@@ -1,5 +1,6 @@
 ---
-title: DeleteRule 属性（ADOX） |Microsoft Docs
+description: DeleteRule 属性 (ADOX)
+title: DeleteRule 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508225919ae71461ef2e122171beede5cb7141c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23262afa30ca28c226964ebc17d4a3ac52971d5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440069"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 属性 (ADOX)
 指示在删除主键时执行的操作。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回一个**Long**值，该值可以是[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)常数之一。 默认值为**adRINone**。  
+ 设置并返回一个 **Long** 值，该值可以是 [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) 常数之一。 默认值为 **adRINone**。  
   
 ## <a name="remarks"></a>备注  
- 对于已追加到集合的[键](../../../ado/reference/adox-api/key-object-adox.md)对象，此属性是只读的。  
+ 对于已追加到集合的 [键](../../../ado/reference/adox-api/key-object-adox.md) 对象，此属性是只读的。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,5 +1,6 @@
 ---
-title: 组和用户追加，ChangePassword 方法示例（VC + +） |Microsoft Docs
+description: 组和用户 Append、ChangePassword 方法示例 (VC++)
+title: 组和用户追加，ChangePassword 方法示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e11cb872d01182f037dd84ab3dd676e4f35e508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 51601cc45aa0c595b3df617848ce66f114e1df63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439969"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>组和用户 Append、ChangePassword 方法示例 (VC++)
-此示例演示了[组](../../../ado/reference/adox-api/groups-collection-adox.md)的[追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法，以及[用户](../../../ado/reference/adox-api/users-collection-adox.md)通过向系统添加新[组](../../../ado/reference/adox-api/group-object-adox.md)和新[用户](../../../ado/reference/adox-api/user-object-adox.md)的[附加](../../../ado/reference/adox-api/append-method-adox-users.md)方法。 新**组**将追加到新**用户**的 "**组**" 集合中。 因此，新**用户**将添加到**该组**中。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用于指定**用户**密码。  
+此示例演示了[组](../../../ado/reference/adox-api/groups-collection-adox.md)的[追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法，以及[用户](../../../ado/reference/adox-api/users-collection-adox.md)通过向系统添加新[组](../../../ado/reference/adox-api/group-object-adox.md)和新[用户](../../../ado/reference/adox-api/user-object-adox.md)的[附加](../../../ado/reference/adox-api/append-method-adox-users.md)方法。 新**组**将追加到新**用户**的 "**组**" 集合中。 因此，新 **用户** 将添加到 **该组**中。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 方法用于指定 **用户** 密码。  
   
 > [!NOTE]
->  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。  
   
 ```  
 // BeginGroupCpp.cpp  

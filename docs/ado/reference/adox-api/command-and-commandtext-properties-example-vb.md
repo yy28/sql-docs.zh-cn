@@ -1,5 +1,6 @@
 ---
-title: Command 和 CommandText 属性示例（VB） |Microsoft Docs
+description: Command 和 CommandText 属性示例 (VB)
+title: Command 和 CommandText 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 116aaa974255352e0d51171f804e86ac02191737
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a607b44311ab9229ecbcf8171e1a506d7b6713d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440259"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Command 和 CommandText 属性示例 (VB)
-下面的代码演示如何使用[Command](../../../ado/reference/adox-api/command-property-adox.md)属性来更新过程的文本。  
+下面的代码演示如何使用 [Command](../../../ado/reference/adox-api/command-property-adox.md) 属性来更新过程的文本。  
   
 ```  
 ' BeginProcedureTextVB  
@@ -76,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 属性（ADOX）](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure 对象（ADOX）](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command 属性 (ADOX) ](../../../ado/reference/adox-api/command-property-adox.md)   
+ [过程对象 (ADOX) ](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

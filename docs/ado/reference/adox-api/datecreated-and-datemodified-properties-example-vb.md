@@ -1,5 +1,6 @@
 ---
-title: DateCreated 和 DateModified 属性示例（VB） |Microsoft Docs
+description: DateCreated 和 DateModified 属性示例 (VB)
+title: DateCreated 和 DateModified 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c78010e98c82f5c43484fe39bbbec506c77b45e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 51400e11416ff7a8e7a336a815e4a11d8033d316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440179"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 和 DateModified 属性示例 (VB)
-此示例演示[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)属性，方法是将新[列](../../../ado/reference/adox-api/column-object-adox.md)添加到现有[表](../../../ado/reference/adox-api/table-object-adox.md)并创建新**表**。 若要运行此示例，需要 DateOutput 过程。  
+此示例演示 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 和 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 属性，方法是将新 [列](../../../ado/reference/adox-api/column-object-adox.md) 添加到现有 [表](../../../ado/reference/adox-api/table-object-adox.md) 并创建新 **表**。 若要运行此示例，需要 DateOutput 过程。  
   
 ```  
 ' BeginDateCreatedVB  
@@ -95,9 +96,9 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DateCreated 属性（ADOX）](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified 属性（ADOX）](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Procedure 对象（ADOX）](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [过程集合（ADOX）](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [视图对象（ADOX）](../../../ado/reference/adox-api/view-object-adox.md)   
+ [DateCreated 属性 (ADOX) ](../../../ado/reference/adox-api/datecreated-property-adox.md)   
+ [DateModified 属性 (ADOX) ](../../../ado/reference/adox-api/datemodified-property-adox.md)   
+ [过程对象 (ADOX) ](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [过程集合 (ADOX) ](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [视图对象 (ADOX) ](../../../ado/reference/adox-api/view-object-adox.md)   
  [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

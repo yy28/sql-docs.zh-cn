@@ -1,5 +1,6 @@
 ---
-title: 连接关闭方法，表类型属性示例（VC + +） |Microsoft Docs
+description: 连接的 Close 方法、表 Type 属性示例 (VC++)
+title: 连接关闭方法，表类型属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa016c166bc2459c61c34a5ca40f8c1444811782
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b8d3263ee4d343f9e77b4d64d42ee8e871888d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440219"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>连接的 Close 方法、表 Type 属性示例 (VC++)
-如果将[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性设置为 "**无**"，则应 "关闭" 目录。 关联的集合将为空。 从目录中的架构对象创建的任何对象都将是孤立对象。 那些已缓存的对象上的所有属性仍将可用，但尝试读取需要调用提供程序的属性会失败。  
+如果将 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 属性设置为 " **无** "，则应 "关闭" 目录。 关联的集合将为空。 从目录中的架构对象创建的任何对象都将是孤立对象。 那些已缓存的对象上的所有属性仍将可用，但尝试读取需要调用提供程序的属性会失败。  
   
 ```  
 // BeginCloseConnectionCpp.cpp  

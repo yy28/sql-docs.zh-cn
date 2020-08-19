@@ -1,5 +1,6 @@
 ---
-title: GetPermissions 和 SetPermissions 方法示例（VB） |Microsoft Docs
+description: GetPermissions 和 SetPermissions 方法示例 (VB)
+title: GetPermissions 和 SetPermissions 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f87e7f9b32c123cae2918f89b92ac2928bb65c65
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440049"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 和 SetPermissions 方法示例 (VB)
-此示例演示[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 以下代码为管理员用户提供 Orders 表的完全访问权限。  
+此示例演示 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 和 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 方法。 以下代码为管理员用户提供 Orders 表的完全访问权限。  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -95,8 +96,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions 方法（ADOX）](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions 方法（ADOX）](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [用户对象（ADOX）](../../../ado/reference/adox-api/user-object-adox.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [GetPermissions 方法 (ADOX) ](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+ [SetPermissions 方法 (ADOX) ](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
+ [用户对象 (ADOX) ](../../../ado/reference/adox-api/user-object-adox.md)   
  [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

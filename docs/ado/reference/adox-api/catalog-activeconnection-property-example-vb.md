@@ -1,5 +1,6 @@
 ---
-title: 目录 ActiveConnection 属性示例（VB） |Microsoft Docs
+description: 目录 ActiveConnection 属性示例 (VB)
+title: 目录 ActiveConnection 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc83a171b9ed2632900c8f31a4ea4d059493b19a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4895f1ec08a0f10c93335fc36954f3a9098ffce4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440409"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>目录 ActiveConnection 属性示例 (VB)
-将[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性设置为有效的开放式连接 "打开" 该目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
+将 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 属性设置为有效的开放式连接 "打开" 该目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,15 +60,15 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- 将**ActiveConnection**属性设置为有效的连接字符串也会 "打开" 目录。  
+ 将 **ActiveConnection** 属性设置为有效的连接字符串也会 "打开" 目录。  
   
 ```  
 Attribute VB_Name = "Catalog"  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Table 对象（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
- [表集合（ADOX）](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Table 对象 (ADOX) ](../../../ado/reference/adox-api/table-object-adox.md)   
+ [表集合 (ADOX) ](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type 属性（表）(ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

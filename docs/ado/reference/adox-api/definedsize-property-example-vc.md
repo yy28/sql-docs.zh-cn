@@ -1,5 +1,6 @@
 ---
-title: DefinedSize 属性示例（VC + +） |Microsoft Docs
+description: DefinedSize 属性示例 (VC++)
+title: DefinedSize 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cafc18fb00a0adeb6d219d901ea40ca79510be5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4d2f7ef20e5fb67450dccee7e7fb29b32d46286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440119"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 属性示例 (VC++)
-此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性。 该代码将重新定义*Northwind*数据库的**Employees**表的 FirstName 列的大小。 然后，将显示基于 " **Employees** " 表的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的 "名字"[字段](../../../ado/reference/ado-api/field-object.md)值的更改。 请注意，在您重新定义**DefinedSize**属性后，默认情况下，FirstName 字段会用空格填充。  
+此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性。 该代码将重新定义*Northwind*数据库的**Employees**表的 FirstName 列的大小。 然后，将显示基于 " **Employees** " 表的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的 "名字"[字段](../../../ado/reference/ado-api/field-object.md)值的更改。 请注意，在您重新定义 **DefinedSize** 属性后，默认情况下，FirstName 字段会用空格填充。  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,5 +164,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列对象 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize 属性 (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

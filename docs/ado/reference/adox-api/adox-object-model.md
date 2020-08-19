@@ -1,4 +1,5 @@
 ---
+description: ADOX 对象模型
 title: ADOX 对象模型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c521a1db30a35e43e5e0a7dbb118320769d4756
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a221cf2a36cb49b1005362d4cda5ad0ca986ca5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440569"
 ---
 # <a name="adox-object-model"></a>ADOX 对象模型
-下图说明了如何在 ADOX 中表示和相关对象。 有关特定对象或集合的详细信息，请参阅特定的参考主题或[Adox 对象](../../../ado/reference/adox-api/adox-objects.md)和[adox 集合](../../../ado/reference/adox-api/adox-collections.md)。  
+下图说明了如何在 ADOX 中表示和相关对象。 有关特定对象或集合的详细信息，请参阅特定的参考主题或 [Adox 对象](../../../ado/reference/adox-api/adox-objects.md) 和 [adox 集合](../../../ado/reference/adox-api/adox-collections.md)。  
   
  ![ADOX 对象模型](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
- 每个[表](../../../ado/reference/adox-api/table-object-adox.md)、[索引](../../../ado/reference/adox-api/index-object-adox.md)和[列](../../../ado/reference/adox-api/column-object-adox.md)对象还具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+ 每个 [表](../../../ado/reference/adox-api/table-object-adox.md)、 [索引](../../../ado/reference/adox-api/index-object-adox.md)和 [列](../../../ado/reference/adox-api/column-object-adox.md) 对象还具有标准 ADO [属性](../../../ado/reference/ado-api/properties-collection-ado.md) 集合。  
   
 ## <a name="see-also"></a>另请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   

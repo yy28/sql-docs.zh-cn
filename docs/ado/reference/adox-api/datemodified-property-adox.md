@@ -1,5 +1,6 @@
 ---
-title: DateModified 属性（ADOX） |Microsoft Docs
+description: DateModified 属性 (ADOX)
+title: DateModified 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c3a2a8ba0890dd50621fac143aa102091abcc19
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7ee921e1865530356e1fd88c97489b63a81a02ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440149"
 ---
 # <a name="datemodified-property-adox"></a>DateModified 属性 (ADOX)
 指示上次修改对象的日期。  
   
 ## <a name="return-values"></a>返回值  
- 返回指定修改日期的**变量**值。 如果提供程序不支持**DateModified** ，则该值为 null。  
+ 返回指定修改日期的 **变量** 值。 如果提供程序不支持 **DateModified** ，则该值为 null。  
   
 ## <a name="remarks"></a>备注  
- 新追加的对象的**DateModified**属性为 null。 追加新的[视图](../../../ado/reference/adox-api/view-object-adox.md)或[过程](../../../ado/reference/adox-api/procedure-object-adox.md)之后，必须调用[视图](../../../ado/reference/adox-api/views-collection-adox.md)或[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合的[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以获取**DateModified**属性的值。  
+ 新追加的对象的 **DateModified** 属性为 null。 追加新的[视图](../../../ado/reference/adox-api/view-object-adox.md)或[过程](../../../ado/reference/adox-api/procedure-object-adox.md)之后，必须调用[视图](../../../ado/reference/adox-api/views-collection-adox.md)或[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合的[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以获取**DateModified**属性的值。  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::
@@ -48,5 +49,5 @@ ms.locfileid: "86942709"
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [DateCreated 和 DateModified 属性示例（VB）](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
+ [DateCreated 和 DateModified 属性示例 (VB) ](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateCreated 属性 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)

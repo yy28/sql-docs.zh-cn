@@ -1,5 +1,6 @@
 ---
-title: Attributes 属性示例（VB） |Microsoft Docs
+description: Attributes 属性示例 (VB)
+title: Attributes 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d951722b341d073364efd699021215cb99001613
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440429"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 属性示例 (VB)
 此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的 "[特性](../../../ado/reference/adox-api/attributes-property-adox.md)" 属性。 如果将其设置为**adColNullable** ，则允许用户将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)的值设置为空字符串。 在这种情况下，用户可以区分数据未知的记录和不应用数据的记录。  
@@ -126,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Attributes 属性（ADOX）](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [特性属性 (ADOX) ](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

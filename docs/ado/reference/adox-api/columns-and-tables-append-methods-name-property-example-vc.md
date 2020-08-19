@@ -1,5 +1,6 @@
 ---
-title: 列和表追加方法、Name 属性示例（VC + +） |Microsoft Docs
+description: 列和表的 Append 方法、Name 属性示例 (VC++)
+title: 列和表追加方法、Name 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 424813731993841bc503592e42459548dcaf5152
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 655c1d014f312ae0706b242bb8b108d871bcef3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440289"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>列和表的 Append 方法、Name 属性示例 (VC++)
 下面的代码演示如何创建新表。  
@@ -82,6 +83,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Append 方法（ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法（ADOX 表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append 列 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 表 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

@@ -1,5 +1,6 @@
 ---
-title: 目录 ActiveConnection 属性示例（VC + +） |Microsoft Docs
+description: 目录 ActiveConnection 属性示例 (VC++)
+title: " (VC + +) 的目录 ActiveConnection 属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d39b018f74bf4edbc443ac3d49004e03efb007b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 37b50500b66c4f9e4bdca19facf27e290ac242c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440389"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>目录 ActiveConnection 属性示例 (VC++)
-将[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性设置为有效的开放式连接 "打开" 该目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
+将 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 属性设置为有效的开放式连接 "打开" 该目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
