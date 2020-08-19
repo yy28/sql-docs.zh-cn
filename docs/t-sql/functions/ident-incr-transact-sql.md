@@ -1,4 +1,5 @@
 ---
+description: IDENT_INCR (Transact-SQL)
 title: IDENT_INCR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4835b3d7ad39ff94b6b5173bb6c4540062d5cb46
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4e51aa371646a3f193576f27ab362c3ce66915fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365833"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,10 +44,10 @@ IDENT_INCR ( 'table_or_view' )
 
 ## <a name="arguments"></a>参数
 **'** *table_or_view* **'**  
-指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view  可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar      。  
+指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view** 可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar******************。  
   
 ## <a name="return-types"></a>返回类型  
-numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
+numeric([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>例外  
 在出错或调用方无权查看对象时返回 NULL。  

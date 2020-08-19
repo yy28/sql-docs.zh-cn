@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IDLE (Transact-SQL)'
 title: '@@IDLE (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e1ab7318c390a657111db96b0b2054c4b8b9d0c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 373f01d1d381cccc32d7247c1d576630c9b0ba88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365533"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +50,8 @@ ms.locfileid: "87112681"
 ## <a name="return-types"></a>返回类型
  **integer**  
   
-## <a name="remarks"></a>备注  
- 若要显示包含几种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报告，请运行 sp_monitor  。  
+## <a name="remarks"></a>注解  
+ 若要显示包含几种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报告，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
  以下示例将返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自启动到当前时间的空闲毫秒数。 为了避免将值转换为微秒时出现算术溢出，此示例将其中一个值转换为 `float` 数据类型。  

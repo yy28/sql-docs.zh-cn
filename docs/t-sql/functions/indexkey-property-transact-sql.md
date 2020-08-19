@@ -1,4 +1,5 @@
 ---
+description: INDEXKEY_PROPERTY (Transact-SQL)
 title: INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 631a2380d8a491fd495e5d60d52284a476c9aab7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 722e8b7d7e818cb4bd9225f83f65aeb8b0090798
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364683"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,21 +49,21 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- object_ID   
- 表或索引视图的对象标识号。 object_id 的数据类型为 int   。  
+ object_ID  
+ 表或索引视图的对象标识号。 object_id 的数据类型为 int。  
   
- index_ID   
- 索引标识号。 index_ID 的数据类型为 int   。  
+ index_ID  
+ 索引标识号。 index_ID 的数据类型为 int******。  
   
- key_ID   
- 索引键列的位置。 key_ID 的数据类型为 int   。  
+ key_ID  
+ 索引键列的位置。 key_ID 的数据类型为 int******。  
   
  *property*  
- 要返回其信息的属性的名称。 property 是字符串，可以是下列值之一  。  
+ 要返回其信息的属性的名称。 property 是字符串，可以是下列值之一**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**ColumnId**|索引的 key_ID 位置上的列 ID  。|  
+|**ColumnId**|索引的 key_ID 位置上的列 ID**。|  
 |**IsDescending**|存储索引列的排序顺序。<br /><br /> 1 = 降序 0 = 升序|  
   
 ## <a name="return-types"></a>返回类型  

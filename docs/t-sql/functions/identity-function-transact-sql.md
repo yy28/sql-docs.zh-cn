@@ -1,4 +1,5 @@
 ---
+description: IDENTITY（函数）(Transact-SQL)
 title: IDENTITY（函数）(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: daf9effbc4c130b4783500014554c4512b6581d1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6f8cd22140dd78ace01d685498306885b0081f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365233"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY（函数）(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  只用于在带有 INTO 子句的 SELECT 语句中将标识列插入到新表中  。 尽管类似，但是 IDENTITY 函数不是与 CREATE TABLE 和 ALTER TABLE 一起使用的 IDENTITY 属性。  
+  只用于在带有 INTO 子句的 SELECT 语句中将标识列插入到新表中**。 尽管类似，但是 IDENTITY 函数不是与 CREATE TABLE 和 ALTER TABLE 一起使用的 IDENTITY 属性。  
   
 > [!NOTE]  
 >  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
@@ -48,22 +49,22 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- data_type   
- 标识列的数据类型。 标识列的有效数据类型可以是任何整数数据类型类别的数据类型（bit 数据类型除外），也可以是 decimal 数据类型   。  
+ data_type  
+ 标识列的数据类型。 标识列的有效数据类型可以是任何整数数据类型类别的数据类型（bit 数据类型除外），也可以是 decimal 数据类型********。  
   
- seed   
- 要分配给表中第一行的整数值。 为每一个后续行分配下一个标识值，该值等于上一个 IDENTITY 值加上 increment 值  。 如果既没有指定 seed，也没有指定 increment，那么它们都默认为 1   。  
+ seed  
+ 要分配给表中第一行的整数值。 为每一个后续行分配下一个标识值，该值等于上一个 IDENTITY 值加上 increment 值**。 如果既没有指定 seed，也没有指定 increment，那么它们都默认为 1****。  
   
- increment   
- 要加到表中后续行的 seed 值上的整数值  。  
+ increment  
+ 要加到表中后续行的 seed 值上的整数值。  
   
- column_name   
+ column_name  
  将插入到新表中的列的名称。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 data_type 相同的数据类型  。  
+ 返回与 data_type 相同的数据类型**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  因为该函数在表中创建一个列，所以必须用下列方式中的一种在选择列表中指定该列的名称：  
   
 ```  
@@ -80,7 +81,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>示例  
- 下面的示例将来自 `Contact` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的所有行都插入到名为 `NewContact` 的新表。 使用 IDENTITY 函数在 `NewContact` 表中从 100 而不是 1 开始编标识号。  
+ 下面的示例将来自 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Contact` 表的所有行都插入到名为 `NewContact` 的新表。 使用 IDENTITY 函数在 `NewContact` 表中从 100 而不是 1 开始编标识号。  
   
 ```  
 USE AdventureWorks2012;  

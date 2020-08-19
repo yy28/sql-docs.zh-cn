@@ -1,4 +1,5 @@
 ---
+description: IDENT_SEED (Transact-SQL)
 title: IDENT_SEED (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4682d0ecd3b1eeeac2b92d5e76beb0ca2355f3f4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1c8ddbf1bd14e246741639a7e9eb11f4175c14d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365243"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,10 +44,10 @@ IDENT_SEED ( 'table_or_view' )
 
 ## <a name="arguments"></a>参数
  **'** *table_or_view* **'**  
- 指定表或视图以检查标识种子值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量，也可以是变量、函数或列名  。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar      。  
+ 指定表或视图以检查标识种子值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量，也可以是变量、函数或列名**。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar******************。  
   
 ## <a name="return-types"></a>返回类型  
-numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
+numeric([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>例外  
  出现错误时或调用方没有查看对象的权限时将返回 NULL。  

@@ -1,4 +1,5 @@
 ---
+description: JSON_VALUE (Transact-SQL)
 title: JSON_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 066ad2fde09d0e3f108c88cbe4fa6fe74882da03
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f22175349162bac226d41f63ca66743de0668b6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364413"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -30,7 +31,7 @@ ms.locfileid: "87395673"
 
  从 JSON 字符串中提取标量值。  
   
- 若要从 JSON 字符串而不是标量值中提取对象或数组，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)   。  
+ 若要从 JSON 字符串而不是标量值中提取对象或数组，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,21 +41,19 @@ ms.locfileid: "87395673"
 JSON_VALUE ( expression , path )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>参数
 
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
 
- 如果 JSON_VALUE 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误    。 如果 JSON_VALUE  找不到路径  标识的值，则它将扫描整个文本，如果在表达式  中的任何位置发现无效的 JSON，则返回错误。
+ 如果 JSON_VALUE 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误********。 如果 JSON_VALUE 找不到路径标识的值，则它将扫描整个文本，如果在表达式中的任何位置发现无效的 JSON，则返回错误。
   
  *路径*  
  指定要提取属性的 JSON 路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
 
-在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值  。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
   
- 如果 path 格式无效，则 JSON_VALUE 返回错误   。  
+ 如果 path 格式无效，则 JSON_VALUE 返回错误******。  
   
 ## <a name="return-value"></a>返回值
 
@@ -62,11 +61,11 @@ JSON_VALUE ( expression , path )
   
  如果值大于 4000 个字符：  
   
-- 在宽松模式下，JSON_VALUE 返回 NULL  。  
+- 在宽松模式下，JSON_VALUE 返回 NULL****。  
   
-- 在严格模式下，JSON_VALUE 返回错误  。  
+- 在严格模式下，JSON_VALUE 返回错误****。  
   
- 如果必须返回大于 4000 个字符的标量值，请使用 OPENJSON 而不是 JSON_VALUE   。 有关详细信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)。  
+ 如果必须返回大于 4000 个字符的标量值，请使用 OPENJSON 而不是 JSON_VALUE********。 有关详细信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)。  
   
 ## <a name="remarks"></a>备注
 
@@ -91,15 +90,15 @@ SET @jsonInfo=N'{
  }'  
 ```  
   
- 下表对宽松模式和严格模式下 JSON_VALUE 的行为进行了比较  。 有关可选路径模式规范（宽松或严格）的详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
+ 下表对宽松模式和严格模式下 JSON_VALUE 的行为进行了比较****。 有关可选路径模式规范（宽松或严格）的详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
 |路径|宽松模式下的返回值|严格模式下的返回值|更多信息|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY  。|  
-|$.info.type|N'1'|N'1'|N/A|  
-|$.info.address.town|N'Bristol'|N'Bristol'|N/A|  
-|$.info."address"|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY  。|  
-|$.info.tags|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY  。|  
+|$|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY****。|  
+|$.info.type|N'1'|N'1'|不适用|  
+|$.info.address.town|N'Bristol'|N'Bristol'|不适用|  
+|$.info."address"|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY****。|  
+|$.info.tags|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY****。|  
 |$.info.type[0]|Null|错误|不是数组。|  
 |$.info.none|Null|错误|属性不存在。|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
@@ -107,7 +106,7 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>示例  
   
 ### <a name="example-1"></a>示例 1
- 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则  。 
+ 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则****。 
 
 > [!NOTE]
 > （此示例假定名为 `Person.Person` 的表包含 JSON 文本的 `jsonInfo` 列，且此列具有先前宽松模式和严格模式讨论中所示的结构。 在 AdventureWorks 示例数据库中，`Person` 表实际上不包含 `jsonInfo` 列。）

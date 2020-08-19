@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYPASSPHRASE (Transact-SQL)
 title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5fc109c89fb32e42c97b5454bd67d41238d63835
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c73f2fac57dbb73ce95a734a8382b8a8f7568edd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366033"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,34 +47,34 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- passphrase   
+ passphrase  
  用于生成对称密钥的通行短语。  
   
  @passphrase  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含用于生成对称密钥的通行短语       。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含用于生成对称密钥的通行短语************************。  
   
- cleartext   
+ *cleartext*  
  要加密的明文。  
   
  @cleartext  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含明文       。 最大大小为 8000 个字节。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含明文************************。 最大大小为 8000 个字节。  
   
- add_authenticator   
- 指示是否将验证器与明文一起加密。 如果将添加验证器，则为 1。 int  。  
+ add_authenticator  
+ 指示是否将验证器与明文一起加密。 如果将添加验证器，则为 1。 int。  
   
  @add_authenticator  
  指示是否将哈希与明文一起加密。  
   
- authenticator   
- 用于派生验证器的数据。 sysname  。  
+ authenticator  
+ 用于派生验证器的数据。 sysname。  
   
  @authenticator  
  包含验证器所源自的数据的变量。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）  。  
+ varbinary（最大大小为 8000 个字节）****。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  通行短语是包含空格的密码。 使用通行短语的优点在于，与相对较长的字符串相比，有含义的短语或句子更容易记忆。  
   
  此函数不检查密码复杂性。  

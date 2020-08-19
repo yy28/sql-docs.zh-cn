@@ -1,4 +1,5 @@
 ---
+description: INDEX_COL (Transact-SQL)
 title: INDEX_COL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6144ba5cf5848beef7960debaaed6e12014d31b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 29f6feeb045e3c8418bfb63fd28e784113dc629f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364923"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,14 +53,14 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  *schema_name*  
  该索引所属架构的名称。  
   
- table_or_view_name   
- 表或索引视图的名称。 table_or_view_name 必须使用单引号分隔，并且可由数据库名称和架构名称完全限定  。  
+ table_or_view_name  
+ 表或索引视图的名称。 table_or_view_name 必须使用单引号分隔，并且可由数据库名称和架构名称完全限定**。  
   
- index_id   
- 索引的 ID。 index_ID 的数据类型为 int   。  
+ index_id  
+ 索引的 ID。 index_ID 的数据类型为 int******。  
   
- key_id   
- 索引键列的位置。 key_ID 的数据类型为 int   。  
+ *key_id*  
+ 索引键列的位置。 key_ID 的数据类型为 int******。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar (128** **)**  
