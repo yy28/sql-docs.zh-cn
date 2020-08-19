@@ -1,4 +1,5 @@
 ---
+description: 开发特定类型的脚本组件
 title: 开发特定类型的脚本组件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 860a629af6962614c19b77ffaea277ee02fc3b04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fc1942c156469def05a8cf9aaa12ac3e09a8167c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430439"
 ---
 # <a name="developing-specific-types-of-script-components"></a>开发特定类型的脚本组件
 

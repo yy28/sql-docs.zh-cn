@@ -1,4 +1,5 @@
 ---
+description: 除（SSIS 表达式）
 title: 除（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb89b3a5696e9e9d7cff33db13f272ca2ec00fcb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 516d8705f38f3bdd7234f1975f5188d32f501efe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430599"
 ---
 # <a name="divide-ssis-expression"></a>除（SSIS 表达式）
 
@@ -36,16 +37,16 @@ dividend / divisor
 ```  
   
 ## <a name="arguments"></a>参数  
- *被除数*  
+ *dividend*  
  被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
- *除数*  
+ *divisor*  
  除数的数值表达式。 *divisor* 可以是除 0 之外的任意有效的数值表达式。  
   
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果任意一个操作数为 Null，则结果为 Null。  
   
  被零除是非法的。 根据 *divisor* 子表达式的计算方法，会出现下列错误之一：  

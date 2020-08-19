@@ -1,5 +1,6 @@
 ---
-title: sys. selective_xml_index_paths （Transact-sql） |Microsoft Docs
+description: sys.selective_xml_index_paths (Transact-SQL)
+title: sys. selective_xml_index_paths (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 55bb26edf9d51731a4a5986a8a6063f6214df1f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adc4ffa7ae43709a572ff1d7f4de1b3e26974ebb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490111"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,10 +49,10 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |object_id|**int**|包含 XML 列的表 ID。|  
 |**index_id**|**int**|选择性 xml 索引的唯一 ID。|  
 |**path_id**|**int**|提升的 XML 路径 ID。|  
-|**path**|**nvarchar(4000)**|提升的路径。 例如，“/a/b/c/d/e”。|  
+|**路径**|**nvarchar(4000)**|提升的路径。 例如，“/a/b/c/d/e”。|  
 |name|**sysname**|路径名称。|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
-|**path_type_desc**|**sysname**|基于**path_type**值 "XQUERY" 或 "SQL"。|  
+|**path_type_desc**|**sysname**|基于 **path_type** 值 "XQUERY" 或 "SQL"。|  
 |**xml_component_id**|**int**|数据库中 XML 架构组件的唯一 ID。|  
 |**xquery_type_description**|**nvarchar(4000)**|指定的 xsd 类型的名称。|  
 |**is_xquery_type_inferred**|**bit**|1 = 推断类型。|  
@@ -60,7 +61,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**is_node**|**bit**|0 = node() 提示不存在。<br /><br /> 1 = 应用 node() 优化提示。|  
 |**system_type_id**|**tinyint**|列的系统类型的 ID。|  
 |**user_type_id**|**tinyint**|列的用户类型的 ID。|  
-|**max_length**|**smallint**|类型的最大长度（以字节为单位）。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max)、varbinary(max) 或 xml。|  
+|**max_length**|**smallint**|类型 (的最大长度（以字节为单位）) 。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max)、varbinary(max) 或 xml。|  
 |**精度**|**tinyint**|如果类型基于数值，则表示类型的最大精度。 否则为0。|  
 |**scale**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数。 否则为 0。|  
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称。 否则为 NULL。|  
@@ -70,7 +71,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 架构 &#40;XML 类型系统&#41; 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

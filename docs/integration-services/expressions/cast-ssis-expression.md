@@ -1,4 +1,5 @@
 ---
+description: Cast（SSIS 表达式）
 title: Cast（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c10996317ce033b6d6437ff989de8d66d31f006
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a958fcc49fb5991baa770bc1c9609ebd13876dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430629"
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
 
@@ -48,7 +49,7 @@ ms.locfileid: "86917185"
 ## <a name="result-types"></a>结果类型  
  *type_spec*数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  以下关系图显示了合法的转换运算。  
   
  ![数据类型之间的合法转换和非法转换](../../integration-services/expressions/media/data-conversion.gif "数据类型之间的合法转换和非法转换")  

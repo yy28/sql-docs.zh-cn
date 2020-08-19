@@ -1,4 +1,5 @@
 ---
+description: DBCC SHOW_STATISTICS (Transact-SQL)
 title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -33,12 +34,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459894"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
@@ -98,7 +99,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 
 下表对指定 STAT_HEADER 时结果集中所返回的列进行了说明。
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |名称|统计信息对象的名称。|  
 |Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函数是另一种检索此信息的方法。 有关详细信息，请参阅此页中的[备注](#Remarks)部分。|  

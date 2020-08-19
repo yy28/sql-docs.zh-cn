@@ -1,4 +1,5 @@
 ---
+description: 派生列转换
 title: 派生列转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82ef2a3959f1f3ae0d18aca2e8049f5a30f4a91f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430689"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
 
@@ -101,19 +102,19 @@ ms.locfileid: "86919379"
  **相关主题**：[Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **数据类型**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  **长度**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  
   
  **精度**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
   
  **缩放**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动根据数据类型来设置数值数据的小数位数。 该列的值是只读的。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动根据数据类型来设置数值数据的小数位数。 该列的值是只读的。  
   
  **代码页**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动设置 DT_STR 数据类型的代码页。 可以更新 **“代码页”** 。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动设置 DT_STR 数据类型的代码页。 可以更新 **“代码页”**。  
   
  **配置错误输出**  
  使用 [配置错误输出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框指定处理错误的方式。  

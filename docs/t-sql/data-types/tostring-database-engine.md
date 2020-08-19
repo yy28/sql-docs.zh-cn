@@ -1,4 +1,5 @@
 ---
+description: ToString（数据库引擎）
 title: ToString（数据库引擎）
 ms.custom: ''
 ms.date: 07/23/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5f12eefb4f84b7ee936bfcbd736c3d22ba9162c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459923"
 ---
 # <a name="tostring-database-engine"></a>ToString（数据库引擎）
 
@@ -31,19 +32,19 @@ ms.locfileid: "86555917"
 返回具有 this 逻辑表示形式的字符串  。 进行从 hierarchyid 到字符串类型的转换时将隐式调用 ToString  。 作用与 [Parse（数据库引擎）](../../t-sql/data-types/parse-database-engine.md)相反。
   
 ## <a name="syntax"></a>语法  
-  
-```sql
--- Transact-SQL syntax  
-node.ToString  ( )   
+
+```syntaxsql
+-- Transact-SQL syntax
+node.ToString  ( )
 -- This is functionally equivalent to the following syntax  
 -- which implicitly calls ToString():  
 CAST(node AS nvarchar(4000))  
 ```  
   
-```sql
--- CLR syntax  
-string ToString  ( )   
-```  
+```syntaxsql
+-- CLR syntax
+string ToString  ( )
+```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

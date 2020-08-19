@@ -1,4 +1,5 @@
 ---
+description: 支持自定义组件中的多目标
 title: 支持自定义组件中的多目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4020d295bc29fa3d240c0176611d446fcb427197
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7bfd8409894c1f98fe4d63efcd122b4bf8025aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430459"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支持自定义组件中的多目标
 
@@ -24,7 +25,7 @@ ms.locfileid: "86916383"
 
  现在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 若要获取用于 Visual Studio 2015 的 SSDT，请参阅[下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
- 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性” **** 以打开该项目的属性页。 在“配置属性” **** 的“常规” **** 选项卡上，选择“TargetServerVersion” **** 属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
  ![“项目属性”对话框中的 TargetServerVersion 属性](../../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
  
@@ -99,7 +100,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **错误消息。** 无法将类型为 "System.__ComObject" 的 COM 对象强制转换为接口类型 "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100"。 此操作失败的原因是对 IID 为 "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" 的接口的 COM 组件调用 QueryInterface 因以下错误而失败: 不支持此类接口(异常来自 HRESULT: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解决方案。** 如果自定义扩展引用 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap 等 SSIS 互操作程序集，将“嵌入互操作类型”  属性的值设置为“False”  。
+**解决方案。** 如果自定义扩展引用 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap 等 SSIS 互操作程序集，将“嵌入互操作类型”属性的值设置为“False”。
 
 ![嵌入互操作类型](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

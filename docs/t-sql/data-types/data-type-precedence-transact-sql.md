@@ -1,4 +1,5 @@
 ---
+description: 数据类型优先级 (Transact-SQL)
 title: 数据类型优先级 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ed8d2a30d4bcc2cd1adaedc3cccd6642d701533
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70030355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459917"
 ---
 # <a name="data-type-precedence-transact-sql"></a>数据类型优先级 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -56,12 +57,12 @@ ms.locfileid: "70030355"
 1. **图像**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. nvarchar（包括 nvarchar(max)）    
+1. nvarchar（包括 nvarchar(max)）********  
 1. **nchar**  
-1. varchar（包括 varchar(max)）    
+1. varchar（包括 varchar(max)）********  
 1. **char**  
-1. varbinary（包括 varbinary(max)）    
-1. binary（最低）   
+1. varbinary（包括 varbinary(max)）********  
+1. binary（最低）****  
   
 ## <a name="see-also"></a>另请参阅
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

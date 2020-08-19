@@ -1,4 +1,5 @@
 ---
+description: 将 SQL Server 数据库还原到某个时点（完整恢复模式）
 title: 将 SQL Server 数据库还原到某个时点（完整恢复模式）| Microsoft Docs
 decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f03b1f490e46fac62c42dea09e78e7fdf9c28acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429099"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "85717975"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称 **。**  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -89,12 +90,12 @@ ms.locfileid: "85717975"
   
 6.  单击 **“时间线”** 以访问 **“备份时间线”** 对话框。  
   
-7.  在 **“还原到”** 部分中，单击 **“具体日期和时间”** 。  
+7.  在 **“还原到”** 部分中，单击 **“具体日期和时间”**。  
   
 8.  使用 **“日期”** 和 **“时间”** 框或滑动条来指定应停止还原的具体日期和时间。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  使用“时间线间隔”  框更改时间线上显示的时间量。  
+    >   使用 **“时间线间隔”** 框更改时间线上显示的时间量。  
   
 9. 指定具体时点后，数据库恢复顾问确保只有需要还原到该时点的那些备份在 **“要还原的备份集”** 网格的 **“还原”** 列中处于选中状态。 这些选定的备份构成了为您的时点还原建议的还原计划。 应当仅使用选定的备份进行时点还原操作。  
   
@@ -120,7 +121,7 @@ ms.locfileid: "85717975"
   
      有关这些选项的说明，请参阅[还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)。  
   
-12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”  。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
+12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”****。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
   
 13. 如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。  
   
@@ -135,11 +136,11 @@ ms.locfileid: "85717975"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG database_name FROM <backup_device> WITH STOPAT *time, RECOVERY…* **=**    
+ RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…  
   
  恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
   
- 要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT  **time=**  。 这样确保了不会超出目标时间。  
+ 要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT = time。 这样确保了不会超出目标时间。  
   
  **将数据库还原到时间点**  
   
@@ -155,7 +156,7 @@ ms.locfileid: "85717975"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY)。  
+4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  

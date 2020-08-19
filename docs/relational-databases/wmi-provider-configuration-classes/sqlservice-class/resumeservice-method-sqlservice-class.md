@@ -1,5 +1,6 @@
 ---
-title: ResumeService 方法（SqlService）
+description: ResumeService 方法（SqlService 类）
+title: 'ResumeService 方法 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 259c5a1696203b06c0c67a87f6dedc00c29d66ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d1e5e368f9fc33898d251f3508f2bcaffd9622f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460043"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.ResumeService()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
