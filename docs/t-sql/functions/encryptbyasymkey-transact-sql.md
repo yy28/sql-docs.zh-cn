@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYASYMKEY (Transact-SQL)
 title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b9695a2cec375cf2eb5a69bbe210478b9d0fa1e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2a0031163de085d6de07aaf7a0e707a5e5ac5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459774"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,11 +43,11 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-Asym_Key_ID   
-数据库中非对称密钥的 ID。 Asym_Key_ID 具有 int 数据类型   。  
+Asym_Key_ID  
+数据库中非对称密钥的 ID。 Asym_Key_ID 具有 int 数据类型******。  
   
-cleartext   
-`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的数据字符串。 cleartext 可以具有 
+cleartext  
+`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的数据字符串。 cleartext 可以具有**
  
 + **binary**
 + **char**
@@ -76,12 +77,12 @@ cleartext
 数据类型。  
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）  。  
+varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>备注  
 与对称密钥加密和解密相比，使用非对称密钥的加密和解密操作消耗大量资源，因此成本很高。 我们建议开发人员避免对大型数据集执行非对称密钥加密和解密操作 - 例如，存储在数据库表中的用户数据数据集。 相反，我们建议开发人员首先使用强对称密钥对数据进行加密，然后使用非对称密钥对该对称密钥进行加密。  
   
-如果输入超出一定字节数，`ENCRYPTBYASYMKEY` 将返回 NULL（具体取决于算法）  。 具体限制：
+如果输入超出一定字节数，`ENCRYPTBYASYMKEY` 将返回 NULL（具体取决于算法）****。 具体限制：
 
 + 一个 512 位的 RSA 密钥最多可加密 53 个字节
 + 一个 1024 位的密钥最多可加密 117 个字节
@@ -90,7 +91,7 @@ varbinary（最大大小为 8,000 个字节）  。
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，证书和非对称密钥都用作 RSA 密钥的包装器。  
   
 ## <a name="examples"></a>示例  
-此示例将用非对称密钥 `@cleartext` 加密 `JanainaAsymKey02` 中存储的文本。 该语句将加密数据插入到 `ProtectedData04` 表中。  
+此示例将用非对称密钥 `JanainaAsymKey02` 加密 `@cleartext` 中存储的文本。 该语句将加密数据插入到 `ProtectedData04` 表中。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

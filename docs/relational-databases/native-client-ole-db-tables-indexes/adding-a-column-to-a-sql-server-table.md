@@ -1,5 +1,6 @@
 ---
-title: 向 SQL Server 表中添加列（Native Client OLE DB 提供程序） |Microsoft Docs
+description: '将列添加到 SQL Server 表 (Native Client OLE DB 提供程序) '
+title: 将列添加到 SQL Server 表 (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e2e63f8a82de0423a24fb7c3030065da5bce952
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8e1e0b9d165b4c0a796ec385d834de0a0ea42445
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87241834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499047"
 ---
 # <a name="adding-a-column-to-a-table-in-sql-server-native-client"></a>将列添加到 SQL Server Native Client 中的表
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,13 +33,13 @@ ms.locfileid: "87241834"
   
 -   如果 DBPROP_COL_AUTOINCREMENT 为 VARIANT_TRUE，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
   
--   如果相应列是使用  timestamp[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **** 数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
+-   如果相应列是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] timestamp  数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
   
 -   对于任何其他列定义，DBPROP_COL_NULLABLE 都必须为 VARIANT_TRUE。  
   
- 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串******。 pTableID 的 eKind 成员必须是 DBKIND_NAME****。  
+ 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串    。 pTableID 的 eKind 成员必须是 DBKIND_NAME   。  
   
- 在 uName 联合（位于 DBCOLUMNDESC 参数 pColumnDesc 的 dbcid 成员中）的 pwszName 成员中，将新列的名称指定为 Unicode 字符串********。 eKind 成员必须为 DBKIND_NAME**。  
+ 在 uName 联合（位于 DBCOLUMNDESC 参数 pColumnDesc 的 dbcid 成员中）的 pwszName 成员中，将新列的名称指定为 Unicode 字符串     。 eKind 成员必须为 DBKIND_NAME  。  
   
 ## <a name="see-also"></a>另请参阅  
  [表和索引](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   

@@ -1,4 +1,5 @@
 ---
+description: 位运算符 (Transact-SQL)
 title: 位运算符 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/04/2019
@@ -17,12 +18,12 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15649f0ff6a9695b17af629f28156ea4860e4aa6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459429"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位运算符 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,8 +36,8 @@ ms.locfileid: "86004001"
 
 |运算符后的表达式|位运算|
 |---- |---- |
-|和 <br> 如果两个位置上的位均为 1，则结果为 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|或 <br> 如果两个位置上任意一个位置的位为 1，则结果为 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|AND <br> 如果两个位置上的位均为 1，则结果为 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
+|OR <br> 如果两个位置上任意一个位置的位为 1，则结果为 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> 对每个位位置上的位值取反。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 请参阅下列主题：   
@@ -48,17 +49,17 @@ ms.locfileid: "86004001"
 * [^=（位异或赋值）](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
 * [~（位非）](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
- 位运算符的操作数可以是整数或二进制字符串数据类型类别中的任何数据类型（image 数据类型除外），但两个操作数不能同时是二进制字符串数据类型类别中的某种数据类型  。 下表显示所支持的操作数数据类型。  
+ 位运算符的操作数可以是整数或二进制字符串数据类型类别中的任何数据类型（image 数据类型除外），但两个操作数不能同时是二进制字符串数据类型类别中的某种数据类型****。 下表显示所支持的操作数数据类型。  
   
 |左操作数|右操作数|  
 |------------------|-------------------|  
-|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint   |  
-|[bit](../../t-sql/data-types/bit-transact-sql.md)|int、smallint、tinyint 或 bit    |  
-|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|bigint、int、smallint、tinyint、binary 或 varbinary      |  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary     |  
-|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary     |  
-|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary     |  
-|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint   |  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint  |  
+|[bit](../../t-sql/data-types/bit-transact-sql.md)|int、smallint、tinyint 或 bit****************|  
+|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|bigint、int、smallint、tinyint、binary 或 varbinary************************|  
+|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary********************|  
+|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary********************|  
+|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary********************|  
+|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint  |  
   
 ## <a name="see-also"></a>另请参阅  
  [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: DROP REMOTE SERVICE BINDING (Transact-SQL)
 title: DROP REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12a51eb0e3cb86625b29263dc828a3713a93dce5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f35d18ea74041bf21b1f67010333ff73b3ef808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444617"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ DROP REMOTE SERVICE BINDING binding_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- binding_name   
+ binding_name  
  要删除的远程服务绑定的名称。 不能指定服务器、数据库和架构名称。  
   
 ## <a name="permissions"></a>权限  

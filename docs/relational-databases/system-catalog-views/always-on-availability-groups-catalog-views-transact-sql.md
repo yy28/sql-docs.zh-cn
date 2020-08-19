@@ -1,5 +1,6 @@
 ---
-title: Always On 可用性组目录视图（Transact-sql） |Microsoft Docs
+description: 'Always On 可用性组目录视图 (Transact-sql) '
+title: Always On 可用性组目录视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0291829a7524ad681cb3937b31cb8ff05f11a01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b78167386734dd3c42a2900819ca9ccecbf53eba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475444"
 ---
-# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性组目录视图（Transact-sql）
+# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性组目录视图 (Transact-sql) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本节包含与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相关的目录视图和函数。  
@@ -49,13 +50,13 @@ ms.locfileid: "86918053"
 :::row-end:::
   
 > [!NOTE]  
-> 有关联接的可用性数据库的信息，请参阅[sys.databases （transact-sql）](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)中的**replica_id**和**group_database_id**列。  
+> 有关联接的可用性数据库的信息，请参阅[sys.databases (transact-sql) ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)中的**replica_id**和**group_database_id**列。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.databases （Transact-sql）](sys-databases-transact-sql.md)   
- [sys. database_mirroring_endpoints （Transact-sql）](sys-database-mirroring-endpoints-transact-sql.md)   
+ [sys.databases (Transact-sql) ](sys-databases-transact-sql.md)   
+ [sys. database_mirroring_endpoints (Transact-sql) ](sys-database-mirroring-endpoints-transact-sql.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [监视可用性组（Transact-sql）;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性组动态管理视图和函数（Transact-sql）](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [ (Transact-sql) 监视可用性组;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On 可用性组动态管理视图和函数 (Transact-sql) ](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

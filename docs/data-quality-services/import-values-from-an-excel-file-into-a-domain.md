@@ -1,4 +1,5 @@
 ---
+description: 将值从 Excel 文件导入到域
 title: 将值从 Excel 文件导入到域
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf2b2f9d6b2f3ad72121db25758b2258363d8566
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431329"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
-  本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入知识库的详细信息，请参阅[在知识发现中从 Excel 文件导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  
+  本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 有关将域导入到知识库的详细信息，请参阅 [知识发现中的从 Excel 文件中导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) 。不支持导出到 excel 文件的 )  (。  
   
  您可以通过两种方式导入数据值：  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85882811"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 Excel 文件导入域值。  
   
-##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>将值从 Excel 文件导入到域中  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a> 将值从 Excel 文件导入到域中  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85882811"
   
 9. 如果电子表格中的第一行表示域名，并且所有其他行表示有效的域值，则选择 **“将第一行用作标头”** 。  
   
-10. 单击 **“确定”** 。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
+10. 单击“确定”。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
   
 11. 确认“导入完成”显示在“导入域值”对话框中****。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
   
@@ -72,10 +73,10 @@ ms.locfileid: "85882811"
   
 14. 单击 **“完成”** 将值添加到知识库。  
   
-##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>跟进：在将值从 Excel 文件导入到域后  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a> 跟进：在将值从 Excel 文件导入到域后  
  在将值导入到某个域中之后，您可以对该域执行其他域管理任务，可以执行知识发现以便向该域添加知识，或者可以向该域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="importing-synonyms"></a><a name="Synonyms"></a>导入同义词  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a> 导入同义词  
  按如下所示导入同义词：  
   
 -   首先，导入所有值，然后建立同义词连接。  
@@ -90,7 +91,7 @@ ms.locfileid: "85882811"
   
 -   如果出于任何原因不能在应用程序中手动连接这些值，则这些值将不适用于导入操作。  
   
-##  <a name="how-the-import-works"></a><a name="How"></a>导入的工作方式  
+##  <a name="how-the-import-works"></a><a name="How"></a> 导入的工作方式  
  此操作将导入下列值：  
   
  在导入操作中，DQS 按如下所示从 Excel 文件进行导入：  

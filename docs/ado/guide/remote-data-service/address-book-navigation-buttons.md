@@ -1,4 +1,5 @@
 ---
+description: 通讯簿导航按钮
 title: 通讯簿导航按钮 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452319"
 ---
 # <a name="address-book-navigation-buttons"></a>通讯簿导航按钮
 通讯簿应用程序显示网页底部的导航按钮。 通过选择数据的第一行或最后一行或与当前所选内容相邻的行，可使用导航按钮在 HTML 网格显示中浏览数据。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="navigation-sub-procedures"></a>导航 Sub 过程  
- 通讯簿应用程序包含多个过程，这些过程允许用户单击**第一个**、**下**一个、**上**一个和**最后**一个按钮来四处移动数据。  
+ 通讯簿应用程序包含多个过程，这些过程允许用户单击 **第一个**、 **下**一个、 **上**一个和 **最后** 一个按钮来四处移动数据。  
   
- 例如，单击**第一个**按钮将激活 VBScript First_OnClick Sub 过程。 此过程执行[MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)方法，使数据的第一行成为当前选定内容。 单击 "**上一步**" 按钮将激活 Last_OnClick Sub 过程，该过程调用[MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)方法，使最后一行数据成为当前选定内容。 其余的导航按钮的工作方式类似。  
+ 例如，单击 **第一个** 按钮将激活 VBScript First_OnClick Sub 过程。 此过程执行 [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) 方法，使数据的第一行成为当前选定内容。 单击 " **上一步** " 按钮将激活 Last_OnClick Sub 过程，该过程调用 [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) 方法，使最后一行数据成为当前选定内容。 其余的导航按钮的工作方式类似。  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -62,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 
 

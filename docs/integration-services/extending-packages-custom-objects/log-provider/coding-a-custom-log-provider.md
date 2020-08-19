@@ -1,4 +1,5 @@
 ---
+description: 编写自定义日志提供程序代码
 title: 编写自定义日志提供程序代码 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4f1eec14ca75ed6f878a7bdb077b899ea05993d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83543bf3963925b92f80ab42e81a0caf8d18f9c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430509"
 ---
 # <a name="coding-a-custom-log-provider"></a>编写自定义日志提供程序代码
 

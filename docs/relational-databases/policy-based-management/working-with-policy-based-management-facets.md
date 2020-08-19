@@ -1,4 +1,5 @@
 ---
+description: 使用基于策略的管理方面
 title: 使用基于策略的管理方面 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f8853222158fd4a5397e60bdffe4171cd8d66694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d785b99fd933cc0209df8ecb0674e65e0d340ea9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475589"
 ---
 # <a name="working-with-policy-based-management-facets"></a>使用基于策略的管理方面
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85774083"
  本主题中的过程要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ## <a name="viewing-and-copying-facet-states"></a>查看和复制方面状态  
- [查看 SQL Server 对象的基于策略的管理分面](../../relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)  
+ [查看 SQL Server 对象的基于策略的管理方面](../../relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)  
   
  [将基于策略的管理分面状态复制到 XML 文件中](../../relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   

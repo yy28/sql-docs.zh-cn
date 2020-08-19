@@ -1,4 +1,5 @@
 ---
+description: KEY_NAME (Transact-SQL)
 title: KEY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8d705bec832e5a0f131c242c41a29bc179c4732d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4083ba966aa24b8ec093e27afaeea80b267b939e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459719"
 ---
 # <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,11 +42,11 @@ KEY_NAME ( ciphertext | key_guid )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- ciphertext   
- 对称密钥加密的文本。 cyphertext 是 varbinary(8000) 类型   。  
+ ciphertext  
+ 对称密钥加密的文本。 cyphertext 是 varbinary(8000) 类型******。  
   
- key_guid   
- 对称密钥的 GUID。 key_guid 是 uniqueidentifier 类型   。  
+ key_guid  
+ 对称密钥的 GUID。 key_guid 是 uniqueidentifier 类型******。  
   
 ## <a name="returned-types"></a>返回类型  
  **varchar(128)**  
@@ -56,7 +57,7 @@ KEY_NAME ( ciphertext | key_guid )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. 使用 key_guid 显示对称密钥的名称  
- master 数据库包含一个名为 ##MS_ServiceMasterKey## 的对称密钥  。 下面的示例从 sys.symmetric_keys 动态管理视图获取该密钥的 GUID，并将其赋值给一个变量，然后将该变量传递到 KEY_NAME 函数，从而演示如何返回与 GUID 对应的名称。  
+ master 数据库包含一个名为 ##MS_ServiceMasterKey## 的对称密钥****。 下面的示例从 sys.symmetric_keys 动态管理视图获取该密钥的 GUID，并将其赋值给一个变量，然后将该变量传递到 KEY_NAME 函数，从而演示如何返回与 GUID 对应的名称。  
   
 ```  
 USE master;  

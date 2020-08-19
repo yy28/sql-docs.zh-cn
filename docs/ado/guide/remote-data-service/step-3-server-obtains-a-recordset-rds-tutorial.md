@@ -1,5 +1,6 @@
 ---
-title: 步骤3：服务器获取记录集（RDS 教程） |Microsoft Docs
+description: 步骤 3：服务器获取记录集（RDS 教程）
+title: 步骤3： Server (RDS 教程) 获取记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bd510ae09bf4c4d3cdc684925823381e40235c4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8da4957f44c481e2a89ca1c8c964880f1ca93fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451929"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步骤 3：服务器获取记录集（RDS 教程）
-服务器程序使用连接字符串和命令文本在数据源中查询所需的行。 ADO 通常用于检索此**记录集**，但也可以使用其他 Microsoft 数据访问接口（如 OLE DB）。  
+服务器程序使用连接字符串和命令文本在数据源中查询所需的行。 ADO 通常用于检索此 **记录集**，但也可以使用其他 Microsoft 数据访问接口（如 OLE DB）。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  自定义服务器程序可能如下所示：  
   
@@ -38,5 +39,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [步骤4：服务器返回记录集（RDS 教程）](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [步骤4： Server 返回记录集 (RDS 教程) ](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

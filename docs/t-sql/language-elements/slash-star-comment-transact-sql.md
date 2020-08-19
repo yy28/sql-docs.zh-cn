@@ -1,4 +1,5 @@
 ---
+description: 斜杠星型（块注释）(Transact-SQL)
 title: 斜杠星型（块注释）(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2407e539d30c3467c4fa6d8b87d831c190a9d00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 481701a7d2167e1d45f5aa77f715a380a63e97af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459226"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>斜杠星型（块注释）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ text_of_comment
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- text_of_comment   
+ text_of_comment**  
  是注释的文本。 它是一个或多个字符串。  
   
 ## <a name="remarks"></a>备注  

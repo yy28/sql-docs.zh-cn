@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_child_instances （Transact-sql） |Microsoft Docs
+description: sys.dm_os_child_instances (Transact-SQL)
+title: sys. dm_os_child_instances (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58830fc28bea6432e32629c43c103f2ba9cd7ad5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5bb2094b96ef90cd8fc05e6d8ace1afeec69de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489860"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "85898802"
   
 > **重要说明！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 从**dm_os_child_instances sys.databases**返回的信息可用于确定每个用户实例的状态（heart_beat），并获取可以用来创建与使用或 SQLCmd 的用户实例的连接的管道名称（instance_pipe_name） [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 只有在外部进程（例如客户端应用程序）启动了用户实例之后，您才能连接到该用户实例。 SQL 管理工具无法启动用户实例。  
+ 从 **dm_os_child_instances sys.databases** 返回的信息可用于确定 (heart_beat 的每个用户实例的状态) 并获取可用于使用或 SQLCmd 创建到用户实例的连接的管道名称 (instance_pipe_name) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 只有在外部进程（例如客户端应用程序）启动了用户实例之后，您才能连接到该用户实例。 SQL 管理工具无法启动用户实例。  
   
 > **注意：** 用户实例仅是的一项功能 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 。  
 > 
-> **注意**若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_child_instances**。  
+> **注意** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_child_instances**。  
   
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
@@ -48,15 +49,15 @@ ms.locfileid: "85898802"
 |**instance_name**|**nvarchar(128)**|该用户实例的名称。|  
 |**instance_pipe_name**|**nvarchar(260)**|创建用户实例时，便会创建与应用程序连接的命名管道。 可以在连接字符串中使用该名称以连接到该用户实例。|  
 |**os_process_id**|**Int**|该用户实例的 Windows 进程的进程号。|  
-|**os_process_creation_date**|**型**|上次启动该用户实例进程的日期和时间。|  
-|**heart_beat**|**nvarchar （5）**|该用户实例的当前状态，可以是 ALIVE 或 DEAD。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**os_process_creation_date**|**日期时间**|上次启动该用户实例进程的日期和时间。|  
+|**heart_beat**|**nvarchar (5) **|该用户实例的当前状态，可以是 ALIVE 或 DEAD。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="remarks"></a>备注  
- 有关动态管理视图的详细信息，请参阅联机丛书中的[动态管理视图和函数 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 有关动态管理视图的详细信息，请参阅联机丛书中的 [动态管理视图和函数 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [User Instances for Non-Administrators（非管理员的用户实例）](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

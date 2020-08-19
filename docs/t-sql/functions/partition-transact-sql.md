@@ -1,4 +1,5 @@
 ---
+description: $PARTITION (Transact-SQL)
 title: $PARTITION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbdc88800d34541a4ab6f66c0b63ec15e9d80e83
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 241eb35a882350a982177da3bcc94f4154f25e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459589"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +46,17 @@ ms.locfileid: "87112362"
  *database_name*  
  包含分区函数的数据库的名称。  
   
- partition_function_name   
+ partition_function_name**  
  对其应用一组分区列值的任何现有分区函数的名称。  
   
  *expression*  
- 其数据类型必须匹配或可隐式转换为其对应分区列数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 表达式也可以是当前参与 partition_function_name 的分区列的名称   。  
+ 其数据类型必须匹配或可隐式转换为其对应分区列数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 表达式也可以是当前参与 partition_function_name 的分区列的名称****。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>备注  
- $PARTITION 返回从 1 到分区函数的分区数之间的 int 值  。  
+ $PARTITION 返回从 1 到分区函数的分区数之间的 int 值****。  
   
  $PARTITION 将针对任何有效值返回分区号，无论此值当前是否存在于使用分区函数的分区表或索引中。  
   

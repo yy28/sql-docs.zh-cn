@@ -1,4 +1,5 @@
 ---
+description: ROWCOUNT_BIG (Transact-SQL)
 title: ROWCOUNT_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -21,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1d6b588a7955f51a78ae89f1d82f55ac965eabdb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2523d69bbab745f9cc8dfc206a4949f8c15c0f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459579"
 ---
 # <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回已执行的上一语句影响的行数。 该函数的功能与 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md) 类似，区别在于 ROWCOUNT_BIG 的返回类型为 bigint  。  
+  返回已执行的上一语句影响的行数。 该函数的功能与 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md) 类似，区别在于 ROWCOUNT_BIG 的返回类型为 bigint。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

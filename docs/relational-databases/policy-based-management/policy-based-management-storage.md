@@ -1,4 +1,5 @@
 ---
+description: 基于策略的管理存储
 title: 基于策略的管理存储 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b927398f565720412bbd9f15b9520a17ef0a960
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abd24579c34b11332e235d29a5f7b89a6dc183e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475629"
 ---
 # <a name="policy-based-management-storage"></a>基于策略的管理存储
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85727300"
 ## <a name="storing-policies"></a>存储策略  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括可用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的策略。 默认情况下， [!INCLUDE[ssDE](../../includes/ssde-md.md)]中未安装这些策略；不过，可以从默认安装位置 C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies\DatabaseEngine\1033 导入这些策略。  
   
- 可以使用“文件/新建”  菜单直接创建策略，然后将这些策略保存到文件中。 这样，在未连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的情况下也可以创建策略。  
+ 可以使用“文件/新建”**** 菜单直接创建策略，然后将这些策略保存到文件中。 这样，在未连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的情况下也可以创建策略。  
   
  在当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中评估的策略的策略历史记录保存在 msdb 系统表中。 不会保留应用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的其他实例、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的策略的策略历史记录。  
   

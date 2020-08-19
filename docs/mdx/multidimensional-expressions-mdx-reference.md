@@ -1,5 +1,6 @@
 ---
-title: 多维表达式（MDX）引用 |Microsoft Docs
+description: 多维表达式 (MDX) 参考
+title: MDX) 引用 (多维表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 65164f9560cb87e0bda1018469412bb4b793e3b7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e988f6864404cb7f1af4be77acc8ad0ab8e50562
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483780"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多维表达式 (MDX) 参考
 
@@ -21,7 +22,7 @@ ms.locfileid: "86970028"
     
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[MDX 语法元素 (MDX)](../mdx/mdx-syntax-elements-mdx.md)|介绍 MDX 语言中适用于 MDX 表达式、语句和脚本的各种语法元素。|  
 |[MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)|介绍定义 MDX 语言的语句、运算符和函数。|  

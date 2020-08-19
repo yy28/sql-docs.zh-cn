@@ -1,4 +1,5 @@
 ---
+description: 候选键配置文件请求选项（数据事件探查任务）
 title: 候选键配置文件请求选项（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41f3c9d4fef15a99592421b3762515a15ef33b7b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431039"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
 
@@ -38,19 +39,19 @@ ms.locfileid: "86913965"
   
 -   如果在 **KeyColumns**中选择了多个列，则该任务将计算由所有选定列组成的组合键的键强度。  
   
--   如果在 **KeyColumns** 中选择通配符 **(\*)**，则该任务将计算表或视图中的每个列的键强度。  
+-   如果在 **KeyColumns** 中选择通配符 **(\*)** ，则该任务将计算表或视图中的每个列的键强度。  
   
  例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **KeyColumns**中进行以下选择：  
   
--   在\*KeyColumns **中选择 (** ) 和 列 C。 该任务将计算列 C 的键强度，然后计算组合候选键 (A, C) 和 (B, C) 的键强度。  
+-   在\*KeyColumns **中选择 (**) 和 列 C。 该任务将计算列 C 的键强度，然后计算组合候选键 (A, C) 和 (B, C) 的键强度。  
   
--   在\*KeyColumns\*中选择 ( **) 和 (** )。 该任务将计算单个列 A、B 和 C 的键强度，然后计算组合候选键 (A, B)、(A, C) 和 (B, C) 的键强度。  
+-   在\*KeyColumns\*中选择 ( **) 和 (**)。 该任务将计算单个列 A、B 和 C 的键强度，然后计算组合候选键 (A, B)、(A, C) 和 (B, C) 的键强度。  
   
 > [!NOTE]  
 >  如果选择 (*)，则此选项可能会导致大量计算并降低任务性能。 但是，如果任务找到满足键阈值的子集，则它不会再分析其他的组合。 例如，在上述示例表中，如果任务确定列 C 是一个键，则不会再继续分析组合候选键。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“候选键配置文件请求”** ， **“请求属性”** 窗格将显示以下选项组：  
+ 对于 **“候选键配置文件请求”**， **“请求属性”** 窗格将显示以下选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **KeyColumns** 选项  
   
@@ -121,7 +122,7 @@ ms.locfileid: "86913965"
   
 |值|说明|  
 |-----------|-----------------|  
-|无 |未指定阈值。 不管键强度值如何，都会报告键强度。|  
+|**无**|未指定阈值。 不管键强度值如何，都会报告键强度。|  
 |**Specified**|在 **KeyStrengthThreshold**中指定了阈值。 仅当键强度大于阈值时，才会报告键强度。|  
 |**Exact**|未指定阈值。 仅当选定列为完全匹配的键时，才报告键强度。|  
   

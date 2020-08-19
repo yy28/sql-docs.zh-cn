@@ -1,4 +1,5 @@
 ---
+description: 处理 SMO 事件
 title: 处理 SMO 事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f913497891eb947b669cbca67912717d1e6c7f5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 79a3bcc31c8b237a93cd5d7d1d32ae425c626735
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490430"
 ---
 # <a name="handling-smo-events"></a>处理 SMO 事件
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -37,12 +39,12 @@ ms.locfileid: "86006357"
 ## <a name="event-subscription"></a>事件订阅  
  您可以通过以下方法处理事件：编写事件处理程序类，创建该类的实例，将事件处理程序分配给父对象，然后订阅事件。  
   
- 必须编写事件处理程序类才能处理事件。 事件处理程序类可以包含多个事件处理程序函数，且只有在安装事件处理程序类后才能处理事件。 事件处理程序函数从*ServerEventNotificatificationArgs*参数接收有关事件的信息，该事件可用于报告有关事件的信息。  
+ 必须编写事件处理程序类才能处理事件。 事件处理程序类可以包含多个事件处理程序函数，且只有在安装事件处理程序类后才能处理事件。 事件处理程序函数从 *ServerEventNotificatificationArgs* 参数接收有关事件的信息，该事件可用于报告有关事件的信息。  
   
  类和类中列出了可以处理的数据库和服务器事件的类型 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> 。  
   
 ## <a name="example"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>在 Visual Basic 中注册事件处理程序并订阅事件处理  

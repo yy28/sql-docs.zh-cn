@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_add_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_add_policy_category (Transact-SQL)
+title: sp_syspolicy_add_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469144"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`策略类别的名称。 *名称*为**sysname**，并且是必需的。 *名称*不能为 NULL 或空字符串。  
+`[ @name = ] 'name'` 策略类别的名称。 *名称* 为 **sysname**，并且是必需的。 *名称* 不能为 NULL 或空字符串。  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`确定是否对策略类别强制执行数据库订阅。 *mandate_database_subscriptions*是**位**值，默认值为1（已启用）。  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` 确定是否对策略类别强制执行数据库订阅。 *mandate_database_subscriptions* 是 **位** 值，默认值为 1 (启用) 。  
   
-`[ @policy_category_id = ] policy_category_id`策略类别的标识符。 *policy_category_id*是**int**，并作为 OUTPUT 返回。  
+`[ @policy_category_id = ] policy_category_id` 策略类别的标识符。 *policy_category_id* 是 **int**，并作为 OUTPUT 返回。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_add_policy_category。  

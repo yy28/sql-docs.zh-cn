@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_status_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_status_sp (Transact-SQL)
+title: sysmail_help_status_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 036fcaabc96f8f8c4688ff5643d2d9e1febff050
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53f0512a2d6d57606a146c39325692b9c3d351e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469156"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  显示数据库邮件队列的状态。 使用**sysmail_start_sp**启动数据库邮件队列，并**sysmail_stop_sp**停止数据库邮件队列。  
+  显示数据库邮件队列的状态。 使用 **sysmail_start_sp** 启动数据库邮件队列，并 **sysmail_stop_sp** 停止数据库邮件队列。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,16 +40,16 @@ sysmail_help_status_sp
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-set"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Status**|**nvarchar （7）**|数据库邮件的状态。 可能的值为 "**已启动**" 和 "**已停止**"。|  
+|**Status**|**nvarchar (7) **|数据库邮件的状态。 可能的值为 " **已启动** " 和 " **已停止**"。|  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有**sysadmin**固定服务器角色的成员才能访问此过程。  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才能访问此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例显示数据库邮件的状态。  

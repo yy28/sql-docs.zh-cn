@@ -1,4 +1,5 @@
 ---
+description: DATABASEPROPERTYEX (Transact-SQL)
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/23/2018
@@ -20,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cf74871f113453f32143145886a297a6b23e21f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ddcdc3f13b37bac0b02c44935c14a4436a7a22c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468079"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ DATABASEPROPERTYEX ( database , property )
 |---|---|---|
 |排序规则|数据库的默认排序规则名称。|排序规则名称<br /><br /> NULL：数据库未启动。<br /><br /> 基本数据类型：nvarchar(128)|  
 |ComparisonStyle|排序规则的 Windows 比较样式。 使用以下样式值生成已完成 ComparisonStyle 值的位图：<br /><br /> 忽略大小写：1<br /><br /> 忽略重音：2<br /><br /> 忽略假名：65536<br /><br /> 忽略宽度：131072<br /><br /> <br /><br /> 例如，196609 的默认值是将忽略大小写、忽略假名和忽略宽度选项合并在一起的结果。|返回比较样式。<br /><br /> 对所有二进制排序规则均返回 0。<br /><br /> 基本数据类型：int|  
-|版本|数据库版本或服务层。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 常规用途<br /><br /> 业务关键<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium<br /><br /> 系统（针对 master 数据库）<br /><br /> NULL：数据库未启动。<br /><br /> 基本数据类型：nvarchar(64)|  
+|版本|数据库版本或服务层。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 常规用途<br /><br /> 业务关键<br /><br /> 基本<br /><br /> 标准<br /><br /> Premium<br /><br /> 系统（针对 master 数据库）<br /><br /> NULL：数据库未启动。<br /><br /> 基本数据类型：nvarchar(64)|  
 |IsAnsiNullDefault|数据库遵循 ISO 规则，允许 Null 值。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int|  
 |IsAnsiNullsEnabled|所有与 Null 的比较将取值为未知。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int|  
 |IsAnsiPaddingEnabled|在比较或插入前，字符串将被填充到相同长度。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int|  

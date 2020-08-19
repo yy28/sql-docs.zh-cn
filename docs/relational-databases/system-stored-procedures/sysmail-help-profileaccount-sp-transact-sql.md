@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_profileaccount_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_profileaccount_sp (Transact-SQL)
+title: sysmail_help_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f27384e614a929cc149d8ae48355fb75a4ce301b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469119"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出与一个或多个数据库邮件配置文件相关联的帐户。  
     
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,16 +44,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id`要列出的配置文件的配置文件 ID。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_id = ] profile_id` 要列出的配置文件的配置文件 ID。 *profile_id* 的值为 **int**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'`要列出的配置文件的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_name = ] 'profile_name'` 要列出的配置文件的配置文件名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @account_id = ] account_id`要列出的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 当*account_id*和*account_name*均为 NULL 时，将列出配置文件中的所有帐户。  
+`[ @account_id = ] account_id` 要列出的帐户 ID。 *account_id* 的值为 **int**，默认值为 NULL。 当 *account_id* 和 *account_name* 均为 NULL 时，将列出配置文件中的所有帐户。  
   
-`[ @account_name = ] 'account_name'`要列出的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 当*account_id*和*account_name*均为 NULL 时，将列出配置文件中的所有帐户。  
+`[ @account_name = ] 'account_name'` 要列出的帐户的名称。 *account_name* 的默认值为 **sysname**，默认值为 NULL。 当 *account_id* 和 *account_name* 均为 NULL 时，将列出配置文件中的所有帐户。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  返回包含以下列的结果集。  
@@ -66,12 +67,12 @@ sysmail_help_profileaccount_sp
 |**sequence_number**|**int**|配置文件中的帐户的序号。|  
   
 ## <a name="remarks"></a>备注  
- 如果未指定*profile_id*或*profile_name* ，则此存储过程将返回实例中的每个配置文件的信息。  
+ 如果未指定 *profile_id* 或 *profile_name* ，则此存储过程将返回实例中的每个配置文件的信息。  
   
- 存储过程**sysmail_help_profileaccount_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_help_profileaccount_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  **A. 按名称列出特定配置文件的帐户**  

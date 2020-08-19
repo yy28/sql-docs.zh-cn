@@ -1,4 +1,5 @@
 ---
+description: LEAD (Transact-SQL)
 title: LEAD (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4660d84e45ae092f97c08bd472052d8ed6a35f3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: aec9fccaeb0ba0a6a0fd67e575bbc1a7877fad72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459687"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,19 +45,19 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 
 ## <a name="arguments"></a>参数
  *scalar_expression*  
- 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 scalar_expression 不能为分析函数  。  
+ 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 scalar_expression 不能为分析函数**。  
   
  *offset*  
- 从在其中获取值的当前行前移的行数。 如果未指定，则默认值为 1。 offset 可以是列、子查询或其他表达式，它们的计算值为正整数，或可隐式转换为 bigint   。 offset 不能是负数值或分析函数  。  
+ 从在其中获取值的当前行前移的行数。 如果未指定，则默认值为 1。 offset 可以是列、子查询或其他表达式，它们的计算值为正整数，或可隐式转换为 bigint******。 offset 不能是负数值或分析函数**。  
   
- default   
- 偏移量  超出分区范围时返回的值。 如果未指定默认值，则返回 NULL。 default 可以是列、子查询或其他表达式，但它不能是分析函数  。 default 的类型与 scalar_expression 的类型必须兼容   。
+ *default*  
+ 偏移量** 超出分区范围时返回的值。 如果未指定默认值，则返回 NULL。 default 可以是列、子查询或其他表达式，但它不能是分析函数**。 default 的类型与 scalar_expression 的类型必须兼容****。
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序  。 当指定 partition_by_clause 时，它确定每个分区中数据的顺序  。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序  。 当指定 partition_by_clause 时，它确定每个分区中数据的顺序**。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 指定 scalar_expression 的数据类型  。 如果 scalar_expression 可以为 null 或 default 被设置为 NULL，则返回 NULL   。  
+ 指定 scalar_expression 的数据类型**。 如果 scalar_expression 可以为 null 或 default 被设置为 NULL，则返回 NULL****。  
   
  LEAD 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
@@ -169,7 +170,7 @@ Year Quarter  SalesQuota  NextQuota  Diff
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [LAG (Transact-SQL)](../../t-sql/functions/lag-transact-sql.md)  
+ [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
 

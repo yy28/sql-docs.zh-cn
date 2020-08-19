@@ -1,4 +1,5 @@
 ---
+description: FILE_ID (Transact-SQL)
 title: FILE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c3d6ced05acfdac106897b7fd5abf438d8eac6c7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5d3d2d24a9f6c3dc206c550fc780105ad36f4d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468039"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,18 +49,18 @@ FILE_ID ( file_name )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-file_name   
-类型 sysname  的表达式，表示文件的逻辑名称，文件 ID 值 `FILE_ID` 将返回此逻辑名称。  
+file_name  
+类型 sysname**** 的表达式，表示文件的逻辑名称，文件 ID 值 `FILE_ID` 将返回此逻辑名称。  
   
 ## <a name="return-types"></a>返回类型  
 **smallint**  
   
 ## <a name="remarks"></a>备注  
-file_name  对应于 sys.master_files 或 sys.database_files 目录视图的 name 列中所显示的逻辑文件名。  
+file_name** 对应于 sys.master_files 或 sys.database_files 目录视图的 name 列中所显示的逻辑文件名。  
 
-如果 file_name`FILE_ID``NULL` 不对应当前数据库组件文件的逻辑名称，*将返回*。
+如果 file_name** 不对应当前数据库组件文件的逻辑名称，`FILE_ID` 将返回 `NULL`。
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，分配给全文目录的文件标识号大于 32767。 因为 `FILE_ID` 函数具有 smallint  返回类型，`FILE_ID` 将不支持全文文件。 改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，分配给全文目录的文件标识号大于 32767。 因为 `FILE_ID` 函数具有 smallint**** 返回类型，`FILE_ID` 将不支持全文文件。 改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
 此示例返回 `AdventureWorks_Data` 文件的文件 ID 值，它是 `ADVENTUREWORKS2012` 数据库的组件文件。  

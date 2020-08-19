@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYCERT (Transact-SQL)
 title: ENCRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 801d2af4bc83b974761c1bd11982e0943460cf92
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6368b5a1e030a8abd5bc1512a653d5f05631ccda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459733"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,9 +45,9 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
 
 ## <a name="arguments"></a>参数
 _certificate\_ID_  
-数据库中证书的 ID。 int  。  
+数据库中证书的 ID。 int。  
   
-cleartext   
+cleartext  
 将使用证书进行加密的数据字符串。  
   
 **\@cleartext**  
@@ -60,9 +61,9 @@ cleartext
 * **nchar**
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8000 个字节）  。  
+varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 此函数使用证书的公钥对数据进行加密。 只能使用相应的私钥对加密文本进行解密。 相较使用对称密钥进行加密和解密的方法，这些非对称转换的开销更大。 因此，建议在处理大型数据集时不要使用非对称加密。
   
 ## <a name="examples"></a>示例  

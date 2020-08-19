@@ -1,4 +1,5 @@
 ---
+description: 使用语义搜索来查找相似和相关文档
 title: 使用语义搜索来查找相似和相关文档
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 42dc892fcf33a052105ccbfaeea6fbaf09a41895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b0df002c1d170061d6db8b6ee1ba53611e869603
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498578"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用语义搜索来查找相似和相关文档
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85730180"
 > [!IMPORTANT]  
 >  针对的列必须启用了全文索引和语义索引。  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> 示例：查找与另一个文档最相似的文档  
  以下示例从 AdventureWorks2012 示例数据库的 HumanResources.JobCandidate 表中检索与按 \@CandidateID 指定的候选人最相似的 10 个候选人。  
   
 ```scr  
@@ -60,7 +61,7 @@ GO
 > [!IMPORTANT]  
 >  针对的列必须启用了全文索引和语义索引。  
   
-###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a> 示例：查找在文档间最相似的关键短语  
  以下示例检索 5 个关键短语，它们在 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表中的两个指定候选人间具有最高的相似性得分。  
   
 ```sql  

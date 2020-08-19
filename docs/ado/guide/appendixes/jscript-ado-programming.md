@@ -1,4 +1,5 @@
 ---
+description: JScript ADO 编程
 title: JScript ADO 编程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b9fe403c0d51d53e79d978ff573556b73f5aec7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f1cad0a2717bb652759a7c8b0d60efc4b3f4541
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444559"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -39,7 +40,7 @@ ms.locfileid: "82760493"
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>在 JScript 中创建 ADO 对象  
- 您必须改用**CreateObject**函数调用：  
+ 您必须改用 **CreateObject** 函数调用：  
   
 ```javascript
 var Rs1;  
@@ -47,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript 示例  
- 下面的代码是一个在 Active Server Page （ASP）文件中打开**Recordset**对象的 JScript 服务器端编程的一般示例：  
+ 下面的代码是 Active Server 页面中 JScript 服务器端编程的一般示例， (ASP) 文件，用于打开 **Recordset** 对象：  
   
 ```javascript
 <%  @LANGUAGE="JScript" %>  
