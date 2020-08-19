@@ -1,4 +1,5 @@
 ---
+description: 元数据 - 参数和结果
 title: 参数和结果元数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,11 +14,12 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d9b4e8161abdade07a66eb742683bec0b057ce3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3beab01b2c2b8493bf598d508b7b1b37152e1f34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420581"
 ---
 # <a name="metadata---parameter-and-result"></a>元数据 - 参数和结果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,11 +48,11 @@ ms.locfileid: "86004322"
   
  有时，值范围中存在不连贯性。 例如，8,10..16 中缺少 9。 这是因为当小数精度大于零时添加了小数点。  
   
- **datetime2**作为**smalldatetime**和**datetime**的 typename 返回，因为驱动程序使用此类型作为将所有**SQL_TYPE_TIMESTAMP**值传输到服务器的通用类型。  
+ **datetime2** 作为 **smalldatetime** 和 **datetime** 的 typename 返回，因为驱动程序使用此类型作为将所有 **SQL_TYPE_TIMESTAMP** 值传输到服务器的通用类型。  
   
- SQL_CA_SS_VARIANT_SQL_TYPE 是一个新的描述符字段。 此字段已添加到 IRD 和 IPD，以使应用程序能够指定与**sqlvariant** （SQL_SSVARIANT）列和参数关联的值类型  
+ SQL_CA_SS_VARIANT_SQL_TYPE 是一个新的描述符字段。 此字段已添加到 IRD 和 IPD，以使应用程序能够指定与 **sqlvariant** (关联的值类型 SQL_SSVARIANT) 列和参数  
   
- SQL_CA_SS_SERVER_TYPE 是一个新的仅适用于 IPD 的字段，用于使应用程序能够控制如何将作为 SQL_TYPE_TYPETIMESTAMP（或具有 C 类型 SQL_C_TYPE_TIMESTAMP 的 SQL_SS_VARIANT）绑定的参数的值发送到服务器。 如果在调用 SQLExecute 或 SQLExecDirect 时，SQL_DESC_CONCISE_TYPE 是 SQL_TYPE_TIMESTAMP （或 SQL_SS_VARIANT，而 C 类型为 SQL_C_TYPE_TIMESTAMP），则 SQL_CA_SS_SERVER_TYPE 的值将确定参数值的表格格式数据流（TDS）类型，如下所示：  
+ SQL_CA_SS_SERVER_TYPE 是一个新的仅适用于 IPD 的字段，用于使应用程序能够控制如何将作为 SQL_TYPE_TYPETIMESTAMP（或具有 C 类型 SQL_C_TYPE_TIMESTAMP 的 SQL_SS_VARIANT）绑定的参数的值发送到服务器。 如果在调用 SQLExecute 或 SQLExecDirect 时，SQL_DESC_CONCISE_TYPE SQL_TYPE_TIMESTAMP (或 SQL_SS_VARIANT 并且 C 类型 SQL_C_TYPE_TIMESTAMP) ，则 SQL_CA_SS_SERVER_TYPE 的值将确定表格格式数据流 (的参数值类型，如下所示：  
   
 |SQL_CA_SS_SERVER_TYPE 的值|SQL_DESC_PRECISION 的有效值|SQL_DESC_LENGTH 的有效值|TDS 类型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -68,12 +70,12 @@ ms.locfileid: "86004322"
   
  如果 SQL_CA_SS_SERVER_TYPE 通过调用 SQLSetDescField 进行设置，则其值必须为 SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME 或 SQL_SS_TYPE_DATETIME。 如果不是这样，将返回 SQL_ERROR 并生成具有 SQLState HY092 和消息“属性/选项标识符无效”的诊断记录。  
   
- SQL_CA_SS_SERVER_TYPE 属性可由依赖于**datetime**和**smalldatetime**支持的功能的应用程序使用，但不能由**datetime2**使用。 例如， **datetime2**要求使用**dateadd**和**datediif**函数，而**datetime**和**smalldatetime**也允许使用算术运算符。 大多数应用程序将不需要使用此属性，而且应当避免使用此属性。  
+ SQL_CA_SS_SERVER_TYPE 属性可由依赖于 **datetime** 和 **smalldatetime**支持的功能的应用程序使用，但不能由 **datetime2**使用。 例如， **datetime2** 要求使用 **dateadd** 和 **datediif** 函数，而 **datetime** 和 **smalldatetime** 也允许使用算术运算符。 大多数应用程序将不需要使用此属性，而且应当避免使用此属性。  
   
 ## <a name="information-returned-in-ird-fields"></a>在 IRD 字段中返回的信息  
  在 IRD 字段中返回以下信息：  
   
-|列名称|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|列类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

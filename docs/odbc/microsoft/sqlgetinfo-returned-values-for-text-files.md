@@ -1,4 +1,5 @@
 ---
+description: 文本文件的 SQLGetInfo 返回值
 title: SQLGetInfo 返回的文本文件的值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98dcfb671a96e9b82d7349193926e8f0f5349324
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6eac36c1a4907f0450dd54d5cb4c8dba54cc3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421691"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>文本文件的 SQLGetInfo 返回值
-下表列出了*fInfoType*参数的 C 语言 #defines 和**SQLGetInfo**返回的相应值。 可以通过将列出的 C 语言 #defines 传递到*fInfoType*参数中的**SQLGetInfo**来检索此信息。 有关**SQLGetInfo**返回的值的详细信息，请参阅[ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)。  
+下表列出了 *fInfoType* 参数的 C 语言 #defines 和 **SQLGetInfo**返回的相应值。 可以通过将列出的 C 语言 #defines 传递到*fInfoType*参数中的**SQLGetInfo**来检索此信息。 有关 **SQLGetInfo**返回的值的详细信息，请参阅 [ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**返回32位位掩码，竖线（&#124;）表示按位 or。  
+>  其中 **SQLGetInfo** 返回32位位掩码，竖线 ( # A0) 表示按位 or。  
   
 |InfoType|返回值|  
 |--------------|--------------------|  
@@ -81,7 +82,7 @@ ms.locfileid: "81298517"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|来自 Odbc 的 DSN，或 "" （如果在 Odbc 中使用驱动程序关键字）|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini 中的 DSN，如果在 Odbc.ini 中使用驱动程序关键字，则为 ""|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|当前数据库目录|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,9 +95,9 @@ ms.locfileid: "81298517"
 |SQL_DRIVER_HENV|由驱动程序管理器处理。|  
 |SQL_DRIVER_HLIB|由驱动程序管理器处理。|  
 |SQL_DRIVER_HSTMT|由驱动程序管理器处理。|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|*"4.00" （**nnnn*指定生成日期）|  
+|SQL_DRIVER_VER|*"4.00" (* *nnnn*指定生成日期) |  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +112,7 @@ ms.locfileid: "81298517"
 |SQL_GETDATA_EXTENSIONS|多个值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" （后引号）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (后退引号) |  
 |SQL_KEYWORDS|多个值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ ms.locfileid: "81298517"
 |SQL_SCROLL_OPTIONS|多个值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|全文|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ";：？/><,.!"[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @ # $% ^& * _-+ = \\ } {" ";：？/><,.!"[] &#124; "|  
 |SQL_STRING_FUNCTIONS|多个值|  
 |SQL_SUBQUERIES|多个值|  
 |SQL_SYSTEM_FUNCTIONS|0|  

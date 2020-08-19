@@ -1,5 +1,6 @@
 ---
-title: SQLGetInfo （Access 驱动程序） |Microsoft Docs
+description: SQLGetInfo（Access 驱动程序）
+title: SQLGetInfo (Access 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11e725665171b85f994e45bc071b7cd2d9f01880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421771"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo（Access 驱动程序）
 > [!NOTE]  
->  本主题提供特定于访问驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题提供特定于访问驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
- **SQLGetInfo**支持 SQL_FILE_USAGE 信息类型。 返回的值是一个16位整数，该整数指示驱动程序如何直接处理数据源中的文件：  
+ **SQLGetInfo** 支持 SQL_FILE_USAGE 信息类型。 返回的值是一个16位整数，该整数指示驱动程序如何直接处理数据源中的文件：  
   
 -   SQL_FILE_NOT_SUPPORTED-驱动程序不是单层驱动程序。  
   
@@ -123,7 +124,7 @@ ms.locfileid: "81298587"
   
  对抗  
   
- 货币  
+ CURRENCY  
   
  DATABASE  
   

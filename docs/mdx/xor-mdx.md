@@ -1,5 +1,6 @@
 ---
-title: XOR （MDX） |Microsoft Docs
+description: XOR (MDX)
+title: XOR (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b74d4ec3d92469dc0372218bfe66375c0844384e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421871"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -29,23 +30,23 @@ Expression1 XOR Expression2
 ```  
   
 #### <a name="parameters"></a>参数  
- *Expression1*  
+ Expression1  
  返回数值的有效多维表达式 (MDX) 表达式。  
   
- Expression2**  
+ Expression2  
  返回数值的有效 MDX 表达式。  
   
 ## <a name="return-value"></a>返回值  
  一个布尔值，如果一个且仅有一个参数的计算结果为**true**，则返回**true** ;否则**为 false**。  
   
 ## <a name="remarks"></a>备注  
- **XOR**运算符将两个参数都视为布尔值（0，0，为**false**; 否则为**true**），然后运算符执行逻辑异运算。 下表说明了**XOR**运算符如何执行逻辑异运算。  
+ **XOR**运算符将两个参数都视为布尔值 (零，0，为**false**;否则，**在**运算符执行逻辑异运算之前) 。 下表说明了 **XOR** 运算符如何执行逻辑异运算。  
   
-|*Expression1*|Expression2**|返回值|  
+|Expression1|Expression2|返回值|  
 |-------------------|-------------------|------------------|  
-|**true**|true |**false**|  
-|true |**false**|true |  
-|**false**|**true**|true |  
+|true|true|**false**|  
+|true|**false**|true|  
+|**false**|true|true|  
 |**false**|**false**|**false**|  
   
 ## <a name="see-also"></a>另请参阅  

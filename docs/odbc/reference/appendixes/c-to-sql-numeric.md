@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL：数字
 title: 从 C 到 SQL：数值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbc0a994ef95f2deca29c8a4cbb06f3167b0433f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 111d2bedf6b988255a569587fd766406b6b4176a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421511"
 ---
 # <a name="c-to-sql-numeric"></a>从 C 到 SQL：数字
 数字 ODBC C 数据类型的标识符为：  
@@ -52,7 +53,7 @@ ms.locfileid: "81304728"
   
  SQL_C_UBIGINT  
   
- 下表显示了可转换数值 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可转换数值 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅 [将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
@@ -63,7 +64,7 @@ ms.locfileid: "81304728"
 |SQL_BIT|数据为0或1<br /><br /> 数据大于0，小于2，并且不等于1<br /><br /> 数据小于0或大于等于2|不适用<br /><br /> 22001<br /><br /> 22003|  
 |SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|数据不会被截断。<br /><br /> 数据被截断。|不适用<br /><br /> 22015|  
   
- [a] 仅支持精确数值数据类型（SQL_C_STINYINT、SQL_C_UTINYINT、SQL_C_SSHORT、SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG 或 SQL_C_NUMERIC）的转换。 它们不受近似数值数据类型（SQL_C_FLOAT 或 SQL_C_DOUBLE）的支持。 不能将确切的数字 C 数据类型转换为其间隔精度不是单个字段的间隔 SQL 类型。  
+ [a] 仅支持 (SQL_C_STINYINT、SQL_C_UTINYINT、SQL_C_SSHORT、SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG 或 SQL_C_NUMERIC) 的精确数值数据类型的转换。 它们不支持近似数值数据类型 (SQL_C_FLOAT 或 SQL_C_DOUBLE) 。 不能将确切的数字 C 数据类型转换为其间隔精度不是单个字段的间隔 SQL 类型。  
   
  [b] 为 "n/a" 的情况，驱动程序可以选择在存在小数部分截断时返回 SQL_SUCCESS_WITH_INFO 和01S07。  
   

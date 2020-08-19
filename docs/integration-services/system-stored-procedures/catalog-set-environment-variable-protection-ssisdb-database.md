@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_protection（SSISDB 数据库）
 title: catalog.set_environment_variable_protection（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f83c5569ef43ee78b2e1054faf26bf0b9867f3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e5e93263d37acf72782f2b9a2fe3ef3f7c5d29d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422151"
 ---
 # <a name="catalogset_environment_variable_protection-ssisdb-database"></a>catalog.set_environment_variable_protection（SSISDB 数据库）
 
@@ -42,11 +43,11 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
  [ @environment_name = ] environment_name   
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @variable_name = ] variable_name   
- 环境变量的名称。 variable_name 为 nvarchar(128)   。  
+ [ @variable_name = ] variable_name**  
+ 环境变量的名称。 variable_name 为 nvarchar(128)******。  
   
- [ @sensitive = ] sensitive   
- 指示变量是否包含敏感值。 使用值 `1` 表示环境变量的值是敏感值，值为 `0` 表示该值不是敏感值。 存储敏感值时将对其加密。 不敏感的值以纯文本形式存储。 sensitive 参数为 bit   。  
+ [ @sensitive = ] sensitive**  
+ 指示变量是否包含敏感值。 使用值 `1` 表示环境变量的值是敏感值，值为 `0` 表示该值不是敏感值。 存储敏感值时将对其加密。 不敏感的值以纯文本形式存储。 sensitive 参数为 bit******。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

@@ -1,5 +1,6 @@
 ---
-title: SQLGetInfo （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+description: SQLGetInfo（Visual FoxPro ODBC 驱动程序）
+title: SQLGetInfo (Visual FoxPro ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370661a9a0ade5c5159f93a9af37c17b675032c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421671"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
  ODBC API 一致性：级别1  
   
- 返回有关 Visual FoxPro ODBC 驱动程序的常规信息以及与连接句柄*hdbc*关联的数据源。 以下列表显示了 Visual FoxPro ODBC 驱动程序为每个*fInfoType*参数返回的值，以及有关返回值的注释。  
+ 返回有关 Visual FoxPro ODBC 驱动程序的常规信息以及与连接句柄 *hdbc*关联的数据源。 以下列表显示了 Visual FoxPro ODBC 驱动程序为每个 *fInfoType* 参数返回的值，以及有关返回值的注释。  
   
  有关详细信息，请参阅*ODBC 程序员参考*中的[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) 。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "81295187"
   
  SQL_CONCAT_NULL_BEHAVIOR 返回 SQL_CB_NULL。  
   
- SQL_CONVERT_BIGINT 返回0。 Visual FoxPro ODBC 驱动程序不支持*BigInt*。  
+ SQL_CONVERT_BIGINT 返回0。 Visual FoxPro ODBC 驱动程序不支持 *BigInt*。  
   
  SQL_CONVERT_BINARY 返回0。  
   
@@ -97,11 +98,11 @@ ms.locfileid: "81295187"
  SQL_CURSOR_ROLLBACK_BEHAVIOR 返回 SQL_CB_PRESERVE。  
   
 ## <a name="d"></a>D  
- SQL_DATA_SOURCE_NAME 返回作为 DSN 传递到[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)或[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)的值。如果未指定任何 DSN，则返回空字符串。  
+ SQL_DATA_SOURCE_NAME 返回作为 DSN 传递到 [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)或 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)的值。如果未指定任何 DSN，则返回空字符串。  
   
  SQL_DATA_SOURCE_READ_ONLY 返回 "N"。  
   
- 如果数据源是[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)，SQL_DATABASE_NAME 将返回当前数据库的完整 UNC 路径。 如果数据源连接到[表](../../odbc/microsoft/visual-foxpro-terminology.md)的某个目录，则该函数将返回该目录的路径。  
+ 如果数据源是 [数据库](../../odbc/microsoft/visual-foxpro-terminology.md)，SQL_DATABASE_NAME 将返回当前数据库的完整 UNC 路径。 如果数据源连接到 [表](../../odbc/microsoft/visual-foxpro-terminology.md)的某个目录，则该函数将返回该目录的路径。  
   
  SQL_DBMS_NAME 返回 "Visual FoxPro"。  
   
@@ -117,9 +118,9 @@ ms.locfileid: "81295187"
   
  SQL_DRIVER_HSTMT 由驱动程序管理器实现。  
   
- SQL_DRIVER_NAME 将返回 "vfpodbc"。  
+ SQL_DRIVER_NAME 返回 "vfpodbc.dll"。  
   
- SQL_DRIVER_ODBC_VER 返回 "02.50" （SQL_SPEC_MAJOR SQL_SPEC_MINOR）。  
+ SQL_DRIVER_ODBC_VER 返回 "02.50" (SQL_SPEC_MAJOR SQL_SPEC_MINOR) 。  
   
  SQL_DRIVER_VER 将返回 "01.00.0000"。  
   
@@ -143,7 +144,7 @@ ms.locfileid: "81295187"
   
 -   SQL_FD_FETCH_BOOKMARK。  
   
- 对于数据库（dbc 文件）和可用表（.dbf 文件）数据源，SQL_FILE_USAGE 返回 SQL_FILE_QUALIFIER。  
+ 对于数据库 ( dbc 文件) ，SQL_FILE_USAGE 返回 SQL_FILE_QUALIFIER，并为免费表 ( 文件) 数据源。  
   
 ## <a name="g-h"></a>G-H  
  SQL_GETDATA_EXENSIONS 返回：  
@@ -298,9 +299,9 @@ ms.locfileid: "81295187"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION 返回 SQL_QL_START。  
   
- SQL_QUALIFIER_NAME_SEPARATOR 返回 "！" 或 "\\"。 对于连接到[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)的数据源，数据库和表之间的分隔符为 "！";\\对于作为[自由表](../../odbc/microsoft/visual-foxpro-terminology.md)目录的数据源，则为 ""。  
+ SQL_QUALIFIER_NAME_SEPARATOR 返回 "！" 或 " \\ "。 对于连接到 [数据库](../../odbc/microsoft/visual-foxpro-terminology.md)的数据源，数据库和表之间的分隔符为 "！"; \\ 对于作为 [自由表](../../odbc/microsoft/visual-foxpro-terminology.md)目录的数据源，则为 ""。  
   
- SQL_QUALIFIER_TERM 返回 "database" 或 "directory"。 限定符是连接到[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)的数据源的 "数据库"，而 "目录" 用于作为[自由表](../../odbc/microsoft/visual-foxpro-terminology.md)目录的数据源。  
+ SQL_QUALIFIER_TERM 返回 "database" 或 "directory"。 限定符是连接到 [数据库](../../odbc/microsoft/visual-foxpro-terminology.md)的数据源的 "数据库"，而 "目录" 用于作为 [自由表](../../odbc/microsoft/visual-foxpro-terminology.md)目录的数据源。  
   
  SQL_QUALIFIER_USAGE 不支持 SQL_QU_PRIVILEGE_DEFINITION;它将返回 SQL_QU_DML_STATEMENT 或 SQL_QU_TABLE_DEFINITION。  
   
@@ -314,7 +315,7 @@ ms.locfileid: "81295187"
   
  SQL_SCROLL_OPTIONS 返回 SQL_SO_STATIC 或 SQL_SO_READONLY。  
   
- SQL_SEARCH_PATTERN_ESCAPE 返回 "\\"。  
+ SQL_SEARCH_PATTERN_ESCAPE 返回 " \\ "。  
   
  SQL_SERVER_NAME 返回 ""。  
   
@@ -454,4 +455,4 @@ ms.locfileid: "81295187"
 ## <a name="u-z"></a>U-Z  
  SQL_UNION 返回 SQL_U_UNION 或 SQL_U_UNION_ALL。  
   
- SQL_USER_NAME 返回\<空白>。
+ SQL_USER_NAME 返回 \<blank> 。

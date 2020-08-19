@@ -1,4 +1,5 @@
 ---
+description: “维护计划”节点（对象资源管理器）
 title: “维护计划”节点（对象资源管理器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: af9562d8e59d3690dd8a0d949945cdfec524d29f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae8337b89ea4dce9f2997bc2a3acaefb181d694d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420821"
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>“维护计划”节点（对象资源管理器）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

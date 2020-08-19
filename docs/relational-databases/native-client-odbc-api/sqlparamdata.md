@@ -1,4 +1,5 @@
 ---
+description: SQLParamData
 title: SQLParamData |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,18 +14,19 @@ ms.assetid: 92349482-ea22-4a6a-8484-e9c6566794fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90b06b1f7d8f1aaf4231a05af659140df1327f43
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f1e81c4e02d0c16caa0cf46d99f731347a639960
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423999"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  当 SQLParamData 返回与表值参数关联的*ValuePtrPtr*时，应用程序应调用 SQLPutData 与*StrLen_Or_Ind*。 如果*StrLen_Or_Ind*的值大于0，则表示应用程序已准备就绪，可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 收集下一个表值参数行的参数数据。 如果*StrLen_Or_Ind*的值为0，则表示表值参数没有更多的数据行。 有关详细信息，请参阅[表值参数和列值的绑定和数据传输](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
+  当 SQLParamData 返回与表值参数关联的 *ValuePtrPtr* 时，应用程序应调用 SQLPutData 与 *StrLen_Or_Ind*。 如果 *StrLen_Or_Ind* 的值大于0，则表示应用程序已准备就绪，可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 收集下一个表值参数行的参数数据。 如果 *StrLen_Or_Ind* 的值为0，则表示表值参数没有更多的数据行。 有关详细信息，请参阅 [表值参数和列值的绑定和数据传输](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅 [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706)   

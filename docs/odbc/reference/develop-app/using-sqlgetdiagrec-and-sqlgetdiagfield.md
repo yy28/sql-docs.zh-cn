@@ -1,4 +1,5 @@
 ---
+description: 使用 SQLGetDiagRec 和 SQLGetDiagField
 title: 使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69a17086253b40469b0ed98cb6f870f319f03f52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 402cb326ac91e13db0d3ab5421bd5ddb097fb3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421431"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
-应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**来检索诊断信息。 这些函数接受环境、连接、语句或描述符句柄，并从上次使用该句柄的函数返回诊断。 使用该句柄调用新的函数时，将丢弃在特定句柄上记录的诊断。 如果函数返回了多个诊断记录，应用程序将多次调用这些函数;通过使用 SQL_DIAG_NUMBER 选项为标头记录（记录0）调用**SQLGetDiagField**来检索状态记录总数。  
+应用程序调用 **SQLGetDiagRec** 或 **SQLGetDiagField** 来检索诊断信息。 这些函数接受环境、连接、语句或描述符句柄，并从上次使用该句柄的函数返回诊断。 使用该句柄调用新的函数时，将丢弃在特定句柄上记录的诊断。 如果函数返回了多个诊断记录，应用程序将多次调用这些函数;通过使用 SQL_DIAG_NUMBER 选项为标头记录 (记录 0) 调用 **SQLGetDiagField** 来检索状态记录总数。  
   
- 应用程序通过调用**SQLGetDiagField**并指定要检索的字段来检索各个诊断字段。 某些诊断字段对某些类型的句柄没有任何意义。 有关诊断字段及其含义的列表，请参阅[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。  
+ 应用程序通过调用 **SQLGetDiagField** 并指定要检索的字段来检索各个诊断字段。 某些诊断字段对某些类型的句柄没有任何意义。 有关诊断字段及其含义的列表，请参阅 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 函数说明。  
   
- 应用程序通过调用**SQLGetDiagRec**检索单个调用中的 SQLSTATE、本机错误代码和诊断消息;**SQLGetDiagRec**不能用于从标头记录中检索信息。  
+ 应用程序通过调用 **SQLGetDiagRec**检索单个调用中的 SQLSTATE、本机错误代码和诊断消息; **SQLGetDiagRec** 不能用于从标头记录中检索信息。  
   
- 例如，下面的代码提示用户提供一条 SQL 语句并执行该语句。 如果返回了任何诊断信息，则它会调用**SQLGetDiagField**来获取状态记录数和**SQLGetDiagRec** ，以获取 SQLSTATE、本机错误代码和这些记录中的诊断消息。  
+ 例如，下面的代码提示用户提供一条 SQL 语句并执行该语句。 如果返回了任何诊断信息，则它会调用 **SQLGetDiagField** 来获取状态记录数和 **SQLGetDiagRec** ，以获取 SQLSTATE、本机错误代码和这些记录中的诊断消息。  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

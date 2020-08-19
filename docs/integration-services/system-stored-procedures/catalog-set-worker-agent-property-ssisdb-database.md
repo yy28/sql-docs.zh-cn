@@ -1,4 +1,5 @@
 ---
+description: catalog.set_worker_agent_property（SSISDB 数据库）
 title: catalog.set_worker_agent_property（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 121c39ddc217cbdc178ca8ea8221081ce33eee4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422111"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property（SSISDB 数据库）
 
@@ -36,13 +37,13 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 
 ## <a name="arguments"></a>参数
 [@WorkerAgentId =] *WorkerAgentId*  
-Scale Out Worker 的 Worker 代理 ID。 WorkerAgentId 为 uniqueidentifier   。
+Scale Out Worker 的 Worker 代理 ID。 WorkerAgentId 为 uniqueidentifier******。
 
 [@PropertyName =] *PropertyName*  
-属性的名称。 *PropertyName* 为 **nvarchar(256)** 。
+属性的名称。 *PropertyName* 为 **nvarchar(256)**。
 
 [@PropertyValue =] *PropertyValue*  
-属性的值。 *PropertyValue* 为 **nvarchar(max)** 。
+该属性的值。 *PropertyValue* 为 **nvarchar(max)**。
 
 ## <a name="remarks"></a>备注
 有效的属性名称为 **DisplayName**、**Description**、**Tags**。

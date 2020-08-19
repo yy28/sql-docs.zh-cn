@@ -1,5 +1,6 @@
 ---
-title: MSmerge_metadataaction_request （Transact-sql） |Microsoft Docs
+description: MSmerge_metadataaction_request (Transact-SQL)
+title: MSmerge_metadataaction_request (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aee900d9f34fb1e8f64db3687d6121a72a9e3b96
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1266bd0c4a8af020a3e29900c2d82d881010a4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423291"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_metadataaction_request**表为所需的每个补偿操作存储一行。 使用 Web 同步时，如果发生错误且必须重试同步，则会在**MSmerge_metadataaction_request**中生成一个条目。 在后续合并的上载阶段，将从此表中检索对属于进行同步的发布的所有项目的请求，然后将其上载。 成功完成同步后，会删除**MSmerge_metadataaction_request**表中对应的行。 此表存储在发布服务器上的发布数据库中，并存储在订阅服务器上的订阅数据库中。  
+  **MSmerge_metadataaction_request**表为所需的每个补偿操作存储一行。 使用 Web 同步时，如果发生错误且必须重试同步，则会在 **MSmerge_metadataaction_request**中生成一个条目。 在后续合并的上载阶段，将从此表中检索对属于进行同步的发布的所有项目的请求，然后将其上载。 成功完成同步后，会删除 **MSmerge_metadataaction_request** 表中对应的行。 此表存储在发布服务器上的发布数据库中，并存储在订阅服务器上的订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -38,8 +39,8 @@ ms.locfileid: "85889732"
 |**经过**|**int**|仅供内部使用。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制视图 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [合并复制的 Web 同步](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

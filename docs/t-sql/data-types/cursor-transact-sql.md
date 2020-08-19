@@ -1,4 +1,5 @@
 ---
+description: cursor (Transact-SQL)
 title: cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2dcc2f69223c4d4c3a700ade7d7b6da5417f3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc1f3981733712758230287c770c47dd0bf43562
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422901"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,18 +28,18 @@ ms.locfileid: "85732874"
 这是变量或存储过程 OUTPUT 参数的一种数据类型，这些参数包含对游标的引用。
   
 ## <a name="remarks"></a>备注  
-有些操作可以引用那些具有 cursor 数据类型的变量和参数，这些操作包括  ：
--   DECLARE \@local_variable 和 SET \@local_variable 语句。  
+有些操作可以引用那些具有 cursor 数据类型的变量和参数，这些操作包括****：
+-   DECLARE \@local_variable 和 SET \@local_variable 语句 。  
 -   OPEN、FETCH、CLOSE 及 DEALLOCATE 游标语句。  
 -   存储过程输出参数。  
 -   CURSOR_STATUS 函数。  
--   sp_cursor_list、sp_describe_cursor、sp_describe_cursor_tables 以及 sp_describe_cursor_columns 系统存储过程     。  
+-   sp_cursor_list、sp_describe_cursor、sp_describe_cursor_tables 以及 sp_describe_cursor_columns 系统存储过程****************。  
   
-sp_cursor_list 和 sp_describe_cursor 的 cursor_name 输出列返回游标变量的名称    。
+sp_cursor_list 和 sp_describe_cursor 的 cursor_name 输出列返回游标变量的名称************。
   
-使用 cursor 数据类型创建的所有变量都可以为 Null  。
+使用 cursor 数据类型创建的所有变量都可以为 Null****。
   
-对于 CREATE TABLE 语句中的列，不能使用 cursor 数据类型  。
+对于 CREATE TABLE 语句中的列，不能使用 cursor 数据类型****。
   
 ## <a name="see-also"></a>另请参阅
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  

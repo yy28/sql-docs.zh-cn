@@ -1,4 +1,5 @@
 ---
+description: 使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
 title: 使用内置函数验证、查询和更改 JSON 数据
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9819b334dfa5b6c9d2b9a91fb80293a40b4a4e67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76644f677a03f34312e6731f5a973167313ad22a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424089"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -174,7 +175,7 @@ FROM Families f
 | familyName | childGivenName | childFirstName | petName |
 | --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
-| AndersenFamily | Jesse | Merriam | 卷影 |
+| AndersenFamily | Jesse | Merriam | Shadow |
 | AndersenFamily | Lisa | Miller| `NULL` |
 
 根文档与两个 `children` 行进行了联接，这两个行由生成两个行（或元组）的首次 `OPENJSON(children)` 调用返回。 然后，使用 `OUTER APPLY` 运算符将每行与由 `OPENJSON(pets)` 生成的新行进行联接。 Jesse 有两只宠物，因此 `(AndersenFamily, Jesse, Merriam)` 与为 Goofy 和 Shadow 生成的两行进行了联接。 Lisa 没有宠物，因此 `OPENJSON(pets)` 没有为该元组返回的任何行。 但是，由于我们使用的是 `OUTER APPLY`，因此这列的结果是 `NULL`。 如果我们使用 `CROSS APPLY` 而不是 `OUTER APPLY`，则不会在结果中返回 Lisa，因为没有可以与该元组联接的任何宠物行。
@@ -243,7 +244,7 @@ HAVING SUM(SubTotal)>1000
 ```  
   
 ##  <a name="update-property-values-in-json-text-by-using-the-json_modify-function"></a><a name="MODIFY"></a> 使用 JSON_MODIFY 函数更新 JSON 文本中的属性值  
-JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串  。  
+JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串****。  
   
 以下示例将更新包含 JSON 的变量中的 JSON 属性的值。  
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.operations（SSISDB 数据库）
 title: catalog.operations（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46f17290ddc026d66910e4a28c1ea36d7ad0286b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 231fa098ababe70c8a375e3f3f357bcbe90d6f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422011"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations（SSISDB 数据库）
 
@@ -36,8 +37,8 @@ ms.locfileid: "86912463"
 |created_time|**datetimeoffset**|创建操作的时间。|  
 |object_type|**smallint**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
-|object_name|nvarchar(260) |对象的名称。|  
-|status|**int**|操作状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|object_name|**nvarchar(260)**|对象的名称。|  
+|状态|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|开始操作的时间。|  
 |end_time|**datetimeoffsset**|操作结束的时间。|  
 |caller_sid|**varbinary(85)**|如果是使用 Windows 身份验证进行登录的，则为用户的安全 ID (SID)。|  

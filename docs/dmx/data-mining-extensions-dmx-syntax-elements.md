@@ -1,5 +1,6 @@
 ---
-title: 数据挖掘扩展插件（DMX）语法元素 |Microsoft Docs
+description: 数据挖掘扩展插件 (DMX) 语法元素
+title: 数据挖掘扩展插件 (DMX) 语法元素 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,26 +9,26 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c0e61dfab45640f9f06362405c4c37dbb9b95181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422271"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>数据挖掘扩展插件 (DMX) 语法元素
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用各种语法元素来定义可用于生成、管理和使用数据挖掘模型的数据挖掘扩展插件（DMX）语句。 下面各部分对这些语法元素进行了说明。  
+  在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用多种语法元素来定义数据挖掘扩展插件 (DMX) 语句，这些扩展插件可用于生成、管理和使用数据挖掘模型。 下面各部分对这些语法元素进行了说明。  
   
 ## <a name="in-this-section"></a>本节内容  
- [&#40;DMX&#41;的标识符](../dmx/identifiers-dmx.md)  
+ [&#40;DMX&#41;的标识符 ](../dmx/identifiers-dmx.md)  
  命名挖掘模型、挖掘结构和列等对象。  
   
  [数据类型 (DMX)](../dmx/data-types-dmx.md)  
  定义挖掘类型列包含的数据类型。  
   
- [&#40;DMX&#41;的表达式](../dmx/expressions-dmx.md)  
+ [&#40;DMX&#41;的表达式 ](../dmx/expressions-dmx.md)  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以解析为单个（或标量）值、对象或表值的语法单元。  
   
  [运算符 &#40;DMX&#41;](../dmx/operators-dmx.md)  
@@ -36,7 +37,7 @@ ms.locfileid: "86971728"
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)  
  一个表达式，该表达式采用零或者一个或多个输入值并返回标量值或表。  
   
- [DMX&#41;&#40;注释](../dmx/comments-dmx.md)  
+ [DMX&#41;&#40;注释 ](../dmx/comments-dmx.md)  
  可以插入到 DMX 语句或脚本中说明语句用途的文本元素。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不会运行注释。  
   
  [保留关键字 &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86971728"
  [数据挖掘扩展插件 &#40;DMX&#41; 运算符引用](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

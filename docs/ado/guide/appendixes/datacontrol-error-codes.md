@@ -1,4 +1,5 @@
 ---
+description: DataControl 对象错误代码
 title: DataControl 错误代码 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422191"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 对象错误代码
-下表列出了[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象错误代码。 低2字节的正十进制转换、完整错误代码的负小数转换以及十六进制值。
+下表列出了 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象错误代码。 低2字节的正十进制转换、完整错误代码的负小数转换以及十六进制值。
 
-|RDS.DataControl 错误代码|Number|说明|
+|RDS.DataControl 错误代码|Number|描述|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|异步操作挂起时，无法执行操作。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|错误的内联 tablegram。|
@@ -39,12 +40,12 @@ ms.locfileid: "82760513"
 |**IDS_NOINTERFACE**|5377-2147019519 0x80071501|不支持此类接口。|
 |**IDS_NotReentrant**|4111-2146824171 0x800A1015|当事件处理程序仍在处理时，无法执行请求。|
 |**IDS_ObjectNotSafe**|4103-2146824185 0x800A1007|此计算机上的安全设置禁止创建业务对象。|
-|**IDS_RecordsetNotOpen**|4109-2146824173 0x800A1013|**记录集**未打开。|
-|**IDS_ResetInvalidField**|4108-2146824174 0x800A1012|在**SortColumn**或**FilterColumn**中指定的列不存在。|
+|**IDS_RecordsetNotOpen**|4109-2146824173 0x800A1013|**记录集** 未打开。|
+|**IDS_ResetInvalidField**|4108-2146824174 0x800A1012|在 **SortColumn** 或 **FilterColumn** 中指定的列不存在。|
 |**IDS_RowsetNotUpdateable**|4104-2146824184 0x800A1008|行集不可更新。|
 |**IDS_UnexpectedError**|4351-2146823937 0x800A10FF|意外错误。|
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|无法更新数据库。|
-|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL**属性需要系统文件 urlmon.dll，但找不到该文件。|
+|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL** 属性需要系统文件 Urlmon.dll，但找不到该文件。|
 
 ## <a name="see-also"></a>另请参阅
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

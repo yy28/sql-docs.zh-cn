@@ -1,4 +1,5 @@
 ---
+description: “导入策略”对话框
 title: “导入策略”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5e5667222a7d7591c61670f2058276035c299
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8cd6f4223d3cf23d9ccd98f5b8e4f787872132f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423691"
 ---
 # <a name="import-policies-dialog-box"></a>“导入策略”对话框
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85749351"
   
 ## <a name="options"></a>选项  
  **要导入的文件**  
- 若要从 XML 文件导入策略，请键入该文件的路径和名称或者使用“浏览”( **...** ) 按钮。  
+ 若要从 XML 文件导入策略，请键入该文件的路径和名称或者使用“浏览”(**...**) 按钮。  
   
  **用导入的项替换重复项**  
  如果选择此选项，当相同名称的任何现有策略或条件在此 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例上已存在时，则会覆盖这些内容。 无法覆盖具有依赖策略的条件，除非也覆盖该依赖策略。 如果未选择此选项，使用相同条件表达式的现有条件不会导致错误。  

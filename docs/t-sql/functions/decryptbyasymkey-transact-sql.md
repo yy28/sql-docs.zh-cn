@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYASYMKEY (Transact-SQL)
 title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0b15b04368ad5b44d1c1adb91cc29367f9e344fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b1c19a02d6cd965181f9ea94338e0669a3ec45df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422781"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,20 +45,20 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- Asym_Key_ID   
-数据库中非对称密钥的 ID。 Asym_Key_ID 具有 int 数据类型   。  
+ Asym_Key_ID  
+数据库中非对称密钥的 ID。 Asym_Key_ID 具有 int 数据类型。  
   
- ciphertext   
+ ciphertext  
 使用非对称密钥加密的数据字符串。  
   
  @ciphertext  
-varbinary 类型的变量，包含使用非对称密钥进行加密的数据  。  
+varbinary 类型的变量，包含使用非对称密钥进行加密的数据****。  
   
- Asym_Key_Password   
+ Asym_Key_Password**  
 用于加密数据库中非对称密钥的密码。  
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）  。  
+varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>备注  
 与对称加密/解密相比，非对称加密/解密的成本更高。 处理大型数据集时（例如存储在表中的用户数据），建议开发人员避免使用非对称密钥加密/解密。  
@@ -66,7 +67,7 @@ varbinary（最大大小为 8,000 个字节）  。
 `DECRYPTBYASYMKEY` 需要对非对称密钥具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
-此示例对最初使用非对称密钥 `JanainaAsymKey02` 加密的已加密文本进行解密。 `AdventureWorks2012.ProtectedData04` 存储此非对称密钥。 该示例使用非对称密钥 `JanainaAsymKey02` 对返回的数据进行解密。 该示例使用密码 `pGFD4bb925DGvbd2439587y` 对此非对称密钥进行解密。 该示例将返回的纯文本转换为类型 nvarchar  。  
+此示例对最初使用非对称密钥 `JanainaAsymKey02` 加密的已加密文本进行解密。 `AdventureWorks2012.ProtectedData04` 存储此非对称密钥。 该示例使用非对称密钥 `JanainaAsymKey02` 对返回的数据进行解密。 该示例使用密码 `pGFD4bb925DGvbd2439587y` 对此非对称密钥进行解密。 该示例将返回的纯文本转换为类型 nvarchar****。  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

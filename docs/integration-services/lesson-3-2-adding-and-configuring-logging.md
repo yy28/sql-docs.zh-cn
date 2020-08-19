@@ -1,4 +1,5 @@
 ---
+description: 第 3-2 课：添加和配置日志记录
 title: 步骤 2：添加和配置日志记录 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e2e66d27fd8658cc0e060da036cca147817d5cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422211"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>第 3-2 课：添加和配置日志记录
 

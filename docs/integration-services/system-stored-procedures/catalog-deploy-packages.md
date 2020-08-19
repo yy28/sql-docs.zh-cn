@@ -1,4 +1,5 @@
 ---
+description: catalog.deploy_packages
 title: catalog.deploy_packages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8d2fbfdeeda5ae16182808a1f222c07c243f71c1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 383fe8ab64e0488ded13726d83e80a8bf7244455
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422161"
 ---
 # <a name="catalogdeploy_packages"></a>catalog.deploy_packages 
 
@@ -45,8 +46,8 @@ catalog.deploy_packages [ @folder_name = ] folder_name
  [ @packages_table = ] *packages_table*  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包 (.dtsx) 文件的二进制内容。 *packages_table* 为 **[catalog].[Package_Table_Type]**  
   
- [ @operation_id = ] operation_id   
- 返回部署操作的唯一标识符。 operation_id 为 bigint   。  
+ [ @operation_id = ] operation_id**  
+ 返回部署操作的唯一标识符。 operation_id 为 bigint******。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

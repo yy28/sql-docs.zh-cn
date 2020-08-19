@@ -1,4 +1,5 @@
 ---
+description: catalog.object_parameters（SSISDB 数据库）
 title: catalog.object_parameters（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca6cf256e00c992e492c6d1a6d1a698a739c871
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422041"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters（SSISDB 数据库）
 
@@ -34,14 +35,14 @@ ms.locfileid: "86912498"
 |object_name|**sysname**|包含对应项目或包的名称。|  
 |parameter_name|**sysname(nvarchar(128))**|参数的名称。|  
 |data_type|**nvarchar(128)**|参数的数据类型。|  
-|必填|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
+|必需|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
 |sensitive|**bit**|当值为 `1` 时，参数值是敏感的。 当值为 `0` 时，参数值是不敏感的。|  
 |description|**nvarchar(1024)**|包的可选说明。|  
 |design_default_value|**sql_variant**|在设计项目或包的过程中分配的参数的默认值。|  
 |default_value|**sql_variant**|服务器上当前使用的默认值。|  
 |value_type|**char(1)**|指示参数值的类型。 当 parameter_value 为文本值时，此字段显示 `V`；当该值通过引用环境对象来分配时，此字段显示 `R`。|  
 |value_set|**bit**|如果值为 `1`，则已分配参数值。 如果值为 `0`，则尚未分配参数值。|  
-|referenced_variable_name|**nvarchar(128)**|分配给参数值的环境变量的名称。 默认值为 NULL  。|  
+|referenced_variable_name|**nvarchar(128)**|分配给参数值的环境变量的名称。 默认值为 NULL。|  
 |validation_status|**char(1)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
 |last_validation_time|**datetimeoffset(7)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86912498"
   
 -   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色中的成员资格  。  
+-   sysadmin 服务器角色中的成员资格。  
   
  将实施行级安全性；只显示您有权查看的行。  
   

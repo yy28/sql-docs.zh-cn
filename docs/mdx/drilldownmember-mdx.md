@@ -1,5 +1,6 @@
 ---
-title: DrilldownMember （MDX） |Microsoft Docs
+description: DrilldownMember (MDX)
+title: DrilldownMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f387d0524ea22aca3c2bb7eb073af07bbdf0612
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 284456995d163c04bc315424ea04b76f17dc228e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421921"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 
@@ -46,9 +47,9 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  用于使计算成员能够包括在深化结果中的关键字。  
   
 ## <a name="remarks"></a>备注  
- 该函数返回按层次结构排序的子成员集，并包括第一个集和第二个集的交集中的成员。 如果第一个集包含父成员以及一个或多个子成员，则不深化父成员。 第一个集可以具有任何维数，但第二个集必须包含一个一维集。 第一个集中的原始成员的顺序将保留，只不过该函数的结果集中包含的所有子成员都紧随在它们的父成员之后。 该函数将通过检索第一个集与第二个集的交集中的每个成员的子成员来构造结果集。 如果指定了**RECURSIVE** ，则函数将继续以递归方式将结果集的成员与第二个集的成员进行递归比较，并为结果集中每个成员检索每个成员的子成员。  
+ 该函数返回按层次结构排序的子成员集，并包括第一个集和第二个集的交集中的成员。 如果第一个集包含父成员以及一个或多个子成员，则不深化父成员。 第一个集可以具有任何维数，但第二个集必须包含一个一维集。 第一个集中的原始成员的顺序将保留，只不过该函数的结果集中包含的所有子成员都紧随在它们的父成员之后。 该函数将通过检索第一个集与第二个集的交集中的每个成员的子成员来构造结果集。 如果指定了 **RECURSIVE** ，则函数将继续以递归方式将结果集的成员与第二个集的成员进行递归比较，并为结果集中每个成员检索每个成员的子成员。  
   
- 通过查询 XMLA 属性**MdpropMdxDrillFunctions** ，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
+ 通过查询 XMLA 属性 **MdpropMdxDrillFunctions** ，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅 [&#40;xmla&#41;支持的 Xmla 属性 ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
  第一个集可以包含元组，但不能包含成员。 对元组的深化是一种 OLE DB 扩展，这种深化将返回元组集而非成员集。  
   

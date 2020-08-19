@@ -1,4 +1,5 @@
 ---
+description: Microsoft SQL Server 分布式查询：OLE DB 连接
 title: 创建链接服务器提供程序
 ms.date: 07/01/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420841"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分布式查询：OLE DB 连接
 
@@ -108,7 +109,7 @@ SQL 命令提供程序的示例包括 SQL Server 的 Microsoft OLE DB 提供程�
 
 - 所有远程表都通过 `IDBSchemaRowset` 接口的 INDEXES 行集公开唯一键。 应有一个索引条目，其 UNIQUE 列设置为 VARIANT_TRUE。
 
-涉及 OpenQuery  函数的分布式查询不支持键集游标。
+涉及 OpenQuery ** 函数的分布式查询不支持键集游标。
 
 #### <a name="updatable-keyset-cursor-requirements"></a>可更新的键集游标要求
 
@@ -190,7 +191,7 @@ SQL Server 支持两种远程数据对象命名约定：基于链接服务器的
 
    SQL Server 收集要在分布式查询评估中使用的几个提供程序属性；通过调用 `IDBProperties::GetProperties` 来检索这些属性。 所有这些属性都是可选的；但是，支持所有相关属性可使 SQL Server 能够充分利用提供程序的功能。 例如，需要 `DBPROP_SQLSUPPORT` 来确定 SQL Server 是否可以向提供程序发送查询。 如果不支持此属性，则即使远程提供程序是 SQL 命令提供程序，SQL Server 也不会将其用作 SQL 命令提供程序。 在下表中，“默认值”列指示 SQL Server 在提供程序不支持该属性时假定的值。
 
-properties| 默认值| 用途 |
+Property| 默认值| 使用 |
 |:----|:----|:----|
 |`DBPROP_DBMSNAME`|无|用于错误消息。|
 |`DBPROP_DBMSVER` |无|用于错误消息。|
@@ -200,16 +201,16 @@ properties| 默认值| 用途 |
 |`DBPROP_NULLCOLLATION`|无|仅当 `NULLCOLLATION` 与 SQL Server 实例 null 排序规则行为匹配时，才允许使用排序/索引。|
 |`DBPROP_OLEOBJECTS`|无|确定提供程序是否支持用于大型数据对象列的结构化存储接口。|
 |`DBPROP_STRUCTUREDSTORAGE`|无|确定大型对象类型（`ILockBytes`、`Istream` 和 `ISequentialStream`）支持的结构化存储接口。|
-|`DBPROP_MULTIPLESTORAGEOBJECTS`|False|确定是否可以同时打开多个大型对象列。|
+|`DBPROP_MULTIPLESTORAGEOBJECTS`|错误|确定是否可以同时打开多个大型对象列。|
 |`DBPROP_SQLSUPPORT`|无|确定是否可以向提供程序发送 SQL 查询。|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|用于构造多部分表名。
-|`SQLPROP_DYNAMICSQL`|False|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示参数化查询执行支持 `?` 参数标记。
-|`SQLPROP_NESTEDQUERIES`|False|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示提供程序支持 `FROM` 子句中的嵌套 `SELECT` 语句。
-|`SQLPROP_GROUPBY`|False|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示提供程序支持 SQL-92 标准中指定的 `SELECT` 语句中的 GROUP BY 子句。
-|`SQLPROP_DATELITERALS `|False|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示提供程序支持按 SQL Server Transact-SQL 语法的日期时间文本。
-|`SQLPROP_ANSILIKE `|False|SQL Server 特定的属性：对于支持 SQL-Minimum 级别的提供程序而言，此属性很有用，并且它根据 SQL-92 入门级别支持 `LIKE` 运算符（\'%\' 和 \'_\' 作为通配符）。
-|`SQLPROP_SUBQUERIES `|False|SQL Server 属性：此属性在支持 SQL-Minimum 级别的提供程序中很有用。 此属性指示提供程序支持 SQL-92 入门级别指定的子查询。 这包括支持相关子查询的 `SELECT` 列表和 `WHERE` 子句中的子查询以及 `IN`、`EXISTS`、`ALL` 和 `ANY` 运算符。
-|`SQLPROP_INNERJOIN`|False|SQL Server 特定的属性：此属性对于支持 SQL-Minimum 级别的提供程序很有用。 此属性表示支持使用 `FROM` 子句中的多个表进行联接。 ------ ---
+|`SQLPROP_DYNAMICSQL`|错误|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示参数化查询执行支持 `?` 参数标记。
+|`SQLPROP_NESTEDQUERIES`|错误|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示提供程序支持 `FROM` 子句中的嵌套 `SELECT` 语句。
+|`SQLPROP_GROUPBY`|错误|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示提供程序支持 SQL-92 标准中指定的 `SELECT` 语句中的 GROUP BY 子句。
+|`SQLPROP_DATELITERALS `|错误|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示提供程序支持按 SQL Server Transact-SQL 语法的日期时间文本。
+|`SQLPROP_ANSILIKE `|错误|SQL Server 特定的属性：对于支持 SQL-Minimum 级别的提供程序而言，此属性很有用，并且它根据 SQL-92 入门级别支持 `LIKE` 运算符（\'%\' 和 \'_\' 作为通配符）。
+|`SQLPROP_SUBQUERIES `|错误|SQL Server 属性：此属性在支持 SQL-Minimum 级别的提供程序中很有用。 此属性指示提供程序支持 SQL-92 入门级别指定的子查询。 这包括支持相关子查询的 `SELECT` 列表和 `WHERE` 子句中的子查询以及 `IN`、`EXISTS`、`ALL` 和 `ANY` 运算符。
+|`SQLPROP_INNERJOIN`|错误|SQL Server 特定的属性：此属性对于支持 SQL-Minimum 级别的提供程序很有用。 此属性表示支持使用 `FROM` 子句中的多个表进行联接。 ------ ---
 
 以下是从 `IDBInfo::GetLiteralInfo` 中检索的三种文本：`DBLITERAL_CATALOG_SEPARATOR`、`DBLITERAL_SCHEMA_SEPARATOR`（根据对象的目录、架构和对象名称部分构造完整的对象名称）和 `DBLITERAL_QUOTE`（在发送给提供程序的 SQL 查询中引用标识符名称）。
 
@@ -274,7 +275,7 @@ OLE DB 提供程序应支持以下分布统计信息：
 
 - **强制**。 `TABLE_STATISTICS` 架构行集。 `TABLE_STATISTICS` 架构行集列出了给定数据库中可用的统计信息。 它还包括架构行集本身中的列和元组基数，并指示特定列是否支持直方图。 要使 SQL Server 使用统计信息，此架构行集中必须包含 `TABLE_NAME`、`STATISTICS_NAME`、`STATISTICS_TYPE`、`COLUMN_NAME` 和 `ORDINAL_POSITION` 列。 至少必须包含 `COLUMN_CARDINALITY` 或 `TUPLE_CARDINALITY` 中的一个。 如果支持直方图，则也必须包含 `NO_OF_RANGES`。
 
-- **可选**。 （可选）如果提供程序支持直方图，则它应支持 `IOpenRowset::OpenRowset` 增强方法，该方法允许通过指定相应统计信息的 `DBID` 来打开直方图行集。
+- 可选。 （可选）如果提供程序支持直方图，则它应支持 `IOpenRowset::OpenRowset` 增强方法，该方法允许通过指定相应统计信息的 `DBID` 来打开直方图行集。
 
 有关统计信息接口的完整信息，请参阅 OLE DB 2.6 规范。
 
@@ -397,9 +398,9 @@ SQL Server 不会从 OLE DB 提供程序公开 LOB 上的完整文本和图像�
 
 如果提供程序支持任一结构化存储接口，则 SQL Server 会执行以下步骤以在查询执行期间检索 LOB 列：
 
-1. 在通过 `IOpenRowset::OpenRowset` 打开行集之前，SQL Server 会先请求对大型对象列上一个或多个结构化存储接口（`ISequentialStream``Istream` 和 `ILockBytes`）的支持。 提供程序支持的第一个接口是必需的；其他接口要求\"若价廉则设置\"，方法是将相应 DBPROP 结构的 dwOptions 元素设置为 DBPROPOPTIONS_SETIFCHEAP  。 例如，如果提供程序同时支持 `ISequentialStream` 和 `ILockBytes`，则 `ISequentialStream` 是必需的，`ILockBytes` 要求\"若价廉则设置\"。
+1. 在通过 `IOpenRowset::OpenRowset` 打开行集之前，SQL Server 会先请求对大型对象列上一个或多个结构化存储接口（`ISequentialStream``Istream` 和 `ILockBytes`）的支持。 提供程序支持的第一个接口是必需的；其他接口要求\"若价廉则设置\"，方法是将相应 DBPROP 结构的 dwOptions 元素设置为 DBPROPOPTIONS_SETIFCHEAP**。 例如，如果提供程序同时支持 `ISequentialStream` 和 `ILockBytes`，则 `ISequentialStream` 是必需的，`ILockBytes` 要求\"若价廉则设置\"。
 
-4. 打开行集后，SQL Server 使用 `IRowsetInfo::GetProperties` 来标识行集中可用的实际接口。 使用提供程序返回的最后一个或最优的接口。 当 SQL Server 针对大型对象列创建访问器时，该列绑定为 DBTYPE_IUNKNOWN，其中绑定集中 DBOBJECT 结构的 iid 元素绑定到接口  。
+4. 打开行集后，SQL Server 使用 `IRowsetInfo::GetProperties` 来标识行集中可用的实际接口。 使用提供程序返回的最后一个或最优的接口。 当 SQL Server 针对大型对象列创建访问器时，该列绑定为 DBTYPE_IUNKNOWN，其中绑定集中 DBOBJECT 结构的 iid 元素绑定到接口**。
 
 #### <a name="reading-from-lob-columns"></a>读取 LOB 列
 
@@ -433,7 +434,7 @@ SQL Server 使用 OLE DB 指定的 OLE DB 错误对象。 其中一些高级步�
 
 这些映射可以由用户为给定的链接服务器指定，并且可以由系统存储过程 `sp_addlinkedsrvlogin` 和 `sp_droplinkedsrvlogin` 设置和管理。 如果通过 `IDBProperties::SetProperties` 设置初始化组属性 DBPROP_AUTH_USERID 和 DBPROP_AUTH_PASSWORD，则由映射确定的用户 ID 和密码可在连接建立期间传递给提供程序。
 
-当客户端通过 Windows 身份验证连接到 SQL Server 时，如果登录使用 `sp_addlinkedsrvlogin` 设置了 `self` 映射，则 SQL Server 会尝试模拟客户端的安全上下文，并在连接建立过程中在提供程序上设置 `DBPROP_AUTH_INTEGRATED` 属性。 此过程称为“委派”  。
+当客户端通过 Windows 身份验证连接到 SQL Server 时，如果登录使用 `sp_addlinkedsrvlogin` 设置了 `self` 映射，则 SQL Server 会尝试模拟客户端的安全上下文，并在连接建立过程中在提供程序上设置 `DBPROP_AUTH_INTEGRATED` 属性。 此过程称为“委派”**。
 
 确定用于连接的安全上下文后，此安全上下文的身份验证以及其针对数据源中的数据对象的权限检查完全取决于 OLE DB 提供程序。
 
@@ -606,7 +607,7 @@ SQL Server 使用 `IOpenRowset::OpenRowset` 在基表上打开行集，并调用
 
 有关 SQL Server 使用的所有 OLE DB 接口的列表，请参阅 [SQL Server 使用的 OLE DB 接口](#appendixa)。
 
-### <a name="conclusion"></a>结束语
+### <a name="conclusion"></a>结论
 
 Microsoft SQL Server 提供了一组最强大的工具，用于访问来自异类数据源的数据。 通过了解 SQL Server 公开的 OLE-DB 接口，开发者可以在分布式查询中实现高度的控制和复杂性。
 
@@ -616,7 +617,7 @@ Microsoft SQL Server 提供了一组最强大的工具，用于访问来自异�
 
 对于可选接口，“方案”列指示使用指定接口的六个方案中的一个或多个方案。 例如，基表行集上的 `IRowsetChange` 接口是可选接口；此接口用于 `UPDATE` 和 DELETE 语句以及 `INSERT` 语句方案。 如果不支持此接口，则不支持对该提供程序使用 UPDATE、DELETE 和 `INSERT` 语句。 某些其他可选接口在“方案”列中标记为\"性能\"，表示该接口的基本性能更佳。 例如，如果不支持 `IDBSchemaRowset` 接口，则 SQL Server 必须打开行集两次：一次用于其元数据，一次用于执行查询。 通过支持 `IDBSchemaRowset`，SQL Server 性能得到了改进。
 
-|Object|接口|必选|注释|方案|
+|Object|接口|必需|注释|方案|
 |:-----|:-----|:-----|:-----|:-----|
 |数据源对象|`IDBInitialize`|是|初始化并设置数据和安全上下文。| |
 | |`IDBCreateSession`|是|创建 DB 会话对象。| |
@@ -648,7 +649,7 @@ Microsoft SQL Server 提供了一组最强大的工具，用于访问来自异�
 | |`ICommandPrepare`|否|用于准备获取元数据的命令（如果可用，则用于传递查询）。|远程查询，性能。|
 |错误对象|`IErrorRecords`|是|用于获取指向与单个错误记录对应的 `IErrorInfo` 接口的指针。| |
 | |`IErrorInfo`|是|用于获取指向与单个错误记录对应的 `IErrorInfo` 接口的指针。| |
-|任意对象|`ISupportErrorInfo`|否|用于验证给定接口是否支持错误对象。| |
+|任何对象|`ISupportErrorInfo`|否|用于验证给定接口是否支持错误对象。| |
 |  |  |  |  |  |
 
 >[!NOTE]
@@ -766,9 +767,9 @@ column-name ::= \[table-name.\]column-identifier
 
 literal ::= character-string-literal
 
-\| integer-literal 
+\| integer-literal
 
-\| exact-numeric-literal 
+\| exact-numeric-literal
 
 character-string-literal ::= \'{character}...\'
 

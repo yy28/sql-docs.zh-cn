@@ -1,4 +1,5 @@
 ---
+description: catalog.extended_operation_info（SSISDB 数据库）
 title: catalog.extended_operation_info（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dfc87963af1a7d55a8368b31d1ed94ccdc04b717
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4082c0bbf428a96776ae18fece7333f0401a2b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422071"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info（SSISDB 数据库）
 
@@ -30,10 +31,10 @@ ms.locfileid: "86912543"
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|扩展信息的唯一标识符 (ID)。|  
 |operation_id|**bigint**|对应于扩展信息的操作的唯一 ID。|  
-|object_name|nvarchar(260) |对象的名称。|  
+|object_name|**nvarchar(260)**|对象的名称。|  
 |object_type|**smallint**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |reference_id|**bigint**|操作中使用的引用的唯一 ID。|  
-|status|**int**|操作状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|状态|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset(7)**|操作开始的日期和时间。|  
 |end_time|**datetimeoffset(7)**|操作结束的日期和时间。|  
   

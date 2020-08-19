@@ -1,4 +1,5 @@
 ---
+description: 编写 ODBC 3.x 驱动程序
 title: 编写 ODBC 1.x 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421341"
 ---
 # <a name="writing-odbc-3x-drivers"></a>编写 ODBC 3.x 驱动程序
-下表显示了 ODBC 3 中的函数支持。*x*驱动程序和 odbc 应用程序，以及在针对 ODBC 3 调用函数时由驱动程序管理器执行的映射。*x*驱动程序。  
+下表显示了 ODBC 3 中的函数支持。*x* 驱动程序和 odbc 应用程序，以及在针对 ODBC 3 调用函数时由驱动程序管理器执行的映射。*x* 驱动程序。  
   
-|函数|支持<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 驱动器?|支持<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 程序?|映射/支持<br /><br /> 由 ODBC 3 进行。*x*<br /><br /> 驱动程序管理器到<br /><br /> ODBC 3。*x*驱动程序？|  
+|函数|支持<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 驱动器?|支持<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 程序?|映射/支持<br /><br /> 由 ODBC 3 进行。*x*<br /><br /> 驱动程序管理器到<br /><br /> ODBC 3。*x* 驱动程序？|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|否|否 [1]|是|  
 |**SQLAllocEnv**|否|否 [1]|是|  
@@ -105,14 +106,14 @@ ms.locfileid: "81300357"
 |**SQLTables**|是|是|否|  
 |**SQLTransact**|否|否 [1]|是|  
   
- [1] 此函数已在 ODBC 3 中弃用。*x*。 ODBC 3。*x*应用程序不应使用此函数。 但是，打开的组或符合 ISO CLI 的应用程序可以调用此函数。  
+ [1] 此函数已在 ODBC 3 中弃用。*x*。 ODBC 3。*x* 应用程序不应使用此函数。 但是，打开的组或符合 ISO CLI 的应用程序可以调用此函数。  
   
- [2] ODBC 3。*x*应用程序应使用**SQLBindParameter**而不是**SQLBindParam**。 但是，打开的组或符合 ISO CLI 的应用程序可以调用此函数。  
+ [2] ODBC 3。*x* 应用程序应使用 **SQLBindParameter** 而不是 **SQLBindParam**。 但是，打开的组或符合 ISO CLI 的应用程序可以调用此函数。  
   
  [3] 驱动程序编写器应注意 ODBC 2。需要**SQLColAttribute**支持*x*列属性 SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE 和 SQL_COLUMN_LENGTH。  
   
- [4] 当覆盖属于不同驱动程序的连接时，驱动程序管理器将部分实现**SQLCopyDesc** 。 需要驱动程序才能跨两个自身的连接支持**SQLCopyDesc** 。 仅由驱动程序管理器实现的函数（如**SQLDrivers**）不会显示在此列表上。  
+ [4] 当覆盖属于不同驱动程序的连接时，驱动程序管理器将部分实现   **SQLCopyDesc** 。 需要驱动程序才能跨两个自身的连接支持 **SQLCopyDesc** 。 仅由驱动程序管理器实现的函数（如 **SQLDrivers**）不会显示在此列表上。  
   
  [5] 在某些情况下，驱动程序可能需要支持此功能。 有关详细信息，请参阅此函数的参考页。  
   
- [6] 如果驱动程序支持的函数集因连接而异，则驱动程序可以选择支持**SQLGetFunctions** 。
+ [6] 如果驱动程序支持的函数集因连接而异，则驱动程序可以选择支持 **SQLGetFunctions** 。

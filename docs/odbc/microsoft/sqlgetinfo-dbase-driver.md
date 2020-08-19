@@ -1,5 +1,6 @@
 ---
-title: SQLGetInfo （dBASE 驱动程序） |Microsoft Docs
+description: SQLGetInfo（dBASE 驱动程序）
+title: SQLGetInfo (dBASE 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ac88f3b563ef7811d9112d8ef7169f533691938
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f650b44e81e56cef6fee910f6351da8b09dfccd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421761"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo（dBASE 驱动程序）
 > [!NOTE]  
->  本主题提供了特定于 dBASE 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题提供了特定于 dBASE 驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
- **SQLGetInfo**支持 SQL_FILE_USAGE 信息类型。 返回的值是一个16位整数，该整数指示驱动程序如何直接处理数据源中的文件：  
+ **SQLGetInfo** 支持 SQL_FILE_USAGE 信息类型。 返回的值是一个16位整数，该整数指示驱动程序如何直接处理数据源中的文件：  
   
 -   SQL_FILE_NOT_SUPPORTED-驱动程序不是单层驱动程序。  
   

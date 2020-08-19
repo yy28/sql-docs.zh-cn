@@ -1,5 +1,6 @@
 ---
-title: sys.sys注释（Transact-sql） |Microsoft Docs
+description: sys.syscomments (Transact-SQL)
+title: " (Transact-sql) sys.sys注释 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49473b85d6c0a52f9c7ec7ed4bab519b19b04693
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3956dd945052a8977a2d9fccfefa6a34ea7b33fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423351"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85883483"
   包含数据库中的每个视图、规则、默认值、触发器、CHECK 约束、DEFAULT 约束和存储过程的条目。 **Text**列包含原始 SQL 定义语句。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议您改用 sys.sql_modules。 有关详细信息，请参阅[sys.databases&#41;sql_modules &#40;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议您改用 sys.sql_modules。 有关详细信息，请参阅 [sys.databases&#41;sql_modules &#40;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +47,7 @@ ms.locfileid: "85883483"
 |language|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**过**|**bit**|指示过程定义是否已经过模糊处理。<br /><br /> 0 = 未经模糊处理<br /><br /> 1 = 已经模糊处理<br /><br /> ** \* \* 重要 \* 说明 \* **若要对存储过程定义进行模糊处理，请使用带有 ENCRYPTION 关键字的 CREATE procedure。|  
 |**压缩**|**bit**|始终返回 0。 这表明过程已压缩。|  
-|**text**|**nvarchar(4000)**|SQL 定义语句的实际文本。<br /><br /> 解码后的表达式的语义等同于原始文本，但是没有语法保证。 例如，解码后的表达式中删除了空格。<br /><br /> 此 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 兼容视图从当前结构中获取信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且可以返回比**nvarchar （4000）** 定义更多的字符。 **sp_help**返回**nvarchar （4000）** 作为文本列的数据类型。 使用**syscomments**时，请考虑使用**nvarchar （max）**。 对于新的开发工作，请勿使用**syscomments**。|  
+|**text**|**nvarchar(4000)**|SQL 定义语句的实际文本。<br /><br /> 解码后的表达式的语义等同于原始文本，但是没有语法保证。 例如，解码后的表达式中删除了空格。<br /><br /> 此 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 兼容视图从当前结构中获取信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且可以返回比 **nvarchar (4000) ** 定义更多的字符。 **sp_help** 返回 **nvarchar (4000) ** 作为文本列的数据类型。 使用 **syscomments** 时，请考虑使用 **nvarchar (max) **。 对于新的开发工作，请勿使用 **syscomments**。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

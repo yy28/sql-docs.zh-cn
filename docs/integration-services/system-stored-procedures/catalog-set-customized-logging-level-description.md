@@ -1,4 +1,5 @@
 ---
+description: catalog.set_customized_logging_level_description
 title: catalog.set_customized_logging_level_description | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b5243a4caf0f380adb89e6fdcb4bdd689ac0a681
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99d413f8447a79331f92229a295192b6c0c5ea72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422131"
 ---
 # <a name="catalogset_customized_logging_level_description"></a>catalog.set_customized_logging_level_description 
 
@@ -31,15 +32,15 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @level_name = ] level_name   
+ [ @level_name = ] level_name**  
  现有自定义日志记录级别的名称。  
   
- level_name 为 nvarchar(128)   。  
+ level_name 为 nvarchar(128)******。  
   
- [ @level_description = ] level_description   
+ [ @level_description = ] level_description**  
  指定的自定义日志记录级别的新说明。  
   
- level_description  为 nvarchar(1024)  。  
+ level_description** 为 nvarchar(1024)****。  
   
 ## <a name="remarks"></a>备注  
   

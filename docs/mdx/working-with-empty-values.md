@@ -1,4 +1,5 @@
 ---
+description: 使用空值
 title: 使用空值 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f497ba1ccf84ac642144340af4d5597d773dcadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421891"
 ---
 # <a name="working-with-empty-values"></a>使用空值
 
@@ -45,16 +46,16 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  以下信息适用于空值：  
   
--   当且仅当函数中指定的元组所标识的单元格为空时， [IsEmpty](../mdx/isempty-mdx.md)函数才返回**TRUE** 。 否则，该函数返回**FALSE**。  
+-   当且仅当函数中指定的元组所标识的单元格为空时， [IsEmpty](../mdx/isempty-mdx.md) 函数才返回 **TRUE** 。 否则，该函数返回 **FALSE**。  
   
     > [!NOTE]  
-    >  **IsEmpty**函数无法确定成员表达式是否返回 null 值。 若要确定是否从表达式返回 null 成员，请使用[is](../mdx/is-mdx.md)运算符。  
+    >  **IsEmpty**函数无法确定成员表达式是否返回 null 值。 若要确定是否从表达式返回 null 成员，请使用 [is](../mdx/is-mdx.md)运算符。  
   
 -   当空单元值是数字运算符（+、-、*、/）中任一运算符的一个操作数时，如果另一个操作数是非空值，空单元值将被作为零处理。 如果两个操作数都为空，数字运算符将返回空单元值。  
   
 -   当空单元值是字符串串联运算符 (+) 的一个操作数时，如果另一个操作数是非空值，空单元值将被作为空字符串处理。 如果两个操作数都为空，字符串串联运算符将返回空单元值。  
   
--   当空单元值是比较运算符（=. <>、>=、 \<=、>、<），空单元值被视为零或空字符串，具体取决于另一个操作数的数据类型是数字还是字符串。 如果两个操作数都为空，则两个操作数均作为零处理。  
+-   当空单元值是比较运算符（=. <>、>=、 \<=, > <) ，空单元值被视为零或空字符串，具体取决于另一个操作数的数据类型是数字还是字符串。 如果两个操作数都为空，则两个操作数均作为零处理。  
   
 -   当对数字值进行排序时，空单元值排在与零相同的位置。 在空单元值和零之间，空单元值排在零之前。  
   
@@ -63,7 +64,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>处理 MDX 语句和多维数据集中的空值  
  在多维表达式 (MDX) 语句中，可以查找空值，然后对包含有效（即不为空）数据的单元进行某些运算。 进行运算时消除空值很重要，因为如果包含空单元值，某些运算（如平均值）可能不准确。  
   
- 如果空值存储在基础事实表数据中，则在处理多维数据集时，默认情况下这些空值将转换为零。 您可以对度量值使用**Null 处理**选项，以控制 null 事实是否转换为0，转换为空值，甚至在处理过程中引发错误。 如果您不希望空单元值出现在查询结果中，则应该创建消除空值或将空值替换为某些其他值的查询、计算成员或 MDX 脚本语句。  
+ 如果空值存储在基础事实表数据中，则在处理多维数据集时，默认情况下这些空值将转换为零。 您可以对度量值使用 **Null 处理** 选项，以控制 null 事实是否转换为0，转换为空值，甚至在处理过程中引发错误。 如果您不希望空单元值出现在查询结果中，则应该创建消除空值或将空值替换为某些其他值的查询、计算成员或 MDX 脚本语句。  
   
  若要删除查询中的空行或空列，可以在轴设置定义之前使用 NON EMPTY 语句。 例如，以下查询仅返回 Product Category Bikes，因为它是 Calendar Year 2001 内销售的唯一 Category：  
   
@@ -113,38 +114,38 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 有关详细信息，请参阅非[空 &#40;MDX&#41;](../mdx/nonempty-mdx.md)。  
+ 有关详细信息，请参阅非 [空 &#40;MDX&#41;](../mdx/nonempty-mdx.md)。  
   
 ## <a name="empty-values-and-comparison-operators"></a>空值和比较运算符  
  如果数据中存在空值，逻辑运算符和比较运算符有可能返回 TRUE 或 FALSE 以外的第三种结果 EMPTY。 这种对三值逻辑的需要是导致许多应用程序出错的根源。 下面这些表概括了引入空值比较的影响。  
   
  下表显示了对两个布尔操作数应用 AND 运算符的结果。  
   
-|AND|TRUE|EMPTY|FALSE|  
+|AND|true|EMPTY|false|  
 |---------|----------|-----------|-----------|  
-|**TRUE**|TRUE|FALSE|FALSE|  
-|**空白处**|FALSE|EMPTY|FALSE|  
-|**FALSE**|FALSE|FALSE|FALSE|  
+|**TRUE**|true|false|false|  
+|**空白处**|false|EMPTY|false|  
+|**FALSE**|false|false|false|  
   
  下表显示了对两个布尔操作数应用 OR 运算符的结果。  
   
-|OR|TRUE|FALSE|  
+|OR|true|false|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**空白处**|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|  
+|**FALSE**|true|false|  
   
  下表显示了 NOT 运算符如何求反或反转布尔运算符的结果。  
   
 |要应用 NOT 运算符的布尔表达式|计算结果|  
 |-------------------------------------------------------------|------------------|  
-|TRUE|FALSE|  
+|true|false|  
 |EMPTY|EMPTY|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)  
+ [MDX&#41;&#40;表达式 ](../mdx/expressions-mdx.md)  
   
   

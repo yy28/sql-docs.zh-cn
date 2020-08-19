@@ -1,4 +1,5 @@
 ---
+description: 编写交互式应用程序
 title: 编写互操作应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 553e718e0759e47701e7f8c04561693358d5dc52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d8bff1848e20705ab64b8284ed42331c80fb23a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421361"
 ---
 # <a name="writing-an-interoperable-application"></a>编写交互式应用程序
 每当应用程序对多个驱动程序使用相同的代码时，该代码必须可在这些驱动程序之间进行互操作。 在大多数情况下，这是一项简单的任务。 例如，使用只进游标提取行的代码对于所有驱动程序都是相同的。 在某些情况下，这可能比较困难。 例如，用于构造要在 SQL 语句中使用的标识符的代码需要考虑标识符大小写、引号和由三部分组成的命名约定。  
   
- 通常，可互操作的代码必须应对功能支持和功能可变性问题。 *功能支持*指特定功能是否受支持。 例如，并非所有 Dbms 都支持事务，并且互操作代码必须正常工作，而不考虑事务支持。 *功能可变性*指的是特定功能的支持方式。 例如，目录名称放置在某些 Dbms 中的标识符开头，在其他 Dbms 中放置在标识符的末尾。  
+ 通常，可互操作的代码必须应对功能支持和功能可变性问题。 *功能支持* 指特定功能是否受支持。 例如，并非所有 Dbms 都支持事务，并且互操作代码必须正常工作，而不考虑事务支持。 *功能可变性* 指的是特定功能的支持方式。 例如，目录名称放置在某些 Dbms 中的标识符开头，在其他 Dbms 中放置在标识符的末尾。  
   
  应用程序可以在设计时或运行时处理功能支持和功能变化。 若要在设计时处理功能支持和可变性，开发人员需要了解目标 Dbms 和驱动程序，并确保相同的代码可在它们之间互操作。 这通常是由于互操作性较低或受限的应用程序处理这些问题的方式。  
   

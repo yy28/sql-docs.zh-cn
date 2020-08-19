@@ -1,4 +1,5 @@
 ---
+description: catalog.explicit_object_permissions（SSISDB 数据库）
 title: catalog.explicit_object_permissions（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cf55832764b595aac01b8fb8c69fb0516898bad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422081"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions（SSISDB 数据库）
 
@@ -42,13 +43,13 @@ ms.locfileid: "86912533"
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允许主体读取被视为对象一部分的信息（如属性）。 它不允许主体枚举或读取该对象中包含的其他对象的内容。|文件夹、项目、环境、操作|  
 |`2`|MODIFY|允许主体修改被视为对象一部分的信息（如属性）。 它不允许主体修改该对象中包含的其他对象。|文件夹、项目、环境、操作|  
-|`3`|在运行 CREATE 语句前执行|允许主体执行项目中的所有包。|Project|  
+|`3`|EXECUTE|允许主体执行项目中的所有包。|项目|  
 |`4`|MANAGE_PERMISSIONS|允许主体向对象分配权限。|文件夹、项目、环境、操作|  
-|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|Folder|  
-|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|Folder|  
-|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|Folder|  
-|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|Folder|  
-|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|Folder|  
+|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|文件夹|  
+|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|文件夹|  
+|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|文件夹|  
+|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|文件夹|  
+|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|文件夹|  
   
 ## <a name="permissions"></a>权限  
  此视图并不显示当前主体的完整权限视图。 用户还必须检查主体是否为已分配了权限的角色和组的成员。  

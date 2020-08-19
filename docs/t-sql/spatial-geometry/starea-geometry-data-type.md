@@ -1,4 +1,5 @@
 ---
+description: STArea（geometry 数据类型）
 title: STArea（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 95aa0235e1f9f2daa63a91b1765cfc548969a7b2
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2dec51b1ce17ed52ed7c6bb6d601b5977eaf2172
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422281"
 ---
 # <a name="starea-geometry-data-type"></a>STArea（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geometry 实例的总表面积  。  
+  返回 geometry 实例的总表面积****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +40,12 @@ ms.locfileid: "86554682"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float****  
   
- CLR 返回类型：SqlDouble   
+ CLR 返回类型：SqlDouble****  
   
 ## <a name="remarks"></a>备注  
- 如果 geometry 实例仅包含 0 维和 1 维图形，或者为空，则 `STArea()` 返回 0  。 如果 geometry 实例尚未初始化，则 `STArea()` 返回 NULL   。  
+ 如果 geometry 实例仅包含 0 维和 1 维图形，或者为空，则 `STArea()` 返回 0****。 如果 geometry 实例尚未初始化，则 `STArea()` 返回 NULL********。  
   
 ## <a name="examples"></a>示例  
   

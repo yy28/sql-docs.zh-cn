@@ -1,4 +1,5 @@
 ---
+description: M（geography 数据类型）
 title: M（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 580feb4d6727e84f982a09ca8a96337d5b1a31df
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77a79972671854e7e8538de7b943545955f61e89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422421"
 ---
 # <a name="m-geography-data-type"></a>M（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  geography 实例的 M（度量）值   。 度量值的语义是用户定义的，但是通常用于描述沿线条的距离。 例如，度量值可用于跟踪某条公路上的里程碑。  
+  geography 实例的 M（度量）值********。 度量值的语义是用户定义的，但是通常用于描述沿线条的距离。 例如，度量值可用于跟踪某条公路上的里程碑。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +40,12 @@ ms.locfileid: "86552537"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
   
- CLR 类型：SqlDouble   
+ CLR 类型：**SqlDouble**  
   
 ## <a name="remarks"></a>备注  
- 如果 geography 实例不是 Point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null    。  
+ 如果 geography 实例不是 Point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null  。  
   
  此属性为只读。  
   

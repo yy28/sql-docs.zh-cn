@@ -1,4 +1,5 @@
 ---
+description: SQLWritePrivateProfileString 函数
 title: SQLWritePrivateProfileString 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0de5ad074fb2b760420686feddff58b26887112
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1110b60d6dc0ba079804ba8a9f21c06f0c1f78d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420951"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 函数
 **度**  
  引入的版本： ODBC 2。0  
   
  **摘要**  
- **SQLWritePrivateProfileString**将值名称和数据写入系统信息的 Odbc 子键。  
+ **SQLWritePrivateProfileString** 将值名称和数据写入系统信息的 Odbc.ini 子项中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ BOOL SQLWritePrivateProfileString(
  送指向以 null 结尾的字符串，该字符串包含要与字符串关联的密钥的名称。 如果该键不存在于指定的节中，则会创建它。 如果此参数为 NULL，则删除整个部分（包括节中的所有条目）。  
   
  *lpszString*  
- 送指向要写入文件的以 null 结尾的字符串。 如果此参数为 NULL，则将删除*lpszEntry*参数指向的键。  
+ 送指向要写入文件的以 null 结尾的字符串。 如果此参数为 NULL，则将删除 *lpszEntry* 参数指向的键。  
   
  *lpszFilename*  
  输出指向以 null 结尾的字符串，该字符串命名初始化文件。  
@@ -61,7 +62,7 @@ BOOL SQLWritePrivateProfileString(
  如果此函数成功，则返回 TRUE，否则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLWritePrivateProfileString**返回 FALSE 时，可以* \** 通过调用**SQLInstallerError**获取关联的 pfErrorCode 值。 下表列出了可由**SQLInstallerError**返回的* \*pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当**SQLWritePrivateProfileString**返回 FALSE 时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
@@ -69,13 +70,13 @@ BOOL SQLWritePrivateProfileString(
 |ODBC_ERROR_REQUEST_FAILED|申请失败。|无法写入请求的系统信息。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   
-## <a name="comments"></a>说明  
- **SQLWritePrivateProfileString**是一种简单的方法，可将来自 Microsoft® Windows®的驱动程序和驱动程序安装 dll 移植到 MICROSOFT windows NT®/Windows 2000。 对**WritePrivateProfileString**的调用会将配置文件字符串写入到该 Odbc 文件，并将其替换为对**SQLWritePrivateProfileString**的调用。 **SQLWritePrivateProfileString**调用 WIN32® API 中的函数，将指定的值名称和数据添加到系统信息的子项。  
+## <a name="comments"></a>注释  
+ **SQLWritePrivateProfileString** 是一种简单的方法，可将来自 Microsoft® Windows®的驱动程序和驱动程序安装 dll 移植到 MICROSOFT windows NT®/Windows 2000。 应将对 **WritePrivateProfileString** 的调用写入到 Odbc.ini 文件中，并将其替换为对 **SQLWritePrivateProfileString**的调用。 **SQLWritePrivateProfileString** 调用 WIN32® API 中的函数，将指定的值名称和数据添加到系统信息的 Odbc.ini 子项中。  
   
- 配置模式指示在何处列出 DSN 值在系统信息中的位置。 如果 DSN 是用户 DSN （状态变量是 USERDSN_ONLY），则函数将写入 HKEY_CURRENT_USER 中的 "Odbc" 项。 如果 DSN 是系统 DSN （SYSTEMDSN_ONLY），则该函数将写入 HKEY_LOCAL_MACHINE 中的 "Odbc" 项。 如果状态变量为 BOTHDSN，则尝试 HKEY_CURRENT_USER，如果失败，则使用 HKEY_LOCAL_MACHINE。  
+ 配置模式指示 Odbc.ini 条目列出 DSN 值在系统信息中的位置。 如果 DSN 是用户 DSN (状态变量 USERDSN_ONLY) ，则该函数将写入 HKEY_CURRENT_USER 中的 Odbc.ini 条目。 如果 DSN 是系统 DSN (SYSTEMDSN_ONLY) ，则该函数将写入 HKEY_LOCAL_MACHINE 中的 Odbc.ini 条目。 如果状态变量为 BOTHDSN，则尝试 HKEY_CURRENT_USER，如果失败，则使用 HKEY_LOCAL_MACHINE。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|查看|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |从系统信息中获取值|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|

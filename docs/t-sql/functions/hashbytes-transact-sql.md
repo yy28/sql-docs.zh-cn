@@ -1,4 +1,5 @@
 ---
+description: HASHBYTES (Transact-SQL)
 title: HASHBYTES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2016
@@ -19,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30f72c8b6fff2d22c3ff7b493d8ba126db91c6c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5c622d1c39668ee1e58c3eb1e60512d6f8d6f729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422731"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -50,9 +51,9 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
   
 `@input`  
-指定包含要对其执行哈希操作的数据的变量。 `@input` 为 varchar、nvarchar 或 varbinary    。  
+指定包含要对其执行哈希操作的数据的变量。  为 varchar、nvarchar 或 varbinary`@input`************。  
   
-'input'   
+'input'  
 指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
   
  输出符合算法标准：MD2、MD4 和 MD5 为 128 位（即 16 个字节）；SHA 和 SHA1 为 160 位（即 20 个字节）；SHA2_256 为 256 位（即 32 个字节），SHA2_512 为 512 位（即 64 个字节）。  
@@ -62,7 +63,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更早版本，允许的输入值限制为 8000 个字节。  
   
 ## <a name="return-value"></a>返回值  
- varbinary（最大 8000 个字节）   
+ varbinary（最大 8000 个字节）****  
 
 ## <a name="remarks"></a>备注  
 请考虑使用 `CHECKSUM` 或 `BINARY_CHECKSUM` 作为替代方案，以计算哈希值。
@@ -71,7 +72,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  
- 以下示例返回变量 `SHA2_256` 中存储的 nvarchar 数据的  **哈希值**`@HashThis`。  
+ 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA2_256` 哈希值****。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  
@@ -80,7 +81,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>返回表列的哈希  
- 下面的示例返回 `c1` 表 `Test1` 列中值的 SHA2_256 哈希。  
+ 下面的示例返回 `Test1` 表 `c1` 列中值的 SHA2_256 哈希。  
   
 ```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(32));  

@@ -1,4 +1,5 @@
 ---
+description: Objects Created on the Oracle Publisher
 title: 在 Oracle 发布服务器上创建的对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 405deb86567c596372777dff5e6ccb9dd2e95fb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 744cf1e5878382e1eae804b4705e21d1fa21d098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420451"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制将数据库对象安装在 Oracle 发布服务器上以启用更改跟踪和转发（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会在 Oracle 发布服务器上安装任何二进制文件）。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
   
-|对象名称|对象类型|说明|  
+|对象名称|对象类型|描述|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|表|更改跟踪表，当对已发布的表中进行了更改时，可使用此表存储更改信息。 为每个已发布的表创建一个更改跟踪表。|  
 |HREPL_Changes|表|Xactset 作业内部用来确定等待分配给事务集的更改数量的表。 有关此作业的详细信息，请参阅 [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)（Oracle 发布服务器的性能优化）。|  
@@ -46,8 +47,8 @@ ms.locfileid: "85901230"
 |HREPL_ExecuteCommand|过程|在 Oracle 发布包代码之外定义的、用于在发布服务器上执行命令的过程。|  
 |HREPL_ArticleN_Trigger_Row|触发器|为每个已发布表生成的、用于跟踪行更改的触发器。|  
 |HREPL_ArticleN_Trigger_Stmt|触发器|为每个已发布表生成的、用于跟踪语句级更改的触发器。|  
-|HREPL_Article_I_J|查看|为每个已发布表创建的、用于查询已发布表的视图。|  
-|HREPL_Log_I_J_K|查看|为每个已发布表创建的、用于查询更改跟踪表的视图。|  
+|HREPL_Article_I_J|视图|为每个已发布表创建的、用于查询已发布表的视图。|  
+|HREPL_Log_I_J_K|视图|为每个已发布表创建的、用于查询更改跟踪表的视图。|  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

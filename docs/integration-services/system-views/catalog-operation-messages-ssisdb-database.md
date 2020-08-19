@@ -1,4 +1,5 @@
 ---
+description: catalog.operation_messages（SSISDB 数据库）
 title: catalog.operation_messages（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2dddde1f4c6ac3cf058e45b0c049bd89fb76bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7b15cffb2f04217586e58fd53ff5b5224c66527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422021"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages（SSISDB 数据库）
 
@@ -36,7 +37,7 @@ ms.locfileid: "86912483"
 |message_time|**datetimeoffset(7)**|创建消息时的时间。|  
 |message_type|**smallint**|所显示的消息的类型。|  
 |message_source_type|**smallint**|消息源类型的 ID。|  
-|message|**nvarchar(max)**|消息的文本。|  
+|消息|**nvarchar(max)**|消息的文本。|  
 |extended_info_id|**bigint**|与在 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 视图中找到的操作消息相关的附加信息的 ID。|  
   
 ## <a name="remarks"></a>备注  
@@ -59,14 +60,14 @@ ms.locfileid: "86912483"
 |100|QueryCancel|  
 |130|TaskFailed|  
 |90|诊断|  
-|200|自定义|  
+|200|“自定义”|  
 |140|DiagnosticEx<br /><br /> 每当执行包任务执行子包时，都会记录此事件。 此事件消息包含传递到子包的参数值。<br /><br /> DiagnosticEx 的消息列的值是 XML 文本。|  
 |400|NonDiagnostic|  
 |80|VariableValueChanged|  
   
  此视图显示下列消息源类型。  
   
-|**message_source_type**|说明|  
+|**message_source_type**|描述|  
 |-------------------------------|-----------------|  
 |10|入口 API，如 T-SQL 和 CLR 存储过程|  
 |20|用来运行包的外部进程 (ISServerExec.exe)|  

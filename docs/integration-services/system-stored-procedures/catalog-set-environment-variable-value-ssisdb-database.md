@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_value（SSISDB 数据库）
 title: catalog.set_environment_variable_value（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa933da5806b916cc200881c880f49ccaa01d746
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 35d7408a5ad925673f68ce9c66c90768f7fe2f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422141"
 ---
 # <a name="catalogset_environment_variable_value-ssisdb-database"></a>catalog.set_environment_variable_value（SSISDB 数据库）
 
@@ -42,11 +43,11 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
  [ @environment_name = ] environment_name   
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @variable _name = ] variable _name   
- 环境变量的名称。 variable _name  为 nvarchar(128)  。  
+ [ @variable _name = ] variable _name**  
+ 环境变量的名称。 variable _name** 为 nvarchar(128)****。  
   
- [ @value = ] value   
- 环境变量的值。 value  为 sql_variant  。  
+ [ @value = ] value  
+ 环境变量的值。 value** 为 sql_variant****。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
