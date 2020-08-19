@@ -18,7 +18,7 @@
   href: save-metadata-accesstosql.md
 - name: 连接到 SQL Server
   href: connecting-to-sql-server-accesstosql.md
-- name: 将 Access 数据迁移到 Azure SQL DB
+- name: 将 Access 数据迁移到 Azure SQL 数据库
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: 创建和管理项目
   href: creating-and-managing-projects-accesstosql.md
@@ -38,7 +38,7 @@
   href: new-project-ssma-accesstosql.md
 - name: SSMA 控制台中的命令行选项
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: 连接到 Azure SQL DB
+- name: 连接到 Azure SQL 数据库
   href: connect-to-azure-sql-db-accesstosql.md
 - name: 评估报表
   href: assessment-report-accesstosql.md
@@ -60,7 +60,7 @@
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: 创建服务器连接文件
   href: creating-the-server-connection-files-accesstosql.md
-- name: 将 Access 应用程序链接到 Azure SQL DB
+- name: 将 Access 应用程序链接到 Azure SQL 数据库
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: 创建变量值文件
   href: creating-variable-value-files-accesstosql.md
@@ -68,7 +68,7 @@
   href: edit-type-mapping-accesstosql.md
 - name: 导出 Access 清单
   href: exporting-an-access-inventory-accesstosql.md
-- name: 将 Access 数据库迁移到 Azure SQL DB
+- name: 将 Access 数据库迁移到 Azure SQL 数据库
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: 映射源和目标数据库
   href: mapping-source-and-target-databases-accesstosql.md
@@ -92,7 +92,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: 快捷键
   href: shortcut-keys-accesstosql.md
-- name: 连接到 Azure SQL DB
+- name: 连接到 Azure SQL 数据库
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: 设置转换和迁移选项
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -112,7 +112,7 @@
       href: project-settings-gui-accesstosql.md
     - name: 转换
       href: project-settings-conversion-accesstosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-accesstosql.md
     - name: Type-Mapping
       href: project-settings-type-mapping-accesstosql.md

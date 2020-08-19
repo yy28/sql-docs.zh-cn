@@ -1,5 +1,6 @@
 ---
-title: sys. fn_hadr_is_primary_replica （Transact-sql） |Microsoft Docs
+description: sys.fn_hadr_is_primary_replica (Transact-SQL)
+title: sys. fn_hadr_is_primary_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1ed8bf04b624746d6a84efc6b515d0efa6c9d598
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1c7bc3d91eafbfa72149c5c228afe409b044b089
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427839"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "87442859"
 sys.fn_hadr_is_primary_replica ( 'dbname' )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  "*dbname*"  
- 数据库的名称。 *dbname*的类型为 sysname。  
+ 数据库的名称。 *dbname* 的类型为 sysname。  
   
-## <a name="returns"></a>返回值  
- 如果当前实例上的数据库是主副本，则返回数据类型**bool**： 1; 否则返回0。  
+## <a name="returns"></a>返回  
+ 如果当前实例上的数据库是主副本，则返回数据类型 **bool**： 1; 否则返回0。  
   
 ## <a name="remarks"></a>备注  
  使用此函数可以方便地确定本地实例承载是否承载指定可用性数据库的主副本。 示例代码可与以下代码相似。  

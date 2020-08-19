@@ -1,4 +1,5 @@
 ---
+description: SQL Server 复制“发布服务器设置”对话框
 title: “发布服务器设置”(SSMS) | Microsoft Docs
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -16,16 +17,16 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a6232fc78b4c9b1d68a9cc96e6fed69138e5075f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427919"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 复制“发布服务器设置”对话框
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  可以使用 **“发布服务器设置”** 对话框，更改已添加到复制监视器左窗格中的发布服务器的设置。  
+  可以使用“发布服务器设置”**** 对话框，更改已添加到复制监视器左窗格中的发布服务器的设置。  
   
 ## <a name="options"></a>选项  
  **发布服务器连接**  
@@ -35,7 +36,7 @@ ms.locfileid: "85678483"
  只有当发布服务器使用了远程分发服务器时，才会显示此项。 单击此项可打开 **“连接到服务器”** 对话框，通过该对话框可以查看和更改复制监视器用来连接远程分发服务器的连接属性和凭据。  
   
  **复制监视器启动时自动连接**  
- 选择此项可以使复制监视器自动连接到分发服务器，并检索在该对话框顶部网格中所选发布服务器的状态信息。 如果清除了此复选框，则必须在启动复制监视器后手动进行连接：在复制监视器左窗格中右键单击发布服务器，然后单击 **“连接”** 。  
+ 选择此项可以使复制监视器自动连接到分发服务器，并检索在该对话框顶部网格中所选发布服务器的状态信息。 如果清除了此复选框，则必须在启动复制监视器后手动进行连接：在复制监视器左窗格中右键单击发布服务器，然后单击 **“连接”**。  
   
  **自动刷新此发布服务器及其发布的状态**  
  选择此项可以使复制监视器自动刷新在该对话框顶部网格中所选发布服务器的状态。 如果选择了此选项，复制监视器将轮询分发服务器，以获取发布服务器及其发布的状态信息。 轮询间隔是由 **“刷新速率”** 选项设置的。 有关在复制监视器中刷新的详细信息，请参阅[缓存、刷新和复制监视器性能](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  

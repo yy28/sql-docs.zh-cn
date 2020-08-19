@@ -1,4 +1,5 @@
 ---
+description: 重命名列（数据库引擎）
 title: 重命名列（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -15,12 +16,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1d24cbf22eb8c188237931daa49e50cdc0648ee
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d2a3c92773a3dd2f36ce7591324dd8505d02abdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427439"
 ---
 # <a name="rename-columns-database-engine"></a>重命名列（数据库引擎）
 
@@ -59,14 +60,14 @@ ms.locfileid: "86011099"
 ### <a name="to-rename-a-column-using-object-explorer"></a>使用对象资源管理器重命名列
 
 1. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。
-2. 在“对象资源管理器”  中，右键单击要重命名其中的列的表，再选择“重命名”  。
+2. 在“对象资源管理器”**** 中，右键单击要重命名其中的列的表，再选择“重命名”****。
 3. 键入新的列名称。
 
 ### <a name="to-rename-a-column-using-table-designer"></a>使用表设计器重命名列
 
-1. 在“对象资源管理器”  中，右键单击要为其重命名列的表，再选择“设计”  。
+1. 在“对象资源管理器”**** 中，右键单击要为其重命名列的表，再选择“设计”****。
 2. 在 **“列名”** 下，选择要更改的名称，并键入新名称。
-3. 在“文件”菜单上，单击“保存表名称”    。
+3. 在“文件”菜单上，单击“保存表名称”******** __。
 
 > [!NOTE]
 > 您也可以在 **“列属性”** 选项卡中更改列名。选择要更改名称的列，并为 **“名称”** 键入新值。

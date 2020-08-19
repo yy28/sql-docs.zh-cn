@@ -1,5 +1,6 @@
 ---
-title: 查询存储存储过程（Transact-sql） |Microsoft Docs
+description: '查询存储存储过程 (Transact-sql) '
+title: 查询存储存储过程 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -17,13 +18,14 @@ ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3209109fd1a54fcf85e9fbcb0898ef0c88a65d4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5cf15624d690a5087edc8f50736d8f37a3b2f753
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427689"
 ---
-# <a name="query-store-stored-procedures-transact-sql"></a>查询存储存储过程（Transact-sql）
+# <a name="query-store-stored-procedures-transact-sql"></a>查询存储存储过程 (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   本部分包含以下用于配置查询存储的存储过程。  

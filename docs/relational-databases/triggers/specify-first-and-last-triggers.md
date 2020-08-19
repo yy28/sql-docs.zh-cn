@@ -1,4 +1,5 @@
 ---
+description: 指定第一个和最后一个触发器
 title: 指定第一个和最后一个触发器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cac5567670887a0e0a996b6aed690e17adbbf9a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98269d555a7cd639589544dbf8c645eb08ed5cb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427349"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,11 +30,11 @@ ms.locfileid: "85755415"
   
  若要指定 AFTER 触发器的顺序，请使用 **sp_settriggerorder** 存储过程。 **sp_settriggerorder** 有下列选项。  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |**第一个**|指定 DML 触发器是执行触发操作时激发的第一个 AFTER 触发器。|  
 |**上一次**|指定 DML 触发器是执行触发操作时激发的最后一个 AFTER 触发器。|  
-|无 |指定不按特定的顺序激发 DML 触发器。 主要用于将某个触发器重置为第一个或最后一个触发器。|  
+|**无**|指定不按特定的顺序激发 DML 触发器。 主要用于将某个触发器重置为第一个或最后一个触发器。|  
   
  以下示例说明如何使用 **sp_settriggerorder**：  
   
@@ -52,7 +53,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  如果 ALTER TRIGGER 语句更改了第一个或最后一个触发器，则会删除 **First** 或 **Last** 属性并将顺序值设置为 **None**。 必须使用 **sp_settriggerorder**来重置顺序。  
   
- OBJECTPROPERTY 函数使用以下属性，报告某一触发器是第一个还是最后一个触发器：ExecIsFirstInsertTrigger、ExecIsFirstUpdateTrigger、ExecIsFirstDeleteTrigger、ExecIsLastInsertTrigger、ExecIsLastUpdateTrigger 和 ExecIsLastDeleteTrigger       。  
+ OBJECTPROPERTY 函数使用以下属性，报告某一触发器是第一个还是最后一个触发器：ExecIsFirstInsertTrigger、ExecIsFirstUpdateTrigger、ExecIsFirstDeleteTrigger、ExecIsLastInsertTrigger、ExecIsLastUpdateTrigger 和 ExecIsLastDeleteTrigger************************。  
   
  复制将为包含在立即更新订阅或排队更新订阅中的任意表自动生成第一个触发器。 复制要求其触发器为第一个触发器。 在尝试将带有第一个触发器的表包含在立即更新订阅或排队更新订阅中时，复制将引发错误。 如果在表已经包含在订阅中之后尝试使某个触发器成为第一个触发器， **sp_settriggerorder** 将返回错误。 如果在复制触发器上使用 ALTER，或使用 **sp_settriggerorder** 将复制触发器更改为最后一个触发器或无触发器，订阅将无法正常工作。  
   

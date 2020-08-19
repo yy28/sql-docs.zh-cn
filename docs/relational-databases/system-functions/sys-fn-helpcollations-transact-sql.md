@@ -1,5 +1,6 @@
 ---
-title: sys. fn_helpcollations （Transact-sql） |Microsoft Docs
+description: sys.fn_helpcollations (Transact-SQL)
+title: sys. fn_helpcollations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91ff0f85ba496397025ea99012509edea9dd865
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427829"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -42,21 +44,21 @@ fn_helpcollations ()
   
 ## <a name="tables-returned"></a>返回的表
 
- **fn_helpcollations**返回以下信息。  
+ **fn_helpcollations** 返回以下信息。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |名称|**sysname**|标准排序规则名称|  
-|说明|**nvarchar(1000)**|排序规则说明|  
+|描述|**nvarchar(1000)**|排序规则说明|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]还支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则之前开发的一种称为排序规则的有限编号（<80）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则仍支持向后兼容，但不能用于新的开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受支持的 Windows 排序规则之前开发的 ( # B0 80) 称为排序规则的排序规则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则仍支持向后兼容，但不能用于新的开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例
 
  以下示例返回以字母 `L` 开头并且是二进制排序规则的所有排序规则名称。
 
 > [!Note]
-> 针对 fn_helpcollations （）的 Azure SQL 数据仓库查询必须在 master 数据库中运行。  
+> 针对 fn_helpcollations ( # A1 的 Azure SQL 数据仓库查询必须在 master 数据库中运行。  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  

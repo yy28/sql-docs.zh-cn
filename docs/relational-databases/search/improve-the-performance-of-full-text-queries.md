@@ -1,4 +1,5 @@
 ---
+description: 改进全文查询的性能
 title: 改进全文查询的性能 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fe209581f1ce57d40c7757333a6da8ea84898e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18cd0b40213fc14542c5ef58ee12f0ee011dd08a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427939"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85629467"
   
 -   如果只需要全文键或排名的信息，请使用 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) ，而不要使用分别与之对应的 CONTAINS 或 FREETEXT。  
   
--   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用*top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”  ）时，才应使用此参数。  
+-   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用*top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”**）时，才应使用此参数。  
   
     > [!NOTE]  
     >  法律应用场景通常需要返回全部项，不过对于诸如电子商务等商业应用场景，性能可能更为重要。  

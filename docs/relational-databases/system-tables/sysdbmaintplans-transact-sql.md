@@ -1,5 +1,6 @@
 ---
-title: sysdbmaintplans （Transact-sql） |Microsoft Docs
+description: sysdbmaintplans (Transact-SQL)
+title: sysdbmaintplans (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eb84e9d50a797e52aca749cf590ca95b4f3e835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b99856c92b13ebfda086a8dea8f2a4bd26e86dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427599"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含此表，以保留已从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本升级而来的实例的现有信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不更改此表的内容。 该表存储在**msdb**数据库中。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含此表，以保留已从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本升级而来的实例的现有信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不更改此表的内容。 该表存储在 **msdb** 数据库中。  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
 
@@ -42,9 +43,9 @@ ms.locfileid: "85881401"
 |**remote_history_server**|**sysname**|远程服务器的名称，可以将历史报表写入该远程服务器中。|  
 |**max_remote_history_rows**|**int**|远程服务器上的系统表中所分配的最大行数，可以将历史报表写入该远程服务器中。|  
 |**user_defined_1**|**int**|默认值为 NULL。|  
-|**user_defined_2**|**nvarchar （100）**|默认值为 NULL。|  
+|**user_defined_2**|**nvarchar (100) **|默认值为 NULL。|  
 |**user_defined_3**|**datetime**|默认值为 NULL。|  
 |**user_defined_4**|**uniqueidentifier**|默认值为 NULL。|  
-|**log_shipping**|**bit**|日志传送状态：<br /><br /> **0** = 禁用**1** = 已启用|  
+|**log_shipping**|**bit**|日志传送状态：<br /><br /> **0** = 禁用 **1** = 已启用|  
   
   

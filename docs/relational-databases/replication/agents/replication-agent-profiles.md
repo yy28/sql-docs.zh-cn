@@ -1,4 +1,5 @@
 ---
+description: 复制代理配置文件
 title: 复制代理配置文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 95166948ff2d447eaac439442230af91d75c1bf3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 49fc84b9ac85d17d85f63372c8bdd57d0619413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427979"
 ---
 # <a name="replication-agent-profiles"></a>复制代理配置文件
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "86922835"
   
  复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 使用代理配置文件可以轻松地更改与该配置文件关联的所有代理的键参数。 例如，如果您有 20 个快照代理并且需要更改查询超时值（ **-QueryTimeout** 参数），则可以更新这些快照代理使用的配置文件，这样该此类型的所有代理将在下次运行时自动开始使用新值。  
   
- 您也可能对代理的不同实例拥有不同的配置文件。 例如，以拨号连接方式连接到发布服务器和分发服务器的合并代理可以通过使用“慢速链接”  配置文件而采用一组更适合慢速通信链接的参数。  
+ 您也可能对代理的不同实例拥有不同的配置文件。 例如，以拨号连接方式连接到发布服务器和分发服务器的合并代理可以通过使用“慢速链接” **** 配置文件而采用一组更适合慢速通信链接的参数。  
   
 > [!NOTE]  
 >  如果在命令行中为代理参数指定了值，则该值将覆盖代理配置文件中为同一参数设置的值。  
@@ -46,7 +47,7 @@ ms.locfileid: "86922835"
 ## <a name="snapshot-agent-profiles"></a>快照代理配置文件  
  下表显示了快照代理的默认配置文件中定义的参数。 有关这些参数的详细信息，请参阅 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)。  
   
-||default|  
+||默认值|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -56,7 +57,7 @@ ms.locfileid: "86922835"
 ## <a name="log-reader-agent-profiles"></a>日志读取器代理配置文件  
  下表显示了日志读取器代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)。  
   
-||default|详细历史记录|  
+||默认值|详细历史记录|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -68,7 +69,7 @@ ms.locfileid: "86922835"
 ## <a name="distribution-agent-profiles"></a>分发代理配置文件  
  下表显示了分发代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
-||default|详细历史记录|Windows 同步管理器|出现数据一致性错误时继续|OLEDB 流的分发配置文件|  
+||默认值|详细历史记录|Windows 同步管理器|出现数据一致性错误时继续|OLEDB 流的分发配置文件|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -89,7 +90,7 @@ ms.locfileid: "86922835"
 ## <a name="merge-agent-profiles"></a>合并代理配置文件  
  下表显示了合并代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
-||default|详细历史记录|Windows 同步管理器|行计数验证|行计数和校验和验证|慢速链接|高卷服务器对服务器|  
+||默认值|详细历史记录|Windows 同步管理器|行计数验证|行计数和校验和验证|慢速链接|高卷服务器对服务器|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -120,7 +121,7 @@ ms.locfileid: "86922835"
 ## <a name="queue-reader-agent-profiles"></a>队列读取器代理配置文件  
  下表显示了队列读取器代理的默认配置文件中定义的参数。 有关这些参数的详细信息，请参阅 [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)。  
   
-||default|  
+||默认值|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  

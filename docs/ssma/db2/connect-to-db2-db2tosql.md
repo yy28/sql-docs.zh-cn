@@ -1,4 +1,5 @@
 ---
+description: '连接到 DB2 (DB2ToSQL) '
 title: 连接到 DB2 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e78e7ec34e9c75d25dac51101e28291b1f4c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426969"
 ---
 # <a name="connect-to-db2-db2tosql"></a>连接到 DB2 (DB2ToSQL) 
-使用 "**连接到 db2** " 对话框连接到要迁移的 DB2 数据库。  
+使用 " **连接到 db2** " 对话框连接到要迁移的 DB2 数据库。  
   
-若要访问此对话框，请在 "**文件**" 菜单上选择 "**连接到 DB2**"。 如果以前已连接，则该命令将**重新连接到 DB2**。  
+若要访问此对话框，请在 " **文件** " 菜单上选择 " **连接到 DB2**"。 如果以前已连接，则该命令将 **重新连接到 DB2**。  
   
 ## <a name="options"></a>选项  
 **提供程序**  
@@ -69,7 +70,7 @@ ms.locfileid: "87933840"
   
 连接字符串包含参数名称和值对。  
   
--   有关 OLE DB 连接字符串的信息，请参阅 MSDN Library 上的[DB2 的 Microsoft OLE DB 提供程序](https://go.microsoft.com/fwlink/?LinkId=85640)文章。  
+-   有关 OLE DB 连接字符串的信息，请参阅 MSDN Library 上的 [DB2 的 Microsoft OLE DB 提供程序](https://go.microsoft.com/fwlink/?LinkId=85640) 文章。  
   
 对于 SSMA 连接字符串，请始终包含提供程序参数。 此外，请确保在连接到 DB2 时包含 Port 参数。  
   

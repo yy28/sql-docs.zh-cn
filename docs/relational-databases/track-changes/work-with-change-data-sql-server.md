@@ -1,4 +1,5 @@
 ---
+description: 处理变更数据 (SQL Server)
 title: 处理变更数据
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427369"
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889097"
  有关如何截获这些已知的 TVF 错误并返回有关失败的更有意义的信息的说明，请参阅“使用 TRY CATCH 枚举净更改”模板。  
   
 > [!NOTE]  
->  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”  菜单上单击“模板资源管理器”  ，展开 **“SQL Server 模板”** ，然后展开 **“变更数据捕获”** 文件夹。  
+>   若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在 **“视图”** 菜单上单击 **“模板资源管理器”**，展开 **“SQL Server 模板”** ，然后展开 **“变更数据捕获”** 文件夹。  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> 查询函数  
  根据所跟踪的源表的特性以及配置其捕获实例的方式，将生成一个或两个查询更改数据的 TVF。  

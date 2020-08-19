@@ -1,4 +1,5 @@
 ---
+description: 复制表
 title: 复制表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8dfba52b3b2fcaece50b9d7feb14014aaff1f99
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 35601b570c7c369efb2a9249f78298345df12f5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427519"
 ---
 # <a name="duplicate-tables"></a>复制表
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -56,19 +57,19 @@ ms.locfileid: "87396906"
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   
-2.  在对象资源管理器中，右键单击  “表”，再单击  “新建表”。  
+2.  在对象资源管理器中，右键单击****“表”，再单击****“新建表”。  
   
-3.  在对象资源管理器中，右键单击要复制的表，再单击  “设计”。  
+3.  在对象资源管理器中，右键单击要复制的表，再单击****“设计”。  
   
-4.  在现有表中选择列，在 **“编辑”** 菜单上单击 **“复制”** 。  
+4.  在现有表中选择列，在 **“编辑”** 菜单上单击 **“复制”**。  
   
 5.  切换回新表并选择第一行。  
   
-6.  在 **“编辑”** 菜单上，单击 **“粘贴”** 。  
+6.  在 **“编辑”** 菜单上，单击 **“粘贴”**。  
   
-7.  从“文件”  菜单上，单击“保存”  表格名称  。  
+7.  从“文件”菜单上，单击“保存”表格名称。  
   
-8.  在 **“选择名称”** 对话框中，键入新表的名称，然后单击 **“确定”** 。  
+8.  在 **“选择名称”** 对话框中，键入新表的名称，然后单击 **“确定”**。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,12 +77,12 @@ ms.locfileid: "87396906"
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   
-2.  右键单击要复制的表，指向  “编写表脚本为”，然后指向  “CREATE 到”，再选择  “新查询编辑器窗口”。  
+2.  右键单击要复制的表，指向****“编写表脚本为”，然后指向****“CREATE 到”，再选择****“新查询编辑器窗口”。  
   
 3.  更改表的名称。  
   
 4.  删除新表中不需要的列。  
   
-5.  单击“执行”  。  
+5.  单击“执行” 。  
   
   

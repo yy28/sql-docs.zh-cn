@@ -1,5 +1,6 @@
 ---
-title: sys. fn_cdc_map_lsn_to_time （Transact-sql） |Microsoft Docs
+description: sys.fn_cdc_map_lsn_to_time (Transact-SQL)
+title: sys. fn_cdc_map_lsn_to_time (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89925b781d94d84a22e744955d335e163875d2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a699f9706c8dafff6d2500a1e41c080f461df6ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427859"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  根据指定的日志序列号（LSN），返回[cdc lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系统表中**tran_end_time**列的日期和时间值。 您可以使用此函数系统地将 LSN 范围映射到更改表中的日期范围。  
+  返回指定日志序列号 (LSN) 的[lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系统表中**tran_end_time**列的日期和时间值。 您可以使用此函数系统地将 LSN 范围映射到更改表中的日期范围。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,13 +44,13 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
   
 ## <a name="arguments"></a>参数  
  *lsn_value*  
- 要进行匹配的 LSN 值。 *lsn_value*为**binary （10）**。  
+ 要进行匹配的 LSN 值。 *lsn_value* 是 ** (10) 的二进制 **。  
   
 ## <a name="return-type"></a>返回类型  
  **datetime**  
   
 ## <a name="remarks"></a>备注  
- 此函数可用于根据在更改数据的行中返回的 **__ $ start_lsn**值来确定提交更改的时间。  
+ 此函数可用于根据在更改数据的行中返回的 **__ $ start_lsn** 值来确定提交更改的时间。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

@@ -1,4 +1,5 @@
 ---
+description: 主键和外键约束
 title: 主键和外键约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -16,19 +17,19 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f9f47b2149bb308bf0e2ca8b5c975d24d11c37
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a7802c1bbf767ae45a2b25da21f8db3d8705c79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427499"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   主键和外键是两种类型的约束，可用于强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据完整性。 这些是重要的数据库对象。  
   
- 本主题包含以下各节。  
+ 本主题包含以下各节：  
   
  [主键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
   
@@ -41,7 +42,7 @@ ms.locfileid: "86004777"
   
  如果为表指定了主键约束， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将通过为主键列自动创建唯一索引来强制数据的唯一性。 当在查询中使用主键时，此索引还允许对数据进行快速访问。 如果对多列定义了主键约束，则一列中的值可能会重复，但来自主键约束定义中所有列的值的任何组合必须唯一。  
   
- 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合    。 这样可以防止插入重复的行。  
+ 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合************。 这样可以防止插入重复的行。  
   
  ![组合 PRIMARY KEY 约束](../../relational-databases/tables/media/fund04.gif "组合 PRIMARY KEY 约束")  
   
@@ -60,7 +61,7 @@ ms.locfileid: "86004777"
 ##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  外键 (FK) 是用于在两个表中的数据之间建立和加强链接的一列或多列的组合，可控制可在外键表中存储的数据。 在外键引用中，当包含一个表的主键值的一个或多个列被另一个表中的一个或多个列引用时，就在这两个表之间创建了链接。 这个列就成为第二个表的外键。  
   
- 例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表的主键中不存在 SalesPersonID 的值，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。  
+ 例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表的主键中不存在 SalesPersonID 的值，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。    
   
  表最多可以将 253 个其他表和列作为外键引用（传出引用）。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 将可在单独的表中引用的其他表和列（传入引用）的数量限制从 253 提高至 10,000。 （兼容性级别至少必须为 130。）数量限制的提高带来了下列约束：  
   

@@ -1,4 +1,5 @@
 ---
+description: 对复制代理事件使用警报
 title: 对复制代理事件使用警报 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a52154d55f1703cc2f7d1a9221021ab11d94177
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0fbec0a8ff1bcd6416ab0c24166a5bf5559cb8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428039"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,10 +42,10 @@ ms.locfileid: "86919743"
 |14151|**复制: 代理失败**|代理关闭时出现错误。|是|  
 |14152|**复制：代理重试**|代理在重试某项操作失败后关闭（代理遇到服务器不可用、死锁、连接失败或超时故障之类的错误）。|是|  
 |14157|**复制：已删除过期的订阅**|已删除过期的订阅。|否|  
-|20572|**复制：验证失败后重新初始化了订阅**|响应作业“数据验证失败时重新初始化订阅”成功重新初始化订阅。|否|  
-|20574|**复制：订阅服务器未通过数据验证**|分发代理或合并代理未通过数据验证。|是|  
-|20575|**复制：订阅服务器已通过数据验证**|分发代理或合并代理通过数据验证。|是|  
-|20578|**复制：代理自定义关闭**|||  
+|20572|复制：验证失败后重新初始化了订阅|响应作业“数据验证失败时重新初始化订阅”成功重新初始化订阅。|否|  
+|20574|复制：订阅服务器未通过数据验证|分发代理或合并代理未通过数据验证。|是|  
+|20575|复制：订阅服务器已通过数据验证|分发代理或合并代理通过数据验证。|是|  
+|20578|复制：代理自定义关闭|||  
 |22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|是|  
   
  除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅[创建用户定义事件](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  

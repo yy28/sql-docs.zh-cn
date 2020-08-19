@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 7/17/2020
-ms.openlocfilehash: c0b701bb23b5ada0f3a4a58d23064bd79acd80ad
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.date: 8/12/2020
+ms.openlocfilehash: 29f5f31d999e96a17cd1653323c75251c8873572
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442393"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147208"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -27,9 +27,9 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行。
 
 |平台|下载|发布日期| 版本 |
 |:---|:---|:---|:---|
-| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 2020 年 7 月 17 日 | 1.20.1 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 2020 年 7 月 17 日 | 1.20.1 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 2020 年 7 月 17 日| 1.20.1 |
+| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2138608)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2138704)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2138705) | 2020 年 8 月 12 日 | 1.21.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | 2020 年 8 月 12 日 | 1.21.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 2020 年 8 月 12 日| 1.21.0 |
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes.md)。
 
@@ -41,32 +41,32 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行。
 
 **用户安装程序**（推荐）
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2135512)。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2138608)。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **系统安装程序**
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2135513)。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2138704)。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **zip 文件**
 
-1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2135514)。
+1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2138705)。
 2. 浏览到下载文件并将其解压缩。
 3. `\azuredatastudio-windows\azuredatastudio.exe`运行
 
 ## <a name="get-azure-data-studio-for-macos"></a>获取适用于 macOS 的 Azure Data Studio
 
-1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2135266)。
+1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2138609)。
 2. 若要展开 zip 的内容，请双击。
 3. 若要使 Azure Data Studio 在启动板中可用，请将 Azure Data Studio.app 拖到“Applications”文件夹中  。
 
 ## <a name="get-azure-data-studio-for-linux"></a>获取适用于 Linux 的 Azure Data Studio
 
 1. 通过使用安装程序之一或 tar.gz 存档来下载适用于 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706)
 1. 若要提取文件并启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，请打开一个新的终端窗口并键入以下命令：
 
    **Debian 安装：**

@@ -1,5 +1,6 @@
 ---
-title: MSpublicationthresholds （Transact-sql） |Microsoft Docs
+description: MSpublicationthresholds (Transact-SQL)
+title: MSpublicationthresholds (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b04ac935a66994fed18745b6fc6a5bd3c3ef46c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 799c068d066fdab518a355552ead5ed5a9fde8af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427649"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,13 +33,13 @@ ms.locfileid: "85889596"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|标识已为其设置阈值的发布。|  
-|**metric_id**|**int**|标识按[MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md)系统表中的定义监视的复制性能指标。|  
-|value|**sql_variant**|受监视的跃点的阈值。|  
-|**shouldalert**|**bit**|值为**1**表示当指标超出定义的阈值时，应生成警报。|  
-|**isenabled**|**bit**|如果值为**1** ，则表示为此复制性能指标启用了监视。|  
+|**metric_id**|**int**|标识按 [MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) 系统表中的定义监视的复制性能指标。|  
+|**value**|**sql_variant**|受监视的跃点的阈值。|  
+|**shouldalert**|**bit**|值为 **1** 表示当指标超出定义的阈值时，应生成警报。|  
+|**isenabled**|**bit**|如果值为 **1** ，则表示为此复制性能指标启用了监视。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER CONFIGURATION (Transact-SQL)
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3647994f8593ccbbc535a7d2781758e2b42c653d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c162a55af4cc76f5ce9b848e28aa0d9b7c324f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426889"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -261,7 +262,7 @@ OFF
   
 **详细信息：** 如果在重启 SQL Server 服务之前使用 SET SOFTNUMA 命令运行 ALTER SERVER CONFIGURATION，则在 SQL Server 代理服务停止时，它会运行 T-SQL RECONFIGURE 命令，将 SOFTNUMA 设置还原回执行 ALTER SERVER CONFIGURATION 之前的状态。 
 
-**\<memory_optimized> ::=**
+\<memory_optimized> ::=
 
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）。
 

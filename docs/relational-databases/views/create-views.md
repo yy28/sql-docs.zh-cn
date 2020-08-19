@@ -1,4 +1,5 @@
 ---
+description: 创建视图
 title: 创建视图 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5251863e3b02f62cb1af6cec6da4166081239d1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1a4233f1b78960224ad8a36ec2e542d8713060a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427379"
 ---
 # <a name="create-views"></a>创建视图
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,19 +63,19 @@ ms.locfileid: "87395718"
   
 1.  在 **“对象资源管理器”** 中，展开要创建新视图的数据库。  
   
-2.  右键单击“视图”文件夹，然后单击“新建视图...”   。  
+2.  右键单击“视图”文件夹，然后单击“新建视图...” 。  
   
 3.  在 **“添加表”** 对话框中，从以下选项卡之一选择要在新视图中包含的元素：“表”、“视图”、“函数”和“同义词”。  
   
-4.  单击 **“添加”** ，再单击 **“关闭”** 。  
+4.  单击 **“添加”**，再单击 **“关闭”**。  
   
 5.  在 **“关系图窗格”** 中，选择要在新视图中包含的列或其他元素。  
   
 6.  在 **“条件窗格”** 中，选择列的其他排序或筛选条件。  
   
-7.  在“文件”  菜单上，单击“保存”  以保存_视图名称_。  
+7.  在“文件”**** 菜单上，单击“保存”**** 以保存_视图名称_。  
   
-8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”** 。  
+8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
 
      有关查询和视图设计器的详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
   
@@ -86,7 +87,7 @@ ms.locfileid: "87395718"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012 ;   

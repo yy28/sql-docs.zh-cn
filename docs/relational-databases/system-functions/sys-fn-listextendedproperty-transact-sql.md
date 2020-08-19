@@ -1,5 +1,6 @@
 ---
-title: sys. fn_listextendedproperty （Transact-sql） |Microsoft Docs
+description: sys.fn_listextendedproperty (Transact-SQL)
+title: sys. fn_listextendedproperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,12 +27,12 @@ ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11249fd563bd892c79edd4f3393c82f34b211684
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd891bcfdaddfb42e2b55e1b69e3f320563c1ba7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427819"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,33 +57,33 @@ fn_listextendedproperty (
   )   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  {默认值 |"*property_name*" |无效  
  属性的名称。 *property_name* **sysname**。 有效输入包括默认值 NULL 或属性名。  
   
  {默认值 |"*level0_object_type*" |无效  
- 用户或用户定义类型。 *level0_object_type*的值为**varchar （128）**，默认值为 NULL。 有效输入包括 ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
+ 用户或用户定义类型。 *level0_object_type* 是 **varchar (128) **，默认值为 NULL。 有效输入包括 ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
   
 > [!IMPORTANT]  
 >  作为级别 0 类型的 USER 和 TYPE 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。 改用 SCHEMA 替代 USER 作为级别 0 类型。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
  {默认值 |"*level0_object_name*" |无效  
- 所指定的级别 0 对象类型的名称。 *level0_object_name*的值为**sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
+ 所指定的级别 0 对象类型的名称。 *level0_object_name* 的值为 **sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
  {默认值 |"*level1_object_type*" |无效  
- 级别 1 对象的类型。 *level1_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 级别 1 对象的类型。 *level1_object_type* 是 **varchar (128) ** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
 > [!NOTE]  
 >  默认值映射到 NULL，而“default”映射到对象类型 DEFAULT。  
   
  {默认值 |"*level1_object_name*" |无效  
- 所指定的级别 1 对象类型的名称。 *level1_object_name*的值为**sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
+ 所指定的级别 1 对象类型的名称。 *level1_object_name* 的值为 **sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
  {默认值 |"*level2_object_type*" |无效  
- 级别 2 对象的类型。 *level2_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 *Level2_object_type*的有效输入为 COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 级别 2 对象的类型。 *level2_object_type* 是 **varchar (128) ** ，默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 *Level2_object_type*的有效输入为 COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  {默认值 |"*level2_object_name*" |无效  
- 所指定的级别 2 对象类型的名称。 *level2_object_name*的值为**sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
+ 所指定的级别 2 对象类型的名称。 *level2_object_name* 的值为 **sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
 ## <a name="tables-returned"></a>返回的表  
  下面是 fn_listextendedproperty 返回的表的格式。  
@@ -92,18 +93,18 @@ fn_listextendedproperty (
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|值|**sql_variant**|  
+|value|**sql_variant**|  
   
  如果返回的表为空，可能对象没有扩展属性或用户不具有列出对象扩展属性的权限。 当返回数据库本身的扩展属性时，objtype 和 objname 列将为 NULL。  
   
 ## <a name="remarks"></a>备注  
- 如果*property_name*的值为 NULL 或默认值，则 fn_listextendedproperty 返回指定对象的所有属性。  
+ 如果 *property_name* 的值为 NULL 或默认值，则 fn_listextendedproperty 返回指定对象的所有属性。  
   
  如果指定了对象类型，并且对应的对象名的值为 NULL 或默认值，则 fn_listextendedproperty 将返回指定类型的所有对象的所有扩展属性。  
   
  对象是按级别区分的，级别 0 为最高，级别 2 为最低。 如果指定了较低级别的对象（级别 1 或级别 2）的类型和名称，则父对象类型和名称应当为 NULL 或默认值以外的给定值。 否则，此函数返回空结果集。  
   
- **objname**已固定为 Latin1_General_CI_AI。 不过，可以通过在比较中覆盖排序规则来解决此问题。  
+ **objname** 已固定为 Latin1_General_CI_AI。 不过，可以通过在比较中覆盖排序规则来解决此问题。  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  

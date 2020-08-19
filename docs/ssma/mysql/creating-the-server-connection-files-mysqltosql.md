@@ -1,4 +1,5 @@
 ---
+description: 创建服务器连接文件 (MySQLToSQL)
 title: " (MySQLToSQL) 创建服务器连接文件 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa9505c0f5c40dcf2ff7cd84fc956240728385b3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df3eaf968bb43b9b6e3adac1027f8fe1a49db2d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426879"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>创建服务器连接文件 (MySQLToSQL)
 服务器信息可以在脚本文件的 "服务器" 部分中指定，也可以在单独的服务器连接文件中指定。 服务器连接文件的命令行参数为， `-c <serverconnectionfile>` 。 如果脚本文件和服务器连接文件中同时存在相同的服务器 id，则考虑脚本文件中的服务器定义。  
@@ -88,7 +89,7 @@ ms.locfileid: "87935726"
 用户可以根据 "架构" 文件夹中提供的架构定义文件 " **2ssconsolescriptserversschema"** 来轻松验证其服务器连接文件。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[执行 SSMA 控制台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+操作控制台的下一步是 [执行 SSMA 控制台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [ (MySQL 执行 SSMA 控制台) ](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

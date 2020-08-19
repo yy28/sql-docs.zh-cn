@@ -1,5 +1,6 @@
 ---
-title: sys. fn_my_permissions （Transact-sql） |Microsoft Docs
+description: sys.fn_my_permissions (Transact-SQL)
+title: sys. fn_my_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75ff0dfb3355158a3dedbc9d5e066dbce0ac441f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427749"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *安全*  
- 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式******。 *安全*对象的名称可以是多部分名称。  
+ securable  
+ 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式******。 *安全* 对象的名称可以是多部分名称。  
   
  "*securable_class*"  
- 为其列出权限的安全对象的类的名称。 *securable_class*是**sysname**。 *securable_class*必须是下列其中一项：应用程序角色、程序集、非对称密钥、证书、协定、数据库、终结点、全文目录、登录名、消息类型、对象、远程服务绑定、角色、路由、架构、服务器、服务、对称密钥、类型、用户和 XML 架构集合。  
+ 为其列出权限的安全对象的类的名称。 *securable_class* 是 **sysname**。 *securable_class* 必须是下列其中一项：应用程序角色、程序集、非对称密钥、证书、协定、数据库、终结点、全文目录、登录名、消息类型、对象、远程服务绑定、角色、路由、架构、服务器、服务、对称密钥、类型、用户和 XML 架构集合。  
   
 ## <a name="columns-returned"></a>返回的列  
- 下表列出了**fn_my_permissions**返回的列。 返回的每一行说明了当前安全上下文拥有的对安全对象的一种权限。 如果查询失败，则返回 NULL。  
+ 下表列出了 **fn_my_permissions** 返回的列。 返回的每一行说明了当前安全上下文拥有的对安全对象的一种权限。 如果查询失败，则返回 NULL。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|对其有效授予所列权限的安全对象的名称。|  
 |subentity_name|**sysname**|如果安全对象具有列，则为列名；否则为 NULL。|  
@@ -70,7 +71,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  权限评估始终在调用方的安全上下文中执行。 若要确定其他某个主体是否具有有效的权限，调用方必须对该主体具有 IMPERSONATE 权限。  
   
- 对于架构级实体，可接受由一部分、两部分或三部分组成的非空名称。 对于数据库级实体，将接受由一个部分构成的名称，其值为 "*当前数据库*"。 对于服务器本身，则需要一个 Null（表示“当前服务器”）。 **fn_my_permissions**无法检查对链接服务器的权限。  
+ 对于架构级实体，可接受由一部分、两部分或三部分组成的非空名称。 对于数据库级实体，将接受由一个部分构成的名称，其值为 "*当前数据库*"。 对于服务器本身，则需要一个 Null（表示“当前服务器”）。 **fn_my_permissions** 无法检查对链接服务器的权限。  
   
  以下查询将返回内置安全对象类的列表：  
   
@@ -80,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- 如果默认值是作为*安全*对象或*securable_class*的值提供的，则该值将被解释为 NULL。  
+ 如果默认值是作为 *安全* 对象或 *securable_class*的值提供的，则该值将被解释为 NULL。  
   
 ## <a name="examples"></a>示例  
   
@@ -160,12 +161,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全功能 &#40;Transact-sql&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [权限 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
+ [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [安全对象](../../relational-databases/security/securables.md)   
- [权限层次结构 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys. fn_builtin_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

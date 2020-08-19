@@ -102,10 +102,14 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
+                - name: OpenShift
+                  href: big-data-cluster/deploy-openshift.md
             - name: 部署脚本
               items:
                 - name: AKS Python 脚本
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+                - name: ARO Python 脚本
+                  href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
                 - name: 单节点 kubeadm 脚本
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: 用笔记本部署
@@ -130,6 +134,8 @@
       items:
         - name: 配置
           items:
+            - name: 群集
+              href: big-data-cluster/configure-cluster.md
             - name: SQL Server 主实例
               href: big-data-cluster/configure-sql-server-master-instance.md
             - name: 配置 Apache Spark 和 Apache Hadoop
@@ -178,6 +184,116 @@
           items:
             - name: 使用机器学习服务（Python、R）
               href: big-data-cluster/machine-learning-services.md
+            - name: 机器学习快速入门
+              items:
+                - name: Python
+                  items:
+                    - name: 运行 Python 脚本
+                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 数据结构和对象
+                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Python 函数
+                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 对模型进行训练和评分
+                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: 运行 R 脚本
+                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 数据类型和对象
+                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: R 函数
+                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 对模型进行训练和评分
+                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 机器学习教程
+              items:
+                - name: Python
+                  items:
+                    - name: 雪橇租赁（线性回归）
+                      items:
+                        - name: 1 - 简介
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - 准备数据
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - 定型模型
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - 部署模型
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 对客户进行分类（k-means 群集）
+                      items:
+                        - name: 1 - 简介
+                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - 准备数据
+                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - 创建模型
+                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - 部署模型
+                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 纽约出租车提示（分类）
+                      items:
+                        - name: 1 - 简介
+                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - 数据研究
+                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - 功能设计
+                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - 训练和部署
+                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 5 - 预测
+                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: 滑雪租赁（决策树）
+                      items:
+                        - name: 1 - 简介
+                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - 准备数据
+                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - 定型模型
+                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - 部署模型
+                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 对客户进行分类（k-means 群集）
+                      items:
+                        - name: 1 - 简介
+                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - 准备数据
+                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - 创建模型
+                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - 部署模型
+                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 纽约出租车提示（分类）
+                      items:
+                        - name: 1 - 简介
+                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - 数据研究
+                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - 功能设计
+                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - 训练和部署
+                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 5 - 预测
+                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 管理 Python 包和 R 包
+              items:
+                - name: Python
+                  items:
+                    - name: 获取 Python 包信息
+                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 通过 sqlmlutils 安装
+                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: 获取 R 包信息
+                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 通过 sqlmlutils 安装
+                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 创建 miniCRAN 存储库
+                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: 使用 R 包的提示
+                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 使用 PROSE 代码加速器进行数据整理
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: 具有 MLeap 的 Spark 机器学习模型
@@ -198,12 +314,26 @@
               href: big-data-cluster/notebooks-manage-bdc.md
             - name: 使用 Spark 运行笔记本
               href: big-data-cluster/notebooks-tutorial-spark.md
-            - name: 安全性
-              items:
-                - name: 更新 AZDATA_PASSWORD
-                  href: big-data-cluster/change-azdata-password.md
-                - name: 管理用户访问权限
-                  href: big-data-cluster/manage-user-access.md
+        - name: 性能
+          items:
+            - name: 优化指南
+              href: big-data-cluster/performance-guidelines-tuned.md
+        - name: 安全
+          items:
+            - name: 用于 BDC 的 Kubernetes RBAC
+              href: big-data-cluster/kubernetes-rbac.md
+            - name: 更新 AZDATA_PASSWORD
+              href: big-data-cluster/change-azdata-password.md
+            - name: 管理用户访问权限
+              href: big-data-cluster/manage-user-access.md
+            - name: 非根容器
+              href: big-data-cluster/non-root-containers.md
+            - name: 同一 AD 域中的多个 BDC
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: 自动生成的 AD 对象
+              href: big-data-cluster/active-directory-objects.md
+            - name: AD DNS 对帐
+              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Spark 作业
           items:
             - name: 在 Azure Data Studio 中提交 Spark 作业
@@ -218,13 +348,15 @@
           items:
             - name: Kubernetes 疑难解答
               href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: 排查 pyspark 笔记本故障
+              href: big-data-cluster/troubleshoot-pyspark-notebook.md
             - name: Active Directory 域组范围
               href: big-data-cluster/troubleshoot-active-directory.md
             - name: Active Directory DNS
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
             - name: Active Directory 登录失败
               href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: HDFS 管理权限
+            - name: HDFS 管理员权限
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 参考
       items:
@@ -234,6 +366,12 @@
           items:
             - name: 部署配置文件
               href: big-data-cluster/reference-deployment-config.md
+        - name: 配置
+          items:
+            - name: 主实例
+              href: big-data-cluster/reference-config-master-instance.md
+            - name: Apache Spark 和 Apache Hadoop
+              href: big-data-cluster/reference-config-spark-hadoop.md
         - name: azdata 参考
           items:
             - name: azdata
@@ -1813,12 +1951,13 @@
             - name: 互操作性
               href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: 触发器
-      href: relational-databases/triggers/logon-triggers.md
       items:
-        - name: 捕获登录触发器事件数据
-          href: relational-databases/triggers/capture-logon-trigger-event-data.md
-        - name: 管理触发器安全性
-          href: relational-databases/triggers/manage-trigger-security.md
+        - name: 登录触发器
+          items:
+            - name: 登录触发器
+              href: relational-databases/triggers/logon-triggers.md
+            - name: 捕获登录触发器事件数据
+              href: relational-databases/triggers/capture-logon-trigger-event-data.md
         - name: DDL 触发器
           href: relational-databases/triggers/ddl-triggers.md
           items:
@@ -1853,6 +1992,8 @@
               href: relational-databases/triggers/get-information-about-dml-triggers.md
             - name: 删除或禁用 DML 触发器
               href: relational-databases/triggers/delete-or-disable-dml-triggers.md
+        - name: 管理触发器安全性
+          href: relational-databases/triggers/manage-trigger-security.md
     - name: 用户定义的函数
       href: relational-databases/user-defined-functions/user-defined-functions.md
       items:
@@ -2111,8 +2252,6 @@
     - name: 数据层应用程序
       href: relational-databases/data-tier-applications/data-tier-applications.md
       items:
-        - name: 对 SQL Server 对象和版本的 DAC 支持
-          href: relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
         - name: 删除
           href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
         - name: 部署
@@ -2565,7 +2704,7 @@
             - name: Java 到 SQL 数据类型
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: 创建 Java jar 文件
-              href: language-extensions/how-to/call-java-from-sql.md
+              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
         - name: 参考
           items:
             - name: 扩展性框架 API
@@ -3421,7 +3560,7 @@
               href: relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md
             - name: 文件和版本号
               href: relational-databases/server-management-objects-smo/files-and-version-numbers.md
-            - name: '如何在 Visual Studio .NET 中创建 Visual C# SMO 项目'
+            - name: 如何在 Visual Studio .NET 中创建 Visual C# SMO 项目
               href: relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
             - name: SMO 对象模型关系图
               href: relational-databases/server-management-objects-smo/smo-object-model-diagram.md
@@ -3429,7 +3568,7 @@
               href: relational-databases/server-management-objects-smo/smo-object-model-namespaces.md
             - name: SMO 对象模型
               href: relational-databases/server-management-objects-smo/smo-object-model.md
-            - name: 'SMO 编程 - Visual C# .NET 入门'
+            - name: SMO 编程 - Visual C# .NET 入门
               href: relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md
             - name: SMO 编程语言
               href: relational-databases/server-management-objects-smo/smo-programming-languages.md
@@ -4393,6 +4532,10 @@
               href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
             - name: 即席分布式查询
               href: database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md
+            - name: ADR 清除程序重试超时
+              href: database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md
+            - name: ADR 预先分配因素
+              href: database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md
             - name: affinity 输入/输出掩码
               href: database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md
             - name: affinity64 输入/输出掩码
@@ -4403,6 +4546,8 @@
               href: database-engine/configure-windows/affinity64-mask-server-configuration-option.md
             - name: 代理 XP
               href: database-engine/configure-windows/agent-xps-server-configuration-option.md
+            - name: 允许 PolyBase 导出
+              href: database-engine/configure-windows/allow-polybase-export.md
             - name: 允许更新
               href: database-engine/configure-windows/allow-updates-server-configuration-option.md
             - name: 备份校验和默认值
@@ -4521,6 +4666,8 @@
               href: database-engine/configure-windows/show-advanced-options-server-configuration-option.md
             - name: SMO 和 DMO XPS
               href: database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md
+            - name: 取消显示恢复模型错误
+              href: database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md
             - name: 转换干扰词
               href: database-engine/configure-windows/transform-noise-words-server-configuration-option.md
             - name: 配置两位数年份截止
@@ -4591,6 +4738,8 @@
               href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
             - name: 将数据库引擎配置为侦听多个 TCP 端口
               href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+            - name: 如何使用 SQLPS 启用 TCP 协议
+              href: powershell/how-to-enable-tcp-sqlps.md
             - name: 确定数据库引擎是否已安装并启动
               href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
             - name: 使用扩展保护连接到数据库引擎
@@ -6232,7 +6381,7 @@
             - name: 实用工具资源管理器的 F1 帮助
               href: relational-databases/manage/utility-explorer-f1-help.md
         - name: SQL 评估 API
-          href: sql-assessment-api/sql-assessment-api-overview.md
+          href: tools/sql-assessment-api/sql-assessment-api-overview.md
     - name: 监视
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -6707,7 +6856,7 @@
                   href: relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
                 - name: 在本机编译过程中进行合并
                   href: relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                - name: '内存中的 SMO C#'
+                - name: 内存中的 SMO C#
                   href: relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
             - name: 操作指南
               items:
@@ -6903,9 +7052,9 @@
                   href: relational-databases/polybase/configure-scale-out-groups-windows.md
             - name: 数据虚拟化向导
               items:
-                - name: 虚拟化关系数据
+                - name: 虚拟化数据
                   href: relational-databases/polybase/data-virtualization.md
-                - name: 虚拟化 CSV 数据
+                - name: 虚拟化 CSV 文件
                   href: relational-databases/polybase/data-virtualization-csv.md
             - name: 疑难解答
               items:
@@ -7554,6 +7703,8 @@
                   items:
                     - name: 使用 Always Encrypted 和 SSMS 查询列
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                    - name: 通过 Azure Data Studio 查询使用 Always Encrypted 的列
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ads.md
                 - name: 迁移受 Always Encrypted 保护的敏感数据
                   items:
                     - name: 导出再导入
@@ -7762,118 +7913,8 @@
   items:
     - name: 概述
       href: tools/overview-sql-tools.md
-    - name: Azure Data Studio
-      href: azure-data-studio/what-is.md
-      items:
-        - name: 安装
-          href: azure-data-studio/download-azure-data-studio.md
-        - name: 发行说明
-          href: azure-data-studio/release-notes-azure-data-studio.md
-        - name: 快速入门
-          items:
-            - name: 连接并查询 SQL Server
-              href: azure-data-studio/quickstart-sql-server.md
-            - name: 连接并查询 Azure SQL 数据库
-              href: azure-data-studio/quickstart-sql-database.md
-            - name: 连接并查询 Azure SQL 数据仓库
-              href: azure-data-studio/quickstart-sql-dw.md
-            - name: 连接和查询 PostgreSQL
-              href: azure-data-studio/quickstart-postgres.md
-        - name: 教程
-          items:
-            - name: T-SQL 编辑器
-              href: azure-data-studio/tutorial-sql-editor.md
-            - name: 示例见解：缓慢查询
-              href: azure-data-studio/tutorial-qds-sql-server.md
-            - name: 示例见解：表空间使用情况
-              href: azure-data-studio/tutorial-table-space-sql-server.md
-            - name: 生成自定义见解
-              href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
-            - name: 备份和还原
-              href: azure-data-studio/tutorial-backup-restore-sql-server.md
-        - name: 概念
-          items:
-            - name: 扩展
-              href: azure-data-studio/extensions.md
-              items:
-                - name: PostgreSQL 扩展
-                  href: azure-data-studio/postgres-extension.md
-                - name: 数据虚拟化扩展
-                  href: azure-data-studio/data-virtualization-extension.md
-                - name: SQL Server 代理
-                  href: azure-data-studio/sql-server-agent-extension.md
-                - name: SQL Server 中央管理服务器扩展
-                  href: azure-data-studio/sql-server-cms-extension.md
-                - name: SQL Server dacpac 扩展
-                  href: azure-data-studio/sql-server-dacpac-extension.md
-                - name: SQL Server 导入
-                  href: azure-data-studio/sql-server-import-extension.md
-                - name: SQL Server Profiler
-                  href: azure-data-studio/sql-server-profiler-extension.md
-                - name: 架构比较扩展
-                  href: azure-data-studio/schema-compare-extension.md
-                - name: PowerShell 扩展
-                  href: azure-data-studio/powershell-extension.md
-                - name: 托管实例扩展
-                  href: azure-data-studio/azure-sql-managed-instance-extension.md
-                - name: SandDance 扩展
-                  href: azure-data-studio/sanddance-extension.md
-            - name: 扩展构建
-              items:
-                - name: 扩展性概述
-                  href: azure-data-studio/extensibility.md
-                - name: 扩展构建
-                  href: azure-data-studio/extension-authoring.md
-                - name: 创建一个扩展
-                  href: azure-data-studio/tutorial-create-extension.md
-                - name: 扩展性 API
-                  href: azure-data-studio/extensibility-apis.md
-            - name: 笔记本
-              items:
-                - name: 笔记本概述
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: 使用 SQL 内核
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: 使用 Python 内核
-                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
-                - name: Kqlmagic
-                  href: azure-data-studio/notebooks-kql-magic.md
-                - name: 管理笔记本
-                  href: azure-data-studio/notebooks-manage-sql-server.md
-        - name: 操作指南
-          items:
-            - name: 仪表板和见解小组件
-              href: azure-data-studio/insight-widgets.md
-            - name: 代码片段
-              href: azure-data-studio/code-snippets.md
-            - name: 集成终端（PowerShell、Bash）
-              href: azure-data-studio/integrated-terminal.md
-            - name: 键盘快捷方式
-              href: azure-data-studio/keyboard-shortcuts.md
-            - name: 资源管理器 Azure SQL 资源
-              href: azure-data-studio/azure-resource-explorer.md
-            - name: 服务器组
-              href: azure-data-studio/server-groups.md
-            - name: 源代码管理
-              href: azure-data-studio/source-control.md
-            - name: 使用情况数据收集
-              href: azure-data-studio/usage-data-collection.md
-            - name: 工作区和用户设置
-              href: azure-data-studio/settings.md
-            - name: Windows 身份验证 (Kerberos)
-              href: azure-data-studio/enable-kerberos.md
-            - name: 使用情况数据收集
-              href: azure-data-studio/usage-data-collection.md
-        - name: 资源
-          items:
-            - name: 常见问题解答
-              href: azure-data-studio/faq.md
-            - name: Azure Data Studio GitHub 存储库 >>
-              href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server 博客 >>
-              href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: 报告问题并提供建议 >>
-              href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: Azure Data Studio >
+      href: azure-data-studio/index.yml
     - name: 命令提示符实用程序
       href: tools/command-prompt-utility-reference-database-engine.md
       items:
@@ -8416,6 +8457,8 @@
               href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
             - name: 向“工具”菜单添加外部工具
               href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+            - name: 在 SQL Server Management Studio (SSMS) 中安装扩展
+              href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
             - name: SSMS 实用工具
               href: ssms/ssms-utility.md
             - name: SSMS 键盘快捷方式
@@ -9755,7 +9798,7 @@
     - name: Visual Studio Code
       items:
         - name: T-SQL 脚本
-          href: visual-studio-code/sql-server-develop-use-vscode.md
+          href: tools/visual-studio-code/sql-server-develop-use-vscode.md
 - name: 教程
   items:
     - name: SQL Server
@@ -10107,14 +10150,10 @@
   items:
     - name: 数据库示例
       items:
-        - name: 示例概述
+        - name: 概述
           href: samples/sql-samples-where-are.md
-        - name: 所有 GitHub 示例 >>
-          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
-          items:
-            - name: 安装和配置
-              href: samples/adventureworks-install-configure.md
+          href: samples/adventureworks-install-configure.md
         - name: Wide World Importers
           items:
             - name: 概述
@@ -10139,6 +10178,8 @@
               href: samples/wide-world-importers-generate-data.md
             - name: ETL 工作流
               href: samples/wide-world-importers-perform-etl.md
+        - name: 所有 GitHub 示例 >>
+          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
     - name: 错误和事件
       href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
       items:
@@ -15434,6 +15475,8 @@
                   href: t-sql/functions/current-timestamp-transact-sql.md
                 - name: CURRENT_TIMEZONE
                   href: t-sql/functions/current-timezone-transact-sql.md
+                - name: CURRENT_TIMEZONE_ID
+                  href: t-sql/functions/current-timezone-id-transact-sql.md
                 - name: DATEADD
                   href: t-sql/functions/dateadd-transact-sql.md
                 - name: DATEDIFF
@@ -16011,7 +16054,7 @@
                       href: t-sql/language-elements/modulo-transact-sql.md
                     - name: '%= 取模赋值'
                       href: t-sql/language-elements/modulo-equals-transact-sql.md
-                - name: =（赋值）
+                - name: '=（赋值）'
                   href: t-sql/language-elements/assignment-operator-transact-sql.md
                 - name: 位
                   href: t-sql/language-elements/bitwise-operators-transact-sql.md
@@ -16033,7 +16076,7 @@
                 - name: 比较
                   href: t-sql/language-elements/comparison-operators-transact-sql.md
                   items:
-                    - name: =（等于）
+                    - name: '=（等于）'
                       href: t-sql/language-elements/equals-transact-sql.md
                     - name: '> （大于）'
                       href: t-sql/language-elements/greater-than-transact-sql.md

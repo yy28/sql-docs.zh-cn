@@ -1,5 +1,6 @@
 ---
-title: SetNumericalValue 方法（SqlServiceAdvancedProperty）
+description: SetNumericalValue 方法（SqlServiceAdvancedProperty 类）
+title: 'SetNumericalValue 方法 (SqlServiceAdvancedProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 770bf78be4f1967a7b67c8eb8563b9365925c345
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 56c41876bc7b6c534f9d4872a0cb43eef9826282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427189"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue 方法（SqlServiceAdvancedProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.SetNumericalValue(NumValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  

@@ -1,4 +1,5 @@
 ---
+description: STAsBinary（geometry 数据类型）
 title: STAsBinary（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 39899d68eab1909e161475f951f37846cf56436f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 59416177b8b50855a0b6a0aa694f938f90479b6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426899"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "86555991"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)****  
   
- CLR 返回类型：SqlBytes   
+ CLR 返回类型：SqlBytes****  
   
 ## <a name="examples"></a>示例  
  以下示例根据文本创建一个从 (0,0) 到 (2,3) 的 `LineString` geometry 实例。 `STAsBinary()` 以 WKB 形式返回结果。  

@@ -1,4 +1,5 @@
 ---
+description: Degree of Parallelism (7.0 Insert) 事件类
 title: Degree of Parallelism (7.0 Insert) 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d6b43d2ffc2ea3c41ebe9a17b5cb9dc5d01471
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97800bdd8137d20fabec298bce235bd2a4232b79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428579"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  每次 **执行 SELECT、INSERT、UPDATE 或 DELETE 语句时都会发生** Degree of Parallelism (7.0 Insert) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件类。  
+  每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SELECT、INSERT、UPDATE 或 DELETE 语句时都会发生 Degree of Parallelism (7.0 Insert) **** 事件类。  
   
  当该事件包含在跟踪中时，如果经常发生这些事件则所引起的开销可能会明显影响性能。 若要最大限度地降低引起的开销，请仅将此事件类用于在短时间内监视特定问题的跟踪操作。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "85765241"
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**BinaryData**|**图像**|用于根据以下值完成进程的 CPU 数量：<br /><br /> 0x00000000，指示以串行方式运行的串行计划。<br /><br /> 0x01000000，指示以串行方式运行的并行计划。<br /><br /> >= 0x02000000 指示以并行方式运行的并行计划。|2|否|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE 数据库语句指定的数据库的 ID；如果未对给定实例发出 USE 数据库语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  

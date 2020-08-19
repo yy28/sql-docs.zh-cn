@@ -20,7 +20,7 @@
   href: initializing-test-cases-sybasetosql.md
 - name: 使用示例控制台脚本文件
   href: working-with-the-sample-console-script-files-sybasetosql.md
-- name: 将 Sybase ASE 数据库迁移到 Azure SQL DB
+- name: 将 Sybase ASE 数据库迁移到 Azure SQL 数据库
   href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
 - name: 评估 Sybase ASE 数据库对象以进行转换
   href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
@@ -56,13 +56,13 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: 选择并配置受影响的对象
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: 连接到 Azure SQL DB
+- name: 连接到 Azure SQL 数据库
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: 管理密码
   href: managing-passwords-sybasetosql.md
 - name: 设置项目选项
   href: setting-project-options-sybasetosql.md
-- name: 连接到 Azure SQL DB
+- name: 连接到 Azure SQL 数据库
   href: connect-to-azure-sql-db-sybasetosql.md
 - name: 数据迁移设置
   href: data-migration-settings-sybasetosql.md
@@ -76,7 +76,7 @@
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
 - name: 在 SQL Server 上安装 SSMA 组件
   href: installing-ssma-components-on-sql-server-sybasetosql.md
-- name: 将 Sybase ASE 数据迁移到 Azure SQL DB
+- name: 将 Sybase ASE 数据迁移到 Azure SQL 数据库
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
 - name: 连接到 Sybase
   href: connect-to-sybase-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Synchronization
       href: project-settings-synchronization-sybasetosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: （迁移
       href: project-settings-migration-sybasetosql.md

@@ -1,4 +1,5 @@
 ---
+description: Audit Database Mirroring Login 事件类
 title: Audit Database Mirroring Login 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,22 +15,22 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 577f5522e2f393c5fe91aca45ab08452853057aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b800c1fee12b34c17aeb28b252301bd13feef0f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428549"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 **Audit Database Mirroring Login** 事件来报告与数据库镜像传输安全性相关的审核消息。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 Audit Database Mirroring Login**** 事件来报告与数据库镜像传输安全性相关的审核消息。  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|ApplicationName |**nvarchar**|在此事件类中未使用。|10|是|  
+|ApplicationName|**nvarchar**|在此事件类中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 对 **Audit Database Mirroring Login** 来说始终是 **154**。|27|否|  
@@ -49,7 +50,7 @@ ms.locfileid: "85756113"
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
 |**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
-|**TargetUserName**|**nvarchar**|登录状态。 可取值为：<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> 注意：ISC = 启动安全上下文。 ASC = 接受安全上下文。|39|否|  
+|**TargetUserName**|**nvarchar**|登录状态。 即以下函数之一：<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> 注意：ISC = 启动安全上下文。 ASC = 接受安全上下文。|39|否|  
 |**TransactionID**|**bigint**|系统为事务分配的 ID。|4|否|  
   
  下表列出了此事件类的子类值。  

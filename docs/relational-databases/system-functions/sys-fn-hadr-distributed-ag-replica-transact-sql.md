@@ -1,5 +1,6 @@
 ---
-title: sys. fn_hadr_distributed_ag_replica （Transact-sql） |Microsoft Docs
+description: 'sys. fn_hadr_distributed_ag_replica (Transact-sql) '
+title: sys. fn_hadr_distributed_ag_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49eabca032ab109be1f0aecb1d830c83d9305a7f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6b7dc6aacf18415b11f5a32e464a57fbbadadc07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427769"
 ---
-# <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica （Transact-sql）
+# <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   用于将分布式可用性组中的副本映射到本地可用性组。  
@@ -39,19 +41,19 @@ ms.locfileid: "86053605"
 sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  "*lag_Id*"  
- 是分布式可用性组的标识符。 *lag_Id*为类型**uniqueidentifier**。  
+ 是分布式可用性组的标识符。 *lag_Id* 为类型 **uniqueidentifier**。  
   
  "*replica_id*"  
- 分布式可用性组中的副本的标识符。 *replica_id*为类型**uniqueidentifier**。  
+ 分布式可用性组中的副本的标识符。 *replica_id* 为类型 **uniqueidentifier**。  
   
 ## <a name="tables-returned"></a>返回的表  
  返回以下信息。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|本地可用性组的唯一标识符（GUID）。|  
+|**group_id**|**uniqueidentifier**|本地可用性组 (GUID) 的唯一标识符。|  
   
 ## <a name="examples"></a>示例  
   

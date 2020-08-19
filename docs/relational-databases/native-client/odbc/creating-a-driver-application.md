@@ -1,4 +1,5 @@
 ---
+description: 创建驱动程序应用程序
 title: 创建应用程序
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,11 +25,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428189"
 ---
 # <a name="creating-a-driver-application"></a>创建驱动程序应用程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +70,7 @@ ms.locfileid: "86009778"
   
 -   执行大容量复制操作  
   
--   管理大型数据（**varchar （max）**、 **nvarchar （max）** 和**varbinary （max）** 列）操作  
+-   管理大型数据 (**varchar (max) **、 **nvarchar (max) **和 **varbinary (最大 **) 列) 操作  
   
 -   在配置数据库镜像时使用重新连接逻辑以便于故障转移  
   
@@ -78,19 +80,19 @@ ms.locfileid: "86009778"
   
  许多 ODBC 驱动程序（包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT odbc 驱动程序）提供特定于驱动程序的 odbc 扩展。 若要利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定于 Native CLIENT ODBC 驱动程序的扩展插件，应用程序应包含 sqlncli.msi 头文件。 此头文件包含：  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的连接属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的连接属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的语句属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的语句属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的列属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的列属性。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的数据类型。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的用户定义数据类型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)类型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 类型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序诊断字段。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序诊断字段。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的诊断动态函数代码。  
   
@@ -109,7 +111,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- 在生成应用程序过程的早期所做的一个设计决策是应用程序是否需要同时进行多个 ODBC 调用。 有两种方法可支持多个并发 ODBC 调用，将在本节的其余主题中介绍。 有关详细信息，请参阅[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ 在生成应用程序过程的早期所做的一个设计决策是应用程序是否需要同时进行多个 ODBC 调用。 有两种方法可支持多个并发 ODBC 调用，将在本节的其余主题中介绍。 有关详细信息，请参阅 [ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

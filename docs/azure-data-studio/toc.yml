@@ -1,0 +1,140 @@
+- name: Azure Data Studio 文档
+  href: ../azure-data-studio/index.yml
+- name: 下载 Azure Data Studio
+  href: download-azure-data-studio.md
+- name: 发行说明
+  href: release-notes-azure-data-studio.md
+- name: 概述
+  items:
+    - name: Azure Data Studio
+      href: what-is.md
+- name: 快速入门
+  items:
+    - name: 连接并查询 SQL Server
+      href: quickstart-sql-server.md
+    - name: 连接并查询 Azure SQL 数据库
+      href: quickstart-sql-database.md
+    - name: 连接并查询 Azure SQL 数据仓库
+      href: quickstart-sql-dw.md
+    - name: 连接和查询 PostgreSQL
+      href: quickstart-postgres.md
+- name: 教程
+  items:
+    - name: T-SQL 编辑器
+      href: tutorial-sql-editor.md
+    - name: 示例见解：缓慢查询
+      href: tutorial-qds-sql-server.md
+    - name: 示例见解：表空间使用情况
+      href: tutorial-table-space-sql-server.md
+    - name: 生成自定义见解
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: 备份和还原
+      href: tutorial-backup-restore-sql-server.md
+- name: 概念
+  items:
+    - name: 扩展
+      items:
+        - name: 扩展
+          href: extensions.md
+        - name: 机器学习扩展
+          items:
+            - name: 机器学习扩展概述
+              href: machine-learning-extension.md
+            - name: 管理数据库中的包
+              href: machine-learning-extension-manage-packages.md
+            - name: 作出预测
+              href: machine-learning-extension-predictions.md
+            - name: 导入和查看模型
+              href: machine-learning-extension-import-view-models.md
+        - name: PostgreSQL 扩展
+          href: postgres-extension.md
+        - name: 数据虚拟化扩展
+          href: data-virtualization-extension.md
+        - name: SQL 数据库项目扩展
+          items:
+            - name: SQL 数据库项目扩展概述
+              href: sql-database-project-extension.md
+            - name: SQL 数据库项目扩展入门
+              href: sql-database-project-extension-getting-started.md
+            - name: 生成和发布项目
+              href: sql-database-project-extension-build.md
+            - name: 从命令行生成项目
+              href: sql-database-project-extension-build-from-command-line.md
+        - name: SQL Server 代理
+          href: sql-server-agent-extension.md
+        - name: SQL Server 中央管理服务器扩展
+          href: sql-server-cms-extension.md
+        - name: SQL Server dacpac 扩展
+          href: sql-server-dacpac-extension.md
+        - name: SQL Server 导入
+          href: sql-server-import-extension.md
+        - name: SQL Server Profiler
+          href: sql-server-profiler-extension.md
+        - name: 架构比较扩展
+          href: schema-compare-extension.md
+        - name: PowerShell 扩展
+          href: powershell-extension.md
+        - name: 托管实例扩展
+          href: azure-sql-managed-instance-extension.md
+        - name: SandDance 扩展
+          href: sanddance-extension.md
+    - name: 扩展构建
+      items:
+        - name: 扩展性概述
+          href: extensibility.md
+        - name: 扩展构建
+          href: extension-authoring.md
+        - name: 创建一个扩展
+          href: tutorial-create-extension.md
+        - name: 扩展性 API
+          href: extensibility-apis.md
+    - name: 集成终端（PowerShell、Bash）
+      href: integrated-terminal.md
+    - name: 键盘快捷方式
+      href: keyboard-shortcuts.md
+    - name: 服务器组
+      href: server-groups.md
+    - name: 源代码管理
+      href: source-control.md
+- name: 操作指南
+  items:
+    - name: 笔记本
+      items:
+        - name: 笔记本概述
+          href: notebooks-guidance.md
+        - name: 使用 SQL 内核
+          href: notebooks-tutorial-sql-kernel.md
+        - name: 使用 Python 内核
+          href: notebooks-tutorial-python-kernel.md
+        - name: Kqlmagic 扩展
+          href: notebooks-kqlmagic.md
+    - name: 仪表板和见解小组件
+      href: insight-widgets.md
+    - name: 代码片段
+      href: code-snippets.md
+    - name: 资源管理器 Azure SQL 资源
+      href: azure-resource-explorer.md
+    - name: 使用情况数据收集
+      href: usage-data-collection.md
+    - name: 工作区和用户设置
+      href: settings.md
+    - name: Windows 身份验证 (Kerberos)
+      href: enable-kerberos.md
+    - name: 使用情况数据收集
+      href: usage-data-collection.md
+- name: 参考
+  items:
+    - name: SQL 工具
+      href: ../tools/overview-sql-tools.md
+    - name: Azure 开发人员工具
+      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+- name: 资源
+  items:
+    - name: 常见问题解答
+      href: faq.md
+    - name: Azure Data Studio GitHub 存储库 >
+      href: 'https://www.github.com/Microsoft/azuredatastudio'
+    - name: 报告问题并提供建议 >
+      href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: SQL Server 文档 >
+      href: ../sql-server/index.yml

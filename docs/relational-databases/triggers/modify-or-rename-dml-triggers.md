@@ -1,4 +1,5 @@
 ---
+description: 修改或重命名 DML 触发器
 title: 修改或重命名 DML 触发器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c46e92ff984c29a6eaa26c6a7a5383da950587
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d63f91b0442d0346abbbd79868dc42a6e7881587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427419"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重命名 DML 触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,11 +75,11 @@ ms.locfileid: "85731543"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要修改的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要修改的触发器的表。  
   
-3.  展开 **“触发器”** ，右键单击要修改的触发器，然后单击 **“修改”** 。  
+3.  展开 **“触发器”**，右键单击要修改的触发器，然后单击 **“修改”**。  
   
-4.  修改该触发器，然后单击 **“执行”** 。  
+4.  修改该触发器，然后单击 **“执行”**。  
   
 #### <a name="to-rename-a-dml-trigger"></a>重命名 DML 触发器  
   
@@ -128,7 +129,7 @@ GO
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例使用 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 和 [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 语句将 `Sales.bonus_reminder` 触发器重命名为 `Sales.bonus_reminder_2`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例使用 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 和 [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 语句将 `Sales.bonus_reminder` 触发器重命名为 `Sales.bonus_reminder_2`。  
   
 ```sql  
 USE AdventureWorks2012;  

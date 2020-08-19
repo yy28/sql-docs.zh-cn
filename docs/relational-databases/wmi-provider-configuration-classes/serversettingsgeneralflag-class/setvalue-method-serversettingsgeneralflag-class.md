@@ -1,5 +1,6 @@
 ---
-title: SetValue 方法（ServerSettingsGeneralFlag）
+description: SetValue 方法（ServerSettingsGeneralFlag 类）
+title: 'SetValue 方法 (ServerSettingsGeneralFlag) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b95664e8bb14ef5e66d76e7bb06140a0736a070b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e400d07a8e14bed9337cd0e889cb6ca13b44f674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427269"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 方法（ServerSettingsGeneralFlag 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +37,12 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务器设置的常规标志的 [ServerSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |*值*|一个指定标志的值的布尔值。|  
   

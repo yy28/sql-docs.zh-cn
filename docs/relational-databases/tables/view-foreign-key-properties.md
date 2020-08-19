@@ -1,4 +1,5 @@
 ---
+description: 查看外键属性
 title: 查看外键属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c144e5615b843a145ce3fed8ddc8dbb9984bd68c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 926b00ad124185433c9e1a2d3116bc4a6f5f3f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427469"
 ---
 # <a name="view-foreign-key-properties"></a>查看外键属性
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "87394402"
   
 #### <a name="to-view-the-foreign-key-attributes-of-a-relationship-in-a-specific-table"></a>查看特定表中关系的外键属性  
   
-1.  对于包含要查看的外键的表，打开表设计器，在表设计器中单击右键，然后从快捷菜单中选择“关系”  。  
+1.  对于包含要查看的外键的表，打开表设计器，在表设计器中单击右键，然后从快捷菜单中选择“关系”****。  
   
 2.  在 **“外键关系”** 对话框中，选择要查看其属性的关系。  
 
@@ -64,7 +65,7 @@ ms.locfileid: "87394402"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例返回示例数据库中的表 `HumanResources.Employee` 的所有外键以及属性。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例返回示例数据库中的表 `HumanResources.Employee` 的所有外键以及属性。  
   
     ```  
     USE AdventureWorks2012;  

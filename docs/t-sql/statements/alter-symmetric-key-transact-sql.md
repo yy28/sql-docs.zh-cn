@@ -1,4 +1,5 @@
 ---
+description: ALTER SYMMETRIC KEY (Transact-SQL)
 title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3574e981ad09555533a7dc96e8ede27c50f9339d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 6bc807fe68e1e4ba8ca1e92fe40e048a82a6307f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426849"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- Key_name   
+ Key_name  
  要更改的对称密钥在数据库中所使用的名称。  
   
  ADD ENCRYPTION BY  
@@ -67,16 +68,16 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  通过指定的方法删除加密。 您不能从对称密钥中删除所有的加密。  
   
- CERTIFICATE Certificate_name   
+ CERTIFICATE Certificate_name  
  指定用于对对称密钥进行加密的证书。 该证书必须已存在于数据库中。  
   
- PASSWORD ='password'     
- 指定用于对对称密钥进行加密的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ PASSWORD ='password'  
+ 指定用于对对称密钥进行加密的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
   
- SYMMETRIC KEY Symmetric_Key_Name   
+ SYMMETRIC KEY Symmetric_Key_Name**  
  指定用于对要更改的对称密钥进行加密的对称密钥。 该对称密钥必须已存在于数据库中，并且必须打开。  
   
- ASYMMETRIC KEY Asym_Key_Name   
+ ASYMMETRIC KEY Asym_Key_Name  
  指定用于对要更改的对称密钥进行加密的非对称密钥。 此非对称密钥必须已经存在于数据库中。  
   
 ## <a name="remarks"></a>备注  

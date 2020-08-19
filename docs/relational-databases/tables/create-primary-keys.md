@@ -1,4 +1,5 @@
 ---
+description: 创建主键
 title: 创建主键 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c45f661afff669e64dae6c800d19a57635aebe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e02d35d518a71ac2381e7bfdce2006d261052dbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427569"
 ---
 # <a name="create-primary-keys"></a>创建主键
 
@@ -46,9 +47,9 @@ ms.locfileid: "86002182"
 
 ### <a name="to-create-a-primary-key"></a>创建主键
 
-1. 在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”  。
+1. 在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”。
 2. 在 **“表设计器”** 中，单击要定义为主键的数据库列的行选择器。 若要选择多个列，请在单击其他列的行选择器时按住 Ctrl 键。
-3. 右键单击该列的行选择器，然后选择“设置主键”  。
+3. 右键单击该列的行选择器，然后选择“设置主键”****。
 
 > [!CAUTION]
 > 若要重新定义主键，则必须首先删除与现有主键之间的任何关系，然后才能创建新主键。 此时，将显示一条消息警告您：作为该过程的一部分，将自动删除现有关系。

@@ -1,4 +1,5 @@
 ---
+description: 适用于 Transact-sql 的按类别列出的系统功能
 title: 按类别列出的系统函数
 ms.date: 11/02/2016
 ms.prod: sql
@@ -14,17 +15,17 @@ ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2c86e7920fadb2447fd0daa134370f4bd70ddc71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bb8db369904a011b96e3c36deef5f6e90419db5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427729"
 ---
 # <a name="system-functions-by-category-for-transact-sql"></a>适用于 Transact-sql 的按类别列出的系统功能
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供下列系统函数组。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列系统函数组。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Always On 可用性组函数](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  

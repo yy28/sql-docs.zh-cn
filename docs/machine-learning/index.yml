@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
+  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606821"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86485298"
 landingContent:
 - title: SQL Server 上的机器学习
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: 在 T-SQL 中使用 R
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: 在 R 工具中使用机器学习服务
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: 大数据群集上的机器学习
+    - text: 使用决策树预测雪橇租赁
+      url: tutorials/r-predictive-model-introduction.md
+    - text: 使用 k-means 聚类分析对客户进行分类
+      url: tutorials/r-clustering-model-introduction.md
+- title: Azure SQL 托管实例
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL 托管实例中的机器学习服务
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Azure SQL 托管实例和 SQL Server 中的机器学习之间的关键差异
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: 在 Azure SQL 托管实例中部署 ONNX 模型并用它进行预测
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: Azure SQL 数据库边缘
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge 中支持 ONNX 的机器学习和 AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: 在 SQL Database Edge 中部署 ONNX 模型并用它进行预测
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Azure Data Studio 机器学习扩展
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什么是 Azure Data Studio 的机器学习扩展？
+      url: ../azure-data-studio/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: 管理数据库中的包
+      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+    - text: 作出预测
+      url: ../azure-data-studio/machine-learning-extension-predictions.md
+    - text: 导入或查看模型
+      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+- title: SQL Server 大数据群集
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: 将 Spark 与 SQL Server 集成
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: Azure Synapse Analytics 上的机器学习
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: 创建、开发和维护 Azure Synapse Studio 笔记本
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: Azure SQL Database Edge 上的机器学习
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: SQL Database Edge 中支持 ONNX 的机器学习和 AI
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: 在 SQL Database Edge 中部署 ONNX 模型并用它进行预测
-      url: /azure/sql-database-edge/deploy-onnx

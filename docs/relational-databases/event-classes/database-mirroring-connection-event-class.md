@@ -1,4 +1,5 @@
 ---
+description: Database Mirroring Connection 事件类
 title: Database Mirroring Connection 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,22 +11,22 @@ ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f1658a49fa5bc6577e4b7668dc62914aab3aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a600b4a319297be30e5f734bd5a272748f6e8c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428599"
 ---
-# <a name="database-mirroring-connection-event-class"></a>数据库镜像连接事件类
+# <a name="database-mirroring-connection-event-class"></a>Database Mirroring Connection 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **数据库镜像连接** 事件以便报告数据库镜像管理的传输连接的状态。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 数据库镜像连接事件以便报告数据库镜像管理的传输连接的状态****。  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>Database Mirroring:Connection 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 **DB_ID** 函数来确定数据库的值。|3|是|  
 |**错误**|**int**|事件中文本的 **sys.messages** 的消息 ID 号。 如果此事件报告错误，即是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误号。|31|否|  

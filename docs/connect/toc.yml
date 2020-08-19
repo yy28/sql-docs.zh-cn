@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: SQL Server 驱动程序
   href: ../connect/sql-connection-libraries.md
+- name: 驱动程序功能支持矩阵
+  href: ../connect/driver-feature-matrix.md
 - name: SQL Server 驱动程序历史记录
   href: ../connect/connect-history.md
 - name: SQL 数据开发人员
@@ -21,7 +23,7 @@
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
         - name: 步骤 3：使用 ADO.NET 连接到 SQL 的概念证明
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: 步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接
+        - name: 步骤 4：使用 ADO.NET 弹性连接到 SQL
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
     - name: SqlClient 驱动程序概述
       href: ../connect/ado-net/overview-sqlclient-driver.md
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: 下载 SQL Server 的 Microsoft SqlClient 数据提供程序
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: 启用 SqlClient 中的事件跟踪
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: SqlClient 中的 AppContext 开关
+          href: ../connect/ado-net/appcontext-switches.md
         - name: SqlClient 驱动程序支持生命周期
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: 查找 SqlClient 驱动程序的其他信息
@@ -92,7 +98,9 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: 事务和大容量复制操作
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
-            - name: 多个活动的结果集 (MARS)
+                - name: 大容量复制操作的顺序提示
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
+            - name: 多个活动结果集 (MARS)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
                 - name: 启用多个活动结果集
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: SqlClient 对 Always Encrypted 的支持
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: 使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: 将 Azure Key Vault 与 Always Encrypted 结合使用
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: 将 Azure Key Vault 与具有安全 Enclave 的 Always Encrypted 结合使用
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: SqlClient 中的数据发现和分类
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: Microsoft JDBC Driver for SQL Server
@@ -2631,8 +2648,8 @@
         - name: 对 JDBC 驱动程序使用始终加密
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: 具有安全 Enclave 的 Always Encrypted
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: 将具有安全 Enclave 的 Always Encrypted 与 JDBC 驱动程序结合使用
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: 指南文章
           items:
             - name: 使用 SQL 语句
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: 使用带有存储过程的语句
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: 环回方案的客户端证书身份验证
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: 适用于 7.0 及其他版本的 Azure Key Vault 示例
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: 工具
               items:
-                - name: 使用 bcp.exe 连接
+                - name: 使用 bcp 连接
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: 使用 sqlcmd.exe 连接
+                - name: 使用 sqlcmd 进行连接
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: 使用集成身份验证
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: 发行说明
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: 发行说明 (mssql-tools)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: 已知问题
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: ODBC Linux 和 macOS 的常见问题解答 (FAQ)
@@ -2836,7 +2857,7 @@
       items:
         - name: 自定义密钥存储提供程序
           href: ../connect/odbc/custom-keystore-providers.md
-        - name: DSN 连接字符串关键字和属性
+        - name: DSN 和连接字符串关键字和属性
           href: ../connect/odbc/dsn-connection-string-attribute.md
         - name: 使用 Always Encrypted
           href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -2962,7 +2983,7 @@
                     - name: ODBC 基础知识
                       href: ../odbc/reference/develop-app/odbc-fundamentals.md
                       items:
-                        - name: 控点
+                        - name: 句柄数
                           href: ../odbc/reference/develop-app/handles.md
                           items:
                             - name: 环境句柄
@@ -3266,7 +3287,7 @@
                         - name: 提取数据
                           href: ../odbc/reference/develop-app/fetching-data.md
                           items:
-                            - name: 游标
+                            - name: 光标
                               href: ../odbc/reference/develop-app/cursors.md
                             - name: 提取数据的行
                               href: ../odbc/reference/develop-app/fetching-a-row-of-data.md
@@ -3452,7 +3473,7 @@
                           items:
                             - name: 并发类型
                               href: ../odbc/reference/develop-app/concurrency-types.md
-                            - name: 乐观并发
+                            - name: 开放式并发
                               href: ../odbc/reference/develop-app/optimistic-concurrency.md
                     - name: 诊断
                       href: ../odbc/reference/develop-app/diagnostics.md
@@ -3550,12 +3571,12 @@
                                   href: ../odbc/reference/develop-app/batch-processing.md
                         - name: 测试交互式应用程序
                           href: ../odbc/reference/develop-app/testing-interoperable-applications.md
-                    - name: '{1}编程时的注意事项{2}'
+                    - name: 编程注意事项
                       href: ../odbc/reference/develop-app/programming-considerations.md
                       items:
                         - name: 多线程处理
                           href: ../odbc/reference/develop-app/multithreading.md
-                        - name: Alignment
+                        - name: 对齐方式
                           href: ../odbc/reference/develop-app/alignment.md
                         - name: Unicode
                           href: ../odbc/reference/develop-app/unicode.md
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: 使用多个活动的结果集 (MARS)
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: 使用透明网络 IP 解析
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: 使用用户定义类型
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: 使用 XML 数据类型
@@ -5492,7 +5515,7 @@
           items:
             - name: 如何：使用 Windows 身份验证进行连接
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 'How to: Connect Using SQL Server Authentication'
+            - name: 如何：使用 SQL Server 身份验证进行连接
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: 如何：使用 Azure Active Directory 身份验证进行连接
               href: ../connect/php/azure-active-directory.md
@@ -5500,7 +5523,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 连接池
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: 如何：禁用多个活动的结果集 (MARS)
+            - name: 如何：禁用多重活动结果集 (MARS)
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 连接选项
               href: ../connect/php/connection-options.md
@@ -5725,7 +5748,7 @@
                   href: ../connect/php/pdostatement-setfetchmode.md
     - name: 安全注意事项
       href: ../connect/php/security-considerations-for-php-sql-driver.md
-    - name: 示例代码
+    - name: 代码示例
       href: ../connect/php/code-samples-for-php-sql-driver.md
       items:
         - name: 示例应用程序（PDO_SQLSRV 驱动程序）
@@ -5743,7 +5766,7 @@
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
         - name: 步骤 2：创建用于 pyodbc Python 开发的 SQL 数据库
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: 步骤 3：使用 pyodbc 连接到 SQL 的概念验证
+        - name: 步骤 3：使用 pyodbc 连接到 SQL 的概念证明
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL 驱动程序 - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
@@ -5752,7 +5775,7 @@
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
         - name: 步骤 2：创建用于 pymssql Python 开发的 SQL 数据库
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 步骤 3：使用 pymssql 连接到 SQL 的概念验证
+        - name: 步骤 3：使用 pymssql 连接到 SQL 的概念证明
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
