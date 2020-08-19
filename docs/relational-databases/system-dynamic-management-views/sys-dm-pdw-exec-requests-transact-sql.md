@@ -1,4 +1,5 @@
 ---
+description: 'sys. dm_pdw_exec_requests (Transact-sql) '
 title: sys. dm_pdw_exec_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447462"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-sql) 
 
@@ -28,17 +29,17 @@ ms.locfileid: "86197067"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|此视图的键。 与请求关联的唯一数字 ID。|系统中所有请求都是唯一的。|  
-|session_id|**nvarchar(32)**|与运行此查询的会话相关联的唯一数字 ID。 请参阅[sys.databases &#40;transact-sql&#41;dm_pdw_exec_sessions ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  
+|session_id|**nvarchar(32)**|与运行此查询的会话相关联的唯一数字 ID。 请参阅 [sys.databases &#40;transact-sql&#41;dm_pdw_exec_sessions ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  
 |状态|**nvarchar(32)**|请求的当前状态。|"正在运行"、"已挂起"、"已完成"、"已取消"、"已失败"。|  
-|submit_time|**datetime**|提交请求以执行的时间。|有效的**日期**时间小于或等于当前时间，start_time。|  
-|start_time|**datetime**|开始执行请求的时间。|对于排队的请求为 NULL;否则，有效的**日期时间**小于或等于当前时间。|  
-|end_compile_time|**datetime**|引擎完成编译请求的时间。|对于尚未编译的请求，为 NULL;否则，有效的**日期时间**小于 start_time 且小于或等于当前时间。|
-|end_time|**datetime**|请求执行完成、失败或已取消的时间。|对于排队或活动的请求为 Null;否则，有效的**日期**时间小于或等于当前时间。|  
+|submit_time|**datetime**|提交请求以执行的时间。|有效的 **日期** 时间小于或等于当前时间，start_time。|  
+|start_time|**datetime**|开始执行请求的时间。|对于排队的请求为 NULL;否则，有效的 **日期时间** 小于或等于当前时间。|  
+|end_compile_time|**datetime**|引擎完成编译请求的时间。|对于尚未编译的请求，为 NULL;否则，有效的 **日期时间** 小于 start_time 且小于或等于当前时间。|
+|end_time|**datetime**|请求执行完成、失败或已取消的时间。|对于排队或活动的请求为 Null;否则，有效的 **日期** 时间小于或等于当前时间。|  
 |total_elapsed_time|**int**|自请求开始后执行所用的时间（以毫秒为单位）。|介于0与 submit_time 与 end_time 之间的差异。</br></br> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"</br></br> 最大值（以毫秒为单位）与24.8 天相同。|  
 |label|**nvarchar(255)**|与某些 SELECT 查询语句相关联的可选标签字符串。|包含 "a-z"、"a-z"、"0-9" 和 "_" 的任何字符串。|  
-|error_id|**nvarchar (36) **|与请求关联的错误的唯一 ID （如果有）。|请参阅[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未发生错误，则设置为 NULL。|  
+|error_id|**nvarchar (36) **|与请求关联的错误的唯一 ID （如果有）。|请参阅 [dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未发生错误，则设置为 NULL。|  
 |database_id|**int**|显式上下文所使用的数据库的标识符 (例如，使用 DB_X) 。|请参阅 sys.databases 中的 ID [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
-|命令|**nvarchar(4000)**|保存用户提交的请求的完整文本。|任何有效的查询或请求文本。 超过4000字节的查询将被截断。|  
+|command|**nvarchar(4000)**|保存用户提交的请求的完整文本。|任何有效的查询或请求文本。 超过4000字节的查询将被截断。|  
 |resource_class|**nvarchar (20) **|用于此请求的工作负荷组。 |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>动态资源类</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(128)**|执行请求的重要性设置。  这是此工作负荷组中的请求与共享资源的工作负荷组之间的相对重要性。  分类器中指定的重要性覆盖工作负荷组重要性设置。</br>适用于：Azure SQL 数据仓库|Null</br>low</br>below_normal</br>正常 (默认值) </br>above_normal</br>high|
 |group_name|**sysname** |对于利用资源的请求，group_name 是在其下运行请求的工作负荷组的名称。  如果请求不使用资源，则 group_name 为 null。</br>适用于：Azure SQL 数据仓库|
@@ -48,9 +49,9 @@ ms.locfileid: "86197067"
 ||||
   
 ## <a name="remarks"></a>备注 
- 有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。
+ 有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。
 
- Result_cache_hit 是查询对结果集缓存的使用的位掩码。  此列可以是以下一个或多个值的[| (位或) ](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品：  
+ Result_cache_hit 是查询对结果集缓存的使用的位掩码。  此列可以是以下一个或多个值的 [| (位或) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 产品：  
   
 |值 Hex (Decimal) |说明|  
 |-----------|-----------------|  
@@ -69,7 +70,7 @@ ms.locfileid: "86197067"
 
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
  sys. dm_pdw_exec_requests 不根据特定于数据库的权限来筛选查询结果。 具有 VIEW SERVER STATE 权限的登录名可以获取所有数据库的结果查询结果  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_grantlogin （Transact-sql） |Microsoft Docs
+description: sp_grantlogin (Transact-SQL)
+title: sp_grantlogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: de02d84d781c5db2d86902034b500c6b4a02ea2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ddca7a999c1095bc1f6da91e62bd675c736dd96b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447060"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85891812"
   创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +43,13 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login'`Windows 用户或组的名称。 Windows 用户或组必须以*域* \\ *用户*（例如**London\Joeb**）的 windows 域名进行限定。 *login*的**sysname**为，无默认值。  
+`[ @loginame = ] 'login'` Windows 用户或组的名称。 Windows 用户或组必须以*域* \\ *用户*（例如**London\Joeb**）的 windows 域名进行限定。 *login* 的 **sysname**为，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_grantlogin**调用创建登录名，后者支持其他选项。 有关创建 SQL Server 登录名的信息，请参阅[CREATE LOGIN &#40;transact-sql&#41;](../../t-sql/statements/create-login-transact-sql.md)  
+ **sp_grantlogin** 调用创建登录名，后者支持其他选项。 有关创建 SQL Server 登录名的信息，请参阅 [CREATE LOGIN &#40;transact-sql&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  不能在用户定义的事务中执行**sp_grantlogin** 。  
   
@@ -65,7 +66,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

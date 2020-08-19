@@ -1,5 +1,6 @@
 ---
-title: sp_databases （Transact-sql） |Microsoft Docs
+description: sp_databases (Transact-SQL)
+title: sp_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 862101470f004c1e3681bd91745e9e2d10aab6bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 427014e08e10a018fd8b04841a1082f2cdce292a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447369"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,20 +40,20 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|数据库的名称。 在中 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，此列表示存储在**sys.databases**目录视图中的数据库名称。|  
+|**DATABASE_NAME**|**sysname**|数据库的名称。 在中 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，此列表示存储在 **sys.databases** 目录视图中的数据库名称。|  
 |**DATABASE_SIZE**|**int**|数据库的大小（以 KB 计）。|  
-|**备注**|**varchar （254）**|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
+|**备注**|**varchar (254) **|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
   
 ## <a name="remarks"></a>备注  
  所返回的数据库名称可以作为 USE 语句的参数，用来更改当前数据库上下文。  
   
- **sp_databases**在开放式数据库连接（ODBC）中没有等效项。  
+ **sp_databases** 在 ODBC)  (开放式数据库连接中没有等效项。  
   
 ## <a name="permissions"></a>权限  
  需要 CREATE DATABASE 或 ALTER ANY DATABASE 或 VIEW ANY DEFINITION 权限，并且必须有该数据库的访问权。 不能是被拒绝的 VIEW ANY DEFINITION 权限。  

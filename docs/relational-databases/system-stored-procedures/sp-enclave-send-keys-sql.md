@@ -1,4 +1,5 @@
 ---
+description: sp_enclave_send_keys (Transact-SQL)
 title: sp_enclave_send_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2019
@@ -19,23 +20,23 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 57a7af110956bdf557ad751723f2497b6aa3ede0
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 09409a3c3b71a668d897d50d6bb22e51f21e51d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447182"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-将数据库中定义的列加密密钥发送到与[安全 enclaves Always Encrypted](../security/encryption/always-encrypted-enclaves.md)一起使用的服务器端安全 enclave。
+将数据库中定义的列加密密钥发送到与 [安全 enclaves Always Encrypted](../security/encryption/always-encrypted-enclaves.md)一起使用的服务器端安全 enclave。
 
-`sp_enclave_send_keys`仅只发送启用了 enclave 的密钥，并对使用随机加密的列进行加密并拥有索引。 对于常规用户查询，客户端驱动程序会向 enclave 提供查询中计算所需的键。 `sp_enclave_send_keys`发送在数据库中定义的所有列加密密钥，并将其用于索引加密列。 
+`sp_enclave_send_keys` 仅只发送启用了 enclave 的密钥，并对使用随机加密的列进行加密并拥有索引。 对于常规用户查询，客户端驱动程序会向 enclave 提供查询中计算所需的键。 `sp_enclave_send_keys` 发送在数据库中定义的所有列加密密钥，并将其用于索引加密列。 
 
-`sp_enclave_send_keys`提供了一种简单的方法来将密钥发送到 enclave，并填充列加密密钥缓存，以便进行后续索引操作。 使用 `sp_enclave_send_keys` 启用：
-- 用于在加密数据库列上重新生成或更改索引或统计信息的 DBA （如果 DBA 无权访问列主密钥 (s) 。 请参阅[使用缓存的列加密密钥调用索引操作](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys)。
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]完成对加密列的索引的恢复。 请参阅[数据库恢复](../security/encryption/always-encrypted-enclaves.md#database-recovery)。
+`sp_enclave_send_keys` 提供了一种简单的方法来将密钥发送到 enclave，并填充列加密密钥缓存，以便进行后续索引操作。 使用 `sp_enclave_send_keys` 启用：
+- 用于在加密数据库列上重新生成或更改索引或统计信息的 DBA （如果 DBA 无权访问列主密钥 (s) 。 请参阅 [使用缓存的列加密密钥调用索引操作](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys)。
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 完成对加密列的索引的恢复。 请参阅 [数据库恢复](../security/encryption/always-encrypted-enclaves.md#database-recovery)。
 - 使用 SQL Server 的 .NET Framework 数据提供程序的应用程序将数据大容量加载到加密列。
 
 若要成功调用 `sp_enclave_send_keys` ，需要连接到数据库，并为数据库连接启用 Always Encrypted 和 enclave 计算。 还需要有权访问列主密钥，保护列加密密钥，要发送，并且您需要访问数据库中 Always Encrypted 密钥元数据的权限。 

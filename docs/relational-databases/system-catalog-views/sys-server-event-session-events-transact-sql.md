@@ -1,5 +1,6 @@
 ---
-title: sys. server_event_session_events （Transact-sql） |Microsoft Docs
+description: sys.server_event_session_events (Transact-SQL)
+title: sys. server_event_session_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18a39be6519d22e8a568e48be616c57bc1b6a069
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: cc4b6f67d282ce838ab5a5b8a401ade3a5e2e4c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447769"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +40,8 @@ ms.locfileid: "87442485"
 |name|**sysname**|事件的名称。 不可为 null。|  
 |包|**sysname**|包含事件的事件包的名称。 不可为 null。|  
 |name|**sysname**|包含事件的模块的名称。 不可为 null。|  
-|predicate|**nvarchar （3000）**|应用于事件的谓词表达式。 可以为 Null。|  
-|predicate_xml|**nvarchar （3000）**|应用于事件的 XML 谓词表达式。 可以为 Null。|  
+|predicate|**nvarchar (3000) **|应用于事件的谓词表达式。 可以为 Null。|  
+|predicate_xml|**nvarchar (3000) **|应用于事件的 XML 谓词表达式。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
@@ -48,13 +49,13 @@ ms.locfileid: "87442485"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 收件人 | 关系 |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|sys. server_event_sessions event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的扩展事件目录视图](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的扩展事件目录视图 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

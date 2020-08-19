@@ -1,5 +1,6 @@
 ---
-title: core. sp_create_snapshot （Transact-sql） |Microsoft Docs
+description: core.sp_create_snapshot (Transact-SQL)
+title: sp_create_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b3ffe874615e58d276428548cb1c2ad318f111d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 763421a7c6c774c02ca6a20eb7a495ce9afecd3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447443"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,25 +49,25 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>参数  
  [ @collection_set_uid =] "*collection_set_uid*"  
- 收集组的 GUID。 *collection_set_uid*为**uniqueidentifier** ，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collection_sets 视图。  
+ 收集组的 GUID。 *collection_set_uid* 为 **uniqueidentifier** ，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collection_sets 视图。  
   
  [ @collector_type_uid =] "*collector_type_uid*"  
- 收集器类型的 GUID。 *collector_type_uid*为**uniqueidentifier** ，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collector_types 视图。  
+ 收集器类型的 GUID。 *collector_type_uid* 为 **uniqueidentifier** ，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collector_types 视图。  
   
  [ @machine_name =] "*machine_name*"  
- 收集组所在的服务器的名称。 *machine_name*是**sysname**，没有默认值。  
+ 收集组所在的服务器的名称。 *machine_name* 是 **sysname**，没有默认值。  
   
  [ @named_instance =] "*named_instance*"  
- 收集组实例的名称。 *named_instance*是**sysname**，没有默认值。  
+ 收集组实例的名称。 *named_instance* 是 **sysname**，没有默认值。  
   
  [ @log_id =] *log_id*  
- 映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id*为**bigint** ，无默认值。 若要获取*log_id*的值，请查询 msdb 数据库中的 dbo.syscollector_execution_log 视图。  
+ 映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id* 为 **bigint** ，无默认值。 若要获取 *log_id*的值，请查询 msdb 数据库中的 dbo.syscollector_execution_log 视图。  
   
  [ @snapshot_id =] *snapshot_id*  
- 插入到 core 快照视图中的行的唯一标识符。 *snapshot_id*为**int** ，并作为 OUTPUT 返回。  
+ 插入到 core 快照视图中的行的唯一标识符。 *snapshot_id* 为 **int** ，并作为 OUTPUT 返回。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  每当上载包开始向管理数据仓库上载数据时，数据收集器运行时组件都会调用 core.sp_create_snapshot。  
@@ -80,7 +81,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  如果未通过上述任一检查，该过程将失败并返回一个错误。  
   
 ## <a name="permissions"></a>权限  
- 需要**mdw_writer** （具有 EXECUTE 权限）固定数据库角色的成员身份。  
+ 需要具有 EXECUTE 权限的 **mdw_writer** (中的成员资格) 固定数据库角色。  
   
 ## <a name="examples"></a>示例  
  下面的示例为“磁盘使用情况”收集组创建一个快照，将该快照添加到管理数据仓库中，并返回快照标识符。 在本示例中，使用默认实例。  
@@ -98,8 +99,8 @@ EXEC core.sp_create_snapshot
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理数据仓库](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

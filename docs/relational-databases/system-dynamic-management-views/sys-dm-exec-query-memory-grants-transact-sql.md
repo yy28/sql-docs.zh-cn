@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_query_memory_grants （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_query_memory_grants (Transact-SQL)
+title: sys. dm_exec_query_memory_grants (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
 ms.prod: sql
@@ -20,22 +21,22 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ecaeedccefc4d385cacaa1198dcb6dd9189998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447557"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回有关已请求并正在等待内存授予或已获得内存授予的所有查询的信息。 不需要内存授予的查询将不会出现在此视图中。 例如，排序和哈希联接操作具有用于执行查询的内存授予，而没有**ORDER by**子句的查询将不具有内存授予。  
+  返回有关已请求并正在等待内存授予或已获得内存授予的所有查询的信息。 不需要内存授予的查询将不会出现在此视图中。 例如，排序和哈希联接操作具有用于执行查询的内存授予，而没有 **ORDER by** 子句的查询将不具有内存授予。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。此外，筛选列中的值**scheduler_id**、 **wait_order**、 **pool_id**和**group_id** 。列值设置为 NULL。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。此外，筛选列中的值 **scheduler_id**、 **wait_order**、 **pool_id**和 **group_id** 。列值设置为 NULL。  
   
 > [!NOTE]  
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_query_memory_grants**。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_exec_query_memory_grants**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +48,7 @@ ms.locfileid: "85734757"
 |**grant_time**|**datetime**|向查询授予内存的日期和时间。 如果尚未授予内存，则此值为 NULL。|  
 |**requested_memory_kb**|**bigint**|请求的内存总量 (KB)。|  
 |**granted_memory_kb**|**bigint**|实际授予的内存总量 (KB)。 如果尚未授予内存，该值可以为 NULL。 在典型情况下，该值应与 **requested_memory_kb** 相同。 创建索引时，除了初始授予的内存外，服务器还允许增加按需分配的内存。|  
-|**required_memory_kb**|**bigint**|运行查询所需的最小内存 (KB)。 **requested_memory_kb**与此数量相同或更大。|  
+|**required_memory_kb**|**bigint**|运行查询所需的最小内存 (KB)。 **requested_memory_kb** 与此数量相同或更大。|  
 |**used_memory_kb**|**bigint**|此刻使用的物理内存 (KB)。|  
 |**max_used_memory_kb**|**bigint**|到此刻为止所用的最大物理内存 (KB)。|  
 |**query_cost**|**float**|估计查询开销。|  
@@ -63,11 +64,11 @@ ms.locfileid: "85734757"
 |**pool_id**|**int**|该工作负荷组所属的资源池的 ID。|  
 |**is_small**|**tinyint**|如果设置为 1，则指示此授予使用小型资源信号量。 如果设置为 0，则指示使用常规信号量。|  
 |**ideal_memory_kb**|**bigint**|将所有内容存放在物理内存中所需的内存授予的大小（以 KB 为单位）。 这基于基数估计。|  
-|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
-|**reserved_worker_count**|**bigint**|保留的[工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
-|**used_worker_count**|**bigint**|目前使用的[工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**max_used_worker_count**|**bigint**|当前使用的最大[工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**reserved_node_bitmap**|**bigint**|保留[工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)的 NUMA 节点的位图。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**reserved_worker_count**|**bigint**|保留的 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|**used_worker_count**|**bigint**|目前使用的 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**max_used_worker_count**|**bigint**|当前使用的最大 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**reserved_node_bitmap**|**bigint**|保留 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 的 NUMA 节点的位图。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
 ## <a name="permissions"></a>权限  
 
@@ -81,7 +82,7 @@ ms.locfileid: "85734757"
   
 -   检查 **sys.dm_os_memory_clerks**（其中 `type = 'MEMORYCLERK_SQLQERESERVATIONS'`）中的查询执行内存预留。  
   
--   使用 sys.databases 检查正在等待<sup>1</sup>的查询。 **dm_exec_query_memory_grants**。  
+-   使用 sys.databases 检查正在等待<sup>1</sup> 的查询。 **dm_exec_query_memory_grants**。  
   
     ```sql  
     --Find all queries waiting in the memory queue  
@@ -90,7 +91,7 @@ ms.locfileid: "85734757"
     
     <sup>1</sup>在此方案中，等待类型通常是 RESOURCE_SEMAPHORE。 有关详细信息，请参阅 [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 
   
--   使用内存授予的查询的搜索缓存使用[sys. dm_exec_cached_plans &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)和[sys. dm_exec_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   使用内存授予的查询的搜索缓存使用 [sys. dm_exec_cached_plans &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 和 [sys. dm_exec_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -116,11 +117,11 @@ ms.locfileid: "85734757"
   
  使用包含或聚合的动态管理视图的查询 `ORDER BY` 可能会增加内存占用，从而导致其故障排除的问题。  
   
- 数据库管理员可以使用资源调控器功能在多个资源池之间分发服务器资源，最多可为 64 个池。 从开始 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，每个池的行为类似于小型独立的服务器实例，并且需要2个信号量。 从**dm_exec_query_resource_semaphores sys.databases**返回的行数可以比中返回的行多出 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 20 倍。  
+ 数据库管理员可以使用资源调控器功能在多个资源池之间分发服务器资源，最多可为 64 个池。 从开始 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，每个池的行为类似于小型独立的服务器实例，并且需要2个信号量。 从 **dm_exec_query_resource_semaphores sys.databases** 返回的行数可以比中返回的行多出 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 20 倍。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
- [sys. dm_os_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)   
   

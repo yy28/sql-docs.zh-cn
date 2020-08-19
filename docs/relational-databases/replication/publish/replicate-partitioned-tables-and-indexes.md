@@ -1,4 +1,5 @@
 ---
+description: 复制已分区表和索引
 title: 复制已分区表和索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/10/2015
@@ -17,12 +18,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6d4e7dc85c98e368217b7d556e4c0a8fbd2501e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8d6d59dc29060a10fc0ad15f1b2fbbfbba5fb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448156"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86915732"
   
  与分区相关的第一组属性是项目架构选项，用于决定是否应将分区对象复制到订阅服务器。 可以按下列方式设置这些架构选项：  
   
--   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，请为属性 **“复制表分区方案”** 和 **“复制索引分区方案”** 指定 **true**值。 有关如何访问“项目属性”  页的信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+-   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，请为属性 **“复制表分区方案”** 和 **“复制索引分区方案”** 指定 **true**值。 有关如何访问“项目属性”**** 页的信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   

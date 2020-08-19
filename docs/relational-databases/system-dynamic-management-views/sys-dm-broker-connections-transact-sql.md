@@ -1,5 +1,6 @@
 ---
-title: sys. dm_broker_connections （Transact-sql） |Microsoft Docs
+description: sys.dm_broker_connections (Transact-SQL)
+title: sys. dm_broker_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dc4329cdd9b5ba5588a20a67aca8ae664f0041f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e921c4bf0920f6586a7a837ccfea73c759f8b10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447739"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +34,8 @@ ms.locfileid: "85894630"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|连接的标识符。 可以为 null.|  
-|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此连接为 tcp/ip 通信使用的网络接口（SNI）连接的标识符。 可以为 null.|  
-|State |**smallint**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
+|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络接口的标识符 (将此连接所使用的 SNI) 连接用于 tcp/ip 通信。 可以为 null.|  
+|State|**smallint**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
 |**state_desc**|**nvarchar(60)**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 新增功能<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|打开连接的日期和时间。 可以为 null.|  
 |**login_time**|**datetime**|连接登录成功的日期和时间。 可以为 null.|  
@@ -73,7 +74,7 @@ ms.locfileid: "85894630"
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|一对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与 Service Broker 有关的动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

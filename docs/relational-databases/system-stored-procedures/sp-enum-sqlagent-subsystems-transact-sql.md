@@ -1,5 +1,6 @@
 ---
-title: sp_enum_sqlagent_subsystems （Transact-sql） |Microsoft Docs
+description: sp_enum_sqlagent_subsystems (Transact-SQL)
+title: sp_enum_sqlagent_subsystems (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 869071ff8e66b5e9d20269c91823f3019e2b03b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af59c399d1d87c75bd78dd16cc57e98f835982f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447183"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,19 +40,19 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>参数  
- None  
+ 无  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**适用**|**nvarchar(40)**|子系统的名称。|  
-|**2008**|**nvarchar(512)**|对子系统的说明。|  
-|**subsystem_dll**|**nvarchar （510）**|包含子系统的 DLL 模块。|  
-|**agent_exe**|**nvarchar （510）**|子系统所用的可执行模块。|  
+|description|**nvarchar(512)**|对子系统的说明。|  
+|**subsystem_dll**|**nvarchar (510) **|包含子系统的 DLL 模块。|  
+|**agent_exe**|**nvarchar (510) **|子系统所用的可执行模块。|  
 |**start_entry_point**|**nvarchar(30)**|在作业步骤执行期间 SQL Server 代理调用的过程。|  
 |**event_entry_point**|**nvarchar(30)**|在作业步骤执行期间 SQL Server 代理调用的过程。|  
 |**stop_entry_point**|**nvarchar(30)**|在作业步骤执行期间 SQL Server 代理调用的过程。|  
@@ -62,9 +63,9 @@ sp_enum_sqlagent_subsystems
  此过程列出实例中可用的子系统。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
- 有关**SQLAgentOperatorRole**的详细信息，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
+ 有关 **SQLAgentOperatorRole**的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)   

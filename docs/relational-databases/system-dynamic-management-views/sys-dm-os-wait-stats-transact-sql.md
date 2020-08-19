@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_wait_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_os_wait_stats (Transact-SQL)
+title: sys. dm_os_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -20,16 +21,17 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a10193722529fabd7cce09569107520fe1b6410d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447563"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-返回执行的线程所遇到的所有等待的相关信息。 可以使用此聚合视图来诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及特定查询和批处理的性能问题。 [dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)按会话提供类似的信息。  
+返回执行的线程所遇到的所有等待的相关信息。 可以使用此聚合视图来诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及特定查询和批处理的性能问题。 [dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 按会话提供类似的信息。  
   
 > [!NOTE] 
 > 若要从** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 或**调用此，请使用名称**dm_pdw_nodes_os_wait_stats**。  
@@ -41,15 +43,15 @@ ms.locfileid: "86091537"
 |wait_time_ms|**bigint**|该等待类型的总等待时间（毫秒）。 该时间包括 signal_wait_time_ms。|  
 |max_wait_time_ms|**bigint**|该等待类型的最长等待时间。|  
 |signal_wait_time_ms|**bigint**|正在等待的线程从收到信号通知到其开始运行之间的时差。|  
-|pdw_node_id|**int**|此分发所在的节点的标识符。 <br/> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|此分发所在的节点的标识符。 <br/> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>等待类型  
- **资源等待**当某个工作线程请求访问不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生资源等待。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 等待类型  
+ **资源等待** 当某个工作线程请求访问不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生资源等待。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象  
   
 **队列等待**  
  当工作线程空闲，等待分配工作时便会发生队列等待。 队列等待通常发生在系统后台任务（如监视死锁以及清除已删除的记录等任务）中。 这些任务将等待工作请求被放入工作队列。 即使没有新数据包放入队列，队列等待也可能定期处于活动状态。  
@@ -69,7 +71,7 @@ ms.locfileid: "86091537"
   
  尽管线程不再处于等待状态，但是它不必立即开始运行。 这是因为此类线程首先放入可运行工作线程的队列中，并且必须等待量程在计划程序中运行。  
   
- 在中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待时间计数器是**bigint**值，因此，在早期版本的中，它们并不像等效的计数器那样易于作为计数器滚动更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 在中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待时间计数器是 **bigint** 值，因此，在早期版本的中，它们并不像等效的计数器那样易于作为计数器滚动更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  执行查询期间的特定等待时间类型可以说明查询中存在瓶颈或失效点。 同样，如果服务器级的等待时间较长或等待计数较多，说明服务器实例内交互查询交互中存在瓶颈或热点。 例如，锁等待指示查询争用数据；页 IO 闩锁等待指示 IO 响应时间较慢；页闩锁更新指示表示文件布局不正确。  
   
@@ -87,7 +89,7 @@ GO
   
  下表列出各任务所遇到的等待类型。  
 
-|类型 |描述| 
+|type |描述| 
 |-------------------------- |--------------------------| 
 |ABR |标识为仅供参考。 不支持。 不保证以后的兼容性。| | 
 |AM_INDBUILD_ALLOCATION |仅限内部使用。 <br />**适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -136,7 +138,7 @@ GO
 |BROKER_TRANSMISSION_OBJECT |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |BROKER_TRANSMISSION_TABLE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |BROKER_TRANSMISSION_WORK |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|BROKER_TRANSMITTER |Service Broker 发送器正在等待工作时出现。 Service Broker 具有一个称为发送器的组件，该组件可在一个或多个连接终结点上计划通过网络发送多个对话框中的消息。 发射器有2个专用线程用于实现此目的。 当这些发送器线程等待使用传输连接发送对话消息时，将对此等待类型收费。 此等待类型的高 waiting_tasks_count 值为这些发送器线程的间歇性工作，并且不会指示任何性能问题。 如果根本不使用 service broker，waiting_tasks_count 应为2（对于2个发送器线程），wait_time_ms 应为自实例启动后的持续时间的两倍。 请参阅[Service broker 等待统计](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types)信息。|
+|BROKER_TRANSMITTER |Service Broker 发送器正在等待工作时出现。 Service Broker 具有一个称为发送器的组件，该组件可在一个或多个连接终结点上计划通过网络发送多个对话框中的消息。 发射器有2个专用线程用于实现此目的。 当这些发送器线程等待使用传输连接发送对话消息时，将对此等待类型收费。 此等待类型的高 waiting_tasks_count 值为这些发送器线程的间歇性工作，并且不会指示任何性能问题。 如果根本不使用 service broker，则对于2个发送器线程，waiting_tasks_count 应为 2 () 并且 wait_time_ms 应为自实例启动后的持续时间的两倍。 请参阅 [Service broker 等待统计](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types)信息。|
 |BUILTIN_HASHKEY_MUTEX |可能在实例启动之后而在初始化内部数据结构时出现。 数据结构初始化之后将不会再次出现。| 
 |CHANGE_TRACKING_WAITFORCHANGES |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |CHECK_PRINT_RECORD |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
@@ -166,8 +168,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |COUNTRECOVERYMGR |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |CREATE_DATINISERVICE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|CXCONSUMER<a name="cxconsumer"></a>|当使用者线程（父）等待制造者线程发送行时，在并行查询计划中发生。 CXCONSUMER 等待是由从其制造者线程中用尽行的 Exchange 迭代器导致的。 这是并行查询执行的正常部分。 <br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 SP2 开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3），[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET<a name="cxpacket"></a>|在同步查询处理器交换迭代器时，以及在生成和使用行时，在并行查询计划中发生。 如果等待情况过大，并且无法通过优化查询来减少（如添加索引），请考虑调整并行的开销阈值或降低最大并行度（MaxDOP）。<br /> **注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，CXPACKET 仅指同步查询处理器交换迭代器和生成行。 如果使用者线程速度太慢，则 Exchange 迭代器缓冲区可能会变满并导致 CXPACKET 等待。 在 CXCONSUMER 等待类型中单独跟踪使用者线程。| 
+|CXCONSUMER <a name="cxconsumer"></a>|当使用者线程 (父) 等待制造者线程发送行时，并行查询计划发生。 CXCONSUMER 等待是由从其制造者线程中用尽行的 Exchange 迭代器导致的。 这是并行查询执行的正常部分。 <br /> **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3) 开始 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|在同步查询处理器交换迭代器时，以及在生成和使用行时，在并行查询计划中发生。 如果等待情况过大，并且无法通过优化查询来降低 (例如添加索引) ，请考虑调整并行的开销阈值或降低最大并行度 (MaxDOP) 。<br /> **注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，CXPACKET 仅指同步查询处理器交换迭代器和生成行。 如果使用者线程速度太慢，则 Exchange 迭代器缓冲区可能会变满并导致 CXPACKET 等待。 在 CXCONSUMER 等待类型中单独跟踪使用者线程。| 
 |CXROWSET_SYNC |在并行范围扫描期间出现。| 
 |DAC_INIT |当正在初始化专用管理员连接时出现。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -194,7 +196,7 @@ GO
 |DPT_ENTRY_LOCK |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |DROP_DATABASE_TIMER_TASK |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |DROPTEMP |在上次尝试删除临时对象失败后再进行下次尝试之前出现。 对于每一次失败的删除尝试，等待持续时间都以指数形式增长。| 
-|DTC |当某任务正在等待用于管理状态转换的事件时出现。 此状态控制在 SQL Server 接收到 MS DTC 服务不可用的通知后，何时发生 Microsoft 分布式事务处理协调器（MS DTC）事务的恢复。| 
+|DTC |当某任务正在等待用于管理状态转换的事件时出现。 此状态控制在 SQL Server 接收到 MS DTC 服务不可用的通知后，Microsoft 分布式事务处理协调器 (MS) DTC 的恢复发生的时间。| 
 |DTC_ABORT_REQUEST |当 MS DTC 工作线程会话正在等待获得 MS DTC 事务的所有权时，在该会话中出现。 当 MS DTC 拥有了事务后，该会话可以回滚事务。 通常，该会话将等待另一个正在使用事务的会话。| 
 |DTC_RESOLVE |当恢复任务正在等待跨数据库事务中的 master 数据库以查询该事务的结果时出现。| 
 |DTC_STATE |当某任务正在等待对内部 MS DTC 全局状态对象的更改进行保护的事件时出现。 该状态应当保持非常短的时间。| 
@@ -295,17 +297,17 @@ GO
 |HADR_AR_UNLOAD_COMPLETED |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |可用性副本事件（例如，状态更改或配置更改）的发布服务器正在等待对事件订阅服务器列表的独占的读/写访问。 仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_BACKUP_BULK_LOCK |Always On 主数据库收到了来自辅助数据库的备份请求，正在等待后台线程完成获取或释放 BulkOp 锁的请求。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_BACKUP_QUEUE |Always On 主数据库的备份后台线程正在等待辅助数据库的新工作请求。 （通常情况下，如果主数据库保存 BulkOp 日志，并且正在等待辅助数据库指示主数据库可以释放该锁），则会发生这种情况。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_CLUSAPI_CALL |SQL Server 线程正在等待从非抢先模式（按 SQL Server 计划）切换到抢先模式（由操作系统计划）以调用 Windows Server 故障转移群集 Api。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_BACKUP_QUEUE |Always On 主数据库的备份后台线程正在等待辅助数据库的新工作请求。  (通常情况下，当主数据库保存 BulkOp 日志并且正在等待辅助数据库指示主数据库可以释放该锁) 时，会发生这种情况。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_CLUSAPI_CALL |SQL Server 线程正在等待从 SQL Server) 到抢先模式的非抢先模式 (， (由操作系统) 计划，以便调用 Windows Server 故障转移群集 Api。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_COMPRESSED_CACHE_SYNC |正在等待访问压缩日志块缓存，以避免发送到多个辅助数据库的日志块的冗余压缩。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_CONNECTIVITY_INFO |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_DATABASE_FLOW_CONTROL |在已达到排队消息的最大数目时正在等待消息发送到伙伴。 指示日志扫描的运行运行速度要快于网络发送速度。 仅当网络发送速度比预期速度慢时，才会出现此问题。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_DATABASE_VERSIONING_STATE |在 Always On 辅助数据库的版本控制状态更改时发生。 此等待时间适用于内部数据结构，通常是非常短的，不会直接影响数据访问。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_DATABASE_WAIT_FOR_RECOVERY |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |HADR_DATABASE_WAIT_FOR_RESTART |正在等待数据库在 Always On 可用性组控制下重新启动。 正常情况下，这不是客户问题，因为此处应有等待。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING |对 Always On 可用性组的可读辅助数据库中的对象的查询在行版本控制上被阻止，同时等待在辅助副本启用读取工作负荷时提交或回滚所有正在进行的事务。 在快照隔离下执行查询之前，此等待类型可保证行版本可用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_DB_COMMAND |等待对会话消息的响应（使用 Always On 会话消息基础结构，这需要另一方显式响应）。 许多不同的消息类型使用此等待类型。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_DB_OP_COMPLETION_SYNC |等待对会话消息的响应（使用 Always On 会话消息基础结构，这需要另一方显式响应）。 许多不同的消息类型使用此等待类型。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING |在 Always On 可用性组的可读辅助数据库中，对对象 (s) 的查询在行版本控制上被阻止，同时等待在辅助副本启用读取工作负荷时提交或回滚所有正在进行的事务。 在快照隔离下执行查询之前，此等待类型可保证行版本可用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_DB_COMMAND |等待对会话消息的响应 (这种情况下，使用 Always On 会话消息基础结构) ，这需要另一方显式响应。 许多不同的消息类型使用此等待类型。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_DB_OP_COMPLETION_SYNC |等待对会话消息的响应 (这种情况下，使用 Always On 会话消息基础结构) ，这需要另一方显式响应。 许多不同的消息类型使用此等待类型。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_DB_OP_START_SYNC |Always On DDL 语句或 Windows Server 故障转移群集命令正在等待对可用性数据库及其运行时状态的序列化访问。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_DBR_SUBSCRIBER |可用性副本事件（例如，状态更改或配置更改）的发布服务器正在等待对与某一可用性数据库相对应的事件订阅服务器的运行时状态的独占读/写访问。 仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_DBR_SUBSCRIBER_FILTER_LIST |可用性副本事件（例如，状态更改或配置更改）的发布服务器正在等待对与可用性数据库相对应的事件订阅服务器的列表的独占读/写访问。 仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -329,9 +331,9 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |后台任务正在等待处理 Windows Server 故障转移群集通知的后台任务完成启动。 仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |后台任务正在等待处理 Windows Server 故障转移群集通知的后台任务终止。 仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_PARTNER_SYNC |并发控制等待伙伴列表。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_READ_ALL_NETWORKS |等待获取对 WSFC 网络列表的读取或写入访问。 仅限内部使用。 注意：引擎保留在动态管理视图（如 dm_hadr_cluster_networks）中使用的 WSFC 网络列表，或验证引用 WSFC 网络信息 Always On Transact-sql 语句。 此列表将在引擎启动、WSFC 相关通知和内部 Always On 重新启动（例如，丢失和重新获得 WSFC 仲裁）时更新。 在该列表中的更新正在进行时，任务通常会被阻止。 , <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_READ_ALL_NETWORKS |等待获取对 WSFC 网络列表的读取或写入访问。 仅限内部使用。 注意：引擎保留在动态管理视图中使用的 WSFC 网络列表， (如 sys.databases dm_hadr_cluster_networks) 或验证引用 WSFC 网络信息的 Always On Transact-sql 语句。 此列表将在引擎启动、WSFC 相关通知和内部 Always On restart (进行更新，例如，丢失和重新获得 WSFC 仲裁) 。 在该列表中的更新正在进行时，任务通常会被阻止。 , <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |正在等待辅助数据库在运行恢复之前连接到主数据库。 这是预期的等待，如果连接到主副本的速度太慢，则可能会延长。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |数据库恢复正在等待辅助数据库完成恢复和初始化阶段以便恢复到主数据库的公共日志点。 这是故障转移后的预期等待。可以通过 Windows 系统监视器（perfmon.exe）和动态管理视图跟踪撤消进度。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |数据库恢复正在等待辅助数据库完成恢复和初始化阶段以便恢复到主数据库的公共日志点。 这是故障转移后的预期等待。可以通过 Windows 系统监视器 ( # A0) 和动态管理视图跟踪撤消进度。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_REPLICAINFO_SYNC |正在等待并发控制更新当前副本状态。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_SEEDING_CANCELLATION |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |HADR_SEEDING_FILE_LIST |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
@@ -344,17 +346,17 @@ GO
 |HADR_TDS_LISTENER_SYNC |内部 Always On 系统或 WSFC 群集将请求侦听器已启动或已停止。 对此请求的处理始终是异步的，并且存在删除冗余请求的机制。 还存在此进程由于配置更改而挂起的时刻。 与此侦听器同步机制相关的所有等待都使用此等待类型。 仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |在需要启动和/或停止可用性组侦听器的 Always On Transact-sql 语句的末尾使用。 由于启动/停止操作是异步执行的，因此用户线程将会阻止使用此等待类型，直到侦听器的情况已知。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
-|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | 当使用低于主副本的计算大小（更低的 SLO）配置异地复制辅助数据库时发生。 由于辅助数据库延迟的日志消耗，主数据库将受到限制。 这是因为辅助数据库的计算能力不足以跟上主数据库的变化率。 <br /> **适用**于： Azure SQL 数据库| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | 当使用较小的计算大小配置异地复制辅助数据库时出现 (低于 SLO) 的主要部分。 由于辅助数据库延迟的日志消耗，主数据库将受到限制。 这是因为辅助数据库的计算能力不足以跟上主数据库的变化率。 <br /> **适用**于： Azure SQL 数据库| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |HADR_TIMER_TASK |正在等待获取计时器任务对象上的锁，并且还可用于正在执行工作的时间之间的实际等待。 例如，对于每10秒运行一次的任务，在一次执行后 Always On 可用性组将等待约10秒来重新计划任务，并在此处提供等待。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_TRANSPORT_DBRLIST |正在等待访问传输层的数据库副本列表。 用于授予对其的访问权限的旋转锁。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_TRANSPORT_FLOW_CONTROL |等待未确认的未确认 Always On 消息数超过流控制阈值时。 这基于可用性副本到副本（而不是数据库到数据库的基础）。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_TRANSPORT_FLOW_CONTROL |等待未确认的未确认 Always On 消息数超过流控制阈值时。 这不同于可用性副本到副本的 (，而不是数据库到数据库的基础) 。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_TRANSPORT_SESSION |Always On 可用性组正在等待更改或访问基础传输状态。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_WORK_POOL |并发控制等待 Always On 可用性组后台工作任务对象。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_WORK_QUEUE |Always On 可用性组后台工作线程正在等待分配新工作。 如果有准备就绪的工作线程正在等待新工作，这是正常状态。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_XRF_STACK_ACCESS |访问（查找、添加和删除） Always On 可用性数据库的扩展恢复分叉堆栈。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_XRF_STACK_ACCESS |访问 Always On 可用性数据库) 的扩展恢复分叉堆栈 (查找、添加和删除。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HCCO_CACHE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |HK_RESTORE_FILEMAP |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |HKCS_PARALLEL_MIGRATION |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
@@ -387,68 +389,68 @@ GO
 |LATCH_UP |等待 UP（更新）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 \_ \* 可在 sys. dm_os_latch_stats 中使用闩锁等待列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
 |LAZYWRITER_SLEEP |挂起惰性编写器任务时发生。 正在等待的后台任务所用时间的度量值。 在查找用户阻隔点所时不要考虑该状态。| 
 |LCK_M_BU |当某任务正在等待获取大容量更新 (BU) 锁时出现。| 
-|LCK_M_BU_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的大容量更新 (BU) 锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_BU_LOW_PRIORITY |在任务等待获取低优先级的大容量更新 (BU) 锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_BU_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的大容量更新 (BU) 锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_BU_LOW_PRIORITY |在任务等待获取低优先级的大容量更新 (BU) 锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_IS |当某任务正在等待获取意向共享 (IS) 锁时出现。| 
-|LCK_M_IS_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向共享 (IS) 锁时出现。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_IS_LOW_PRIORITY |在任务等待获取低优先级的意向共享 (IS) 锁时出现。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_IS_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向共享 (IS) 锁时出现。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_IS_LOW_PRIORITY |在任务等待获取低优先级的意向共享 (IS) 锁时出现。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_IU |当某任务正在等待获取意向更新 (IU) 锁时出现。| 
-|LCK_M_IU_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向更新 (IU) 锁时出现。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_IU_LOW_PRIORITY |在任务等待获取低优先级的意向更新 (IU) 锁时出现。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_IU_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向更新 (IU) 锁时出现。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_IU_LOW_PRIORITY |在任务等待获取低优先级的意向更新 (IU) 锁时出现。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_IX |当某任务正在等待获取意向排他 (IX) 锁时出现。| 
-|LCK_M_IX_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向排他 (IX) 锁时出现。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_IX_LOW_PRIORITY |在任务等待获取低优先级的意向排他 (IX) 锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_IX_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向排他 (IX) 锁时出现。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_IX_LOW_PRIORITY |在任务等待获取低优先级的意向排他 (IX) 锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RIn_NL |当某任务正在等待获取当前键值上的 NULL 锁以及当前键和上一个键之间的插入范围锁时出现。 键上的 NULL 锁是指立即释放的锁。| 
-|LCK_M_RIn_NL_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的 NULL 锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁时发生。 键上的 NULL 锁是指立即释放的锁。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RIn_NL_LOW_PRIORITY |在任务等待获取当前键值上低优先级的 NULL 锁以及当前键和上一个键之间低优先级的插入范围锁时发生。 键上的 NULL 锁是指立即释放的锁。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_NL_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的 NULL 锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁时发生。 键上的 NULL 锁是指立即释放的锁。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_NL_LOW_PRIORITY |在任务等待获取当前键值上低优先级的 NULL 锁以及当前键和上一个键之间低优先级的插入范围锁时发生。 键上的 NULL 锁是指立即释放的锁。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RIn_S |当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的插入范围锁时出现。| 
-|LCK_M_RIn_S_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的共享锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RIn_S_LOW_PRIORITY |在任务等待获取当前键值上低优先级的共享锁以及当前键和上一个键之间低优先级的插入范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_S_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的共享锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_S_LOW_PRIORITY |在任务等待获取当前键值上低优先级的共享锁以及当前键和上一个键之间低优先级的插入范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RIn_U |任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的插入范围锁。| 
-|LCK_M_RIn_U_ABORT_BLOCKERS |任务等待获取当前键值上使用中止阻塞程序的更新锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RIn_U_LOW_PRIORITY |任务等待获取当前键值上低优先级的更新锁以及当前键和上一个键之间低优先级的插入范围锁。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_U_ABORT_BLOCKERS |任务等待获取当前键值上使用中止阻塞程序的更新锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_U_LOW_PRIORITY |任务等待获取当前键值上低优先级的更新锁以及当前键和上一个键之间低优先级的插入范围锁。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RIn_X |当某任务正在等待获取当前键值上的排他锁以及当前键和上一个键之间的插入范围锁时出现。| 
-|LCK_M_RIn_X_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的排他锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RIn_X_LOW_PRIORITY |在任务等待获取当前键值上低优先级的排他锁以及当前键和上一个键之间低优先级的插入范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_X_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的排他锁以及当前键和上一个键之间使用中止阻塞程序的插入范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RIn_X_LOW_PRIORITY |在任务等待获取当前键值上低优先级的排他锁以及当前键和上一个键之间低优先级的插入范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RS_S |当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的共享范围锁时出现。| 
-|LCK_M_RS_S_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的共享锁以及当前键和上一个键之间使用中止阻塞程序的共享范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RS_S_LOW_PRIORITY |在任务等待获取当前键值上低优先级的共享锁以及当前键和上一个键之间低优先级的共享范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RS_S_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的共享锁以及当前键和上一个键之间使用中止阻塞程序的共享范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RS_S_LOW_PRIORITY |在任务等待获取当前键值上低优先级的共享锁以及当前键和上一个键之间低优先级的共享范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RS_U |当某任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的更新范围锁时出现。| 
-|LCK_M_RS_U_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的更新锁以及当前键和上一个键之间使用中止阻塞程序的更新范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RS_U_LOW_PRIORITY |在任务等待获取当前键值上低优先级的更新锁以及当前键和上一个键之间低优先级的更新范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RS_U_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的更新锁以及当前键和上一个键之间使用中止阻塞程序的更新范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RS_U_LOW_PRIORITY |在任务等待获取当前键值上低优先级的更新锁以及当前键和上一个键之间低优先级的更新范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RX_S |当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的排他范围锁时出现。| 
-|LCK_M_RX_S_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的共享锁以及当前键和上一个键之间使用中止阻塞程序的排他范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RX_S_LOW_PRIORITY |在任务等待获取当前键值上低优先级的共享锁以及当前键和上一个键之间低优先级的排他范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RX_S_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的共享锁以及当前键和上一个键之间使用中止阻塞程序的排他范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RX_S_LOW_PRIORITY |在任务等待获取当前键值上低优先级的共享锁以及当前键和上一个键之间低优先级的排他范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RX_U |当某任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的排他范围锁时出现。| 
-|LCK_M_RX_U_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的更新锁以及当前键和上一个键之间使用中止阻塞程序的排他范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RX_U_LOW_PRIORITY |在任务等待获取当前键值上低优先级的更新锁以及当前键和上一个键之间低优先级的排他范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RX_U_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的更新锁以及当前键和上一个键之间使用中止阻塞程序的排他范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RX_U_LOW_PRIORITY |在任务等待获取当前键值上低优先级的更新锁以及当前键和上一个键之间低优先级的排他范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_RX_X |当某任务正在等待获取当前键值上的排他锁以及当前键和上一个键之间的排他范围锁时出现。| 
-|LCK_M_RX_X_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的排他锁以及当前键和上一个键之间使用中止阻塞程序的排他范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_RX_X_LOW_PRIORITY |在任务等待获取当前键值上低优先级的排他锁以及当前键和上一个键之间低优先级的排他范围锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RX_X_ABORT_BLOCKERS |在任务等待获取当前键值上使用中止阻塞程序的排他锁以及当前键和上一个键之间使用中止阻塞程序的排他范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_RX_X_LOW_PRIORITY |在任务等待获取当前键值上低优先级的排他锁以及当前键和上一个键之间低优先级的排他范围锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_S |当某任务正在等待获取共享锁时出现。| 
-|LCK_M_S_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的共享锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_S_LOW_PRIORITY |在任务等待获取低优先级的共享锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_S_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的共享锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_S_LOW_PRIORITY |在任务等待获取低优先级的共享锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_SCH_M |当某任务正在等待获取架构修改锁时出现。| 
-|LCK_M_SCH_M_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的架构修改锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_SCH_M_LOW_PRIORITY |在任务等待获取低优先级的架构修改锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SCH_M_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的架构修改锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SCH_M_LOW_PRIORITY |在任务等待获取低优先级的架构修改锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_SCH_S |当某任务正在等待获取架构共享锁时出现。| 
-|LCK_M_SCH_S_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的架构共享锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_SCH_S_LOW_PRIORITY |在任务等待获取低优先级的架构共享锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SCH_S_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的架构共享锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SCH_S_LOW_PRIORITY |在任务等待获取低优先级的架构共享锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_SIU |当某任务正在等待获取共享意向更新锁时出现。| 
-|LCK_M_SIU_ABORT_BLOCKERS |在任务等待获取具有中止阻塞程序的共享意向更新锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_SIU_LOW_PRIORITY |在任务等待获取低优先级的共享意向更新锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SIU_ABORT_BLOCKERS |在任务等待获取具有中止阻塞程序的共享意向更新锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SIU_LOW_PRIORITY |在任务等待获取低优先级的共享意向更新锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_SIX |当某任务正在等待获取共享意向排他锁时出现。| 
-|LCK_M_SIX_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的共享意向排他锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_SIX_LOW_PRIORITY |在任务等待获取低优先级的意向排他共享锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SIX_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的共享意向排他锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_SIX_LOW_PRIORITY |在任务等待获取低优先级的意向排他共享锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_U |当某任务正在等待获取更新锁时出现。| 
-|LCK_M_U_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的更新锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_U_LOW_PRIORITY |在任务等待获取低优先级的更新锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_U_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的更新锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_U_LOW_PRIORITY |在任务等待获取低优先级的更新锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_UIX |当某任务正在等待获取更新意向排他锁时出现。| 
-|LCK_M_UIX_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向排他更新锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_UIX_LOW_PRIORITY |在任务等待获取低优先级的意向排他更新锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_UIX_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的意向排他更新锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_UIX_LOW_PRIORITY |在任务等待获取低优先级的意向排他更新锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LCK_M_X |当某任务正在等待获取排他锁时出现。| 
-|LCK_M_X_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的排他锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|LCK_M_X_LOW_PRIORITY |在任务等待获取低优先级的排他锁时发生。 （与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项相关。）， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_X_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的排他锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
+|LCK_M_X_LOW_PRIORITY |在任务等待获取低优先级的排他锁时发生。 与 ALTER TABLE 和 ALTER INDEX 的低优先级等待选项 (相关。 ) ， <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |LOG_POOL_SCAN |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |LOG_RATE_GOVERNOR |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |LOGBUFFER |当某任务正在等待日志缓冲区的空间以存储日志记录时出现。 连续的高值可能指示日志设备无法跟上服务器生成的日志量。| 
@@ -716,8 +718,8 @@ GO
 |PWAIT_EVENT_SESSION_INIT_MUTEX |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |PWAIT_FABRIC_REPLICA_CONTROLLER_DATA_LOSS |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |PWAIT_HADR_ACTION_COMPLETED |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC |当后台任务正在等待接收（通过轮询） Windows Server 故障转移群集通知的后台任务终止时发生。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|PWAIT_HADR_CLUSTER_INTEGRATION |追加、替换和/或删除操作正在等待获取 Always On 内部列表（例如网络、网络地址或可用性组侦听器的列表）上的写入锁。 仅供内部使用， <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC |当后台任务正在等待通过轮询（) Windows Server 故障转移群集通知）接收 (的后台任务时发生。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|PWAIT_HADR_CLUSTER_INTEGRATION |追加、替换和/或删除操作正在等待获取 Always On 内部列表上的写入锁 (例如网络、网络地址或可用性组侦听器) 列表。 仅供内部使用， <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |PWAIT_HADR_FAILOVER_COMPLETED |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |PWAIT_HADR_JOIN |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |PWAIT_HADR_OFFLINE_COMPLETED |Always On drop 可用性组操作在销毁 Windows Server 故障转移群集对象之前等待目标可用性组脱机。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -777,9 +779,9 @@ GO
 |QUERY_TASK_ENQUEUE_MUTEX |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |QUERY_TRACEOUT |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |RBIO_WAIT_VLF |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
-|RBIO_RG_STORAGE |由于页面服务器上延迟的日志消耗导致超大规模数据库计算节点被阻止时发生。 <br /> **适用**于： Azure SQL 数据库超大规模。|
+|RBIO_RG_STORAGE |当超大规模数据库计算节点由于页面服务器 () 的延迟日志消耗而受到限制时发生。 <br /> **适用**于： Azure SQL 数据库超大规模。|
 |RBIO_RG_DESTAGE |由于长期日志存储延迟日志消耗而正在限制超大规模数据库计算节点时发生。 <br /> **适用**于： Azure SQL 数据库超大规模。|
-|RBIO_RG_REPLICA |由于可读辅助副本节点延迟日志消耗而正在限制超大规模数据库计算节点时发生。 <br /> **适用**于： Azure SQL 数据库超大规模。|
+|RBIO_RG_REPLICA |当超大规模数据库计算节点由于) 的可读辅助副本节点 (延迟的日志消耗而受到限制时发生。 <br /> **适用**于： Azure SQL 数据库超大规模。|
 |RBIO_RG_LOCALDESTAGE |由于日志服务延迟日志消耗而正在限制超大规模数据库计算节点时发生。 <br /> **适用**于： Azure SQL 数据库超大规模。|
 |RECOVER_CHANGEDB |在备用数据库中同步数据库状态期间出现。| 
 |RECOVERY_MGR_LOCK |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
@@ -943,7 +945,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |等待检查点完成时出现。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_XTP_CKPT_ENABLED |当检查点处于禁用状态，并且正在等待启用检查点操作时发生。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_XTP_CKPT_STATE_LOCK |当同步检查点状态时出现。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|WAIT_XTP_COMPILE_WAIT |仅限内部使用。 <br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和更高版本。| 
+|WAIT_XTP_COMPILE_WAIT |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |WAIT_XTP_GUEST |当数据库内存分配器需要停止接收低内存通知时出现。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |WAIT_XTP_HOST_WAIT |当数据库引擎触发等待并由主机实现时发生。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
@@ -1011,10 +1013,10 @@ GO
 |XTP_PREEMPTIVE_TASK |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |XTP_TRUNCATION_LSN |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |XTPPROC_CACHE_ACCESS |当用于访问所有本机编译的存储过程缓存对象时发生。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|XTPPROC_PARTITIONED_STACK_CREATE |在为给定过程分配每个 NUMA 节点本机编译的存储过程缓存结构（必须以单线程方式完成）时发生。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。|
+|XTPPROC_PARTITIONED_STACK_CREATE |当分配每个 NUMA 节点本机编译的存储过程缓存结构 (必须为给定过程完成单线程) 。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。|
 
   
- 以下 XEvents 与分区**切换**和联机索引重新生成相关。 有关语法的信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md)和[Alter INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
+ 以下 XEvents 与分区 **切换** 和联机索引重新生成相关。 有关语法的信息，请参阅 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 和 [Alter INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 -   lock_request_priority_state  
   
@@ -1022,9 +1024,9 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- 有关锁兼容性矩阵，请参阅[transact-sql&#41;&#40;dm_tran_locks ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
+ 有关锁兼容性矩阵，请参阅 [transact-sql&#41;&#40;dm_tran_locks ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
     
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

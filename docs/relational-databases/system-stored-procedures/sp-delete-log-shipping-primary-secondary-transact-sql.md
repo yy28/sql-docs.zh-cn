@@ -1,5 +1,6 @@
 ---
-title: sp_delete_log_shipping_primary_secondary （Transact-sql） |Microsoft Docs
+description: sp_delete_log_shipping_primary_secondary (Transact-SQL)
+title: sp_delete_log_shipping_primary_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9c714d2f43ecf53f048f57dcb049bfd8acd0f2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 72d76081ac46d55bbb60843403b22a9ed4a9f9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447288"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @primary_database = ] 'primary_database'`主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
-`[ @secondary_server = ] 'secondary_server'`辅助服务器的名称。 *secondary_server* **sysname**，无默认值。  
+`[ @secondary_server = ] 'secondary_server'` 辅助服务器的名称。 *secondary_server* **sysname**，无默认值。  
   
-`[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
+`[ @secondary_database = ] 'secondary_database'` 辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,7 +56,7 @@ sp_delete_log_shipping_primary_secondary
  无。  
   
 ## <a name="remarks"></a>备注  
- 必须从主服务器上的**master**数据库运行**sp_delete_log_shipping_primary_secondary** 。 此存储过程从主服务器上的**log_shipping_primary_secondaries**中删除辅助数据库的条目。  
+ 必须从主服务器上的**master**数据库运行**sp_delete_log_shipping_primary_secondary** 。 此存储过程从主服务器上的 **log_shipping_primary_secondaries** 中删除辅助数据库的条目。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

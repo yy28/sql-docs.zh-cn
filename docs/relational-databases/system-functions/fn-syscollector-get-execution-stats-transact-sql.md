@@ -1,5 +1,6 @@
 ---
-title: fn_syscollector_get_execution_stats （Transact-sql） |Microsoft Docs
+description: fn_syscollector_get_execution_stats (Transact-SQL)
+title: fn_syscollector_get_execution_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9d6bb073cc237fff2a859c37316a981e4b5d88f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447509"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "85734390"
 fn_syscollector_get_execution_stats ( log_id )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *log_id*  
- 执行日志的本地唯一标识符。 *log_id*是**int**。  
+ 执行日志的本地唯一标识符。 *log_id* 是 **int**。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -59,10 +60,10 @@ fn_syscollector_get_execution_stats ( log_id )
 |max_duration|**int**|在包的数据流组件中消耗的最长时间，以毫秒为单位。|  
   
 ## <a name="permissions"></a>权限  
- 需要**dc_operator**的 SELECT。  
+ 需要 **dc_operator**的 SELECT。  
   
 ## <a name="see-also"></a>另请参阅  
  [syscollector_execution_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

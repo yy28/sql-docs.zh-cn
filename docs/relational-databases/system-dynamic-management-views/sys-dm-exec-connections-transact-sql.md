@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_connections （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_connections (Transact-SQL)
+title: sys. dm_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d128ee81a4465bdb24b9e6fde48d5dbe8cc8b8cc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a2e283d084fc5b76340e3b37253e3506ecd5ce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447622"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,14 +34,14 @@ ms.locfileid: "86942357"
   返回有关与此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立的连接的信息以及每个连接的详细信息。 返回 SQL Server 的服务器范围连接信息。 返回 SQL 数据库的当前数据库连接信息。  
   
 > [!NOTE]
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用[&#40;transact-sql&#41;的 dm_pdw_exec_connections ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用 [&#40;transact-sql&#41;的 dm_pdw_exec_connections ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|标识与此连接关联的会话。 可以为 Null。|  
-|most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 （其他会话可以重用 SOAP 连接。）可以为 null。|  
+|most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 其他会话可以重复使用 (SOAP 连接。 ) 可以为 null。|  
 |connect_time|**datetime**|连接建立时的时间戳。 不可为 null。|  
-|net_transport|**nvarchar(40)**|当连接启用了多个活动的结果集（MARS）时，始终返回**Session** 。<br /><br /> **注意：** 描述此连接使用的物理传输协议。 不可为 null。|  
+|net_transport|**nvarchar(40)**|当连接具有多个活动的结果集 (MARS) 启用时，始终返回 **Session** 。<br /><br /> **注意：** 描述此连接使用的物理传输协议。 不可为 null。|  
 |protocol_type|**nvarchar(40)**|指定负载的协议类型。 此参数当前可区分 TDS (TSQL) 和 SOAP。 可以为 Null。|  
 |protocol_version|**int**|与此连接关联的数据访问协议的版本。 可以为 Null。|  
 |endpoint_id|**int**|说明其连接类型的标识符。 此 endpoint_id 可用于查询 sys.endpoints 视图。 可以为 Null。|  
@@ -59,12 +60,12 @@ ms.locfileid: "86942357"
 |connection_id|**uniqueidentifier**|对每个连接进行唯一标识。 不可为 null。|  
 |parent_connection_id|**uniqueidentifier**|标识 MARS 会话正在使用的主要连接。 可以为 Null。|  
 |most_recent_sql_handle|**varbinary(64)**|此连接上执行的上一个请求的 SQL 句柄。 most_recent_sql_handle 列始终与 most_recent_session_id 列同步。 可以为 Null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
 ## <a name="physical-joins"></a>物理联接  
  ![sys.dm_exec_connections 的联接](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的联接")  

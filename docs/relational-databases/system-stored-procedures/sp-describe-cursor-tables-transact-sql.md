@@ -1,5 +1,6 @@
 ---
-title: sp_describe_cursor_tables （Transact-sql） |Microsoft Docs
+description: sp_describe_cursor_tables (Transact-SQL)
+title: sp_describe_cursor_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68c8cd21de793dc34c2f601a9918db2224d3df03
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 01e7850faa83e6d8854b5ac1a0138cd4363adf4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447239"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,25 +50,25 @@ sp_describe_cursor_tables
   
 ## <a name="arguments"></a>参数  
  [ @cursor_return =] *output_cursor_variable*输出  
- 声明的用于接收游标输出的游标变量的名称。 *output_cursor_variable*是**游标**，无默认值，并且在调用 sp_describe_cursor_tables 时，不能与任何游标相关联。 返回的游标是可滚动的动态只读游标。  
+ 声明的用于接收游标输出的游标变量的名称。 *output_cursor_variable* 是 **游标**，无默认值，并且在调用 sp_describe_cursor_tables 时，不能与任何游标相关联。 返回的游标是可滚动的动态只读游标。  
   
  [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
- 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 参数为**nvarchar （30）**。  
+ 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 参数 ** (30) 为 nvarchar **。  
   
  [ @cursor_identity =] N '*local_cursor_name*'  
- 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句所创建的游标的名称。 *local_cursor_name*为**nvarchar （128）**。  
+ 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句所创建的游标的名称。 *local_cursor_name* ** (128) 为 nvarchar **。  
   
  [ @cursor_identity =] N '*global_cursor_name*'  
- 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标的名称。 *global_cursor_name*还可以是由 ODBC 应用程序打开，然后通过调用 SQLSetCursorName 来命名该游标的 API 服务器游标的名称。*global_cursor_name*为**nvarchar （128）**。  
+ 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标的名称。 *global_cursor_name* 还可以是由 ODBC 应用程序打开，然后通过调用 SQLSetCursorName 来命名该游标的 API 服务器游标的名称。*global_cursor_name* ** (128) 为 nvarchar **。  
   
  [ @cursor_identity =] N '*input_cursor_variable*'  
- 与打开的游标关联的游标变量的名称。 *input_cursor_variable*为**nvarchar （128）**。  
+ 与打开的游标关联的游标变量的名称。 *input_cursor_variable* ** (128) 为 nvarchar **。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="cursors-returned"></a>返回的游标  
- sp_describe_cursor_tables 将其报表封装为 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这还意味着不能直接从 API 函数调用此过程。 **Cursor**输出参数必须绑定到程序变量，但是 api 不支持绑定**游标**参数或变量。  
+ sp_describe_cursor_tables 将其报表封装为 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** 输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这还意味着不能直接从 API 函数调用此过程。 **Cursor**输出参数必须绑定到程序变量，但是 api 不支持绑定**游标**参数或变量。  
   
  下表显示 sp_describe_cursor_tables 所返回的游标的格式。  
   
@@ -80,7 +81,7 @@ sp_describe_cursor_tables
 |server_name|**sysname，可以为 null**|驻留表的链接服务器的名称。 如果使用 OPENQUERY 或 OPENROWSET，则为 NULL。|  
 |Objectid|**int**|表的对象 ID。 如果使用 OPENQUERY 或 OPENROWSET，则为 0。|  
 |dbid|**int**|表所在的数据库的 ID。 如果使用 OPENQUERY 或 OPENROWSET，则为 0。|  
-|dbname|**sysname**，**可以为 null**|表所在的数据库的名称。 如果使用 OPENQUERY 或 OPENROWSET，则为 NULL。|  
+|dbname|**sysname**， **可以为 null**|表所在的数据库的名称。 如果使用 OPENQUERY 或 OPENROWSET，则为 NULL。|  
   
 ## <a name="remarks"></a>备注  
  sp_describe_cursor_tables 说明由服务器游标引用的基表。 要查看游标所返回的结果集的属性说明，请使用 sp_describe_cursor_columns。 要查看游标的全局特性（例如，其可滚动性和可更新性）的说明，请使用 sp_describe_cursor。 若要获得在连接时可见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标的报表，请使用 sp_cursor_list。  
@@ -130,9 +131,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [指针](../../relational-databases/cursors.md)   
+ [游标](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-sql&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [&#40;Transact-sql 声明游标&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   

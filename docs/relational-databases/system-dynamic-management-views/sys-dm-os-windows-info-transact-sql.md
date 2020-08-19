@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_windows_info （Transact-sql） |Microsoft Docs
+description: sys.dm_os_windows_info (Transact-SQL)
+title: sys. dm_os_windows_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -18,36 +19,36 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26cf5253d95a1c716c3c2ecfc1be0d9f99897832
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 567da3021d443b2d8c6d6eeeca30401618c67360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447519"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个显示 Windows 操作系统版本信息的行。  
   
-  仅适用于在 Windows 上运行的 SQL Server。 若要查看在非 Windows 主机（如 Linux）上运行 SQL Server 的类似信息，请使用[sys. dm_os_host_info &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
+  仅适用于在 Windows 上运行的 SQL Server。 若要查看在非 Windows 主机（如 Linux）上运行 SQL Server 的类似信息，请使用 [sys. dm_os_host_info &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar(256)**|对于 Windows，返回发布号。 有关值和说明的列表，请参阅[操作系统版本（Windows）](/windows/desktop/SysInfo/operating-system-version)。 不能为 NULL。|  
+|**windows_release**|**nvarchar(256)**|对于 Windows，返回发布号。 有关值和说明的列表，请参阅 [操作系统版本 (Windows) ](/windows/desktop/SysInfo/operating-system-version)。 不能为 NULL。|  
 |**windows_service_pack_level**|**nvarchar(256)**| 对于 Windows，将返回 Service Pack 号。 不能为 NULL。 |  
-|**windows_sku**|**int**|对于 Windows，返回 Windows 库存单位（SKU） ID。 有关 SKU Id 和说明的列表，请参阅[GetProductInfo 函数](https://msdn.microsoft.com/library/ms724358.aspx)。 可以为 Null。 |  
-|**os_language_version**|**int**| 对于 Windows，返回操作系统的 Windows 区域设置标识符（LCID）。 有关 LCID 值和说明的列表，请参阅[Microsoft 分配的区域设置 id](https://go.microsoft.com/fwlink/?LinkId=208080)。 不能为 NULL。|  
+|**windows_sku**|**int**|对于 Windows，返回 Windows 库存 (SKU) ID。 有关 SKU Id 和说明的列表，请参阅 [GetProductInfo 函数](https://msdn.microsoft.com/library/ms724358.aspx)。 可以为 Null。 |  
+|**os_language_version**|**int**| 对于 Windows，将返回 (LCID) 操作系统的 Windows 区域设置标识符。 有关 LCID 值和说明的列表，请参阅 [Microsoft 分配的区域设置 id](https://go.microsoft.com/fwlink/?LinkId=208080)。 不能为 NULL。|  
   
   
 ## <a name="permissions"></a>权限  
 默认情况下，将对 dm_os_windows_info sys.databases 的 SELECT 权限授予 public 角色。 如果已吊销，则需要对服务器具有 VIEW SERVER STATE 权限。  
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
-若要查看在非 Windows 主机（如 Linux）上运行的 SQL 的信息，请使用[&#40;transact-sql&#41;上的 sys. dm_os_host_info ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
+若要查看在非 Windows 主机（如 Linux）上运行的 SQL 的信息，请使用 [&#40;transact-sql&#41;上的 sys. dm_os_host_info ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
   
 ## <a name="examples"></a>示例  
- 下面的示例返回**sys.databases dm_os_windows_info**视图中的所有列。  
+ 下面的示例返回 **sys.databases dm_os_windows_info** 视图中的所有列。  
   
 ```  
 SELECT windows_release, windows_service_pack_level, windows_sku, os_language_version  

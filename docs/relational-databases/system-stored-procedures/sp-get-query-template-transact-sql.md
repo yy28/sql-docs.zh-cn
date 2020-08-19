@@ -1,5 +1,6 @@
 ---
-title: sp_get_query_template （Transact-sql） |Microsoft Docs
+description: sp_get_query_template (Transact-SQL)
+title: sp_get_query_template (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447087"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,20 +44,20 @@ sp_get_query_template
   
 ## <a name="arguments"></a>参数  
  "*query_text*"  
- 要生成参数化版本的查询。 "*query_text*" 必须用单引号引起来，并以 N Unicode 说明符开头。 N "*query_text*" 是分配给参数的值 @querytext 。 此类型的类型为**nvarchar （max）**。  
+ 要生成参数化版本的查询。 "*query_text*" 必须用单引号引起来，并以 N Unicode 说明符开头。 N "*query_text*" 是分配给参数的值 @querytext 。 这种类型的类型为 **nvarchar (max) **。  
   
  @templatetext  
- 提供的类型为**nvarchar （max）** 的输出参数，以字符串文字形式接收*query_text*的参数化形式。  
+ 类型为 **nvarchar (max) **的输出参数，以字符串文字形式接收 *query_text* 的参数化形式。  
   
  @parameters  
- 按指示提供的类型为**nvarchar （max）** 的输出参数，用于接收已参数化的参数名称和数据类型的字符串文字 @templatetext 。  
+ 是 nvarchar 类型的输出参数 ** (max) **，按指示提供，用于接收参数名称和已参数化的数据类型的字符串文字 @templatetext 。  
   
 ## <a name="remarks"></a>备注  
  如果出现下列情况，sp_get_query_template 会返回错误。  
   
--   它不会在*query_text*中参数化任何常量文本值。  
+-   它不会在 *query_text*中参数化任何常量文本值。  
   
--   *query_text*为 NULL，而不是 Unicode 字符串、语法无效或无法编译。  
+-   *query_text* 为 NULL，而不是 Unicode 字符串、语法无效或无法编译。  
   
  如果 sp_get_query_template 返回错误，则不会修改 @templatetext 和 @parameters 输出参数的值。  
   
@@ -113,7 +114,7 @@ SELECT @my_parameters;
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各个快速修复工程、Service Pack 和版本升级之间，sp_get_query_template 输出中参数的顺序和命名会发生变化。 另外，升级会导致同一查询的不同的常量文字集被参数化，并且对两种输出参数的结果应用不同的文本间距。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

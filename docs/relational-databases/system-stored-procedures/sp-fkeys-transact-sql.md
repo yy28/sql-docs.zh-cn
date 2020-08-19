@@ -1,4 +1,5 @@
 ---
+description: sp_fkeys (Transact-SQL)
 title: sp_fkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -18,12 +19,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18a4a5c25c791122191c07e5bb63a6fc6c32cba0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: dce5453de0dc41f00e1b6c622397972e635df97e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447220"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,26 +46,26 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="arguments"></a>参数  
  [ @pktable_name =] "*pktable_name*"  
- 带主键的表的名称，用于返回目录信息。 *pktable_name*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或*fktable_name*参数，或同时提供两者。  
+ 带主键的表的名称，用于返回目录信息。 *pktable_name* 的默认值为 **sysname**，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或 *fktable_name* 参数，或同时提供两者。  
   
  [ @pktable_owner =] "*pktable_owner*"  
- 表所有者的名称， (用来返回目录信息的主密钥) 。 *pktable_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*pktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
+ 表所有者的名称， (用来返回目录信息的主密钥) 。 *pktable_owner* 的默认值为 **sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定 *pktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定*pktable_owner*并且当前用户没有具有指定*pktable_name*的表，则此过程将查找数据库所有者拥有指定*pktable_name*的表。 如果有，则返回该表的列。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定 *pktable_owner* 并且当前用户没有具有指定 *pktable_name*的表，则此过程将查找数据库所有者拥有指定 *pktable_name* 的表。 如果有，则返回该表的列。  
   
  [ @pktable_qualifier =] "*pktable_qualifier*"  
- 与主键) 限定符 (的表的名称。 *pktable_qualifier*的默认值为 sysname，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 与主键) 限定符 (的表的名称。 *pktable_qualifier* 的默认值为 sysname，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [ @fktable_name =] "*fktable_name*"  
- 用于返回目录信息的表（带外键）的名称。 *fktable_name*的默认值为 sysname，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或*pktable_name*参数，或同时提供两者。  
+ 用于返回目录信息的表（带外键）的名称。 *fktable_name* 的默认值为 sysname，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或 *pktable_name* 参数，或同时提供两者。  
   
  [ @fktable_owner =] "*fktable_owner*"  
- 用于返回目录信息的表（带外键）的所有者的名称。 *fktable_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*fktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
+ 用于返回目录信息的表（带外键）的所有者的名称。 *fktable_owner* 的默认值为 **sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定 *fktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定*fktable_owner*并且当前用户没有具有指定*fktable_name*的表，则此过程将查找数据库所有者拥有指定*fktable_name*的表。 如果有，则返回该表的列。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定 *fktable_owner* 并且当前用户没有具有指定 *fktable_name*的表，则此过程将查找数据库所有者拥有指定 *fktable_name* 的表。 如果有，则返回该表的列。  
   
  [ @fktable_qualifier =] "*fktable_qualifier*"  
- 使用外键) 限定符 (表的名称。 *fktable_qualifier*的默认值为**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 使用外键) 限定符 (表的名称。 *fktable_qualifier* 的默认值为 **sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -121,8 +122,8 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目录存储过程 ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   

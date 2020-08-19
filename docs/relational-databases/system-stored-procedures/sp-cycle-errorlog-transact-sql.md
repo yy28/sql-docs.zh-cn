@@ -1,5 +1,6 @@
 ---
-title: sp_cycle_errorlog （Transact-sql） |Microsoft Docs
+description: sp_cycle_errorlog (Transact-SQL)
+title: sp_cycle_errorlog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad631a10998f3628084581ea25faa53151f12af0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5f950b15772f30e914f425261f84591deb0f822d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447335"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ sp_cycle_errorlog
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时，当前错误日志都会重命名为**错误日志。 1**;**错误日志**将变成**错误日志。 2**，**错误日志 2**变成**错误日志。 3**，依此类推。 **sp_cycle_errorlog**使你能够在不停止和启动服务器的情况下循环错误日志文件。  
+ 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时，当前错误日志都会重命名为 **错误日志。 1**; **错误日志** 将变成 **错误日志。 2**， **错误日志 2** 变成 **错误日志。 3**，依此类推。 **sp_cycle_errorlog** 使你能够在不停止和启动服务器的情况下循环错误日志文件。  
   
 ## <a name="permissions"></a>权限  
  **Sp_cycle_errorlog**的执行权限仅限于**sysadmin**固定服务器角色的成员。  
@@ -59,7 +60,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cycle_agent_errorlog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sp_help_notification （Transact-sql） |Microsoft Docs
+description: sp_help_notification (Transact-SQL)
+title: sp_help_notification (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447035"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,61 +45,61 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @object_type = ] 'object_type'`要返回的信息的类型。 *object_type*为**char （9）**，无默认值。 *object_type*可以是警报，其中列出了分配给所提供的操作员名称的警报 *，或操作员，其中*列出了负责提供的警报名称的操作员 *。*  
+`[ @object_type = ] 'object_type'` 要返回的信息的类型。 *object_type*是 **char (9) **，无默认值。 *object_type* 可以是警报，其中列出了分配给所提供的操作员名称的警报 *，或操作员，其中* 列出了负责提供的警报名称的操作员 *。*  
   
-`[ @name = ] 'name'`操作员名称（如果*object_type*为 OPERATORS）或警报名称（如果*object_type*为警报）。 *名称*为**sysname**，无默认值。  
+`[ @name = ] 'name'` 如果 *object_type* 是运算符) ，则为运算符名称 (; 如果 *object_type* 为警报) ，则为警报名称 (。 *名称* 为 **sysname**，无默认值。  
   
-`[ @enum_type = ] 'enum_type'`返回的*object_type*信息。 大多数情况下， *enum_type*是实际的。 *enum_type*为**char （10）**，无默认值，可以是下列值之一。  
+`[ @enum_type = ] 'enum_type'` 返回的 *object_type*信息。 大多数情况下， *enum_type*是实际的。 *enum_type*是 **char (10) **，无默认值，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |ACTUAL|仅列出与*名称*关联的*object_types* 。|  
-|ALL|列出所有*object_types*包括不与*name*关联的。|  
+|ALL|列出所有*object_types* 包括不与 *name*关联的。|  
 |TARGET|仅列出与所提供*target_name*匹配的*object_types* ，而不考虑与 name 关联的*名称*。|  
   
-`[ @notification_method = ] notification_method`确定要返回的通知方法列的数值。 *notification_method*为**tinyint**，可以是下列值之一。  
+`[ @notification_method = ] notification_method` 确定要返回的通知方法列的数值。 *notification_method* 为 **tinyint**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
-|**1**|电子邮件：只返回**use_email**列。|  
-|**2**|寻呼：仅返回**use_pager**列。|  
-|**4**|NetSend：仅返回**use_netsend**列。|  
+|**1**|电子邮件：只返回 **use_email** 列。|  
+|**2**|寻呼：仅返回 **use_pager** 列。|  
+|**4**|NetSend：仅返回 **use_netsend** 列。|  
 |**7**|全部：返回全部列。|  
   
-`[ @target_name = ] 'target_name'`要搜索的警报名称（如果*object_type*为警报）或要搜索的操作员名称（如果*object_type*为运算符）。 仅当*enum_type*为 target 时，才需要*target_name* 。 *target_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @target_name = ] 'target_name'` 如果 *object_type* 为警报) ，则为搜索 (的警报名称; 如果 *object_type* 是运算符) ，则为要搜索 (的操作员名称。 仅当*enum_type*为 target 时，才需要*target_name* 。 *target_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-valves"></a>返回代码阀  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果*object_type*为**警报**，则结果集将列出给定操作员的所有警报。  
+ 如果 *object_type* 为 **警报**，则结果集将列出给定操作员的所有警报。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警报标识号。|  
 |**alert_name**|**sysname**|警报名称。|  
-|**use_email**|**int**|使用电子邮件通知操作员：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_pager**|**int**|使用寻呼通知操作员：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_netsend**|**int**|使用网络弹出消息通知操作员：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**use_email**|**int**|使用电子邮件通知操作员：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**use_pager**|**int**|使用寻呼通知操作员：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**use_netsend**|**int**|使用网络弹出消息通知操作员：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**has_email**|**int**|为此警报发送的电子邮件通知的次数。|  
 |**has_pager**|**int**|为此警报发送的寻呼通知的次数。|  
-|**has_netsend**|**int**|为此警报发送的**net send**通知数。|  
+|**has_netsend**|**int**|为此警报发送的 **net send** 通知数。|  
   
- 如果**object_type**是**运算符**，则结果集将列出给定警报的所有运算符。  
+ 如果 **object_type** 是 **运算符**，则结果集将列出给定警报的所有运算符。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|操作员标识号。|  
 |**operator_name**|**sysname**|操作员名称。|  
-|**use_email**|**int**|使用电子邮件发送操作员的通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_pager**|**int**|使用寻呼发送操作员的通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_netsend**|**int**|用于通知操作员的网络弹出窗口：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**has_email**|**int**|操作员有电子邮件地址：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**has_pager**|**int**|操作员有寻呼地址：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**has_netsend**|**int**|操作员已配置网络发送通知。<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**use_email**|**int**|使用电子邮件发送操作员的通知：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**use_pager**|**int**|使用寻呼发送操作员的通知：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**use_netsend**|**int**|用于通知操作员的网络弹出窗口：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**has_email**|**int**|操作员有电子邮件地址：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**has_pager**|**int**|操作员有寻呼地址：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**has_netsend**|**int**|操作员已配置网络发送通知。<br /><br /> 1 = 是<br /><br /> 0 = 否|  
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行此存储过程。  
+ 必须从 **msdb** 数据库运行此存储过程。  
   
 ## <a name="permissions"></a>权限  
  若要执行此存储过程，用户必须为 **sysadmin** 固定服务器角色的成员。  

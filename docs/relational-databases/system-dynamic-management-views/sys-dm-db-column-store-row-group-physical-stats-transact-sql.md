@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_column_store_row_group_physical_stats （Transact-sql） |Microsoft Docs
+description: 'sys. dm_db_column_store_row_group_physical_stats (Transact-sql) '
+title: sys. dm_db_column_store_row_group_physical_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
@@ -20,28 +21,29 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db8bfa11e87e4a8f595c559444907aef3c3e3e81
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447680"
 ---
-# <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats （Transact-sql）
+# <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-sql) 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 提供当前数据库中所有列存储索引的当前行组级信息。  
 
-这将[column_store_row_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)扩展目录视图。  
+这将 [column_store_row_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)扩展目录视图。  
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|基础表的 ID。|  
-|**index_id**|**int**|此列存储索引*object_id*表的 ID。|  
-|**partition_number**|**int**|保存*row_group_id*的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
+|**index_id**|**int**|此列存储索引 *object_id* 表的 ID。|  
+|**partition_number**|**int**|保存 *row_group_id*的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|**int**|此行组的 ID。 对于已分区表，值在分区中是唯一的。<br /><br /> 对于内存尾，为-1。|  
 |**delta_store_hobt_id**|**bigint**|增量存储中行组的 hobt_id。<br /><br /> 如果行组不在增量存储中，则为 NULL。<br /><br /> 对于内存中表尾，为 NULL。|  
-|State |**tinyint**|与*state_description*关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 逻辑删除<br /><br /> 压缩是适用于内存中表的唯一状态。|  
+|State|**tinyint**|与 *state_description*关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 逻辑删除<br /><br /> 压缩是适用于内存中表的唯一状态。|  
 |**state_desc**|**nvarchar(60)**|行组状态的说明：<br /><br /> 0-不可见-正在生成的行组。 例如： <br />压缩数据时，列存储中的行组是不可见的。 压缩完成后，元数据开关会将列存储行组的状态从不可见改为已压缩，并将增量存储行组的状态从 "已关闭" 更改为 "逻辑删除"。<br /><br /> 1-打开-正在接受新行的增量存储行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 2-已关闭-增量存储中的行组，其中包含最大行数，正在等待元组移动进程将其压缩到列存储中。<br /><br /> 3压缩-使用列存储压缩进行压缩并存储在列存储中的行组。<br /><br /> 4-逻辑删除-行组，该组以前位于增量存储中，不再使用。|  
 |**total_rows**|**bigint**|以物理方式存储在行组中的行数。 对于压缩的行组。 包括标记为已删除的行。|  
 |**deleted_rows**|**bigint**|以物理方式存储在压缩行组中且标记为要删除的行数。<br /><br /> 对于增量存储中的行组，值为 0。|  
@@ -65,9 +67,9 @@ ms.locfileid: "86012887"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calculate-fragmentation-to-decide-when-to-reorganize-or-rebuild-a-columnstore-index"></a>A. 计算碎片以决定何时重新组织或重新生成列存储索引。  
- 对于列存储索引，已删除行的百分比是对行组中碎片的良好度量。 当碎片为20% 或更大时，删除删除的行。 有关更多示例，请参阅[重新组织和重新生成索引](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+ 对于列存储索引，已删除行的百分比是对行组中碎片的良好度量。 当碎片为20% 或更大时，删除删除的行。 有关更多示例，请参阅 [重新组织和重新生成索引](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
- 此示例将**sys. dm_db_column_store_row_group_physical_stats**与其他系统表联接，然后将 `Fragmentation` 该列计算为当前数据库中每个行组的效率的估计值。 若要查找单个表的信息，请删除**WHERE**子句前面的注释连字符，并提供表名称。  
+ 此示例将 **sys. dm_db_column_store_row_group_physical_stats** 与其他系统表联接，然后将 `Fragmentation` 该列计算为当前数据库中每个行组的效率的估计值。 若要查找单个表的信息，请删除 **WHERE** 子句前面的注释连字符，并提供表名称。  
   
 ```sql  
 SELECT i.object_id,   
@@ -85,11 +87,11 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
  [sys. column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   

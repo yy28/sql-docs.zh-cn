@@ -1,4 +1,5 @@
 ---
+description: 使用用户定义表
 title: 使用用户定义的表 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf585eacb9fdb9cc93177220150144cbea00fd2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 58f244f5216a016633b2f186d04ef9789267b6e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448012"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -33,11 +35,11 @@ ms.locfileid: "86011858"
  <xref:Microsoft.SqlServer.Management.Smo.DataType> 类用于指定与列和参数关联的数据类型。 使用此类型可指定用户定义表类型作为用户定义函数和存储过程的参数。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>在 Visual Basic 中创建用户定义表  
- 对于此示例，必须包含包含**StringCollection**类型的类库的 imports 语句。  
+ 对于此示例，必须包含包含 **StringCollection** 类型的类库的 imports 语句。  
   
  `Imports System.Collections.Specialized`  
   
@@ -101,7 +103,7 @@ ms.locfileid: "86011858"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>在 Visual C# 中创建用户定义表  
- 对于此示例，必须包含包含**StringCollection**类型的类库的 imports 语句。  
+ 对于此示例，必须包含包含 **StringCollection** 类型的类库的 imports 语句。  
   
  `using System.Collections.Specialized;`  
   
@@ -171,7 +173,7 @@ ms.locfileid: "86011858"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>在 PowerShell 中创建用户定义表  
- 对于此示例，必须包含包含**StringCollection**类型的类库的 imports 语句。  
+ 对于此示例，必须包含包含 **StringCollection** 类型的类库的 imports 语句。  
   
  `using System.Collections.Specialized;`  
   

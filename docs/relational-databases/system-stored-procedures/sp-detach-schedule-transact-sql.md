@@ -1,5 +1,6 @@
 ---
-title: sp_detach_schedule （Transact-sql） |Microsoft Docs
+description: sp_detach_schedule (Transact-SQL)
+title: sp_detach_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447247"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,30 +43,30 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id`要从中删除计划的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要从中删除计划的作业的标识号。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'`要从中删除计划的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
-  
-> [!NOTE]  
->  必须指定*job_id*或*job_name* ，但不能同时指定两者。  
-  
-`[ @schedule_id = ] schedule_id`要从作业中删除的计划的标识号。 *schedule_id*的值为**int**，默认值为 NULL。  
-  
-`[ @schedule_name = ] 'schedule_name'`要从作业中删除的计划的名称。 *schedule_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要从中删除计划的作业的名称。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  必须指定*schedule_id*或*schedule_name* ，但不能同时指定两者。  
+>  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`指定是否删除未使用的作业计划。 *delete_unused_schedule*的类型为**bit**，默认值为**0**，这意味着所有计划都将保留，即使没有作业引用它们也是如此。 如果设置为**1**，则会删除未使用的作业计划。  
+`[ @schedule_id = ] schedule_id` 要从作业中删除的计划的标识号。 *schedule_id* 的值为 **int**，默认值为 NULL。  
+  
+`[ @schedule_name = ] 'schedule_name'` 要从作业中删除的计划的名称。 *schedule_name* 的默认值为 **sysname**，默认值为 NULL。  
+  
+> [!NOTE]  
+>  必须指定 *schedule_id* 或 *schedule_name* ，但不能同时指定两者。  
+  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否删除未使用的作业计划。 *delete_unused_schedule* 的类型为 **bit**，默认值为 **0**，这意味着所有计划都将保留，即使没有作业引用它们也是如此。 如果设置为 **1**，则会删除未使用的作业计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -77,7 +78,7 @@ sp_detach_schedule
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将进行检查以确定用户是否拥有计划。 只有**sysadmin**固定服务器角色的成员才可以从其他用户拥有的作业中分离计划。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将进行检查以确定用户是否拥有计划。 只有 **sysadmin** 固定服务器角色的成员才可以从其他用户拥有的作业中分离计划。  
   
 ## <a name="examples"></a>示例  
  以下示例将删除 `'NightlyJobs'` 计划和 `'BackupDatabase'` 作业之间的关联。  

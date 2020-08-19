@@ -1,5 +1,6 @@
 ---
-title: sp_monitor （Transact-sql） |Microsoft Docs
+description: sp_monitor (Transact-SQL)
+title: sp_monitor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446964"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ sp_monitor
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|描述|  
 |-----------------|-----------------|  
-|**last_run**|上次运行时间**sp_monitor** 。|  
-|**current_run**|正在运行的时间**sp_monitor** 。|  
-|**计算**|自运行**sp_monitor**以来经过的秒数。|  
+|**last_run**|上次运行时间 **sp_monitor** 。|  
+|**current_run**|正在运行的时间 **sp_monitor** 。|  
+|**计算**|自运行 **sp_monitor** 以来经过的秒数。|  
 |**cpu_busy**|服务器计算机的 CPU 处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作所用的秒数。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在输入和输出操作上花费的秒数。|  
 |**时间**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已空闲的秒数。|  
@@ -60,9 +61,9 @@ sp_monitor
 |**连接**|登录或尝试登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的次数。|  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过一系列函数跟踪其完成的工作量。 执行**sp_monitor**显示这些函数返回的当前值，并显示自上次运行该过程以来它们的更改量。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过一系列函数跟踪其完成的工作量。 执行 **sp_monitor** 显示这些函数返回的当前值，并显示自上次运行该过程以来它们的更改量。  
   
- 对于每一列，统计信息将按*数字*（*number*）-*数字*% 或*数字*（*数字*）的形式进行打印。 第一个*数字*是指在重启后的秒数（对于**cpu_busy**、 **io_busy**和**空闲**）或总数目（对于其他变量） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 括号中的*数字*是指自上次运行**sp_monitor**以来的秒数或总数。 百分比是自上次运行**sp_monitor**以来的时间百分比。 例如，如果报表显示**cpu_busy**为4250（215）-68%，则 cpu 在上一次启动时会忙于4250秒，自上次运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_monitor**以来215秒，最后一次运行**sp_monitor**以来的总时间的68%。  
+ 对于每一列，统计信息将以 *数字* 形式显示 (*number*) 号 *% 或* *number* (*number*) 。 第一个 *数字* 是指在重新启动后，为 **cpu_busy**、 **io_busy**和 **空闲**)  (的秒数，或其他变量 (总数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 括号中的 *数字* 是指自上次运行 **sp_monitor** 以来的秒数或总数。 百分比是自上次运行 **sp_monitor** 以来的时间百分比。 例如，如果报表显示 **cpu_busy** 为 4250 (215) -68%，则自上次启动以来，cpu 已忙4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，自上次运行 **sp_monitor** 以来的215秒，以及自上次运行 **sp_monitor** 以来的总时间的68百分比。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

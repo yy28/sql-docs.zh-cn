@@ -1,4 +1,5 @@
 ---
+description: sys.resource_stats (Azure SQL Database)
 title: resource_stats (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2018
@@ -19,19 +20,19 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 29862abf480aa5470314a531558839154886cc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447829"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   返回 Azure SQL 数据库的 CPU 使用率和存储数据。 在五分钟间隔内收集并聚合数据。 对于每个用户数据库，资源消耗发生变化的每五分钟报告时段都有一行。 返回的数据包括 CPU 使用率、存储大小更改和数据库 SKU 修改。 不带更改的空闲数据库可能每五分钟间隔没有行。 历史数据保留大约 14 天。  
   
- 根据与数据库关联的 Azure SQL 数据库服务器的版本， **sys.databases resource_stats**视图的定义有所不同。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。  
+ 根据与数据库关联的 Azure SQL 数据库服务器的版本， **sys.databases resource_stats** 视图的定义有所不同。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。  
   
  下表介绍 v12 服务器中可用的列：  
   
@@ -43,7 +44,7 @@ ms.locfileid: "87822810"
 |sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> Standard<br /><br /> 高级<br /><br />常规用途<br /><br />业务关键|  
 |storage_in_megabytes|**float**|时间段的最大存储大小（以 mb 为单位），包括数据库数据、索引、存储过程和元数据。|  
 |avg_cpu_percent|**decimal (5，2) **|平均计算使用率（以服务层限制的百分比表示）。|  
-|avg_data_io_percent|**decimal (5，2) **|平均 I/O 使用率（以基于服务层限制的百分比表示）。 对于超大规模数据库，请参阅[资源利用率统计信息中的数据 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
+|avg_data_io_percent|**decimal (5，2) **|平均 I/O 使用率（以基于服务层限制的百分比表示）。 对于超大规模数据库，请参阅 [资源利用率统计信息中的数据 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
 |avg_log_write_percent|**decimal (5，2) **|平均写入资源使用率（以服务层限制的百分比表示）。|  
 |max_worker_percent|**decimal (5，2) **| (请求的最大并发工作线程数) 以数据库的服务层限制为百分比。<br /><br /> 最大值当前是根据并发辅助进程计数的15秒的时间间隔计算的五分钟间隔。|  
 |max_session_percent|**decimal (5，2) **|基于数据库服务层的限制的最大并发会话数（以百分比表示）。<br /><br /> 最大值当前根据并发会话计数的15秒的时间间隔计算出五分钟间隔。|  
@@ -56,17 +57,17 @@ ms.locfileid: "87822810"
 |allocated_storage_in_megabytes|**float**|用于存储数据库数据的格式化文件空间量（以 MB 为单位）。 格式化文件空间也称为 "分配的数据空间"。  有关详细信息，请参阅： [SQL Database 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
->  有关这些限制和服务层的详细信息，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)。  
+>  有关这些限制和服务层的详细信息，请参阅主题 [服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)。  
     
 ## <a name="permissions"></a>权限  
- 此视图可用于具有连接到虚拟**master**数据库的权限的所有用户角色。  
+ 此视图可用于具有连接到虚拟 **master** 数据库的权限的所有用户角色。  
   
 ## <a name="remarks"></a>备注  
  **Resource_stats sys.databases**返回的数据以所运行的服务层/性能级别所允许的最大限制的百分比表示。  
   
  如果数据库是弹性池的成员，则显示为百分比值的资源统计信息将表示为在弹性池配置中设置的数据库的最大限制百分比。  
   
- 若要更细致地查看此数据，请使用用户数据库中的**dm_db_resource_stats**动态管理视图。 此视图每 15 秒钟捕获一次数据，并将历史数据保留 1 个小时。  有关详细信息，请参阅[AZURE SQL 数据库&#41;&#40;dm_db_resource_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)。  
+ 若要更细致地查看此数据，请使用用户数据库中的 **dm_db_resource_stats** 动态管理视图。 此视图每 15 秒钟捕获一次数据，并将历史数据保留 1 个小时。  有关详细信息，请参阅 [AZURE SQL 数据库&#41;&#40;dm_db_resource_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)。  
 
 ## <a name="examples"></a>示例  
  以下示例返回与上周相比平均参与至少 80% 的计算使用率的所有数据库。  

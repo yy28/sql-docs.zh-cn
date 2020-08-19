@@ -1,5 +1,6 @@
 ---
-title: sp_help_spatial_geometry_histogram （Transact-sql） |Microsoft Docs
+description: sp_help_spatial_geometry_histogram (Transact-SQL)
+title: sp_help_spatial_geometry_histogram (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6e17d2e4ae048c563a2130918d137d5c186b60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447025"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,24 +44,24 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
      [ , [ @sample = ] 'sample' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @tabname = ] 'tabname'`已为其指定了空间索引的表的限定名称或非限定名称。  
+## <a name="arguments"></a>参数  
+`[ @tabname = ] 'tabname'` 已为其指定了空间索引的表的限定名称或非限定名称。  
   
- 仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*的值为**sysname**，无默认值。  
+ 仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname* 的值为 **sysname**，无默认值。  
   
-`[ @colname = ] 'colname'`指定的空间列的名称。 *colname*是一个**sysname**，无默认值。  
+`[ @colname = ] 'colname'` 指定的空间列的名称。 *colname* 是一个 **sysname**，无默认值。  
   
-`[ @resolution = ] 'resolution'`边界框的分辨率。 有效值为 10 到 5000。 *解析*是**tinyint**，无默认值。  
+`[ @resolution = ] 'resolution'` 边界框的分辨率。 有效值为 10 到 5000。 *解析* 是 **tinyint**，无默认值。  
   
-`[ @xmin = ] 'xmin'`是 X 的最小范围框属性。 *xmin*是一个**float**，无默认值。  
+`[ @xmin = ] 'xmin'` 是 X 的最小范围框属性。 *xmin* 是一个 **float**，无默认值。  
   
-`[ @ymin = ] 'ymin'`为 Y 的最小范围框属性。 *ymin*是一个**float**，无默认值。  
+`[ @ymin = ] 'ymin'` 为 Y 的最小范围框属性。 *ymin* 是一个 **float**，无默认值。  
   
-`[ @xmax = ] 'xmax'`是 X 最大范围框属性。 *xmax*是一个**float**，无默认值。  
+`[ @xmax = ] 'xmax'` 是 X 最大范围框属性。 *xmax* 是一个 **float**，无默认值。  
   
-`[ @ymax = ] 'ymax'`是最大值边界框属性。 *ymax*是一个**float**，无默认值。  
+`[ @ymax = ] 'ymax'` 是最大值边界框属性。 *ymax* 是一个 **float**，无默认值。  
   
-`[ @sample = ] 'sample'`使用的表的百分比。 有效值为0至100。 *示例*是一个**浮点数**。 默认值为100。  
+`[ @sample = ] 'sample'` 使用的表的百分比。 有效值为0至100。 *示例* 是一个 **浮点数**。 默认值为100。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  返回表值。 下面的网格描述表的列内容。  
@@ -72,15 +73,15 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |**row_count**|**bigint**|指示接触或包含单元的空间对象数 。|  
   
 ## <a name="permissions"></a>权限  
- 用户必须是**公共**角色的成员。 需要服务器和对象的 READ ACCESS 权限。  
+ 用户必须是 **公共** 角色的成员。 需要服务器和对象的 READ ACCESS 权限。  
   
 ## <a name="remarks"></a>备注  
  SSMS 空间选项卡显示结果的图形表示形式。 您可以针对空间窗口查询结果，以获取近似的结果项数。 表中的对象可能涵盖多个单元，因此单元之和可能大于实际对象数。  
   
- 可能会向结果集中添加一个附加行，用于保存在范围框之外或与范围框边界接触的对象数。 该行的**cellid**为0，该行的**单元格**包含表示边界框的**LineString** 。 此行表示在范围框之外的整个空间。  
+ 可能会向结果集中添加一个附加行，用于保存在范围框之外或与范围框边界接触的对象数。 该行的 **cellid** 为0，该行的 **单元格** 包含表示边界框的 **LineString** 。 此行表示在范围框之外的整个空间。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个示例表，然后对该表调用**sp_help_spatial_geometry_histogram** 。  
+ 下面的示例创建一个示例表，然后对该表调用 **sp_help_spatial_geometry_histogram** 。  
   
  `USE AdventureWorksDW2012`  
   
