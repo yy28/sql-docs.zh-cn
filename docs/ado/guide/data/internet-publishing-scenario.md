@@ -1,4 +1,5 @@
 ---
+description: Internet 发布方案
 title: Internet 发布方案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f157fd1058e3807d83b9e4d6612b2f88039f11a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d0686a2924891e7eff9b0e6a8a2b14810090e27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453209"
 ---
 # <a name="internet-publishing-scenario"></a>Internet 发布方案
-此代码示例演示如何将 ADO 用于 Internet 发布的 Microsoft OLE DB 提供程序。 在此方案中，你将创建一个 Visual Basic 应用程序，该应用程序使用**记录集**、**记录**和**流**对象来显示与 Internet 发布提供程序一起发布的资源的内容。  
+此代码示例演示如何将 ADO 用于 Internet 发布的 Microsoft OLE DB 提供程序。 在此方案中，你将创建一个 Visual Basic 应用程序，该应用程序使用 **记录集**、 **记录**和 **流** 对象来显示与 Internet 发布提供程序一起发布的资源的内容。  
   
  若要创建此方案，需要执行以下步骤：  
   

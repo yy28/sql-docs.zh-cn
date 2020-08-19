@@ -1,4 +1,5 @@
 ---
+description: XML 中的分层记录集
 title: XML 中的分层记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24a5303f4ecd43293508f117b795d389a7608285
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453259"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的分层记录集
 ADO 允许将分层记录集对象持久保存到 XML 中。 使用分层记录集对象，父记录集中某个字段的值就是另一个记录集。 此类字段表示为 XML 流中的子元素，而不是特性。  
@@ -112,9 +113,9 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   包含待定更新的分层记录集无法保存到 XML 中。  
   
--   使用参数化形状命令创建的分层记录集不能持久化（XML 或 ADTG 格式）。  
+-   使用参数化形状命令创建的分层记录集不能以 XML 格式或 ADTG 格式保存 () 。  
   
--   ADO 当前将父记录集和子记录集之间的关系保存为二进制大型对象（BLOB）。 尚未在行集架构命名空间中定义用于描述此关系的 XML 标记。  
+-   ADO 目前将父记录集和子记录集之间的关系保存为二进制大型对象 (BLOB) 。 尚未在行集架构命名空间中定义用于描述此关系的 XML 标记。  
   
 -   保存分层记录集时，所有子记录集都将连同它一起保存。 如果当前记录集是另一个记录集的子级，则不保存其父级。 将保存构成当前记录集的子树的所有子记录集。  
   
@@ -122,7 +123,7 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   如果子记录包含没有对应的父记录的记录，则这些行不会以分层记录集的 XML 表示形式写出。 因此，当记录集从其持久性位置重新打开时，这些行将丢失。  
   
--   如果子记录引用了多个父记录，则在重新打开记录集时，子记录集可能包含重复记录。 但是，仅当用户直接使用基础子行集时，才会显示这些重复项。 如果使用章节导航子记录集（这是在 ADO 中导航的唯一方法），则不会显示重复项。  
+-   如果子记录引用了多个父记录，则在重新打开记录集时，子记录集可能包含重复记录。 但是，仅当用户直接使用基础子行集时，才会显示这些重复项。 如果某个章节用于导航子记录集 (这是通过 ADO) 导航的唯一方法，则不会显示重复项。  
   
 ## <a name="see-also"></a>另请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)
