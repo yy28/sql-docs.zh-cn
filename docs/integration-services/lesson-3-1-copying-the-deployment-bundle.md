@@ -1,4 +1,5 @@
 ---
+description: 第 3-1 课 - 复制部署捆绑
 title: 步骤 1：复制部署捆绑 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eac15d46e1530d0a742a3161e0622233c05ac3da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8f3f026833037c66581ffa95e2e1a736b07091c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390313"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>第 3-1 课 - 复制部署捆绑
 
@@ -32,9 +33,9 @@ ms.locfileid: "86918142"
   
     如果使用的是默认位置，则部署捆绑是 Deployment Tutorial 文件夹内的 Bin\Deployment 文件夹。  
   
-2.  右键单击 Deployment 文件夹，再单击“复制”  。  
+2.  右键单击 Deployment 文件夹，再单击“复制”****。  
   
-3.  在目标计算机上找到要向其复制该文件夹的公共共享，再单击“粘贴”  。  
+3.  在目标计算机上找到要向其复制该文件夹的公共共享，再单击“粘贴”****。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 2：运行包安装向导](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

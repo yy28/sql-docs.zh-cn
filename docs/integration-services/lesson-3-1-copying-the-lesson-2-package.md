@@ -1,4 +1,5 @@
 ---
+description: 第 3-1 课：复制第 2 课包
 title: 步骤 1：复制第 2 课包 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9448dada6a93e4cda928f75e06862ad42ee2eee5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5916961ea33dd7534d6b98ff2c158f718ea6db7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390713"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>第 3-1 课：复制第 2 课包
 
