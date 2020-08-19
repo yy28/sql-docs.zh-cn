@@ -1,4 +1,5 @@
 ---
+description: Background Job Error 事件类
 title: Background Job Error 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5524bd8ed316780a9b0b8babd66e2c2582fb0585
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410423"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85763085"
 |**StartTime**|**datetime**|创建作业的时间。|14|是|  
 |**State**|**int**|上次尝试中出现的错误状态（仅限**EventSubClass** 1）。|30|是|  
 |**TextData**|**ntext**|事件子类值的文本说明。|1|是|  
-|类型 |**int**|作业类型。|57|是|  
+|**类型**|**int**|作业类型。|57|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

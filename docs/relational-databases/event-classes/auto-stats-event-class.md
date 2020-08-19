@@ -1,4 +1,5 @@
 ---
+description: Auto Stats 事件类
 title: Auto Stats 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9e20179799dbc61dae0a1e02247fe5eb0df2628
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410543"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  **Auto Stats** 事件类指示索引和列统计信息自动更新事件的发生。  优化器加载使用统计数据时，也会触发 Auto Stats  。
+  Auto Stats 事件类指示索引和列统计信息自动更新事件的发生****。  优化器加载使用统计数据时，也会触发 Auto Stats****。
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的标识符；如果未对给定实例发出 USE *database* 语句，则为默认数据库的标识符。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
@@ -55,7 +56,7 @@ ms.locfileid: "85763079"
 |**Success**|**int**|0 = 错误。<br /><br /> 1 = 成功。<br /><br /> 2 = 因服务器中止而跳过 (MSDE)。|23|是|  
 |**TextData**|**ntext**|此列的内容取决于统计信息是同步更新的 (**EventSubClass** 1) 还是异步更新的（**EventSubClass** 2、3 或 4）：<br /><br /> 1: 列出更新/创建的统计信息<br /><br /> 2、3 或 4：NULL；用已更新的统计信息的索引/统计信息 ID 填充 **IndexID** 列。|1|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
-|类型 |**int**|作业类型。|57|是|  
+|**类型**|**int**|作业类型。|57|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

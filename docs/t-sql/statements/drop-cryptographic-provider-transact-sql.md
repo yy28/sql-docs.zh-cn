@@ -1,4 +1,5 @@
 ---
+description: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a215da933308ea271a7e900c13a3929311cae996
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 80c6b61bbded237a0eedb0ee39fc8d4a6f55700f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416383"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +42,10 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- provider_name   
+ provider_name  
  可扩展密钥管理提供程序的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要删除某个可扩展密钥管理 (EKM) 提供程序，必须停止使用此提供程序的所有会话。  
   
  仅在没有凭据映射到某一 EKM 提供程序时才可以删除该提供程序。  

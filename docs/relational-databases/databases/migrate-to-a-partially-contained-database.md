@@ -1,4 +1,5 @@
 ---
+description: Migrate to a Partially Contained Database
 title: 迁移到部分包含的数据库 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cb7fbdc8085fbf068ddc4f97587e919b1872971f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2a942af36a551498e81b3dbaeaa02686dec9c28b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410993"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85726427"
   
 -   复查为了部分包含的数据库而修改的数据库功能的列表。 有关详细信息，请参阅[经过修改的功能（包含的数据库）](../../relational-databases/databases/modified-features-contained-database.md)。  
   
--   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 。 有关详细信息，请参阅  
+-   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 。 有关详细信息，请参阅：  
   
 -   监视 **database_uncontained_usage** XEvent 以了解何时使用非包含的功能。  
   
@@ -64,9 +65,9 @@ GO
 #### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 启用包含的数据库  
  下面的示例对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
-1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”  。  
+1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”****。  
   
-2.  在 **“高级”** 页面上的 **“包含”** 部分中，将 **“启用包含的数据库”** 选项设置为 **“True”** 。  
+2.  在 **“高级”** 页面上的 **“包含”** 部分中，将 **“启用包含的数据库”** 选项设置为 **“True”**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
@@ -86,9 +87,9 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>使用 Management Studio 将数据库转换为部分包含的数据库  
  下面的示例将数据库转换为部分包含的数据库。  
   
-1.  在对象资源管理器中，展开“数据库”  ，右键单击要转换的数据库，然后单击“属性”  。  
+1.  在对象资源管理器中，展开“数据库”****，右键单击要转换的数据库，然后单击“属性”****。  
   
-2.  在 **“选项”** 页面上，将 **“包含类型”** 选项更改为 **“部分”** 。  
+2.  在 **“选项”** 页面上，将 **“包含类型”** 选项更改为 **“部分”**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

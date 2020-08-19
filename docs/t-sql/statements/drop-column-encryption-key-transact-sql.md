@@ -1,4 +1,5 @@
 ---
+description: DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2575bedc4c967bb4fc3227981cd52aca115a8d75
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5bfe3fd136b5bed09b0de6dfcd35ff07425dbb46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416593"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,14 +43,14 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ```  
 
 ## <a name="arguments"></a>参数
- key_name   
+ key_name  
  从数据库中删除列加密密钥所依据的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解
  如果列加密密钥用于对数据库中的任何列进行加密，则无法将其删除。 必须首先删除所有使用列加密密钥的列。  
   
 ## <a name="permissions"></a>权限  
- 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限  。  
+ 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限****。  
   
 ## <a name="examples"></a>示例  
   

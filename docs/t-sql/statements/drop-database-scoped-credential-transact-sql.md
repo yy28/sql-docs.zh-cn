@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 title: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
@@ -17,12 +18,12 @@ ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bab6abe83478c0f391d37a816c52f042f72b18b2
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: a43fc4828b2f3c436767ff4c19508ee6b897eb58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416253"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -42,7 +43,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
  *credential_name*  
  要从服务器中删除的数据库作用域凭据的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要删除与数据库作用域凭据关联的密码而不删除数据库作用域凭据本身，请使用 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md)。  
   
  可在 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 目录视图中查看有关数据库范围凭据的信息。  

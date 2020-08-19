@@ -1,4 +1,5 @@
 ---
+description: DROP AGGREGATE (Transact-SQL)
 title: DROP AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3af850b4154726ea300688a0d155c39c1b262828
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 47abd647ce5b46986c665a1ed898232de2c0483c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416823"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- IF EXISTS   
+ IF EXISTS  
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  仅当聚合已存在时对其进行有条件地删除。  
@@ -53,10 +54,10 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *schema_name*  
  用户定义聚合函数所属的架构的名称。  
   
-  aggregate_name  
+ ** aggregate_name  
  要删除的用户定义聚合函数的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果存在使用了引用要删除的用户定义聚合函数的架构绑定而创建的任何视图、函数或存储过程，则不会执行 DROP AGGREGATE。  
   
 ## <a name="permissions"></a>权限  
@@ -71,6 +72,6 @@ DROP AGGREGATE dbo.Concatenate;
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE AGGREGATE (Transact-SQL)](../../t-sql/statements/create-aggregate-transact-sql.md)   
- [创建用户定义的聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
+ [创建用户定义聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 第 2-4 课：测试第 2 课教程包
 title: 步骤 4：测试第 2 课教程包 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11d621289dbff6e6940df75e13f07af287c4e9ef
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d431f2c14b42d5dbaa1dfdc7d987560eab58d4c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413563"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>第 2-4 课：测试第 2 课教程包
 
@@ -41,11 +42,11 @@ ms.locfileid: "86922243"
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>测试第 2 课教程包  
   
-1.  在“解决方案资源管理器”中，右键单击“Lesson 2.dtsx”，然后选择“执行包”    。  
+1.  在“解决方案资源管理器”中，右键单击“Lesson 2.dtsx”，然后选择“执行包”************。  
   
-    包开始运行。 可以在“输出”窗口中或选择“进度”选项卡来验证每个循环的状态   。例如，可以看到 1097 行从文件 Currency_VEB.txt 添加到目标表中。  
+    包开始运行。 可以在“输出”窗口中或选择“进度”选项卡来验证每个循环的状态 。例如，可以看到 1097 行从文件 Currency_VEB.txt 添加到目标表中。  
   
-2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”   。  
+2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”********。  
   
 ## <a name="go-to-next-lesson"></a>转到下一课  
 [第 3 课：使用 SSIS 添加日志记录](../integration-services/lesson-3-add-logging-with-ssis.md)  

@@ -1,4 +1,5 @@
 ---
+description: DROP EVENT SESSION (Transact-SQL)
 title: DROP EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9704a50205e901c50a1a25d47741a3336832fcdb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5c7472a6185dca4ca32bfd0ef639a674b82fc719
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416511"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +43,10 @@ ON SERVER
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- event_session_name   
+ event_session_name  
  是现有事件会话的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在删除事件会话时，将完全删除所有配置信息，例如，目标和会话参数。  
   
 ## <a name="permissions"></a>权限  
