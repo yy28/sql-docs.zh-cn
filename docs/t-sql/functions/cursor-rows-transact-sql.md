@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CURSOR_ROWS (Transact-SQL)'
 title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a35f2e2e75b29a28ed56fc7c5cdaa3e9c2244d6d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ea10c7ada51794a26fd08cf265bfa78953856abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422801"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,12 +48,12 @@ ms.locfileid: "87112078"
   
 ## <a name="return-value"></a>返回值  
   
-|返回值|说明|  
+|返回值|描述|  
 |---|---|
-|-m |游标被异步填充。 返回的值 (-m) 是键集中当前的行数*m*。|  
+|-m|游标被异步填充。 返回的值 (-m) 是键集中当前的行数*m*。|  
 |-1|游标为动态游标。 因为动态游标可反映所有更改，所以游标符合条件的行数不断变化。 游标不一定检索所有符合条件的行。|  
 |0|没有已打开的游标，对于上一个打开的游标没有符合条件的行，或上一个打开的游标已被关闭或被释放。|  
-|*n*|游标已完全填充。 返回值 (n) 是游标中的总行数  。|  
+|*n*|游标已完全填充。 返回值 (n) 是游标中的总行数**。|  
   
 ## <a name="remarks"></a>备注  
 如果异步打开最后一个游标，`@@CURSOR_ROWS` 返回负数。 如果 sp_configure cursor threshold 的值超过 0，且游标结果集中的行数大于游标阈值，则异步打开键集驱动程序或静态游标。

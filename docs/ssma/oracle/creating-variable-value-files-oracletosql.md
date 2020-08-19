@@ -1,4 +1,5 @@
 ---
+description: 创建变量值文件 (OracleToSQL)
 title: 创建变量值文件 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,15 +14,15 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 763785b09adf1a562d497d4c1b448ec03d502bfc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 766bbd6b8908983726a18d5d66bf9700600e66e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468798"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>创建变量值文件 (OracleToSQL)
-变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v**开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
+变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v** 开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
   
 > [!NOTE]  
 > 1.  变量名称以 $ (美元) 符号为前缀并带有后缀。 如果变量值文件中没有为变量赋值，则在分析脚本文件时将遇到错误，从而导致控制台执行过程停止。  
@@ -88,8 +89,8 @@ ms.locfileid: "87934924"
 ```  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[&#40;OracleToSQL 创建服务器连接文件&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+操作控制台的下一步是 [&#40;OracleToSQL 创建服务器连接文件&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[ (Oracle) 创建服务器文件](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[ (Oracle) 创建服务器文件 ](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

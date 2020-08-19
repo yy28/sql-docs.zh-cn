@@ -1,5 +1,6 @@
 ---
-title: SELECT 语句（MDX） |Microsoft Docs
+description: MDX 数据操作 - SELECT
+title: SELECT 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477009"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 数据操作 - SELECT
 
@@ -84,11 +85,11 @@ FROM
          [, MemberProperty_Name,...n ] )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *Integer*  
+ *整数*  
  一个介于 0 和 127 之间的整数。  
   
  *Cube_Name*  
@@ -334,10 +335,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 使用连接字符串中的 AUTOEXISTS = [1 | 2 | 3] 参数可以修改 Autoexists 行为;[&#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和参数用法，请参阅支持的 xmla 属性 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
+ 使用连接字符串中的 AUTOEXISTS = [1 | 2 | 3] 参数可以修改 Autoexists 行为; [&#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 和参数用法，请参阅支持的 xmla 属性 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回 `Measures.[Order Quantity]` `Date` 从**艾德工作**多维数据集中包含在维度中的前八个月的日历年2003的成员的总和。  
+ 下面的示例返回 `Measures.[Order Quantity]` `Date` 从 **艾德工作** 多维数据集中包含在维度中的前八个月的日历年2003的成员的总和。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -356,7 +357,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 若要理解**非视觉对象，** 以下示例为 [艾德作品] 的查询，以获取表中产品类别为列，分销商业务类型为行的表中的 "分销商销售额" 数字。 请注意，会给出产品和分销商的总数。  
+ 若要理解 **非视觉对象，** 以下示例为 [艾德作品] 的查询，以获取表中产品类别为列，分销商业务类型为行的表中的 "分销商销售额" 数字。 请注意，会给出产品和分销商的总数。  
   
  以下 SELECT 语句：  
   
@@ -393,7 +394,7 @@ WHERE
   
  产生以下结果：  
   
-|业务类型 + 类别|All Products|配件|Clothing|  
+|业务类型 + 类别|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -419,7 +420,7 @@ WHERE
   
  上述查询产生以下结果：  
   
-|业务类型 + 类别|All Products|配件|Clothing|  
+|业务类型 + 类别|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -427,7 +428,7 @@ WHERE
   
  与上述结果比较时，您可以观察到 [All Resellers] 行现在是将 [Value Added Reseller] 和 [Warehouse] 仓库的显示值相加，但 [All Products] 列会显示所有产品的总值，包括那些未显示的值。  
   
- 下面的示例说明如何使用嵌套 select 中的计算成员来筛选值。 为了能够重现此示例，必须使用连接字符串参数*子查询 = 1*建立连接。  
+ 下面的示例说明如何使用嵌套 select 中的计算成员来筛选值。 为了能够重现此示例，必须使用连接字符串参数 *子查询 = 1*建立连接。  
   
  `select Measures.allmembers on 0`  
   

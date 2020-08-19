@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)'
 title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5aef95dbc330d59992513823abcb572ff3c98d8f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 061f293673e76fcf9d979d5bb63b21c7806dc632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422681"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87110382"
 ## <a name="remarks"></a>备注  
  实际允许的用户连接数还依赖于所安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本以及应用程序和硬件的限制。  
   
- 若要重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以减少允许的连接数，请使用 sp_configure  。  
+ 若要重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以减少允许的连接数，请使用 sp_configure****。  
   
 ## <a name="examples"></a>示例  
  以下示例显示如何返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最大用户连接数。 此示例假定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有针对更少的用户连接进行重新配置。  

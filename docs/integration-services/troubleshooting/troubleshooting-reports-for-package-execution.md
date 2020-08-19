@@ -1,4 +1,5 @@
 ---
+description: 对包执行进行故障排除的报告
 title: 包执行的疑难解答报告 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a9525a8fb130b7fcf08c22d5b9fe9012d28c518
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91d575842410d79411bb5cdd77d5ecff27f13c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495155"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>对包执行进行故障排除的报告
 
@@ -32,7 +33,7 @@ ms.locfileid: "86901167"
   
     -   如果包已完成操作，则持续时间 = 结束时间 - 开始时间  
   
-     对于已在服务器上运行的每个包，该面板允许您“放大”以便查找有关可能已发生的包执行错误的具体细节。 例如，单击“概述”  可以显示执行中各任务的状态的高级概览，或者选择“所有消息”  可以显示作为包执行的一部分捕获的详细消息。  
+     对于已在服务器上运行的每个包，该面板允许您“放大”以便查找有关可能已发生的包执行错误的具体细节。 例如，单击“概述”**** 可以显示执行中各任务的状态的高级概览，或者选择“所有消息”**** 可以显示作为包执行的一部分捕获的详细消息。  
   
      您可以通过单击 **“筛选器”** ，然后在 **“筛选设置”** 对话框中选择条件，对在任何页上显示的表进行筛选。 可用的筛选条件依赖于要显示的数据。 您可以通过在 **“筛选设置”** 对话框中单击排序图标，更改报告的排序顺序。  
   

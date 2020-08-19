@@ -1,5 +1,6 @@
 ---
-title: LinRegSlope （MDX） |Microsoft Docs
+description: LinRegSlope (MDX)
+title: LinRegSlope (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d43d2ccc961e465c5430c525fd6178d74e29ca9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5443718e83084285983f3d22ff99d5931f82bad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429809"
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope (MDX)
 
@@ -44,7 +45,7 @@ LinRegSlope(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
   
  **LinRegSlope**函数根据第一个数值表达式对指定的集求值，以获得 y 轴的值。 然后，此函数根据第二个数值表达式（如果已指定）对指定的集表达式求值，以获取 X 轴的值。 如果未指定第二个数值表达式，则此函数使用指定集中的单元的当前上下文作为 X 轴的值。 不指定 x 轴参数经常与 Time 维度一起使用。  
   
- 获取点集后， **LinRegSlope**函数将返回回归线的斜率（上一个公式中的）。  
+ 获取点集后， **LinRegSlope** 函数将返回回归线)  (中的回归线的斜率。  
   
 > [!NOTE]  
 >  **LinRegSlope**函数将忽略空单元或包含文本或逻辑值的单元。 但是，该函数将包含值为零的单元。  

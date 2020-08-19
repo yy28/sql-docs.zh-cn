@@ -1,4 +1,5 @@
 ---
+description: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0bd39f63162511ba0541ecf4c218da2e18bc11
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cdca657421c2508ed05a25302f85e4bba365891d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415233"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -54,7 +55,9 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  当 SET CONCAT_NULL_YIELDS_NULL 为 ON 时，串联空值与字符串将产生 NULL 结果。 例如，`SELECT 'abc' + NULL` 将生成 `NULL`。 当 SET CONCAT_NULL_YIELDS_NULL 为 OFF 时，串联空值与字符串将产生字符串本身（空值作为空字符串处理）。 例如，`SELECT 'abc' + NULL` 将生成 `abc`。  
   
  如果未指定 SET CONCAT_NULL_YIELDS_NULL，则应用 **CONCAT_NULL_YIELDS_NULL** 数据库选项的设置。  
@@ -64,7 +67,7 @@ SET CONCAT_NULL_YIELDS_NULL ON
   
  SET CONCAT_NULL_YIELDS_NULL 的设置是在执行或运行时设置的，而不是在分析时设置的。  
 
-创建或更改索引视图、计算列上的索引、筛选索引或空间索引时，SET CONCAT_NULL_YIELDS_NULL 必须为 ON  。 如果 SET CONCAT_NULL_YIELDS_NULL 为 OFF  ，无法对包含计算列上的索引、筛选索引、空间索引或索引视图的表运行任何 CREATE、UPDATE、INSERT 和 DELETE 语句。 有关计算列的索引视图和索引需要的 SET 选项设置的详细信息，请参阅 [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md) 中的“使用 SET 语句时的注意事项”。
+创建或更改索引视图、计算列上的索引、筛选索引或空间索引时，SET CONCAT_NULL_YIELDS_NULL 必须为 ON****。 如果 SET CONCAT_NULL_YIELDS_NULL 为 OFF****，无法对包含计算列上的索引、筛选索引、空间索引或索引视图的表运行任何 CREATE、UPDATE、INSERT 和 DELETE 语句。 有关计算列的索引视图和索引需要的 SET 选项设置的详细信息，请参阅 [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md) 中的“使用 SET 语句时的注意事项”。
   
  如果将 CONCAT_NULL_YIELDS_NULL 设置为 OFF，则不能出现跨服务器边界的字符串串联。  
   

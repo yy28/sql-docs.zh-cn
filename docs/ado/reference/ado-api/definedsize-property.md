@@ -1,4 +1,5 @@
 ---
+description: DefinedSize 属性
 title: DefinedSize 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,36 +16,36 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444179"
 ---
 # <a name="definedsize-property"></a>DefinedSize 属性
-指示[Field](../../../ado/reference/ado-api/field-object.md)对象的数据容量。  
+指示 [Field](../../../ado/reference/ado-api/field-object.md) 对象的数据容量。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个**长整型**值，该值反映字段的定义大小，该字段依赖于 field 对象的数据类型;有关详细信息，请参阅[类型](../../../ado/reference/ado-api/type-property-ado.md)。 对于使用固定长度的数据类型的字段，返回值为数据类型的大小（以字节为单位）。 对于使用可变长度数据类型的字段，这是以下项之一：  
+ 返回一个 **长整型** 值，该值反映字段的定义大小，该字段依赖于 field 对象的数据类型;有关详细信息，请参阅 [类型](../../../ado/reference/ado-api/type-property-ado.md) 。 对于使用固定长度的数据类型的字段，返回值为数据类型的大小（以字节为单位）。 对于使用可变长度数据类型的字段，这是以下项之一：  
   
-1.  字段的长度（对于**adVarChar**和**adVarWChar**）或以字节表示的最大长度（对于**adVarBinary**，和**adVarNumeric**）。 例如， **adVarChar （5）** 字段的最大长度为5。  
+1.  如果字段具有定义的长度，则以字符为单位** () 的**最大**长度（以字符为单位**， (为**adVarBinary**），而**adVarNumeric**) 。 例如， **adVarChar (5) ** 的字段的最大长度为5。  
   
-2.  数据类型的最大长度（对于**adChar**和**adWChar**）或以字节表示的最大长度（对于**adBinary**和**adNumeric**）。  
+2.  对于 AdBinary 和 AdNumeric **) ，数据**类型的最大长度（以字符) 为单位） (用于**adBinary**和**adNumeric** ** (** （如果该字段没有定义的长度）。  
   
-3.  ~ 0 （位值，值不为 0; 所有位均设置为1），前提是该字段和数据类型都没有定义的最大长度。  
+3.  ~ 0 (按位，该值不是 0;如果字段和数据类型都没有定义的最大长度，则所有位都将设置为 1) 。  
   
-4.  对于没有长度的数据类型，此值设置为 ~ 0 （位，值不为 0; 所有位均设置为1）。  
+4.  对于没有长度的数据类型，此值设置为 ~ 0 (按位运算，该值不是 0;所有位均设置为 1) 。  
   
 ## <a name="remarks"></a>备注  
- 使用**DefinedSize**属性可确定**Field**对象的数据容量。  
+ 使用 **DefinedSize** 属性可确定 **Field** 对象的数据容量。  
   
- **DefinedSize**和[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)属性不同。 例如，假设某个**字段**对象的类型为**adVarChar** ， **DefinedSize**属性值为50，其中包含单个字符。 它返回的**ActualSize**属性值是单个字符的长度（以字节为单位）。  
+ **DefinedSize**和[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)属性不同。 例如，假设某个 **字段** 对象的类型为 **adVarChar** ， **DefinedSize** 属性值为50，其中包含单个字符。 它返回的 **ActualSize** 属性值是单个字符的长度（以字节为单位）。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ActualSize 和 DefinedSize 属性示例（VB）](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [ActualSize 和 DefinedSize 属性示例（VC + +）](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+ [ActualSize 和 DefinedSize 属性示例 (VB) ](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [ActualSize 和 DefinedSize 属性示例 (VC + +) ](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [ActualSize 属性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)

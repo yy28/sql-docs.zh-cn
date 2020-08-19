@@ -1,4 +1,5 @@
 ---
+description: 确认提交变更集 (Master Data Services)
 title: 确认或提交变更集
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0d6656052194b23b0107641d3c59ba8a84544731
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 47675ce7f7ac4704db9578564020c67fdc3b30b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430099"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>确认提交变更集 (Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85813153"
   
 ## <a name="prerequisites"></a>先决条件  
   
--   **** 您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
+-   **** 您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅 [功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
 -   如果实体的更改不需要管理员审批，只有当拥有变更集并且变更集状态为打开时，才可以确认变更集。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "85813153"
 ## <a name="to-commit-a-local-changeset"></a>确认本地变更集  
  确认选项仅可用于实体管理员尚未启用审批需求的实体上的本地变更集。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 "**资源管理器**"。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 " **资源管理器**"。  
   
 2.  单击“实体”菜单中的某个实体 **** 。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "85813153"
 ## <a name="to-submit-a-changeset"></a>提交变更集  
  提交选项仅可用在实体管理员启用了审批需求的实体上的变更集上。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 "**资源管理器**"。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 " **资源管理器**"。  
   
 2.  单击“实体”菜单中的某个实体 **** 。  
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.event_message_context
 title: catalog.event_message_context | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efba3eecba580293397848a52bce40980f42987f
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: e8728d1ddbc8ae7643d0ee660266357d42125c89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495285"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 
@@ -32,7 +33,7 @@ ms.locfileid: "87472194"
 |Event_message_id|bigint|上下文与之相关的消息的唯一 ID。|  
 |Context_depth|int|随着深度的增加，上下文将进一步来自错误。 当错误发生时，上下文深度从 1 开始。 值为 0 指示执行开始前包的状态。|  
 |Package_path|Nvarchar(max)|上下文源的包路径。|  
-|Context_type|smallint|作为上下文来源的对象的类型。 有关上下文类型的列表，请参阅“备注”部分  。|  
+|Context_type|smallint|作为上下文来源的对象的类型。 有关上下文类型的列表，请参阅“备注”部分****。|  
 |Context_source_name|Nvarchar(4000)|作为上下文来源的对象的名称。|  
 |Context_source_id|Nvarchar(38)|作为上下文来源的对象的唯一 ID。|  
 |Property_name|Nvarchar(4000)|与上下文的源相关联的属性的名称。|  
@@ -41,14 +42,14 @@ ms.locfileid: "87472194"
 ## <a name="remarks"></a>备注  
  下表列出了上下文类型。  
   
-|上下文类型值|类型名称|说明|  
+|上下文类型值|类型名称|描述|  
 |-|-|-|  
 |10|任务|出错时任务的状态。|  
 |20|管道|错误来自管道组件：源、目标或转换组件。|  
 |30|序列|序列的状态。|  
 |40|For 循环|For 循环的状态。|  
 |50|ForEach 循环|Foreach 循环的状态。|  
-|60|程序包|出错时包的状态。|  
+|60|包|出错时包的状态。|  
 |70|变量|变量值|  
 |80|“ODBC 源编辑器”|连接管理器的属性。|  
   

@@ -1,4 +1,5 @@
 ---
+description: 描述符字段一致性
 title: 描述符字段一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cce33adfdbfceef56936b22c549b6762521b4798
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36687cf456f4fcbbaa3f4b029e51098815dec3f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476739"
 ---
 # <a name="descriptor-field-conformance"></a>描述符字段一致性
 下表指明了每个 ODBC 描述符标头字段的一致性级别，其中定义正确。  
@@ -29,7 +30,7 @@ ms.locfileid: "81305928"
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|核心|  
 |SQL_DESC_ARRAY_SIZE|核心|  
-|SQL_DESC_ARRAY_STATUS_PTR|Core （适用于 APD、IPR 和 IRD）;级别1（适用于 ARD）|  
+|SQL_DESC_ARRAY_STATUS_PTR|用于 APD、IPR 和 IRD 的核心 () ;ARD) 的1级 (|  
 |SQL_DESC_BIND_OFFSET_PTR|核心|  
 |SQL_DESC_BIND_TYPE|核心|  
 |SQL_DESC_COUNT|核心|  

@@ -1,4 +1,5 @@
 ---
+description: 数据迁移报表 (OracleToSQL)
 title: 数据迁移报表 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +11,15 @@ ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 3be5379cc339326bc8ce35c886982e7eeff4d0a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6a8db3e4025ddbb434c07448d576ec18828a403e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468874"
 ---
 # <a name="data-migration-report--oracletosql"></a>数据迁移报表 (OracleToSQL)
-在将数据迁移到之后，将显示 "**数据迁移报表**" 对话框 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+在将数据迁移到之后，将显示 " **数据迁移报表** " 对话框 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
 **Status**  

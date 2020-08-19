@@ -1,4 +1,5 @@
 ---
+description: MDX 保留字
 title: MDX 保留字 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d2b47a6860d73e72be54dbe9caa1f18ab95c6cff
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b5405241a99c931c1f9e9354214f097645941efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429749"
 ---
 # <a name="mdx-reserved-words"></a>MDX 保留字
 
@@ -96,11 +97,11 @@ ms.locfileid: "87362777"
         DROP  
         EMPTY  
         End  
-        ERROR  
+        错误  
         EXCEPT  
         EXCLUDEEMPTY  
         EXTRACT  
-        FALSE  
+        false  
         FILTER  
         FIRSTCHILD  
         FIRSTSIBLING  
@@ -150,7 +151,7 @@ ms.locfileid: "87362777"
         MEMBER  
         MEMBERS  
         MEMBERTOSTR  
-        最小值  
+        MIN  
         MTD  
         名称  
         NAMETOSET  
@@ -164,7 +165,7 @@ ms.locfileid: "87362777"
         Null  
         ON  
         OPENINGPERIOD  
-        或  
+        OR  
         PAGES  
         PARALLELPERIOD  
         PARENT  
@@ -217,7 +218,7 @@ ms.locfileid: "87362777"
         TOPSUM  
         TOTALS  
         trEE  
-        TRUE  
+        true  
         TUPLETOSTR  
         TYPE  
         UNION  

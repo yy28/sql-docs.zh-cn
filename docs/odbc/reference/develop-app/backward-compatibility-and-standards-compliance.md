@@ -1,4 +1,5 @@
 ---
+description: 后向兼容性和标准符合性
 title: 向后兼容性和标准符合性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b46b9f5b72117fd978a78b765d09aafd5dc84b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bab7e7777cd5750c86ffbfc3cc87a97ea31ebca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476859"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>后向兼容性和标准符合性
-向后兼容性是较新的 ODBC 组件与旧的 ODBC 组件配合使用的能力。 以下部分讨论了这些组件如何受到 ODBC 2.x 中的更改的*影响。* 其中包含的信息主要用于处理 ODBC 3.x 应用程序的编写和 ODBC*驱动程序如何*处理后向兼容性问题。 有关向后兼容性问题如何*影响 ODBC 1.x*驱动程序编写的特定准则，请参阅[附录 G：驱动程序准则，以获得向后兼容性](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
+向后兼容性是较新的 ODBC 组件与旧的 ODBC 组件配合使用的能力。 以下部分讨论了这些组件如何受到 ODBC 2.x 中的更改的*影响。* 其中包含的信息主要用于处理 ODBC 3.x 应用程序的编写和 ODBC *驱动程序如何* 处理后向兼容性问题。 有关向后兼容性问题如何 *影响 ODBC 1.x* 驱动程序编写的特定准则，请参阅 [附录 G：驱动程序准则，以获得向后兼容性](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
   
  本部分包含以下主题。  
   

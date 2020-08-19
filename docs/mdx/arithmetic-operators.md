@@ -1,4 +1,5 @@
 ---
+description: 算术运算符
 title: 算术运算符 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995e7ce1cb6a3c5d06db1042c00f945ec01e1be6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494990"
 ---
 # <a name="arithmetic-operators"></a>算术运算符
 
@@ -22,10 +23,10 @@ ms.locfileid: "68017083"
   
  MDX 支持下表中列出的算术运算符。  
   
-|运算符|说明|  
+|操作员|描述|  
 |--------------|-----------------|  
 |[+（加）](../mdx/add-mdx.md)|两个数相加。|  
-|[/（相除）](../mdx/divide-mdx-operator-reference.md)|将一个数除以另一个数。|  
+|[/（除）](../mdx/divide-mdx-operator-reference.md)|将一个数除以另一个数。|  
 |[*（乘）](../mdx/multiply-mdx.md)|使两个数字相乘。|  
 |[-（减）](../mdx/subtract-mdx.md)|两个数相减。|  
 |^（幂）|以一个数为底，另一个数为幂求值。|  

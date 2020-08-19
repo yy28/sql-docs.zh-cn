@@ -1,5 +1,6 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
+description: COLUMNS_UPDATED (Transact-SQL)
+title: COLUMNS_UPDATED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
@@ -20,17 +21,18 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f0eca52b39980b3b4f97276be3dcd2289a0e527
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af91c04f85eae26326ab05e2deb83030267cc7fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422821"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列  。 可以在 `COLUMNS_UPDATED` INSERT 或 UPDATE 触发器主体中的任意位置使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，以测试触发器是否应执行某些操作。
+此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列****。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 `COLUMNS_UPDATED`，以测试触发器是否应执行某些操作。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -39,7 +41,9 @@ ms.locfileid: "85732619"
 ```sql
 COLUMNS_UPDATED ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
@@ -48,11 +52,11 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` 将按从左到右的顺序返回一个或多个字节。 每个字节的最右侧位是最低有效位。 最左侧字节的最右侧位表示表中的第一表列；向左的下一位表示第二列，依此类推。 如果创建了触发器的表中包含八列以上，`COLUMNS_UPDATED` 则将返回多个字节，最低有效字节位于最左侧。 在 INSERT 操作中，`COLUMNS_UPDATED` 将为所有列返回 TRUE，因为这些列已插入了显式值或隐式 (NULL) 值。
   
-若要检测针对特定列的更新或插入操作，请使用按位运算符和已测试列的整数位掩码的语法。 例如，假设表 t1 包含列 C1、C2、C3、C4 和 C5       。 若要验证列 C2、C3 和 C4 是否已全部成功更新（使用具有 UPDATE 触发器的表 t1），请使用 & 14 的语法      。 若要测试是否只更新了列 C2，请指定 & 2   。 有关实际示例，请参阅[示例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[示例 B](#b-using-columns_updated-to-test-more-than-eight-columns)。
+若要检测针对特定列的更新或插入操作，请使用按位运算符和已测试列的整数位掩码的语法。 例如，假设表 t1 包含列 C1、C2、C3、C4 和 C5************************。 若要验证列 C2、C3 和 C4 是否已全部成功更新（使用具有 UPDATE 触发器的表 t1），请使用 & 14 的语法********************。 若要测试是否只更新了列 C2，请指定 & 2********。 有关实际示例，请参阅[示例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[示例 B](#b-using-columns_updated-to-test-more-than-eight-columns)。
   
-可以在 `COLUMNS_UPDATED` INSERT 或 UPDATE 触发器内部的任意位置使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。
+可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器内部的任意位置使用 `COLUMNS_UPDATED`。
   
-INFORMATION_SCHEMA.COLUMNS 视图的 ORDINAL_POSITION 列与 `COLUMNS_UPDATED` 所返回列的位模式不兼容。 若要获取与 `COLUMNS_UPDATED` 兼容的位模式，请在查询 `ColumnID` 视图时引用 `COLUMNPROPERTY` 系统函数的 `INFORMATION_SCHEMA.COLUMNS` 属性，如以下示例所示。
+INFORMATION_SCHEMA.COLUMNS 视图的 ORDINAL_POSITION 列与 `COLUMNS_UPDATED` 所返回列的位模式不兼容。 若要获取与 `COLUMNS_UPDATED` 兼容的位模式，请在查询 `INFORMATION_SCHEMA.COLUMNS` 视图时引用 `COLUMNPROPERTY` 系统函数的 `ColumnID` 属性，如以下示例所示。
   
 ```sql
 SELECT TABLE_NAME, COLUMN_NAME,  
@@ -184,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. 使用 COLUMNS_UPDATED 测试八个以上的列  
-若要对影响表中前八列以外的列的更新进行检测，请使用 `SUBSTRING` 函数测试由 `COLUMNS_UPDATED` 返回的正确位。 此示例对影响 `3` 表中的列 `5`、`9` 和 `AdventureWorks2012.Person.Person` 的更新进行检测。
+若要对影响表中前八列以外的列的更新进行检测，请使用 `SUBSTRING` 函数测试由 `COLUMNS_UPDATED` 返回的正确位。 此示例对影响 `AdventureWorks2012.Person.Person` 表中的列 `3`、`5` 和 `9` 的更新进行检测。
   
 ```sql
 USE AdventureWorks2012;  

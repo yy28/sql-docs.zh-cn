@@ -1,4 +1,5 @@
 ---
+description: STOverlaps（geography 数据类型）
 title: STOverlaps（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 94dfdbf56290a38b99fd031771777970597536de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0a4df3ac3d6ac6b3c4d8cf212d83cc0f71582b86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459013"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  如果 geography 实例在空间上与另一个 geography 实例重叠，则返回 1；否则，返回 0   。  
+  如果 geography 实例在空间上与另一个 geography 实例重叠，则返回 1；否则，返回 0********。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,19 +37,19 @@ ms.locfileid: "86556043"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography   
- 与对其调用 `STOverlaps()` 的实例进行比较的其他 geography 实例。  
+ other_geography**  
+ 与对其调用 `STOverlaps()` 的实例进行比较的其他 geography 实例****。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
- CLR 返回类型：SqlBoolean   
+ CLR 返回类型：SqlBoolean****  
   
-## <a name="remarks"></a>备注  
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
+## <a name="remarks"></a>注解  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
   
 ## <a name="examples"></a>示例  
- 以下示例使用 `STOverlaps()` 测试两个 geography 实例是否重叠  。  
+ 以下示例使用 `STOverlaps()` 测试两个 geography 实例是否重叠****。  
   
 ```  
 DECLARE @g geography;  

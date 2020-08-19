@@ -1,4 +1,5 @@
 ---
+description: 使用集函数
 title: 使用集函数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476979"
 ---
 # <a name="using-set-functions"></a>使用集函数
 
@@ -22,7 +23,7 @@ ms.locfileid: "68038049"
   
  与成员函数和元组函数一样，集函数对协商 Analysis Services 中的多维结构至关重要。 集函数对获得多维表达式 (MDX) 查询结果也很重要，因为集表达式定义了 MDX 查询的轴。  
   
- 最常见的集函数之一是[&#40;设置&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)函数的成员，此函数将检索包含维度、层次结构或级别中所有成员的集。 以下是该函数在查询中的用法示例：  
+ 最常见的集函数之一是 [&#40;设置&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md) 函数的成员，此函数将检索包含维度、层次结构或级别中所有成员的集。 以下是该函数在查询中的用法示例：  
   
  `SELECT`  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68038049"
   
  `FROM [Adventure Works]`  
   
- 另一个常用函数是[MDX&#41;函数的交叉结合 &#40;](../mdx/crossjoin-mdx.md) 。 它返回元组的集，表示作为参数传递到该函数的集的笛卡尔积。 实际上，利用此函数可以在查询中创建“嵌套”轴或“交叉表”轴：  
+ 另一个常用函数是 [MDX&#41;函数的交叉结合 &#40;](../mdx/crossjoin-mdx.md) 。 它返回元组的集，表示作为参数传递到该函数的集的笛卡尔积。 实际上，利用此函数可以在查询中创建“嵌套”轴或“交叉表”轴：  
   
  `SELECT`  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68038049"
   
  FROM [Adventure Works]  
   
- 使用[MDX&#41;函数 &#40;顺序](../mdx/order-mdx.md)，您可以根据特定数值表达式按升序或降序对集的内容进行排序。 以下查询返回的行成员与前一查询返回的行成员相同，但现在按 Internet Sales Amount 度量值对这些成员进行排序：  
+ 使用 [MDX&#41;函数 &#40;顺序 ](../mdx/order-mdx.md) ，您可以根据特定数值表达式按升序或降序对集的内容进行排序。 以下查询返回的行成员与前一查询返回的行成员相同，但现在按 Internet Sales Amount 度量值对这些成员进行排序：  
   
  `SELECT`  
   
@@ -122,7 +123,7 @@ ms.locfileid: "68038049"
   
  此查询还说明如何将从一个集函数 Descendants 返回的集作为参数传递到另一个集函数 Order。  
   
- 在编写查询时，根据特定条件筛选集非常有用，可以使用[筛选器 &#40;MDX&#41;](../mdx/filter-mdx.md)函数，如以下示例中所示：  
+ 在编写查询时，根据特定条件筛选集非常有用，可以使用 [筛选器 &#40;MDX&#41;](../mdx/filter-mdx.md) 函数，如以下示例中所示：  
   
  `SELECT`  
   
@@ -150,7 +151,7 @@ ms.locfileid: "68038049"
   
  `FROM [Adventure Works]`  
   
- 另外，存在允许您以其他方式筛选集的更复杂的函数。 例如，以下查询显示[TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)函数返回集中的前 n 项：  
+ 另外，存在允许您以其他方式筛选集的更复杂的函数。 例如，以下查询显示 [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md) 函数返回集中的前 n 项：  
   
  `SELECT`  
   
@@ -176,7 +177,7 @@ ms.locfileid: "68038049"
   
  `FROM [Adventure Works]`  
   
- 最后，可以使用函数（如[交集 &#40;mdx&#41;](../mdx/intersect-mdx.md)、[联合 &#40;mdx&#41;](../mdx/union-mdx.md)和[&#40;MDX&#41;函数除外](../mdx/except-mdx-function.md)）执行多个逻辑集运算。 以下查询说明后两个函数的示例：  
+ 最后，可以使用函数（如 [交集 &#40;mdx&#41;](../mdx/intersect-mdx.md)、 [联合 &#40;mdx&#41;](../mdx/union-mdx.md) 和 [&#40;MDX&#41;函数除外 ](../mdx/except-mdx-function.md) ）执行多个逻辑集运算。 以下查询说明后两个函数的示例：  
   
  `SELECT`  
   

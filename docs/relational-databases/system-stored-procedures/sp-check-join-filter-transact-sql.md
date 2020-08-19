@@ -1,5 +1,6 @@
 ---
-title: sp_check_join_filter （Transact-sql） |Microsoft Docs
+description: sp_check_join_filter (Transact-SQL)
+title: sp_check_join_filter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daf5b155aa4319a20a3005687515fbafa8702e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486198"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,33 +45,33 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
         , [ @join_filterclause = ] 'join_filterclause'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @filtered_table = ] 'filtered_table'`筛选的表的名称。 *filtered_table*为**nvarchar （400）**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @filtered_table = ] 'filtered_table'` 筛选的表的名称。 *filtered_table* 为 **nvarchar (400) **，无默认值。  
   
-`[ @join_table = ] 'join_table'`要联接到*filtered_table*的表的名称。 *join_table*为**nvarchar （400）**，无默认值。  
+`[ @join_table = ] 'join_table'` 要联接到 *filtered_table*的表的名称。 *join_table* 为 **nvarchar (400) **，无默认值。  
   
-`[ @join_filterclause = ] 'join_filterclause'`要测试的联接筛选子句。 *join_filterclause*为**nvarchar （1000）**，无默认值。  
+`[ @join_filterclause = ] 'join_filterclause'` 要测试的联接筛选子句。 *join_filterclause* 为 **nvarchar (1000) **，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|如果发布有资格预计算分区，则为;其中， **1**表示可以使用 precomupted 分区， **0**表示不能使用。|  
-|**has_dynamic_filters**|**bit**|如果提供的筛选子句包含至少一个参数化筛选函数，则为;其中， **1**表示使用参数化筛选函数， **0**表示不使用此类函数。|  
-|**dynamic_filters_function_list**|**nvarchar （500）**|筛选子句中为项目定义参数化筛选器的函数的列表，其中每个函数用分号分隔。|  
-|**uses_host_name**|**bit**|如果在 filter 子句中使用[HOST_NAME （）](../../t-sql/functions/host-name-transact-sql.md)函数，其中**1**表示存在此函数。|  
-|**uses_suser_sname**|**bit**|如果在 filter 子句中使用[SUSER_SNAME （）](../../t-sql/functions/suser-sname-transact-sql.md)函数，其中**1**表示存在此函数。|  
+|**can_use_partition_groups**|**bit**|如果发布有资格预计算分区，则为;其中， **1** 表示可以使用 precomupted 分区， **0** 表示不能使用。|  
+|**has_dynamic_filters**|**bit**|如果提供的筛选子句包含至少一个参数化筛选函数，则为;其中， **1** 表示使用参数化筛选函数， **0** 表示不使用此类函数。|  
+|**dynamic_filters_function_list**|**nvarchar (500) **|筛选子句中为项目定义参数化筛选器的函数的列表，其中每个函数用分号分隔。|  
+|**uses_host_name**|**bit**|如果在 filter 子句中使用 [HOST_NAME ( # B1 ](../../t-sql/functions/host-name-transact-sql.md) 函数，其中 **1** 表示存在此函数。|  
+|**uses_suser_sname**|**bit**|如果在 filter 子句中使用 [SUSER_SNAME ( # B1 ](../../t-sql/functions/suser-sname-transact-sql.md) 函数，其中 **1** 表示存在此函数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_check_join_filter**用于合并复制。  
+ **sp_check_join_filter** 用于合并复制。  
   
  可以对任何相关表执行**sp_check_join_filter** ，即使它们未发布也是如此。 在定义两个项目之间的联接筛选器之前，可以使用此存储过程验证联接筛选子句。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_check_join_filter**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_check_join_filter**。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

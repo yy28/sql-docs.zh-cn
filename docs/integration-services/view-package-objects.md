@@ -1,4 +1,5 @@
 ---
+description: 查看包对象
 title: 查看包对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67e178d43f07a7b2b2e9f2af822cee74ac49e1f7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4d277642cb45ce56bdabf2c98d21aeb3f948ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86899838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495061"
 ---
 # <a name="view-package-objects"></a>查看包对象
 
@@ -49,17 +50,17 @@ ms.locfileid: "86899838"
   
 2.  单击 **“包资源管理器”** 选项卡。  
   
-3.  若要查看 **“变量”** 、 **“优先约束”** 、 **“事件处理程序”** 、 **“连接管理器”** 、 **“日志提供程序”** 或 **“可执行文件”** 文件夹的内容，请展开每个相应的文件夹。  
+3.  若要查看 **“变量”**、 **“优先约束”**、 **“事件处理程序”**、 **“连接管理器”**、 **“日志提供程序”** 或 **“可执行文件”** 文件夹的内容，请展开每个相应的文件夹。  
   
 4.  根据包的结构，展开所有次级文件夹。  
   
 ## <a name="view-the-properties-of-a-package-object"></a>查看包对象的属性
   
--   右键单击对象，再单击“属性”  ，打开“属性”  窗口。  
+-   右键单击对象，再单击“属性”****，打开“属性”**** 窗口。  
   
 ## <a name="delete-an-object-in-a-package"></a>删除包中的对象  
   
--   右键单击对象，再单击“删除”  。 
+-   右键单击对象，再单击“删除”****。 
  
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../integration-services/control-flow/integration-services-tasks.md)   

@@ -1,4 +1,5 @@
 ---
+description: YEAR (Transact-SQL)
 title: YEAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,17 +24,17 @@ ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5ce9bf9bc9c1e9c03e86ff696a8684c9f54bafc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f3f8ad5bd4d39b0fc55fad2dd68b43552bf15ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422581"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回表示指定 date 的年份的整数  。  
+  返回表示指定 date 的年份的整数。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "87111773"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 YEAR ( date )  
 ```  
   
@@ -49,33 +50,33 @@ YEAR ( date )
 
 ## <a name="arguments"></a>参数
  *date*  
- 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值       。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字  。  
+ 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值************************。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="return-value"></a>返回值  
- YEAR 与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (year, date) 返回相同的值   。  
+ YEAR 与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (year, date) 返回相同的值******。  
   
- 如果 date 仅包含一个时间部分，则返回值为 1900，即基准年  。  
+ 如果 date 仅包含一个时间部分，则返回值为 1900，即基准年**。  
   
 ## <a name="examples"></a>示例  
  下面的语句将返回 `2010`。 它是表示年份的数字。  
   
-```  
+```sql  
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字  `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
-```  
+```sql 
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字  `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
-```  
+```sql  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  
 ```  
   

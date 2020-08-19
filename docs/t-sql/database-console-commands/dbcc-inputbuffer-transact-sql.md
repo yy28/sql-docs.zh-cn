@@ -1,4 +1,5 @@
 ---
+description: DBCC INPUTBUFFER (Transact-SQL)
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7b36dd3a0392a4054aa110e625f1ea5703f25b80
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b8b4c308530099bb54bf7a447adb46b6faac7e5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422851"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,10 +51,10 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *session_id*  
 与各活动主连接关联的会话 ID。  
   
-request_id   
+request_id  
 要在当前会话中搜索的精确请求（批）。  
 
-下面的查询返回 request_id  ：  
+下面的查询返回 request_id**：  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -70,9 +71,9 @@ DBCC INPUTBUFFER 返回包含如下列的行集。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|事件类型。 这可能是 RPC 事件或 Language 事件   。 检测不到上一个事件时，输出为 No Event  。|  
-|**参数**|**smallint**|0 = 文本<br /><br /> 1- n = Parameters |  
-|**EventInfo**|**nvarchar(4000)**|对于 RPC 的 EventType，EventInfo 仅包含过程名   。 对于 Language 的 EventType，仅显示事件的前 4000 个字符  。|  
+|**EventType**|**nvarchar(30)**|事件类型。 这可能是 RPC 事件或 Language 事件********。 检测不到上一个事件时，输出为 No Event****。|  
+|**参数**|**smallint**|0 = 文本<br /><br /> 1- n = Parameters**|  
+|**EventInfo**|**nvarchar(4000)**|对于 RPC 的 EventType，EventInfo 仅包含过程名********。 对于 Language 的 EventType，仅显示事件的前 4000 个字符****。|  
   
 例如，当缓冲区中的最后一个事件是 DBCC INPUTBUFFER(11) 时，DBCC INPUTBUFFER 将返回以下结果集。
   
@@ -91,9 +92,9 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## <a name="permissions"></a>权限  
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，要求具有下列权限之一：
--   用户必须是 sysadmin 固定服务器角色的成员  。  
+-   用户必须是 sysadmin 固定服务器角色的成员****。  
 -   用户必须具有 VIEW SERVER STATE 权限。  
--   session_id 必须与正在运行该命令的会话 ID 相同  。 要确定会话 ID，请执行以下查询：  
+-   session_id 必须与正在运行该命令的会话 ID 相同**。 要确定会话 ID，请执行以下查询：  
   
 ```sql
 SELECT @@spid;  

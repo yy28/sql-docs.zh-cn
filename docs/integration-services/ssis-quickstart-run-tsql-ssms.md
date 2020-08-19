@@ -1,4 +1,5 @@
 ---
+description: 使用 Transact-SQL 运行来自 SSMS 的 SSIS 包
 title: 使用 Transact-SQL (SSMS) 运行 SSIS 包 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2526e630468ca7b58a0b21c8d63845b6978fdd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afd8fb3bf9b77eaaf5ee69728fafd83ed4f63889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430109"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 运行来自 SSMS 的 SSIS 包
 
@@ -24,13 +25,13 @@ ms.locfileid: "86921800"
 
 SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 到 SQL 数据库的任何 SQL 基础结构。 有关 SSMS 的详细信息，请参阅 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 开始之前，请确保有最新版本的 SQL Server Management Studio (SSMS)。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
-## <a name="supported-platforms"></a>支持的平台
+## <a name="supported-platforms"></a>受支持的平台
 
 可使用此快速入门中的信息在以下平台上运行 SSIS 包：
 
@@ -45,8 +46,8 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 要在 Azure SQL 数据库上运行包，请获取连接到 SSIS 目录数据库 (SSISDB) 所需的连接信息。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
 1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库   。 
-3. 在数据库的“概述”  页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上  。 
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库********。 
+3. 在数据库的“概述”**** 页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上****。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
 ## <a name="connect-to-the-ssisdb-database"></a>连接到 SSISDB 数据库
@@ -55,7 +56,7 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 
 1. 打开 SQL Server Management Studio。
 
-2. 在“连接到服务器”对话框中，输入以下信息： 
+2. 在“连接到服务器”对话框中，输入以下信息：
 
    | 设置       | 建议的值 | 更多信息 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -72,7 +73,7 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 ## <a name="run-a-package"></a>运行包
 运行以下 Transact-SQL 代码以便运行 SSIS 包。
 
-1.  在 SSMS 中，打开新的查询窗口并粘贴以下代码。 （此代码是由 SSMS “执行包”对话框中的“脚本”选项生成的代码。）
+1.  在 SSMS 中，打开新的查询窗口并粘贴以下代码。 （此代码是由 SSMS “执行包”**** 对话框中的“脚本”**** 选项生成的代码。）
 
 2.  为系统更新 `catalog.create_execution` 存储过程中的参数值。
 
@@ -80,7 +81,7 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 
 4.  运行该脚本。
 
-5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目  。
+5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目****。
 
 ```sql
 Declare @execution_id bigint

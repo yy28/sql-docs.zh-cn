@@ -1,5 +1,6 @@
 ---
-title: Head （MDX） |Microsoft Docs
+description: Head (MDX)
+title: Head (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51a832bf38d3834c44f9b31f5bbfd27833d6d691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429919"
 ---
 # <a name="head-mdx"></a>Head (MDX)
 
@@ -35,7 +36,7 @@ Head(Set_Expression [ ,Count ] )
  指定要返回的元组数的有效数值表达式。  
   
 ## <a name="remarks"></a>备注  
- **Head**函数从指定集的开头返回指定数量的元组。 会保留元素的顺序。 Count 的默认值为 1。 如果指定的元组数目小于1，则**Head**函数返回空集。 如果指定的元组数目超过了集中的元组数目，则此函数返回原始集。  
+ **Head**函数从指定集的开头返回指定数量的元组。 会保留元素的顺序。 Count 的默认值为 1。 如果指定的元组数目小于1，则 **Head** 函数返回空集。 如果指定的元组数目超过了集中的元组数目，则此函数返回原始集。  
   
 ## <a name="example"></a>示例  
  以下示例根据 Reseller Gross Profit 返回产品的前五大销售子类别（与层次结构无关）。 **Head**函数用于在使用**Order**函数对结果进行排序后，仅返回结果中的前5个集。  

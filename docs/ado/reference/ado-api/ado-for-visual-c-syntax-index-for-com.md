@@ -1,4 +1,5 @@
 ---
+description: 用于 COM 的 ADO for Visual C++ 语法索引‎
 title: 用于 COM Visual C++ 语法索引的 ADO |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 044dcc2fb10463e592a953725afc2413c3a5880f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c5febeb8727348525a9fe4a4dd5f8e22a17678b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451409"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>用于 COM 的 ADO for Visual C++ 语法索引‎
 此索引是基于 Microsoft Visual C++ 的 ADO 语言参考的交叉引用。  
   
- 如果在应用程序中使用 **#import**指令，则会生成一个标头文件，使你能够使用类似于 Microsoft Visual Basic 的语法。 格式**get_**_propertyname_和**put_**_propertyname_的属性名称可以被视为只声明为*propertyname*。 然后，可以将属性视为数据成员而不是函数。  
+ 如果在应用程序中使用 **#import** 指令，则会生成一个标头文件，使你能够使用类似于 Microsoft Visual Basic 的语法。 格式 **get_**_propertyname_ 和 **put_**_propertyname_ 的属性名称可以被视为只声明为 *propertyname*。 然后，可以将属性视为数据成员而不是函数。  
   
- 所有方法、属性和事件都是返回**HRESULT**的函数，可以对其进行测试以确定函数是否已成功执行。  
+ 所有方法、属性和事件都是返回 **HRESULT**的函数，可以对其进行测试以确定函数是否已成功执行。  
   
  为以下元素列出了 Visual C++ 中的方法和属性语法：  
   

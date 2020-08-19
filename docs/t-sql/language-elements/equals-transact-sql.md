@@ -1,4 +1,5 @@
 ---
+description: =（等于）(Transact-SQL)
 title: =（等于）(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 140545235928e356d143aa2a5164c0b054adf0f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422511"
 ---
 # <a name="-equals-transact-sql"></a>=（等于）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ expression = expression
  为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果表达式的数据类型不同，则其中一个表达式的数据类型必须可以隐式转换为另一个表达式的数据类型。 该转换基于[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的规则进行。  
   
 ## <a name="result-types"></a>结果类型  
- Boolean  
+ 布尔  
   
 ## <a name="remarks"></a>备注  
  使用 NULL 表达式进行比较时，结果取决于 `ANSI_NULLS` 设置：  

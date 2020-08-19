@@ -1,5 +1,6 @@
 ---
-title: DrillupMember （MDX） |Microsoft Docs
+description: DrillupMember (MDX)
+title: DrillupMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9db34a9117bf7405511b86e8e989d2e002cb12d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494940"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
@@ -40,7 +41,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  第一个集可以包含元组，但不能包含成员。 元组的深化是 OLE DB 的扩展，它返回元组集而非成员集。  
   
 > [!IMPORTANT]  
->  只有后面紧跟子成员或后代的成员才会被浅化。 集中成员的顺序对两个函数\* \*系列都很重要。 请考虑使用**Hierarchize**函数对第一个集的成员进行适当的排序。  
+>  只有后面紧跟子成员或后代的成员才会被浅化。 集中成员的顺序对两个函数系列都很重要 \* \* 。 请考虑使用 **Hierarchize** 函数对第一个集的成员进行适当的排序。  
   
 ## <a name="example"></a>示例  
  除了第二个集以外，以下三个示例都是相似的。 在第一个示例时，第二个集为 United States。 因此，从结果集中排除 Colorado。 它是 United States 的后代。  
@@ -58,7 +59,7 @@ SELECT DrillUpMember (
 FROM [Adventure Works]  
 ```  
   
- 示例二向我们显示了成员顺序的重要性。 由于**DrillupMember**只会深化第一个集中后代后紧接着的那些成员，因此它不会向上钻取加拿大成员。 Canada 与其后代由 United States 和 Colorado 分隔开来。 如果你对成员重新排序，使 Canada 直接位于 Alberta 上方，则 Alberta 和 Brunswick 都将从行集中排除。  
+ 示例二向我们显示了成员顺序的重要性。 由于 **DrillupMember** 只会深化第一个集中后代后紧接着的那些成员，因此它不会向上钻取加拿大成员。 Canada 与其后代由 United States 和 Colorado 分隔开来。 如果你对成员重新排序，使 Canada 直接位于 Alberta 上方，则 Alberta 和 Brunswick 都将从行集中排除。  
   
 ```  
 SELECT DrillUpMember (   
@@ -74,7 +75,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 示例3显示了**Hierarchize**的使用如何缓解成员顺序的影响，以及如何在加拿大成员上进行钻取。  
+ 示例3显示了 **Hierarchize** 的使用如何缓解成员顺序的影响，以及如何在加拿大成员上进行钻取。  
   
 ```  
 SELECT DrillUpMember (   

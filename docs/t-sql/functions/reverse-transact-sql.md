@@ -1,4 +1,5 @@
 ---
+description: REVERSE (Transact-SQL)
 title: REVERSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,17 +21,17 @@ ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 592690fcaca48b6e9270022d6f6cda34fb9abccb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6c19d7f874b17009d28ce3c41a1fb468454cd1fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422641"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回字符串值的逆序。  
+  返回字符串值的逆序排序形式。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +44,14 @@ REVERSE ( string_expression )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- string_expression   
- string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
+ string_expression  
+ string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)**。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列**。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar    
+ varchar 或 nvarchar********  
   
 ## <a name="remarks"></a>备注  
- string_expression 的数据类型必须可隐式转换为 varchar   。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression  。  
+ string_expression 的数据类型必须可隐式转换为 varchar******。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression**。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
  使用 SC 排序规则时，REVERSE 函数将不反转代理项对的两部分的顺序。  
@@ -88,7 +89,7 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果   。  
+ 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果********。  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  

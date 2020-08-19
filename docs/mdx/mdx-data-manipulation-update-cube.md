@@ -1,5 +1,6 @@
 ---
-title: UPDATE CUBE 语句（MDX） |Microsoft Docs
+description: MDX 数据操作 - UPDATE CUBE
+title: " (MDX) 更新 CUBE 语句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476989"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 数据操作 - UPDATE CUBE
 
 
-  UPDATE CUBE 语句用于将数据写回到多维数据集中的任何单元中，该多维数据集使用 SUM 聚合而聚合到其父级。 有关详细说明和示例，请参阅此博客文章：[使用 Analysis Services 生成写回应用程序（博客）](https://go.microsoft.com/fwlink/?LinkId=394977)。  
+  UPDATE CUBE 语句用于将数据写回到多维数据集中的任何单元中，该多维数据集使用 SUM 聚合而聚合到其父级。 有关详细说明和示例，请参阅此博客文章： [使用 Analysis Services (博客) 生成写回应用程序 ](https://go.microsoft.com/fwlink/?LinkId=394977)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,9 +54,9 @@ UPDATE [ CUBE ] Cube_Name
  有效的 MDX（多维表达式）数值表达式，将返回介于 0 到 1 之间的一个十进制值。  
   
 ## <a name="remarks"></a>备注  
- 您可以更新多维数据集中的指定叶单元或非叶单元的值，并且可以根据需要跨依赖叶单元为指定非叶单元分配值。 元组表达式指定的单元可以是多维空间中的任意有效单元（即该单元不一定是叶单元）。 但是，该单元必须使用[Sum](../mdx/sum-mdx.md)聚合函数进行聚合，并且不能包含用于标识该单元的元组中的计算成员。  
+ 您可以更新多维数据集中的指定叶单元或非叶单元的值，并且可以根据需要跨依赖叶单元为指定非叶单元分配值。 元组表达式指定的单元可以是多维空间中的任意有效单元（即该单元不一定是叶单元）。 但是，该单元必须使用 [Sum](../mdx/sum-mdx.md) 聚合函数进行聚合，并且不能包含用于标识该单元的元组中的计算成员。  
   
- 可以将**UPDATE CUBE**语句视为一个子例程，该子例程会自动生成一系列单独的单元写回操作，该操作将汇总到指定的总和中的叶单元和非叶单元。  
+ 可以将 **UPDATE CUBE** 语句视为一个子例程，该子例程会自动生成一系列单独的单元写回操作，该操作将汇总到指定的总和中的叶单元和非叶单元。  
   
  下面描述了分配方法。  
   
@@ -87,7 +88,7 @@ Count(leaf cells contained in <tuple>)
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- 如果未指定权重表达式，则**UPDATE CUBE**语句将隐式使用以下表达式。  
+ 如果未指定权重表达式，则 **UPDATE CUBE** 语句将隐式使用以下表达式。  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
@@ -98,7 +99,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  客户端应用程序必须同时考虑所有维度的分配，以避免可能产生的意外结果，包括不正确的汇总值或不一致的数据。  
   
- 出于事务目的，每个**更新多维数据集**分配都应被视为原子的。 这意味着，如果任意一个分配操作由于任何原因（例如公式中出现错误或存在安全冲突）失败，则整个 UPDATE CUBE 操作都将失败。 在处理各个分配操作的计算之前，会对数据拍摄快照以确保所得到的计算是正确的。  
+ 出于事务目的，每个 **更新多维数据集** 分配都应被视为原子的。 这意味着，如果任意一个分配操作由于任何原因（例如公式中出现错误或存在安全冲突）失败，则整个 UPDATE CUBE 操作都将失败。 在处理各个分配操作的计算之前，会对数据拍摄快照以确保所得到的计算是正确的。  
   
 > [!CAUTION]  
 >  当用于包含整数的度量值时，USE_WEIGHTED_ALLOCATION 方法可能会由于不断地进行舍入而得出不准确的结果。  

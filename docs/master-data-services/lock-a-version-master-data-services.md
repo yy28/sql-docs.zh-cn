@@ -1,4 +1,5 @@
 ---
+description: 锁定版本 (Master Data Services)
 title: 锁定版本
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b98dff0acf3b2d7a8c3eed5d79e284bfca8f92fd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7f72b98acb33d906adc979313826f234812a8a4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495056"
 ---
 # <a name="lock-a-version-master-data-services"></a>锁定版本 (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "85813273"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   版本的状态必须是 **“打开”**。  
   

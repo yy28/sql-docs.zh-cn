@@ -1,4 +1,5 @@
 ---
+description: COMPRESS (Transact-SQL)
 title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6edda04e2520ec915a6c4767751130f091668e85
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 51cf2e37ae548383d7c02b3ba4028b9327857928
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468179"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-此函数使用 GZIP 算法压缩输入表达式。 该函数返回类型 varbinary(max) 的字节数组  。
+此函数使用 GZIP 算法压缩输入表达式。 该函数返回类型 varbinary(max) 的字节数组****。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -35,8 +36,6 @@ ms.locfileid: "87394289"
 COMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>参数
 *expression*  
 A
@@ -57,9 +56,9 @@ A
 expression。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-varbinary(max) 代表已压缩的输入内容  。
+varbinary(max) 代表已压缩的输入内容****。
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 压缩数据无法编入索引。
   
 `COMPRESS` 函数压缩输入的表达式数据。 必须调用此函数，才能压缩每个部分的数据。 请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)，详细了解行或页级别存储过程中的自动数据压缩。

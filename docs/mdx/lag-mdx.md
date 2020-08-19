@@ -1,5 +1,6 @@
 ---
-title: Lag （MDX） |Microsoft Docs
+description: Lag (MDX)
+title: " (MDX) 的 Lag |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc9beb8215d8d690f2d4ccdf43c3aaf03096b9d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477039"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 
@@ -37,11 +38,11 @@ Member_Expression.Lag(Index)
 ## <a name="remarks"></a>备注  
  级别内的成员位置由属性层次结构的自然顺序决定。 位置的编号从零开始。  
   
- 如果指定的滞后值为零，则**lag**函数返回指定的成员本身。  
+ 如果指定的滞后值为零，则 **lag** 函数返回指定的成员本身。  
   
- 如果指定的 lag 为负数，则**lag**函数返回后续成员。  
+ 如果指定的 lag 为负数，则 **lag** 函数返回后续成员。  
   
- `Lag(1)`等效于[PrevMember](../mdx/prevmember-mdx.md)函数。 `Lag(-1)`等效于[NextMember](../mdx/nextmember-mdx.md)函数。  
+ `Lag(1)` 等效于 [PrevMember](../mdx/prevmember-mdx.md) 函数。 `Lag(-1)` 等效于 [NextMember](../mdx/nextmember-mdx.md) 函数。  
   
  **Lag**函数类似于[导引](../mdx/lead-mdx.md)函数，但**导引**函数与**Lag**函数的方向相反。 也就是说，`Lag(n)` 等效于 `Lead(-n)`。  
   

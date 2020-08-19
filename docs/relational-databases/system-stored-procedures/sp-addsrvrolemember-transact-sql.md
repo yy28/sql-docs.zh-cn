@@ -1,5 +1,6 @@
 ---
-title: sp_addsrvrolemember （Transact-sql） |Microsoft Docs
+description: sp_addsrvrolemember (Transact-SQL)
+title: sp_addsrvrolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3077ba01cb982a5f4a3517f5d73b5d9e4436484b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7a782c8a29758eb78547219d40b4fcdc99bfec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486249"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876440"
   添加登录名以作为固定服务器角色的成员。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,10 +45,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>参数  
  [ @loginame **=** ] **"**_login_**"**  
- 将添加到固定服务器角色中的登录名。 *login*的**sysname**为，无默认值。 *登录*名可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
+ 将添加到固定服务器角色中的登录名。 *login* 的 **sysname**为，无默认值。 *登录* 名可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
   
  [ @rolename **=** ] **"**_role_**"**  
- 要添加登录名的固定服务器角色的名称。 *role*的数据值为**sysname**，默认值为 NULL，必须是下列值之一：  
+ 要添加登录名的固定服务器角色的名称。 *role* 的数据值为 **sysname**，默认值为 NULL，必须是下列值之一：  
   
 -   sysadmin  
   
@@ -92,9 +93,9 @@ GO
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [安全功能 &#40;Transact-sql&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [&#40;Transact-sql&#41;创建服务器角色](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建服务器角色 ](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

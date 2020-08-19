@@ -1,4 +1,5 @@
 ---
+description: DROP SERVICE (Transact-SQL)
 title: DROP SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47639c92df2144ec22ded9a15f42df876e8a0b67
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0c44273578fff67bed075dea4f60fc6314902dcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415803"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,10 +47,10 @@ DROP SERVICE service_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- service_name   
+ service_name  
  要删除的服务的名称。 不能指定服务器、数据库和架构名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果任何会话优先级引用了某个服务，则不能删除该服务。  
   
  删除服务将从该服务使用的队列中删除该服务的所有消息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将向使用该服务的所有已打开会话的远程端发送错误。  

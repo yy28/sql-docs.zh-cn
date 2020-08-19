@@ -1,4 +1,5 @@
 ---
+description: 硬编码 SQL 语句
 title: 硬编码 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 341dc642f0529fd779eccf9f2d1d1b50a4977479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476659"
 ---
 # <a name="hard-coded-sql-statements"></a>硬编码 SQL 语句
 执行固定任务的应用程序通常包含硬编码的 SQL 语句。 例如，订单输入系统可能使用以下调用来列出开放式销售订单：  
@@ -30,7 +31,7 @@ SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS
   
  硬编码的 SQL 语句有几个优点：可以在编写应用程序时对其进行测试;它们比在运行时构造的语句更简单：并简化了应用程序。  
   
- 使用语句参数和准备语句可以更好地使用硬编码的 SQL 语句。 例如，假设 Parts 表包含 PartID、Description 和 Price 列。 向此表中插入新行的一种方法是构造并执行**insert**语句：  
+ 使用语句参数和准备语句可以更好地使用硬编码的 SQL 语句。 例如，假设 Parts 表包含 PartID、Description 和 Price 列。 向此表中插入新行的一种方法是构造并执行 **insert** 语句：  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- 有关参数、预定义语句和过程的详细信息，请参阅[执行语句](../../../odbc/reference/develop-app/executing-a-statement.md)。
+ 有关参数、预定义语句和过程的详细信息，请参阅 [执行语句](../../../odbc/reference/develop-app/executing-a-statement.md)。

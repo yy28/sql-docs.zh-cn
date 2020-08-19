@@ -1,5 +1,6 @@
 ---
-title: BOF、EOF 和 Bookmark 属性示例（VC + +） |Microsoft Docs
+description: 'BOF、EOF 和 Bookmark 属性示例 (VC + +) '
+title: BOF、EOF 和 Bookmark 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451139"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF 和 Bookmark 属性示例（VC + +）
-如果用户尝试移过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的第一个或最后一个记录，则此示例中的第一个函数使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性来显示消息。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性允许用户标记记录**集中**的记录并稍后返回到该记录。  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF 和 Bookmark 属性示例 (VC + +) 
+如果用户尝试移过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的第一个或最后一个记录，则此示例中的第一个函数使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性来显示消息。 它使用 [书签](../../../ado/reference/ado-api/bookmark-property-ado.md) 属性允许用户标记记录 **集中** 的记录并稍后返回到该记录。  
   
  第二个函数使用 Bookmark 属性将**记录集中**的每个其他记录的**书签**置于数组中，然后使用数组筛选记录集。  
   
@@ -206,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BOF、EOF 属性（ADO）](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark 属性（ADO）](../../../ado/reference/ado-api/bookmark-property-ado.md)   
+ [BOF、EOF 属性 (ADO) ](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [ (ADO) 的书签属性 ](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

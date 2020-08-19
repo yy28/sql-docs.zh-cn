@@ -1,5 +1,6 @@
 ---
-title: sp_change_log_shipping_secondary_database （Transact-sql） |Microsoft Docs
+description: sp_change_log_shipping_secondary_database (Transact-SQL)
+title: sp_change_log_shipping_secondary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fc10c705564c88fe157860d00a61fa5ea682cc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486264"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,33 +52,33 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @restore_delay = ] 'restore_delay'`辅助服务器在还原给定备份文件之前等待的时间，以分钟为单位。 *restore_delay*为**int** ，且不能为 NULL。 默认值为 0。  
+`[ @restore_delay = ] 'restore_delay'` 辅助服务器在还原给定备份文件之前等待的时间，以分钟为单位。 *restore_delay* 为 **int** ，且不能为 NULL。 默认值为 0。  
   
-`[ @restore_all = ] 'restore_all'`如果设置为1，则在还原作业运行时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。 *restore_all*是**bit** ，并且不能为 NULL。  
+`[ @restore_all = ] 'restore_all'` 如果设置为1，则在还原作业运行时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。 *restore_all* 是 **bit** ，并且不能为 NULL。  
   
-`[ @restore_mode = ] 'restore_mode'`辅助数据库的还原模式。  
+`[ @restore_mode = ] 'restore_mode'` 辅助数据库的还原模式。  
   
  0 = 使用 NORECOVERY 还原日志。  
   
  1 = 用备用还原日志。  
   
- *restore*为**bit** ，并且不能为 NULL。  
+ *restore* 为 **bit** ，并且不能为 NULL。  
   
-`[ @disconnect_users = ] 'disconnect_users'`如果设置为1，则在执行还原操作时，用户将与辅助数据库断开连接。 默认值 = 0。 *disconnect_users*是**bit** ，并且不能为 NULL。  
+`[ @disconnect_users = ] 'disconnect_users'` 如果设置为1，则在执行还原操作时，用户将与辅助数据库断开连接。 默认值 = 0。 *disconnect_users* 是 **bit** ，并且不能为 NULL。  
   
-`[ @block_size = ] 'block_size'`用作备份设备的块大小的大小（以字节为单位）。 *block_size*为**int** ，默认值为-1。  
+`[ @block_size = ] 'block_size'` 用作备份设备的块大小的大小（以字节为单位）。 *block_size* 为 **int** ，默认值为-1。  
   
-`[ @buffer_count = ] 'buffer_count'`备份或还原操作使用的缓冲区总数。 *buffer_count*为**int** ，默认值为-1。  
+`[ @buffer_count = ] 'buffer_count'` 备份或还原操作使用的缓冲区总数。 *buffer_count* 为 **int** ，默认值为-1。  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`向备份设备发出的最大输入或输出请求的大小（以字节为单位） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize*为**int** ，并且可以为 NULL。  
+`[ @max_transfer_size = ] 'max_transfer_size'` 向备份设备发出的最大输入或输出请求的大小（以字节为单位） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize* 为 **int** ，并且可以为 NULL。  
   
-`[ @restore_threshold = ] 'restore_threshold'`在生成警报之前，还原操作允许间隔的分钟数。 *restore_threshold*为**int** ，且不能为 NULL。  
+`[ @restore_threshold = ] 'restore_threshold'` 在生成警报之前，还原操作允许间隔的分钟数。 *restore_threshold* 为 **int** ，且不能为 NULL。  
   
-`[ @threshold_alert = ] 'threshold_alert'`超过还原阈值时引发的警报。 *threshold_alert*的值为**int**，默认值为14420。  
+`[ @threshold_alert = ] 'threshold_alert'` 超过还原阈值时引发的警报。 *threshold_alert* 的值为 **int**，默认值为14420。  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`指定在超出*restore_threshold*时是否引发警报。 1 = 启用；0 = 禁用。 *threshold_alert_enabled*是**bit** ，并且不能为 NULL。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 指定在超出 *restore_threshold*时是否引发警报。 1 = 启用；0 = 禁用。 *threshold_alert_enabled* 是 **bit** ，并且不能为 NULL。  
   
-`[ @history_retention_period = ] 'history_retention_period'`将保留历史记录的时间长度（分钟）。 *history_retention_period*是**int**。如果未指定值1440，则将使用该值。  
+`[ @history_retention_period = ] 'history_retention_period'` 将保留历史记录的时间长度（分钟）。 *history_retention_period* 是 **int**。如果未指定值1440，则将使用该值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -88,15 +89,15 @@ sp_change_log_shipping_secondary_database
 ## <a name="remarks"></a>备注  
  必须从辅助服务器上的**master**数据库运行**sp_change_log_shipping_secondary_database** 。 此存储过程执行以下操作：  
   
-1.  必要时，更改**log_shipping_secondary_database**记录中的设置。  
+1.  必要时，更改 **log_shipping_secondary_database** 记录中的设置。  
   
-2.  必要时，使用提供的参数更改辅助服务器上**log_shipping_monitor_secondary**中的本地监视器记录。  
+2.  必要时，使用提供的参数更改辅助服务器上 **log_shipping_monitor_secondary** 中的本地监视器记录。  
 
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_change_log_shipping_secondary_database**来更新数据库**LogShipAdventureWorks**的辅助数据库参数。  
+ 此示例演示如何使用 **sp_change_log_shipping_secondary_database** 来更新数据库 **LogShipAdventureWorks**的辅助数据库参数。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   

@@ -1,5 +1,6 @@
 ---
-title: CacheSize 属性示例（VC + +） |Microsoft Docs
+description: CacheSize 属性示例 (VC++)
+title: CacheSize 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68cea9dc78bbb2fa895dc8fb697404e462c1bc07
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 79cc1b0b69914e8f2a00c3e8cf4557ac89c54c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451069"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 属性示例 (VC++)
-此示例使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性来显示用和（不含30记录缓存）执行的操作的性能差异。  
+此示例使用 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 属性来显示用和（不含30记录缓存）执行的操作的性能差异。  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -161,5 +162,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CacheSize 属性（ADO）](../../../ado/reference/ado-api/cachesize-property-ado.md)   
+ [CacheSize 属性 (ADO) ](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

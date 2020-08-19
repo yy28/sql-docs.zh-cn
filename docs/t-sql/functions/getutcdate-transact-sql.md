@@ -1,4 +1,5 @@
 ---
+description: GETUTCDATE (Transact-SQL)
 title: GETUTCDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/02/2015
@@ -35,17 +36,17 @@ ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0979bf4241c24477274d7a220f7a4687339ab1e4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e0c03a89535dded3c17f556c4b048bbdb1840c1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422761"
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回当前数据库系统时间戳作为 datetime 值  。 数据库时区偏移量未包含在内。 此值表示当前的 UTC 时间（通用协调时间）。 此值得自运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统。  
+  返回当前数据库系统时间戳作为 datetime 值****。 数据库时区偏移量未包含在内。 此值表示当前的 UTC 时间（通用协调时间）。 此值得自运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统。  
   
 > [!NOTE]  
 >  与 GETDATE 和 GETUTCDATE 比较而言，SYSDATETIME 和 SYSUTCDATETIME 的秒的小数部分精度更高。 SYSDATETIMEOFFSET 包含系统时区偏移量。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可以分配给采用任意日期和时间类型的变量。  
@@ -66,7 +67,7 @@ GETUTCDATE()
  **datetime**  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 GETUTCDATE  。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 GETUTCDATE****。  
   
  GETUTCDATE 是非确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   

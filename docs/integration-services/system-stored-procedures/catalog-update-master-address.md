@@ -1,4 +1,5 @@
 ---
+description: catalog.update_master_address（SSISDB 数据库）
 title: catalog.update_master_address（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a400275aa68d9906ad16ae7d1236b019f4e9f6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80b5e28a0d552955154849d2f593fc32be79f656
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495358"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address（SSISDB 数据库）
 
@@ -33,8 +34,8 @@ catalog.update_master_address [ @MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>参数
-[ @MasterAddress = ] masterAddress   
-Scale Out Master 终结点。 masterAddress  为 nvarchar  。  
+[ @MasterAddress = ] masterAddress**  
+Scale Out Master 终结点。 masterAddress** 为 nvarchar****。  
 
  ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

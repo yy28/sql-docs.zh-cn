@@ -1,4 +1,5 @@
 ---
+description: GET CONVERSATION GROUP (Transact-SQL)
 title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58d29c1979dc97b43dd6ccb82c5bad4c875995e6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c6dc77084c32b88d507cf8216cf901359268252f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415753"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,27 +60,27 @@ ms.locfileid: "86484898"
  指定如果当前没有消息，则 GET CONVERSATION GROUP 语句将等待消息到达队列。  
   
  *\@conversation_group_id*  
- 用于存储 GET CONVERSATION GROUP 语句返回的会话组 ID 的变量。 该变量的类型必须为 uniqueidentifier  。 如果没有可用的会话组，则该变量设置为 NULL。  
+ 用于存储 GET CONVERSATION GROUP 语句返回的会话组 ID 的变量。 该变量的类型必须为 uniqueidentifier****。 如果没有可用的会话组，则该变量设置为 NULL。  
   
  FROM  
  指定要从中获取会话组的队列。  
   
  *database_name*  
- 包含从中获取会话组的队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库  。  
+ 包含从中获取会话组的队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库**。  
   
  *schema_name*  
- 拥有从中获取会话组的队列的架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构  。  
+ 拥有从中获取会话组的队列的架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构**。  
   
- queue_name   
+ queue_name  
  要从中获取会话组的队列的名称。  
   
- TIMEOUT timeout   
- 指定 Service Broker 等待消息到达队列的时间（毫秒）。 该子句只能与 WAITFOR 子句一起使用。 如果使用 WAITFOR 的语句不包括该子句，或者 timeout  为 -1，则等待时间没有限制。 如果超时时间已到，则 GET CONVERSATION GROUP 将 *conversation_group_id 变量设置为 NULL\@* 。  
+ TIMEOUT timeout**  
+ 指定 Service Broker 等待消息到达队列的时间（毫秒）。 该子句只能与 WAITFOR 子句一起使用。 如果使用 WAITFOR 的语句不包括该子句，或者 timeout** 为 -1，则等待时间没有限制。 如果超时时间已到，则 GET CONVERSATION GROUP 将 \@conversation_group_id 变量设置为 NULL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!IMPORTANT]  
->  如果 GET CONVERSATION GROUP 语句不是批处理或存储过程中的第一个语句，则必须使用  **语句终止符分号 (;** [!INCLUDE[tsql](../../includes/tsql-md.md)]) 终止前面的语句。  
+>  如果 GET CONVERSATION GROUP 语句不是批处理或存储过程中的第一个语句，则必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符分号 (;****) 终止前面的语句。  
   
  如果 GET CONVERSATION GROUP 语句中指定的队列不可用，则该语句将失败，并返回一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。  
   

@@ -1,5 +1,6 @@
 ---
-title: 按名称绑定参数（命名参数） |Microsoft Docs
+description: 按名称绑定参数（命名参数）
+title: 按名称绑定参数 (命名参数) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1e214f50488c4600ed39f76e91618cc5ce53de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75227b26b5f9f060089e6568e233d327e3f7faa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476839"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>按名称绑定参数（命名参数）
-某些 Dbms 允许应用程序按名称（而不是在过程调用中的位置）来指定存储过程的参数。 此类参数称为*命名参数*。 ODBC 支持使用命名参数。 在 ODBC 中，命名参数仅用于对存储过程的调用，而不能用于其他 SQL 语句。  
+某些 Dbms 允许应用程序按名称（而不是在过程调用中的位置）来指定存储过程的参数。 此类参数称为 *命名参数*。 ODBC 支持使用命名参数。 在 ODBC 中，命名参数仅用于对存储过程的调用，而不能用于其他 SQL 语句。  
   
- 驱动程序将检查 IPD 的 SQL_DESC_UNNAMED 字段的值，以确定是否使用了命名参数。 如果 SQL_DESC_UNNAMED 未设置为 SQL_UNNAMED，驱动程序将使用 IPD 的 SQL_DESC_NAME 字段中的名称来标识参数。 若要绑定参数，应用程序可以调用**SQLBindParameter**来指定参数信息，然后可以调用**SQLSETDESCFIELD**来设置 IPD 的 SQL_DESC_NAME 字段。 使用命名参数时，过程调用中参数的顺序并不重要，并且忽略参数的记录号。  
+ 驱动程序将检查 IPD 的 SQL_DESC_UNNAMED 字段的值，以确定是否使用了命名参数。 如果 SQL_DESC_UNNAMED 未设置为 SQL_UNNAMED，驱动程序将使用 IPD 的 SQL_DESC_NAME 字段中的名称来标识参数。 若要绑定参数，应用程序可以调用 **SQLBindParameter** 来指定参数信息，然后可以调用 **SQLSETDESCFIELD** 来设置 IPD 的 SQL_DESC_NAME 字段。 使用命名参数时，过程调用中参数的顺序并不重要，并且忽略参数的记录号。  
   
- 未命名参数和命名参数之间的区别在于描述符的记录编号与过程中的参数编号之间的关系。 使用未命名参数时，第一个参数标记与参数描述符中的第一条记录相关，后者又与过程调用中的第一个参数（在创建顺序中）相关。 使用命名参数时，第一个参数标记仍与参数描述符的第一条记录相关，但在此过程中，说明符的记录号和参数号之间的关系将不再存在。 命名参数不使用描述符记录号到过程参数位置的映射;相反，描述符记录名称将映射到过程参数名称。  
+ 未命名参数和命名参数之间的区别在于描述符的记录编号与过程中的参数编号之间的关系。 使用未命名参数时，第一个参数标记与参数描述符中的第一条记录相关，后者又与过程调用中的第一个参数 (按创建顺序) 相关。 使用命名参数时，第一个参数标记仍与参数描述符的第一条记录相关，但在此过程中，说明符的记录号和参数号之间的关系将不再存在。 命名参数不使用描述符记录号到过程参数位置的映射;相反，描述符记录名称将映射到过程参数名称。  
   
 > [!NOTE]  
 >  如果启用了 IPD 的自动填充，则驱动程序将填充描述符，以便描述符记录的顺序与过程定义中的参数顺序匹配，即使使用的是命名参数也是如此。  
@@ -38,7 +39,7 @@ ms.locfileid: "81306368"
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- 在此过程中，第一个参数@title_id的默认值为1。 应用程序可以使用以下代码调用此过程，以便仅指定一个动态参数。 此参数是名为 "\@quote" 的命名参数。  
+ 在此过程中，第一个参数的 @title_id 默认值为1。 应用程序可以使用以下代码调用此过程，以便仅指定一个动态参数。 此参数是名为 "quote" 的命名参数 \@ 。  
   
 ```  
 // Prepare the procedure invocation statement.  

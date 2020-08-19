@@ -1,5 +1,6 @@
 ---
-title: Delete 方法示例（VB） |Microsoft Docs
+description: Delete 方法示例 (VB)
+title: Delete 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83caae41ad4e8e5dc06863c1a714f59fc97379c1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c2c4d08c785811468990e25b018bddce78e85768
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444139"
 ---
 # <a name="delete-method-example-vb"></a>Delete 方法示例 (VB)
-此示例使用[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)删除指定的记录。  
+此示例使用 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 方法从 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)删除指定的记录。  
   
 ```  
 'BeginDeleteVB  
@@ -129,5 +130,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Delete 方法（ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [ADO 记录集 (Delete 方法) ](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
