@@ -1,5 +1,6 @@
 ---
-title: IHextendedSubscriptionView （Transact-sql） |Microsoft Docs
+description: IHextendedSubscriptionView (Transact-SQL)
+title: IHextendedSubscriptionView (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 909aa160bdd5f7b5f60255e1187f07ab6ef1b3fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aca2ddea9625b5b2a40fea6ef27d6f218a71cda0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485412"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHextendedSubscriptionView**视图显示有关非 SQL Server 发布订阅的信息。 此视图存储在**分发**数据库中。  
+  **IHextendedSubscriptionView**视图显示有关非 SQL Server 发布订阅的信息。 此视图存储在 **分发** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -51,7 +52,7 @@ ms.locfileid: "85889203"
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

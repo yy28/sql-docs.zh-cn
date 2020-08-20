@@ -1,5 +1,6 @@
 ---
-title: sys. filetable （Transact-sql） |Microsoft Docs
+description: sys.filetables (Transact-SQL)
+title: filetable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d83b58f8ff153583775e2e321c5524b43b205745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ac470d0cdc64860721f045a3108c0221d20e219
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482152"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85738764"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|object_id||对象标识号。 在数据库中是唯一的。<br /><br /> 有关详细信息，请[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|object_id||对象标识号。 在数据库中是唯一的。<br /><br /> 有关详细信息，请 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_enabled**|**bit**|1 = FileTable 处于“已启用”状态。|  
 |**directory_name**|**varchar(255)**|FileTable 的根目录名称。|  
 |**filename_collation_id**||为 FileTable 定义的排序规则标识符|  

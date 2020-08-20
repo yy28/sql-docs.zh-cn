@@ -1,4 +1,5 @@
 ---
+description: '! （逻辑非）（SSIS 表达式）'
 title: '! （逻辑非）（SSIS 表达式）| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb3d9bc9fb9ff483e86f1ddd4a451f440bac2824
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1643daac9dab5b1027a0df8fec56ccd190e5980a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484393"
 ---
 # <a name="-logical-not-ssis-expression"></a>! （逻辑非）（SSIS 表达式）
 
@@ -45,14 +46,14 @@ ms.locfileid: "86914477"
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  下表显示了 ! 操作所需的后续步骤。  
   
 |原始布尔表达式|应用 ! 运算符后的表达式|  
 |---------------------------------|------------------------------------|  
-|TRUE|FALSE|  
+|true|FALSE|  
 |Null|Null|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="expression-examples"></a>表达式示例  
  以下示例中，如果 **Color** 列的值为“red”，则计算结果为 FALSE。  

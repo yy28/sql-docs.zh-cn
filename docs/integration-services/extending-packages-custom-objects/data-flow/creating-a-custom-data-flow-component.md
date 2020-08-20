@@ -1,4 +1,5 @@
 ---
+description: 创建自定义数据流组件
 title: 创建自定义数据流组件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7acd3f9c218a068f5af09da21ec21b1fcf6e065
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 30052448f3b6c39d032d9bb4338639e23ff8b189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484259"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>创建自定义数据流组件
 
@@ -48,7 +49,7 @@ ms.locfileid: "86921253"
   
  根据您的组件所使用的对象，您的项目将需要引用以下部分或全部程序集：  
   
-|Feature|要引用的程序集|要导入的命名空间|  
+|功能|要引用的程序集|要导入的命名空间|  
 |-------------|---------------------------|-------------------------|  
 |数据流|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
 |数据流包装|Microsoft.SqlServer.DTSPipelineWrap|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>|  

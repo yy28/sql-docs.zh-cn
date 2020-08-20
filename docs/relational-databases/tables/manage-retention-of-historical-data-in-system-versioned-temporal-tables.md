@@ -1,4 +1,5 @@
 ---
+description: 管理由系统控制版本的临时表中历史数据的保留期
 title: 管理版本由系统控制的临时表中的历史数据
 ms.custom: seo-lt-2019
 ms.date: 05/18/2017
@@ -11,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ca3494bce1f392757206a5ae68ae736d0f9a95
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ff4ab5295328ff71325f3f864b9d0747f299152
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485398"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理由系统控制版本的临时表中历史数据的保留期
 
@@ -421,7 +422,7 @@ COMMIT;
 
 可在单个表级别配置时态历史记录保留，这使用户可以创建灵活的期限策略。 应用时态保留很简单：仅需要在创建表或更改架构期间设置一个参数。
 
-定义保留策略后，Azure SQL 数据库开始定期检查是否有符合数据自动清理条件的历史数据行。 识别匹配行并将其从历史记录表中删除，这些操作以透明方式在系统计划和运行的后台任务中进行。 系统会依据表示 SYSTEM_TIME 结束期限的列检查历史记录表行的期限条件。 例如，如果保留期设置为 6 个月，则应清理的表行应符合以下条件：
+定义保留策略后，Azure SQL 数据库开始定期检查是否有符合数据自动清理条件的历史数据行。 识别匹配行并将其从历史记录表中删除，这些操作以透明方式在系统计划和运行的后台任务中进行。 历史记录表行的期限条件根据表示 SYSTEM_TIME 期限结束时间的列进行检查。 例如，如果保留期设置为 6 个月，则应清理的表行应符合以下条件：
 
 ```sql
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
@@ -466,8 +467,8 @@ CREATE TABLE dbo.WebsiteUserInfo
  );
 ```
 
-可使用不同的时间单位指定保留期：天、周、月和年。 如果忽略了 HISTORY_RETENTION_PERIOD，则假定保留期为 INFINITE。 还可以显式使用 INFINITE 关键字。
-在某些情况下，建议在创建表后配置保留策略或更改以前配置的值。 此时应使用 ALTER TABLE 语句：
+可使用不同的时间单位指定保留期：天、周、月和年。 如果忽略了 HISTORY_RETENTION_PERIOD，则假定保留期为 INFINITE。 也可以显式使用 INFINITE 关键字。
+在某些情况下，你可能想要在创建表后配置保留策略或更改以前配置的值。 此时应使用 ALTER TABLE 语句：
 
 ```sql
 ALTER TABLE dbo.WebsiteUserInfo
@@ -491,7 +492,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 ### <a name="how-sql-database-deletes-aged-rows"></a>SQL 数据库如何删除陈旧行
 
-清理过程具体取决于历史记录表的索引布局。 请务必注意，仅具有聚集索引（B 树或列存储）的历史记录表可配置有限保留策略  。 对于具有有限保留期的所有时态表，系统会创建一个后台任务来执行陈旧数据清理。 行存储（B 树）聚集索引的清理逻辑会删除较小区块（最多 10K）的过期行，以减轻数据库日志和 I/O 子系统的压力。 虽然清理逻辑使用要求的 B 树索引，但无法完全保证删除超过保留期的行的顺序。 因此，请不要对应用程序中的清理顺序有任何期待  。
+清理过程具体取决于历史记录表的索引布局。 必须注意，只能为具有聚集索引（B 树或列存储）的历史记录表配置有限期保留策略。 对于具有有限保留期的所有时态表，系统会创建一个后台任务来执行陈旧数据清理。 行存储（B 树）聚集索引的清理逻辑会删除较小区块（最多 10K）的过期行，以减轻数据库日志和 I/O 子系统的压力。 虽然清理逻辑使用要求的 B 树索引，但无法完全保证删除超过保留期的行的顺序。 因此，请不要对应用程序中的清理顺序有任何期待  。
 
 聚集列存储的清理任务可同时移除整个行组（每组通常包含 100 万行），效率非常高，高速生成历史数据时尤其如此。
 

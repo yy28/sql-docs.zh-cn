@@ -1,4 +1,5 @@
 ---
+description: 使用聚合转换来聚合数据集中的值
 title: 使用聚合转换来聚合数据集中的值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7290cc15e5721918af9eaa3507465db222f812cf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c53ac2228a7ddbef51473ba42c9688566e9dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484426"
 ---
 # <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>使用聚合转换来聚合数据集中的值
 
@@ -49,7 +50,7 @@ ms.locfileid: "86915744"
   
 8.  或者，修改 **“输出别名”** 列中的值。  
   
-9. 若要更改默认聚合操作 **“分组依据”** ，请选择 **“操作”** 列表中的其他操作。  
+9. 若要更改默认聚合操作 **“分组依据”**，请选择 **“操作”** 列表中的其他操作。  
   
 10. 若要更改默认比较，请选择 **“比较标志”** 列中所列出的单个比较标志。 默认情况下，比较将忽略大小写、假名类型、不占位字符和字符宽度。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86915744"
   
 13. 或者，单击 **“高级”** 选项卡并设置应用于优化聚合转换所执行的所有操作的属性。  
   
-14. 单击“确定”。   
+14. 单击“确定”。  
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

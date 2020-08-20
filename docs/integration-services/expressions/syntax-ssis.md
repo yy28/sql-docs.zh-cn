@@ -1,4 +1,5 @@
 ---
+description: 语法 (SSIS)
 title: 语法 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50e6319c78bedccb0b34cd48a2d09e6b6cc0ba3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3262135632cc10036bf03c93edd448de16fbbc79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484391"
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
 
@@ -41,7 +42,7 @@ ms.locfileid: "86913494"
   
  表达式可包含 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系统变量和自定义变量。 表达式中引用的变量必须包含 \@ 前缀。 例如，使用 \@Counter 引用 `Counter` 变量。 \@ 字符不属于变量名，仅向表达式计算器指明标识符是变量。 有关详细信息，请参阅[标识符 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)。  
   
-## <a name="literals"></a>文字  
+## <a name="literals"></a>文本  
  表达式可以包含数值、字符串和布尔文字。 表达式中使用的字符串文字必须用引号引起来。 数值和布尔文字不使用引号。 表达式语言包含用于常用转义字符的转义序列。 有关详细信息，请参阅[文字 (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
   
 ## <a name="operators"></a>运算符  

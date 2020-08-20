@@ -1,4 +1,5 @@
 ---
+description: 服务器 public 权限
 title: 服务器 public 权限 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ffdcfcecf88bfaa12a9d1defee2fc40ef3900c0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4abf2fd4068f19befd2896a27b9b214fee95dec0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482544"
 ---
 # <a name="server-public-permissions"></a>服务器 public 权限
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85774215"
  请勿为服务器 public 角色授予服务器权限。  
   
 > [!IMPORTANT]  
->  安装完成后， **PUBLIC** 角色在“专用管理员连接”  之外的所有端点上具有 **CONNECT**权限。 这很正常，通常不应更改。 （通过使用 **CONNECT SQL** 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
+>  安装完成后， **PUBLIC** 角色在“专用管理员连接” **** 之外的所有端点上具有 **CONNECT**权限。 这很正常，通常不应更改。 （通过使用 **CONNECT SQL** 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
   
 ### <a name="for-more-information"></a>更多信息  
  [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)  

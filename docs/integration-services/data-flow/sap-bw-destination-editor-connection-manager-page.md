@@ -1,4 +1,5 @@
 ---
+description: SAP BW 目标编辑器（“连接管理器”页）
 title: SAP BW 目标编辑器（“连接管理器”页）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2df00ea414e24b1863fcae16832b5f3bbb1f5b79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484546"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
 
@@ -48,7 +49,7 @@ ms.locfileid: "86913592"
  从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 使用“SAP BW 连接管理器”  对话框创建新的连接管理器。  
+ 使用“SAP BW 连接管理器”**** 对话框创建新的连接管理器。  
   
  **测试加载**  
  对要使用您选择的设置加载零行的加载进程进行测试。  
@@ -62,7 +63,7 @@ ms.locfileid: "86913592"
  **InfoSource**  
  输入 InfoSource 的名称。  
   
- 类型   
+ **类型**  
  输入标识 InfoSource 类型的单字符。 下表列出了可接受的单字符值。  
   
 |值|说明|  
@@ -76,7 +77,7 @@ ms.locfileid: "86913592"
  输入 InfoPackage 关联的逻辑系统的名称。  
   
  **查找**  
- 使用“查找 InfoPackage”  对话框查找 InfoPackage。 有关此对话框的详细信息，请参阅 [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)。  
+ 使用“查找 InfoPackage”**** 对话框查找 InfoPackage。 有关此对话框的详细信息，请参阅 [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)。  
   
 ### <a name="rfc-destination-options"></a>RFC 目标选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的 RFC 目标。 选定 RFC 目标后，组件会为这些选项输入合适的值。  
@@ -85,13 +86,13 @@ ms.locfileid: "86913592"
  输入服务器名称或网关主机的 IP 地址。 通常，名称或 IP 地址与 SAP 应用程序服务器相同。  
   
  **网关服务**  
- 输入网关服务的名称，格式为“sapgwNN”  ，其中 **NN** 是系统编号。  
+ 输入网关服务的名称，格式为“sapgwNN”****，其中 **NN** 是系统编号。  
   
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
  **查找**  
- 使用“查找 RFC 目标”  对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
+ 使用“查找 RFC 目标”**** 对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 ### <a name="create-sap-bw-objects-options"></a>创建 SAP BW 对象选项  
  **选择 对象类型**  

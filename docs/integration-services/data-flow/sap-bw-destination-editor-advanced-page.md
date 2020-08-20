@@ -1,4 +1,5 @@
 ---
+description: SAP BW 目标编辑器（“高级”页）
 title: SAP BW 目标编辑器（“高级”页）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34af54db2bca8f4876507b827725b3d0831490f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d137eef410a3b406ea2b18a9893a5f4ca4a061b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484514"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 目标编辑器（“高级”页）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  可以使用“SAP BW 目标编辑器”的“高级”页设置高级设置，如包大小和超时信息   。  
+  可以使用“SAP BW 目标编辑器”的“高级”页设置高级设置，如包大小和超时信息********。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目标的详细信息，请参阅 [SAP BW 目标](../../integration-services/data-flow/sap-bw-destination.md)。  
   

@@ -1,4 +1,5 @@
 ---
+description: HEX（SSIS 表达式）
 title: HEX（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9189790bb29d5595459f0fcabecdf735fc0bdf1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a2fdba3ec151b363766ffb29e88afbdfc4575bc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484463"
 ---
 # <a name="hex-ssis-expression"></a>HEX（SSIS 表达式）
 
@@ -42,9 +43,9 @@ HEX(integer_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>备注  
- 如果 integer_expression 为 Null，则 HEX 返回 Null  。  
+ 如果 integer_expression 为 Null，则 HEX 返回 Null**。  
   
- integer_expression 参数的计算结果必须为整数  。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ integer_expression 参数的计算结果必须为整数**。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  返回结果不包含限定符，如 0x 前缀。 若要包含前缀，请使用 +（连接）运算符。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](../../integration-services/expressions/concatenate-ssis-expression.md)。  
   

@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF（SSIS 表达式）
 title: DATEDIFF（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f869de30e8f6b6c65d01cc3189d9e63abfb57e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e7133fffcea2afe188e00f2c80aa51d6825386c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484412"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF（SSIS 表达式）
 
@@ -47,19 +48,19 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  下表列出了表达式计算器可以识别的日期部分和缩写形式。  
   
 |datepart|缩写形式|  
 |--------------|-------------------|  
-|年龄|yy、yyyy|  
-|季度|qq、q|  
-|月份|mm、m|  
+|Year|yy、yyyy|  
+|Quarter|qq、q|  
+|Month|mm、m|  
 |Dayofyear|dy、y|  
-|日期|dd、d|  
-|Week|wk、ww|  
+|天|dd、d|  
+|周|wk、ww|  
 |星期|dw、w|  
-|Hour|Hh|  
+|小时|Hh|  
 |Minute|mi、n|  
 |秒|ss、s|  
 |Millisecond|Ms|  

@@ -1,4 +1,5 @@
 ---
+description: 高级连接属性
 title: 高级连接属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 925b7155af44d77dc33506c0ff4d574be9970eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fd7ed8863356ff3e6b67d456628bd3dbc1ab6a5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484737"
 ---
 # <a name="advanced-connection-properties"></a>高级连接属性
 
@@ -28,7 +29,7 @@ ms.locfileid: "86916551"
   
  使用 **“高级连接属性”** 对话框添加的参数将添加到在 **“连接到 SQL Server”** 对话框中选择的参数上。  
   
- 所提供的各个参数的最后一个实例均覆盖该参数的任何以前的实例。 使用 **“高级连接参数”** 添加的参数将跟踪并替换 **“SQL Server 连接”** 对话框中提供的参数。 例如，如果“SQL Server 连接”  对话框将服务器名称指定为 SERVER1，而“其他连接参数”  页包含 ;SERVER=SERVER2，则会连接到 SERVER2。  
+ 所提供的各个参数的最后一个实例均覆盖该参数的任何以前的实例。 使用 **“高级连接参数”** 添加的参数将跟踪并替换 **“SQL Server 连接”** 对话框中提供的参数。 例如，如果“SQL Server 连接”**** 对话框将服务器名称指定为 SERVER1，而“其他连接参数”**** 页包含 ;SERVER=SERVER2，则会连接到 SERVER2。  
   
  使用 **“高级连接属性”** 对话框添加的参数将作为纯文本传递。  
   

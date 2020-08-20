@@ -1,5 +1,6 @@
 ---
-title: InstanceName 属性（ServerSettings）
+description: InstanceName 属性（ServerSettings 类）
+title: 'InstanceName 属性 (ServerSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d708164b39345fb48f9069ff86afed0e14ad7c28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5a6b3a80e88a8047597d90c9ea1976bcfae4f06a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485113"
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName 属性（ServerSettings 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示 [实例上的服务器设置的](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -1,4 +1,5 @@
 ---
+description: 删除用户定义函数
 title: 删除用户定义函数 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48d0b41d77f562983b5e6a0ecd19ff3f98551887
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd339199cb32fc98490a5e2861591cbc2232c061
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485323"
 ---
 # <a name="delete-user-defined-functions"></a>删除用户定义函数
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,12 +66,12 @@ ms.locfileid: "85722858"
   
     -   Aggregate 函数  
   
-4.  右键单击要删除的函数，然后选择“删除”  。  
+4.  右键单击要删除的函数，然后选择“删除”****。  
   
 5.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
 
     > [!IMPORTANT]  
-    >  单击“删除对象”对话框中的“显示依赖关系”，打开“_function\_name_**依赖关系**”对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
+    >  单击“删除对象”**** 对话框中的“显示依赖关系”****，打开“_function\_name_**依赖关系**”对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -80,7 +81,7 @@ ms.locfileid: "85722858"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- creates function called "Sales.ufn_SalesByStore"  

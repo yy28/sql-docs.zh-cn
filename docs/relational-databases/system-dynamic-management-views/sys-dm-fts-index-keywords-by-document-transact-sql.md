@@ -1,5 +1,6 @@
 ---
-title: sys. dm_fts_index_keywords_by_document （Transact-sql） |Microsoft Docs
+description: sys.dm_fts_index_keywords_by_document (Transact-SQL)
+title: sys. dm_fts_index_keywords_by_document (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,11 +23,12 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1517198208c6282aabd29e39d425dc8ae5afb9e
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 1d9526c20757ca8f63c468f88c56e26de7ad2b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481949"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -53,12 +55,12 @@ sys.dm_fts_index_keywords_by_document
 )  
 ```  
   
-## <a name="arguments"></a>自变量  
- db_id （"*database_name*"）  
- 对[DB_ID （）](../../t-sql/functions/db-id-transact-sql.md)函数的调用。 此函数接受数据库名称并返回数据库 ID，sys.dm_fts_index_keywords_by_document 使用此 ID 来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID**。  
+## <a name="arguments"></a>参数  
+ db_id ( "*database_name*" )   
+ 调用 [DB_ID ( # B1 ](../../t-sql/functions/db-id-transact-sql.md) 函数。 此函数接受数据库名称并返回数据库 ID，sys.dm_fts_index_keywords_by_document 使用此 ID 来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID**。  
   
- object_id （"*table_name*"）  
- 对[OBJECT_ID （）](../../t-sql/functions/object-id-transact-sql.md)函数的调用。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
+ object_id ( "*table_name*" )   
+ 调用 [OBJECT_ID ( # B1 ](../../t-sql/functions/object-id-transact-sql.md) 函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -70,7 +72,7 @@ sys.dm_fts_index_keywords_by_document
 |document_id|**int**|从中对当前字词进行全文索引的文档或行的 ID。 此 ID 对应于该文档或行的全文键值。|  
 |occurrence_count|**int**|**Document_id**指示的文档或行中的当前关键字出现次数。 指定 "*search_property_name*" 时，occurrence_count 只显示文档或行的指定搜索属性中的当前关键字出现次数。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  sys.dm_fts_index_keywords_by_document 返回的信息有助于确定以下信息（但不仅限于此）：  
   
 -   全文索引包含的关键字的总数。  
@@ -79,7 +81,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   关键字在整个全文索引中出现了多少次，即：  
   
-     （[SUM](../../t-sql/functions/sum-transact-sql.md)（**occurrence_count**） WHERE**关键字** =*keyword_value* ）  
+      ([求和](../../t-sql/functions/sum-transact-sql.md) (**occurrence_count**) WHERE**关键字** = *keyword_value* )   
   
 -   关键字在给定文档或行中出现了多少次。  
   
@@ -89,7 +91,7 @@ sys.dm_fts_index_keywords_by_document
   
  如果全文键列是建议的整数数据类型，则 document_id 直接映射到基表中的全文键值。  
   
- 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_document 返回的基表中的行，需要使用[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)返回的结果来联接此视图。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以将 dm_fts_index_keywords_by_document 的 document_id 列与此存储过程返回的 DocId 列联接在一起。 请注意，**时间戳**列无法在插入时接收值，因为它们是由自动生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 因此， **timestamp**列必须转换为**varbinary （8）** 列。 下面的示例说明了这些步骤。 在此示例中， *table_id*是表的 id， *database_name*是数据库的名称， *table_name*是表的名称。  
+ 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_document 返回的基表中的行，需要使用 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)返回的结果来联接此视图。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以将 dm_fts_index_keywords_by_document 的 document_id 列与此存储过程返回的 DocId 列联接在一起。 请注意， **时间戳** 列无法在插入时接收值，因为它们是由自动生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 因此， **timestamp** 列必须转换为 **varbinary (8) ** 列。 下面的示例说明了这些步骤。 在此示例中， *table_id* 是表的 id， *database_name* 是数据库的名称， *table_name* 是表的名称。  
   
 ```  
 USE database_name;  

@@ -1,5 +1,6 @@
 ---
-title: sys.sysperfinfo （Transact-sql） |Microsoft Docs
+description: sys.sysperfinfo (Transact-SQL)
+title: sys.sysperfinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2cdadb112dbceb6a3b031707b8ba8b889bad822
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1122c224e21fa633c2c04cd156a49878fefc7daa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482097"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "85895852"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar(128)**|性能对象名称，例如**SQLServer： LockManager**或**sqlserver： BufferManager**。|  
-|**counter_name**|**nchar(128)**|对象中性能计数器的名称，如请求的**页面请求**或**锁**。|  
-|**instance_name**|**nchar(128)**|计数器的命名实例。 例如，会为每种类型的锁（如**表**、**页**、**键**等等）维护计数器。 实例名在相似的计数器之间是有区别的。|  
+|**object_name**|**nchar(128)**|性能对象名称，例如 **SQLServer： LockManager** 或 **sqlserver： BufferManager**。|  
+|**counter_name**|**nchar(128)**|对象中性能计数器的名称，如请求的 **页面请求** 或 **锁**。|  
+|**instance_name**|**nchar(128)**|计数器的命名实例。 例如，会为每种类型的锁（如 **表**、 **页**、 **键**等等）维护计数器。 实例名在相似的计数器之间是有区别的。|  
 |**cntr_value**|**bigint**|实际计数器值。 通常，该值是一个级别或对实例事件发生进行计数的单调递增计数器。|  
 |**cntr_type**|**int**|Windows 性能体系结构定义的计数器类型。|  
   

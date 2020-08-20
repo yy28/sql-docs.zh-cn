@@ -1,5 +1,6 @@
 ---
-title: StartService 方法（SqlService）
+description: StartService 方法（SqlService 类）
+title: 'StartService 方法 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a6b3048ae439cdca6727f1547c2aa956bca325f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5add2aebb0a2a148b803fadbab454d2d72c2bf3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485057"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 方法（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.StartService()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -46,7 +47,7 @@ object.StartService()
  成功。 已接受该请求。  
   
  1  
- 不受支持。 不支持该请求。  
+ 。 不支持该请求。  
   
  2  
  拒绝访问。 用户没有相应的访问权限。  

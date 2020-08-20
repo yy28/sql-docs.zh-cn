@@ -1,5 +1,6 @@
 ---
-title: sys.sysoledbusers （Transact-sql） |Microsoft Docs
+description: sys.sysoledbusers (Transact-SQL)
+title: sys.sysoledbusers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,33 +21,33 @@ helpviewer_keywords:
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 932669feea7f267ae7120ec2c9e60eab07d23bad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 01a2683f063280800606ebd42ba9ce65a286ab82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482110"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中包括此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统表只为了向后兼容。 建议改用[目录视图](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
+>  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中包括此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统表只为了向后兼容。 建议改用 [目录视图](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) 。  
   
- 指定的链接服务器的每个用户和密码映射在表中对应一行。 **sysoledbusers**存储在**master**数据库中。  
+ 指定的链接服务器的每个用户和密码映射在表中对应一行。 **sysoledbusers** 存储在 **master** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|服务器的安全标识号 (SID)。|  
-|**rmtloginame**|**nvarchar （** 128 **）**|**Loginsid**映射到的链接**rmtservid**的远程登录名。|  
-|**rmtpassword**|**nvarchar （** 128 **）**|返回 NULL。|  
+|**rmtloginame**|**nvarchar (** 128 **) **|**Loginsid**映射到的链接**rmtservid**的远程登录名。|  
+|**rmtpassword**|**nvarchar (** 128 **) **|返回 NULL。|  
 |**loginsid**|**varbinary(** 85 **)**|要映射的本地登录 SID。|  
 |**status**|**smallint**|如果为 1，则映射应使用用户凭据。|  
 |**changedate**|**datetime**|最近更改映射信息的日期。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

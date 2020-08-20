@@ -1,4 +1,5 @@
 ---
+description: CDC 实例部署脚本
 title: CDC 实例部署脚本 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34e5b1872c23d28a59ae0a9ac762c470fc297ee0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b53daf02f3fae88f2ab9dd17e7be14373a774d45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484736"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 实例部署脚本
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921174"
  **另存为**  
  将脚本保存在一个文本文件中，您可以将该文本文件保存在所需的任何位置。 您可以将包含该脚本的文件复制到任何其他服务器以便在那里运行脚本。  
   
- **Copy**  
+ **复制**  
  将脚本复制到剪贴板。 然后，您可以将脚本粘贴到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或任何文本编辑器，以便以后运行脚本。  
   
 ## <a name="see-also"></a>另请参阅  

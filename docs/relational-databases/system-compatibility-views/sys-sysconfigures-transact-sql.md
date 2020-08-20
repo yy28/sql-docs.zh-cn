@@ -1,5 +1,6 @@
 ---
-title: sys.sys配置（Transact-sql） |Microsoft Docs
+description: 'sys.sys配置 (Transact-sql) '
+title: sys.sys配置 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,27 +21,27 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 213c4ec07b733b355de8cd7cdb0ae0b14f165584
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f67d5742c5de1f806194090ebe366693cc8c9457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482153"
 ---
-# <a name="syssysconfigures-transact-sql"></a>sys.sys配置（Transact-sql）
+# <a name="syssysconfigures-transact-sql"></a>sys.sys配置 (Transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  对每个由用户设置的配置选项都包含一行。 **sysconfigures**包含在最新启动之前定义的配置选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及自那时起设置的任何动态配置选项。  
+  对每个由用户设置的配置选项都包含一行。 **sysconfigures** 包含在最新启动之前定义的配置选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及自那时起设置的任何动态配置选项。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|value|**int**|用户可修改的变量值。 仅在执行 RECONFIGURE 后，由[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用。|  
+|**value**|**int**|用户可修改的变量值。 仅在执行 RECONFIGURE 后，由[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用。|  
 |**config**|**int**|配置变量号。|  
 |**comment**|**nvarchar(255)**|对配置选项的解释。|  
-|**status**|**smallint**|指示选项状态的位图。 可能的值如下所示：<br /><br /> 0 = 静态。 重新启动服务器后，设置才会生效。<br /><br /> 1 = 动态。 执行 RECONFIGURE 语句后，变量才会生效。<br /><br /> 2 = 高级。 仅当设置了 "**显示高级选项**" 时，才会显示变量。 重新启动服务器后，设置才会生效。<br /><br /> 3 = 动态和高级。|  
+|**status**|**smallint**|指示选项状态的位图。 可能的值如下所示：<br /><br /> 0 = 静态。 重新启动服务器后，设置才会生效。<br /><br /> 1 = 动态。 执行 RECONFIGURE 语句后，变量才会生效。<br /><br /> 2 = 高级。 仅当设置了 " **显示高级选项** " 时，才会显示变量。 重新启动服务器后，设置才会生效。<br /><br /> 3 = 动态和高级。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

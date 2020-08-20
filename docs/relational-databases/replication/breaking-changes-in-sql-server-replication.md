@@ -1,4 +1,5 @@
 ---
+description: SQL Server 复制中的重大更改
 title: SQL Server 复制中的重大更改 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cc4feef3b7860dff9fa231cdb5e674443c0ee801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ace6d2d6812fe319ef61fcebfeb88333fd74a950
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482410"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 复制中的重大更改
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

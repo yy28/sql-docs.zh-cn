@@ -1,4 +1,5 @@
 ---
+description: 为数据流组件开发用户界面
 title: 为数据流组件开发用户界面 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da478b08a23550735c5a93d192a39fe741c91a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 047cbf40a98c2d513c23865dc2b45e00b1fa17b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484199"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>为数据流组件开发用户界面
 
@@ -88,10 +89,10 @@ End Class
   
  虽然可以通过 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口直接修改组件，但是最好使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 方法创建一个 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> 实例。 使用该接口直接编辑组件时，将绕过组件的验证保护。 通过 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 使用组件的设计时实例的优点是可以确保组件可以控制对它的更改。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的返回值确定对组件的更改是持久的还是被放弃。 此方法返回 false  时，所有更改都被放弃；返回 true  时，将持久化对组件的更改并将包标记为需要保存。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的返回值确定对组件的更改是持久的还是被放弃。 此方法返回 false**** 时，所有更改都被放弃；返回 true**** 时，将持久化对组件的更改并将包标记为需要保存。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 设计器的服务  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 IServiceProvider 参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 IServiceProvider**** 参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
   
 |服务|说明|  
 |-------------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: 将域导出到 .dqs 文件
 title: 将域导出到 .dqs 文件
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3e37309a430b92e12493c178eeaf7a117a41552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484842"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>将域导出到 .dqs 文件
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895355"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能将域导出到 .dqs 数据文件。  
   
-##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>将域导出到 dqs 文件  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a> 将域导出到 dqs 文件  
  您可以从任何域管理页进行导出。 导出命令可通过用户界面中的控件和域列表窗格的上下文菜单中的命令来使用。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
@@ -51,9 +52,9 @@ ms.locfileid: "85895355"
   
 5.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留默认名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”****************。  
   
-6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击 **“确定”** 。  
+6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击“确定”。  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>跟进：在将域导出到 dqs 文件后  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> 跟进：在将域导出到 dqs 文件后  
  将域导出到 .dqs 文件后，您可以将该域导入到另一个知识库。  
   
   

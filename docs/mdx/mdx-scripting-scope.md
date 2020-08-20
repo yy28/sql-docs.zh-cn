@@ -1,5 +1,6 @@
 ---
-title: SCOPE 语句（MDX） |Microsoft Docs
+description: SCOPE 语句 (MDX)
+title: SCOPE 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f6738b2d7e0764e750b25f09001b7e9d3864a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483860"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 脚本 - SCOPE
 
@@ -78,12 +79,12 @@ Limited_Set ::=
 > [!NOTE]  
 >  SCOPE 语句会处理隐藏的成员。  
   
- SCOPE 语句将创建公开 "洞" 的子多维数据，而不考虑**MDX 兼容性**设置。 例如，`Scope( Customer.State.members )` 语句可以在不包含州的国家或地区中包括州，但在其他情况下会插入不可见的占位符成员。  
+ SCOPE 语句将创建公开 "洞" 的子多维数据，而不考虑 **MDX 兼容性** 设置。 例如，`Scope( Customer.State.members )` 语句可以在不包含州的国家或地区中包括州，但在其他情况下会插入不可见的占位符成员。  
   
  在 SCOPE 语句中创建的计算成员和命名集不受 SCOPE 语句的影响。  
   
 ## <a name="example"></a>示例  
- 下面的示例（来自艾德公司示例解决方案中的 MDX 计算脚本）将当前范围定义为会计年度2005中的会计季度和销售配额度量值，然后使用**ParallelPeriod**函数将值分配给当前范围中的单元格。 然后，该示例使用另一个 SCOPE 语句修改作用域，然后使用[This （MDX）](../mdx/this-mdx.md)函数执行另一个赋值。  
+ 下面的示例（来自艾德公司示例解决方案中的 MDX 计算脚本）将当前范围定义为会计年度2005中的会计季度和销售配额度量值，然后使用 **ParallelPeriod** 函数将值分配给当前范围中的单元格。 然后，该示例使用其他 SCOPE 语句修改作用域，然后使用 [This (MDX) ](../mdx/this-mdx.md) 函数执行其他分配。  
   
 ```  
 Scope   

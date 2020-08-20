@@ -1,5 +1,6 @@
 ---
-title: DrilldownLevel （MDX） |Microsoft Docs
+description: DrilldownLevel (MDX)
+title: DrilldownLevel (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484000"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
 
   将某个集的成员深化到该集中所表示的最低级别的下一个级别。  
   
- 指定向下钻取的级别是可选的，但如果设置了级别，则可以使用**级别表达式**或**索引级别**。 这两种参数互相排斥。 最后，如果计算成员出现在查询中，你可指定一个聚合以将这些成员包含在行集中。  
+ 指定向下钻取的级别是可选的，但如果设置了级别，则可以使用 **级别表达式** 或 **索引级别**。 这两种参数互相排斥。 最后，如果计算成员出现在查询中，你可指定一个聚合以将这些成员包含在行集中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +36,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  （可选）。 显式标识要深化的级别的 MDX 表达式。 如果指定了级别表达式，请跳过下面的索引参数。  
   
- *Index*  
+ *索引*  
  （可选）。 有效的数值表达式，它指定在集中要深化的层次结构编号。 你可使用索引级别而不是 Level_Expression 显式标识要深化的级别。  
   
  *Include_Calc_Members*  
@@ -44,7 +45,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
 ## <a name="remarks"></a>备注  
  **DrilldownLevel**函数基于指定集内包含的成员按层次结构顺序返回一组子成员。 指定集中原始成员的顺序将保持不变，只不过该函数的结果集中包含的所有子成员都位于其父成员下方并紧随其父成员。  
   
- 根据多级别分层数据结构，你可显式选择要深化的级别。 有两种独占方式可指定级别。 第一种方法是使用返回级别的 MDX 表达式来设置**level_expression**参数，另一种方法是指定**索引**参数，使用数值表达式指定级别的按数字。  
+ 根据多级别分层数据结构，你可显式选择要深化的级别。 有两种独占方式可指定级别。 第一种方法是使用返回级别的 MDX 表达式来设置 **level_expression** 参数，另一种方法是指定 **索引** 参数，使用数值表达式指定级别的按数字。  
   
  如果指定了级别表达式，函数将只检索指定级别的成员的子成员，然后用这些子成员按层次结构顺序构造一个集。 如果指定了级别表达式且该级别没有成员，则忽略该级别表达式。  
   
@@ -52,14 +53,14 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  如果级别表达式和索引值均未指定，此函数将只检索指定集中引用的第一个维度的最低级别成员的子成员，然后用这些子成员按层次结构顺序构造一个集。  
   
- 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
+ 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅 [&#40;xmla&#41;支持的 Xmla 属性 ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
 ## <a name="examples"></a>示例  
  你可使用 Adventure Works 多维数据集在 SSMS 中的 MDX 查询窗口中尝试下面的示例。  
   
  **示例 1-演示最少语法**  
   
- 第一个示例显示了**DrilldownLevel**的最小语法。 所需的唯一参数是集表达式。 请注意，运行此查询时，您将获得下一级别的父 [所有类别] 和成员： [附件]、[自行车] 等。 尽管此示例很简单，但它演示了**DrilldownLevel**函数的基本用途，该函数可深化到下一级别。  
+ 第一个示例显示了 **DrilldownLevel**的最小语法。 所需的唯一参数是集表达式。 请注意，运行此查询时，您将获得下一级别的父 [所有类别] 和成员： [附件]、[自行车] 等。 尽管此示例很简单，但它演示了 **DrilldownLevel** 函数的基本用途，该函数可深化到下一级别。  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
@@ -82,7 +83,7 @@ FROM [Adventure Works]
   
  下面的示例显示如何使用级别表达式。 基于代表层次结构的集，使用级别表达式可让你在层次结构中选择开始深化的级别。  
   
- 在此示例中，向下钻取级别以 [City] 开头，作为**DrilldownLevel**函数的第二个参数。 运行此查询时，深化从华盛顿和俄勒冈州的 [City] 级别开始。 根据**DrilldownLevel**函数，结果集还包括下一个级别的成员，即 [邮政编码]。  
+ 在此示例中，向下钻取级别以 [City] 开头，作为 **DrilldownLevel** 函数的第二个参数。 运行此查询时，深化从华盛顿和俄勒冈州的 [City] 级别开始。 根据 **DrilldownLevel** 函数，结果集还包括下一个级别的成员，即 [邮政编码]。  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -99,7 +100,7 @@ FROM [Adventure Works]
   
  **示例 4-包括计算成员**  
   
- 最后一个示例显示一个计算成员，当您添加**include_calculated_members**标志时，该成员将出现在结果集的底部。 请注意，该标志被指定为第四个参数。  
+ 最后一个示例显示一个计算成员，当您添加 **include_calculated_members** 标志时，该成员将出现在结果集的底部。 请注意，该标志被指定为第四个参数。  
   
  此示例有效的原因是计算成员所处的级别与非计算成员相同。 计算成员 [West Coast] 由来自 [United States] 的成员以及 [United States] 的下一个级别的所有成员组成。  
   

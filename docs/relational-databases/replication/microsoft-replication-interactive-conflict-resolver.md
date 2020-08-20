@@ -1,4 +1,5 @@
 ---
+description: Microsoft Replication Interactive Conflict Resolver
 title: 交互式冲突解决程序（合并）
 describes: Describes the Interactive Conflict Resolver that can be used for merge subscriptions that are synchronized using the Windows Synchronization Manager.
 ms.custom: seo-lt-2019
@@ -14,12 +15,12 @@ ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b96d438aa8332a024932dec689ada2efa419d139
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 242e6847c2c00177ba9939781d56831d8cb9492a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482397"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft Replication Interactive Conflict Resolver
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87108309"
  **订阅服务器**  
  订阅服务器中的数据值。  
   
- **“接受建议”** 、 **“接受发布服务器”** 和 **“接受订阅服务器”**  
+ **“接受建议”**、 **“接受发布服务器”** 和 **“接受订阅服务器”**  
  单击此项可以接受将在发布服务器或订阅服务器上应用的行，具体取决于哪个服务器在冲突中落选。 如果发布服务器在冲突中落选，则其他所有订阅服务器将在下次与发布服务器同步时接收入选行。  
   
  **自动解决剩余冲突**  

@@ -1,5 +1,6 @@
 ---
-title: 数据收集器视图（Transact-sql） |Microsoft Docs
+description: 数据收集器视图 (Transact-SQL)
+title: 数据收集器视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69ae9f64a47283d001fbb6a210f530034b21f228
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b35f12b1ff06e417a01fafe6f4de1c012ee8f9fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482210"
 ---
 # <a name="data-collector-views-transact-sql"></a>数据收集器视图 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  数据收集器可提供以下视图，用于显示有关数据收集器配置的信息（如收集器类型属性、收集组和收集组项）以及收集组运行时获得的执行统计信息。 这些视图位于**msdb**数据库中，也为基础表提供抽象层。 这种抽象化通过禁止对表的直接访问，同时允许在不影响任何关联应用程序的情况下对表进行更改，使安全性得以提高。  
+  数据收集器可提供以下视图，用于显示有关数据收集器配置的信息（如收集器类型属性、收集组和收集组项）以及收集组运行时获得的执行统计信息。 这些视图位于 **msdb** 数据库中，也为基础表提供抽象层。 这种抽象化通过禁止对表的直接访问，同时允许在不影响任何关联应用程序的情况下对表进行更改，使安全性得以提高。  
 
 :::row:::
     :::column:::

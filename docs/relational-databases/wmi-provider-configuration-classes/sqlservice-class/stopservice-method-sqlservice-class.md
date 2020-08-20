@@ -1,5 +1,6 @@
 ---
-title: StopService 方法（SqlService）
+description: StopService 方法（SqlService 类）
+title: 'StopService 方法 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8fe68790b30ffdc54e9f30e4f85675eb595d09e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f4c01a00f1ce264cc26ebbfd7f4ad6a682e5ba6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485090"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService 方法（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.StopService()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

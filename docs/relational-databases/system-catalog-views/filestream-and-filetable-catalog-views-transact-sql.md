@@ -1,5 +1,6 @@
 ---
-title: Filestream 和 FileTable 目录视图（Transact-sql） |Microsoft Docs
+description: Filestream 和 FileTable 目录视图 (Transact-SQL)
+title: Filestream 和 FileTable 目录视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9ff0596667be0822e2e65717ebfd757f001f821
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c50e3042b82540e17ec6be721d84ba9cfe469c87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482234"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 和 FileTable 目录视图 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本节介绍与 FileTable 功能相关的目录视图。  
   
-## <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 和 filetable 目录视图（Transact-sql）
+## <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 和 filetable 目录视图 (Transact-sql) 
  [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
  显示已启用的针对 FileTable 中的 FILESTREAM 数据的非事务性访问级别的相关信息。 为 SQL Server 实例中的每个数据库包含一行。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "85764817"
  显示与 FileTable 相关的系统定义对象的列表。 为每个系统定义对象包含一行。  
   
  [sys.filetables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
- 为每个 FileTable 返回一行。 继承自**sys.databases**。  
+ 为每个 FileTable 返回一行。 继承自 **sys.databases**。  
 
 ## <a name="see-also"></a>另请参阅
 [文件流](../../relational-databases/blob/filestream-sql-server.md)

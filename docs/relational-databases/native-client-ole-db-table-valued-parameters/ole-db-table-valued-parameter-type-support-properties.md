@@ -1,5 +1,6 @@
 ---
-title: OLE DB 表值参数类型（属性）
+description: 'SQL Server Native Client (属性中 OLE DB 表值参数类型支持) '
+title: " (属性 OLE DB 表值参数类型) "
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +14,14 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9a79a82eaf8f3623435bd2330d87686eb9834c7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 96fdbd152eacf5a23f530f5bd5caa7cebb801980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482607"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB SQL Server Native Client 中的表值参数类型支持（属性）
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>SQL Server Native Client (属性中 OLE DB 表值参数类型支持) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题提供有关与表值参数行集对象相关联的 OLE DB 属性和属性集的信息。  
@@ -35,7 +36,7 @@ ms.locfileid: "87246728"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在表值参数行集对象上不允许书签。|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:在表值参数行集对象上不允许使用书签。|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -82,7 +83,7 @@ ms.locfileid: "87246728"
   
 |属性 ID|属性值|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 键入：VT_BOOL<br /><br /> 说明：在设置为 VARIANT_TRUE 时，指示该列是计算列。 VARIANT_FALSE 指示它不是计算列。|  
+|SSPROP_COL_COMPUTED|R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 键入：VT_BOOL<br /><br /> 说明:在设置为 VARIANT_TRUE 时，指示该列是计算列。 VARIANT_FALSE 指示它不是计算列。|  
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
@@ -92,11 +93,11 @@ ms.locfileid: "87246728"
   
 |属性 ID|属性值|  
 |-----------------|--------------------|  
-|SSPROP_PARAM_TYPE_TYPENAME|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_BSTR<br /><br /> 说明：使用者使用此属性获取或设置表值参数类型的名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。<br /><br /> 可以选择指定此属性，以便为表值参数提供表类型名称（在 ODBC 调用语法命令的情况下）。 此属性是即席参数化 SQL 查询所必需的。|  
-|SSPROP_PARAM_TYPE_SCHEMANAME|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_BSTR<br /><br /> 说明：使用者使用此属性获取或设置表值参数类型的架构名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。|  
-|SSPROP_PARAM_TYPE_CATALOGNAME|R/W：只读<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_BSTR<br /><br /> 说明：使用者使用此属性获取表值参数类型的目录名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。 设置此属性是错误的；用户定义表类型必须与使用它们的表值参数处于同一数据库中。|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型： VT_UI2 &#124; VT_ARRAY<br /><br /> 说明：使用者使用此属性指定行集中哪些列集要视作默认值。 将不为这些列发送值。 在从使用者行集对象提取数据时，提供程序不要求对此类列的绑定。<br /><br /> 数组中的每个元素都应是行集对象中某一列的序号。 无效的序号将导致在执行命令时发生错误。|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型： VT_UI2 &#124; VT_ARRAY<br /><br /> 说明：使用者使用此属性向服务器提供提示，以便指出列数据的排序顺序。 提供程序不执行任何验证，并且假定使用者符合已提供的规范。 服务器使用此属性执行优化。<br /><br /> 每一列的列顺序信息均由数组中的一对元素表示。 该元素对中的第一个元素是列的编号。 该元素对中的第二个元素将是 1 或 2，分别表示升序或降序。|  
+|SSPROP_PARAM_TYPE_TYPENAME|R/W：读取/写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_BSTR<br /><br /> 说明:使用者使用此属性获取或设置表值参数类型的名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。<br /><br /> 可以选择指定此属性，以便为表值参数提供表类型名称（在 ODBC 调用语法命令的情况下）。 此属性是即席参数化 SQL 查询所必需的。|  
+|SSPROP_PARAM_TYPE_SCHEMANAME|R/W：读取/写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_BSTR<br /><br /> 说明:使用者使用此属性获取或设置表值参数类型的架构名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。|  
+|SSPROP_PARAM_TYPE_CATALOGNAME|R/W：只读<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_BSTR<br /><br /> 说明:使用者使用此属性获取表值参数类型的目录名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。 设置此属性是错误的；用户定义表类型必须与使用它们的表值参数处于同一数据库中。|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W：读取/写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_UI2 | VT_ARRAY<br /><br /> 说明:使用者使用此属性指定行集中哪些列集要视作默认值。 将不为这些列发送值。 在从使用者行集对象提取数据时，提供程序不要求对此类列的绑定。<br /><br /> 数组中的每个元素都应是行集对象中某一列的序号。 无效的序号将导致在执行命令时发生错误。|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W：读取/写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 键入：VT_UI2 | VT_ARRAY<br /><br /> 说明:使用者使用此属性向服务器提供提示，以便指出列数据的排序顺序。 提供程序不执行任何验证，并且假定使用者符合已提供的规范。 服务器使用此属性执行优化。<br /><br /> 每一列的列顺序信息均由数组中的一对元素表示。 该元素对中的第一个元素是列的编号。 该元素对中的第二个元素将是 1 或 2，分别表示升序或降序。|  
 |||
 
 ## <a name="see-also"></a>另请参阅  

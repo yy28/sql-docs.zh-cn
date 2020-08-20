@@ -1,5 +1,6 @@
 ---
-title: GeneralFlags 属性（ServerSettings）
+description: GeneralFlags 属性（ServerSettings 类）
+title: 'GeneralFlags 属性 (ServerSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0de38cfc0e7796be36c76c7a8412a3f635c7149
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10e9e8bb6167626eea89f9037c50b875f9707496
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485137"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 属性（ServerSettings 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.GeneralFlags [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示 [实例上的服务器设置的](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

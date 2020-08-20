@@ -1,4 +1,5 @@
 ---
+description: 删除或禁用 DML 触发器
 title: 删除或禁用 DML 触发器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56af23085e590c5c9d63b6b3da6626b4c2edb601
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec282485aec37e07684de2430c2379bf584b4b05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485411"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,21 +66,21 @@ ms.locfileid: "85757587"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要删除的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要删除的触发器的表。  
   
-3.  展开 **“触发器”** ，右键单击要删除的触发器，再单击 **“删除”** 。  
+3.  展开 **“触发器”**，右键单击要删除的触发器，再单击 **“删除”**。  
   
-4.  在 **“删除对象”** 对话框中，确认要删除的触发器，然后单击 **“确定”** 。  
+4.  在 **“删除对象”** 对话框中，确认要删除的触发器，然后单击 **“确定”**。  
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要禁用的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要禁用的触发器的表。  
   
-3.  展开 **“触发器”** ，右键单击要禁用的触发器，再单击 **“禁用”** 。  
+3.  展开 **“触发器”**，右键单击要禁用的触发器，再单击 **“禁用”**。  
   
-4.  若要启用触发器，请单击 **“启用”** 。  
+4.  若要启用触发器，请单击 **“启用”**。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

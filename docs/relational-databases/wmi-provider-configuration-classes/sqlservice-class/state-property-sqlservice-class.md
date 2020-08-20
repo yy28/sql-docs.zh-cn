@@ -1,5 +1,6 @@
 ---
-title: State 属性（SqlService）
+description: State 属性（SqlService 类）
+title: '状态属性 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5273d7dd27753b62a22520f2d1aa1f9a28dc8b5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 606c991cd1f5b20f888fc2a2bf9d500e4e5ec410
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485058"
 ---
 # <a name="state-property-sqlservice-class"></a>State 属性（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.State [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

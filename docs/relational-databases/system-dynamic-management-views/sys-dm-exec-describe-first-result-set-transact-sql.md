@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_describe_first_result_set （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_describe_first_result_set (Transact-SQL)
+title: sys. dm_exec_describe_first_result_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +19,19 @@ ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9597d1852cb16c4f212989d42b1b614f0e5e8fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a67fd4b8c528626af8f53ba187b0e13fa326d1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481990"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   此动态管理函数将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句作为参数，并描述该语句的第一个结果集的元数据。  
   
- **sys. dm_exec_describe_first_result_set**具有与 dm_exec_describe_first_result_set_for_object sys.databases 相同的结果集定义[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，与[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)类似。  
+ **sys. dm_exec_describe_first_result_set** 具有与 dm_exec_describe_first_result_set_for_object sys.databases 相同的结果集定义 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，与 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)类似。  
   
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,14 +43,14 @@ ms.locfileid: "85676483"
 sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *\@tsql*  
- 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact-sql SQL_batch*可以是**nvarchar （***n***）** 或**nvarchar （max）**。  
+ 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *SQL_batch* 可以是 **nvarchar (***n***) ** 或 **nvarchar (max) **。  
   
  *\@params*  
- \@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，类似于 sp_executesql。 参数可以为**nvarchar （n）** 或**nvarchar （max）**。  
+ \@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，类似于 sp_executesql。 参数可以为 **nvarchar (n) ** 或 **nvarchar (max) **。  
   
- 一个字符串，其中包含已嵌入到 _batch 中的所有参数的定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在参数中定义 stmt 中指定的每个参数 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的语句或批处理不包含参数， \@ 则无需参数。 该参数的默认值为 NULL。  
+ 一个字符串，其中包含已嵌入到 _batch 中的所有参数的定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n* 是表示附加参数定义的占位符。 必须在参数中定义 stmt 中指定的每个参数 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的语句或批处理不包含参数， \@ 则无需参数。 该参数的默认值为 NULL。  
   
  *\@include_browse_information*  
  如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 将返回其他键列和源表信息。  
@@ -65,7 +66,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|包含下列值：<br /><br /> 如果列允许使用 NULL，则值为 1。<br /><br /> 如果列不允许使用 NULL，则值为 0。<br /><br /> 如果无法确定列是否允许使用 NULL，则值为 1。|  
 |**system_type_id**|**int**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。<br /><br /> 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。<br /><br /> 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
-|**max_length**|**smallint**|列的最大长度（字节）。<br /><br /> -1 = 列数据类型为**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**。<br /><br /> 对于**text**列， **max_length**值将是16，或者是**sp_tableoption "text in row"** 设置的值。|  
+|**max_length**|**smallint**|列的最大长度（字节）。<br /><br /> -1 = 列数据类型为 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **或 **xml**。<br /><br /> 对于 **text** 列， **max_length** 值将是16，或者是 **sp_tableoption "text in row"** 设置的值。|  
 |**精度**|**tinyint**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
 |**scale**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname**|如果列包含的是字符，则为该列的排序规则的名称。 否则，返回 NULL。|  
@@ -94,15 +95,15 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**ordinal_in_order_by_list**|**smallint**|此列在 ORDER BY 列表中的位置。 如果在 ORDER BY 列表中不显示该列或无法唯一确定 ORDER BY 列表，则返回 NULL。|  
 |**order_by_list_length**|**smallint**|ORDER BY 列表的长度。 如果没有 ORDER BY 列表，或者无法唯一确定 ORDER BY 列表，则返回 NULL。 请注意，对于 sp_describe_first_result_set 返回的所有行，该值是相同的。|  
 |**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不为 NULL，则 **order_by_is_descending** 列报告此列的 ORDER BY 子句的方向。 否则，它报告 NULL。|  
-|error_number |**int**|包含函数返回的错误号。 如果未发生错误，则该列包含 NULL。|  
+|error_number|**int**|包含函数返回的错误号。 如果未发生错误，则该列包含 NULL。|  
 |**error_severity**|**int**|包含函数返回的严重性。 如果未发生错误，则该列包含 NULL。|  
 |**error_state**|**int**|包含函数返回的 状态消息。 如果未发生错误，则该列包含 NULL。|  
-|**error_message**|**nvarchar （4096）**|包含函数返回的消息。 如果未发生错误，则该列包含 NULL。|  
+|**error_message**|**nvarchar (4096) **|包含函数返回的消息。 如果未发生错误，则该列包含 NULL。|  
 |**error_type**|**int**|包含一个整数，它表示返回的错误。 映射到 error_type_desc。 请参阅“备注”中的列表。|  
 |**error_type_desc**|**nvarchar(60)**|包含一个简短的大写字符串，它表示返回的错误。 映射到 error_type。 请参阅“备注”中的列表。|  
   
 ## <a name="remarks"></a>备注  
- 此函数使用与 **sp_describe_first_result_set** 相同的算法。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_describe_first_result_set ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+ 此函数使用与 **sp_describe_first_result_set** 相同的算法。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_describe_first_result_set ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  下表列出了错误类型及其说明。  
   
@@ -119,14 +120,14 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|由于批处理包含递归语句，无法确定结果。|  
 |10|TEMPORARY_TABLE|由于批处理包含临时表且 **sp_describe_first_result_set** 不支持该临时表，无法确定结果。|  
 |11|UNSUPPORTED_STATEMENT|由于批处理包含 **sp_describe_first_result_set** 不支持的语句（例如，FETCH、REVERT 等），无法确定结果。|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|\@不支持传递给函数的 object_id （即，不是存储过程）|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@不支持传递给函数的 object_id (（即不是存储过程）) |  
 |13|OBJECT_DOES_NOT_EXIST|\@在系统目录中找不到传递给函数的 object_id。|  
   
 ## <a name="permissions"></a>权限  
  要求具有执行 \@ tsql 参数的权限。  
   
 ## <a name="examples"></a>示例  
- 本主题中的其他示例[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可以改编为使用**sys. dm_exec_describe_first_result_set**。  
+ 本主题中的其他示例 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 可以改编为使用 **sys. dm_exec_describe_first_result_set**。  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 返回有关单个 Transact-SQL 语句的信息  
  以下代码返回有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句结果的信息。  

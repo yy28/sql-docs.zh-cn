@@ -1,5 +1,6 @@
 ---
-title: GetCurrentCertificate 方法（ServerSettings）
+description: GetCurrentCertificate 方法（ServerSettings 类）
+title: 'GetCurrentCertificate 方法 (ServerSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69cc583a1378e78456855472f14768943f9b1951
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e2c9733194cc8d060caf1fa535ae685b64945de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485130"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 方法（ServerSettings 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +37,12 @@ object.GetCurrentCertificate(SHA)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示实例上的服务器设置的**ServerSettings**对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 对象  
+ 一个表示实例上的服务器设置的 **ServerSettings** 对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |*SHA*|一个在方法完成后指定当前安全证书的字符串对象值（输出参数）。|  
   

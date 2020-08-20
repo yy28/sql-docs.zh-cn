@@ -1,4 +1,5 @@
 ---
+description: 查询使用具有安全 enclave 的 Always Encrypted 的列
 title: 查询使用具有安全 enclave 的 Always Encrypted 的列 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf127e7aa40e538bb3dee390f3661ae5d74413f3
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 8daabf320e0f736bcfabc5addb8508320b10bb8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482217"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>查询使用具有安全 enclave 的 Always Encrypted 的列
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "87411491"
 
 以下类型的查询涉及使用安全 enclave：
 - 使用已启用 enclave 的密钥触发就地加密操作的查询 - 请参阅 [使用 Transact-SQL 就地配置列加密](always-encrypted-enclaves-configure-encryption-tsql.md)。
-- 丰富查询  - 对使用随机加密和已启用 enclave 的密钥加密的列进行的范围比较或模式匹配操作。
+- 丰富查询** - 对使用随机加密和已启用 enclave 的密钥加密的列进行的范围比较或模式匹配操作。
 - 在使用随机加密和已启用 enclave 的密钥加密的列上创建或更新索引的查询。 有关详细信息，请参阅[对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引](always-encrypted-enclaves-create-use-indexes.md)。
 
 > [!NOTE]

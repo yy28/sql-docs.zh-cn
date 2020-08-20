@@ -1,4 +1,5 @@
 ---
+description: 开发具有异步输出的自定义转换组件
 title: 开发具有异步输出的自定义转换组件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: beacd62bb72ab59dfd5572edf2eea007d0c08b73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08c3a38c4e4d8297489daa8343af5f6ad74411a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484328"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>开发具有异步输出的自定义转换组件
 

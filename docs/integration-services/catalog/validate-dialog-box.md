@@ -1,4 +1,5 @@
 ---
+description: “验证”对话框
 title: “验证”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d261c049ab59459d81a26d8f9cf23c7268ce53e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a65f5d8114907472eb03aa06e428927aa1408b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484902"
 ---
 # <a name="validate-dialog-box"></a>“验证”对话框
 
@@ -47,7 +48,7 @@ ms.locfileid: "86922546"
   
 4.  展开包含您要验证的项目或包的文件夹。  
   
-5.  右键单击该包，然后单击“验证”  。  
+5.  右键单击该包，然后单击“验证”****。  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 设置“常规”页上的选项  
  **环境**  
@@ -61,7 +62,7 @@ ms.locfileid: "86922546"
  **容器**  
  列出包含参数的对象。  
   
- **Parameter**  
+ **参数**  
  列出参数的名称  
   
  **值**  

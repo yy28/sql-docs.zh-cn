@@ -1,4 +1,5 @@
 ---
+description: 将表添加到 CDC 实例
 title: 将表添加到 CDC 实例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca9d1f6fbc9c238dae9682552cb02153d8a89fbb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e025963ad981e05696af4676155efe642ee49893
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484800"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>将表添加到 CDC 实例
 
@@ -26,10 +27,10 @@ ms.locfileid: "86914913"
 
   使用“表选择”对话框可以将 Oracle 源中的附加表添加到 CDC 实例。 选定的表将添加到属性编辑器的 **“表”** 选项卡的列表中。  
   
- 默认情况下，此对话框的表的列表中不包含任何表。 可以选中“(全选)”  复选框或搜索特定表。  
+ 默认情况下，此对话框的表的列表中不包含任何表。 可以选中“(全选)”**** 复选框或搜索特定表。  
   
  **搜索特定表**  
- 按如下所示输入搜索条件，然后单击“搜索”  ：  
+ 按如下所示输入搜索条件，然后单击“搜索”****：  
   
 -   **架构**：从列表中选择数据库架构。 只有具有该架构的表才会出现在列表中。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "86914913"
 -   **显示前 1000 个匹配表**：默认情况下选中此复选框。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
   
  **选择要包括在 CDC 实例中的表**  
- 单击要包含的任何表旁边的复选框，然后单击“添加”  。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  
+ 单击要包含的任何表旁边的复选框，然后单击“添加”****。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  
   
  单击 **“关闭”** 将关闭该对话框并且不添加任何表。  
   
