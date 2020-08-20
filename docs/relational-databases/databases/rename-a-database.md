@@ -1,4 +1,5 @@
 ---
+description: 重命名数据库
 title: 重命名数据库 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/02/2018
@@ -14,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ff09925b3fd51debbdeda647cd1ae7255f5fa0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471161"
 ---
 # <a name="rename-a-database"></a>重命名数据库
 
@@ -40,7 +41,7 @@ ms.locfileid: "85728394"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **跟进：** [在重命名数据库之后](#backup-after-renaming-a-database)  
+- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > 若要重命名 Azure SQL 数据仓库或并行数据仓库中的数据库，可使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 语句。
@@ -65,13 +66,13 @@ ms.locfileid: "85728394"
 使用以下步骤通过 SQL Server Management Studio 重命名 SQL Server 或 Azure SQL 数据库。
 
   
-1. 在“对象资源管理器”中，连接到 SQL 实例  。  
+1. 在“对象资源管理器”中，连接到 SQL 实例****。  
   
 2. 请确保该数据库没有打开的连接。 如果使用 SQL Server，则可以[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)，关闭任何打开的连接并防止其他用户在你更改数据库名称时进行连接。  
   
-3. 在“对象资源管理器”中，展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”   。  
+3. 在“对象资源管理器”中，展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”********。  
   
-4. 输入新的数据库名称，然后单击 **“确定”** 。  
+4. 输入新的数据库名称，然后单击 **“确定”**。  
   
 5. （可选）如果数据库是默认数据库，请参阅[重命名后重置默认数据库](#reset-your-default-database-after-rename)。
 
@@ -83,7 +84,7 @@ ms.locfileid: "85728394"
   
 1. 为实例连接到 `master` 数据库。  
 2. 打开一个查询窗口。  
-3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将 `MyTestDatabase` 数据库的名称更改为 `MyTestDatabaseCopy`。
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将 `MyTestDatabase` 数据库的名称更改为 `MyTestDatabaseCopy`。
   
    ```sql
    USE master;  
@@ -105,7 +106,7 @@ ms.locfileid: "85728394"
 1. 为实例连接到 `master` 数据库。  
 2. 打开一个查询窗口。
 3. 请确保当前无人使用该数据库。
-4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将 `MyTestDatabase` 数据库的名称更改为 `MyTestDatabaseCopy`。
+4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将 `MyTestDatabase` 数据库的名称更改为 `MyTestDatabaseCopy`。
   
    ```sql
    ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;

@@ -1,5 +1,6 @@
 ---
-title: 查询存储目录视图（Transact-sql） |Microsoft Docs
+description: '查询存储目录视图 (Transact-sql) '
+title: " (Transact-sql) 查询存储目录视图 |Microsoft Docs"
 ms.custom: ''
 ms.date: 04/12/2019
 ms.prod: sql
@@ -16,14 +17,14 @@ ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c3435f9480e7337e9c10b824b650b85ed498a42
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 46af0fdda723a23534592e3d5755922c6182e1b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470029"
 ---
-# <a name="query-store-catalog-views-transact-sql"></a>查询存储目录视图（Transact-sql）
+# <a name="query-store-catalog-views-transact-sql"></a>查询存储目录视图 (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   本节包含以下目录视图：  

@@ -1,4 +1,5 @@
 ---
+description: sp_droprolemember (Transact-SQL)
 title: sp_droprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -18,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469542"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -32,7 +33,7 @@ ms.locfileid: "88180066"
   从当前数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色中删除安全帐户。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +54,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] 'role'`要从中删除成员的角色的名称。 *role*的值为**sysname**，无默认值。 *角色*必须存在于当前数据库中。  
+`[ @rolename = ] 'role'` 要从中删除成员的角色的名称。 *role* 的值为 **sysname**，无默认值。 *角色* 必须存在于当前数据库中。  
   
-`[ @membername = ] 'security_account'`要从角色中删除的安全帐户的名称。 *security_account* **sysname**，无默认值。 *security_account*可以是数据库用户、其他数据库角色、windows 登录名或 windows 组。 当前数据库中必须存在*security_account* 。  
+`[ @membername = ] 'security_account'` 要从角色中删除的安全帐户的名称。 *security_account* **sysname**，无默认值。 *security_account* 可以是数据库用户、其他数据库角色、windows 登录名或 windows 组。 当前数据库中必须存在*security_account* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

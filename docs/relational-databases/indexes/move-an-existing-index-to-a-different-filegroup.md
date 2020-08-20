@@ -1,4 +1,5 @@
 ---
+description: 将现有索引移动到其他文件组中
 title: 将现有索引移动到其他文件组 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 01b7f9191c34e9c83c472abfb560c365e9e5f9b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470452"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,19 +64,19 @@ ms.locfileid: "85771705"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击您要移动的索引的表，然后选择  “设计”。  
+3.  右键单击您要移动的索引的表，然后选择****“设计”。  
   
-4.  在“表设计器”  菜单上，单击“索引/键”  。  
+4.  在“表设计器”菜单上，单击“索引/键”。  
   
 5.  选择要移动的索引。  
   
-6.  在主网格中，展开 **“数据空间规范”** 。  
+6.  在主网格中，展开 **“数据空间规范”**。  
   
 7.  选择 **“文件组或分区方案名称”** 并从列表中选择要将索引移动到的文件组或分区方案。  
   
-8.  单击“关闭”  。  
+8.  单击“关闭”。  
   
-9. 在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
+9. 在“文件”**** 菜单上，选择“保存”**** 以保存 _table_name_。  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>在“对象资源管理器”中将现有索引移到其他文件组  
   
@@ -87,9 +88,9 @@ ms.locfileid: "85771705"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要移动的索引，然后选择  “属性”。  
+5.  右键单击要移动的索引，然后选择****“属性”。  
   
-6.  在 **“选择页”** 下，选择 **“存储”** 。  
+6.  在 **“选择页”** 下，选择 **“存储”**。  
   
 7.  选择移动此索引的目标文件组。  
   
@@ -99,9 +100,9 @@ ms.locfileid: "85771705"
   
      在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅“SQL Server 2016 各个版本支持的功能”。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-8.  单击“确定”。   
+8.  单击“确定”。  
   
- “索引属性 - index_name”对话框的“存储”页面中提供了以下信息    ：  
+ “索引属性 - index_name”对话框的“存储”页面中提供了以下信息******** __：  
   
  **文件组**  
  在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。  
@@ -151,7 +152,7 @@ ms.locfileid: "85771705"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

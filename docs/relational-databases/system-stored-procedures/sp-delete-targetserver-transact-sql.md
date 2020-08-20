@@ -1,5 +1,6 @@
 ---
-title: sp_delete_targetserver （Transact-sql） |Microsoft Docs
+description: sp_delete_targetserver (Transact-SQL)
+title: sp_delete_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 290da3e982e98287305e2e9f277037fea0e8f86a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469597"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,23 +42,23 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server_name = ] 'server'`要作为可用目标服务器删除的服务器的名称。 *服务器*为**nvarchar （30）**，无默认值。  
+`[ @server_name = ] 'server'` 要作为可用目标服务器删除的服务器的名称。 *服务器* ** (30) 为 nvarchar **，无默认值。  
   
-`[ @clear_downloadlist = ] clear_downloadlist`指定是否清除目标服务器的下载列表。 *clear_downloadlist*的类型为**bit**，默认值为**1**。 当*clear_downloadlist*为**1**时，过程将在删除服务器之前清除服务器的下载列表。 如果*clear_downloadlist*为**0**，则不会清除下载列表。  
+`[ @clear_downloadlist = ] clear_downloadlist` 指定是否清除目标服务器的下载列表。 *clear_downloadlist* 的类型为 **bit**，默认值为 **1**。 当 *clear_downloadlist* 为 **1**时，过程将在删除服务器之前清除服务器的下载列表。 如果 *clear_downloadlist* 为 **0**，则不会清除下载列表。  
   
-`[ @post_defection = ] post_defection`指定是否将缺陷指令发布到目标服务器。 *post_defection*的类型为**bit**，默认值为1。 当*post_defection*为**1**时，过程将在删除服务器之前向目标服务器发布缺陷指令。 当*post_defection*为**0**时，该过程不会将缺陷指令发布到目标服务器。  
+`[ @post_defection = ] post_defection` 指定是否将缺陷指令发布到目标服务器。 *post_defection* 的类型为 **bit**，默认值为1。 当 *post_defection* 为 **1**时，过程将在删除服务器之前向目标服务器发布缺陷指令。 当 *post_defection* 为 **0**时，该过程不会将缺陷指令发布到目标服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- 删除目标服务器的常规方法是在目标服务器上调用**sp_msx_defect** 。 仅当需要手动脱离时才使用**sp_delete_targetserver** 。  
+ 删除目标服务器的常规方法是在目标服务器上调用 **sp_msx_defect** 。 仅当需要手动脱离时才使用 **sp_delete_targetserver** 。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
+ 若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例将从可用作业服务器中删除服务器 `LONDON1`。  

@@ -1,5 +1,6 @@
 ---
-title: 数据库邮件视图（Transact-sql） |Microsoft Docs
+description: 数据库邮件视图 (Transact-SQL)
+title: " (Transact-sql) 数据库邮件视图 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a4100246d27370a420706d65718ea765d8e11f13
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1e298e23af425ebecd6323ccd3de509ced9b650
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470040"
 ---
 # <a name="database-mail-views-transact-sql"></a>数据库邮件视图 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  数据库邮件具有下列用于显示数据库邮件电子邮件内容、电子邮件状态以及已接收的任何消息（例如，数据库邮件记录的错误）的视图。 这些视图位于**msdb**数据库中。  
+  数据库邮件具有下列用于显示数据库邮件电子邮件内容、电子邮件状态以及已接收的任何消息（例如，数据库邮件记录的错误）的视图。 这些视图位于 **msdb** 数据库中。  
 
 :::row:::
     :::column:::

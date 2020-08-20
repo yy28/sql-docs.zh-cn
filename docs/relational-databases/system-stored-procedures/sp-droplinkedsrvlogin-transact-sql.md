@@ -1,5 +1,6 @@
 ---
-title: sp_droplinkedsrvlogin （Transact-sql） |Microsoft Docs
+description: sp_droplinkedsrvlogin (Transact-SQL)
+title: sp_droplinkedsrvlogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f6df8ac0be9a6bfc8798697ec01e7e5a2c8e3d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 934b936f6fdc301acde46af4160ee1edfc8374c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469544"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rmtsrvname = ] 'rmtsrvname'`应用登录映射的链接服务器的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *rmtsrvname*的值为**sysname**，无默认值。 *rmtsrvname*必须已存在。  
+`[ @rmtsrvname = ] 'rmtsrvname'` 应用登录映射的链接服务器的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *rmtsrvname* 的值为 **sysname**，无默认值。 *rmtsrvname* 必须已存在。  
   
-`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本地服务器上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin*的值为**sysname**，无默认值。 必须已经存在*locallogin*到*rmtsrvname*的映射。 如果为 NULL，则会删除**sp_addlinkedserver**创建的默认映射，该映射将本地服务器上的所有登录名映射到链接服务器上的登录名。  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本地服务器上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin* 的值为 **sysname**，无默认值。 必须已经存在 *locallogin* 到 *rmtsrvname* 的映射。 如果为 NULL，则会删除 **sp_addlinkedserver**创建的默认映射，该映射将本地服务器上的所有登录名映射到链接服务器上的登录名。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 删除登录名的现有映射后，本地服务器将使用**sp_addlinkedserver**创建的默认映射，该映射代表该登录名连接到链接服务器。 若要更改默认映射，请使用**sp_addlinkedsrvlogin**。  
+ 删除登录名的现有映射后，本地服务器将使用 **sp_addlinkedserver** 创建的默认映射，该映射代表该登录名连接到链接服务器。 若要更改默认映射，请使用 **sp_addlinkedsrvlogin**。  
   
- 如果还删除了默认映射，则只有通过使用**sp_addlinkedsrvlogin**显式给定了到链接服务器的登录名映射的登录名可以访问链接服务器。  
+ 如果还删除了默认映射，则只有通过使用 **sp_addlinkedsrvlogin**显式给定了到链接服务器的登录名映射的登录名可以访问链接服务器。  
   
  不能在用户定义的事务中执行**sp_droplinkedsrvlogin** 。  
   
@@ -74,8 +75,8 @@ EXEC sp_droplinkedsrvlogin 'Accounts', NULL;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

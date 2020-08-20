@@ -1,4 +1,5 @@
 ---
+description: 基于时间的行筛选器的最佳实践
 title: 基于时间的行筛选器的最佳做法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 285b005393c29a81b90a749a89ebf83af8e9c271
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad3264079a3bf4c28a9e1420cf17ed1018510c3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470279"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
  此方法解决了使用 **GETDATE()** 或其他基于时间的方法时的缺点，并避免了必须确定何时为分区对筛选器求值的问题。 考虑 **Events** 表的以下示例：  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
+|**事件 ID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|招待会|112|2006-10-04|1|  
 |2|晚餐|112|2006-10-10|0|  
@@ -82,7 +83,7 @@ GO
   
  第一行将 **Replicate** 列重置为 **0**，第二行对未来七天内发生的事件将该列设置为 **1** 。 如果此 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句在 2006 年 10 月 7 日运行，则该表将更新为：  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
+|**事件 ID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|招待会|112|2006-10-04|0|  
 |2|晚餐|112|2006-10-10|1|  

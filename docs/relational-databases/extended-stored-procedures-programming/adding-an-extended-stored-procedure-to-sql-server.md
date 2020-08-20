@@ -1,4 +1,5 @@
 ---
+description: 将扩展存储过程添加到 SQL Server
 title: 将扩展存储过程添加到 SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22f2b2b5345d4d5cb11b96ecf7741ce144597548
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45a0c13811152c9dd8e5e9590db2062f0f874664
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470479"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>将扩展存储过程添加到 SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85756777"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
- 包含扩展存储过程函数的 DLL 充当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的扩展。 若要安装此 DLL，请将文件复制到一个目录中，例如包含标准 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 文件的目录（C:\Program FILES\MICROSOFT SQL Server\MSSQL12.0.*x*默认情况下为 \MSSQL\Binn）。  
+ 包含扩展存储过程函数的 DLL 充当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的扩展。 若要安装此 DLL，请将文件复制到一个目录中，例如包含标准 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 文件的目录 (C:\Program FILES\MICROSOFT SQL Server\MSSQL12.0.*x*默认) 。  
   
  在将扩展存储过程 DLL 复制到服务器之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员必须将 DLL 中的每个扩展存储过程函数注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以使用 sp_addextendedproc 系统存储过程完成该操作。  
   

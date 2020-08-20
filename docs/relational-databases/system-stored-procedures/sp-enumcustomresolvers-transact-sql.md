@@ -1,5 +1,6 @@
 ---
-title: sp_enumcustomresolvers （Transact-sql） |Microsoft Docs
+description: sp_enumcustomresolvers (Transact-SQL)
+title: sp_enumcustomresolvers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecff860e5dc101cc02b3e5fd7b97569510a8cf68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2579e1d099d0543b1ed8d14bccef877bb892c64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469491"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @distributor = ] 'distributor'`自定义冲突解决程序所在的分发服务器的名称。 *分发服务器*的默认值为**sysname**，默认值为 NULL。 *不推荐使用此参数，该参数将从以后的版本中删除。*  
+`[ @distributor = ] 'distributor'` 自定义冲突解决程序所在的分发服务器的名称。 *分发服务器* 的默认值为 **sysname**，默认值为 NULL。 *不推荐使用此参数，该参数将从以后的版本中删除。*  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -50,16 +51,16 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 |**dotnet_class_name**|**nvarchar(255)**|实现业务逻辑处理程序时优先级高于 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的名称。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_enumcustomresolvers**用于合并复制。  
+ **sp_enumcustomresolvers** 用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员和**db_owner**固定数据库角色的成员才能执行**sp_enumcustomresolvers**。  
+ 只有 **sysadmin** 固定服务器角色的成员和 **db_owner** 固定数据库角色的成员才能执行 **sp_enumcustomresolvers**。  
   
 ## <a name="see-also"></a>另请参阅  
- [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [为合并项目实现业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [为合并项目实现自定义冲突解决程序](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: 验证 DAC 包
 title: 验证 DAC 包 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 62ea7a75bc9ed691f282aa0d886f64d006deb94b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471370"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
   
-1.  **开始之前：** [先决条件](#Prerequisites)  
+1.  **准备工作：**  [先决条件](#Prerequisites)  
   
-2.  若要升级 DAC，请使用：  [查看 DAC 的内容](#ViewDACContents)、[查看数据库更改](#ViewDBChanges)、[查看升级操作](#ViewUpgradeActions)、[比较 DAC](#CompareDACs)  
+2.  **若要升级 DAC，请使用：**  [查看 DAC 的内容](#ViewDACContents)、 [查看数据库更改](#ViewDBChanges)、 [查看升级操作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
 
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  
@@ -38,17 +39,17 @@ ms.locfileid: "85781637"
   
  **在 SQL Server 开发工具中查看 DAC**  
   
-1.  打开“文件”菜单，选择“新建”，然后选择“项目…”    。  
+1.  打开“文件”菜单，选择“新建”，然后选择“项目…”  。  
   
-2.  选择 **SQL Server** 项目模板，然后指定 **“名称”** 、 **“位置”** 和 **“解决方案名称”** 。  
+2.  选择 **SQL Server** 项目模板，然后指定 **“名称”**、 **“位置”** 和 **“解决方案名称”**。  
   
-3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…”   。  
+3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…” 。  
   
-4.  在“项目设置”  选项卡上的“输出类型”  部分中，选中“数据层应用程序（.dacpac 文件）”  复选框，然后关闭属性对话框。  
+4.  在“项目设置”**** 选项卡上的“输出类型”**** 部分中，选中“数据层应用程序（.dacpac 文件）”**** 复选框，然后关闭属性对话框。  
   
-5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…”   。  
+5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…” 。  
   
-6.  使用“解决方案资源管理器”  可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
+6.  使用“解决方案资源管理器”**** 可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
   
 7.  使用 **“架构视图”** 可查看架构中的所有对象，特别是查看对象（例如函数或存储过程）中的代码。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85781637"
   
  **使用向导查看数据库更改**  
   
-1.  运行“升级数据层应用程序”  向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”**** 向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  在 **“检测更改”** 页上，查看已对数据库进行的更改的报告。  
   
@@ -110,7 +111,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **使用向导报告升级操作**  
   
-1.  运行“升级数据层应用程序”  向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”**** 向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  对 **“摘要”** 页上，查看升级操作的报告。  
   

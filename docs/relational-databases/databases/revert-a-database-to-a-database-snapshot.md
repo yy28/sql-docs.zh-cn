@@ -1,4 +1,5 @@
 ---
+description: 将数据库恢复到数据库快照
 title: 将数据库恢复到数据库快照 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1a9c34408dd1f7731579830802fd8ac62d1f0bae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d4551044d0db95cfa8abaf177d683626c666dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471127"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85759038"
   
      [安全性](#Security)  
   
--   **若要将数据库恢复到数据库快照，请使用：** [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -100,7 +101,7 @@ ms.locfileid: "85759038"
   
      恢复操作要求对源数据库具有 RESTORE DATABASE 权限。 若要恢复数据库，请使用下列 Transact-SQL 语句：  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      其中， *database_name* 是源数据库的名称， *database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
   

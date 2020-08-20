@@ -1,4 +1,5 @@
 ---
+description: Stored Procedures 事件类别
 title: “存储过程”事件类别 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ea798faa2df28520fa93c852add32e6778c80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c75ae77c338f7c0d8374a2ca35e947d68f4482c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470682"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85790966"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[RPC:Completed 事件类](../../relational-databases/event-classes/rpc-completed-event-class.md)|指示已完成远程过程调用 (RPC)。|  
 |[PreConnect:Completed 事件类](../../relational-databases/event-classes/preconnect-completed-event-class.md)|指示何时资源调控器分类器函数结束执行。|  

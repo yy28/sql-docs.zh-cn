@@ -1,4 +1,5 @@
 ---
+description: 启动或停止收集组
 title: 启动或停止收集组 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8c9a4b009c562e3af594aa7adbe081f46a37f32a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1d62c72e43d9495874881ba3c029640626f129c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471381"
 ---
 # <a name="start-or-stop-a-collection-set"></a>启动或停止收集组
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "85758109"
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击要启动的收集组，然后单击“启动数据收集组”  。  
+2.  右键单击要启动的收集组，然后单击“启动数据收集组”****。  
 
      将出现一个消息框，显示此操作的结果，收集组图标上的绿色箭头指示收集组已经启动。  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85758109"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) 启动 ID 为 `1`的收集组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) 启动 ID 为 `1`的收集组。  
   
 ```sql  
 USE msdb;  
@@ -102,7 +103,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) 停止 ID 为 `1`的收集组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) 停止 ID 为 `1`的收集组。  
   
 ```sql  
 USE msdb;  

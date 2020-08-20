@@ -1,4 +1,5 @@
 ---
+description: 创建新的基于策略的管理条件
 title: 创建新的基于策略的管理条件 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 27635c5f579ea6590b939c460702d36d2c1c7ed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76c60d4561eacda47648d2cac710e64c2ccc1f4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470326"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>创建新的基于策略的管理条件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ ms.locfileid: "85654654"
   
 #### <a name="to-create-a-condition"></a>创建条件  
   
-1.  在“对象资源管理器”  中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
+1.  在“对象资源管理器”**** 中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”** 。  
+3.  单击加号以便展开 **“策略管理”**。  
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”  。  
+5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”****。  
   
 6.  在 **“创建新条件”** 对话框的 **“名称”** 框中，键入新条件的名称。  
   

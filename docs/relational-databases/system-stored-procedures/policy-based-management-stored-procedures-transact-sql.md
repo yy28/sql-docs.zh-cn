@@ -1,5 +1,6 @@
 ---
-title: 基于策略的管理存储过程（Transact-sql） |Microsoft Docs
+description: 基于策略的管理存储过程 (Transact-SQL)
+title: 基于策略的管理存储过程 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a8e08f63bc4bb039436c94f0fb678ace795927a
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 1811a67ac9eceb3e6f1fd14d27de2b7d04e07684
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469797"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>基于策略的管理存储过程 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持用于基于策略的管理的下列系统存储过程。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持用于基于策略的管理的下列系统存储过程。  
   
 > [!IMPORTANT]  
 >  只支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中记录的基于策略的管理的存储过程。 未记录的存储过程由内部基于策略的管理组件使用并且不应用于管理基于策略的管理。  

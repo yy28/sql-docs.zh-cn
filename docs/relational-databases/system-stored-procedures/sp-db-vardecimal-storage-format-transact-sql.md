@@ -1,5 +1,6 @@
 ---
-title: sp_db_vardecimal_storage_format （Transact-sql） |Microsoft Docs
+description: sp_db_vardecimal_storage_format (Transact-SQL)
+title: sp_db_vardecimal_storage_format (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6122a9b2720331b8211a06db051492946f4209b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e0c834696f37dd61fcc5830d9e5ef40302e5b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469680"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  要更改其存储格式的数据库的名称。 *database_name* **sysname**，无默认值。 如果省略数据库名称，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的 vardecimal 存储格式状态。  
   
  [ @vardecimal_storage_format =] {' 上的 ' | '关闭 "}  
- 指定是否启用 vardecimal 存储格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 参数的值为**varchar （3）**，无默认值。 如果提供数据库名称但却省略 @vardecimal_storage_format，则返回指定数据库的当前设置。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，此参数不起作用。  
+ 指定是否启用 vardecimal 存储格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 参数的值为 **varchar (3) **，无默认值。 如果提供数据库名称但却省略 @vardecimal_storage_format，则返回指定数据库的当前设置。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，此参数不起作用。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -74,7 +75,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  若要将 vardecimal 存储格式状态更改为 OFF，必须将数据库设置为简单恢复模式。 将数据库设置为简单恢复模式时，日志链将断开。 在将 vardecimal 存储格式状态设置为 OFF 后，请执行完整数据库备份。  
   
- 如果有表使用 vardecimal 数据库压缩，则将 vardecimal 存储格式状态更改为 OFF 的操作将失败。 若要更改表的存储格式，请使用[sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 若要确定数据库中有哪些表使用 vardecimal 存储格式，请使用 `OBJECTPROPERTY` 函数并搜索 `TableHasVarDecimalStorageFormat` 属性，如以下示例所示。  
+ 如果有表使用 vardecimal 数据库压缩，则将 vardecimal 存储格式状态更改为 OFF 的操作将失败。 若要更改表的存储格式，请使用 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 若要确定数据库中有哪些表使用 vardecimal 存储格式，请使用 `OBJECTPROPERTY` 函数并搜索 `TableHasVarDecimalStorageFormat` 属性，如以下示例所示。  
   
 ```  
 USE AdventureWorks2012 ;  

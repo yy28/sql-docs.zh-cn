@@ -1,4 +1,5 @@
 ---
+description: Join Filters
 title: 联接筛选器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470239"
 ---
 # <a name="join-filters"></a>Join Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -69,9 +70,9 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      联接筛选器可关联的表数目不限，但有大量表的筛选器会严重影响合并处理过程的性能。 如果要生成五个或更多表的联接筛选器，请考虑其他解决方案：不筛选小表、不会发生更改的表或主要是查找表的表。 仅在必须在订阅中分区的表之间使用联接筛选器。  
   
--   在适当处将“联接唯一键”  选项设置为 **True** 。  
+-   在适当处将“联接唯一键” **** 选项设置为 **True** 。  
   
-     如果父级中的联接列是唯一的，则合并进程的性能有较大的优化空间。 如果联接条件是依据某个唯一列，请为联接筛选器设置“联接唯一键”  选项。 有关设置此选项的详细信息，请参阅前一部分中列出的操作指南主题。  
+     如果父级中的联接列是唯一的，则合并进程的性能有较大的优化空间。 如果联接条件是依据某个唯一列，请为联接筛选器设置“联接唯一键” **** 选项。 有关设置此选项的详细信息，请参阅前一部分中列出的操作指南主题。  
   
 -   确保为联接筛选器中引用的列建立索引。  
   

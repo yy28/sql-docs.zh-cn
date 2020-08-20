@@ -1,5 +1,6 @@
 ---
-title: sp_delete_jobsteplog （Transact-sql） |Microsoft Docs
+description: sp_delete_jobsteplog (Transact-SQL)
+title: sp_delete_jobsteplog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1ae68a2c09ca79917288381db0a0f9c92d4e33c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b50fb6987fe43e78ae205f620fffa06750172a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469627"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,35 +44,35 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] 'job_id'`包含要删除的作业步骤日志的作业的标识号。 *job_id*的值为**int**，默认值为 NULL。  
+`[ @job_id = ] 'job_id'` 包含要删除的作业步骤日志的作业的标识号。 *job_id* 的值为 **int**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-> **注意：** 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
+> **注意：** 必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
   
-`[ @step_id = ] step_id`作业步骤日志要删除的作业中步骤的标识号。 如果未包括，则删除作业中的所有作业步骤日志，除非指定** \@ older_than**或** \@ larger_than** 。 *step_id*的值为**int**，默认值为 NULL。  
+`[ @step_id = ] step_id` 作业步骤日志要删除的作业中步骤的标识号。 如果未包括，则删除作业中的所有作业步骤日志，除非指定** \@ older_than**或** \@ larger_than** 。 *step_id* 的值为 **int**，默认值为 NULL。  
   
-`[ @step_name = ] 'step_name'`作业步骤日志要删除的作业中步骤的名称。 *step_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @step_name = ] 'step_name'` 作业步骤日志要删除的作业中步骤的名称。 *step_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-> **注意：** 可以指定*step_id*或*step_name* ，但不能同时指定两者。  
+> **注意：** 可以指定 *step_id* 或 *step_name* ，但不能同时指定两者。  
   
-`[ @older_than = ] 'date'`您要保留的最早作业步骤日志的日期和时间。 将删除早于该日期和时间的所有作业步骤日志。 *date*为**datetime**，默认值为 NULL。 可以同时指定** \@ older_than**和** \@ larger_than** 。  
+`[ @older_than = ] 'date'` 您要保留的最早作业步骤日志的日期和时间。 将删除早于该日期和时间的所有作业步骤日志。 *date* 为 **datetime**，默认值为 NULL。 可以同时指定** \@ older_than**和** \@ larger_than** 。  
   
-`[ @larger_than = ] 'size_in_bytes'`您要保留的最大作业步骤日志的大小（以字节为单位）。 大于此大小的所有作业步骤日志都会被删除。 可以同时指定** \@ larger_than**和** \@ older_than** 。  
+`[ @larger_than = ] 'size_in_bytes'` 您要保留的最大作业步骤日志的大小（以字节为单位）。 大于此大小的所有作业步骤日志都会被删除。 可以同时指定** \@ larger_than**和** \@ older_than** 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- **sp_delete_jobsteplog**在**msdb**数据库中。  
+ **sp_delete_jobsteplog** 在 **msdb** 数据库中。  
   
  如果未指定除** \@ job_id**或** \@ job_name**以外的参数，则将删除指定作业的所有作业步骤日志。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -81,7 +82,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有**sysadmin**的成员才能删除其他用户拥有的作业步骤日志。  
+ 只有 **sysadmin** 的成员才能删除其他用户拥有的作业步骤日志。  
   
 ## <a name="examples"></a>示例  
   

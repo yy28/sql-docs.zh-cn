@@ -1,5 +1,6 @@
 ---
-title: sp_dropsubscriber （Transact-sql） |Microsoft Docs
+description: sp_dropsubscriber (Transact-SQL)
+title: sp_dropsubscriber (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 093c04b63b9b99a777f7b20af70ea06677b0c917
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84fd3594b0c8926df6f3575b8c2e899246897503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469490"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,32 +42,32 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
     [ , [ @ignore_distributor = ] ignore_distributor ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @subscriber = ] 'subscriber'`要删除的订阅服务器的名称。 *订阅服务器*的**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @subscriber = ] 'subscriber'` 要删除的订阅服务器的名称。 *订阅服务器* 的 **sysname**，无默认值。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_dropsubscriber**在所有类型的复制中使用。  
+ **sp_dropsubscriber** 在所有类型的复制中使用。  
   
- 此存储过程将删除服务器**子项**选项，并删除系统管理员的远程登录映射，以**repl_subscriber**。  
+ 此存储过程将删除服务器 **子项** 选项，并删除系统管理员的远程登录映射，以 **repl_subscriber**。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_dropsubscriber**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropsubscriber**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpsubscriberinfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

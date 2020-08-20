@@ -1,5 +1,6 @@
 ---
-title: sys. availability_databases_cluster （Transact-sql） |Microsoft Docs
+description: sys.availability_databases_cluster (Transact-SQL)
+title: sys. availability_databases_cluster (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c520cf9e836f8db051599ed00735763c85632aab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 950c3a0b02fb9a7d6331b1a6e6938ed794365daa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470027"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在为 Windows Server 故障转移群集（WSFC）群集中的任何 Always On 可用性组承载可用性副本的实例上的每个可用性数据库，都包含一行，不管本地副本数据库是否已联接到可用性组。  
+  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 承载 Windows Server 故障转移群集 (WSFC) 群集中任意 Always On 可用性组的可用性副本的实例上的每个可用性数据库，都包含一行，不管本地副本数据库是否已联接到该可用性组。  
   
 > [!NOTE]  
 >  将数据库添加到可用性组后，主数据库自动联接到该组。 必须在每个辅助副本上准备辅助数据库，之后才能将其联接到可用性组。   
@@ -44,13 +45,13 @@ ms.locfileid: "85649125"
 |**database_name**|**sysname**|已添加到可用性组的数据库的名称。|  
   
 ## <a name="permissions"></a>权限  
- 如果**availability_databases_cluster**的调用方不是数据库的所有者，则查看对应行所需的最小权限为 ALTER any DATABASE 或 VIEW any database 服务器级权限，或**master**数据库中的 CREATE database 权限。  
+ 如果 **availability_databases_cluster** 的调用方不是数据库的所有者，则查看对应行所需的最小权限为 ALTER any DATABASE 或 VIEW any database 服务器级权限，或 **master** 数据库中的 CREATE database 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
  [sys. dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
- [SQL Server Always On 可用性组 &#40;概述&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

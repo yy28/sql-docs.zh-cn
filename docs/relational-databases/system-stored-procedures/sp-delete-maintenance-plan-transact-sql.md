@@ -1,5 +1,6 @@
 ---
-title: sp_delete_maintenance_plan （Transact-sql） |Microsoft Docs
+description: sp_delete_maintenance_plan (Transact-SQL)
+title: sp_delete_maintenance_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d993720a85508751b734322454d2f2d98be469c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8ba3e8e3529ab47b7789bc19334f973ae0879deb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469659"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] 'plan\_id'`指定要删除的维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
+`[ @plan_id = ] 'plan\_id'` 指定要删除的维护计划的 ID。 *plan_id* 是 **uniqueidentifier**，并且必须是有效 id。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -53,10 +54,10 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
  必须从**msdb**数据库运行**sp_delete_maintenance_plan** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_delete_maintenance_plan**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_delete_maintenance_plan**执行。  
   
 ## <a name="examples"></a>示例  
- 删除使用**sp_add_maintenance_plan**创建的维护计划。  
+ 删除使用 **sp_add_maintenance_plan**创建的维护计划。  
   
 ```  
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  

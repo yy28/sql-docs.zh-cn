@@ -1,5 +1,6 @@
 ---
-title: sys. database_permissions （Transact-sql） |Microsoft Docs
+description: sys.database_permissions (Transact-SQL)
+title: sys. database_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87b2f2e94e137f6a710c19b6f461e4c0cfe12d30
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc503cec67334a95a7e5e06e19a3b6eb722e27f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469941"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,15 +38,15 @@ ms.locfileid: "86011971"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|标识权限所在的类。<br /><br /> 0 = 数据库<br />1 = 对象或列<br />3 = 架构<br />4 = 数据库主体<br />5 = 程序集-**适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />6 = 类型<br />10 = XML 架构集合- <br />                      **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br />15 = 消息类型-**适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />16 = 服务约定-**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />17 = 服务-**适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />18 = 远程服务绑定-**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />19 = 路由-**适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />23 = 全文目录-**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />24 = 对称密钥-**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />25 = 证书-**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />26 = 非对称密钥-**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。|  
+|**class**|**tinyint**|标识权限所在的类。<br /><br /> 0 = 数据库<br />1 = 对象或列<br />3 = 架构<br />4 = 数据库主体<br />5 = 程序集- **适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />6 = 类型<br />10 = XML 架构集合- <br />                      **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br />15 = 消息类型- **适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />16 = 服务约定- **适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />17 = 服务- **适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />18 = 远程服务绑定- **适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />19 = 路由- **适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />23 = 全文目录- **适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />24 = 对称密钥- **适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />25 = 证书- **适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。<br />26 = 非对称密钥- **适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。|  
 |**class_desc**|**nvarchar(60)**|权限所针对的类的说明。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|存在权限的对象的 ID，根据类解释。 通常， **major_id**只是适用于类所表示内容的 id 类型。 <br /><br /> 0 = 数据库本身 <br /><br /> >0 = 用户对象的对象 Id <br /><br /> \<0 = 系统对象的对象 Id |  
-|**minor_id**|**int**|存在权限的对象的辅助 ID，根据类解释。 通常， **minor_id**为零，因为对象的类没有可用的子类别。 否则，它是表的列 ID。|  
+|**major_id**|**int**|存在权限的对象的 ID，根据类解释。 通常， **major_id** 只是适用于类所表示内容的 id 类型。 <br /><br /> 0 = 数据库本身 <br /><br /> >0 = 用户对象的对象 Id <br /><br /> \<0 = 系统对象的对象 Id |  
+|**minor_id**|**int**|存在权限的对象的辅助 ID，根据类解释。 通常， **minor_id** 为零，因为对象的类没有可用的子类别。 否则，它是表的列 ID。|  
 |**grantee_principal_id**|**int**|向其授予权限的数据库主体 ID。|  
 |**grantor_principal_id**|**int**|这些权限的授权者的数据库主体 ID。|  
-|**type**|**char （4）**|数据库权限类型。 有关权限类型的列表，请参阅下一个表。|  
+|type|**char (4) **|数据库权限类型。 有关权限类型的列表，请参阅下一个表。|  
 |**permission_name**|**nvarchar(128)**|权限名称。|  
-|State |**char （1）**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
+|State|**char (1) **|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
 |**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>数据库权限   
@@ -108,7 +110,7 @@ ms.locfileid: "86011971"
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|DELETE|DATABASE、OBJECT、SCHEMA|  
+|DL|删除|DATABASE、OBJECT、SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|EXECUTE|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|USER|  
@@ -167,8 +169,8 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>另请参阅  
  [安全对象](../../relational-databases/security/securables.md)   
- [权限层次结构 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

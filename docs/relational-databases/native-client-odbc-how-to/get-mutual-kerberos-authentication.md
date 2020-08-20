@@ -1,4 +1,5 @@
 ---
+description: 获取 Kerberos 相互身份验证
 title: 获取相互的 Kerberos 身份验证 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,11 +12,12 @@ ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5beea9eaea1f38cafadf0ad4d7ecf2f516b3c22d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b2bc6879cae551ce462db0df1c00b51a25da432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470406"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>获取 Kerberos 相互身份验证
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +26,7 @@ ms.locfileid: "86009437"
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 有关详细信息，请参阅[客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关详细信息，请参阅 [客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  

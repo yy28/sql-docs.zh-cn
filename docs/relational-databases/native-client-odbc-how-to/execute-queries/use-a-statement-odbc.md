@@ -1,5 +1,6 @@
 ---
-title: 使用语句（ODBC） |Microsoft Docs
+description: 使用语句 (ODBC)
+title: 使用 (ODBC) 的语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e653ff458ee816a00654e574b27fe2d9f327b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470408"
 ---
 # <a name="use-a-statement-odbc"></a>使用语句 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,6 +74,6 @@ ms.locfileid: "86009424"
 8.  调用 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)，同时将 *HandleType* 设置为 SQL_HANDLE_STMT，以释放语句句柄。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;执行查询操作指南主题](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [&#40;ODBC&#41;执行查询操作指南主题 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

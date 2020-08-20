@@ -1,5 +1,6 @@
 ---
-title: 如何在 Geography 列中插入行（ODBC） |Microsoft Docs
+description: 如何：在 Geography 列中插入行 (ODBC)
+title: 如何：将行插入到地域列 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,11 +12,12 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a952f0442f41ede8c2151a580fb4ad19b516d1cf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb225cdb2a1407ecc4941823471bd569c6d9b943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470438"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：在 Geography 列中插入行 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,10 +28,10 @@ ms.locfileid: "86009413"
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 有关空间存储的详细信息，请参阅[空间数据 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
+ 有关空间存储的详细信息，请参阅 [空间数据 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>示例  
- 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表创建此示例使用的表。  
+ 第一个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的表。  
   
  使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
@@ -37,7 +39,7 @@ ms.locfileid: "86009413"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表删除此示例使用的表。  
+ 第三个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用的表。  
   
 ```sql
 use tempdb  

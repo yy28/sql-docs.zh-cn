@@ -1,5 +1,6 @@
 ---
-title: COLUMN_DOMAIN_USAGE （Transact-sql） |Microsoft Docs
+description: COLUMN_DOMAIN_USAGE (Transact-SQL)
+title: COLUMN_DOMAIN_USAGE (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df6b4a2a0e5c63fdfc208f04770d6d57d2b88d06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36d9c334f5e3e360c9070de6545f8ce37d55c6af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469834"
 ---
 # <a name="column_domain_usage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,17 +36,17 @@ ms.locfileid: "85675574"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**nvarchar （** 128 **）**|包含该别名数据类型的数据库。|  
-|**DOMAIN_SCHEMA**|**nvarchar （** 128 **）**|包含该别名数据类型的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
+|**DOMAIN_CATALOG**|**nvarchar (** 128 **) **|包含该别名数据类型的数据库。|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **) **|包含该别名数据类型的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
 |**DOMAIN_NAME**|**sysname**|别名数据类型。|  
-|**TABLE_CATALOG**|**nvarchar （** 128 **）**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|表所有者。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **) **|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **) **|表所有者。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**TABLE_NAME**|**sysname**|使用别名数据类型的表。|  
 |**COLUMN_NAME**|**sysname**|使用别名数据类型的列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的信息架构视图 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_delete_log_shipping_secondary_database （Transact-sql） |Microsoft Docs
+description: sp_delete_log_shipping_secondary_database (Transact-SQL)
+title: sp_delete_log_shipping_secondary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28527dcb21243c7853439b2f8244fc1ca696b3c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8eb3b4818674ebb8e52c340fad8452269a2a50d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469665"
 ---
 # <a name="sp_delete_log_shipping_secondary_database-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
+`[ @secondary_database = ] 'secondary_database'` 辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -52,7 +53,7 @@ sp_delete_log_shipping_secondary_database
  必须从辅助服务器上的**master**数据库运行**sp_delete_log_shipping_secondary_database** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

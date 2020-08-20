@@ -1,4 +1,5 @@
 ---
+description: 表值参数数据转换及其他错误和警告
 title: 表值参数数据转换
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78090d979d1a34b845519fc88bd373f50302b14c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b1ef0b488b8cd0e1ccd76142d78fe81a7bfbd88b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470379"
 ---
 # <a name="table-valued-parameter-data-conversion-and-other-errors-and-warnings"></a>表值参数数据转换及其他错误和警告
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +32,6 @@ ms.locfileid: "85998362"
  诊断记录的 SQLSTATE 和消息部分将在所有其他方面符合现有的 ODBC 行为。 也就是说，除了参数、行和列标识信息外，错误消息对于表值参数具有相同的值，这与非表值参数的值相同。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

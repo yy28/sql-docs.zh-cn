@@ -1,4 +1,5 @@
 ---
+description: 辅助数据库设置
 title: 辅助数据库设置 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471119"
 ---
 # <a name="secondary-database-settings"></a>辅助数据库设置
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85759009"
  让 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用主数据库的现有备份初始化辅助数据库。 在 **“备份文件”** 框中键入该备份的位置。 如果在“辅助数据库”框中输入新的数据库名称，数据库将作为还原操作的一部分进行创建。  
   
  **“备份文件”**  
- 如果选择“是，将主数据库的现有备份还原到辅助数据库”  选项，请键入要用于初始化辅助数据库的完整数据库备份的路径和文件名。  
+ 如果选择“是，将主数据库的现有备份还原到辅助数据库”**** 选项，请键入要用于初始化辅助数据库的完整数据库备份的路径和文件名。  
   
  **还原选项**  
  参阅本主题前面对此按钮的说明。  
@@ -74,7 +75,7 @@ ms.locfileid: "85759009"
  **作业名称**  
  显示用于将事务日志备份文件从主服务器复制到辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的名称。 首次创建此作业时，可以通过在该框中键入内容来更改名称。  
   
- **“计划”**  
+ **计划**  
  显示用于将事务日志备份从主服务器复制到辅助服务器的 SQL Server 代理复制作业的当前计划。 通过单击 **“计划...”** 可以修改此计划。  
   
  **“计划...”**  
@@ -96,7 +97,7 @@ ms.locfileid: "85759009"
  使辅助数据库处于 STANDBY 模式。 此模式允许对数据库执行只读操作。  
   
 > [!IMPORTANT]  
->  如果更改现有辅助数据库的恢复模式（例如，从“无恢复模式”  到“备用模式”  ），则更改仅在下一次日志备份还原到数据库后才会生效。  
+>   如果更改现有辅助数据库的恢复模式（例如，从 **“无恢复模式”** 到 **“备用模式”**），则更改仅在下一次日志备份还原到数据库后才会生效。  
   
  **延迟还原备份操作至少**  
  选择将事务日志备份还原到辅助数据库之前的延迟时间（如果有）。  
@@ -107,7 +108,7 @@ ms.locfileid: "85759009"
  **作业名称**  
  显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的名称。 首次创建此作业时，可以通过在该框中键入内容来更改名称。  
   
- **“计划”**  
+ **计划**  
  显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的当前计划。 通过单击 **“计划...”** 可以修改此选项。  
   
  **“计划...”**  

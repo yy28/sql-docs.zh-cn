@@ -1,5 +1,6 @@
 ---
-title: 故障排除（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+description: 疑难解答（Visual FoxPro ODBC 驱动程序）
+title: " (Visual FoxPro ODBC 驱动程序) 的疑难解答 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70b035069c0be88d05a3aa5e17b96af991c27405
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73f98f66a09b0ff17987186103b38643047f1762
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471430"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>疑难解答（Visual FoxPro ODBC 驱动程序）
 以下各节介绍了如何提高性能并解决使用 Visual FoxPro ODBC 驱动程序时可能遇到的问题。  
   
 ## <a name="accessing-parameterized-views"></a>访问参数化视图  
- 使用驱动程序时，不能访问 Visual FoxPro 数据库中的参数化视图。 参数化视图在视图的 SQL **SELECT**语句中创建 WHERE 子句，该子句将下载的记录限制为满足使用为参数提供的值生成的 WHERE 子句条件的记录。 由于驱动程序不支持将参数传递给视图，因此尝试使用驱动程序访问参数化视图将失败。  
+ 使用驱动程序时，不能访问 Visual FoxPro 数据库中的参数化视图。 参数化视图在视图的 SQL **SELECT** 语句中创建 WHERE 子句，该子句将下载的记录限制为满足使用为参数提供的值生成的 WHERE 子句条件的记录。 由于驱动程序不支持将参数传递给视图，因此尝试使用驱动程序访问参数化视图将失败。  
   
  可以在运行时提供参数值，也可以通过编程方式将参数值传递给视图。  
   
@@ -49,18 +50,18 @@ ms.locfileid: "81303028"
   
 -   在连接字符串中使用 BackgroundFetch 特性关键字。  
   
- 有关连接字符串属性关键字的信息，请参阅[使用连接字符串](../../odbc/microsoft/using-connection-strings.md)。  
+ 有关连接字符串属性关键字的信息，请参阅 [使用连接字符串](../../odbc/microsoft/using-connection-strings.md)。  
   
 ## <a name="updating-multitiered-views"></a>更新各层视图  
  多层视图是基于一个或多个视图（而不是基表）的视图。 当你在多层视图中更新数据时，更新只会向下移动一个级别，指向顶级视图所基于的视图;不更新基表。  
   
-## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>在存储过程中使用数据定义语言（DDL）  
+## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>在存储过程中使用数据定义语言 (DDL)   
  在 Visual FoxPro 存储过程中，不能使用 DDL，例如 CREATE TABLE 或 ALTER TABLE。  
   
- 有关可以在存储过程中使用的语言的信息，请参阅[对规则、触发器、默认值和存储过程的支持](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)。  
+ 有关可以在存储过程中使用的语言的信息，请参阅 [对规则、触发器、默认值和存储过程的支持](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)。  
   
 ## <a name="using-positioned-updates"></a>使用定位更新  
  该驱动程序不支持定位更新。 使用 SQL WHERE 子句标识要更新的行。  
   
 ## <a name="using-the-set-ansi-command"></a>使用 SET ANSI 命令  
- 如果您是 Visual FoxPro 开发人员，您应该注意到该驱动程序的 SET ANSI 的默认设置为 ON，而 Visual FoxPro 的默认设置为 OFF。 设置 ANSI 的默认 ON 设置允许 Visual FoxPro 数据源与通常执行完全比较的其他 ODBC 数据源的行为一致。 您可以更改默认设置。 有关详细信息，请参阅[SET ANSI](../../odbc/microsoft/set-ansi-command.md)。
+ 如果您是 Visual FoxPro 开发人员，您应该注意到该驱动程序的 SET ANSI 的默认设置为 ON，而 Visual FoxPro 的默认设置为 OFF。 设置 ANSI 的默认 ON 设置允许 Visual FoxPro 数据源与通常执行完全比较的其他 ODBC 数据源的行为一致。 您可以更改默认设置。 有关详细信息，请参阅 [SET ANSI](../../odbc/microsoft/set-ansi-command.md)。

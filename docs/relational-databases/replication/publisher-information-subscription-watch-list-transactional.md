@@ -1,4 +1,5 @@
 ---
+description: 发布服务器信息，订阅监视列表（事务）
 title: 发布服务器信息，订阅监视列表（事务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6289b71f044bc3df3d9bc5306906483c6dd02886
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d335464f07ad5573a2c45fb7258152fc71d930a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470147"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>发布服务器信息，订阅监视列表（事务）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,11 +61,11 @@ ms.locfileid: "85640397"
   
 -   未运行  
   
--   正在运行  
+-   运行  
   
- 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期， **“状态”** 列将显示 **“错误”** 。  
+ 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期， **“状态”** 列将显示 **“错误”**。  
   
- 状态值 **“‘严重’状态下的性能”** 、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在运行代理。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”** 。  
+ 状态值 **“‘严重’状态下的性能”**、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在运行代理。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”**。  
   
  只有在设置了阈值时，才会显示状态值 **“‘严重’状态下的性能”** 和 **“即将过期/已过期”** 。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
@@ -75,21 +76,21 @@ ms.locfileid: "85640397"
  与订阅同步的发布的名称，格式为： *PublicationDatabaseName: PublicationName*。  
   
  **“性能”**  
- 每个订阅的性能等级都是基于复制监视器的最新度量值，并不反映历史性能。 对于为发布定义了性能阈值的订阅，均会度量其性能；如果没有为发布定义性能阈值，此列将显示 **“未启用”** 。 性能等级可以为以下值之一：  
+ 每个订阅的性能等级都是基于复制监视器的最新度量值，并不反映历史性能。 对于为发布定义了性能阈值的订阅，均会度量其性能；如果没有为发布定义性能阈值，此列将显示 **“未启用”**。 性能等级可以为以下值之一：  
   
--   很好  
+-   优秀  
   
 -   好  
   
 -   一般  
   
--   较差  
+-   差  
   
 -   严重  
   
  如果性能状态为“严重”，则 **“状态”** 列中将显示 **“‘严重’状态下的性能”** 。 有关如何定义性能等级以及如何设置性能阈值的详细信息，请参阅[使用复制监视器监视性能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
- **滞后时间**  
+ **延迟**  
  事务在发布服务器上提交和相应的事务在订阅服务器上提交之间间隔的平均时间。 所显示的滞后时间基于复制监视器的最新度量值。 有关测量滞后时间的详细信息，请参阅[为事务复制测量滞后时间和验证连接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
  **上次同步**  

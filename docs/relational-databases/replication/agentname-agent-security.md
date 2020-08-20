@@ -1,4 +1,5 @@
 ---
+description: '&lt;代理名称&gt; 代理安全性'
 title: '&lt;代理名称&gt; 代理安全性 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61c5a4a61f276eedd684ee059bb0de2292c03490
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 283f19912bcb5f3c57f84c845d9bf051a7c211d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470325"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;代理名称&gt; 代理安全性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

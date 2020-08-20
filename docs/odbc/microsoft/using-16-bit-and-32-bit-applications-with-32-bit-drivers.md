@@ -1,4 +1,5 @@
 ---
+description: 配合使用 16 位和 32 位应用程序与 32 位驱动程序
 title: 使用带有32位驱动程序的16位和32位应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ce996a7c4816d4d14491e226f891904b6cf8c02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3985fa6fa4fd24ad9638e418915542b48abc26f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471372"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>配合使用 16 位和 32 位应用程序与 32 位驱动程序
 > [!IMPORTANT]  
@@ -37,7 +38,7 @@ ms.locfileid: "81307608"
 > [!NOTE]  
 >  从 ODBC 3.0 版开始，已支持 Windows NT 4.0。  
   
- ODBC 包含通过 "thunk" 动态链接库（Dll）支持上述配置所需的 ODBC 组件，以将16位地址转换为32位地址，反之亦然。 安装程序将确定正在使用的操作系统并安装该系统所需的 ODBC 组件。 你还可以选择安装所有系统使用的 ODBC 组件。  
+ ODBC 包括必要的 ODBC 组件，这些组件可通过 "thunk" 动态链接库 (Dll) 将16位地址转换为32位地址，反之亦然。 安装程序将确定正在使用的操作系统并安装该系统所需的 ODBC 组件。 你还可以选择安装所有系统使用的 ODBC 组件。  
   
  大多数情况下，将应用程序或驱动程序从16位移植到32位涉及五种类型的更改：  
   
@@ -45,7 +46,7 @@ ms.locfileid: "81307608"
   
 -   由于整数和句柄为32位而发生的更改  
   
--   对 Windows 应用程序编程接口（Api）的调用中的更改  
+-   对 Windows 应用程序编程接口调用 (Api 的更改)   
   
 -   将驱动程序设置为线程安全的更改  
   

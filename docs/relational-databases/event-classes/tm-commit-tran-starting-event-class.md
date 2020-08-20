@@ -1,4 +1,5 @@
 ---
+description: TM：Commit Tran Starting 事件类
 title: 'TM: Commit Tran Starting 事件类 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c77a9dd688178a858167b8810da328a53d7188b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d57921a67b9f1243961654f2095eacf7eff393a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470634"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting 事件类
+# <a name="tm-commit-tran-starting-event-class"></a>TM：Commit Tran Starting 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Commit Tran Starting 事件类表示正在启动 COMMIT TRANSACTION 请求。 将通过事务管理接口从客户端发送请求。 EventSubClass 列指示在提交当前事务后是否启动新事务。  
   

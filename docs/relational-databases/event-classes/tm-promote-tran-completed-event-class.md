@@ -1,4 +1,5 @@
 ---
+description: TM：Promote Tran Completed 事件类
 title: 'TM: Promote Tran Completed 事件类 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f93a7232f2537c9a37341315d095e472e0f4b0cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa1538e08e6c404b87055051e667199033006cf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470624"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed 事件类
+# <a name="tm-promote-tran-completed-event-class"></a>TM：Promote Tran Completed 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Promote Tran Completed 事件类指示 PROMOTE TRANSACTION 请求已完成。 将通过事务管理接口从客户端发送请求。  
   

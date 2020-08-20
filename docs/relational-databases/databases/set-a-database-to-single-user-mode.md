@@ -1,4 +1,5 @@
 ---
+description: 将数据库设置为单用户模式
 title: 将数据库设置为单用户模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba2485d34df61b931afef75d68cddbde6b01289f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471128"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>将数据库设置为单用户模式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,13 +63,13 @@ ms.locfileid: "85763386"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击要更改的数据库，再单击“属性”  。  
+2.  右键单击要更改的数据库，再单击“属性”****。  
   
 3.  在 **“数据库属性”** 对话框中，单击 **“选项”** 页。  
   
-4.  在 **“限制访问”** 选项中，选择 **“单用户”** 。  
+4.  在 **“限制访问”** 选项中，选择 **“单用户”**。  
   
-5.  如果其他用户连接到数据库，将出现 **“打开的连接”** 消息。 若要更改属性并关闭所有其他连接，请单击 **“是”** 。  
+5.  如果其他用户连接到数据库，将出现 **“打开的连接”** 消息。 若要更改属性并关闭所有其他连接，请单击 **“是”**。  
   
  还可以使用此过程将数据库设置为“多用户”访问或“限制”访问。 有关此“限制访问”选项的详细信息，请参阅[数据库属性（选项页）](../../relational-databases/databases/database-properties-options-page.md)。  
   
@@ -80,7 +81,7 @@ ms.locfileid: "85763386"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。在第一个 `WITH ROLLBACK IMMEDIATE` 语句中指定终止选项 `ALTER DATABASE` 。 这将导致所有未完成事务都将被回滚，并将立刻断开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库的所有其他连接。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。在第一个 `WITH ROLLBACK IMMEDIATE` 语句中指定终止选项 `ALTER DATABASE` 。 这将导致所有未完成事务都将被回滚，并将立刻断开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库的所有其他连接。  
   
  [!code-sql[DatabaseDDL#AlterDatabase8](../../relational-databases/databases/codesnippet/tsql/set-a-database-to-single_1.sql)]  
   
