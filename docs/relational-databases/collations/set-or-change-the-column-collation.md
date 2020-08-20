@@ -1,4 +1,5 @@
 ---
+description: 设置或更改列排序规则
 title: 设置或更改列排序规则 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/05/2019
@@ -13,12 +14,12 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06e96206160557eaaa71d3b44dd6960182b47a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c57021e300168a5e912dfce4ce1e0c62f728dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465597"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "85694971"
         
     有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 列中的一个值匹配。 有关详细信息，请参阅[修改列（数据库引擎）](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 有关详细信息，请参阅[修改列（数据库引擎）](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)。  
   
 -   使用 **管理对象 (SMO) 中的** Column.Collation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性。  
   

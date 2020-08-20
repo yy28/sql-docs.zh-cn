@@ -1,5 +1,6 @@
 ---
-title: count 函数（XQuery） |Microsoft Docs
+description: 聚合函数 - count
+title: " (XQuery) 计算函数 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6691ca005de2ceec1de0408e358544292c58704d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467179"
 ---
 # <a name="aggregate-functions---count"></a>聚合函数 - count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -34,15 +35,15 @@ ms.locfileid: "85643713"
 fn:count($arg as item()*) as xs:integer  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *$arg*  
  要计数的项。  
   
 ## <a name="remarks"></a>备注  
- 如果 *$arg*是空序列，则返回0。  
+ 如果 *$arg* 是空序列，则返回0。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种 **xml** 类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. 使用 count() XQuery 函数计算产品型号生产中的生产车间数。  
  以下查询将计算产品型号 (ProductModelID=7) 生产过程中的生产车间数。  
@@ -66,7 +67,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   查询构造包含 <> 元素的 XML `NoOfWorkStations` 。  
   
--   XQuery 体中的**count （）** 函数计算 <> 元素的数目 `Location` 。  
+-   XQuery 主体中 ** ( # B1 函数计数 ** <`Location`> 元素的数目。  
   
  结果如下：  
   
@@ -98,7 +99,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- 可以将这些值作为非 xml 类型（而不是 xml 类型）返回，如以下查询所示。 查询使用[value （）方法（xml 数据类型）](../t-sql/xml/value-method-xml-data-type.md)来检索工作中心位置计数。  
+ 可以将这些值作为非 xml 类型（而不是 xml 类型）返回，如以下查询所示。 查询使用 [ ( # A1 方法 (xml 数据类型) 的值 ](../t-sql/xml/value-method-xml-data-type.md) 来检索工作中心位置计数。  
   
 ```  
 SELECT  ProductModelID,   

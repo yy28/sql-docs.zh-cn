@@ -1,5 +1,6 @@
 ---
-title: GetPathLocator （Transact-sql） |Microsoft Docs
+description: GetPathLocator (Transact-SQL)
+title: GetPathLocator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133d2b109c54271c2e94cba2e88831f8f7aecf16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2551dfbb7d71b33542f4bc6fd8087c10f974e45b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464759"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "85662872"
 GetPathLocator(filenamespace_path)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *filenamespace_path*  
- FileTable 中的命名空间路径。 命名空间路径的类型为**nvarchar （max）**。  
+ FileTable 中的命名空间路径。 命名空间路径的类型为 **nvarchar (max) **。  
   
- 当数据库属于 Always On 可用性组时， **GetPathLocator**函数将接受虚拟网络名称（VNN）或计算机名称。  
+ 当数据库属于 Always On 可用性组时， **GetPathLocator** 函数将接受虚拟网络名称 (VNN) 或计算机名称。  
   
 ## <a name="return-type"></a>返回类型  
  **hierarchyid**  
@@ -49,7 +50,7 @@ GetPathLocator(filenamespace_path)
  有关详细信息，请参阅 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 ## <a name="examples"></a>示例  
- 将文件从文件服务器迁移到 FileTable 时，可以使用**GetPathLocator**函数。 在这种情况下，您需要将文件移入 FileTable，然后用 FileTable UNC 路径替换每个文件的原始 UNC 路径。 有关完整示例，请参阅将[文件加载到 filetable](../../relational-databases/blob/load-files-into-filetables.md)。  
+ 将文件从文件服务器迁移到 FileTable 时，可以使用 **GetPathLocator** 函数。 在这种情况下，您需要将文件移入 FileTable，然后用 FileTable UNC 路径替换每个文件的原始 UNC 路径。 有关完整示例，请参阅将 [文件加载到 filetable](../../relational-databases/blob/load-files-into-filetables.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 FileTable 中使用目录和路径](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  

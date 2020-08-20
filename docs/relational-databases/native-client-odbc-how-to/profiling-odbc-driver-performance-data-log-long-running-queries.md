@@ -1,5 +1,6 @@
 ---
-title: 记录长时间运行的查询（ODBC） |Microsoft Docs
+description: 分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
+title: " (ODBC) 记录长时间运行的查询 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80757fcbaf0548b520f8357de4eb5cc23db86386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 650ce0033a09913c8f30b8ff51534f31c628a6e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465330"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,13 +27,13 @@ ms.locfileid: "86005837"
   此示例显示用于记录长时间运行查询的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项。 此示例在运行时将创建 Odbcqry.log，其中包含执行时间超过应用程序所设定间隔的查询的列表。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理器记录长时间运行的查询  
   
-1.  在 "控制面板" 中，双击 "**管理工具**"，然后双击 "**数据源（ODBC）** **"**。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
+1.  在 " **控制面板**" 中，双击 " **管理工具** "，然后双击 " ** (ODBC) **中的" 数据源 "。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
   
-2.  单击 "**用户 dsn**"、"**系统 dsn**" 或 "**文件 dsn** " 选项卡。  
+2.  单击 " **用户 dsn**"、" **系统 dsn**" 或 " **文件 dsn** " 选项卡。  
   
 3.  单击要记录其长时间运行的查询的数据源。  
   
@@ -39,26 +41,26 @@ ms.locfileid: "86005837"
   
 5.  在 Microsoft SQL Server 配置 DSN 向导 "中，导航到具有 **" 将长时间运行的查询保存到日志文件**"的页面。  
   
-6.  选择 **"将长时间运行的查询保存到日志文件"**。 在该框中，放置应记录长时间运行的查询的文件的名称。 还可以单击 "**浏览**"，浏览文件系统中的查询日志。  
+6.  选择 **"将长时间运行的查询保存到日志文件"**。 在该框中，放置应记录长时间运行的查询的文件的名称。 还可以单击 " **浏览** "，浏览文件系统中的查询日志。  
   
-7.  在**长查询时间（毫秒）** 框中设置查询超时间隔（以毫秒为单位）。  
+7.  在 **长查询时间 (毫秒) ** 中，设置查询超时间隔（以毫秒为单位）。  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以编程方式记录长时间运行的查询数据  
   
-1.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 以及长时间运行的查询日志文件的完整路径和文件名。 例如：  
+1.  调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 以及长时间运行的查询日志文件的完整路径和文件名。 例如：  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  调用 SQL_COPT_SS_PERF_QUERY_INTERVAL [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)并将其设置为超时间隔（以毫秒为单位）。  
+2.  调用 SQL_COPT_SS_PERF_QUERY_INTERVAL [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 并将其设置为超时间隔（以毫秒为单位）。  
   
-3.  通过 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，开始记录长时间运行的查询。  
+3.  通过 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，开始记录长时间运行的查询。  
   
-4.  通过 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以停止记录长时间运行的查询。  
+4.  通过 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以停止记录长时间运行的查询。  
   
 ## <a name="example"></a>示例  
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。  (可以从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384) 主页下载 AdventureWorks 示例数据库。 ) 此数据源必须基于操作系统提供的 ODBC 驱动程序， (驱动程序名称为 "SQL Server" ) 。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   

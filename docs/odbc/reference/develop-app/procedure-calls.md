@@ -1,4 +1,5 @@
 ---
+description: 过程调用
 title: 过程调用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9c52e72512c8b81c6872461207f235ea2731ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed5da9bbe94bf1f508e1b94c17e81c7b0169f6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465729"
 ---
 # <a name="procedure-calls"></a>过程调用
 *过程*是存储在数据源中的可执行对象。 通常，它是一个或更多的已经预编译的 SQL 语句。 用于调用过程的转义序列是  
   
- **{**[**？ =**]**调用***过程-name*[**（**[*parameter*] [**，**[*parameter*]] .。。**)**]**}**  
+ **{**[**？ =**]**call** *procedure-name*[** (**[*参数*] [**，**[*parameter*]] .。。**) **]**}**  
   
- 其中，*过程名称*指定过程的名称，*参数*指定过程参数。  
+ 其中， *过程名称* 指定过程的名称， *参数* 指定过程参数。  
   
- 有关过程调用转义序列的详细信息，请参阅附录 C： SQL 语法中的[过程调用转义序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)。  
+ 有关过程调用转义序列的详细信息，请参阅附录 C： SQL 语法中的 [过程调用转义序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) 。  
   
- 一个过程可以有零个或多个参数。 它还可以返回值，如语法开头的可选参数标记 **？ =** 所示。 如果*参数*是一个输入参数或输入/输出参数，则它可以是文字或参数标记。 但是，可交互应用程序应始终使用参数标记，因为某些数据源不接受文本参数值。 如果*参数*是输出参数，则它必须是参数标记。 执行过程调用语句之前，必须与**SQLBindParameter**绑定参数标记。  
+ 一个过程可以有零个或多个参数。 它还可以返回值，如语法开头的可选参数标记 **？ =** 所示。 如果 *参数* 是一个输入参数或输入/输出参数，则它可以是文字或参数标记。 但是，可交互应用程序应始终使用参数标记，因为某些数据源不接受文本参数值。 如果 *参数* 是输出参数，则它必须是参数标记。 执行过程调用语句之前，必须与 **SQLBindParameter** 绑定参数标记。  
   
- 过程调用的输入和输入/输出参数可以省略。 如果使用括号（如 {call *procedure-name*（）}）调用过程，则驱动程序会指示数据源使用第一个参数的默认值。 如果该过程不具有任何参数，则这可能会导致过程失败。 如果在不使用括号的情况下调用过程（如 {call *procedure-name*}），驱动程序不会发送任何参数值。  
+ 过程调用的输入和输入/输出参数可以省略。 如果使用括号（但不带任何参数）调用 *过程 (，* 则驱动程序会指示数据源使用第一个参数的默认值。 如果该过程不具有任何参数，则这可能会导致过程失败。 如果在不使用括号的情况下调用过程（如 {call *procedure-name*}），驱动程序不会发送任何参数值。  
   
- 可以为过程调用中的输入和输入/输出参数指定文字。 例如，假设过程**InsertOrder**有五个输入参数。 以下对**InsertOrder**的调用省略第一个参数，为第二个参数提供文本，并为第三个、第四个和第五个参数使用参数标记：  
+ 可以为过程调用中的输入和输入/输出参数指定文字。 例如，假设过程 **InsertOrder** 有五个输入参数。 以下对 **InsertOrder** 的调用省略第一个参数，为第二个参数提供文本，并为第三个、第四个和第五个参数使用参数标记：  
   
 ```  
 {call InsertOrder(, 10, ?, ?, ?)}   // Not interoperable!  
@@ -60,6 +61,6 @@ PartID = 544;
 SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);  
 ```  
   
- 若要确定数据源是否支持过程，应用程序需要使用 SQL_PROCEDURES 选项调用**SQLGetInfo** 。  
+ 若要确定数据源是否支持过程，应用程序需要使用 SQL_PROCEDURES 选项调用 **SQLGetInfo** 。  
   
- 有关过程的详细信息，请参阅[过程](../../../odbc/reference/develop-app/procedures-odbc.md)。
+ 有关过程的详细信息，请参阅 [过程](../../../odbc/reference/develop-app/procedures-odbc.md)。

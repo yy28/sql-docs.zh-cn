@@ -1,5 +1,6 @@
 ---
-title: 使用书签检索行（Native Client OLE DB 提供程序）
+description: '使用书签 (Native Client OLE DB 提供程序检索行) '
+title: '使用书签 (Native Client OLE DB 提供程序检索行) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1aee0ddd1324660c5b3fcdfd10ffa9c831d4f237
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4436f28610b465b896db8c269da3677af60c20a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465279"
 ---
-# <a name="retrieve-rows-using-bookmarks-native-client-ole-db-provider"></a>使用书签检索行（Native Client OLE DB 提供程序）
+# <a name="retrieve-rows-using-bookmarks-native-client-ole-db-provider"></a>使用书签 (Native Client OLE DB 提供程序检索行) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  使用者可将绑定结构的 dwFlag 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签****。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 IRowsetLocate::GetRowsAt 提取行（起始行的位置为书签加上一个偏移量得到的位置）****。  
+  使用者可将绑定结构的 dwFlag 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签  。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 IRowsetLocate::GetRowsAt 提取行（起始行的位置为书签加上一个偏移量得到的位置）  。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>使用书签检索行  
   
@@ -37,9 +38,9 @@ ms.locfileid: "87247003"
   
 3.  执行命令。  
   
-4.  对于将用作书签的列，请将绑定结构的 dwFlag 字段设置为 DBCOLUMNSINFO_ISBOOKMARK 标记****。  
+4.  对于将用作书签的列，请将绑定结构的 dwFlag 字段设置为 DBCOLUMNSINFO_ISBOOKMARK 标记  。  
   
-5.  使用 IRowsetLocate::GetRowsAt**** 提取行（起始行为书签偏移量指定的行）。  
+5.  使用 IRowsetLocate::GetRowsAt  提取行（起始行为书签偏移量指定的行）。  
 
 ## <a name="example"></a>示例  
  此示例显示如何使用书签提取行。 IA64 平台不支持此示例。  
@@ -48,7 +49,7 @@ ms.locfileid: "87247003"
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L "（local）" 更改为 L "（local） \\ \name"，其中 name 为命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

@@ -1,4 +1,5 @@
 ---
+description: 使用表和索引分区
 title: 使用表和索引分区 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e94692f52c6507122df0e35a55f13555315021f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9744fe42994499539d57f0e84fd73b2809208642
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464874"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用表和索引分区
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86008922"
  每个 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 属性中指定其使用的分区方案，并在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定列。  
   
 ## <a name="example"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>在 Visual C# 中为表设置分区方案  
  此代码示例说明如何为 `TransactionHistory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建分区函数和分区方案。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  

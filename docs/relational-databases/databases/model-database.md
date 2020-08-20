@@ -1,4 +1,5 @@
 ---
+description: model 数据库
 title: model 数据库 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2020
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465410"
 ---
 # <a name="model-database"></a>model 数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **model** 数据库用作在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建的所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
+   model **** 数据库用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上创建所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
   
  新创建的用户数据库与 model 数据库使用相同的 [恢复模式](../../relational-databases/backup-restore/recovery-models-sql-server.md) 。 默认值是用户可配置的。 若要了解模式的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "87108337"
 |Service Broker 选项|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|否|  
   
- \* 若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 或 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
+ * 若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 或 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   

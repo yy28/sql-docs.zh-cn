@@ -1,4 +1,5 @@
 ---
+description: 运行数据质量客户端应用程序
 title: 运行数据质量客户端应用程序
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7125dd10e16b8013fccc1f584115550c026cc627
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466650"
 ---
 # <a name="run-the-data-quality-client-application"></a>运行数据质量客户端应用程序
 
@@ -35,18 +36,18 @@ ms.locfileid: "85883343"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须具有对 DQS_MAIN 数据库授予的三种 DQS 角色（dqs_adminstrator、dqs_kb_editor 或 dqs_kb_operator）中的一种，才能登录到 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
-##  <a name="run-data-quality-client"></a><a name="Run"></a>运行 Data Quality Client  
+##  <a name="run-data-quality-client"></a><a name="Run"></a> 运行 Data Quality Client  
  若要在安装了 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的计算机上运行它，请执行以下操作：  
   
 1.  单击 **“开始”**，指向 **“所有程序”**，依次单击 **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**、 **Data Quality Services**和 **“数据质量客户端”**。  
   
-2.  在 **“连接到服务器”** 对话框中：  
+2.  在“连接到服务器”对话框中：  
   
-    1.  指定您要将 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序连接到的服务器。 选择 **(LOCAL)** 以便连接到本地计算机上的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 还可以单击向下箭头，选择 **\<Browse network for more servers>** 连接到不同的服务器（或按名称连接到本地服务器）。 将显示 **“查找服务器”** 对话框。 您可以在 **“本地服务器”** 选项卡或 **“网络服务器”** 选项卡中选择某一服务器。  
+    1.  指定您要将 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序连接到的服务器。 选择 **(LOCAL)** 以便连接到本地计算机上的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 还可以单击向下箭头，选择 **\<Browse network for more servers>** 连接到不同的服务器 (或按名称) 连接到本地服务器。 将显示 **“查找服务器”** 对话框。 您可以在 **“本地服务器”** 选项卡或 **“网络服务器”** 选项卡中选择某一服务器。  
   
     2.  若要加密在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]之间传输的数据，请单击“选项” ****，然后选中“加密连接” **** 复选框。  
   
-3.  单击“连接”。  
+3.  单击“连接”  。  
   
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕将出现。 有关详细信息，请参阅[数据质量客户端主屏幕](../data-quality-services/data-quality-client-home-screen.md)。  
   

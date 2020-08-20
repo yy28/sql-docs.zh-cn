@@ -1,4 +1,5 @@
 ---
+description: SET COLLATE 命令
 title: 设置逐份打印命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466379"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 指定后续索引和排序操作中字符字段的排序规则顺序。  
@@ -33,13 +34,13 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  指定排序规则顺序。 下表介绍了可用的排序规则序列选项。  
   
-|选项|语言|  
+|选项|Language|  
 |-------------|--------------|  
 |荷兰语|荷兰语|  
 |GENERAL|英语、法语、德语、新式西班牙语、葡萄牙语和其他西欧语言|  
-|德语|德国电话薄顺序（|  
+|德语|德国电话薄定购)  (|  
 |冰岛|冰岛语|  
-|设备|计算机（早期 FoxPro 版本的默认排序规则序列）|  
+|设备|计算机 (早期 FoxPro 版本的默认排序规则顺序) |  
 |NORDAN|挪威语、丹麦语|  
 |西班牙语|传统西班牙语|  
 |SWEFIN|瑞典语、芬兰语|  
@@ -56,13 +57,13 @@ SET COLLATE TO "SWEFIN"
   
  计算机是默认的排序规则序列选项，是用户熟悉的序列 Xbase。 字符在当前代码页中出现时按顺序排列。  
   
- 通常，适用于美国和西欧用户。 字符在当前代码页中出现时按顺序排列。 在2.5 之前的 FoxPro 版本中，可能已使用**UPPER**（）或**LOWER**（）函数创建了索引，以便将字符字段转换为一致的大小写。 在超过2.5 的 FoxPro 版本中，你可以改为指定常规排序规则序列选项，并忽略**上限**（）转换。  
+ 通常，适用于美国和西欧用户。 字符在当前代码页中出现时按顺序排列。 在版本早于2.5 的 FoxPro 版本中，可能已使用 **上限** ( ) 或 **更低** ( ) 函数创建了索引，以便将字符字段转换为一致的大小写。 在超过2.5 的 FoxPro 版本中，你可以改为指定常规排序规则序列选项，并省略 ) 转换的 ( **上限** 。  
   
  如果你指定了除计算机之外的排序规则序列选项，并且创建 idx 文件，则始终会创建一个 compact. idx。  
   
- 使用 SET （"COLLATE"）可返回当前排序规则序列。  
+ 使用 SET ( "COLLATE" ) 返回当前排序规则序列。  
   
- 您可以通过使用 " [ODBC Visual FoxPro 安装程序" 对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)或通过在连接字符串中将 Collate 关键字与[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)一起使用来指定数据源的排序顺序。 这等同于发出以下命令：  
+ 您可以通过使用 " [ODBC Visual FoxPro 安装程序" 对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) 或通过在连接字符串中将 Collate 关键字与 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)一起使用来指定数据源的排序顺序。 这等同于发出以下命令：  
   
 ```  
 SET COLLATE TO cSequenceName  

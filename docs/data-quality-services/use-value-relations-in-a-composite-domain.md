@@ -1,4 +1,5 @@
 ---
+description: 在复合域中使用值关系
 title: 在复合域中使用值关系
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466575"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>在复合域中使用值关系
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883299"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能在复合域中查看值关系。  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>查看值关系  
+##  <a name="view-value-relations"></a><a name="Use"></a> 查看值关系  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "85883299"
     > [!NOTE]  
     >  **“值”** 表显示在复合域中存在的每个值组合。 每个值都显示在它应用于的单一域中。 值关系表的默认排序是按频率，但您可以单击其他列以便按该列排序。 仅显示其频率大于或等于 20 的那些值。  
   
-6.  您不能更改该表中的任何值。 如果您已执行了其他操作，则单击 **“完成”** 可完成域管理活动。 否则，单击 "**取消**"。  
+6.  您不能更改该表中的任何值。 如果您已执行了其他操作，则单击 **“完成”** 可完成域管理活动。 否则，单击 " **取消**"。  
   
 ##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> 跟进：在查看值关系后  
  在查看值关系后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  

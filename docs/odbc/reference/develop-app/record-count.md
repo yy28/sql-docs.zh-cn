@@ -1,4 +1,5 @@
 ---
+description: 记录计数
 title: 记录计数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28e503ae4602d87fc9138ed018ee1e95f135ec57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d329ca3638f964244cea8c28f7e07e171887fb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465667"
 ---
 # <a name="record-count"></a>记录计数
 描述符的 SQL_DESC_COUNT 标头字段是包含数据的编号最高的记录的从1开始的索引。 此字段不是所有列或绑定的参数的计数。 分配描述符时，SQL_DESC_COUNT 的初始值为0。  

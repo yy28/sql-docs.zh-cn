@@ -1,4 +1,5 @@
 ---
+description: 创建自定义收集组 - 一般 T-SQL 查询收集器类型
 title: 创建自定义收集组 - 一般 T-SQL 查询收集器类型
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ca7e286d5e6d754bfa13c1e10907b7c040b86a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42ede39d7c0e247b0cd8939ed831533aeec293e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465478"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>创建自定义收集组 - 一般 T-SQL 查询收集器类型
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "85733865"
     GO  
     ```  
   
-     您还可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中执行目视检查。 在对象资源管理器中，展开 **“管理”** 节点，然后展开 **“数据收集”** 。 新的收集组将显示。 收集组的红色圆圈图标指示该收集组已停止。  
+     您还可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中执行目视检查。 在对象资源管理器中，展开 **“管理”** 节点，然后展开 **“数据收集”**。 新的收集组将显示。 收集组的红色圆圈图标指示该收集组已停止。  
   
 ## <a name="example"></a>示例  
  下面的代码示例汇集了上面步骤中记录的示例。 请注意，为收集项设置的收集频率（5 秒钟）将被忽略，因为收集组的收集模式设置为 0，即缓存模式。 有关详细信息，请参阅 [Data Collection](../../relational-databases/data-collection/data-collection.md)。  

@@ -1,4 +1,5 @@
 ---
+description: 增加数据库的大小
 title: 增加数据库的大小 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 381e611f78e1b3e6725312b534618ad10eb28ce0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6520e44a9a351c2cc2e433397575b90cc641e42f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465516"
 ---
 # <a name="increase-the-size-of-a-database"></a>增加数据库的大小
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,15 +59,15 @@ ms.locfileid: "85726459"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开  “数据库”，右键单击要扩展的数据库，再单击  “属性”。  
+2.  展开****“数据库”，右键单击要扩展的数据库，再单击****“属性”。  
   
 3.  在 **“数据库属性”** 中，选择 **“文件”** 页。  
   
-4.  若要增加现有文件的大小，请增加文件的  “初始大小 (MB)”列中的值。 数据库的大小必须至少增加 1 MB。  
+4.  若要增加现有文件的大小，请增加文件的****“初始大小 (MB)”列中的值。 数据库的大小必须至少增加 1 MB。  
   
 5.  若要通过添加新文件增加数据库大小，请单击 **“添加”** ，然后输入新文件的值。 有关详细信息，请参阅 [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85726459"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例可增加文件 `test1dat3`的大小。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例可增加文件 `test1dat3`的大小。  
   
  [!code-sql[DatabaseDDL#AlterDatabase5](../../relational-databases/databases/codesnippet/tsql/increase-the-size-of-a-d_1.sql)]  
   

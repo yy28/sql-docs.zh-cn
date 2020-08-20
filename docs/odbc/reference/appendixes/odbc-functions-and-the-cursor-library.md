@@ -1,4 +1,5 @@
 ---
+description: ODBC 函数和游标库
 title: ODBC 函数和游标库 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aa156a1fe4a6ebecb33b0c0401ae116226a80e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466122"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函数和游标库
 > [!IMPORTANT]  
@@ -33,9 +34,9 @@ ms.locfileid: "81304338"
   
 -   [SQLBindParameter（游标库）](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
--   [SQLBulkOperations （游标库）](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
+-   [SQLBulkOperations (游标库) ](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
--   [SQLCloseCursor （游标库）](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
+-   [SQLCloseCursor (游标库) ](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
 -   [SQLEndTran（游标库）](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
@@ -67,7 +68,7 @@ ms.locfileid: "81304338"
   
 -   [SQLSetDescField 和 SQLSetDescRec（游标库）](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
--   [SQLSetEnvAttr （游标库）](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
+-   [SQLSetEnvAttr (游标库) ](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
 -   [SQLSetPos（游标库）](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   

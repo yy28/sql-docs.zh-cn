@@ -1,4 +1,5 @@
 ---
+description: 使用全文搜索查询
 title: 使用全文搜索查询 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,26 +18,26 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abc6f54441e4cf4baaaede6cf9e4766daac607a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464977"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-结合 SELECT 语句使用谓词 CONTAINS 和 FREETEXT 以及行集值函数 CONTAINSTABLE 和 FREETEXTTABLE 编写全文查询      。 本文提供每个谓词和函数的示例，并帮助用户选择要使用的最佳谓词和函数。
+结合 SELECT 语句使用谓词 CONTAINS 和 FREETEXT 以及行集值函数 CONTAINSTABLE 和 FREETEXTTABLE 编写全文查询********************。 本文提供每个谓词和函数的示例，并帮助用户选择要使用的最佳谓词和函数。
 
--   要匹配单词和短语，可使用 CONTAINS 和 CONTAINSTABLE   。
--   要匹配含义，但不匹配确切的措辞，可使用 FREETEXT 和 FREETEXTTABLE   。
+-   要匹配单词和短语，可使用 CONTAINS 和 CONTAINSTABLE********。
+-   要匹配含义，但不匹配确切的措辞，可使用 FREETEXT 和 FREETEXTTABLE********。
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a>每个谓词和函数的示例
 
 以下示例使用 AdventureWorks 示例数据库。 有关 AdventureWorks 的最终版本，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。 要运行示例查询，还需要设置全文搜索。 有关详细信息，请参阅[全文搜索入门](get-started-with-full-text-search.md)。 
 
 ### <a name="example---contains"></a>示例 - CONTAINS  
-下面的示例查找包含 `$80.99` 一词且价格为 `"Mountain"` 的所有产品：
+下面的示例查找包含 `"Mountain"` 一词且价格为 `$80.99` 的所有产品：
   
 ```sql
 USE AdventureWorks2012  
@@ -63,7 +64,7 @@ GO
 ```
 
 ### <a name="example---containstable"></a>示例 - CONTAINSTABLE  
- 对于在词“light”或“lightweight”附近包含词“aluminum”的“Description”  列，以下示例返回其所有产品的说明 ID 和说明。 仅返回排名为 2 或更高的行。  
+ 对于在词“light”或“lightweight”附近包含词“aluminum”的“Description”**** 列，以下示例返回其所有产品的说明 ID 和说明。 仅返回排名为 2 或更高的行。  
   
 ```sql
 USE AdventureWorks2012  
@@ -85,7 +86,7 @@ GO
 ```  
   
 ### <a name="example---freetexttable"></a>示例 - FREETEXTTABLE  
- 以下示例扩展了 FREETEXTTABLE 查询，以便首先返回排名最高的行，然后将每一行的排名添加到选择列表中。 要编写类似查询，必须知道 ProductDescriptionID 是 ProductDescription 表的唯一键列   。  
+ 以下示例扩展了 FREETEXTTABLE 查询，以便首先返回排名最高的行，然后将每一行的排名添加到选择列表中。 要编写类似查询，必须知道 ProductDescriptionID 是 ProductDescription 表的唯一键列********。  
   
 ```sql 
 USE AdventureWorks2012  
@@ -132,7 +133,7 @@ GO
 
 ### <a name="freetextfreetexttable"></a>FREETEXT/FREETEXTTABLE
 
--   匹配指定单词、短语或句子（Freetext 字符串  ）的含义，但无法匹配确切的措辞。
+-   匹配指定单词、短语或句子（Freetext 字符串**）的含义，但无法匹配确切的措辞。
 -   只要在指定列的全文索引中找到任何搜索词或任何搜索词的任何形式，就会生成匹配项。
 
 ## <a name="compare-predicates-and-functions"></a>比较谓词和函数
@@ -141,7 +142,7 @@ GO
 
 ### <a name="predicates-contains-and-freetext"></a>谓词 CONTAINS 和 FREETEXT
 
-**用法**。 在 SELECT 语句的 WHERE 或 HAVING 子句中使用全文**谓词** CONTAINS 和 FREETEXT。
+**使用情况**。 在 SELECT 语句的 WHERE 或 HAVING 子句中使用全文**谓词** CONTAINS 和 FREETEXT。
 
 **结果**。 CONTAINS 和 FREETEXT 谓词返回 TRUE 或 FALSE 值，指示给定的行是否与全文查询匹配。 匹配的行在结果集中返回。
 
@@ -157,25 +158,25 @@ GO
 
 ### <a name="rowset-valued-functions-containstable-and-freetexttable"></a>行集值函数 CONTAINSTABLE 和 FREETEXTTABLE
 
-**用法**。 在 SELECT 语句的 FROM 子句中使用全文**函数** CONTAINSTABLE 和 FREETEXTTABLE，就像使用普通的表名一样。
+**使用情况**。 在 SELECT 语句的 FROM 子句中使用全文**函数** CONTAINSTABLE 和 FREETEXTTABLE，就像使用普通的表名一样。
 
 使用其中的任一函数时，必须指定要搜索的基表。 与谓词一样，可以指定搜索表中的单个列、一组列或所有列；此外，还可以指定给定的全文查询使用的资源的语言。
 
-通常，必须将 CONTAINSTABLE 或 FREETEXTTABLE 的结果与基表联接。 要联接该表，必须知道唯一键列名。 该列出现在每个启用全文的表中，用于强制表的唯一行（“唯一键列”  ）。 有关键列的详细信息，请参阅[创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。
+通常，必须将 CONTAINSTABLE 或 FREETEXTTABLE 的结果与基表联接。 要联接该表，必须知道唯一键列名。 该列出现在每个启用全文的表中，用于强制表的唯一行（“唯一键列”**）。 有关键列的详细信息，请参阅[创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。
 
 **结果**。 这些函数返回与全文查询匹配的、包含零行、一行或多行的表。 返回的表只包含与该函数的全文搜索条件中指定的选择条件相匹配的基表的行。
 
 使用这些函数之一的查询还针对返回的每个行返回相关性排名值 (RANK) 和全文键 (KEY)，如下所示：
 
 -   **KEY** 列 KEY 列返回所返回行的唯一值。 可使用 KEY 列指定选择条件。
--   **RANK** 列 RANK 列返回每一行的排名值  ，此值指示该行与选择条件相匹配的程度。 行中文本或文档的排名值越高，该行与给定的全文查询的相关性就越高。 不同行的排名可以相同。 可以通过指定可选的 top_n_by_rank  参数限制返回的匹配项的数目。 有关详细信息，请参阅 [使用 RANK 限制搜索结果](../../relational-databases/search/limit-search-results-with-rank.md)。
+-   **RANK** 列 RANK 列返回每一行的排名值 ** ，此值指示该行与选择条件相匹配的程度。 行中文本或文档的排名值越高，该行与给定的全文查询的相关性就越高。 不同行的排名可以相同。 可以通过指定可选的 top_n_by_rank** 参数限制返回的匹配项的数目。 有关详细信息，请参阅 [使用 RANK 限制搜索结果](../../relational-databases/search/limit-search-results-with-rank.md)。
 
 **详细信息**。 有关这些函数的语法和参数的详细信息，请参阅 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。
 
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a>特定搜索类型
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>搜索特定的单词或短语（简单词）  
- 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定单词或短语。 例如，如果要在  **数据库的“ProductReview”** [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
+ 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定单词或短语。 例如，如果要在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的“ProductReview”**** 表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
   
 ```sql
 USE AdventureWorks2012  
@@ -227,7 +228,7 @@ GO
 ###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>搜索特定单词的变形（派生词）  
 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 搜索动词的所有不同时态和语态形式或搜索名词的单数和复数形式（变形搜索）或者搜索特定词的同义词形式（同义词库搜索）。  
   
-以下示例在 `Comments` 数据库的 `ProductReview` 表的 `AdventureWorks` 列搜索“foot”的任意变形（“foot”、“feet”等）： 
+以下示例在 `AdventureWorks` 数据库的 `ProductReview` 表的 `Comments` 列搜索“foot”的任意变形（“foot”、“feet”等）： 
   
 ```sql  
 USE AdventureWorks2012  
@@ -259,7 +260,7 @@ GO
 
 ### <a name="search-for-a-word-near-another-word"></a>搜索与另一个词相邻的词
 
-邻近词  表示词或短语彼此相邻。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以以任意顺序或您指定的顺序搜索词或短语。
+邻近词** 表示词或短语彼此相邻。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以以任意顺序或您指定的顺序搜索词或短语。
 
 例如，查找词“ice”与“hockey”邻近或短语“ice skating”与“ice hockey”邻近的行。 
 
@@ -291,7 +292,7 @@ GO
 
 #### <a name="more-info-about-weighted-term-searches"></a>有关加权词搜索的详细信息
 
-在加权词搜索中，加权值  指示一组单词和短语中的每个单词和短语的重要程度。 加权值的最低值是 0.0，最高值是 1.0。
+在加权词搜索中，加权值** 指示一组单词和短语中的每个单词和短语的重要程度。 加权值的最低值是 0.0，最高值是 1.0。
 
 例如，在某个搜索多个词条的查询中，可以为每个搜索单词指定一个加权值，用于指示它相对于搜索条件中其他单词的重要性。 此查询类型的结果将按指定给搜索单词的相对权重首先返回最相关的行。 结果集由包含任何指定词（或它们之间的内容）的文档或行组成；但是，由于与不同搜索词关联的加权值的不同，某些结果将被视为比其他结果更相关。
 
@@ -333,7 +334,7 @@ GO
   
 ##  <a name="check-the-tokenization-results"></a><a name="tokens"></a>检查词汇切分结果
 
-在查询中应用给定的断字符、同义词库和非索引字表组合后，可以使用 sys.dm_fts_parser 动态管理视图查看全文搜索如何切分结果  。 有关详细信息，请参阅[sys.dm_fts_parser (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)。  
+在查询中应用给定的断字符、同义词库和非索引字表组合后，可以使用 sys.dm_fts_parser 动态管理视图查看全文搜索如何切分结果****。 有关详细信息，请参阅[sys.dm_fts_parser (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   

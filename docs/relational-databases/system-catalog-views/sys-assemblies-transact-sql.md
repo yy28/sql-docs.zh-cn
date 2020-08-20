@@ -1,5 +1,6 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+description: sys.assemblies (Transact-SQL)
+title: sys.databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: e321753f-293f-42ab-b225-d118713df40b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5b430767a7ded990b440c3f22b68c2bfab2573a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2e239ea7b5f91261fb58577071d42ec52957979a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464859"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,13 +44,13 @@ ms.locfileid: "87394828"
 |**is_visible**|**bit**|1 = 程序集对于注册表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 入口点可见。<br /><br /> 0 = 程序集只用于受管调用方。 即，程序集提供数据库中其他程序集的内部实现。|  
 |create_date|**datetime**|程序集创建或注册的日期。|  
 |modify_date|**datetime**|程序集修改的日期。|  
-|**is_user_defined**|**bit**|指示程序集的源。<br /><br /> 0 = 用于**hierarchyid**数据类型的系统定义的程序集（例如，类型为<br /><br /> 1 = 用户定义的程序集|  
+|**is_user_defined**|**bit**|指示程序集的源。<br /><br /> 0 = **hierarchyid** 数据类型的系统定义的程序集 (如) <br /><br /> 1 = 用户定义的程序集|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的 CLR 程序集目录视图](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的 CLR 程序集目录视图 ](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ASSEMBLYPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   

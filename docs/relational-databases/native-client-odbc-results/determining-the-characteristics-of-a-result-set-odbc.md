@@ -1,5 +1,6 @@
 ---
-title: 结果集的特征（ODBC）
+description: 确定结果集的特征 (ODBC)
+title: " (ODBC) 的结果集的特征"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +20,12 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec78b6708feae1b8eea6394705516577772026ae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81554f5b82a37ab2c1597234e434ae396cc4c129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465307"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>确定结果集的特征 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,17 +42,17 @@ ms.locfileid: "86002873"
   
  若要确定结果集的特征，应用程序可以调用：  
   
--   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)确定请求返回的列数。  
+-   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) 确定请求返回的列数。  
   
 -   用于描述结果集中的列的[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)或[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 。  
   
- 设计得很好的应用程序在编写时会假定结果集是未知的，并使用这些函数返回的信息来绑定结果集中的列。 在准备或执行语句之后，应用程序可以在任何时候调用这些函数。 但是，为了获得最佳性能，应用程序应在执行语句后调用**SQLColAttribute**、 **SQLDescribeCol**和**SQLNumResultCols** 。  
+ 设计得很好的应用程序在编写时会假定结果集是未知的，并使用这些函数返回的信息来绑定结果集中的列。 在准备或执行语句之后，应用程序可以在任何时候调用这些函数。 但是，为了获得最佳性能，应用程序应在执行语句后调用 **SQLColAttribute**、 **SQLDescribeCol**和 **SQLNumResultCols** 。  
   
  可以对元数据进行多个并发调用。 ODBC 驱动程序可以在使用静态服务器游标时调用作为 ODBC 目录 API 实现基础的系统目录过程。 这使得应用程序可以同时处理对 ODBC 目录函数的多个调用。  
   
  如果某个应用程序多次使用一组特定的元数据，则该应用程序很有可能得益于以下操作：首次获得专用变量中的信息时就进行信息缓存。 这样可以防止以后为获取相同信息而调用 ODBC 目录函数，这种调用会强制驱动程序执行到服务器的往返操作。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;处理结果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [&#40;ODBC&#41;处理结果 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

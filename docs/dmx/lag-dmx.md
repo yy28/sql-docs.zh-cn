@@ -1,5 +1,6 @@
 ---
-title: Lag （DMX） |Microsoft Docs
+description: Lag (DMX)
+title: DMX)  (Lag |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4e7aa504c3afd236ddd748a7ee81cbbb6cf90b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466557"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ Lag()
  整型类型的标量值。  
   
 ## <a name="remarks"></a>备注  
- 如果对键 TIME 列位于嵌套表中的模型使用**Lag**函数，则该函数必须位于语句的子选择中。  
+ 如果对键 TIME 列位于嵌套表中的模型使用 **Lag** 函数，则该函数必须位于语句的子选择中。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回在过去12个月内用于为模型定型的事例。  
@@ -44,6 +45,6 @@ WHERE Lag() < 12
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)  
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

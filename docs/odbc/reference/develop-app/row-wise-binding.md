@@ -1,4 +1,5 @@
 ---
+description: 按行绑定
 title: 按行绑定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30d2426a8fb2a2bd0f0cb89c2de5bc326b67dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465617"
 ---
 # <a name="row-wise-binding"></a>按行绑定
 使用按行绑定时，应用程序将定义一个结构，该结构包含一个或两个，或在某些情况下为要为其返回数据的每个列的元素。 第一个元素保存数据值，第二个元素保存长度/指示器缓冲区。 可以通过将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值，将指示器和长度值存储在单独的缓冲区中;如果完成此操作，该结构包含第三个元素。 然后，应用程序分配这些结构的数组，其中包含的元素数量与行集中的行数相同。  
@@ -30,7 +31,7 @@ ms.locfileid: "81304268"
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- 其中，行从1到行集的大小进行编号。 （从行号中减去1，因为 C 中的数组索引从零开始。）下图显示了按行绑定的工作方式。 通常，结构中只包含将绑定的列。 结构可以包含与结果集列无关的字段。 列可以按任何顺序放置在结构中，但会按顺序显示，以便清楚地显示。  
+ 其中，行从1到行集的大小进行编号。 由于 C 中的数组索引从零开始，因此 (从行号中减去一个。 ) 下图显示了按行绑定的工作方式。 通常，结构中只包含将绑定的列。 结构可以包含与结果集列无关的字段。 列可以按任何顺序放置在结构中，但会按顺序显示，以便清楚地显示。  
   
  ![显示行&#45;明智绑定](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   

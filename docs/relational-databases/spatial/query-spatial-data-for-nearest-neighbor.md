@@ -1,4 +1,5 @@
 ---
+description: 为 Nearest Neighbor 查询空间数据
 title: 查询最近的邻域的空间数据 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e53b816b25c991e7dafb891a0006b256979cb298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464911"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +72,7 @@ SELECT TOP ( number )
 7.  必须筛选掉 `STDistance` 返回 **NULL** 的所有行。  
   
 > [!WARNING]  
->  将 **geography** 或 **geometry** 数据类型作为参数的方法将返回 **NULL** ，前提是 SRID 对于这些数据类型不同。  
+>   将 **geography** 或 **geometry** 数据类型作为参数的方法将返回 **NULL** ，前提是 SRID 对于这些数据类型不同。  
   
  建议将新的空间索引分割用于在 Nearest Neighbor 查询中使用的索引。 有关空间索引分割的详细信息，请参阅 [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   

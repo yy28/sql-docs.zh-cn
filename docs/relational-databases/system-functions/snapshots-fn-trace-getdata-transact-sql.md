@@ -1,5 +1,6 @@
 ---
-title: fn_trace_getdata （Transact-sql） |Microsoft Docs
+description: snapshots.fn_trace_getdata (Transact-SQL)
+title: fn_trace_getdata (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96120924b3362ec14df84d5043f7b7741a0f2b8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f022a27c8a8e47cd12994d0d03ddb5af9a2f920c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464770"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 ## <a name="arguments"></a>参数  
  *trace_info_id*  
- 快照中主键的唯一标识符。管理数据仓库数据库中的 trace_info 表。 *trace_info_id*是**int**。  
+ 快照中主键的唯一标识符。管理数据仓库数据库中的 trace_info 表。 *trace_info_id* 是 **int**。  
   
  *start_time*  
- 跟踪的开始时间。 *start_time*为**日期时间**。  
+ 跟踪的开始时间。 *start_time* 为 **日期时间**。  
   
  *end_time*  
- 跟踪的结束时间。 *end_time*为**日期时间**。  
+ 跟踪的结束时间。 *end_time* 为 **日期时间**。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -57,6 +58,6 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
  要求拥有 mdw_reader 的 SELECT 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sys. allocation_units （Transact-sql） |Microsoft Docs
+description: sys.allocation_units (Transact-SQL)
+title: sys. allocation_units (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58ae604f06e97e07560d55bc8eea103b27002aaa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3d3cfeafa6ef955ba02962b75135a6bd40ac51f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464840"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85652858"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|分配单元的 ID。 在数据库中是唯一的。|  
-|类型|**tinyint**|分配单元的类型：<br /><br /> 0 = 已删除<br /><br /> 1 = 行内数据（所有数据类型，但 LOB 数据类型除外）<br /><br /> 2 = 大型对象（LOB）数据（**text**、 **ntext**、 **image**、 **xml**、大值类型和 CLR 用户定义类型）<br /><br /> 3 = 行溢出数据|  
+|type|**tinyint**|分配单元的类型：<br /><br /> 0 = 已删除<br /><br /> 1 = 行内数据（所有数据类型，但 LOB 数据类型除外）<br /><br /> 2 = (LOB) 数据 (**text**、 **ntext**、 **image**、 **xml**、大值类型和 CLR 用户定义类型的大型对象) <br /><br /> 3 = 行溢出数据|  
 |type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> **删除**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|与分配单元关联的存储容器的 ID。<br /><br /> 如果 type = 1 或 3，则 container_id = sys.partitions.hobt_id。<br /><br /> 如果 type 为 2，则 container_id = sys.partitions.partition_id。<br /><br /> 0 = 标记为要延迟删除的分配单元|  
 |data_space_id|**int**|此分配单元所在文件组的 ID。|  
@@ -51,7 +52,7 @@ ms.locfileid: "85652858"
   
 ## <a name="see-also"></a>另请参阅  
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

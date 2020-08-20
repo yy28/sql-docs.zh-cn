@@ -1,4 +1,5 @@
 ---
+description: 一元运算符
 title: 一元运算符 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32f5084190642bd4237d225404c92f0c4754da7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466469"
 ---
 # <a name="unary-operators"></a>一元运算符
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893557"
   
  MDX 支持下表中列出的一维运算符。  
   
-|运算符|说明|  
+|操作员|描述|  
 |--------------|-----------------|  
 |[-（负）](../mdx/negative-mdx.md)|返回数值表达式的负值。|  
 |[+（正）](../mdx/positive-mdx.md)|返回数值表达式的正值。|  
@@ -40,7 +41,7 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- 此外，MDX 使用特殊一元运算符来确定由[RollupChildren](../mdx/rollupchildren-mdx.md)函数执行的聚合操作。 有关这些特殊一元运算符的详细信息，请参阅[向维度中添加自定义聚合](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)。  
+ 此外，MDX 使用特殊一元运算符来确定由 [RollupChildren](../mdx/rollupchildren-mdx.md) 函数执行的聚合操作。 有关这些特殊一元运算符的详细信息，请参阅 [向维度中添加自定义聚合](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)。  
   
 ## <a name="see-also"></a>另请参阅  
  [运算符 &#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  

@@ -1,4 +1,5 @@
 ---
+description: 使用 DQS 拼写检查器
 title: 使用 DQS 拼写检查器
 ms.date: 11/08/2011
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ca84d1706641c15d7043e96ead0013fef3ed606a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da3a38baa2038f923df5365b4eacb0bc60dcea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466620"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
 
@@ -40,7 +41,7 @@ ms.locfileid: "85883291"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能运行拼写检查器。  
   
-##  <a name="enable-the-speller"></a><a name="Enable"></a>启用拼写检查器  
+##  <a name="enable-the-speller"></a><a name="Enable"></a> 启用拼写检查器  
   
 1.  若要在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中启用拼写检查器，请在 **“域管理”** 活动中打开知识库，选择所需域，然后在 **“域属性”** 页上单击 **“启用拼写检查器”** 。 在 **“语言”** 中，选择要用于拼写检查器的语言。  
   

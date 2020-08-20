@@ -1,5 +1,6 @@
 ---
-title: semantickeyphrasetable （Transact-sql） |Microsoft Docs
+description: semantickeyphrasetable (Transact-SQL)
+title: semantickeyphrasetable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464781"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  **table**  
  启用全文和语义索引的表的名称。  
   
@@ -53,7 +54,7 @@ SEMANTICKEYPHRASETABLE
  **column**  
  应为其返回结果的索引列的名称。 列必须启用语义索引。  
   
- column_list   
+ column_list  
  指示由逗号分隔并括在括号中的多个列。 所有列都必须启用语义索引。  
   
  **\***  
@@ -75,9 +76,9 @@ SEMANTICKEYPHRASETABLE
 |**分值**|**实际上**|一个相对值，用来表示此关键短语与索引列中同一文档的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
- 有关详细信息，请参阅[在具有语义搜索的文档中查找关键短语](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  
+ 有关详细信息，请参阅 [在具有语义搜索的文档中查找关键短语](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  
   
-## <a name="metadata"></a>元数据  
+## <a name="metadata"></a>Metadata  
  有关语义关键短语的提取和填充的信息和状态，请查询以下动态管理视图：  
   
 -   [sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
@@ -91,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>示例  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>示例1：查找特定文档中的前几个关键短语  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> 示例1：查找特定文档中的前几个关键短语  
  以下示例从通过 @DocumentId 变量指定的文档中检索前 10 个关键短语，该变量位于 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中。 @DocumentId 变量表示全文检索的键列的一个值。 **SEMANTICKEYPHRASETABLE** 函数使用索引查找替代表扫描高效检索这些结果。 此示例假定列已配置为进行全文和语义索引。  
   
 ```sql  
@@ -106,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>示例2：查找包含特定关键短语的顶级文档  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> 示例2：查找包含特定关键短语的顶级文档  
  以下示例从 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中检索包含关键短语“Bracket”的前 25 个文档。 此示例假定列已配置为进行全文和语义索引。  
   
 ```sql  

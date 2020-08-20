@@ -1,4 +1,5 @@
 ---
+description: 函数一致性
 title: 函数一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ff61c62b18f531eaad7cc822f99c7065fcba129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465789"
 ---
 # <a name="function-conformance"></a>函数一致性
 下表指明了每个 ODBC 函数的一致性级别，其中定义正确。  
@@ -90,4 +91,4 @@ ms.locfileid: "81305588"
   
  [1] 此函数的重要功能只能在更高的一致性级别上使用。  
   
- [2] 将某些属性设置为非默认值取决于一致性级别。 有关详细信息，请参阅下一节 "[属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)"。
+ [2] 将某些属性设置为非默认值取决于一致性级别。 有关详细信息，请参阅下一节 " [属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)"。

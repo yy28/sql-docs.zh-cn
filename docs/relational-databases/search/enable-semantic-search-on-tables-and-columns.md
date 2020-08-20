@@ -1,4 +1,5 @@
 ---
+description: 对表和列启用语义搜索
 title: 对表和列启用语义搜索 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465003"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +116,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建新的语义索引  
- 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列” **** 页为每个要创建语义索引的列启用“统计语义”**** 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -144,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 添加语义索引  
- 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”**** 对话框的“全文索引列”**** 页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
 ## <a name="alter-a-semantic-index"></a>更改语义索引
   
@@ -158,7 +159,7 @@ GO
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
-要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句********__****。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
 ```sql  
 USE database_name  
@@ -170,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句。  
+要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句********__****。  
   
 ```sql  
 USE database_name  
@@ -183,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除语义索引  
- 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”**** 对话框的“全文索引列”**** 页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> 删除语义索引的要求和限制  
   
@@ -236,7 +237,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”  。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”****。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   
@@ -274,7 +275,7 @@ GO
   
  如果您要为其编制索引的文档类型不在所支持类型的列表中，则可能必须查找、下载和安装其他筛选器。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> 最佳实践：考虑为全文索引和语义索引创建单独的文件组  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> 最佳做法：考虑为全文索引和语义索引创建单独的文件组  
  如果磁盘空间分配成问题，请考虑为全文索引和语义索引创建单独的文件组。 在全文索引所在的文件组中创建语义索引。 完全填充的语义索引可能包含大量数据。  
  
 ##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> 问题：搜索特定列时未返回结果  

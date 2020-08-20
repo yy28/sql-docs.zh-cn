@@ -1,4 +1,5 @@
 ---
+description: 编程注意事项
 title: 编程注意事项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 497869e26ac9bcc3267d620e2c67b4b1aaee991c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465689"
 ---
-# <a name="programming-considerations"></a>编程时的注意事项
+# <a name="programming-considerations"></a>编程注意事项
 本部分简要介绍了一些与编写 ODBC 应用程序和驱动程序相关的主题。  
   
  本部分包含以下主题。  
   
 -   [多线程处理](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [关联](../../../odbc/reference/develop-app/alignment.md)  
+-   [对齐方式](../../../odbc/reference/develop-app/alignment.md)  
   
 -   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   

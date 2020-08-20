@@ -1,4 +1,5 @@
 ---
+description: DQS 中的 Reference Data Services
 title: DQS 中的 Reference Data Services
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ecae6543a0a83084bbabb141339464d56b36c753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466712"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -32,12 +33,12 @@ ms.locfileid: "85883363"
   
 -   支持使用来自 Azure Marketplace 的引用数据，以及直接来自第三方引用数据提供程序的引用数据。  
   
-##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>使用 Azure Marketplace 中的引用数据  
- DQS 支持使用来自 Azure Marketplace 的引用数据，使内容提供程序能够通过 Marketplace 提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关 Marketplace 的详细信息，请参阅[了解 Microsoft Azure 市场](https://azuremarketplace.microsoft.com/about)（ https://azuremarketplace.microsoft.com/about) 。
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a> 使用 Azure Marketplace 中的引用数据  
+ DQS 支持使用来自 Azure Marketplace 的引用数据，使内容提供程序能够通过 Marketplace 提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关 Marketplace 的详细信息，请参阅 [了解 Microsoft Azure 市场](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about) 。
   
  市场和 DQS 之间的无缝集成简化了与从 DQS 中发现、浏览和获取数据质量项目的信息相关的步骤。 从 DQS 中使用数据，并通过使用一种创新方法将 DQS、市场和引用数据服务提供程序结合起来，帮助 DQS 用户获得高数据质量。  
   
- 若要在 DQS 中使用来自市场的引用数据执行清理活动，必须具有市场帐户密钥。 创建市场帐户密钥是免费的，仅当您订阅付费数据集时才需要付费。 订阅和使用免费数据集都不需要付费。 有关创建 Marketplace 帐户密钥的详细信息，请参阅[创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936)（ https://go.microsoft.com/fwlink/?LinkId=212936) 。  
+ 若要在 DQS 中使用来自市场的引用数据执行清理活动，必须具有市场帐户密钥。 创建市场帐户密钥是免费的，仅当您订阅付费数据集时才需要付费。 订阅和使用免费数据集都不需要付费。 有关创建 Marketplace 帐户密钥的详细信息，请参阅 [创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) 。  
   
  此外，还可以从 DQS 中执行以下市场活动：  
   
@@ -57,7 +58,7 @@ ms.locfileid: "85883363"
   
 1.  **在 DQS 中配置引用数据提供程序详细信息**：您必须在 DQS 中配置引用数据服务详细信息，才能在 DQS 中使用引用数据。  
   
-    1.  如果你使用的是 Marketplace，请提供有效的 Marketplace 帐户密钥，浏览到 Marketplace 中的[数据服务](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services)数据类别，并订阅所需的提供程序。  
+    1.  如果你使用的是 Marketplace，请提供有效的 Marketplace 帐户密钥，浏览到 Marketplace 中的 [数据服务](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) 数据类别，并订阅所需的提供程序。  
   
     2.  如果您正在使用直接联机引用数据提供程序，则在使用之前，必须在 DQS 中添加直接引用数据提供程序详细信息。  
   

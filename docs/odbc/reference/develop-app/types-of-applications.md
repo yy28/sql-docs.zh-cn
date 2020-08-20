@@ -1,4 +1,5 @@
 ---
+description: 应用程序类型
 title: 应用程序的类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f14326c9cec1eb89e431154c91b680e4688fcdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54056a6111924fb584ac35a65d6f74e8dab1ba6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465547"
 ---
 # <a name="types-of-applications"></a>应用程序类型
 ODBC 应用程序可以按如下方式分类：  
@@ -29,27 +30,27 @@ ODBC 应用程序可以按如下方式分类：
 -   **纯 ODBC 2。**  
      ** _x_应用程序**A 32 位应用程序：  
   
-    -   仅调用 ODBC 2。*x*函数（包括 ODBC 1.0 函数**SQLSetParam**）。 其中包括 ODBC 1。*x*已移植到32位的应用程序。  
+    -   仅调用 ODBC 2。*x* 函数 (包括 ODBC 1.0 函数 **SQLSetParam**) 。 其中包括 ODBC 1。*x* 已移植到32位的应用程序。  
   
-    -   应为 ODBC 2。*x*行为更改的功能。 （有关详细信息，请参阅[行为更改](../../../odbc/reference/develop-app/behavioral-changes.md)。）  
+    -   应为 ODBC 2。*x* 行为更改的功能。 有关详细信息，请参阅 [行为更改](../../../odbc/reference/develop-app/behavioral-changes.md) (。 )   
   
     -   尚未重新编译 ODBC 3.5 标头。  
   
 -   **纯 ODBC 2。**  
-     **_x_重新编译**了纯 ODBC 2 的应用程序。已使用 ODBC 3.5 头文件重新编译的*x*应用程序，设置 ODBCVER = 0x0250。  
+     **_x_ 重新编译** 了纯 ODBC 2 的应用程序。已使用 ODBC 3.5 头文件重新编译的*x* 应用程序，设置 ODBCVER = 0x0250。  
   
 -   **纯 ODBC 2。**  
-     **_x_ Unicode 应用程序**是纯 ODBC 2。*x*重新编译了 Unicode 兼容的应用程序，并使用 SQL_WCHAR 数据类型。  
+     **_x_ Unicode 应用程序** 是纯 ODBC 2。*x* 重新编译了 Unicode 兼容的应用程序，并使用 SQL_WCHAR 数据类型。  
   
--   **纯开放式组和符合 ISO**-的**ODBC 应用程序**A 32 位应用程序：  
+-   **纯开放组和 ISO** -**兼容的 ODBC 应用程序**32位应用程序：  
   
-    -   调用在开放组或 ISO CLI 标准中定义的函数。 （这些函数可能包括弃用的3.0 函数。）  
+    -   调用在开放组或 ISO CLI 标准中定义的函数。  (这些函数可能包括弃用的3.0 函数。 )   
   
     -   不使用 Unicode 数据类型。  
   
     -   对于具有行为更改的功能，应使用 ODBC 3.0 行为。  
   
--   **纯 ODBC 3.0 应用程序**32位应用程序：  
+-   **纯 ODBC 3.0 应用程序** 32位应用程序：  
   
     -   已编译为3.0 标头。  
   
@@ -57,7 +58,7 @@ ODBC 应用程序可以按如下方式分类：
   
     -   对于具有行为更改的功能，应使用 ODBC 3.0 行为。  
   
--   **纯 ODBC 3.5 应用程序**32或64位应用程序：  
+-   **纯 ODBC 3.5 应用程序** 32或64位应用程序：  
   
     -   可以使用 Unicode 数据类型。  
   
@@ -65,7 +66,7 @@ ODBC 应用程序可以按如下方式分类：
   
     -   对于具有行为更改的功能，应使用 ODBC 3.5 行为。  
   
--   **纯 ODBC 3.8 （或更高版本）应用程序**32位或64位应用程序：  
+-   **纯 ODBC 3.8 (或更高版本) 应用程序** 32位或64位应用程序：  
   
     -   可以使用 Unicode 数据类型。  
   
@@ -73,7 +74,7 @@ ODBC 应用程序可以按如下方式分类：
   
     -   对于具有行为更改的功能，应使用 ODBC 3.8 行为。  
   
--   **已替换应用程序**32或64位应用程序：  
+-   **已替换应用程序** 32或64位应用程序：  
   
     -   实现重复功能的新行为。  
   

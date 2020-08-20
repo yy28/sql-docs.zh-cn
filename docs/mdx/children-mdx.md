@@ -1,5 +1,6 @@
 ---
-title: 子级（MDX） |Microsoft Docs
+description: Children (MDX)
+title: 子 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a37bc27564baf9d75e10af78fb477ea08be092e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466509"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -42,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例返回列轴上的**度量值**维度中的所有成员，其中包括所有计算成员，以及来自**艾德公司**的行轴`[Product].[Model Name]`上属性层次结构的所有子级集。  
+ 下面的示例返回列轴上的 **度量值** 维度中的所有成员，其中包括所有计算成员，以及 `[Product].[Model Name]` 来自 **艾德公司** 的行轴上属性层次结构的所有子级集。  
   
 ```  
 SELECT  
@@ -53,7 +54,7 @@ FROM
   
 ```  
   
-|Release|历史记录|  
+|发布|历史记录|  
 |-------------|-------------|  
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**更改的内容：**<br /> -更新了语法和参数以提高清晰度。<br /><br /> -添加了更新的示例。|  
   

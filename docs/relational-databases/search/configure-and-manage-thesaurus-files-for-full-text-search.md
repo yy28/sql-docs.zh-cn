@@ -1,4 +1,5 @@
 ---
+description: 为全文搜索配置和管理同义词库文件
 title: 为全文搜索配置和管理同义词库文件
 ms.date: 07/01/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465053"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索查询可以通过使用全文搜索*同义词库*来搜索用户指定的字词的同义词。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文搜索查询可以使用全文搜索同义词库来搜索用户指定字词的同义词**。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
 
 仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 `FORMSOF THESAURUS` 子句的任意 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询执行同义词库匹配操作。
   
@@ -156,7 +157,7 @@ ms.locfileid: "85897993"
 </replacement>  
 ```  
   
-and  
+以及  
   
 ```xml  
 <replacement>  

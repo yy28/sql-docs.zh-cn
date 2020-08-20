@@ -1,4 +1,5 @@
 ---
+description: 数据库邮件外部程序
 title: 数据库邮件外部程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4821091d350abd3396d524aa7ea3a1b4dd131318
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8d609ec57f47cf3df061f286bd663c0a8431047
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465449"
 ---
 # <a name="database-mail-external-program"></a>数据库邮件外部程序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85726532"
 ##  <a name="database-mail-external-program-concepts"></a><a name="ComponentsAndConcepts"></a> 数据库邮件外部程序概念  
  该外部程序启动后，使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并开始处理电子邮件。 如果达到指定的超时期限时没有邮件要发送，该程序将退出。 可以使用数据库邮件配置向导或数据库邮件存储过程配置该程序退出前等待的时间。 有关详细信息，请参阅 [sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)的服务帐户的安全上下文中运行。  
   
- 外部程序将信息存储在 **msdb** 数据库的系统表中。 如果该外部程序无法与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信，就将错误记录在 Microsoft Windows 应用程序事件日志中。 如果在 **数据库邮件配置向导** 的 **“配置系统参数”** 对话框中将日志记录级别设置为 **“详细”** ，则还会记录其他消息。  
+ 外部程序将信息存储在 **msdb** 数据库的系统表中。 如果该外部程序无法与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信，就将错误记录在 Microsoft Windows 应用程序事件日志中。 如果在 **数据库邮件配置向导** 的 **“配置系统参数”** 对话框中将日志记录级别设置为 **“详细”**，则还会记录其他消息。  
   
  请注意，为了提高效率，该外部程序会缓存帐户和配置文件信息。 因此，对帐户和配置文件所做的配置更改在几分钟内可能不会反映在该外部程序中。  
   

@@ -1,4 +1,5 @@
 ---
+description: 日志传送事务日志备份设置
 title: 日志传送事务日志备份设置 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a73e046e4013ef4396ddd738fd84e2a932a2da81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4aca0ffc4cf4521123c03b71c7e2e4aae72038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465429"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>日志传送事务日志备份设置
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85642548"
  **作业名称**  
  显示 SQL Server 代理作业的名称，该作业用于为日志传送创建事务日志备份。 首次创建作业时，可以通过在该框中键入内容来修改名称。  
   
- **“计划”**  
+ **计划**  
  显示用来备份主数据库的事务日志的当前计划。 在创建备份作业之前，可以通过单击 **“计划...”** 来修改此计划。在创建备份作业之后，可以通过单击 **“编辑作业...”** 来修改此计划。  
   
 ### <a name="backup-job"></a>备份作业  

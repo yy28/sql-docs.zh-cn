@@ -1,4 +1,5 @@
 ---
+description: DQS 知识库和域
 title: DQS 知识库和域
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466737"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知识库和域
 
@@ -69,7 +70,7 @@ ms.locfileid: "87362483"
   
  不过，您可以在清理结果中控制导出的值的大小写。 为此，需要设置“将输出格式设置为”域属性（请参阅[设置域属性](../data-quality-services/set-domain-properties.md)）或在导出清理结果时使用“标准化输出”复选框（请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)）********。  
   
-##  <a name="domain-management"></a><a name="Domains"></a>域管理  
+##  <a name="domain-management"></a><a name="Domains"></a> 域管理  
  通过域管理，数据专员可以以交互方式更改和增加计算机辅助的知识发现活动生成的元数据。 您所做的每个更改针对某个知识库域。 在域管理活动中，可以执行以下操作：  
   
 -   创建新域。 新域可以链接到现有域或从现有域复制。  
@@ -138,7 +139,7 @@ ms.locfileid: "87362483"
   
  可以在构成复合域的单一域上执行匹配，但是不在复合域本身上执行匹配。  
   
-##  <a name="data-matching"></a><a name="Matching"></a>数据匹配  
+##  <a name="data-matching"></a><a name="Matching"></a> 数据匹配  
  除了通过域管理对知识库进行手动更改外，您还可以将匹配知识添加到知识库。 若要准备将 DQS 用于数据消除重复过程，您必须创建 DQS 将用于计算匹配概率的匹配策略。 该策略包含一个或多个匹配规则，数据专员创建这些规则来标识 DQS 应如何比较数据行。 数据专员确定应比较行中的哪些数据字段，以及在比较中每个字段的权重是多少。 数据专员也确定多高的概率应被视为匹配。 DQS 将匹配规则添加到知识库，以供在数据质量项目中执行匹配活动时使用。  
   
  有关知识库和数据匹配的详细信息，请参阅 [数据匹配](../data-quality-services/data-matching.md)上维护多个知识库。  

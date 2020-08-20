@@ -1,4 +1,5 @@
 ---
+description: 示例 SQLGetTypeInfo 结果集
 title: 示例 SQLGetTypeInfo 结果集 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5cf62f8a95f4c91095c21a6d603317fe1f73500
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2420713e0adb7f0b7c983243b4021ebbe9b141c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466207"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>示例 SQLGetTypeInfo 结果集
-应用程序调用**SQLGetTypeInfo**来确定数据源支持的数据类型以及这些数据类型的特征。 下表显示了**SQLGetTypeInfo**为支持 SQL_CHAR、SQL_LONGVARCHAR、SQL_DECIMAL、SQL_REAL、SQL_DATETIME、SQL_INTERVAL_YEAR 和 SQL_INTERVAL_DAY_TO_SECOND 的数据源返回的示例结果集。  
+应用程序调用 **SQLGetTypeInfo** 来确定数据源支持的数据类型以及这些数据类型的特征。 下表显示了 **SQLGetTypeInfo** 为支持 SQL_CHAR、SQL_LONGVARCHAR、SQL_DECIMAL、SQL_REAL、SQL_DATETIME、SQL_INTERVAL_YEAR 和 SQL_INTERVAL_DAY_TO_SECOND 的数据源返回的示例结果集。  
   
 |TYPE_NAME|DATA_TYPE|COLUMN_SIZE|LITERAL_PREFIX|LITERAL_SUFFIX|CREATE_PARAMS|NULLABLE|  
 |----------------|----------------|------------------|---------------------|---------------------|--------------------|--------------|  
@@ -31,18 +32,18 @@ ms.locfileid: "81307008"
 |式|SQL_DECIMAL|28|\<Null>|\<Null>|precision<br />纵向|SQL_TRUE|  
 |实际上|SQL_REAL|7|\<Null>|\<Null>|\<Null>|SQL_TRUE|  
 |型|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<Null>|SQL_TRUE|  
-|"间隔年份（）到年份"|SQL_INTERVAL_YEAR|9|"'"|"'"|precision|SQL_TRUE|  
-|"INTERVAL DAY （）到分式（5）"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|precision|SQL_TRUE|  
+|"间隔年份 ( # A1 到年份"|SQL_INTERVAL_YEAR|9|"'"|"'"|precision|SQL_TRUE|  
+|"间隔日期 ( # A1 到分数 (5) "|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|precision|SQL_TRUE|  
   
-|DATA_TYPE|CASE_SENSITIVE|SEARCHABLE|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
+|DATA_TYPE|CASE_SENSITIVE|可搜索|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
 |----------------|---------------------|----------------|-------------------------|------------------------|-------------------------|-----------------------|  
 |**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|char|  
 |**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<Null>|SQL_FALSE|\<Null>|"text"|  
 |**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|式|  
 |**SQL_REAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|实际上|  
 |**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|型|  
-|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"间隔年份（）到年份"|  
-|**SQL_INTERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Null>|SQL_FALSE|\<Null>|"INTERVAL DAY （）到分式（5）"|  
+|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"间隔年份 ( # A1 到年份"|  
+|**SQL_INTERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Null>|SQL_FALSE|\<Null>|"间隔日期 ( # A1 到分数 (5) "|  
   
 |DATA_TYPE|MINIMUM_SCALE|MAXIMUM_SCALE|SQL_DATA_TYPE|SQL_DATETIME_SUB|NUM_PREC_RADIX|INTERVAL_PRECISION|  
 |----------------|--------------------|--------------------|---------------------|------------------------|----------------------|-------------------------|  

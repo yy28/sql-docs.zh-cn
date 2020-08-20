@@ -1,4 +1,5 @@
 ---
+description: 日志传送监视器设置
 title: 日志传送监视器设置 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b4ff8d6e7348ece5f09f9ac529c474a302e30be7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 33ff5abf38eef7525dff17587a32529ddddc689b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465435"
 ---
 # <a name="log-shipping-monitor-settings"></a>日志传送监视器设置
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85726440"
  **作业名称**  
  指示 SQL Server 代理警报作业的名称，日志传送使用该作业在超出备份或还原阈值时发出警报。 首次创建此作业时，可以通过在该框中键入内容来更改名称。  
   
- **“计划”**  
+ **计划**  
  指示 SQL Server 代理警报作业的当前计划。  
   
  **编辑**  

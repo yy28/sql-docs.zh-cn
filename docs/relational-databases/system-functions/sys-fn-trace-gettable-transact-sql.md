@@ -1,5 +1,6 @@
 ---
-title: sys. fn_trace_gettable （Transact-sql） |Microsoft Docs
+description: sys.fn_trace_gettable (Transact-SQL)
+title: sys. fn_trace_gettable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85ffb20fb0ead23c8027ab9b4ba45f906fe8c097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464735"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>参数  
  "*filename*"  
- 指定要读取的初始跟踪文件。 *filename*为**nvarchar （256）**，无默认值。  
+ 指定要读取的初始跟踪文件。 *filename* 为 **nvarchar (256) **，无默认值。  
   
  *number_files*  
- 指定要读取的滚动更新文件数。 此数目包括*filename*中指定的初始文件。 *number_files*是**int**。  
+ 指定要读取的滚动更新文件数。 此数目包括 *filename*中指定的初始文件。 *number_files* 是 **int**。  
   
 ## <a name="remarks"></a>备注  
- 如果*number_files*指定为**默认值**，则**fn_trace_gettable**将读取所有滚动更新文件，直到到达跟踪结尾为止。 **fn_trace_gettable**返回一个表，该表包含指定跟踪的所有有效列。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_trace_setevent ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
+ 如果 *number_files* 指定为 **默认值**，则 **fn_trace_gettable** 将读取所有滚动更新文件，直到到达跟踪结尾为止。 **fn_trace_gettable** 返回一个表，该表包含指定跟踪的所有有效列。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_trace_setevent ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
- 请注意，fn_trace_gettable 函数将不会加载滚动更新文件（使用*number_files*参数指定此选项时），其中原始跟踪文件名以下划线和数值结尾。 （这不适用于在滚动文件时自动追加的下划线和数字。）作为一种解决方法，您可以重命名跟踪文件以删除原始文件名中的下划线。 例如，如果原始文件命名为**Trace_Oct_5 trace.dat.trc** ，并且滚动更新文件的 Trace_Oct_5_1 名称为**trace.dat.trc**，则可以将文件重命名为**TraceOct5** **TraceOct5_1 和 trace.dat.trc**。  
+ 请注意，当使用 *number_files* 参数指定此选项时，fn_trace_gettable 函数将不会加载滚动更新文件 () 其中，原始跟踪文件名以下划线和数值结尾。  (这不适用于在滚动文件时自动追加的下划线和数字。 ) 作为一种解决方法，你可以重命名跟踪文件以删除原始文件名中的下划线。 例如，如果原始文件命名为 **Trace_Oct_5 trace.dat.trc** ，并且滚动更新文件的 Trace_Oct_5_1 名称为 **trace.dat.trc**，则可以将文件重命名为 **TraceOct5** **TraceOct5_1 和 trace.dat.trc**。  
   
  该函数可以读取在执行该函数所在实例中仍处于活动状态的跟踪。  
   
@@ -85,7 +86,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   

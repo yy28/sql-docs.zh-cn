@@ -1,4 +1,5 @@
 ---
+description: 运行匹配项目
 title: 运行匹配项目
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466663"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
 
@@ -50,7 +51,7 @@ ms.locfileid: "85883326"
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建数据质量项目”** 以便在新的数据质量项目中执行匹配。 输入数据质量项目的名称，输入说明，然后在 **“使用知识库”** 中选择要用于匹配的知识库。 对于活动单击 **“匹配”** 。 单击 **“下一步”** 以进入映射阶段。  
   
-3.  单击 **“打开数据质量项目”** 以便在现有数据质量项目中执行匹配。 选择项目，然后单击 **“下一步”**。 （或者，您可以单击 "**最近的数据质量项目**" 下的项目。）如果打开已关闭的匹配项目，则将继续执行中已关闭的匹配项目活动的阶段（由项目表中的**State**列或 "**最近的数据质量项目**" 下的项目名称表示）。 如果您打开已完成的匹配项目，则将进入 **“导出”** 页（并且将无法返回到之前的屏幕）。  
+3.  单击 **“打开数据质量项目”** 以便在现有数据质量项目中执行匹配。 选择项目，然后单击 **“下一步”**。  (或者，你可以单击 "**最近的数据质量项目**" 下的项目。 ) 如果打开已关闭的匹配项目，则会在 (如项目表中的 State 列或 "**最近的数据质量) 项目**" 下的项目名称中所示的 "**状态**" 列所指示的那样，将继续执行已关闭匹配项目活动的阶段。 如果您打开已完成的匹配项目，则将进入 **“导出”** 页（并且将无法返回到之前的屏幕）。  
   
 ##  <a name="mapping-stage"></a><a name="MappingStage"></a> 映射阶段  
  在映射阶段中，您确定要对其运行匹配分析的数据源，并将源列映射到域以使域可用于匹配活动。  
@@ -98,13 +99,13 @@ ms.locfileid: "85883326"
   
 9. 若要拒绝来自匹配结果的记录，请单击该记录的 **“拒绝”** 复选框。  
   
-10. 若要更改确定记录必须显示的匹配级别的最低匹配分数，请选择表右侧的 "**最小匹配分数**" 图标，并输入较大的数字。 默认情况下，最低匹配分数设为 80%。 单击 **“刷新”** 可更改表的内容。  
+10. 若要更改确定记录必须显示的匹配级别的最低匹配分数，请选择表右侧的 " **最小匹配分数** " 图标，并输入较大的数字。 默认情况下，最低匹配分数设为 80%。 单击 **“刷新”** 可更改表的内容。  
   
 11. 分析完成后， **“启动”** 按钮将变为 **“重新启动”** 按钮。 单击 **“重新启动”** 以便再次运行分析项目。 但是，如果前一分析的结果尚未保存，则单击 **“重新启动”** 将导致先前的数据丢失。 若要继续，请在弹出窗口中单击 **“是”** 。 当分析正在运行时，不要离开页面，否则分析进程将被终止。  
   
 12. 单击 **“下一步”** 以进入存活和导出阶段。  
   
-##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a>存活和导出阶段  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a> 存活和导出阶段  
  在存活过程中，Data Quality Services 将确定每个群集的存活记录，这将替换该群集中与其匹配的其他记录。 然后，该服务会将匹配和/或存活结果导出到 SQL Server 数据库的表、.csv 文件或 Excel 文件中。  
   
  存活是可选的。 您可以不运行存活便导出结果，在此情况下，DQS 将使用在匹配分析中指定的透视记录。 如果群集中两个或更多的记录符合存活规则，则存活过程将选择冲突记录中最低的记录 ID 作为存活记录。 您可以使用不同的存活规则将存活记录导出到不同的文件或表。  
@@ -169,7 +170,7 @@ ms.locfileid: "85883326"
 ##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a> 跟进：在运行匹配项目之后  
  在运行某一匹配项目后，您可以在知识库中更改匹配策略，并且基于更新的匹配策略创建和运行另一个匹配项目。 有关详细信息，请参阅 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>探查器和 "结果" 选项卡  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a> 探查器和 "结果" 选项卡  
  “事件探查器”和“结果”选项卡包含针对匹配过程的统计信息。  
   
 ### <a name="profiler-tab"></a>“事件探查器”选项卡  

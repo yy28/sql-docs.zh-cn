@@ -1,4 +1,5 @@
 ---
+description: 显式数据类型转换函数
 title: 显式数据类型转换函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466184"
 ---
 # <a name="explicit-data-type-conversion-function"></a>显式数据类型转换函数
 显式数据类型转换是根据 SQL 数据类型定义进行指定的。  
   
- 显式数据类型转换函数的 ODBC 语法不限制转换。 将一种数据类型转换为另一种数据类型的特定转换的有效性取决于每个特定于驱动程序的实现。 驱动程序将将 ODBC 语法转换为本机语法，并拒绝那些虽然数据源不支持在 ODBC 语法中合法的转换。 ODBC 函数**SQLGetInfo**具有转换选项（如 SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH 等），提供了一种方法来查询数据源所支持的转换。  
+ 显式数据类型转换函数的 ODBC 语法不限制转换。 将一种数据类型转换为另一种数据类型的特定转换的有效性取决于每个特定于驱动程序的实现。 驱动程序将将 ODBC 语法转换为本机语法，并拒绝那些虽然数据源不支持在 ODBC 语法中合法的转换。 ODBC 函数 **SQLGetInfo**（包含转换选项 (如 SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH 等) ）提供了一种方法来查询数据源支持的转换。  
   
  **CONVERT**函数的格式为：  
   
- **CONVERT （** _value_exp_， _data_type_**）**  
+ **转换 (** _value_exp_， _data_type_ **) **  
   
- 函数返回由*value_exp*转换为指定的*data_type*指定的值，其中*data_type*是以下关键字之一：  
+ 函数返回由 *value_exp* 转换为指定的 *data_type*指定的值，其中 *data_type* 是以下关键字之一：  
 
 :::row:::
     :::column:::
@@ -79,7 +80,7 @@ ms.locfileid: "87363317"
 
  显式数据类型转换函数的 ODBC 语法不支持转换格式的规范。 如果基础数据源支持显式格式规范，则驱动程序必须指定默认值或实现格式规范。  
   
- 参数*value_exp*可以是列名称、其他标量函数的结果，也可以是数字或字符串。 例如：  
+ 参数 *value_exp* 可以是列名称、其他标量函数的结果，也可以是数字或字符串。 例如：  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
@@ -87,9 +88,9 @@ ms.locfileid: "87363317"
   
  将 CURDATE 标量函数的输出转换为字符串。  
   
- 由于 ODBC 不会对标量函数的返回值强制使用数据类型（因为函数通常是特定于数据源的），因此应用程序应尽可能使用 CONVERT 标量函数来强制进行数据类型转换。  
+ 由于 ODBC 不会为标量函数的返回值强制数据类型 (因为函数通常是特定于数据源的) ，所以，应用程序应尽可能使用 CONVERT 标量函数来强制进行数据类型转换。  
   
- 下面两个示例说明了**CONVERT**函数的用法。 这些示例假定存在名为 EMPLOYEES 的表，其中 EMPNO 类型为的列 SQL_SMALLINT 和类型 SQL_CHAR 的 EMPNAME 列。  
+ 下面两个示例说明了 **CONVERT** 函数的用法。 这些示例假定存在名为 EMPLOYEES 的表，其中 EMPNO 类型为的列 SQL_SMALLINT 和类型 SQL_CHAR 的 EMPNAME 列。  
   
  如果应用程序指定了以下 SQL 语句：  
   

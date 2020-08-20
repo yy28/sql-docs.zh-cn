@@ -1,4 +1,5 @@
 ---
+description: 考虑使用数据库功能
 title: 正在考虑使用数据库功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2abaed3806514a161c5c506d8bad89b4d3b75153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465889"
 ---
 # <a name="considering-database-features-to-use"></a>考虑使用数据库功能
-了解基本的互操作性级别后，必须考虑应用程序使用的数据库功能。 例如，应用程序将执行哪些 SQL 语句？ 应用程序是否将使用可滚动游标？ 记录? 操作? 长数据？ 有关所有 Dbms 可能不支持哪些功能的建议，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数说明和[附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可能会从目标 Dbms 列表中消除某些 Dbms。 它们也可能会显示应用程序可以轻松地以很多 Dbms 为目标。  
+了解基本的互操作性级别后，必须考虑应用程序使用的数据库功能。 例如，应用程序将执行哪些 SQL 语句？ 应用程序是否将使用可滚动游标？ 记录? 操作? 长数据？ 有关所有 Dbms 可能不支持哪些功能的建议，请参阅 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)和 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 函数说明和 [附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可能会从目标 Dbms 列表中消除某些 Dbms。 它们也可能会显示应用程序可以轻松地以很多 Dbms 为目标。  
   
- 例如，如果所需的功能很简单，通常可以通过高度的互操作来实现。 执行简单的**SELECT**语句并使用只进游标检索结果的应用程序可能会因为其简易性而高度可互操作：几乎所有驱动程序和 dbms 都支持所需的功能。  
+ 例如，如果所需的功能很简单，通常可以通过高度的互操作来实现。 执行简单的 **SELECT** 语句并使用只进游标检索结果的应用程序可能会因为其简易性而高度可互操作：几乎所有驱动程序和 dbms 都支持所需的功能。  
   
  但是，如果所需的功能更复杂，例如可滚动游标、定位更新和删除语句以及过程，则通常必须进行权衡。 有几种可能性：  
   
@@ -38,7 +39,7 @@ ms.locfileid: "81299007"
   
  假设可以连接到单个数据源的一般查询应用程序。 应用程序接受来自用户的查询，并在窗口中显示结果。 现在假设此应用程序具有一项功能，使用户能够同时显示多个查询的结果。 也就是说，他们可以执行查询并查看一些结果，执行其他查询并查看其中一些结果，然后返回到第一个查询。 这会带来互操作性问题，因为某些驱动程序只支持单个活动语句。  
   
- 应用程序具有许多选择，具体取决于驱动程序为**SQLGetInfo**中的 SQL_MAX_CONCURRENT_ACTIVITIES 选项返回的内容：  
+ 应用程序具有许多选择，具体取决于驱动程序为 **SQLGetInfo**中的 SQL_MAX_CONCURRENT_ACTIVITIES 选项返回的内容：  
   
 -   **始终支持多个查询。** 连接到驱动程序后，应用程序会检查活动语句的数量。 如果驱动程序仅支持一个活动语句，则应用程序会关闭连接，并通知用户驱动程序不支持所需的功能。 此应用程序易于实现并具有完整的功能，但互操作性较低。  
   

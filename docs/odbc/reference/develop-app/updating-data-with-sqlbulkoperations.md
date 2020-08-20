@@ -1,4 +1,5 @@
 ---
+description: 使用 SQLBulkOperations 更新数据
 title: 用 SQLBulkOperations 更新数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c8626a0925d0f30792ed92332c0f96efd23f62e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465531"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新数据
-应用程序可以通过调用**SQLBulkOperations**在数据源的基础表上执行大容量更新、删除、提取或插入操作。 调用**SQLBulkOperations**是构造和执行 SQL 语句的一种简便方法。 即使数据源不支持定位 SQL 语句，它也允许 ODBC 驱动程序支持定位更新。 这是通过函数调用实现数据库完全访问权限的一种模式。  
+应用程序可以通过调用 **SQLBulkOperations**在数据源的基础表上执行大容量更新、删除、提取或插入操作。 调用 **SQLBulkOperations** 是构造和执行 SQL 语句的一种简便方法。 即使数据源不支持定位 SQL 语句，它也允许 ODBC 驱动程序支持定位更新。 这是通过函数调用实现数据库完全访问权限的一种模式。  
   
- **SQLBulkOperations**对当前行集进行操作，并且只能在调用**SQLFetch**或**SQLFetchScroll**后使用。 应用程序通过缓存书签来指定要更新、删除或刷新的行。 驱动程序将从行集缓冲区中检索要更新的行的新数据或要插入基础表中的新数据。  
+ **SQLBulkOperations** 对当前行集进行操作，并且只能在调用 **SQLFetch** 或 **SQLFetchScroll**后使用。 应用程序通过缓存书签来指定要更新、删除或刷新的行。 驱动程序将从行集缓冲区中检索要更新的行的新数据或要插入基础表中的新数据。  
   
- **SQLBulkOperations**所使用的行集大小是通过调用**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 的*属性*参数设置的。 不同于**SQLSetPos**，它仅在调用**SQLFetch**或**SQLFetchScroll**后使用新的行集大小， **SQLBulkOperations**在调用**SQLSetStmtAttr**后使用新的行集大小。  
+ **SQLBulkOperations**所使用的行集大小是通过调用**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 的*属性*参数设置的。 不同于 **SQLSetPos**，它仅在调用 **SQLFetch** 或 **SQLFetchScroll**后使用新的行集大小， **SQLBulkOperations** 在调用 **SQLSetStmtAttr**后使用新的行集大小。  
   
- 由于与关系数据库的大多数交互是通过 SQL 来完成的，因此**SQLBulkOperations**不受广泛支持。 但是，驱动程序可以通过构造并执行**UPDATE**、 **DELETE**或**INSERT**语句来轻松地对其进行模拟。  
+ 由于与关系数据库的大多数交互是通过 SQL 来完成的，因此 **SQLBulkOperations** 不受广泛支持。 但是，驱动程序可以通过构造并执行 **UPDATE**、 **DELETE**或 **INSERT** 语句来轻松地对其进行模拟。  
   
- 若要确定**SQLBulkOperation**支持的操作，应用程序需要使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 信息选项（具体取决于游标的类型）调用**SQLGetInfo** 。  
+ 若要确定 **SQLBulkOperation** 支持的操作，应用程序需要使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 信息选项调用 **SQLGetInfo** ，具体取决于游标的类型 (。  
   
  本部分包含以下主题。  
   

@@ -1,4 +1,5 @@
 ---
+description: ODBC 中的目录函数
 title: ODBC 中的目录函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6731018b99f2f3043e48ee7c174a08cb9ef71fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7a34a29e55f6705ccc98e5644096ac6ea7bfd67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465969"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC 中的目录函数
 ODBC 包含以下目录函数：  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |**SQLTables**|返回数据源中的目录、架构、表或表类型的列表。|  
 |**SQLColumns**|返回一个或多个表中的列的列表。|  
@@ -35,9 +36,9 @@ ODBC 包含以下目录函数：
 |**SQLColumnPrivileges**|返回与一个表中的一个或多个列关联的特权列表。|  
 |**SQLProcedures**|返回数据源中的过程列表。|  
 |**SQLProcedureColumns**|返回单个过程的结果集中的输入和输出参数、返回值和列的列表。|  
-|**SQLGetTypeInfo**|返回数据源支持的 SQL 数据类型的列表。 这些数据类型通常在**CREATE TABLE**和**ALTER TABLE**语句中使用。|  
+|**SQLGetTypeInfo**|返回数据源支持的 SQL 数据类型的列表。 这些数据类型通常在 **CREATE TABLE** 和 **ALTER TABLE** 语句中使用。|  
   
- 由于**SQLTables**、 **SQLColumns**、 **SQLStatistics**和**SQLSpecialColumns**符合开放组 CLI，并且**SQLGetTypeInfo**符合 ISO 92 cli，因此它们由大多数驱动程序实现。 其余目录函数为 ODBC 一致性级别。  
+ 由于 **SQLTables**、 **SQLColumns**、 **SQLStatistics**和 **SQLSpecialColumns** 符合开放组 CLI，并且 **SQLGetTypeInfo** 符合 ISO 92 cli，因此它们由大多数驱动程序实现。 其余目录函数为 ODBC 一致性级别。  
   
  本部分包含以下主题。  
   
