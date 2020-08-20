@@ -21,16 +21,17 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dc6a94205c7432f6fee305d58a27ec1eb0e0c33
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447680"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646120"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-sql) 
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 提供当前数据库中所有列存储索引的当前行组级信息。  
 
@@ -39,7 +40,7 @@ ms.locfileid: "88447680"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|基础表的 ID。|  
-|**index_id**|**int**|此列存储索引 *object_id* 表的 ID。|  
+|index_id|**int**|此列存储索引 *object_id* 表的 ID。|  
 |**partition_number**|**int**|保存 *row_group_id*的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|**int**|此行组的 ID。 对于已分区表，值在分区中是唯一的。<br /><br /> 对于内存尾，为-1。|  
 |**delta_store_hobt_id**|**bigint**|增量存储中行组的 hobt_id。<br /><br /> 如果行组不在增量存储中，则为 NULL。<br /><br /> 对于内存中表尾，为 NULL。|  

@@ -19,15 +19,16 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28946de442b72309f3284338e6f426c655a4d0f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7884ec6f980c001578b8e049ed8c1ee1f3da8629
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455244"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646107"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-sql) 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   使用 **sys. masked_columns** 视图可查询应用了动态数据掩码函数的表列。 该视图继承自 **sys.columns** 视图。 该视图会返回 **sys.columns** 视图中的所有列，以及 **is_masked** 和 **masking_function** 列，表明该列是否被屏蔽，以及在该列被屏蔽的情况下定义了什么屏蔽函数。 该视图仅显示在其上应用了屏蔽函数的列。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "88455244"
 |is_masked|**bit**|指示是否屏蔽该列。 1表示掩码。|  
 |masking_function|**nvarchar(4000)**|列的掩码函数。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="permissions"></a>权限  
  此视图返回有关用户对表具有某种权限或用户具有 VIEW ANY DEFINITION 权限的表的信息。  

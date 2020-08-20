@@ -13,12 +13,12 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b13e5da130d7b122f9b79e1996ea3fdb0792e25a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f015d17f401cb2457d3e5cf657ce85342c1628e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475376"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646267"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "88475376"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|分区的 id。 在数据库中是唯一的。|  
-|object_id|**int**|此分区所属的对象的 id。 每个表或视图都至少包含一个分区。|  
-|index_id|**int**|此分区所属的对象内的索引的 id。|  
+|partition_id|**bigint**|分区 ID。 在数据库中是唯一的。|  
+|object_id|**int**|此分区所属的对象的 ID。 每个表或视图都至少包含一个分区。|  
+|index_id|**int**|此分区所属的对象内的索引的 ID。|  
 |partition_number|**int**|拥有的索引或堆中从1开始的分区号。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，此列的值为1。|  
 |hobt_id|**bigint**|包含此分区的行的数据堆或B 树 (HoBT) 的 ID。|  
 |行|**bigint**|此分区中的大约行数。 |  
@@ -69,6 +69,9 @@ JOIN sys.objects AS o
 WHERE o.name = 'myTable'  
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
+
+>[!TIP]
+> 为提高 Synapse SQL 中的性能，请考虑**pdw_permanent_table_mappings**使用持久性用户表上的而不是**sys.databases pdw_table_mappings。** 有关详细信息，请参阅 **[.sys &#40;transact-sql&#41;pdw_permanent_table_mappings ](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 。
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

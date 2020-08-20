@@ -21,16 +21,16 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 783a7033e9db323ea774b4456c2159670104fecb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de7e998ff91295c62d28efbcdbde4a40c3bfdf14
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482000"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646147"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 返回当前数据库中 (表或索引视图) 的指定数据库对象的统计信息直方图 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 类似于 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
@@ -63,7 +63,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |非重复列值位于直方图梯级内（不包括上限）的行的估算数目。 |
 |average_range_rows |**real** |直方图步骤中具有重复列值的平均行数，不包括) 的上限 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` `DISTINCT_RANGE_ROWS > 0` 。 |
   
- ## <a name="remarks"></a>备注  
+ ## <a name="remarks"></a>注解  
  
  的结果集将 `sys.dm_db_stats_histogram` 返回类似于的信息， `DBCC SHOW_STATISTICS WITH HISTOGRAM` 并且还包括 `object_id` 、 `stats_id` 和 `step_number` 。
 
