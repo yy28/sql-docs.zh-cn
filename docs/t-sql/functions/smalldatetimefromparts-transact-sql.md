@@ -1,4 +1,5 @@
 ---
+description: SMALLDATETIMEFROMPARTS (Transact-SQL)
 title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -18,17 +19,17 @@ ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c666dea495f0ca6191457199fe210ab99e09815
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f82241b49a83f2553ff2d683887e6e76be50279e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467857"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为指定的日期和时间返回 smalldatetime 值  。  
+  为指定的日期和时间返回 smalldatetime 值****。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,23 +45,23 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
  *year*  
  用于指定年度的整数表达式。  
   
- month   
+ *month*  
  用于指定月份的整数表达式。  
   
- day   
+ *day*  
  用于指定日期的整数表达式。  
   
- hour   
+ hour  
  用于指定小时的整数表达式。  
   
- minute   
+ minute  
  用于指定分钟的整数表达式。  
   
 ## <a name="return-types"></a>返回类型  
  **smalldatetime**  
   
 ## <a name="remarks"></a>备注  
- 此函数的行为像完全初始化的 smalldatetime 值的构造函数  。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。  
+ 此函数的行为像完全初始化的 smalldatetime 值的构造函数****。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。  
   
  此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 但在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之下的服务器版本中无法远程执行。  
   

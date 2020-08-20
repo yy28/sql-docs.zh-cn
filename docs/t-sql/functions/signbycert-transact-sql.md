@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT (Transact-SQL)
 title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467873"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,23 +48,23 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- certificate_ID   
- 当前数据库中证书的 ID。 certificate_ID 是 int   。  
+ certificate_ID  
+ 当前数据库中证书的 ID。 certificate_ID 是 int******。  
   
  *\@cleartext*  
- 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据     。  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据****************。  
   
- ' password '     
- 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)   。  
+ ' password '  
+ 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)******。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）  。  
+ varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例将用证书 `@SensitiveData` 来签署 `ABerglundCert07` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
+ 以下示例将用证书 `ABerglundCert07` 来签署 `@SensitiveData` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

@@ -1,5 +1,6 @@
 ---
-title: sp_help_agent_profile （Transact-sql） |Microsoft Docs
+description: sp_help_agent_profile (Transact-SQL)
+title: sp_help_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c6873ada83a846ae719e5498a296df02fa2a9c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469335"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,10 +38,10 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
     [ , [ @profile_id = ] profile_id ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @agent_type = ] agent_type`代理的类型。 *agent_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
+## <a name="arguments"></a>参数  
+`[ @agent_type = ] agent_type` 代理的类型。 *agent_type* 的数据值为 **int**，默认值为 **0**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|快照代理|  
 |**2**|日志读取器代理|  
@@ -48,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|合并代理|  
 |**9**|队列读取器代理|  
   
-`[ @profile_id = ] profile_id`要显示的配置文件的 ID。 *profile_id*的值为**int**，默认值为 **-1**，则返回**MSagent_profiles**表中的所有配置文件。  
+`[ @profile_id = ] profile_id` 要显示的配置文件的 ID。 *profile_id* 的值为 **int**，默认值为 **-1**，则返回 **MSagent_profiles** 表中的所有配置文件。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -57,18 +58,18 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|配置文件的 ID。|  
 |**profile_name**|**sysname**|对代理类型唯一。|  
 |**agent_type**|**int**|**1** = 快照代理<br /><br /> **2** = 日志读取器代理<br /><br /> **3** = 分发代理<br /><br /> **4** = 合并代理<br /><br /> **9** = 队列读取器代理|  
-|类型|**int**|**0** = 系统<br /><br /> **1** = 自定义|  
-|**2008**|**varchar （3000）**|配置文件的说明。|  
+|**类型**|**int**|**0** = 系统<br /><br /> **1** = 自定义|  
+|description|**varchar (3000) **|配置文件的说明。|  
 |**def_profile**|**bit**|指定该配置文件是否是该代理类型的默认值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_help_agent_profile**在所有类型的复制中使用。  
+ **sp_help_agent_profile** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**replmonitor**固定数据库角色的成员才能**sp_help_agent_profile**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **replmonitor** 固定数据库角色的成员才能 **sp_help_agent_profile**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

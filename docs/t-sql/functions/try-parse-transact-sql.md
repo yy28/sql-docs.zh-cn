@@ -1,4 +1,5 @@
 ---
+description: TRY_PARSE (Transact-SQL)
 title: TRY_PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467721"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -42,18 +43,18 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- string_value   
- nvarchar(4000) 值，表示要分析为指定数据类型的格式化值  。  
+ string_value  
+ nvarchar(4000) 值，表示要分析为指定数据类型的格式化值。  
   
- string_value 必须为所请求的数据类型的有效表示形式，否则 TRY_PARSE 将返回 Null  。  
+ string_value 必须为所请求的数据类型的有效表示形式，否则 TRY_PARSE 将返回 Null**。  
   
- data_type   
+ data_type  
  表示结果的所请求数据类型的文本。  
   
- *区域性*  
- 可选字符串，它标识对 string_value 进行格式化的区域性  。  
+ *culture*  
+ 可选字符串，它标识对 string_value 进行格式化的区域性**。  
   
- 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于  *显式支持的语言*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果 culture 参数无效，PARSE 将引发错误  。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言**。 如果 culture 参数无效，PARSE 将引发错误**。  
   
 ## <a name="return-types"></a>返回类型  
  返回表达式的结果（已转换为请求的数据类型）；如果强制转换失败，则返回 Null。  
@@ -67,7 +68,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  **有关 data_type 参数的详细信息**  
   
- data_type 参数的值局限于下表中显示的类型以及样式  。 提供的样式信息有助于确定允许使用哪些类型的模式。 有关样式的详细信息，请参阅 System.Globalization.NumberStyles 和 DateTimeStyles 枚举的 .NET Framework 文档   。  
+ data_type 参数的值局限于下表中显示的类型以及样式**。 提供的样式信息有助于确定允许使用哪些类型的模式。 有关样式的详细信息，请参阅 System.Globalization.NumberStyles 和 DateTimeStyles 枚举的 .NET Framework 文档********。  
   
 |类别|类型|.NET 类型|使用的样式|  
 |--------------|----------|---------------|-----------------|  
@@ -75,12 +76,12 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Numeric|int|Int32|NumberStyles.Number|  
 |Numeric|smallint|Int16|NumberStyles.Number|  
 |Numeric|tinyint|Byte|NumberStyles.Number|  
-|Numeric|Decimal|Decimal|NumberStyles.Number|  
-|Numeric|numeric|Decimal|NumberStyles.Number|  
+|Numeric|Decimal|小数|NumberStyles.Number|  
+|Numeric|numeric|小数|NumberStyles.Number|  
 |Numeric|FLOAT|Double|NumberStyles.Float|  
 |Numeric|real|Single|NumberStyles.Float|  
-|Numeric|smallmoney|Decimal|NumberStyles.Currency|  
-|Numeric|money|Decimal|NumberStyles.Currency|  
+|Numeric|smallmoney|小数|NumberStyles.Currency|  
+|Numeric|money|小数|NumberStyles.Currency|  
 |日期和时间|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  

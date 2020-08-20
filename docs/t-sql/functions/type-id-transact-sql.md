@@ -1,4 +1,5 @@
 ---
+description: TYPE_ID (Transact-SQL)
 title: TYPE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 675240db58ea6c46978987adb39696a8370639bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fa18e7fd00b50597068695f9b1f20a947289ca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467716"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,8 +45,8 @@ TYPE_ID ( [ schema_name ] type_name )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- type_name   
- 数据类型的名称。 type_name 的数据类型为 nvarchar   。 type_name 可以是系统数据类型或用户定义的数据类型  。  
+ type_name  
+ 数据类型的名称。 type_name 的数据类型为 nvarchar******。 type_name 可以是系统数据类型或用户定义的数据类型**。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -55,7 +56,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 TYPE_ID）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果类型名称无效，或调用方没有足够权限来引用类型，则 TYPE_ID 返回 NULL。  
   
 ## <a name="examples"></a>示例  

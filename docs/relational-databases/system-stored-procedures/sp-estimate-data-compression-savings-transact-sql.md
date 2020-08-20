@@ -1,5 +1,6 @@
 ---
-title: sp_estimate_data_compression_savings （Transact-sql） |Microsoft Docs
+description: sp_estimate_data_compression_savings (Transact-SQL)
+title: sp_estimate_data_compression_savings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94eeb0baeae20327650d0291e0ca4f1725abb1d9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4479aa059222ea7685cf38b56c98cc22ee94df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469469"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85881730"
   
  若要对使用请求的压缩设置的对象进行大小估算，该存储过程将对源对象进行采样并且将此数据加载到在 tempdb 中创建的等效表和索引中。 然后，将按照所请求的设置压缩在 tempdb 中创建的表和索引，并计算出估计的压缩节省量。  
   
- 若要更改表、索引或分区的压缩状态，请使用[ALTER table](../../t-sql/statements/alter-table-transact-sql.md)或[alter index](../../t-sql/statements/alter-index-transact-sql.md)语句。 有关压缩的一般信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
+ 若要更改表、索引或分区的压缩状态，请使用 [ALTER table](../../t-sql/statements/alter-table-transact-sql.md) 或 [alter index](../../t-sql/statements/alter-index-transact-sql.md) 语句。 有关压缩的一般信息，请参阅 [数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
 > [!NOTE]  
 > 如果现有的数据含有碎片，则可以在不使用压缩的情况下通过重新生成索引来减小数据的大小。 对于索引，在索引重新生成的过程中将应用填充因子。 这可能会增加索引的大小。  
@@ -56,21 +57,21 @@ sp_estimate_data_compression_savings
   
 ## <a name="arguments"></a>参数  
  [ @schema_name =] "*schema_name*"  
- 包含表或索引视图的数据库架构的名称。 *schema_name* **sysname**。 如果*schema_name*为 NULL，则使用当前用户的默认架构。  
+ 包含表或索引视图的数据库架构的名称。 *schema_name* **sysname**。 如果 *schema_name* 为 NULL，则使用当前用户的默认架构。  
   
  [ @object_name =] "*object_name*"  
  索引所属的表或索引视图的名称。 object_name 为 sysname******。  
   
  [ @index_id =] *index_id*  
- 索引的 ID。 *index_id*为**int**，可以是下列值之一：索引的 id 号、NULL 或0（如果*object_id*为堆）。 若要返回基表或视图的所有索引的信息，请指定 NULL。 如果指定 NULL，则还必须为*partition_number*指定 null 值。  
+ 索引的 ID。 *index_id* 为 **int**，可以是下列值之一：索引的 id 号、NULL 或0（如果 *object_id* 为堆）。 若要返回基表或视图的所有索引的信息，请指定 NULL。 如果指定 NULL，则还必须为 *partition_number*指定 null 值。  
   
  [ @partition_number =] *partition_number*  
- 对象中的分区号。 *partition_number*为**int**，可以是下列值之一：索引或堆的分区号、NULL 或1（对于未分区的索引或堆）。  
+ 对象中的分区号。 *partition_number* 为 **int**，可以是下列值之一：索引或堆的分区号、NULL 或1（对于未分区的索引或堆）。  
   
- 若要指定分区，还可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函数。 若要返回所属对象的所有分区的信息，请指定 NULL。  
+ 若要指定分区，还可以指定 [$partition](../../t-sql/functions/partition-transact-sql.md) 函数。 若要返回所属对象的所有分区的信息，请指定 NULL。  
   
  [ @data_compression =] "*data_compression*"  
- 要评估的压缩的类型。 *data_compression*可以是以下值之一： NONE、ROW、PAGE、列存储或 COLUMNSTORE_ARCHIVE。  
+ 要评估的压缩的类型。 *data_compression* 可以是以下值之一： NONE、ROW、PAGE、列存储或 COLUMNSTORE_ARCHIVE。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -109,7 +110,7 @@ sp_estimate_data_compression_savings
  在 SQL Server 2019 之前，此过程不适用于列存储索引，因此不接受数据压缩参数列存储和 COLUMNSTORE_ARCHIVE。  从 SQL Server 2019 开始，列存储索引可用作估算源对象，并可用作请求的压缩类型。
 
  > [!IMPORTANT]
- > 当在中启用了[内存优化 TempDB 元数据](../databases/tempdb-database.md#memory-optimized-tempdb-metadata)时 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，不支持在临时表上创建列存储索引。 由于存在此限制，因此当启用内存优化 TempDB 元数据时，列存储 COLUMNSTORE_ARCHIVE 和数据压缩参数 sp_estimate_data_compression_savings 不受支持。
+ > 当在中启用了 [内存优化 TempDB 元数据](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) 时 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，不支持在临时表上创建列存储索引。 由于存在此限制，因此当启用内存优化 TempDB 元数据时，列存储 COLUMNSTORE_ARCHIVE 和数据压缩参数 sp_estimate_data_compression_savings 不受支持。
 
 ## <a name="considerations-for-columnstore-indexes"></a>列存储索引的注意事项
  从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ， `sp_estimate_compression_savings` 支持估计列存储和列存储存档压缩。 与页和行压缩不同，将列存储压缩应用于对象需要创建新的列存储索引。 出于此原因，使用此过程的列存储和 COLUMNSTORE_ARCHIVE 选项时，提供给过程的源对象的类型决定了用于压缩的大小估算的列存储索引的类型。 下表说明了在 @data_compression 将参数设置为列存储或 COLUMNSTORE_ARCHIVE 时，用于估计每个源对象类型的压缩节省量的引用对象。
@@ -118,22 +119,22 @@ sp_estimate_data_compression_savings
  |-----------------|---------------|
  |堆|聚集列存储索引|
  |聚集索引|聚集列存储索引|
- |非聚集索引|非聚集列存储索引（包括所提供的非聚集索引的键列和包含的所有列，以及表的分区列，如果有的话）|
- |非聚集列存储索引|非聚集列存储索引（包括与所提供的非聚集列存储索引相同的列）|
+ |非聚集索引|非聚集列存储索引 (包含所提供的非聚集索引的键列和所有包含的列以及表的分区列（如果有）) |
+ |非聚集列存储索引|非聚集列存储索引 (包括与所提供的非聚集列存储索引相同的列) |
  |聚集列存储索引|聚集列存储索引|
 
 > [!NOTE]  
-> 从行存储的源对象（聚集索引、非聚集索引或堆）估算列存储压缩时，如果源对象中的任何列的数据类型在列存储索引中不受支持，则 sp_estimate_compression_savings 将失败并出现错误。
+> 当通过行存储源对象估算列存储压缩时 (聚集索引、非聚集索引或堆) ，如果源对象中的任何列的数据类型在列存储索引中不受支持，则 sp_estimate_compression_savings 将失败并出现错误。
 
  同样，当 `@data_compression` 参数设置为 `NONE` 、或， `ROW` `PAGE` 并且源对象为列存储索引时，下表概述了所使用的引用对象。
 
  |源对象|Reference 对象|
  |-----------------|---------------|
  |聚集列存储索引|堆|
- |非聚集列存储索引|非聚集索引（包括作为键列的非聚集列存储索引中包含的列）以及表的分区列（如果有）作为包含列）|
+ |非聚集列存储索引|非聚集索引 (包括非聚集列存储索引中包含的列作为键列，表的分区列（如果有）作为包含列) |
 
 > [!NOTE]  
-> 估算列存储源对象的行存储压缩（无、行或页）时，请确保源索引不包含超过32列，因为这是行存储（非聚集）索引中支持的限制。
+> 在估算列存储源对象 (无、行或页) 时，请确保源索引不包含超过32列，因为这是行存储 (非聚集) 索引中支持的限制。
   
 ## <a name="examples"></a>示例  
  下面的示例估计 `Production.WorkOrderRouting` 表在使用 `ROW` 压缩进行压缩后的大小。  

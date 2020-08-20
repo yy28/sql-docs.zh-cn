@@ -1,4 +1,5 @@
 ---
+description: SUSER_SID (Transact-SQL)
 title: SUSER_SID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 338df319b792f0ceb7e7494bd3bd2201e86dae19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 40c6b6dcb0d424c8b92f1534423bf0acf667da78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467771"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,26 +52,26 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  **'** *login* **'**  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
- 用户的登录名。 login 为 sysname   。 login 作为可选项，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组  。 如果未指定 login，则返回有关当前安全上下文的信息  。 如果此参数包含词 NULL，将返回 NULL。  
+ 用户的登录名。 login 为 sysname******。 login 作为可选项，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组**。 如果未指定 login，则返回有关当前安全上下文的信息**。 如果此参数包含词 NULL，将返回 NULL。  
   
- Param2   
+ Param2  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
- 指定是否验证登录名。 Param2 的类型为 int，并且可选   。 在 Param2 为 0 时，不验证登录名  。 在 Param2 未指定为 0 时，对 Windows 登录名进行验证，以便确认是否与在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的登录名完全相同  。  
+ 指定是否验证登录名。 Param2 的类型为 int，并且可选******。 在 Param2 为 0 时，不验证登录名**。 在 Param2 未指定为 0 时，对 Windows 登录名进行验证，以便确认是否与在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的登录名完全相同**。  
   
 ## <a name="return-types"></a>返回类型  
  **varbinary(85)**  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  SUSER_SID 在 ALTER TABLE 或 CREATE TABLE 中可用作 DEFAULT 约束。 SUSER_SID 可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 SUSER_SID 必须始终后跟括号，即使在未指定参数的情况下也是如此。  
   
  在无参数的情况下调用时，SUSER_SID 将返回当前安全上下文的 SID。 当通过使用 EXECUTE AS 切换上下文的批处理中无参数调用时，SUSER_SID 将返回模拟上下文的 SID。 从模拟上下文中调用时，SUSER_SID(ORIGINAL_LOGIN()) 将返回原始上下文的 SID。  
   
- 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则和 Windows 排序规则不同时，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 以不同格式存储登录名，SUSER_SID 可能会失败。 例如，如果 Windows 计算机 TestComputer 具有登录名 User，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将该登录名存储为 TESTCOMPUTER\User，则查找登录名 TestComputer\User 可能无法正确解析该登录名。 若要跳过此登录名的验证，请使用 Param2  。 排序规则不同通常是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误 15401 的原因：  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则和 Windows 排序规则不同时，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 以不同格式存储登录名，SUSER_SID 可能会失败。 例如，如果 Windows 计算机 TestComputer 具有登录名 User，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将该登录名存储为 TESTCOMPUTER\User，则查找登录名 TestComputer\User 可能无法正确解析该登录名。 若要跳过此登录名的验证，请使用 Param2**。 排序规则不同通常是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误 15401 的原因：  
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
-## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 备注  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 注释  
  SUSER_SID 始终返回当前安全上下文的登录 ID。 使用 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 获取不同登录名的 SID。
   
  SUSER_SID 语句不支持通过 EXECUTE AS 使用模拟安全上下文执行。  
@@ -123,7 +124,7 @@ GO
 ```  
   
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. 将 Windows 登录名与在 SQL Server 中存储的登录名进行比较  
- 下面的示例演示如何使用 Param2 从 Windows 获取 SID 并使用该 SID 作为对 `SUSER_SNAME` 函数的输入  。 该示例以在 Windows 中存储的格式 (`TestComputer\User`) 提供登录名，并且以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`) 中存储的格式返回登录名。  
+ 下面的示例演示如何使用 Param2 从 Windows 获取 SID 并使用该 SID 作为对 `SUSER_SNAME` 函数的输入**。 该示例以在 Windows 中存储的格式 (`TestComputer\User`) 提供登录名，并且以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`) 中存储的格式返回登录名。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   

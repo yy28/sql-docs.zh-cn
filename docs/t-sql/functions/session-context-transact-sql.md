@@ -1,4 +1,5 @@
 ---
+description: SESSION_CONTEXT (Transact-SQL)
 title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00056403e2b2ef00862b7552c76fd98b851cabe5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae64d9e63d6c6a6c77642144275af00a8418a8d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467899"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -37,8 +38,6 @@ ms.locfileid: "87394759"
 SESSION_CONTEXT(N'key')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>参数
  “key”  
  正在检索的值的键（类型为 sysname）。  
@@ -56,7 +55,7 @@ SESSION_CONTEXT(N'key')
  SESSION_CONTEXT 的 MARS 行为类似于 CONTEXT_INFO 的该行为。 如果 MARS 批设置键值对，则新值不会返回到相同连接上的其他 MARS 批，除非它们在设置新值的批完成后开始。 如果连接上有多个活动的 MARS 批，那么值不能设置为“read_only”。 这样可以避免有关哪一个值“胜出”的争用条件和非确定性。  
   
 ## <a name="examples"></a>示例  
- 下面这个简单的示例将键 `user_id` 的会话上下文值设置为 4，然后使用 SESSION_CONTEXT 函数检索值  。  
+ 下面这个简单的示例将键 `user_id` 的会话上下文值设置为 4，然后使用 SESSION_CONTEXT 函数检索值****。  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4;  

@@ -1,5 +1,6 @@
 ---
-title: sp_help_log_shipping_alert_job （Transact-sql） |Microsoft Docs
+description: sp_help_log_shipping_alert_job (Transact-SQL)
+title: sp_help_log_shipping_alert_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d831935d70d65756b431632c0b9b64d87049173c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 799880f18cdb5ad89d27eebeaca48ede85bd50fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469312"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_help_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>参数  
- None  
+ 无  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -52,7 +53,7 @@ sp_help_log_shipping_alert_job
  必须从监视服务器上的**master**数据库运行**sp_help_log_shipping_alert_job** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

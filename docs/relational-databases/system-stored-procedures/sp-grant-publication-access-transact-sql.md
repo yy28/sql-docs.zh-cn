@@ -1,5 +1,6 @@
 ---
-title: sp_grant_publication_access （Transact-sql） |Microsoft Docs
+description: sp_grant_publication_access (Transact-SQL)
+title: sp_grant_publication_access (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 319f61f1cf1587117b4f8205b208c4f3e7deb6be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469351"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -38,22 +39,22 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`要访问的发布的名称。 **"***发布***"** 的值为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 要访问的发布的名称。 **"***发布***"** 的值为 **sysname**，无默认值。  
   
-`[ @login = ] 'login'`登录 ID。 **"***login***"** 的值为**sysname**，无默认值。  
+`[ @login = ] 'login'` 登录 ID。 **"***login***"** 的值为 **sysname**，无默认值。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_grant_publication_access**用于快照复制、事务复制和合并复制。  
+ **sp_grant_publication_access** 用于快照复制、事务复制和合并复制。  
   
  该存储过程可以重复调用。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_grant_publication_access**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_grant_publication_access**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_help_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
