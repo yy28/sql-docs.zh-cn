@@ -1,5 +1,6 @@
 ---
-title: sys. dm_io_virtual_file_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_io_virtual_file_stats (Transact-SQL)
+title: sys. dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -20,20 +21,20 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 71cdc5b88a525e88e79ccebd0b61f20d2c391c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474858"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  返回数据和日志文件的 I/O 统计信息。 此动态管理视图替换[fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)函数。  
+  返回数据和日志文件的 I/O 统计信息。 此动态管理视图替换 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) 函数。  
   
 > [!NOTE]  
->  若要从调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ，请使用名称**dm_pdw_nodes_io_virtual_file_stats**。 
+>  若要从调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ，请使用名称 **dm_pdw_nodes_io_virtual_file_stats**。 
 
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +60,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database****
 
- 数据库 ID。 *database_id*为 int，没有默认值。 有效的输入包括数据库的 ID 号或 NULL。 如果指定 NULL，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有数据库。  
+ 数据库 ID。 *database_id* 为 int，没有默认值。 有效的输入包括数据库的 ID 号或 NULL。 如果指定 NULL，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有数据库。  
   
  可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。  
   
@@ -67,9 +68,9 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database****
  
-文件的 ID。 *file_id*为 int，没有默认值。 有效输入为文件 ID 号或为 NULL。 如果指定 NULL，则返回数据库中的所有文件。  
+文件的 ID。 *file_id* 为 int，没有默认值。 有效输入为文件 ID 号或为 NULL。 如果指定 NULL，则返回数据库中的所有文件。  
   
- 可以指定内置函数[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) ，并引用当前数据库中的文件。  
+ 可以指定内置函数 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) ，并引用当前数据库中的文件。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -88,21 +89,21 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|用户等待在文件中完成 I/O 操作所用的总时间（毫秒）。|  
 |**size_on_disk_bytes**|**bigint**|该文件在磁盘上占用的字节数。 对于稀疏文件，此数字是数据库快照在磁盘上所占用的实际字节数。|  
 |**file_handle**|**varbinary**|用于此文件的 Windows 文件句柄。|  
-|**io_stall_queued_read_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅[sys.databases&#41;dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_read_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅 [sys.databases&#41;dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
 |**io_stall_queued_write_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  针对写的 IO 资源调控所引入的总 IO 延迟。 不可为 null。|
 |pdw_node_id|**int**|**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布的节点的标识符。
  
 ## <a name="remarks"></a>备注
-只要启动 SQL Server （MSSQLSERVER）服务，计数器就会初始化为空。
+只要启动 SQL Server (MSSQLSERVER) 服务，计数器就初始化为空。
   
 ## <a name="permissions"></a>权限  
- 需要 VIEW SERVER STATE 权限。 有关详细信息，请参阅[&#40;transact-sql&#41;中的动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 需要 VIEW SERVER STATE 权限。 有关详细信息，请参阅 [&#40;transact-sql&#41;中的动态管理视图和函数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. 返回日志文件的统计信息
 
-**适用于：** SQL Server （从2008开始）、Azure SQL 数据库
+**适用于：** 从 2008) ，Azure SQL Database 开始 SQL Server (
 
  以下示例将返回有关 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的日志文件的统计信息。  
   

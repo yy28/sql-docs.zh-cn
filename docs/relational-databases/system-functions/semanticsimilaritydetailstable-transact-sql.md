@@ -1,5 +1,6 @@
 ---
-title: semanticsimilaritydetailstable （Transact-sql） |Microsoft Docs
+description: semanticsimilaritydetailstable (Transact-SQL)
+title: semanticsimilaritydetailstable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa94a6c16eaaf2548b3c0375d43848d5e03a7f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474571"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  **table**  
  启用全文和语义索引的表的名称。  
   
@@ -77,9 +78,9 @@ SEMANTICSIMILARITYDETAILSTABLE
 |**分值**|**实际上**|一个相对值，用来表示此关键短语与两篇文档间相似的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
- 有关详细信息，请参阅[通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 有关详细信息，请参阅 [通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
-## <a name="metadata"></a>元数据  
+## <a name="metadata"></a>Metadata  
  有关语义相似性的提取和填充的信息和状态，请查询以下动态管理视图：  
   
 -   [sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
@@ -92,7 +93,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  需要对创建全文和语义搜索所基于的基表具有 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例检索5个关键短语，该短语在 AdventureWorks2012 示例数据库的**HumanResources humanresources.jobcandidate**表中指定的候选项之间具有最高相似性分数。 @CandidateId和 @MatchedID 变量表示全文索引的键列中的值。  
+ 下面的示例检索5个关键短语，该短语在 AdventureWorks2012 示例数据库的 **HumanResources humanresources.jobcandidate** 表中指定的候选项之间具有最高相似性分数。 @CandidateId和 @MatchedID 变量表示全文索引的键列中的值。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

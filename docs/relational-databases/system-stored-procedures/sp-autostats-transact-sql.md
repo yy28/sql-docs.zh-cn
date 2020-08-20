@@ -1,5 +1,6 @@
 ---
-title: sp_autostats （Transact-sql） |Microsoft Docs
+description: sp_autostats (Transact-SQL)
+title: sp_autostats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 113b17db3bd06b8855b91bea2b67b96831b42ac1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474460"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,36 +44,36 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
     [ , [ @indname = ] 'statistics_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @tblname = ] 'table_or_indexed_view_name'`要在其上显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name*为**nvarchar （776）**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @tblname = ] 'table_or_indexed_view_name'` 要在其上显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name* 为 **nvarchar (776) **，无默认值。  
   
-`[ @flagc = ] 'stats_flag'`将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  
+`[ @flagc = ] 'stats_flag'` 将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  
   
- **开启**= 打开  
+ **开启** = 打开  
   
- **关**= 关闭  
+ **关** = 关闭  
   
- 如果未指定*stats_flag* ，则显示当前 AUTO_UPDATE_STATISTICS 设置。 *stats_flag*的值为**varchar （10）**，默认值为 NULL。  
+ 如果未指定 *stats_flag* ，则显示当前 AUTO_UPDATE_STATISTICS 设置。 *stats_flag* 是 **varchar (10) **，默认值为 NULL。  
   
-`[ @indname = ] 'statistics_name'`显示或更新 AUTO_UPDATE_STATISTICS 选项的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
+`[ @indname = ] 'statistics_name'` 显示或更新 AUTO_UPDATE_STATISTICS 选项的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
   
- *statistics_name*的默认值为**sysname**，默认值为 NULL。  
+ *statistics_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果指定了*stats_flag* ， **sp_autostats**会报告已执行但未返回结果集的操作。  
+ 如果指定了 *stats_flag* ， **sp_autostats** 会报告已执行但未返回结果集的操作。  
   
- 如果未指定*stats_flag* ， **sp_autostats**将返回以下结果集。  
+ 如果未指定 *stats_flag* ， **sp_autostats** 将返回以下结果集。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**索引名称**|**varchar(60)**|索引或统计信息的名称。|  
-|**AUTOSTATS**|**varchar （3）**|AUTO_UPDATE_STATISTICS 选项的当前值。|  
+|**AUTOSTATS**|**varchar (3) **|AUTO_UPDATE_STATISTICS 选项的当前值。|  
 |**上次更新时间**|**datetime**|最近更新统计信息的日期。|  
   
- 表或索引视图的结果集包括为索引创建的统计信息、使用 AUTO_CREATE_STATISTICS 选项生成的单列统计信息以及使用[CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md)语句创建的统计信息。  
+ 表或索引视图的结果集包括为索引创建的统计信息、使用 AUTO_CREATE_STATISTICS 选项生成的单列统计信息以及使用 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
   
 ## <a name="remarks"></a>备注  
  如果禁用了指定的索引，或者指定的表具有被禁用的聚集索引，将显示错误消息。  
@@ -80,7 +81,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  对于内存优化表，AUTO_UPDATE_STATISTICS 始终为 OFF。  
   
 ## <a name="permissions"></a>权限  
- 若要更改 AUTO_UPDATE_STATISTICS 选项，需要**db_owner**固定数据库角色的成员身份，或者对*table_name*具有 ALTER 权限。若要显示 AUTO_UPDATE_STATISTICS 选项，要求具有**public**角色的成员身份。  
+ 若要更改 AUTO_UPDATE_STATISTICS 选项，需要 **db_owner** 固定数据库角色的成员身份，或者对 *table_name*具有 ALTER 权限。若要显示 AUTO_UPDATE_STATISTICS 选项，要求具有 **public** 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   
@@ -115,14 +116,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [标识](../../relational-databases/statistics/statistics.md)   
+ [统计信息](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;创建统计信息](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [Transact-sql&#41;&#40;DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sp_createstats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [&#40;Transact-sql&#41;更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

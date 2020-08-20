@@ -1,4 +1,5 @@
 ---
+description: SQLGetFunctions
 title: SQLGetFunctions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,17 @@ ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f9e6c26b028566311a7dcda8d19916b63f79462
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d70c7e1a6cb1fbc3857311321d7ac7dc6c27f9fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475794"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序接口符合为 ODBC 定义的三个符合性级别（ISO、开放式组和 odbc 级别2）。 **SQLGetFunctions**报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client odbc 驱动程序支持所有 ODBC 函数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序接口符合针对 odbc (ISO、开放式组和 odbc level 2) 的三个已定义的符合性级别。 **SQLGetFunctions** 报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client odbc 驱动程序支持所有 ODBC 函数。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLGetFunctions 函数](https://go.microsoft.com/fwlink/?LinkId=59353)   

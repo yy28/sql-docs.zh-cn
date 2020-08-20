@@ -1,5 +1,6 @@
 ---
-title: sys. dm_pdw_os_event_logs （Transact-sql） |Microsoft Docs
+description: 'sys. dm_pdw_os_event_logs (Transact-sql) '
+title: sys. dm_pdw_os_event_logs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,14 +13,14 @@ ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 086666160c990ee2606688376db624c1aee5fbf9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 11e33ec6a9ca52ed2ca5b67906fc710922df26e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474724"
 ---
-# <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs （Transact-sql）
+# <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   保存有关不同节点上的不同 Windows 事件日志的信息。  
@@ -35,7 +36,7 @@ ms.locfileid: "87396618"
 |generate_time|**datetime**|事件的创建时间。||  
 |write_time|**datetime**|事件实际写入日志的时间。||  
   
- 有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。 
+ 有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。 
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

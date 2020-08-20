@@ -1,5 +1,6 @@
 ---
-title: sys.sys消息（Transact-sql） |Microsoft Docs
+description: sys.sysmessages (Transact-SQL)
+title: " (Transact-sql) sys.sys消息 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25d1e3624dcaacd78325ba359cfb559a24eff3f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c54d1cd0db8de1753a6dd81bfbde71c6944df6e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475120"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85882046"
 |**error**|**int**|唯一错误号。|  
 |severity |**tinyint**|错误的严重级别。|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**2008**|**nvarchar(255)**|对参数占位符错误的解释。|  
+|description|**nvarchar(255)**|对参数占位符错误的解释。|  
 |**msglangid**|**smallint**|系统消息组 ID。|  
   
 ## <a name="see-also"></a>另请参阅  

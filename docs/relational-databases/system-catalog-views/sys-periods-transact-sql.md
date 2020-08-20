@@ -1,5 +1,6 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+description: 'sys.databases (Transact-sql) '
+title: sys.databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -12,13 +13,14 @@ dev_langs:
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f849e1c360a7e2a8e40f03d3068a58e24d842cea
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: a7f084571472f1f37a1e825ae2067e51a817ff35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475279"
 ---
-# <a name="sysperiods-transact-sql"></a>sys.databases （Transact-sql）
+# <a name="sysperiods-transact-sql"></a>sys.databases (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   为已为其定义了期间的每个表返回一行。  
@@ -37,10 +39,10 @@ ms.locfileid: "86053543"
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [&#40;Transact-sql 的 tem_columnssys.sys&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
+ [ &#40;Transact-sql 的 tem_columnssys.sys&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [临时表](../../relational-databases/tables/temporal-tables.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_session_space_usage （Transact-sql） |Microsoft Docs
+description: sys.dm_db_session_space_usage (Transact-SQL)
+title: sys. dm_db_session_space_usage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 225809f44c2a38ab2de406debd473b298a232376
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8c6829043a007506c33ccbc240dcba7f3610ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475077"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,10 +34,10 @@ ms.locfileid: "86011923"
   返回每个会话为数据库分配和释放的页数。  
   
 > [!NOTE]  
->  此视图仅适用于[tempdb 数据库](../../relational-databases/databases/tempdb-database.md)。  
+>  此视图仅适用于 [tempdb 数据库](../../relational-databases/databases/tempdb-database.md)。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_db_session_space_usage**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_db_session_space_usage**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -46,21 +48,21 @@ ms.locfileid: "86011923"
 |**internal_objects_alloc_page_count**|**bigint**|由该会话为内部对象保留或分配的页数。|  
 |**internal_objects_dealloc_page_count**|**bigint**|由该会话释放并不再为内部对象保留的页数。|  
 |**user_objects_deferred_dealloc_page_count**|**bigint**|已标记为要延迟释放的页数。<br /><br /> **注意：** 在和的 service pack 中引入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  由该视图报告的分配或释放的计数不包括 IAM 页。  
   
  在会话开始时，页计数器被初始化为零 (0)。 计数器跟踪为会话中已经完成的任务分配或释放的总页数。 仅当任务结束时，该计数器才更新；它们不反映正在运行的任务。  
   
  会话可同时包含多个活动请求。 如果是并行查询，则请求可启动多个线程和任务。  
   
- 有关会话、请求和任务的详细信息，请参阅[sys. dm_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)， [Sys.databases dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)，dm_os_tasks [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。  
+ 有关会话、请求和任务的详细信息，请参阅 [sys. dm_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)， [Sys.databases dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)，dm_os_tasks [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。  
   
 ## <a name="user-objects"></a>用户对象  
  用户对象页计数器中包括下列对象：  
@@ -78,7 +80,7 @@ ms.locfileid: "86011923"
 -   表值函数中返回的表  
   
 ## <a name="internal-objects"></a>内部对象  
- 内部对象仅在**tempdb**中。 内部对象页计数器中包括下列对象：  
+ 内部对象仅在 **tempdb**中。 内部对象页计数器中包括下列对象：  
   
 -   用于游标或假脱机操作以及临时大型对象 (LOB) 存储的工作表  
   
@@ -96,10 +98,10 @@ ms.locfileid: "86011923"
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|一对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys. dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_file_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  

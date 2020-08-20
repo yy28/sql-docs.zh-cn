@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_volume_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_os_volume_stats (Transact-SQL)
+title: sys. dm_os_volume_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474809"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +39,18 @@ ms.locfileid: "82829321"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  *database_id*  
  数据库 ID。 database_id 的数据类型为 int，无默认值******。 不能为 NULL。  
   
  *file_id*  
- 文件的 ID。 *file_id*为**int**，没有默认值。 不能为 NULL。  
+ 文件的 ID。 *file_id* 为 **int**，没有默认值。 不能为 NULL。  
   
 ## <a name="table-returned"></a>返回的表  
   
 ||||  
 |-|-|-|  
-|**列**|**数据类型**|**说明**|  
+|**列**|**Data type**|**说明**|  
 |**database_id**|**int**|数据库 ID。 不可为 null。|  
 |**file_id**|**int**|文件的 ID。 不可为 null。|  
 |**volume_mount_point**|**nvarchar(512)**|根卷上的装入点。 可返回空字符串。|  

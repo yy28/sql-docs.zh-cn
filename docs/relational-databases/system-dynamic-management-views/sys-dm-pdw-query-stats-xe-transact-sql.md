@@ -1,5 +1,6 @@
 ---
-title: sys. dm_pdw_query_stats_xe （Transact-sql） |Microsoft Docs
+description: 'sys. dm_pdw_query_stats_xe (Transact-sql) '
+title: sys. dm_pdw_query_stats_xe (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,14 +13,14 @@ ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 220661cd5573d6160f69130760ef3046c986ae1e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1c141fef15f052b87db4c09d735c0217d45cb10a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474682"
 ---
-# <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe （Transact-sql）
+# <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   此 DMV 已弃用，并将在将来的版本中删除。 在此版本中，它返回0行。  
@@ -27,7 +28,7 @@ ms.locfileid: "87394849"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |event|**nvarchar(60)**|此视图的键。||  
-|event_id|**nvarchar （36）**|||  
+|event_id|**nvarchar (36) **|||  
 |create_time|**datetime**|||  
 |session_id|**int**|会话的 id。|请参阅 dm_pdw_exec_sessions sys.databases 中的 session_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
 |cpu|**int**|||  

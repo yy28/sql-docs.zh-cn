@@ -1,5 +1,6 @@
 ---
-title: sp_addmergealternatepublisher （Transact-sql） |Microsoft Docs
+description: sp_addmergealternatepublisher (Transact-SQL)
+title: sp_addmergealternatepublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474503"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,33 +45,33 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
     [ , [ @reserved= ] 'reserved' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'`备用发布服务器的名称。 *alternate_synchronization_partner* **sysname**，无默认值。  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` 备用发布服务器的名称。 *alternate_synchronization_partner* **sysname**，无默认值。  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`备用发布服务器上发布数据库的名称。 *alternate_publisher_db* **sysname**，无默认值。  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 备用发布服务器上发布数据库的名称。 *alternate_publisher_db* **sysname**，无默认值。  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'`备用同步伙伴上的发布的名称。 *alternate_synchronization_partner* **sysname**，无默认值。  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` 备用同步伙伴上的发布的名称。 *alternate_synchronization_partner* **sysname**，无默认值。  
   
-`[ @alternate_distributor = ] 'alternate_distributor'`备用同步伙伴的分发服务器的名称。 *alternate_distributor* **sysname**，无默认值。  
+`[ @alternate_distributor = ] 'alternate_distributor'` 备用同步伙伴的分发服务器的名称。 *alternate_distributor* **sysname**，无默认值。  
   
-`[ @friendly_name = ] 'friendly_name'`是一个显示名称，通过该名称可以标识构成备用同步伙伴的发布服务器、发布和分发服务器之间的关联。 *friendly_name*为**nvarchar （255）**，默认值为 NULL。  
+`[ @friendly_name = ] 'friendly_name'` 是一个显示名称，通过该名称可以标识构成备用同步伙伴的发布服务器、发布和分发服务器之间的关联。 *friendly_name* 为 **nvarchar (255) **，默认值为 NULL。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_addmergealternatepublisher**用于合并复制。  
+ **sp_addmergealternatepublisher** 用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addmergealternatepublisher**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_addmergealternatepublisher**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_dropmergealternatepublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   

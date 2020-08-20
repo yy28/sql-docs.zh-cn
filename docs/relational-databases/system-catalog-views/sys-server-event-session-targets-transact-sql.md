@@ -1,5 +1,6 @@
 ---
-title: sys. server_event_session_targets （Transact-sql） |Microsoft Docs
+description: sys.server_event_session_targets (Transact-SQL)
+title: sys. server_event_session_targets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b99adfbd57d8062cec0b3cc493095312f06020f8
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0d7a67610844722fc7b280223e31f096ad534679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475258"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +47,13 @@ ms.locfileid: "87442442"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 收件人 | 关系 |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|sys. server_event_sessions event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的扩展事件目录视图](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的扩展事件目录视图 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

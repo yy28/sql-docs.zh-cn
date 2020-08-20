@@ -1,4 +1,5 @@
 ---
+description: 'sys. pdw_nodes_tables (Transact-sql) '
 title: sys. pdw_nodes_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 7b50d1757371a1ca379a4cf8f79410ceaef9a614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475353"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "86196865"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|\<inherited columns>||有关此视图所继承的列的列表，请参阅[sys.databases](../system-catalog-views/sys-objects-transact-sql.md)。||  
+|\<inherited columns>||有关此视图所继承的列的列表，请参阅 [sys.databases](../system-catalog-views/sys-objects-transact-sql.md)。||  
 |lob_data_space_id|**int**||始终为 0。|  
-|filestream_data_space_id|**int**|FILESTREAM 文件组或的数据空间 ID[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|Null|  
+|filestream_data_space_id|**int**|FILESTREAM 文件组或的数据空间 ID [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|Null|  
 |max_column_id_used|**int**|此表使用的最大列 ID。||  
 |lock_on_bulk_load|**bit**|大容量加载期间将锁定表。|TBD|  
 |uses_ansi_nulls|**bit**|在创建表时，将 SET ANSI_NULLS 数据库选项设置为 ON。|1|  

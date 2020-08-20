@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_threads （Transact-sql） |Microsoft Docs
+description: sys.dm_os_threads (Transact-SQL)
+title: sys. dm_os_threads (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53957ed65247124927e248c4e9aad104362ec84e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80986f9bce91034d8950915f5048e3f4ee895f57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474819"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "86008562"
   返回在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中运行的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作系统线程的列表。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_threads**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_threads**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +50,7 @@ ms.locfileid: "86008562"
 |stack_end_address|**varbinary(8)**|该线程的最低堆栈地址在内存中的位置。|  
 |stack_bytes_committed|**int**|在堆栈中提交的字节数。|  
 |stack_bytes_used|**int**|线程目前使用的字节数。|  
-|affinity|**bigint**|该线程运行时使用的 CPU 掩码。 这取决于**ALTER SERVER CONFIGURATION SET PROCESS 地缘**语句配置的值。 在软关联的情况下，可能与计划程序不同。|  
+|affinity|**bigint**|该线程运行时使用的 CPU 掩码。 这取决于 **ALTER SERVER CONFIGURATION SET PROCESS 地缘** 语句配置的值。 在软关联的情况下，可能与计划程序不同。|  
 |优先度|**int**|该线程的优先级值。|  
 |Locale|**int**|线程的缓存区域设置 LCID。|  
 |标记|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
@@ -57,21 +59,21 @@ ms.locfileid: "86008562"
 |fiber_data|**varbinary(8)**|线程当前运行的 Win32 纤程。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置了轻型池时，这才适用。|  
 |thread_handle|**varbinary(8)**|仅限内部使用。|  
 |event_handle|**varbinary(8)**|仅限内部使用。|  
-|scheduler_address|**varbinary(8)**|与该线程关联的计划程序的内存地址。 有关详细信息，请参阅[sys.databases&#41;dm_os_schedulers &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
-|worker_address|**varbinary(8)**|绑定到该线程的工作线程的内存地址。 有关详细信息，请参阅[sys.databases&#41;dm_os_workers &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|scheduler_address|**varbinary(8)**|与该线程关联的计划程序的内存地址。 有关详细信息，请参阅 [sys.databases&#41;dm_os_schedulers &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
+|worker_address|**varbinary(8)**|绑定到该线程的工作线程的内存地址。 有关详细信息，请参阅 [sys.databases&#41;dm_os_workers &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
 |fiber_context_address|**varbinary(8)**|内部纤程上下文地址。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置了轻型池时，这才适用。|  
 |self_address|**varbinary(8)**|内部一致性指针。|  
 |processor_group|**smallint**|**适用于**：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 处理器组 ID。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
 ## <a name="notes-on-linux-version"></a>Linux 版本上的说明
 
-由于 SQL 引擎在 Linux 中的工作原理，某些信息与 Linux 诊断数据不匹配。 例如，与 `os_thread_id` 工具（如） `ps` `top` 或 procfs （/proc/）的结果不匹配 `pid` 。  这是由于平台抽象层（SQLPAL）、SQL Server 组件和操作系统之间的一层。
+由于 SQL 引擎在 Linux 中的工作原理，某些信息与 Linux 诊断数据不匹配。 例如，与 `os_thread_id` 类似于的工具 `ps` `top` 或 procfs (/proc/) 的结果不匹配 `pid` 。  这是由于平台抽象层 (SQLPAL) （SQL Server 组件和操作系统之间的一个层）。
 
 ## <a name="examples"></a>示例  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时将启动线程，然后将工作与这些线程进行关联。 但是，外部组件（如扩展存储过程）可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中启动线程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法控制这些线程。 sys. dm_os_threads 可以提供有关使用进程中的资源的恶意线程的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

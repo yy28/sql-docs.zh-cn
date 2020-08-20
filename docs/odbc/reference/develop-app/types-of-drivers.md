@@ -1,4 +1,5 @@
 ---
+description: 驱动程序类型
 title: 驱动程序的类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de6d8e1473f127d28c69969e0fc298afd69d3023
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae3ab2b0172e97a221b446107ccbf4b6ae4eb7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476291"
 ---
 # <a name="types-of-drivers"></a>驱动程序类型
 ODBC 驱动程序可以按如下方式分类：  
@@ -30,9 +31,9 @@ ODBC 驱动程序可以按如下方式分类：
   
     -   仅*导出 ODBC 2.x 函数。*  
   
-    -   展示行为*更改的 ODBC 2.x*行为。  
+    -   展示行为 *更改的 ODBC 2.x* 行为。  
   
--   **ISO 并打开与组兼容的驱动程序**一个32位驱动程序，该驱动程序：  
+-   **ISO 并打开与组兼容的驱动程序** 一个32位驱动程序，该驱动程序：  
   
     -   导出打开组或 ISO CLI 文档中记录的所有函数。 这将包括 ODBC 中弃用的一些函数。  
   
@@ -40,19 +41,19 @@ ODBC 驱动程序可以按如下方式分类：
   
     -   不一定要经过 ODBC 3.0 驱动程序管理器。  
   
--   **ODBC 3.0 驱动程序**一个32位驱动程序，该驱动程序：  
+-   **ODBC 3.0 驱动程序** 一个32位驱动程序，该驱动程序：  
   
     -   仅导出 ODBC 3.0 中不推荐使用的函数的函数。  
   
-    -   基于 SQL_ATTR_APP_ODBC_VERSION 环境属性，能够使 ODBC 2.x 行为或 ODBC *3.0 行为与*行为更改相关。  
+    -   基于 SQL_ATTR_APP_ODBC_VERSION 环境属性，能够使 ODBC 2.x 行为或 ODBC *3.0 行为与* 行为更改相关。  
   
--   **ODBC 3.5 （或更高版本） ANSI 驱动程序**一个32位驱动程序，该驱动程序：  
+-   **ODBC 3.5 (或更高版本) ANSI 驱动程序** 一个32位驱动程序，该驱动程序：  
   
     -   仅导出 ODBC 3.5 中不推荐使用的函数的函数。  
   
-    -   基于 SQL_ATTR_APP_ODBC_VERSION 环境属性，能够使 ODBC 2.x 行为或 ODBC *3.0 行为或*odbc 3.5 行为与行为更改相关。  
+    -   基于 SQL_ATTR_APP_ODBC_VERSION 环境属性，能够使 ODBC 2.x 行为或 ODBC *3.0 行为或* odbc 3.5 行为与行为更改相关。  
   
--   **ODBC 3.5 （或更高版本） Unicode 驱动程序**一个32位驱动程序，该驱动程序：  
+-   **ODBC 3.5 (或更高版本) Unicode 驱动程序** 一个32位驱动程序，该驱动程序：  
   
     -   支持 ODBC 3.5 ANSI 驱动程序的所有功能。  
   
@@ -61,4 +62,4 @@ ODBC 驱动程序可以按如下方式分类：
     -   可以存储和处理数据源上的 Unicode 数据。  
   
 > [!NOTE]  
->  16位 ODBC 驱动程序不会直接*使用 odbc 1.X*驱动程序管理器。 但是，16位驱动程序可以与 2.0 ODBC 驱动程序管理器配合使用，后者随后会成为1.x 驱动程序管理*器。*
+>  16位 ODBC 驱动程序不会直接 *使用 odbc 1.X* 驱动程序管理器。 但是，16位驱动程序可以与 2.0 ODBC 驱动程序管理器配合使用，后者随后会成为1.x 驱动程序管理*器。*

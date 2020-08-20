@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_xtp_hash_index_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
+title: sys. dm_db_xtp_hash_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d27f44c0d0bcec96d6d4c0d5f4da63038485a1f7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 219fc6e3624e3a305481d661748a0f1a5ff87d6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475003"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,9 +42,9 @@ ms.locfileid: "87442561"
 链长度较长可能会显著影响针对各单独行的所有 DML 操作的性能，包括 SELECT 和 INSERT。 链长度较短以及空存储桶计数较高指示 bucket_count 过高。 这将降低索引扫描的性能。  
   
 > [!WARNING]
-> **sys. dm_db_xtp_hash_index_stats**扫描整个表。 如果数据库中有大型表，则**dm_db_xtp_hash_index_stats**可能需要较长时间才能运行。  
+> **sys. dm_db_xtp_hash_index_stats** 扫描整个表。 如果数据库中有大型表，则 **dm_db_xtp_hash_index_stats** 可能需要较长时间才能运行。  
   
-有关详细信息，请参阅[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
+有关详细信息，请参阅 [内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
 |列名称|类型|描述|  
 |-----------------|----------|-----------------|  
@@ -87,7 +88,7 @@ ms.locfileid: "87442561"
   ORDER BY [table], [index];  
 ``` 
 
-有关如何解释此查询的结果的详细信息，请参阅对[内存优化表的哈希索引进行故障排除](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
+有关如何解释此查询的结果的详细信息，请参阅对 [内存优化表的哈希索引进行故障排除](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部表的哈希索引统计信息
 
@@ -112,7 +113,7 @@ ms.locfileid: "87442561"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-请注意，不能更改内部表的索引 BUCKET_COUNT，因此应仅将此查询的输出视为 "信息性"。 不需要执行任何操作。  
+请注意，不能更改内部表的索引 BUCKET_COUNT，因此应仅将此查询的输出视为 "信息性"。 因此不需要执行任何操作。  
 
 此查询不应返回任何行，除非您使用的功能利用了内部表的哈希索引。 以下内存优化表包含列存储索引。 创建此表后，将看到内部表的哈希索引。
 

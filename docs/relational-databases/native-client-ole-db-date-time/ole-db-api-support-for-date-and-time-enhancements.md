@@ -1,5 +1,6 @@
 ---
-title: 对日期和时间增强的 API 支持（Native Client OLE DB 提供程序）
+description: 'OLE DB API 支持 (Native Client OLE DB 提供程序的日期和时间增强功能) '
+title: " (Native Client OLE DB 提供程序的日期和时间增强功能的 API 支持) "
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,22 +12,22 @@ ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4bb55ae2187b1406281572157457a49bda97752
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9c948c8fa104f57c36f1cbf55fcc7de3469f0846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475765"
 ---
-# <a name="ole-db-api-support-for-date-and-time-enhancements-native-client-ole-db-provider"></a>OLE DB API 对日期和时间增强的支持（Native Client OLE DB 提供程序）
+# <a name="ole-db-api-support-for-date-and-time-enhancements-native-client-ole-db-provider"></a>OLE DB API 支持 (Native Client OLE DB 提供程序的日期和时间增强功能) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   以下 OLE DB API 支持日期/时间增强功能。  
   
 |函数|说明|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|DBBINDING 结构中添加了一个标志，可便于应用程序区分 datetime****、datetime2**** 和 smalldatetime**** 值。 有关详细信息，请参阅[参数和行集元数据](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)。|  
-|IBCPSession::BCPColFmt|有关详细信息，请参阅[&#40;OLE DB 和 ODBC&#41;的增强日期和时间类型的大容量复制更改](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。|  
+|IAccessor::CreateAccessor|DBBINDING 结构中添加了一个标志，可便于应用程序区分 datetime  、datetime2  和 smalldatetime  值。 有关详细信息，请参阅[参数和行集元数据](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)。|  
+|IBCPSession::BCPColFmt|有关详细信息，请参阅 [&#40;OLE DB 和 ODBC&#41;的增强日期和时间类型的大容量复制更改 ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。|  
 |ICommandWithParameters::GetParameterInfo|有关详细信息，请参阅[参数和行集元数据](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)。|  
 |ICommandWithParameters::SetParameterinfo|有关详细信息，请参阅[参数和行集元数据](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)。|  
 |IColumnsRowset::GetColumnsRowset|有关详细信息，请参阅[参数和行集元数据](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)。|  

@@ -1,5 +1,6 @@
 ---
-title: 数据类型（Native Client OLE DB 提供程序） |Microsoft Docs
+description: 'OLE DB 的数据类型 (SQL Server Native Client) '
+title: OLE DB 提供程序)  (Native Client 的数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1574b87bef2e231415b0c95a333c4b7107ca726
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1f3d294bf1c504da0f5c90a46ff5e5e86d5c734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475752"
 ---
-# <a name="sql-server-native-client-data-types-ole-db"></a>SQL Server Native Client 数据类型（OLE DB）
+# <a name="sql-server-native-client-data-types-ole-db"></a>OLE DB 的数据类型 (SQL Server Native Client) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  若要 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 Native client OLE DB 提供程序来执行语句并处理结果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必须知道在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行集内绑定参数或列时，Native Client OLE DB 提供程序如何将数据类型映射到 OLE DB 数据类型，以及何时使用**ITableDefinition**接口在中创建表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  若要 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 Native client OLE DB 提供程序来执行语句并处理结果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必须知道在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行集内绑定参数或列时，Native Client OLE DB 提供程序如何将数据类型映射到 OLE DB 数据类型，以及何时使用 **ITableDefinition** 接口在中创建表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本节内容  
   

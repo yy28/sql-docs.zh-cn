@@ -1,4 +1,5 @@
 ---
+description: sys.dm_geo_replication_link_status（Azure SQL 数据库）
 title: sys.dm_geo_replication_link_status
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -18,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fc501f372cbeacfb2bc0f6172c9295b4b28a3076
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ebfac02130a40d7c8ad091c1825fcc0655913bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474886"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status（Azure SQL 数据库）
 
@@ -47,10 +48,10 @@ ms.locfileid: "85738604"
 |last_commit|**datetimeoffset**|上次提交给数据库的事务的时间。 如果在主数据库上检索，它表示主数据库上的上次提交时间。 如果在辅助数据库上检索，它将指示辅助数据库上的上次提交时间。 如果在复制链接的主节点关闭时在辅助数据库上检索，它将指示辅助数据库在哪个位置上捕获。|
   
 > [!NOTE]  
->  如果通过删除辅助数据库（第4.2 节）终止了复制关系，则**dm_geo_replication_link_status**视图中该数据库的行将会消失。  
+>  如果通过删除辅助数据库 (部分 4.2) 来终止复制关系，则 **dm_geo_replication_link_status** 视图中该数据库的行将会消失。  
   
 ## <a name="permissions"></a>权限  
- 具有 view_database_state 权限的任何帐户都可以查询**dm_geo_replication_link_status**。  
+ 具有 view_database_state 权限的任何帐户都可以查询 **dm_geo_replication_link_status**。  
   
 ## <a name="example"></a>示例  
  显示复制延迟和辅助数据库的上次复制时间。  

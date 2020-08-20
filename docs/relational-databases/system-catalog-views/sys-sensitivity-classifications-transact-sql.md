@@ -1,5 +1,6 @@
 ---
-title: sys. sensitivity_classifications （Transact-sql） |Microsoft Docs
+description: sys.sensitivity_classifications (Transact-SQL)
+title: sys. sensitivity_classifications (Transact-sql) |Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9962a7fbcb3b308862db7e8813ee2733155950ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475293"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,19 +38,19 @@ ms.locfileid: "86004788"
 
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|标识存在分类的项的类。 始终具有值1（表示列）|  
-|**class_desc**|**varchar （16）**|存在分类的项的类的说明。 始终具有值*OBJECT_OR_COLUMN*|  
+|**class**|**int**|标识存在分类的项的类。 将始终具有值 1 (表示列) |  
+|**class_desc**|**varchar (16) **|存在分类的项的类的说明。 始终具有值 *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|表示包含已分类列的表的 ID，该 ID 与 all_objects 相对应。 object_id|  
 |**minor_id**|**int**|表示存在分类的列的 ID，与 sys. all_columns 相对应 column_id|   
-|**label**|**sysname**|为敏感度分类分配的标签（可读）|  
-|**label_id**|**sysname**|与标签关联的 ID，可由信息保护系统（如 Azure 信息保护（AIP））使用|  
-|**information_type**|**sysname**|为敏感度分类分配的信息类型（可人工读取）|  
-|**information_type_id**|**sysname**|与信息保护系统（如 Azure 信息保护（AIP））关联的信息类型的 ID|  
+|**label**|**sysname**|为敏感度分类分配的用户可读)  (标签|  
+|**label_id**|**sysname**|与标签关联的 ID，可由信息保护系统（如 Azure 信息保护 (AIP）使用) |  
+|**information_type**|**sysname**|为敏感度分类分配了用户可读)  (信息类型|  
+|**information_type_id**|**sysname**|与信息保护系统（如 Azure 信息保护） (AIP) 相关联的信息类型的 ID|  
 |**级别**|**int**|排名的数值： <br><br>0表示无<br>10表示低<br>20个用于中型<br>高30<br>40对于严重| 
 |**rank_desc**|**sysname**|排名的文本表示形式：  <br><br>无、低、中、高、严重|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 
 - 此视图提供数据库的分类状态的可见性。 它可用于管理数据库分类以及生成报告。
 - 目前仅支持对数据库列进行分类。
@@ -75,7 +77,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ```
 
 ## <a name="permissions"></a>权限  
- 需要 "**查看任何敏感度分类**" 权限。 
+ 需要 " **查看任何敏感度分类** " 权限。 
  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 

@@ -1,5 +1,6 @@
 ---
-title: sys. trusted_assemblies （Transact-sql） |Microsoft Docs
+description: sys.trusted_assemblies (Transact-SQL)
+title: sys. trusted_assemblies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8144e6a134edf3331b34f5c91f6d676e6a9302f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4eee138db35efe4b8f9b01f88d07b52141ab9a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475156"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85733396"
 |列名称 |数据类型 |说明 |
 |--- |--- |--- |
 |hash |varbinary(8000) |SHA2_512 程序集内容的哈希。 |
-|description |nvarchar(4000) |程序集的可选用户定义说明。 Microsoft 建议使用规范名称对要信任的程序集的简单名称、版本号、区域性、公钥和体系结构进行编码。 此值在公共语言运行时（CLR）端唯一标识程序集，与 sys.databases 中的 clr_name 值相同。 |
+|description |nvarchar(4000) |程序集的可选用户定义说明。 Microsoft 建议使用规范名称对要信任的程序集的简单名称、版本号、区域性、公钥和体系结构进行编码。 此值在公共语言运行时 (CLR) 端唯一地标识程序集，该程序集与 sys.databases 中的 clr_name 值相同。 |
 |create_date |datetime2 |将程序集添加到受信任程序集列表的日期。 |
 |created_by |nvarchar(128) |向列表中添加程序集的主体的登录名。 |
 | | | |
@@ -44,7 +45,7 @@ ms.locfileid: "85733396"
 
 ## <a name="remarks"></a>备注  
 
-使用 "**需要添加 sp_add_trusted_assembly** ，并**需要添加 trusted_assemblies**添加或删除程序集 `sys.trusted_assemblies` 。
+使用 " **需要添加 sp_add_trusted_assembly** ，并 **需要添加 trusted_assemblies** 添加或删除程序集 `sys.trusted_assemblies` 。
 
 ## <a name="see-also"></a>另请参阅  
   [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [drop assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md) sp_add_trusted_assembly  

@@ -1,5 +1,6 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+description: sys.stats (Transact-SQL)
+title: sys. stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,18 +21,19 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19a338aa9f5d20dd9a6d089cdf4b56bcf1a4b541
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18c6900c0eae313b77e796a99666dd1176d9f2df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475219"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据库中的表、索引和索引视图对应的每个统计信息对象都包含一行。 每个索引都具有相同名称和 ID （**index_id**stats_id）的相应统计信息行  =  **stats_id**，但并非每个统计信息行都有相应的索引。  
+  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据库中的表、索引和索引视图对应的每个统计信息对象都包含一行。 每个索引都将具有相同名称和 ID (**index_id**  =  **stats_id**) 中的相应统计信息行，但并不是每个统计信息行都有相应的索引。  
   
- 目录视图[sys.databases stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)提供数据库中每个列的统计信息。 有关统计信息的详细信息，请参阅[统计](../../relational-databases/statistics/statistics.md)信息。  
+ 目录视图 [sys.databases stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 提供数据库中每个列的统计信息。 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +42,7 @@ ms.locfileid: "86012917"
 |**stats_id**|**int**|统计信息 ID。 在对象中是唯一的。<br /><br />如果统计信息对应于索引，则*stats_id*值与[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图中的*index_id*值相同。|  
 |**auto_created**|**bit**|指示统计信息是否由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。<br /><br /> 0 = 统计信息不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。<br /><br /> 1 = 统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。|  
 |**user_created**|**bit**|指示统计信息是否由用户创建。<br /><br /> 0 = 统计信息不是用户创建的。<br /><br /> 1 = 统计信息是用户创建的。|  
-|**no_recompute**|**bit**|指示是否已用**NORECOMPUTE**选项创建统计信息。<br /><br /> 0 = 统计信息不是用**NORECOMPUTE**选项创建的。<br /><br /> 1 = 统计信息是通过**NORECOMPUTE**选项创建的。|  
+|**no_recompute**|**bit**|指示是否已用 **NORECOMPUTE** 选项创建统计信息。<br /><br /> 0 = 统计信息不是用 **NORECOMPUTE** 选项创建的。<br /><br /> 1 = 统计信息是通过 **NORECOMPUTE** 选项创建的。|  
 |**has_filter**|**bit**|0 = 统计信息不具有筛选器并且针对所有行进行计算。<br /><br /> 1 = 统计信息具有筛选器并且仅针对满足筛选器定义的行进行计算。|  
 |**filter_definition**|**nvarchar(max)**|包含在筛选统计信息中的行子集的表达式。<br /><br /> NULL = 非筛选的统计信息。|  
 |**is_temporary**|**bit**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示统计信息是否是临时的。 临时统计信息支持 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 辅助数据库（支持只读访问）。<br /><br /> 0 = 统计信息不是临时的。<br /><br /> 1 = 统计信息是临时的。|  
@@ -67,11 +69,11 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [标识](../../relational-databases/statistics/statistics.md)    
- [sys. dm_db_stats_properties &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [统计信息](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys. dm_db_stats_histogram &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  

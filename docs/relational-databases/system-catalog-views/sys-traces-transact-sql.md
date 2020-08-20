@@ -1,5 +1,6 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+description: sys.traces (Transact-SQL)
+title: sys.databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f8edc61622c2748208a62d2bdaeb66650a78840
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ab9f9b8d86e61d231aae70c43b028550b6032a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475182"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Sys.databases**目录视图包含系统上当前正在运行的跟踪。 此视图旨在替换**fn_trace_getinfo**函数。  
+  **Sys.databases**目录视图包含系统上当前正在运行的跟踪。 此视图旨在替换 **fn_trace_getinfo** 函数。  
   
- 有关支持的跟踪事件的完整列表，请参阅[SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
+ 有关支持的跟踪事件的完整列表，请参阅 [SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
@@ -40,7 +41,7 @@ ms.locfileid: "85897706"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|跟踪 ID。|  
 |**status**|**int**|跟踪状态：<br /><br /> 0 = 停止<br /><br /> 1 = 正在运行|  
-|**path**|**nvarchar(260)**|跟踪文件的路径。 如果跟踪为行集跟踪，则此值为空值。|  
+|**路径**|**nvarchar(260)**|跟踪文件的路径。 如果跟踪为行集跟踪，则此值为空值。|  
 |**max_size**|**bigint**|跟踪文件的最大大小限制，以兆字节 (MB) 表示。 如果跟踪为行集跟踪，则此值为空值。|  
 |**stop_time**|**datetime**|停止运行跟踪的时间。|  
 |**max_files**|**int**|滚动更新文件的最大数目。 如果未设置最大数目，则此值是零。|  
@@ -61,7 +62,7 @@ ms.locfileid: "85897706"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys. trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys. trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
  [sys. trace_events &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   

@@ -1,5 +1,6 @@
 ---
-title: sys. query_store_query_text （Transact-sql） |Microsoft Docs
+description: 'sys. query_store_query_text (Transact-sql) '
+title: sys. query_store_query_text (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -21,14 +22,14 @@ ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fca2f8ebd5bf23f129fd7c097eca0451c278570
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2979ad8e2b2a635df117e9bbfcb1734f22ea1925
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475310"
 ---
-# <a name="sysquery_store_query_text-transact-sql"></a>sys. query_store_query_text （Transact-sql）
+# <a name="sysquery_store_query_text-transact-sql"></a>sys. query_store_query_text (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的文本和 SQL 句柄。  
@@ -37,12 +38,12 @@ ms.locfileid: "87393977"
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|主密钥。|  
 |**query_sql_text**|**nvarchar(max)**|由用户提供的查询的 SQL 文本。 包括空格、提示和注释。 将忽略查询文本之前和之后的注释和空格。 不忽略文本内部的注释和空格。|  
-|**statement_sql_handle**|**vabinary （64）**|单个查询的 SQL 句柄。|  
-|**is_part_of_encrypted_module**|**bit**|查询文本是加密模块的一部分。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|
-|**has_restricted_text**|**bit**|查询文本包含一个密码或其他 unmentionable 词。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|
+|**statement_sql_handle**|**vabinary (64) **|单个查询的 SQL 句柄。|  
+|**is_part_of_encrypted_module**|**bit**|查询文本是加密模块的一部分。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|
+|**has_restricted_text**|**bit**|查询文本包含一个密码或其他 unmentionable 词。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|
   
 ## <a name="permissions"></a>权限  
- 需要**VIEW DATABASE STATE**权限。  
+ 需要 **VIEW DATABASE STATE** 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

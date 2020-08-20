@@ -1,4 +1,5 @@
 ---
+description: LocalDBFormatMessage 函数
 title: LocalDBFormatMessage 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57c110763c38f1d400d03178568ff955a9c1840b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d3083d789124023985577d1a04a811ff2273915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475834"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ HRESULT LocalDBFormatMessage(
  *hrLocalDB*  
  [输入] LocalDB 错误代码。  
   
- dwFlags**  
+ dwFlags   
  [输入] 用于指定此函数的行为的标志。  
   
  可用标志：  
@@ -59,7 +60,7 @@ HRESULT LocalDBFormatMessage(
  [输出] 要存储 LocalDB 错误消息的缓冲区。  
   
  *lpcchMessage*  
- [输入/输出]输入时包含*wszMessage*缓冲区的大小（以字符为限）。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符数表示，包括任何尾随空格）。 如果函数成功，则包含消息中的字符数（任何尾随空格除外）。  
+ [输入/输出]输入时包含 *wszMessage* 缓冲区的大小（以字符为限）。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符数表示，包括任何尾随空格）。 如果函数成功，则包含消息中的字符数（任何尾随空格除外）。  
   
 ## <a name="returns"></a>返回  
  S_OK  
@@ -78,13 +79,13 @@ HRESULT LocalDBFormatMessage(
  该消息在请求的语言中不可用。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../../relational-databases/express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 输入缓冲区*wszMessage*太短，不请求截断。  
+ 输入缓冲区 *wszMessage* 太短，不请求截断。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>备注  
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅 [SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

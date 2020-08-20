@@ -1,4 +1,5 @@
 ---
+description: 处理 SQL 语句
 title: 处理 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4ce614f6dcf4c1fe0ab1e1c806b966b4267e7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476214"
 ---
 # <a name="processing-a-sql-statement"></a>处理 SQL 语句
 在讨论以编程方式使用 SQL 的方法之前，必须先讨论如何处理 SQL 语句。 所有这三种方法都有所涉及的步骤，但每种方法在不同时间执行。 下图显示了处理 SQL 语句所涉及的步骤，本部分的其余部分将对此进行讨论。  

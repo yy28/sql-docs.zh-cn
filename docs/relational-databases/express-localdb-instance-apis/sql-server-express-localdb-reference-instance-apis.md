@@ -1,4 +1,5 @@
 ---
+description: SQL Server Express LocalDB 参考 - 实例 API
 title: SQL Server Express LocalDB 实例 API 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a7d1f9461e766ec76ab5c17051143b67fd7914c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475811"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 参考 - 实例 API
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85767786"
   
  LocalDB 实例始终由单个用户所有，并且仅在此用户的上下文中可见且可访问，除非已启用实例共享。  
   
- 尽管从技术上说 LocalDB 实例与传统 SQL Server 实例不同，但它们的目标用途是类似的。 它们被称为*实例*来强调这种相似性，并使它们对 SQL Server 用户更加直观。  
+ 尽管从技术上说 LocalDB 实例与传统 SQL Server 实例不同，但它们的目标用途是类似的。 它们被称为 *实例* 来强调这种相似性，并使它们对 SQL Server 用户更加直观。  
   
  LocalDB 支持两种类型的实例：自动实例 (AI) 和命名实例 (NI)。 LocalDB 实例的标识符为实例名称。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "85767786"
   
  非法自动实例名称的示例如下：  
   
--   11.0 （开头缺少 "v" 字符）  
+-   11.0 (缺少开头的 "v" 字符)   
   
 -   v11（缺少句点和版本的第二个数字）  
   
@@ -63,9 +64,9 @@ ms.locfileid: "85767786"
  每个命名实例都具有关联的 LocalDB 版本；也就是说，它指向指定的一组 LocalDB 二进制代码。 命名实例的版本是在实例创建过程中设置的。  
   
 ### <a name="named-instance-naming-rules"></a>命名实例命名规则  
- LocalDB 实例名称最多可包含128个字符（ **sysname**数据类型施加的限制）。 这与传统 SQL Server 实例名称相比有显著差异，后者限制为 16 个 ASCII 字符的 NetBIOS 名称。 这种差异的原因是 LocalDB 将数据库视为文件，因此表示基于文件的语义，因此，用户可以更加自由地选择实例名称。  
+ LocalDB 实例名称最多可包含128个字符， (" **sysname** " 数据类型) 所规定的限制。 这与传统 SQL Server 实例名称相比有显著差异，后者限制为 16 个 ASCII 字符的 NetBIOS 名称。 这种差异的原因是 LocalDB 将数据库视为文件，因此表示基于文件的语义，因此，用户可以更加自由地选择实例名称。  
   
- LocalDB 实例名称可包含在文件名组分内合法的任何 Unicode 字符。 文件名组件中的非法字符通常包含以下字符： ASCII/Unicode 字符1到31、引号（"）、小于号（ \<), greater than (> ）、竖线（|）、backspace （\b）、制表符（\t）、冒号（:)、星号（*）、问号（？）、反斜杠（ \\ ）和正斜杠（/）。 请注意，允许使用 Null 字符 (\ 0)，因为它用于终止字符串；第一个 Null 字符之后的任何字符都将忽略。  
+ LocalDB 实例名称可包含在文件名组分内合法的任何 Unicode 字符。 文件名组件中的非法字符通常包含以下字符： ASCII/Unicode 字符1到31、引号 ( ") 、小于 (\<), greater than (>) 、管道 (|) 、退格 ( \b) 、tab ( \t) 、冒号 (： ) 、星号 ( * ) 、问号 (？ ) 、反斜杠 () 、问号 ( \\ /) 。 请注意，允许使用 Null 字符 (\ 0)，因为它用于终止字符串；第一个 Null 字符之后的任何字符都将忽略。  
   
 > [!NOTE]  
 >  非法字符列表取决于操作系统，并且可能在将来的版本中更改。  

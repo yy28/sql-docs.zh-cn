@@ -1,5 +1,6 @@
 ---
-title: sys. pdw_nodes_pdw_physical_databases （Transact-sql）
+description: 'sys. pdw_nodes_pdw_physical_databases (Transact-sql) '
+title: 'sys. pdw_nodes_pdw_physical_databases (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475354"
 ---
-# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases （Transact-sql）
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   计算节点上的每个物理数据库在各占一行。 聚合物理数据库信息以获取有关数据库的详细信息。 若要合并信息，请将联接 `sys.pdw_nodes_pdw_physical_databases` 到 `sys.pdw_database_mappings` 和 `sys.databases` 表。  
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|数据库的对象 ID。 请注意，此值与[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)视图中的 database_id 不相同。|  
-|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值与[pdw_database_mappings sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)视图中 physical_name 列的值相同。|  
+|database_id|**int**|数据库的对象 ID。 请注意，此值与 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 视图中的 database_id 不相同。|  
+|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值与 [pdw_database_mappings sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 视图中 physical_name 列的值相同。|  
 |pdw_node_id|**int**|与节点关联的唯一数字 id。|  
   
 ## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

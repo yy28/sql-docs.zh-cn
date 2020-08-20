@@ -1,5 +1,6 @@
 ---
-title: sp_delete_jobschedule （Transact-sql） |Microsoft Docs
+description: sp_delete_jobschedule (Transact-SQL)
+title: sp_delete_jobschedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a74d7235b1faa80c1fe65f80717c39e7944f343
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee25a531baeaf96b4090f0cb0f165e6cd4c8d203
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474402"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,12 +34,12 @@ ms.locfileid: "85864265"
   
   
 ## <a name="remarks"></a>备注  
- 作业计划现在可以独立于作业进行管理。 若要从作业中删除计划，请使用**sp_detach_schedule**。 若要删除计划，请使用**sp_delete_schedule**。  
+ 作业计划现在可以独立于作业进行管理。 若要从作业中删除计划，请使用 **sp_detach_schedule**。 若要删除计划，请使用 **sp_delete_schedule**。  
   
-> **注意： sp_delete_jobschedule**不支持附加到多个作业的计划。 如果现有脚本调用**sp_delete_jobschedule**删除附加到多个作业的计划，则该过程将返回错误。  
+> **注意： sp_delete_jobschedule** 不支持附加到多个作业的计划。 如果现有脚本调用 **sp_delete_jobschedule** 删除附加到多个作业的计划，则该过程将返回错误。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85864265"
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **Sysadmin**角色的成员可以删除任何作业计划。 不是**sysadmin**角色成员的用户只能删除他们所拥有的作业计划。  
+ **Sysadmin**角色的成员可以删除任何作业计划。 不是 **sysadmin** 角色成员的用户只能删除他们所拥有的作业计划。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

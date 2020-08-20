@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_xtp_merge_requests （Transact-sql） |Microsoft Docs
+description: sys.dm_db_xtp_merge_requests (Transact-SQL)
+title: sys. dm_db_xtp_merge_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f489b01655f3b6836c1360bc0e473747e62ca59e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c8a03ef677c5c5ac3402f80c0b90eb32577fa8f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474995"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-跟踪数据库合并请求。 合并请求可能是由 SQL Server 生成的，或者该请求可能由具有 sys.databases 的用户发出[sp_xtp_merge_checkpoint_files （transact-sql）](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)。
+跟踪数据库合并请求。 合并请求可能是由 SQL Server 生成的，或者该请求可能由具有 [sys.databases (transact-sql) ](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)的用户发出 sp_xtp_merge_checkpoint_files。
 
 > [!NOTE]
-> 此动态管理视图（DMV） dm_db_xtp_merge_requests 存在，直到 Microsoft SQL Server 2014。
+> 此动态管理视图 (DMV) ，dm_db_xtp_merge_requests sys.databases 一直存在，直到 Microsoft SQL Server 2014 为止。
 > 但从 SQL Server 2016 开始，此 DMV 将不再适用。
 
 ## <a name="columns-in-the-report"></a>报表中的列
@@ -43,6 +44,6 @@ ms.locfileid: "87442667"
 
 要求对当前数据库拥有 VIEW DATABASE STATE 权限。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存优化表动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)

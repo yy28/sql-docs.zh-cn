@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_persisted_sku_features （Transact-sql） |Microsoft Docs
+description: sys.dm_db_persisted_sku_features (Transact-SQL)
+title: sys. dm_db_persisted_sku_features (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41fcc673152f0cb253c0a5f10721beb40cf7628
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f99385bb016ca640955d7d3c6077521d1a7cabf7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475061"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +47,15 @@ ms.locfileid: "85894570"
   
  sys. dm_db_persisted_sku_features 可能会列出以下数据库更改的功能，这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本：  
   
--   **ChangeCapture**：指示数据库已启用更改数据捕获。 若要删除变更数据捕获，请使用[sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)存储过程。 有关详细信息，请参阅[关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
+-   **ChangeCapture**：指示数据库已启用更改数据捕获。 若要删除变更数据捕获，请使用 [sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 存储过程。 有关详细信息，请参阅[关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
   
--   **ColumnStoreIndex**：指示至少有一个表具有列存储索引。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除列存储索引。 有关详细信息，请参阅[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
+-   **ColumnStoreIndex**：指示至少有一个表具有列存储索引。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 或 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 语句删除列存储索引。 有关详细信息，请参阅 [列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
     **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。  
   
--   **压缩**：指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用[alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+-   **压缩**：指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) 语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
--   **MultipleFSContainers**：指示数据库使用多个 FILESTREAM 容器。 数据库具有包含多个容器（文件）的 FILESTREAM 文件组。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
+-   **MultipleFSContainers**：指示数据库使用多个 FILESTREAM 容器。 数据库具有一个 FILESTREAM 文件组，其中包含多个容器 (文件) 。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   
 -   **InMemoryOLTP**：指示数据库使用内存中 OLTP。 数据库具有 MEMORY_OPTIMIZED_DATA 文件组。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
@@ -75,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
+ [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [版本和 SQL Server 2017 支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
   

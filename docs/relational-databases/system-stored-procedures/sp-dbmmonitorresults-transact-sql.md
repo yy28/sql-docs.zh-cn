@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitorresults （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitorresults (Transact-SQL)
+title: sp_dbmmonitorresults (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d302c6c592dda3dc4612310a3af8cabc0113aef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474415"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  0 = 不更新数据库的状态。 仅使用最后两行计算结果，其保留时间取决于何时刷新状态表。  
   
- 1 = 在计算结果之前通过调用**sp_dbmmonitorupdate**来更新数据库的状态。 但是，如果状态表在前15秒内已更新，或者该用户不是**sysadmin**固定服务器角色的成员，则**sp_dbmmonitorresults**在不更新状态的情况下运行。  
+ 1 = 在计算结果之前通过调用 **sp_dbmmonitorupdate** 来更新数据库的状态。 但是，如果状态表在前15秒内已更新，或者该用户不是 **sysadmin** 固定服务器角色的成员，则 **sp_dbmmonitorresults** 在不更新状态的情况下运行。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
  返回指定数据库的所请求行数的历史记录状态。 每一行包含以下信息：  
@@ -100,7 +101,7 @@ sp_dbmmonitorresults database_name
 |**local_time**|**datetime**|更新此行时本地服务器实例上的系统时钟时间。|  
   
 ## <a name="remarks"></a>备注  
- **sp_dbmmonitorresults**只能在**msdb**数据库的上下文中执行。  
+ **sp_dbmmonitorresults** 只能在 **msdb** 数据库的上下文中执行。  
   
 ## <a name="permissions"></a>权限  
  要求具有**sysadmin**固定服务器角色的成员身份或**msdb**数据库中**dbm_monitor**固定数据库角色的成员身份。 **Dbm_monitor**角色使其成员可以查看数据库镜像状态，但不会对其进行更新，而不会查看或配置数据库镜像事件。  
@@ -117,7 +118,7 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [监视数据库镜像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   

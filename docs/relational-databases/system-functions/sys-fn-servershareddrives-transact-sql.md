@@ -1,5 +1,6 @@
 ---
-title: sys. fn_servershareddrives （Transact-sql） |Microsoft Docs
+description: sys.fn_servershareddrives (Transact-SQL)
+title: sys. fn_servershareddrives (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa0b61680108d669ce023797b787ccb0e1d9c840
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3fa98a1e24e20469da6fd39bf64db61451582d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474615"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85898314"
   返回群集服务器使用的共享驱动器的名称。  
   
 > [!IMPORTANT]  
->  包含此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数是为了向后兼容。 建议改用[&#40;transact-sql&#41;的 dm_io_cluster_valid_path_names](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) 。  
+>  包含此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数是为了向后兼容。 建议改用 [&#40;transact-sql&#41;的 dm_io_cluster_valid_path_names ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +46,9 @@ fn_servershareddrives()
 ```  
   
 ## <a name="tables-returned"></a>返回的表  
- 如果当前服务器是群集服务器， **fn_servershareddrives**将返回共享驱动器的驱动器名称。  
+ 如果当前服务器是群集服务器， **fn_servershareddrives** 将返回共享驱动器的驱动器名称。  
   
- 如果当前服务器实例不是群集服务器， **fn_servershareddrives**将返回空的行集。  
+ 如果当前服务器实例不是群集服务器， **fn_servershareddrives** 将返回空的行集。  
   
 ## <a name="remarks"></a>备注  
  `fn_servershareddrives` 返回此群集服务器使用的共享驱动器的列表。 这些共享驱动器属于与资源相同的群集组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源与这些驱动器相关。  

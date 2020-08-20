@@ -1,5 +1,6 @@
 ---
-title: sys. server_event_session_fields （Transact-sql） |Microsoft Docs
+description: sys.server_event_session_fields (Transact-SQL)
+title: sys. server_event_session_fields (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b87440f9f5e1afc6ea1ede20054e4f34db8087d
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ffead368e1c89d9e2d963eb4fb3f806c4bde327a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475266"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87442465"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |object_id|**int**|此字段所关联的对象的 ID。 不可为 null。|  
 |name|**sysname**|字段的名称。 不可为 null。|  
-|值|**sql_variant**|字段的值。 不可为 null。|  
+|value|**sql_variant**|字段的值。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
@@ -45,7 +46,7 @@ ms.locfileid: "87442465"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 收件人 | 关系 |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys. server_event_sessions event_session_id|多对一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多对一|  
@@ -53,7 +54,7 @@ ms.locfileid: "87442465"
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的扩展事件目录视图](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的扩展事件目录视图 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

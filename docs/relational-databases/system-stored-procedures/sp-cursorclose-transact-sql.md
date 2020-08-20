@@ -1,5 +1,6 @@
 ---
-title: sp_cursorclose （Transact-sql） |Microsoft Docs
+description: sp_cursorclose (Transact-SQL)
+title: sp_cursorclose (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ede7644f143fbec8a013e6db879f869562b33e84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 94676fe60a7c5b5143a014fc12647b3f93d8fd63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474398"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  关闭并取消分配游标，并释放所有关联的资源;也就是说，它会删除用于支持键集或静态**游标**的临时表。 通过在表格格式数据流（TDS）包中指定 ID = 9 来调用 sp_cursorclose。  
+  关闭并取消分配游标，并释放所有关联的资源;也就是说，它会删除用于支持键集或静态 **游标**的临时表。 sp_cursorclose 通过在表格格式数据流 (TDS) 数据包中指定 ID = 9 来调用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +41,7 @@ sp_cursorclose cursor
   
 ## <a name="arguments"></a>参数  
  *cursor*  
- 是由生成并由 sp_cursoropen 过程返回的游标*句柄*值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *cursor*是为**int**输入值调用的必需参数。  
+ 是由生成并由 sp_cursoropen 过程返回的游标 *句柄* 值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *cursor* 是为 **int** 输入值调用的必需参数。  
   
 > [!NOTE]  
 >  输入值 -1 将应用于当前连接上的所有游标。  

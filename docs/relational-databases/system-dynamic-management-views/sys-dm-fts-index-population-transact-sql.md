@@ -1,5 +1,6 @@
 ---
-title: sys. dm_fts_index_population （Transact-sql） |Microsoft Docs
+description: sys.dm_fts_index_population (Transact-SQL)
+title: sys. dm_fts_index_population (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0326d5117371f23cd446caf2c17e0d832ea5cf4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fd871a3f0de84d5a6a36eff7262f71062ace3a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474934"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,13 +39,13 @@ ms.locfileid: "85734528"
 |**catalog_id**|**int**|包含此全文索引的全文目录的 ID。|  
 |table_id****|**int**|其全文索引正在被填充的表的 ID。|  
 |**memory_address**|**varbinary(8)**|用于表示活动填充的内部数据结构的内存地址。|  
-|**population_type**|**int**|填充类型。 下列情况之一：<br /><br /> 1 = 完全填充<br /><br /> 2 = 基于时间戳的增量式填充<br /><br /> 3 = 对跟踪的更改进行手动更新<br /><br /> 4 = 对跟踪的更改进行后台更新。|  
+|**population_type**|**int**|填充类型。 下列类型作之一：<br /><br /> 1 = 完全填充<br /><br /> 2 = 基于时间戳的增量式填充<br /><br /> 3 = 对跟踪的更改进行手动更新<br /><br /> 4 = 对跟踪的更改进行后台更新。|  
 |**population_type_description**|**nvarchar(120)**|对填充类型的说明。|  
 |**is_clustered_index_scan**|**bit**|指示填充是否涉及对聚集索引的扫描。|  
 |**range_count**|**int**|并行执行填充的子范围数。|  
 |**completed_range_count**|**int**|处理完成的范围数。|  
-|**outstanding_batch_count**|**int**|此填充当前未完成的批处理个数。 有关详细信息，请参阅[sys.databases&#41;dm_fts_outstanding_batches &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
-|**status**|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 此填充的状态。 说明：某些状态是暂时的。 下列情况之一：<br /><br /> 3 = 正在启动<br /><br /> 5 = 正常处理<br /><br /> 7 = 已停止处理<br /><br /> 例如，正在进行自动合并时将出现此状态。<br /><br /> 11 = 已中止填充<br /><br /> 12 = 处理语义相似性提取|  
+|**outstanding_batch_count**|**int**|此填充当前未完成的批处理个数。 有关详细信息，请参阅 [sys.databases&#41;dm_fts_outstanding_batches &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
+|**status**|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 此填充的状态。 说明：某些状态是暂时的。 下列类型作之一：<br /><br /> 3 = 正在启动<br /><br /> 5 = 正常处理<br /><br /> 7 = 已停止处理<br /><br /> 例如，正在进行自动合并时将出现此状态。<br /><br /> 11 = 已中止填充<br /><br /> 12 = 处理语义相似性提取|  
 |**status_description**|**nvarchar(120)**|对填充状态的说明。|  
 |**completion_type**|**int**|有关填充完成的状态。|  
 |**completion_type_description**|**nvarchar(120)**|完成类型的说明。|  
@@ -55,12 +56,12 @@ ms.locfileid: "85734528"
 |**incremental_timestamp**|**timestamp**|表示完全填充的开始时间戳。 对于所有其他填充类型，该值是表示填充进度的上次提交的检查点。|  
   
 ## <a name="remarks"></a>备注  
- 如果除了全文索引之外还启用了统计语义索引，则关键字短语的语义提取和填充以及文档相似性数据的提取与全文索引同时发生。 文档相似性索引的填充在后面的第二阶段中发生。 有关详细信息，请参阅[管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
+ 如果除了全文索引之外还启用了统计语义索引，则关键字短语的语义提取和填充以及文档相似性数据的提取与全文索引同时发生。 文档相似性索引的填充在后面的第二阶段中发生。 有关详细信息，请参阅 [管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
   
 ## <a name="physical-joins"></a>物理联接  
  ![此动态管理视图的重要联接](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "此动态管理视图的重要联接")  
@@ -74,7 +75,7 @@ ms.locfileid: "85734528"
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [全文搜索和语义搜索动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

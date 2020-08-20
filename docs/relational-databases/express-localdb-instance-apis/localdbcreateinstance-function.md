@@ -1,4 +1,5 @@
 ---
+description: LocalDBCreateInstance 函数
 title: LocalDBCreateInstance 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e06c3c309b29f52d68b765210999469973331ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bf1d0f11ce3030ead3adb012211460227b8c17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475890"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 函数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ HRESULT LocalDBCreateInstance(
  *pInstanceName*  
  [输入] 要创建的 LocalDB 实例的名称。  
   
- dwFlags**  
+ dwFlags   
  [输入] 保留供将来使用。 当前应设置为 0。  
   
 ## <a name="returns"></a>返回  
@@ -100,9 +101,9 @@ HRESULT LocalDBCreateInstance(
 ## <a name="remarks"></a>备注  
  如果 LocalDB 实例完全正常运行，指定的名称已存在并且其版本等于或高于所请求的版本，则结果为 S_OK。  
   
- 如果现有实例损坏，对**LocalDBCreateInstance** API 方法的后续调用将失败。 必须手动修复损坏的实例或显式删除它们，然后才能再次使用。  
+ 如果现有实例损坏，对 **LocalDBCreateInstance** API 方法的后续调用将失败。 必须手动修复损坏的实例或显式删除它们，然后才能再次使用。  
   
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅 [SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

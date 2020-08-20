@@ -1,5 +1,6 @@
 ---
-title: sys.sys登录名（Transact-sql） |Microsoft Docs
+description: sys.syslogins (Transact-SQL)
+title: " (Transact-sql) sys.sys登录名 |Microsoft Docs"
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb1fd5b8dcf9867cb61452534a742cc929a41396
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 075e78b9f8e765cad359a136e643f594ce6638b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475091"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +36,11 @@ ms.locfileid: "85891942"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**sid**|**varbinary （85）**|安全标识符。|  
+|**sid**|**varbinary (85) **|安全标识符。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|添加登录的日期。|  
 |**updatedate**|**datetime**|更新登录的日期。|  
@@ -58,14 +59,14 @@ ms.locfileid: "85891942"
 |**isntname**|**int**|1 = 登录名是 Windows 用户或组。<br /><br /> 0 = 登录名是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  
 |**isntgroup**|**int**|1 = 登录名是 Windows 组。|  
 |**isntuser**|**int**|1 = 登录名是 Windows 用户。|  
-|**sysadmin**|**int**|1 = 登录名是**sysadmin**服务器角色的成员。|  
-|**securityadmin**|**int**|1 = 登录名是**securityadmin**服务器角色的成员。|  
-|**serveradmin**|**int**|1 = 登录名是**serveradmin**固定服务器角色的成员。|  
-|**setupadmin**|**int**|1 = 登录名是**setupadmin**固定服务器角色的成员。|  
-|**processadmin**|**int**|1 = 登录名是**processadmin**固定服务器角色的成员。|  
-|**diskadmin**|**int**|1 = 登录名是**diskadmin**固定服务器角色的成员。|  
-|**dbcreator**|**int**|1 = 登录名是**dbcreator**固定服务器角色的成员。|  
-|**bulkadmin**|**int**|1 = 登录名是**bulkadmin**固定服务器角色的成员。|  
+|**sysadmin**|**int**|1 = 登录名是 **sysadmin** 服务器角色的成员。|  
+|**securityadmin**|**int**|1 = 登录名是 **securityadmin** 服务器角色的成员。|  
+|**serveradmin**|**int**|1 = 登录名是 **serveradmin** 固定服务器角色的成员。|  
+|**setupadmin**|**int**|1 = 登录名是 **setupadmin** 固定服务器角色的成员。|  
+|**processadmin**|**int**|1 = 登录名是 **processadmin** 固定服务器角色的成员。|  
+|**diskadmin**|**int**|1 = 登录名是 **diskadmin** 固定服务器角色的成员。|  
+|**dbcreator**|**int**|1 = 登录名是 **dbcreator** 固定服务器角色的成员。|  
+|**bulkadmin**|**int**|1 = 登录名是 **bulkadmin** 固定服务器角色的成员。|  
 |**loginname**|**nvarchar(128)**|用户的登录名。 提供该列是为了向后兼容。|  
   
 ## <a name="see-also"></a>另请参阅  

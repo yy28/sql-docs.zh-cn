@@ -1,5 +1,6 @@
 ---
-title: sys.xml_schema_wildcards （Transact-sql） |Microsoft Docs
+description: sys.xml_schema_wildcards (Transact-SQL)
+title: sys.xml_schema_wildcards (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,30 +20,30 @@ helpviewer_keywords:
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e726f3f08cab5dc8e1b24694158af214ca5905b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27d2e12fea56f50875ee3163164e503d123b7960
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475097"
 ---
 # <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  为每个 XML 架构组件返回一行，该组件为属性-通配符（**类型**为**V**）或元素-通配符（ **W****类型**），其中**symbol_space** **N**。  
+  为每个 XML 架构组件返回一行，每个元素都是一个属性-通配符 (**类型** 的 **V**) 或元素-通配符 (**类型** **W**) ，两者都 **symbol_space** **N**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**||从[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)中继承列。|  
-|**process_content**|**char （1）**|指示处理内容的方式。<br /><br /> S = 严格验证（必须验证）<br /><br /> L = 非严格验证（在可能的情况下进行验证）<br /><br /> P = 跳过验证|  
+|**\<inherited columns>**||从 [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)中继承列。|  
+|**process_content**|**char (1) **|指示处理内容的方式。<br /><br /> S = 严格验证（必须验证）<br /><br /> L = 非严格验证（在可能的情况下进行验证）<br /><br /> P = 跳过验证|  
 |**process_content_desc**|**nvarchar(60)**|有关处理内容的方式的说明：<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
-|**disallow_namespaces**|**bit**|0 = 仅允许在[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)中枚举的命名空间。<br /><br /> 1 = 只禁止命名空间。|  
+|**disallow_namespaces**|**bit**|0 = 仅允许在 [sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) 中枚举的命名空间。<br /><br /> 1 = 只禁止命名空间。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 架构 &#40;XML 类型系统&#41; 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

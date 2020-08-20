@@ -1,5 +1,6 @@
 ---
-title: CHANGETABLE （Transact-sql） |Microsoft Docs
+description: CHANGETABLE (Transact-SQL)
+title: CHANGETABLE (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474683"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,9 +46,9 @@ CHANGETABLE (
 ( column_name [ , ...n ] ) , ( value [ , ...n ] )  
 ```  
   
-## <a name="arguments"></a>自变量  
- 更改*表*， *last_sync_version*  
- 返回自*last_sync_version*指定的版本以来对某个表进行的所有更改的跟踪信息。  
+## <a name="arguments"></a>参数  
+ 更改 *表* ， *last_sync_version*  
+ 返回自 *last_sync_version*指定的版本以来对某个表进行的所有更改的跟踪信息。  
   
  *table*  
  是要从中获取跟踪的更改的用户定义表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
@@ -55,35 +56,35 @@ CHANGETABLE (
  *last_sync_version*  
  获取更改时，调用应用程序必须指定所需更改的起始点。 last_sync_version 指定该起始点。 该函数返回在该版本之后更改的所有行的信息。 应用程序将查询以接收版本大于 last_sync_version 的更改。  
   
- 通常，在获取更改之前，应用程序将调用**CHANGE_TRACKING_CURRENT_VERSION （）** 以获取将在下次需要更改时使用的版本。 因此，该应用程序不必解释或了解实际值。  
+ 通常情况下，在获取更改之前，应用程序将调用 **CHANGE_TRACKING_CURRENT_VERSION ( # B1 ** 获取将在下次需要更改时使用的版本。 因此，该应用程序不必解释或了解实际值。  
   
  由于 last_sync_version 是由调用应用程序获取的，因此该应用程序必须保持该值。 如果应用程序丢失该值，则需要重新初始化数据。  
   
- *last_sync_version*为**bigint**。 值必须是标量。 表达式将导致语法错误。  
+ *last_sync_version* 为 **bigint**。 值必须是标量。 表达式将导致语法错误。  
   
  如果值为 NULL，则返回所有跟踪的更改。  
   
- 应该验证*last_sync_version* ，以确保它不太旧，因为某些或全部更改信息可能已根据为数据库配置的保留期进行清理。 有关详细信息，请参阅[CHANGE_TRACKING_MIN_VALID_VERSION&#41;transact-sql&#41;&#40;transact-sql](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)和[ALTER Database SET &#40;选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
+ 应该验证*last_sync_version* ，以确保它不太旧，因为某些或全部更改信息可能已根据为数据库配置的保留期进行清理。 有关详细信息，请参阅 [CHANGE_TRACKING_MIN_VALID_VERSION&#41;transact-sql&#41;&#40;transact-sql ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) 和 [ALTER Database SET &#40;选项 ](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
- 版本*表*{<primary_key_values>}  
+ 版本 *表*{<primary_key_values>}  
  返回指定行的最新更改跟踪信息。 主键值必须标识该行。 <primary_key_values> 标识主键列并指定值。 可以按任意顺序指定主键列名称。  
   
- *表格*  
+ *表*  
  是用户定义的从中获取更改跟踪信息的表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
   
  column_name  
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
  *值*  
- 是主键的值。 如果有多个主键列，则这些值的指定顺序必须与列在*column_name*列表中的显示顺序相同。  
+ 是主键的值。 如果有多个主键列，则这些值的指定顺序必须与列在 *column_name* 列表中的显示顺序相同。  
   
- 方式*table_alias* [（*column_alias* [,.。。*n* ]）]  
+ 方式 *table_alias* [ (*column_alias* [,.。。*n* ] ) ]  
  为 CHANGETABLE 返回的结果提供名称。  
   
  table_alias  
- 是 CHANGETABLE 返回的表的别名。 *table_alias*是必需的，并且必须是有效的[标识符](../../relational-databases/databases/database-identifiers.md)。  
+ 是 CHANGETABLE 返回的表的别名。 *table_alias* 是必需的，并且必须是有效的 [标识符](../../relational-databases/databases/database-identifiers.md)。  
   
- column_alias**  
+ column_alias  
  是由 CHANGETABLE 返回的列的可选列别名或列别名列表。 这使得在结果中存在重复的名称时可以自定义列名。  
   
 ## <a name="return-types"></a>返回类型  
@@ -99,8 +100,8 @@ CHANGETABLE (
 |SYS_CHANGE_VERSION|**bigint**|与上次对行的更改关联的版本值|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|与上次插入操作关联的版本值。|  
 |SYS_CHANGE_OPERATION|**nchar(1)**|指定更改的类型：<br /><br /> **U** = 更新<br /><br /> **I** = 插入<br /><br /> **D** = 删除|  
-|SYS_CHANGE_COLUMNS|**varbinary(4100)**|列出自 last_sync_version（基准版本）以后发生了更改的列。 请注意，计算列永远不会列出为已更改。<br /><br /> 以下任何一个条件为真时，值为 NULL：<br /><br /> 未启用列更改跟踪。<br /><br /> 操作是插入操作或删除操作。<br /><br /> 在一个操作中更新了所有非主键列。 不应直接解释此二进制值。 相反，若要对其进行解释，请使用[CHANGE_TRACKING_IS_COLUMN_IN_MASK （）](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)。|  
-|SYS_CHANGE_CONTEXT|**varbinary(128)**|可以通过使用[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)子句作为 INSERT、UPDATE 或 DELETE 语句的一部分来更改上下文信息。|  
+|SYS_CHANGE_COLUMNS|**varbinary(4100)**|列出自 last_sync_version（基准版本）以后发生了更改的列。 请注意，计算列永远不会列出为已更改。<br /><br /> 以下任何一个条件为真时，值为 NULL：<br /><br /> 未启用列更改跟踪。<br /><br /> 操作是插入操作或删除操作。<br /><br /> 在一个操作中更新了所有非主键列。 不应直接解释此二进制值。 相反，若要对其进行解释，请使用 [CHANGE_TRACKING_IS_COLUMN_IN_MASK ( # B1 ](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)。|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|可以通过使用 [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) 子句作为 INSERT、UPDATE 或 DELETE 语句的一部分来更改上下文信息。|  
 |\<primary key column value>|与用户表列相同|被跟踪表的主键值。 这些值在用户表中唯一标识各行。|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
@@ -116,13 +117,13 @@ CHANGETABLE (
  CHANGETABLE 函数通常在对表的查询的 FROM 子句中使用。  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
- 要获取新行或修改过的行的行数据，请使用主键列将结果集与用户表联接起来。 对于用户表中已更改的每一行，只返回一行，即使在*last_sync_version*值后对同一行进行了多次更改。  
+ 要获取新行或修改过的行的行数据，请使用主键列将结果集与用户表联接起来。 对于用户表中已更改的每一行，只返回一行，即使在 *last_sync_version* 值后对同一行进行了多次更改。  
   
  永远不将对主键列的更改标记为更新。 如果主键值更改，则会视作删除旧值并插入新值。  
   
  如果删除一行，然后插入具有旧的主键值的行，则将更改视作对行中所有列的更新。  
   
- 为 SYS_CHANGE_OPERATION 和 SYS_CHANGE_COLUMNS 列返回的值相对于指定的基线（last_sync_version）。 例如，如果在版本10和版本15的更新操作中进行插入操作，并且基线*last_sync_version*为12，则会报告更新。 如果*last_sync_version*值为8，则将报告 insert。 SYS_CHANGE_COLUMNS 永远不会报告计算列，因为列已更新。  
+ 为 SYS_CHANGE_OPERATION 和 SYS_CHANGE_COLUMNS 列返回的值相对于指定的基线 (last_sync_version) 。 例如，如果在版本10和版本15的更新操作中进行插入操作，并且基线 *last_sync_version* 为12，则会报告更新。 如果 *last_sync_version* 值为8，则将报告 insert。 SYS_CHANGE_COLUMNS 永远不会报告计算列，因为列已更新。  
   
  通常，将跟踪在用户表中插入、更新或删除数据的所有操作，其中包括 MERGE 语句。  
   
@@ -142,7 +143,7 @@ CHANGETABLE (
  如果未进行更改的时间超过保持期（例如，清除操作删除了更改信息），或者在为表启用更改跟踪后从未更改行，则 SYS_CHANGE_VERSION 的值可能为 NULL。  
   
 ## <a name="permissions"></a>权限  
- 需要对*表*值指定的表具有以下权限才能获取更改跟踪信息：  
+ 需要对 *表* 值指定的表具有以下权限才能获取更改跟踪信息：  
   
 -   主键列的 SELECT 权限  
   
@@ -210,8 +211,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [更改跟踪函数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [跟踪 SQL Server &#40;的数据更改&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  

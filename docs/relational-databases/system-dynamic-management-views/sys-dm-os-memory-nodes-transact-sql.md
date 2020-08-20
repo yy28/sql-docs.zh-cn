@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_memory_nodes （Transact-sql） |Microsoft Docs
+description: sys.dm_os_memory_nodes (Transact-SQL)
+title: sys. dm_os_memory_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,23 +21,24 @@ ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1dffead9abbd537ef9ead278d0a6da0603a8b3f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a59dbc31c74a76d31abaf3f44b93a0323cf9a318
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474894"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部分配使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器。 跟踪进程内存计数器与**sys. dm_os_process_memory**和内部计数器之间的差异可以指示内存空间中的外部组件的内存使用情况 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部分配使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器。 跟踪进程内存计数器与 **sys. dm_os_process_memory** 和内部计数器之间的差异可以指示内存空间中的外部组件的内存使用情况 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 针对每个物理 NUMA 内存节点都创建了节点。 它们可能与**sys. dm_os_nodes**中的 CPU 节点不同。  
+ 针对每个物理 NUMA 内存节点都创建了节点。 它们可能与 **sys. dm_os_nodes**中的 CPU 节点不同。  
   
  对于直接通过 Windows 内存分配例程进行的分配不会进行跟踪。 下表提供了仅通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器接口进行的内存分配的相关信息。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_memory_nodes**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_memory_nodes**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -54,12 +56,12 @@ ms.locfileid: "85999091"
 |**processor_group**|**smallint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 仅限内部使用。 不可为 Null。|  
 |**foreign_committed_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定从其他内存节点中提交的内存数量（以 KB 为单位）。 不可为 Null。|  
 |**target_kb** |**bigint** |**适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指定内存节点的内存目标（KB）。 |   
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
 ## <a name="see-also"></a>另请参阅  
   [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

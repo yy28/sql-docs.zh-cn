@@ -1,4 +1,5 @@
 ---
+description: 'sys. dm_pdw_sql_requests (Transact-sql) '
 title: sys. dm_pdw_sql_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -12,12 +13,12 @@ ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 455ccc47d4150211001b0cf715d67827c04376bc
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 9d6ec963b5e46578e8fb543169ef897533b26ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474660"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "86196805"
 |total_elapsed_time|**int**|表示查询分发已运行的时间（以毫秒为单位）。|大于或等于0。 与已完成、失败或已取消的查询分发的 start_time 和 end_time 的增量相等。<br /><br /> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  
 |row_count|**bigint**|此查询分布更改或读取的行数。|对于不更改或返回数据的操作（例如 CREATE TABLE 和删除表），为-1。|  
 |spid|**int**|运行查询分发的 SQL Server 实例上的会话 id。||  
-|命令|**nvarchar(4000)**|此查询分发的命令的全文。|任何有效的查询或请求字符串。|  
+|command|**nvarchar(4000)**|此查询分发的命令的全文。|任何有效的查询或请求字符串。|  
   
- 有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。  
+ 有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

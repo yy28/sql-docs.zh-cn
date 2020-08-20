@@ -1,5 +1,6 @@
 ---
-title: 检索错误信息（Native Client OLE DB 提供程序）
+description: " (Native Client OLE DB 提供程序检索错误信息) "
+title: " (Native Client OLE DB 提供程序检索错误信息) "
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +19,14 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcbc1fc61d1f86582ae144476a16cea9e4c886f0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c81f21dd21a6fc73427a833e10b3eacd929469ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475751"
 ---
-# <a name="retrieving-error-information-native-client-ole-db-provider"></a>检索错误信息（Native Client OLE DB 提供程序）
+# <a name="retrieving-error-information-native-client-ole-db-provider"></a> (Native Client OLE DB 提供程序检索错误信息) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开的各种错误接口中获取信息。  
