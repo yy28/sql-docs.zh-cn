@@ -1,4 +1,5 @@
 ---
+description: 使用 SQL Server 导入和导出向导导入和导出数据
 title: 使用 SQL Server 导入和导出向导导入和导出数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40ea51fdaaadc7d6a3d9505e2f972c9f26a78471
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdb761ce5ea9b0a64b21880ef2945c0ff85876ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457169"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入和导出数据
 
@@ -54,7 +55,7 @@ ms.locfileid: "86909483"
 |**文本文件**（平面文件）|无需任何其他文件。<br/><br/>有关详细信息，请参阅[连接到平面文件数据源](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)。|
 |**Microsoft Excel 和 Microsoft Access 文件**|Microsoft Office 并不会安装连接到作为数据源的 Excel 和 Access 文件所需的所有文件。 获取下载：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>有关详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[连接到 Access 数据源](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
 |**Azure 数据源**<br/>目前仅限 Azure Blob 存储。|SQL Server Data Tools 不会安装需要作为数据源连接到 Azure Blob 存储的文件。 获取以下下载 — [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>有关详细信息，请参阅[连接到 Azure Blob 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)。|
-|**打开源数据库**<br/>PostgreSQL、MySql 等。|必须下载其他文件才能连接到这些数据源。<br/><br/>- 对于 PostgreSQL，请参阅[连接到 PostgreSQL 数据源](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)  。<br/>- 对于 MySql，请参阅[连接到 MySQL 数据源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)  。|
+|**打开源数据库**<br/>PostgreSQL、MySql 等。|必须下载其他文件才能连接到这些数据源。<br/><br/>- 对于 PostgreSQL，请参阅[连接到 PostgreSQL 数据源](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)****。<br/>- 对于 MySql，请参阅[连接到 MySQL 数据源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)****。|
 |**提供驱动程序或提供程序的其他任何数据源**|通常必须下载其他文件才能连接到以下类型的数据源。<br/><br/>- 提供 **ODBC 驱动程序** 的任何源。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。<br/>- 提供 **.Net Framework 数据提供程序** 的任何源。<br/>- 提供 **OLE DB 提供程序** 的任何源。<br/><br/>有时，为其他数据源提供源和目标功能的第三方组件被标记为 SQL Server Integration Services (SSIS) 的附加产品。|
 
 ## <a name="how-do-i-connect-to-my-data"></a>如何连接到我的数据？
@@ -96,7 +97,7 @@ ms.locfileid: "86909483"
 
 有关 SSIS 的详细信息，请参阅 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)。
 
-## <a name="whats-next"></a>下一步是什么？  
+## <a name="whats-next"></a>下一步操作  
  启动向导。 有关详细信息，请参阅 [启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另请参阅

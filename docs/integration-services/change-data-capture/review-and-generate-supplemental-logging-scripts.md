@@ -1,4 +1,5 @@
 ---
+description: 查看和生成补充日志记录脚本
 title: 查看和生成补充日志记录脚本 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f647bc913a52539992f3d6dcbb74b0dde1ff175
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77a6b4f11ea2e01f43f1be335fad893ee87f1e90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457677"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>查看和生成补充日志记录脚本
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用“脚本”  选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
+  使用“脚本”**** 选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
   
  在运行脚本前，请选择以下选项之一：  
   
@@ -59,6 +60,6 @@ ms.locfileid: "86923887"
   
 ## <a name="see-also"></a>另请参阅  
  [如何编辑 CDC 实例属性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [用于运行脚本的 Oracle 凭据](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

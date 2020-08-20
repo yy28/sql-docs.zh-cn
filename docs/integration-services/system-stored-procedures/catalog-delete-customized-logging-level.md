@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_customized_logging_level
 title: catalog.delete_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d7db61c085f6ac085ce0585428d43cffcdb66cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 302201f4d3932867265b507c78290e511913bed7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456899"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
@@ -30,12 +31,12 @@ catalog.delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @level_name = ] level_name   
+ [ @level_name = ] level_name**  
  要删除的现有自定义日志记录级别的名称。  
   
- level_name 为 nvarchar(128)   。  
+ level_name 为 nvarchar(128)******。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="return-codes"></a>返回代码  
  0（成功）  

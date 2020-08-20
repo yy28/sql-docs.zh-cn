@@ -1,4 +1,5 @@
 ---
+description: CREATE CONTRACT (Transact-SQL)
 title: CREATE CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6f4b7360fa3429a621e364c27776c4f6a8f0a946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458732"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,26 +51,26 @@ CREATE CONTRACT contract_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- contract_name   
- 要创建的约定的名称。 新约定创建于当前数据库中，并且由 AUTHORIZATION 子句中所指定的主体拥有。 不能指定服务器、数据库和架构名称。  contract_name 最多可具有 128 个字符。  
+ contract_name  
+ 要创建的约定的名称。 新约定创建于当前数据库中，并且由 AUTHORIZATION 子句中所指定的主体拥有。 不能指定服务器、数据库和架构名称。 ** contract_name 最多可具有 128 个字符。  
   
 > [!NOTE]  
->  不要创建将关键字 ANY 用于 contract_name  的约定。 在 CREATE BROKER PRIORITY 中为约定名称指定 ANY 时，优先级将被视为针对所有约定。 此情况不限于名称为 ANY 的约定。  
+>  不要创建将关键字 ANY 用于 contract_name** 的约定。 在 CREATE BROKER PRIORITY 中为约定名称指定 ANY 时，优先级将被视为针对所有约定。 此情况不限于名称为 ANY 的约定。  
   
  AUTHORIZATION owner_name   
- 将约定的所有者设置为指定的数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可以为任意有效用户或角色的名称    。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有模拟权限的用户的名称，或者是当前用户所属的角色的名称  。 如果省略此子句，则约定属于当前用户。  
+ 将约定的所有者设置为指定的数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可以为任意有效用户或角色的名称**********。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有模拟权限的用户的名称，或者是当前用户所属的角色的名称**。 如果省略此子句，则约定属于当前用户。  
   
- message_type_name   
+ *message_type_name*  
  要作为约定的一部分所包括的消息类型的名称。  
   
  SENT BY  
- 指定哪个端点可以发送所指示的消息类型的消息。 约定将记录服务可以用来拥有特定会话的消息。 每个会话都有两个端点：发起程序端点（启动会话的服务）和目标端点（发起程序要联系的服务）   。  
+ 指定哪个端点可以发送所指示的消息类型的消息。 约定将记录服务可以用来拥有特定会话的消息。 每个会话都有两个端点：发起程序端点（启动会话的服务）和目标端点（发起程序要联系的服务）****。  
   
  INITIATOR  
- 指示只有会话的发起方才能发送指定消息类型的消息。 启动会话的服务称为会话的发起程序  。  
+ 指示只有会话的发起方才能发送指定消息类型的消息。 启动会话的服务称为会话的发起程序**。  
   
  TARGET  
- 指示只有会话的目标才能发送指定消息类型的消息。 接受由另一个服务启动的会话的服务称为会话的目标  。  
+ 指示只有会话的目标才能发送指定消息类型的消息。 接受由另一个服务启动的会话的服务称为会话的目标**。  
   
  ANY  
  指示发起方和目标都可以发送此类型的消息。  
@@ -78,7 +79,7 @@ CREATE CONTRACT contract_name
  指示此约定支持默认消息类型的消息。 默认情况下，所有数据库都包含名为 DEFAULT 的消息类型。 此消息类型使用的验证为 NONE。 在此子句的上下文中，DEFAULT 不是关键字，必须作为标识符进行分隔。 Microsoft SQL Server 还提供了 DEFAULT 约定，该约定指定 DEFAULT 消息类型。  
   
 ## <a name="remarks"></a>备注  
- 在约定中消息类型的顺序并不重要。 目标收到第一条消息之后，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 允许会话的任一端在任何时候发送允许该会话端发送的任何消息。 例如，如果会话发起程序可以发送消息类型 //Adventure-Works.com/Expenses/SubmitExpense，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 允许发起程序在会话过程中发送任意数量的 SubmitExpense 消息   。  
+ 在约定中消息类型的顺序并不重要。 目标收到第一条消息之后，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 允许会话的任一端在任何时候发送允许该会话端发送的任何消息。 例如，如果会话发起程序可以发送消息类型 //Adventure-Works.com/Expenses/SubmitExpense，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 允许发起程序在会话过程中发送任意数量的 SubmitExpense 消息 。  
   
  无法更改约定中的消息类型和方向。 若要更改约定的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
@@ -89,14 +90,14 @@ CREATE CONTRACT contract_name
  约定不能是临时对象。 约定名称允许以 # 开头，但应当是永久对象。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员可以创建约定    。  
+ 默认情况下，db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员可以创建约定************。  
   
- 默认情况下，约定的所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员对约定拥有 REFERENCES 权限    。  
+ 默认情况下，约定的所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员对约定拥有 REFERENCES 权限************。  
   
  执行 CREATE CONTRACT 语句的用户必须对所指定的所有消息类型拥有 REFERENCES 权限。  
   
 ## <a name="examples"></a>示例  
- **A.创建约定**  
+ **A. 创建约定**  
   
  以下示例基于三个消息类型创建费用归还约定。  
   

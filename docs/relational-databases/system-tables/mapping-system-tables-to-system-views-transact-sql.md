@@ -1,5 +1,6 @@
 ---
-title: 将系统表映射到系统视图（Transact-sql） |Microsoft Docs
+description: 将系统表映射到系统视图 (Transact-SQL)
+title: 将系统表映射到系统视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 424dda2a57b51f6486cabcadadce7342c0a0eb0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 84493da61303f1ac383eb009e07198d495a9846d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460360"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>将系统表映射到系统视图 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ ms.locfileid: "85890101"
 |syslockinfo|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|动态管理视图|  
 |syslocks|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|动态管理视图|  
 |syslogins|[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)<br /><br /> [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)|目录视图|  
-|sysmessages|[sys. 消息](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|目录视图|  
+|sysmessages|[sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|目录视图|  
 |sysoledbusers|[sys.linked_logins](../../relational-databases/system-catalog-views/sys-linked-logins-transact-sql.md)|目录视图|  
 |sysopentapes|[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|动态管理视图|  
 |sysperfinfo|[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)|动态管理视图|  
 |sysprocesses|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)<br /><br /> [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)<br /><br /> [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|动态管理视图<br /><br /> 动态管理视图<br /><br /> 动态管理视图|  
-|sysremotelogins|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|目录视图|  
-|sysservers|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|目录视图|  
+|sysremotelogins|[sys. remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|目录视图|  
+|sysservers|[sys. 服务器](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|目录视图|  
   
  下表将 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中每个数据库内的系统表或函数映射到它们在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中对应的系统视图或函数。  
   
@@ -72,11 +73,11 @@ ms.locfileid: "85890101"
 |sysreferences|[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)|目录视图|  
 |systypes|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|目录视图|  
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|目录视图|  
-|sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|目录视图|  
+|sysfulltextcatalogs|[sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|目录视图|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

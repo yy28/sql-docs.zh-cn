@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2016 Integration Services 中的新增功能
 title: SQL Server 2016 Integration Services 中的新增功能 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456866"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 
@@ -53,7 +54,7 @@ ms.locfileid: "86922313"
   
         -   [支持 SSIS 目录中的 Always Encrypted](#encrypted)  
   
-    -   改进调试  
+    -   优化调试  
   
         -   [SSIS 目录中的全新 ssis_logreader 数据库级别角色](#LogReader)  
   
@@ -189,9 +190,9 @@ ms.locfileid: "86922313"
   
 -   [SSIS with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Lookup transformation with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
+-   [查找转换与始终加密](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
-### <a name="better-debugging"></a>改进调试
+### <a name="better-debugging"></a>优化调试
 
 ####  <a name="new-ssis_logreader-database-level-role-in-the-ssis-catalog"></a><a name="LogReader"></a> SSIS 目录中的全新 ssis_logreader 数据库级别角色  
  在旧版 SSIS 目录中，仅充当 **ssis_admin** 角色的用户可以访问包含日志记录输出的视图。 现在提供了一个新的 **ssis_logreader** 数据库级别的角色，你可以通过该角色将包含日志记录输出的视图的访问权限授予非管理员用户。  
@@ -199,10 +200,10 @@ ms.locfileid: "86922313"
  另外，还提供了一个新的 **ssis_monitor** 角色。 该角色支持 AlwaysOn，仅限 SSIS 目录内部使用。  
 
 ####  <a name="new-runtimelineage-logging-level-in-the-ssis-catalog"></a><a name="RuntimeLineage"></a> SSIS 目录中的全新运行时沿袭日志记录级别  
- SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。  可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。 
+ SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。 **** 可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> SSIS 目录中的全新自定义日志记录级别  
- 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。  SQL Server 2016 增加了 RuntimeLineage  日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
+ 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。 **** SQL Server 2016 增加了 RuntimeLineage **** 日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> 数据流中错误对应的列名称  
  当您将重定向的数据流中包含到错误输出的错误的行时，输出会包括顺序错误发生，但不会显示的列的名称的列的数值标识符。 现在可以通过多种方式来查找和显示发生了错误的列的名称。  
@@ -225,13 +226,13 @@ ms.locfileid: "86922313"
   
  GetIdentificationStringByLineageID 方法已重命名为 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>中新增或更新的功能。 有关详细信息，请参阅 [数据流中错误对应的列名称](#ErrorColumn)。  
   
- 有关这方面的更改以及错误列改进的详细信息，请参阅下述已更新的博客文章。 [SSIS 数据流的错误列改进（已对 CTP3.3 进行更新）](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
+ 有关这方面的更改以及错误列改进的详细信息，请参阅下述已更新的博客文章。 [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)（SSIS 数据流的错误列改进（已对 CTP3.3 进行更新））](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  （在 RC0 中，此方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 接口。 有关详细信息，请参阅 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  
 
 ####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> 支持服务器范围的默认日志记录级别  
- 在 SQL Server“服务器属性”的“服务器日志记录级别”属性下，现在可以选择默认服务器范围的日志记录级别。   可以从内置日志记录级别（基本、无、详细、性能或运行时沿袭）中选择一项，也可以选择现有的自定义日志记录级别。 所选的日志记录级别适用于部署到 SSIS 目录的所有包， 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
+ 在 SQL Server“服务器属性”的“服务器日志记录级别”属性下，现在可以选择默认服务器范围的日志记录级别。******** 可以从内置日志记录级别（基本、无、详细、性能或运行时沿袭）中选择一项，也可以选择现有的自定义日志记录级别。 所选的日志记录级别适用于部署到 SSIS 目录的所有包， 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
 
 ####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> API 中的全新 IDTSComponentMetaData130 接口  
  SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 接口向现有的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口添加了新功能，特别是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。 （ **GetIdentificationStringByID** 方法已从 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口移至新接口。）另外，还有新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 接口，这两个接口均提供 **LineageIdentificationString** 属性。 有关详细信息，请参阅 [数据流中错误对应的列名称](#ErrorColumn)。  
@@ -324,7 +325,7 @@ ms.locfileid: "86922313"
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> SSIS 设计器中的多目标和多版本支持  
  你现在可以在用于 Visual Studio 2015 的 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
- 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性” **** 以打开该项目的属性页。 在“配置属性” **** 的“常规” **** 选项卡上，选择“TargetServerVersion” **** 属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
  ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
 

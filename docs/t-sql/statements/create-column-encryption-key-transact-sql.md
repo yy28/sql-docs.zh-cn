@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 473d41dcc61113a331597a6de8f103517378bfdd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9527007eb54e07747f3e6d12b9fdf98bc50ed3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458790"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -61,21 +62,21 @@ WITH VALUES
 ```  
 
 ## <a name="arguments"></a>参数
-key_name\__  
+key\_name  
 列加密密钥在数据库中所使用的名称。  
   
-column_master\_key\_name\__ 指定用于加密列加密密钥的自定义 CMK 的名称。  
+column\_master\_key\_name__ 指定用于加密列加密密钥的自定义 CMK 的名称。  
   
-algorithm_name\__  
-用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP  。  
+algorithm\_name  
+用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP****。  
   
-varbinary_literal\__  
+varbinary\_literal  
 已加密的列加密密钥值 BLOB。  
   
 > [!WARNING]  
 >  切勿在此语句中传递纯文本列加密密钥值。 这样做不利于发挥此功能的优点。  
-  
-## <a name="remarks"></a>备注  
+
+## <a name="remarks"></a>备注
 `CREATE COLUMN ENCRYPTION KEY` 语句必须至少包含一个或两个值。 可以稍后使用 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) 添加第二个值。 还可以使用 `ALTER COLUMN ENCRYPTION KEY` 语句删除值。  
   
 通常情况下，创建列加密密钥时，密钥只具有一个加密值。 有时，需要轮换列主密钥以将当前列主密钥替换为新的列主密钥。 需要轮换密钥时，添加使用新的列主密钥加密的新列加密密钥值。 此轮换可以确保客户端应用程序能访问使用列加密密钥加密的数据，同时客户端应用程序将能使用新的列主密钥。 通过 Always Encrypted 功能，无权访问新主密钥的客户端应用程序中的驱动程序将通过列加密密钥值（使用旧的列主密钥进行加密）来访问敏感数据。  
@@ -90,7 +91,7 @@ Always Encrypted 支持的加密算法要求纯文本值具有 256 位。
 可使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看列加密密钥的相关信息。  
   
 ## <a name="permissions"></a>权限  
-需要 ALTER ANY COLUMN ENCRYPTION KEY 权限  。  
+需要 ALTER ANY COLUMN ENCRYPTION KEY 权限****。  
   
 ## <a name="examples"></a>示例  
   

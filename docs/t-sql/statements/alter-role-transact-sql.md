@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE (Transact-SQL)
 title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc9f49a8a21ef4582f6f951a9301f33fe66002aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458889"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,32 +64,34 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
- role_name   
- 适用对象： **（从 2008 开始）、** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ role_name  
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定要更改的数据库角色。  
   
- ADD MEMBER database_principal   
- 适用对象： **（从 2012 开始）、** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER database_principal**  
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定向数据库角色的成员身份添加数据库主体。  
   
--   database_principal 是数据库用户或用户定义的数据库角色  。  
+-   database_principal 是数据库用户或用户定义的数据库角色**。  
   
--   database_principal 不能是固定的数据库角色或是服务器主体  。  
+-   database_principal 不能是固定的数据库角色或是服务器主体**。  
   
-DROP MEMBER database_principal   
- 适用对象： **（从 2012 开始）、** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+DROP MEMBER database_principal**  
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定从数据库角色的成员身份删除数据库主体。  
   
--   database_principal 是数据库用户或用户定义的数据库角色  。  
+-   database_principal 是数据库用户或用户定义的数据库角色**。  
   
--   database_principal 不能是固定的数据库角色或是服务器主体  。  
+-   database_principal 不能是固定的数据库角色或是服务器主体**。  
   
-WITH NAME = new_name   
- 适用对象： **（从 2008 开始）、** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+WITH NAME = new_name**  
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定更改用户定义的数据库角色的名称。 数据库中必须尚未包含新名称。  
   
@@ -97,18 +100,18 @@ WITH NAME = new_name
 ## <a name="permissions"></a>权限  
  需具有以下一项或多项权限或成员身份才能运行此命令：  
   
--   对角色具有 ALTER 权限   
--   对数据库具有 ALTER ANY ROLE 权限   
--   具有 db_securityadmin 固定数据库角色的成员身份   
+-   对角色具有 ALTER 权限****  
+-   对数据库具有 ALTER ANY ROLE 权限****  
+-   具有 db_securityadmin 固定数据库角色的成员身份****  
   
 此外，若要更改固定数据库角色中的成员身份还需要：  
   
--   具有 db_owner 固定数据库角色的成员身份   
+-   具有 db_owner 固定数据库角色的成员身份****  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能更改固定数据库角色的名称。  
   
-## <a name="metadata"></a>元数据  
+## <a name="metadata"></a>Metadata  
  这些系统视图中包含有关数据库角色和数据库主体的信息。  
   
 -   [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)  
@@ -118,7 +121,7 @@ WITH NAME = new_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. 更改数据库角色的名称  
- 适用对象： **（从 2008 开始）、** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 开始）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  以下示例将角色 `buyers` 的名称更改为 `purchasing`。   本示例可以在 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 示例数据库中执行。
   
@@ -127,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. 添加或删除角色成员  
- 适用对象： **（从 2012 开始）、** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  此示例创建一个名为 `Sales` 的数据库角色。 示例向成员身份添加一个名为 Barry 的数据库用户，然后演示如何删除成员 Barry。   本示例可以在 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 示例数据库中执行。
   

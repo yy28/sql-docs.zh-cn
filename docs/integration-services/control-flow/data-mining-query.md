@@ -1,4 +1,5 @@
 ---
+description: 数据挖掘查询
 title: 数据挖掘查询 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44448f8f73ee303ff3d9484f887e40362fb1fb53
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457532"
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
 
@@ -38,18 +39,18 @@ ms.locfileid: "86919823"
  显示所选的挖掘模型，您希望利用该模型来进行预测。  
   
  **选择模型**  
- 打开“选择挖掘模型”  对话框。  
+ 打开“选择挖掘模型”**** 对话框。  
   
  **输入列**  
  显示用于生成预测的所选输入列。  
   
- **数据源**  
- 从下拉列表中选择包含要用于列的字段的源。 可以使用“挖掘模型”  表中所选的挖掘模型、“选择输入表”  表中所选的输入表、预测函数或自定义表达式。  
+ **Source**  
+ 从下拉列表中选择包含要用于列的字段的源。 可以使用“挖掘模型”**** 表中所选的挖掘模型、“选择输入表”**** 表中所选的输入表、预测函数或自定义表达式。  
   
  可以将列从包含挖掘模型的表和输入列中拖动到单元。  
   
- **字段**  
- 从派生自源表的列的列表中选择列。 如果在“源”中选择了“预测函数”，则此单元将包含对所选挖掘模型可用的预测函数的下拉列表。  
+ 字段  
+ 从派生自源表的列的列表中选择列。 如果在“源”**** 中选择了“预测函数”****，则此单元将包含对所选挖掘模型可用的预测函数的下拉列表。  
   
  **Alias**  
  服务器返回的列的名称。  
@@ -57,8 +58,8 @@ ms.locfileid: "86919823"
  **显示**  
  选择此项将返回列或只使用 WHERE 子句中的列。  
   
- **分组**  
- 与“和/或”  列一起使用，将表达式组合到一起。 例如，(expr1 OR expr2) AND expr3。  
+ **组**  
+ 与“和/或”**** 列一起使用，将表达式组合到一起。 例如，(expr1 OR expr2) AND expr3。  
   
  **和/或**  
  用于创建逻辑查询。 例如，(expr1 OR expr2) AND expr3。  

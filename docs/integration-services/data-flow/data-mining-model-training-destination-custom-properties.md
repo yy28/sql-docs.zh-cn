@@ -1,4 +1,5 @@
 ---
+description: 数据挖掘模型定型目标自定义属性
 title: 数据挖掘模型定型目标自定义属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ffa0b82f393172f92b17e7bbe78302372c9b8ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6427b808d31c9b1938b093da2bdf14d59bec90cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457359"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>数据挖掘模型定型目标自定义属性
 
@@ -26,7 +27,7 @@ ms.locfileid: "86916776"
   
  下表介绍了数据挖掘模型定型目标的自定义属性。 所有属性均可读/写。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|连接管理器的唯一标识符。|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的连接字符串。|  

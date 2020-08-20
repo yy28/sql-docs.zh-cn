@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_environment_variable（SSISDB 数据库）
 title: catalog.delete_environment_variable（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c01a64050f05b6acd2c0bc7431b9891ecca8d5c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daa94bf3d9a5147fff447ba6f88e7fd284514d5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456929"
 ---
 # <a name="catalogdelete_environment_variable-ssisdb-database"></a>catalog.delete_environment_variable（SSISDB 数据库）
 
@@ -41,8 +42,8 @@ catalog.delete_environment_variable [ @folder_name = ] folder_name
  [ @environment_name = ] environment_name   
  包含变量的环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @variable_name = ] variable_name   
- 包含要删除的变量的名称。 variable_name 为 nvarchar(128)   。  
+ [ @variable_name = ] variable_name**  
+ 包含要删除的变量的名称。 variable_name 为 nvarchar(128)******。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

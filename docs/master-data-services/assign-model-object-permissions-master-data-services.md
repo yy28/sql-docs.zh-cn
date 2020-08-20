@@ -1,4 +1,5 @@
 ---
+description: 分配模型对象权限 (Master Data Services)
 title: 分配模型对象权限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b134629e732934d44f219edc9be368234911a5d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9b79a9428df0dc528190281070ea33b3a2c21b25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456736"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>分配模型对象权限 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85812800"
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-assign-model-object-permissions"></a>分配模型对象权限  
   

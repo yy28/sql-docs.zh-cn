@@ -1,4 +1,5 @@
 ---
+description: STUnion（geometry 数据类型）
 title: STUnion（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ad2ad92952a3848982c9cf8873f70217db654ee8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 857428b0dee48336ae41f22e79c82a02f2f7b241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458909"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,12 +44,12 @@ ms.locfileid: "86554883"
  与调用 `STUnion()` 的实例形成并集的另一个 **geometry** 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
 ## <a name="remarks"></a>备注  
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
 ## <a name="examples"></a>示例  
   

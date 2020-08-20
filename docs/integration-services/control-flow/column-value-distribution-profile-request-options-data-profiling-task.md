@@ -1,4 +1,5 @@
 ---
+description: 列值分布配置文件请求选项（数据事件探查任务）
 title: 列值分布配置文件请求选项（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eacd467eed8a9c0a80be5e94f8495176ac134633
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 608dbbb804c8e7a2dbfdf5673b0070ef77b6ce60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457575"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>列值分布配置文件请求选项（数据事件探查任务）
 
@@ -32,7 +33,7 @@ ms.locfileid: "86922483"
  有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“列值分布配置文件请求”** ， **“请求属性”** 窗格显示下列选项组：  
+ 对于 **“列值分布配置文件请求”**， **“请求属性”** 窗格显示下列选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   
@@ -82,7 +83,7 @@ ms.locfileid: "86922483"
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，“Ã¥”等于“a”。|  
@@ -97,7 +98,7 @@ ms.locfileid: "86922483"
  **ValueDistributionOption**  
  指定是否计算所有列值的分布。 此选项的默认值为 **FrequentValues**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**AllValues**|计算所有列值的分布。|  
 |**FrequentValues**|仅计算其频率超出 **FrequentValueThreshold**中指定的最小值的值的分布。 输出报告中将不包括未满足 **FrequentValueThreshold** 的值。|  

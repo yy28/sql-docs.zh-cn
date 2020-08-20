@@ -1,4 +1,5 @@
 ---
+description: 撤消事务 (Master Data Services)
 title: 撤消事务
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a4228f34fea725d2be8cdaff94613fa734771ce2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: eb92a6d663fa37efa718b88ed04a842e46389e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456699"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>撤消事务 (Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811434"
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-reverse-a-transaction"></a>撤消事务  
   

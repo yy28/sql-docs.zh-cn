@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION FUNCTION (Transact-SQL)
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 73e9ea60c35fd82d6927901e719aedb2e1745d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458740"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,29 +54,29 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- partition_function_name   
+ partition_function_name**  
  是分区函数的名称。 分区函数名称在数据库内必须唯一，并且符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- input_parameter_type   
- 是用于分区的列的数据类型。 所有数据类型都可有效用作分区列，除了 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、别名数据类型或 CLR 用户定义的数据类型。  
+ input_parameter_type**  
+ 是用于分区的列的数据类型。 所有数据类型都可有效用作分区列，除了 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、别名数据类型或 CLR 用户定义的数据类型。  
   
  实际列（也称为分区列）是在 CREATE TABLE 或 CREATE INDEX 语句中指定的。  
   
- boundary_value   
- 为使用 partition_function_name 的已分区表或索引的每个分区指定边界值  。 如果 boundary_value 为空，则分区函数使用 partition_function_name 将整个表或索引映射到单个分区   。 只能使用 CREATE TABLE 或 CREATE INDEX 语句中指定的一个分区列。  
+ boundary_value**  
+ 为使用 partition_function_name 的已分区表或索引的每个分区指定边界值**。 如果 boundary_value 为空，则分区函数使用 partition_function_name 将整个表或索引映射到单个分区****。 只能使用 CREATE TABLE 或 CREATE INDEX 语句中指定的一个分区列。  
   
- boundary_value 是可以引用变量的常量表达式  。 这包括用户定义类型变量，或函数以及用户定义函数。 它不能引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value 必须匹配或可以隐式转换为 input_parameter_type 中提供的数据类型，并且当值的大小和小数位数不匹配其对应 input_parameter_type 时，将无法在隐式转换过程中被截断    。  
+ boundary_value 是可以引用变量的常量表达式**。 这包括用户定义类型变量，或函数以及用户定义函数。 它不能引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value 必须匹配或可以隐式转换为 input_parameter_type 中提供的数据类型，并且当值的大小和小数位数不匹配其对应 input_parameter_type 时，将无法在隐式转换过程中被截断******。  
 
 > [!NOTE]  
->  如果 boundary_value 包含 datetime 或 smalldatetime 文字值，则为这些文字值在计算时假设会话语言为 us_english    。 不推荐使用此行为。 要确保分区函数定义对于所有会话语言都具有预期的行为，建议使用对于所有语言设置都以相同方式进行解释的常量，例如 yyyymmdd 格式；或者将文字值显式转换为特定样式。 若要确定服务器的语言会话，请运行 `SELECT @@LANGUAGE`。
+>  如果 boundary_value 包含 datetime 或 smalldatetime 文字值，则为这些文字值在计算时假设会话语言为 us_english**********。 不推荐使用此行为。 要确保分区函数定义对于所有会话语言都具有预期的行为，建议使用对于所有语言设置都以相同方式进行解释的常量，例如 yyyymmdd 格式；或者将文字值显式转换为特定样式。 若要确定服务器的语言会话，请运行 `SELECT @@LANGUAGE`。
 >
 > 有关详细信息，请参阅[文字日期字符串转换为日期值的不确定性转换](../data-types/nondeterministic-convert-date-literals.md)。
   
- ...n   
- 指定 boundary_value 提供的值的数目，不能超过 14,999  。 创建的分区数等于 n + 1  。 不必按顺序列出各值。 如果值未按顺序列出，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将对它们进行排序、创建函数并返回一个警告，说明未按顺序提供值。 如果 n 包括任何重复的值，则数据库引擎将返回错误  。  
+ ...n  
+ 指定 boundary_value 提供的值的数目，不能超过 14,999**。 创建的分区数等于 n + 1**。 不必按顺序列出各值。 如果值未按顺序列出，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将对它们进行排序、创建函数并返回一个警告，说明未按顺序提供值。 如果 n 包括任何重复的值，则数据库引擎将返回错误**。  
   
- LEFT | RIGHT   
- 指定当间隔值由  *按升序从左到右排序时，boundary_value [ ,...n ] 属于每个边界值间隔的哪一侧（左侧还是右侧）*   [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 如果未指定，则默认值为 LEFT。  
+ LEFT | RIGHT****  
+ 指定当间隔值由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 按升序从左到右排序时，boundary_value [ ,...n ] 属于每个边界值间隔的哪一侧（左侧还是右侧）。 如果未指定，则默认值为 LEFT。  
   
 ## <a name="remarks"></a>备注  
  分区函数的作用域被限制为在其中创建该分区函数的数据库。 在该数据库内，分区函数驻留在与其他函数的命名空间不同的一个单独命名空间内。  
@@ -101,28 +102,28 @@ CREATE PARTITION FUNCTION myRangePF1 (int)
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
   
- 下表显示对分区依据列 col1 使用此分区函数的表如何进行分区  。  
+ 下表显示对分区依据列 col1 使用此分区函数的表如何进行分区****。  
   
 |分区|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**值**|**col1** <= `1`|col1  AND col1 > `1`   <= `100`|col1  AND col1 > `100`   <=`1000`|**col1** > `1000`|  
+|**值**|**col1** <= `1`|col1  AND col1 > `1`   <= `100`|col1 > `100` AND col1 <=`1000` |**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. 对 int 列创建 RANGE RIGHT 分区函数  
- 以下分区函数与上一个示例使用相同的 boundary_value [ ,...n ] 值，但它指定 RANGE RIGHT    。  
+ 以下分区函数与上一个示例使用相同的 boundary_value [ ,...n ] 值，但它指定 RANGE RIGHT。  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
   
- 下表显示对分区依据列 col1 使用此分区函数的表如何进行分区  。  
+ 下表显示对分区依据列 col1 使用此分区函数的表如何进行分区****。  
   
 |分区|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. 对 datetime 列创建 RANGE RIGHT 分区函数  
- 以下分区函数将表或索引分成 12 个分区，每个分区对应 datetime 列中的一年中一个月的值  。  
+ 以下分区函数将表或索引分成 12 个分区，每个分区对应 datetime 列中的一年中一个月的值****。  
   
 ```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
@@ -131,11 +132,11 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
                '20030901', '20031001', '20031101', '20031201');  
 ```  
   
- 下表显示对分区依据列 datecol 上使用此分区函数的表或索引如何进行分区  。  
+ 下表显示对分区依据列 datecol 上使用此分区函数的表或索引如何进行分区****。  
   
 |分区|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
-|**值**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|datecol   >= `December 1, 2003`| 
+|**值**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|datecol  >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. 对 char 列创建分区函数  
  以下分区函数将表或索引分为四个分区。  
@@ -145,7 +146,7 @@ CREATE PARTITION FUNCTION myRangePF3 (char(20))
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
   
- 下表显示对分区依据列 col1 使用此分区函数的表如何进行分区  。  
+ 下表显示对分区依据列 col1 使用此分区函数的表如何进行分区****。  
   
 |分区|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
@@ -171,7 +172,7 @@ GO
 ```  
   
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. 为多个年度创建分区  
- 以下分区函数将表或索引在 datetime2 列上分为 50 个分区  。 对于 2007 年 1 月至 2011 年 1 月之间的每个月，都有一个分区。  
+ 以下分区函数将表或索引在 datetime2 列上分为 50 个分区****。 对于 2007 年 1 月至 2011 年 1 月之间的每个月，都有一个分区。  
   
 ```sql  
 --Create date partition function with increment by month.  

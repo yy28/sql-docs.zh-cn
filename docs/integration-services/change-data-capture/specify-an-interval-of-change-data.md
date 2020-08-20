@@ -1,4 +1,5 @@
 ---
+description: 指定变更数据的间隔
 title: 指定变更数据的间隔 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457621"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
 
@@ -85,13 +86,13 @@ ms.locfileid: "86921268"
   
 1.  在 **设计器的** “控制流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上，向包中添加一个执行 SQL 任务。  
   
-2.  打开 **“执行 SQL 任务编辑器”** ，在编辑器的 **“常规”** 页上，选择以下选项：  
+2.  打开 **“执行 SQL 任务编辑器”**，在编辑器的 **“常规”** 页上，选择以下选项：  
   
-    1.  对于 **ResultSet**，选择 **“单行”** 。  
+    1.  对于 **ResultSet**，选择 **“单行”**。  
   
     2.  配置到源数据库的有效连接。  
   
-    3.  对于 **SQLSourceType**，选择 **“直接输入”** 。  
+    3.  对于 **SQLSourceType**，选择 **“直接输入”**。  
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   

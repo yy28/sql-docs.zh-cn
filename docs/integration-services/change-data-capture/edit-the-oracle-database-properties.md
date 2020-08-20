@@ -1,4 +1,5 @@
 ---
+description: 编辑 Oracle 数据库属性
 title: 编辑 Oracle 数据库属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 071d8dd634af79bcb041cbf7336fa4cc20555dc5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b1d5eb987c5dfd62a67bbe6b536b4c2258463741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457712"
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
 
@@ -38,7 +39,7 @@ ms.locfileid: "86921631"
  正使用 Oracle 数据库的计算机的 Oracle 连接字符串。 此字段是只读的，不能编辑此信息。 其原因在于，对连接字符串的某些更改可能会将 Oracle CDC 实例完全指向其他 Oracle 数据库，从而破坏在 **cdc.xdbcdc_config** 表中存储的 CDC 实例状态。 如果需要较小的更改，您可以使用 SQL Server Management Studio 直接在配置表中更改连接字符串。  
   
  **Oracle 日志挖掘身份验证**  
- 若要为包含日志挖掘器的 Oracle 数据库输入身份验证凭据，请在“身份验证”  下选择以下选项之一：  
+ 若要为包含日志挖掘器的 Oracle 数据库输入身份验证凭据，请在“身份验证”**** 下选择以下选项之一：  
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   

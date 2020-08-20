@@ -1,4 +1,5 @@
 ---
+description: （取模）（SSIS 表达式）
 title: （取模）（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4065651c097d4cf9d2671ac486f294d7884b43a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14ea6b261c63b06d5e6b3fbeb77822c0d3c6836f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457199"
 ---
 # <a name="modulo-ssis-expression"></a>（取模）（SSIS 表达式）
 
@@ -37,10 +38,10 @@ dividend % divisor
 ```  
   
 ## <a name="arguments"></a>参数  
- *被除数*  
+ *dividend*  
  被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
- *除数*  
+ *divisor*  
  除数的数值表达式。 *divisor* 可以是除 0 之外的任意有效的数值表达式。  
   
 ## <a name="result-types"></a>结果类型  

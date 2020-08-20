@@ -1,4 +1,5 @@
 ---
+description: 使用 SQL Server 目标大容量加载数据
 title: 使用 SQL Server 目标大容量加载数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 38b4b61cecf57f4ce0db7152aff1bc5c08ccf500
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3bce4cae8fc71c93487f65a726bb42f58618d5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457427"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目标大容量加载数据
 
@@ -48,7 +49,7 @@ ms.locfileid: "86915500"
   
     -   选择一个现有的表或视图。  
   
-    -   单击“新建”  ，并在“创建表”  对话框中写入创建表或视图的 SQL 语句。  
+    -   单击“新建”****，并在“创建表”**** 对话框中写入创建表或视图的 SQL 语句。  
   
         > [!NOTE]  
         >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于连接数据源生成一个默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
@@ -58,14 +59,14 @@ ms.locfileid: "86915500"
     > [!NOTE]  
     >  目标自动映射名称相同的列。  
   
-9. 单击 **“高级”** ，并设置大容量加载选项： **“保留标识”** 、 **“保留空值”** 、 **“表锁”** 、 **“检查约束”** 和 **“激发触发器”** 。  
+9. 单击 **“高级”** ，并设置大容量加载选项： **“保留标识”**、 **“保留空值”**、 **“表锁”**、 **“检查约束”** 和 **“激发触发器”**。  
   
      也可以指定要插入的第一个和最后一个输入行、在插入操作停止前可以出现的最大错误数以及插入据以排序的列。  
   
     > [!NOTE]  
     >  排序顺序由列所列出的顺序确定。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

@@ -1,4 +1,5 @@
 ---
+description: 默认 C 数据类型
 title: 默认 C 数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fdb787580e1c79df805f468416ab8993a1d32a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d0ed42971405ca23d5f69f47cbb6ac02e8e5675
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456603"
 ---
 # <a name="default-c-data-types"></a>默认 C 数据类型
-如果应用程序在**SQLBindCol**、 **SQLGetData**或**SQLBindParameter**中指定 SQL_C_DEFAULT，则驱动程序会假定输出或输入缓冲区的 C 数据类型对应于缓冲区绑定到的列或参数的 SQL 数据类型。  
+如果应用程序在 **SQLBindCol**、 **SQLGetData**或 **SQLBindParameter**中指定 SQL_C_DEFAULT，则驱动程序会假定输出或输入缓冲区的 C 数据类型对应于缓冲区绑定到的列或参数的 SQL 数据类型。  
   
 > [!IMPORTANT]  
 >  互操作应用程序不应使用 SQL_C_DEFAULT。 相反，它们应始终指定它们所使用的缓冲区的 C 类型。 这是因为，由于以下原因，驱动程序无法始终正确确定默认 C 类型：  
@@ -33,4 +34,4 @@ ms.locfileid: "81307048"
   
      由于 SQL_C_DEFAULT 仅作为编程便利提供，因此当应用程序指定实际 C 数据类型时，不会丢失任何功能。  
   
- 在本附录后面的将[数据从 SQL 转换为 c 数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)类型时，将包含显示每个 sql 数据类型的默认 C 数据类型的表。
+ 在本附录后面的将 [数据从 SQL 转换为 c 数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)类型时，将包含显示每个 sql 数据类型的默认 C 数据类型的表。

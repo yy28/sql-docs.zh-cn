@@ -1,4 +1,5 @@
 ---
+description: 批准或拒绝变更集 (Master Data Services)
 title: 批准或拒绝变更集
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0d7e090350fdaae094c8365d28a4e058bdfa62e
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 42b3b6ae849313a00111ceda1fb19eda334c0278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456805"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>批准或拒绝变更集 (Master Data Services)
 
@@ -37,7 +38,7 @@ ms.locfileid: "85812808"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>批准或拒绝变更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 "**资源管理器**"。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 " **资源管理器**"。  
   
 2.  单击“实体”菜单中的某个实体 **** 。  
   

@@ -1,4 +1,5 @@
 ---
+description: “创建事务数据的 InfoCube”
 title: 创建事务数据的 InfoCube | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc7e124f0220a5d7dcd1a146479a82801f83a3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457386"
 ---
 # <a name="create-infocube-for-transaction-data"></a>“创建事务数据的 InfoCube”
 
@@ -37,13 +38,13 @@ ms.locfileid: "86923573"
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 分组框，选择 **“InfoCube”** ，然后单击 **“创建”** 。  
+4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 分组框，选择 **“InfoCube”**，然后单击 **“创建”**。  
   
 ## <a name="general-options"></a>常规选项  
  **InfoCube 名称**  
  输入新 InfoCube 的名称。  
   
- **详细说明**  
+ **长说明**  
  输入新 InfoCube 的说明。  
   
  **保存并激活**  
@@ -61,28 +62,28 @@ ms.locfileid: "86923573"
  **InfoObject**  
  显示与数据流列相关联的 InfoObject 的名称。  
   
- 类型   
+ **类型**  
  显示与数据流列相关联的 InfoObject 的类型。 下表列出了该类型的可能值。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |CHA|特征|  
-|UNI|单位|  
+|UNI|单元|  
 |KYF|关键数字|  
 |TIM|时间特征|  
   
  **Iobject - 搜索**  
- 将现有的 InfoObject 与当前行的数据流列关联。 要进行此关联，请单击 **“搜索”** ，然后使用 **“查找 InfoObject”** 对话框选择现有的 InfoObject。 有关此对话框的详细信息，请参阅 [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)。  
+ 将现有的 InfoObject 与当前行的数据流列关联。 要进行此关联，请单击 **“搜索”**，然后使用 **“查找 InfoObject”** 对话框选择现有的 InfoObject。 有关此对话框的详细信息，请参阅 [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)。  
   
  选择现有的 InfoObject 后，组件会将选定的值填充在 **“InfoObject”** 和 **“类型”** 列中。  
   
  **Iobject - 新建**  
- 创建一个新的 InfoObject 并将该新的 InfoObject 与当前行中的数据流列关联。 要创建新的 InfoObject，请单击 **“新建”** ，然后使用 **“新建 InfoObject”** 对话框创建 InfoObject。 有关此对话框的详细信息，请参阅 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)。  
+ 创建一个新的 InfoObject 并将该新的 InfoObject 与当前行中的数据流列关联。 要创建新的 InfoObject，请单击 **“新建”**，然后使用 **“新建 InfoObject”** 对话框创建 InfoObject。 有关此对话框的详细信息，请参阅 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)。  
   
  创建新 InfoObject 后，组件会将新值填充在 **“InfoObject”** 和 **“类型”** 列中。  
   
  **Iobject - 删除**  
- 删除 InfoObject 与当前行的数据流列之间的关联。 若要删除此关联，请单击 **“删除”** 。  
+ 删除 InfoObject 与当前行的数据流列之间的关联。 若要删除此关联，请单击 **“删除”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  

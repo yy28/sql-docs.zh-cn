@@ -1,4 +1,5 @@
 ---
+description: 复制包对象
 title: 复制包对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cab8f7b6d3214a3ab49eb6fe062b4235954aa87
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eedc9c3758764840afbbeefd765cf0caa52f5e2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457510"
 ---
 # <a name="copy-package-objects"></a>复制包对象
 
@@ -35,21 +36,21 @@ ms.locfileid: "86923253"
   
 2.  在解决方案资源管理器中，双击希望在其间复制的包。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击包含要复制的项的包对应的选项卡，并单击 **“控制流”** 、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击包含要复制的项的包对应的选项卡，并单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
 4.  选择要复制的控制流或数据流项。 可以通过按 Shift 键并单击项以一次一个的方式来选择多项，也可以通过拖动指针扫过希望选择的项来按组选择多项。  
   
     > [!IMPORTANT]  
     >  如果选择的两个项相互连接，则不会自动选择连接这些项的优先级约束和路径。 若要复制经过排序的工作流（一段控制流或数据流），请确保同时复制优先级约束和路径。  
   
-5.  右键单击所选项并单击“复制”  。  
+5.  右键单击所选项并单击“复制”****。  
   
 6.  如果将项复制到其他包，请单击要复制到其中的包，然后单击适合该项类型的合适的选项卡。  
   
     > [!IMPORTANT]  
     >  无法将数据流复制到包中，除非包至少包含一个“数据流”任务。  
   
-7.  右键单击并单击“粘贴”  。  
+7.  右键单击并单击“粘贴”****。  
   
 ### <a name="to-copy-connection-managers"></a>复制连接管理器  
   
@@ -57,13 +58,13 @@ ms.locfileid: "86923253"
   
 2.  在解决方案资源管理器中，双击包。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
-4.  在“连接管理器”  区域中，右键单击连接管理器，然后单击“复制”  。 每次只能复制一个连接管理器。  
+4.  在“连接管理器”**** 区域中，右键单击连接管理器，然后单击“复制”****。 每次只能复制一个连接管理器。  
   
-5.  如果要将项复制到其他包，请单击希望复制到其中的包，然后单击 **“控制流”** 、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
+5.  如果要将项复制到其他包，请单击希望复制到其中的包，然后单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
-6.  右键单击“连接管理器”  区域，并单击“粘贴”  。  
+6.  右键单击“连接管理器”**** 区域，并单击“粘贴”****。  
   
 ## <a name="see-also"></a>另请参阅  
  [控制流](../integration-services/control-flow/control-flow.md)   

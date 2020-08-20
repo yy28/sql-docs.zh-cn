@@ -1,4 +1,5 @@
 ---
+description: 以编程方式添加数据流组件
 title: 以编程方式添加数据流组件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a293e7d3151341753cdf1228f7a3d6958a8e3b3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0c43fc088fbf6ed8f95fdd418b50dc93563b662
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457833"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以编程方式添加数据流组件
 
@@ -37,9 +38,9 @@ ms.locfileid: "86917243"
  在 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性中指定的值可为 CLSID、PROGID 或组件的 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 属性。 CLSID 通常作为组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性值显示在“属性”窗口中。 有关获取可用组件的此属性和其他属性的信息，请参阅[以编程方式查找数据流组件](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)。  
   
 ## <a name="adding-a-managed-component"></a>添加托管组件  
- 您不能使用 CLSID 或 PROGID 向数据流添加一个托管数据流组件，因为这些值指向包装而不是组件本身。 可以改用 CreationName  属性或 AssemblyQualifiedName  属性，如以下示例中所示。  
+ 您不能使用 CLSID 或 PROGID 向数据流添加一个托管数据流组件，因为这些值指向包装而不是组件本身。 可以改用 CreationName**** 属性或 AssemblyQualifiedName**** 属性，如以下示例中所示。  
   
- 若要使用 AssemblyQualifiedName  属性，则必须在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目中添加对包含托管组件的程序集的引用。 这些程序集没有在“添加引用”  对话框的 .NET 选项卡上列出。 通常需要浏览至 C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents  文件夹查找程序集。  
+ 若要使用 AssemblyQualifiedName**** 属性，则必须在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目中添加对包含托管组件的程序集的引用。 这些程序集没有在“添加引用”**** 对话框的 .NET 选项卡上列出。 通常需要浏览至 C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents**** 文件夹查找程序集。  
   
  内置托管数据流组件包括：  
   

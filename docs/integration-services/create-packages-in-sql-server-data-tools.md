@@ -1,4 +1,5 @@
 ---
+description: 在 SQL Server Data Tools 中创建包
 title: 在 SQL Server Data Tools 中创建包 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8366969291ce3c8e970986376d7f3938fdb174b1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 521bc0dd4a454472586c18f108a42e4393498323
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457550"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建包
 
@@ -58,7 +59,7 @@ ms.locfileid: "86923243"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要在其中创建包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击“SSIS 包”文件夹，然后单击“新建 SSIS 包”   。  
+2.  在解决方案资源管理器中，右键单击“SSIS 包”文件夹，然后单击“新建 SSIS 包”********。  
   
 3.  还可以向包中添加控制流、数据流任务和事件处理程序。 有关详细信息，请参阅[控制流](../integration-services/control-flow/control-flow.md)、[数据流](../integration-services/data-flow/data-flow.md)和[Integration Services (SSIS) 事件处理程序](../integration-services/integration-services-ssis-event-handlers.md)。  
   
@@ -69,9 +70,9 @@ ms.locfileid: "86923243"
   
 ## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>选择项目的目标版本及其包  
   
-1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。  
+1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性” **** 以打开该项目的属性页。  
   
-2.  在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+2.  在“配置属性” **** 的“常规” **** 选项卡上，选择“TargetServerVersion” **** 属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
      ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
   

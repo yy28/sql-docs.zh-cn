@@ -1,5 +1,6 @@
 ---
-title: DefaultMember （MDX） |Microsoft Docs
+description: DefaultMember (MDX)
+title: DefaultMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6037d5089b9d0fa67599728ce35082432b0a570c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456667"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 
@@ -35,7 +36,7 @@ Hierarchy_Expression.DefaultMember
  特性的默认成员用于在查询中不包括特性的情况下计算表达式。  
   
 ## <a name="example"></a>示例  
- 下面的示例将**DefaultMember**函数与**Name**函数结合使用，以返回艾德工作多维数据集中目标货币维度的默认成员。 该示例返回**美元**。 **Name**函数用于返回度量值的名称，而不是度量**值**的默认属性。  
+ 下面的示例将 **DefaultMember** 函数与 **Name** 函数结合使用，以返回艾德工作多维数据集中目标货币维度的默认成员。 该示例返回 **美元**。 **Name**函数用于返回度量值的名称，而不是度量**值**的默认属性。  
   
 ```  
 WITH MEMBER Measures.x AS   

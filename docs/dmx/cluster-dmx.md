@@ -1,5 +1,6 @@
 ---
-title: 群集（DMX） |Microsoft Docs
+description: Cluster (DMX)
+title: 群集 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e0722e53752cfa01ffee086cb8cf1f6a84f82fd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457837"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86969918"
 Cluster()  
 ```  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
  只有在基础数据挖掘模型支持聚类分析时，此函数才可用。  
   
 ## <a name="return-type"></a>返回类型  
@@ -39,7 +40,7 @@ Cluster()
  **群集**还可以用作 `<` PredictHistogram 函数的群集列引用 `>` 。 **PredictHistogram**  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用带有[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)和群集函数的单独查询，以返回 TM 群集挖掘模型的每个分类中单个事例的距离，以及单个事例在每个分类中的概率。  
+ 下面的示例使用带有 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 和群集函数的单独查询，以返回 TM 群集挖掘模型的每个分类中单个事例的距离，以及单个事例在每个分类中的概率。  
   
 ```  
 SELECT  
@@ -58,6 +59,6 @@ FROM
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)  
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

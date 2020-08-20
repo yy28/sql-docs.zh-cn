@@ -1,4 +1,5 @@
 ---
+description: 删除主键
 title: 删除主键 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -15,12 +16,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7465a183241211fe4372eea0c57f93f3cfe0aa49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e281a418dc6bfc1ebf9ca1920564f22a9ff2f306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460229"
 ---
 # <a name="delete-primary-keys"></a>删除主键
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -50,22 +51,22 @@ ms.locfileid: "86002081"
   
 #### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>使用对象资源管理器删除主键约束  
   
-1.  在对象资源管理器中，展开包含主键的表，再展开 **“键”** 。  
+1.  在对象资源管理器中，展开包含主键的表，再展开 **“键”**。  
   
-2.  右键单击该键，然后选择“删除”  。  
+2.  右键单击该键，然后选择“删除”****。  
   
-3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”** 。  
+3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
   
 #### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>使用表设计器删除主键约束  
   
-1.  在对象资源管理器中，右键单击具有主键的表，再单击“设计”  。  
+1.  在对象资源管理器中，右键单击具有主键的表，再单击“设计”****。  
   
-2.  在表网格中右键单击包含主键的行，再选择“删除主键”  以将该设置从启用切换到禁用。  
+2.  在表网格中右键单击包含主键的行，再选择“删除主键”**** 以将该设置从启用切换到禁用。  
   
     > [!NOTE]  
     >  若要撤消此操作，请关闭该表而不保存更改。 若要撤消删除主键操作，就无法避免丢失对表做出的所有其他更改。  
   
-3.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+3.  在“文件”菜单上，单击“保存表名称”********__。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86002081"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例首先标识主键约束的名称，然后删除该约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例首先标识主键约束的名称，然后删除该约束。  
   
     ```  
     USE AdventureWorks2012;  

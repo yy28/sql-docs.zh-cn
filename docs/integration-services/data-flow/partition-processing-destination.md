@@ -1,4 +1,5 @@
 ---
+description: 分区处理目标
 title: 分区处理目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50513545bf2737a8b331153c686acad7ebaf4bd2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457311"
 ---
 # <a name="partition-processing-destination"></a>分区处理目标
 
@@ -62,7 +63,7 @@ ms.locfileid: "86916078"
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="partition-processing-destination-editor-connection-manager-page"></a>分区处理目标编辑器（“连接管理器”页）
-  使用“分区处理目标编辑器”对话框的“连接管理器”页面，可以指定与   项目或  **实例之间的连接**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  使用“分区处理目标编辑器”对话框的“连接管理器”页面，可以指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接********。  
   
 > [!NOTE]  
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
@@ -72,15 +73,15 @@ ms.locfileid: "86916078"
  从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
   
  **可用分区列表**  
  选择要处理的分区。  
   
  **处理方法**  
- 选择处理方法。 此选项的默认值为 **“完全”** 。  
+ 选择处理方法。 此选项的默认值为 **“完全”**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |添加(增量式)|对分区执行增量处理。|  
 |完全|对分区执行完全处理。|  
@@ -118,7 +119,7 @@ ms.locfileid: "86916078"
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将无法接受的键值转换为 Unknown 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -130,12 +131,12 @@ ms.locfileid: "86916078"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 如果选择了“出错时停止”  ，请指定应停止处理的错误阈值。  
+ 如果选择了“出错时停止”****，请指定应停止处理的错误阈值。  
   
  **出错时要执行的操作**  
- 如果选择了“出错时停止”  ，请指定在达到错误阈值时要执行的操作。  
+ 如果选择了“出错时停止”****，请指定在达到错误阈值时要执行的操作。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -143,7 +144,7 @@ ms.locfileid: "86916078"
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -152,7 +153,7 @@ ms.locfileid: "86916078"
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -161,7 +162,7 @@ ms.locfileid: "86916078"
  **空键转换为未知键**  
  指定在将空键转换为 Unknown 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -170,7 +171,7 @@ ms.locfileid: "86916078"
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  

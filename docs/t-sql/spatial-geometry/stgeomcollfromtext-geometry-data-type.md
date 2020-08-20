@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromText（geometry 数据类型）
 title: STGeomCollFromText（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0fd31568d26945bf27e73850f6dccfbd45df1701
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8e9333f71bb601629b13b025fb0fdb9f81af58d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458953"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geometry 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值  。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geometry 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值****。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +40,16 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- geometrycollection_tagged_text   
- 希望返回的 **geometry** 实例的 WKT 表示形式。 geometry_tagged_text 是一个 nvarchar(max) 表达式   。  
+ geometrycollection_tagged_text**  
+ 希望返回的 **geometry** 实例的 WKT 表示形式。 geometry_tagged_text 是一个 nvarchar(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
 ## <a name="remarks"></a>备注  
  `STGeomCollFromText()` 返回的 **geometry** 实例的 OGC 类型设置为相应的 WKT 输入。  

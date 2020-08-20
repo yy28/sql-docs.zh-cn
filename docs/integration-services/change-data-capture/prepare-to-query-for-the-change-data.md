@@ -1,4 +1,5 @@
 ---
+description: 准备查询变更数据
 title: 准备查询变更数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2ab217d81620b28ced334842dcff3643f686a98
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0b2f12bf0ad4b5166e7a206b30264782992f144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457685"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
 
@@ -130,7 +131,7 @@ ms.locfileid: "86921740"
   
 5.  保留从脚本执行过程返回 **DtsExecResult.Success** 的默认代码行。  
   
-6.  关闭脚本开发环境和 **“脚本任务编辑器”** 。  
+6.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
   
 #### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>使用执行 SQL 任务连接查询字符串  
   
@@ -141,11 +142,11 @@ ms.locfileid: "86921740"
   
 2.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
-    1.  对于 **ResultSet**，选择 **“单行”** 。  
+    1.  对于 **ResultSet**，选择 **“单行”**。  
   
     2.  配置到源数据库的有效连接。  
   
-    3.  对于 **SQLSourceType**，选择 **“直接输入”** 。  
+    3.  对于 **SQLSourceType**，选择 **“直接输入”**。  
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   

@@ -1,4 +1,5 @@
 ---
+description: 将知识库导出到 .dqs 文件
 title: 将知识库导出到 .dqs 文件
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1ebfecaead83e845bc95dd9e8fa32316e1d2e9c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 946b1192b314c5303cd529c176e93ebf1fb0204f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457919"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>将知识库导出到 .dqs 文件
 
@@ -36,7 +37,7 @@ ms.locfileid: "85895330"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能将知识库导出到 .dqs 数据文件。  
   
-##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a>将知识库导出到 dqs 文件  
+##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a> 将知识库导出到 dqs 文件  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -46,9 +47,9 @@ ms.locfileid: "85895330"
   
 4.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留知识库名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”****************。  
   
-5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击 **“确定”** 。  
+5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击“确定”。  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>跟进：在将域导出到 dqs 文件后  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> 跟进：在将域导出到 dqs 文件后  
  将知识库导出到 .dqs 文件后，您可以将知识库导入到同一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] （使用新名称）或导入到另一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]中。  
   
   

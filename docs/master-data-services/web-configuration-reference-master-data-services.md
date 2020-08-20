@@ -1,4 +1,5 @@
 ---
+description: Web 配置参考 (Master Data Services)
 title: Web 配置参考
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b8524a4dde301d274bf17176b7a683fe1b183922
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 34e3e849a86cb23c3974b32b9d3d8c0721601274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456750"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 配置参考 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85811672"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 使用 Web.config 文件来包含使 Internet Information Services (IIS) 能够承载 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务的配置设置。 此 Web.config 文件位于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安装路径的 WebApplication 文件夹。 有关路径和权限的详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md)。  
   
 ## <a name="webconfig-elements"></a>Web.Config 元素  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **\<masterDataServices>** 除了标准 IIS、.NET Framework、ASP.NET 和 WINDOWS COMMUNICATION FOUNDATION （WCF）配置元素外，Web.config 文件还包含自定义元素。 下表描述了 Web.config 文件中包括的元素。  
+ Web.config 文件 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **\<masterDataServices>** 除了包含标准 IIS、.NET Framework、ASP.NET 和 WINDOWS COMMUNICATION FOUNDATION (WCF) 配置元素外，还包含一个自定义元素。 下表描述了 Web.config 文件中包括的元素。  
   
 |配置元素|描述|  
 |---------------------------|-----------------|  
@@ -55,7 +56,7 @@ ms.locfileid: "85811672"
   
 ### <a name="elements-and-attributes"></a>元素和属性  
   
-|Item|说明|  
+|项|描述|  
 |----------|-----------------|  
 |**实例**|子元素。 包含指定 Web 服务和数据库连接字符串信息的属性。|  
 |**virtualPath**|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 这对应于**path** **\<application>** **\<site>** IIS ApplicationHost.config 文件中元素下的元素的 path 属性。|  

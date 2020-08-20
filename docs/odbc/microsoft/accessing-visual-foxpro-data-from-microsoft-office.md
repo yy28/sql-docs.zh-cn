@@ -1,4 +1,5 @@
 ---
+description: 从 Microsoft Office 访问 Visual FoxPro 数据
 title: 从 Microsoft Office 访问视觉 FoxPro 数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 116efee6-2cd1-4d54-a6e4-1ee7b2fe82e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6be620ed83e3f181bf0c2695140d2afd177dd44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee19000a1180a0673aad2a1772156d37d67feb85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456657"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>从 Microsoft Office 访问 Visual FoxPro 数据
 你可以使用 Microsoft Visual FoxPro ODBC 驱动程序从适用于 Windows 95 或 Windows 98 应用程序的 Microsoft Office 访问 Visual FoxPro 数据。  

@@ -1,4 +1,5 @@
 ---
+description: 为事务添加批注 (Master Data Services)
 title: 为事务添加批注
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 140342398d35dfb7ad38940d0e2a2e7726e8375b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 90ca7f628206e54a284866eaae4a18c3dfe54094
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456845"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>为事务添加批注 (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "85811862"
   
 -   若要为创建的事务添加批注，您必须有权访问 **“资源管理器”** 功能区域，并且必须至少对要添加批注的模型对象具有 **“更新”** 权限。  
   
--   若要为所有用户的事务添加批注，您必须有权访问 **“版本管理”** 功能区域并且必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   若要为所有用户的事务添加批注，您必须有权访问 **“版本管理”** 功能区域并且必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>为资源管理器中为事务添加批注  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85811862"
   
 4.  在 **“事务批注”** 窗格的 **“批注”** 框中，键入您的批注。  
   
-5.  单击“确定”。   
+5.  单击“确定”。  
   
 ## <a name="see-also"></a>另请参阅  
  [批注 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   

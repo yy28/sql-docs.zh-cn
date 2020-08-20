@@ -1,4 +1,5 @@
 ---
+description: 删除外键关系
 title: 删除外键关系 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -15,12 +16,12 @@ ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fbc504ed754ad3181c6a6989f0efdec74af1f20
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b1af63b09d17af1d88b91b31f841df675ddbe6af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460231"
 ---
 # <a name="delete-foreign-key-relationships"></a>删除外键关系
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -50,9 +51,9 @@ ms.locfileid: "86002089"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>删除外键约束  
   
-1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“键”** 。  
+1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“键”**。  
   
-2.  右键单击该约束，然后单击“删除”  。  
+2.  右键单击该约束，然后单击“删除”****。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
 
@@ -64,7 +65,7 @@ ms.locfileid: "86002089"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

@@ -1,4 +1,5 @@
 ---
+description: 订阅视图格式 (Master Data Services)
 title: 订阅视图格式
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ac58c9c1edfce6b02f48c31e220d37d842b18527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456727"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>订阅视图格式 (Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85812312"
   
 ## <a name="subscription-view-formats"></a>订阅视图格式  
   
-|“属性”|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |**叶成员**|包含叶成员及其关联的属性值。|  
 |**叶成员历史记录**|包含叶成员历史数据及关联的属性值。 视图格式是缓慢更改维度类型 4 样式。|  

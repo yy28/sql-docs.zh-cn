@@ -1,4 +1,5 @@
 ---
+description: 以编程方式创建包
 title: 以编程方式创建包 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 42d7d3dd3c4e8ee86da1a9fd8de8b725ba1579e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8a79a235f7329b3bac84a34b0d8ff10b1faa889d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457786"
 ---
 # <a name="creating-a-package-programmatically"></a>以编程方式创建包
 

@@ -1,4 +1,5 @@
 ---
+description: 设置参数值对话框
 title: “设置参数值”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a157124ed1167ecafa977de573cfdca8d275281f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f75e25778f7a38f0f096a0929286be2a3fd8ba26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457734"
 ---
 # <a name="set-parameter-value-dialog-box"></a>设置参数值对话框
 
@@ -40,13 +41,13 @@ ms.locfileid: "86922566"
   
 3.  展开 **“SSISDB”** 节点。  
   
-4.  右键单击包或项目，单击“配置”  ，然后单击“参数”  选项卡或“连接管理器”  选项卡中的省略号按钮。  
+4.  右键单击包或项目，单击“配置”****，然后单击“参数”**** 选项卡或“连接管理器”**** 选项卡中的省略号按钮。  
   
 ##  <a name="configure-the-options"></a><a name="option"></a> 配置选项  
- **Parameter**  
+ **参数**  
  列出参数名称。  
   
- 类型   
+ **类型**  
  列出参数值的数据类型。  
   
  **说明**  

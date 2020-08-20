@@ -1,4 +1,5 @@
 ---
+description: Linux 上 SQL Server 2019 的各版本和支持的功能
 title: SQL Server 2019 的各版本和支持的功能 - Linux
 ms.date: 01/08/2020
 ms.prod: sql
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 66e354a23b88c2f6843b6180eabbff5b5a19f038
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aca10f1cb7d6b3bef1cd44b58f2f68ba01d57a22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456833"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的各版本和支持的功能
 
@@ -236,7 +237,7 @@ Linux 上的 SQL Server 2019 目前不支持以下功能和服务。 随着时�
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | 数据库引擎服务 |
+| &nbsp; | “数据库引擎服务” |
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server 中支持 SQL Server R，但不支持作为单独包的 SQL Server R services。

@@ -1,4 +1,5 @@
 ---
+description: 分区处理目标自定义属性
 title: 分区处理目标自定义属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9bd6dff6e35b4fa78d69dc1c6703ca6a098f6c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87f70b54a0f43252bd6ebc2f28b32371715760cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457320"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>分区处理目标自定义属性
 
@@ -26,7 +27,7 @@ ms.locfileid: "86920404"
   
  下表介绍分区处理目标的自定义属性。 所有属性均可读/写。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的连接字符串。|  
 |KeyDuplicate|Integer（枚举）|UseDefaultConfiguration 为 **False**时，指示如何处理重复键错误的值。 可能的值有 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此属性的默认值为 **IgnoreError** (0)。|  
@@ -38,7 +39,7 @@ ms.locfileid: "86920404"
 |NullKeyConvertedToUnknown|Integer（枚举）|UseDefaultConfiguration 为 **False**时，指示如何处理 null 键转换为 Unknown 值的值。 可能的值有 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此属性的默认值为 **IgnoreError** (0)。|  
 |NullKeyNotAllowed|Integer（枚举）|UseDefaultConfiguration 为 **False**时，指示如何处理不允许的 null 的值。 可能的值有 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此属性的默认值为 **ReportAndContinue** (1)。|  
 |ProcessType|Integer（枚举）|转换使用的分区处理的类型。 可能的值有 **ProcessAdd** (1)（增量）、 **ProcessFull** (0) 和 **ProcessUpdate** (2)。|  
-|UseDefaultConfiguration|Boolean|一个指定转换是否使用默认错误配置的值。 如果此属性为 **False**，则转换使用此表中列出的错误处理自定义属性的值，包括 KeyDuplicate 和 KeyErrorAction 等。|  
+|UseDefaultConfiguration|布尔|一个指定转换是否使用默认错误配置的值。 如果此属性为 **False**，则转换使用此表中列出的错误处理自定义属性的值，包括 KeyDuplicate 和 KeyErrorAction 等。|  
   
  分区处理目标的输入和输入列没有自定义属性。  
   

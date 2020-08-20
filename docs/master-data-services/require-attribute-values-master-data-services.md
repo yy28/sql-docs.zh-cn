@@ -1,4 +1,5 @@
 ---
+description: 要求属性值 (Master Data Services)
 title: 要求属性值
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 74893d2d64a6de182206313a3d227c3a7db2f1de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456728"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求属性值 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85811882"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-require-attribute-values"></a>要求属性值  
   
@@ -42,13 +43,13 @@ ms.locfileid: "85811882"
   
 2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
   
-3.  在 "**业务规则**" 页上，从 "**模型**" 下拉列表中选择一个模型。  
+3.  在 " **业务规则** " 页上，从 " **模型** " 下拉列表中选择一个模型。  
   
 4.  从 **** “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型” **** 下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击 **“添加”** 。  
+6.  单击“添加”。  
   
 7.  在“名称” **** 框中，键入业务规则的名称。  
   

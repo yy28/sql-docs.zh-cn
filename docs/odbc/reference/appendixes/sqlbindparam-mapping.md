@@ -1,4 +1,5 @@
 ---
+description: SQLBindParam 映射
 title: SQLBindParam 映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1df595722297c91dc75398470912188e109e278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f998fd30716e479cb4dd0650af53c5a24483f2f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456458"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam 映射
-不能真正地调用**SQLBindParam** ，因为它从未出现在 ODBC 中;但是，它仍表示重复的功能，驱动程序管理器需要将其导出，因为 ISO 和打开符合组的应用程序将使用它。 由于**SQLBindParameter**包含**SQLBindParam**的所有功能，因此**SQLBindParam**将在**SQLBindParameter** （基础*驱动程序为 ODBC 1.x*驱动程序）上进行映射。 *ODBC 2.x*驱动程序不需要实现**SQLBindParam**。  
+不能真正地调用**SQLBindParam** ，因为它从未出现在 ODBC 中;但是，它仍表示重复的功能，驱动程序管理器需要将其导出，因为 ISO 和打开符合组的应用程序将使用它。 由于**SQLBindParameter**包含**SQLBindParam**的所有功能，因此当基础*驱动程序为 ODBC 3.x*驱动程序) 时， **SQLBindParam**将在**SQLBindParameter** (上进行映射。 *ODBC 2.x*驱动程序不需要实现**SQLBindParam**。  
   
 ## <a name="remarks"></a>备注  
- 对**SQLBindParam**进行以下调用时：  
+ 对 **SQLBindParam** 进行以下调用时：  
   
 ```  
 SQLBindParam(   StatementHandle,    ParameterNumber,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    StrLen_or_IndPtr)  
 ```  
   
- 驱动程序管理器将调用驱动程序中的**SQLBindParameter** ，如下所示：  
+ 驱动程序管理器将调用驱动程序中的 **SQLBindParameter** ，如下所示：  
   
 ```  
 SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    BufferLength,    StrLen_or_IndPtr)  
 ```  
   
- 如果你的应用程序将在64位操作系统上运行，请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
+ 如果你的应用程序将在64位操作系统上运行，请参阅 [ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [映射已弃用的函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)

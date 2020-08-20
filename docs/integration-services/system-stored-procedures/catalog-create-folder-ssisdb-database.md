@@ -1,4 +1,5 @@
 ---
+description: catalog.create_folder（SSISDB 数据库）
 title: catalog.create_folder（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3590308c901dc27ec417a925f316d290f499ca55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c0c28c81f607f5ab7ddc71d84ae52ea848d9334
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456943"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder（SSISDB 数据库）
 
@@ -33,11 +34,11 @@ catalog.create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [@folder_name =] folder_name   
+ [@folder_name =] folder_name**  
  新文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [@folder_name =] folder_id   
- 文件夹的唯一标识符 (ID)。 folder_id 为 bigint   。  
+ [@folder_name =] folder_id**  
+ 文件夹的唯一标识符 (ID)。 folder_id 为 bigint******。  
   
 ## <a name="return-code-value"></a>返回代码值  
  返回文件夹标识符。  

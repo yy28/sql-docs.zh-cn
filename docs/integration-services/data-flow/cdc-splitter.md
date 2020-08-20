@@ -1,4 +1,5 @@
 ---
+description: CDC 拆分器
 title: CDC 拆分器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457394"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
 
@@ -29,10 +30,10 @@ ms.locfileid: "86917140"
 |操作的值|输出|说明|  
 |------------------------|------------|-----------------|  
 |1|删除|删除的行|  
-|2|插入|插入的行（使用“净值且具有合并”  CDC 模式时不可用）|  
-|3|更新|更新前的行（仅在使用“全部且具有旧值”  CDC 模式时可用）|  
+|2|插入|插入的行（使用“净值且具有合并”**** CDC 模式时不可用）|  
+|3|更新|更新前的行（仅在使用“全部且具有旧值”**** CDC 模式时可用）|  
 |4|更新|更新后的行（与更新前相同）|  
-|5|更新|合并行（仅在使用“净值且具有合并”  CDC 模式时可用）|  
+|5|更新|合并行（仅在使用“净值且具有合并”**** CDC 模式时可用）|  
 |其他|错误||  
   
  您可以使用拆分器连接到预定义的 INSERT、DELETE 和 UPDATE 输出以便进行进一步的处理。  
@@ -59,7 +60,7 @@ ms.locfileid: "86917140"
   
  打开 **“高级编辑器”** 对话框：  
   
--   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 拆分器，然后选择 **“显示高级编辑器”** 。  
+-   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 拆分器，然后选择 **“显示高级编辑器”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [根据更改的类型定向 CDC 流](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  

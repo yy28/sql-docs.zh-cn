@@ -1,4 +1,5 @@
 ---
+description: catalog.add_execution_worker（SSISDB 数据库）
 title: catalog.add_execution_worker（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -11,12 +12,12 @@ ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ffcd20f1895252cc09eca1fc87a055bd5c964a38
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 102277139885379f4c2f75c912756e09131ec546
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456986"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker（SSISDB 数据库）
 
@@ -34,11 +35,11 @@ catalog.add_execution_worker [ @execution_id = ] execution_id, [ @workeragent_id
 ```
 
 ## <a name="arguments"></a>参数
-[ @execution_id = ] execution_id   
- 执行实例的唯一标识符。 execution_id 为 bigint   。  
+[ @execution_id = ] execution_id  
+ 执行实例的唯一标识符。 execution_id 为 bigint。  
  
-[@workeragent_id = ] workeragent_id   
-Scale Out Worker 的辅助角色代理 ID。 workeragent_id  为 uniqueIdentifier  。
+[@workeragent_id = ] workeragent_id**  
+Scale Out Worker 的辅助角色代理 ID。 workeragent_id 为 uniqueIdentifier。
 
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

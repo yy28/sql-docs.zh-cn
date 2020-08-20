@@ -1,4 +1,5 @@
 ---
+description: 需要审批 (Master Data Services)
 title: 需要审批
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 448a8174acef464fa1badb5a25d019891dd53bc6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f93514c1efd561aa989c03373f91edc2d552eba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456815"
 ---
 # <a name="approval-required-master-data-services"></a>需要审批 (Master Data Services)
 
@@ -37,13 +38,13 @@ ms.locfileid: "85812050"
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   实体必须存在。 有关详细信息，请参阅[Create a Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
+-   实体必须存在。 有关详细信息，请参阅 [Create a Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="to-enable-approval-required-for-an-entity"></a>为实体启用“需要审批”  
   
 1.  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，单击 **“系统管理”**。  
   
-2.  在 "**管理模型**" 页上，从网格中选择一个模型，然后单击 "**实体**"。  
+2.  在 " **管理模型** " 页上，从网格中选择一个模型，然后单击 " **实体**"。  
   
 3.  在“管理实体” **** 页上，从网格中选择要为其启用“需要审批”  **** 的实体所在的行。  
   

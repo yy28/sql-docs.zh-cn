@@ -1,5 +1,6 @@
 ---
-title: + 把（DMX） |Microsoft Docs
+description: '+  ( (DMX 添加) ) '
+title: +  (将)  (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63fe6414d6f1df9f3855c01e0e7f03f523fe3a36
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 36f87ddf567462401f59456093bcfa345cd300be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457909"
 ---
 # <a name="-add-dmx"></a>+ (加) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

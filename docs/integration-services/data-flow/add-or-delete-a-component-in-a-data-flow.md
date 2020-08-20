@@ -1,4 +1,5 @@
 ---
+description: 在数据流中添加或删除组件
 title: 在数据流中添加或删除组件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93353b31ff84d1fc48c88c4fdaec1c105d0d5e44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ca8342ac6cbdab99c3314b49cac4c28408fee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457490"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在数据流中添加或删除组件
 
@@ -35,9 +36,9 @@ ms.locfileid: "86923221"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”选项卡，然后双击包含要向其添加组件的数据流的数据流任务。   
+3.  单击“控制流”选项卡，然后双击包含要向其添加组件的数据流的数据流任务。****  
   
-4.  在工具箱中，展开 **“数据流源”** 、 **“数据流转换”** 或 **“数据流目标”** ，然后将数据流项拖动到 **“数据流”** 选项卡的设计图面。  
+4.  在工具箱中，展开 **“数据流源”**、 **“数据流转换”** 或 **“数据流目标”**，然后将数据流项拖动到 **“数据流”** 选项卡的设计图面。  
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -47,9 +48,9 @@ ms.locfileid: "86923221"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”选项卡，然后双击包含要从中删除组件的数据流的数据流任务。   
+3.  单击“控制流”选项卡，然后双击包含要从中删除组件的数据流的数据流任务。****  
   
-4.  右键单击数据流组件，然后单击“删除”  。  
+4.  右键单击数据流组件，然后单击“删除”****。  
   
 5.  确认删除操作。  
   

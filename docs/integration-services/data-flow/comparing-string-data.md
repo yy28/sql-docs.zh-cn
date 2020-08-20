@@ -1,4 +1,5 @@
 ---
+description: 比较字符串数据
 title: 比较字符串数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 76f3cdcde9b84b5e1bed3c421045f1a38742f1c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa3d507527ea18e9d9296ee9b9cd10989932d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457379"
 ---
 # <a name="comparing-string-data"></a>比较字符串数据
 
@@ -71,7 +72,7 @@ ms.locfileid: "86920011"
   
  下表介绍比较选项和排序样式。  
   
-|比较选项|说明|  
+|比较选项|描述|  
 |-----------------------|-----------------|  
 |忽略大小写|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |忽略假名类型|指定比较是否区分日语的两种假名字符类型：平假名和片假名。 如果设置了此选项，字符串比较会忽略假名类型。|  
@@ -87,6 +88,6 @@ ms.locfileid: "86920011"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)   
  [快速分析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [标准分析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

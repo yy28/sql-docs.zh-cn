@@ -1,4 +1,5 @@
 ---
+description: 通过控制流包部件在包之间重用控制流
 title: 使用控制流包部件来在包之间重用控制流 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c86782a4ccd7ad03096ccd2723ff2867a779de16
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 878bc37ccb800b4dd1636464b58d3ce44c92e232
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457096"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>通过控制流包部件在包之间重用控制流
 
@@ -30,11 +31,11 @@ ms.locfileid: "86918296"
   将常用控制流任务或容器保存到单独的部件文件“.dtsxp”中，然后即可通过控制流包部件在一个或多个包中多次重复使用它。 这种可重用性使得 SSIS 包更容易进行设计和维护。  
   
 ## <a name="create-a-new-control-flow-package-part"></a>创建新的控制流包部件  
- 若要创建新的控制流包部件，请在解决方案资源管理器中，展开“包部件”文件夹。  右键单击“控制流”  ，然后选择“新建控制流包部件”  。  
+ 若要创建新的控制流包部件，请在解决方案资源管理器中，展开“包部件”文件夹。 **** 右键单击“控制流”****，然后选择“新建控制流包部件”****。  
   
  ![创建新的控制流模板](../integration-services/media/control-flow-templates-create-new.png "创建新的控制流模板")  
   
- 此时会在“包部件 | 控制流”文件夹中创建扩展名为“.dtsxp”的新的部件文件  。 同时，还会向 SSIS 工具箱添加具有相同名称的新项目。 （仅当你有一个包含该部件的项目且该项目在 Visual Studio 中处于打开状态时，该工具箱项目才可见。）  
+ 此时会在“包部件 | 控制流”文件夹中创建扩展名为“.dtsxp”的新的部件文件****。 同时，还会向 SSIS 工具箱添加具有相同名称的新项目。 （仅当你有一个包含该部件的项目且该项目在 Visual Studio 中处于打开状态时，该工具箱项目才可见。）  
   
  ![工具箱中的控制流模板](../integration-services/media/control-flow-templates-in-toolbox.png "工具箱中的控制流模板")  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86918296"
   
 -   若要重用属于当前项目一部分的部件，请在工具箱中拖放该部件。  
   
--   若要重用属于其他项目的部件，请使用“添加现有控制流包部件”命令。   
+-   若要重用属于其他项目的部件，请使用“添加现有控制流包部件”命令。 ****  
   
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>拖放控制流包部件  
  若要重用项目中的部件，请直接在工具箱中拖放该部件项目，就像对任何其他任务或容器进行操作一样。 可以多次将部件拖放到包中，以便在包的多个位置重用逻辑。 通过此方法可以重用属于当前项目的部件。  
@@ -74,7 +75,7 @@ ms.locfileid: "86918296"
  ![带有控制流模板的解决方案资源管理器](../integration-services/media/control-flow-templates-in-solution-explorer.png "带有控制流模板的解决方案资源管理器")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>添加现有控制流包部件的副本或现有部件的引用  
- 若要将文件系统中现有部件的副本添加到某个包，请在解决方案资源管理器中展开“包部件”文件夹。  右键单击“控制流”  ，然后选择“添加现有控制流包部件”  。  
+ 若要将文件系统中现有部件的副本添加到某个包，请在解决方案资源管理器中展开“包部件”文件夹。 **** 右键单击“控制流”****，然后选择“添加现有控制流包部件”****。  
   
  ![从菜单中添加新的控制流模板](../integration-services/media/control-flow-templates-add-from-menu.png "从菜单中添加新的控制流模板")  
   
@@ -91,16 +92,16 @@ ms.locfileid: "86918296"
 -   如果清除此项，则会将部件文件的副本添加到项目。  
   
 ## <a name="configure-a-control-flow-package-part"></a>配置控制流包部件  
- 将控制流包部件添加到包的控制流以后，若要对其进行配置，请使用“包部件配置”对话框。   
+ 将控制流包部件添加到包的控制流以后，若要对其进行配置，请使用“包部件配置”对话框。 ****  
   
 #### <a name="to-open-the-package-part-configuration-dialog-box"></a>打开“包部件配置”对话框的步骤  
   
-1.  若要配置部件实例，请双击控制流中的部件实例。 或右键单击部件实例，然后选择“编辑”  。 此时会打开“包部件配置”对话框。   
+1.  若要配置部件实例，请双击控制流中的部件实例。 或右键单击部件实例，然后选择“编辑”****。 此时会打开“包部件配置”对话框。 ****  
   
 2.  配置部件实例的属性和连接管理器。  
   
 ### <a name="properties-tab"></a>“属性”选项卡  
- 使用“包部件配置”对话框的“属性”选项卡指定部件的属性。    
+ 使用“包部件配置”对话框的“属性”选项卡指定部件的属性。********  
   
  ![“模板配置”对话框的“属性”选项卡](../integration-services/media/template-configuration-properties-tab.png "“模板配置”对话框的“属性”选项卡")  
   
@@ -119,7 +120,7 @@ ms.locfileid: "86918296"
 -   **值**。 配置的值。 此值将覆盖默认值。  
   
 ### <a name="connection-managers-tab"></a>“连接管理器”选项卡  
- 使用“包部件配置”对话框的“连接管理器”选项卡指定部件实例的连接管理器的属性。  
+ 使用“包部件配置”**** 对话框的“连接管理器”**** 选项卡指定部件实例的连接管理器的属性。  
   
  ![“模板配置”对话框的“连接管理器”选项卡](../integration-services/media/template-configuration-connection-managers-tab.png "“模板配置”对话框的“连接管理器”选项卡")  
   
@@ -134,12 +135,12 @@ ms.locfileid: "86918296"
 -   **值**。 配置的值。 此值将覆盖默认值。  
   
 ## <a name="delete-a-control-flow-part"></a>删除控制流部件  
- 若要删除某个部件，请在解决方案资源管理器中右键单击该部件，然后选择“删除”  。 选择“确定”确认删除，或选择“取消”保留该部件。    
+ 若要删除某个部件，请在解决方案资源管理器中右键单击该部件，然后选择“删除”****。 选择“确定”确认删除，或选择“取消”保留该部件。********  
   
  如果从项目中删除某个部件，将会从文件系统中永久删除该部件，且不能还原。  
   
 > [!NOTE]  
->  如果要从 Integration Services 项目中删除某个部件，但要在其他项目中继续使用该部件，则可使用“从项目中排除”  选项，而不使用“删除”  选项。  
+>  如果要从 Integration Services 项目中删除某个部件，但要在其他项目中继续使用该部件，则可使用“从项目中排除”**** 选项，而不使用“删除”**** 选项。  
   
 ## <a name="package-parts-are-a-design-time-feature-only"></a>包部件仅为设计时功能  
  包部件纯粹是设计时功能。 SSIS 设计器可以在包中创建、打开、保存和更新部件，还可以添加、配置或删除部件实例。 但是，SSIS 运行时无法感知这些部件。 下面是设计器实现这种分离效果的原理。  

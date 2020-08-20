@@ -1,4 +1,5 @@
 ---
+description: 原始文件自定义属性
 title: 原始文件自定义属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed2bc817f446481d228806f5f2ffb3222b79ecf0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45e439343713ac98dfd293a21af90d75e1275847
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457270"
 ---
 # <a name="raw-file-custom-properties"></a>原始文件自定义属性
 
@@ -30,7 +31,7 @@ ms.locfileid: "86916053"
   
 |属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer（枚举）|用来访问原始数据的模式。 可能的值为“文件名”  (0) 和“来自变量的文件名”  (1)。 默认值为“文件名”  (0)。|  
+|AccessMode|Integer（枚举）|用来访问原始数据的模式。 可能的值为“文件名”****(0) 和“来自变量的文件名”****(1)。 默认值为“文件名”****(0)。|  
 |FileName|String|源文件的路径和文件名。|  
   
  原始文件源的输出和输出列没有自定义属性。  
@@ -45,9 +46,9 @@ ms.locfileid: "86916053"
   
 |属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为  “文件名”(0) 和“来自变量的文件名”  (1)。|  
+|AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为****“文件名”(0) 和“来自变量的文件名”****(1)。|  
 |FileName|String|原始文件目标要写入的文件的名称。|  
-|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项为“始终创建”(0)、“创建一次”(1)、“截断和追加”(3)、“追加”(2)。     此属性的默认值为“始终创建”(0)  。|  
+|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项为“始终创建”(0)、“创建一次”(1)、“截断和追加”(3)、“追加”(2)。**************** 此属性的默认值为“始终创建”(0)****。|  
   
 > [!NOTE]  
 >  追加操作要求追加数据的元数据与文件中已有数据的元数据匹配。  

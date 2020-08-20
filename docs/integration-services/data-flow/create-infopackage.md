@@ -1,4 +1,5 @@
 ---
+description: 创建 InfoPackage
 title: 创建 InfoPackage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f84017f981fb8300e0cd0773981bade40ed5141f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38c7183853dcac7043672d5e4a622362af08c10b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457366"
 ---
 # <a name="create-infopackage"></a>创建 InfoPackage
 
@@ -37,7 +38,7 @@ ms.locfileid: "86923563"
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 组框，选择 **“InfoPackage”** ，然后单击 **“创建”** 。  
+4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 组框，选择 **“InfoPackage”**，然后单击 **“创建”**。  
   
 ## <a name="options"></a>选项  
  **InfoSource**  
@@ -49,7 +50,7 @@ ms.locfileid: "86923563"
  **源系统**  
  选择将与新 InfoPackage 相关联的源系统。  
   
- **属性**  
+ **特性**  
  指示 InfoPackage 将加载属性数据。  
   
  **文本**  

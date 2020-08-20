@@ -1,4 +1,5 @@
 ---
+description: ALTER MATERIALIZED VIEW (Transact-SQL)
 title: ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c9c9ae639a3dce3e697eded9f55af3485118506c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bc7f7f07656f2dc187de013fcb56eada5a997b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458847"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW (Transact-SQL)  
 
@@ -47,17 +48,17 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
   
 ## <a name="arguments"></a>参数
 
- schema_name      
+ schema_name     
  视图所属架构的名称。  
   
- view_name       
+ view_name     
  是要更改的具体化视图。  
   
-REBUILD     
+REBUILD   
 重启具体化视图。
 
-DISABLE     
-暂停对具体化视图的维护，并保留元数据和权限。  处于禁用状态期间，基于基础表处理针对具体化视图的所有查询。
+DISABLE   
+暂停对具体化视图的维护，并保留元数据和权限。处于禁用状态期间，基于基础表处理针对具体化视图的所有查询。
   
 ## <a name="permissions"></a>权限
 
