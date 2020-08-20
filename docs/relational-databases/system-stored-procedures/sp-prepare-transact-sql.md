@@ -1,4 +1,5 @@
 ---
+description: sp_prepare (Transact SQL)
 title: sp_prepare (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
@@ -18,17 +19,17 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9095536219fc0cdc419a0952217b0eeb2ef19f5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b3ccb20945f47aa7094de832faa8eb246022819a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489165"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-准备参数化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并返回执行的语句*句柄*。  `sp_prepare` 通过在表格格式数据流 (TDS) 包中指定 ID = 11 来调用。  
+准备参数化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并返回执行的语句 *句柄* 。  `sp_prepare` 通过在表格格式数据流 (TDS) 包中指定 ID = 11 来调用。  
   
  ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,18 +41,18 @@ sp_prepare handle OUTPUT, params, stmt, options
   
 ## <a name="arguments"></a>参数  
  *柄*  
- 是 SQL Server 生成的已*准备的句柄*标识符。 *句柄*是带有**int**返回值的必需参数。  
+ 是 SQL Server 生成的已 *准备的句柄* 标识符。 *句柄* 是带有 **int** 返回值的必需参数。  
   
  *params*  
- 标识参数化语句。 变量的参数定义将替换为语句*中的参数*标记。 *params*是调用**ntext**、 **nchar**或**nvarchar**输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
+ 标识参数化语句。 变量的参数定义将替换为语句 *中的参数* 标记。 *params* 是调用 **ntext**、 **nchar**或 **nvarchar** 输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
   
  *stmt*  
  定义游标结果集。 *Stmt*参数是必需的，并且调用了**ntext**、 **nchar**或**nvarchar**输入值。  
   
  *options*  
- 一个可选参数，它返回游标结果集列的说明。 *选项*需要以下 int 输入值：  
+ 一个可选参数，它返回游标结果集列的说明。 *选项* 需要以下 int 输入值：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

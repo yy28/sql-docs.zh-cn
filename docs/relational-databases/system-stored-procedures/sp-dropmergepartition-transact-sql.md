@@ -1,5 +1,6 @@
 ---
-title: sp_dropmergepartition （Transact-sql） |Microsoft Docs
+description: sp_dropmergepartition (Transact-SQL)
+title: sp_dropmergepartition (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,11 +17,12 @@ ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7320f894800c1893afb69c73c6e5324eedbaa939
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2bf72972d35a85812e9d16939572a31358d53d12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489487"
 ---
 # <a name="sp_dropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,21 +40,21 @@ sp_dropmergepartition [ @publication = ] 'publication'
         , [ @host_name = ] 'host_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication] = 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication] = 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @suser_sname = ] 'suser_sname'`订阅服务器上用于定义分区的[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函数的值。 *suser_sname* **sysname**，无默认值。  
+`[ @suser_sname = ] 'suser_sname'` 订阅服务器上用于定义分区的 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 函数的值。 *suser_sname* **sysname**，无默认值。  
   
-`[ @host_name = ] 'host_name'`订阅服务器上用于定义分区的[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数的值。 *host_name* **sysname**，无默认值。  
+`[ @host_name = ] 'host_name'` 订阅服务器上用于定义分区的 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 函数的值。 *host_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
-## <a name="remarks"></a>注解  
- **sp_dropmergepartition**用于合并复制。  
+## <a name="remarks"></a>备注  
+ **sp_dropmergepartition** 用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_dropmergepartition**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_dropmergepartition**。  
   
 ## <a name="see-also"></a>另请参阅  
  [通过参数化筛选器为合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  

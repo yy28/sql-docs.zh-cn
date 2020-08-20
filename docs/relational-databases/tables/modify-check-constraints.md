@@ -1,4 +1,5 @@
 ---
+description: 修改 CHECK 约束
 title: 修改 CHECK 约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -16,12 +17,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea5ecb64640df674d0f55d7347c1e8cb2d78d3ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488552"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,15 +52,15 @@ ms.locfileid: "85786067"
   
 #### <a name="to-modify-a-check-constraint"></a>修改 CHECK 约束  
   
-1.  在“对象资源管理器”  中，右键单击包含 CHECK 约束的表，然后选择“设计”  。  
+1.  在“对象资源管理器”**** 中，右键单击包含 CHECK 约束的表，然后选择“设计”****。  
   
-2.  在“表设计器”菜单上，单击“CHECK 约束…”   。  
+2.  在“表设计器”菜单上，单击“CHECK 约束…”********。  
   
 3.  在 **“CHECK 约束”** 对话框中，在 **“选定的 CHECK 约束”** 下选择要编辑的约束。  
   
 4.  完成下表中的相应操作：  
   
-    |目标|需要遵循的步骤|  
+    |功能|需要遵循的步骤|  
     |--------|------------------------|  
     |编辑约束表达式|在 **“表达式”** 字段中键入新的表达式。|  
     |重命名约束|在 **“名称”** 字段中键入新的名称。|  
@@ -70,9 +71,9 @@ ms.locfileid: "85786067"
     > [!NOTE]  
     >  对于 CHECK 约束，有些数据库具有不同的功能。  
   
-5.  单击“关闭”  。  
+5.  单击“关闭”。  
   
-6.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+6.  在“文件”菜单上，单击“保存表名称”********__。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改 CHECK 约束**  

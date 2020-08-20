@@ -1,4 +1,5 @@
 ---
+description: 'sys. dm_pdw_exec_sessions (Transact-sql) '
 title: sys. dm_pdw_exec_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2019
@@ -12,12 +13,12 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5801b3e1b4cf57aef3b465a6190b3093480e6ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489784"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,14 +32,14 @@ ms.locfileid: "86197088"
 |request_id|**nvarchar(32)**|当前查询或上次查询运行的 id。|系统中所有请求都是唯一的。 如果未运行任何，则为 Null。|  
 |security_id|**varbinary (85) **|运行会话的主体的安全 ID。||  
 |login_name|**nvarchar(128)**|运行会话的主体的登录名。|符合用户命名约定的任何字符串。|  
-|login_time|**datetime**|用户登录的日期和时间，创建此会话的日期和时间。|当前时间之前有效的**日期**时间。|  
+|login_time|**datetime**|用户登录的日期和时间，创建此会话的日期和时间。|当前时间之前有效的 **日期** 时间。|  
 |query_count|**int**|捕获自创建后运行的查询/requeststhis 会话数。|大于或等于0。|  
 |is_transactional|**bit**|捕获会话当前是否在事务中。|对于自动提交，为 0; 对于事务，则为1。|  
 |client_id|**nvarchar(255)**|捕获会话的客户端信息。|任何有效的字符串。|  
 |app_name|**nvarchar(255)**|捕获应用程序名称信息，可以选择在连接过程中进行设置。|任何有效的字符串。|  
-|sql_spid|**int**|SPID 的 id 号。 使用 `session_id` 此会话。 使用 `sql_spid` 列联接到**sys.databases dm_pdw_nodes_exec_sessions**。<br /><br /> 警告此列包含已关闭的 spid。 ** \* \* \* \* **||  
+|sql_spid|**int**|SPID 的 id 号。 使用 `session_id` 此会话。 使用 `sql_spid` 列联接到 **sys.databases dm_pdw_nodes_exec_sessions**。<br /><br /> 警告此列包含已关闭的 spid。 ** \* \* \* \* **||  
   
- 有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。  
+ 有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。  
   
 ## <a name="permissions"></a>权限  
  需要 `VIEW SERVER STATE` 权限。  

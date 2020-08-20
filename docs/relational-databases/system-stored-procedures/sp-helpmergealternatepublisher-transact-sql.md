@@ -1,5 +1,6 @@
 ---
-title: sp_helpmergealternatepublisher （Transact-sql） |Microsoft Docs
+description: sp_helpmergealternatepublisher (Transact-SQL)
+title: sp_helpmergealternatepublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 408d619ac06403c2d07b4b71b859cf49f6e2a071
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9d20e6273aaafd2c589dbd7e04b38e60890d5c21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489310"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'`备用发布服务器的名称。*发布服务器*的**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 备用发布服务器的名称。*发布服务器* 的 **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'`发布数据库的名称。*publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 发布数据库的名称。*publisher_db* **sysname**，无默认值。  
   
-`[ @publication = ] 'publication'`发布的名称。*发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 发布的名称。*发布* 为 **sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -52,18 +53,18 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publication**|**sysname**|发布的名称。|  
 |**alternate_distributor**|**sysname**|分发服务器的名称。|  
 |**friendly_name**|**nvarchar(255)**|对备用发布服务器的说明。|  
-|**能够**|**bit**|指定服务器是否为备用发布服务器。 **1**指定将发布服务器启用为备用发布服务器。 **0**指定不启用。|  
+|**enabled**|**bit**|指定服务器是否为备用发布服务器。 **1** 指定将发布服务器启用为备用发布服务器。 **0** 指定不启用。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helpmergealternatepublisher**用于合并复制。  
+ **sp_helpmergealternatepublisher** 用于合并复制。  
   
  在每个合并会话过程中，系统向发布服务器和订阅服务器查询它们各自的备用发布服务器列表。 合并进程将添加或删除备用发布服务器列表项，从而使订阅服务器和发布服务器中的备用发布服务器列表相匹配。  
   
 ## <a name="permissions"></a>权限  
- 只有发布的发布访问列表的成员才能**sp_helpmergealternatepublisher**执行。  
+ 只有发布的发布访问列表的成员才能 **sp_helpmergealternatepublisher**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

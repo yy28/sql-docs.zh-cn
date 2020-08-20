@@ -1,5 +1,6 @@
 ---
-title: sys. sp_drop_trusted_assembly （Transact-sql） |Microsoft Docs
+description: sys.sp_drop_trusted_assembly (Transact-SQL)
+title: sys. sp_drop_trusted_assembly (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3c1747fee1e23e0f68a7bcf1744f40e80786b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489022"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -41,14 +42,14 @@ sp_drop_trusted_assembly
     [ @hash = ] 'value'
 ```  
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 [ @hash =] "*value*"  
 要从服务器的受信任程序集列表中删除的程序集的 SHA2_512 哈希值。 即使程序集未签名或数据库未标记为可信，也可以在启用 clr 严格安全时加载受信任的程序集。
 
 ## <a name="remarks"></a>备注  
 
-此过程从 sys.databases 中删除程序集[。 trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
+此过程从 sys.databases 中删除程序集 [。 trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
 
 ## <a name="permissions"></a>权限
 

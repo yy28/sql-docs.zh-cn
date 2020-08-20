@@ -1,5 +1,6 @@
 ---
-title: sp_help_agent_default （Transact-sql） |Microsoft Docs
+description: sp_help_agent_default (Transact-SQL)
+title: sp_help_agent_default (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad0ae89b2cc2b09222fea863a008104e43ccfd15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489460"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,10 +38,10 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
         , [ @agent_type = ] agent_type  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @profile_id = ] _profile_idOUTPUT`代理类型的默认配置的 ID。 *profile_id*为**int**，没有默认值。*profile_id*也是一个输出参数，它返回代理类型默认配置的 id。  
+## <a name="arguments"></a>参数  
+`[ @profile_id = ] _profile_idOUTPUT` 代理类型的默认配置的 ID。 *profile_id* 为 **int**，没有默认值。*profile_id* 也是一个输出参数，它返回代理类型默认配置的 id。  
   
-`[ @agent_type = ] 'agent_type'`代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
+`[ @agent_type = ] 'agent_type'` 代理的类型。 *agent_type* 是 **int**，没有默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -51,13 +52,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 |**9**|队列读取器代理|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_help_agent_default**在所有类型的复制中使用。  
+ **sp_help_agent_default** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**replmonitor**固定数据库角色的成员才能**sp_help_agent_default**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **replmonitor** 固定数据库角色的成员才能 **sp_help_agent_default**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

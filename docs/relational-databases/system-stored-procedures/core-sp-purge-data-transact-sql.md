@@ -1,5 +1,6 @@
 ---
-title: core. sp_purge_data （Transact-sql） |Microsoft Docs
+description: core.sp_purge_data (Transact-SQL)
+title: sp_purge_data (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b7432238a3bedc85f6f9d971299fa7de2705df8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2ab402b1641e72225bf579d5b0aa5a21b345637
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489738"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,21 +48,21 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>参数  
  [ @retention_days =] *retention_days*  
- 管理数据仓库表中的数据的保留天数。 删除时间戳早于*retention_days*的数据。 *retention_days*为**smallint**，默认值为 NULL。 如果指定，该值必须是正数。 为 NULL 时，core.snapshots 视图中的 valid_through 列中的值决定了符合删除条件的行。  
+ 管理数据仓库表中的数据的保留天数。 删除时间戳早于 *retention_days* 的数据。 *retention_days* 为 **smallint**，默认值为 NULL。 如果指定，该值必须是正数。 为 NULL 时，core.snapshots 视图中的 valid_through 列中的值决定了符合删除条件的行。  
   
  [ @instance_name =] "*instance_name*"  
- 收集组实例的名称。 *instance_name*的默认值为**sysname**，默认值为 NULL。  
+ 收集组实例的名称。 *instance_name* 的默认值为 **sysname**，默认值为 NULL。  
   
  *instance_name*必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computername* \\ *instancename*。 为 NULL 时，使用本地服务器上的默认实例。  
   
  [ @collection_set_uid =] "*collection_set_uid*"  
- 收集组的 GUID。 *collection_set_uid*的值为**uniqueidentifier**，默认值为 NULL。 为 NULL 时，将删除所有收集组中的限定行。 若要获取此值，请查询 syscollector_collection_sets 目录视图。  
+ 收集组的 GUID。 *collection_set_uid* 的值为 **uniqueidentifier**，默认值为 NULL。 为 NULL 时，将删除所有收集组中的限定行。 若要获取此值，请查询 syscollector_collection_sets 目录视图。  
   
- [ @duration =]*持续时间*  
- 清除操作应当运行的最长分钟数。 *持续时间*为**smallint**，默认值为 NULL。 如果指定，则该值必须是零或正整数。 为 NULL 时，操作将一直运行，直到删除所有符合条件的行或手动停止操作。  
+ [ @duration =] *持续时间*  
+ 清除操作应当运行的最长分钟数。 *持续时间* 为 **smallint**，默认值为 NULL。 如果指定，则该值必须是零或正整数。 为 NULL 时，操作将一直运行，直到删除所有符合条件的行或手动停止操作。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  此过程将基于保留期选择 core.snapshots 视图中符合删除条件的行。 符合删除条件的所有行将从 core.snapshots_internal 表中删除。 删除位于前面的行将在所有管理数据仓库表中触发级联删除操作。 通过使用 ON DELETE CASCADE 子句可以完成此操作，该子句是为用于存储收集的数据的所有表定义的。  
@@ -71,7 +72,7 @@ core.sp_purge_data
  必须在管理数据仓库数据库的上下文中执行此过程。  
   
 ## <a name="permissions"></a>权限  
- 需要**mdw_admin** （具有 EXECUTE 权限）固定数据库角色的成员身份。  
+ 需要具有 EXECUTE 权限的 **mdw_admin** (中的成员资格) 固定数据库角色。  
   
 ## <a name="examples"></a>示例  
   
@@ -108,7 +109,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 处理结果（ODBC） |Microsoft Docs
+description: 处理结果 - 处理结果
+title: ODBC)  (处理结果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,16 +14,17 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0afae97770982f4ecd6b08d53f8df04e6e2e7ac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490833"
 ---
 # <a name="processing-results---process-results"></a>处理结果 - 处理结果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将数据检索到程序变量中。  
+ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后使用 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 或 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将数据检索到程序变量中。  
   
 ### <a name="to-process-results"></a>处理结果  
   
@@ -61,6 +63,6 @@ ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后
 >  若要在 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 返回 SQL_NO_DATA 之前取消处理结果集，请调用 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[&#40;ODBC&#41;检索结果集信息](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[&#40;ODBC&#41;检索结果集信息 ](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

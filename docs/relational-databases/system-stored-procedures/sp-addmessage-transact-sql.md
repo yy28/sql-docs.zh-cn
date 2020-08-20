@@ -1,5 +1,6 @@
 ---
-title: sp_addmessage （Transact-sql） |Microsoft Docs
+description: sp_addmessage (Transact-SQL)
+title: sp_addmessage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adf32fad3c233023529d362cd7382ca6376b3cee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a7c1c41cf9b745efea8b2368d5120f0b03d3ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489562"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @msgnum = ] msg_id`消息的 ID。 *msg_id*的值为**int** ，默认值为 NULL。 用户定义的错误消息*msg_id*可以是介于50001和2147483647之间的整数。 *Msg_id*和*语言*的组合必须是唯一的;如果指定语言的 ID 已存在，则会返回错误。  
+`[ @msgnum = ] msg_id` 消息的 ID。 *msg_id* 的值为 **int** ，默认值为 NULL。 用户定义的错误消息*msg_id*可以是介于50001和2147483647之间的整数。 *Msg_id*和*语言*的组合必须是唯一的;如果指定语言的 ID 已存在，则会返回错误。  
   
-`[ @severity = ]severity`错误的严重性级别。 *严重性*为**smallint** ，默认值为 NULL。 有效级别的范围为 1 到 25。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
+`[ @severity = ]severity` 错误的严重性级别。 *严重性* 为 **smallint** ，默认值为 NULL。 有效级别的范围为 1 到 25。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
-`[ @msgtext = ] 'msg'`错误消息的文本。 *msg*为**nvarchar （255）** ，默认值为 NULL。  
+`[ @msgtext = ] 'msg'` 错误消息的文本。 *msg* 为 **nvarchar (255) ** ，默认值为 NULL。  
   
-`[ @lang = ] 'language'`此消息的语言。 *language*的值为**sysname** ，默认值为 NULL。 由于可以在同一台服务器上安装多种语言，因此*language*指定了每条消息的编写语言。 如果省略*语言*，则语言是会话的默认语言。  
+`[ @lang = ] 'language'` 此消息的语言。 *language* 的值为 **sysname** ，默认值为 NULL。 由于可以在同一台服务器上安装多种语言，因此 *language* 指定了每条消息的编写语言。 如果省略 *语言* ，则语言是会话的默认语言。  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`指示消息是否在发生时写入 Windows 应用程序日志。 ** \@ with_log**的值为**varchar （5）** ，默认值为 FALSE。 如果为 TRUE，则错误始终写入 Windows 应用程序日志。 如果为 FALSE，则错误不会始终写入 Windows 应用程序日志，但仍然可以写入，具体取决于错误是如何引发的。 只有**sysadmin**服务器角色的成员才能使用此选项。  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` 指示消息是否在发生时写入 Windows 应用程序日志。 ** \@ with_log**是**varchar (5) ** ，默认值为 FALSE。 如果为 TRUE，则错误始终写入 Windows 应用程序日志。 如果为 FALSE，则错误不会始终写入 Windows 应用程序日志，但仍然可以写入，具体取决于错误是如何引发的。 只有 **sysadmin** 服务器角色的成员才能使用此选项。  
   
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
-`[ @replace = ] 'replace'`如果指定为字符串*replace*，将使用新的消息文本和严重级别覆盖现有错误消息。 *replace*为**varchar （7）** ，默认值为 NULL。 如果*msg_id*已存在，则必须指定此选项。 如果替换美国英语消息，则会为所有其他语言中具有相同*msg_id*的所有邮件替换严重性级别。  
+`[ @replace = ] 'replace'` 如果指定为字符串 *replace*，将使用新的消息文本和严重级别覆盖现有错误消息。 *replace* 是 **varchar (7) ** ，默认值为 NULL。 如果 *msg_id* 已存在，则必须指定此选项。 如果替换美国英语消息，则会为所有其他语言中具有相同 *msg_id*的所有邮件替换严重性级别。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -75,7 +76,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  由于语言语法不同，因此，本地化消息中的参数可能不会以原始消息中相同的顺序出现。  
   
 ## <a name="permissions"></a>权限  
-要求具有**sysadmin**或**serveradmin**固定服务器角色的成员身份。  
+要求具有 **sysadmin** 或 **serveradmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   

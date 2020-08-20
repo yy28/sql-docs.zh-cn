@@ -1,4 +1,5 @@
 ---
+description: 创建 SMO 程序
 title: 正在创建 SMO 程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,22 +18,23 @@ ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe4da5dbd07cef57b6028ce015b184cffa9563f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b55530e34a77878c551dc8ea4ff0fa2936325755
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490433"
 ---
 # <a name="creating-smo-programs"></a>创建 SMO 程序
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 对象的常规编程包括了所有对象共享的共有领域，例如运行方法、设置属性和操作集合。  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[连接到 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的最简单 SMO 程序。 演示 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 此外还包括了一些示例，演示如何连接到本地和远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
 |[断开与 SQL Server 实例的连接](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|一个演示如何断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接的程序。|  
-|[调用方法](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|本节介绍调用方法的常见途径。 演示如何使用参数以及如何处理在 <xref:System.Data.DataTable> 对象中返回的数据的表。 还包括有关如何调用对象构造函数以及如何调用**Clone**方法的示例。|  
+|[调用方法](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|本节介绍调用方法的常见途径。 演示如何使用参数以及如何处理在 <xref:System.Data.DataTable> 对象中返回的数据的表。 还包括有关如何调用对象构造函数以及如何调用 **Clone** 方法的示例。|  
 |[设置属性 - SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|本节介绍如何设置不同类型的属性。 演示如何设置和获取对象属性。 此外还包括一些示例，演示如何在创建对象时设置对象属性，以及如何遍历对象的所有属性。|  
 |[使用集合](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|各种讨论用于对象集合的方法的程序。 演示如何使用集合引用对象。 此外还包括一个示例，演示如何遍历集合成员。|  
 |[处理 SMO 事件](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-events.md)|本节介绍如何设置和处理 SMO 中的事件。 包含一个示例，演示如何设置事件处理程序和如何设置事件订阅。|  

@@ -1,5 +1,6 @@
 ---
-title: log_shipping_secondary_databases （Transact-sql） |Microsoft Docs
+description: log_shipping_secondary_databases (Transact-SQL)
+title: log_shipping_secondary_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5dcc3f2a76f069d90fd756410a8b478552c6f6b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cee2eca7d0f75b6a27c17056f70195f3aae14d99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488850"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在日志传送配置中为每个辅助数据库存储一条记录。 该表存储在**msdb**数据库中。  
+  在日志传送配置中为每个辅助数据库存储一条记录。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +41,7 @@ ms.locfileid: "85890124"
 |**block_size**|**int**|用作备份设备的块大小（字节）。|  
 |**buffer_count**|**int**|备份或还原操作使用的缓冲区总数。|  
 |**max_transfer_size**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。|  
-|**last_restored_file**|**nvarchar （500）**|上次还原到辅助数据库的备份文件的文件名。|  
+|**last_restored_file**|**nvarchar (500) **|上次还原到辅助数据库的备份文件的文件名。|  
 |**last_restored_date**|**datetime**|上次对辅助数据库执行还原操作的时间和日期。|  
   
 ## <a name="see-also"></a>另请参阅  

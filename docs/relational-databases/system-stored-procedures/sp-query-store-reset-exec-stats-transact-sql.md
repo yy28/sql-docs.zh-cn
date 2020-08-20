@@ -1,5 +1,6 @@
 ---
-title: sp_query_store_reset_exec_stats （Transact-sql） |Microsoft Docs
+description: 'sp_query_store_reset_exec_stats (Transact-sql) '
+title: sp_query_store_reset_exec_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,13 +22,14 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d818d6ebf8c00d788f422c19b0bf32edaff0c24
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb4dc0ab26f2b3df03dc290054270f3c8a705f69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489121"
 ---
-# <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats （Transact-sql）
+# <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   从查询存储中清除特定查询计划的运行时统计信息。  
@@ -41,16 +43,16 @@ ms.locfileid: "86012621"
 sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @plan_id = ] plan_id`要清除的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @plan_id = ] plan_id` 要清除的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有**ALTER**权限。 
+ 要求对数据库具有 **ALTER** 权限。 
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关查询存储中的查询的信息。  

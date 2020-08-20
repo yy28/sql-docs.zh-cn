@@ -1,4 +1,5 @@
 ---
+description: 使用 Transact-SQL 配置列加密
 title: 使用 Transact-SQL 就地配置列加密 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1dba061f6b8bc30e8f9f0e64e45f16493f62db1
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490470"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>使用 Transact-SQL 配置列加密
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

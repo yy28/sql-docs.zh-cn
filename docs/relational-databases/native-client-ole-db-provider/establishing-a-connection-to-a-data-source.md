@@ -1,5 +1,6 @@
 ---
-title: 建立与数据源的连接（Native Client OLE DB 提供程序） |Microsoft Docs
+description: '建立与数据源的连接 (Native Client OLE DB 提供程序) '
+title: 建立与数据源的连接 (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dc465bfa63a0822fc4a1de7b13611c0d1121017
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 384d6b0b9db152d1418b009c50345151786875e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490711"
 ---
 # <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>建立与 SQL Server Native Client 数据源的连接
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，使用者必须首先通过调用**CoCreateInstance**方法创建数据源对象的实例。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，CLSID_SQLNCLI10 类标识符。 您还可以使用符号 SQLNCLI_CLSID，该符号将解析为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您引用的 sqlncli.msi 中使用的 Native Client OLE DB 提供程序。  
+  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，使用者必须首先通过调用 **CoCreateInstance** 方法创建数据源对象的实例。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，CLSID_SQLNCLI10 类标识符。 您还可以使用符号 SQLNCLI_CLSID，该符号将解析为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您引用的 sqlncli.msi 中使用的 Native Client OLE DB 提供程序。  
   
- 数据源对象公开了 IDBProperties 接口，使用者使用该接口提供基本的身份验证信息，如服务器名、数据库名、用户 ID 和密码****。 可调用 IDBProperties::SetProperties 方法设置这些属性****。  
+ 数据源对象公开了 IDBProperties 接口，使用者使用该接口提供基本的身份验证信息，如服务器名、数据库名、用户 ID 和密码  。 可调用 IDBProperties::SetProperties 方法设置这些属性  。  
   
  如果计算机上运行了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，应以“服务器名称\示例名称”的形式指定服务器名称。  
   
- 数据源对象还公开了 IDBInitialize 接口****。 在设置这些属性之后，可通过调用 IDBInitialize::Initialize 方法建立与数据源的连接****。 例如：  
+ 数据源对象还公开了 IDBInitialize 接口  。 在设置这些属性之后，可通过调用 IDBInitialize::Initialize 方法建立与数据源的连接  。 例如：  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -43,7 +44,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- 对**CoCreateInstance**的此调用会创建类的单个对象，该类与 CLSID_SQLNCLI10 （与将用于创建对象的数据和代码相关联的 CSLID）相关联。 IID_IDBInitialize 引用接口 (IDBInitialize) 的标识符，而该接口用于与对象通信****。  
+ 对 **CoCreateInstance** 的此调用将创建与 (CLSID_SQLNCLI10 关联的类的单个对象，该类与要用于创建对象) 的数据和代码关联。 IID_IDBInitialize 引用接口 (IDBInitialize) 的标识符，而该接口用于与对象通信  。  
   
  以下是一个函数示例，该函数初始化并建立与数据源的连接。  
   

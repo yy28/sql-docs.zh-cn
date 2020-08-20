@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_job_object（Azure SQL 数据库）
 title: dm_os_job_object (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -19,19 +20,19 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 3ed298216393b59d723eb58cac783f9836ce93d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489832"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 返回单个行，用于描述管理 SQL Server 进程的作业对象的配置，以及作业对象级别的某些资源消耗统计信息。 如果 SQL Server 未在作业对象中运行，则返回空集。
 
-作业对象是一种在操作系统级别实现 CPU、内存和 IO 资源调控的 Windows 构造。 有关作业对象的详细信息，请参阅[作业对象](/windows/desktop/ProcThread/job-objects)。
+作业对象是一种在操作系统级别实现 CPU、内存和 IO 资源调控的 Windows 构造。 有关作业对象的详细信息，请参阅 [作业对象](/windows/desktop/ProcThread/job-objects)。
   
 |列|数据类型|说明|  
 |-------------|---------------|-----------------|  
@@ -56,5 +57,5 @@ ms.locfileid: "87865275"
  
 ## <a name="see-also"></a>另请参阅  
 
-有关托管实例的信息，请参阅[SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
+有关托管实例的信息，请参阅 [SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
   

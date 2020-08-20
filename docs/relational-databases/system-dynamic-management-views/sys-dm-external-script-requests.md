@@ -1,4 +1,5 @@
 ---
+description: sys.dm_external_script_requests
 title: sys. dm_external_script_requests |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2020
@@ -20,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 64a21295da9b399cc212848c83d93657199c3536
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1b3c1f10be0b454503c5fbcfd9cdab191a687797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489835"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "88180194"
 为运行外部脚本的每个活动工作线程帐户都返回一行。
   
 > [!NOTE]
-> 仅当你已安装并启用支持外部脚本执行的功能时，此动态管理视图 (DMV) 才可用。 有关详细信息，请参阅[SQL Server 2017 和更高版本中的机器学习服务 (r、Python) ](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 中的 r SERVICES](../../machine-learning/r/sql-server-r-services.md)和[Azure SQL 机器学习服务中的托管实例](/azure/azure-sql/managed-instance/machine-learning-services-overview)。  
+> 仅当你已安装并启用支持外部脚本执行的功能时，此动态管理视图 (DMV) 才可用。 有关详细信息，请参阅 [SQL Server 2017 和更高版本中的机器学习服务 (r、Python) ](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 中的 r SERVICES](../../machine-learning/r/sql-server-r-services.md)和 [Azure SQL 机器学习服务中的托管实例](/azure/azure-sql/managed-instance/machine-learning-services-overview)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -53,7 +54,7 @@ ms.locfileid: "88180194"
 
 此视图可以使用脚本语言标识符进行筛选。
 
-此视图还返回在其下运行脚本的工作线程帐户。 有关外部脚本使用的辅助角色帐户的信息，请参阅[SQL Server 机器学习服务中的扩展性框架的 "安全概述](../../machine-learning/concepts/security.md#sqlrusergroup)" 中处理 (SQLRUserGroup) 部分。
+此视图还返回在其下运行脚本的工作线程帐户。 有关外部脚本使用的辅助角色帐户的信息，请参阅 [SQL Server 机器学习服务中的扩展性框架的 "安全概述](../../machine-learning/concepts/security.md#sqlrusergroup)" 中处理 (SQLRUserGroup) 部分。
 
 在 **external_script_request_id** 字段中返回的 GUID 还表示用于存储临时文件的受保护目录的文件名。 每个辅助角色帐户（如 MSSQLSERVER01）代表一个 SQL 登录名或 Windows 用户，并可用于运行多个脚本请求。 默认情况下，这些临时文件会在请求脚本完成之后进行清理。
 

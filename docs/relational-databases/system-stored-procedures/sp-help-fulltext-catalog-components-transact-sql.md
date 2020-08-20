@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_catalog_components （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_catalog_components (Transact-SQL)
+title: sp_help_fulltext_catalog_components (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb7cbf41a439c5221892142178d1341a9284f555
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489357"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,10 +48,10 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**全文目录名称**|**int**|全文目录的名称。|  
 |**全文目录 id**|**sysname**|全文目录的 ID。|  
-|**componenttype**|**sysname**|组件的类型。 下列情况之一：<br /><br /> 筛选器<br /><br /> 协议处理程序<br /><br /> 断字符|  
+|**componenttype**|**sysname**|组件的类型。 下列类型作之一：<br /><br /> 筛选<br /><br /> 协议处理程序<br /><br /> 断字符|  
 |**componentname**|**sysname**|组件的名称。|  
 |**clsid**|**uniqueidentifier**|组件的类标识符。|  
-|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是**serveradmin**固定服务器角色的成员。|  
+|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是 **serveradmin** 固定服务器角色的成员。|  
 |**version**|**nvarchar(30)**|组件的版本。|  
 |**提供**|**sysname**|组件制造商的名称。|  
   
@@ -58,7 +59,7 @@ sp_help_fulltext_catalog_components
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [sys. fulltext_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)  

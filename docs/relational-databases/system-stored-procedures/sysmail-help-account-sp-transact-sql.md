@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_account_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_account_sp (Transact-SQL)
+title: sysmail_help_account_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 9f6995ca068efacff419ddad4f99435234d3228b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488970"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出有关数据库邮件帐户的信息（密码除外）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +40,12 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @account_id = ] account_id`要列出其信息的帐户的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。  
+`[ @account_id = ] account_id` 要列出其信息的帐户的帐户 ID。 *account_id* 的值为 **int**，默认值为 NULL。  
   
-`[ @account_name = ] 'account_name'`要列出其信息的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @account_name = ] 'account_name'` 要列出其信息的帐户的名称。 *account_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  返回包含下面列出的列的结果集。  
@@ -60,17 +61,17 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servertype**|**sysname**|用于此帐户的电子邮件服务器的类型。|  
 |**服务器**|**sysname**|用于此帐户的电子邮件服务器的名称。|  
 |**port**|**int**|电子邮件服务器使用的端口号。|  
-|**username**|**nvarchar(128)**|登录电子邮件服务器所用的用户名（如果电子邮件服务器使用身份验证）。 当**username**为 NULL 时，数据库邮件不对此帐户使用身份验证。|  
-|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**是 bit，无默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为0时，数据库邮件使用** \@ 用户名**和** \@ 密码**在 SMTP 服务器上进行身份验证。 如果** \@ 用户名**和** \@ 密码**为空，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
-|**enable_ssl**|**bit**|指定数据库邮件是否使用传输层安全性（TLS）（以前称为安全套接字层（SSL））对通信进行加密。 如果 SMTP 服务器需要 TLS，请使用此选项。 **enable_ssl**是 bit，无默认值。 1指示数据库邮件使用 TLS 加密通信。 0指示数据库邮件发送没有 TLS 加密的邮件。|  
+|**username**|**nvarchar(128)**|登录电子邮件服务器所用的用户名（如果电子邮件服务器使用身份验证）。 当 **username** 为 NULL 时，数据库邮件不对此帐户使用身份验证。|  
+|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials** 是 bit，无默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为0时，数据库邮件使用** \@ 用户名**和** \@ 密码**在 SMTP 服务器上进行身份验证。 如果** \@ 用户名**和** \@ 密码**为空，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
+|**enable_ssl**|**bit**|指定数据库邮件是否使用传输层安全性 (TLS) （以前称为安全套接字层 (SSL) ）对通信进行加密。 如果 SMTP 服务器需要 TLS，请使用此选项。 **enable_ssl** 是 bit，无默认值。 1指示数据库邮件使用 TLS 加密通信。 0指示数据库邮件发送没有 TLS 加密的邮件。|  
   
 ## <a name="remarks"></a>备注  
- 如果未提供*account_id*或*account_name* ，则**sysmail_help_account**会列出 Microsoft SQL Server 实例中所有数据库邮件帐户的信息。  
+ 如果未提供 *account_id* 或 *account_name* ，则 **sysmail_help_account** 会列出 Microsoft SQL Server 实例中所有数据库邮件帐户的信息。  
   
- 存储过程**sysmail_help_account_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_help_account_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  **A. 列出所有帐户的信息**  

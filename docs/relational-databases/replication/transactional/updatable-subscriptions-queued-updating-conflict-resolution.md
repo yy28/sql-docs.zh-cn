@@ -1,4 +1,5 @@
 ---
+description: 可更新订阅 - 排队更新冲突的解决
 title: 排队更新冲突的检测和解决 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9364de40aed4218d1abf73dac1502413c3509edf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 18cc2c5b4b93a77303fe9e59b3e8eae7f5597633
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490521"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>可更新订阅 - 排队更新冲突的解决
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85883214"
   
  **查看数据冲突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[查看事务发布的数据冲突 (SQL Server Management Studio)](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[查看事务发布的数据冲突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>发布服务器入选  
  如果将冲突解决设置为服务器入选，将根据发布服务器中的数据保持事务的一致性。 冲突的事务将回滚到启动该事务的订阅服务器。  

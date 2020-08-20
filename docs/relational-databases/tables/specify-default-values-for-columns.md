@@ -1,4 +1,5 @@
 ---
+description: 指定列的默认值
 title: 指定列的默认值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -14,12 +15,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e624926eb55adf65bd8390e6929cfa04aa742ba4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488551"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
 
@@ -37,7 +38,7 @@ ms.locfileid: "87395802"
 
 在开始之前，请注意以下限制和局限：
 
-- 如果“默认值”  字段中的项替换绑定的默认值（以不带圆括号的形式显示），则将提示你解除对默认值的绑定，并将其替换为新的默认值。
+- 如果“默认值”**** 字段中的项替换绑定的默认值（以不带圆括号的形式显示），则将提示你解除对默认值的绑定，并将其替换为新的默认值。
 
 - 若要输入文本字符串，请用单引号 (') 将值括起来；不要使用双引号 (")，因为双引号已保留用于带引号的标识符。
 
@@ -55,7 +56,7 @@ ms.locfileid: "87395802"
 
 ### <a name="object-explorer"></a>“对象资源管理器”
 
-1. 在“对象资源管理器”  中，右键单击要更改其小数位数的列所在的表，再单击“设计”  。
+1. 在“对象资源管理器”**** 中，右键单击要更改其小数位数的列所在的表，再单击“设计”****。
 
 2. 选择要为其指定默认值的列。
 
@@ -64,7 +65,7 @@ ms.locfileid: "87395802"
    > [!NOTE]
    > 若要输入数值默认值，请输入该数字。 对于对象或函数，请输入其名称。 对于字母数字默认值，请输入该值，两边用单引号引起来。
 
-4. 在“文件”菜单上，单击“保存表名称”    。
+4. 在“文件”菜单上，单击“保存表名称”******** __。
 
 ## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 指定默认值
 
@@ -76,7 +77,7 @@ ms.locfileid: "87395802"
 
 2. 在标准菜单栏上，单击 **“新建查询”** 。
 
-3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。
 
    ```sql
    CREATE TABLE dbo.doc_exz (column_a INT, column_b INT); -- Allows nulls.

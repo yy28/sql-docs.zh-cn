@@ -1,5 +1,6 @@
 ---
-title: dbo.sysjobsteps （Transact-sql） |Microsoft Docs
+description: dbo.sysjobsteps (Transact-SQL)
+title: dbo.sysjobsteps (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b3395a26efaa4d05ebc4a74681c7d7d3e51897b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8cbe10b4d7734aa15448bd39e9e3ea9ec52eabd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488878"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的作业中的各个步骤的信息。 该表存储在**msdb**数据库中。  
+  包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的作业中的各个步骤的信息。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -37,13 +38,13 @@ ms.locfileid: "85890443"
 |**step_id**|**int**|作业中步骤的 ID。|  
 |**step_name**|**sysname**|作业步骤的名称。|  
 |**适用**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于执行作业步骤的子系统的名称。|  
-|**command**|**nvarchar(max)**|要由**子系统**执行的命令。|  
+|**command**|**nvarchar(max)**|要由 **子系统**执行的命令。|  
 |**flag**|**int**|保留。|  
 |**additional_parameters**|**ntext**|保留。|  
 |**cmdexec_success_code**|**int**|**CmdExec**子系统步骤返回的错误级别值指示成功。|  
-|**on_success_action**|**tinyint**|成功执行了某个步骤时将要执行的操作。<br /><br /> **1** = （默认值）成功退出<br /><br /> **2** = 失败时退出<br /><br /> **3** = 中转到下一步<br /><br /> **4** = 中转到步骤_on_success_step_id_|
+|**on_success_action**|**tinyint**|成功执行了某个步骤时将要执行的操作。<br /><br /> **1** = (默认值) 成功退出<br /><br /> **2** = 失败时退出<br /><br /> **3** = 中转到下一步<br /><br /> **4** = 中转到步骤 _on_success_step_id_|
 |**on_success_step_id**|**int**|成功执行了某个步骤时将要执行的下一个步骤的 ID。|  
-|**on_fail_action**|**tinyint**|未成功执行某个步骤时将要执行的操作。<br /><br /> **1** = 成功退出<br /><br /> **2** = （默认值）在失败的情况下退出<br /><br /> **3** = 中转到下一步<br /><br /> **4** = 中转到步骤_on_fail_step_id_|
+|**on_fail_action**|**tinyint**|未成功执行某个步骤时将要执行的操作。<br /><br /> **1** = 成功退出<br /><br /> **2** = (默认) 退出但失败<br /><br /> **3** = 中转到下一步<br /><br /> **4** = 中转到步骤 _on_fail_step_id_|
 |**on_fail_step_id**|**int**|未成功执行某个步骤时将要执行的下一个步骤的 ID。|  
 |服务器|**sysname**|保留。|  
 |**database_name**|**sysname**|如果**子系统**为 TSQL，则在其中执行**命令**的数据库的名称。|  
@@ -61,6 +62,6 @@ ms.locfileid: "85890443"
 |**step_uid**|**uniqueidentifier**|作业步骤的标识符。|  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的 SQL Server 代理表](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+ [&#40;Transact-sql&#41;的 SQL Server 代理表 ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

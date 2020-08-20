@@ -1,5 +1,6 @@
 ---
-title: ISSAsynchStatus：： Abort （Native Client OLE DB 提供程序） |Microsoft Docs
+description: 'ISSAsynchStatus：： Abort (Native Client OLE DB 提供程序) '
+title: ISSAsynchStatus：： Abort (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,14 +17,14 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490876"
 ---
-# <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus：： Abort （Native Client OLE DB 提供程序）
+# <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus：： Abort (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   取消异步执行的操作。  
@@ -37,11 +38,11 @@ HRESULT Abort(
         DBASYNCHOP eOperation);  
 ```  
   
-## <a name="arguments"></a>自变量  
- hChapter[in]**  
- 要中止其操作的章节的句柄。 如果被调用的对象不是行集对象或操作不适用于某一章节，则调用方必须将*hChapter*设置为 DB_NULL_HCHAPTER。  
+## <a name="arguments"></a>参数  
+ hChapter[in]   
+ 要中止其操作的章节的句柄。 如果被调用的对象不是行集对象或操作不适用于某一章节，则调用方必须将 *hChapter* 设置为 DB_NULL_HCHAPTER。  
   
- eOperation[in]**  
+ eOperation[in]   
  要中止的操作。 其值应为：  
   
  DBASYNCHOP_OPEN - 要取消的请求应用于行集的异步打开或填充，或应用于数据源对象的异步初始化。  
@@ -65,16 +66,16 @@ HRESULT Abort(
  E_UNEXPECTED  
  对未在其上调用**IDBInitialize：： Initialize**的数据源对象调用了**ISSAsynchStatus：： Abort** ，或该对象尚未完成。  
   
- 对在其上调用了**IDBInitialize：： Initialize**但随后在初始化之前取消的数据源对象调用了**ISSAsynchStatus：： Abort** ，或已超时。数据源对象仍未初始化。  
+ 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消   。数据源对象仍未初始化。  
   
  在之前调用了**ITransaction：： Commit**或**ITransaction：： abort**的行集上调用了**ISSAsynchStatus：： abort** ，并且行集未保留在提交或中止后并且处于僵停状态。  
   
- 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort****。 该行集处于僵停状态。  
+ 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort  。 该行集处于僵停状态。  
   
 ## <a name="remarks"></a>备注  
- 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED****。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
+ 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED  。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
   
- 如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK******。 这并不意味着操作已完成或取消。  
+ 如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK   。 这并不意味着操作已完成或取消。  
   
 ## <a name="see-also"></a>另请参阅  
  [执行异步操作](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  

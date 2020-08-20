@@ -1,5 +1,6 @@
 ---
-title: sp_cursoropen （Transact-sql） |Microsoft Docs
+description: sp_cursoropen (Transact-SQL)
+title: sp_cursoropen (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489483"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +43,17 @@ sp_cursoropen cursor OUTPUT, stmt
   
 ## <a name="arguments"></a>参数  
  *cursor*  
- SQL Server 生成的游标标识符。 *cursor*是一个*句柄*值，必须对涉及游标的所有后续过程（如 sp_cursorfetch）提供此值。 *cursor*是带有**int**返回值的必需参数。  
+ SQL Server 生成的游标标识符。 *cursor* 是一个 *句柄* 值，必须对涉及游标的所有后续过程（如 sp_cursorfetch）提供此值。 *cursor* 是带有 **int** 返回值的必需参数。  
   
- *游标*允许单个数据库连接上的多个游标处于活动状态。  
+ *游标* 允许单个数据库连接上的多个游标处于活动状态。  
   
  *stmt*  
- 定义游标结果集的必需参数。 任何字符串类型（无论 Unicode、大小等）的任何有效的查询字符串（语法和 binding）都可以充当有效的*stmt*值类型。  
+ 定义游标结果集的必需参数。 任何有效的查询字符串 (语法和绑定) 任何字符串类型 (无论 Unicode、大小等，) 都可以充当有效的 *stmt* 值类型。  
   
  *scrollopt*  
- 滚动选项。 *scrollopt*是一个可选参数，它需要以下**整数**输入值之一。  
+ 滚动选项。 *scrollopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -69,16 +70,16 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 因为请求的值可能不适合于*stmt*定义的游标，所以，此参数可同时用作输入和输出。 在此类情况下，SQL Server 分配一个适当的值。  
+ 因为请求的值可能不适合于 *stmt*定义的游标，所以，此参数可同时用作输入和输出。 在此类情况下，SQL Server 分配一个适当的值。  
   
  *ccopt*  
- 并发控制选项。 *ccopt*是一个可选参数，它需要以下**整数**输入值之一。  
+ 并发控制选项。 *ccopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
-|0x0004|**乐观**（以前称为 OPTCC）|  
+|0x0004|**乐观** (以前称为 OPTCC) |  
 |0x0008|OPTIMISTIC（以前称为 OPTCCVAL）|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -88,19 +89,19 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 与*scrollopt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以覆盖请求的*ccopt*值。  
+ 与 *scrollopt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以覆盖请求的 *ccopt* 值。  
   
  *数*  
  要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 指定为输入值与返回值时，*行计数*的行为不同。  
   
 |作为输入值|作为返回值|  
 |--------------------|---------------------|  
-|当指定的 AUTO_FETCH *scrollopt*值为*rowcount*时，表示要放入提取缓冲区中的行数。<br /><br /> 注意：如果指定 AUTO_FETCH，则 >0 是有效的值，否则将被忽略。|表示结果集中的行数，除非指定了*scrollopt* AUTO_FETCH 值。|  
+|当指定的 AUTO_FETCH *scrollopt* 值为 *rowcount* 时，表示要放入提取缓冲区中的行数。<br /><br /> 注意：如果指定 AUTO_FETCH，则 >0 是有效的值，否则将被忽略。|表示结果集中的行数，除非指定了 *scrollopt* AUTO_FETCH 值。|  
   
 -  
   
  *boundparam*  
- 指示使用其他参数。 *boundparam*是一个可选参数，如果*scrollopt* PARAMETERIZED_STMT 值设置为 ON，则应指定此参数。  
+ 指示使用其他参数。 *boundparam* 是一个可选参数，如果 *scrollopt* PARAMETERIZED_STMT 值设置为 ON，则应指定此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  如果未引发错误，则 sp_cursoropen 返回以下值之一。  
@@ -122,13 +123,13 @@ sp_cursoropen cursor OUTPUT, stmt
   
  当引发错误时，返回值可能不一致，无法确保准确性。  
   
- 当*rowcount*参数指定为返回值时，将出现以下结果集。  
+ 当 *rowcount* 参数指定为返回值时，将出现以下结果集。  
   
  -1  
  如果行数未知或不适用，则返回此值。  
   
  -n  
- 当异步填充生效时，返回此值。 表示在指定*scrollopt* AUTO_FETCH 值时放置在提取缓冲区中的行数。  
+ 当异步填充生效时，返回此值。 表示在指定 *scrollopt* AUTO_FETCH 值时放置在提取缓冲区中的行数。  
   
  如果使用 RPC，则返回值如下所示。  
   
@@ -145,47 +146,47 @@ sp_cursoropen cursor OUTPUT, stmt
  快进游标已自动关闭。  
   
 > [!NOTE]  
->  如果 sp_cursoropen 过程成功执行，则将发送 RPC 返回参数和具有 TDS 列格式信息（0xa0 & 0xa1 消息）的结果集。 如果不成功，则发送一条或多条 TDS 错误消息。 在任一情况下，都不会返回行数据，已*完成*的消息计数将为零。 如果您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本低于 7.0，将返回 0xa0、0xa1（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将返回 0x81（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。  
+>  如果 sp_cursoropen 过程成功执行，则会发送 RPC 返回参数和具有 TDS 列格式信息的结果集 (0xa0 & 0xa1 消息) 。 如果不成功，则发送一条或多条 TDS 错误消息。 在任一情况下，都不会返回行数据，已 *完成* 的消息计数将为零。 如果您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本低于 7.0，将返回 0xa0、0xa1（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将返回 0x81（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="stmt-parameter"></a>stmt 参数  
- 如果*stmt*指定了存储过程的执行，则输入参数可能会定义为*常量字符串的*一部分，或指定为*boundparam*参数。 通过此方法，可以将声明的变量作为绑定参数传递。  
+ 如果 *stmt* 指定了存储过程的执行，则输入参数可能会定义为 *常量字符串的* 一部分，或指定为 *boundparam* 参数。 通过此方法，可以将声明的变量作为绑定参数传递。  
   
  *Stmt*参数允许的内容取决于*ccopt* ALLOW_DIRECT 返回值是由链接还是链接到*ccopt*值的其余部分，例如：  
   
 -   如果未指定 ALLOW_DIRECT，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 必须使用为包含单个 SELECT 语句的存储过程调用的 SELECT 语句或执行语句。 此外，SELECT 语句必须限定为一个游标；也即，它不能包含关键字 SELECT INTO 或 FOR BROWSE。  
   
--   如果指定了 ALLOW_DIRECT，则这可能导致一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，包括那些依次执行其他存储过程以及多个语句的语句。 将只执行非 SELECT 语句或包含关键字 SELECT INTO 或 FOR BROWSE 的任何 SELECT 语句，而不会导致创建游标。 这同样适用于在一批多个语句中包含的任何 SELECT 语句。 在 SELECT 语句包含只与游标相关的子句的情况下，将忽略这些子句。 例如，当*ccopt*的值为0x2002 时，这是对的请求：  
+-   如果指定了 ALLOW_DIRECT，则这可能导致一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，包括那些依次执行其他存储过程以及多个语句的语句。 将只执行非 SELECT 语句或包含关键字 SELECT INTO 或 FOR BROWSE 的任何 SELECT 语句，而不会导致创建游标。 这同样适用于在一批多个语句中包含的任何 SELECT 语句。 在 SELECT 语句包含只与游标相关的子句的情况下，将忽略这些子句。 例如，当 *ccopt* 的值为0x2002 时，这是对的请求：  
   
     -   具有滚动锁的游标（如果只有一个 SELECT 语句限定为游标），或者  
   
     -   一个直接的语句执行（如果有多个语句、一个非 SELECT 语句或不限定为游标的 SELECT 语句）。  
   
 ## <a name="scrollopt-parameter"></a>scrollopt 参数  
- 前五个*scrollopt*值（KEYSEY、DYNAMIC、FORWARD_ONLY、STATIC 和 FAST_FORWARD）是互斥的。  
+ 前五个 *scrollopt* 值 (KEYSEY、DYNAMIC、FORWARD_ONLY、STATIC 和 FAST_FORWARD) 互相排斥。  
   
  PARAMETERIZED_STMT 和 CHECK_ACCEPTED_TYPES 可以由 OR 链接到前五个值中的任何一个。  
   
  AUTO_FETCH 和 AUTO_CLOSE 可以由 OR 链接到 FAST_FORWARD。  
   
- 如果 CHECK_ACCEPTED_TYPES 为 ON，则最后五个*scrollopt*值中至少有一个（KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE，FORWARD_ONLY_ACCEPTABLE，STATIC_ACCEPTABLE 或 FAST_FORWARD_ACCEPTABLE）也必须为 ON。  
+ 如果 CHECK_ACCEPTED_TYPES 为 ON，则 (KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE、FORWARD_ONLY_ACCEPTABLE、STATIC_ACCEPTABLE 或 FAST_FORWARD_ACCEPTABLE 的最后五个 *scrollopt* 值中至少有一个值 `,` 也必须为 ON。  
   
  STATIC 游标始终打开为 READ_ONLY。 这意味着无法通过此游标更新基础表。  
   
 ## <a name="ccopt-parameter"></a>ccopt 参数  
- 前四个*ccopt*值（READ_ONLY、SCROLL_LOCKS 和两个乐观值）是互斥的。  
+ 前四个 *ccopt* 值 (READ_ONLY，SCROLL_LOCKS，并且两个乐观值) 都是互斥的。  
   
 > [!NOTE]  
->  选择前四个*ccopt*值中的一个值，指示游标是只读的，还是使用锁定或乐观方法来防止丢失更新。 如果未指定*ccopt*值，则默认值为乐观。  
+>  选择前四个 *ccopt* 值中的一个值，指示游标是只读的，还是使用锁定或乐观方法来防止丢失更新。 如果未指定 *ccopt* 值，则默认值为乐观。  
   
  ALLOW_DIRECT 和 CHECK_ACCEPTED_TYPES 可以由 OR 链接到前四个值中的任何一个。  
   
  UPDT_IN_PLACE 可以由 OR 链接到 READ_ONLY、SCROLL_LOCKS 或任一 OPTIMISTIC 值。  
   
- 如果 CHECK_ACCEPTED_TYPES 为 ON，则最后四个*ccopt*值中至少有一个（READ_ONLY_ACCEPTABLE、SCROLL_LOCKS_ACCEPTABLE 和 OPTIMISTIC_ACCEPTABLE 值）也必须为 ON。  
+ 如果 CHECK_ACCEPTED_TYPES 为 ON，则 (READ_ONLY_ACCEPTABLE，SCROLL_LOCKS_ACCEPTABLE，最后四个 *ccopt* 值中至少有一个，，并且 OPTIMISTIC_ACCEPTABLE 值都必须为 ON。  
   
- 定位更新和删除函数只能在提取缓冲区内执行，并且仅当*ccopt*值等于 SCROLL_LOCKS 或乐观时才可执行。 如果 SCROLL_LOCKS 是指定的值，则此操作可确保成功。 如果 OPTIMISTIC 是指定的值，则当自上次提取该行后行已发生变化时，操作将失败。  
+ 定位更新和删除函数只能在提取缓冲区内执行，并且仅当 *ccopt* 值等于 SCROLL_LOCKS 或乐观时才可执行。 如果 SCROLL_LOCKS 是指定的值，则此操作可确保成功。 如果 OPTIMISTIC 是指定的值，则当自上次提取该行后行已发生变化时，操作将失败。  
   
  失败原因在于：当 OPTIMISTIC 为指定的值时，将通过比较时间戳或校验和值执行乐观并发控制函数（由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 确定）。 如果任何行不匹配，则操作失败。  
   
@@ -196,7 +197,7 @@ sp_cursoropen cursor OUTPUT, stmt
 -   如果设置为 ON，游标将只更新工作表的原始行中的键列。  
   
 ## <a name="bound_param-parameter"></a>bound_param 参数  
- 根据代码中的错误消息指定 PARAMETERIZED_STMT 时，参数名称应为*paramdef* 。 当未指定 PARAMETERIZED_STMT 时，在错误消息将不指定任何名称。  
+ 根据代码中的错误消息指定 PARAMETERIZED_STMT 时，参数名称应为 *paramdef* 。 当未指定 PARAMETERIZED_STMT 时，在错误消息将不指定任何名称。  
   
 ## <a name="rpc-considerations"></a>RPC 注意事项  
  RPC RETURN_METADATA 输入标志可设置为 0x0001，以请求在 TDS 流中返回游标选择列表元数据。  
@@ -208,7 +209,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *{局部变量名称数据类型}[,...北*  
   
- 后续参数用于传递要替换为语句中的*局部变量名称*的值。  
+ 后续参数用于传递要替换为语句中的 *局部变量名称* 的值。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   

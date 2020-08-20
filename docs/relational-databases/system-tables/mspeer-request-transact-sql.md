@@ -1,5 +1,6 @@
 ---
-title: MSpeer_request （Transact-sql） |Microsoft Docs
+description: MSpeer_request (Transact-SQL)
+title: MSpeer_request (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b35f294cdde44bae349ed23021072f2e20d5d3e3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19a39eeddd6a528f99e8e111d69a5f2fc6ec1b06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488724"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889639"
 |description|**nvarchar(4000)**|可用于标识各个状态请求的用户定义信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

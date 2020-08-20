@@ -1,5 +1,6 @@
 ---
-title: sp_delete_maintenance_plan_job （Transact-sql） |Microsoft Docs
+description: sp_delete_maintenance_plan_job (Transact-SQL)
+title: sp_delete_maintenance_plan_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 516bfaa2b581b19570e7edffc7567ae1d520bb85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8aab6443a16b5de89bb3d8764beabfa5dc8beb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489401"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] 'plan\_id'`指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
+`[ @plan_id = ] 'plan\_id'` 指定维护计划的 ID。 *plan_id* 是 **uniqueidentifier**，并且必须是有效 id。  
   
-`[ @job_id = ] 'job\_id'`指定与维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效 id。  
+`[ @job_id = ] 'job\_id'` 指定与维护计划相关联的作业的 ID。 *job_id* 是 **uniqueidentifier**，并且必须是有效 id。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,10 +56,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="remarks"></a>备注  
  必须从**msdb**数据库运行**sp_delete_maintenance_plan_job** 。  
   
- 当从维护计划中删除所有作业时，建议用户执行**sp_delete_maintenance_plan_db**以从计划中删除剩余数据库。  
+ 当从维护计划中删除所有作业时，建议用户执行 **sp_delete_maintenance_plan_db** 以从计划中删除剩余数据库。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_delete_maintenance_plan_job**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_delete_maintenance_plan_job**执行。  
   
 ## <a name="examples"></a>示例  
  以下示例从维护计划中删除作业“B8FCECB1-E22C-11D2-AA64-00C04F688EAE”。  

@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_delete_policy_category_subscription （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
+title: sp_syspolicy_delete_policy_category_subscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 75390e920074059885ace32333426eb2fa642c49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 151e33da35c4761ee6b16b13f75a7b1ae1963558
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489062"
 ---
 # <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`策略类别订阅的标识符。 *policy_category_subscription_id*是**int**。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 策略类别订阅的标识符。 *policy_category_subscription_id* 是 **int**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_delete_policy_category_subscription。  
@@ -52,7 +53,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="permissions"></a>权限  
  此存储过程在其当前所有者的上下文中运行。  
   
- 若要获取*policy_category_subscription_id*的值，可以使用以下查询：  
+ 若要获取 *policy_category_subscription_id*的值，可以使用以下查询：  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_object, b.name AS category_name  

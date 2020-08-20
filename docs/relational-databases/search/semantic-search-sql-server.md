@@ -1,4 +1,5 @@
 ---
+description: 语义搜索 (SQL Server)
 title: 语义搜索 (SQL Server) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +15,19 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 4ef517636a0bc1f727f2dc6a59093af773007cc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8da5b57c26ad2b99ab11b058b9d3362ff48569e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490518"
 ---
 # <a name="semantic-search-sql-server"></a>语义搜索 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-统计语义搜索通过提取统计上相关的“关键短语” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*并对其进行索引，提供对*中存储的非结构化文档的更深层次剖析。 然后，它使用这些关键短语标识“相似或相关文档”  并对其进行索引。  
+统计语义搜索通过提取统计上相关的“关键短语”** 并对其进行索引，提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的非结构化文档的更深层次剖析。 然后，它使用这些关键短语标识“相似或相关文档”** 并对其进行索引。  
   
 ##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a> 使用语义搜索可以做什么？  
- 语义搜索以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中现有的全文搜索功能为基础，但允许超出关键字搜索范畴的新方案。 全文搜索允许你查询文档中的“词”  ，语义搜索则允许你查询文档的“含义”  。 现有的可能解决方案包括自动标记提取、相关内容发现以及相似内容中层次结构导航。 例如，您可以查询关键短语的索引来建立一个组织或文档集的分类索引。 或者，您可以查询文档相似性索引来标识匹配某一工作描述的简历。  
+ 语义搜索以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中现有的全文搜索功能为基础，但允许超出关键字搜索范畴的新方案。 全文搜索允许你查询文档中的“词”**，语义搜索则允许你查询文档的“含义”**。 现有的可能解决方案包括自动标记提取、相关内容发现以及相似内容中层次结构导航。 例如，您可以查询关键短语的索引来建立一个组织或文档集的分类索引。 或者，您可以查询文档相似性索引来标识匹配某一工作描述的简历。  
   
  下面的示例演示了语义搜索的功能。 同时，这些示例还展示了你用来查询语义索引和以结构化数据形式检索结果的三个 Transact-SQL 行集函数。  
   

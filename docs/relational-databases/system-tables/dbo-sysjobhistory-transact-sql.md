@@ -1,5 +1,6 @@
 ---
-title: dbo.sysjobhistory （Transact-sql） |Microsoft Docs
+description: dbo.sysjobhistory (Transact-SQL)
+title: dbo.sysjobhistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06a5ab82207534d01f84c58d3a445f3fb91f0c34
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5fc3586075ddf8f48f4117b3907db503960e613
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488916"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +33,9 @@ ms.locfileid: "85890507"
 包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行预定作业的信息。
   
 > [!NOTE]
-> 在大多数情况下，仅在作业步骤完成并且表通常不包含当前正在进行的作业步骤的记录时才更新数据，但在某些情况下，基础*进程会*提供有关正在进行的作业步骤的信息。
+> 在大多数情况下，仅在作业步骤完成并且表通常不包含当前正在进行的作业步骤的记录时才更新数据，但在某些情况下，基础 *进程会* 提供有关正在进行的作业步骤的信息。
 
-该表存储在**msdb**数据库中。  
+该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -47,8 +48,8 @@ ms.locfileid: "85890507"
 |**message**|**nvarchar(4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的文本（如果有）。|  
 |**run_status**|**int**|作业的执行状态：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 已取消<br /><br />**4** = 正在进行|  
 |**run_date**|**int**|作业或步骤开始执行的日期。 对于正在进行中的历史记录，这是写入历史记录的日期/时间。|  
-|**run_time**|**int**|作业或步骤的开始时间，格式为**HHMMSS** 。|  
-|**run_duration**|**int**|执行作业或步骤所用的时间（采用**HHMMSS**格式）。|  
+|**run_time**|**int**|作业或步骤的开始时间，格式为 **HHMMSS** 。|  
+|**run_duration**|**int**|执行作业或步骤所用的时间（采用 **HHMMSS** 格式）。|  
 |**operator_id_emailed**|**int**|作业完成时通知的操作员的 ID。|  
 |**operator_id_netsent**|**int**|作业完成时用消息通知的操作员的 ID。|  
 |**operator_id_paged**|**int**|作业完成时用寻呼通知的操作员的 ID。|  
@@ -56,7 +57,7 @@ ms.locfileid: "85890507"
 |服务器|**sysname**|执行作业时所在服务器的名称。|  
   
   ## <a name="example"></a>示例
- 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询将**run_time**和**run_duration**列转换为更加用户友好格式。  在中执行脚本 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。
+ 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询将 **run_time** 和 **run_duration** 列转换为更加用户友好格式。  在中执行脚本 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。
  
  ```sql
  SET NOCOUNT ON;

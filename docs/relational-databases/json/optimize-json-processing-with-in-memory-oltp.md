@@ -1,4 +1,5 @@
 ---
+description: 使用内存中 OLTP 优化 JSON 处理
 title: 使用内存中 OLTP 优化 JSON 处理
 ms.date: 06/03/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30a31cb80a9aea2f99824dbf7912714870059be3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73106658572120b2c679c2ac37e2770fbc1151a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490923"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用内存中 OLTP 优化 JSON 处理
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -134,7 +135,7 @@ ALTER TABLE Product
 ## <a name="native-compilation-of-json-queries"></a><a name="compile"></a>本机编译 JSON 查询
 如果过程、函数和触发器包含使用内置 JSON 函数的查询，本机编译可以提高这些查询的性能，并减少运行这些查询所需的 CPU 周期。
 
-下面的示例演示使用多个 JSON 函数（JSON_VALUE、OPENJSON 和 JSON_MODIFY）的本机编译过程    。
+下面的示例演示使用多个 JSON 函数（JSON_VALUE、OPENJSON 和 JSON_MODIFY）的本机编译过程************。
 
 ```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))

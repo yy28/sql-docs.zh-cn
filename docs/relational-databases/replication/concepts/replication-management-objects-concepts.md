@@ -1,4 +1,5 @@
 ---
+description: Replication Management Objects Concepts
 title: 复制管理对象概念 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a2e6f065c29956873d48ada5e7add52a0528784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95b4db25e874d4afe51ea47d5def4b316990c056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490626"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,17 +67,17 @@ ms.locfileid: "86915831"
   
 1.  启动 Visual Studio。  
   
-2.  在“文件”菜单中，单击“新建项目”。   将显示“新建项目”对话框  。  
+2.  在“文件”菜单中，单击“新建项目”。******** 将显示“新建项目”对话框。  
   
-3.  在“项目类型”对话框中，选择“Visual C# 项目”。   在“模板”窗格中，选择“Windows 应用程序”。    
+3.  在“项目类型”对话框中，选择“Visual C# 项目”。******** 在“模板”窗格中，选择“Windows 应用程序”。   
   
-4.  （可选）在“名称”中，键入新应用程序的名称。   
+4.  （可选）在“名称”中，键入新应用程序的名称。****  
   
-5.  单击“确定”加载 Visual C# Windows 模板。   
+5.  单击“确定”加载 Visual C# Windows 模板。****  
   
-6.  在“项目”菜单中，选择“添加引用”项。   此时将显示“添加引用”对话框。   
+6.  在“项目”菜单中，选择“添加引用”项。******** 此时将显示“添加引用”对话框。  
   
-7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。    
+7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。********  
   
     -   Microsoft.SqlServer.Replication .NET Programming Interface  
   
@@ -87,9 +88,9 @@ ms.locfileid: "86915831"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。  
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。********  
   
-9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
+9. 在 **“视图”** 菜单上，单击 **“代码”**。  
   
 10. 在代码的命名空间语句前，键入以下 **using** 语句，限定 RMO 命名空间中的类型：  
 
@@ -106,17 +107,17 @@ ms.locfileid: "86915831"
   
 1.  启动 Visual Studio。  
   
-2.  在“文件”菜单中，选择“新建项目”。   将显示“新建项目”对话框  。  
+2.  在“文件”菜单中，选择“新建项目”。******** 将显示“新建项目”对话框。  
   
-3.  在“项目类型”窗格中，选择“Visual Basic”。  在“模板”窗格中，选择“Windows 应用程序”。   
+3.  在“项目类型”窗格中，选择“Visual Basic”。**** 在“模板”窗格中，选择“Windows 应用程序”。****  
   
-4.  （可选）在“名称”框中，键入新应用程序的名称。   
+4.  （可选）在“名称”框中，键入新应用程序的名称。****  
   
-5.  单击“确定”加载 Visual Basic Windows 模板。   
+5.  单击“确定”加载 Visual Basic Windows 模板。****  
   
-6.  在“项目”菜单中，选择“添加引用”。   此时将显示“添加引用”对话框。   
+6.  在“项目”菜单中，选择“添加引用”。******** 此时将显示“添加引用”对话框。  
   
-7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。    
+7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。********  
   
     -   Microsoft.SqlServer.Replication .NET Programming Interface  
   
@@ -127,9 +128,9 @@ ms.locfileid: "86915831"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。  
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。********  
   
-9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
+9. 在 **“视图”** 菜单上，单击 **“代码”**。  
   
 10. 在代码的任何声明前，键入以下 **Imports** 语句限定 RMO 命名空间中的类型。  
   
@@ -157,7 +158,7 @@ ms.locfileid: "86915831"
   
 -   执行连接并成功登录服务器所需的所有验证信息由 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象提供。  
   
--   默认情况下使用 Windows 身份验证。 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> 必须设置为“False”  ，并且 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> 必须设置为有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名和密码。 安全凭据必须始终以安全的方式存储和处理，并且尽可能在运行时才提供。  
+-   默认情况下使用 Windows 身份验证。 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> 必须设置为“False”，并且 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> 必须设置为有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名和密码。 安全凭据必须始终以安全的方式存储和处理，并且尽可能在运行时才提供。  
   
 -   对于多线程应用程序，每个线程应使用单独的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   

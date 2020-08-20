@@ -1,5 +1,6 @@
 ---
-title: 处理 ODBC 错误（ODBC） |Microsoft Docs
+description: 处理 ODBC 错误 (ODBC)
+title: 在 ODBC)  (处理 ODBC 错误 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,38 +14,39 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 321aeb76c64d0d8917daff93abcd9f78682a1024
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c5bade3c381024ef8e20ac069ed3effd16ac1e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490857"
 ---
 # <a name="process-odbc-errors-odbc"></a>处理 ODBC 错误 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  可以使用两个 ODBC 函数调用来检索 ODBC 消息： [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)和[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 **SQLGetDiagField** 来检索。  
+  可以使用两个 ODBC 函数调用来检索 ODBC 消息： [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 **SQLGetDiagField** 来检索。  
   
  [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 通过 ODBC 驱动程序管理器进行处理，而不是通过单独的驱动程序进行处理。 在成功连接之前，ODBC 驱动程序管理器不会缓存特定于驱动程序的诊断字段。 在成功连接之前，无法针对特定于驱动程序的诊断字段调用 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 这包括 ODBC 连接命令，即使它们返回 SQL_SUCCESS_WITH_INFO 也是如此。 在进行下一次 ODBC 函数调用之前，特定于驱动程序的诊断字段不可用。  
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>说明  
+### <a name="description"></a>描述  
  此示例显示一个简单的错误处理程序，它调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 以获取标准 ODBC 信息。 随后测试是否存在有效连接，如果存在，则为特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的诊断字段调用 **SQLGetDiagField**。 IA64 平台不支持此示例。  
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。  (可以从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384) 主页下载 AdventureWorks 示例数据库。 ) 此数据源必须基于操作系统提供的 ODBC 驱动程序， (驱动程序名称为 "SQL Server" ) 。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表，以创建此示例使用的存储过程。  
+ 执行第一个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建此示例使用的存储过程。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 执行第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表，以删除此示例使用的存储过程。  
+ 执行第三个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以删除此示例使用的存储过程。  
   
 ### <a name="code"></a>代码  
   

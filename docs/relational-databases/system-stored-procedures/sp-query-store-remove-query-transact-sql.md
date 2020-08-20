@@ -1,5 +1,6 @@
 ---
-title: sp_query_store_remove_query （Transact-sql） |Microsoft Docs
+description: 'sp_query_store_remove_query (Transact-sql) '
+title: sp_query_store_remove_query (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,13 +22,14 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1751940417d7bf95d2745f46c9acb7f1eb8839a7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4aff0b1ce7544474899793e7f1cc7344021cb157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489155"
 ---
-# <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query （Transact-sql）
+# <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   删除查询存储中的查询，以及所有关联的计划和运行时统计信息。  
@@ -41,16 +43,16 @@ ms.locfileid: "86012633"
 sp_query_store_remove_query [ @query_id = ] query_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @query_id = ] query_id`要从查询存储区中删除的查询的 id。 *query_id*是**bigint**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @query_id = ] query_id` 要从查询存储区中删除的查询的 id。 *query_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有**ALTER**权限。
+ 要求对数据库具有 **ALTER** 权限。
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关查询存储中的查询的信息。  

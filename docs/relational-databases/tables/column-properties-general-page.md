@@ -1,4 +1,5 @@
 ---
+description: 列属性（“常规”页）
 title: 列属性（“常规”页）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,19 +14,19 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c1c009106bb4beb956b049e7acab43b187d082
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488643"
 ---
 # <a name="column-properties-general-page"></a>列属性（“常规”页）
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   使用此页可以查看所选列的属性。  
   
- 此页上的信息为只读信息。 若要修改列，请关闭“列属性”  对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”  。  
+ 此页上的信息为只读信息。 若要修改列，请关闭“列属性”**** 对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”****。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -56,7 +57,7 @@ ms.locfileid: "87395114"
  指示标识列的初始行值。  
   
  **标识增量**  
- “标识增量”属性指定在   为插入的行生成标识值时，在现有的最大行标识值基础上所加的值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ “标识增量”属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值****。  
   
  **默认值绑定**  
  绑定到该列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认值。 如果未绑定默认值，此选项为空白。  

@@ -1,5 +1,6 @@
 ---
-title: sp_post_msx_operation （Transact-sql） |Microsoft Docs
+description: sp_post_msx_operation (Transact-SQL)
+title: sp_post_msx_operation (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489182"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  将操作（行）插入到**sysdownloadlist**系统表中，以便下载和执行目标服务器。  
+  向 **sysdownloadlist** 系统表中 (行) 插入操作，以便下载和执行目标服务器。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @operation = ] 'operation'`已发布操作的操作类型。 *操作*为**varchar （64）**，无默认值。 有效的操作取决于*object_type*。  
+`[ @operation = ] 'operation'` 已发布操作的操作类型。 *操作*是 **varchar (64) **，无默认值。 有效的操作取决于 *object_type*。  
   
 |对象类型|Operation|  
 |-----------------|---------------|  
@@ -53,18 +54,18 @@ sp_post_msx_operation
 |**服务**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**编制**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'`要为其发布操作的对象的类型。 有效类型为 "**作业**"、"**服务器**" 和 "**计划**"。 *对象*的值为**varchar （64）**，默认值为**JOB**。  
+`[ @object_type = ] 'object'` 要为其发布操作的对象的类型。 有效类型为 " **作业**"、" **服务器**" 和 " **计划**"。 *对象*是**varchar (64) **，默认值**为。**  
   
-`[ @job_id = ] job_id`应用操作的作业的标识号。 *job_id*是**uniqueidentifier**，无默认值。 **0x00**指示所有作业。 如果*对象*为**SERVER**，则不需要*job_id*。  
+`[ @job_id = ] job_id` 应用操作的作业的标识号。 *job_id* 是 **uniqueidentifier**，无默认值。 **0x00** 指示所有作业。 如果 *对象* 为 **SERVER**，则不需要 *job_id*。  
   
-`[ @specific_target_server = ] 'target_server'`为其应用指定操作的目标服务器的名称。 如果指定了*job_id* ，但未指定*target_server* ，则将为作业的所有作业服务器发布操作。 *target_server*为**nvarchar （30）**，默认值为 NULL。  
+`[ @specific_target_server = ] 'target_server'` 为其应用指定操作的目标服务器的名称。 如果指定了 *job_id* ，但未指定 *target_server* ，则将为作业的所有作业服务器发布操作。 *target_server* 为 **nvarchar (30) **，默认值为 NULL。  
   
-`[ @value = ] value`轮询间隔（以秒为单位）。 *value* 的数据类型为 **int**，默认值为 NULL。 仅在**设置**了 "轮询"*时才指定*此参数。  
+`[ @value = ] value` 轮询间隔（以秒为单位）。 *value* 的数据类型为 **int**，默认值为 NULL。 仅在**设置**了 "轮询"*时才指定*此参数。  
   
-`[ @schedule_uid = ] schedule_uid`应用操作的计划的唯一标识符。 *schedule_uid*是**uniqueidentifier**，无默认值。  
+`[ @schedule_uid = ] schedule_uid` 应用操作的计划的唯一标识符。 *schedule_uid* 是 **uniqueidentifier**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -74,12 +75,12 @@ sp_post_msx_operation
   
  始终可以安全地调用**sp_post_msx_operation** ，因为它首先确定当前服务器是否为多服务器 Microsoft SQL Server 代理，如果是，则*对象*是否为多服务器作业。  
   
- 操作发布后，它将显示在**sysdownloadlist**表中。 创建并发布作业后，对该作业的后续更改也必须通知目标服务器 (TSX)。 这也是用下载列表完成的。  
+ 操作发布后，它将显示在 **sysdownloadlist** 表中。 创建并发布作业后，对该作业的后续更改也必须通知目标服务器 (TSX)。 这也是用下载列表完成的。  
   
- 我们强烈建议使用 SQL Server Management Studio 来管理下载列表。 有关详细信息，请参阅[查看或修改作业](../../ssms/agent/view-or-modify-jobs.md)。  
+ 我们强烈建议使用 SQL Server Management Studio 来管理下载列表。 有关详细信息，请参阅 [查看或修改作业](../../ssms/agent/view-or-modify-jobs.md)。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
+ 若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

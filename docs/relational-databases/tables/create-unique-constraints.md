@@ -1,4 +1,5 @@
 ---
+description: 创建唯一约束
 title: 创建唯一约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -17,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef372c63ec954a0be878d013f4198ee6f5656a53
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa8ab586235c33d6620bbce15676f226a85779d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488610"
 ---
 # <a name="create-unique-constraints"></a>创建唯一约束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -55,15 +56,15 @@ ms.locfileid: "86002151"
   
 #### <a name="to-create-a-unique-constraint"></a>创建唯一约束  
   
-1.  在“对象资源管理器”  中，右键单击要为其添加唯一约束的表，再单击“设计”  。  
+1.  在“对象资源管理器”**** 中，右键单击要为其添加唯一约束的表，再单击“设计”****。  
   
-2.  在“表设计器”  菜单上，单击“索引/键”  。  
+2.  在“表设计器”菜单上，单击“索引/键”。  
   
-3.  在“索引/键”  对话框中，单击“添加”  。  
+3.  在“索引/键”**** 对话框中，单击“添加”****。  
   
-4.  在“常规”  下的网格中，单击“类型”  ，然后从该属性右侧的下拉列表框中选择“唯一键”  。  
+4.  在“常规”**** 下的网格中，单击“类型”****，然后从该属性右侧的下拉列表框中选择“唯一键”****。  
   
-5.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+5.  在“文件”菜单上，单击“保存表名称”********__。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -73,7 +74,7 @@ ms.locfileid: "86002151"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建表 `TransactionHistoryArchive4` ，并且在列 `TransactionID`上创建唯一约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建表 `TransactionHistoryArchive4` ，并且在列 `TransactionID`上创建唯一约束。  
   
     ```  
     USE AdventureWorks2012;  
@@ -93,7 +94,7 @@ ms.locfileid: "86002151"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例在表 `PasswordHash` 中的 `PasswordSalt` 和 `Person.Password`列上创建唯一约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例在表 `PasswordHash` 中的 `PasswordSalt` 和 `Person.Password`列上创建唯一约束。  
   
     ```  
     USE AdventureWorks2012;   
@@ -110,7 +111,7 @@ ms.locfileid: "86002151"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例创建一个表并在 `TransactionID`列上定义唯一约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例创建一个表并在 `TransactionID`列上定义唯一约束。  
   
     ```  
     USE AdventureWorks2012;  

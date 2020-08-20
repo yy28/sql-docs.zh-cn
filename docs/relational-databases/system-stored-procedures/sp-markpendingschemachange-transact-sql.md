@@ -1,5 +1,6 @@
 ---
-title: sp_markpendingschemachange （Transact-sql） |Microsoft Docs
+description: sp_markpendingschemachange (Transact-SQL)
+title: sp_markpendingschemachange (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cea2f7c8f9ce6040f4335428e2c5e97b52a3e591
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b9e62684057772d18a78694de67928073bc10c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489218"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,22 +41,22 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @schemaversion = ] schemaversion`标识挂起的架构更改。 *schemaversion*为**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出发布的挂起的架构更改。  
+`[ @schemaversion = ] schemaversion` 标识挂起的架构更改。 *schemaversion* 为 **int**，默认值为 **0**。 使用 [sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 列出发布的挂起的架构更改。  
   
-`[ @status = ] 'status'`是否将跳过挂起的架构更改。 *状态*为**nvarchar （10）** ，默认值为 "**活动**"。 如果**跳过***状态*值，则不会复制所选的架构更改。  
+`[ @status = ] 'status'` 是否将跳过挂起的架构更改。 *状态* 为 **nvarchar (10) ** ，默认值为 " **活动**"。 如果**跳过***状态*值，则不会复制所选的架构更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_markpendingschemachange**用于合并复制。  
+ **sp_markpendingschemachange** 用于合并复制。  
   
- **sp_markpendingschemachange**是一种用于合并复制的可支持性的存储过程，只应在其他纠正措施（如重新初始化）无法纠正这种情况或在性能方面过于昂贵时使用。  
+ **sp_markpendingschemachange** 是一种用于合并复制的可支持性的存储过程，只应在其他纠正措施（如重新初始化）无法纠正这种情况或在性能方面过于昂贵时使用。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_markpendingschemachange**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_markpendingschemachange**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sysmergeschemachange &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  

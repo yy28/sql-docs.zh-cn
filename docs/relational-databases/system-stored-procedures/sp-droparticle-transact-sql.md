@@ -1,5 +1,6 @@
 ---
-title: sp_droparticle （Transact-sql） |Microsoft Docs
+description: sp_droparticle (Transact-SQL)
+title: sp_droparticle (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b150636804bc4d312f6f6bfbe046ef7e9612207
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7616e6c58400d67be184b0634ea749692b30292
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489463"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,20 +42,20 @@ sp_droparticle [ @publication= ] 'publication'
     [ , [ @from_drop_publication = ] from_drop_publication ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`包含要删除的项目的发布名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 包含要删除的项目的发布名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @article = ] 'article'`要删除的项目的名称。 *项目*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 要删除的项目的名称。 *项目* 是 **sysname**，无默认值。  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*为一个**位**，默认值为**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot* 为一个 **位**，默认值为 **0**。  
   
- **0**指定对项目所做的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
+ **0** 指定对项目所做的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   
- **1**指定对项目所做的更改可能导致快照无效，如果存在需要新快照的现有订阅，则授予将现有快照标记为过时并生成新快照的权限。  
+ **1** 指定对项目所做的更改可能导致快照无效，如果存在需要新快照的现有订阅，则授予将现有快照标记为过时并生成新快照的权限。  
   
-`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -62,27 +63,27 @@ sp_droparticle [ @publication= ] 'publication'
 `[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_droparticle**用于快照复制和事务复制。  
+ **sp_droparticle** 用于快照复制和事务复制。  
   
  对于水平筛选的项目， **sp_droparticle**会检查[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表中项目的**类型**列，以确定是否也应删除视图或筛选器。 如果视图或筛选是自动生成的，则将其与项目一起删除。 如果是手动创建的，则不将其删除。  
   
- 执行**sp_droparticle**从发布中删除项目时，不会从发布数据库中删除该对象，也不会从订阅数据库中删除相应的对象。 如果需要，请使用 `DROP <object>` 手动删除这些对象。  
+ 执行 **sp_droparticle** 从发布中删除项目时，不会从发布数据库中删除该对象，也不会从订阅数据库中删除相应的对象。 如果需要，请使用 `DROP <object>` 手动删除这些对象。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_droparticle](../../relational-databases/replication/codesnippet/tsql/sp-droparticle-transact-_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_droparticle**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_droparticle**。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除项目](../../relational-databases/replication/publish/delete-an-article.md)   
  [向现有发布添加项目和从中删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

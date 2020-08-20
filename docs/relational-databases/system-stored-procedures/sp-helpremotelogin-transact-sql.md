@@ -1,5 +1,6 @@
 ---
-title: sp_helpremotelogin （Transact-sql） |Microsoft Docs
+description: sp_helpremotelogin (Transact-SQL)
+title: sp_helpremotelogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d912271e1f772ed0161b6c97977917d525b7d771
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93d907cec14712af625867a14537060e33b3f09b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489264"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +45,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="arguments"></a>参数  
  [ @remoteserver **=** ] **\ "***remoteserver***"**  
- 远程服务器，将返回其远程登录名信息。 *remoteserver*的值为**sysname**，默认值为 NULL。 如果未指定*remoteserver* ，则返回在本地服务器上定义的所有远程服务器的相关信息。  
+ 远程服务器，将返回其远程登录名信息。 *remoteserver* 的值为 **sysname**，默认值为 NULL。 如果未指定 *remoteserver* ，则返回在本地服务器上定义的所有远程服务器的相关信息。  
   
  [ @remotename **=** ] **'***remote_name***'**  
- 远程服务器上的特定远程登录名。 *remote_name*的默认值为**sysname**，默认值为 NULL。 如果未指定*remote_name* ，则返回有关为*remoteserver*定义的所有远程用户的信息。  
+ 远程服务器上的特定远程登录名。 *remote_name* 的默认值为 **sysname**，默认值为 NULL。 如果未指定 *remote_name* ，则返回有关为 *remoteserver* 定义的所有远程用户的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -59,7 +60,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |server|**sysname**|本地服务器上定义的远程服务器的名称。|  
 |local_user_name|**sysname**|本地服务器上的登录名，来自服务器的远程登录名映射到该登录名。|  
 |remote_user_name|**sysname**|远程服务器上的登录，该登录映射到 local_user_name。|  
-|选项|**sysname**|Trusted = 从远程服务器连接到本地服务器时，远程登录名不需要提供密码。<br /><br /> Untrusted（或空白）= 从远程服务器连接到本地服务器时，提示远程登录名提供密码。|  
+|options|**sysname**|Trusted = 从远程服务器连接到本地服务器时，远程登录名不需要提供密码。<br /><br /> Untrusted（或空白）= 从远程服务器连接到本地服务器时，提示远程登录名提供密码。|  
   
 ## <a name="remarks"></a>备注  
  使用 sp_helpserver 列出在本地服务器上定义的远程服务器的名称。  
@@ -86,7 +87,7 @@ EXEC sp_helpremotelogin;
 ## <a name="see-also"></a>另请参阅  
  [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_cursorprepexec （Transact-sql） |Microsoft Docs
+description: sp_cursorprepexec (Transact-SQL)
+title: sp_cursorprepexec (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1a6cbd32485e006ead529f4d8b1afeca3e0e7af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489390"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  为提交的游标语句或批处理编译计划，然后创建并填充游标。 sp_cursorprepexec 结合了 sp_cursorprepare 和 sp_cursorexecute 的函数。 此过程通过在表格格式数据流（TDS）包中指定 ID = 5 来调用。  
+  为提交的游标语句或批处理编译计划，然后创建并填充游标。 sp_cursorprepexec 结合了 sp_cursorprepare 和 sp_cursorexecute 的函数。 此过程通过在表格格式数据流 (TDS) 数据包中指定 ID = 5 来调用。  
   
  ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,34 +43,34 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>参数  
  *准备的句柄*  
- 是生成的已 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 准备的*句柄*标识符。 需要*准备的句柄*并返回**int**。  
+ 是生成的已 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 准备的 *句柄* 标识符。 需要*准备的句柄*并返回**int**。  
   
  *cursor*  
- 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的游标标识符。 *cursor*是必需的参数，必须在对此游标执行操作的所有后续过程（例如 sp_cursorfetch）上提供。  
+ 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的游标标识符。 *cursor* 是必需的参数，必须在对此游标执行操作的所有后续过程（例如 sp_cursorfetch）上提供。  
   
  *params*  
- 标识参数化语句。 变量的参数定义将替换为语句*中的参数*标记。 *params*是调用**ntext**、 **nchar**或**nvarchar**输入值的必需参数。  
+ 标识参数化语句。 变量的参数定义将替换为语句 *中的参数* 标记。 *params* 是调用 **ntext**、 **nchar**或 **nvarchar** 输入值的必需参数。  
   
 > [!NOTE]  
 >  当*stmt*已参数化且*scrollopt* PARAMETERIZED_STMT 值为 ON 时，使用**ntext**字符串作为输入值。  
   
- *损益*  
+ *语句*  
  定义游标结果集。 *语句*参数是必需的，并且调用了**ntext**、 **nchar**或**nvarchar**输入值。  
   
 > [!NOTE]  
->  用于指定 stmt 值的规则与 sp_cursoropen 的规则相同，但*stmt*字符串数据类型必须为**ntext**。  
+>  用于指定 stmt 值的规则与 sp_cursoropen 的规则相同，但 *stmt* 字符串数据类型必须为 **ntext**。  
   
  *options*  
- 一个可选参数，它返回游标结果集列的说明。 * 选项需要以下**int**输入值。  
+ 一个可选参数，它返回游标结果集列的说明。 * 选项需要以下 **int** 输入值。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
- 滚动选项。 *scrollopt*是一个可选参数，它需要以下**整数**输入值之一。  
+ 滚动选项。 *scrollopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -86,16 +87,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 因为请求的选项可能不适合于* \< stmt>* 所定义的游标，所以，此参数可同时用作输入和输出。 在此类情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个适当的类型并修改此值。  
+ 因为请求的选项可能不适合于定义的游标 *\<stmt>* ，所以，此参数可同时用作输入和输出。 在此类情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个适当的类型并修改此值。  
   
  *ccopt*  
- 并发控制选项。 *ccopt*是一个可选参数，它需要以下**整数**输入值之一。  
+ 并发控制选项。 *ccopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
-|0x0004|**乐观**（以前称为 OPTCC）|  
+|0x0004|**乐观** (以前称为 OPTCC) |  
 |0x0008|OPTIMISTIC（以前称为 OPTCCVAL）|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -105,16 +106,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 与*scrollpt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以分配一个与请求的值不同的值。  
+ 与 *scrollpt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以分配一个与请求的值不同的值。  
   
  *数*  
  一个可选参数，指示要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 指定为输入值与返回值时，*行计数*的行为不同。  
   
 |作为输入值|作为返回值|  
 |--------------------|---------------------|  
-|当指定 AUTO_FETCH 时，将 FAST_FORWARD cursor 行*计数*，表示要放入提取缓冲区中的行数。|表示结果集中的行数。 当指定*scrollopt* AUTO_FETCH 值时， *rowcount*返回提取到提取缓冲区中的行数。|  
+|当指定 AUTO_FETCH 时，将 FAST_FORWARD cursor 行 *计数* ，表示要放入提取缓冲区中的行数。|表示结果集中的行数。 当指定 *scrollopt* AUTO_FETCH 值时， *rowcount* 返回提取到提取缓冲区中的行数。|  
 
-*parameter_name*指定 params 参数中定义的一个或多个参数名称。  必须为 params 中包含的每个参数提供一个参数。 如果未定义任何参数，则不需要此参数。
+*parameter_name* 指定 params 参数中定义的一个或多个参数名称。  必须为 params 中包含的每个参数提供一个参数。 如果未定义任何参数，则不需要此参数。
   
 ## <a name="return-code-values"></a>返回代码值  
  如果 params 返回 NULL 值，则不会对该语句进行参数化。  

@@ -1,5 +1,6 @@
 ---
-title: sp_help_targetservergroup （Transact-sql） |Microsoft Docs
+description: sp_help_targetservergroup (Transact-SQL)
+title: sp_help_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10f96877b346396166f2980d47085c726a66bc19
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75d725bec30d25d46216e292d7e96ff8f2b5f899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489361"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>参数  
-`[ @name = ] 'name'`要返回其信息的目标服务器组的名称。 *名称*为**sysname**，默认值为 NULL。  
+`[ @name = ] 'name'` 要返回其信息的目标服务器组的名称。 *名称* 为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
@@ -53,7 +54,7 @@ sp_help_targetservergroup
 |name|**sysname**|服务器组的名称|  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色执行此过程的权限。  
+ 默认情况下， **sysadmin** 固定服务器角色执行此过程的权限。  
   
 ## <a name="examples"></a>示例  
   

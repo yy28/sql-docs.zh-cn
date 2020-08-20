@@ -1,4 +1,5 @@
 ---
+description: 解决 SQL Server 中 JSON 的常见问题
 title: 解决 SQL Server 中 JSON 的常见问题
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e5a115c8ba86553954ab325651a1bb89cf6c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d898f2e0c61b0775d9094580e319640f2aeadf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490891"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解决 SQL Server 中 JSON 的常见问题
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -141,7 +142,7 @@ WHERE [key] = 'color'
 ### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>引用 JSON 文本中中包含非字母数字字符的键  
  **问题。** 我的 JSON 文本中有包含非字母数字字符的键。 我如何引用这些属性？  
   
- **答案。** 必须在 JSON 路径中用引号将它们括起来。 例如，`JSON_VALUE(@json, '$."$info"."First Name".value')` 。
+ **答案。** 必须在 JSON 路径中用引号将它们括起来。 例如，`JSON_VALUE(@json, '$."$info"."First Name".value')`。
  
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
   

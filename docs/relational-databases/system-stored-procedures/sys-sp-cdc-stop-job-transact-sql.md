@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_stop_job （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_stop_job (Transact-SQL)
+title: sys. sp_cdc_stop_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a42ace7fc657f0f8637c2e5316c2c952917df7d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4049a54624868862faaf36b2d392836ce115c1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489050"
 ---
 # <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +42,10 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ [ @job_type = ] 'job_type_' ]`要添加的作业的类型。 *job_type*的默认值为**nvarchar （20）** ，默认值为**capture**。 有效的输入包括 "**捕获**" 和 "**清理**"。  
+`[ [ @job_type = ] 'job_type_' ]` 要添加的作业的类型。 *job_type* 为 **nvarchar (20) ** ，默认值为 **capture**。 有效的输入包括 " **捕获** " 和 " **清理**"。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  

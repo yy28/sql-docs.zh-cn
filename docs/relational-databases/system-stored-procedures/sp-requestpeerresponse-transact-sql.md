@@ -1,5 +1,6 @@
 ---
-title: sp_requestpeerresponse （Transact-sql） |Microsoft Docs
+description: sp_requestpeerresponse (Transact-SQL)
+title: sp_requestpeerresponse (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2114460ca878b45bb0b850c066e1fd9356504a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489178"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,24 +40,24 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`要验证其状态的对等拓扑中的发布名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 要验证其状态的对等拓扑中的发布名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @description = ] 'description'`可用于标识各个状态请求的用户定义的信息。 *description*的值为**nvarchar （4000）**，默认值为 NULL。  
+`[ @description = ] 'description'` 可用于标识各个状态请求的用户定义的信息。 *描述* 为 **nvarchar (4000) **，默认值为 NULL。  
   
-`[ @request_id = ] request_id`返回新请求的 ID。 *request_id*为**int** ，并且是一个 OUTPUT 参数。 此值可在执行[sp_helppeerresponses &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)查看对状态请求的所有响应时使用。  
+`[ @request_id = ] request_id` 返回新请求的 ID。 *request_id* 为 **int** ，并且是一个 OUTPUT 参数。 此值可在执行 [sp_helppeerresponses &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 查看对状态请求的所有响应时使用。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_requestpeerresponse**用于对等事务复制。  
+ **sp_requestpeerresponse** 用于对等事务复制。  
   
- **sp_requestpeerresponse**用于确保在还原在对等拓扑中发布的数据库之前所有其他节点已接收到所有的命令。 此过程还用于复制节点脱机时所做的数据定义语言 (DDL) 更改，以评估这些更改到达其他节点的时间。  
+ **sp_requestpeerresponse** 用于确保在还原在对等拓扑中发布的数据库之前所有其他节点已接收到所有的命令。 此过程还用于复制节点脱机时所做的数据定义语言 (DDL) 更改，以评估这些更改到达其他节点的时间。  
   
  不能在用户定义的事务中执行**sp_requestpeerresponse** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_requestpeerresponse**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_requestpeerresponse**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_deletepeerrequesthistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

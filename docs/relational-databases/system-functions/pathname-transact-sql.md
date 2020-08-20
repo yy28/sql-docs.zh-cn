@@ -1,5 +1,6 @@
 ---
-title: PathName （Transact-sql） |Microsoft Docs
+description: PathName (Transact-SQL)
+title: PathName (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489712"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- column_name   
- **Varbinary （max）** FILESTREAM 列的列名称。 *column_name*必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
+ column_name  
+ **Varbinary (max) ** FILESTREAM 列的列名称。 *column_name* 必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
   
- 如果为任何其他数据类型的列或**varbinary （max）** Columnthat 请求路径名，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
+ 如果请求任何其他数据类型的列的路径名或对于 **varbinary (max) ** columnthat，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
   
  *\@选*  
- 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以为下列值之一。 默认值为 0。  
+ 一个整数 [表达式](../../t-sql/language-elements/expressions-transact-sql.md) ，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以为下列值之一。 默认值为 0。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -58,9 +59,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  如果数据库不属于 Always On 可用性组，则忽略此参数的值。 在路径中始终使用计算机名称。  
   
- 当数据库属于 Always On 可用性组时， *use_replica_computer_name*的值对**PathName**函数的输出具有以下影响：  
+ 当数据库属于 Always On 可用性组时， *use_replica_computer_name* 的值对 **PathName** 函数的输出具有以下影响：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  

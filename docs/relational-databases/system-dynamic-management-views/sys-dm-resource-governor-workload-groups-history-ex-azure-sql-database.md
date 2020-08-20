@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）
 title: dm_resource_governor_workload_groups_history_ex (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489713"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87823312"
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |资源池的 ID。 不可为 null。|
 |**group_id**| int |工作负荷组的 ID。 不可为 null。|
-|name| nvarchar(256) |工作负荷组的名称。 不可为 null。|
+|**name**| nvarchar(256) |工作负荷组的名称。 不可为 null。|
 |**snapshot_time**| datetime |拍摄的资源组统计快照的日期时间。|
 |**duration_ms**| int |当前快照与前一个快照之间的持续时间。|
 |**active_worker_count**| int |当前快照中的总工作进程数。|

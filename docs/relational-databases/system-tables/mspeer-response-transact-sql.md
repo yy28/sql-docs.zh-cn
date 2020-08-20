@@ -1,5 +1,6 @@
 ---
-title: MSpeer_response （Transact-sql） |Microsoft Docs
+description: MSpeer_response (Transact-SQL)
+title: MSpeer_response (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371ee711cbae4c97dc95e9d31d51739c29e85d14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e0bb95540f6731c9fc1d49711b85d03c9fa2efad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488692"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85889632"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**int**|标识[MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md)表中的状态请求条目。|  
+|**request_id**|**int**|标识 [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) 表中的状态请求条目。|  
 |**对等**|**sysname**|生成响应的对等方。|  
 |**peer_db**|**sysname**|生成响应的对等方的订阅数据库。|  
 |**received_date**|**datetime**|收到对等请求的日期和时间。|  

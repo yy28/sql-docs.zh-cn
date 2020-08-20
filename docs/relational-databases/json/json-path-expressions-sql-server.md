@@ -1,4 +1,5 @@
 ---
+description: JSON 路径表达式 (SQL Server)
 title: JSON 路径表达式
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490938"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路径表达式 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,16 +39,16 @@ ms.locfileid: "85715370"
 ## <a name="parts-of-a-path-expression"></a>路径表达式的各部分
  路径表达式由两部分组成。  
   
-1.  可选的[路径模式](#PATHMODE)，其值为 lax 或 strict   。  
+1.  可选的[路径模式](#PATHMODE)，其值为 lax 或 strict********。  
   
 2.  [路径](#PATH) 本身。  
 
 ##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  在路径表达式的开头，可以选择指定关键字 **lax** 或 **strict**来声明路径模式。 默认值为 **lax**。  
   
--   在 lax 模式下，如果路径表达式包含错误，函数将返回空值  。 例如，如果请求值 $.name，但 JSON 文本不包含 name 键，函数将返回 null，但不会引发错误   。  
+-   在 lax 模式下，如果路径表达式包含错误，函数将返回空值****。 例如，如果请求值 $.name，但 JSON 文本不包含 name 键，函数将返回 null，但不会引发错误********。  
   
--   在 strict 模式下，如果路径表达式包含错误，函数将引发错误  。  
+-   在 strict 模式下，如果路径表达式包含错误，函数将引发错误****。  
 
 以下查询显式指定路径表达式中的 `lax` 模式。
 
@@ -67,7 +68,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
     -   键名。 例如，`$.name` 和 `$."first name"`。 如果键名以美元符号开头或者包含空格等特殊字符，请为其加上引号。   
   
-    -   数组元素。 例如，`$.product[3]` 。 数组从零开始。  
+    -   数组元素。 例如，`$.product[3]`。 数组从零开始。  
   
     -   点运算符 (`.`) 指示对象的成员。 例如，在 `$.people[1].surname` 中，`surname` 是 `people` 的子级。
   
@@ -97,7 +98,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>内置函数如何处理重复的路径  
- 如果 JSON 文本包含重复属性，例如，同一级别上有两个同名的键，JSON_VALUE 和 JSON_QUERY 函数将仅返回第一个与路径匹配的值   。 若要分析包含重复键的 JSON 对象并返回所有值，请使用 OPENJSON，如下面的示例中所示  。  
+ 如果 JSON 文本包含重复属性，例如，同一级别上有两个同名的键，JSON_VALUE 和 JSON_QUERY 函数将仅返回第一个与路径匹配的值********。 若要分析包含重复键的 JSON 对象并返回所有值，请使用 OPENJSON，如下面的示例中所示****。  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX);

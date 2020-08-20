@@ -1,4 +1,5 @@
 ---
+description: 发布服务器
 title: 发布服务器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 774358e1732d5110d9574bce810b84af1f2807d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2fed319e89864538104904782b28329855dbf08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490522"
 ---
-# <a name="publishers"></a>发布者
+# <a name="publishers"></a>发布服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   您可以为其他发布服务器授予使用分发服务器的权限。 请注意，允许发布服务器将此服务器用作其远程分发服务器的同时，并不会使该服务器成为发布服务器。 必须连接到发布服务器，对其进行配置以用于发布，并选择此服务器作为分发服务器。 您可以通过新建发布向导配置发布服务器并选择分发服务器。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "85765170"
  选择允许使用此分发服务器的服务器。 请单击发布服务器旁边的属性按钮 ( **...** ) 以查看和设置其他属性。  
   
  **添加**  
- 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加   发布服务器或 Oracle 发布服务器[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器****。  
   
 ## <a name="see-also"></a>另请参阅  
  [“配置分发”](../../relational-databases/replication/configure-distribution.md)   

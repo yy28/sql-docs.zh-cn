@@ -1,5 +1,6 @@
 ---
-title: MSmerge_partition_groups （Transact-sql） |Microsoft Docs
+description: MSmerge_partition_groups (Transact-SQL)
+title: MSmerge_partition_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 71df50ce6f94602d06bc46229887983233641610
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fd91cdbce03ade08552673aeda3128959c31e5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488760"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,13 +33,13 @@ ms.locfileid: "85889746"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|为预计算分区提供唯一 ID 号的标识列。|  
-|**publication_number**|**smallint**|存储在**sysmergepublications**中的发布编号。|  
+|**publication_number**|**smallint**|存储在 **sysmergepublications**中的发布编号。|  
 |**maxgen_whenadded**|**bigint**|在该表中插入行时在发布服务器中已知的最大生成值。|  
 |**using_partition_groups**|**bit**|指示分区是否属于使用预计算分区的发布，可以是下列值之一：<br /><br /> **0** = 发布不使用预计算分区。<br /><br /> **1** = 发布使用预计算分区<br /><br /> 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
 |**HOST_NAME_FN**|**nvarchar(128)**|使用参数化行筛选器生成分区时所提供的值。 有关详细信息，请参阅 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sysmail_add_profileaccount_sp （Transact-sql） |Microsoft Docs
+description: sysmail_add_profileaccount_sp (Transact-SQL)
+title: sysmail_add_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a393c3902d8ee9c5af45a10358fbb9fa371af18e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488983"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,32 +42,32 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id`要向其中添加帐户的配置文件 id。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_id = ] profile_id` 要向其中添加帐户的配置文件 id。 *profile_id* 的值为 **int**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'`要向其中添加帐户的配置文件的名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_name = ] 'profile_name'` 要向其中添加帐户的配置文件的名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @account_id = ] account_id`要添加到配置文件中的帐户 id。 *account_id*的值为**int**，默认值为 NULL。 必须指定*account_id*或*account_name* 。  
+`[ @account_id = ] account_id` 要添加到配置文件中的帐户 id。 *account_id* 的值为 **int**，默认值为 NULL。 必须指定 *account_id* 或 *account_name* 。  
   
-`[ @account_name = ] 'account_name'`要添加到配置文件的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 必须指定*account_id*或*account_name* 。  
+`[ @account_name = ] 'account_name'` 要添加到配置文件的帐户的名称。 *account_name* 的默认值为 **sysname**，默认值为 NULL。 必须指定 *account_id* 或 *account_name* 。  
   
-`[ @sequence_number = ] sequence_number`配置文件中的帐户的序列号。 *sequence_number*为**int**，没有默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
+`[ @sequence_number = ] sequence_number` 配置文件中的帐户的序列号。 *sequence_number* 为 **int**，没有默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  配置文件和帐户都必须已经存在。 否则，存储过程将返回错误。  
   
- 请注意，此存储过程不会更改已与指定的配置文件关联的帐户的序列号。 有关更新帐户的序列号的详细信息，请参阅[&#40;transact-sql&#41;sysmail_update_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)。  
+ 请注意，此存储过程不会更改已与指定的配置文件关联的帐户的序列号。 有关更新帐户的序列号的详细信息，请参阅 [&#40;transact-sql&#41;sysmail_update_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)。  
   
  序列号可以确定数据库邮件使用配置文件中帐户的顺序。 对于新的电子邮件，数据库邮件将从序列号最小的帐户开始。 如果该帐户失败，数据库邮件就使用具有下一个序列号较大的帐户，依此类推，直到数据库邮件成功发送邮件，或者序列号最大的帐户也失败为止。 如果序列号最大的帐户失败，数据库邮件将暂停尝试发送邮件，暂停时间在 *sysmail_configure_sp* 的 **AccountRetryDelay**参数中配置，然后从最小序列号再次开始尝试发送邮件的过程。 使用 *sysmail_configure_sp* 的 **AccountRetryAttempts**参数可以配置外部邮件进程尝试使用指定配置文件中的每个帐户发送电子邮件的次数。  
   
  如果存在具有相同序列号的多个帐户，则数据库邮件将只使用这些帐户中的某一个来处理给定的电子邮件。 在此情况下，数据库邮件不能保证使用具有该序列号的特定帐户，也不能保证使用同一个帐户发送各个邮件。  
   
- 存储过程**sysmail_add_profileaccount_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_add_profileaccount_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例将配置文件 `AdventureWorks Administrator` 与帐户 `Audit Account` 关联。 审核帐户的序列号为 1。  

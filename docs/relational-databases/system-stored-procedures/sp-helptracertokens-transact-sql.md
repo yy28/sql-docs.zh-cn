@@ -1,5 +1,6 @@
 ---
-title: sp_helptracertokens （Transact-sql） |Microsoft Docs
+description: sp_helptracertokens (Transact-SQL)
+title: sp_helptracertokens (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cee4dd07152a20310b920b93ae70ee5589d7ae13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a971f50c57d8544293da7bcb0714ac5de3b8430
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489243"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,15 +39,15 @@ sp_helptracertokens [ @publication = ] 'publication'
     [ , [ @publisher_db = ] 'publisher_db' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`在其中插入跟踪令牌的发布的名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 在其中插入跟踪令牌的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]
 >  只应为非发布服务器指定此参数 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db*的值为**sysname**，默认值为 NULL。 如果在发布服务器上执行该存储过程，将忽略此参数。  
+`[ @publisher_db = ] 'publisher_db'` 发布数据库的名称。 *publisher_db* 的值为 **sysname**，默认值为 NULL。 如果在发布服务器上执行该存储过程，将忽略此参数。  
   
 ## <a name="result-set"></a>结果集  
   
@@ -56,18 +57,18 @@ sp_helptracertokens [ @publication = ] 'publication'
 |**publisher_commit**|**datetime**|在发布服务器的发布数据库中提交标记记录的日期和时间。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helptracertokens**用于事务复制。  
+ **sp_helptracertokens** 用于事务复制。  
   
- **sp_helptracertokens**用于获取[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)时的跟踪令牌 id。  
+ **sp_helptracertokens** 用于获取 [sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)时的跟踪令牌 id。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员、发布数据库中**db_owner**固定数据库角色的成员或分发数据库中的**db_owner**固定数据库角色或**replmonitor**角色才能**sp_helptracertokenhistory**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员、发布数据库中 **db_owner** 固定数据库角色的成员或分发数据库中的 **db_owner** 固定数据库角色或 **replmonitor** 角色才能 **sp_helptracertokenhistory**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [为事务复制测量滞后时间并验证连接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

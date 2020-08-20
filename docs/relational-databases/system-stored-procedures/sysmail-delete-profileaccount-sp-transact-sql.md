@@ -1,5 +1,6 @@
 ---
-title: sysmail_delete_profileaccount_sp （Transact-sql） |Microsoft Docs
+description: sysmail_delete_profileaccount_sp (Transact-SQL)
+title: sysmail_delete_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27568d450bed5a937931164ed1c04cd09d0b7c2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d24b5ac22b944fde36f9588036c78698b570ad8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488982"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +41,16 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id`要删除的配置文件的配置文件 ID。 *profile_id*的值为**int**，默认值为 NULL。 可以指定*profile_id*或*profile_name* 。  
+`[ @profile_id = ] profile_id` 要删除的配置文件的配置文件 ID。 *profile_id* 的值为 **int**，默认值为 NULL。 可以指定 *profile_id* 或 *profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'`要删除的配置文件的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 可以指定*profile_id*或*profile_name* 。  
+`[ @profile_name = ] 'profile_name'` 要删除的配置文件的配置文件名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。 可以指定 *profile_id* 或 *profile_name* 。  
   
-`[ @account_id = ] account_id`要删除的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 可以指定*account_id*或*account_name* 。  
+`[ @account_id = ] account_id` 要删除的帐户 ID。 *account_id* 的值为 **int**，默认值为 NULL。 可以指定 *account_id* 或 *account_name* 。  
   
-`[ @account_name = ] 'account_name'`要删除的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 可以指定*account_id*或*account_name* 。  
+`[ @account_name = ] 'account_name'` 要删除的帐户的名称。 *account_name* 的默认值为 **sysname**，默认值为 NULL。 可以指定 *account_id* 或 *account_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -61,10 +62,10 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  如果指定了配置文件但没有指定帐户，此存储过程将从指定的配置文件中删除所有帐户。 例如，如果您正在更改配置文件使用的 SMTP 服务器，则可方便地从配置文件中删除所有帐户，然后根据需要添加新帐户。  
   
- 存储过程**sysmail_delete_profileaccount_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_delete_profileaccount_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了如何从配置文件 `Audit Account` 中删除帐户 `AdventureWorks Administrator`。  

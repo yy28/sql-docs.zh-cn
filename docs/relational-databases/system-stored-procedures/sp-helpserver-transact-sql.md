@@ -1,5 +1,6 @@
 ---
-title: sp_helpserver （Transact-sql） |Microsoft Docs
+description: sp_helpserver (Transact-SQL)
+title: sp_helpserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1870b2e58871eacde9a65fa42bf75285b2630311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489260"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server = ] 'server'`要报告其信息的服务器。 如果未指定*服务器*，则报告**master.sys 服务器**中的所有服务器。 *服务器*的默认值为**sysname**，默认值为 NULL。  
+`[ @server = ] 'server'` 要报告其信息的服务器。 如果未指定 *服务器* ，则报告 **master.sys 服务器**中的所有服务器。 *服务器* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @optname = ] 'option'`描述服务器的选项。 *选项*为**varchar （** 35 **）**，默认值为 NULL，必须是下列值之一。  
+`[ @optname = ] 'option'` 描述服务器的选项。 *选项* 为 **varchar (** 35 **) **，默认值为 NULL，必须是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**排序规则兼容**|影响分布式查询在链接服务器上的执行。 如果此选项设置为 True，|  
 |**数据访问**|启用和禁用链接服务器以进行分布式查询访问。|  
-|**dist**|分发服务器。|  
+|dist|分发服务器。|  
 |**dpub**|到该分发服务器的远程发布服务器。|  
 |**惰性架构验证**|在查询开始跳过远程表的架构检查。|  
 |**pub**|发行者。|  
@@ -59,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**系统**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用远程排序规则**|使用远程列的排序规则而不使用本地服务器的排序规则。|  
   
-`[ @show_topology = ] 'show_topology'`指定服务器与其他服务器的关系。 *show_topology*为**varchar （** 1 **）**，默认值为 NULL。 如果*show_topology*不等于**t**或为 NULL，则**sp_helpserver**返回 "结果集" 部分中列出的列。 如果*show_topology*等于**t**，则除了结果集中列出的列外， **sp_helpserver**还返回**topx**和**topy**信息。  
+`[ @show_topology = ] 'show_topology'` 指定服务器与其他服务器的关系。 *show_topology* 是 **varchar (** 1 **) **，默认值为 NULL。 如果 *show_topology* 不等于 **t** 或为 NULL，则 **sp_helpserver** 返回 "结果集" 部分中列出的列。 如果 *show_topology* 等于 **t**，则除了结果集中列出的列外， **sp_helpserver** 还返回 **topx** 和 **topy** 信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）。  
@@ -70,8 +71,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |name|**sysname**|服务器名称。|  
 |**network_name**|**sysname**|服务器的网络名称。|  
-|**status**|**varchar （** 70 **）**|服务器状态。|  
-|**id**|**char （** 4 **）**|服务器的标识号。|  
+|**status**|**varchar (** 70 **) **|服务器状态。|  
+|**id**|**char (** 4 **) **|服务器的标识号。|  
 |**collation_name**|**sysname**|服务器的排序规则。|  
 |**connect_timeout**|**int**|连接到链接服务器的超时值。|  
 |**query_timeout**|**int**|查询链接服务器的超时值。|  
@@ -110,9 +111,9 @@ EXEC sp_helpserver 'SEATTLE2';
  [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_helpsubscriberinfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

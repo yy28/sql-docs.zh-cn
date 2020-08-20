@@ -1,5 +1,6 @@
 ---
-title: Msdb.dbo.msagentparameterlist （Transact-sql） |Microsoft Docs
+description: MSagentparameterlist (Transact-SQL)
+title: Msdb.dbo.msagentparameterlist (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f03817f9e7b13e21eb7513de4a4d96216b700460
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 111916053ec35d742994b81796efba1bb502a161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488788"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Msdb.dbo.msagentparameterlist**表包含复制代理参数信息，用于指定可为给定代理类型设置的参数。 该表存储在**msdb**数据库中。  
+  **Msdb.dbo.msagentparameterlist**表包含复制代理参数信息，用于指定可为给定代理类型设置的参数。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +39,7 @@ ms.locfileid: "85890064"
 |**max_value**|**int**|设置代理参数的上限，在这里，NULL 指示没有上限。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

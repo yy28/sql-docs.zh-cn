@@ -1,5 +1,6 @@
 ---
-title: suspect_pages （Transact-sql） |Microsoft Docs
+description: suspect_pages (Transact-SQL)
+title: suspect_pages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,26 +19,26 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa13a24d933157aaa1dc546a2e55c1dc0d1ef7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c2532301ee2459f66281be8cf1b782574768e283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488646"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   对于每个由于出现次要 823 错误或 824 错误而失败的页，都包含一行。 页面列出在此表中是因为怀疑这些页面存在错误，但它们实际上可能是正常的。 修复可疑页面后，会在 " **event_type** " 列中更新其状态。  
   
- 下表（限制为1000行）存储在**msdb**数据库中。  
+ 下表（限制为1000行）存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|应用此页的数据库的 ID。|  
 |**file_id**|**int**|数据库中文件的 ID。|  
 |**page_id**|**bigint**|可疑页的 ID。 每一页都有一个 32 位值的页 ID，该值标识页在数据库中的位置。 **Page_id**是 8 KB 页的数据文件的偏移量。 每个页 ID 在文件中都是唯一的。|  
-|event_type |**int**|错误类型；其具体类型有：<br /><br /> 1 = 导致出现可疑页的 823 错误（如磁盘错误）或校验和错误或页撕裂之外的 824 错误（如页 ID 错误）。<br /><br /> 2 = 校验和错误。<br /><br /> 3 = 页撕裂。<br /><br /> 4 = 已还原（页在标记为错误后已还原）。<br /><br /> 5 = 已修复（DBCC 修复了页）。<br /><br /> 7 = 已由 DBCC 释放。|  
+|event_type|**int**|错误类型；其具体类型有：<br /><br /> 1 = 导致出现可疑页的 823 错误（如磁盘错误）或校验和错误或页撕裂之外的 824 错误（如页 ID 错误）。<br /><br /> 2 = 校验和错误。<br /><br /> 3 = 页撕裂。<br /><br /> 4 = 已还原（页在标记为错误后已还原）。<br /><br /> 5 = 已修复（DBCC 修复了页）。<br /><br /> 7 = 已由 DBCC 释放。|  
 |**error_count**|**int**|错误出现的次数。|  
 |**last_update_date**|**datetime**|上次更新的日期时间戳。|  
   

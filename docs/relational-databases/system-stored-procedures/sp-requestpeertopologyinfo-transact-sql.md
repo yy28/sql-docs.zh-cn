@@ -1,5 +1,6 @@
 ---
-title: sp_requestpeertopologyinfo （Transact-sql） |Microsoft Docs
+description: sp_requestpeertopologyinfo (Transact-SQL)
+title: sp_requestpeertopologyinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c88b25976af9914d21ea4ee80d165e893360bdf0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9bbd80d75ce96748613cfefe9048dc68b777aae1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489159"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  使用有关对等事务复制拓扑的信息填充[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)系统表。 执行[sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)以获取 XML 格式的表中的信息。  
+  使用有关对等事务复制拓扑的信息填充 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 系统表。 执行 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md) 以获取 XML 格式的表中的信息。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,22 +40,22 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>参数  
  [ @publication =] "*发布*"  
- 要执行拓扑范围内的状态请求的发布的名称。 *发布*为**sysname**，无默认值。  
+ 要执行拓扑范围内的状态请求的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
  [ @request_id =] *request_id*  
- 分配给拓扑状态请求的 ID 号。 *request_id*的值为**int**，默认值为 NULL。 [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)可以使用此 ID。  
+ 分配给拓扑状态请求的 ID 号。 *request_id* 的值为 **int**，默认值为 NULL。 [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)可以使用此 ID。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- sp_requestpeertopologyinfo 用于对等事务复制。 执行[sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)之前执行 sp_requestpeertopologyinfo。 这些过程由配置对等拓扑向导使用，但如果需要 XML 格式的拓扑信息，也可以直接使用它们。 如果喜欢表格结果，请查询[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)系统表。  
+ sp_requestpeertopologyinfo 用于对等事务复制。 执行 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)之前执行 sp_requestpeertopologyinfo。 这些过程由配置对等拓扑向导使用，但如果需要 XML 格式的拓扑信息，也可以直接使用它们。 如果喜欢表格结果，请查询 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 系统表。  
   
 ## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [对等事务复制](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

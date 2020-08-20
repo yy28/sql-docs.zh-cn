@@ -1,5 +1,6 @@
 ---
-title: sp_helplogins （Transact-sql） |Microsoft Docs
+description: sp_helplogins (Transact-SQL)
+title: sp_helplogins (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489325"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @LoginNamePattern = ] 'login'`是登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果指定，则必须存在*登录名*。 如果未指定*login* ，则返回有关所有登录名的信息。  
+`[ @LoginNamePattern = ] 'login'` 是登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果指定，则必须存在*登录名*。 如果未指定 *login* ，则返回有关所有登录名的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -50,11 +51,11 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登录名。|  
-|**SID**|**varbinary （85）**|登录安全标识符 (SID)。|  
+|**SID**|**varbinary (85) **|登录安全标识符 (SID)。|  
 |**DefDBName**|**sysname**|**LoginName**在连接到实例时使用的默认数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**DefLangName**|**sysname**|**LoginName**使用的默认语言。|  
-|**Auser**|**char （5）**|Yes = **LoginName**在数据库中具有关联的用户名。<br /><br /> No = **LoginName**没有关联的用户名。|  
-|**ARemote**|**char （7）**|Yes = **LoginName**具有关联的远程登录名。<br /><br /> No = **LoginName**没有关联的登录名。|  
+|**Auser**|**char (5) **|Yes = **LoginName** 在数据库中具有关联的用户名。<br /><br /> No = **LoginName** 没有关联的用户名。|  
+|**ARemote**|**char (7) **|Yes = **LoginName** 具有关联的远程登录名。<br /><br /> No = **LoginName** 没有关联的登录名。|  
   
  第二个报告包含有关映射到每个登录的用户的信息以及登录的角色成员身份，如下表所示。  
   
@@ -62,22 +63,22 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登录名。|  
 |**DBName**|**sysname**|**LoginName**在连接到实例时使用的默认数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**用户名**|**sysname**|**LoginName**在**dbname**中映射到的用户帐户，以及**LoginName**是**dbname**中的成员的角色。|  
-|**UserOrAlias**|**char （8）**|MemberOf =**用户名**是一个角色。<br /><br /> User = **UserName**是用户帐户。|  
+|**UserName**|**sysname**|**LoginName**在**dbname**中映射到的用户帐户，以及**LoginName**是**dbname**中的成员的角色。|  
+|**UserOrAlias**|**char (8) **|MemberOf = **用户名** 是一个角色。<br /><br /> User = **UserName** 是用户帐户。|  
   
 ## <a name="remarks"></a>备注  
- 删除登录名之前，请使用**sp_helplogins**标识映射到该登录名的用户帐户。  
+ 删除登录名之前，请使用 **sp_helplogins** 标识映射到该登录名的用户帐户。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**securityadmin**固定服务器角色的成员身份。  
+ 要求具有 **securityadmin** 固定服务器角色的成员身份。  
   
- 若要确定映射到给定登录名的所有用户帐户， **sp_helplogins**必须检查服务器中的所有数据库。 因此，对于服务器中的每个数据库，至少应满足下列条件之一：  
+ 若要确定映射到给定登录名的所有用户帐户， **sp_helplogins** 必须检查服务器中的所有数据库。 因此，对于服务器中的每个数据库，至少应满足下列条件之一：  
   
--   正在执行**sp_helplogins**的用户有权访问数据库。  
+-   正在执行 **sp_helplogins** 的用户有权访问数据库。  
   
--   在数据库中启用了**guest**用户帐户。  
+-   在数据库中启用了 **guest** 用户帐户。  
   
- 如果**sp_helplogins**无法访问数据库， **sp_helplogins**将返回尽可能多的信息，并显示错误消息15622。  
+ 如果 **sp_helplogins** 无法访问数据库， **sp_helplogins** 将返回尽可能多的信息，并显示错误消息15622。  
   
 ## <a name="examples"></a>示例  
  以下示例报告有关登录 `John` 的信息。  

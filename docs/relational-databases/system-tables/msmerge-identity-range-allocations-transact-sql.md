@@ -1,5 +1,6 @@
 ---
-title: MSmerge_identity_range_allocations （Transact-sql） |Microsoft Docs
+description: MSmerge_identity_range_allocations (Transact-SQL)
+title: MSmerge_identity_range_allocations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72eb58276b78faf3ea3257cf56585b69c93b6e1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1e258632e47664d88c6bfbe5f9b732672b5f9827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488782"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ ms.locfileid: "85889783"
 |**subscriber_db**|**nvarchar(128)**|订阅数据库的名称。|  
 |**is_pub_range**|**bit**|列出是否将标识范围分配给发布服务器。|  
 |**ranges_allocated**|**tinyint**|已分配的标识范围数。|  
-|**range_begin**|**numeric （38）**|范围的起始值。|  
-|**range_end**|**numeric （38）**|范围中的最后一个值。|  
-|**next_range_begin**|**numeric （38）**|要分配的下一个范围的起始值。|  
-|**next_range_end**|**numeric （38）**|要分配的下一个范围中的最后一个值。|  
-|**max_used**|**numeric （38）**|所使用的最大标识值。|  
+|**range_begin**|**数值 (38) **|范围的起始值。|  
+|**range_end**|**数值 (38) **|范围中的最后一个值。|  
+|**next_range_begin**|**数值 (38) **|要分配的下一个范围的起始值。|  
+|**next_range_end**|**数值 (38) **|要分配的下一个范围中的最后一个值。|  
+|**max_used**|**数值 (38) **|所使用的最大标识值。|  
 |**time_of_allocation**|**datetime**|执行分配的时间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

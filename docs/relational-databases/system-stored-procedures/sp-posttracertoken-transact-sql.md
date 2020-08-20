@@ -1,5 +1,6 @@
 ---
-title: sp_posttracertoken （Transact-sql） |Microsoft Docs
+description: sp_posttracertoken (Transact-SQL)
+title: sp_posttracertoken (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e1bcab6a1db0f8c92b82475689f24b53d72316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489127"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,23 +42,23 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`要测量其滞后时间的发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 要测量其滞后时间的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`插入的跟踪令牌的 ID。 *tracer_token_id*的默认值为**int** ，默认值为 NULL，它是一个 OUTPUT 参数。 此值可用于执行[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) ，而无需首先执行[sp_helptracertokens &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` 插入的跟踪令牌的 ID。 *tracer_token_id* 的默认值为 **int** ，默认值为 NULL，它是一个 OUTPUT 参数。 此值可用于执行 [sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) 或 [sp_deletetracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) ，而无需首先执行 [sp_helptracertokens &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
-`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**为，默认值为 NULL，不应为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器指定。  
+`[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**为，默认值为 NULL，不应为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_posttracertoken**用于事务复制。  
+ **sp_posttracertoken** 用于事务复制。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_posttracertoken**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_posttracertoken**。  
   
 ## <a name="see-also"></a>另请参阅  
  [为事务复制测量滞后时间和验证连接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
