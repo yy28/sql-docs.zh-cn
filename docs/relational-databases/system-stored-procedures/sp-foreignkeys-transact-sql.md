@@ -1,5 +1,6 @@
 ---
-title: sp_foreignkeys （Transact-sql） |Microsoft Docs
+description: sp_foreignkeys (Transact-SQL)
+title: sp_foreignkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481280"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,35 +46,35 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @table_server = ] 'table_server'`要为其返回表信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
+`[ @table_server = ] 'table_server'` 要为其返回表信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
-`[ @pktab_name = ] 'pktab_name'`具有主键的表的名称。 *pktab_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @pktab_name = ] 'pktab_name'` 具有主键的表的名称。 *pktab_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @pktab_schema = ] 'pktab_schema'`包含主键的架构的名称。 *pktab_schema*的默认值为**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含所有者名称。  
+`[ @pktab_schema = ] 'pktab_schema'` 包含主键的架构的名称。 *pktab_schema*的默认值为 **sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含所有者名称。  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`具有主键的目录的名称。 *pktab_catalog*的默认值为**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含数据库名称。  
+`[ @pktab_catalog = ] 'pktab_catalog'` 具有主键的目录的名称。 *pktab_catalog*的默认值为 **sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含数据库名称。  
   
-`[ @fktab_name = ] 'fktab_name'`带有外键的表的名称。 *fktab_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @fktab_name = ] 'fktab_name'` 带有外键的表的名称。 *fktab_name*的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @fktab_schema = ] 'fktab_schema'`包含外键的架构的名称。 *fktab_schema*的默认值为**sysname**，默认值为 NULL。  
+`[ @fktab_schema = ] 'fktab_schema'` 包含外键的架构的名称。 *fktab_schema*的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`包含外键的目录的名称。 *fktab_catalog*的默认值为**sysname**，默认值为 NULL。  
+`[ @fktab_catalog = ] 'fktab_catalog'` 包含外键的目录的名称。 *fktab_catalog*的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
- 各种 DBMS 产品支持表的三部分命名（_目录_）**。**_架构_**。**_表_），它在结果集中表示。  
+ 各种 DBMS 产品支持表的三部分命名 (_目录_**。**_架构_**。**_表_) ，在结果集中表示。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|主键所在表的目录。|  
 |**PKTABLE_SCHEM**|**sysname**|主键所在表的架构。|  
-|**PKTABLE_NAME**|**sysname**|表的名称（带有主键）。 此字段始终返回值。|  
-|**PKCOLUMN_NAME**|**sysname**|返回的每个**TABLE_NAME**列的主键列或列的名称。 此字段始终返回值。|  
+|**PKTABLE_NAME**|**sysname**|与主键)  (的表的名称。 此字段始终返回值。|  
+|**PKCOLUMN_NAME**|**sysname**|返回的每个 **TABLE_NAME** 列的主键列或列的名称。 此字段始终返回值。|  
 |**FKTABLE_CAT**|**sysname**|外键所在表的目录。|  
 |**FKTABLE_SCHEM**|**sysname**|外键所在表的架构。|  
-|**FKTABLE_NAME**|**sysname**|表的名称（带有外键）。 此字段始终返回值。|  
+|**FKTABLE_NAME**|**sysname**|带有外键)  (表的名称。 此字段始终返回值。|  
 |**FKCOLUMN_NAME**|**sysname**|外键列的名称，针对 TABLE_NAME 返回的每一列。 此字段始终返回值。|  
 |**KEY_SEQ**|**smallint**|多列主键中列的序列号。 此字段始终返回值。|  
 |**UPDATE_RULE**|**smallint**|当 SQL 操作是更新操作时应用于外键的操作。 对于这些列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 0、1 或 2：<br /><br /> 0=对外键的 CASCADE 更改。<br /><br /> 1=NO ACTION 更改（如果有外键）。<br /><br /> 2=SET_NULL；将外键设置为 NULL。|  
@@ -85,7 +86,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  在结果集中，FK_NAME 和 PK_NAME 列总是返回 NULL。  
   
 ## <a name="remarks"></a>备注  
- **sp_foreignkeys**查询与*table_server*对应的 OLE DB 提供程序的**IDBSchemaRowset**接口的 FOREIGN_KEYS 行集。 将*table_name*、 *table_schema*、 *table_catalog*和*列*参数传递到此接口，以限制返回的行数。  
+ **sp_foreignkeys**查询与*table_server*对应的 OLE DB 提供程序的**IDBSchemaRowset**接口的 FOREIGN_KEYS 行集。 将 *table_name*、 *table_schema*、 *table_catalog*和 *列* 参数传递到此接口，以限制返回的行数。  
   
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
@@ -103,7 +104,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

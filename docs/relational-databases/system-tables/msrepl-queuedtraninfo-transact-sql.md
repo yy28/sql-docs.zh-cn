@@ -1,5 +1,6 @@
 ---
-title: MSrepl_queuedtraninfo （Transact-sql） |Microsoft Docs
+description: MSrepl_queuedtraninfo (Transact-SQL)
+title: MSrepl_queuedtraninfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcefa2680dd5126c9d3cd378d6e71f527681f12e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e95ac3bb96d726b1b02d0258f9364cc48a3af09d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480719"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  复制过程使用**MSreplication_queuedtraninfo**表存储有关使用基于 SQL 的排队更新的所有排队更新订阅发出的排队命令的信息。 该表存储在订阅数据库中。  
+  复制过程使用 **MSreplication_queuedtraninfo** 表存储有关使用基于 SQL 的排队更新的所有排队更新订阅发出的排队命令的信息。 该表存储在订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +40,7 @@ ms.locfileid: "85889484"
 |**commandcount**|**bigint**|仅供内部使用。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

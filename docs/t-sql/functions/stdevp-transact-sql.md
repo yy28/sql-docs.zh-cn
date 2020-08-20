@@ -1,4 +1,5 @@
 ---
+description: STDEVP (Transact-SQL)
 title: STDEVP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a005ad422bdcf41e5b8f9ba2d57fa90d2dc1739
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fb6db4504d3861c036547778ce6c8c9e16995990
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479584"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,15 +56,15 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  指定考虑每一个唯一值。  
   
  *expression*  
- 数值[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。 expression 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式   。  
+ 数值[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。 expression 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式******。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序  。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果在 SELECT 语句中的所有项目上都使用 STDEVP，则计算中包括结果集内的每个值。 STDEVP 只能用于数字列。 Null 值会被忽略。  
   
  STDEVP 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -71,7 +72,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-stdevp"></a>A：使用 STDEVP  
- 以下示例返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的总体标准偏差。  
+ 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的总体标准偏差。  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -82,7 +83,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B：使用 STDEVP  
- 下面的示例返回表 `STDEVP` 中的销售配额值的 `dbo.FactSalesQuota`。 第一列中包含所有非重复值的标准差，第二列中包含所有值（包括任何重复值）的标准差。  
+ 下面的示例返回表 `dbo.FactSalesQuota` 中的销售配额值的 `STDEVP`。 第一列中包含所有非重复值的标准差，第二列中包含所有值（包括任何重复值）的标准差。  
   
 ```  
 -- Uses AdventureWorks  

@@ -1,4 +1,5 @@
 ---
+description: SYSDATETIMEOFFSET (Transact-SQL)
 title: SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -30,17 +31,17 @@ ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cbfeb1f6f9891d9896369e6e2d765481a569ce0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 914c8d497006e74a8fec6bccb7adca1639cdd583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479536"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回包含计算机的日期和时间的 datetimeoffset(7) 值， **的实例正在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 时区偏移量包含在内。  
+  返回包含计算机的日期和时间的 datetimeoffset(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行****。 时区偏移量包含在内。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -58,7 +59,7 @@ SYSDATETIMEOFFSET ( )
  **datetimeoffset(7)**  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetimeoffset 表达式的任何位置都可以引用 SYSDATETIMEOFFSET  。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetimeoffset 表达式的任何位置都可以引用 SYSDATETIMEOFFSET****。  
   
  SYSDATETIMEOFFSET 是不确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   

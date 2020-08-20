@@ -1,5 +1,6 @@
 ---
-title: sys. dm_repl_schemas （Transact-sql） |Microsoft Docs
+description: sys.dm_repl_schemas (Transact-SQL)
+title: sys. dm_repl_schemas (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76fbd6947090d90cadf814ac1af04995acff0782
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e6a790db9fc4b072eb474157c1f25c46bca4e7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481843"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,20 +37,20 @@ ms.locfileid: "85898717"
 |**tabid**|**bigint**|已复制的表的 ID。|  
 |**indexid**|**smallint**|已发布的表上的聚集索引的 ID。|  
 |**idSch**|**bigint**|表架构的 ID。|  
-|**tabschema**|**nvarchar （510）**|表架构的名称。|  
+|**tabschema**|**nvarchar (510) **|表架构的名称。|  
 |**ccTabschema**|**smallint**|表架构的字符长度。|  
-|**tabname**|**nvarchar （510）**|已发布表的名称。|  
+|**tabname**|**nvarchar (510) **|已发布表的名称。|  
 |**ccTabname**|**smallint**|已发布的表名的字符长度。|  
 |**rowsetid_delete**|**bigint**|已删除的行的 ID。|  
 |**rowsetid_insert**|**bigint**|已插入的行的 ID。|  
 |**num_pk_cols**|**int**|主键列数。|  
-|**pcitee**|**binary （8000）**|指向用于对计算列进行计算的查询表达式结构的指针。|  
+|**pcitee**|**二进制 (8000) **|指向用于对计算列进行计算的查询表达式结构的指针。|  
 |**re_numtextcols**|**int**|已复制的表中的二进制大型对象列数。|  
-|**re_schema_lsn_begin**|**binary （8000）**|架构版本日志记录的开始日志序列号 (LSN)。|  
-|**re_schema_lsn_end**|**binary （8000）**|架构版本日志记录的结束 LSN。|  
+|**re_schema_lsn_begin**|**二进制 (8000) **|架构版本日志记录的开始日志序列号 (LSN)。|  
+|**re_schema_lsn_end**|**二进制 (8000) **|架构版本日志记录的结束 LSN。|  
 |**re_numcols**|**int**|已发布的列数。|  
 |**re_colid**|**int**|发布服务器上的列标识符。|  
-|**re_awcName**|**nvarchar （510）**|已发布的列的名称。|  
+|**re_awcName**|**nvarchar (510) **|已发布的列的名称。|  
 |**re_ccName**|**smallint**|列名中的字符数。|  
 |**re_pk**|**tinyint**|已发布的列是否为主键的一部分。|  
 |**re_unique**|**tinyint**|已发布的列是否为唯一索引的一部分。|  
@@ -64,8 +65,8 @@ ms.locfileid: "85898717"
 |**re_fAnsiTrim**|**tinyint**|指定是否对已发布的列使用 ANSI 剪裁。|  
 |**re_computed**|**smallint**|指定已发布的列是否为计算列。|  
 |**se_rowsetid**|**bigint**|行集的 ID。|  
-|**se_schema_lsn_begin**|**binary （8000）**|架构版本日志记录的开始 LSN。|  
-|**se_schema_lsn_end**|**binary （8000）**|架构版本日志记录的结束 LSN。|  
+|**se_schema_lsn_begin**|**二进制 (8000) **|架构版本日志记录的开始 LSN。|  
+|**se_schema_lsn_end**|**二进制 (8000) **|架构版本日志记录的结束 LSN。|  
 |**se_numcols**|**int**|列数。|  
 |**se_colid**|**int**|订阅服务器上的列的 ID。|  
 |**se_maxlen**|**smallint**|列的最大长度。|  
@@ -81,13 +82,13 @@ ms.locfileid: "85898717"
 |**se_nullBitInLeafRows**|**int**|指定列值是否为 NULL。|  
   
 ## <a name="permissions"></a>权限  
- 要求对发布数据库具有 VIEW DATABASE STATE 权限才能调用**dm_repl_schemas**。  
+ 要求对发布数据库具有 VIEW DATABASE STATE 权限才能调用 **dm_repl_schemas**。  
   
 ## <a name="remarks"></a>备注  
  只为复制项目缓存中当前加载的复制的数据库对象返回信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与复制相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT CATALOG (Transact-SQL)
 title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fd19ebcedda06703058d96313ab477d660393d5
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 4f7bba432c31146e9bec8bdfc54ea3bee63e9bc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479083"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ALTER FULLTEXT CATALOG catalog_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- catalog_name   
+ catalog_name  
  指定要修改的目录的名称。 如果具有指定名称的目录不存在，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回错误，并且不执行 ALTER 操作。  
   
  REBUILD  
@@ -59,12 +60,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  指定要更改的全文索引和查询的目录是区分重音的，还是不区分重音的。  
   
- 若要确定全文目录当前的区分重音属性的设置，请对 catalog_name 使用具有 accentsensitivity 属性值的 FULLTEXTCATALOGPROPERTY 函数   。 如果函数返回“1”，则全文目录是区分重音的；如果函数返回“0”，则目录是不区分重音的。  
+ 若要确定全文目录当前的区分重音属性的设置，请对 catalog_name 使用具有 accentsensitivity 属性值的 FULLTEXTCATALOGPROPERTY 函数******。 如果函数返回“1”，则全文目录是区分重音的；如果函数返回“0”，则目录是不区分重音的。  
   
  目录和数据库的默认重音区分设置是相同的。  
   
  REORGANIZE  
- 告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行“主合并”，以将在索引进程中创建的各个较小的索引合并成一个大型索引  。 合并全文索引碎片可以提高性能，并释放磁盘和内存资源。 如果全文目录频繁发生更改，则请定期使用该命令重新组织全文目录。  
+ 告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行“主合并”，以将在索引进程中创建的各个较小的索引合并成一个大型索引**。 合并全文索引碎片可以提高性能，并释放磁盘和内存资源。 如果全文目录频繁发生更改，则请定期使用该命令重新组织全文目录。  
   
  REORGANIZE 还可以优化内部索引和目录结构。  
   
@@ -74,7 +75,7 @@ ALTER FULLTEXT CATALOG catalog_name
  指定此目录为默认目录。 如果创建全文索引时没有指定目录，则将使用默认目录。 如果存在默认全文目录，则以 AS DEFAULT 设置该目录将覆盖现有默认设置。  
   
 ## <a name="permissions"></a>权限  
- 用户必须对全文目录具有 ALTER 权限，或者是 db_owner、db_ddladmin 固定数据库角色或 sysadmin 固定服务器角色的成员   。  
+ 用户必须对全文目录具有 ALTER 权限，或者是 db_owner、db_ddladmin 固定数据库角色或 sysadmin 固定服务器角色的成员********。  
   
 > [!NOTE]  
 >  若要使用 ALTER FULLTEXT CATALOG AS DEFAULT，用户必须对全文目录具有 ALTER 权限，对数据库具有 CREATE FULLTEXT CATALOG 权限。  

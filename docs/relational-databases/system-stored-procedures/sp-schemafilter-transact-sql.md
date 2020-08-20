@@ -1,5 +1,6 @@
 ---
-title: sp_schemafilter （Transact-sql） |Microsoft Docs
+description: sp_schemafilter (Transact-SQL)
+title: sp_schemafilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 116dde1f0fd62f96e31a164ff06472de5b527938
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481079"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'`非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器* 的 **sysname**，无默认值。  
   
-`[ @schema = ] 'schema'`架构的名称。 *架构*的值为**sysname**，默认值为 NULL。  
+`[ @schema = ] 'schema'` 架构的名称。 *架构* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @operation = ] 'operation'`要对此架构采取的操作。 *操作*为**nvarchar （4）**，可以是下列值之一。  
+`[ @operation = ] 'operation'` 要对此架构采取的操作。 *操作* 为 **nvarchar (4) **，可以为以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**add**|将指定架构添加到不适合发布的架构列表中。|  
-|**击落**|从不适合发布的架构列表中删除指定架构。|  
+|**drop**|从不适合发布的架构列表中删除指定架构。|  
 |**help**|返回不适合发布的架构列表。|  
   
 ## <a name="result-sets"></a>结果集  
@@ -58,13 +59,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 |**schemaname**|**sysname**|不适合发布的架构名称。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_schemafilter**应仅用于异类发布服务器。  
+ **sp_schemafilter** 应仅用于异类发布服务器。  
   
 ## <a name="permissions"></a>权限  
- 只有分发服务器上**sysadmin**固定服务器角色的成员才能**sp_schemafilter**执行。  
+ 只有分发服务器上 **sysadmin** 固定服务器角色的成员才能 **sp_schemafilter**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

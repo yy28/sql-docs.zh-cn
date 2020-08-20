@@ -1,5 +1,6 @@
 ---
-title: sp_vupgrade_mergeobjects （Transact-sql） |Microsoft Docs
+description: sp_vupgrade_mergeobjects (Transact-SQL)
+title: sp_vupgrade_mergeobjects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e2237feb8ba1be19df876cedc480b15cc430a30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da875b534164230609015492e88b10986808c5de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480889"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,23 +46,23 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @login = ] 'login'`在分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
+`[ @login = ] 'login'` 在分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果 *security_mode* 设置为 **1**（这是 Windows 身份验证），则不需要此参数。  
   
-`[ @password = ] 'password'`在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *password*的值为**sysname**，默认值为 **' '** （空字符串）。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
+`[ @password = ] 'password'` 在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码* 为 **sysname**，默认值为 **""** (空字符串) 。 如果 *security_mode* 设置为 **1**（这是 Windows 身份验证），则不需要此参数。  
   
-`[ @security_mode = ] 'security_mode'`在分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*为**bit** ，默认值为**1**。 如果为**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则使用身份验证。 如果为**1**，则将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` 在分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode* 为 **bit** ，默认值为 **1**。 如果为 **0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则使用身份验证。 如果为 **1**，则将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_vupgrade_mergeobjects**仅用于合并复制。  
+ **sp_vupgrade_mergeobjects** 仅用于合并复制。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [升级复制数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)  
+ [升级复制的数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

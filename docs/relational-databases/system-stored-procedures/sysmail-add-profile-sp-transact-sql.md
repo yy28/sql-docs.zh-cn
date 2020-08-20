@@ -1,5 +1,6 @@
 ---
-title: sysmail_add_profile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_add_profile_sp (Transact-SQL)
+title: sysmail_add_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f78f4ea075f04c4deb447ad9b68e3707b4e19ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480854"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,29 +42,29 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_name = ] 'profile\_name'`新配置文件的名称。 *profile_name* **sysname**，无默认值。  
+`[ @profile_name = ] 'profile\_name'` 新配置文件的名称。 *profile_name* **sysname**，无默认值。  
  
    > [!NOTE]
-   > 必须调用使用 Azure SQL 托管实例 SQL 代理的配置文件名称**AzureManagedInstance_dbmail_profile**
+   > 必须调用使用 Azure SQL 托管实例 SQL 代理的配置文件名称 **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`新配置文件的可选说明。 *description*的值为**nvarchar （256）**，无默认值。  
+`[ @description = ] 'description'` 新配置文件的可选说明。 *描述* 为 **nvarchar (256) **，无默认值。  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`返回新配置文件的 ID。 *new_profile_id*的值为**int**，默认值为 NULL。  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` 返回新配置文件的 ID。 *new_profile_id* 的值为 **int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- 数据库邮件配置文件可以保存任意数目的数据库邮件帐户。 数据库邮件存储过程可以通过配置文件名称或此过程生成的配置文件 ID 来引用配置文件。 有关将帐户添加到配置文件的详细信息，请参阅[&#40;transact-sql&#41;sysmail_add_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
+ 数据库邮件配置文件可以保存任意数目的数据库邮件帐户。 数据库邮件存储过程可以通过配置文件名称或此过程生成的配置文件 ID 来引用配置文件。 有关将帐户添加到配置文件的详细信息，请参阅 [&#40;transact-sql&#41;sysmail_add_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
   
- 配置文件的名称和描述可以通过存储过程进行更改**sysmail_update_profile_sp**，而配置文件 id 在配置文件的生存期内保持不变。  
+ 配置文件的名称和描述可以通过存储过程进行更改 **sysmail_update_profile_sp**，而配置文件 id 在配置文件的生存期内保持不变。  
   
  配置文件名称对于 Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 必须是唯一的，否则存储过程将返回一个错误。  
   
- 存储过程**sysmail_add_profile_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_add_profile_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  **A. 创建一个新配置文件**  

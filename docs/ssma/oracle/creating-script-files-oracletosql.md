@@ -1,4 +1,5 @@
 ---
+description: 创建脚本文件 (OracleToSQL)
 title: 创建脚本文件 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ce9479bd7cb7be5516cd1c87a5f6a2c20649347f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0c6bca3c9c185f4b6affea004e59c996f214a1e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480489"
 ---
 # <a name="creating-script-files-oracletosql"></a>创建脚本文件 (OracleToSQL)
 启动 SSMA 控制台应用程序之前的第一个步骤是创建脚本文件，并在需要时创建变量值文件和服务器连接文件。  
@@ -125,7 +126,7 @@ ms.locfileid: "87934974"
   
     -   **继续-** 控制台将继续执行。  
   
-    默认模式为 "**错误**"。  
+    默认模式为 " **错误**"。  
   
     **示例：**  
   
@@ -156,7 +157,7 @@ ms.locfileid: "87934974"
   
     -   生成-错误：如果连接未处于活动状态，则会生成错误。  
   
-    默认模式为 "**生成-错误**"。  
+    默认模式为 " **生成-错误**"。  
   
     **示例：**  
   
@@ -324,9 +325,9 @@ ms.locfileid: "87934974"
   
     这里出现两种情况：  
   
-    1.  如果 override 选项为**false**，则搜索顺序为 "受保护的存储- &gt; 脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
+    1.  如果 override 选项为 **false**，则搜索顺序为 "受保护的存储- &gt; 脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
   
-    2.  如果 override 选项为**true**，则搜索顺序为 "脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
+    2.  如果 override 选项为 **true**，则搜索顺序为 "脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
   
     **示例：**  
   
@@ -340,17 +341,17 @@ ms.locfileid: "87934974"
   
 不可配置的选项是：  
   
--   **最大重新连接尝试：** 如果已建立的连接超时或由于网络故障而中断，则需要重新连接服务器。 允许重新连接尝试最多执行**5**次重试，此时，控制台将自动执行重新连接。 自动重新连接的功能可以减少重新运行脚本的工作量。  
+-   **最大重新连接尝试：** 如果已建立的连接超时或由于网络故障而中断，则需要重新连接服务器。 允许重新连接尝试最多执行 **5** 次重试，此时，控制台将自动执行重新连接。 自动重新连接的功能可以减少重新运行脚本的工作量。  
   
 ## <a name="server-connection-parameters"></a>服务器连接参数  
-服务器连接参数可以在脚本文件中或服务器连接文件中定义。 有关更多详细信息，请参阅[创建服务器连接文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)部分。  
+服务器连接参数可以在脚本文件中或服务器连接文件中定义。 有关更多详细信息，请参阅 [创建服务器连接文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 部分。  
   
 ## <a name="script-commands"></a>脚本命令  
 脚本文件包含一系列 XML 格式的迁移工作流命令。 SSMA 控制台应用程序按脚本文件中显示的命令顺序处理迁移。  
   
 例如，Oracle 数据库中特定表的典型数据迁移遵循： Schema 表的层次结构 &gt; 。  
   
-成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中包含的变量信息包含在[创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或（在脚本文件的单独节中，用于变量值）。  
+成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中包含的变量信息包含在 [创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) 或（在脚本文件的单独节中，用于变量值）。  
   
 **示例：**  
   
@@ -397,7 +398,7 @@ ms.locfileid: "87934974"
 用户可以根据 "架构" 文件夹中提供的架构定义文件 **"O2SSConsoleScriptSchema"** 轻松地对其脚本文件进行验证。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[&#40;OracleToSQL&#41;创建变量值文件](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
+操作控制台的下一步是 [&#40;OracleToSQL&#41;创建变量值文件 ](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  

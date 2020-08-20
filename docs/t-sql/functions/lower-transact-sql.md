@@ -1,4 +1,5 @@
 ---
+description: LOWER (Transact-SQL)
 title: LOWER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4b3fd394ec5dd17048272a99d1b2c9d90bd9821
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5da061dba0641ad1de853323831583df57ad6cbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479629"
 ---
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,10 +48,10 @@ LOWER ( character_expression )
 
 ## <a name="arguments"></a>参数
  *character_expression*  
- 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列  。 character_expression 的数据类型必须可隐式转换为 varchar   。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression  。  
+ 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。 character_expression 的数据类型必须可隐式转换为 varchar******。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression**。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar    
+ varchar 或 nvarchar********  
   
 ## <a name="examples"></a>示例  
  以下示例将使用 `LOWER` 函数、`UPPER` 函数，并将 `UPPER` 函数嵌套在 `LOWER` 函数中，选择价格在 $11 到 $20 之间的产品名称。  

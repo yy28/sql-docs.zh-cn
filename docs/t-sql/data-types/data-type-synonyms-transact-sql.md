@@ -1,4 +1,5 @@
 ---
+description: 数据类型同义词 (Transact-SQL)
 title: 数据类型同义词 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f689cdae7253c43ca39c06dc09953c4db02d0def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479924"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>数据类型同义词 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,17 +35,17 @@ ms.locfileid: "85732857"
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(n**  **)**|**char(n)**|  
-|**character varying(n**  **)**|**varchar(n)**|  
+|**character(n**__**)**|**char(n)**|  
+|**character varying(n**__**)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[ **(** n  **)** ] for n  = 1-7|**real**|  
-|**float**[ **(** n  **)** ] for n  = 8-15|**float**|  
+|**float**[ **(** n **)** ] for n = 1-7|**real**|  
+|**float**[ **(** n **)** ] for n = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(** n  **)**|**nchar(n)**|  
-|**national char(** n  **)**|**nchar(n)**|  
-|**national character varying(** n  **)**|**nvarchar(n)**|  
-|**national char varying(** n  **)**|**nvarchar(n)**|  
+|**national character(** n__**)**|**nchar(n)**|  
+|**national char(** n__**)**|**nchar(n)**|  
+|**national character varying(** n__**)**|**nvarchar(n)**|  
+|**national char varying(** n__**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
@@ -52,7 +53,7 @@ ms.locfileid: "85732857"
   
 将为从原始对象派生的对象（如结果集列或表达式）分配基本数据类型。 使用原始对象或任何派生对象的任何元数据函数都将报告基本数据类型，而不是同义词，其中包括：
 
-* 元数据操作，如 sp_help  和其他系统存储过程、
+* 元数据操作，如 sp_help**** 和其他系统存储过程、
 * 信息架构视图和
 * 数据访问 API 元数据操作，用于报告表或结果集列的数据类型。
   
@@ -62,7 +63,7 @@ ms.locfileid: "85732857"
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-为 `VarCharCol` 分配了 nvarchar(10)  数据类型，所有后续元数据函数将该列报告为 nvarchar(10)  列。 元数据函数永远不会将它们报告为 national character varying(10) 列  。
+为 `VarCharCol` 分配了 nvarchar(10)**** 数据类型，所有后续元数据函数将该列报告为 nvarchar(10)**** 列。 元数据函数永远不会将它们报告为 national character varying(10) 列****。
   
 ## <a name="see-also"></a>另请参阅
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

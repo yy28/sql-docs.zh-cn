@@ -1,5 +1,6 @@
 ---
-title: sp_add_targetsvrgrp_member （Transact-sql） |Microsoft Docs
+description: sp_add_targetsvrgrp_member (Transact-SQL)
+title: sp_add_targetsvrgrp_member (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 347f9581db7da96d93d69a25625af1bc40260f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481569"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @group_name = ] 'group_name'`组的名称。 *group_name* **sysname**，无默认值。  
+`[ @group_name = ] 'group_name'` 组的名称。 *group_name* **sysname**，无默认值。  
   
-`[ @server_name = ] 'server_name'`应添加到指定组中的服务器的名称。 *server_name*为**nvarchar （30）**，无默认值。  
+`[ @server_name = ] 'server_name'` 应添加到指定组中的服务器的名称。 *server_name* 为 **nvarchar (30) **，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -53,7 +54,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
  一个目标服务器可以是多个目标服务器组的成员。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能执行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能执行此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例将添加 `Servers Maintaining Customer Information` 组并将 `LONDON1` 服务器添加到该组中。  

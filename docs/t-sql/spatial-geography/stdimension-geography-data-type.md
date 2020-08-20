@@ -1,4 +1,5 @@
 ---
+description: STDimension（geography 数据类型）
 title: STDimension（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7dfd48621e2d587d985a695d00f4f091877c4814
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e7cd207272093ab77aea443737f27bd99a35e2e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479290"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "86552872"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int****  
   
- CLR 返回类型：SqlInt32   
+ CLR 返回类型：SqlInt32****  
   
 ## <a name="remarks"></a>备注  
  如果 **geography** 实例为空，则 STDimension() 返回 -1。  
@@ -64,11 +65,11 @@ FROM @temp;
   
 |name|dim|  
 |----------|---------|  
-|Point|0|  
+|点|0|  
 |LineString|1|  
 |Polygon|2|  
   
 ## <a name="see-also"></a>另请参阅  
- [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

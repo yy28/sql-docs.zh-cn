@@ -1,4 +1,5 @@
 ---
+description: sp_changelogreader_agent (Transact-SQL)
 title: sp_changelogreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5a46432317ebf320af3e3860c1c1973fc04119b5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 40356a67f13cc3c83a1a8555bd967b5092ecc65d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481499"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,40 +43,40 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @job_login = ] 'job_login'`运行代理时所用的帐户的登录名。 *job_login*为**nvarchar (257) **，默认值为 NULL。 在 Azure SQL 托管实例上，使用 SQL Server 帐户。 *不能更改非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*  
+## <a name="arguments"></a>参数  
+`[ @job_login = ] 'job_login'` 运行代理时所用的帐户的登录名。 *job_login* 为 **nvarchar (257) **，默认值为 NULL。 在 Azure SQL 托管实例上，使用 SQL Server 帐户。 *不能更改非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*  
   
-`[ @job_password = ] 'job_password'`运行代理时所用的帐户的密码。 *job_password*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_password = ] 'job_password'` 运行代理时所用的帐户的密码。 *job_password* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为 NULL。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1**指定 Windows 身份验证。  
+`[ @publisher_security_mode = ] publisher_security_mode` 连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode* 为 **smallint**，默认值为 NULL。 **0** 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1** 指定 Windows 身份验证。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`连接到发布服务器时使用的登录名。 *publisher_login*的默认值为**sysname**，默认值为 NULL。 当*publisher_security_mode*为**0**时，必须指定*publisher_login* 。 如果*publisher_login*为 NULL 且*publisher_security_mode*为**1**，则连接到发布服务器时将使用*job_login*中指定的 Windows 帐户。  
+`[ @publisher_login = ] 'publisher_login'` 连接到发布服务器时使用的登录名。 *publisher_login* 的默认值为 **sysname**，默认值为 NULL。 当*publisher_security_mode*为**0**时，必须指定*publisher_login* 。 如果 *publisher_login* 为 NULL 且 *publisher_security_mode* 为 **1**，则连接到发布服务器时将使用 *job_login* 中指定的 Windows 帐户。  
   
-`[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的默认值为**sysname**，默认值为 NULL。  
+`[ @publisher_password = ] 'publisher_password'` 连接到发布服务器时使用的密码。 *publisher_password* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 仅非 SQL Server 发布服务器支持此参数。  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。 仅非 SQL Server 发布服务器支持此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** (成功) 或**1** (失败)   
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_changelogreader_agent**用于事务复制。  
+ **sp_changelogreader_agent** 用于事务复制。  
   
- **sp_changelogreader_agent**用于更改日志读取器代理运行时所用的 Windows 帐户。 可以更改现有 Windows 登录名的密码，或提供新的 Windows 登录名和密码。  
+ **sp_changelogreader_agent** 用于更改日志读取器代理运行时所用的 Windows 帐户。 可以更改现有 Windows 登录名的密码，或提供新的 Windows 登录名和密码。  
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_changelogreader_agent**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_changelogreader_agent**。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

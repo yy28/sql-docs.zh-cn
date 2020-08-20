@@ -1,5 +1,6 @@
 ---
-title: sp_repltrans （Transact-sql） |Microsoft Docs
+description: sp_repltrans (Transact-SQL)
+title: sp_repltrans (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea8d8c948c3a04a5c63377f5209fbe946d945c09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a80364b3df96bb454cf9d43f1de2ee217a796f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481083"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,15 +38,15 @@ sp_repltrans
 ```  
   
 ## <a name="result-sets"></a>结果集  
- **sp_repltrans**返回有关从中执行它的发布数据库的信息，使您能够查看当前未分发的事务（事务日志中尚未发送到分发服务器的事务）。 结果集显示每个事务的第一个记录和最后一个记录的日志序列号。 **sp_repltrans**类似于[&#40;transact-sql&#41;的 sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) ，但不返回事务的命令。  
+ **sp_repltrans** 返回有关从中执行它的发布数据库的信息，使您能够查看当前未分发 (事务日志中尚未发送到分发服务器) 的事务的事务。 结果集显示每个事务的第一个记录和最后一个记录的日志序列号。 **sp_repltrans** 类似于 [&#40;transact-sql&#41;的 sp_replcmds ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) ，但不返回事务的命令。  
   
 ## <a name="remarks"></a>备注  
- **sp_repltrans**用于事务复制。  
+ **sp_repltrans** 用于事务复制。  
   
  非发布服务器不支持**sp_repltrans** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_repltrans**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_repltrans**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   

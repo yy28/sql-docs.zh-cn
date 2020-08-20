@@ -1,5 +1,6 @@
 ---
-title: sp_changeqreader_agent （Transact-sql） |Microsoft Docs
+description: sp_changeqreader_agent (Transact-SQL)
+title: sp_changeqreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99dcccc85577d854996b37743ee8f8cdd32bbebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481429"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,24 +40,24 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'`用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。  
+`[ @job_login = ] 'job_login'` 用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257) **，默认值为 NULL。  
   
-`[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_password = ] 'job_password'` 运行代理所用的 Windows 帐户的密码。 *job_password* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @frompublisher = ] frompublisher`如果正在发布服务器上执行该过程，则为。 *frompublisher*的值为 bit，默认值为**0**。 值为**1**表示在发布服务器上对发布数据库执行此过程。  
+`[ @frompublisher = ] frompublisher` 如果正在发布服务器上执行该过程，则为。 *frompublisher* 的值为 bit，默认值为 **0**。 值为 **1** 表示在发布服务器上对发布数据库执行此过程。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_changeqreader_agent**用于事务复制。  
+ **sp_changeqreader_agent** 用于事务复制。  
   
- **sp_changeqreader_agent**用于更改运行队列读取器代理所用的 Windows 帐户。 可以更改现有 Windows 登录名的密码，或提供新的 Windows 登录名和密码。  
+ **sp_changeqreader_agent** 用于更改运行队列读取器代理所用的 Windows 帐户。 可以更改现有 Windows 登录名的密码，或提供新的 Windows 登录名和密码。  
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_changeqreader_agent**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changeqreader_agent**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

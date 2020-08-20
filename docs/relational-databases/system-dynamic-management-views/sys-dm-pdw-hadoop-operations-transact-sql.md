@@ -1,4 +1,5 @@
 ---
+description: 'sys. dm_pdw_hadoop_operations (Transact-sql) '
 title: sys. dm_pdw_hadoop_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6378ddd4b0604fabe81d669d272b59207781fdf8
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6665a23aa3b3a30aee3c80cfbd8ed139d6784d3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481853"
 ---
 # <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>sys. dm_pdw_hadoop_operations (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "86197078"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|此外部 Hadoop 操作的 ID。|与[sys. dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)相同。|  
+|request_id|**nvarchar(32)**|此外部 Hadoop 操作的 ID。|与 [sys. dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)相同。|  
 |step_index|**int**|引用此 Hadoop 操作的查询步骤的索引。|与 sys.databases 中的 step_index [dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |operation_type|**nvarchar(255)**|描述外部操作的类型。|"外部 Hadoop 操作"|  
 |operation_name|**nvarchar(4000)**|映射-缩减作业的作业 ID。 此情况由 Hadoop 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 提交作业后返回。||  

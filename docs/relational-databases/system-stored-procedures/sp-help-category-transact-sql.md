@@ -1,5 +1,6 @@
 ---
-title: sp_help_category （Transact-sql） |Microsoft Docs
+description: sp_help_category (Transact-SQL)
+title: sp_help_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481235"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,28 +43,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'`要请求其信息的类。 *类*为**varchar （8）**，默认值为**JOB**。 *类*可以是下列值之一。  
+`[ @class = ] 'class'` 要请求其信息的类。 *类* 为 **varchar (8) **，默认值为 **JOB**。 *类* 可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**任务**|提供有关作业类别的信息。|  
 |**发出**|提供有关警报类别的信息。|  
 |**操作员**|提供有关操作员类别的信息。|  
   
-`[ @type = ] 'type'`请求其信息的类别的类型。 *类型*为**varchar （12）**，默认值为 NULL，可以是下列值之一。  
+`[ @type = ] 'type'` 请求其信息的类别的类型。 *类型* 为 **varchar (12) **，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**地方**|本地作业类别。|  
+|**LOCAL**|本地作业类别。|  
 |**MULTI-SERVER**|多服务器作业类别。|  
 |**NONE**|**作业**之外的类的类别。|  
   
-`[ @name = ] 'name'`请求其信息的类别的名称。 *名称*为**sysname**，默认值为 NULL。  
+`[ @name = ] 'name'` 请求其信息的类别的名称。 *名称* 为 **sysname**，默认值为 NULL。  
   
-`[ @suffix = ] suffix`指定结果集中**category_type**列是 ID 还是名称。 *后缀*为**bit**，默认值为**0**。 **1**将**category_type**显示为名称， **0**将其显示为 ID。  
+`[ @suffix = ] suffix` 指定结果集中 **category_type** 列是 ID 还是名称。 *后缀* 为 **bit**，默认值为 **0**。 **1** 将 **category_type** 显示为名称， **0** 将其显示为 ID。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  当** \@ 后缀**为**0**时， **sp_help_category**将返回以下结果集：  
@@ -88,7 +89,7 @@ sp_help_category [ [ @class = ] 'class' ]
  如果未指定参数，则结果集将提供有关所有作业类别的信息。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

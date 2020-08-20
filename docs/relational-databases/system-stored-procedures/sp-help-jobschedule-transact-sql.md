@@ -1,5 +1,6 @@
 ---
-title: sp_help_jobschedule （Transact-sql） |Microsoft Docs
+description: sp_help_jobschedule (Transact-SQL)
+title: sp_help_jobschedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07a07efac0a8908d0916049df594c273594ed4d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 002534c38b5060dca0457d0c704194db037b93b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481238"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id`作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号。 *job_id*的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]
-> 必须指定*job_id*或*job_name* ，但不能同时指定两者。
+> 必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。
 
-`[ @schedule_name = ] 'schedule_name'`作业的计划项的名称。 *schedule_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @schedule_name = ] 'schedule_name'` 作业的计划项的名称。 *schedule_name*的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @schedule_id = ] schedule_id`作业的计划项的标识号。 *schedule_id*的值为**int**，默认值为 NULL。  
+`[ @schedule_id = ] schedule_id` 作业的计划项的标识号。 *schedule_id*的值为 **int**，默认值为 NULL。  
   
-`[ @include_description = ] include_description`指定是否在结果集中包含计划的说明。 *include_description*为**bit**，默认值为**0**。 当*include_description*为**0**时，将不在结果集中包含计划的说明。 当*include_description*为**1**时，将在结果集中包含计划的说明。  
+`[ @include_description = ] include_description` 指定是否在结果集中包含计划的说明。 *include_description* 为 **bit**，默认值为 **0**。 当 *include_description* 为 **0**时，将不在结果集中包含计划的说明。 当 *include_description* 为 **1**时，将在结果集中包含计划的说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -65,28 +66,28 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|计划标识号。|  
 |**schedule_name**|**sysname**|计划名称。|  
-|**能够**|**int**|计划是已启用（**1**）还是未启用（**0**）。|  
-|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于**freq_interval**<br /><br /> **64** = 当**SQLServerAgent**服务启动时运行。|  
-|**freq_interval**|**int**|执行作业的天数。 此值取决于**freq_type**的值。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
-|**freq_subday_type**|**int**|**Freq_subday_interval**的单位。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
-|**freq_subday_interval**|**int**|每次执行作业之间要发生的**freq_subday_type**周期数。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
-|**freq_relative_interval**|**int**|计划作业每月的**freq_interval** 。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**enabled**|**int**| (**1**) 还是未启用计划 (**0**) 。|  
+|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于 **freq_interval**<br /><br /> **64** = 当 **SQLServerAgent** 服务启动时运行。|  
+|**freq_interval**|**int**|执行作业的天数。 此值取决于 **freq_type**的值。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_subday_type**|**int**|**Freq_subday_interval**的单位。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_subday_interval**|**int**|每次执行作业之间要发生的 **freq_subday_type** 周期数。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_relative_interval**|**int**|计划作业每月的 **freq_interval** 。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
 |**freq_recurrence_factor**|**int**|作业的已计划执行日期之间的间隔月数。|  
 |**active_start_date**|**int**|激活计划的日期。|  
 |**active_end_date**|**int**|计划的结束日期。|  
 |**active_start_time**|**int**|计划开始的时间。|  
 |**active_end_time**|**int**|计划结束的时间。|  
 |**date_created**|**datetime**|创建计划的日期。|  
-|**schedule_description**|**nvarchar(4000)**|计划的英语说明，派生自**msdb.dbo.sys计划**中的值。 当*include_description*为**0**时，此列包含文本，指出未请求说明。|  
+|**schedule_description**|**nvarchar(4000)**|计划的英语说明，派生自 **msdb.dbo.sys计划**中的值。 当 *include_description* 为 **0**时，此列包含文本，指出未请求说明。|  
 |**next_run_date**|**int**|计划下一次引发作业运行的日期。|  
 |**next_run_time**|**int**|计划下一次引发作业运行的时间。|  
 |**schedule_uid**|**uniqueidentifier**|计划的标识符。|  
 |**job_count**|**int**|返回的作业数。|  
   
-> **注意： sp_help_jobschedule**从**dbo.sysjobschedules**返回值，并在**msdb**中**dbo.sys计划**系统表。 **sysjobschedules**每20分钟更新一次。 这可能会影响此存储过程返回的值。  
+> **注意： sp_help_jobschedule**从**dbo.sysjobschedules**返回值，并在**msdb**中**dbo.sys计划**系统表。 **sysjobschedules** 每20分钟更新一次。 这可能会影响此存储过程返回的值。  
   
 ## <a name="remarks"></a>备注  
- **Sp_help_jobschedule**的参数只能在某些组合中使用。 如果指定*schedule_id* ，则*job_id*和*job_name*都无法指定。 否则， *job_id*或*job_name*参数可与*schedule_name*一起使用。  
+ **Sp_help_jobschedule**的参数只能在某些组合中使用。 如果指定 *schedule_id* ，则 *job_id* 和 *job_name* 都无法指定。 否则， *job_id* 或 *job_name* 参数可与 *schedule_name*一起使用。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_stacks （Transact-sql） |Microsoft Docs
+description: sys.dm_os_stacks (Transact-SQL)
+title: sys. dm_os_stacks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 869ebff08a3bb20ea531f3a1bdcdf59eafdcdceb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a91347a94f5623e9a3bb7b430eca9dae2ff6fcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481890"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,16 +40,16 @@ ms.locfileid: "85718753"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|是该堆栈分配的唯一地址。 不可为 null。|  
-|**frame_index**|**int**|每行表示一个函数调用，该函数调用在特定**stack_address**按帧索引的升序排序时，返回完整调用堆栈。 不可为 null。|  
+|**frame_index**|**int**|每行表示一个函数调用，该函数调用在特定 **stack_address**按帧索引的升序排序时，返回完整调用堆栈。 不可为 null。|  
 |**frame_address**|**varbinary(8)**|函数调用的地址。 不可为 null。|  
   
 ## <a name="remarks"></a>备注  
- **sys. dm_os_stacks**要求服务器和其他组件的符号在服务器上出现，才能正确显示信息。  
+ **sys. dm_os_stacks** 要求服务器和其他组件的符号在服务器上出现，才能正确显示信息。  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
 
 ## <a name="see-also"></a>另请参阅  

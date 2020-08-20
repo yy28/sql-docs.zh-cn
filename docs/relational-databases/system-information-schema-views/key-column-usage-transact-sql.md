@@ -1,5 +1,6 @@
 ---
-title: KEY_COLUMN_USAGE （Transact-sql） |Microsoft Docs
+description: KEY_COLUMN_USAGE (Transact-SQL)
+title: KEY_COLUMN_USAGE (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cca6fe4ea0cd6e81fb59dcae3b2f566015dbdf9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aa2f41f2b37323e60bc2e86e91a00d04424904c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481718"
 ---
 # <a name="key_column_usage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,20 +35,20 @@ ms.locfileid: "85775168"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar （** 128 **）**|约束限定符。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar （** 128 **）**|包含该约束的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|**CONSTRAINT_NAME**|**nvarchar （** 128 **）**|约束名称。|  
-|**TABLE_CATALOG**|**nvarchar （** 128 **）**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该表的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|**TABLE_NAME**|**nvarchar （** 128 **）**|表名。|  
-|**COLUMN_NAME**|**nvarchar （** 128 **）**|列名称。|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **) **|约束限定符。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **) **|包含该约束的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**CONSTRAINT_NAME**|**nvarchar (** 128 **) **|约束名称。|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **) **|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **) **|包含该表的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_NAME**|**nvarchar (** 128 **) **|表名。|  
+|**COLUMN_NAME**|**nvarchar (** 128 **) **|列名称。|  
 |**ORDINAL_POSITION**|**int**|列序号位置。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. 索引 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [&#40;Transact-sql&#41;的信息架构视图 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. foreign_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)   
  [sys. key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)  

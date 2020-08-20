@@ -1,5 +1,6 @@
 ---
-title: sp_db_selective_xml_index （Transact-sql） |Microsoft Docs
+description: sp_db_selective_xml_index (Transact-SQL)
+title: sp_db_selective_xml_index (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 787750b0b69f70989d6a060f82e754573189d708
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481397"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85728215"
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上启用和禁用选择性 XML 索引功能。 如果不带任何参数调用，则当在特定数据库上启用选择性 XML 索引时，存储过程返回 1。  
   
 > [!NOTE]  
->  若要使用此存储过程禁用选择性 XML 索引，必须使用[ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令将数据库置于简单恢复模式。  
+>  若要使用此存储过程禁用选择性 XML 索引，必须使用 [ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 命令将数据库置于简单恢复模式。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +43,10 @@ ms.locfileid: "85728215"
 [[ @action = ] 'action']  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @ db_name = ] 'db_name'`要对其启用或禁用选择性 XML 索引的数据库的名称。 如果*db_name*为空，则假定为当前数据库。  
+## <a name="arguments"></a>参数  
+`[ @ db_name = ] 'db_name'` 要对其启用或禁用选择性 XML 索引的数据库的名称。 如果 *db_name* 为空，则假定为当前数据库。  
   
-`[ @action = ] 'action'`确定是启用还是禁用索引。 如果传递了除 "on"、"true"、"off" 或 "false" 之外的其他值，则会引发错误。  
+`[ @action = ] 'action'` 确定是启用还是禁用索引。 如果传递了除 "on"、"true"、"off" 或 "false" 之外的其他值，则会引发错误。  
   
 ```  
   

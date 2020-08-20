@@ -1,4 +1,5 @@
 ---
+description: UPPER (Transact-SQL)
 title: UPPER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8c2eaf53931d935300c4002ab88843b86525576
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f95a25d11862141b484df1d1b3bc45330dd17983
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479500"
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,12 +48,12 @@ UPPER ( character_expression )
 
 ## <a name="arguments"></a>参数
  *character_expression*  
- 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列**。  
   
- character_expression 的数据类型必须可隐式转换为 varchar   。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression  。  
+ character_expression 的数据类型必须可隐式转换为 varchar******。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression**。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar    
+ varchar 或 nvarchar********  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `UPPER` 和 `RTRIM` 函数返回 `dbo.DimEmployee` 表中人员的姓氏，以便使它大写、得到修整并与名字连在一起。  

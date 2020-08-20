@@ -1,5 +1,6 @@
 ---
-title: sp_help_maintenance_plan （Transact-sql） |Microsoft Docs
+description: sp_help_maintenance_plan (Transact-SQL)
+title: sp_help_maintenance_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481200"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +45,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] 'plan\_id'`指定维护计划的计划 ID。 *plan_id*是**UNIQUEIDENTIFIER**。 默认值为 NULL。  
+`[ @plan_id = ] 'plan\_id'` 指定维护计划的计划 ID。 *plan_id* 是 **UNIQUEIDENTIFIER**。 默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
- 如果指定了*plan_id* ， **sp_help_maintenance_plan**将返回三个表： Plan、Database 和 Job。  
+ 如果指定了 *plan_id* ， **sp_help_maintenance_plan** 将返回三个表： Plan、Database 和 Job。  
   
 ### <a name="plan-table"></a>Plan 表  
   
@@ -64,13 +65,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**remote_history_server**|**int**|可以写入历史报表的远程服务器的名称。|  
 |**max_remote_history_rows**|**int**|可以写入历史报表的远程服务器上系统表所分配的最大行数。|  
 |**user_defined_1**|**int**|默认值为 NULL。|  
-|**user_defined_2**|**nvarchar （100）**|默认值为 NULL。|  
+|**user_defined_2**|**nvarchar (100) **|默认值为 NULL。|  
 |**user_defined_3**|**datetime**|默认值为 NULL。|  
 |**user_defined_4**|**uniqueidentifier**|默认值为 NULL。|  
   
 ### <a name="database-table"></a>Database 表  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**database_name**|所有与维护计划相关的数据库的名称。 database_name 的数据类型为 sysname******。|  
   
@@ -78,13 +79,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |列名称|说明|  
 |-----------------|-----------------|  
-|**job_id**|所有与维护计划相关的作业的 ID。 *job_id*是**uniqueidentifier**。|  
+|**job_id**|所有与维护计划相关的作业的 ID。 *job_id* 是 **uniqueidentifier**。|  
   
 ## <a name="remarks"></a>备注  
- **sp_help_maintenance_plan**在**msdb**数据库中。  
+ **sp_help_maintenance_plan** 在 **msdb** 数据库中。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_help_maintenance_plan**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_help_maintenance_plan**执行。  
   
 ## <a name="examples"></a>示例  
  此示例提供有关维护计划 FAD6F2AB-3571-11D3-9D4A-00C04FB925FC 的说明性信息。  

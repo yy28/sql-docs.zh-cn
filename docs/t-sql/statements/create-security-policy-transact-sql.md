@@ -1,4 +1,5 @@
 ---
+description: CREATE SECURITY POLICY (Transact-SQL)
 title: CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de5ab7ebb06a6ba51241b06a3ee6f618378bc635
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: da7b906f774bb3cf56acdb8c60587146fa98ae50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478961"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [table_schema_name.] table_name   
  是将要应用安全谓词的目标表。 多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
-## <a name="remarks"></a>备注  
+
+## <a name="remarks"></a>备注
  将谓词函数用于内存优化表时，必须包含 SCHEMABINDING 并使用 WITH NATIVE_COMPILATION 编译提示 。  
   
  在执行相应 DML 操作后计算阻止谓词。 因此，READ UNCOMMITTED 查询可看到要回滚的临时值。  

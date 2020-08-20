@@ -1,5 +1,6 @@
 ---
-title: sp_trace_generateevent （Transact-sql） |Microsoft Docs
+description: sp_trace_generateevent (Transact-SQL)
+title: sp_trace_generateevent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00952b8059aed7325fdeab449bbb29e302a0373f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480996"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建用户定义事件。  
   
->**注意：** **不**推荐使用此存储过程。 不推荐使用所有其他与跟踪相关的存储过程。  
+>**注意：** **不** 推荐使用此存储过程。 不推荐使用所有其他与跟踪相关的存储过程。  
   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,28 +45,28 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @eventid = ] event_id`要打开的事件的 ID。 *event_id*为**int**，没有默认值。 ID 必须是82到91中的事件编号之一，表示用户定义的事件， [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)设置。  
+`[ @eventid = ] event_id` 要打开的事件的 ID。 *event_id* 为 **int**，没有默认值。 ID 必须是82到91中的事件编号之一，表示用户定义的事件， [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)设置。  
   
-`[ @userinfo = ] 'user_info'`是可选的用户定义的字符串，用于标识事件的原因。 *user_info*的默认值为**nvarchar （128）**，默认值为 NULL。  
+`[ @userinfo = ] 'user_info'` 是可选的用户定义的字符串，用于标识事件的原因。 *user_info* 为 **nvarchar (128) **，默认值为 NULL。  
   
-`[ @userdata = ] user_data`是事件的可选的用户指定数据。 *user_data*为**varbinary （8000）**，默认值为 NULL。  
+`[ @userdata = ] user_data` 是事件的可选的用户指定数据。 *user_data* 为 **varbinary (8000) **，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|说明|  
+|返回代码|描述|  
 |-----------------|-----------------|  
-|**0**|没有错误。|  
+|**0**|无错误。|  
 |**1**|未知错误。|  
 |**3**|指定的事件无效。 该事件可能不存在或者它不适用于此存储过程。|  
 |**13**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
   
 ## <a name="remarks"></a>备注  
- **sp_trace_generateevent**执行先前由**xp_trace_ \* **扩展存储过程执行的许多操作。 使用**sp_trace_generateevent**而不是**xp_trace_generate_event**。  
+ **sp_trace_generateevent**执行先前由**xp_trace_ \* **扩展存储过程执行的许多操作。 使用 **sp_trace_generateevent** 而不是 **xp_trace_generate_event**。  
   
- 仅用户定义事件的 ID 号可与**sp_trace_generateevent**一起使用。 如果使用其他事件 ID 号，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将产生错误。  
+ 仅用户定义事件的 ID 号可与 **sp_trace_generateevent**一起使用。 如果使用其他事件 ID 号，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将产生错误。  
   
- 所有 SQL 跟踪存储过程的参数（**sp_trace_xx**）都是严格类型化的。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
+ 严格类型化)  (**sp_trace_xx** 的所有 SQL 跟踪存储过程的参数。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
 ## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
@@ -96,7 +97,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
   
 ## <a name="see-also"></a>另请参阅  
  [sys. fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   
   

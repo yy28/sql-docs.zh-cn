@@ -1,5 +1,6 @@
 ---
-title: MSdistributiondbs （Transact-sql） |Microsoft Docs
+description: MSdistributiondbs (Transact-SQL)
+title: MSdistributiondbs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fde8c78cb37b84ae897e2b12bba6049da8ddc4fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccc4ea10d896a6422ca5b46f1bb4eb70bbc6ba0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480757"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在本地分发服务器上定义的每个分发数据库在**MSdistributiondbs**表中各占一行。 该表存储在**msdb**数据库中。  
+  在本地分发服务器上定义的每个分发数据库在 **MSdistributiondbs** 表中各占一行。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +38,7 @@ ms.locfileid: "85889956"
 |**history_retention**|**int**|保留历史记录的小时数。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

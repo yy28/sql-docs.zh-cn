@@ -1,5 +1,6 @@
 ---
-title: sys. fn_trace_getinfo （Transact-sql） |Microsoft Docs
+description: sys.fn_trace_getinfo (Transact-SQL)
+title: sys. fn_trace_getinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76c1dc6253d1a1b16824966c0fe56f1b4b8822f3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2502fa3fb70811ff73235863eb83fb63b889ad8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481772"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,22 +46,22 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="arguments"></a>参数  
  *trace_id*  
- 跟踪的 ID。 *trace_id*是**int**。 有效输入是跟踪的 ID 号、NULL、0或 DEFAULT。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 指定 NULL、0 或 DEFAULT 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有跟踪的信息。  
+ 跟踪的 ID。 *trace_id* 是 **int**。 有效输入是跟踪的 ID 号、NULL、0或 DEFAULT。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 指定 NULL、0 或 DEFAULT 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有跟踪的信息。  
   
 ## <a name="tables-returned"></a>返回的表  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|跟踪的 ID。|  
-|property|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请 @options 参阅[&#40;transact-sql&#41;sp_trace_create ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
-|值|**sql_variant**|有关指定跟踪的属性的信息。|  
+|property|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请 @options 参阅 [&#40;transact-sql&#41;sp_trace_create ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
+|value|**sql_variant**|有关指定跟踪的属性的信息。|  
   
 ## <a name="remarks"></a>备注  
  当传递特定跟踪的 ID 时，fn_trace_getinfo 将返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  
   
- fn_trace_getinfo 会将 .trc 扩展名附加到其结果集中包含的所有跟踪文件名。 有关定义跟踪的信息，请参阅[&#40;transact-sql&#41;sp_trace_create ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。 有关跟踪筛选器的类似信息，请参阅[transact-sql&#41;&#40;fn_trace_getfilterinfo ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)。  
+ fn_trace_getinfo 会将 .trc 扩展名附加到其结果集中包含的所有跟踪文件名。 有关定义跟踪的信息，请参阅 [&#40;transact-sql&#41;sp_trace_create ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。 有关跟踪筛选器的类似信息，请参阅 [transact-sql&#41;&#40;fn_trace_getfilterinfo ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)。  
   
- 有关使用跟踪存储过程的完整示例，请参阅[Create a trace &#40;transact-sql&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
+ 有关使用跟踪存储过程的完整示例，请参阅 [Create a trace &#40;transact-sql&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 ALTER TRACE 权限。  
@@ -77,7 +78,7 @@ GO
  [&#40;Transact-sql 创建跟踪&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_create &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [sys. fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   

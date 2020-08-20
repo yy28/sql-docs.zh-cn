@@ -1,4 +1,5 @@
 ---
+description: AsTextZM（geography 数据类型）
 title: AsTextZM（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 20bcc248f04e5f432cb99ba83640f34e436fb3c5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 49857a94c95240386893854408d2b26cba533815
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479409"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值    。  
+  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,14 +42,14 @@ ms.locfileid: "86555512"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)****  
   
- CLR 返回类型：SqlChars   
+ CLR 返回类型：SqlChars****  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个带有 Z（标高）和 M（度量）值的 `Point` 实例   。 `STAsText()` 选择 WKT 值 (-122.34900 47.65100)；`AsTextZM()` 选择相同的 WKT 值，还返回 Z 和 M 的值，从而生成 (-122.34900 47.65100 10.3 12)   。  
+ 下面的示例创建一个带有 Z（标高）和 M（度量）值的 `Point` 实例********。 `STAsText()` 选择 WKT 值 (-122.34900 47.65100)；`AsTextZM()` 选择相同的 WKT 值，还返回 Z 和 M 的值，从而生成 (-122.34900 47.65100 10.3 12)********。  
   
 ```  
 DECLARE @g geography;  

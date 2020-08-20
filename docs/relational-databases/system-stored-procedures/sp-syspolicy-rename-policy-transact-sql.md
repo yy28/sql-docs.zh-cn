@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_rename_policy （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_rename_policy (Transact-SQL)
+title: sp_syspolicy_rename_policy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481006"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,19 +42,19 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`要重命名的策略的名称。 *name*为**sysname**，如果*policy_id*为 NULL，则必须指定。  
+`[ @name = ] 'name'` 要重命名的策略的名称。 *name* 为 **sysname**，如果 *policy_id* 为 NULL，则必须指定。  
   
-`[ @policy_id = ] policy_id`要重命名的策略的标识符。 *policy_id*为**int**，并且如果*name*为 NULL，则必须指定。  
+`[ @policy_id = ] policy_id` 要重命名的策略的标识符。 *policy_id* 为 **int**，并且如果 *name* 为 NULL，则必须指定。  
   
-`[ @new_name = ] 'new_name'`策略的新名称。 *new_name* **sysname**，并且是必需的。 不能为 NULL 或空字符串。  
+`[ @new_name = ] 'new_name'` 策略的新名称。 *new_name* **sysname**，并且是必需的。 不能为 NULL 或空字符串。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_rename_policy。  
   
- 必须为 "*名称*" 或 " *policy_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policies 系统视图。  
+ 必须为 " *名称* " 或 " *policy_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policies 系统视图。  
   
 ## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  

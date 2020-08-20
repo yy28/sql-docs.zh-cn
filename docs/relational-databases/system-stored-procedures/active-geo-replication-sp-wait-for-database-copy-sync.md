@@ -1,4 +1,5 @@
 ---
+description: 活动异地复制-sp_wait_for_database_copy_sync
 title: sp_wait_for_database_copy_sync
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -17,17 +18,17 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0151b29c6375cdefd2ad1a6430591cb98b51e08e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb1ac50e4da538d80e743114714fe216d35a89fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481604"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>活动异地复制-sp_wait_for_database_copy_sync
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  此过程的范围限定为主数据库与辅助数据库之间的 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 关系。 调用**sp_wait_for_database_copy_sync**会导致应用程序等待，直到所有提交的事务复制并由活动辅助数据库确认。 仅对主数据库运行**sp_wait_for_database_copy_sync** 。  
+  此过程的范围限定为主数据库与辅助数据库之间的 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 关系。 调用 **sp_wait_for_database_copy_sync** 会导致应用程序等待，直到所有提交的事务复制并由活动辅助数据库确认。 仅对主数据库运行 **sp_wait_for_database_copy_sync** 。  
   
 ||  
 |-|  
@@ -40,7 +41,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
      , [ @target_database = ] 'database_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @target_server = ] 'server_name'  
  承载活动辅助数据库的 SQL Database 服务器的名称。 server_name 为 sysname，无默认值。  
   
@@ -56,16 +57,16 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   找不到指定服务器名称或数据库的链接。  
   
--   失去互连连接。 **sp_wait_for_database_copy_sync**将在连接超时后返回。  
+-   失去互连连接。 **sp_wait_for_database_copy_sync** 将在连接超时后返回。  
   
 ## <a name="permissions"></a>权限  
  主数据库中的任何用户均可调用此系统存储过程。 登录名必须是主数据库和活动辅助数据库中的用户。  
   
 ## <a name="remarks"></a>备注  
- 在**sp_wait_for_database_copy_sync**调用之前提交的所有事务都将发送到活动辅助数据库。  
+ 在 **sp_wait_for_database_copy_sync** 调用之前提交的所有事务都将发送到活动辅助数据库。  
   
 ## <a name="examples"></a>示例  
- 下面的示例调用**sp_wait_for_database_copy_sync** ，以确保将所有事务提交到主数据库 db0，并将其发送到目标服务器 ubfyu5ssyt 上的活动辅助数据库。  
+ 下面的示例调用 **sp_wait_for_database_copy_sync** ，以确保将所有事务提交到主数据库 db0，并将其发送到目标服务器 ubfyu5ssyt 上的活动辅助数据库。  
   
 ```  
 USE db0;  
@@ -76,7 +77,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [dm_continuous_copy_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [异地复制动态管理视图（Dmv）和函数 &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [异地复制动态管理视图 &#40;Azure SQL Database (Dmv) 和功能&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
   
   

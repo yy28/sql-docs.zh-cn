@@ -1,4 +1,5 @@
 ---
+description: FLOOR (Transact-SQL)
 title: FLOOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dbce5ca4606e44b3c6e548e82d3266890c7c449
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f429b2cf8b581cf005f1ff88b4fa329432040cee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479666"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,10 +45,10 @@ FLOOR ( numeric_expression )
 
 ## <a name="arguments"></a>参数
  *numeric_expression*  
- 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式  。  
+ 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 numeric_expression  相同的类型。  
+ 返回与 numeric_expression** 相同的类型。  
   
 ## <a name="examples"></a>示例  
  以下示例显示正数、负数和货币值在 `FLOOR` 函数中的运用。  
@@ -56,7 +57,7 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 结果是与 numeric_expression数据类型相同的计算所得值的整数部分  。  
+ 结果是与 numeric_expression数据类型相同的计算所得值的整数部分**。  
   
 ```  
 ---------      ---------     -----------  
@@ -70,7 +71,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 结果是与 numeric_expression数据类型相同的计算所得值的整数部分  。  
+ 结果是与 numeric_expression数据类型相同的计算所得值的整数部分**。  
   
  ```
  -----   ---------    -----------  

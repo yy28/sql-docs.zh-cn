@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_waiting_tasks （Transact-sql） |Microsoft Docs
+description: sys.dm_os_waiting_tasks (Transact-SQL)
+title: sys. dm_os_waiting_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,33 +21,34 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1336e65374bace69e0b929d2571a62276bed45b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fedd70dd33cb49e98d243461bcbd51427db5eec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481929"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回有关正在等待某些资源的任务的等待队列的信息。 有关任务的详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+  返回有关正在等待某些资源的任务的等待队列的信息。 有关任务的详细信息，请参阅 [线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
    
 > [!NOTE]  
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_waiting_tasks**。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_waiting_tasks**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|等待任务的地址。|  
 |**session_id**|**smallint**|与任务关联的会话的 ID。|  
 |**exec_context_id**|**int**|与任务关联的执行上下文的 ID。|  
-|**wait_duration_ms**|**bigint**|此等待类型的总等待时间（毫秒）。 此时间包含**signal_wait_time**。|  
+|**wait_duration_ms**|**bigint**|此等待类型的总等待时间（毫秒）。 此时间包含 **signal_wait_time**。|  
 |**wait_type**|**nvarchar(60)**|等待类型的名称。|  
 |**resource_address**|**varbinary(8)**|任务等待的资源的地址。|  
 |**blocking_task_address**|**varbinary(8)**|当前持有此资源的任务。|  
 |**blocking_session_id**|**smallint**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
 |**blocking_exec_context_id**|**int**|正在阻塞的任务的执行上下文 ID。|  
-|**resource_description**|**nvarchar （3072）**|对正在占用的资源的说明。 有关详细信息，请参阅下面的列表。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**resource_description**|**nvarchar (3072) **|对正在占用的资源的说明。 有关详细信息，请参阅下面的列表。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="resource_description-column"></a>resource_description 列  
  resource_description 列具有以下可能值。  
@@ -77,9 +79,9 @@ ms.locfileid: "86010975"
   
  **锁资源所有者：**  
   
--   \<type-specific-description>id = lock \<lock-hex-address> mode = \<mode> associatedObjectId =\<associated-obj-id>  
+-   \<type-specific-description> id = lock \<lock-hex-address> mode = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<type-specific-description>可以是：**  
+     **\<type-specific-description> 可以是：**  
   
     -   对于数据库： databaselock subresource = \<databaselock-subresource> dbid =\<db-id>  
   
@@ -103,7 +105,7 @@ ms.locfileid: "86010975"
   
     -   对于 ALLOCATION_UNIT： allocunitlock hobtid = \<hobt-id> subresource = \<alloc-unit-subresource> dbid =\<db-id>  
   
-     **\<mode>可以是：**  
+     **\<mode> 可以是：**  
   
      Sch-S、Sch-M、S、U、X、IS、IU、IX、SIU、SIX、UIX、BU、RangeS-S、RangeS-U、RangeI-N、RangeI-S、RangeI-U、RangeI-X、RangeX-、RangeX-U、RangeX-X  
   
@@ -136,7 +138,7 @@ ms.locfileid: "86010975"
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
  
 ## <a name="example"></a>示例
 ### <a name="a-identify-tasks-from-blocked-sessions"></a>A. 识别阻止的会话中的任务。 

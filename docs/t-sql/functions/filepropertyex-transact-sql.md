@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTYEX (Transact-SQL)
 title: FILEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.date: 07/23/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - file names [SQL Server], FILEPROPERTYEX
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d0eb763436bc4dd26815879c33c9a8461d9a38d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fca1a10c6e0fce286854b96ac673e602744cdb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479658"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -40,11 +41,11 @@ FILEPROPERTYEX ( name , property )
 ```  
   
 ## <a name="arguments"></a>参数  
- name   
- 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)   。  
+ *name*  
+ 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)******。  
   
  *property*  
- 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一   。  
+ 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一******。  
 
 
   
@@ -59,7 +60,7 @@ FILEPROPERTYEX ( name , property )
  **sql_variant**  
   
 ## <a name="remarks"></a>备注  
- file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应     。  
+ file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应**************。  
   
 ## <a name="examples"></a>示例  
  以下示例返回数据库文件的设置：

@@ -1,4 +1,5 @@
 ---
+description: CurveToLineWithTolerance（geography 数据类型）
 title: CurveToLineWithTolerance（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3de1674efb17e3826cb1e999922016a0ed55c924
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d4852ff1e43bb561cffa7d001df33793e5f00e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479382"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-返回包含圆弧线段的 geography 实例的多边形近似值  。  
+返回包含圆弧线段的 geography 实例的多边形近似值****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +40,16 @@ ms.locfileid: "86555442"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-tolerance   
-一个 double 表达式，它定义原始圆弧线段与其线性近似值之间的最大误差  。  
+tolerance  
+一个 double 表达式，它定义原始圆弧线段与其线性近似值之间的最大误差****。  
   
 _relative_  
-一个 bool 表达式，它指示是否使用偏差的相对最大值  。 如果 relative 设置为 false (0)，则为可能具有线性近似的偏差设置绝对最大值。 如果 relative 设置为 true (1)，则按 tolerance 参数与空间对象边界框直径的乘积来计算容差。  
+一个 bool 表达式，它指示是否使用偏差的相对最大值****。 如果 relative 设置为 false (0)，则为可能具有线性近似的偏差设置绝对最大值。 如果 relative 设置为 true (1)，则按 tolerance 参数与空间对象边界框直径的乘积来计算容差。  
   
 ## <a name="return-types"></a>返回类型  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
-CLR 返回类型：SqlGeography   
+CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>例外  
 将 tolerance 设置为 <= 0 会引发 **ArgumentOutOfRange** 异常。  
@@ -56,7 +57,7 @@ CLR 返回类型：SqlGeography
 ## <a name="remarks"></a>备注  
 此方法允许为生成的 **LineString** 指定公差大小。  
   
-CurveToLineWithTolerance 方法将为 CircularString 或 CompoundCurve 实例返回 LineString 实例，为 CurvePolygon 实例返回 Polygon 实例       。  
+CurveToLineWithTolerance 方法将为 CircularString 或 CompoundCurve 实例返回 LineString 实例，为 CurvePolygon 实例返回 Polygon 实例************************。  
   
 ## <a name="examples"></a>示例  
   
@@ -88,7 +89,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 对于调用 CurvePolygon 实例，将 relative 设置为 true  
-以下示例使用 `CurvePolygon` 实例调用 `CurveToLineWithTolerance()` 并将 relative 设置为 true  ：  
+以下示例使用 `CurvePolygon` 实例调用 `CurveToLineWithTolerance()` 并将 relative 设置为 true**：  
   
 ```
 DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

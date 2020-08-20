@@ -1,4 +1,5 @@
 ---
+description: STIntersection（geometry 数据类型）
 title: STIntersection（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bbb66fd5a2436b8852172db17612330e4a1ccf07
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6365d94822d8d291951de3e59c7c71fbed487163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479247"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,11 +44,11 @@ ms.locfileid: "86555624"
  将与调用 `STIntersection()` 的实例进行比较的另一个 **geometry** 实例，进行比较的目的是确定这两个实例是否相交。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 **geometry** 实例的空间引用 ID (SRID) 不匹配，则 `STIntersection()` 始终返回 null。 只有在输入实例包含它们时，结果才可能包含圆弧段。  
   
 ## <a name="examples"></a>示例  

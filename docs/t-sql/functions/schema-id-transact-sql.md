@@ -1,4 +1,5 @@
 ---
+description: SCHEMA_ID (Transact-SQL)
 title: SCHEMA_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f609a350f179d1a552b5067ac3a2979de3006c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c962d46e2c8596ab5082af139fad136fe03ce4cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479583"
 ---
 # <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +49,12 @@ SCHEMA_ID ( [ schema_name ] )
   
 |术语|定义|  
 |----------|----------------|  
-|*schema_name*|是架构的名称。 schema_name 为 sysname   。 如果未指定 schema_name，则 SCHEMA_ID 将返回调用方的默认架构的 ID  。|  
+|*schema_name*|是架构的名称。 schema_name 为 sysname******。 如果未指定 schema_name，则 SCHEMA_ID 将返回调用方的默认架构的 ID**。|  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
- 如果 schema_name 不是有效架构，将返回 NULL  。  
+ 如果 schema_name 不是有效架构，将返回 NULL**。  
   
 ## <a name="remarks"></a>备注  
  SCHEMA_ID 将返回系统架构的 ID 和用户定义架构的 ID。 SCHEMA_ID 可以在选择列表、WHERE 子句和任何允许使用表达式的地方调用。  

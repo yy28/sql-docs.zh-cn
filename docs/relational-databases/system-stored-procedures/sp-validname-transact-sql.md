@@ -1,5 +1,6 @@
 ---
-title: sp_validname （Transact-sql） |Microsoft Docs
+description: sp_validname (Transact-SQL)
+title: sp_validname (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480941"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  检查有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符名称。 所有非二进制和非零数据（包括可使用**nchar**、 **nvarchar**或**Ntext**数据类型存储的 Unicode 数据）都作为标识符名称的有效字符接受。  
+  检查有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符名称。 所有非二进制和非零数据（包括可使用 **nchar**、 **nvarchar**或 **Ntext** 数据类型存储的 Unicode 数据）都作为标识符名称的有效字符接受。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,10 +41,10 @@ sp_validname [@name =] 'name'
      [, [@raise_error =] raise_error]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @name = ] 'name'`要检查其有效性的[标识符](../../relational-databases/databases/database-identifiers.md)的名称。 *名称*为**sysname**，无默认值。 *名称*不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
+## <a name="arguments"></a>参数  
+`[ @name = ] 'name'` 要检查其有效性的 [标识符](../../relational-databases/databases/database-identifiers.md) 的名称。 *名称* 为 **sysname**，无默认值。 *名称* 不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
   
-`[ @raise_error = ] raise_error`指定是否引发错误。 *raise_error*为**bit**，默认值为1。 这表示将显示错误。 0 表示不会显示错误消息。  
+`[ @raise_error = ] raise_error` 指定是否引发错误。 *raise_error* 为 **bit**，默认值为1。 这表示将显示错误。 0 表示不会显示错误消息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

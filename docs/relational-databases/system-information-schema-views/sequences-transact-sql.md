@@ -1,5 +1,6 @@
 ---
-title: 序列（Transact-sql） |Microsoft Docs
+description: Transact-sql)  (序列
+title: Transact-sql)  (序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2019
 ms.prod: sql
@@ -17,27 +18,27 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ad17bb63dc60accb220799d62a81e625f20d5c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db4fb9d06a6e2197b16ee7c2eee99029ae09d2a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481700"
 ---
-# <a name="sequences-transact-sql"></a>序列（Transact-sql）
+# <a name="sequences-transact-sql"></a>Transact-sql)  (序列
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 为当前数据库中当前用户可访问的每个序列返回一行。
 
-若要从这些视图中检索信息，请指定**INFORMATION_SCHEMA**_view_name_的完全限定名称。
+若要从这些视图中检索信息，请指定 **INFORMATION_SCHEMA**_view_name_的完全限定名称。
 
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|
 |**SEQUENCE_CATALOG**|**nvarchar(128)**|序列限定符|
-|**SEQUENCE_SCHEMA**|**nvarchar （** 128） * *|包含序列的架构的名称|
+|**SEQUENCE_SCHEMA**|**nvarchar (** 128) * *|包含序列的架构的名称|
 |**SEQUENCE_NAME**|**nvarchar(128)**|序列名称|
-|**DATA_TYPE**|**nvarchar （** 128 **）**|序列数据类型|
+|**DATA_TYPE**|**nvarchar (** 128 **) **|序列数据类型|
 |**NUMERIC_PRECISION**|**tinyint**|序列的精度|
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，返回 NULL。|
 |**NUMERIC_SCALE**|**int**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|
@@ -50,7 +51,7 @@ ms.locfileid: "85716618"
 |**DECLARED_DATA_PRECISION**|**int**|用户定义数据类型的精度。|
 |**DECLARED_NUJMERIC_SCALE**|**int**|用户定义数据类型的数值小数位数。|
 
-**示例**下面的示例返回有关测试数据库中的架构的信息：
+**示例** 下面的示例返回有关测试数据库中的架构的信息：
 
 ```sql
 SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
@@ -58,5 +59,5 @@ SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 
 ## <a name="see-also"></a>另请参阅
 
-- [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [&#40;Transact-sql&#41;的信息架构视图 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [sys.sequences (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

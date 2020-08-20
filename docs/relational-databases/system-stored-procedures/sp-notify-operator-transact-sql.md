@@ -1,5 +1,6 @@
 ---
-title: sp_notify_operator （Transact-sql） |Microsoft Docs
+description: sp_notify_operator (Transact-SQL)
+title: sp_notify_operator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07f18ad85f759340d43825ce8c6a95c11696d2f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6a1c623ec7172a7cab48c49491619184d618ebf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481092"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,24 +48,24 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_name = ] 'profilename'`用于发送消息的数据库邮件配置文件的名称。 *profilename*为**nvarchar （128）**。 如果未指定*profilename* ，则使用默认数据库邮件配置文件。  
+`[ @profile_name = ] 'profilename'` 用于发送消息的数据库邮件配置文件的名称。 *profilename* 是 **nvarchar (128) **。 如果未指定 *profilename* ，则使用默认数据库邮件配置文件。  
   
-`[ @id = ] id`要向其发送消息的操作员的标识符。 *id*为**int**，默认值为 NULL。 必须指定*id*或*名称*之一。  
+`[ @id = ] id` 要向其发送消息的操作员的标识符。 *id* 为 **int**，默认值为 NULL。 必须指定 *id* 或 *名称* 之一。  
   
-`[ @name = ] 'name'`要向其发送消息的操作员的名称。 *名称*为**nvarchar （128）**，默认值为 NULL。 必须指定*id*或*名称*之一。  
+`[ @name = ] 'name'` 要向其发送消息的操作员的名称。 *name* 为 **nvarchar (128) **，默认值为 NULL。 必须指定 *id* 或 *名称* 之一。  
   
 > **注意：** 必须先为操作员定义电子邮件地址，然后才能接收消息。  
   
-`[ @subject = ] 'subject'`电子邮件的主题。 *subject*为**nvarchar （256）** ，无默认值。  
+`[ @subject = ] 'subject'` 电子邮件的主题。 *subject* 为 **nvarchar (256) ** ，无默认值。  
   
-`[ @body = ] 'message'`电子邮件的正文。 *message*为**nvarchar （max）** ，无默认值。  
+`[ @body = ] 'message'` 电子邮件的正文。 *消息* 为 **nvarchar (max) ** ，无默认值。  
   
-`[ @file_attachments = ] 'attachment'`要附加到电子邮件的文件的名称。 *附件*的值为**nvarchar （512）**，无默认值。  
+`[ @file_attachments = ] 'attachment'` 要附加到电子邮件的文件的名称。 *附件* 是 **nvarchar (512) **，无默认值。  
   
-`[ @mail_database = ] 'mail_host_database'`指定邮件主机数据库的名称。 *mail_host_database*为**nvarchar （128）**。 如果未指定*mail_host_database* ，则默认情况下使用**msdb**数据库。  
+`[ @mail_database = ] 'mail_host_database'` 指定邮件主机数据库的名称。 *mail_host_database* ** (128) 为 nvarchar **。 如果未指定 *mail_host_database* ，则默认情况下使用 **msdb** 数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  将指定消息发送到指定操作员的电子邮件地址。 如果操作员没有配置电子邮件地址，则返回一个错误。  
@@ -72,7 +73,7 @@ sp_notify_operator
  必须先配置数据库邮件和邮件主机数据库才能将通知发送给操作员。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

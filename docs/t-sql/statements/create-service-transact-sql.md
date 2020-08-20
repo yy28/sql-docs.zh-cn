@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVICE (Transact-SQL)
 title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5fb4e378dcba2a125c569d8fa96a1d279e88d724
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9ceb3cfbae19670789d7dc8776805b14b463a059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478900"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,22 +49,22 @@ CREATE SERVICE service_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- service_name   
- 要创建的服务的名称。 新服务在当前数据库中创建，由 AUTHORIZATION 子句中指定的主体数据库所有。 不能指定服务器、数据库和架构名称。 service_name 必须是有效的 sysname   。  
+ *service_name*  
+ 要创建的服务的名称。 新服务在当前数据库中创建，由 AUTHORIZATION 子句中指定的主体数据库所有。 不能指定服务器、数据库和架构名称。 service_name 必须是有效的 sysname******。  
   
 > [!NOTE]  
-> 不要创建将关键字 ANY 用于 service_name 的服务  。 在 `ANY` 中为服务名称指定 `CREATE BROKER PRIORITY` 时，优先级被视为针对所有服务。 此情况不限于名称为 ANY 的服务。  
+> 不要创建将关键字 ANY 用于 service_name 的服务**。 在 `CREATE BROKER PRIORITY` 中为服务名称指定 `ANY` 时，优先级被视为针对所有服务。 此情况不限于名称为 ANY 的服务。  
   
  AUTHORIZATION owner_name   
- 将服务所有者设置为指定的数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可能为任意有效用户或角色的名称    。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称  。  
+ 将服务所有者设置为指定的数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可能为任意有效用户或角色的名称**********。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称  。  
   
- ON QUEUE [ schema_name.   ] queue_name   
- 指定接收服务消息的队列。 该队列必须与服务在同一数据库中。 如果未提供 schema_name，则架构为执行该语句的用户的默认架构  。  
+ ON QUEUE [ schema_name.__**** ] queue_name**  
+ 指定接收服务消息的队列。 该队列必须与服务在同一数据库中。 如果未提供 schema_name，则架构为执行该语句的用户的默认架构**。  
   
- contract_name   
+ contract_name  
  指定针对此服务的约定。 服务程序使用指定的约定来启动与此服务的会话。 如果未指定约定，则该服务可能仅启动会话。  
   
- [DEFAULT]    
+ [DEFAULT]   
  指定该服务可作为遵循 DEFAULT 约定的会话的目标。 在此子句的上下文中，DEFAULT 不是关键字，必须作为标识符进行分隔。 DEFAULT 约定允许会话的双方发送 DEFAULT 类型的消息。 DEFAULT 消息类型使用 NONE 验证。  
   
 ## <a name="remarks"></a>备注  
@@ -76,9 +77,9 @@ CREATE SERVICE service_name
 ## <a name="permissions"></a>权限  
  默认情况下，`db_ddladmin` 或 `db_owner` 固定数据库角色和 `sysadmin` 固定服务器角色的成员拥有创建服务的权限。 执行 `CREATE SERVICE` 语句的用户必须对队列和指定的所有约定具有 `REFERENCES` 权限。  
   
- 默认情况下，服务的所有者、`REFERENCES` 或 `db_ddladmin` 固定数据库角色的成员以及 `db_owner` 固定服务器角色的成员拥有该服务的 `sysadmin` 权限。 默认情况下，服务所有者、`SEND` 固定数据库角色的成员以及 `db_owner` 固定服务器角色的成员拥有服务的 `sysadmin` 权限。  
+ 默认情况下，服务的所有者、`db_ddladmin` 或 `db_owner` 固定数据库角色的成员以及 `sysadmin` 固定服务器角色的成员拥有该服务的 `REFERENCES` 权限。 默认情况下，服务所有者、`db_owner` 固定数据库角色的成员以及 `sysadmin` 固定服务器角色的成员拥有服务的 `SEND` 权限。  
   
- 服务不能是临时对象。 允许服务名称以  **开头，但仅限于永久对象#** 。  
+ 服务不能是临时对象。 允许服务名称以 # 开头，但仅限于永久对象。  
   
 ## <a name="examples"></a>示例  
   

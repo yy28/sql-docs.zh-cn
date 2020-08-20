@@ -1,4 +1,5 @@
 ---
+description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2296050c41b774e2180532c79b816d112c6e2a7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479169"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -46,22 +47,22 @@ ALTER COLUMN ENCRYPTION KEY key_name
 ```  
 
 ## <a name="arguments"></a>参数
- key_name   
+ key_name  
  要更改的列加密密钥。  
   
- column_master_key_name   
+ column_master_key_name**  
  指定用于对列加密密钥 (CEK) 进行加密的列主密钥 (CMK) 的名称。  
   
- algorithm_name   
- 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP  。 删除列加密密钥值时，此参数无效。  
+ algorithm_name**  
+ 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP****。 删除列加密密钥值时，此参数无效。  
   
- varbinary_literal   
+ varbinary_literal**  
  使用指定的主加密密钥加密的 CEK BLOB。 删除列加密密钥值时，此参数无效。  
   
 > [!WARNING]  
 >  切勿在此语句中传递纯文本 CEK 值。 这样做不利于发挥此功能的优点。  
-  
-## <a name="remarks"></a>备注  
+
+## <a name="remarks"></a>备注
 通常情况下，创建列加密密钥时，密钥只具有一个加密值。 列主密钥需要进行轮换（需要将当前的列主密钥替换为新的列主密钥）时，可以为列加密密钥添加一个新值，并使用新的列主密钥进行加密。 此工作流可以确保客户端应用程序能访问使用列加密密钥加密的数据，同时客户端应用程序将能使用新的列主密钥。 通过 Always Encrypted 功能，无权访问新主密钥的客户端应用程序中的驱动程序将能够通过列加密密钥值（使用旧的列主密钥进行加密）来访问敏感数据。 Always Encrypted 支持的加密算法要求纯文本值具有 256 位。 
  
 建议使用诸如 SQL Server Management Studio (SSMS) 或 PowerShell 等工具来轮换列主密钥。 请参阅[使用 SQL Server Management Studio 轮换 Always Encrypted 密钥](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 轮换 Always Encrypted 密钥](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)。
@@ -76,7 +77,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 可使用 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看有关列加密密钥的相关信息。  
   
 ## <a name="permissions"></a>权限  
- 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限  。  
+ 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限****。  
   
 ## <a name="examples"></a>示例  
   

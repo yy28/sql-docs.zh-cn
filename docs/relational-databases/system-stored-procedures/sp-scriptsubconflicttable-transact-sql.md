@@ -1,5 +1,6 @@
 ---
-title: sp_scriptsubconflicttable （Transact-sql） |Microsoft Docs
+description: sp_scriptsubconflicttable (Transact-SQL)
+title: sp_scriptsubconflicttable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93656ff6bec2acc3c3f6f7ee189b1c45db75a7d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1c6d2a6ea66f0e2d937e1564d4abed36bd4af44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481047"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`包含项目的发布的名称。 名称在数据库中必须是唯一的。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 包含项目的发布的名称。 名称在数据库中必须是唯一的。 *发布* 为 **sysname**，无默认值。  
   
-`[ @article = ] 'article'`订阅项目的名称。 *项目*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 订阅项目的名称。 *项目* 是 **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
@@ -51,10 +52,10 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |**cmdtext**|**nvarchar(4000)**|为排队订阅项目返回用于在订阅服务器上创建冲突表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 该脚本在订阅服务器的订阅数据库上执行。|  
   
 ## <a name="remarks"></a>备注  
- **sp_scriptsubconflicttable**用于具有手动应用初始快照的订阅的订阅服务器。 冲突表为订阅服务器上的可选表。  
+ **sp_scriptsubconflicttable** 用于具有手动应用初始快照的订阅的订阅服务器。 冲突表为订阅服务器上的可选表。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_scriptsubconflicttable**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_scriptsubconflicttable**。  
   
 ## <a name="see-also"></a>另请参阅  
  [排队更新冲突的检测和解决](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   

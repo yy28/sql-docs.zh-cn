@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitoraddmonitoring （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitoraddmonitoring (Transact-SQL)
+title: sp_dbmmonitoraddmonitoring (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 268226d28b134ffe13a5acfca3baf47bde655baf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8eff9a189f77624f962475b38b07ec44516f1086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481346"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  如果将更新持续时间设置得太低，客户端的响应时间可能会增加。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -55,10 +56,10 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>备注  
  此过程要求允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器实例上运行，为了运行数据库镜像监视器作业，必须运行该代理。  
   
- 如果从开始数据库镜像 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，则**sp_dbmmonitoraddmonitoring**过程会自动运行。 如果使用 ALTER DATABASE 语句手动开始镜像，若要监视服务器实例上的镜像数据库，则必须手动运行**sp_dbmmonitoraddmonitoring** 。  
+ 如果从开始数据库镜像 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，则 **sp_dbmmonitoraddmonitoring** 过程会自动运行。 如果使用 ALTER DATABASE 语句手动开始镜像，若要监视服务器实例上的镜像数据库，则必须手动运行 **sp_dbmmonitoraddmonitoring** 。  
   
 > [!NOTE]  
->  如果在设置数据库镜像之前运行**sp_dbmmonitoraddmonitoring** ，则监视作业将运行，但不会更新存储数据库镜像监视器历史记录的状态表。  
+>  如果在设置数据库镜像之前运行 **sp_dbmmonitoraddmonitoring** ，则监视作业将运行，但不会更新存储数据库镜像监视器历史记录的状态表。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
@@ -71,7 +72,7 @@ EXEC sp_dbmmonitoraddmonitoring 3;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [监视数据库镜像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   

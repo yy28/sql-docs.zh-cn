@@ -1,4 +1,5 @@
 ---
+description: ALTER INDEX（选择性 XML 索引）
 title: ALTER INDEX（选择性 XML 索引）| Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11aa4f80e391644c796280e2d236c710e70bee2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85761867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479068"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX（选择性 XML 索引）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +138,9 @@ identifier
  [WITH ( \<index_options> )]   
  使用不包含 FOR 子句的 ALTER INDEX 时，只能指定 \<index_options>。 在您使用 ALTER INDEX 添加或删除索引中的路径时，索引选项将不是有效的参数。 有关索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
   
 > [!IMPORTANT]  
 >  在您运行 ALTER INDEX 语句时，始终重新生成选择性 XML 索引。 请务必考虑此过程对服务器资源的影响。  

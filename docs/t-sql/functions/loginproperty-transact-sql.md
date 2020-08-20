@@ -1,4 +1,5 @@
 ---
+description: LOGINPROPERTY (Transact-SQL)
 title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 20b67d4b1913cd896d3c4473b0c0f161b833154f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c3014a8d57602dc80b7faeec26dbc85d43f91c44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479613"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,18 +57,18 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- login_name   
+ login_name  
  将返回登录属性状态的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- propertyname   
- 一个表达式，包含要为登录名返回的属性信息。 propertyname 可以是下列值之一  。  
+ propertyname  
+ 一个表达式，包含要为登录名返回的属性信息。 propertyname 可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**BadPasswordCount**|返回尝试以不正确密码连续登录的次数。|  
 |**BadPasswordTime**|返回上次尝试以不正确密码登录的时间。|  
 |**DaysUntilExpiration**|返回密码过期前的天数。|  
-|**DefaultDatabase**|返回存储在元数据中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的默认数据库；如果未指定数据库，则返回 master 数据库  。 为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的用户（例如经过身份验证的 Windows 用户）返回 NULL。|  
+|**DefaultDatabase**|返回存储在元数据中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的默认数据库；如果未指定数据库，则返回 master 数据库****。 为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的用户（例如经过身份验证的 Windows 用户）返回 NULL。|  
 |**DefaultLanguage**|返回存储在元数据中的登录默认语言。 为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的用户（例如经过身份验证的 Windows 用户）返回 NULL。|  
 |**HistoryLength**|返回使用密码策略强制机制跟踪登录名的密码数。 如果未强制执行密码策略，则为 0。 恢复密码策略实施将从 1 重新开始。|  
 |**IsExpired**|指示登录名是否已过期。|  
@@ -81,21 +82,21 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>返回  
  数据类型取决于所请求的值。  
   
- IsLocked、IsExpired 和 IsMustChange 的类型为 int     。  
+ IsLocked、IsExpired 和 IsMustChange 的类型为 int****************。  
   
 -   1（如果登录名处于指定状态）。  
   
 -   0（如果登录名不处于指定状态）。  
   
- BadPasswordCount 和 HistoryLength 的类型为 int    。  
+ BadPasswordCount 和 HistoryLength 的类型为 int************。  
   
- BadPasswordTime、LockoutTime、PasswordLastSetTime 的类型为 datetime     。  
+ BadPasswordTime、LockoutTime、PasswordLastSetTime 的类型为 datetime****************。  
   
- PasswordHash 的类型为 varbinary   。  
+ PasswordHash 的类型为 varbinary********。  
   
  NULL（如果登录名不是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名）。  
   
- DaysUntilExpiration 的数据类型为 int   。  
+ DaysUntilExpiration 的数据类型为 int********。  
   
 -   如果登录名已过期或者它将在查询的当日过期，则为 0。  
   
@@ -103,7 +104,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   如果登录名的 CHECK_POLICY 或 CHECK_EXPIRATION 设置为 OFF，或者操作系统不支持该密码策略，则为 NULL。  
   
- PasswordHashAlgorithm 的数据类型为 int  。  
+ PasswordHashAlgorithm 的数据类型为 int****。  
   
 -   0（如果是 SQL7.0 哈希）  
   
@@ -114,7 +115,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 -   NULL（如果登录名不是有效的 SQL Server 登录名）  
   
 ## <a name="remarks"></a>备注  
- 此内置函数返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的密码策略设置的信息。 属性名称不区分大小写，因此 BadPasswordCount 和 badpasswordcount 等属性名称是等效的   。 PasswordHash、PasswordHashAlgorithm 和 PasswordLastSetTime 属性值在所有支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置中都可用，但仅当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 上运行并且同时启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时，其他属性才可用。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ 此内置函数返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的密码策略设置的信息。 属性名称不区分大小写，因此 BadPasswordCount 和 badpasswordcount 等属性名称是等效的********。 PasswordHash、PasswordHashAlgorithm 和 PasswordLastSetTime 属性值在所有支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置中都可用，但仅当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 上运行并且同时启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时，其他属性才可用********。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
 ## <a name="permissions"></a>权限  
  需要对登录名具有 VIEW 权限。 请求密码哈希时，还需要 CONTROL SERVER 权限。  

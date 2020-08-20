@@ -1,4 +1,5 @@
 ---
+description: ALTER CREDENTIAL (Transact-SQL)
 title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -20,12 +21,12 @@ ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e30cc37a64f21bd4cae48071e94a98f18160e171
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 8c251486ae982abda531bd443db95c57a1b99900
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479220"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86301964"
   更改凭据的属性。  
 
 > [!IMPORTANT]
-> “应执行操作”为最佳做法；“必须执行操作”用于完成任务![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标")[Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> “应执行操作”为最佳做法；“必须执行操作”用于完成任务![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,17 +51,17 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  指定将要更改的凭据的名称。  
   
- IDENTITY ='identity_name' ****  
+ IDENTITY ='identity_name'**********  
  指定从服务器外部进行连接时要使用的帐户名称。  
   
- SECRET ='secret' ****  
+ SECRET ='secret'**********  
  指定发送身份验证所需的机密内容。 *secret* 是可选项。
   
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持 Azure Key Vault 和共享访问签名标识。 不支持 Windows 用户标识。
   
 ## <a name="remarks"></a>备注  
- 当凭据发生更改时，identity_name 和 secret 的值都将重置   。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
+ 当凭据发生更改时，identity_name 和 secret 的值都将重置****。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
   
  使用服务主密钥对密码进行加密。 如果重新生成服务主密钥，则需要使用新服务主密钥对该密码重新加密。  
   

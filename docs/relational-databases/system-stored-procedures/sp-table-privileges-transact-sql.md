@@ -1,5 +1,6 @@
 ---
-title: sp_table_privileges （Transact-sql） |Microsoft Docs
+description: sp_table_privileges (Transact-SQL)
+title: sp_table_privileges (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3024de2e45f8d4fe6b7a8521f24e9fe44424d5f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9eb21300720f43d68dc00953e5b760489596145d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481011"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
@@ -42,20 +43,20 @@ sp_table_privileges [ @table_name = ] 'table_name'
      [ , [ @fUsePattern = ] 'fUsePattern' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @table_name =] "*table_name*"  
- 用来返回目录信息的表。 *table_name*为**nvarchar （** 384 **）**，无默认值。 支持通配符模式匹配。  
+ 用来返回目录信息的表。 *table_name* 为 **nvarchar (** 384 **) **，无默认值。 支持通配符模式匹配。  
   
  [ @table_owner =] "*table_owner*"  
- 用于返回目录信息的表的表所有者。 *table_owner*为**nvarchar （** 384 **）**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
+ 用于返回目录信息的表的表所有者。 *table_owner*为 **nvarchar (** 384 **) **，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
   
- 如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定*owner* ，并且当前用户没有具有指定*名称*的表，则此过程将查找由数据库所有者拥有指定*table_name*的表。 如果存在，则返回该表的列。  
+ 如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定 *owner* ，并且当前用户没有具有指定 *名称*的表，则此过程将查找由数据库所有者拥有指定 *table_name* 的表。 如果存在，则返回该表的列。  
   
  [ @table_qualifier =] "*table_qualifier*"  
- 表限定符的名称。 *table_qualifier*的默认值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（*qualifier.owner.name*）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 表限定符的名称。 *table_qualifier* 的默认值为 **sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*) 。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [ @fUsePattern =] "*fUsePattern*"  
- 确定下划线 (_)、百分号 (%) 和方括号（[ 或 ]）是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*的值为**bit**，默认值为1。  
+ 确定下划线 (_)、百分号 (%) 和方括号（[ 或 ]）是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern* 的值为 **bit**，默认值为1。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -89,7 +90,7 @@ EXEC sp_table_privileges
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目录存储过程 ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

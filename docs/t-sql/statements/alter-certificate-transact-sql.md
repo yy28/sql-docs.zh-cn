@@ -1,4 +1,5 @@
 ---
+description: ALTER CERTIFICATE (Transact-SQL)
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -23,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: e983b85c4017ab282988142010770cc3f1e16378
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 20e92d37c2476663bfe203a5b83a1ca7b8a0f536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479188"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -80,35 +81,35 @@ ALTER CERTIFICATE certificate_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- certificate_name   
+ certificate_name  
  数据库中标识证书的唯一名称。  
   
- REMOVE PRIVATE KEY  
+ REMOVE PRIVATE KEY   
  指定私钥不应再保留在数据库内。  
   
  WITH PRIVATE KEY 指定将证书的私钥加载到 SQL Server 中。
 
- FILE ='path_to_private_key  '  
+ FILE ='path_to_private_key'  
  指定私钥的完整路径（包括文件名）。 此参数可以是本地路径或网络位置的 UNC 路径。 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问此文件。 使用此选项时，请确保服务帐户有权访问指定的文件。
  
  如果仅指定文件名，则该文件将保存在实例的默认用户数据文件夹中。 此文件夹可能是（或可能不是）[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
   
- BINARY = private_key_bits   
+ BINARY = private_key_bits**  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  指定为二进制常量的专有键位。 这些位可采用加密形式。 如果加密，则用户必须提供解密密码。 不会对此密码执行密码策略检查。 私钥位应该采用 PVK 文件格式。  
   
- DECRYPTION BY PASSWORD = current_password   
+ DECRYPTION BY PASSWORD = current_password**  
  指定解密私钥所需的密码。  
   
- ENCRYPTION BY PASSWORD = new_password   
- 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ ENCRYPTION BY PASSWORD = new_password**  
+ 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求**。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
- ACTIVE FOR BEGIN_DIALOG  **{ ON | OFF }=**  
+ ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。  
   
 ## <a name="remarks"></a>备注  
- 私钥必须与 certificate_name 指定的公钥相对应  。  
+ 私钥必须与 certificate_name 指定的公钥相对应**。  
   
  如果文件中的密码受空密码保护，则可省略 DECRYPTION BY PASSWORD 子句。  
   

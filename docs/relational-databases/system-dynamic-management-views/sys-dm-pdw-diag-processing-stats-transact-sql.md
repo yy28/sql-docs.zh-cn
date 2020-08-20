@@ -1,5 +1,6 @@
 ---
-title: sys. dm_pdw_diag_processing_stats （Transact-sql） |Microsoft Docs
+description: 'sys. dm_pdw_diag_processing_stats (Transact-sql) '
+title: sys. dm_pdw_diag_processing_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,14 +13,14 @@ ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a765e591e3b55bb4be2e2b6d7431873702910f6f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: e326d790423127e5ac9f9bda211563a182023588
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481826"
 ---
-# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats （Transact-sql）
+# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   显示与可以合并到管理员定义的诊断会话中的所有内部诊断事件相关的信息。 查询此视图，以了解诊断所用的统计信息，以及驱动所有其他 Dmv 总体的事件子系统。 每个节点上的每个进程都有一组队列。  

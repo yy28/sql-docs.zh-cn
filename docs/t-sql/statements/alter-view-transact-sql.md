@@ -1,4 +1,5 @@
 ---
+description: ALTER VIEW (Transact-SQL)
 title: ALTER VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b12802ee2d4c8e9263b1a8c5ca284d134e56d59
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fe90ae1099c350c4e323a7229ca980d94f0eac24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479059"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ AS <select_statement>
  *schema_name*  
  视图所属架构的名称。  
   
- view_name   
+ view_name  
  要更改的视图。  
   
  *column*  
@@ -75,7 +76,7 @@ AS <select_statement>
 >  只有在 ALTER VIEW 执行前后列名称不变的情况下，列的权限才会保持不变。  
   
 > [!NOTE]  
->  在视图的各列中，列名的权限在 CREATE VIEW 或 ALTER VIEW 语句间均适用，与基础数据源无关。 例如，如果在 CREATE VIEW 语句中授予对 SalesOrderID 列的权限，则 ALTER VIEW 语句可以重命名 SalesOrderID 列（例如，重命名为 OrderRef），并且仍然具有与使用 SalesOrderID 的视图关联的权限     。  
+>  在视图的各列中，列名的权限在 CREATE VIEW 或 ALTER VIEW 语句间均适用，与基础数据源无关。 例如，如果在 CREATE VIEW 语句中授予对 SalesOrderID 列的权限，则 ALTER VIEW 语句可以重命名 SalesOrderID 列（例如，重命名为 OrderRef），并且仍然具有与使用 SalesOrderID 的视图关联的权限****************。  
   
  ENCRYPTION  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -92,16 +93,16 @@ AS <select_statement>
   
  对于使用 VIEW_METADATA 创建的视图，浏览模式的元数据在描述结果集内视图中的列时，将返回视图名，而不返回基表名。  
   
- 使用 WITH VIEW_METADATA 创建视图时，如果该视图具有 INSERT 或 UPDATE INSTEAD OF 触发器，则视图的所有列（timestamp 列除外）都可更新  。 有关详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“注释”部分。  
+ 使用 WITH VIEW_METADATA 创建视图时，如果该视图具有 INSERT 或 UPDATE INSTEAD OF 触发器，则视图的所有列（timestamp 列除外）都可更新****。 有关详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“注释”部分。  
   
  AS  
  视图要执行的操作。  
   
- select_statement   
+ select_statement  
  定义视图的 SELECT 语句。  
   
  WITH CHECK OPTION  
- 要求对该视图执行的所有数据修改语句都必须符合 select_statement 中所设置的条件  。  
+ 要求对该视图执行的所有数据修改语句都必须符合 select_statement 中所设置的条件**。  
   
 ## <a name="remarks"></a>备注  
  有关 ALTER VIEW 的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“备注”部分。  

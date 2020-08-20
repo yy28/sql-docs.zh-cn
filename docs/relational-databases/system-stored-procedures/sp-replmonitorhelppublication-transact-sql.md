@@ -1,5 +1,6 @@
 ---
-title: sp_replmonitorhelppublication （Transact-sql） |Microsoft Docs
+description: sp_replmonitorhelppublication (Transact-SQL)
+title: sp_replmonitorhelppublication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6468bcb1c97b6f995afadfe422e11dec98463620
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ab914a76ba3aa4a5205631727242d3983cef68d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481122"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,14 +41,14 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
     [ , [ @refreshpolicy = ] refreshpolicy ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`是要监视其状态的发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 如果**为 null**，则将返回使用分发服务器的所有发布服务器的信息。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 是要监视其状态的发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。 如果 **为 null**，则将返回使用分发服务器的所有发布服务器的信息。  
   
-`[ @publisher_db = ] 'publisher_db'`已发布数据库的名称。 *publisher_db*的值为**sysname**，默认值为 NULL。 如果为 NULL，则返回发布服务器上所有已发布数据库的信息。  
+`[ @publisher_db = ] 'publisher_db'` 已发布数据库的名称。 *publisher_db* 的值为 **sysname**，默认值为 NULL。 如果为 NULL，则返回发布服务器上所有已发布数据库的信息。  
   
-`[ @publication = ] 'publication'`正在监视的发布的名称。 *发布*为**sysname**，默认值为 NULL。  
+`[ @publication = ] 'publication'` 正在监视的发布的名称。 *发布* 为 **sysname**，默认值为 NULL。  
   
-`[ @publication_type = ] publication_type`如果发布的类型为。 *publication_type*为**int**，可以是下列值之一。  
+`[ @publication_type = ] publication_type` 如果发布的类型为。 *publication_type* 为 **int**，可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -56,7 +57,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|合并发布。|  
 |NULL（默认值）|复制尝试确定发布类型。|  
   
-`[ @refreshpolicy = ] refreshpolicy`仅限内部使用。  
+`[ @refreshpolicy = ] refreshpolicy` 仅限内部使用。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -83,17 +84,17 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**worst_runspeedPerf**|**int**|合并发布的最长同步时间。|  
 |**best_runspeedPerf**|**int**|合并发布的最短同步时间。|  
 |**average_runspeedPerf**|**int**|合并发布的平均同步时间。|  
-|**retention_period_unit**|**int**|用于表示*保持期*的单位。|  
+|**retention_period_unit**|**int**|用于表示 *保持期*的单位。|  
 |**publisher**|**sysname**|发布内容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replmonitorhelppublication**用于所有类型的复制。  
+ **sp_replmonitorhelppublication** 用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有分发数据库上的**db_owner**或**replmonitor**固定数据库角色的成员才能执行**sp_replmonitorhelppublication**。  
+ 只有分发数据库上的 **db_owner** 或 **replmonitor** 固定数据库角色的成员才能执行 **sp_replmonitorhelppublication**。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

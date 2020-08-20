@@ -1,5 +1,6 @@
 ---
-title: sp_getmergedeletetype （Transact-sql） |Microsoft Docs
+description: sp_getmergedeletetype (Transact-SQL)
+title: sp_getmergedeletetype (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 406eb51a43b350a5e6f0f2d4723baab40a62ce5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e430a763a5922a38c23fda241fd207edc3c91fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481248"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @source_object = ] 'source_object'`源对象的名称。 *source_object*为**nvarchar （386）**，无默认值。  
+`[ @source_object = ] 'source_object'` 源对象的名称。 *source_object* 为 **nvarchar (386) **，无默认值。  
   
-`[ @rowguid = ] 'rowguid'`删除类型的行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
+`[ @rowguid = ] 'rowguid'` 删除类型的行标识符。 *rowguid* 是 **uniqueidentifier**，无默认值。  
   
-`[ @delete_type = ] delete_type OUTPUT`表示删除类型的代码。 *delete_type*为**int**，没有默认值。 *delete_type*也是 OUTPUT 参数，并且可以是下列值之一。  
+`[ @delete_type = ] delete_type OUTPUT` 表示删除类型的代码。 *delete_type* 为 **int**，没有默认值。 *delete_type* 也是 OUTPUT 参数，并且可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -50,10 +51,10 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 |**6**|系统删除|  
   
 ## <a name="remarks"></a>备注  
- **sp_getmergedeletetype**用于合并复制。  
+ **sp_getmergedeletetype** 用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_getmergedeletetype**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_getmergedeletetype**。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

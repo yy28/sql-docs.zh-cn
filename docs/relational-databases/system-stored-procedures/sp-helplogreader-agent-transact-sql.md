@@ -1,5 +1,6 @@
 ---
-title: sp_helplogreader_agent （Transact-sql） |Microsoft Docs
+description: sp_helplogreader_agent (Transact-SQL)
+title: sp_helplogreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b83ce376482210c99179ea501f2c1e4c07fb0bf6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4a5830f73e58925e3935fe554d7467b0582b2b28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481174"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,29 +38,29 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理的 ID。|  
-|**name**|**nvarchar （100）**|代理的名称。|  
+|**name**|**nvarchar (100) **|代理的名称。|  
 |**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
-|**publisher_password**|**nvarchar （524）**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
+|**publisher_password**|**nvarchar (524) **|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|是日志读取器代理运行时所用的 Windows 帐户，它以 "*域*用户名" 的格式返回 \\ *username*。|  
 |**job_password**|**sysname**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helplogreader_agent**用于事务复制。  
+ **sp_helplogreader_agent** 用于事务复制。  
   
 ## <a name="permissions"></a>权限  
- 只有发布服务器上的**sysadmin**固定服务器角色的成员或发布数据库上**db_owner**固定数据库角色的成员才能执行**sp_helplogreader_agent**。  
+ 只有发布服务器上的 **sysadmin** 固定服务器角色的成员或发布数据库上 **db_owner** 固定数据库角色的成员才能执行 **sp_helplogreader_agent**。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

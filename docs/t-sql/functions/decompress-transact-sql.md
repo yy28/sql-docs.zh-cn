@@ -1,4 +1,5 @@
 ---
+description: DECOMPRESS (Transact-SQL)
 title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4c4309a12f3db14af0d38f9e98e73b7e8c4e6b1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f6390d157ab7d352e7ecb355fec4c16114333ea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479709"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,14 +36,12 @@ ms.locfileid: "87396696"
 DECOMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>参数
  *expression*  
-varbinary(n)、varbinary(max) 或 binary(n) 值        。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+varbinary(n)、varbinary(max) 或 binary(n) 值****__************__****。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
-数据类型 varbinary(max) 的值  。 `DECOMPRESS` 将使用 ZIP 算法解压缩输入参数。 如有必要，用户应显式将结果强制转换为目标类型。  
+数据类型 varbinary(max) 的值****。 `DECOMPRESS` 将使用 ZIP 算法解压缩输入参数。 如有必要，用户应显式将结果强制转换为目标类型。  
   
 ## <a name="remarks"></a>备注  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_help_operator （Transact-sql） |Microsoft Docs
+description: sp_help_operator (Transact-SQL)
+title: sp_help_operator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d86d691c33fdfc09ce60d3ef7059c823527f9494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481201"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @operator_name = ] 'operator_name'`运算符名称。 *operator_name* **sysname**。 如果未指定*operator_name* ，则返回有关所有运算符的信息。  
+`[ @operator_name = ] 'operator_name'` 运算符名称。 *operator_name* **sysname**。 如果未指定 *operator_name* ，则返回有关所有运算符的信息。  
   
-`[ @operator_id = ] operator_id`为其请求信息的操作员的标识号。 *operator_id*的值为**int**，默认值为 NULL。  
+`[ @operator_id = ] operator_id` 为其请求信息的操作员的标识号。 *operator_id*的值为 **int**，默认值为 NULL。  
   
 > [!NOTE]  
->  必须指定*operator_id*或*operator_name* ，但不能同时指定两者。  
+>  必须指定 *operator_id* 或 *operator_name* ，但不能同时指定两者。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
@@ -58,11 +59,11 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作员标识号。|  
 |name|**sysname**|运算符名称。|  
-|**能够**|**tinyint**|操作员可以接收到任何通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**email_address**|**nvarchar （100）**|操作员电子邮件地址。|  
+|**enabled**|**tinyint**|操作员可以接收到任何通知：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**email_address**|**nvarchar (100) **|操作员电子邮件地址。|  
 |**last_email_date**|**int**|上次用电子邮件通知操作员的日期。|  
 |**last_email_time**|**int**|上一次用电子邮件通知操作员的时间。|  
-|**pager_address**|**nvarchar （100）**|操作员寻呼地址。|  
+|**pager_address**|**nvarchar (100) **|操作员寻呼地址。|  
 |**last_pager_date**|**int**|上一次通过寻呼通知操作员的日期。|  
 |**last_pager_time**|**int**|上一次通过寻呼通知操作员的时间。|  
 |**weekday_pager_start_time**|**int**|某一时间段的起始时间，在工作日的该时间段内操作员可以接收到寻呼通知。|  
@@ -71,8 +72,8 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|某一时间段的结束时间，在星期六的该时间段内操作员可以接收到寻呼通知。|  
 |**sunday_pager_start_time**|**int**|某一时间段的起始时间，在星期日的该时间段内操作员可以接收到寻呼通知。|  
 |**sunday_pager_end_time**|**int**|某一时间段的结束时间，在星期日的该时间段内操作员可以接收到寻呼通知。|  
-|**pager_days**|**tinyint**|一周中的某天的位掩码（**1** = 星期日， **64** = 星期六），指示操作员何时可接收寻呼通知。|  
-|**netsend_address**|**nvarchar （100）**|接收网络弹出通知的操作员地址。|  
+|**pager_days**|**tinyint**|位掩码 (**1** = 星期日， **64** = 每周的第几天的星期六) ，指示操作员何时可用于接收寻呼通知。|  
+|**netsend_address**|**nvarchar (100) **|接收网络弹出通知的操作员地址。|  
 |**last_netsend_date**|**int**|上一次用网络弹出消息通知操作员的日期。|  
 |**last_netsend_time**|**int**|上一次用网络弹出消息通知操作员的时间。|  
 |**category_name**|**sysname**|该操作员所属的操作员分类的名称。|  
@@ -81,7 +82,7 @@ sp_help_operator
  必须从**msdb**数据库运行**sp_help_operator** 。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

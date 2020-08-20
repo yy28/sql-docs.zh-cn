@@ -1,5 +1,6 @@
 ---
-title: sp_add_agent_parameter （Transact-sql） |Microsoft Docs
+description: sp_add_agent_parameter (Transact-SQL)
+title: sp_add_agent_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abd0a36fe9699c3fc72db4848d08ad6469ae3dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481623"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,8 +39,8 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
         , [ @parameter_value = ] 'parameter_value'   
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @profile_id = ] profile_id`**Msdb**数据库的**MSagent_profiles**表中的配置文件的 ID。 *profile_id*为**int**，没有默认值。  
+## <a name="arguments"></a>参数  
+`[ @profile_id = ] profile_id`**Msdb**数据库的**MSagent_profiles**表中的配置文件的 ID。 *profile_id* 为 **int**，没有默认值。  
   
  若要找出此*profile_id*表示的代理类型，请在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表中查找*profile_id* ，并记下 " *agent_type* " 字段值。 这些值如下所示：  
   
@@ -51,7 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|合并代理|  
 |**9**|队列读取器代理|  
   
-`[ @parameter_name = ] 'parameter_name'`参数的名称。 *parameter_name* **sysname**，无默认值。 有关已在系统配置文件中定义的参数的列表，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。 若要查看每个代理的有效参数的完整列表，请参阅下列主题：  
+`[ @parameter_name = ] 'parameter_name'` 参数的名称。 *parameter_name* **sysname**，无默认值。 有关已在系统配置文件中定义的参数的列表，请参阅 [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。 若要查看每个代理的有效参数的完整列表，请参阅下列主题：  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,16 +64,16 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'`要赋给参数的值。 *parameter_value*为**nvarchar （255）**，无默认值。  
+`[ @parameter_value = ] 'parameter_value'` 要赋给参数的值。 *parameter_value* 为 **nvarchar (255) **，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_add_agent_parameter**用于快照复制、事务复制和合并复制。  
+ **sp_add_agent_parameter** 用于快照复制、事务复制和合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_add_agent_parameter**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_add_agent_parameter**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

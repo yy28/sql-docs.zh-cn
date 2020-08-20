@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAngle（geography 数据类型）
 title: EnvelopeAngle（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2066a2874094e3a6e4f7376809d26cbcbaba9e81
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c72459ec22208dfebbe234430ba49a4e94cb06a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479367"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回由 `EnvelopeCenter()` 返回的点与 geography 实例中的点之间的最大角度（以度数为单位）  。  
+  返回由 `EnvelopeCenter()` 返回的点与 geography 实例中的点之间的最大角度（以度数为单位）****。  
   
  这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。  
   
@@ -41,16 +42,16 @@ EnvelopeAngle( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float****  
   
- CLR 返回类型：SqlDouble   
+ CLR 返回类型：SqlDouble****  
   
 ## <a name="remarks"></a>备注  
- 此方法返回 geography 实例中的点（以度数为单位）  。 在与 EnvelopeCenter() 一起使用时，`EnvelopeAngle()` 返回 geography 实例的一个边框圆  。  
+ 此方法返回 geography 实例中的点（以度数为单位）****。 在与 EnvelopeCenter() 一起使用时，`EnvelopeAngle()` 返回 geography 实例的一个边框圆****。  
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例  。  
   
- 已删除应用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 `EnvelopeAngle()` 的半球限制。 但是，对于角度大于 90 度的实例将返回 180 度。 对于跨越多个半球的 geography 实例而言，`EnvelopeAngle()` 并不精确  。  
+ 已删除应用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 `EnvelopeAngle()` 的半球限制。 但是，对于角度大于 90 度的实例将返回 180 度。 对于跨越多个半球的 geography 实例而言，`EnvelopeAngle()` 并不精确****。  
   
 ## <a name="examples"></a>示例  
   

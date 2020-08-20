@@ -1,4 +1,5 @@
 ---
+description: 管理密码 (OracleToSQL)
 title: " (OracleToSQL) 管理密码 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b96c7cff343c1c0f00c0e324961d633c4255f2a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3ffcc42e790e6eb0f26ffa96ec8e3bcf7503ca3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480449"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密码 (OracleToSQL)
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码。
@@ -131,5 +132,5 @@ SSMA 控制台应用程序允许将本地计算机上的文件中存在的加密
 8. 请确认密码： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
 
 ## <a name="see-also"></a>另请参阅  
-[ (Oracle) 执行 SSMA 控制台](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[ (Oracle) 执行 SSMA 控制台 ](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

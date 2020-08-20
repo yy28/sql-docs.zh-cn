@@ -1,4 +1,5 @@
 ---
+description: BACKUP CERTIFICATE (Transact-SQL)
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -28,12 +29,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
-ms.openlocfilehash: 734de238f38520ad31923a9d4ed45edd5d807336
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 1944728a05db49a194b2c1f070695fd16ee095d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479002"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -74,21 +75,21 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- certname   
+ certname  
  要备份的证书的名称。
 
- TO FILE = path_to_file   
+ TO FILE = path_to_file**  
  指定要保存证书的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
 
  WITH PRIVATE KEY 指定将证书的私钥保存到文件中。 此子句为可选项。
 
- FILE = path_to_private_key_file   
+ FILE = path_to_private_key_file**  
  指定要保存私钥的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
 
- ENCRYPTION BY PASSWORD = encryption_password   
+ ENCRYPTION BY PASSWORD = encryption_password**  
  用于在将密钥写入备份文件之前对私钥进行加密的密码。 该密码需要进行复杂性检查。  
   
- DECRYPTION BY PASSWORD = decryption_password   
+ DECRYPTION BY PASSWORD = decryption_password**  
  用于在备份密钥之前对私钥进行解密的密码。 如果证书是用主密钥加密，便无需使用此参数。 
   
 ## <a name="remarks"></a>备注  

@@ -1,4 +1,5 @@
 ---
+description: USER_ID (Transact-SQL)
 title: USER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 646ed2166a7519c12fd7695ef49bfe3aca7c0738
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 472a56ce6adf6b4020178ba8195642d88665d9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479472"
 ---
 # <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,14 +50,14 @@ USER_ID ( [ 'user' ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- user   
- 要使用的用户名。 user 为 nchar   。 如果指定的是 char 类型的值，则将其隐式转换为 nchar   。 需要使用括号。  
+ *user*  
+ 要使用的用户名。 user 为 nchar******。 如果指定的是 char 类型的值，则将其隐式转换为 nchar********。 需要使用括号。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>备注  
- 省略 user 时，则假定为当前用户  。 如果此参数包含词 NULL，将返回 NULL。当在 EXECUTE AS 之后调用 USER_ID 时，USER_ID 将返回模拟上下文的 ID。  
+ 省略 user 时，则假定为当前用户**。 如果此参数包含词 NULL，将返回 NULL。当在 EXECUTE AS 之后调用 USER_ID 时，USER_ID 将返回模拟上下文的 ID。  
   
  当未映射到特定数据库用户的 Windows 主体使用组成员身份访问数据库时，USER_ID 将返回 0（public 的 ID）。 如果此类主体在不指定架构的情况下创建对象，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建映射到 Windows 主体的隐式用户和架构。 在这些情况下创建的用户不能用来连接到数据库。 映射到隐式用户的 Windows 主体调用 USER_ID 将返回该隐式用户的 ID。  
   

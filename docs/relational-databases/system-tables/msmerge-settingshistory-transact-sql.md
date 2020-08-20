@@ -1,5 +1,6 @@
 ---
-title: MSmerge_settingshistory （Transact-sql） |Microsoft Docs
+description: MSmerge_settingshistory (Transact-SQL)
+title: MSmerge_settingshistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfcec38c71b1822c51d8ee08227f57f78ef185ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 022516c97d6778a27d0319244cf9adf35adbfe7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480724"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "85889710"
 |**pubid**|**uniqueidentifier**|给定发布的唯一标识号。|  
 |**artid**|**uniqueidentifier**|给定项目的唯一标识号。|  
 |**eventtype**|**tinyint**|指定要记录的事件类型，可以是下列类型之一：<br /><br /> **1** -初始发布级别属性设置。<br /><br /> **2** -更改发布属性。<br /><br /> **101** -初始项目属性设置。<br /><br /> **102** -项目属性中的更改。|  
-|propertyname |**sysname**|设置或更改的属性的名称|  
+|propertyname|**sysname**|设置或更改的属性的名称|  
 |**previousvalue**|**sysname**|被更改的属性的以前的属性值。|  
 |**newvalue**|**sysname**|更改后或创建时的属性值。|  
-|**eventtext**|**nvarchar （2000）**|说明事件的字符串。|  
+|**eventtext**|**nvarchar (2000) **|说明事件的字符串。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

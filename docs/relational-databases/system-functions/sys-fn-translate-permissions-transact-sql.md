@@ -1,5 +1,6 @@
 ---
-title: sys. fn_translate_permissions （Transact-sql） |Microsoft Docs
+description: sys.fn_translate_permissions (Transact-SQL)
+title: sys. fn_translate_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aec909b59a6e174269a14a330ad839d3e3ff4faa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1069d5b76d6ee404ddd2e671eb6a7b63396424ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481760"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>参数  
- *级别*  
- 应用该权限的安全对象的种类。 *级别*为**nvarchar （60）**。  
+ *level*  
+ 应用该权限的安全对象的种类。 *级别* 为 **nvarchar (60) **。  
   
  *perms*  
- 权限列中返回的位掩码。 *perms*为**varbinary （16）**。  
+ 权限列中返回的位掩码。 *perms* 是 **varbinary (16) **。  
   
 ## <a name="returns"></a>返回  
  **table**  
   
 ## <a name="remarks"></a>备注  
- SQL 跟踪的**权限**列中返回的值是用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来计算有效权限的位掩码的整数表示形式。 25 种安全对象中的每一种都有它自己的权限集，并且这些权限具有相应的数字值。 **sys. fn_translate_permissions**将此位掩码转换为权限名称表。  
+ SQL 跟踪的 **权限** 列中返回的值是用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来计算有效权限的位掩码的整数表示形式。 25 种安全对象中的每一种都有它自己的权限集，并且这些权限具有相应的数字值。 **sys. fn_translate_permissions** 将此位掩码转换为权限名称表。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -69,8 +70,8 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [权限 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys. server_permissions &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
+ [sys.server_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

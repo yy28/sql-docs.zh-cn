@@ -1,5 +1,6 @@
 ---
-title: sp_add_data_file_recover_suspect_db （Transact-sql） |Microsoft Docs
+description: sp_add_data_file_recover_suspect_db (Transact-SQL)
+title: sp_add_data_file_recover_suspect_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce146a12cb794952cc218a3dadb22318b700460c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae07b655dd7b693876c61b600315ac8874d988ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481633"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,23 +46,23 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbName = ] 'database_ '`数据库的名称。 *数据库*为**sysname**，无默认值。  
+`[ @dbName = ] 'database_ '` 数据库的名称。 *数据库* 为 **sysname**，无默认值。  
   
-`[ @filegroup = ] 'filegroup_name_ '`要向其中添加文件的文件组。 *filegroup_name*为**nvarchar （260）**，默认值为 NULL，指示主文件。  
+`[ @filegroup = ] 'filegroup_name_ '` 要向其中添加文件的文件组。 *filegroup_name* 为 **nvarchar (260) **，默认值为 NULL，指示主文件。  
   
-`[ @name = ] 'logical_file_name_ '`用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引用文件的名称。 名称在服务器中必须是唯一的。 *logical_file_name*为**nvarchar （260）**，无默认值。  
+`[ @name = ] 'logical_file_name_ '` 用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引用文件的名称。 名称在服务器中必须是唯一的。 *logical_file_name* 为 **nvarchar (260) **，无默认值。  
   
-`[ @filename = ] 'os_file_name_ '`操作系统用于文件的路径和文件名。 该文件必须驻留在[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。 *os_file_name*为**nvarchar （260）**，无默认值。  
+`[ @filename = ] 'os_file_name_ '` 操作系统用于文件的路径和文件名。 该文件必须驻留在[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。 *os_file_name* 为 **nvarchar (260) **，无默认值。  
   
-`[ @size = ] 'size_ '`文件的初始大小。 *大小*为**nvarchar （20）**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。 最小值为 512 KB。 如果未指定*size* ，则默认值为 1 MB。  
+`[ @size = ] 'size_ '` 文件的初始大小。 *大小* 为 **nvarchar (20) **，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。 最小值为 512 KB。 如果未指定 *size* ，则默认值为 1 MB。  
   
-`[ @maxsize = ] 'max_size_ '`文件可以增长到的最大大小。 *max_size*的值为**nvarchar （20）**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。  
+`[ @maxsize = ] 'max_size_ '` 文件可以增长到的最大大小。 *max_size* 为 **nvarchar (20) **，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。  
   
- 如果未指定*max_size* ，则文件将增长，直到磁盘已满。 当磁盘将满时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志会向管理员发出警告。  
+ 如果未指定 *max_size* ，则文件将增长，直到磁盘已满。 当磁盘将满时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志会向管理员发出警告。  
   
-`[ @filegrowth = ] 'growth_increment_ '`每次需要新空间时添加到文件中的空间量。 *growth_increment*的值为**nvarchar （20）**，默认值为 NULL。 0 值表示不增长。 指定一个整数，不包含小数位。 该值可按 MB、KB 或百分比 (%) 形式指定。 如果指定百分比 (%)，则增量大小为发生增长时文件大小的指定百分比。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。  
+`[ @filegrowth = ] 'growth_increment_ '` 每次需要新空间时添加到文件中的空间量。 *growth_increment* 为 **nvarchar (20) **，默认值为 NULL。 0 值表示不增长。 指定一个整数，不包含小数位。 该值可按 MB、KB 或百分比 (%) 形式指定。 如果指定百分比 (%)，则增量大小为发生增长时文件大小的指定百分比。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。  
   
- 如果*growth_increment*为 NULL，则默认值为10%，最小值为 64 KB。 指定的大小舍入为最接近的 64 KB 的倍数。  
+ 如果 *growth_increment* 为 NULL，则默认值为10%，最小值为 64 KB。 指定的大小舍入为最接近的 64 KB 的倍数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -70,7 +71,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  无  
   
 ## <a name="permissions"></a>权限  
- Execute 权限默认授予**sysadmin**固定服务器角色的成员。 这些权限是不可传递的。  
+ Execute 权限默认授予 **sysadmin** 固定服务器角色的成员。 这些权限是不可传递的。  
   
 ## <a name="examples"></a>示例  
  在以下示例中，由于文件组 `db1` 中空间不足（错误 1105），数据库 `fg1` 被标记为可疑。  

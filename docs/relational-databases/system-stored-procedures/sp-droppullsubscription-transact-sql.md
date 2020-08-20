@@ -1,5 +1,6 @@
 ---
-title: sp_droppullsubscription （Transact-sql） |Microsoft Docs
+description: sp_droppullsubscription (Transact-SQL)
+title: sp_droppullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12215e39e90586bf8346c96cde3f0f3f5f386e6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0451fcee1d17a2838af12f782498be61b8431586
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481297"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,28 +40,28 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
     [ , [ @reserved= ] reserved ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`远程服务器名称。 *发布服务器*的**sysname**，无默认值。 如果为**all**，则删除所有发布服务器上的订阅。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 远程服务器名称。 *发布服务器* 的 **sysname**，无默认值。 如果为 **all**，则删除所有发布服务器上的订阅。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。 **all**表示所有发布服务器数据库。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。 **all** 表示所有发布服务器数据库。  
   
-`[ @publication = ] 'publication'`发布名称。 *发布*为**sysname**，无默认值。 如果为**all**，则将订阅删除到所有发布。  
+`[ @publication = ] 'publication'` 发布名称。 *发布* 为 **sysname**，无默认值。 如果为 **all**，则将订阅删除到所有发布。  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_droppullsubscription**用于快照复制和事务复制。  
+ **sp_droppullsubscription** 用于快照复制和事务复制。  
   
- **sp_droppullsubscription**将[MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)表中删除相应的行，并在订阅服务器上删除相应的分发服务器代理。 如果[MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)中没有剩余的行，则将删除该表。  
+ **sp_droppullsubscription** 将 [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 表中删除相应的行，并在订阅服务器上删除相应的分发服务器代理。 如果 [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)中没有剩余的行，则将删除该表。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或创建请求订阅的用户才能**sp_droppullsubscription**执行。 只有创建请求订阅的用户属于此角色时， **db_owner**固定数据库角色才能执行**sp_droppullsubscription** 。  
+ 只有 **sysadmin** 固定服务器角色的成员或创建请求订阅的用户才能 **sp_droppullsubscription**执行。 只有创建请求订阅的用户属于此角色时， **db_owner** 固定数据库角色才能执行 **sp_droppullsubscription** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   

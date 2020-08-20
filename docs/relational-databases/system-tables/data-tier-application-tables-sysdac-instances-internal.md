@@ -1,5 +1,6 @@
 ---
-title: sysdac_instances_internal （Transact-sql） |Microsoft Docs
+description: 数据层应用程序表 - sysdac_instances_internal
+title: sysdac_instances_internal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98b33a43eeb52ca99c50235e5c3865c79cd92125
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5677f92a5a7cb4a74b72bb45d058ad4c198442fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480811"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>数据层应用程序表 - sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85890558"
 |instance_id|**uniqueidentifier**|DAC 实例的标识符。|  
 |instance_name|**sysname**|在部署 DAC 实例时指定的实例名称。|  
 |type_name|**sysname**|在创建 DAC 包时指定的 DAC 的名称。|  
-|type_version|**nvarchar （64）**|在创建 DAC 包时指定的 DAC 的版本。|  
+|type_version|**nvarchar (64) **|在创建 DAC 包时指定的 DAC 的版本。|  
 |description|**nvarchar(4000)**|在创建 DAC 包时写入的 DAC 的说明。|  
 |type_stream|**varbinary(max)**|包含在 DAC 中包含的逻辑对象（例如表和视图）的编码表示形式的位流。|  
 |date_created|**datetime**|DAC 实例的创建日期和时间。|  
@@ -48,6 +49,6 @@ ms.locfileid: "85890558"
   
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [&#40;Transact-sql 的 dac_instancesdbo.sys&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
+ [ &#40;Transact-sql 的 dac_instancesdbo.sys&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

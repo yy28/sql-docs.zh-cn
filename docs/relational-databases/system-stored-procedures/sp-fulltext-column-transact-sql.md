@@ -1,5 +1,6 @@
 ---
-title: sp_fulltext_column （Transact-sql） |Microsoft Docs
+description: sp_fulltext_column (Transact-SQL)
+title: sp_fulltext_column (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 544854219f8fbc26a06b80280c6f36f64fe726c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481232"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "82820448"
   指定表的某个特定列是否参与全文索引。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER 全文索引](../../t-sql/statements/alter-fulltext-index-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [ALTER 全文索引](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,26 +48,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tabname = ] 'qualified_table_name'`为一个或两个部分组成的表名。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name*为**nvarchar （517）**，无默认值。  
+`[ @tabname = ] 'qualified_table_name'` 为一个或两个部分组成的表名。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name* 为 **nvarchar (517) **，没有默认值。  
   
-`[ @colname = ] 'column_name'`*Qualified_table_name*中的列的名称。 列必须是字符、 **varbinary （max）** 或**image**列，不能是计算列。 *column_name* **sysname**，无默认值。  
+`[ @colname = ] 'column_name'`*Qualified_table_name*中的列的名称。 列必须是字符、 **varbinary (max) ** 或 **image** 列，不能是计算列。 *column_name* **sysname**，无默认值。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以创建存储在**varbinary （max）** 或**image**数据类型的列中的文本数据的全文索引。 不对图像和图片进行索引。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以为 ** (max) ** 或 **image** 数据类型的列中存储的文本数据创建全文索引。 不对图像和图片进行索引。  
   
-`[ @action = ] 'action'`要执行的操作。 *操作*为**varchar （20）**，无默认值，可以是下列值之一。  
+`[ @action = ] 'action'` 要执行的操作。 *操作* 是 **varchar (20) **，无默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**add**|将*qualified_table_name* *column_name*添加到表的不活动全文索引中。 此操作可启用列以进行全文索引。|  
-|**击落**|从表的不活动全文索引中移除*qualified_table_name* *column_name* 。|  
+|**drop**|从表的不活动全文索引中移除*qualified_table_name* *column_name* 。|  
   
-`[ @language = ] 'language_term'`列中存储的数据的语言。 有关中包含的语言的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[transact-sql&#41;&#40;fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
+`[ @language = ] 'language_term'` 列中存储的数据的语言。 有关中包含的语言的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [transact-sql&#41;&#40;fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  如果列包含的数据使用了多种语言或不支持的语言，则使用“非特定语言”。 默认值通过配置选项“默认全文语言”指定。  
   
-`[ @type_colname = ] 'type_column_name'`*Qualified_table_name*中保存*column_name*的文档类型的列的名称。 此列必须是**char**、 **nchar**、 **varchar**或**nvarchar**。 仅当*column_name*的数据类型为**varbinary （max）** 或**image**类型时，才使用此方法。 *type_column_name* **sysname**，无默认值。  
+`[ @type_colname = ] 'type_column_name'`*Qualified_table_name*中保存*column_name*的文档类型的列的名称。 此列必须是 **char**、 **nchar**、 **varchar**或 **nvarchar**。 仅当 *column_name* 的数据类型为 **varbinary (max) ** 或 **image**类型时，才使用此方法。 *type_column_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -80,7 +81,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  如果启用了更改跟踪，并且需要在保留索引的同时从全文索引中添加或删除列，则应停用表并添加或删除所需的列。 这些操作将冻结索引。 如果以后可以开始进行填充了，则可以重新激活表。  
   
 ## <a name="permissions"></a>权限  
- 用户必须是**db_ddladmin**固定数据库角色的成员，或者是**db_owner**固定数据库角色的成员或表所有者。  
+ 用户必须是 **db_ddladmin** 固定数据库角色的成员，或者是 **db_owner** 固定数据库角色的成员或表所有者。  
   
 ## <a name="examples"></a>示例  
  以下示例将 `DocumentSummary` 表的 `Document` 列添加到表的全文索引中。  
@@ -113,12 +114,12 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
 >  在单个全文查询函数子句中列出的所有列都必须使用相同的语言。  
   
 ## <a name="see-also"></a>另请参阅  
- [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   
