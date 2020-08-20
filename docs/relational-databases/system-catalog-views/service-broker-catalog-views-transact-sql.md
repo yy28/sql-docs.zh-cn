@@ -1,5 +1,6 @@
 ---
-title: Service Broker 目录视图（Transact-sql） |Microsoft Docs
+description: Service Broker 目录视图 (Transact-SQL)
+title: " (Transact-sql) Service Broker 目录视图 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2dad704672d5c2eb6aa82db6c4a6cfb2c48fc67
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: a6f083a8f776714f8ac32dcc3394b32d6bce6870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498450"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker 目录视图 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

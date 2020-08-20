@@ -1,5 +1,6 @@
 ---
-title: 隔离级别（Native Client OLE DB 提供程序） |Microsoft Docs
+description: '本机客户端 OLE DB 提供程序 (隔离级别) '
+title: 本机客户端 OLE DB 提供程序)  (隔离级别 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +17,14 @@ ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d828877a5b1f685eb5e00c5649acd50fd925aabc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 90f33a053e9c1c0ebea0b0248e79660ec7428955
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87240028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498982"
 ---
-# <a name="isolation-levels-native-client-ole-db-provider"></a>隔离级别（Native Client OLE DB 提供程序）
+# <a name="isolation-levels-native-client-ole-db-provider"></a>本机客户端 OLE DB 提供程序 (隔离级别) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 若要控制事务隔离级别， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用：  
@@ -32,9 +33,9 @@ ms.locfileid: "87240028"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]级别的 Native Client OLE DB 提供程序默认为 DBPROPVAL_TI_READCOMMITTED。  
   
--   将 ITransactionLocal::StartTransaction 方法的 isoLevel 参数用于本地手动提交事务******。  
+-   将 ITransactionLocal::StartTransaction 方法的 isoLevel 参数用于本地手动提交事务   。  
   
--   将 ITransactionDispenser::BeginTransaction 方法的 isoLevel 参数用于 MS DTC 协调的分布式事务******。  
+-   将 ITransactionDispenser::BeginTransaction 方法的 isoLevel 参数用于 MS DTC 协调的分布式事务   。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在脏读隔离级别允许只读访问。 所有其他级别通过将锁应用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象来限制并发。 当客户端需要更高的并发级别时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会为数据并发访问设置更多限制。 为了保持对数据的最高级别的并发访问， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者应智能地控制其针对特定并发级别的请求。  
   
@@ -42,6 +43,6 @@ ms.locfileid: "87240028"
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了快照隔离级别。 有关详细信息，请参阅[使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [事务](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [中的](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

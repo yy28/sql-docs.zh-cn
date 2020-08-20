@@ -1,4 +1,5 @@
 ---
+description: 在 SMO 中配置 SQL Server
 title: 在 SMO 中配置 SQL Server
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -14,11 +15,12 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e685a8c2980cf3faa375e9fb13b3d6d873f1735
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498538"
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中配置 SQL Server
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,14 +36,14 @@ ms.locfileid: "86000271"
   
  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象属性包含与算术、ANSI 标准和事务相关的当前连接行为的相关信息。  
   
- 还存在由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象表示的一组配置选项。 它包含表示可通过 **sp_configure** 存储过程进行修改的选项的一组属性。 "**优先级提升**"、"**恢复间隔**" 和 "**网络数据包大小**" 等选项控制实例的性能 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 其中的许多选项可以进行动态更改，但在某些情况下，其值需要先配置，在重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后才发生更改。  
+ 还存在由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象表示的一组配置选项。 它包含表示可通过 **sp_configure** 存储过程进行修改的选项的一组属性。 " **优先级提升**"、" **恢复间隔** " 和 " **网络数据包大小**" 等选项控制实例的性能 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 其中的许多选项可以进行动态更改，但在某些情况下，其值需要先配置，在重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后才发生更改。  
   
  每个配置选项都对应一个 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 对象，可以修改全局配置设置。 许多属性都有最大值和最小值，这些值也存储为 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 属性。 这些属性要求 <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> 方法将更改提交到的实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象中的所有配置选项都必须由系统管理员进行更改。  
   
 ## <a name="examples"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>在 Visual Basic 中修改 SQL Server 配置选项  
  此代码示例说明如何在 Visual Basic .NET 中更新配置选项。 它还检索并显示指定配置选项的最大值和最小值的相关信息。 最后，程序会通知用户是否已进行了动态更改，或者是否存储了更改直到重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后再予以应用。  

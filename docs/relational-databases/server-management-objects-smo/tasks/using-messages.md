@@ -1,4 +1,5 @@
 ---
+description: 使用消息
 title: 使用消息 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -13,21 +14,22 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d79ac396f480100319bec8ea6a9c82bd984bce5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8fae0c31778304c9bca4b9680451e9574ecf29dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498485"
 ---
 # <a name="using-messages"></a>使用消息
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  在 SMO 中，系统消息由 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 属于**服务器**对象的对象表示。 由于无法修改系统消息， **SystemMessage**对象属性是只读的。  
+  在 SMO 中，系统消息由 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 属于 **服务器** 对象的对象表示。 由于无法修改系统消息， **SystemMessage** 对象属性是只读的。  
   
- 用户定义的消息在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 对象以编程方式表示。 可通过循环访问该集合来发现现有的用户定义的消息。 可以通过实例化新的**UserDefinedMessage**对象并设置相应的属性来创建新的用户定义的消息。  
+ 用户定义的消息在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 对象以编程方式表示。 可通过循环访问该集合来发现现有的用户定义的消息。 可以通过实例化新的 **UserDefinedMessage** 对象并设置相应的属性来创建新的用户定义的消息。  
   
 ## <a name="examples"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>在 Visual Basic 中查找特殊系统消息  
  此代码示例说明如何通过 ID 号标识系统消息并显示该消息。  
