@@ -1,4 +1,5 @@
 ---
+description: bcp_columns
 title: bcp_columns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63217ba5d69e66ce328ed4c05d7af4d12b0090c4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9b8e0798ce0b00256923d7740cb450e2949b20ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499249"
 ---
 # <a name="bcp_columns"></a>bcp_columns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,22 +40,22 @@ RETCODE bcp_columns (
         INT nColumns);  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
  *nColumns*  
- 用户文件中的列的总数。 即使您准备将数据从用户文件大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，并且不想复制用户文件中的所有列，仍必须将*nColumns*设置为用户文件列总数。  
+ 用户文件中的列的总数。 即使您准备将数据从用户文件大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，并且不想复制用户文件中的所有列，仍必须将 *nColumns* 设置为用户文件列总数。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>注解  
- 仅当使用有效的文件名调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之后，才能调用此函数。  
+## <a name="remarks"></a>备注  
+ 仅当使用有效的文件名调用 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 之后，才能调用此函数。  
   
- 仅当您要使用不同于默认设置的用户文件格式时，才应当调用该函数。 有关默认用户文件格式的说明的详细信息，请参阅**bcp_init**。  
+ 仅当您要使用不同于默认设置的用户文件格式时，才应当调用该函数。 有关默认用户文件格式的说明的详细信息，请参阅 **bcp_init**。  
   
- 调用**bcp_columns**之后，必须对用户文件中的每个列调用[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)以完全定义自定义文件格式。  
+ 调用 **bcp_columns**之后，必须对用户文件中的每个列调用 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 以完全定义自定义文件格式。  
   
 ## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

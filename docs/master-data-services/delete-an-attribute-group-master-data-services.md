@@ -1,4 +1,5 @@
 ---
+description: 删除属性组 (Master Data Services)
 title: 删除属性组
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bcc9a263a8bb6ebb015c715930ebd601747ea25f
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 91abdbbec357c5d5b7b629c5619b221c14bc0d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500579"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>删除属性组 (Master Data Services)
 
@@ -33,7 +34,7 @@ ms.locfileid: "85812373"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-attribute-group"></a>删除属性组  
   

@@ -1,4 +1,5 @@
 ---
+description: 将数据从 Visual FoxPro 数据库导入 Microsoft Excel
 title: 将数据从 Visual FoxPro 数据库导入到 Microsoft Excel |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bfd86233e5a0a406febcb30bf7a4fae595e53d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a4bd1cf7983ed0a552de4f9d0f491960b48f0d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500290"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>将数据从 Visual FoxPro 数据库导入 Microsoft Excel
-如果为数据源定义了数据源，则可以将其导入到 Microsoft Excel 工作表中。 有关创建 Visual FoxPro 数据源的信息，请参阅[从 Microsoft Excel 访问 Visual Foxpro 数据源](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)。  
+如果为数据源定义了数据源，则可以将其导入到 Microsoft Excel 工作表中。 有关创建 Visual FoxPro 数据源的信息，请参阅 [从 Microsoft Excel 访问 Visual Foxpro 数据源](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)。  
   
 ### <a name="to-import-visual-foxpro-data-into-an-microsoft-excel-worksheet"></a>将 Visual FoxPro 数据导入到 Microsoft Excel 工作表中  
   

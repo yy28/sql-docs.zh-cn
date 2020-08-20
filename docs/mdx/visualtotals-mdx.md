@@ -1,5 +1,6 @@
 ---
-title: VisualTotals （MDX） |Microsoft Docs
+description: VisualTotals (MDX)
+title: VisualTotals (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1e85f4384c322938f5e7937c32bcd116acdda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500420"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -38,9 +39,9 @@ VisualTotals(Set_Expression[,Pattern])
  指定的集表达式可以指定包含单个维度内任何级别成员（通常是具有祖先-后代关系的成员）的集。 **VisualTotals**函数计算指定集内子成员的值的总和，并忽略不在计算结果总计的集中的子成员。 直观地对以层次结构顺序排序的集计算总和。 如果集中成员的顺序违背了层次结构，则结果就不是直观合计了。 例如，VisualTotals (USA, WA, CA, Seattle) 不将 WA 返回为 Seattle，而返回 WA、CA 和 Seattle 的值，然后计算这些值的总和作为 USA 的直观合计，同时计算两次 Seattle 的销售额。  
   
 > [!NOTE]  
->  如果将**VisualTotals**函数应用于与度量值无关或小于度量值组粒度的维度成员，则会将值替换为 null。  
+>  如果将 **VisualTotals** 函数应用于与度量值无关或小于度量值组粒度的维度成员，则会将值替换为 null。  
   
- *模式*（可选）指定总计标签的格式。 *Pattern*要求使用星号（*）作为父成员的替换字符，而字符串中的剩余文本出现在与父名称串联的结果中。 若要显示文本星号，请使用两个\*\*星号（）。  
+ *模式*（可选）指定总计标签的格式。 *模式* 要求星号 ( * ) 作为父成员的替换字符，而字符串中的剩余文本出现在与父名称串联的结果中。 若要显示文本星号，请使用两个星号 (\* \*) 。  
   
 ## <a name="examples"></a>示例  
  下面的示例根据所指定的一个后代 - 7 月，返回 2001 日历年第三季度的直观合计。  

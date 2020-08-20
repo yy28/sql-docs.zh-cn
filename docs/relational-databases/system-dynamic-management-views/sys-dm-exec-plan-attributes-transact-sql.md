@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481968"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618117"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |attribute|**varchar(128)**|与此计划关联的属性的名称。 紧靠此的下表列出了可能的属性、数据类型及其说明。|  
-|value|**sql_variant**|与此计划关联的属性的值。|  
+|值|**sql_variant**|与此计划关联的属性的值。|  
 |is_cache_key|**bit**|指示此属性是否用作计划的缓存查找密钥的一部分。|  
 
 在上表中， **属性** 可具有以下值：
@@ -84,7 +84,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="set-options"></a>Set 选项  
  相同编译计划的副本可能仅与 **set_options** 列中的值不同。 这说明不同的连接为相同的查询使用不同的 SET 选项集。 通常不希望使用不同的选项集，因为这可能导致额外的编译工作、减少计划重用并由于缓存中的多个计划副本而导致计划缓存膨胀。  
@@ -95,7 +95,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |选项|值|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
-|Parallel Plan|2|  
+|ParallelPlan<br /><br /> 指示计划并行度选项已更改。|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
 |ANSI_WARNINGS|16|  
@@ -114,7 +114,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |UPON<br /><br /> 指示编译计划时数据库选项 PARAMETERIZATION 设置为 FORCED。|131072|  
 |ROWCOUNT|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 自 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
-## <a name="cursors"></a>光标  
+## <a name="cursors"></a>游标  
  不活动游标缓存在编译的计划中，以便游标的并发用户可以重用存储游标所使用的内存。 例如，假设某批处理声明并使用了一个游标，但未释放该游标。 如果有两个用户执行同一个批处理，将有两个活动游标。 游标释放（可能在不同批处理中）后，用于存储该游标的内存就会缓存但不释放。 此不活动游标列表保存在编译的计划中。 下次用户执行该批处理时，缓存的游标内存将重用并相应地初始化为活动游标。  
   
 ### <a name="evaluating-cursor-options"></a>计算游标选项  

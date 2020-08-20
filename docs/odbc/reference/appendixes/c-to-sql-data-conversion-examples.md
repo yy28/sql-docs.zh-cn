@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL 的数据转换示例
 title: C 到 SQL 数据转换示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e21654f183946675c63cee10a3c08754e1508f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65b0dd229139de060dd79132ee3ca7215906442a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500010"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>从 C 到 SQL 的数据转换示例
 下面的示例说明了驱动程序如何将 C 数据转换为 SQL 数据：  
   
-|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|列<br /><br /> 长度|SQL 数据<br /><br /> value|SQLSTATE|  
+|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|列<br /><br /> length|SQL 数据<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|不适用|  
-|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde...z|22001|  
+|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
 |SQL_C_CHAR|1234.56 \ 0 [a]|SQL_DECIMAL|8 [b]|1234.56|不适用|  
 |SQL_C_CHAR|1234.56 \ 0 [a]|SQL_DECIMAL|7 [b]|1234.5|22001|  
 |SQL_C_CHAR|1234.56 \ 0 [a]|SQL_DECIMAL|4|----|22003|  

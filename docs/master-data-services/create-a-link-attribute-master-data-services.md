@@ -1,4 +1,5 @@
 ---
+description: 创建链接属性 (Master Data Services)
 title: 创建链接属性
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8b22b60f005ab7e982491685db0ff59dd2c73346
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 129cfe3eec5b99bc486e5a47cd7f90ac0733d13e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500668"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>创建链接属性 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85813093"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -43,8 +44,8 @@ ms.locfileid: "85813093"
   
 |列|描述|  
 |------------|-----------------|  
-|状态|属性状态。<br /><br /> 单击 "保存" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，指示属性正在更新。<br /><br /> 如果在创建或编辑属性时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|  
-|“属性”|属性名称。|  
+|状态|属性状态。<br /><br /> 单击 "保存" 时，将显示 ![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标") 图像的图标，指示属性正在更新。<br /><br /> 如果在创建或编辑属性时出现错误，则会显示 ![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标") 。<br /><br /> 否则，状态为 "正常"，将显示 !["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标") " 图像的图标。|  
+|名称|特性名称。|  
 |显示名称|属性显示名称。|  
 |描述|属性说明。|  
 |显示像素宽度|属性宽度。|  

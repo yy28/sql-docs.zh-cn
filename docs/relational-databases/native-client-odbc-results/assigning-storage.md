@@ -1,4 +1,5 @@
 ---
+description: 分配存储区
 title: 分配存储 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,18 +23,19 @@ ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d891ae890f101fff704dfa0500e6cbb3724ffbf5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2006f41abcdc086a49ce04e91a579294a411dd07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499122"
 ---
 # <a name="assigning-storage"></a>分配存储区
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   应用程序可以在执行 SQL 语句之前或之后为结果分配存储区。 如果应用程序首先准备或执行 SQL 语句，则它可以在为结果分配存储区之前询问有关结果集的情况。 例如，如果结果集是未知的，则应用程序在为它们分配存储区之前必须先检索列数。  
   
- 若要关联数据列的存储，应用程序将调用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)并将其传递：  
+ 若要关联数据列的存储，应用程序将调用 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)并将其传递：  
   
 -   数据将要转换成的数据类型。  
   
@@ -55,11 +57,11 @@ ms.locfileid: "86002907"
   
 -   当 SQL 语句中的所有参数作为一个单元绑定到包含这些参数中各个变量的结构数组时，将完成按行绑定。  
   
-     通过调用**SQLSetStmtAttr**并将*属性*设置为 SQL_ATTR_ROW_BIND_TYPE，并将*将 valueptr*设置为包含将接收结果集列的变量的结构的大小，可以指定按行绑定。  
+     通过调用 **SQLSetStmtAttr** 并将 *属性* 设置为 SQL_ATTR_ROW_BIND_TYPE，并将 *将 valueptr* 设置为包含将接收结果集列的变量的结构的大小，可以指定按行绑定。  
   
  应用程序还将 SQL_ATTR_ROW_ARRAY_SIZE 设置为列或行数组中的元素个数，并设置 SQL_ATTR_ROW_STATUS_PTR 和 SQL_ATTR_ROWS_FETCHED_PTR。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;处理结果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [&#40;ODBC&#41;处理结果 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

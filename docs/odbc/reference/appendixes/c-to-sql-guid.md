@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL：GUID
 title: C 到 SQL： GUID |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3b559499273e885e23da10d9093a0ce9ff92393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fca2ba20df65222eaf1ce6f4384f449a1524334
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499980"
 ---
 # <a name="c-to-sql-guid"></a>从 C 到 SQL：GUID
 GUID ODBC C 数据类型的标识符是：  
   
  SQL_C_GUID  
   
- 下表显示了可将 GUID C 数据转换为的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可将 GUID C 数据转换为的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅 [将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  

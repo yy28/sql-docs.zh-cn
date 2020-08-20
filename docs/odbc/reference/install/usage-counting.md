@@ -1,4 +1,5 @@
 ---
+description: 使用情况计数
 title: 使用量计数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d516a591bfde47522c0ccfe08bd2bd706218e07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e8c02aae51c47b13970a1824e3c0c9c417eb5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499690"
 ---
 # <a name="usage-counting"></a>使用情况计数
 > [!NOTE]  
 >  从 Windows XP 和 Windows Server 2003 开始，ODBC 包含在 Windows 操作系统中。 只应在早期版本的 Windows 上显式安装 ODBC。  
   
- 在注册表中，每个组件都保留两种类型的使用计数：组件使用计数和一个或多个可选的文件使用计数。 组件使用计数有助于安装程序 DLL 维护注册表项。 它存储在 ODBC Core、driver 和 translator 子项下的 UsageCount 值中。 有关 UsageCount 值的格式以及这些子项的详细信息，请参阅[ODBC 组件的注册表项](../../../odbc/reference/install/registry-entries-for-odbc-components.md)。  
+ 在注册表中，每个组件都保留两种类型的使用计数：组件使用计数和一个或多个可选的文件使用计数。 组件使用计数有助于安装程序 DLL 维护注册表项。 它存储在 ODBC Core、driver 和 translator 子项下的 UsageCount 值中。 有关 UsageCount 值的格式以及这些子项的详细信息，请参阅 [ODBC 组件的注册表项](../../../odbc/reference/install/registry-entries-for-odbc-components.md)。  
   
  第一次安装组件时，安装程序 DLL 将为其创建一个子项，并将该子项中 UsageCount 值的数据设置为1。 再次安装该组件时，安装程序 DLL 会递增使用量计数。 删除该组件时，安装程序 DLL 将递减使用计数。 如果使用计数降到0，则安装程序 DLL 会删除组件的子项。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "81296017"
 > [!NOTE]  
 >  文件使用计数在 Microsoft® WindowsNT®/Windows2000. 中是可选的  
   
- 文件使用计数在调用**SQLInstallDriverManager**、 **SQLInstallDriverEx**、 **SQLInstallTranslatorEx**、 **SQLRemoveDriverManager**、 **SQLRemoveDriver**或**SQLRemoveTranslator**后由安装程序维护。  
+ 文件使用计数在调用 **SQLInstallDriverManager**、 **SQLInstallDriverEx**、 **SQLInstallTranslatorEx**、 **SQLRemoveDriverManager**、 **SQLRemoveDriver**或 **SQLRemoveTranslator**后由安装程序维护。  
   
  第一次安装组件时，安装程序或安装程序 DLL 会在该组件中不存在系统上的每个文件的下面创建一个值：  
   
@@ -63,7 +64,7 @@ ms.locfileid: "81296017"
 |----------|---------------|----------|  
 |*完整路径*|REG_DWORD|*计数*|  
   
- 例如，假设 Informix 的驱动程序使用 Infrmx32 和 Infrmx32 文件，并且假设此驱动程序已安装了两次。 Informix 驱动程序的 SharedDlls 子项下的值如下所示：  
+ 例如，假设 Informix 的驱动程序使用 Infrmx32.dll 和 Infrmx32 文件，并且假设此驱动程序已安装了两次。 Informix 驱动程序的 SharedDlls 子项下的值如下所示：  
   
 ```  
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  

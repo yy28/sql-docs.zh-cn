@@ -1,4 +1,5 @@
 ---
+description: 在 PATH 模式下格式化嵌套 JSON 输出 (SQL Server)
 title: 在 PATH 模式下格式化嵌套 JSON 输出
 ms.date: 06/03/2020
 ms.prod: sql
@@ -10,30 +11,30 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee7d60d05e1238dc48e872338ed1a19cdb81667
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f4bc2ab48ca1d7d741eb7de8056f1566daadb47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499361"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>在 PATH 模式下格式化嵌套 JSON 输出 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-若要保持对 FOR JSON 子句输出的完全控制，请指定 PATH 选项   。  
+若要保持对 FOR JSON 子句输出的完全控制，请指定 PATH 选项********。  
   
 借助**PATH** 模式，你可以创建包装器对象，并嵌套复杂属性。 结果会格式化为 JSON 对象数组。  
   
-替代方法是使用 AUTO 选项根据 SELECT 语句的结构自动格式化输出   。
- -   有关 AUTO 选项的详细信息，请参阅[在 AUTO 模式下自动格式化 JSON 输出](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
+替代方法是使用 AUTO 选项根据 SELECT 语句的结构自动格式化输出********。
+ -   有关 AUTO 选项的详细信息，请参阅[在 AUTO 模式下自动格式化 JSON 输出](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)****。
  -   有关这两个选项的概述，请参阅[使用 FOR JSON 将查询结果格式化为 JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。
  
-下面的一些示例展示了如何使用 **PATH** 选项指定 **FOR JSON** 子句。 使用以点分隔的列名称或使用嵌套查询来格式化嵌套结果，如下面的示例所示。 默认情况下，FOR JSON 输出中不包括 null 值  。  
+下面的一些示例展示了如何使用 **PATH** 选项指定 **FOR JSON** 子句。 使用以点分隔的列名称或使用嵌套查询来格式化嵌套结果，如下面的示例所示。 默认情况下，FOR JSON 输出中不包括 null 值****。  
 
 ## <a name="example---dot-separated-column-names"></a>示例 - 以点分隔的列名称  
 以下查询将 AdventureWorks `Person` 表的前五行格式化为 JSON。  
 
-FOR JSON PATH 子句使用列别名或列名来确定 JSON 输出中的键名称  。 如果别名中包含点，则 PATH 选项将创建嵌套对象。  
+FOR JSON PATH 子句使用列别名或列名来确定 JSON 输出中的键名称。 如果别名中包含点，则 PATH 选项将创建嵌套对象。  
 
  **查询**  
   
@@ -84,7 +85,7 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>示例 - 多个表  
-如果查询中引用了多个表，FOR JSON PATH 将使用列别名嵌套每个列  。 以下查询将为查询中联接的每个（OrderHeader，OrderDetails）对创建一个 JSON 对象。 
+如果查询中引用了多个表，FOR JSON PATH 将使用列别名嵌套每个列。 以下查询将为查询中联接的每个（OrderHeader，OrderDetails）对创建一个 JSON 对象。 
   
  **查询**  
   

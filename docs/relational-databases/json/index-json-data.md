@@ -1,4 +1,5 @@
 ---
+description: 对 JSON 数据编制索引
 title: 对 JSON 数据编制索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -13,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77cdc132f3ef52baf6124d3f52279ad1c16b9bde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499230"
 ---
 # <a name="index-json-data"></a>对 JSON 数据编制索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85755763"
 数据库索引可提升筛选和排序操作的性能。 如果没有索引，每次查询数据时，SQL Server 不得不扫描整个表。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>通过使用计算列对 JSON 属性编制索引  
-将 JSON 数据存储在 SQL Server 中时，通常会希望按 JSON 文档的一个或多个属性对查询结果进行筛选或排序  。  
+将 JSON 数据存储在 SQL Server 中时，通常会希望按 JSON 文档的一个或多个属性对查询结果进行筛选或排序**。  
 
 ### <a name="example"></a>示例 
 此示例假定 AdventureWorks `SalesOrderHeader` 表包含 `Info` 列，此列包含关于销售订单的采用 JSON 格式的各种信息。 例如，包含客户、销售人员、装运和帐单地址等相关信息。 假设要使用 `Info` 列的值来筛选某个客户的销售订单。
@@ -45,7 +46,7 @@ WHERE JSON_VALUE(Info, '$.Customer.Name') = N'Aaron Campbell'
 ```  
 
 ### <a name="example-index"></a>示例索引
-如果想要加快对 JSON 文档中某属性的筛选或 `ORDER BY` 子句的速度，可使用已用于其他列的索引。 但是，不能直接引用 JSON 文档中的属性  。
+如果想要加快对 JSON 文档中某属性的筛选或 `ORDER BY` 子句的速度，可使用已用于其他列的索引。 但是，不能直接引用 JSON 文档中的属性。
     
 1.  必须首先创建一个“虚拟列”，用于返回你要用于筛选的值。
 2.  然后，需要对该虚拟列创建索引。  

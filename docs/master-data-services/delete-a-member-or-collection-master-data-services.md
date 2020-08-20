@@ -1,4 +1,5 @@
 ---
+description: 删除成员或集合 (Master Data Services)
 title: 删除成员或集合
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 613fa319c00ab100e52835faab1eafc33c07c9be
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c7245b06b114c62b7fd0dde543f8a7a2859bd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500619"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>删除成员或集合 (Master Data Services)
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，当您不再需要某个成员或集合时，可以将其删除。 若要大批量删除成员，可以改用临时表。 有关详细信息，请参阅[从表中导入数据 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，当您不再需要某个成员或集合时，可以将其删除。 若要大批量删除成员，可以改用临时表。 有关详细信息，请参阅 [从表中导入数据 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
 > [!NOTE]  
 >  如果某一成员用作另一个成员的基于域的属性值，则不能删除该成员。  

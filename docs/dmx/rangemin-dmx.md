@@ -1,5 +1,6 @@
 ---
-title: RangeMin （DMX） |Microsoft Docs
+description: RangeMin (DMX)
+title: RangeMin (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 47365778d51ba9b7ee857f9a634b3b0b25616d60
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 529a669b20719db93ddb702a2b4cff629f53c8db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500881"
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86970645"
 RangeMin(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
@@ -36,7 +37,7 @@ RangeMin(<scalar column reference>)
 ## <a name="remarks"></a>备注  
  **RangeMin**函数可在[SELECT 不同于 &#60;模型 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)查询中使用。 与这种类型的查询一起使用时，标量列引用可以包含连续或离散的可预测列或输入列。  
   
- 与[SELECT FROM &#60;模型一起使用时&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)， **RangeMin**、 **RangeMid**和**RangeMax**函数返回指定 bucket 的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**、 **RangeMid**和**RangeMax**函数描述了预测指定的存储桶。 当**RangeMin**函数与预测联接语句一起使用时，标量列引用只能包含离散的可预测列。  
+ 与 [SELECT FROM &#60;模型一起使用时&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)， **RangeMin**、 **RangeMid**和 **RangeMax** 函数返回指定 bucket 的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**、 **RangeMid**和**RangeMax**函数描述了预测指定的存储桶。 当 **RangeMin** 函数与预测联接语句一起使用时，标量列引用只能包含离散的可预测列。  
   
 ## <a name="examples"></a>示例  
  以下示例返回 Decision Tree 挖掘模型中“年收入”连续列的最小值、最大值和平均值。  
@@ -52,7 +53,7 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
  [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL：位
 title: C 到 SQL：位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a96982573d83cf01947f82dc2014ee2c470931e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b62f85ddb3a89d27e078f316560cec466043743a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500030"
 ---
 # <a name="c-to-sql-bit"></a>从 C 到 SQL：位
 位 ODBC C 数据类型的标识符是：  
   
  SQL_C_BIT  
   
- 下表显示了可转换位 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可转换位 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅 [将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  

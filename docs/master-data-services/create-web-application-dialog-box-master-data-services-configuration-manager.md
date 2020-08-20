@@ -1,4 +1,5 @@
 ---
+description: “创建 Web 应用程序”对话框（Master Data Services 配置管理器）
 title: “创建 Web 应用程序”对话框
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 246ac0977d84e1e011553937d1edd5ce39b53205
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0f32becd4f98ec714102bbe38f7b15049b730508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500651"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>“创建 Web 应用程序”对话框（Master Data Services 配置管理器）
 
@@ -37,7 +38,7 @@ ms.locfileid: "85812008"
   
 |控件名称|描述|  
 |------------------|-----------------|  
-|**Name**|为新的应用程序池键入唯一的友好名称，或者使用默认名称。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序将添加到这个应用程序池。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
+|**名称**|为新的应用程序池键入唯一的友好名称，或者使用默认名称。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序将添加到这个应用程序池。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
 |**用户名**|键入来自 Active Directory 的域名和用户名。 此帐户是 Web 应用程序运行所在的应用程序池的标识。 此帐户应该与创建 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库时指定为服务帐户的帐户相同。<br /><br /> 此帐户添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色，以便访问数据库。 有关详细信息，请参阅[数据库登录、用户和角色 (Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md)。 它还会被添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
 |**密码**|键入指定用户帐户的密码。|  
 |**确认密码**|重新键入指定用户帐户的密码。 **“密码”** 字段和 **“确认密码”** 字段必须包含相同的密码。|  

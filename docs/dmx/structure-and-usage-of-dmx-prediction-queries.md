@@ -1,4 +1,5 @@
 ---
+description: DMX 预测查询的结构和用法
 title: DMX 预测查询的结构和用法 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 242e86a0ac74dacd8682825f25adab4a847a82e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500754"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 预测查询的结构和用法
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用数据挖掘扩展插件（DMX）中的预测查询，根据挖掘模型的结果来预测新数据集中的未知列值。  
+  在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，可以在数据挖掘扩展插件 (DMX) 中使用预测查询，以根据挖掘模型的结果在新数据集中预测未知的列值。  
   
  使用何种查询类型取决于您要从模型中获取的具体信息。 如果要实时创建简单预测，例如要知道网站上的一位潜在客户是否符合自行车购买者的特征，则可以使用单独查询。 如果要根据数据源中包含的一组事例创建一批预测，则可使用常规预测查询。  
   
@@ -26,10 +27,10 @@ ms.locfileid: "86970263"
  可以使用 DMX 创建下列类型的预测：  
   
  预测联接  
- 用于根据挖掘模型中存在的模式创建输入数据的预测。 此查询语句后面必须有一个**ON**子句，该子句提供了挖掘模型列和输入列之间的联接条件。  
+ 用于根据挖掘模型中存在的模式创建输入数据的预测。 此查询语句后面必须有一个 **ON** 子句，该子句提供了挖掘模型列和输入列之间的联接条件。  
   
  自然预测联接  
- 用于创建基于挖掘模型中的列名的预测，这些列名与您正在执行查询的表中的列名完全匹配。 此查询语句不需要**ON**子句，因为联接条件是根据挖掘模型列和输入列之间的匹配名称自动生成的。  
+ 用于创建基于挖掘模型中的列名的预测，这些列名与您正在执行查询的表中的列名完全匹配。 此查询语句不需要 **ON** 子句，因为联接条件是根据挖掘模型列和输入列之间的匹配名称自动生成的。  
   
  空预测联接  
  用于发现最可能的预测，无需提供输入数据。 返回的将是仅根据挖掘模型内容创建的预测。  
@@ -52,7 +53,7 @@ ms.locfileid: "86970263"
   
 -   **ORDER BY**  
   
- 预测查询的**SELECT**元素定义将出现在结果集中的列和表达式，并可以包含以下数据：  
+ 预测查询的 **SELECT** 元素定义将出现在结果集中的列和表达式，并可以包含以下数据：  
   
 -   从挖掘模型中**预测**列或**PredictOnly**列。  
   
@@ -64,9 +65,9 @@ ms.locfileid: "86970263"
   
  **ON**元素将挖掘模型中定义的列映射到外部数据集中的列。 如果要创建空预测联接查询或自然预测联接，则不必包括该元素。  
   
- 您可以使用**WHERE**子句来筛选预测查询的结果。 您可以使用**TOP**或**ORDER by**子句来选择最有可能的预测。 有关使用这些子句的详细信息，请参阅[SELECT &#40;DMX&#41;](../dmx/select-dmx.md)。  
+ 您可以使用 **WHERE** 子句来筛选预测查询的结果。 您可以使用 **TOP** 或 **ORDER by** 子句来选择最有可能的预测。 有关使用这些子句的详细信息，请参阅 [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)。  
   
- 有关预测语句的语法的详细信息，请参阅[SELECT from &#60;model&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md) ，并[从 &#60;&#62; &#40;&#41;dmx 中进行选择](../dmx/select-from-model-dmx.md)。  
+ 有关预测语句的语法的详细信息，请参阅 [SELECT from &#60;model&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md) ，并 [从 &#60;&#62; &#40;&#41;dmx 中进行选择 ](../dmx/select-from-model-dmx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;DMX&#41; 的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -75,7 +76,7 @@ ms.locfileid: "86970263"
  [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [&#40;DMX&#41; 语法元素的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   

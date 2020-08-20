@@ -1,4 +1,5 @@
 ---
+description: 在 AUTO 模式下自动格式化 JSON 输出 (SQL Server)
 title: 在 AUTO 模式下自动格式化 JSON 输出
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,22 +13,22 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 083e8503b659be0f03af08c5f514e30baf012ae8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 785060a9f12b68f38e7d59420f7a2e31a77312fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499317"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>在 AUTO 模式下自动格式化 JSON 输出 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 若要根据 **SELECT** 语句的结构自动格式化 **FOR JSON** 子句的输出，请指定 **AUTO** 选项。  
   
-指定 AUTO 选项时，将根据 SELECT 列表及其源表中的列顺序自动确定 JSON 输出的格式  。 无法更改此格式。
+指定 AUTO 选项时，将根据 SELECT 列表及其源表中的列顺序自动确定 JSON 输出的格式****。 无法更改此格式。
  
-替代方法是使用 PATH 选项保持对输出的控制  。
--   有关 PATH 选项的详细信息，请参阅[在 PATH 模式下格式化嵌套的 JSON 输出](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。
+替代方法是使用 PATH 选项保持对输出的控制****。
+-   有关 PATH 选项的详细信息，请参阅[在 PATH 模式下格式化嵌套的 JSON 输出](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)****。
 -   有关这两个选项的概述，请参阅[使用 FOR JSON 将查询结果格式化为 JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。
 
 使用 **FOR JSON AUTO** 选项的查询必须具有 **FROM** 子句。  

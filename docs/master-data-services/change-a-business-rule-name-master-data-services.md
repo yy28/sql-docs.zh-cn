@@ -1,4 +1,5 @@
 ---
+description: 更改业务规则名称 (Master Data Services)
 title: 更改业务规则名称
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9de8fba3f5a9ba04cccf475ed4a1ebcef1dced74
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c575f408d0682554eb3ead69e3915d226d4975b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500696"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>更改业务规则名称 (Master Data Services)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85813636"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   业务规则必须存在。 有关详细信息，请参阅[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "85813636"
   
 2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
   
-3.  在 "**业务规则**" 页上，从 "**模型**" 下拉列表中选择一个模型。  
+3.  在 " **业务规则** " 页上，从 " **模型** " 下拉列表中选择一个模型。  
   
 4.  从 **** “实体”下拉列表中选择一个实体。  
   

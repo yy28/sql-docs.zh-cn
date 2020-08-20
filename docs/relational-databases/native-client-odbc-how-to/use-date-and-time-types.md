@@ -1,4 +1,5 @@
 ---
+description: 使用日期和时间类型
 title: 使用日期和时间类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,16 +12,17 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5bdf4f4f48c65fe4f37992c7968bbeb8103a17c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: de9a93cf1c05652b09676c215533f26ddf3e0d2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499173"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和时间类型
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  此示例显示如何对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中增加的日期/时间数据结构进行初始化。 随后准备输入值、绑定参数，并执行查询。 有关使用这些类型的详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+  此示例显示如何对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中增加的日期/时间数据结构进行初始化。 随后准备输入值、绑定参数，并执行查询。 有关使用这些类型的详细信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="example"></a>示例  
  您将需要一个名为 DateTime 的 ODBC 数据源。 DateTime 的默认数据库应为 tempdb。 此数据源必须基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驱动程序。  
@@ -29,11 +31,11 @@ ms.locfileid: "86000571"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表创建此示例使用的表。  
+ 第一个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的表。  
   
  使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
- 第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表删除此示例使用的表。  
+ 第三个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用的表。  
   
 ```sql
 use tempdb  

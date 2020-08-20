@@ -1,5 +1,6 @@
 ---
-title: 形状（DMX） |Microsoft Docs
+description: '&lt;源数据查询 &gt; -形状'
+title: 形状 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 16fff086514facbb8197d8d6f27b72b81f67c2e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500766"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询 &gt; -形状
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   将多个数据源中的查询合并到一个层次结构表中（即具有嵌套表的表），该表将成为挖掘模型的事例表。  
   
- **SHAPE** [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据访问组件（MDAC）软件开发工具包（SDK）中介绍了 SHAPE 命令的完整语法。  
+ **SHAPE** [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据访问组件 (MDAC) 软件开发工具包 (SDK) 中介绍了 SHAPE 命令的完整语法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +59,7 @@ APPEND ({ <child table query> }
  必须按与父表和子表都相关的列对查询排序。  
   
 ## <a name="examples"></a>示例  
- 您可以在[INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md)语句中使用下面的示例来训练包含嵌套表的模型。 **SHAPE**语句中的两个表通过**OrderNumber**列相关。  
+ 您可以在 [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md) 语句中使用下面的示例来训练包含嵌套表的模型。 **SHAPE**语句中的两个表通过**OrderNumber**列相关。  
   
 ```  
 SHAPE {  

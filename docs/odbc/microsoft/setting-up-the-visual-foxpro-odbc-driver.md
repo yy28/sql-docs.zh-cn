@@ -1,4 +1,5 @@
 ---
+description: 设置 Visual FoxPro ODBC 驱动程序
 title: 设置 Visual FoxPro ODBC 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26c73cb42e9adb9d46218983ade143450ff5d73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18bc0ffcdc0d42d62f752ebfc280019ec4e75f15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500280"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>设置 Visual FoxPro ODBC 驱动程序
-有关下载和安装 Visual FoxPro ODBC 驱动程序的信息，请参阅 MSDN 上的[Visual FOXPRO Odbc 驱动程序](https://go.microsoft.com/fwlink/?LinkId=121318)下载。  
+有关下载和安装 Visual FoxPro ODBC 驱动程序的信息，请参阅 MSDN 上的 [Visual FOXPRO Odbc 驱动程序](https://go.microsoft.com/fwlink/?LinkId=121318) 下载。  
   
  使用 Microsoft Visual FoxPro ODBC 驱动程序安装程序来执行以下操作：  
   

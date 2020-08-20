@@ -1,4 +1,5 @@
 ---
+description: 删除订阅视图 (Master Data Services)
 title: 删除订阅视图
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44ee02d2397f0f17573e48ccf056b3e768b15240
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4dea51dd78f69c7906ec149dcefd52aa3f9e5dfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500598"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>删除订阅视图 (Master Data Services)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85811553"
   
 -   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-subscription-view"></a>删除订阅视图  
   

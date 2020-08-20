@@ -1,4 +1,5 @@
 ---
+description: ODBC 核心子项
 title: ODBC Core 子项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9e6bfcf3c1efa87076e6d3e27a438cde6f794157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 37948c46d6a717975902bc2109ece2aea02b0129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499732"
 ---
 # <a name="odbc-core-subkey"></a>ODBC 核心子项
-ODBC Core 子项下的值提供核心组件的使用计数（驱动程序管理器、游标库、安装程序 DLL 等）。 下表显示了此值的格式。  
+ODBC Core 子项下的值提供了 (驱动程序管理器、游标库、安装程序 DLL) 的核心组件的使用计数。 下表显示了此值的格式。  
   
 |名称|数据类型|数据|  
 |----------|---------------|----------|  

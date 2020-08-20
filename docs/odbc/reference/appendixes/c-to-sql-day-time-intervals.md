@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL：日期时间间隔
 title: 从 C 到 SQL：日期时间间隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c3f7efb443b442d44a94cfd43629cdaedd6195b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499990"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>从 C 到 SQL：日期时间间隔
 日期时间间隔 ODBC C 数据类型的标识符为：  
@@ -45,7 +46,7 @@ ms.locfileid: "81291917"
   
  SQL_C_INTERVAL_MINUTE_TO_SECOND  
   
- 下表显示了可将时间间隔 C 数据转换到的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可将时间间隔 C 数据转换到的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅 [将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
@@ -56,7 +57,7 @@ ms.locfileid: "81291917"
   
  [a] 所有 C 间隔数据类型都可以转换为字符数据类型。  
   
- [b] 如果间隔结构中的类型字段的间隔是单个字段（SQL_DAY、SQL_HOUR、SQL_MINUTE 或 SQL_SECOND），则可以将 interval C 类型转换为任何精确数值（SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_DECIMAL 或 SQL_NUMERIC）。  
+ [b] 如果间隔结构中的类型字段的间隔是 (SQL_DAY、SQL_HOUR、SQL_MINUTE 或 SQL_SECOND) 的单个字段，则可以将 interval C 类型转换为任何精确数值 (SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_DECIMAL 或 SQL_NUMERIC) 。  
   
  Interval C 类型的默认转换为相应的日期时间间隔 SQL 类型。  
   

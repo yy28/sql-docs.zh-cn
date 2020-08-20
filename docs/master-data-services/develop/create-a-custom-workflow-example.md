@@ -1,4 +1,5 @@
 ---
+description: 创建自定义工作流 - 示例
 title: 自定义工作流示例
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,21 +11,21 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 404fab4ed966fd8b29bc4160e7a7d721dd6397e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c04e5da6a1e6ddb09f27613888c872ca7e94df6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500606"
 ---
 # <a name="create-a-custom-workflow---example"></a>创建自定义工作流 - 示例
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当创建一个自定义工作流类库时，创建一个实现 Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender 接口的类。 此接口包含一个方法[IWorkflowTypeExtender StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) ，在工作流启动时 SQL Server MDS Workflow Integration Service 调用此方法。 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法包含两个参数： *workflowType*包含在中的 "**工作流类型**" 文本框中输入的文本 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ， *dataElement*包含触发工作流业务规则的项的元数据和项数据。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当创建一个自定义工作流类库时，创建一个实现 Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender 接口的类。 此接口包含一个方法 [IWorkflowTypeExtender StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) ，在工作流启动时 SQL Server MDS Workflow Integration Service 调用此方法。 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法包含两个参数： *workflowType*包含在中的 "**工作流类型**" 文本框中输入的文本 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ， *dataElement*包含触发工作流业务规则的项的元数据和项数据。  
   
 ## <a name="custom-workflow-example"></a>自定义工作流示例  
- 下面的代码示例演示如何实现[MasterDataServices. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法，以便从触发工作流业务规则的元素的 XML 数据中提取 Name、Code 和 LastChgUserName 特性，以及如何调用存储过程将其插入到另一个数据库中。 有关项数据 XML 的示例和其包含的标记的说明，请参阅[自定义工作流 XML 说明 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)。  
+ 下面的代码示例演示如何实现 [MasterDataServices. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  方法，以便从触发工作流业务规则的元素的 XML 数据中提取 Name、Code 和 LastChgUserName 特性，以及如何调用存储过程将其插入到另一个数据库中。 有关项数据 XML 的示例和其包含的标记的说明，请参阅[自定义工作流 XML 说明 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)。  
   
 ```csharp  
 using System;  

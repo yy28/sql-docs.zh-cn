@@ -1,4 +1,5 @@
 ---
+description: 支持的 ODBC API 函数
 title: 支持的 ODBC API 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec6ceaf57d8fe3c5325f85a9644cf4c8016663e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61dca7de4a9a532789a2b448fad812ae3daf76ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500090"
 ---
 # <a name="supported-odbc-api-functions"></a>支持的 ODBC API 函数
 进行调配的目的是通知应用程序可通过驱动程序使用哪些功能。 Microsoft ODBC 桌面数据库驱动程序支持所有核心和第1级功能。  
   
  有关函数和语法的一致性级别的详细信息，请参阅*ODBC 程序员参考*中的[符合性级别](../../odbc/reference/develop-app/conformance-levels.md)。  
   
- ODBC API 函数的支持取决于所使用的驱动程序。 下表总结了对函数的支持。 最左侧的列提供了指向每个函数的常规参考页的链接。 这些参考页在 "odbc API 参考" 部分的 " [odbc API 参考](../../odbc/reference/syntax/odbc-api-reference.md)" 部分中按字母顺序[列出。](../../odbc/reference/odbc-programmer-s-reference.md) 右侧的列提供了指向有关每个受支持函数的特定于驱动程序的说明的链接。 每个驱动程序的 "其他编程详细信息" 部分中列出了这些特定于驱动程序的主题。 或者，如果有关函数的相同注释适用于所有 ODBC 桌面数据库驱动程序，最右边的列将提供一个链接，该链接指向汇总桌面数据库驱动程序对该函数的支持。 本部分的末尾列出了这些主题（"支持的 ODBC API 函数"）。  
+ ODBC API 函数的支持取决于所使用的驱动程序。 下表总结了对函数的支持。 最左侧的列提供了指向每个函数的常规参考页的链接。 这些参考页在 "odbc API 参考" 部分的 " [odbc API 参考](../../odbc/reference/syntax/odbc-api-reference.md)" 部分中按字母顺序[列出。](../../odbc/reference/odbc-programmer-s-reference.md) 右侧的列提供了指向有关每个受支持函数的特定于驱动程序的说明的链接。 每个驱动程序的 "其他编程详细信息" 部分中列出了这些特定于驱动程序的主题。 或者，如果有关函数的相同注释适用于所有 ODBC 桌面数据库驱动程序，最右边的列将提供一个链接，该链接指向汇总桌面数据库驱动程序对该函数的支持。 本主题将在当前部分的末尾列出 ( "支持的 ODBC API 函数" ) 。  
   
 |ODBC 函数|访问特定于驱动程序的说明|dBASE 驱动程序特定说明|Paradox 特定于驱动程序的说明|文本文件驱动程序特定说明|Excel 驱动程序特定说明|与所有驱动程序相关的注释|  
 |-------------------|-----------------------------------|----------------------------------|------------------------------------|--------------------------------------|----------------------------------|-----------------------------------|  
@@ -57,7 +58,7 @@ ms.locfileid: "81304098"
   
 -   [SQLGetData（桌面数据库驱动程序）](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
--   [SQLGetStmtOption （桌面数据库驱动程序）](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
+-   [SQLGetStmtOption (桌面数据库驱动程序) ](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
 -   [SQLMoreResults（桌面数据库驱动程序）](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   

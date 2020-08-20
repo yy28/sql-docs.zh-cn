@@ -1,5 +1,6 @@
 ---
-title: 斜杠星形（注释）（DMX） |Microsoft Docs
+description: '斜杠星形 (注释)  (DMX) '
+title: 斜杠星形 (注释)  (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f09533b68ab6dc3c771a09b70faf71087ed69a62
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 011d72bfcb0b72d1b73579e81dc6f82e4d50da69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500851"
 ---
-# <a name="slash-star-comment-dmx"></a>斜杠星形（注释）（DMX）
+# <a name="slash-star-comment-dmx"></a>斜杠星形 (注释)  (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不应执行的文本字符串。 服务器不会计算注释字符/* 和/之间的文本 \* 。 您可以在数据挖掘扩展 (DMX) 语句中嵌入注释，将其加在代码行末尾，或者单独插入一行。  
@@ -36,7 +37,7 @@ ms.locfileid: "86970398"
   
  注释没有最大长度限制。  
   
- 有关如何在 DMX 中使用不同种类的注释的详细信息，请参阅[&#40;dmx&#41;的注释](../dmx/comments-dmx.md)。  
+ 有关如何在 DMX 中使用不同种类的注释的详细信息，请参阅 [&#40;dmx&#41;的注释 ](../dmx/comments-dmx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [双斜线 &#40;注释&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   

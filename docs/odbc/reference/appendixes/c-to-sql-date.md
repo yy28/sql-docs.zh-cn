@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL：日期
 title: 从 C 到 SQL： Date |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa3df8aaee03472076b3241cb9bb60e2a307e28b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9d8bed4b16ee1c63134cdb9e1ae0b8303b0deb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500000"
 ---
 # <a name="c-to-sql-date"></a>从 C 到 SQL：日期
 Date ODBC C 数据类型的标识符是：  
   
  SQL_C_TYPE_DATE  
   
- 下表显示了日期 C 数据可转换为的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了日期 C 数据可转换为的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅 [将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
@@ -37,8 +38,8 @@ Date ODBC C 数据类型的标识符是：
   
  [a] 时间戳的时间部分设置为零。  
   
- 有关 SQL_C_TYPE_DATE 结构中的有效值的信息，请参阅本附录前面的[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
+ 有关 SQL_C_TYPE_DATE 结构中的有效值的信息，请参阅本附录前面的 [C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
- 当日期 C 数据转换为字符 SQL 数据时，生成的字符数据的格式为 "*yyyy*-*mm*-*dd*"。  
+ 当日期 C 数据转换为字符 SQL 数据时，生成的字符数据的格式为 "*yyyy* - *mm* - *dd*"。  
   
  驱动程序在从日期 C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为日期 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。

@@ -1,4 +1,5 @@
 ---
+description: 安装 ODBC 组件
 title: 安装 ODBC 组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbd0a6aeba8073ce14b08b8635396b1f231895fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0250cc51b76cbda9c1091ebe1d696c2e569c037f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499743"
 ---
 # <a name="installing-odbc-components"></a>安装 ODBC 组件
 > [!NOTE]  
 >  从 Windows XP 和 Windows Server 2003 开始，ODBC 包含在 Windows 操作系统中。 只应在早期版本的 Windows 上显式安装 ODBC。  
   
- 本部分介绍如何安装和删除 ODBC 组件。 由于驱动程序开发人员始终安装 ODBC 组件（其驱动程序），因此需要阅读此部分。 仅当应用程序开发人员将 ODBC 组件随应用程序一起发布时，它才需要读取此部分。 ODBC 组件包括驱动程序管理器、驱动程序、转换器、安装程序 DLL、游标库和所有相关文件。 出于本部分的目的，ODBC 应用程序不会被视为 ODBC 组件。  
+ 本部分介绍如何安装和删除 ODBC 组件。 由于驱动程序开发人员始终将 ODBC 组件安装 (其驱动程序) ，因此需要阅读本部分。 仅当应用程序开发人员将 ODBC 组件随应用程序一起发布时，它才需要读取此部分。 ODBC 组件包括驱动程序管理器、驱动程序、转换器、安装程序 DLL、游标库和所有相关文件。 出于本部分的目的，ODBC 应用程序不会被视为 ODBC 组件。  
   
 > [!NOTE]  
 >  本部分特定于 Microsoft Windows 平台。 ODBC 组件在其他平台上的安装方式是特定于平台的。  

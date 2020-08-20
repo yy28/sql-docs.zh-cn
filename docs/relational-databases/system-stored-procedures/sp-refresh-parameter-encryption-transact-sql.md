@@ -20,15 +20,16 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 64ca46d46ac648fdebeb8c028df312472e4f5d58
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446900"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645054"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql) 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 为当前数据库中指定的非绑定到架构的存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的参数更新 Always Encrypted 元数据。 
 
@@ -56,7 +57,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0（成功）或非零数字（失败）
 
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 如果以下情况，模块的参数的加密元数据可能会过时：   
 * 模块引用的表中列的加密属性已更新。 例如，已删除某列，并且添加了一个具有相同名称但具有不同加密类型、加密密钥或加密算法的新列。  

@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDSNFromIni 函数
 title: SQLRemoveDSNFromIni 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499610"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 函数
 **度**  
  引入的版本： ODBC 1。0  
   
  **摘要**  
- **SQLRemoveDSNFromIni**从系统信息中删除数据源。  
+ **SQLRemoveDSNFromIni** 从系统信息中删除数据源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,10 +47,10 @@ BOOL SQLRemoveDSNFromIni(
  送要删除的数据源的名称。  
   
 ## <a name="returns"></a>返回  
- 如果该函数删除了数据源或该数据源不在 Odbc .ini 文件中，则该函数返回 TRUE。 如果无法删除数据源，则返回 FALSE。  
+ 如果该函数删除数据源或数据源不在 Odbc.ini 文件中，则该函数返回 TRUE。 如果无法删除数据源，则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLRemoveDSNFromIni**返回 FALSE 时，可以* \** 通过调用**SQLInstallerError**获取关联的 pfErrorCode 值。 下表列出了可由**SQLInstallerError**返回的* \*pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当**SQLRemoveDSNFromIni**返回 FALSE 时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
@@ -58,14 +59,14 @@ BOOL SQLRemoveDSNFromIni(
 |ODBC_ERROR_REQUEST_FAILED|申请失败。|安装程序无法从注册表中删除 DSN 信息。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   
-## <a name="comments"></a>说明  
- **SQLRemoveDSNFromIni**从系统信息的 [ODBC 数据源] 部分删除数据源名称。 它还将从系统信息中删除数据源规范部分。  
+## <a name="comments"></a>注释  
+ **SQLRemoveDSNFromIni** 从系统信息的 [ODBC 数据源] 部分删除数据源名称。 它还将从系统信息中删除数据源规范部分。  
   
  只应从驱动程序安装程序库中调用此函数。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|查看|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |添加、修改或删除数据源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
 |添加、修改或删除数据源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  

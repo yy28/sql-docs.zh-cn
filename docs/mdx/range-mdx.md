@@ -1,5 +1,6 @@
 ---
-title: ：（范围）（MDX） |Microsoft Docs
+description: :（范围）(MDX)
+title: ： (范围)  (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d52a78a1fcdefa4ee7bf09fa4125b488165e09c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500460"
 ---
 # <a name="-range-mdx"></a>:（范围）(MDX)
 
@@ -35,7 +36,7 @@ Member_Expression : Member_Expression
  包含指定成员以及指定成员之间的所有成员的集。  
   
 ## <a name="remarks"></a>备注  
- 两个参数所指定的成员必须位于给定维度的同一级别和层次结构中。 如果这两个参数指定相同的成员，则 **：（范围）** 运算符将返回只包含指定成员的集。 如果第一个参数为 Null，则该集包含从第二个参数中指定的成员级别开始直到包括该成员的所有成员。 如果第二个参数为 Null，则该集包含从第一个参数中指定的成员开始直到包括同一级别最后一个成员的所有成员。  
+ 两个参数所指定的成员必须位于给定维度的同一级别和层次结构中。 如果这两个参数指定相同的成员，则 **： (范围) ** 运算符返回只包含指定成员的集。 如果第一个参数为 Null，则该集包含从第二个参数中指定的成员级别开始直到包括该成员的所有成员。 如果第二个参数为 Null，则该集包含从第一个参数中指定的成员开始直到包括同一级别最后一个成员的所有成员。  
   
  在 MDX 中没有与此集运算符功能相同的函数。  
   

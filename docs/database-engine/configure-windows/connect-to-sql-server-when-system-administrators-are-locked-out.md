@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717089"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512310"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85717089"
 
 在单用户模式下启动实例时，请首先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 否则，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可能会首先进行连接，获取到服务器的唯一可用连接并阻止你登录。
 
-未知客户端应用程序也可能在能够登录之前获取唯一可用的连接。 为了防止发生这种情况，可以使用后跟应用程序名称的 `-m` 选项将连接限制为来自指定应用程序的单个连接。 例如，用 `-m"sqlcmd"` 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接限制为将自身标识为 sqlcmd 客户端程序的单个连接。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的查询编辑器进行连接，请使用 `-m"Microsoft SQL Server Management Studio - Query"`。  
+未知客户端应用程序也可能在能够登录之前获取唯一可用的连接。 为了防止发生这种情况，可以使用后跟应用程序名称的 `-m` 选项将连接限制为来自指定应用程序的单个连接。 例如，用 `-mSQLCMD` 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接限制为将自身标识为 sqlcmd 客户端程序的单个连接。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的查询编辑器进行连接，请使用 `-m"Microsoft SQL Server Management Studio - Query"`。  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "85717089"
 | 选项 | 说明 | 何时使用 |
 |:---|:---|:---|
 |`-m` | 将连接限制为单个连接 | 当没有其他用户尝试连接到实例，或者不确定用于连接到实例的应用程序名称时。 |
-|`-m"sqlcmd"`| 将连接限制为必须将自身标识为 sqlcmd 客户端程序的单个连接| 当计划使用 sqlcmd 连接到实例，并且想要阻止其他应用程序使用唯一可用的连接时。 |
+|`-mSQLCMD`| 将连接限制为必须将自身标识为 sqlcmd 客户端程序的单个连接| 当计划使用 sqlcmd 连接到实例，并且想要阻止其他应用程序使用唯一可用的连接时。 |
 |`-m"Microsoft SQL Server Management Studio - Query"`| 将连接限制为必须将自身标识为“Microsoft SQL Server Management Studio - 查询”应用程序的单个连接。| 当计划通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的查询编辑器连接到实例，并且想要阻止其他应用程序使用唯一可用的连接时。 |
 |`-f`| 将连接限制为单个连接，并以最小配置启动实例 | 当某个其他配置阻止你启动时。 |
 | &nbsp; | &nbsp; | &nbsp; |

@@ -1,5 +1,6 @@
 ---
-title: OPENROWSET （DMX） |Microsoft Docs
+description: '&lt;源数据查询 &gt; -OPENROWSET'
+title: OPENROWSET (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b19b897b65ffb3a4c9e940370ffdead1e10b6d31
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8da3686e7772b7e997690d509c8092917635497a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500756"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;源数据查询 &gt; -OPENROWSET
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  使用对外部访问接口的查询替换源数据查询。 INSERT，选择 "从预测联接"，然后从 "自然预测联接语句" 中选择 "支持**OPENROWSET**"。  
+  使用对外部访问接口的查询替换源数据查询。 INSERT，选择 "从预测联接"，然后从 "自然预测联接语句" 中选择 "支持 **OPENROWSET**"。  
   
 ## <a name="syntax"></a>语法  
   

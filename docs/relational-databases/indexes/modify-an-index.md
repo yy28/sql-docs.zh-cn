@@ -1,4 +1,5 @@
 ---
+description: 修改索引
 title: 修改索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -15,12 +16,12 @@ ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68316958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499357"
 ---
 # <a name="modify-an-index"></a>修改索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,11 +45,11 @@ ms.locfileid: "68316958"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”** ，展开该表所属的数据库，再展开 **“表”** 。  
+2.  展开 **“数据库”**，展开该表所属的数据库，再展开 **“表”**。  
   
-3.  展开该索引所属的表，再展开 **“索引”** 。  
+3.  展开该索引所属的表，再展开 **“索引”**。  
   
-4.  右键单击要修改的索引，然后单击“属性”  。  
+4.  右键单击要修改的索引，然后单击“属性”****。  
   
 5.  在 **“索引属性”** 对话框中进行所需的更改。 例如，您可以从索引键中添加或删除列，或更改索引选项的设置。  
   

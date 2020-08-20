@@ -1,5 +1,6 @@
 ---
-title: SetToStr （MDX） |Microsoft Docs
+description: SetToStr (MDX)
+title: SetToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3965c3cc8ea2a2f2de292ca0c75e49c957e04f02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0317de06f3d68388fac5be752d26e27f0d373a89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500440"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
 
@@ -32,7 +33,7 @@ SetToStr(Set_Expression)
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 该函数用于将某集的字符串表示形式传输到外部函数，以进行分析。 返回的字符串括在大括号{}中，其中的每一项都由逗号分隔。  
+ 该函数用于将某集的字符串表示形式传输到外部函数，以进行分析。 返回的字符串括在大括号中 {} ，其中的每一项都由逗号分隔。  
   
 ## <a name="example"></a>示例  
  下面的示例将返回包含 Geography.Country 属性层次结构的所有成员的字符串。  

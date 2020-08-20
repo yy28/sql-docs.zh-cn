@@ -1,4 +1,5 @@
 ---
+description: 为索引指定填充因子
 title: 为索引指定填充因子 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -14,12 +15,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499330"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,17 +73,17 @@ ms.locfileid: "67909524"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要指定索引的填充因子的表，然后选择“设计”  。  
+3.  右键单击你要指定索引的填充因子的表，然后选择“设计”****。  
   
-4.  在“表设计器”  菜单上，单击“索引/键”  。  
+4.  在“表设计器”菜单上，单击“索引/键”。  
   
 5.  选择您要指定填充因子的索引。  
   
-6.  展开 **“填充规范”** ，选择 **“填充因子”** 行并在行中输入所需的填充因子。  
+6.  展开 **“填充规范”**，选择 **“填充因子”** 行并在行中输入所需的填充因子。  
   
 7.  单击“关闭”  。  
   
-8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
+8.  在“文件”**** 菜单上，选择“保存”**** 以保存 _table_name_。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
@@ -94,13 +95,13 @@ ms.locfileid: "67909524"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要指定填充因子的索引，然后选择“属性”  。  
+5.  右键单击要指定填充因子的索引，然后选择“属性”****。  
   
 6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
 7.  在 **“填充因子”** 行中，输入所需的填充因子。  
   
-8.  单击“确定”。   
+8.  单击“确定”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -110,7 +111,7 @@ ms.locfileid: "67909524"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例重新生成现有索引，并在重新生成操作过程中应用指定的填充因子。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例重新生成现有索引，并在重新生成操作过程中应用指定的填充因子。  
   
     ```  
     USE AdventureWorks2012;  
@@ -129,7 +130,7 @@ ms.locfileid: "67909524"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

@@ -1,4 +1,5 @@
 ---
+description: 事务 - AlwaysOn 可用性组和数据库镜像
 title: 事务：可用性组和数据库镜像
 descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87a2d5dc4e4c7109db09217e975c1a8c8c9b9434
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500928"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -91,6 +92,6 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
 >  通过本文未批准的方式配合 DTC 使用数据库镜像或配合 DTC 使用可用性组不受支持。  这并不意味着不支持与 DTC 不相关的产品方面；而是不支持因错误使用分布式事务而引发的任何问题。  
   
 ## <a name="next-steps"></a>后续步骤  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

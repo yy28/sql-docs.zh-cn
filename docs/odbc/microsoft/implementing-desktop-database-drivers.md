@@ -1,4 +1,5 @@
 ---
+description: 实现桌面数据库驱动程序
 title: 实现桌面数据库驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19d9e95fff84340c520b37e64f88f845d161e25d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500310"
 ---
 # <a name="implementing-desktop-database-drivers"></a>实现桌面数据库驱动程序
-有关如何实现和设置 Microsoft ODBC 桌面数据库驱动程序的说明和技术说明，可参阅 ODBC 数据源管理器联机帮助。 在驱动程序安装例程期间，可以从[MICROSOFT ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)访问此文件。  
+有关如何实现和设置 Microsoft ODBC 桌面数据库驱动程序的说明和技术说明，可参阅 ODBC 数据源管理器联机帮助。 在驱动程序安装例程期间，可以从 [MICROSOFT ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)访问此文件。  
   
  本部分包含以下主题。  
   

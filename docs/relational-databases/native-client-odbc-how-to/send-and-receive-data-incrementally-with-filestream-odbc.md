@@ -1,5 +1,6 @@
 ---
-title: 数据增量，FILESTREAM （ODBC）
+description: 通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
+title: '数据增量，FILESTREAM (ODBC) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,27 +12,28 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f475eb3ba5887932ff760077fb001e520ca48130
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cbd57baf461cb9317f2d6c4baea469b9063d62a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499210"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例显示如何通过 FILESTREAM 功能使用 SQLPutData 和 SQLGetData 以增量方式发送和接收数据。  
   
- 有关 FILESTREAM 功能的详细信息，请参阅[Filestream 支持 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
+ 有关 FILESTREAM 功能的详细信息，请参阅 [Filestream 支持 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>示例  
  编译和运行此示例前，先启用 FILESTREAM 支持（[启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)）。  
   
- 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
+ 第一 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
   
  第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
   
- 第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表删除此示例使用的数据库。  
+ 第三个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用的数据库。  
   
 ```sql
 USE master  

@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 45dc1cfc39b1287078e29c139b157a3e23ee3922
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4adbc9ea8015b500b4555b8e2e2d97d363b098b1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420041"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646037"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-sql) 
 
@@ -31,7 +31,7 @@ ms.locfileid: "88420041"
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | 指示分区 ID。 在数据库中是唯一的。     |
 | **hobt_id**                 | **bigint** | 具有此 columnstore 索引的表的堆或 B 树 (hobt) 的 ID。 |
-| **column_id**               | **int**    | 列存储列的 ID。                                |
+| column_id               | **int**    | 列存储列的 ID。                                |
 | **segment_id**              | **int**    | 列段的 ID。 为实现向后兼容性，即使这是行组 ID，列名仍将继续 segment_id 调用。 您可以使用 <hobt_id，partition_id column_id> <segment_id> 来唯一标识段。 |
 | **version**                 | **int**    | 列段格式的版本。                        |
 | **encoding_type**           | **int**    | 用于该段的编码类型：<br /><br /> 1 = 不含字典的 VALUE_BASED 非字符串/二进制文件 (类似于4，具有一些内部变体) <br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。 |
@@ -80,6 +80,9 @@ ORDER BY    table_nm
 ,           nc.column_id
 ,           sm.name ;
 ```
+
+>[!TIP]
+> 为提高 Synapse SQL 中的性能，请考虑**pdw_permanent_table_mappings**使用持久性用户表上的而不是**sys.databases pdw_table_mappings。** 有关详细信息，请参阅 **[.sys &#40;transact-sql&#41;pdw_permanent_table_mappings ](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 。
 
 ## <a name="permissions"></a>权限
 

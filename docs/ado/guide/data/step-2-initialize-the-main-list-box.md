@@ -1,4 +1,5 @@
 ---
+description: 步骤 2：初始化主列表框
 title: 步骤2：初始化主列表框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f746b454b18de7d88ca4c42d049eb058f671ba8e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760813"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512293"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步骤 2：初始化主列表框
-若要声明全局记录和记录集对象，请将以下代码插入到 Form1 的（常规）（声明）中：  
+若要声明全局记录和记录集对象，请将以下代码插入到 Form1 的 (常规)  () 声明中：  
   
 ```  
 Option Explicit  
@@ -45,7 +46,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 此代码将实例化全局记录和记录集对象。 `grec`使用指定为 ActiveConnection 的 URL 打开记录对象。 如果该 URL 存在，则将其打开;如果它尚不存在，则创建它。 请注意，应将 " <https://servername/foldername/> " 替换为你的环境中的有效 URL。  
+ 此代码将实例化全局记录和记录集对象。 `grec`使用指定为 ActiveConnection 的 URL 打开记录对象。 如果该 URL 存在，则将其打开;如果它尚不存在，则创建它。 请注意，应将替换 `https://servername/foldername/` 为您的环境中的有效 URL。  
   
  记录集对象 `grs` 在记录的子级上打开 `grec` 。 然后， `lstMain` 将用发布到 URL 的资源的文件名填充。  
   
