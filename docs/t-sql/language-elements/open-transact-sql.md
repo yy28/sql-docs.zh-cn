@@ -1,4 +1,5 @@
 ---
+description: OPEN (Transact-SQL)
 title: OPEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73199a9dba314f845c8dbb4268da0cc4fd0f4af4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 478c8c846f075c6d9a9705e978a53236a65e3536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467577"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标，然后通过执行在 DECLARE CURSOR 或 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*语句中指定的* 语句填充游标。  
+  打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标，然后通过执行在 DECLARE CURSOR 或 SET *cursor_variable* 语句中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句填充游标。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,15 +47,15 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 
 ## <a name="arguments"></a>参数
  GLOBAL  
- 指定 cursor_name 是指全局游标  。  
+ 指定 cursor_name 是指全局游标。  
   
- cursor_name   
- 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标    。  
+ cursor_name  
+ 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标******。  
   
- cursor_variable_name   
+ cursor_variable_name  
  游标变量的名称，该变量引用一个游标。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果使用 INSENSITIVE 或 STATIC 选项声明了游标，那么 OPEN 将创建一个临时表以保留结果集。 如果结果集中任意行的大小超过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的最大行大小，OPEN 将失败。 如果使用 KEYSET 选项声明了游标，那么 OPEN 将创建一个临时表以保留键集。 临时表存储在 tempdb 中。  
   
  打开游标后，可以使用 @@CURSOR_ROWS 函数在上次打开的游标中接收合格行的数目。  

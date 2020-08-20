@@ -1,4 +1,5 @@
 ---
+description: Extended Methods on Geography Instances
 title: Geography 实例上的扩展方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ dev_langs:
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3688e530362dd313c9e5f5b4623cce1c64d5caae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e9fe842234ae0cf2ec704bbdeee0eab81dfd835
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467492"
 ---
-# <a name="extended-methods-on-geography-instances"></a>地理实例上的扩展方法
+# <a name="extended-methods-on-geography-instances"></a>Extended Methods on Geography Instances
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在开放地理空间联盟 (OGC) 地理实例上支持多种扩展方法。  
@@ -74,7 +75,7 @@ ms.locfileid: "85731209"
   
 -   [NumRing](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
--   [Reduce](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
+-   [减轻](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
   
 -   [ReorientObject](../../t-sql/spatial-geography/reorientobject-geography-data-type.md)  
   

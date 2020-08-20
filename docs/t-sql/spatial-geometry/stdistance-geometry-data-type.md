@@ -1,4 +1,5 @@
 ---
+description: STDistance（geometry 数据类型）
 title: STDistance（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bcb10fc64d6bac02b8ecc6faba0c8d7662b0adc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467359"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,11 +44,11 @@ ms.locfileid: "86554991"
  另一个 **geometry** 实例，将度量该实例与调用 `STDistance()` 的实例之间的距离。 如果 *other_geometry* 为空集，则 `STDistance()` 返回 null。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float****  
   
- CLR 返回类型：SqlDouble   
+ CLR 返回类型：SqlDouble****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 **geometry** 实例的空间引用 ID (SRID) 不匹配，则 `STDistance()` 始终返回 null。  
   
 ## <a name="examples"></a>示例  

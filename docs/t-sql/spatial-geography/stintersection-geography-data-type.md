@@ -1,4 +1,5 @@
 ---
+description: STIntersection（geography 数据类型）
 title: STIntersection（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9107a97c775aaf5b249ee0a16e8e916c700d00a4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 26df98e23bc24c0f1c112ffa2a07600cc753cb1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467458"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回一个对象，该对象表示一个 geography 实例与另一个 geography 实例的交点   。  
+  返回一个对象，该对象表示一个 geography 实例与另一个 geography 实例的交点********。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +40,20 @@ ms.locfileid: "86554384"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography   
- 与调用 STIntersection() 的实例进行比较的另一个 geography 实例  。  
+ other_geography**  
+ 与调用 STIntersection() 的实例进行比较的另一个 geography 实例****。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
  返回两个 geography 实例的交集。  
   
- 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则 STIntersection() 始终返回 NULL  。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则 STIntersection() 始终返回 NULL****。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器上返回的可能结果集中可能包含 FullGlobe 实例  。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器上返回的可能结果集中可能包含 FullGlobe 实例****。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
@@ -89,6 +90,6 @@ SELECT @g.STIntersection('FULLGLOBE').ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

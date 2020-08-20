@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE（SQL 图形）
 title: CREATE TABLE（SQL 图形）| Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2019
@@ -32,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06a5284d057467ad687a503af0f70be8b01c2154
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0653d3be257c77ab0eba1410104818d72c810c77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467186"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE（SQL 图形）
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -100,14 +101,14 @@ CREATE TABLE
 ## <a name="arguments"></a>参数
 本文档仅列出与 SQL 图形相关的参数。 有关受支持参数的完整列表和说明，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- database_name      
- 要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。  
+ database_name    
+ 要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称。 如果未指定，则 database_name 默认为当前数据库。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限。  
   
- schema_name      
+ schema_name    
  新表所属架构的名称。  
   
  *table_name*      
- 是节点或边界表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符  。  
+ 是节点或边界表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符。  
   
  NODE   
  创建节点表。

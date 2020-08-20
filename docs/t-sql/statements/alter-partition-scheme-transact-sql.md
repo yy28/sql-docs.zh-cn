@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION SCHEME (Transact-SQL)
 title: ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3baca278dfaa94c51dfddff84a8a5c760c1275ae
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c6bd938d1dfcf4cf1506d1b8eb35cade61458f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467340"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -51,19 +52,19 @@ NEXT USED [ filegroup_name ] [ ; ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- partition_scheme_name   
+ partition_scheme_name  
  要更改的分区方案的名称。  
   
- filegroup_name   
+ filegroup_name  
  指定要由分区方案标记为 NEXT USED 的文件组。 这意味着文件组将接受使用 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) 语句创建的新分区。  
   
- 在一个分区方案中，只能将一个文件组指定为 NEXT USED。 可以指定非空文件组。 如果指定了 filegroup_name 且当前没有文件组被标记为 NEXT USED，则将 filegroup_name 标记为 NEXT USED   。 如果指定了 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则 NEXT USED 属性从现有的文件组转移到 filegroup_name   。  
+ 在一个分区方案中，只能将一个文件组指定为 NEXT USED。 可以指定非空文件组。 如果指定了 filegroup_name 且当前没有文件组被标记为 NEXT USED，则将 filegroup_name 标记为 NEXT USED****。 如果指定了 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则 NEXT USED 属性从现有的文件组转移到 filegroup_name****。  
   
- 如果没有指定 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则该文件组将失去其 NEXT USED 状态，因此 partition_scheme_name 中将没有 NEXT USED 文件组   。  
+ 如果没有指定 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则该文件组将失去其 NEXT USED 状态，因此 partition_scheme_name 中将没有 NEXT USED 文件组****。  
   
- 如果指定了 filegroup_name 且没有文件组被标记为 NEXT USED，则 ALTER PARTITION SCHEME 将返回一个警告  。  
+ 如果指定了 filegroup_name 且没有文件组被标记为 NEXT USED，则 ALTER PARTITION SCHEME 将返回一个警告**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  受 ALTER PARTITION SCHEME 影响的所有文件组都必须处于联机状态。  
   
 ## <a name="permissions"></a>权限  

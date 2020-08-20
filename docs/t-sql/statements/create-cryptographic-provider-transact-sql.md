@@ -1,4 +1,5 @@
 ---
+description: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10d3716351aecc982ad060cd9795c029401a48a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b1a12f2c53409148854b806f1141bf46acad8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467247"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,16 +48,16 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- provider_name   
+ provider_name  
  可扩展密钥管理提供程序的名称。  
   
- path_of_DLL   
- 实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可扩展的密钥管理接口的 .dll 文件的路径。 使用用于 Microsoft Azure Key Vault 的 SQL Server 连接器时，默认位置是 C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll   。  
+ path_of_DLL  
+ 实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可扩展的密钥管理接口的 .dll 文件的路径。 使用用于 Microsoft Azure Key Vault 的 SQL Server 连接器时，默认位置是 C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll********。  
   
 ## <a name="remarks"></a>备注  
  提供程序创建的所有密钥都将按照提供程序的 GUID 引用提供程序。 在 DLL 的所有版本中都将保留此 GUID。  
   
- 必须使用任何证书对实现 SQLEKM 接口的 DLL 进行数字签名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将验证此签名。 此签名包括其证书链，证书链的根目录必须安装在 Windows 系统的受信任的根证书颁发机构位置  。 如果该签名未经正确验证，则 CREATE CRYPTOGRAPHIC PROVIDER 语句将失败。 有关证书和证书链的详细信息，请参阅 [SQL Server 证书和对称密钥](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
+ 必须使用任何证书对实现 SQLEKM 接口的 DLL 进行数字签名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将验证此签名。 此签名包括其证书链，证书链的根目录必须安装在 Windows 系统的受信任的根证书颁发机构位置****。 如果该签名未经正确验证，则 CREATE CRYPTOGRAPHIC PROVIDER 语句将失败。 有关证书和证书链的详细信息，请参阅 [SQL Server 证书和对称密钥](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
   
  当 EKM 提供程序 DLL 未实现所有必需的方法时，CREATE CRYPTOGRAPHIC PROVIDER 可能返回错误 33085：  
   
@@ -67,7 +68,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
 ## <a name="permissions"></a>权限  
- 要求具有 CONTROL SERVER 权限，或者具有 sysadmin 固定服务器角色的成员身份  。  
+ 要求具有 CONTROL SERVER 权限，或者具有 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下面的示例通过 .dll 文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建名为 `SecurityProvider` 的加密提供程序。 此 .dll 文件命名为 `c:\SecurityProvider\SecurityProvider_v1.dll` 并安装在服务器上。 必须首先在服务器上安装此提供程序的证书。  

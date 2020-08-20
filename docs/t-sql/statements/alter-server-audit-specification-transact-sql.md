@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b955c95df0af36bac4f249aab547310d46a6220
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fd2163114fb0b2ad6d21ca2ed827db160819c8ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467264"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,16 +51,16 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- audit_specification_name   
+ audit_specification_name**  
  审核规范的名称。  
   
- audit_name   
+ audit_name**  
  应用此规范的审核的名称。  
   
- audit_action_group_name   
+ audit_action_group_name**  
  服务器级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- WITH ( STATE  **{ ON | OFF } )** **=**   
+ WITH ( STATE = { ON | OFF } )************  
  允许或禁止审核收集此审核规范的记录。  
   
 ## <a name="remarks"></a>备注  
@@ -71,7 +72,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  创建服务器审核规范后，具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 权限的主体、sysadmin 帐户或具有对审核的明确访问权的主体即可查看该规范。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个称为 `HIPAA_Audit_Specification` 的服务器审核规范。 它删除了失败登录的审核操作组，为称作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `HIPAA_Audit` Audit 的数据库对象访问添加了一个审核操作组。  
+ 下面的示例创建一个称为 `HIPAA_Audit_Specification` 的服务器审核规范。 它删除了失败登录的审核操作组，为称作 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的数据库对象访问添加了一个审核操作组。  
   
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  

@@ -1,4 +1,5 @@
 ---
+description: CREATE INDEX (Transact-SQL)
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -54,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61f09bbc1b1d7ed517dfb2fca623dca02209a498
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 19e4d14aa0e8624cf2ddc5ca37e3aba5ea27dff1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467253"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -314,7 +315,7 @@ ON "default"
 
 在表或视图所在的文件组或分区方案上创建指定索引。
 
-在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示   。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示     。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 
 > [!NOTE]
 > “default”不表示 CREATE INDEX 上下文中的数据库默认文件组。 这与 CREATE TABLE 不同，在 CREATE TABLE 中，“default”会在数据库默认文件组上找到表。

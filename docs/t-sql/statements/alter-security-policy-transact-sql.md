@@ -1,4 +1,5 @@
 ---
+description: ALTER SECURITY POLICY (Transact-SQL)
 title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0696b96e83aac5ca66b43d38c11adceab702c10f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d8267b7583827dce34e46c8f3605912fe72ea72b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467287"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 是应用的安全谓词的目标表。 多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注
 ALTER SECURITY POLICY 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
 将谓词函数用于内存优化表时，安全策略中必须包含 SCHEMABINDING 并使用 WITH NATIVE_COMPILATION 编译提示 。 不能使用 ALTER 语句更改 SCHEMABINDING 参数，因为该参数应用于所有谓词。 若要更改架构绑定，必须先删除安全策略，然后再重新创建。  
