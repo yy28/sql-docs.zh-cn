@@ -1,4 +1,5 @@
 ---
+description: TSQL 事件类别
 title: TSQL 事件类别 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca72015d0d10ff33b250a96c539f36c85f1a5cef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 585e69e546489f4130e7200f819244f89620492b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494250"
 ---
 # <a name="tsql-event-category"></a>TSQL 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,6 +41,6 @@ ms.locfileid: "85789533"
 |[XQuery Static Type 事件类](../../relational-databases/event-classes/xquery-static-type-event-class.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 XQuery 表达式时出现。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)  
+ [Transact-SQL 参考（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

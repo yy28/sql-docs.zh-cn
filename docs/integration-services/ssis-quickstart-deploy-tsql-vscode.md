@@ -1,4 +1,5 @@
 ---
+description: 使用 TRANSACT-SQL 从 Visual Studio Code 部署 SSIS 项目
 title: 使用 TRANSACT-SQL (VS Code) 部署 SSIS 项目 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495403"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 TRANSACT-SQL 从 Visual Studio Code 部署 SSIS 项目
 
@@ -24,13 +25,13 @@ ms.locfileid: "86921818"
 
 Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS 和 Linux，其支持的扩展包括用于连接到 Microsoft SQL Server、Azure SQL 数据库或 Azure SQL 数据仓库的 `mssql` 扩展。 有关 VS Code 的详细信息，请参阅 [Visual Studio Code](https://code.visualstudio.com/)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在开始之前，请确保已安装最新版本的 Visual Studio Code 并已加载 `mssql` 扩展。 若要下载这些工具，请参阅以下页面：
 -   [下载 Visual Studio Code](https://code.visualstudio.com/Download)
 -   [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
-## <a name="supported-platforms"></a>支持的平台
+## <a name="supported-platforms"></a>受支持的平台
 
 可使用此快速入门中的信息将 SSIS 项目部署到以下平台：
 
@@ -42,13 +43,13 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>在 VS Code 中将语言模式设置为 SQL
 
-若要启用 `mssql` 命令和 T-SQL IntelliSense，请在 Visual Studio Code 中将语言模式设置为 SQL  。
+若要启用 `mssql` 命令和 T-SQL IntelliSense，请在 Visual Studio Code 中将语言模式设置为 SQL****。
 
 1. 打开 Visual Studio Code，然后打开一个新窗口。 
 
-2. 在状态栏的右下角单击“纯文本”  。
+2. 在状态栏的右下角单击“纯文本”****。
  
-3. 在打开的“选择语言模式”  下拉菜单中选择或输入“SQL”  ，然后按 ENTER  将语言模式设置为 SQL。 
+3. 在打开的“选择语言模式”**** 下拉菜单中选择或输入“SQL”****，然后按 ENTER**** 将语言模式设置为 SQL。 
 
 ## <a name="supported-authentication-method"></a>支持的身份验证方法
 
@@ -58,11 +59,11 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
 使用 Visual Studio Code 来建立到 SSIS 目录的连接。
 
-1. 在 VS Code 中，按 CTRL+SHIFT+P（或 F1）打开命令面板   。
+1. 在 VS Code 中，按 CTRL+SHIFT+P（或 F1）打开命令面板********。
 
-2. 键入 sqlcon，然后按 ENTER   。
+2. 键入 sqlcon，然后按 ENTER********。
 
-3. 按 **ENTER** 选择“创建连接配置文件”。  本步骤是为 SQL Server 实例创建连接配置文件。
+3. 按 **ENTER** 选择“创建连接配置文件”。**** 本步骤是为 SQL Server 实例创建连接配置文件。
 
 4. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 **ENTER** 继续。 
 
@@ -74,20 +75,20 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
    | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码(SQL 登录名)** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
-   |  输入此配置文件的名称 | 一个配置文件名称，如 mySSISServer  | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
+   | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer**** | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
 
-5. 按 ESC  键关闭信息消息，该消息通知你，配置文件已创建并且已连接。
+5. 按 ESC**** 键关闭信息消息，该消息通知你，配置文件已创建并且已连接。
 
 6. 在状态栏中验证连接。
 
 ## <a name="run-the-t-sql-code"></a>运行 T-SQL 代码
 运行下面的 TRANSACT-SQL 代码以部署 SSIS 项目。
 
-1. 在“编辑器”  窗口中，在空查询窗口中输入以下查询。
+1. 在“编辑器”**** 窗口中，在空查询窗口中输入以下查询。
 
 2. 为系统更新 `catalog.deploy_project` 存储过程中的参数值。
 
-3. 按 CTRL+SHIFT+E  以运行代码并部署项目。
+3. 按 CTRL+SHIFT+E**** 以运行代码并部署项目。
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetVersions 函数
 title: LocalDBGetVersions 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1548b23aceb5eb4f622ada1289df88ff790c8645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ddc76949165266656558a7f99c959fc0942d005
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494229"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85640851"
  输出包含用户工作站上可用的 LocalDB 版本的名称。  
   
  *lpdwNumberOfVersions*  
- [输入/输出]输入时保存*pVersionNames*缓冲区中版本的槽数。   
+ [输入/输出]输入时保存 *pVersionNames* 缓冲区中版本的槽数。   
 在输出时，将包含现有 LocalDB 版本的数目。  
   
 ## <a name="returns"></a>返回  
@@ -59,7 +60,7 @@ ms.locfileid: "85640851"
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>备注  
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅 [SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

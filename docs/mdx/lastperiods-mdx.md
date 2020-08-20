@@ -1,5 +1,6 @@
 ---
-title: LastPeriods （MDX） |Microsoft Docs
+description: LastPeriods (MDX)
+title: LastPeriods (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60e8adf1dba453fb536f95a4fa113e16f6950f62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494880"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 
@@ -35,13 +36,13 @@ LastPeriods(Index [ ,Member_Expression ] )
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果指定的期间数为正，则**LastPeriods**函数返回一组成员，该成员从指定的成员表达式中以滞后于*索引*-1 的成员开头，并以指定的成员结束。 函数返回的成员数等于*Index*。  
+ 如果指定的期间数为正，则 **LastPeriods** 函数返回一组成员，该成员从指定的成员表达式中以滞后于 *索引* -1 的成员开头，并以指定的成员结束。 函数返回的成员数等于 *Index*。  
   
- 如果指定的期间数为负数，则**LastPeriods**函数返回一组成员，这些成员以指定成员开头，并以从指定成员领导（- *Index* -1）的成员结尾。 函数返回的成员数等于*Index*的绝对值。  
+ 如果指定的期间数为负数，则 **LastPeriods** 函数返回一组成员，这些成员以指定成员开头，并以从指定成员领导 ( *索引*) 的成员结尾。 函数返回的成员数等于 *Index*的绝对值。  
   
- 如果指定的期间数为零，则**LastPeriods**函数返回空集。 这与**Lag**函数不同，后者会在指定0时返回指定的成员。  
+ 如果指定的期间数为零，则 **LastPeriods** 函数返回空集。 这与 **Lag** 函数不同，后者会在指定0时返回指定的成员。  
   
- 如果未指定成员，则**LastPeriods**函数将使用**CurrentMember**。 如果没有任何一个维度标记为 Time 维度，该函数将在不发生错误的情况下分析并执行，但将导致客户端应用程序出现单元错误。  
+ 如果未指定成员，则 **LastPeriods** 函数将使用 **CurrentMember**。 如果没有任何一个维度标记为 Time 维度，该函数将在不发生错误的情况下分析并执行，但将导致客户端应用程序出现单元错误。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回 2002 会计年度第二、第三和第四会计季度的默认度量值。  

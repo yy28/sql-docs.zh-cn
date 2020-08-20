@@ -1,5 +1,6 @@
 ---
-title: CREATE KPI 语句（MDX） |Microsoft Docs
+description: MDX 数据定义 - CREATE KPI
+title: " (MDX) 创建 KPI 语句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1840ebe0dec014a2b768a8571249b103de6552d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494850"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义 - CREATE KPI
 
@@ -58,10 +59,10 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|返回时间维度成员的有效 MDX 表达式。 CURRENT_TIME_MEMBER 设置所有相对时间函数的参考点|  
 |PARENT_KPI|指定父级 KPI 名称的字符串。|  
 |CAPTION|客户端应用程序用作 KPI 标题的字符串。|  
-|DISPLAY_FOLDER|指定显示文件夹的路径的字符串，客户端应用程序将在此处显示 KPI。 文件夹级别的分隔符由客户端应用程序定义。 对于提供的工具和客户端[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠（\\）是级别分隔符。 若要为已定义的成员提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
+|DISPLAY_FOLDER|指定显示文件夹的路径的字符串，客户端应用程序将在此处显示 KPI。 文件夹级别的分隔符由客户端应用程序定义。 对于提供的工具和客户端 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，) 的反斜杠 (\\ 是级别分隔符。 若要为已定义的成员提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
 |ASSOCIATED_MEASURE_GROUP|指定所有 MDX 计算应指向的度量值组名称的字符串。|  
   
- GOAL、STATUS 和 TREND 属性的值是 MDX 表达式，并且这些表达式的计算结果应该在 -1 和 1 之间。 但是，定义这些属性值的实际范围的是客户端应用程序。 使用提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]工具和客户端浏览 kpi 时，小于-1 的值将被视为-1，大于1的值将被视为1。  
+ GOAL、STATUS 和 TREND 属性的值是 MDX 表达式，并且这些表达式的计算结果应该在 -1 和 1 之间。 但是，定义这些属性值的实际范围的是客户端应用程序。 使用提供的工具和客户端 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 浏览 kpi 时，小于-1 的值将被视为-1，大于1的值将被视为1。  
   
  STATUS_GRAPHIC 和 TREND_GRAPHIC 都是字符串值，客户端应用程序使用它们来标识要显示的正确图像集。 这些字符串还定义显示函数的行为。 此行为包括要显示的状态数（通常是奇数），以及每种状态所使用的图像。  
   
@@ -76,7 +77,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  对于某些图形来说，如反向测量或反向状态箭头，则范围相反。 即，-1 是好，1 是差。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形的名称可确定该图形有三种状态还是五种状态。 下表列出了与 KPI 图形[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]关联的状态、名称和状态数。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形的名称可确定该图形有三种状态还是五种状态。 下表列出了 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 与 KPI 图形关联的状态、名称和状态数。  
   
 |图形用途|KPI 图形的名称|状态数|  
 |--------------------|-------------------------|----------------------|  

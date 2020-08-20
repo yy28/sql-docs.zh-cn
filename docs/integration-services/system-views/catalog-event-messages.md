@@ -1,4 +1,5 @@
 ---
+description: catalog.event_messages
 title: catalog.event_messages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e19ca7fac23979ecd691ed6cab45fa2cfec9564
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fcb7e924f444b44435b6c46dcdf76a88ebeec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495258"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912625"
 |Message_time|datetimeoffset(7)|创建消息的时间。|  
 |Message_type|smallint|所显示的消息的类型。 有关消息类型的详细信息，请参阅 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)。|  
 |Message_source_type|smallint|消息的源。|  
-|message|nvarchar(max)|消息的文本。|  
+|消息|nvarchar(max)|消息的文本。|  
 |Extended_info_id|bigint|与在 [catalog.extended_operation_info（SSISDB 数据库）](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)视图中找到的操作消息相关的附加信息的 ID。|  
 |Package_name|nvarchar(260)|包文件的名称。|  
 |Event_name|nvarchar(1024)|与消息关联的运行时事件。|  
@@ -48,7 +49,7 @@ ms.locfileid: "86912625"
 ## <a name="remarks"></a>备注  
  此视图显示下列消息源类型。  
   
-|**message_source_type**|说明|  
+|**message_source_type**|描述|  
 |-------------------------------|-----------------|  
 |10|入口 API，如 T-SQL 和 CLR 存储过程|  
 |20|用来运行包的外部进程 (ISServerExec.exe)|  

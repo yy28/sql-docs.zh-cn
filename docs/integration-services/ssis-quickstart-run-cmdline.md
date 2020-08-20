@@ -1,4 +1,5 @@
 ---
+description: 使用 DTExec.exe 从命令提示符运行 SSIS 包
 title: 从命令提示符运行 SSIS 包 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abac052f7da501f298cc0166273ca624e2fc38f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bc97eb4c3c8d554a86a773910508c2d1ba936459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495404"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>使用 DTExec.exe 从命令提示符运行 SSIS 包
 
@@ -27,7 +28,7 @@ ms.locfileid: "86921801"
 
 有关 `DTExec.exe` 的详细信息，请参阅 [dtexec 实用工具](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)。
 
-## <a name="supported-platforms"></a>支持的平台
+## <a name="supported-platforms"></a>受支持的平台
 
 可使用此快速入门中的信息在以下平台上运行 SSIS 包：
 

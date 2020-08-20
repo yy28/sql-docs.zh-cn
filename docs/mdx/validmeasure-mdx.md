@@ -1,5 +1,6 @@
 ---
-title: ValidMeasure （MDX） |Microsoft Docs
+description: ValidMeasure (MDX)
+title: ValidMeasure (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd2bc2385a3445076636fb1b4001120463d1cd89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494824"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -38,7 +39,7 @@ ValidMeasure(Tuple_Expression)
   
 -   属性的维度与度量值的度量值组无关，但粒度属性不是键属性，并且粒度属性与元组中的属性没有直接关系。  
   
- 此函数指定的行为是默认的服务器端行为，由度量值组对象上的**IgnoreUnrelatedDimensions**属性控制。  
+ 此函数指定的行为是默认的服务器端行为，由度量值组对象上的 **IgnoreUnrelatedDimensions** 属性控制。  
   
  对于具有粒度的指定元组中的每个属性（也就是说，元组中的成员不是“全部”成员），其当前坐标按如下方式移动：  
   

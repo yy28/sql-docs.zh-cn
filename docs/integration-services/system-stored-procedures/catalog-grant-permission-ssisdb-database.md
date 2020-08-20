@@ -1,4 +1,5 @@
 ---
+description: catalog.grant_permission（SSISDB 数据库）
 title: catalog.grant_permission（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4eb835fb8f5d81d5c15ecc0bf3c6911c2dfb05ef
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 19ad48a806db4f1877ac71f38d71be8f0d2dadc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495394"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission（SSISDB 数据库）
 
@@ -78,20 +79,20 @@ catalog.grant_permission [ @object_type = ] object_type
 
 此过程不能由 SQL Server 验证了身份的登录名调用。 它不能由 sa 登录名调用。
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  通过此存储过程可以授予下表中所示的权限类型：  
   
 |permission_type 值|权限名称|权限说明|适用对象类型|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允许主体读取被视为对象一部分的信息（如属性）。 它不允许主体枚举或读取该对象中包含的其他对象的内容。|文件夹、项目、环境、操作|  
 |`2`|MODIFY|允许主体修改被视为对象一部分的信息（如属性）。 它不允许主体修改该对象中包含的其他对象。|文件夹、项目、环境、操作|  
-|`3`|在运行 CREATE 语句前执行|允许主体执行项目中的所有包。|Project|  
+|`3`|EXECUTE|允许主体执行项目中的所有包。|项目|  
 |`4`|MANAGE_PERMISSIONS|允许主体向对象分配权限。|文件夹、项目、环境、操作|  
-|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|Folder|  
-|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|Folder|  
-|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|Folder|  
-|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|Folder|  
-|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|Folder|  
+|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|文件夹|  
+|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|文件夹|  
+|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|文件夹|  
+|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|文件夹|  
+|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|文件夹|  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  有关相关错误和消息，请参阅“返回代码值”一节。  

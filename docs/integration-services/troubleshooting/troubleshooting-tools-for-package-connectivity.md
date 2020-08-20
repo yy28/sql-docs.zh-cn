@@ -1,4 +1,5 @@
 ---
+description: 包连接故障排除工具
 title: 包连接故障排除工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6be13d4e6ef84b22a50368e3818af6231a7a04e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93297c11c2fbca50fdf8fb1f25d319343963d2b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495120"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>包连接故障排除工具
 
@@ -44,7 +45,7 @@ ms.locfileid: "86913733"
   
     -   查找转换、OLE DB 命令转换和渐变维度转换  
   
-     日志记录消息包括正被调用的方法的名称。 例如，这些日志消息可能包括 OLE DB **Open** 对象的 **Connection** 方法或 **ExecuteNonQuery** 对象的 **Command** 方法。 该消息具有以下格式，其中 '%1!s!' 是方法信息的占位符：  
+     日志记录消息包括正被调用的方法的名称。 例如，这些日志消息可能包括 OLE DB **Open** 对象的 **Connection** 方法或 **ExecuteNonQuery** 对象的 **Command** 方法。 该消息具有以下格式，其中 '%1!s!'  是方法信息的占位符：  
   
     ```  
     ExternalRequest_pre: The object is ready to make the following external request: '%1!s!'.  

@@ -1,4 +1,5 @@
 ---
+description: 数据库邮件消息处理对象
 title: 数据库邮件消息处理对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e627bd6505d43737061d8fab34cc819d52c22106
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494544"
 ---
 # <a name="database-mail-messaging-objects"></a>数据库邮件消息处理对象
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85726481"
   
  这些对象是数据库邮件在邮件主机数据库内的接口。 还会安装其他对象以执行上面列出的对象所提供的功能， 但是这些对象仅供内部使用。  
   
-|名称|类型|说明|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**视图**|列出已提交到数据库邮件的所有邮件。|  
 |[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**视图**|列出有关 [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)行为的邮件。|  

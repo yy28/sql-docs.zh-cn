@@ -1,4 +1,5 @@
 ---
+description: 添加 Visual FoxPro 数据源
 title: 添加 Visual FoxPro 数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fd0c0f929ca00b7cf731dc92f07f69b6503f884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22ac95b51d543ca223148b169b53acb9c334d9f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494800"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>添加 Visual FoxPro 数据源
 若要从应用程序访问视觉 FoxPro 数据，您必须具有数据源。 可以按如下所示创建数据源：  
@@ -29,13 +30,13 @@ ms.locfileid: "81307138"
   
  在系统上存在数据源后，你可以在每次要访问视觉 FoxPro 数据时重复使用相同的数据源。 如果要访问多个不同的数据库或表，可以为每个数据库或目录创建一个单独的数据源。  
   
- 下面的过程使用 "控制面板" 创建数据源。 有关如何从应用程序创建数据源的详细信息，请参阅[从 Microsoft Office 访问视觉 FoxPro 数据](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)。  
+ 下面的过程使用 "控制面板" 创建数据源。 有关如何从应用程序创建数据源的详细信息，请参阅 [从 Microsoft Office 访问视觉 FoxPro 数据](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)。  
   
 ### <a name="to-add-a-visual-foxpro-data-source"></a>添加 Visual FoxPro 数据源  
   
 1.  在运行 Windows 2000 的计算机上，打开 Windows "控制面板"，然后双击 "管理工具"。  
   
-2.  双击 "数据源（ODBC）" 以打开 "ODBC 数据源管理器" 对话框。 此图标在您安装 Visual FoxPro ODBC 驱动程序或任何 ODBC 驱动程序软件之后可用。  
+2.  双击 " (ODBC) 中的" 数据源 "以打开" ODBC 数据源管理器 "对话框。 此图标在您安装 Visual FoxPro ODBC 驱动程序或任何 ODBC 驱动程序软件之后可用。  
   
     > [!NOTE]  
     >  如果运行的是早期版本的 Windows，请打开 Windows "控制面板"，然后双击 "32-位 ODBC" 或 "ODBC" 以打开 "ODBC 数据源管理器" 对话框。  

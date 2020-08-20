@@ -1,4 +1,5 @@
 ---
+description: 列存储索引 - 数据仓库
 title: 列存储索引 - 数据仓库 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
@@ -11,19 +12,19 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e9ca11ccf29cc1f13b5d4c70a229634674b3d9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3ffd31c536952780f487504fae715797bd07028d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494203"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   列存储索引与分区结合使用对于构建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库而言必不可少。  
   
-## <a name="whats-new"></a>新增功能  
+## <a name="whats-new"></a>新变化  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了以下用于增强列存储性能的功能：  
   
 -   AlwaysOn 支持查询可读次要副本上的列存储索引。  

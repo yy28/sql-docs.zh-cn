@@ -1,4 +1,5 @@
 ---
+description: 按列绑定
 title: 按列绑定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494677"
 ---
 # <a name="column-wise-binding"></a>按列绑定
 使用按列绑定时，应用程序绑定一个或两个，或在某些情况下绑定到要为其返回数据的每个列的数组。 第一个数组保存数据值，第二个数组保存长度/指示器缓冲区。 可以通过将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值，将指示器和长度值存储在单独的缓冲区中;如果完成此操作，将绑定第三个数组。 每个数组包含的元素数量与行集中的行数相同。  

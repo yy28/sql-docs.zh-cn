@@ -1,4 +1,5 @@
 ---
+description: 使用 Transact-SQL 从 SSMS 部署 SSIS 项目
 title: 使用 Transact-SQL (SSMS) 部署 SSIS 项目 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9bdd9a10d5ab30cba8f12e07ee3475e902c3e35f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c03bf004b95e4321cb93198750a798a019a1eb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495443"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 从 SSMS 部署 SSIS 项目
 
@@ -25,11 +26,11 @@ ms.locfileid: "86921895"
 
 SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 到 SQL 数据库的任何 SQL 基础结构。 有关 SSMS 的详细信息，请参阅 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 开始之前，请确保具有最新版本的 SQL Server Management Studio。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-## <a name="supported-platforms"></a>支持的平台
+## <a name="supported-platforms"></a>受支持的平台
 
 可使用此快速入门中的信息将 SSIS 项目部署到以下平台：
 
@@ -49,7 +50,7 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 1. 打开 SQL Server Management Studio。
 
-2. 在“连接到服务器”对话框中，输入以下信息： 
+2. 在“连接到服务器”对话框中，输入以下信息：
 
    | 设置       | 建议的值 | 更多信息 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -71,11 +72,11 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 2.  为系统更新 `catalog.deploy_project` 存储过程中的参数值。
 
-3.  请确保 SSISDB 是当前数据库  。
+3.  请确保 SSISDB 是当前数据库****。
 
 4.  运行该脚本。
 
-5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目  。
+5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目****。
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

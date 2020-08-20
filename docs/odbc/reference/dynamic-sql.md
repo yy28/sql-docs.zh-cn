@@ -1,4 +1,5 @@
 ---
+description: 动态 SQL
 title: 动态 SQL |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494578"
 ---
 # <a name="dynamic-sql"></a>动态 SQL
 虽然静态 SQL 在许多情况下都可以很好地工作，但有一类应用程序无法提前确定数据访问。 例如，假设电子表格允许用户输入查询，电子表格随后会将查询发送到 DBMS 以检索数据。 编写电子表格程序时，程序员不知道此查询的内容。  
@@ -33,9 +34,9 @@ ms.locfileid: "84423251"
   
  EXECUTE 直接语句的一个缺点是，DBMS 必须每执行一次语句就处理 SQL 语句的五个步骤。 如果动态执行了很多语句，此过程所涉及的开销会很大，并且如果这些语句相似，它也会浪费。 为了解决这种情况，动态 SQL 提供一种名为 "准备好的执行" 的优化形式，它使用以下步骤：  
   
-1.  该程序会在缓冲区中构造一条 SQL 语句，与执行直接语句时相同。 问号（？）可以替换语句文本中任意位置的常量，以指示稍后将提供该常量的值。 问号称为参数标记。  
+1.  该程序会在缓冲区中构造一条 SQL 语句，与执行直接语句时相同。 问号 (？ ) 可以替换语句文本中任意位置的常量，以指示稍后将提供常数的值，而不是主机变量。 问号称为参数标记。  
   
-2.  该程序使用 PREPARE 语句将 SQL 语句传递给 DBMS，请求 DBMS 对语句进行分析、验证和优化，并为其生成执行计划。 然后，该程序使用 EXECUTE 语句（而非 EXECUTE 直接语句）在以后执行 PREPARE 语句。 它通过名为 SQL 数据区域或 SQLDA 的特殊数据结构传递语句的参数值。  
+2.  该程序使用 PREPARE 语句将 SQL 语句传递给 DBMS，请求 DBMS 对语句进行分析、验证和优化，并为其生成执行计划。 然后，该程序使用 EXECUTE 语句 (执行语句) ，稍后执行 PREPARE 语句。 它通过名为 SQL 数据区域或 SQLDA 的特殊数据结构传递语句的参数值。  
   
 3.  该程序可以重复使用 EXECUTE 语句，在每次执行动态语句时提供不同的参数值。  
   

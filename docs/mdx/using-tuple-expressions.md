@@ -1,4 +1,5 @@
 ---
+description: 使用元组表达式
 title: 使用元组表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dfba7ed88a27c7cdcc56ff29861d593cca33e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494840"
 ---
 # <a name="using-tuple-expressions"></a>使用元组表达式
 
@@ -25,7 +26,7 @@ ms.locfileid: "68135133"
   
  元组标识符的完整表达式由一个或多个用括号括起的显式指定的成员组成：  
   
- （*Member_expression* [，*Member_expression* ...]）  
+  (*Member_expression* [，*Member_expression* ...] )   
   
  元组可以是完全限定的，可以包含多个隐式成员，也可以只包含一个成员。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68135133"
   
 -   如果隐式引用的层次结构有默认成员，则将该默认成员添加到元组中。  
   
--   如果隐式引用的层次结构没有默认成员，则使用默认层次结构的 " **（全部）** " 成员。  
+-   如果隐式引用的层次结构没有默认成员，则将使用默认层次结构 ** (所有) ** 成员。  
   
 -   如果隐式引用的层次结构没有默认成员，则使用该层次结构最上层的第一个成员。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68135133"
  如果元组表达式仅有一个成员，MDX 将把该成员转换为单成员元组，以计算该表达式。 换言之，使用成员表达式 `[Measures].[TestMeasure]`（而不是元组表达式）与使用元组表达式 `( [Measures].[TestMeasure] ).` 的效果相同。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)   
+ [MDX&#41;&#40;表达式 ](../mdx/expressions-mdx.md)   
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 包开发的故障排除工具
 title: 包开发的故障排除工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 652ebe1e842acd6b51b53f229bed09b60ab0fe41
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495126"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
 
@@ -33,11 +34,11 @@ ms.locfileid: "86913725"
 ## <a name="troubleshooting-design-time-validation-issues"></a>设计时验证问题故障排除  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，当打开包后，系统将在验证所有数据流组件值之前验证所有连接，并设置速度较慢或无法脱机工作的所有连接。 这有助于减少验证包数据流时的延迟时间。  
   
- 打开包后，还可以通过右键单击“连接管理器”  区域中的连接管理器并单击“脱机工作”  来关闭连接。 这可以在 SSIS 设计器中加快执行操作。  
+ 打开包后，还可以通过右键单击“连接管理器”**** 区域中的连接管理器并单击“脱机工作”**** 来关闭连接。 这可以在 SSIS 设计器中加快执行操作。  
   
  已设置为脱机工作的连接将保持脱机状态，直到您执行下列操作之一：  
   
--   通过右键单击 SSIS 设计器的“连接管理器”  区域中的连接管理器并单击“测试连接”  来测试连接。  
+-   通过右键单击 SSIS 设计器的“连接管理器”**** 区域中的连接管理器并单击“测试连接”**** 来测试连接。  
   
      例如，当打开包后，连接最初设置为脱机工作。 修改连接字符串以解决该问题，并单击 **“测试连接”** 以测试连接。  
   

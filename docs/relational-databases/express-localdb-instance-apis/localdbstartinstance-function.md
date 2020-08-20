@@ -1,4 +1,5 @@
 ---
+description: LocalDBStartInstance 函数
 title: LocalDBStartInstance 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b228c97280a2152f14a2ea97d9b1ac56c567afdd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf46ccf1e972dc34b4f0500fdf654a76aa32f086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494216"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,14 +44,14 @@ HRESULT LocalDBStartInstance(
  *pInstanceName*  
  [输入] 要启动的 LocalDB 实例的名称。  
   
- dwFlags**  
+ dwFlags   
  [输入] 保留供将来使用。 当前应设置为 0。  
   
  *wszSqlConnection*  
  [输出] 要存储 LocalDB 实例的连接字符串的缓冲区。  
   
  *lpcchSqlConnection*  
- [输入/输出]输入时包含*wszSqlConnection*缓冲区的大小（包括任何尾随 null）。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符为单位），包括任何尾随空格。  
+ [输入/输出]输入时包含 *wszSqlConnection* 缓冲区的大小（包括任何尾随 null）。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符为单位），包括任何尾随空格。  
   
 ## <a name="returns"></a>返回  
  S_OK  
@@ -69,7 +70,7 @@ HRESULT LocalDBStartInstance(
  该实例不存在。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../../relational-databases/express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 指定的缓冲区*wszSqlConnection*太小。  
+ 指定的缓冲区 *wszSqlConnection* 太小。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](../../relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md)  
  尝试获取同步锁定时超时。  
@@ -105,7 +106,7 @@ HRESULT LocalDBStartInstance(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 连接缓冲区参数（*wszSqlConnection*）和连接缓冲区大小参数（*lpcchSqlConnection*）都是可选的。 下表显示了为使用这些参数提供的选项及其结果。  
+ 连接缓冲区参数 (*wszSqlConnection*) ，并且连接缓冲区大小参数 (*lpcchSqlConnection*) 是可选的。 下表显示了为使用这些参数提供的选项及其结果。  
   
 |Buffer|缓冲区大小|理由|操作|  
 |------------|-----------------|---------------|------------|  
@@ -114,7 +115,7 @@ HRESULT LocalDBStartInstance(
 |现值|Null|不允许；输入不正确。|返回结果为 LOCALDB_ERROR_INVALID_PARAMETER。|  
 |现值|现值|用户想要启动实例，并且在启动后需要管道名称以便连接到此实例。|检查缓冲区大小，启动实例，并在缓冲区中返回管道名称。 <br />Buffer size 参数返回 "server =" 字符串的长度，不包括终止 null。|  
   
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅 [SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

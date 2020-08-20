@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_project（SSISDB 数据库）
 title: catalog.validate_project（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dfda68b04a898efc7aa87e5a821e79717113544
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495348"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project（SSISDB 数据库）
 
@@ -45,20 +46,20 @@ catalog.validate_project [ @folder_name = ] folder_name
  [ @project_name = ] project_name   
  项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @validate_type = ] validate_type   
- 指示要执行的验证类型。 使用字符 `F` 执行完全验证。 此参数是可选的，默认情况下使用字符 `F`。 validate_type  为 char(1)  。  
+ [ @validate_type = ] validate_type**  
+ 指示要执行的验证类型。 使用字符 `F` 执行完全验证。 此参数是可选的，默认情况下使用字符 `F`。 validate_type** 为 char(1)****。  
   
- [ @validation_id = ] validation_id   
- 返回验证的唯一标识符 (ID)。 validation_id  为 bigint  。  
+ [ @validation_id = ] validation_id**  
+ 返回验证的唯一标识符 (ID)。 validation_id** 为 bigint****。  
   
- [ @use32bitruntime = ] use32bitruntime   
- 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数是可选的。 use32bitruntime  为 bit  。  
+ [ @use32bitruntime = ] use32bitruntime  
+ 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数是可选的。 use32bitruntime 为 bit。  
   
- [ @environment_scope = ] environment_scope   
- 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数是可选的，默认情况下使用字符 `D`。 environment_scope 为 char(1)   。  
+ [ @environment_scope = ] environment_scope**  
+ 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数是可选的，默认情况下使用字符 `D`。 environment_scope 为 char(1)。  
   
  [ @reference_id = ] reference_id   
- 环境引用的唯一 ID。 如果 environment_scope  为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint   。  
+ 环境引用的唯一 ID。 如果 environment_scope** 为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint   。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）  
@@ -88,7 +89,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  验证有助于识别将阻止项目中的包成功运行的问题。 使用 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 或 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 视图以监视验证状态。  
   
  在验证中只可使用此用户可访问的环境。 验证输出作为结果集发送到客户端。  

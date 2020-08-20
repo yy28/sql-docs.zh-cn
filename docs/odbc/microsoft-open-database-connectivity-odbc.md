@@ -1,5 +1,6 @@
 ---
-title: Microsoft 开放式数据库连接（ODBC） |Microsoft Docs
+description: Microsoft 开放式数据库连接 (ODBC)
+title: Microsoft 开放式数据库连接 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c51822e347c606d586238f84711797e63f6aa563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ccf7a5ceb15d61bc61bf3434a239c130bc5fcf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494790"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 开放式数据库连接 (ODBC)
-Microsoft 开放式数据库连接（ODBC）接口是一种 C 编程语言接口，它使应用程序可以访问来自各种数据库管理系统（Dbms）的数据。 ODBC 是一个专为关系数据存储设计的低级别、高性能的接口。  
+Microsoft 开放式数据库连接 (ODBC) 接口是一种 C 编程语言接口，它使应用程序能够访问各种数据库管理系统中的数据 (Dbms) 。 ODBC 是一个专为关系数据存储设计的低级别、高性能的接口。  
   
  ODBC 接口允许最大的互操作性，应用程序可以通过单个接口访问不同 Dbms 中的数据。 此外，该应用程序与访问数据的任何 DBMS 无关。 应用程序的用户可以添加名为驱动程序的软件组件，这些组件在应用程序和特定 DBMS 之间进行接口。  
   
@@ -43,9 +44,9 @@ Microsoft 开放式数据库连接（ODBC）接口是一种 C 编程语言接口
   
  定义与 ODBC 相关的术语。  
   
- [ODBCCONF..EXE](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  介绍用于配置驱动程序和数据源名称的命令行实用程序。  
   
 ## <a name="support"></a>支持  
- 可在[Microsoft 帮助和支持](https://go.microsoft.com/fwlink?linkid=5521)网站上找到有关支持选项的信息。
+ 可在 [Microsoft 帮助和支持](https://go.microsoft.com/fwlink?linkid=5521) 网站上找到有关支持选项的信息。

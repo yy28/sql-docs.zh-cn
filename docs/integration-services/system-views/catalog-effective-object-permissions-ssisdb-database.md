@@ -1,4 +1,5 @@
 ---
+description: catalog.effective_object_permissions（SSISDB 数据库）
 title: catalog.effective_object_permissions（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af72db9d78859f9065673aa145bc4b763199b298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4af26b86804bd8717bfd3772442980483fbd2d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495279"
 ---
 # <a name="catalogeffective_object_permissions-ssisdb-database"></a>catalog.effective_object_permissions（SSISDB 数据库）
 
@@ -35,20 +36,20 @@ ms.locfileid: "86912667"
 |object_id|**bigint**|对象的唯一标识符 (ID) 或主键。|  
 |permission_type|**smallint**|权限的类型。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此视图显示下表中所列的权限类型：  
   
 |permission_type 值|权限名称|权限说明|适用对象类型|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允许主体读取被视为对象一部分的信息（如属性）。 它不允许主体枚举或读取该对象中包含的其他对象的内容。|文件夹、项目、环境、操作|  
 |`2`|MODIFY|允许主体修改被视为对象一部分的信息（如属性）。 它不允许主体修改该对象中包含的其他对象。|文件夹、项目、环境、操作|  
-|`3`|在运行 CREATE 语句前执行|允许主体执行项目中的所有包。|Project|  
+|`3`|EXECUTE|允许主体执行项目中的所有包。|项目|  
 |`4`|MANAGE_PERMISSIONS|允许主体向对象分配权限。|文件夹、项目、环境、操作|  
-|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|Folder|  
-|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|Folder|  
-|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|Folder|  
-|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|Folder|  
-|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|Folder|  
+|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|文件夹|  
+|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|文件夹|  
+|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|文件夹|  
+|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|文件夹|  
+|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|文件夹|  
   
  只评估调用方对其具有权限的对象。 权限基于以下各项进行计算：  
   

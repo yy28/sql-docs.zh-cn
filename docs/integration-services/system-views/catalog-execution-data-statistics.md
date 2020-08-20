@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_data_statistics
 title: catalog.execution_data_statistics | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50eef5fd9e9f5d48960329c6a747ac0997d9c256
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 24452ceffc1660e57b087395ded3923e47802314
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495213"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
@@ -30,7 +31,7 @@ ms.locfileid: "86912590"
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|数据的唯一标识符 (ID)。|  
 |execution_id|**bigint**|执行实例的唯一 ID。|  
-|package_name|nvarchar(260) |在执行过程中启动的第一个包的名称。|  
+|package_name|**nvarchar(260)**|在执行过程中启动的第一个包的名称。|  
 |task_name|**nvarchar(4000)**|数据流任务的名称。|  
 |dataflow_path_id_string|**nvarchar(4000)**|数据流路径的标识字符串。|  
 |dataflow_path_name|**nvarchar(4000)**|数据流路径的名称。|  
@@ -46,7 +47,7 @@ ms.locfileid: "86912590"
   
 -   默认情况下，开始执行时，不记录有关发送的行数的信息。  
   
--   要查看给定包执行的这些数据，请将日志记录级别设置为“详细”  。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
+-   要查看给定包执行的这些数据，请将日志记录级别设置为“详细”****。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
   
 ## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
