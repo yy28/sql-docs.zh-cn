@@ -19,15 +19,16 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469579"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646487"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql) 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   分析指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句及其参数，以确定哪些参数与使用 Always Encrypted 功能保护的数据库列相对应。 返回与加密列对应的参数的加密元数据。  
   
@@ -64,9 +65,9 @@ sp_describe_parameter_encryption
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|结果集中的行的 Id。|  
-|**database_id**|**int**|数据库 id。|  
+|database_id|**int**|数据库 id。|  
 |**column_encryption_key_id**|**int**|列加密密钥 id。注意：此 id 在 [sys. column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 目录视图中表示一行。|  
-|**column_encryption_key_version**|**int**|留待将来使用。 当前，始终包含1。|  
+|**column_encryption_key_version**|**int**|保留供将来使用。 当前，始终包含1。|  
 |**column_encryption_key_metadata_version**|**二进制 (8) **|表示列加密密钥的创建时间的时间戳。|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|列加密密钥的加密值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含列主密钥的密钥存储的提供程序的名称，该列用于生成列加密密钥的加密值。|  
@@ -84,7 +85,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|第一个结果集中的行的代码。 引用的行描述为列配置的列加密密钥，参数对应于。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|类型规范化算法的版本号。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 Always Encrypted 的客户端驱动程序将自动调用**sp_describe_parameter_encryption**来检索由应用程序发出的参数化查询的加密元数据。 随后，驱动程序将使用加密元数据对与 Always Encrypted 保护的数据库列对应的参数值进行加密，并在将查询发送到数据库引擎之前，用加密参数值替换应用程序提交的纯文本参数值。  
   
 ## <a name="permissions"></a>权限  
@@ -156,7 +157,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|\@低耗|1|1|  
+|1|\@c1|1|1|  
   
   (结果继续。 )   
   

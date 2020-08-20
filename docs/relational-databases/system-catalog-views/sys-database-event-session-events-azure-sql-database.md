@@ -12,15 +12,15 @@ ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4cc0cee2b7acea6bbe465f0fc3cef9f40954e0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6234e6b9c6cc2cfeb48b01fd2a2541ec2244678
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323353"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646334"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events（Azure SQL 数据库）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   返回事件会话中每个事件所对应的行。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "88323353"
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此视图具有下列关系基数。  
   
 | From | 功能 | 关系 |

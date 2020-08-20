@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f759896a21b99d54efc41db9ea3aba22c8580dcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a856f10e59fa41bc9cd6d27c9c88097aa90c9c4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489957"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646357"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-sql) 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   返回有关对每个会话执行的线程所遇到的所有等待的信息。 您可以使用此视图诊断会话的性能问题 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及特定查询和批处理。  此视图返回与 [dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 聚合的相同信息，但也提供 **session_id** 号。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "88489957"
 |max_wait_time_ms|**bigint**|该等待类型的最长等待时间。|  
 |signal_wait_time_ms|**bigint**|正在等待的线程从收到信号通知到其开始运行之间的时差。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当会话打开时，此 DMV 会重置会话的信息，如果连接池) ，则重置会话 (  
   
  有关等待类型的信息，请参阅 [&#40;transact-sql&#41;dm_os_wait_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。  
