@@ -1,4 +1,5 @@
 ---
+description: 处理失败的更新
 title: 处理失败的更新 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbd8346c481fc4fdfddb7aa6260bd5b8422b941a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c313e424c44ce289254267e6d6aa651308ae25df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453519"
 ---
 # <a name="dealing-with-failed-updates"></a>处理失败的更新
 如果更新结束时出现错误，则解决这些错误的方式取决于错误的性质和严重性以及应用程序的逻辑。 但是，如果数据库与其他用户共享，则典型的错误是，其他人在执行此操作之前会修改该字段。 这种类型的错误被称为冲突。 ADO 检测到这种情况并报告错误。  
   
 ## <a name="remarks"></a>备注  
- 如果存在更新错误，将在错误处理例程中捕获这些错误。 筛选包含 adFilterConflictingRecords 常量的记录集，以便仅显示冲突的行。 在此示例中，错误解决策略只是打印作者的名字和姓氏（au_fname 和 au_lname）。  
+ 如果存在更新错误，将在错误处理例程中捕获这些错误。 筛选包含 adFilterConflictingRecords 常量的记录集，以便仅显示冲突的行。 在此示例中，错误解决策略只是打印作者的名字和姓氏 (au_fname 和 au_lname) 。  
   
  提醒用户发生更新冲突的代码如下所示：  
   

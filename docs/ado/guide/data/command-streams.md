@@ -1,4 +1,5 @@
 ---
+description: 命令流
 title: 命令流 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2db139f3f5ae4ff701e36179a9df7ce30eecd94e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453659"
 ---
 # <a name="command-streams"></a>命令流
-ADO 始终支持由**CommandText**属性指定的字符串格式的命令输入。 作为替代方法，使用 ADO 2.7 或更高版本，还可以通过将流分配给**CommandStream**属性，来使用信息流进行命令输入。 可以分配 ADO**流**对象，也可以指定支持 COM **IStream**接口的任何对象。  
+ADO 始终支持由 **CommandText** 属性指定的字符串格式的命令输入。 作为替代方法，使用 ADO 2.7 或更高版本，还可以通过将流分配给 **CommandStream** 属性，来使用信息流进行命令输入。 可以分配 ADO **流** 对象，也可以指定支持 COM **IStream** 接口的任何对象。  
   
  命令流的内容只是从 ADO 传递到提供程序，因此提供程序必须支持流的命令输入才能使此功能正常工作。 例如，SQL Server 支持 XML 模板形式的查询或 Transact-sql 的 OpenXML 扩展。  
   
- 由于流的详细信息必须由提供程序进行解释，因此必须通过设置**方言**属性来指定命令方言。 **方言**的值是包含 GUID 的字符串，由提供程序定义。 有关提供程序支持的**方言**的有效值的信息，请参阅提供程序文档。  
+ 由于流的详细信息必须由提供程序进行解释，因此必须通过设置 **方言** 属性来指定命令方言。 **方言**的值是包含 GUID 的字符串，由提供程序定义。 有关提供程序支持的 **方言** 的有效值的信息，请参阅提供程序文档。  
   
 ## <a name="xml-template-query-example"></a>XML 模板查询示例  
  下面的示例通过 VBScript 写入 Northwind 数据库。  
   
- 首先，初始化并打开将用于包含查询流的**流**对象：  
+ 首先，初始化并打开将用于包含查询流的 **流** 对象：  
   
 ```  
 Dim adoStreamQuery  
@@ -40,7 +41,7 @@ adoStreamQuery.Open
   
  查询流的内容将是 XML 模板查询。  
   
- 模板查询需要引用由 \< sql： query> 标记的 sql： prefix 标识的 XML 命名空间。 SQL SELECT 语句作为 XML 模板的内容包含，并分配给字符串变量，如下所示：  
+ 模板查询需要引用由标记的 sql： prefix 标识的 XML 命名空间 \<sql:query> 。 SQL SELECT 语句作为 XML 模板的内容包含，并分配给字符串变量，如下所示：  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -63,13 +64,13 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- 指定命令语言方言，此**方言**指示 SQL Server OLE DB 提供程序应如何解释命令流。 特定于提供程序的 GUID 指定的方言：  
+ 指定命令语言方言，此 **方言**指示 SQL Server OLE DB 提供程序应如何解释命令流。 特定于提供程序的 GUID 指定的方言：  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  
 ```  
   
- 最后，执行查询并将结果返回到**Recordset**对象：  
+ 最后，执行查询并将结果返回到 **Recordset** 对象：  
   
 ```  
 Set objRS = adoCmd.Execute  

@@ -1,4 +1,5 @@
 ---
+description: 记录集的边界
 title: 记录集的边界 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453709"
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
-**Recordset**支持**BOF**和**EOF**属性，分别描绘数据集的开头和结尾。 可以将**BOF**和**EOF**视为位于**记录集**开头和结尾的 "虚拟" 记录。 计算**BOF**和**EOF**后，示例**记录集**现在如下所示：  
+**Recordset** 支持 **BOF** 和 **EOF** 属性，分别描绘数据集的开头和结尾。 可以将 **BOF** 和 **EOF** 视为位于 **记录集**开头和结尾的 "虚拟" 记录。 计算 **BOF** 和 **EOF**后，示例 **记录集** 现在如下所示：  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
@@ -34,7 +35,7 @@ ms.locfileid: "82761223"
 |74|Longlife Tofu|10.0000|  
 |EOF|||  
   
- 当游标移过最后一条记录时， **EOF**将设置为**True**;否则，其值为**False**。 同样，当光标移动到第一条记录之前， **BOF**将设置为**True**;否则，其值为**False**。 这些属性通常用于枚举数据集中的记录，如以下 JScript 代码段中所示。  
+ 当游标移过最后一条记录时， **EOF** 将设置为 **True**;否则，其值为 **False**。 同样，当光标移动到第一条记录之前， **BOF** 将设置为 **True**;否则，其值为 **False**。 这些属性通常用于枚举数据集中的记录，如以下 JScript 代码段中所示。  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -54,7 +55,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- 如果**BOF**和**EOF**都为**True**，则**Recordset**对象为空。 对于新打开的非空**Recordset**对象，这两个属性都将为**False** 。 可以结合使用**BOF**和**EOF**属性来确定**Recordset**对象是否为空，如以下 JScript 代码段中所示。  
+ 如果 **BOF** 和 **EOF** 都为 **True**，则 **Recordset** 对象为空。 对于新打开的非空**Recordset**对象，这两个属性都将为**False** 。 可以结合使用 **BOF** 和 **EOF** 属性来确定 **Recordset** 对象是否为空，如以下 JScript 代码段中所示。  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  
@@ -67,6 +68,6 @@ else
 }  
 ```  
   
- 此方案适用于所有类型的游标，并且独立于基础提供程序。 如果尝试通过检查**记录集**的**RecordCount**属性值是否为零（0）来确定 Recordset 对象的空，必须采取预防措施，以便使用支持返回结果中的记录数的适当游标和提供程序。  
+ 此方案适用于所有类型的游标，并且独立于基础提供程序。 如果尝试通过检查 **记录集** 的 **RecordCount** 属性值是否为零 (0) 来确定 Recordset 对象的空，则必须采取预防措施，以便使用支持返回结果中的记录数的适当游标和提供程序。  
   
- 如果删除**记录集**对象中的最后一个记录，游标将保持不确定状态。 在您尝试重新定位当前记录（具体取决于提供程序）之前， **BOF**和**EOF**属性可能会保留**为 False** 。 有关详细信息，请参阅[使用 Delete 方法删除记录](../../../ado/guide/data/deleting-records-using-the-delete-method.md)。
+ 如果删除 **记录集** 对象中的最后一个记录，游标将保持不确定状态。 在您尝试重新定位当前记录（具体取决于提供程序）之前， **BOF** 和 **EOF** 属性可能会保留 **为 False** 。 有关详细信息，请参阅 [使用 Delete 方法删除记录](../../../ado/guide/data/deleting-records-using-the-delete-method.md)。

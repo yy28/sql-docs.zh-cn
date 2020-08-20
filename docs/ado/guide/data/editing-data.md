@@ -1,4 +1,5 @@
 ---
+description: 编辑数据
 title: 编辑数据 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc80c8ad9985efc21e2f583d8ca72751e21c1a2b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453459"
 ---
 # <a name="editing-data"></a>编辑数据
-我们介绍了如何使用 ADO 连接到数据源、执行命令、获取**记录集**对象中的结果，以及在**记录集中**导航。 本部分重点介绍下一基本 ADO 操作：编辑数据。  
+我们介绍了如何使用 ADO 连接到数据源、执行命令、获取 **记录集** 对象中的结果，以及在 **记录集中**导航。 本部分重点介绍下一基本 ADO 操作：编辑数据。  
   
- 此部分继续使用[检查数据](../../../ado/guide/data/examining-data.md)时引入的示例**记录集**，其中一项重要更改。 以下代码用于打开**记录集**：  
+ 此部分继续使用[检查数据](../../../ado/guide/data/examining-data.md)时引入的示例**记录集**，其中一项重要更改。 以下代码用于打开 **记录集**：  
   
 ```  
 'BeginEditIntro  
@@ -43,11 +44,11 @@ ms.locfileid: "82761033"
 'EndEditIntro  
 ```  
   
- 代码的重要变化涉及到在*GetNewConnection*函数中将**连接**对象的**CursorLocation**属性设置为等于**adUseClient** （如下面的示例中所示），该属性指示使用客户端游标。 有关客户端和服务器端游标之间的差异的详细信息，请参阅[了解游标和锁定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
+ 代码的重要变化涉及到在*GetNewConnection*函数中设置等于**adUseClient**的**连接**对象的**CursorLocation**属性 (在下一个示例) 中显示，指示客户端游标的使用。 有关客户端和服务器端游标之间的差异的详细信息，请参阅 [了解游标和锁定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
   
- **CursorLocation**属性的**adUseClient**设置将游标的位置从数据源（在本例中为 SQL Server）移动到客户端代码（桌面工作站）的位置。 此设置强制 ADO 调用客户端上的 OLE DB 客户端游标引擎，以便创建和管理游标。  
+ **CursorLocation**属性的**adUseClient**设置会将数据源中光标的位置移 (SQL Server，在这种情况下)  (桌面工作站) 的客户端代码的位置。 此设置强制 ADO 调用客户端上的 OLE DB 客户端游标引擎，以便创建和管理游标。  
   
- 你可能还注意到， **Open**方法的**LockType**参数已更改为**adLockBatchOptimistic**。 这将在批处理模式下打开光标。 （提供程序会缓存多个更改，并仅在调用**UpdateBatch**方法时将这些更改写入基础数据源。）在调用**UpdateBatch**方法之前，对**记录集**所做的更改将不会在数据库中更新。  
+ 你可能还注意到， **Open**方法的**LockType**参数已更改为**adLockBatchOptimistic**。 这将在批处理模式下打开光标。  (提供程序缓存多个更改并仅在调用**updatebatch**方法时将这些更改写入基础数据源 ) 。在调用**updatebatch**方法之前，将不会在数据库中更新对**记录集**所做的更改。  
   
  最后，本部分中的代码使用 GetNewConnection 函数的修改版本。 此版本的函数现在返回客户端游标。 该函数如下所示：  
   

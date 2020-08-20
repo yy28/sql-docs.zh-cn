@@ -1,4 +1,5 @@
 ---
+description: 创建和执行简单的命令
 title: 创建和执行简单的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4946af23a684e1bc98556c914cbd9e271fd208
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea860584e00b7b25a69d406ee81a24c4c8f01844
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453609"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>创建和执行简单的命令
 简单的命令不是参数化的，不需要持久性。 有三种方法可以创建和执行简单的命令。  
   
--   使用**Command**对象  
+-   使用 **Command** 对象  
   
--   使用**连接**对象  
+-   使用 **连接** 对象  
   
--   使用**Recordset**对象  
+-   使用 **Recordset** 对象  
   
 ## <a name="using-a-command-object"></a>使用 Command 对象  
  若要使用**command**对象创建简单的命令，必须将指令分配给**Command**对象的**CommandText**属性，并为**CommandType**属性设置适当的值。 执行命令要求将打开的连接分配给**command**对象的**ActiveConnection**属性，然后对**命令**对象调用**Execute**方法。  
   
- 下面的代码片段演示了使用**command**对象对数据源执行命令的基本方法。 此示例使用返回行的命令，并将命令执行的结果作为**Recordset**对象返回。  
+ 下面的代码片段演示了使用 **command** 对象对数据源执行命令的基本方法。 此示例使用返回行的命令，并将命令执行的结果作为 **Recordset** 对象返回。  
   
 ```  
     'BeginBasicCmd  
@@ -108,7 +109,7 @@ End Function
 ```  
   
 ## <a name="using-a-recordset-object"></a>使用 Recordset 对象  
- 你还可以创建一个命令作为文本字符串，并将其作为**记录集**对象的**Open**方法，并将其作为命令类型（adCmdText），用于执行。 下面的代码段演示了这一点。  
+ 你还可以创建一个命令作为文本字符串，并将其作为**记录集**对象的**Open**方法，并将其与命令类型 (adCmdText) ，用于执行。 下面的代码段演示了这一点。  
   
 ```  
   

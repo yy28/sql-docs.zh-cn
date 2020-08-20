@@ -1,4 +1,5 @@
 ---
+description: 聚合函数、CALC 函数和 NEW 关键字
 title: 聚合函数、CALC 函数和 NEW 关键字 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,39 +16,39 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453749"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、CALC 函数和 NEW 关键字
-数据定形支持以下功能。 分配给包含要操作的列的章节的名称是*章节别名*。  
+数据定形支持以下功能。 分配给包含要操作的列的章节的名称是 *章节别名*。  
   
- 章节别名可以是完全限定的，其中包含每个章节列名，其中包含*列名称，* 并以句点分隔。 例如，如果父章节 chap1 包含一个 chap2，其中包含一个 "金额" 列，则该限定名称为 "chap1"。  
+ 章节别名可以是完全限定的，其中包含每个章节列名，其中包含 *列名称，* 并以句点分隔。 例如，如果父章节 chap1 包含一个 chap2，其中包含一个 "金额" 列，则该限定名称为 "chap1"。  
   
 |聚合函数|说明|  
 |-------------------------|-----------------|  
-|SUM （*章节别名*。*列名*）|计算指定列中所有值的总和。|  
-|AVG （*章节别名*。*列名*）|计算指定列中所有值的平均值。|  
-|MAX （*章节别名*。*列名*）|计算指定列中的最大值。|  
-|MIN （*章节别名*。*列名*）|计算指定列中的最小值。|  
-|计数（*章节别名*[.*列名*]）|计算指定别名中的行数。 如果指定了列，则只会在计数中包含该列非 Null 的行。|  
-|STDEV （*章节别名*。*列名*）|计算指定列中的标准偏差。|  
-|ANY （*章节别名*。*列名*）|指定列的值。 只有当章节中所有行的列的值相同时，ANY 才具有可预测的值。<br /><br /> **注意**如果列中的所有行都不包含相同的值，则 SHAPE 命令将随意返回值之一作为 ANY 函数的值。|  
+|SUM (*章节别名*。*列名*) |计算指定列中所有值的总和。|  
+|AVG (*章节别名*。*列名*) |计算指定列中所有值的平均值。|  
+|最大 (*章节别名*。*列名*) |计算指定列中的最大值。|  
+|最小 (*章节别名*。*列名*) |计算指定列中的最小值。|  
+|计数 (*章节-别名*[。*列名*] ) |计算指定别名中的行数。 如果指定了列，则只会在计数中包含该列非 Null 的行。|  
+|STDEV (*章节别名*。*列名*) |计算指定列中的标准偏差。|  
+|任何 (*章节别名*。*列名*) |指定列的值。 只有当章节中所有行的列的值相同时，ANY 才具有可预测的值。<br /><br /> **注意** 如果列中的所有行都不包含相同的值，则 SHAPE 命令将随意返回值之一作为 ANY 函数的值。|  
   
 |计算表达式|说明|  
 |---------------------------|-----------------|  
-|CALC （*expression*）|计算任意表达式，但仅在包含 CALC 函数的**记录集**的行上。 允许使用这些[Visual Basic for Applications （VBA）函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)的任何表达式。|  
+|计算 (*表达式*) |计算任意表达式，但仅在包含 CALC 函数的 **记录集** 的行上。 允许使用这些 [Visual Basic for Applications (VBA) 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md) 的任何表达式。|  
   
 |NEW 关键字|说明|  
 |-----------------|-----------------|  
-|新*字段类型*[（*width* &#124;*刻度*&#124;*精度*&#124;*错误*[，*小数位数*&#124;*错误*]）]|将指定类型的空列添加到**记录集**。|  
+|新 *字段类型* [ (*width* &#124; *缩放* &#124; *精度* &#124; *错误* [， *小数位数* &#124; *错误*] ) ]|将指定类型的空列添加到 **记录集**。|  
   
- 用 NEW 关键字传递的*字段类型*可以是以下任意数据类型。  
+ 用 NEW 关键字传递的 *字段类型* 可以是以下任意数据类型。  
   
-|OLE DB 数据类型|ADO 数据类型等效项|  
+|OLE DB 数据类型|ADO 数据类型等效 (s) |  
 |-----------------------|-----------------------------------|  
 |DBTYPE_BSTR|adBSTR|  
 |DBTYPE_BOOL|adBoolean|  
@@ -70,7 +71,7 @@ ms.locfileid: "82761273"
 |DBTYPE_FILETIME|adFileTime|  
 |DBTYPE_ERROR|adError|  
   
- 如果新字段的类型为 decimal （OLE DB、DBTYPE_DECIMAL 或 ADO，adDecimal），则必须指定精度和小数位数。  
+ 如果新字段的类型为 decimal (OLE DB、DBTYPE_DECIMAL 或 ADO adDecimal) 中，则必须指定精度和小数位数。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   

@@ -1,4 +1,5 @@
 ---
+description: ADO 基础知识
 title: ADO 基础 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453769"
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 OLE DB 系统接口以编程方式访问、编辑和更新各种数据源中的数据。 ADO 最常见的用法是查询关系数据库中的一个或多个表，检索并显示应用程序中的结果，并可能让用户进行更改并保存对数据所做的更改。 其他任务包括：  
@@ -38,7 +39,7 @@ ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 
   
 -   执行存储过程。  
   
--   动态创建一个名为**记录集**的灵活结构，用于保存、导航和处理数据。  
+-   动态创建一个名为 **记录集**的灵活结构，用于保存、导航和处理数据。  
   
 -   执行事务性数据库操作。  
   
@@ -48,7 +49,7 @@ ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 
   
 -   将数据库字段绑定到识别数据的组件。  
   
--   创建远程、断开连接的**记录集**。  
+-   创建远程、断开连接的 **记录集**。  
   
  ADO 公开多种选项和设置，以提供这种灵活性。 因此，务必要采取一种方法来了解如何在应用程序中使用 ADO，将每个目标分解为可管理的部分。  
   

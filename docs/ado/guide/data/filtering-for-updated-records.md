@@ -1,4 +1,5 @@
 ---
+description: 筛选更新的记录
 title: 筛选已更新记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dae572da8f87051a58415929657f77be6c91d14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453379"
 ---
 # <a name="filtering-for-updated-records"></a>筛选更新的记录
 在调用 UpdateBatch 之前，您可以使用 "记录集筛选器" 属性来仅查看自打开记录集以来或上次调用 UpdateBatch 后发生更改的记录。 为此，请将筛选器设置为等于 adFilterPendingRecords 以确定将更新多少条记录，如下面的代码示例中所示。  
   
 ## <a name="remarks"></a>备注  
- 此示例通过在调用 UpdateBatch 之前筛选记录集来扩展以前的 UpdateBatch 示例，显示用户哪些记录将发生更改，并允许用户取消更新（使用 CancelBatch 方法）。  
+ 此示例通过在调用 UpdateBatch 之前筛选记录集来扩展以前的 UpdateBatch 示例，显示用户将更改哪些记录，并允许用户使用) 的 CancelBatch 方法取消更新 (。  
   
 ```  
 'BeginFilterPend  

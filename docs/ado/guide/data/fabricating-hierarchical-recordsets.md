@@ -1,4 +1,5 @@
 ---
+description: 构造分层记录集
 title: 制造分层记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453399"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>构造分层记录集
-下面的示例演示如何使用数据定形语法来定义父、子和孙**记录集**的列，以创建不包含基础数据源的分层记录集。  
+下面的示例演示如何使用数据定形语法来定义父、子和孙 **记录集**的列，以创建不包含基础数据源的分层记录集。  
   
- 若要创建分层**记录集**，您必须[为 OLE DB （ADO 服务提供程序）（MSDataShape）指定 Microsoft 数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，并且您可以在[connection](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的连接字符串参数中指定 "NONE" 的数据提供程序值。 有关详细信息，请参阅[数据定形所需的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
+ 若要创建某个分层**记录集**，您必须[为 OLE DB (ADO 服务提供程序)  (MSDataShape) 指定 Microsoft 数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，并且您可以在该[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的连接字符串参数中指定 "NONE" 的数据提供程序值。 有关详细信息，请参阅 [数据定形所需的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,7 +53,7 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- 一旦记录了该**记录集**，就可以对其进行填充、操作或保存到文件。  
+ 一旦记录了该 **记录集** ，就可以对其进行填充、操作或保存到文件。  
   
 ## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

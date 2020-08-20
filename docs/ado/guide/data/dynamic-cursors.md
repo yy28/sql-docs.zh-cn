@@ -1,4 +1,5 @@
 ---
+description: 动态游标
 title: 动态游标 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a2b251e23c2408e75acd77debbc0876fd3f9c98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6904bc0b3459f25af955d804ed4764ae57238b90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453469"
 ---
 # <a name="dynamic-cursors"></a>动态游标
-动态游标检测对结果集中的行所做的所有更改，而不考虑更改是发生在游标内部还是游标外的其他用户。 所有用户发出的所有 insert、update 和 delete 语句均通过游标可见。 动态游标可以检测在打开游标后对结果集中的行、顺序和值所做的任何更改。 在游标外部所做的更新直到提交时才可见（除非将游标事务隔离级别设置为 "未提交"）。  
+动态游标检测对结果集中的行所做的所有更改，而不考虑更改是发生在游标内部还是游标外的其他用户。 所有用户发出的所有 insert、update 和 delete 语句均通过游标可见。 动态游标可以检测在打开游标后对结果集中的行、顺序和值所做的任何更改。 除非将游标事务隔离级别设置为 "未提交" ) ，否则在游标外进行的更新将不可见，除非将它们提交 (。  
   
  例如，假设动态游标提取两个行和一个应用程序，然后更新其中一个行并删除另一个行。 然后，如果动态游标提取这两行，它将找不到已删除的行，但会显示已更新行的新值。  
   
- 如果你的应用程序必须检测其他用户进行的所有并发更新，则动态游标是一个不错的选择。 使用**AdOpenDynamic CursorTypeEnum**指示要在 ADO 中使用动态游标。  
+ 如果你的应用程序必须检测其他用户进行的所有并发更新，则动态游标是一个不错的选择。 使用 **AdOpenDynamic CursorTypeEnum** 指示要在 ADO 中使用动态游标。  
   
 ## <a name="see-also"></a>另请参阅  
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   

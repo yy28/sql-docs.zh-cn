@@ -1,4 +1,5 @@
 ---
+description: 检测和解决冲突
 title: 检测和解决冲突 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453509"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果在即时模式下处理记录集，则可能会有很少的并发问题发生。 另一方面，如果应用程序使用批处理模式更新，则可能会有很好的机会，让一个用户在另一个用户编辑相同记录所做的更改保存之前更改记录。 在这种情况下，你将希望应用程序妥善处理冲突。 你可能希望最后一位用户将更新发送到服务器 "wins"。 或者，您可能想让最近的用户通过在两个冲突值之间进行选择来决定哪个更新的优先级。  
@@ -30,7 +31,7 @@ ms.locfileid: "82761083"
   
  调用 BatchUpdate 时，ADO 和提供程序正在生成 SQL 语句，以便对数据源执行更新。 请记住，某些数据源对于 WHERE 子句中可以使用哪些类型的列有限制。  
   
- 接下来，在 AffectRecords 参数设置为 adAffectGroup 且 ResyncValues 参数设置等于 adResyncUnderlyingValues 的记录集中调用 Resync 方法。 Resync 方法从基础数据库更新当前记录集对象中的数据。 通过使用 adAffectGroup，你可以确保只有与当前筛选器设置一起显示的记录才会与数据库重新同步。 如果正在处理大型记录集，这可能会显著提高性能。 通过将 ResyncValues 参数设置为 adResyncUnderlyingValues 时，在调用重新同步时，你可以确保 UnderlyingValue 属性包含数据库中的（冲突）值，该值属性将保留用户输入的值，并且 OriginalValue 属性将保留该字段的原始值（在进行上一次成功的 UpdateBatch 调用之前的值）。 然后，你可以使用这些值以编程方式解决冲突，或者要求用户选择将使用的值。  
+ 接下来，在 AffectRecords 参数设置为 adAffectGroup 且 ResyncValues 参数设置等于 adResyncUnderlyingValues 的记录集中调用 Resync 方法。 Resync 方法从基础数据库更新当前记录集对象中的数据。 通过使用 adAffectGroup，你可以确保只有与当前筛选器设置一起显示的记录才会与数据库重新同步。 如果正在处理大型记录集，这可能会显著提高性能。 通过将 ResyncValues 参数设置为 adResyncUnderlyingValues 时，在调用重新同步时，你可以确保 UnderlyingValue 属性包含数据库中的 (冲突) 值，该值属性将保留用户输入的值，并且 OriginalValue 属性将保留该字段的原始值 (在上次成功的 UpdateBatch 调用) 之前的值。 然后，你可以使用这些值以编程方式解决冲突，或者要求用户选择将使用的值。  
   
  下面的代码示例演示了此方法。 示例人为在调用 UpdateBatch 之前，通过使用单独的记录集更改基础表中的值来创建冲突。  
   
@@ -113,7 +114,7 @@ ms.locfileid: "82761083"
   
  您可以使用当前记录或特定字段的 Status 属性来确定发生了哪种冲突。  
   
- 有关错误处理的详细信息，请参阅[错误处理](../../../ado/guide/data/error-handling.md)。  
+ 有关错误处理的详细信息，请参阅 [错误处理](../../../ado/guide/data/error-handling.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [批处理模式](../../../ado/guide/data/batch-mode.md)
