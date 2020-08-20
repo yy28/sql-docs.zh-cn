@@ -1,4 +1,5 @@
 ---
+description: dtexec 实用工具
 title: dtexec 实用工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 206f7d54967eea85c96198e78471f026197a6a64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477231"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
 
@@ -306,13 +307,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID：{59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]设置用户帐户 ：  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
         -   ProgID：DTS.LogProviderSQLProfiler.1  
   
         -   ClassID：{5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置用户帐户 ：  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
         -   ProgID：DTS.LogProviderSQLServer.1  
   

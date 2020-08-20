@@ -1,4 +1,5 @@
 ---
+description: 可序列化性
 title: Serializability |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0557e011578d313765614c05a2a9cf1b975bbc08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b627d24b16e0bae4a117dba38de8cc1755feadac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476439"
 ---
 # <a name="serializability"></a>可序列化性
-理想情况下，事务应该是可*序列化*的。 如果运行中的事务的结果与按顺序运行事务的结果相同（即一个接一个），则认为该事务是可序列化的。 首先执行的事务并不重要，只是结果并不反映任何事务的混合。  
+理想情况下，事务应该是可 *序列化*的。 如果运行中的事务的结果与按顺序运行事务的结果相同（即一个接一个），则认为该事务是可序列化的。 首先执行的事务并不重要，只是结果并不反映任何事务的混合。  
   
  例如，假设 transaction A 将数据值乘以2，事务 B 会将1添加到数据值。 现在假设有两个数据值：0和10。 如果这些事务逐个运行，则新值将为1，21如果首先运行事务 A，则新值为1，如果首先运行事务 B，则新值为2和22。 但是，如果两个事务的运行顺序不同于每个值，该怎么办呢？ 如果在第一个值上首先运行事务 A，并且首先对第二个值运行事务 B，则新值为1和22。 如果反转此顺序，则新值为2和21。 如果1、21和2，则事务是可序列化的。 如果1、22或2，则可能会导致事务无法序列化。  
   

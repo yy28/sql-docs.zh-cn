@@ -1,4 +1,5 @@
 ---
+description: 互操作性
 title: 互操作性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31b20a696c601ff91c591e4c717f468beca34e36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a404ee6de56cbd8b5605eca640fdf0e065f16d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476609"
 ---
 # <a name="interoperability"></a>互操作性
-*互操作性*是指单个应用程序使用多个不同 dbms 进行操作的能力。 编写通用的可互操作应用程序的需要是导致 ODBC 开发的主要因素之一。 但是，互操作性并不是从 "无法互操作" 到 "完全可互操作" 的简单途径。 路径包含多个分支，每个分支都需要特性、速度、代码复杂性和开发时间之间的权衡。  
+*互操作性* 是指单个应用程序使用多个不同 dbms 进行操作的能力。 编写通用的可互操作应用程序的需要是导致 ODBC 开发的主要因素之一。 但是，互操作性并不是从 "无法互操作" 到 "完全可互操作" 的简单途径。 路径包含多个分支，每个分支都需要特性、速度、代码复杂性和开发时间之间的权衡。  
   
  编写互操作应用程序的过程如下所示：  
   

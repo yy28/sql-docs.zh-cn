@@ -1,4 +1,5 @@
 ---
+description: 设置参数值
 title: 设置参数值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 923fd57f4308fb72aca2f829ccb9d7b884c12546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af2992ea66601ec0ae4804e327863e6abb285d73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476419"
 ---
 # <a name="setting-parameter-values"></a>设置参数值
-若要设置参数的值，应用程序只需将绑定到参数的变量的值设置为。 如果设置了此值，则它并不重要，只要在执行语句之前设置该值。 应用程序可以在绑定变量之前或之后设置值，并且它可以根据需要更改多次。 执行语句时，驱动程序只检索变量的当前值。 当多次执行预定义语句时，此方法特别有用;每次执行语句时，应用程序都会为某些或所有变量设置新值。 有关此操作的示例，请参阅本部分前面的[准备执行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)。  
+若要设置参数的值，应用程序只需将绑定到参数的变量的值设置为。 如果设置了此值，则它并不重要，只要在执行语句之前设置该值。 应用程序可以在绑定变量之前或之后设置值，并且它可以根据需要更改多次。 执行语句时，驱动程序只检索变量的当前值。 当多次执行预定义语句时，此方法特别有用;每次执行语句时，应用程序都会为某些或所有变量设置新值。 有关此操作的示例，请参阅本部分前面的 [准备执行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)。  
   
- 如果在对**SQLBindParameter**的调用中绑定了长度/指示器缓冲区，则在执行该语句之前，必须将其设置为以下值之一：  
+ 如果在对 **SQLBindParameter**的调用中绑定了长度/指示器缓冲区，则在执行该语句之前，必须将其设置为以下值之一：  
   
--   绑定变量中数据的字节长度。 仅当变量为字符或二进制（*ValueType*为 SQL_C_CHAR 或 SQL_C_BINARY）时，驱动程序才会检查此长度。  
+-   绑定变量中数据的字节长度。 仅当变量为字符或二进制 (*ValueType* SQL_C_CHAR 或 SQL_C_BINARY) 时，驱动程序才会检查此长度。  
   
 -   SQL_NTS。 数据为以 null 值结束的字符串。  
   
 -   SQL_NULL_DATA。 数据值为 NULL，驱动程序将忽略绑定变量的值。  
   
--   SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的结果。 参数的值将与**SQLPutData**一起发送。 有关详细信息，请参阅本部分后面的[发送长数据](../../../odbc/reference/develop-app/sending-long-data.md)。  
+-   SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的结果。 参数的值将与 **SQLPutData**一起发送。 有关详细信息，请参阅本部分后面的 [发送长数据](../../../odbc/reference/develop-app/sending-long-data.md)。  
   
  下表显示了绑定变量的值和应用程序为各种参数值设置的长度/指示器缓冲区。  
   
-|参数<br /><br /> value|参数<br /><br /> TRANSACT-SQL<br /><br /> 数据类型|变量（C）<br /><br /> 数据类型| 中的值<br /><br /> 绑定<br /><br /> 可变| 中的值<br /><br /> 长度/指示器<br /><br /> 缓冲区 [d]|  
+|参数<br /><br /> value|参数<br /><br />  (SQL) <br /><br /> 数据类型|变量 (C) <br /><br /> 数据类型| 中的值<br /><br /> 绑定<br /><br /> 变量| 中的值<br /><br /> 长度/指示器<br /><br /> 缓冲区 [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS 或3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
@@ -47,7 +48,7 @@ ms.locfileid: "81299827"
   
  [b] 此列表中的数字是存储在 TIME_STRUCT 结构的字段中的数字。  
   
- [c] 字符串使用 ODBC date escape 子句。 有关详细信息，请参阅[日期、时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
+ [c] 字符串使用 ODBC date escape 子句。 有关详细信息，请参阅 [日期、时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
   
  [d] 驱动程序必须始终检查此值，以确定它是否是一个特殊值，如 SQL_NULL_DATA。  
   

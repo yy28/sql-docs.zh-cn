@@ -1,4 +1,5 @@
 ---
+description: 设置事务隔离级别
 title: 设置事务隔离级别 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80401b276355a47469355cb6921d768d168398ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f871ef9e25cb5745987079a4d94272d2f430dfaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476409"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>设置事务隔离级别
-若要设置事务隔离级别，应用程序需要使用 SQL_ATTR_TXN_ISOLATION 连接属性。 如果数据源不支持所请求的隔离级别，则驱动程序或数据源可以设置更高的级别。 若要确定数据源所支持的事务隔离级别以及默认隔离级别，应用程序需要分别使用 SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 选项来调用**SQLGetInfo** 。  
+若要设置事务隔离级别，应用程序需要使用 SQL_ATTR_TXN_ISOLATION 连接属性。 如果数据源不支持所请求的隔离级别，则驱动程序或数据源可以设置更高的级别。 若要确定数据源所支持的事务隔离级别以及默认隔离级别，应用程序需要分别使用 SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 选项来调用 **SQLGetInfo** 。  
   
  较高的事务隔离级别为数据库数据的完整性提供了最大程度的保护。 可序列化事务不受其他事务影响，因此保证保持数据库的完整性。  
   
@@ -32,4 +33,4 @@ ms.locfileid: "81299807"
   
 -   当速度比准确性更重要时，任何错误都可能会很小。 例如，假设某家公司的销售规模很小，但这种情况很少发生。 估算所有开放式销售的总值的事务可能会安全地使用未提交读隔离级别。 尽管该事务包括正在打开或关闭的订单，并随后将其回滚，但这些订单通常会彼此取消，并且事务的速度将更快，因为每次遇到此类订单时，该事务不会被阻止。  
   
- 有关详细信息，请参阅[乐观并发](../../../odbc/reference/develop-app/optimistic-concurrency.md)。
+ 有关详细信息，请参阅 [乐观并发](../../../odbc/reference/develop-app/optimistic-concurrency.md)。

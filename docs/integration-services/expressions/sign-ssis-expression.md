@@ -1,4 +1,5 @@
 ---
+description: SIGN（SSIS 表达式）
 title: SIGN（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 593c17254c06e22e26e4e131fd74c5dacd1a5621
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 88a0009b7d846adb0f12f8712c70b95109877ef1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477344"
 ---
 # <a name="sign-ssis-expression"></a>SIGN（SSIS 表达式）
 
@@ -42,7 +43,7 @@ SIGN(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果该参数为空，SIGN 返回的结果为空。  
   
 ## <a name="expression-examples"></a>表达式示例  

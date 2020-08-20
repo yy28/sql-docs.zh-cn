@@ -1,4 +1,5 @@
 ---
+description: 运算符（SSIS 表达式）
 title: 运算符（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cce2d53a48a55dad2f8d8120e8a7fd091b062ebe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f2c4ddb9dad3a1b6c922201906628ad3b6d25f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477473"
 ---
 # <a name="operators-ssis-expression"></a>运算符（SSIS 表达式）
 
@@ -31,7 +32,7 @@ ms.locfileid: "86921106"
   
  下表列出了本部分中有关运算符的主题。  
   
-|操作员|说明|  
+|运算符|说明|  
 |--------------|-----------------|  
 |[Cast（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)|将表达式从一种数据类型转换为另外一种数据类型。|  
 |[()（括号）（SSIS 表达式）](../../integration-services/expressions/parentheses-ssis-expression.md)|标识表达式的计算顺序。|  
@@ -42,10 +43,10 @@ ms.locfileid: "86921106"
 |[*（相乘）（SSIS 表达式）](../../integration-services/expressions/multiply-ssis-expression.md)|将两个数值表达式相乘。|  
 |[/（除）（SSIS 表达式）](../../integration-services/expressions/divide-ssis-expression.md)|用第一个数值表达式除以第二个数值表达式。|  
 |[（取模）（SSIS 表达式）](../../integration-services/expressions/modulo-ssis-expression.md)|将第一个数据表达式的值除以第二个数据表达式的值后，提供整数余数。|  
-|[&#124;&#124; &#40;逻辑或&#41; &#40;SSIS 表达式&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|执行“逻辑或”运算。|  
+|[||（逻辑或）（SSIS 表达式）](../../integration-services/expressions/logical-or-ssis-expression.md)|执行“逻辑或”运算。|  
 |[&&（逻辑 AND）（SSIS 表达式）](../../integration-services/expressions/logical-and-ssis-expression.md)|执行“逻辑与”运算。|  
 |[\!（逻辑非）（SSIS 表达式）](../../integration-services/expressions/logical-not-ssis-expression.md)|对布尔操作数求反。|  
-|[&#124;（位异或）（SSIS 表达式）](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|对两个整数值执行“位或”运算。|  
+|[|（位异或）（SSIS 表达式）](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|对两个整数值执行“位或”运算。|  
 |[^（位异或）（SSIS 表达式）](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|对两个整数值执行“位异或”运算。|  
 |[&（位与）（SSIS 表达式）](../../integration-services/expressions/bitwise-and-ssis-expression.md)|对两个整数值执行“位与”运算。|  
 |[~（位非）（SSIS 表达式）](../../integration-services/expressions/bitwise-not-ssis-expression.md)|对整数执行位求反运算。|  

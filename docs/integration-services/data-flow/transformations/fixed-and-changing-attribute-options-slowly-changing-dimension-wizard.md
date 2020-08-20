@@ -1,4 +1,5 @@
 ---
+description: 固定的属性选项和变化的属性选项（渐变维度向导）
 title: 固定和变化的属性选项（渐变维度向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f0e3aadb76c9a75f2d0458e0c4163105c122d7a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 019af78f978d0df87d923cf838c53ea7442721ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477677"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>固定的属性选项和变化的属性选项（渐变维度向导）
 

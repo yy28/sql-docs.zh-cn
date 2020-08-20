@@ -1,4 +1,5 @@
 ---
+description: catalog.stop_operation（SSISDB 数据库）
 title: catalog.stop_operation（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ab0e358eef9ec7739b8cb9ed20c28f4fdb5a498
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c77113417a108632aab150e75011399f9ad3a752
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477076"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation（SSISDB 数据库）
 
@@ -33,8 +34,8 @@ catalog.stop_operation [ @operation_id = ] operation_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @operation_id = ] operation_id   
- 执行验证或实例的唯一标识符。 operation_id 为 bigint   。  
+ [ @operation_id = ] operation_id**  
+ 执行验证或实例的唯一标识符。 operation_id 为 bigint******。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -60,7 +61,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   操作已停止  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  一次只能有一个用户应停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的操作。 如果多个用户试图停止操作，则存储过程在第一次尝试时将返回成功（值 `0`），但后续尝试将引发错误。  
   
   

@@ -1,4 +1,5 @@
 ---
+description: MONTH（SSIS 表达式）
 title: MONTH（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed9229a514045f303c651dd71a5ab8837a31632e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 24ab080c25e240ce62260ff708d8cfee137f462f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477569"
 ---
 # <a name="month-ssis-expression"></a>MONTH（SSIS 表达式）
 
@@ -41,7 +42,7 @@ MONTH(date)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果参数为空，则 MONTH 返回的结果为空。  
   
  日期文字必须显式转换为日期数据类型之一。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  

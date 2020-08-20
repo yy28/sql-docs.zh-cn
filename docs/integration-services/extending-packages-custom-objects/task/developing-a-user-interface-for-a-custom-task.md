@@ -1,4 +1,5 @@
 ---
+description: 为自定义任务开发用户界面
 title: 为自定义任务开发用户界面 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef58fe4cdc604f0b23d97d5b4538cb1ffb629a35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2819e52dfe651cb7fde80560c3edd28745376179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477376"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>为自定义任务开发用户界面
 
@@ -44,7 +45,7 @@ ms.locfileid: "86916333"
   
  本节介绍为自定义任务开发用户界面时，<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性和 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 接口的角色，并提供有关如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中创建、集成、部署和调试任务的详细信息。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器为任务提供用户界面的多个入口点：用户可以从快捷菜单中选择“编辑”  ，双击任务，或者单击属性表底部的“显示编辑器”  链接。 当用户访问其中一个入口点时，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 编辑器会定位并加载包含该任务的用户界面的程序集。 任务的用户界面负责创建在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中向用户显示的属性对话框。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器为任务提供用户界面的多个入口点：用户可以从快捷菜单中选择“编辑”****，双击任务，或者单击属性表底部的“显示编辑器”**** 链接。 当用户访问其中一个入口点时，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 编辑器会定位并加载包含该任务的用户界面的程序集。 任务的用户界面负责创建在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中向用户显示的属性对话框。  
   
  任务及其用户界面是不同的实体。 应该在不同的程序集中实现它们，以减少本地化、部署和维护的工作。 除了在任务中编码的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性值中包含的信息外，任务 DLL 不会加载、调用或通常的包含其用户界面的任何知识。 此信息是任务与其用户界面相关联的唯一方式。  
   
@@ -53,12 +54,12 @@ ms.locfileid: "86916333"
   
  下表介绍了 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性的各属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|在“控制流”工具箱中显示任务名称。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|任务说明（继承自 <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>）。 此属性显示在工具提示中。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中的图标。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果使用，请将其设置为 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 枚举中的一个值。 例如，`RequiredProductLevel = DTSProductLevel.None` 。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果使用，请将其设置为 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 枚举中的一个值。 例如，`RequiredProductLevel = DTSProductLevel.None`。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|保存联系信息，以备任务需要技术支持。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|为任务分配类型。|  
 |Attribute.TypeId|在派生类中实现时，获取此特性的唯一标识符。 有关详细信息，请参阅 .NET Framework 类库中的 **Attribute.TypeID** 属性。|  

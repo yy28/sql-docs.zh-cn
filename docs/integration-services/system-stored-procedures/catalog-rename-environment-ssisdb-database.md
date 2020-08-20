@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_environment（SSISDB 数据库）
 title: catalog.rename_environment（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 400b93128b19ca12550816889c732793c0e9e5d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6641ff60f49534a303d3f60110dbdd63aab2ed29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477107"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment（SSISDB 数据库）
 
@@ -42,7 +43,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
  环境的原始名称。 environment_name 为 nvarchar(128)   。  
   
  [ @new_environment_name = ] *new_environment_name*  
- 环境的新名称。 *new_environment_name* 为 **nvarchar(128)** 。  
+ 环境的新名称。 *new_environment_name* 为 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -66,7 +67,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   新名称已用于现有环境  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当您重命名环境时，项目中的环境引用不会自动更新。 必须相应地更新环境引用。 即使通过更改环境名称损坏了环境引用，此存储过程也会成功。 在此存储过程完成之后，必须更新环境引用。  
   
 > [!NOTE]  

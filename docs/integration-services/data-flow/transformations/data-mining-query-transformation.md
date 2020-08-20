@@ -1,4 +1,5 @@
 ---
+description: 数据挖掘查询转换
 title: 数据挖掘查询转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e44443974472593a45d35ec54a4cb69d0dd580f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c7a2e6ffd3dcf8544dabfd010ea7a1161dc9bf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477740"
 ---
 # <a name="data-mining-query-transformation"></a>数据挖掘查询转换
 
@@ -53,10 +54,10 @@ ms.locfileid: "86919400"
   
 ### <a name="options"></a>选项  
  **Connection**  
- 使用列表框选择现有 Analysis Services 连接，或使用下面介绍的“新建”  按钮创建新的连接。  
+ 使用列表框选择现有 Analysis Services 连接，或使用下面介绍的“新建”**** 按钮创建新的连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
   
  **挖掘结构**  
  从可用挖掘模型结构的列表中进行选择。  
@@ -72,5 +73,5 @@ ms.locfileid: "86919400"
  将数据挖掘扩展插件 (DMX) 查询直接键入文本框中。  
   
  **生成新查询**  
- 单击  “生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
+ 单击****“生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
   

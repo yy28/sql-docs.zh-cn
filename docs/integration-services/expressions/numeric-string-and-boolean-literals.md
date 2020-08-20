@@ -1,4 +1,5 @@
 ---
+description: 数值、字符串和布尔型文字
 title: 文本 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8405bd4cb76470eb415dc058caff3931a6b4624
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2ae5d096a90d4e755a57842fb9fb242f7d863eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477486"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>数值、字符串和布尔型文字
 
@@ -103,10 +104,10 @@ ms.locfileid: "86918623"
 |转义序列|说明|  
 |---------------------|-----------------|  
 |\a|警报|  
-|\b|退格键|  
-|\f|换页符|  
-|\n|新建行|  
-|\r|回车符|  
+|\b|Backspace|  
+|\f|换页|  
+|\n|换行|  
+|\r|回车|  
 |\t|水平制表符|  
 |\v|垂直制表符|  
 |\\"|引号|  

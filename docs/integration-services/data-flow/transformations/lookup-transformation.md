@@ -1,4 +1,5 @@
 ---
+description: 查找转换
 title: 查找转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1c65cf892c36f04ac0669d5e011c6c54c434c09
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477692"
 ---
 # <a name="lookup-transformation"></a>查找转换
 
@@ -134,11 +135,11 @@ ms.locfileid: "86919263"
   
 ## <a name="related-content"></a>相关内容  
   
--   MSDN 库中的视频[操作说明：在完全缓存模式下实现查找转换](https://go.microsoft.com/fwlink/?LinkId=131031)  
+-   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
   
 -   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
--   blogs.msdn.com 上的博客文章：[查找模式：不区分大小写](https://go.microsoft.com/fwlink/?LinkId=157782)  
+-   blogs.msdn.com 上的博客项 [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)（查找模式：不区分大小写）  
   
 -   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
   
@@ -166,7 +167,7 @@ ms.locfileid: "86919263"
  **指定如何处理无匹配项的行**  
  选择一个选项来处理在引用数据集内没有任何匹配项的行。  
   
- 如果选中 **“将行重定向到无匹配输出”** ，则行将重定向到无匹配输出，并且将不作为错误处理。 **“查找转换编辑器”** 对话框的 **“错误输出”** 页上的 **“错误”** 选项不可用。  
+ 如果选中 **“将行重定向到无匹配输出”**，则行将重定向到无匹配输出，并且将不作为错误处理。 **“查找转换编辑器”** 对话框的 **“错误输出”** 页上的 **“错误”** 选项不可用。  
   
  如果选中 **“指定如何处理无匹配项的行”** 列表框中的任何其他选项，则行将作为错误处理。 **“错误输出”** 页上的 **“错误”** 选项不可用。  
   
@@ -180,21 +181,21 @@ ms.locfileid: "86919263"
  在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”** 和 **“缓存连接管理器”** 时，下列选项可用：  
   
  **“完全缓存”**  
- 从列表中选择现有的缓存连接管理器，或单击“新建”  创建一个新连接。  
+ 从列表中选择现有的缓存连接管理器，或单击“新建”**** 创建一个新连接。  
   
  **新建**  
- 使用“缓存连接管理器编辑器”  对话框创建新的连接。  
+ 使用“缓存连接管理器编辑器”**** 对话框创建新的连接。  
   
- 在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”** 、 **“部分缓存”** 或 **“无缓存”** 以及 **“OLE DB 连接管理器”** 时，下列选项可用：  
+ 在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”**、 **“部分缓存”** 或 **“无缓存”** 以及 **“OLE DB 连接管理器”** 时，下列选项可用：  
   
  **“无缓存”**  
- 从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”  创建一个新连接。  
+ 从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
  通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
   
  **使用表或视图**  
- 从列表中选择现有表或视图，或单击“新建”  创建新表。  
+ 从列表中选择现有表或视图，或单击“新建”创建新表。  
   
 > [!NOTE]  
 >  在此处选择的表名将由在 **“查找转换编辑器”** 的 **“高级”** 页上指定的 SQL 语句覆盖和替换。 有关详细信息，请参阅 [查找转换编辑器（“高级”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)。  
@@ -206,7 +207,7 @@ ms.locfileid: "86919263"
  选择该选项后，可以通过浏览找到预先存在的查询、生成一个新查询、检查查询语法，然后预览查询结果。  
   
  **生成查询**  
- 通过使用“查询生成器”  可以创建要运行的 Transact-SQL 语句，查询生成器是一个用于通过浏览数据来创建查询的图形工具。  
+ 通过使用“查询生成器”**** 可以创建要运行的 Transact-SQL 语句，查询生成器是一个用于通过浏览数据来创建查询的图形工具。  
   
  **“浏览”**  
  使用此选项可以找到保存为文件的预先存在的查询。  
@@ -229,7 +230,7 @@ ms.locfileid: "86919263"
   
  使用拖放操作将可用输入列映射到查找列。  
   
- 还可以用键盘通过以下方法将输入列映射到查找列：突出显示 **“可用输入列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”** 。  
+ 还可以用键盘通过以下方法将输入列映射到查找列：突出显示 **“可用输入列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”**。  
   
  **可用查找列**  
  查看查找列的列表。 查找列是包含在引用表中并可在其中查找与输入列相匹配的值的列。  
@@ -238,7 +239,7 @@ ms.locfileid: "86919263"
   
  使用这些复选框可以在引用表中选择要对其执行查找操作的列。  
   
- 还可以用键盘通过以下方法将查找列映射到输入列：突出显示 **“可用查找列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”** 。  
+ 还可以用键盘通过以下方法将查找列映射到输入列：突出显示 **“可用查找列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”**。  
   
  **查找列**  
  查看所选的查找列。 通过选中 **“可用查找列”** 表中的复选框即可选择查找列。  
@@ -272,7 +273,7 @@ ms.locfileid: "86919263"
 >  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”** 页上指定的表名。 有关详细信息，请参阅 [查找转换编辑器（“连接”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)。  
   
  **设置参数**  
- 使用“设置查询参数”  对话框将输入列映射到参数。  
+ 使用“设置查询参数”**** 对话框将输入列映射到参数。  
   
 ### <a name="external-resources"></a>外部资源  
  blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  

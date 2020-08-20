@@ -1,4 +1,5 @@
 ---
+description: 运算符优先级和结合性
 title: 运算符优先级和结合性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 801f0358ce5dd6b68e42aff37e7135ec813b3bc0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda01c12856bff3e28b06c9cfddccb368e6a3e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477482"
 ---
 # <a name="operator-precedence-and-associativity"></a>运算符优先级和结合性
 
@@ -34,16 +35,16 @@ ms.locfileid: "86901168"
 |( )|表达式|从左到右|  
 |-, !, ~|一元|从右到左|  
 |casts|一元|从右到左|  
-|*, / ,%|乘法性的|从左到右|  
-|+, -|累加性|从左到右|  
+|*, / ,%|乘法|从左到右|  
+|+, -|加法|从左到右|  
 |\<, >, \<=, >=|关系|从左到右|  
-|==, !=|等式|从左到右|  
+|==, !=|相等|从左到右|  
 |&|位与|从左到右|  
 |^|位异或|从左到右|  
 |&#124;|位或|从左到右|  
 |&&|逻辑与|从左到右|  
 |&#124;&#124;|逻辑或|从左到右|  
-|? 解码的字符：|条件表达式|从右到左|  
+|? :|条件表达式|从右到左|  
   
 ## <a name="see-also"></a>另请参阅  
  [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  

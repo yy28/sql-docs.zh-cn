@@ -1,4 +1,5 @@
 ---
+description: 产品周期长度
 title: 产品周期的长度 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235146ffe1b4699f0064c5772407bcf40ae962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1484079a09d10864e0563db95208e926a959d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476579"
 ---
 # <a name="length-of-the-product-cycle"></a>产品周期长度
 互操作性的最后问题是时间。 开发可互操作的应用程序所用的时间通常比开发 noninteroperable 要长。 原因在于，应用程序必须检查 DBMS 功能，针对不同 Dbms 执行相同的任务，而不是某些 Dbms 支持的功能，等等。  
