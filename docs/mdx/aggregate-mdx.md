@@ -1,5 +1,6 @@
 ---
-title: 聚合（MDX） |Microsoft Docs
+description: Aggregate (MDX)
+title: 聚合 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461689"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -37,12 +38,12 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 ## <a name="remarks"></a>备注  
  如果指定了一组空元组或一个空集，则此函数返回一个空值。  
   
- 下表描述了**聚合**函数在不同聚合函数中的行为。  
+ 下表描述了 **聚合** 函数在不同聚合函数中的行为。  
   
 |聚合运算符|结果|  
 |--------------------------|------------|  
-|SUM|返回对集求得的值之和。|  
-|Count|返回对集求得的值数。|  
+|Sum|返回对集求得的值之和。|  
+|计数|返回对集求得的值数。|  
 |Max|返回对集求得的最大值。|  
 |Min|返回对集求得的最小值。|  
 |半累加性聚合函数|返回将形状投影到时间轴后，对集进行的半累加性计算。|  
@@ -55,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |分配|分配根据度量值聚合函数聚合。 如果度量值聚合函数是非重复计数，则对分配求和。|  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回从**艾德工作**多维`Measures.[Order Quantity]`数据集中包含在`Date`维度中的前八个月的日历年2003的成员的总和。  
+ 下面的示例返回 `Measures.[Order Quantity]` `Date` 从 **艾德工作** 多维数据集中包含在维度中的前八个月的日历年2003的成员的总和。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -125,11 +126,11 @@ WHERE ([Geography].[State-Province].x,
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
  [子 &#40;MDX&#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [&#41; &#40;MDX&#41;&#40;集计数](../mdx/count-set-mdx.md)   
+ [&#41; &#40;MDX&#41;&#40;集计数 ](../mdx/count-set-mdx.md)   
  [筛选 &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [MDX&#41;&#40;属性](../mdx/properties-mdx.md)   
+ [MDX&#41;&#40;属性 ](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   

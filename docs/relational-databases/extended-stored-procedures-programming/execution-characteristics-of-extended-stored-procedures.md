@@ -1,4 +1,5 @@
 ---
+description: 扩展存储过程的执行特征
 title: 扩展存储过程的执行特征
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d991dbdf8029a6021f4cf27a9010dec83b94a5ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23162895a2e2461fbd6f0f0abbe71341ce2fbf91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460855"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>扩展存储过程的执行特征
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85758122"
   
 -  
   
- 加载扩展存储过程 DLL 后，DLL 将在服务器的地址空间中保持加载状态，直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止或管理员使用 DBCC *DLL_name* （免费）显式卸载 DLL。  
+ 加载扩展存储过程 DLL 后，DLL 将在服务器的地址空间中保持加载状态，直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止或管理员使用 DBCC *DLL_NAME* (免费) 显式卸载 DLL。  
   
  使用 EXECUTE 语句，可以通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将扩展存储过程作为存储过程来执行：  
   

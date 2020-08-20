@@ -1,4 +1,5 @@
 ---
+description: ServerNetworkProtocolIPAddress 类
 title: ServerNetworkProtocolIPAddress 类
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0cc6f508b355ffae370ea83e45449e0217f70dda
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f25a207619031eb0ec9efdc54f788332ab565bd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463639"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 类
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [ServerNetworkProtocolIPAddress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)表示服务器网络协议支持的 IP 地址。  
   
- 借助[ServerNetworkProtocolIPAddress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)，您可以执行以下任务：  
+ 借助 [ServerNetworkProtocolIPAddress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) ，您可以执行以下任务：  
   
 -   检查实例的名称 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   

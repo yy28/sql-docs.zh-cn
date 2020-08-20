@@ -1,5 +1,6 @@
 ---
-title: SetDefaults 方法（SInstance）
+description: SetDefaults 方法（SInstance 类）
+title: 'SetDefaults 方法 (SInstance) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 346c714dea89d171431527dfa42e8503aa30e5f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c454a5b2819a07ecb9152b0b9fbece48434c2fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463601"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 方法（SInstance 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,14 +37,14 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示服务器实例的[SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)对象。  
+ 对象  
+ 一个表示服务器实例的 [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*OverwriteAll*|指定是否覆盖客户端实例上的现有值的布尔值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：如果覆盖现有数据，**则为 true** ; 如果不覆盖现有数据，则为**false** 。|  
+|*OverwriteAll*|指定是否覆盖客户端实例上的现有值的布尔值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：如果覆盖现有数据， **则为 true** ; 如果不覆盖现有数据，则为 **false** 。|  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  

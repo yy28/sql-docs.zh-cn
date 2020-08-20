@@ -1,4 +1,5 @@
 ---
+description: 第 1 课：准备创建部署捆绑
 title: 第 1 课：准备创建部署捆绑 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e13cbefc2c46acf07ad3d1d412b652089fe72adb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c5ef2363d07fc6560199154633fc45d93eb10c13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461985"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 课：准备创建部署捆绑
 

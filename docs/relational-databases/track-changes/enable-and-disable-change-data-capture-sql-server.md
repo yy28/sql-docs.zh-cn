@@ -1,4 +1,5 @@
 ---
+description: 启用和禁用变更数据捕获 (SQL Server)
 title: 启用和禁用变更数据捕获
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aefc7bb8f812951d7b8fcdac7b28549984faa7fb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 83e4d748032d4744480d90a977432c70b418ce8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463715"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85889116"
  有关启用数据库的示例，请参阅 Enable Database for Change Data Capture 模板。  
   
 > [!IMPORTANT]  
->  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”** ，单击 **“模板资源管理器”** ，然后选择 **“SQL Server 模板”** 。 **Change Data Capture** 为一个子文件夹。 在此文件夹下，您会找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
+>  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后选择 **“SQL Server 模板”**。 **Change Data Capture** 为一个子文件夹。 在此文件夹下，您会找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
 ```sql  
 -- ====  
@@ -56,7 +57,7 @@ GO
  有关禁用数据库的示例，请参阅 Disable Database for Change Data Capture 模板。  
   
 > [!IMPORTANT]  
->  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”** ，单击 **“模板资源管理器”** ，然后单击 **“SQL Server 模板”** 。 **“变更数据捕获”** 为子文件夹，在该文件夹中您将找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
+>  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后单击 **“SQL Server 模板”**。 **“变更数据捕获”** 为子文件夹，在该文件夹中您将找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
 ```sql  
 -- =======  

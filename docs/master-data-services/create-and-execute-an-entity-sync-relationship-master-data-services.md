@@ -1,4 +1,5 @@
 ---
+description: 创建和执行实体同步关系（主数据服务）
 title: 创建和执行实体同步关系
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6e96975fbd7946c53f60af29a91cec938b0ffeb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461789"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
 
@@ -28,7 +29,7 @@ ms.locfileid: "85813028"
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   至少需要拥有对源实体及其所有属性和成员的读取访问权限。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85813028"
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  在创建实体同步关系时，请注意以下事项。  
   
@@ -90,14 +91,14 @@ ms.locfileid: "85813028"
   
 3.  在“实体同步维护” **** 页上，选择网格中的同步关系。  
   
-4.  单击“执行”  。  
+4.  单击“执行” 。  
   
 ## <a name="sync-relationship-information"></a>同步关系信息  
  对于创建的每个同步关系，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
   
 |列|描述|  
 |------------|-----------------|  
-|状态|同步关系状态。<br /><br /> 单击 "**保存**" 或 "执行同步关系" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，指示同步关系正在更新。<br /><br /> 如果在创建、编辑或执行同步关系时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|  
+|状态|同步关系状态。<br /><br /> 单击 " **保存** " 或 "执行同步关系" 时，将显示 ![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标") 图像的图标，指示同步关系正在更新。<br /><br /> 如果在创建、编辑或执行同步关系时出现错误，则会显示 ![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标") 。<br /><br /> 否则，状态为 "正常"，将显示 !["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标") " 图像的图标。|  
 |源模型|源模型名称。|  
 |源版本|源版本名称。|  
 |源实体|源实体名称。|  

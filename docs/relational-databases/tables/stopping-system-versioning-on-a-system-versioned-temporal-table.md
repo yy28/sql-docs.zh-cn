@@ -1,4 +1,5 @@
 ---
+description: 停止对系统版本的临时表的系统版本控制
 title: 停止对系统版本控制临时表的系统版本控制 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/28/2020
@@ -11,12 +12,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b145a9f68fe87909113c06b2f081ec156c525dd5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ce74abdc24fceff522fe65353b62295f6de5dc66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463816"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止对由系统控制版本的时态表进行系统版本控制
 

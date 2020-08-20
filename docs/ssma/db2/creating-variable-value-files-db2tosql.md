@@ -1,4 +1,5 @@
 ---
+description: '创建变量值文件 (DB2ToSQL) '
 title: 创建变量值文件 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f5a1b2fe01fd9800ee9d56e3a01f9861bfb3a046
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 69753bb7f8b873ebdd74a8c18262034557844c55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463487"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>创建变量值文件 (DB2ToSQL) 
-变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v**开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
+变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v** 开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
   
 > [!NOTE]  
 > 1.  变量名称以 $ (美元) 符号为前缀并带有后缀。 如果变量值文件中没有为变量赋值，则在分析脚本文件时将遇到错误，从而导致控制台执行过程停止。  
@@ -84,7 +85,7 @@ ms.locfileid: "87933852"
 ```  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[&#40;DB2ToSQL 创建服务器连接文件&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+操作控制台的下一步是 [&#40;DB2ToSQL 创建服务器连接文件&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [创建服务器连接文件](../oracle/creating-the-server-connection-files-oracletosql.md)  

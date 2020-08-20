@@ -1,5 +1,6 @@
 ---
-title: AddCalculatedMembers （MDX） |Microsoft Docs
+description: AddCalculatedMembers (MDX)
+title: AddCalculatedMembers (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81e048ef534d12f282315562713e40d08512b121
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461698"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -50,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- 下面的示例从`Measures.[Unit Price]` **艾德工作**多维数据集中返回除了**度量值**维度中的所有计算成员之外的成员。  
+ 下面的示例 `Measures.[Unit Price]` 从**艾德工作**多维数据集中返回除了**度量值**维度中的所有计算成员之外的成员。  
   
 ```  
 SELECT  

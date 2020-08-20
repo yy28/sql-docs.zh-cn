@@ -1,4 +1,5 @@
 ---
+description: 数据源的注册表项
 title: 数据源的注册表项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82759a988a0a2ff290d67406a1450ec9cb228a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461299"
 ---
 # <a name="registry-entries-for-data-sources"></a>数据源的注册表项
 > [!NOTE]  
@@ -37,7 +38,7 @@ ms.locfileid: "81296267"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- 使用哪种密钥取决于数据源是否为*系统数据源（* 对所有用户都可用）或*用户数据源（* 仅适用于当前用户）。 系统数据源存储在 HKEY_LOCAL_MACHINE 树上，用户数据源存储在 HKEY_CURRENT_USER 树中。 在所有其他方面，系统数据源和用户数据源相同。  
+ 使用哪种密钥取决于数据源是否为 *系统数据源（* 对所有用户都可用）或 *用户数据源（* 仅适用于当前用户）。 系统数据源存储在 HKEY_LOCAL_MACHINE 树上，用户数据源存储在 HKEY_CURRENT_USER 树中。 在所有其他方面，系统数据源和用户数据源相同。  
   
  本部分包含以下主题。  
   

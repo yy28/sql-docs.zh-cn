@@ -1,4 +1,5 @@
 ---
+description: 创建表（数据库引擎）
 title: 创建表（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2016
@@ -13,12 +14,12 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d37b8d87be1b6207ba9dcfd9bc1a8dcaa1ab039
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: de52eb6abbcbcbb23638c07663d78a80ccffd22f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463814"
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -37,11 +38,11 @@ ms.locfileid: "87394574"
  
 ## <a name="using-table-designer"></a>使用表设计器  
   
-1.  在 SSMS 中的“对象资源管理器”  中，连接到包含要修改的数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
+1.  在 SSMS 中的“对象资源管理器”**** 中，连接到包含要修改的数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
 2.  在 **“对象资源管理器”** 中，展开 **“数据库”** 节点，然后展开将包含新表的数据库。  
   
-3.  在对象资源管理器中，右键单击数据库的“表”节点，然后单击“新建表”   。  
+3.  在对象资源管理器中，右键单击数据库的“表”节点，然后单击“新建表”********。  
   
 4.  键入列名，选择数据类型，并选择各列是否允许为空值，如下图所示：  
   
@@ -49,7 +50,7 @@ ms.locfileid: "87394574"
   
 5.  若要为某个列指定更多属性，例如标识或计算列值，请单击该列，然后在列属性选项卡中，选择适当的属性。 有关列属性的详细信息，请参阅[表列属性 (SQL Server Management Studio)](../../relational-databases/tables/table-column-properties-sql-server-management-studio.md)。  
   
-6.  若要将某个列指定为主键，请右键单击该列，然后选择“设置主键”  。 有关详细信息，请参阅 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
+6.  若要将某个列指定为主键，请右键单击该列，然后选择“设置主键”****。 有关详细信息，请参阅 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
   
 7.  若要创建外键关系、CHECK 约束或索引，请在“表设计器”窗格中单击右键，然后从列表中选择一个对象，如下图所示：  
   
@@ -57,15 +58,15 @@ ms.locfileid: "87394574"
   
      有关这些对象的详细信息，请参阅 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)、 [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) 和 [Indexes](../../relational-databases/indexes/indexes.md)。  
   
-8.  默认情况下，该表包含在 **dbo** 架构中。 若要为该表指定不同架构，请在“表设计器”窗格中右键单击，然后选择“属性”  ，如下图中所示。 从“架构”  下拉列表中选择适当的架构。  
+8.  默认情况下，该表包含在 **dbo** 架构中。 若要为该表指定不同架构，请在“表设计器”窗格中右键单击，然后选择“属性”****，如下图中所示。 从“架构”**** 下拉列表中选择适当的架构。  
   
      ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
      有关架构的详细信息，请参阅 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)。  
   
-9. 从“文件”菜单中，选择“保存”表名称    。  
+9. 从“文件”菜单中，选择“保存”表名称******** **。  
   
-10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”** 。  
+10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”**。  
   
 11. 若要查看这个新表，请在 **“对象资源管理器”** 中展开 **“表”** 节点，然后按 **F5** 刷新对象列表。 该新表将显示在表列表中。  
   
@@ -77,7 +78,7 @@ ms.locfileid: "87394574"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     CREATE TABLE dbo.PurchaseOrderDetail  

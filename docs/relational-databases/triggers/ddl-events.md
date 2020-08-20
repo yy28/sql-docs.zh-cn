@@ -1,4 +1,5 @@
 ---
+description: DDL 事件
 title: DDL 事件 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/01/2016
@@ -14,12 +15,12 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4281b67d44e7a1aa7404e89b07a505416f38260f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463787"
 ---
 # <a name="ddl-events"></a>DDL 事件
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -193,24 +194,24 @@ ms.locfileid: "87243318"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_FULLTEXT_CATALOG（当指定 create 时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
+        CREATE_FULLTEXT_CATALOG（当指定 create** 时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG（当指定 start_incremental、start_full、Stop 或 Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句 **sp_fulltextcatalog**，当指定 enable 时，适用于 **sp_fulltext_database**。）
+        ALTER_FULLTEXT_CATALOG（当指定 ** start_incremental、** start_full、** Stop 或 ** Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句 **sp_fulltextcatalog**，当指定 ** enable 时，适用于 **sp_fulltext_database**。）
     :::column-end:::
     :::column:::
-        DROP_FULLTEXT_CATALOG（当指定 drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
+        DROP_FULLTEXT_CATALOG（当指定 ** drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_FULLTEXT_INDEX（当指定 create 时，适用于 CREATE FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
+        CREATE_FULLTEXT_INDEX（当指定 ** create 时，适用于 CREATE FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX（当指定 start_full 、start_incremental 或stop 时，适用于 ALTER FULLTEXT INDEX 语句和 **sp_fulltextcatalog**，当指定除了 create 或 drop 操作之外时，适用于 **sp_fulltext_column** 和 **sp_fulltext_table**。）
+        ALTER_FULLTEXT_INDEX（当指定 start_full****、start_incremental 或** stop 时，适用于 ALTER FULLTEXT INDEX 语句和 **sp_fulltextcatalog**，当指定除了 create** 或 ** drop 操作之外时，适用于 **sp_fulltext_column** 和 **sp_fulltext_table**。）
     :::column-end:::
     :::column:::
-        DROP_FULLTEXT_INDEX（当指定 drop 时，适用于 DROP FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
+        DROP_FULLTEXT_INDEX（当指定 ** drop 时，适用于 DROP FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -406,7 +407,7 @@ ms.locfileid: "87243318"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SCHEMA（适用于 CREATE SCHEMA 语句、**sp_addrole** **sp_adduser**、**sp_addgroup** 和 **sp_grantdbaccess**。）
+        CREATE_SCHEMA（适用于 CREATE SCHEMA 语句、**sp_addrole****sp_adduser**、**sp_addgroup** 和 **sp_grantdbaccess**。）
     :::column-end:::
     :::column:::
         ALTER_SCHEMA（适用于 ALTER SCHEMA 语句和 **sp_changeobjectowner**）。
@@ -723,10 +724,10 @@ ms.locfileid: "87243318"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LOGIN（当使用必须隐式创建的不存在登录名时，适用于 CREATE LOGIN 语句、**sp_addlogin** **sp_grantlogin** **xp_grantlogin** 和 **sp_denylogin**。）
+        CREATE_LOGIN（当使用必须隐式创建的不存在登录名时，适用于 CREATE LOGIN 语句、**sp_addlogin****sp_grantlogin****xp_grantlogin** 和 **sp_denylogin**。）
     :::column-end:::
     :::column:::
-        ALTER_LOGIN（当指定 Auto_Fix 时，适用于**sp_defaultdb**、**sp_defaultlanguage**、**sp_password** 和 **sp_change_users_login**。）
+        ALTER_LOGIN（当指定 ** Auto_Fix 时，适用于**sp_defaultdb**、**sp_defaultlanguage**、**sp_password** 和 **sp_change_users_login**。）
     :::column-end:::
     :::column:::
         DROP_LOGIN（适用于 DROP LOGIN 语句、 **sp_droplogin**、 **sp_revokelogin**和 **xp_revokelogin**）

@@ -1,4 +1,5 @@
 ---
+description: 创建日期属性 (Master Data Services)
 title: 创建日期属性
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5b2bb59ff72884649feb2167c41c5d838b9779d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461894"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "87363149"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   您必须具有要为其创建属性的实体。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "87363149"
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>显示日期时间值的时间部分  
  若要使用户界面显示日期时间值的时间部分，您必须为该属性选择一个适当的输入掩码。 对于日期时间属性没有内置的此类掩码，但您可以添加一个新掩码以便显示时间。 为此，在存储内置掩码的 MDS 数据库的 mdm.tblList 表中添加一行。 此行应具有以下各值：  
   
-|列|值|  
+|列|Value|  
 |-|-|  
 |ListCode|lstInputMask|  
 |ListName|“输入掩码”|  

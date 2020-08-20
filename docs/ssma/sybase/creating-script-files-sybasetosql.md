@@ -1,4 +1,5 @@
 ---
+description: 创建脚本文件 (SybaseToSQL)
 title: 创建脚本文件 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e5abea3995ae8b2515c142812ee47498c37497f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0f5205dccc0d5c13f4c9308d32d981a7be506656
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463159"
 ---
 # <a name="creating-script-files-sybasetosql"></a>创建脚本文件 (SybaseToSQL)
 启动 SSMA 控制台应用程序之前的第一个步骤是创建脚本文件，并在需要时创建变量值文件和服务器连接文件。  
@@ -125,7 +126,7 @@ ms.locfileid: "87931995"
   
     -   **继续-** 控制台将继续执行。  
   
-    默认模式为 "**错误**"。  
+    默认模式为 " **错误**"。  
   
     **示例：**  
   
@@ -156,7 +157,7 @@ ms.locfileid: "87931995"
   
     -   生成-错误：如果连接未处于活动状态，则会生成错误。  
   
-    默认模式为 "**生成-错误**"。  
+    默认模式为 " **生成-错误**"。  
   
     **示例：**  
   
@@ -324,9 +325,9 @@ ms.locfileid: "87931995"
   
     这里出现两种情况：  
   
-    1.  如果 override 选项为**false**，则搜索顺序为 "受保护的存储- &gt; 脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
+    1.  如果 override 选项为 **false**，则搜索顺序为 "受保护的存储- &gt; 脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
   
-    2.  如果 override 选项为**true**，则搜索顺序为 "脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
+    2.  如果 override 选项为 **true**，则搜索顺序为 "脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
   
     **示例：**  
   
@@ -340,17 +341,17 @@ ms.locfileid: "87931995"
   
 不可配置的选项是：  
   
--   **最大重新连接尝试：** 如果已建立的连接超时或由于网络故障而中断，则需要重新连接服务器。 允许重新连接尝试最多执行**5**次重试，此时，控制台将自动执行重新连接。 自动重新连接的功能可以减少重新运行脚本的工作量。  
+-   **最大重新连接尝试：** 如果已建立的连接超时或由于网络故障而中断，则需要重新连接服务器。 允许重新连接尝试最多执行 **5** 次重试，此时，控制台将自动执行重新连接。 自动重新连接的功能可以减少重新运行脚本的工作量。  
   
 ## <a name="server-connection-parameters"></a>服务器连接参数  
-服务器连接参数可以在脚本文件中或服务器连接文件中定义。 有关更多详细信息，请参阅[创建服务器连接文件 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)部分  
+服务器连接参数可以在脚本文件中或服务器连接文件中定义。 有关更多详细信息，请参阅 [创建服务器连接文件 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) 部分  
   
 ## <a name="script-commands"></a>脚本命令  
 脚本文件包含一系列 XML 格式的迁移工作流命令。 SSMA 控制台应用程序按脚本文件中显示的命令顺序处理迁移。  
   
 例如，Sybase 数据库中特定表的典型数据迁移遵循数据库架构表的层次结构 &gt; &gt; 。  
   
-成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中的变量信息包含在[变量值文件](creating-variable-value-files-sybasetosql.md)中，或在脚本文件的单独节中用于变量值。  
+成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中的变量信息包含在 [变量值文件](creating-variable-value-files-sybasetosql.md) 中，或在脚本文件的单独节中用于变量值。  
   
 **示例：**  
   
@@ -394,10 +395,10 @@ ms.locfileid: "87931995"
 脚本命令的完整列表，可在[执行 SSMA 控制台 &#40;SybaseToSQL](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)中找到&#41;  
   
 ## <a name="script-file-validation"></a>脚本文件验证  
-用户可以根据 "架构" 文件夹中提供的架构定义文件**的 "2ssconsolescriptschema"** ，轻松验证其脚本文件  
+用户可以根据 "架构" 文件夹中提供的架构定义文件 **的 "2ssconsolescriptschema"** ，轻松验证其脚本文件  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[&#40;SybaseToSQL&#41;创建变量值文件](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)。  
+操作控制台的下一步是 [&#40;SybaseToSQL&#41;创建变量值文件 ](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建变量值文件 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  

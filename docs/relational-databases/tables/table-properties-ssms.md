@@ -1,4 +1,5 @@
 ---
+description: Table Properties - SSMS
 title: 表属性 - SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e476076084e23d3381f08a2e10dc130bee25b93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463771"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -149,7 +150,7 @@ ms.locfileid: "87928668"
  索引在表中所占的空间大小 (MB)。 此值不包括表的 XML 索引空间使用量。 如果 XML 索引属于表，则使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 。  
   
  **行计数**  
- 该表中的行数。  
+ 表中的行数。  
   
  **数据空间**  
  数据在表中所占的空间大小 (MB)。  

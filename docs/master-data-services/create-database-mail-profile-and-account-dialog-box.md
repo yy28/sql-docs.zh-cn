@@ -1,4 +1,5 @@
 ---
+description: “创建数据库邮件配置文件和帐户”对话框
 title: “创建数据库邮件配置文件和帐户”对话框
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b1bc67db4ebfe6d72b466562e7075fb93489ba29
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6c9b1c9b455b7e192c5c4c4ec921b8b9cdebcba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461794"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>“创建数据库邮件配置文件和帐户”对话框
 
@@ -45,7 +46,7 @@ ms.locfileid: "85812413"
 |**答复电子邮件地址**|可选设置。 键入用于答复由此帐户发送的电子邮件的电子邮件地址。 一个示例答复电子邮件地址为 admin@contoso.com。|  
 |**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式示例：**smtp.***<company_name>***.com**。 如需相关帮助，请询问您的邮件管理员。|  
 |**端口号**|键入此帐户的 SMTP 服务器的端口号。 默认 SMTP 端口为 25。|  
-|**此服务器要求安全连接(SSL)**|使用传输层安全性（TLS）（以前称为安全套接字层（SSL））对通信进行加密。|  
+|**此服务器要求安全连接(SSL)**|使用传输层安全性 (TLS) （以前称为安全套接字层 (SSL) ）对通信进行加密。|  
   
 ## <a name="smtp-authentication"></a>SMTP 身份验证  
  可以利用 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的凭据或您提供的其他凭据发送数据库邮件，也可以用匿名方式发送。 最佳做法是，如果您的电子邮件服务器要求身份验证，则创建要用于数据库邮件的特定用户帐户。 此用户帐户应具有最低权限，且不应用于其他任何用途。  

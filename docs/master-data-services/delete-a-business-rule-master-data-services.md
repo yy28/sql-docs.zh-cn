@@ -1,4 +1,5 @@
 ---
+description: 删除业务规则 (Master Data Services)
 title: 删除业务规则
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1a649c1d04d1d52fee2864991bbe051b04814ee6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461742"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>删除业务规则 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85812765"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-business-rule"></a>删除业务规则  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85812765"
   
 2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
   
-3.  在 "**业务规则**" 页上，从 "**模型**" 下拉列表中选择一个模型。  
+3.  在 " **业务规则** " 页上，从 " **模型** " 下拉列表中选择一个模型。  
   
 4.  从 **** “实体”下拉列表中选择一个实体。  
   

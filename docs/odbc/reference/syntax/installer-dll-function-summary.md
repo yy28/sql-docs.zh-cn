@@ -1,4 +1,5 @@
 ---
+description: 安装程序 DLL 函数摘要
 title: 安装程序 DLL 函数摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ddaf20334a84833433961a49e17724d354945c5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3666808659abb29a1f5a1eb1e8be62e8cf0507f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461229"
 ---
 # <a name="installer-dll-function-summary"></a>安装程序 DLL 函数摘要
-下表介绍了安装程序 DLL 中的函数。 有关每个函数的语法和语义的详细信息，请参阅[安装程序 DLL API 参考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  
+下表介绍了安装程序 DLL 中的函数。 有关每个函数的语法和语义的详细信息，请参阅 [安装程序 DLL API 参考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  
   
 |任务|函数名称|用途|  
 |----------|-------------------|-------------|  
@@ -37,14 +38,14 @@ ms.locfileid: "81298767"
 ||[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|从系统信息中删除转换器。|  
 |配置数据源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|调用驱动程序特定的安装 DLL。|  
 ||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|显示一个对话框，用于添加数据源。|  
-||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|检索配置模式，该模式指示在系统信息中列出 DSN 值的位置。|  
+||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|检索配置模式，该配置模式指示 Odbc.ini 项列出 DSN 值在系统信息中的位置。|  
 ||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|将一个值写入系统信息。|  
 ||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|显示一个对话框，用于选择转换器。|  
 ||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|显示一个对话框，用于配置数据源和驱动程序。|  
 ||[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|读取文件 Dsn 中的信息。|  
 ||[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|删除默认数据源。|  
 ||[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|删除数据源。|  
-||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|设置指示在系统信息中列出 DSN 值的 Odbc 条目的配置模式。|  
+||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|设置指示 Odbc.ini 条目列出 DSN 值的位置在系统信息中的配置模式。|  
 ||[SQLValidDSN](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|检查数据源名称的长度和有效性。|  
 ||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|添加数据源。|  
 ||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|将信息写入文件 Dsn。|  

@@ -1,4 +1,5 @@
 ---
+description: 法律声明 (MySQLToSql)
 title: 法律声明 (MySQLToSql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: aaf9660b77e943e2350c2dc32c73f013ae68dde8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 30ead9bd1d01b26d6453672940a55dd09ad36577
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463365"
 ---
 # <a name="legal-notice-mysqltosql"></a>法律声明 (MySQLToSql)
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  

@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_scan （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_scan (Transact-SQL)
+title: sys. sp_cdc_scan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463926"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @maxtrans = ] max_trans`每个扫描循环中要处理的最大事务数。 *max_trans*的**整数为 int** ，默认值为500。  
+`[ @maxtrans = ] max_trans` 每个扫描循环中要处理的最大事务数。 *max_trans* 的 **整数为 int** ，默认值为500。  
   
-`[ @maxscans = ] max_scans`为了从日志中提取所有行而要执行的扫描周期的最大数目。 *max_scans*的**整数为 int** ，默认值为10。  
+`[ @maxscans = ] max_scans` 为了从日志中提取所有行而要执行的扫描周期的最大数目。 *max_scans* 的 **整数为 int** ，默认值为10。  
   
-`[ @continuous = ] continuous`指示存储过程应在执行单个扫描循环（0）之后结束，还是在 reexecuting 扫描周期（1）之前，通过*polling_interval*指定的时间暂停。 *连续*为**tinyint** ，默认值为0。  
+`[ @continuous = ] continuous`指示存储过程是否应在执行单个扫描循环之后结束 (0) 或连续运行，polling_interval 在将扫描周期 reexecuting (1) 之前，暂停*polling_interval*指定的时间。 *连续* 为 **tinyint** ，默认值为0。  
   
-`[ @pollinginterval = ] polling_interval`日志扫描循环之间的秒数。 *polling_interval*为**bigint** ，默认值为0。  
+`[ @pollinginterval = ] polling_interval` 日志扫描循环之间的秒数。 *polling_interval* 为 **bigint** ，默认值为0。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  

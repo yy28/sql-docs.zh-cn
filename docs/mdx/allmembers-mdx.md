@@ -1,5 +1,6 @@
 ---
-title: AllMembers （MDX） |Microsoft Docs
+description: AllMembers (MDX)
+title: AllMembers (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba70d4ad8b301cbd8af2fd76ce058f2dab2e4a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461669"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 
@@ -39,16 +40,16 @@ Level_Expression.AllMembers
  返回级别的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **AllMembers**函数返回一个集，该集包含指定层次结构或级别中的所有成员，包括计算成员。 即使指定的层次结构或级别不包含可见成员， **AllMembers**函数也会返回计算成员。  
+ **AllMembers**函数返回一个集，该集包含指定层次结构或级别中的所有成员，包括计算成员。 即使指定的层次结构或级别不包含可见成员， **AllMembers** 函数也会返回计算成员。  
   
 > [!IMPORTANT]  
 >  如果维度仅包含单个可见层次结构，由于在此情况下维度名称将解析为其唯一可见的层次结构，所以既可以通过维度名称也可以通过层次结构名称来引用该层次。 例如，`Measures.AllMembers` 是一个有效的 MDX 表达式，这是因为它会解析为 Measures 维度中唯一的层次结构。  
   
 > [!NOTE]  
->  **AllMembers**函数在语义上类似于[AddCalculatedMembers （MDX）](../mdx/addcalculatedmembers-mdx.md)函数。  
+>  **AllMembers**函数在语义上类似于[AddCalculatedMembers (MDX) ](../mdx/addcalculatedmembers-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回列轴上 [`Date].[Calendar Year]`属性层次结构中的所有成员，这包括计算成员，以及来自**艾德工作**多维数据集的`[Product].[Model Name]`行轴上属性层次结构的所有子级的集合。  
+ 下面的示例返回 `Date].[Calendar Year]` 列轴上 [属性层次结构中的所有成员，这包括计算成员，以及 `[Product].[Model Name]` 来自 **艾德工作** 多维数据集的行轴上属性层次结构的所有子级的集合。  
   
 ```  
 SELECT  
@@ -58,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
- 下面的示例返回列轴上的**度量值**维度中的所有成员，其中包括所有计算成员，以及来自**艾德公司**的行轴`[Product].[Model Name]`上属性层次结构的所有子级集。  
+ 下面的示例返回列轴上的 **度量值** 维度中的所有成员，其中包括所有计算成员，以及 `[Product].[Model Name]` 来自 **艾德公司** 的行轴上属性层次结构的所有子级集。  
   
 ```  
 SELECT  

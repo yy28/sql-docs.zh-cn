@@ -1,4 +1,5 @@
 ---
+description: SSMA for Oracle 控制台入门 (OracleToSQL)
 title: SSMA for Oracle Console (OracleToSQL) 入门 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463244"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle 控制台入门 (OracleToSQL)
 本部分介绍了启动和开始 Oracle 控制台应用程序的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -26,7 +27,7 @@ ms.locfileid: "87934886"
 ## <a name="launching-ssma-console"></a>启动 SSMA 控制台  
 使用以下步骤启动 SSMA 控制台应用程序：  
   
-1.  中转到 "**开始**"，然后指向 "**所有程序**"。  
+1.  中转到 " **开始** "，然后指向 " **所有程序**"。  
   
 2.  单击 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于 Oracle 命令提示符的迁移助手**快捷方式" 快捷方式。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "87934886"
 ## <a name="procedure-for-using-the-ssma-console"></a>使用 SSMA 控制台的过程  
 在 Windows 系统上成功启动控制台后，可以使用以下步骤来处理它：  
   
-1.  通过脚本文件配置 SSMA 控制台。 有关此部分的详细信息，请参阅[创建脚本文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
+1.  通过脚本文件配置 SSMA 控制台。 有关此部分的详细信息，请参阅 [创建脚本文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
   
 2.  [创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
@@ -45,9 +46,9 @@ ms.locfileid: "87934886"
   
 其他功能：  
   
-1.  [指定密码](managing-passwords-oracletosql.md)，并将其导出或导入到其他窗口计算机上  
+1.  [指定密码](managing-passwords-oracletosql.md) ，并将其导出或导入到其他窗口计算机上  
   
-2.  [生成报表](generating-reports-oracletosql.md)以查看详细的 xml 输出报告，以便进行评估/conversion 和数据迁移。 还可以为刷新和同步命令生成详细的错误报告。  
+2.  [生成报表](generating-reports-oracletosql.md) 以查看详细的 xml 输出报告，以便进行评估/conversion 和数据迁移。 还可以为刷新和同步命令生成详细的错误报告。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
 执行 SSMA 脚本命令和选项后，控制台程序会在控制台上显示 (信息、错误等 ) 的结果和消息，或者，如果需要，则重定向到 xml 输出文件。 输出中的每种消息类型都用一种独特的颜色表示。 例如，以白色表示的短信表示脚本文件命令;绿色颜色表示用户输入的提示，等等。  
@@ -56,11 +57,11 @@ ms.locfileid: "87934886"
   
 下表中的控制台输出的颜色解释：  
   
-|颜色|说明|  
+|Color|说明|  
 |---------|---------------|  
 |红色|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
-|白色|脚本文件命令，消息类型|  
+|White|脚本文件命令，消息类型|  
 |Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始、完成和结果|  

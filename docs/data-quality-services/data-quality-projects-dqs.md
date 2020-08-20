@@ -1,4 +1,5 @@
 ---
+description: 数据质量项目 (DQS)
 title: 数据质量项目 (DQS)
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8cc17bac7bca3907ffecc0e39e454889194f7a93
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6dfb68d73ba01f343660cef328f8cb8b4dbbd3b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462217"
 ---
 # <a name="data-quality-projects-dqs"></a>数据质量项目 (DQS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85899108"
   
 -   提供一个向导，指导您完成整个清理活动和匹配活动，并根据您的选择将数据导出到 SQL Server 数据库或 .csv 文件。 数据专员可以使用数据质量项目来运行并控制计算机辅助/交互方式清理步骤和数据匹配步骤。  
   
-##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a>数据质量项目：清理活动  
+##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a> 数据质量项目：清理活动  
  清理数据质量项目使您可以基于知识库清理您的源数据。 DQS 中的数据清理活动分为两个步骤：  
   
 1.  “计算机辅助” ** 数据清理过程，可以针对知识库中的知识分析源数据并提出更改建议。 DQS 对处理后的数据进行分类（建议、新建、无效、已更正和正确），然后向用户显示以供进一步处理。  
@@ -39,7 +40,7 @@ ms.locfileid: "85899108"
   
  有关数据质量项目中的清理活动的详细信息，请参阅 [Data Cleansing](../data-quality-services/data-cleansing.md)。  
   
-##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a>数据质量项目：匹配活动  
+##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a> 数据质量项目：匹配活动  
  匹配数据质量项目支持您基于知识库中的匹配策略执行匹配活动，通过标识精确匹配项和近似匹配项，进而删除重复数据，以防止数据重复。 建议先清除数据，然后再运行匹配。 为此，请执行以下操作：  
   
 1.  创建数据质量项目，选择 **“清理”** 活动，对源数据完成数据清理活动，然后将其导出到 SQL Server 数据库中的表。  
@@ -50,7 +51,7 @@ ms.locfileid: "85899108"
   
  有关数据质量项目中的匹配活动的详细信息，请参阅 [Data Matching](../data-quality-services/data-matching.md)。  
   
-##  <a name="data-profiling-and-notifications"></a><a name="ProfilingNotification"></a>数据事件探查和通知  
+##  <a name="data-profiling-and-notifications"></a><a name="ProfilingNotification"></a> 数据事件探查和通知  
  在数据质量项目中运行清理和匹配活动时，可查看与正由 DQS 处理的数据有关的实时统计信息和其他信息。 数据事件探查可帮助您评估清理或匹配过程的有效性，并且您可能能够确定数据清理或数据匹配在多大程度上可帮助您提高数据质量。 DQS 事件探查提供两种数据质量维度：“完整性” ** （提供数据的范围）和“准确性” ** （数据可用于目标用途的程度）。 此外，根据数据事件探查信息，对用户显示相关的通知，告知用户可以通过采取哪些措施来改善数据清理和数据匹配操作。 有关数据事件探查和通知的详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  

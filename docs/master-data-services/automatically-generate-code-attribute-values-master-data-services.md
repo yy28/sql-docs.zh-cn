@@ -1,4 +1,5 @@
 ---
+description: 自动生成 Code 属性值 (Master Data Services)
 title: 自动生成 Code 属性值
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9a9fbaac8875be535354a5f6f9122eb5089a0c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a2028a0cc9911308bfe8462be4b826e53e328103
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461936"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>自动生成 Code 属性值 (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85813719"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   

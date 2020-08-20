@@ -1,4 +1,5 @@
 ---
+description: 通过分离和附加来移动数据库 (Transact-SQL)
 title: 通过分离和附加来移动数据库 (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e26ca45fb3851926959795675e1dd38a7f3f3a14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5696940a7b2eb5d633d6077217ff30b259876e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460995"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "85726411"
     GO  
     ```  
   
-     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”** 。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
+     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”**。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  

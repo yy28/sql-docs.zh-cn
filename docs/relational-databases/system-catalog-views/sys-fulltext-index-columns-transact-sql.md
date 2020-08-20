@@ -1,5 +1,6 @@
 ---
-title: sys. fulltext_index_columns （Transact-sql） |Microsoft Docs
+description: sys.fulltext_index_columns (Transact-SQL)
+title: sys. fulltext_index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +23,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffc3f9823bbdf176b639c28b805a997f868e364
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c1dbd0b4885ef9c1320a505eba17b21b5c8964c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460644"
 ---
 # <a name="sysfulltext_index_columns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
 
@@ -40,14 +41,14 @@ ms.locfileid: "85764735"
 |object_id|**int**|此对象所属对象的 ID。|  
 |**column_id**|**int**|构成全文索引的列的 ID。|  
 |**type_column_id**|**int**|类型列的 ID，它将用户提供的文档文件扩展名（".doc"、".xls" 等）存储在给定行中的文档中。 类型列仅针对全文索引期间需要筛选其数据的列指定。 如果不适用，则为 NULL。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。|  
-|**language_id**|**int**|其断字符用于对该全文列创建索引的语言 LCID。<br /><br /> 0 = 非特定语言。<br /><br /> 有关详细信息，请参阅[sys.databases&#41;fulltext_languages &#40;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。|  
+|**language_id**|**int**|其断字符用于对该全文列创建索引的语言 LCID。<br /><br /> 0 = 非特定语言。<br /><br /> 有关详细信息，请参阅 [sys.databases&#41;fulltext_languages &#40;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。|  
 |**statistical_semantics**|**int**|1 = 此列在全文索引之外还启用了统计语义索引。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

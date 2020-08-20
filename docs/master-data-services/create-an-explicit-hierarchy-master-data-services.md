@@ -1,4 +1,5 @@
 ---
+description: 创建显式层次结构 (Master Data Services)
 title: 创建显式层次结构
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461805"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>创建显式层次结构 (Master Data Services)
 
@@ -33,7 +34,7 @@ ms.locfileid: "85813054"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   必须为显式层次结构和集合启用了实体。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "85813054"
   
 3.  在“管理实体” **** 页上，从网格中选择要为其创建显式层次结构的实体所在的行。  
   
-4.  单击 "**显式层次结构**"。  
+4.  单击 " **显式层次结构**"。  
   
 5.  在“管理显式层次结构” **** 页上，单击“添加” ****。  
   
@@ -58,10 +59,10 @@ ms.locfileid: "85813054"
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个显式层次结构，系统都会在网格中添加一行（其中包含七列）。 下面介绍了这些列。  
   
-|“属性”|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |状态|实体状态。 单击“保存” **** 时，将显示下图，指示实体正在更新。<br /><br /> ![用于更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> !["正常" 状态图标](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")|  
-|“属性”|显式层次结构名称。|  
+|名称|显式层次结构名称。|  
 |必需|指定显式层次结构是否必需。|  
 |创建者|创建显式层次结构的用户的用户名。|  
 |创建时间|创建显式层次结构的日期和时间。|  

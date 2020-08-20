@@ -1,4 +1,5 @@
 ---
+description: SQLSetDriverConnectInfo 函数
 title: SQLSetDriverConnectInfo 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10336475e39598161126c13771ad822de0d5f7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21538fa93328790ad8173e5193ba377b0744d964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461249"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 函数
 **度**  
  引入的版本： ODBC 3.81 标准符合性： ODBC  
   
  **摘要**  
- **SQLSetDriverConnectInfo**用于为应用程序的**SQLDriverConnect**调用将连接字符串设置为连接信息令牌。  
+ **SQLSetDriverConnectInfo** 用于为应用程序的 **SQLDriverConnect** 调用将连接字符串设置为连接信息令牌。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ SQLRETURN SQLSetDriverConnectInfo(
  送标记句柄。  
   
  *InConnectionString*  
- 送完整的连接字符串（请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的 "注释" 中的语法）、部分连接字符串或空字符串。  
+ 送完整的连接字符串 (参阅 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 中的 "注释") 、部分连接字符串或空字符串。  
   
  *StringLength1*  
  送**InConnectionString*的长度（如果字符串为 Unicode，则为个字符）; 如果 STRING 为 ANSI 或 DBCS，则为字节。  
@@ -53,9 +54,9 @@ SQLRETURN SQLSetDriverConnectInfo(
  与与任何输入验证错误相关的[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)相同，不同之处在于，驱动程序管理器将使用 SQL_HANDLE_DBC_INFO_TOKEN 的**HandleType**和*hDbcInfoToken*的**句柄**。  
   
 ## <a name="remarks"></a>备注  
- 每当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE 时，驱动程序管理器会将错误返回到应用程序（ [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)或[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)）。  
+ 每当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE 时，驱动程序管理器会将错误返回到应用程序 (的 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 或 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)) 。  
   
- 每当驱动程序返回 SQL_SUCCESS_WITH_INFO 时，驱动程序管理器都将从*hDbcInfoToken*获取诊断信息，并将 SQL_SUCCESS_WITH_INFO 返回到[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的应用程序。  
+ 每当驱动程序返回 SQL_SUCCESS_WITH_INFO 时，驱动程序管理器都将从 *hDbcInfoToken*获取诊断信息，并将 SQL_SUCCESS_WITH_INFO 返回到 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 和 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的应用程序。  
   
  应用程序不应直接调用此函数。 支持驱动程序感知连接池的 ODBC 驱动程序必须实现此功能。  
   

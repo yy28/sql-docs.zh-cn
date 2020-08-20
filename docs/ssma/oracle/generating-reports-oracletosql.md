@@ -1,4 +1,5 @@
 ---
+description: 生成报告 (OracleToSQL)
 title: " (OracleToSQL) 生成报表 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -14,19 +15,19 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 17f9c9b31d1593edd353830d999d5afdbfbaabaa
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aa659269808555f37a570963d82119d1360d1ef4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463202"
 ---
 # <a name="generating-reports-oracletosql"></a>生成报告 (OracleToSQL)
 使用命令执行的某些活动的报告在对象树级别的 SSMA 控制台中生成。  
   
 使用以下过程来生成报表：  
   
-1.  指定**写入摘要-报表-报表-到**参数。 如果在指定的) 或文件夹中指定，相关报表将存储为文件名 (。 文件名按下表中所述进行系统预定义，其中， ** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
+1.  指定 **写入摘要-报表-报表-到** 参数。 如果在指定的) 或文件夹中指定，相关报表将存储为文件名 (。 文件名按下表中所述进行系统预定义，其中， ** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
   
     报告 vis-vis 命令包括：  
   
@@ -42,7 +43,7 @@ ms.locfileid: "87934844"
     > [!IMPORTANT]  
     > 输出报告不同于评估报告。 前者是有关执行的命令的性能报告，后者是用于编程的 XML 报告。  
   
-    对于输出报表的命令选项 (Sl。 否。 2-4) ，请参阅[执行 SSMA 控制台 &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)部分。  
+    对于输出报表的命令选项 (Sl。 否。 2-4) ，请参阅 [执行 SSMA 控制台 &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) 部分。  
   
 2.  使用报表详细级别设置指示输出报表中所需的详细信息的范围：  
   
@@ -85,7 +86,7 @@ ms.locfileid: "87934844"
 ```  
   
 ### <a name="synchronize-target"></a>同步-目标：  
-命令**同步-目标**具有 "**报告错误-** 目标" 参数，该参数指定同步操作的错误报告的位置。 然后，按名称**TargetSynchronizationReport &lt; n &gt; 。XML**是在指定的位置创建的，其中** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
+命令 **同步-目标** 具有 " **报告错误-** 目标" 参数，该参数指定同步操作的错误报告的位置。 然后，按名称**TargetSynchronizationReport &lt; n &gt; 。XML**是在指定的位置创建的，其中** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
   
 **注意：** 如果提供了文件夹路径，则 "报告错误到" 参数将成为命令 "同步目标" 的可选属性。  
   
@@ -139,5 +140,5 @@ ms.locfileid: "87934844"
 -   fail-脚本  
   
 ## <a name="see-also"></a>另请参阅  
-[ (Oracle) 执行 SSMA 控制台](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[ (Oracle) 执行 SSMA 控制台 ](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

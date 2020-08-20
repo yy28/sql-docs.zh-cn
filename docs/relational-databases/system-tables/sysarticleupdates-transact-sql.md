@@ -1,5 +1,6 @@
 ---
-title: sysarticleupdates （Transact-sql） |Microsoft Docs
+description: sysarticleupdates (Transact-SQL)
+title: sysarticleupdates (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 929a2322b9f3299a3f191515eace7cfdef7bc4d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1aed6a7d193dfc664e9e17473c0c9aa03c282f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463879"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85881378"
 |**autogen**|**bit**|指示自动生成存储过程：<br /><br /> **0** = False，不自动。<br /><br /> **1** = True，自动。|  
 |**sync_upd_trig**|**int**|项目表上自动版本控制触发器的 ID。|  
 |**conflict_tableid**|**int**|冲突表的 ID。|  
-|**ins_conflict_proc**|**int**|用于将冲突写入**conflict_table**的过程的 ID。|  
-|**identity_support**|**bit**|指定使用排队更新时是否启用自动标识范围处理。 **0**表示没有标识范围支持。|  
+|**ins_conflict_proc**|**int**|用于将冲突写入 **conflict_table**的过程的 ID。|  
+|**identity_support**|**bit**|指定使用排队更新时是否启用自动标识范围处理。 **0** 表示没有标识范围支持。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

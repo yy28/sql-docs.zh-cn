@@ -1,5 +1,6 @@
 ---
-title: 使用执行时数据参数（ODBC） |Microsoft Docs
+description: 管理 text 和 image 列 - 使用执行时数据参数
+title: 在 ODBC)  (使用执行时数据参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee2daaa43c4453db0020f3400ba126b2afcfd5e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460753"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 列 - 使用执行时数据参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,15 +46,15 @@ ms.locfileid: "86007915"
 ## <a name="example"></a>示例  
  此示例显示如何使用 SQLParamData 和 SQLPutData 读取 SQL_LONG 变量字符数据。 IA64 平台不支持此示例。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。  (可以从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384) 主页下载 AdventureWorks 示例数据库。 ) 此数据源必须基于操作系统提供的 ODBC 驱动程序， (驱动程序名称为 "SQL Server" ) 。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表，以创建该示例使用的表。  
+ 执行第一个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建该示例使用的表。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 执行第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表，以删除该示例使用的表。  
+ 执行第三个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以删除该示例使用的表。  
   
 ```  
 use AdventureWorks  

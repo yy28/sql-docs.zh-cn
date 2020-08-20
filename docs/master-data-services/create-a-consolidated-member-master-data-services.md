@@ -1,4 +1,5 @@
 ---
+description: 创建合并成员 (Master Data Services)
 title: 创建合并成员
 ms.custom: ''
 ms.date: 04/01/2016
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 598c1b12168919ecd90324aa4c581ef8c994b348
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4465fa105492cd691f474664748a4b3aca0a4f3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461895"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
 
@@ -48,13 +49,13 @@ ms.locfileid: "85812392"
   
 6.  在左侧窗格中，选择要在其下创建合并成员的根节点或合并成员。  
   
-7.  单击 **“添加”** 。  
+7.  单击“添加”。  
   
 8.  在右侧窗格中，填写字段。  
   
 9. 可选。 **** 在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建显式层次结构 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

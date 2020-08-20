@@ -1,4 +1,5 @@
 ---
+description: 更改属性组名称 (Master Data Services)
 title: 更改属性组名称
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bb4fd11dca83f752e778b55117d098e3e070d441
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d7fab1a8f16c51d52e32c0147a85ab6ef08cd821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461924"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>更改属性组名称 (Master Data Services)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85813484"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-change-an-attribute-group-name"></a>更改属性组名称  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_delete_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_delete_policy_category (Transact-SQL)
+title: sp_syspolicy_delete_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83d08b5261d6657a2bddbf494eb6f5e9ade3b065
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb0df2c440f1198dfe18d4615ab9e8962d93a37e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463972"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`策略类别的名称。 *name*为**sysname**，如果*policy_category_id*为 NULL，则必须指定。  
+`[ @name = ] 'name'` 策略类别的名称。 *name* 为 **sysname**，如果 *policy_category_id* 为 NULL，则必须指定。  
   
-`[ @policy_category_id = ] policy_category_id`策略类别的标识符。 *policy_category_id*为**int**，并且如果*name*为 NULL，则必须指定。  
+`[ @policy_category_id = ] policy_category_id` 策略类别的标识符。 *policy_category_id* 为 **int**，并且如果 *name* 为 NULL，则必须指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_delete_policy_category。  

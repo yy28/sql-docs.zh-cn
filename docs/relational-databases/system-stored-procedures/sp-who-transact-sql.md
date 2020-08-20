@@ -1,5 +1,6 @@
 ---
-title: sp_who （Transact-sql） |Microsoft Docs
+description: sp_who (Transact-SQL)
+title: sp_who (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bfcf04c0f6dd7455bac9beaa65b29eb1b2a8f9cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a3d3af35b9d886e41d43e0c480c49a7e593e00f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463969"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login' | session ID | 'ACTIVE'`用于筛选结果集。  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` 用于筛选结果集。  
   
- *login*是标识属于特定登录的进程的**sysname** 。  
+ *login* 是标识属于特定登录的进程的 **sysname** 。  
   
- *会话 ID*是属于实例的会话标识号 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *会话 ID*为**smallint**。  
+ *会话 ID* 是属于实例的会话标识号 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *会话 ID* 为 **smallint**。  
   
  "**活动**" 排除用户正在等待下一个命令的会话。  
   
@@ -53,28 +54,28 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- **sp_who**返回包含以下信息的结果集。  
+ **sp_who** 返回包含以下信息的结果集。  
   
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
-|**spid**|**smallint**|会话 ID。|  
+|spid|**smallint**|会话 ID。|  
 |**ecid**|**smallint**|与特定会话 ID 相关联的给定线程的执行上下文 ID。<br /><br /> ECID = {0，1，2，3，.。。*n*}，其中0始终表示主线程或父线程，{1，2，3，.。。*n*} 代表子线程。|  
-|**status**|**nchar(30)**|进程状态。 可能的值为：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重置会话。<br /><br /> **正在运行**。 会话正在运行一个或多个批。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**。 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **rollback**。 会话具有正在处理的事务回滚。<br /><br /> **挂起**。 会话正在等待工作线程变为可用。<br /><br /> 可**运行**。 会话的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop**。 会话的任务正在等待调节锁变为可用。<br /><br /> **挂起**。 会话正在等待事件（如 I/O）完成。|  
+|**status**|**nchar(30)**|进程状态。 可能的值为：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重置会话。<br /><br /> **正在运行**。 会话正在运行一个或多个批。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**。 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **rollback**。 会话具有正在处理的事务回滚。<br /><br /> **挂起**。 会话正在等待工作线程变为可用。<br /><br /> **runnable**。 会话的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop**。 会话的任务正在等待调节锁变为可用。<br /><br /> **挂起**。 会话正在等待事件（如 I/O）完成。|  
 |**loginame**|**nchar(128)**|与特定进程相关联的登录名。|  
 |**hostname**|**nchar(128)**|每个进程的主机或计算机名。|  
-|**blk**|**char （5）**|如果存在阻塞进程，则是该阻塞进程的会话 ID。 否则该列为零。<br /><br /> 当与指定会话 ID 相关联的事务受到孤立分布式事务的阻塞时，该列将对阻塞孤立事务返回“-2”。|  
+|**blk**|**char (5) **|如果存在阻塞进程，则是该阻塞进程的会话 ID。 否则该列为零。<br /><br /> 当与指定会话 ID 相关联的事务受到孤立分布式事务的阻塞时，该列将对阻塞孤立事务返回“-2”。|  
 |**dbname**|**nchar(128)**|进程使用的数据库。|  
-|**cmd**|**nchar(16)**|为该进程执行的[!INCLUDE[ssDE](../../includes/ssde-md.md)]命令（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程等等）。 在 SQL Server 2019 中，数据类型已更改为**nchar （26）**。|  
+|**cmd**|**nchar(16)**|为该进程执行的[!INCLUDE[ssDE](../../includes/ssde-md.md)]命令（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程等等）。 在 SQL Server 2019 中，数据类型已更改为 **nchar (26) **。|  
 |**request_id**|**int**|特定会话中运行的请求的 ID。|  
   
- 如果是并行处理，则会为特定的会话 ID 创建子线程。 主线程则以 `spid = <xxx>` 和 `ecid =0` 表示。 其他子线程具有相同的 `spid = <xxx>` ，但**ecid** > 0。  
+ 如果是并行处理，则会为特定的会话 ID 创建子线程。 主线程则以 `spid = <xxx>` 和 `ecid =0` 表示。 其他子线程具有相同的 `spid = <xxx>` ，但 **ecid** > 0。  
   
 ## <a name="remarks"></a>备注  
  阻塞进程（可能含有排他锁）是控制其他进程所需要的资源的进程。  
   
  所有孤立的分布式事务的会话 ID 都被赋予值“-2”。 孤立的分布式事务是不与任何会话 ID 关联的分布式事务。 有关详细信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
- 查询 dm_exec_sessions sys.databases 的**is_user_process**列，以将系统进程与用户进程分开。  
+ 查询 dm_exec_sessions sys.databases 的 **is_user_process** 列，以将系统进程与用户进程分开。  
   
 ## <a name="permissions"></a>权限  
  要求对服务器拥有 VIEW SERVER STATE 权限才能查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有正在执行的会话。 否则，用户只能查看当前会话。  
@@ -120,8 +121,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_lock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [Transact-sql&#41;的sys.sys进程 &#40;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [ Transact-sql&#41;的sys.sys进程 &#40;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

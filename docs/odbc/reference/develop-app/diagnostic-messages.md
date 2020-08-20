@@ -1,4 +1,5 @@
 ---
+description: 诊断消息
 title: 诊断消息 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be63e9d78960e40ac5e9ee016d2cfd868d99a922
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d788a8bb23b7b63ae65a6fcf8c119110b5e6557
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461509"
 ---
 # <a name="diagnostic-messages"></a>诊断消息
-每个 SQLSTATE 返回一条诊断消息。 相同的 SQLSTATE 通常返回了大量不同的消息。 例如，对于 SQL 语法中的大多数错误，都将返回 SQLSTATE 42000 （语法错误或访问冲突）。 但是，每个语法错误都可能由不同的消息描述。  
+每个 SQLSTATE 返回一条诊断消息。 相同的 SQLSTATE 通常返回了大量不同的消息。 例如，SQLSTATE 42000 (语法错误或访问冲突) 对于 SQL 语法中的大多数错误均返回。 但是，每个语法错误都可能由不同的消息描述。  
   
  示例诊断消息列在 "附录 A" 中的 SQLSTATEs 表的 "错误" 列和每个函数中。 尽管驱动程序可以返回这些消息，但它们更有可能返回数据源传递给它们的任何消息。  
   
@@ -50,4 +51,4 @@ ms.locfileid: "81305828"
   
  [1] 在本例中，驱动程序同时充当驱动程序和数据源。  
   
- 括号（**[]**）必须包含在消息中，并且不表示可选项。
+ 方括号 (**[]**) 必须包含在消息中，并且不表示可选项。

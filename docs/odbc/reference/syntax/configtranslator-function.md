@@ -1,4 +1,5 @@
 ---
+description: ConfigTranslator 函数
 title: ConfigTranslator 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb2f26f87854d74a217885010014633963472787
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b99628b801199c7e2d7fd033e1b0728f1538932
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461269"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 函数
 **度**  
  引入的版本： ODBC 2。0  
   
  **摘要**  
- **ConfigTranslator**返回翻译人员的默认翻译选项。 它可以在转换器 DLL 或单独的安装 DLL 中。  
+ **ConfigTranslator** 返回翻译人员的默认翻译选项。 它可以在转换器 DLL 或单独的安装 DLL 中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +54,7 @@ BOOL ConfigTranslator(
  如果此函数成功，则返回 TRUE，否则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**ConfigTranslator**返回 FALSE 时，将* \** 通过调用**SQLPostInstallerError**将关联的 pfErrorCode 值发布到安装程序错误缓冲区，并可通过调用**SQLInstallerError**获取该值。 下表列出了可由**SQLInstallerError**返回的* \*pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当**ConfigTranslator**返回 FALSE 时，将通过调用**SQLPostInstallerError**将关联的* \* pfErrorCode*值发布到安装程序错误缓冲区，并可通过调用**SQLInstallerError**获取该值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
@@ -61,12 +62,12 @@ BOOL ConfigTranslator(
 |ODBC_ERROR_DRIVER_SPECIFIC|驱动程序或转换器特定的错误|未定义 ODBC 安装程序错误的特定于驱动程序的错误。 对**SQLPostInstallerError**函数的调用中的*SzError*参数应包含特定于驱动程序的错误消息。|  
 |ODBC_ERROR_INVALID_OPTION|转换选项无效|*PvOption*参数包含无效的值。|  
   
-## <a name="comments"></a>说明  
- 如果转换器仅支持一个转换选项，则**ConfigTranslator**将返回 TRUE，并将*pvOption*设置为32位选项。 否则，它会确定要使用的默认转换选项。 **ConfigTranslator**可以显示一个对话框，用户可以使用该对话框选择默认的翻译选项。  
+## <a name="comments"></a>注释  
+ 如果转换器仅支持一个转换选项，则 **ConfigTranslator** 将返回 TRUE，并将 *pvOption* 设置为32位选项。 否则，它会确定要使用的默认转换选项。 **ConfigTranslator** 可以显示一个对话框，用户可以使用该对话框选择默认的翻译选项。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|查看|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |获取翻译选项|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |选择转换器|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  

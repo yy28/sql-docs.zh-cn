@@ -1,5 +1,6 @@
 ---
-title: sys. extended_properties （Transact-sql） |Microsoft Docs
+description: 扩展属性目录视图-sys. extended_properties
+title: sys. extended_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5328e930d5200184c6db15dc6ac7083a61967464
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76a910b12f744aa0620ba81c3db872db3d63b3d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460723"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>扩展属性目录视图-sys. extended_properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,8 +46,8 @@ ms.locfileid: "85977579"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的扩展属性目录视图](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的扩展属性目录视图 ](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
  [sys. fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   

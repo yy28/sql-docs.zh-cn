@@ -1,4 +1,5 @@
 ---
+description: 创建索引 (Master Data Services)
 title: 创建索引
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 48d78cffb116996848035e3675e707994226f080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461819"
 ---
 # <a name="create-an-index-master-data-services"></a>创建索引 (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85813065"
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  **创建索引**  
   
@@ -52,8 +53,8 @@ ms.locfileid: "85813065"
   
 |列名|描述|  
 |-----------------|-----------------|  
-|状态|索引状态。<br /><br /> 单击 "**保存**" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，表明索引正在更新。<br /><br /> 如果在创建或编辑索引时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")。<br /><br /> 否则，状态为 "正常"，并显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|  
-|“属性”|索引名称。|  
+|状态|索引状态。<br /><br /> 单击 " **保存**" 时，将显示 ![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标") 图像的图标，表明索引正在更新。<br /><br /> 如果在创建或编辑索引时出现错误，则会显示 ![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标") 。<br /><br /> 否则，状态为 "正常"，并显示 !["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标") " 图像的图标。|  
+|名称|索引名称。|  
 |是唯一的|指定索引是否是唯一的。|  
 |对应属性|显示在其上定义索引的属性的显示名称。|  
   

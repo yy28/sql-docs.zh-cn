@@ -1,4 +1,5 @@
 ---
+description: 叶权限（主数据服务）
 title: 叶权限
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461736"
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
 
@@ -31,7 +32,7 @@ ms.locfileid: "85813293"
   
  对于未启用显式层次结构的实体，将权限分配给 **“叶”** 等同于将权限分配给实体。  
   
- 注意：  
+ **注意：**  
   
 -   叶权限仅应用到用户界面的 **“资源管理器”** 功能区域。  
   
@@ -61,10 +62,10 @@ ms.locfileid: "85813293"
 ### <a name="example"></a>示例  
  对于 Product 实体，将 **“更新”** 权限分配给 Subcategory 属性。 向所有其他属性分配“拒绝”权限。  
   
-|“属性”|代码|Subcategory（更新）|  
+|名称|代码|Subcategory（更新）|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5}山地自行车|  
-|Mountain-100|BK-M201|{5}山地自行车|  
+|Mountain-100|BK-M101|{5} 山地自行车|  
+|Mountain-100|BK-M201|{5} 山地自行车|  
   
  在 **“资源管理器”** 中，可以更新 Subcategory 列中的任何属性值。 如果您没有对属性的权限，则不显示该属性。  
   

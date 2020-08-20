@@ -1,4 +1,5 @@
 ---
+description: 创建派生层次结构 (Master Data Services)
 title: 创建派生层次结构
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a2ff6e7eed27cd3482aa6acc7a6609562e8d3ea6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4ada9791d75d273bd28c516019be8cf9e7ce1088
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461879"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>创建派生层次结构 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85812779"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-derived-hierarchy"></a>创建派生层次结构  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85812779"
   
 3.  在 **“派生层次结构维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
-4.  单击 **“添加”** 。  
+4.  单击“添加”。  
   
 5.  在 **“添加派生层次结构”** 页上的 **“派生层次结构名称”** 框中，键入层次结构的名称。  
   

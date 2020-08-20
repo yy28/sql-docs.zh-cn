@@ -1,5 +1,6 @@
 ---
-title: sys. server_event_sessions （Transact-sql） |Microsoft Docs
+description: sys.server_event_sessions (Transact-SQL)
+title: sys. server_event_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5821e5a64670bec6f9129ee98bd343f176048db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c98eece7a34af4ceb0693007690ec1499d91cef4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460573"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85885986"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的唯一 ID。 不可为 null。|  
 |name|**sysname**|标识事件会话的用户定义名称。 名称是唯一的。 不可为 null。|  
-|event_retention_mode|**nchar(1)**|确定如何处理事件丢失。 默认值为 S。不可为 Null 值。 可以是下列值之一：<br /><br /> 国 映射到 event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. 映射到 event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> N. 映射到 event_retention_mode_desc = NO_EVENT_LOSS|  
+|event_retention_mode|**nchar(1)**|确定如何处理事件丢失。 默认值为 S。不可为 Null 值。 可以是下列值之一：<br /><br /> S. 映射到 event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. 映射到 event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> N. 映射到 event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|介绍了如何处理事件丢失。 默认为 ALLOW_SINGLE_EVENT_LOSS。 不可为 null。 可以是下列值之一：<br /><br /> ALLOW_SINGLE_EVENT_LOSS。 事件可能从会话中丢失。 所有事件缓冲区都已满时仅删除单个事件。 通过在缓冲区已满时丢失单个事件，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可实现足以满足要求的性能特征，同时还可使处理过的事件流中的事件丢失下降到最低程度。<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS。 完整的事件缓冲区可能从会话中丢失。 事件丢失的数目取决于分配给会话的内存大小、内存的分区以及缓冲区中的事件大小。 在快速填充事件缓冲区时，此选项可将对服务器性能的影响降到最低。 不过，大量的事件可能从会话中丢失。<br /><br /> NO_EVENT_LOSS。 不允许事件丢失。 此选项可确保保留所有引发的事件。 使用此选项可强制所有可激发事件的任务都等到事件缓冲区中有可用空间时再执行。 事件会话处于活动状态时，这可能会导致可以察觉的性能下降。|  
 |max_dispatch_latency|**int**|在事件用于会话目标之前将其缓存在内存中的时间（以毫秒为单位）。 有效值为从0到2147483648，0。 值0指示调度延迟为无限。 可以为 Null。|  
 |max_memory|**int**|分配给会话的用于事件缓冲的内存量。 默认值为 4 MB。 可以为 Null。|  
@@ -50,8 +51,8 @@ ms.locfileid: "85885986"
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的扩展事件目录视图](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的扩展事件目录视图 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

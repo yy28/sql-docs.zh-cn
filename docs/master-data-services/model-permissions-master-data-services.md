@@ -1,4 +1,5 @@
 ---
+description: 模型权限 (Master Data Services)
 title: 模型权限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e195c4f2db244fa5cf647c19c0713f24840c3441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461730"
 ---
 # <a name="model-permissions-master-data-services"></a>模型权限 (Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85813234"
   模型权限应用到模型中存在的所有实体、派生层次结构、显式层次结构和集合。 对于任何单个对象，可以覆盖分配给模型的权限。  
   
 > [!NOTE]  
->  如果用户是模型管理员，则在用户界面的所有功能区域显示该模型。 否则，仅在 **“资源管理器”** 功能区域显示该模型。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+>  如果用户是模型管理员，则在用户界面的所有功能区域显示该模型。 否则，仅在 **“资源管理器”** 功能区域显示该模型。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 |权限|说明|  
 |----------------|-----------------|  

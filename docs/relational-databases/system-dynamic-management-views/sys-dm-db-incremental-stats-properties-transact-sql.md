@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_incremental_stats_properties （Transact-sql） |Microsoft Docs
+description: sys.dm_db_incremental_stats_properties (Transact-SQL)
+title: sys. dm_db_incremental_stats_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: f6661c9dd7f581bb7c8dccc62b0b11547a73b4fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460436"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87442922"
 sys.dm_db_incremental_stats_properties (object_id, stats_id)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  object_id  
  当前数据库中要请求其某个增量统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
@@ -69,7 +70,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  此行为在如 `sys.dm_db_incremental_stats_properties` 和 `sys.objects` 等视图中交叉应用于行时，允许安全使用 `sys.stats`。 此方法可返回对应于每个分区的统计信息的属性。 若要查看跨所有分区组合的合并统计信息的属性，请改为使用 sys.dm_db_stats_properties。 
 
-统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 如果未读取任何数据来生成统计数据，则不会创建统计信息 blob，该日期不可用，并且*last_updated*列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
+统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 如果未读取任何数据来生成统计数据，则不会创建统计信息 blob，该日期不可用，并且 *last_updated* 列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
 
 ## <a name="permissions"></a>权限  
  要求用户对统计信息列拥有 select 权限，或用户拥有表，或用户是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。  

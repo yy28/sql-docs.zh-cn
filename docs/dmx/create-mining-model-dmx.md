@@ -1,5 +1,6 @@
 ---
-title: 创建挖掘模型（DMX） |Microsoft Docs
+description: CREATE MINING MODEL (DMX)
+title: " (DMX) 创建挖掘模型 |Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462028"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "86971801"
   
  挖掘结构的命名方式是在模型名称后追加 "_structure"，这样可以确保将结构名称与模型名称进行区分。  
   
- 若要为现有挖掘结构创建挖掘模型，请使用[ALTER 挖掘 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)语句。  
+ 若要为现有挖掘结构创建挖掘模型，请使用 [ALTER 挖掘 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) 语句。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,13 +48,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  当前提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
->  可以使用[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  可以使用 [DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅 [数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *XML 字符串*  
- （仅限高级使用。）XML 编码的模型（PMML）。 字符串必须以单引号 (') 引起。  
+  (仅限高级使用。 ) XML 编码模型 (PMML) 。 字符串必须以单引号 (') 引起。  
   
  **Session**子句允许您创建一个挖掘模型，该模型在连接关闭或会话超时时自动从服务器中删除。**会话**挖掘模型非常有用，因为它们不要求用户是数据库管理员，并且仅在连接打开时才使用磁盘空间。  
   
@@ -74,9 +75,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   内容类型（必需）  
   
--   预测请求，指示算法预测此列，由**predict**或**PREDICT_ONLY**子句指示  
+-   预测请求，指示算法预测此列，由 **predict** 或 **PREDICT_ONLY** 子句指示  
   
--   与属性列的关系（仅在适用时为必需），由**相关的 to**子句指示  
+-   与属性列的关系 (仅当它应用) 时才是必需的（由 **相关的 to** 子句指示）  
   
  使用以下列定义列表的语法，定义单个列：  
   
@@ -102,14 +103,14 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [建模标志（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- 您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下 \<Column relationship> 子句。  
+ 您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持使用以下 \<Column relationship> 子句。  
   
  **相关**  
  此窗体指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  
   
  使用预测子句可以说明使用预测列的方式。 下表列出了两种可以使用的子句。  
   
-|\<prediction> clause|说明|  
+|\<prediction> clause|描述|  
 |---------------------------|-----------------|  
 |**准确**|该列可以由模型预测，并且可以在输入事例中提供，以预测其他可预测列的值。|  
 |**PREDICT_ONLY**|此列可以由模型预测，但其值不可用于输入事例来预测其他可预测列的值。|  
@@ -121,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- 有关与每种算法关联的参数的列表，请参阅[数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
+ 有关与每种算法关联的参数的列表，请参阅 [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
 ## <a name="remarks"></a>备注  
  如果要创建具有内置测试数据集的模型，则应当使用 CREATE MINING STRUCTURE 语句，然后再使用 ALTER MINING STRUCTURE 语句。 但是，并非所有挖掘模型类型都支持维持数据集。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
- 有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时序预测 DMX 教程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅 [时序预测 DMX 教程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  
  以下示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法创建新的挖掘模型。 Bike Buyer 列定义为可预测属性。  
@@ -143,7 +144,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>关联模型示例  
- 以下示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法创建新的挖掘模型。 该语句通过使用表列，充分利用了在模型定义中嵌套表的能力。 使用*MINIMUM_PROBABILITY*和*MINIMUM_SUPPORT*参数修改模型。  
+ 以下示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法创建新的挖掘模型。 该语句通过使用表列，充分利用了在模型定义中嵌套表的能力。 使用 *MINIMUM_PROBABILITY* 和 *MINIMUM_SUPPORT* 参数修改模型。  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -171,10 +172,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>时间序列示例  
- 下面的示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法和 ARTxp 算法创建新的挖掘模型。 ReportingDate 是时序的键列，ModelRegion 是数据序列的键列。 在此示例中，假定数据出现的频率为每 12 个月一次。 因此， *PERIODICITY_HINT*参数设置为12。  
+ 下面的示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法和 ARTxp 算法创建新的挖掘模型。 ReportingDate 是时序的键列，ModelRegion 是数据序列的键列。 在此示例中，假定数据出现的频率为每 12 个月一次。 因此， *PERIODICITY_HINT* 参数设置为12。  
   
 > [!NOTE]  
->  必须使用大括号字符指定*PERIODICITY_HINT*参数。 此外，因为值是一个字符串，所以必须用单引号引起来： "{ \<numeric value> }"。  
+>  必须使用大括号字符指定 *PERIODICITY_HINT* 参数。 此外，因为值是一个字符串，所以必须用单引号引起来： "{ \<numeric value> }"。  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

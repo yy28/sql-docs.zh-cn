@@ -1,5 +1,6 @@
 ---
-title: ProcessId 类（SqlService）
+description: ProcessId 类（SqlService 类）
+title: 'ProcessId 类 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 226530ebb5347ab2ace2804fc8e293d1c5899793
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e998dad0b768ebfcca33b83a8128dc44c776acc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463591"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 类（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +37,11 @@ object.ProcessId [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 一个**uint32**值，指定唯一标识进程的 ID。  
+ 一个 **uint32** 值，指定唯一标识进程的 ID。  
   
 ## <a name="remarks"></a>备注  
   

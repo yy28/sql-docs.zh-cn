@@ -1,5 +1,6 @@
 ---
-title: SELECT （DMX） |Microsoft Docs
+description: SELECT (DMX)
+title: 选择 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1e44c7d2f4bf872a7629a48c305114f09f98ee66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462029"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  数据挖掘扩展插件（DMX）中的**SELECT**语句用于数据挖掘中的以下任务：  
+  数据挖掘扩展插件中的 **SELECT** 语句 (DMX) 用于数据挖掘中的以下任务：  
   
 -   浏览现有挖掘模型的内容  
   
@@ -40,14 +41,14 @@ FROM <model/structure>[.aspect]
 ## <a name="flattened"></a>FLATTENED  
  有些数据挖掘客户端无法接受数据挖掘提供程序提供的、层次结构格式的结果集。 客户端可能不具备处理层次结构的能力，或者可能必须将结果存储在单一非规范化表中。 若要将嵌套表数据转换为平展表数据，您必须请求平展查询结果。  
   
- 若要平展查询结果，请使用**SELECT**句法 with**平展**选项，如以下示例中所示：  
+ 若要平展查询结果，请使用 **SELECT** 句法 with **平展** 选项，如以下示例中所示：  
   
 ```  
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
 ## <a name="top-n-and-order-by"></a>TOP \<n> 和 ORDER BY  
- 您可以使用表达式对查询结果进行排序，然后可以通过组合使用**ORDER by**和**TOP**子句来返回结果的子集。 如果在确定邮件目标时，只想将结果发送给最可能的答复者，以及类似的情况，上述选项就很有用。 您可以按预测概率对目标邮件预测查询的结果进行排序，然后只返回最前面的 \<n> 结果。  
+ 您可以使用表达式对查询结果进行排序，然后可以通过组合使用 **ORDER by** 和 **TOP** 子句来返回结果的子集。 如果在确定邮件目标时，只想将结果发送给最可能的答复者，以及类似的情况，上述选项就很有用。 您可以按预测概率对目标邮件预测查询的结果进行排序，然后只返回最前面的 \<n> 结果。  
   
 ## <a name="select-list"></a>选择列表  
  *\<select list>* 可以包括标量列引用、预测函数和表达式。 可用的选项取决于算法以及下列上下文：  
@@ -76,7 +77,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 您可以使用**WHERE**子句限制查询返回的事例。 **Where**子句指定**where**表达式中的列引用必须与 SELECT 语句中的列引用具有相同的语义 *\<select list>* ，并且**SELECT**只能返回布尔表达式。 **WHERE**子句的语法如下所示  
+ 您可以使用 **WHERE** 子句限制查询返回的事例。 **Where**子句指定**where**表达式中的列引用必须与 SELECT 语句中的列引用具有相同的语义 *\<select list>* ，并且**SELECT**只能返回布尔表达式。 **WHERE**子句的语法如下所示  
   
 ```  
 WHERE < condition expression >  
@@ -105,16 +106,16 @@ WHERE < condition expression >
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
 ```  
   
- 有关创建预测查询的详细信息，请参阅[DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)。  
+ 有关创建预测查询的详细信息，请参阅 [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)。  
   
 ## <a name="clause-syntax"></a>子句语法  
- 由于使用**SELECT**语句进行浏览的复杂性，详细的语法元素和参数将通过子句进行说明。 有关各个子句的详细信息，请单击下面列表中的主题：  
+ 由于使用 **SELECT** 语句进行浏览的复杂性，详细的语法元素和参数将通过子句进行说明。 有关各个子句的详细信息，请单击下面列表中的主题：  
   
  [选择 "与 &#60;模型不同" &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
  [从 &#60;模型&#62; 中进行选择。内容 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [从 &#60;模型&#62; 中进行选择。DMX&#41;&#40;情况](../dmx/select-from-model-cases-dmx.md)  
+ [从 &#60;模型&#62; 中进行选择。DMX&#41;&#40;情况 ](../dmx/select-from-model-cases-dmx.md)  
   
  [从 &#60;模型&#62; 中进行选择。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Master Data Services 开发人员文档
 title: 开发人员文档
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3dc41680a336936bf419dbcd52255e8a60120a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c1772c12889da4200553a7f303e2b6c9c26b894
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461752"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 开发人员文档
 
@@ -42,7 +43,7 @@ ms.locfileid: "85892275"
  <xref:Microsoft.MasterDataServices.ServiceClient> 类的 Web 服务操作的分类列表。  
   
 ## <a name="custom-workflows"></a>自定义工作流  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则来创建基本工作流解决方案。 您可以自动更新和验证数据，并可根据指定的条件发送电子邮件通知。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的业务规则旨在管理最常见的工作流方案。 如果您的工作流需要更复杂的事件处理（如多层审核或复杂决策树），则可配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将数据发送到您创建的自定义程序集。 若要处理自定义工作流，则必须在 web 应用程序计算机上配置和启动 SQL Server MDS Workflow Integration Service，并创建一个实现[WorkflowTypeExtender IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))接口的程序集。  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则来创建基本工作流解决方案。 您可以自动更新和验证数据，并可根据指定的条件发送电子邮件通知。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的业务规则旨在管理最常见的工作流方案。 如果您的工作流需要更复杂的事件处理（如多层审核或复杂决策树），则可配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将数据发送到您创建的自定义程序集。 若要处理自定义工作流，则必须在 web 应用程序计算机上配置和启动 SQL Server MDS Workflow Integration Service，并创建一个实现 [WorkflowTypeExtender IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 接口的程序集。  
   
 ### <a name="custom-workflow-content"></a>自定义工作流内容  
  [创建自定义工作流 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  

@@ -1,4 +1,5 @@
 ---
+description: 分离数据库和附加 DQS 数据库
 title: 分离数据库和附加 DQS 数据库
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fdd977cf886512c7d8ef19bfa5580ec689acb91b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d59c5c92b41176cfb6a664bdf1617c164d23d30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462113"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>分离数据库和附加 DQS 数据库
 
@@ -73,7 +74,7 @@ ms.locfileid: "85882820"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **“数据库详细信息”** （下部）窗格将显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击 "**浏览**" 按钮（...）。  
+5.  **“数据库详细信息”** （下部）窗格将显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击 " **浏览** " 按钮 ( ... ") 。  
   
 6.  单击 **“确定”** 将附加该 DQS_MAIN 数据库。  
   
@@ -85,14 +86,13 @@ ms.locfileid: "85882820"
   
 9. 在“查询编辑器”窗口中，复制以下 SQL 语句：  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
-    RECONFIGURE WITH OVERRIDE  
-    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
+    RECONFIGURE WITH OVERRIDE;  
+    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER;  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##];  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##];  
     ```  
   
 10. 按 F5 执行这些语句。 查看“结果”窗格以便验证这些语句已成功执行。 您将看到下列消息： `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

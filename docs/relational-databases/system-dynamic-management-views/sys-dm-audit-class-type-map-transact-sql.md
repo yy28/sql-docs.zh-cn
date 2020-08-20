@@ -1,5 +1,6 @@
 ---
-title: sys. dm_audit_class_type_map （Transact-sql） |Microsoft Docs
+description: sys.dm_audit_class_type_map (Transact-SQL)
+title: sys. dm_audit_class_type_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,26 +19,26 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 646d3510a347e22ccf68701f5e89d57642323a71
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ed8b45fcd8650d47c2acbce23a5e9033b65d58e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460503"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  返回一个表，将审核日志中的 class_type 字段映射到 sys.dm_audit_actions 中的 class_desc 字段。 有关审核的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[SQL Server audit &#40;数据库引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  返回一个表，将审核日志中的 class_type 字段映射到 sys.dm_audit_actions 中的 class_desc 字段。 有关审核的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [SQL Server audit &#40;数据库引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|审核的实体的类类型。 映射到写入审核日志并由**get_audit_file （）** 函数返回的 class_type。 不可为 null。|  
+|**class_type**|**char(2)**|审核的实体的类类型。 映射到写入审核日志并由 **get_audit_file ( # B1 ** 函数返回的 class_type。 不可为 null。|  
 |**class_type_desc**|**nvarchar(120)**|可审核实体的名称。 不可为 null。|  
 |**securable_class_desc**|**nvarchar(120)**|映射到要审核的 class_type 的安全对象。 如果 class_type 不映射到安全对象，则为 NULL。 可以与 sys.dm_audit_actions 中的 class_desc 相关。|  
   
 ## <a name="permissions"></a>权限  
- 主体必须具有**SELECT**权限。 默认情况下，此权限授予 Public。  
+ 主体必须具有 **SELECT** 权限。 默认情况下，此权限授予 Public。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

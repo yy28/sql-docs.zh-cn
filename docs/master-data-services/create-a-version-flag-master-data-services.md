@@ -1,4 +1,5 @@
 ---
+description: 创建版本标志 (Master Data Services)
 title: 创建版本标志
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 373e915a2a0a2c75894698df943b0d8a3df955c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6720191a37230042f3b1fa85ec3018d0508b0fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461831"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>创建版本标志 (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "85812729"
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   你必须有权访问“版本管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85812729"
   
 3.  在 **“管理版本标志”** 页上，从 **“模型”** 字段中，选择要为其创建标志的模型。  
   
-4.  单击 **“添加”** 。  
+4.  单击“添加”。  
   
 5.  在 **“名称”** 框中，键入名称。  
   

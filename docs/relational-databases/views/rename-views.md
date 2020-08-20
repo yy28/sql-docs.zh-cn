@@ -1,4 +1,5 @@
 ---
+description: 重命名视图
 title: 重命名视图 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856c40bbe7031a8adf2a789f8ac2a674d572838c
-ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
+ms.openlocfilehash: 135bccd7ff94a88f7f1036b4bce4e55451eab4e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85082681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463658"
 ---
 # <a name="rename-views"></a>重命名视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85082681"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [在重命名视图之后](#FollowUp)  
+-   **跟进：**  [在重命名视图之后](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -60,7 +61,7 @@ ms.locfileid: "85082681"
   
 1.  在 **“对象资源管理器”** 中，展开包含要重命名的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要重命名的视图，然后选择 **“重命名”** 。  
+2.  右键单击要重命名的视图，然后选择 **“重命名”**。  
   
 3.  输入视图的新名称。  
 

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_database_encryption_keys （Transact-sql） |Microsoft Docs
+description: sys.dm_database_encryption_keys (Transact-SQL)
+title: sys. dm_database_encryption_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d42cc2873c1e3e03e2af3e0a01080cdb18c349a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2a1aee58c8cde21161b84721c61adc0b367ac39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460466"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,36 +37,36 @@ ms.locfileid: "85754288"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|数据库 ID。|  
 |encryption_state|**int**|指示数据库是加密的还是未加密的。<br /><br /> 0 = 不存在数据库加密密钥，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 正在进行加密<br /><br /> 3 = 已加密<br /><br /> 4 = 正在更改密钥<br /><br /> 5 = 正在进行解密<br /><br /> 6 = 正在进行保护更改（正在更改对数据库加密密钥进行加密的证书或非对称密钥）。|  
-|create_date|**datetime**|显示加密密钥的创建日期（UTC）。|  
-|regenerate_date|**datetime**|显示重新生成加密密钥的日期（UTC）。|  
-|modify_date|**datetime**|显示加密密钥的修改日期（UTC）。|  
-|set_date|**datetime**|显示加密密钥应用于数据库的日期（UTC）。|  
-|opened_date|**datetime**|显示上次打开数据库密钥的时间（UTC）。|  
+|create_date|**datetime**|显示加密密钥) 的 UTC (日期。|  
+|regenerate_date|**datetime**|显示重新生成加密密钥)  (UTC 格式的日期。|  
+|modify_date|**datetime**|显示加密密钥修改后) UTC 格式的日期 (。|  
+|set_date|**datetime**|显示应用于数据库的加密密钥) UTC 格式的日期 (。|  
+|opened_date|**datetime**|显示上次打开数据库密钥)  (UTC 格式的时间。|  
 |key_algorithm|**nvarchar(32)**|显示用于密钥的算法。|  
 |key_length|**int**|显示密钥的长度。|  
 |encryptor_thumbprint|**varbinary(20)**|显示加密程序的指纹。|  
-|encryptor_type|**nvarchar(32)**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。<br /><br /> 描述加密程序。|  
+|encryptor_type|**nvarchar(32)**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。<br /><br /> 描述加密程序。|  
 |percent_complete|**real**|数据库加密状态更改的完成百分比。 如果未发生状态更改，则为 0。|
-|encryption_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br> 指示数据库是否已加密或未加密的字符串。<br><br>NONE<br><br>未加密<br><br>过<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br> 指示数据库是否已加密或未加密的字符串。<br><br>无<br><br>未加密<br><br>过<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br>指示加密扫描的当前状态。 <br><br>0 = 未启动任何扫描，TDE 未启用<br><br>1 = 正在进行扫描。<br><br>2 = 正在进行扫描，但已挂起，用户可以继续。<br><br>3 = 由于某种原因中止扫描，需要手动干预。 请联系 Microsoft 支持部门以获得更多帮助。<br><br>4 = 扫描已成功完成，TDE 已启用并且加密已完成。|
-|encryption_scan_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br>指示加密扫描当前状态的字符串。<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>完成|
-|encryption_scan_modify_date|**datetime**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br> 显示上次修改加密扫描状态的日期（UTC）。|
+|encryption_scan_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br>指示加密扫描当前状态的字符串。<br><br> 无<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>完成|
+|encryption_scan_modify_date|**datetime**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br> 显示上次修改加密扫描状态) UTC 格式的日期 (。|
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
 ## <a name="see-also"></a>另请参阅  
 
- [与安全性相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
- [透明数据加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
+ [与安全性相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)   
- [SQL Server 和数据库加密密钥 &#40;数据库引擎&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [&#40;Transact-sql&#41;创建数据库加密密钥](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   

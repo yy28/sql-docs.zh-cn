@@ -1,4 +1,5 @@
 ---
+description: 管理知识库
 title: 管理知识库
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462079"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知识库
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882749"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能打开知识库。  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>管理知识库  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> 管理知识库  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   

@@ -1,4 +1,5 @@
 ---
+description: 回退成员修订历史记录 (Master Data Services)
 title: 回退成员修订历史记录
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a37881bd22c73ea86316f3883382e3319e36b66
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: fe275fe7aef826b3eeaa6ef6e959f8c8bea33b4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461719"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>回退成员修订历史记录 (Master Data Services)
 

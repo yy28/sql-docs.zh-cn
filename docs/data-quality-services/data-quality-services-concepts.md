@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services 概念
 title: Data Quality Services 概念
 ms.date: 01/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fe7f6c957bb1781528c0bad06de41063c41ca3cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 15fc90d3437ff4cf9f24a482201ba64ce38560d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462189"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -92,6 +93,6 @@ ms.locfileid: "85887955"
  有关 DQS 管理的详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎服务](../data-quality-services/data-quality-services.md)  
+ [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

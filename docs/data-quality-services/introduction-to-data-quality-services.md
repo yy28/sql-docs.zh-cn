@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services 简介
 title: Data Quality Services 简介
 ms.date: 03/05/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0564da5fc907db5f684f96b716ad1cb39ef007ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46a95e0cdd54360a91aa56cfde86be6fff8d0c40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462091"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
 
@@ -76,7 +77,7 @@ ms.locfileid: "85901615"
   
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 是一个独立的应用程序，使您可以在一个用户界面中执行知识管理、数据质量项目以及进行其他管理。 该应用程序设计用于数据专员和 DQS 管理员。 它是一个独立的可执行文件，负责执行知识发现、域管理、匹配策略创建、数据清理、匹配、事件探查、监视和服务器管理。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 既可与 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 安装和运行在同一台计算机上，也可以远程安装和运行在不同的计算机上。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中的很多操作由向导指引，易于执行。  
   
-##  <a name="data-quality-functionality-in-integration-services-and-master-data-services"></a><a name="Processes"></a>Integration Services 和 Master Data Services 中的数据质量功能  
+##  <a name="data-quality-functionality-in-integration-services-and-master-data-services"></a><a name="Processes"></a> Integration Services 和 Master Data Services 中的数据质量功能  
  Data Quality Services 提供的数据质量功能内置到 SQL Server Integration Services (SSIS) 的一个组件和 Master Data Services (MDS) 的功能中，使您可以在这些服务中执行数据质量过程。  
   
  **[!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]**  

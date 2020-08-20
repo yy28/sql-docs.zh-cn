@@ -1,4 +1,5 @@
 ---
+description: “数据库配置”页（Master Data Services 配置管理器）
 title: “数据库配置”页
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b7c581c06ca465de301d48a760c54f1247ff32f3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3e7bee6e69dbfe3089e5f75a9500c767dd675fca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461751"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>“数据库配置”页（Master Data Services 配置管理器）
 

@@ -1,4 +1,5 @@
 ---
+description: 自动生成 Code 之外的属性值 (Master Data Services)
 title: 自动生成属性值
 titleSuffix: Master Data Services
 ms.custom: seo-lt-2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 165820bfea62fe1172aaad4f6a18f4d3b5e5eed4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 85339e8fb742bfa6e8545e72ac1ff70dc5bde6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461946"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自动生成 Code 之外的属性值 (Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85813731"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   数值属性必须存在。 有关详细信息，请参阅[创建数字属性 (Master Data Services)](../master-data-services/create-a-numeric-attribute-master-data-services.md)。  
   

@@ -1,5 +1,6 @@
 ---
-title: 全文搜索和语义搜索目录视图（Transact-sql） |Microsoft Docs
+description: 全文搜索和语义搜索目录视图 (Transact-SQL)
+title: 全文搜索和语义搜索目录视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0272ab778c538b2fa8690493606a346d713fa6d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af1960d9fa36dd770ad11a16b0689737037b4a60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460709"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>全文搜索和语义搜索目录视图 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,11 +30,11 @@ ms.locfileid: "85764809"
   本节介绍提供有关全文索引和语义索引的信息的目录视图。  
   
 ## <a name="full-text-search-catalog-views"></a>全文搜索目录视图  
- [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
+ [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
  每个全文目录对应一行。  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
- 为可用于全文索引操作的每个文档类型返回一行。 每行表示在 SQL Server 的实例中注册的**IFilter**接口。  
+ 为可用于全文索引操作的每个文档类型返回一行。 每行表示在 SQL Server 的实例中注册的 **IFilter** 接口。  
   
  [sys.fulltext_index_catalog_usages](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)  
  对于全文索引引用的每个全文目录，返回与其对应的一行。  
@@ -74,7 +75,7 @@ ms.locfileid: "85764809"
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [全文搜索和语义搜索动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 创建基于域的属性 (Master Data Services)
 title: 创建基于域的属性
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461837"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>创建基于域的属性 (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "85813115"
 
 -   您必须有权访问 **“系统管理”** 功能区域。
 
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。
 
 -   要用作属性值的源的实体必须存在。 例如，若要基于 Color 实体创建基于域的属性，您必须首先创建 Color 实体。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。
 
@@ -43,8 +44,8 @@ ms.locfileid: "85813115"
 
 |列|描述|
 |------------|-----------------|
-|状态|属性状态。<br /><br /> 单击 "保存" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，指示属性正在更新。<br /><br /> 如果在创建或编辑属性时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|
-|“属性”|属性名称。|
+|状态|属性状态。<br /><br /> 单击 "保存" 时，将显示 ![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标") 图像的图标，指示属性正在更新。<br /><br /> 如果在创建或编辑属性时出现错误，则会显示 ![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标") 。<br /><br /> 否则，状态为 "正常"，将显示 !["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标") " 图像的图标。|
+|名称|特性名称。|
 |显示名称|属性显示名称。|
 |描述|属性说明。|
 |显示像素宽度|属性宽度。|
@@ -79,7 +80,7 @@ ms.locfileid: "85813115"
 
     -   如果属性是针对集合，则从“成员类型” **** 列表框中选择“集合” **** 。
 
-6.  在 **“名称”** 框中，键入属性的名称。 有关不应用作属性名称的单词列表，请参阅[&#40;Master Data Services 中的保留字&#41;](../master-data-services/reserved-words-master-data-services.md)
+6.  在 **“名称”** 框中，键入属性的名称。 有关不应用作属性名称的单词列表，请参阅 [&#40;Master Data Services 中的保留字&#41;](../master-data-services/reserved-words-master-data-services.md)
 
 7.  也可键入显示名称，并在“说明” **** 框中键入说明。
 

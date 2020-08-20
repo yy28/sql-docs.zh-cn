@@ -1,5 +1,6 @@
 ---
-title: sp_releaseapplock （Transact-sql） |Microsoft Docs
+description: sp_releaseapplock (Transact-SQL)
+title: sp_releaseapplock (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c737f6c139a82735e4da1d764b4036bb93c8b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39c78005aba5d601496df5b8af153acf1667581a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464034"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,18 +43,18 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @Resource =] "*resource_name*"  
- 由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*为**nvarchar （255）** ，无默认值。 比较了二进制*resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
+ 由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name* 为 **nvarchar (255) ** ，无默认值。 比较了二进制*resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
   
  [ @LockOwner =] "*lock_owner*"  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 是 nvarchar(32)******。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner*值为**transaction**时，sp_getapplock 必须从事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 是 nvarchar(32)******。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner* 值为 **transaction**时，sp_getapplock 必须从事务内执行。  
   
  [ @DbPrincipal =] "*database_principal*"  
- 对数据库中的对象具有权限的用户、角色或应用程序角色。 函数的调用方必须是*database_principal*、dbo 或 db_owner 固定数据库角色的成员，才能成功调用该函数。 默认值为 public。  
+ 对数据库中的对象具有权限的用户、角色或应用程序角色。 函数的调用方必须是 *database_principal*、dbo 或 db_owner 固定数据库角色的成员，才能成功调用该函数。 默认值为 public。  
   
 ## <a name="return-code-values"></a>返回代码值  
- \>= 0 （成功）或 < 0 （失败）  
+ \>= 0 (成功) ，或 < 0 (失败)   
   
 |值|结果|  
 |-----------|------------|  
