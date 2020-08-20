@@ -1,5 +1,6 @@
 ---
-title: sp_article_validation （Transact-sql） |Microsoft Docs
+description: sp_article_validation (Transact-SQL)
+title: sp_article_validation (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3fa3274901d881be7d52ecd62c60a802b597a0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 146925fbcbb0f2195195204831f7216ae4ca39da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464556"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,48 +44,48 @@ sp_article_validation [ @publication = ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`项目所在的发布的名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 项目所在的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @article = ] 'article'`要验证的项目的名称。 *项目*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 要验证的项目的名称。 *项目* 是 **sysname**，无默认值。  
   
-`[ @rowcount_only = ] type_of_check_requested`指定是否只返回表的行计数。 *type_of_check_requested*为**smallint**，默认值为**1**。  
+`[ @rowcount_only = ] type_of_check_requested` 指定是否只返回表的行计数。 *type_of_check_requested* 为 **smallint**，默认值为 **1**。  
   
- 如果为**0**，则执行行计数和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。  
+ 如果为 **0**，则执行行计数和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。  
   
- 如果为**1**，则仅执行行计数检查。  
+ 如果为 **1**，则仅执行行计数检查。  
   
- 如果为**2**，则执行行计数和二进制校验和。  
+ 如果为 **2**，则执行行计数和二进制校验和。  
   
-`[ @full_or_fast = ] full_or_fast`用于计算行计数的方法。 *full_or_fast*为**tinyint**，可以是下列值之一。  
+`[ @full_or_fast = ] full_or_fast` 用于计算行计数的方法。 *full_or_fast* 为 **tinyint**，可以是下列值之一。  
   
 |**值**|**说明**|  
 |---------------|---------------------|  
 |**0**|用 COUNT(*) 执行完整计数。|  
-|**1**|从**sysindexes**执行快速计数。 计算**sysindexes**中的行数比计算实际表中的行的速度更快。 但是， **sysindexes**会延迟更新，行计数可能不准确。|  
-|**2** （默认值）|首先尝试使用快速方法执行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果*expected_rowcount*为 NULL，并且存储过程用于获取该值，则始终使用完整 COUNT （*）。|  
+|**1**|从 **sysindexes**执行快速计数。 计算 **sysindexes** 中的行数比计算实际表中的行的速度更快。 但是， **sysindexes** 会延迟更新，行计数可能不准确。|  
+|**2** （默认值）|首先尝试使用快速方法执行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果 *expected_rowcount* 为 NULL，并且存储过程用于获取该值，则始终使用 ( * ) 的完整计数。|  
   
-`[ @shutdown_agent = ] shutdown_agent`指定分发代理是否应在完成验证后立即关闭。 *shutdown_agent*为**bit**，默认值为**0**。 如果为**0**，则分发代理不会关闭。 如果为**1**，则分发代理在验证项目后关闭。  
+`[ @shutdown_agent = ] shutdown_agent` 指定分发代理是否应在完成验证后立即关闭。 *shutdown_agent* 为 **bit**，默认值为 **0**。 如果为 **0**，则分发代理不会关闭。 如果为 **1**，则分发代理在验证项目后关闭。  
   
-`[ @subscription_level = ] subscription_level`指定是否由一组订阅服务器选取验证。 *subscription_level*为**bit**，默认值为**0**。 如果为**0**，则验证应用于所有订阅服务器。 如果为**1**，则仅将验证应用于对当前打开事务中**sp_marksubscriptionvalidation**的调用指定的订阅服务器的子集。  
+`[ @subscription_level = ] subscription_level` 指定是否由一组订阅服务器选取验证。 *subscription_level* 为 **bit**，默认值为 **0**。 如果为 **0**，则验证应用于所有订阅服务器。 如果为 **1**，则仅将验证应用于对当前打开事务中 **sp_marksubscriptionvalidation** 的调用指定的订阅服务器的子集。  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  在发布服务器上请求验证时，不应使用*发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_article_validation**用于事务复制。  
+ **sp_article_validation** 用于事务复制。  
   
- **sp_article_validation**会导致在指定项目上收集验证信息，并将验证请求发送到事务日志。 分发代理接收到该请求后，将该请求中的验证信息与订阅服务器表进行比较。 验证的结果显示在复制监视器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报中。  
+ **sp_article_validation** 会导致在指定项目上收集验证信息，并将验证请求发送到事务日志。 分发代理接收到该请求后，将该请求中的验证信息与订阅服务器表进行比较。 验证的结果显示在复制监视器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报中。  
   
 ## <a name="permissions"></a>权限  
- 只有对所验证项目的源表具有 SELECT ALL 权限的用户才可以执行**sp_article_validation**。  
+ 只有对所验证项目的源表具有 SELECT ALL 权限的用户才可以执行 **sp_article_validation**。  
   
 ## <a name="see-also"></a>另请参阅  
  [验证复制的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   

@@ -1,5 +1,6 @@
 ---
-title: sp_approlepassword （Transact-sql） |Microsoft Docs
+description: sp_approlepassword (Transact-SQL)
+title: sp_approlepassword (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d6fb44101952c5fe5fe28ba9764c43658a6208a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b375dac904decdaa096cfe0e0b1839cc0c3d2d8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464531"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874859"
   更改当前数据库中应用程序角色的密码。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] 'role'`应用程序角色的名称。 *Role*的值为**sysname**，无默认值。 *角色*必须存在于当前数据库中。  
+`[ @rolename = ] 'role'` 应用程序角色的名称。 *Role* 的值为 **sysname**，无默认值。 *角色* 必须存在于当前数据库中。  
   
-`[ @newpwd = ] 'password'`是应用程序角色的新密码。 *password*的值为**sysname**，无默认值。 *密码*不能为 NULL。  
+`[ @newpwd = ] 'password'` 是应用程序角色的新密码。 *password* 的值为 **sysname**，无默认值。 *密码* 不能为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  

@@ -1,5 +1,6 @@
 ---
-title: sp_apply_job_to_targets （Transact-sql） |Microsoft Docs
+description: sp_apply_job_to_targets (Transact-SQL)
+title: sp_apply_job_to_targets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbefdf6a045dce468365aa585b7efad775709c2c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f821418b5e6a75aa51264abb0d265f907b8957d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464545"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,27 +43,27 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id`要应用于指定目标服务器或目标服务器组的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要应用于指定目标服务器或目标服务器组的作业的标识号。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'`要应用于指定的关联目标服务器或目标服务器组的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要应用于指定的关联目标服务器或目标服务器组的作业的名称。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  必须指定*job_id*或*job_name* ，但不能同时指定两者。  
+>  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
   
-`[ @target_server_groups = ] 'target_server_groups'`以逗号分隔的目标服务器组列表，指定的作业将应用于这些组。 *target_server_groups*的值为**nvarchar （2048）**，默认值为 NULL。  
+`[ @target_server_groups = ] 'target_server_groups'` 以逗号分隔的目标服务器组列表，指定的作业将应用于这些组。 *target_server_groups* 为 **nvarchar (2048) **，默认值为 NULL。  
   
-`[ @target_servers = ] 'target_servers'`以逗号分隔的目标服务器列表，指定的作业将应用于这些服务器。 *target_servers*的值为**nvarchar （2048）**，默认值为 NULL。  
+`[ @target_servers = ] 'target_servers'` 以逗号分隔的目标服务器列表，指定的作业将应用于这些服务器。 *target_servers*为 **nvarchar (2048) **，默认值为 NULL。  
   
-`[ @operation = ] 'operation'`指定的作业是否应该应用于指定的目标服务器或目标服务器组。 *操作*为**varchar （7）**，默认值为 APPLY。 有效操作是 "**应用**" 和 "**删除**"。  
+`[ @operation = ] 'operation'` 指定的作业是否应该应用于指定的目标服务器或目标服务器组。 *操作*是 **varchar (7) **，默认值为 APPLY。 有效操作是 " **应用** " 和 " **删除**"。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_apply_job_to_targets**提供了一种简单的方法来应用（或从多个目标服务器删除）作业，并且是一种为每个所需的目标服务器调用一次**sp_add_jobserver** （或**sp_delete_jobserver**）的替代方法。  
+ **sp_apply_job_to_targets** 提供了一种简单的方法来应用 (或从多个目标服务器中删除作业) ，这是为每个所需的目标服务器调用 **sp_add_jobserver** (或 **sp_delete_jobserver** 的一种替代方法。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能执行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能执行此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例将以前创建的 `Backup Customer Information` 作业应用于 `Servers Maintaining Customer Information` 组中的所有目标服务器。  

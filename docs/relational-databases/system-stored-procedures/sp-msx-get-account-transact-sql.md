@@ -1,5 +1,6 @@
 ---
-title: sp_msx_get_account （Transact-sql） |Microsoft Docs
+description: sp_msx_get_account (Transact-SQL)
+title: sp_msx_get_account (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ddb3d983b37bdad5db334073fe168b518aaee77a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe1034dee3f1e2fb3c8647bcce3ad6336fb56f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464092"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>结果集  
  返回以下结果集：  
   
-|列名|类型|说明|  
+|列名|类型|描述|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|主服务器连接号。|  
 |msx_credential_id|**int**|用于此主服务器连接的凭据的 ID。|  
@@ -78,7 +79,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 代理存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;创建凭据](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_set_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
   
   

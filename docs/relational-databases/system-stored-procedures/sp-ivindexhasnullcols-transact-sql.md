@@ -1,5 +1,6 @@
 ---
-title: sp_ivindexhasnullcols （Transact-sql） |Microsoft Docs
+description: sp_ivindexhasnullcols (Transact-SQL)
+title: sp_ivindexhasnullcols (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 837a589827b4bf4db9d4e7d38e00d56b646e781a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86fef9d3b131770e11edde117ea12e96d336de24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464190"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,23 +39,23 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @viewname = ] 'view_name'`要验证的视图的名称。 *view_name* **sysname**，无默认值。  
+`[ @viewname = ] 'view_name'` 要验证的视图的名称。 *view_name* **sysname**，无默认值。  
   
-`[ @fhasnullcols = ] field_has_null_columns OUTPUT`指示视图索引是否具有允许 NULL 值的列的标志。 *view_name* **sysname**，无默认值。 如果视图索引包含允许 NULL 的列，则返回值**1** 。 如果视图不包含允许 NULL 的列，则返回值**0** 。  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` 指示视图索引是否具有允许 NULL 值的列的标志。 *view_name* **sysname**，无默认值。 如果视图索引包含允许 NULL 的列，则返回值 **1** 。 如果视图不包含允许 NULL 的列，则返回值 **0** 。  
   
 > [!NOTE]  
->  如果存储过程本身返回的返回代码为**1**，则表示存储过程执行失败，则此值为**0** ，应忽略此值。  
+>  如果存储过程本身返回的返回代码为 **1**，则表示存储过程执行失败，则此值为 **0** ，应忽略此值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_ivindexhasnullcols**由事务复制使用。  
+ **sp_ivindexhasnullcols** 由事务复制使用。  
   
  默认情况下，发布中的索引视图项目创建为订阅服务器上的表。 但是，当索引列允许 NULL 值时，索引视图创建为订阅服务器上的索引视图而不是表。 通过执行此存储过程，可以警告用户当前索引视图中是否存在此问题。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_ivindexhasnullcols**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_ivindexhasnullcols**。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

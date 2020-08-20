@@ -1,5 +1,6 @@
 ---
-title: sp_help_log_shipping_primary_secondary （Transact-sql） |Microsoft Docs
+description: sp_help_log_shipping_primary_secondary (Transact-SQL)
+title: sp_help_log_shipping_primary_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a52339c2ff0b609b2c9f0dab4a3a893135be2d31
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4937844672c5700496eee6d4ff7d580cac608fc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464251"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @primary_database = ] 'primary_database'`主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**secondary_server**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 日志传送配置中的辅助实例的名称。|  
 |**secondary_database**|日志传送配置中辅助数据库的名称。|  
@@ -56,10 +57,10 @@ sp_help_log_shipping_primary_secondary
  必须从主服务器上的**master**数据库运行**sp_help_log_shipping_primary_secondary** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_help_log_shipping_primary_secondary**检索与主数据库关联的辅助数据库的列表 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
+ 此示例演示如何使用 **sp_help_log_shipping_primary_secondary** 检索与主数据库关联的辅助数据库的列表 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  

@@ -1,5 +1,6 @@
 ---
-title: sp_query_store_unforce_plan （Transact-sql） |Microsoft Docs
+description: 'sp_query_store_unforce_plan (Transact-sql) '
+title: sp_query_store_unforce_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,13 +22,14 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6af13e434fcf7fdc4c1738f71c76f092a0ed71d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b85e3a49faad133e52eab6ab542ec195dc4d58b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464095"
 ---
-# <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan （Transact-sql）
+# <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   为特定查询启用取消强制执行先前强制计划。  
@@ -40,18 +42,18 @@ ms.locfileid: "86012611"
 sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @query_id = ] query_id` 查询的 id。 *query_id* 是 **bigint**，无默认值。  
   
-`[ @plan_id = ] plan_id`将不再强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+`[ @plan_id = ] plan_id` 将不再强制执行的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有**ALTER**权限。
+ 要求对数据库具有 **ALTER** 权限。
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关查询存储中的查询的信息。  

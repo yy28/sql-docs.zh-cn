@@ -1,5 +1,6 @@
 ---
-title: sp_attach_db （Transact-sql） |Microsoft Docs
+description: sp_attach_db (Transact-SQL)
+title: sp_attach_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 896a4791d1b04de37f57496fd8ff71961a54f7ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62f7ed238899f6fe99c10f2c3c558e5e16af2e49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464517"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874612"
   将数据库附加到服务器。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]建议改为使用 CREATE DATABASE *database_name*作为附加。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建议改为使用 CREATE DATABASE *database_name* 作为附加。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 > [!NOTE]  
 >  若要在一个或多个日志文件有新位置时重新生成这些日志文件，请使用 CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG。  
@@ -47,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbnam_ '`要附加到服务器的数据库的名称。 此名称必须唯一。 *dbname*的值为**sysname**，默认值为 NULL。  
+`[ @dbname = ] 'dbnam_ '` 要附加到服务器的数据库的名称。 该名称必须是唯一的。 *dbname* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @filename1 = ] 'filename_n'`是数据库文件的物理名称，包括路径。 *filename_n*的默认值为**nvarchar （260）**，默认值为 NULL。 最多可以指定 16 个文件名。 参数名从** \@ filename1**开始，并递增到** \@ filename16**。 文件名列表至少必须包括主文件。 主文件中包含指向数据库中其他文件的系统表。 该列表还必须包括在数据库分离之后移动的所有文件。  
+`[ @filename1 = ] 'filename_n'` 是数据库文件的物理名称，包括路径。 *filename_n* 为 **nvarchar (260) **，默认值为 NULL。 最多可以指定 16 个文件名。 参数名从** \@ filename1**开始，并递增到** \@ filename16**。 文件名列表至少必须包括主文件。 主文件中包含指向数据库中其他文件的系统表。 该列表还必须包括在数据库分离之后移动的所有文件。  
   
 > [!NOTE]  
 >  此参数映射到 CREATE DATABASE 语句的 FILENAME 参数。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -63,7 +64,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  无  
   
 ## <a name="remarks"></a>备注  
- **Sp_attach_db**存储过程只应在以前从数据库服务器分离的数据库上执行，只需使用显式**sp_detach_db**操作或复制的数据库。 如果需要指定16个以上的文件，请使用 CREATE DATABASE *database_name*来附加或创建数据库*database_name* FOR_ATTACH_REBUILD_LOG。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ **Sp_attach_db**存储过程只应在以前从数据库服务器分离的数据库上执行，只需使用显式**sp_detach_db**操作或复制的数据库。 如果需要指定16个以上的文件，请使用 CREATE DATABASE *database_name* 来附加或创建数据库 *database_name* FOR_ATTACH_REBUILD_LOG。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
  假设所有未指定文件都位于其上次的已知位置。 若要使用不同位置的文件，则必须指定新位置。  
   
@@ -83,7 +84,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 **OPEN MASTER KEY** 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 **ALTER MASTER KEY REGENERATE** 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。  
   
 ## <a name="permissions"></a>权限  
- 有关附加数据库时如何处理权限的信息，请参阅[CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 有关附加数据库时如何处理权限的信息，请参阅 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  下例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的文件附加到当前服务器。  

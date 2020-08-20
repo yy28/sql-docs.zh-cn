@@ -1,5 +1,6 @@
 ---
-title: sp_add_log_shipping_alert_job （Transact-sql） |Microsoft Docs
+description: sp_add_log_shipping_alert_job (Transact-SQL)
+title: sp_add_log_shipping_alert_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5c872f0346cce50ff27e442991efa5e5f4e4391
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464699"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  此存储过程用于检查是否已在此服务器上创建了警报作业。 如果警报作业不存在，则此存储过程将创建警报作业，并将其作业 ID 添加到**log_shipping_monitor_alert**表。 默认情况下，将启用警报作业并按计划每两分钟运行一次。  
+  此存储过程用于检查是否已在此服务器上创建了警报作业。 如果警报作业不存在，则此存储过程将创建警报作业，并将其作业 ID 添加到 **log_shipping_monitor_alert** 表。 默认情况下，将启用警报作业并按计划每两分钟运行一次。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +53,10 @@ sp_add_log_shipping_alert_job
  必须从监视服务器上的**master**数据库运行**sp_add_log_shipping_alert_job** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何执行**sp_add_log_shipping_alert_job**来创建警报作业 ID。  
+ 此示例演示如何执行 **sp_add_log_shipping_alert_job** 来创建警报作业 ID。  
   
 ```  
 USE master  

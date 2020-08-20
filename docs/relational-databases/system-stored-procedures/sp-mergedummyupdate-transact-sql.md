@@ -1,5 +1,6 @@
 ---
-title: sp_mergedummyupdate （Transact-sql） |Microsoft Docs
+description: sp_mergedummyupdate (Transact-SQL)
+title: sp_mergedummyupdate (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5502b64da269639d99fe54d4930f7f3b7b145d73
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dbacf385842d226c733c5c1baec9859f26e140d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464126"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,20 +38,20 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @source_object = ] 'source_object'`源对象的名称。 *source_object*为**nvarchar （386）**，无默认值。  
+`[ @source_object = ] 'source_object'` 源对象的名称。 *source_object*为 **nvarchar (386) **，无默认值。  
   
-`[ @rowguid = ] 'rowguid'`行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
+`[ @rowguid = ] 'rowguid'` 行标识符。 *rowguid* 是 **uniqueidentifier**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_mergedummyupdate**用于合并复制。  
+ **sp_mergedummyupdate** 用于合并复制。  
   
- 如果你编写自己对复制冲突查看器（Wzcnflct.exe）的替代项， **sp_mergedummyupdate**会很有用。  
+ 如果你编写自己的复制冲突查看器 ( # A0) ， **sp_mergedummyupdate**会很有用。  
   
 ## <a name="permissions"></a>权限  
- 只有**db_owner**固定数据库角色的成员才能执行**sp_mergedummyupdate**。  
+ 只有 **db_owner** 固定数据库角色的成员才能执行 **sp_mergedummyupdate**。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,6 @@
 ---
-title: sp_can_tlog_be_applied （Transact-sql） |Microsoft Docs
+description: sp_can_tlog_be_applied (Transact-SQL)
+title: sp_can_tlog_be_applied (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e4596cfab5bb7a272e29b2d2749e38c9f38ddaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464460"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  验证事务日志备份是否可应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 **sp_can_tlog_be_applied**要求数据库处于还原状态。  
+  验证事务日志备份是否可应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 **sp_can_tlog_be_applied** 要求数据库处于还原状态。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @backup_file_name = ] 'backup_file_name'`备份文件的名称。 *backup_file_name*为**nvarchar （128）**。  
+`[ @backup_file_name = ] 'backup_file_name'` 备份文件的名称。 *backup_file_name* ** (128) 为 nvarchar **。  
   
-`[ @database_name = ] 'database_name'`数据库的名称。 database_name 的数据类型为 sysname******。  
+`[ @database_name = ] 'database_name'` 数据库的名称。 database_name 的数据类型为 sysname******。  
   
-`[ @result = ] _result_ OUTPUT`指示事务日志是否可应用于数据库。 *结果*为**bit**。  
+`[ @result = ] _result_ OUTPUT` 指示事务日志是否可应用于数据库。 *结果* 为 **bit**。  
   
  1 = 日志可以应用  
   
@@ -55,7 +56,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
  0（成功）或 1（失败）  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_can_tlog_be_applied**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_can_tlog_be_applied**执行。  
   
 ## <a name="examples"></a>示例  
  以下示例将声明一个本地变量 `@MyBitVar`，用于存储结果。  

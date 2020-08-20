@@ -1,5 +1,6 @@
 ---
-title: sp_attach_schedule （Transact-sql） |Microsoft Docs
+description: sp_attach_schedule (Transact-SQL)
+title: sp_attach_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464470"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,29 +43,29 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id`向其中添加计划的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 向其中添加计划的作业的标识号。 *job_id*的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'`向其中添加计划的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
-  
-> [!NOTE]  
->  必须指定*job_id*或*job_name* ，但不能同时指定两者。  
-  
-`[ @schedule_id = ] schedule_id`为作业设置的计划的标识号。 *schedule_id*的值为**int**，默认值为 NULL。  
-  
-`[ @schedule_name = ] 'schedule_name'`要为作业设置的计划的名称。 *schedule_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 向其中添加计划的作业的名称。 *job_name*的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  必须指定*schedule_id*或*schedule_name* ，但不能同时指定两者。  
+>  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
+  
+`[ @schedule_id = ] schedule_id` 为作业设置的计划的标识号。 *schedule_id*的值为 **int**，默认值为 NULL。  
+  
+`[ @schedule_name = ] 'schedule_name'` 要为作业设置的计划的名称。 *schedule_name*的默认值为 **sysname**，默认值为 NULL。  
+  
+> [!NOTE]  
+>  必须指定 *schedule_id* 或 *schedule_name* ，但不能同时指定两者。  
   
 ## <a name="remarks"></a>备注  
  计划和作业的所有者必须相同。  
   
  可以为多个作业设置一个计划。 可以根据多个计划运行作业。  
   
- 必须从**msdb**数据库运行此存储过程。  
+ 必须从 **msdb** 数据库运行此存储过程。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

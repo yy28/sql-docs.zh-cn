@@ -1,5 +1,6 @@
 ---
-title: sp_addumpdevice （Transact-sql） |Microsoft Docs
+description: sp_addumpdevice (Transact-SQL)
+title: sp_addumpdevice (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840214a807ff37eedcc024125fc4902587afa05c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91343fe93ad66b4e89e1e0190f5a46be23142f6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464649"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
 
 将备份设备添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中。  
   
@@ -47,16 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @devtype = ] 'device_type'`备份设备的类型。 *device_type*为**varchar （20）**，无默认值，可以是下列值之一。  
+`[ @devtype = ] 'device_type'` 备份设备的类型。 *device_type* 是 **varchar (20) **，无默认值，并且可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**磁盘**|硬盘文件作为备份设备。|  
 |**磁盘**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
   
-`[ @logicalname = ] 'logical_name'`Backup 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name* **sysname**，无默认值，且不能为 NULL。  
+`[ @logicalname = ] 'logical_name'` Backup 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name* **sysname**，无默认值，且不能为 NULL。  
   
-`[ @physicalname = ] 'physical_name'`备份设备的物理名称。 物理名称必须遵从操作系统文件名规则或网络设备的通用命名约定，并且必须包含完整路径。 *physical_name*为**nvarchar （260）**，无默认值，且不能为 NULL。  
+`[ @physicalname = ] 'physical_name'` 备份设备的物理名称。 物理名称必须遵从操作系统文件名规则或网络设备的通用命名约定，并且必须包含完整路径。 *physical_name* 为 **nvarchar (260) **，没有默认值，且不能为 NULL。  
   
  在远程网络位置上创建备份设备时，请确保启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]时所用的名称对远程计算机有相应的写权限。  
   
@@ -65,9 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  此过程会在目录中输入指定的物理名称。 此过程不会尝试访问或创建设备。  
   
-`[ @cntrltype = ] 'controller_type'`弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice**的新用法应省略此参数。  
+`[ @cntrltype = ] 'controller_type'` 弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice**的新用法应省略此参数。  
   
-`[ @devstatus = ] 'device_status'`弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice**的新用法应省略此参数。  
+`[ @devstatus = ] 'device_status'` 弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice**的新用法应省略此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -76,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  无  
   
 ## <a name="remarks"></a>备注  
- **sp_addumpdevice**将备份设备添加到**sys.databases backup_devices**目录视图。 然后便可以在 BACKUP 和 RESTORE 语句中逻辑引用该设备。 **sp_addumpdevice**不执行对物理设备的任何访问。 只有在执行 BACKUP 或 RESTORE 语句后才会访问指定的设备。 创建一个逻辑备份设备可简化 BACKUP 和 RESTORE 语句，在这种情况下指定设备名称将代替使用 "TAPE =" 或 "DISK =" 子句指定设备路径。  
+ **sp_addumpdevice** 将备份设备添加到 **sys.databases backup_devices** 目录视图。 然后便可以在 BACKUP 和 RESTORE 语句中逻辑引用该设备。 **sp_addumpdevice** 不执行对物理设备的任何访问。 只有在执行 BACKUP 或 RESTORE 语句后才会访问指定的设备。 创建一个逻辑备份设备可简化 BACKUP 和 RESTORE 语句，在这种情况下指定设备名称将代替使用 "TAPE =" 或 "DISK =" 子句指定设备路径。  
   
  所有权和权限问题可能干扰磁盘或文件备份设备的使用。 请确保已将相应的文件权限授予用于启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]的 Windows 帐户。  
   
@@ -86,7 +87,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  无法在事务中执行**sp_addumpdevice** 。  
   
- 若要删除设备，请使用[sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)或[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)。  
+ 若要删除设备，请使用 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 或[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **diskadmin** 固定服务器角色中的成员身份。  

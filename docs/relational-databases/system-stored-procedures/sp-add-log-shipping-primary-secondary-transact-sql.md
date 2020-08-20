@@ -1,5 +1,6 @@
 ---
-title: sp_add_log_shipping_primary_secondary （Transact-sql） |Microsoft Docs
+description: sp_add_log_shipping_primary_secondary (Transact-SQL)
+title: sp_add_log_shipping_primary_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 575656d0fb80328b65c72735d0a4c5b9e1a8a59e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68e63391d03d97aee8474a7aac95ebdfc09b04b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464667"
 ---
 # <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @primary_database = ] 'primary_database'`主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
-`[ @secondary_server = ] 'secondary_server',`辅助服务器的名称。 *secondary_server* **sysname**，无默认值。  
+`[ @secondary_server = ] 'secondary_server',` 辅助服务器的名称。 *secondary_server* **sysname**，无默认值。  
   
-`[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
+`[ @secondary_database = ] 'secondary_database'` 辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -58,10 +59,10 @@ sp_add_log_shipping_primary_secondary
  必须从主服务器上的**master**数据库运行**sp_add_log_shipping_primary_secondary** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_add_log_shipping_primary_secondary**将辅助数据库**LogShipAdventureWorks**的条目添加到辅助服务器 FLATIRON。  
+ 此示例演示如何使用 **sp_add_log_shipping_primary_secondary** 将辅助数据库 **LogShipAdventureWorks** 的条目添加到辅助服务器 FLATIRON。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_primary_secondary   

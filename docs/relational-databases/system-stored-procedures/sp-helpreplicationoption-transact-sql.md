@@ -1,5 +1,6 @@
 ---
-title: sp_helpreplicationoption （Transact-sql） |Microsoft Docs
+description: sp_helpreplicationoption (Transact-SQL)
+title: sp_helpreplicationoption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80d34e406b7672e31dd9cb70f42431bcd7392917
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464195"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85775745"
 sp_helpreplicationoption [ [ @optname =] 'option_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @optname = ] 'option_name'`要查询的复制选项的名称。 *option_name*的默认值为**sysname**，默认值为 NULL。  
+## <a name="arguments"></a>参数  
+`[ @optname = ] 'option_name'` 要查询的复制选项的名称。 *option_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -50,20 +51,20 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|复制选项的名称，可以是下列值之一：<br /><br /> **事务**<br /><br /> **merge**|  
-|value|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**a01**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helpreplicationoption**用于获取有关在特定服务器上启用的复制选项的信息。 若要获取有关特定数据库的信息，请使用**sp_helpreplicationdboption**。  
+ **sp_helpreplicationoption** 用于获取有关在特定服务器上启用的复制选项的信息。 若要获取有关特定数据库的信息，请使用 **sp_helpreplicationdboption**。  
   
 ## <a name="permissions"></a>权限  
- Execute 权限默认授予**public**角色。  
+ Execute 权限默认授予 **public** 角色。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

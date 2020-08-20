@@ -1,5 +1,6 @@
 ---
-title: sp_helprolemember （Transact-sql） |Microsoft Docs
+description: sp_helprolemember (Transact-SQL)
+title: sp_helprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6007f595555843c783718fecfb6adbe2d74103c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 360b700d6fe123c3a87ddb45878a3806e5671bee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464179"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] ' role '`当前数据库中的角色的名称。 *role*的值为**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库中。 如果未指定*role* ，则返回所有包含当前数据库中的至少一个成员的角色。  
+`[ @rolename = ] ' role '` 当前数据库中的角色的名称。 *role* 的值为 **sysname**，默认值为 NULL。 *角色* 必须存在于当前数据库中。 如果未指定 *role* ，则返回所有包含当前数据库中的至少一个成员的角色。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -50,14 +51,14 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|当前数据库中角色的名称。|  
 |**名称**|**sysname**|数据库角色成员的名称 **。**|  
-|**MemberSID**|**varbinary （85）**|**成员名称**的安全标识符。|  
+|**MemberSID**|**varbinary (85) **|**成员名称**的安全标识符。|  
   
 ## <a name="remarks"></a>备注  
- 如果数据库包含嵌套角色，则**成员**名称可能是角色的名称。 **sp_helprolemember**不显示通过嵌套角色获取的成员身份。 例如，如果 User1 是 Role1 的成员，而 Role1 是 Role2 的成员，则 `EXEC sp_helprolemember 'Role2'` 将返回 Role1，而不是 Role1 的成员（在这个示例中为 User1）。 若要返回嵌套成员身份，必须对每个嵌套角色重复执行**sp_helprolemember** 。  
+ 如果数据库包含嵌套角色，则 **成员** 名称可能是角色的名称。 **sp_helprolemember** 不显示通过嵌套角色获取的成员身份。 例如，如果 User1 是 Role1 的成员，而 Role1 是 Role2 的成员，则 `EXEC sp_helprolemember 'Role2'` 将返回 Role1，而不是 Role1 的成员（在这个示例中为 User1）。 若要返回嵌套成员身份，必须对每个嵌套角色重复执行 **sp_helprolemember** 。  
   
- 使用**sp_helpsrvrolemember**显示固定服务器角色的成员。  
+ 使用 **sp_helpsrvrolemember** 显示固定服务器角色的成员。  
   
- 使用[IS_ROLEMEMBER &#40;transact-sql&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)检查指定用户的角色成员身份。  
+ 使用 [IS_ROLEMEMBER &#40;transact-sql&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) 检查指定用户的角色成员身份。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

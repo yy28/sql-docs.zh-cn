@@ -1,5 +1,6 @@
 ---
-title: sp_adjustpublisheridentityrange （Transact-sql） |Microsoft Docs
+description: sp_adjustpublisheridentityrange (Transact-SQL)
+title: sp_adjustpublisheridentityrange (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac449d2437184695c4d5957fea0788ce40a176ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9315025143c31d6fc1ef76aab4e70578e251694d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464589"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,24 +40,24 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`在其中重新分配新标识范围的发布的名称。 *发布*为**sysname**，默认值为 NULL。  
+`[ @publication = ] 'publication'` 在其中重新分配新标识范围的发布的名称。 *发布* 为 **sysname**，默认值为 NULL。  
   
-`[ @table_name = ] 'table_name'`重新分配新标识范围的表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @table_name = ] 'table_name'` 重新分配新标识范围的表的名称。 *table_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @table_owner = ] 'table_owner'`发布服务器上的表的所有者。 *table_owner*的默认值为**sysname**，默认值为 NULL。 如果未指定*table_owner* ，则使用当前用户的名称。  
+`[ @table_owner = ] 'table_owner'` 发布服务器上的表的所有者。 *table_owner* 的默认值为 **sysname**，默认值为 NULL。 如果未指定 *table_owner* ，则使用当前用户的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_adjustpublisheridentityrange**在所有类型的复制中使用。  
+ **sp_adjustpublisheridentityrange** 在所有类型的复制中使用。  
   
- 对于已启用自动标识范围的发布，分发代理或合并代理负责基于发布的阈值自动调整发布的标识范围。 但是，如果出于某种原因，分发代理或合并代理尚未运行一段时间，并且标识范围资源已过度消耗到阈值，则用户可以调用**sp_adjustpublisheridentityrange**为发布服务器分配新的值范围。  
+ 对于已启用自动标识范围的发布，分发代理或合并代理负责基于发布的阈值自动调整发布的标识范围。 但是，如果出于某种原因，分发代理或合并代理尚未运行一段时间，并且标识范围资源已过度消耗到阈值，则用户可以调用 **sp_adjustpublisheridentityrange** 为发布服务器分配新的值范围。  
   
- 执行**sp_adjustpublisheridentityrange**时，必须指定*发布*或*table_name* 。 如果同时指定了这两个参数或二者都未指定，则将返回错误。  
+ 执行 **sp_adjustpublisheridentityrange**时，必须指定 *发布* 或 *table_name* 。 如果同时指定了这两个参数或二者都未指定，则将返回错误。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_adjustpublisheridentityrange**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_adjustpublisheridentityrange**。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)   
