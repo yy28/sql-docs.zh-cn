@@ -1,5 +1,6 @@
 ---
-title: sp_expired_subscription_cleanup （Transact-sql） |Microsoft Docs
+description: sp_expired_subscription_cleanup (Transact-SQL)
+title: sp_expired_subscription_cleanup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 279334fee40c24cbc0423eca58cd5386dbdb4bdc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f01368f50ce4a7a6116f58bfedee187648a8302d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474230"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,18 +38,18 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'`非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布*为**sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
+`[ @publisher = ] 'publisher'` 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布* 为 **sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_expired_subscription_cleanup**在所有类型的复制中使用。  
+ **sp_expired_subscription_cleanup** 在所有类型的复制中使用。  
   
- **sp_expired_subscription_cleanup**由 "过期的订阅清除" 作业执行，每24小时检测并删除发布数据库中的过期订阅。 如果有任何订阅过期，也就是说，在保持期内未与发布服务器保持同步，则声明发布已过期并在发布服务器上清除该订阅的跟踪。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
+ **sp_expired_subscription_cleanup** 由 "过期的订阅清除" 作业执行，每24小时检测并删除发布数据库中的过期订阅。 如果有任何订阅过期，也就是说，在保持期内未与发布服务器保持同步，则声明发布已过期并在发布服务器上清除该订阅的跟踪。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_expired_subscription_cleanup**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_expired_subscription_cleanup**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_mergesubscription_cleanup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   

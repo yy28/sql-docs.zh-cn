@@ -1,5 +1,6 @@
 ---
-title: sp_dropmergepullsubscription （Transact-sql） |Microsoft Docs
+description: sp_dropmergepullsubscription (Transact-SQL)
+title: sp_dropmergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dab181e38d9c072f5e25dc8db490a7538bbe615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474245"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,27 +41,27 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 NULL。 此参数是必需的。 指定一个值，**以删除所有发布**的订阅  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 NULL。 此参数是必需的。 指定一个值， **以删除所有发布** 的订阅  
   
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 此参数是必需的。  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器*的 **sysname**，默认值为 NULL。 此参数是必需的。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 NULL。 此参数是必需的。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db*的默认值为 **sysname**，默认值为 NULL。 此参数是必需的。  
   
-`[ @reserved = ] 'reserved'`保留供将来使用。 *reserved*为**bit**，默认值为**0**。  
+`[ @reserved = ] 'reserved'` 保留供将来使用。 *reserved* 为 **bit**，默认值为 **0**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_dropmergepullsubscription**用于合并复制。  
+ **sp_dropmergepullsubscription** 用于合并复制。  
   
- **sp_dropmergepullsubscription**删除此合并请求订阅的合并代理，但合并代理不是在**sp_addmergepullsubscription**中创建的。  
+ **sp_dropmergepullsubscription** 删除此合并请求订阅的合并代理，但合并代理不是在 **sp_addmergepullsubscription**中创建的。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或创建了合并请求订阅的用户才能**sp_dropmergepullsubscription**执行。 只有创建合并请求订阅的用户属于此角色时， **db_owner**固定数据库角色才能执行**sp_dropmergepullsubscription** 。  
+ 只有 **sysadmin** 固定服务器角色的成员或创建了合并请求订阅的用户才能 **sp_dropmergepullsubscription**执行。 只有创建合并请求订阅的用户属于此角色时， **db_owner** 固定数据库角色才能执行 **sp_dropmergepullsubscription** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   

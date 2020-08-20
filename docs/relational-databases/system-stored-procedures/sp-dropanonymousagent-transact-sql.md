@@ -1,5 +1,6 @@
 ---
-title: sp_dropanonymousagent （Transact-sql） |Microsoft Docs
+description: sp_dropanonymousagent (Transact-SQL)
+title: sp_dropanonymousagent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: acf909be9ca1185ea441acf27a60409e1c868328
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d6e687976dab6d526a2413260d2ad2f980001086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474272"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
@@ -37,20 +38,20 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @subid = ] sub_id`匿名订阅的全局标识符。 *sub_id*是**uniqueidentifier**，无默认值。 可以使用**sp_helppullsubscription**在订阅服务器上检索此标识符。 返回的结果集的**subid**字段中的值是此全局标识符。  
+`[ @subid = ] sub_id` 匿名订阅的全局标识符。 *sub_id* 是 **uniqueidentifier**，无默认值。 可以使用 **sp_helppullsubscription**在订阅服务器上检索此标识符。 返回的结果集的 **subid** 字段中的值是此全局标识符。  
   
-`[ @type = ] type`订阅的类型。 *类型*为**int**，无默认值。 有效值为**1**或**2**。 如果使用分发代理快照复制或事务复制，请指定**1**。 如果使用合并代理合并复制，则指定**2**。  
+`[ @type = ] type` 订阅的类型。 *类型* 为 **int**，无默认值。 有效值为 **1** 或 **2**。 如果使用分发代理快照复制或事务复制，请指定 **1**。 如果使用合并代理合并复制，则指定 **2**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_dropanonymousagent**在所有类型的复制中使用。  
+ **sp_dropanonymousagent** 在所有类型的复制中使用。  
   
  此存储过程只用于删除匿名订阅代理，而不能用于删除众所周知的订阅。  
   
 ## <a name="permissions"></a>权限  
- 只有分发数据库中**db_owner**固定数据库角色的成员才能执行**sp_dropanonymousagent**。  
+ 只有分发数据库中 **db_owner** 固定数据库角色的成员才能执行 **sp_dropanonymousagent**。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

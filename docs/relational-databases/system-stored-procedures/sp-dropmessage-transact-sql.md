@@ -1,5 +1,6 @@
 ---
-title: sp_dropmessage （Transact-sql） |Microsoft Docs
+description: sp_dropmessage (Transact-SQL)
+title: sp_dropmessage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474225"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中删除指定的用户定义的错误消息。 可以使用**sys.databases**目录视图查看用户定义的消息。  
+  从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中删除指定的用户定义的错误消息。 可以使用 **sys.databases** 目录视图查看用户定义的消息。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @msgnum = ] message_number`要删除的消息号。 *message_number*必须是消息编号大于50000的用户定义消息。 *message_number*的值为**int**，默认值为 NULL。  
+`[ @msgnum = ] message_number` 要删除的消息号。 *message_number* 必须是消息编号大于50000的用户定义消息。 *message_number* 的值为 **int**，默认值为 NULL。  
   
-`[ @lang = ] 'language'`要删除的消息的语言。 如果指定**all** ，则删除*message_number*的所有语言版本。 *language*的值为**sysname**，默认值为 NULL。  
+`[ @lang = ] 'language'` 要删除的消息的语言。 如果指定 **all** ，则删除 *message_number* 的所有语言版本。 *language* 的值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,7 +52,7 @@ sp_dropmessage [ @msgnum = ] message_number
  无。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**和**serveradmin**固定服务器角色的成员身份。  
+ 要求具有 **sysadmin** 和 **serveradmin** 固定服务器角色的成员身份。  
   
 ## <a name="remarks"></a>备注  
  除非为*语言*指定**all** ，否则必须先删除消息的所有本地化版本，然后才能删除该消息的美国英语版本。  
@@ -59,7 +60,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. 删除用户定义的消息  
- 下面的示例 `50001` 从**sys.databases**中删除用户定义的消息 number。  
+ 下面的示例 `50001` 从 **sys.databases**中删除用户定义的消息 number。  
   
 ```  
 USE master;  

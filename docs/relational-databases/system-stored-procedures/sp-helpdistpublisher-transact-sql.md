@@ -1,5 +1,6 @@
 ---
-title: sp_helpdistpublisher （Transact-sql） |Microsoft Docs
+description: sp_helpdistpublisher (Transact-SQL)
+title: sp_helpdistpublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb9bfd2bebe5220d992b92251c79df957f3d7077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474072"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,8 +38,8 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
     [ , [ @check_user = ] check_user  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`要为其返回属性的发布服务器。 *发布服务器*的**sysname**为，默认值为 **%** 。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 要为其返回属性的发布服务器。 *发布服务器* 的 **sysname**为，默认值为 **%** 。  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -50,25 +51,25 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**distribution_db**|**sysname**|指定的发布服务器的分发数据库。|  
 |**security_mode**|**int**|复制代理连接到发布服务器进行排队更新订阅时所用的安全模式，或者用于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的安全模式。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证|  
 |**id**|**sysname**|复制代理连接到发布服务器进行排队更新订阅时的登录名，或者用于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的登录名。|  
-|**password**|**nvarchar （524）**|返回的密码（采用简单加密格式）。 对于除**sysadmin**以外的用户，密码为 NULL。|  
-|**active**|**bit**|指示远程发布服务器是否将本地服务器用作分发服务器：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**password**|**nvarchar (524) **|返回的密码（采用简单加密格式）。 对于除 **sysadmin**以外的用户，密码为 NULL。|  
+|**active**|**bit**|指示远程发布服务器是否将本地服务器用作分发服务器：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |**working_directory**|**nvarchar(255)**|工作目录的名称。|  
-|**受信任**|**bit**|指示发布服务器连接到分发服务器时是否需要密码。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本，这应该始终返回**0**，这意味着密码是必需的。|  
+|**受信任**|**bit**|指示发布服务器连接到分发服务器时是否需要密码。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本，这应该始终返回 **0**，这意味着密码是必需的。|  
 |**thirdparty_flag**|**bit**|指示发布是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用还是由第三方应用程序启用：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、oracle 或 oracle 网关发布服务器。<br /><br /> **1** = 发布服务器已与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用第三方应用程序集成。|  
 |**publisher_type**|**sysname**|发布服务器的类型；可以为下列值之一：<br /><br /> **MSSQLSERVER**<br /><br /> **联手**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|发布服务器中 OLE DB 数据源的名称。|  
 |**storage_connection_string**|**nvarchar(4000)**|适用于 Azure SQL 数据库中的分发服务器或发布服务器的工作目录的存储访问密钥。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helpdistpublisher**在所有类型的复制中使用。  
+ **sp_helpdistpublisher** 在所有类型的复制中使用。  
   
- **sp_helpdistpublisher**不会在非**sysadmin**登录的结果集中显示发布服务器的登录名或密码。  
+ **sp_helpdistpublisher** 不会在非**sysadmin** 登录的结果集中显示发布服务器的登录名或密码。  
   
 ## <a name="permissions"></a>权限  
- **Sysadmin**固定服务器角色的成员可以对使用本地服务器作为分发服务器的任何发布服务器执行**sp_helpdistpublisher** 。 **Db_owner**固定数据库角色的成员或分发数据库中的**replmonitor**角色的成员可以对使用该分发数据库的任何发布服务器执行**sp_helpdistpublisher** 。 指定*发布服务器*上发布的发布访问列表中的用户可能会执行**sp_helpdistpublisher**。 如果未指定*发布服务器*，则会为用户有权访问的所有发布服务器返回信息。  
+ **Sysadmin**固定服务器角色的成员可以对使用本地服务器作为分发服务器的任何发布服务器执行**sp_helpdistpublisher** 。 **Db_owner**固定数据库角色的成员或分发数据库中的**replmonitor**角色的成员可以对使用该分发数据库的任何发布服务器执行**sp_helpdistpublisher** 。 指定 *发布服务器* 上发布的发布访问列表中的用户可能会执行 **sp_helpdistpublisher**。 如果未指定 *发布服务器* ，则会为用户有权访问的所有发布服务器返回信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -1,5 +1,6 @@
 ---
-title: sp_delete_maintenance_plan_db （Transact-sql） |Microsoft Docs
+description: sp_delete_maintenance_plan_db (Transact-SQL)
+title: sp_delete_maintenance_plan_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 114240ad0916a664e95dbc980093b857ecd500a6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9997758701897aa5fa37afb85cac053e22b0e5c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474355"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +49,9 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] 'plan\_id'`指定维护计划 ID。 *plan_id*是**uniqueidentifier**。  
+`[ @plan_id = ] 'plan\_id'` 指定维护计划 ID。 *plan_id* 是 **uniqueidentifier**。  
   
-`[ @db_name = ] 'database\_name'`指定要从维护计划中删除的数据库名称。 database_name 的数据类型为 sysname******。  
+`[ @db_name = ] 'database\_name'` 指定要从维护计划中删除的数据库名称。 database_name 的数据类型为 sysname******。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -60,13 +61,13 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
  **Sp_delete_maintenance_plan_db**存储过程将删除维护计划和指定数据库之间的关联;它不会删除或破坏数据库。  
   
- 当**sp_delete_maintenance_plan_db**从维护计划中删除最后一个数据库时，该存储过程也会删除维护计划。  
+ 当 **sp_delete_maintenance_plan_db** 从维护计划中删除最后一个数据库时，该存储过程也会删除维护计划。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_delete_maintenance_plan_db**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_delete_maintenance_plan_db**执行。  
   
 ## <a name="examples"></a>示例  
- 删除**AdventureWorks2012**数据库中的维护计划（以前通过使用**sp_add_maintenance_plan_db**添加）。  
+ 删除 **AdventureWorks2012** 数据库中的维护计划（以前通过使用 **sp_add_maintenance_plan_db**添加）。  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  

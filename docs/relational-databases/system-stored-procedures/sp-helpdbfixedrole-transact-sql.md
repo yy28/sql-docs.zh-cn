@@ -1,5 +1,6 @@
 ---
-title: sp_helpdbfixedrole （Transact-sql） |Microsoft Docs
+description: sp_helpdbfixedrole (Transact-SQL)
+title: sp_helpdbfixedrole (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b029430388e1f58a725e5eb15795fa47380eda7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f7d2518a14ba15a7cd91ea4c9a41d6710d9572e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474074"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] 'role'`固定数据库角色的名称。 *role*的值为**sysname**，默认值为 NULL。 如果指定了*role* ，则仅返回有关该角色的信息;否则，将返回所有固定数据库角色的列表和说明。  
+`[ @rolename = ] 'role'` 固定数据库角色的名称。 *role* 的值为 **sysname**，默认值为 NULL。 如果指定了 *role* ，则仅返回有关该角色的信息;否则，将返回所有固定数据库角色的列表和说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -49,7 +50,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定数据库角色的名称。|  
-|**说明**|**nvarchar （70）**|DbFixedRole 的说明 **。**|  
+|**说明**|**nvarchar (70) **|DbFixedRole 的说明 **。**|  
   
 ## <a name="remarks"></a>备注  
  固定数据库角色（如下表所示）在数据库级上定义，具有执行特定数据库级的管理活动的权限。 无法添加或删除固定数据库角色。 无法更改授予固定数据库角色的权限。  

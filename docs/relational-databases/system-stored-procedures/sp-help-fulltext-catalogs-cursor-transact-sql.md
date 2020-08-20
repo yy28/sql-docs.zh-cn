@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_catalogs_cursor （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_catalogs_cursor (Transact-SQL)
+title: sp_help_fulltext_catalogs_cursor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9ab95a6e2d4b44c42735c5ffd9fe084a2a85854
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c9fb8cc87cf3221aff60cb492540d377e2f89b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474220"
 ---
 # <a name="sp_help_fulltext_catalogs_cursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85728172"
   使用游标返回指定的全文目录的 ID、名称、根目录、状态和全文索引表的数量。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]改用[sys.databases fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)目录视图。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [sys.databases fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 目录视图。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,10 +44,10 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
      [ @fulltext_catalog_name = ] 'fulltext_catalog_name'   
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @cursor_return = ] @cursor_variable OUTPUT`类型为**cursor**的输出变量。 游标是只读的可滚动动态游标。  
+## <a name="arguments"></a>参数  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 类型为 **cursor**的输出变量。 游标是只读的可滚动动态游标。  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`全文目录的名称。 *fulltext_catalog_name* **sysname**。 如果省略该参数或该参数值为 NULL，则返回与当前数据库关联的所有全文目录的信息。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 全文目录的名称。 *fulltext_catalog_name* **sysname**。 如果省略该参数或该参数值为 NULL，则返回与当前数据库关联的所有全文目录的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -57,12 +58,12 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文目录的标识符。|  
 |**NAME**|**sysname**|全文目录的名称。|  
-|**通道**|**nvarchar(260)**|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
+|PATH|**nvarchar(260)**|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
 |**状态**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|与目录关联的全文索引表的数量。|  
   
 ## <a name="permissions"></a>权限  
- Execute 权限默认授予**public**角色。  
+ Execute 权限默认授予 **public** 角色。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关 `Cat_Desc` 全文目录的信息。  

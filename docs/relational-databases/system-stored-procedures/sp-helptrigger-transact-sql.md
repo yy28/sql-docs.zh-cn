@@ -1,5 +1,6 @@
 ---
-title: sp_helptrigger （Transact-sql） |Microsoft Docs
+description: sp_helptrigger (Transact-SQL)
+title: sp_helptrigger (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e79a0a06b812fedd98ed558c17f00d026bae8ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473963"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回对当前数据库的指定表定义的 DML 触发器的类型。 sp_helptrigger 不能与 DDL 触发器一起使用。 改为查询[系统存储过程](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)目录视图。  
+  返回对当前数据库的指定表定义的 DML 触发器的类型。 sp_helptrigger 不能与 DDL 触发器一起使用。 改为查询 [系统存储过程](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 目录视图。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,10 +41,10 @@ sp_helptrigger [ @tabname = ] 'table'
      [ , [ @triggertype = ] 'type' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @tabname = ] 'table'`当前数据库中要为其返回触发器信息的表的名称。 *table*为**nvarchar （776）**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @tabname = ] 'table'` 当前数据库中要为其返回触发器信息的表的名称。 *table* 为 **nvarchar (776) **，无默认值。  
   
-`[ @triggertype = ] 'type'`要返回其相关信息的 DML 触发器的类型。 *类型*为**char （6）**，默认值为 NULL，可以是下列值之一。  
+`[ @triggertype = ] 'type'` 要返回其相关信息的 DML 触发器的类型。 *类型* 为 **char (6) **，默认值为 NULL，可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -59,7 +60,7 @@ sp_helptrigger [ @tabname = ] 'table'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|trigger_name |**sysname**|触发器的名称。|  
+|trigger_name|**sysname**|触发器的名称。|  
 |**trigger_owner**|**sysname**|对其定义触发器的表的所有者名称。|  
 |**isupdate**|**int**|1=UPDATE 触发器<br /><br /> 0=不是 UPDATE 触发器|  
 |**isdelete**|**int**|1=DELETE 触发器<br /><br /> 0=不是 DELETE 触发器|  
@@ -69,7 +70,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**trigger_schema**|**sysname**|触发器所属架构的名称。|  
   
 ## <a name="permissions"></a>权限  
- 要求对表具有[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)权限。  
+ 要求对表具有 [元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md) 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例执行 `sp_helptrigger` 以生成有关对 `Person.Person` 表的触发器的信息。  

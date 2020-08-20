@@ -1,5 +1,6 @@
 ---
-title: sp_helparticledts （Transact-sql） |Microsoft Docs
+description: sp_helparticledts (Transact-SQL)
+title: sp_helparticledts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfacdd363e66401bc9cfbf494f6cb64ab12446fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6340460ff9bc1c8d0454d7ad0e4f05637df772bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474136"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "85634537"
 sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @article = ] 'article'`发布中项目的名称。 *项目*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 发布中项目的名称。 *项目* 是 **sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -52,14 +53,14 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 |**post_script_task_name**|**sysname**|复制快照数据之后发生的编程任务的名称。 遇到错误时程序将停止执行。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helparticledts**用于快照复制和事务复制。  
+ **sp_helparticledts** 用于快照复制和事务复制。  
   
  在复制 Data Transformation Services (DTS) 程序中命名任务时，必须遵从复制代理所需的某些命名约定。 对于自定义任务（如执行 SQL 任务），名称是由项目名称、前缀和可选部分组成的串联字符串。 编写代码时，如果不能确定任务名，则结果集将给出应使用的任务名。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员和**db_owner**固定数据库角色的成员才能执行**sp_helparticledts**。  
+ 只有 **sysadmin** 固定服务器角色的成员和 **db_owner** 固定数据库角色的成员才能执行 **sp_helparticledts**。  
   
   

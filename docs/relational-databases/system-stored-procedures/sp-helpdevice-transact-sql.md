@@ -1,5 +1,6 @@
 ---
-title: sp_helpdevice （Transact-sql） |Microsoft Docs
+description: sp_helpdevice (Transact-SQL)
+title: sp_helpdevice (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cda03415378577a061bb308c0b19e7fcd0659d49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474109"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893601"
   报告有关 Microsoft® SQL Server™ 备份设备的信息。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]建议改用[sys.databases backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)目录视图  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建议改用 [sys.databases backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) 目录视图  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @devname = ] 'name'`要报告其信息的备份设备的名称。 *Name*的值始终为**sysname**。  
+`[ @devname = ] 'name'` 要报告其信息的备份设备的名称。 *Name*的值始终为**sysname**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -53,15 +54,15 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|逻辑设备名。|  
 |**physical_name**|**nvarchar(260)**|物理文件名。|  
-|**2008**|**nvarchar(255)**|设备的说明。|  
-|**status**|**int**|与 "**说明**" 列中的状态说明相对应的数字。|  
+|description|**nvarchar(255)**|设备的说明。|  
+|**status**|**int**|与 " **说明** " 列中的状态说明相对应的数字。|  
 |**cntrltype**|**smallint**|设备的控制器类型：<br /><br /> 2 = 磁盘设备<br /><br /> 5 = 磁带设备|  
-|size |**int**|设备大小（以 2 KB 页为单位）。|  
+|**大小**|**int**|设备大小（以 2 KB 页为单位）。|  
   
 ## <a name="remarks"></a>备注  
- 如果指定*name* ， **sp_helpdevice**将显示有关指定转储设备的信息。 如果未指定*name* ， **sp_helpdevice**将显示有关**sys.databases backup_devices**目录视图中的所有转储设备的信息。  
+ 如果指定 *name* ， **sp_helpdevice** 将显示有关指定转储设备的信息。 如果未指定 *name* ， **sp_helpdevice** 将显示有关 **sys.databases backup_devices** 目录视图中的所有转储设备的信息。  
   
- 使用**sp_addumpdevice**将转储设备添加到系统中。  
+ 使用 **sp_addumpdevice**将转储设备添加到系统中。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

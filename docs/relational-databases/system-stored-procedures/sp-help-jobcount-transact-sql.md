@@ -1,5 +1,6 @@
 ---
-title: sp_help_jobcount （Transact-sql） |Microsoft Docs
+description: sp_help_jobcount (Transact-SQL)
+title: sp_help_jobcount (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86d4c7ebeac06589e7f80f0a01adb0b996a1d3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474189"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @schedule_id = ] schedule_id`要列出的计划的标识符。 *schedule_id*为**int**，没有默认值。 可以指定*schedule_id*或*schedule_name* 。  
+`[ @schedule_id = ] schedule_id` 要列出的计划的标识符。 *schedule_id* 为 **int**，没有默认值。 可以指定 *schedule_id* 或 *schedule_name* 。  
   
-`[ @schedule_name = ] 'schedule_name'`要列出的计划的名称。 *schedule_name* **sysname**，无默认值。 可以指定*schedule_id*或*schedule_name* 。  
+`[ @schedule_name = ] 'schedule_name'` 要列出的计划的名称。 *schedule_name* **sysname**，无默认值。 可以指定 *schedule_id* 或 *schedule_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  返回以下结果集：  
@@ -59,7 +60,7 @@ sp_help_jobcount
  此过程列出附加到指定计划的作业数。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -69,7 +70,7 @@ sp_help_jobcount
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有**sysadmin**的成员才可以查看其他用户拥有的作业的计数。  
+ 只有 **sysadmin** 的成员才可以查看其他用户拥有的作业的计数。  
   
 ## <a name="examples"></a>示例  
  以下示例列出了附加到 `NightlyJobs` 计划的作业数。  

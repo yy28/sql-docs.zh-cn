@@ -1,5 +1,6 @@
 ---
-title: sp_delete_jobserver （Transact-sql） |Microsoft Docs
+description: sp_delete_jobserver (Transact-SQL)
+title: sp_delete_jobserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474337"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,23 +41,23 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id`要从中删除指定目标服务器的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要从中删除指定目标服务器的作业的标识号。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'`要从中删除指定目标服务器的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要从中删除指定目标服务器的作业的名称。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  必须指定*job_id*或*job_name* ;不能同时指定两者。  
+>  必须指定 *job_id* 或 *job_name* ;不能同时指定两者。  
   
-`[ @server_name = ] 'server'`要从指定作业中删除的目标服务器的名称。 *服务器*为**nvarchar （30）**，无默认值。 *服务器*可以是 **（LOCAL）** 或远程目标服务器的名称。  
+`[ @server_name = ] 'server'` 要从指定作业中删除的目标服务器的名称。 *服务器* ** (30) 为 nvarchar **，无默认值。 *服务器* 可以 ** (本地) **或远程目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须是**sysadmin**固定服务器角色的成员。  
+ 若要运行此存储过程，用户必须是 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  下面的示例 `SEATTLE2` 从处理作业中删除服务器 `Weekly Sales Backups` 。  

@@ -1,5 +1,6 @@
 ---
-title: sp_dropdevice （Transact-sql） |Microsoft Docs
+description: sp_dropdevice (Transact-SQL)
+title: sp_dropdevice (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4c4a02e581b743b780db715b61f06ef7f22413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474289"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  从的实例中删除数据库设备或备份设备，并 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 从**master.dbo.sys设备**中删除该条目。  
+  从的实例中删除数据库设备或备份设备，并 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 从 **master.dbo.sys设备**中删除该条目。  
    
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,9 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @logicalname = ] 'device'`**master.dbo.sysdevices.name**中列出的数据库设备或备份设备的逻辑名称。 *设备*为**sysname**，无默认值。  
+`[ @logicalname = ] 'device'`**master.dbo.sysdevices.name**中列出的数据库设备或备份设备的逻辑名称。 *设备* 为 **sysname**，无默认值。  
   
-`[ @delfile = ] 'delfile'`指定是否应删除物理备份设备文件。 *delfile*为**varchar （7）**。 如果指定为**DELFILE**，则删除物理备份设备磁盘文件。  
+`[ @delfile = ] 'delfile'` 指定是否应删除物理备份设备文件。 *delfile* 是 **varchar (7) **。 如果指定为 **DELFILE**，则删除物理备份设备磁盘文件。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

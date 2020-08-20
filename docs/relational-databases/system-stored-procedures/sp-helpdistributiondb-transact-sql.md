@@ -1,5 +1,6 @@
 ---
-title: sp_helpdistributiondb （Transact-sql） |Microsoft Docs
+description: sp_helpdistributiondb (Transact-SQL)
+title: sp_helpdistributiondb (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f592b7f3f5c864fba493327cb2b5cda1e44998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474069"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85749308"
 sp_helpdistributiondb [ [ @database= ] 'database_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @database = ] 'database_name'`要为其返回属性的数据库的名称。 *database_name*是**sysname**， **%** 对于与分发服务器关联的所有数据库，默认值为，用户具有权限。  
+## <a name="arguments"></a>参数  
+`[ @database = ] 'database_name'` 要为其返回属性的数据库的名称。 *database_name* 是 **sysname**， **%** 对于与分发服务器关联的所有数据库，默认值为，用户具有权限。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -58,13 +59,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**log_file_size**|**int**|以 MB 为单位的日志文件初始大小。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helpdistributiondb**在所有类型的复制中使用。  
+ **sp_helpdistributiondb** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 分发数据库中**db_owner**固定数据库角色的成员或**replmonitor**角色的成员，以及使用分发数据库的发布的发布访问列表中的用户可以执行**sp_helpdistributiondb**以返回与文件相关的信息。 **公共**角色的成员可以执行**sp_helpdistributiondb** ，以返回其具有访问权限的分发数据库的非文件相关信息。  
+ 分发数据库中 **db_owner** 固定数据库角色的成员或 **replmonitor** 角色的成员，以及使用分发数据库的发布的发布访问列表中的用户可以执行 **sp_helpdistributiondb** 以返回与文件相关的信息。 **公共**角色的成员可以执行**sp_helpdistributiondb** ，以返回其具有访问权限的分发数据库的非文件相关信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

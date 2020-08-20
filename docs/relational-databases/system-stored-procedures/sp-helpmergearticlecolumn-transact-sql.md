@@ -1,5 +1,6 @@
 ---
-title: sp_helpmergearticlecolumn （Transact-sql） |Microsoft Docs
+description: sp_helpmergearticlecolumn (Transact-SQL)
+title: sp_helpmergearticlecolumn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f85830c11ca64f3540995411a2cfe1dac6044544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474022"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。*发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 发布的名称。*发布* 为 **sysname**，无默认值。  
   
-`[ @article = ] 'article'`要检索其信息的项目的表或视图的名称。*项目*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 要检索其信息的项目的表或视图的名称。*项目* 是 **sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -48,16 +49,16 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|标识列。|  
 |column_name|**sysname**|表或视图的列名。|  
-|**发布**|**bit**|指定是否发布列名称。<br /><br /> **1**指定正在发布列。<br /><br /> **0**指定不发布。|  
+|**发布**|**bit**|指定是否发布列名称。<br /><br /> **1** 指定正在发布列。<br /><br /> **0** 指定不发布。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_helpmergearticlecolumn**用于合并复制。  
+ **sp_helpmergearticlecolumn** 用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有分发数据库中**replmonitor**固定数据库角色的成员或发布的发布访问列表中的成员才能执行**sp_helpmergearticlecolumn**。  
+ 只有分发数据库中 **replmonitor** 固定数据库角色的成员或发布的发布访问列表中的成员才能执行 **sp_helpmergearticlecolumn**。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

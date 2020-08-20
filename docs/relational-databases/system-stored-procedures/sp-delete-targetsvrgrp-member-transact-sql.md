@@ -1,5 +1,6 @@
 ---
-title: sp_delete_targetsvrgrp_member （Transact-sql） |Microsoft Docs
+description: sp_delete_targetsvrgrp_member (Transact-SQL)
+title: sp_delete_targetsvrgrp_member (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51846fabc42e99ab82bd3a9d6312ba6316c9c651
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b5bfbe079f5004f7d0da8b42093068ebb57ea74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474309"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,18 +40,18 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @group_name = ] 'group_name'`组的名称。 *group_name* **sysname**，无默认值。  
+`[ @group_name = ] 'group_name'` 组的名称。 *group_name* **sysname**，无默认值。  
   
-`[ @server_name = ] 'server_name'`要从指定组中删除的服务器的名称。 *server_name*为**nvarchar （30）**，无默认值。  
+`[ @server_name = ] 'server_name'` 要从指定组中删除的服务器的名称。 *server_name* 为 **nvarchar (30) **，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
+ 若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例从 Servers Maintaining Customer Information 组中删除服务器 `LONDON1`。  

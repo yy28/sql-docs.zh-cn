@@ -1,5 +1,6 @@
 ---
-title: sp_helparticlecolumns （Transact-sql） |Microsoft Docs
+description: sp_helparticlecolumns (Transact-SQL)
+title: sp_helparticlecolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ab8250e12f5b553a9c2c080b0a1e4efe9eb1657
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eed4538f2ffe43faf6ef83685ba3b5984198663c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474164"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,18 +39,18 @@ sp_helparticlecolumns [ @publication = ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`包含项目的发布的名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 包含项目的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @article = ] 'article'`返回其列的项目的名称。 *项目*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 返回其列的项目的名称。 *项目* 是 **sysname**，无默认值。  
   
-`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  如果发布服务器发布请求的项目，则不应指定*发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （未发布的列）或**1** （已发布的列）  
+ **0** (未发布) 或 **1** (发布的列的列)   
   
 ## <a name="result-sets"></a>结果集  
   
@@ -57,17 +58,17 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**列 id**|**int**|列的标识符。|  
 |**column**|**sysname**|列的名称。|  
-|**发布**|**bit**|指示是否发布列：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**发布**|**bit**|指示是否发布列：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |**发布服务器类型**|**sysname**|发布服务器上列的数据类型。|  
 |**订阅服务器类型**|**sysname**|订阅服务器上列的数据类型。|  
   
 ## <a name="remarks"></a>备注  
- **sp_helparticlecolumns**用于快照复制和事务复制。  
+ **sp_helparticlecolumns** 用于快照复制和事务复制。  
   
- **sp_helparticlecolumns**可用于检查垂直分区。  
+ **sp_helparticlecolumns** 可用于检查垂直分区。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员、 **db_owner**固定数据库角色的成员或当前发布的发布访问列表才能执行**sp_helparticlecolumns**。  
+ 只有 **sysadmin** 固定服务器角色的成员、 **db_owner** 固定数据库角色的成员或当前发布的发布访问列表才能执行 **sp_helparticlecolumns**。  
   
 ## <a name="see-also"></a>另请参阅  
  [定义和修改列筛选器](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   

@@ -1,5 +1,6 @@
 ---
-title: sp_droprole （Transact-sql） |Microsoft Docs
+description: sp_droprole (Transact-SQL)
+title: sp_droprole (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a3d30a00c08dd90cf98e565eff46cfa58928c72
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a909a672680428cd5cca761945a0443ae5a1630c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474261"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881775"
   从当前数据库中删除数据库角色。  
   
 > [!IMPORTANT]  
->  在中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， **sp_droprole**已由 DROP ROLE 语句取代。 提供**sp_droprole**仅是为了兼容早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在未来版本中可能不支持。  
+>  在中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， **sp_droprole** 已由 DROP ROLE 语句取代。 提供**sp_droprole**仅是为了兼容早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在未来版本中可能不支持。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,17 +43,17 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] 'role'`要从当前数据库中删除的数据库角色的名称。 *role*是**sysname**，无默认值。 *角色*必须已存在于当前数据库中。  
+`[ @rolename = ] 'role'` 要从当前数据库中删除的数据库角色的名称。 *role* 是 **sysname**，无默认值。 *角色* 必须已存在于当前数据库中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 只能使用**sp_droprole**删除数据库角色。  
+ 只能使用 **sp_droprole**删除数据库角色。  
   
- 不能删除带有现有成员的数据库角色。 必须删除数据库角色的所有成员，然后才能删除该数据库角色。 若要从角色中删除用户，请使用**sp_droprolemember**。 如果任何用户仍是该角色的成员， **sp_droprole**将显示这些成员。  
+ 不能删除带有现有成员的数据库角色。 必须删除数据库角色的所有成员，然后才能删除该数据库角色。 若要从角色中删除用户，请使用 **sp_droprolemember**。 如果任何用户仍是该角色的成员， **sp_droprole** 将显示这些成员。  
   
- 固定角色和**公共**角色无法删除。  
+ 固定角色和 **公共** 角色无法删除。  
   
  如果角色拥有任何安全对象，则不能将其删除。 在删除拥有安全对象的应用程序角色之前，必须首先移交安全对象的所有权或将其删除。 使用 ALTER AUTHORIZATION 更改必须删除的对象的所有者。  
   
@@ -73,7 +74,7 @@ GO
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE &#40;Transact-sql&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact-sql&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sp_dropapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

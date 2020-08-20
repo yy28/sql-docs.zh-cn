@@ -1,5 +1,6 @@
 ---
-title: sp_help_schedule （Transact-sql） |Microsoft Docs
+description: sp_help_schedule (Transact-SQL)
+title: sp_help_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 516314123b6555f7e079471b88384e586bdc5cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474194"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +44,16 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @schedule_id = ] id`要列出的计划的标识符。 *schedule_name*为**int**，没有默认值。 可以指定*schedule_id*或*schedule_name* 。  
+`[ @schedule_id = ] id` 要列出的计划的标识符。 *schedule_name* 为 **int**，没有默认值。 可以指定 *schedule_id* 或 *schedule_name* 。  
   
-`[ @schedule_name = ] 'schedule_name'`要列出的计划的名称。 *schedule_name* **sysname**，无默认值。 可以指定*schedule_id*或*schedule_name* 。  
+`[ @schedule_name = ] 'schedule_name'` 要列出的计划的名称。 *schedule_name* **sysname**，无默认值。 可以指定 *schedule_id* 或 *schedule_name* 。  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]`指定是否仅显示作业附加到的计划。 *attached_schedules_only*为**bit**，默认值为**0**。 当*attached_schedules_only*为**0**时，将显示所有计划。 如果*attached_schedules_only*为**1**，则结果集仅包含附加到作业的计划。  
+`[ @attached_schedules_only = ] attached_schedules_only ]` 指定是否仅显示作业附加到的计划。 *attached_schedules_only* 为 **bit**，默认值为 **0**。 当 *attached_schedules_only* 为 **0**时，将显示所有计划。 如果 *attached_schedules_only* 为 **1**，则结果集仅包含附加到作业的计划。  
   
-`[ @include_description = ] include_description`指定是否在结果集中包含说明。 *include_description*为**bit**，默认值为**0**。 当*include_description*为**0**时，结果集的*schedule_description*列包含占位符。 当*include_description*为**1**时，将在结果集中包含计划的说明。  
+`[ @include_description = ] include_description` 指定是否在结果集中包含说明。 *include_description* 为 **bit**，默认值为 **0**。 当 *include_description* 为 **0**时，结果集的 *schedule_description* 列包含占位符。 当 *include_description* 为 **1**时，将在结果集中包含计划的说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  此过程返回以下结果集：  
@@ -62,12 +63,12 @@ sp_help_schedule
 |**schedule_id**|**int**|计划标识号。|  
 |**schedule_uid**|**uniqueidentifier**|计划的标识符。|  
 |**schedule_name**|**sysname**|计划名称。|  
-|**能够**|**int**|计划是已启用（**1**）还是未启用（**0**）。|  
-|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于**freq_interval**<br /><br /> **64** = 当 SQLServerAgent 服务启动时运行。|  
-|**freq_interval**|**int**|执行作业的天数。 此值取决于**freq_type**的值。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
-|**freq_subday_type**|**int**|**Freq_subday_interval**的单位。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
-|**freq_subday_interval**|**int**|每次执行作业之间要发生的**freq_subday_type**周期数。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
-|**freq_relative_interval**|**int**|计划作业每月的**freq_interval** 。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**enabled**|**int**| (**1**) 还是未启用计划 (**0**) 。|  
+|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于 **freq_interval**<br /><br /> **64** = 当 SQLServerAgent 服务启动时运行。|  
+|**freq_interval**|**int**|执行作业的天数。 此值取决于 **freq_type**的值。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_subday_type**|**int**|**Freq_subday_interval**的单位。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_subday_interval**|**int**|每次执行作业之间要发生的 **freq_subday_type** 周期数。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_relative_interval**|**int**|计划作业每月的 **freq_interval** 。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
 |**freq_recurrence_factor**|**int**|作业的已计划执行日期之间的间隔月数。|  
 |**active_start_date**|**int**|激活计划的日期。|  
 |**active_end_date**|**int**|计划的结束日期。|  
@@ -78,10 +79,10 @@ sp_help_schedule
 |**job_count**|**int**|返回引用此计划的作业数。|  
   
 ## <a name="remarks"></a>备注  
- 如果未提供任何参数， **sp_help_schedule**会列出实例中所有计划的信息。  
+ 如果未提供任何参数， **sp_help_schedule** 会列出实例中所有计划的信息。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

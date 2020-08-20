@@ -1,5 +1,6 @@
 ---
-title: sp_help_spatial_geography_index （Transact-sql） |Microsoft Docs
+description: sp_help_spatial_geography_index (Transact-SQL)
+title: sp_help_spatial_geography_index (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8c9073ae1a2536c87437c94fd9fe224c2c63e63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474148"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  返回有关**地理**空间索引的一组指定属性的名称和值。 以表格式返回结果。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
+  返回有关 **地理** 空间索引的一组指定属性的名称和值。 以表格式返回结果。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +42,11 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
      [ , [ @query_sample = ] 'query_sample' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
- 请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+## <a name="arguments"></a>参数  
+ 请参阅 [空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="properties"></a>属性  
- 请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+## <a name="properties"></a>“属性”  
+ 请参阅 [空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="permissions"></a>权限  
  必须为用户分配一个 PUBLIC 角色以便能够访问该过程。 需要服务器和对象的 READ ACCESS 权限。  
