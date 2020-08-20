@@ -1,5 +1,6 @@
 ---
-title: sp_prepexec （Transact-sql） |Microsoft Docs
+description: sp_prepexec (Transact-SQL)
+title: sp_prepexec (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b8d6d652c6324344af24b9efbb5b74e3accf203e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473892"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  准备并执行参数化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 sp_prepexec 结合了 sp_prepare 和 sp_execute 的函数。 在表格格式数据流（TDS）包中，此操作由 ID = 13 调用。  
+  准备并执行参数化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 sp_prepexec 结合了 sp_prepare 和 sp_execute 的函数。 此操作由表格格式数据流中的 ID = 13 调用 (TDS) 包。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,16 +42,16 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>参数  
  *柄*  
- 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的*句柄*标识符。 *句柄*是带有**int**返回值的必需参数。  
+ 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的 *句柄* 标识符。 *句柄* 是带有 **int** 返回值的必需参数。  
   
  *params*  
- 标识参数化语句。 变量的参数定义将替换为语句*中的参数*标记。 *params*是调用**ntext**、 **nchar**或**nvarchar**输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
+ 标识参数化语句。 变量的参数定义将替换为语句 *中的参数* 标记。 *params* 是调用 **ntext**、 **nchar**或 **nvarchar** 输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
   
  *stmt*  
  定义游标结果集。 *Stmt*参数是必需的，并且调用了**ntext**、 **nchar**或**nvarchar**输入值。  
   
  *bound_param*  
- 指示可选使用其他参数。 *bound_param*调用任何数据类型的输入值来指定要使用的其他参数。  
+ 指示可选使用其他参数。 *bound_param* 调用任何数据类型的输入值来指定要使用的其他参数。  
   
 ## <a name="examples"></a>示例  
  下面的示例准备并执行一个简单的语句：  

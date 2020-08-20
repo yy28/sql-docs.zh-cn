@@ -1,4 +1,5 @@
 ---
+description: 修改主键
 title: 修改主键 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86f2fa7037a7c113a452974f8565148d0a9417e3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f69001aa9bdc4785c992f019807b411f00b755b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473037"
 ---
 # <a name="modify-primary-keys"></a>修改主键
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -49,20 +50,20 @@ ms.locfileid: "86007110"
   
 #### <a name="to-modify-a-primary-key"></a>修改主键  
   
-1.  打开要修改其主键的表的表设计器，在此表设计器中单击右键，然后从快捷菜单中选择“索引/键”  。  
+1.  打开要修改其主键的表的表设计器，在此表设计器中单击右键，然后从快捷菜单中选择“索引/键”****。  
   
-2.  在“索引/键”  对话框中，从“选定的主/唯一键或索引”  列表中选择主键索引。  
+2.  在“索引/键”**** 对话框中，从“选定的主/唯一键或索引”**** 列表中选择主键索引。  
   
 3.  完成下表中的相应操作：  
   
-    |目标|需要遵循的步骤|  
+    |功能|需要遵循的步骤|  
     |--------|------------------------|  
-    |重命名主键|在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”  列表中的名称重复。|  
-    |设置聚集选项|若要为主键创建聚集索引，请选择“创建为聚集的”  ，再从下拉列表框中选择相应的选项。 对于每个表，只允许存在一个聚集索引。 如果此选项对您的索引不可用，则您必须首先对现有的聚集索引清除此设置。<br /><br /> 如果未选择此选项，则创建唯一的非聚集索引。|  
+    |重命名主键|在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”**** 列表中的名称重复。|  
+    |设置聚集选项|若要为主键创建聚集索引，请选择“创建为聚集的”****，再从下拉列表框中选择相应的选项。 对于每个表，只允许存在一个聚集索引。 如果此选项对您的索引不可用，则您必须首先对现有的聚集索引清除此设置。<br /><br /> 如果未选择此选项，则创建唯一的非聚集索引。|  
     |定义填充因子|展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。 有关填充因子及其用途的详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。|  
-    |更改列顺序|选择“列”，再单击属性右侧的省略号 (…)   。 在  **“索引列”** 对话框中，将这些列从主键中删除。 然后，按所需顺序重新添加这些列。 若要将某列从键中移除，只需将其列名从 **“列”** 名称列表名称中移除即可。|  
+    |更改列顺序|选择“列”，再单击属性右侧的省略号 (…) 。 在  **“索引列”** 对话框中，将这些列从主键中删除。 然后，按所需顺序重新添加这些列。 若要将某列从键中移除，只需将其列名从 **“列”** 名称列表名称中移除即可。|  
   
-4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+4.  在“文件”菜单上，单击“保存表名称”********__。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改主键**  

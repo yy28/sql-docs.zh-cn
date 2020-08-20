@@ -1,5 +1,6 @@
 ---
-title: 选择 "从 &lt; 模型" &gt; 。DIMENSION_CONTENT （DMX） |Microsoft Docs
+description: '选择 "从 &lt; 模型" &gt; 。DIMENSION_CONTENT (DMX) '
+title: 选择 "从 &lt; 模型" &gt; 。 (DMX) DIMENSION_CONTENT |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e3d7bbfcce023ce994f71a5897a1cbf4b0095419
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471979"
 ---
-# <a name="select-from-ltmodelgtdimension_content-dmx"></a>选择 "从 &lt; 模型" &gt; 。DIMENSION_CONTENT （DMX）
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>选择 "从 &lt; 模型" &gt; 。DIMENSION_CONTENT (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **SELECT FROM \<model> 。Dimension_CONTENT**语句以维度形式返回与其使用情况有关的模型的内容。  
+  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **SELECT FROM \<model> 。Dimension_CONTENT** 语句以维度形式返回与其使用情况有关的模型的内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +59,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |NODE_TYPE|成员属性。|  
 |NODE_CAPTION|**键**属性的 CaptionColumn。|  
 |CHILDREN_CARDINALITY|成员属性。|  
-|PARENT_UNIQUE_NAME|**键**属性的 RelatedAttribute （在父子层次结构中为 ParentAttribute）。|  
+|PARENT_UNIQUE_NAME|父子层次结构) 中 (ParentAttribute 的 **键** 属性的 RelatedAttribute。|  
 |NODE_DESCRIPTION|成员属性。|  
 |NODE_RULE|成员属性。|  
 |MARGINAL_RULE|成员属性。|  

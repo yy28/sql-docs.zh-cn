@@ -1,5 +1,6 @@
 ---
-title: sp_OADestroy （Transact-sql） |Microsoft Docs
+description: sp_OADestroy (Transact-SQL)
+title: sp_OADestroy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 363d89a420d6fd927293fc39525e1a95d7ebd4b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5bb9f3e59cf27c9bfbac1430c0d7c0830170367d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473926"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,21 +41,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>参数  
  *objecttoken*  
- 是先前使用**sp_OACreate**创建的 OLE 对象的对象标记。  
+ 是先前使用 **sp_OACreate**创建的 OLE 对象的对象标记。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败），是由 OLE 自动化对象返回的 HRESULT 整数值。  
   
- 有关 HRESULT 返回代码的详细信息，请参阅[OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
+ 有关 HRESULT 返回代码的详细信息，请参阅 [OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="remarks"></a>备注  
- 如果未调用**sp_OADestroy** ，则创建的 OLE 对象在批处理结束时自动销毁。  
+ 如果未调用 **sp_OADestroy** ，则创建的 OLE 对象在批处理结束时自动销毁。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**固定服务器角色的成员身份或直接对此存储过程执行权限。 `Ole Automation Procedures`必须**启用**配置才能使用与 OLE 自动化相关的任何系统过程。  
+ 要求具有 **sysadmin** 固定服务器角色的成员身份或直接对此存储过程执行权限。 `Ole Automation Procedures` 必须 **启用** 配置才能使用与 OLE 自动化相关的任何系统过程。  
   
 ## <a name="examples"></a>示例  
- 下面的示例将销毁先前创建的**SQLServer**对象。  
+ 下面的示例将销毁先前创建的 **SQLServer** 对象。  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  
@@ -66,7 +67,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的 OLE 自动化存储过程](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的 OLE 自动化存储过程 ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

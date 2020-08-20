@@ -1,5 +1,6 @@
 ---
-title: sysssislog （Transact-sql） |Microsoft Docs
+description: sysssislog (Transact-SQL)
+title: sysssislog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 264f6495c12a350983af22c1bef325278238a514
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473093"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85889261"
   包或其任务和容器在运行时生成的每个日志记录条目各占一行。 当你安装时，将在 msdb 数据库中创建此表 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 如果将日志记录配置为记录到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则会在指定的数据库中创建采用此格式的 sysssislog 表。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]仅当包使用日志提供程序时，**才**写入此表中的日志记录项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 仅当包使用日志提供程序时， **才** 写入此表中的日志记录项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   
 |列名称|数据类型|说明|  
@@ -46,7 +47,7 @@ ms.locfileid: "85889261"
 |endtime|**datetime**|包的完成时间。<br /><br /> 此功能尚未实现。 endtime 列中的值始终与 starttime 列中的值相同。|  
 |datacode|**int**|一个可选的整数值，它通常表示运行容器或任务的结果。|  
 |databytes|**图像**|包含附加信息的可选字节数组。|  
-|message|**nvarchar**|事件以及与事件关联的信息的说明。|  
+|消息|**nvarchar**|事件以及与事件关联的信息的说明。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)   

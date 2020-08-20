@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE (Transact-SQL)
 title: DROP DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -25,12 +26,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dc64b473319421eab790c438ba75c073852d3c5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 98acb873f2a59619279b24823519892423311671
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472310"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -52,17 +53,19 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 DROP DATABASE database_name [;]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>参数
 
-IF EXISTS  
-  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
+IF EXISTS
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
 
 只有在数据库已存在时才对其进行有条件地删除。
 
-database_name  指定要删除的数据库的名称。 若要显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。
+database_name** 指定要删除的数据库的名称。 若要显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。
 
 database_snapshot_name
-适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本   。
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 指定要删除的数据库快照的名称。
 
@@ -77,7 +80,7 @@ database_snapshot_name
 执行数据库删除操作会从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除数据库，并删除该数据库使用的物理磁盘文件。 执行删除操作时，如果数据库或它的任意一个文件处于脱机状态，则不会删除磁盘文件。 可使用 Windows 资源管理器手动删除这些文件。 若要从当前服务器删除数据库，但不从文件系统删除文件，请使用 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。
 
 > [!WARNING]
-> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)  。
+> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -124,15 +127,15 @@ DROP DATABASE 语句必须是 SQL 批处理中的唯一语句，您一次只能�
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份    。
+要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份************。
 
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-只有服务器级别主体登录名（由预配过程创建）或 dbmanager 数据库角色的成员可以删除数据库  。
+只有服务器级别主体登录名（由预配过程创建）或 dbmanager 数据库角色的成员可以删除数据库****。
 
 ### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份    。
+要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份************。
 
 ## <a name="examples"></a>示例
 

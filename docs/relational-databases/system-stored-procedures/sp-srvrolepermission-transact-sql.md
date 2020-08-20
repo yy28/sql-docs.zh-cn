@@ -1,5 +1,6 @@
 ---
-title: sp_srvrolepermission （Transact-sql） |Microsoft Docs
+description: sp_srvrolepermission (Transact-SQL)
+title: sp_srvrolepermission (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473705"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @srvrolename = ] 'role'`为其返回权限的固定服务器角色的名称。 *role*的值为**sysname**，默认值为 NULL。 如果未指定角色，则返回所有固定服务器角色的权限。 *角色*可以具有以下值之一。  
+`[ @srvrolename = ] 'role'` 为其返回权限的固定服务器角色的名称。 *role* 的值为 **sysname**，默认值为 NULL。 如果未指定角色，则返回所有固定服务器角色的权限。 *角色* 可以具有以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -66,7 +67,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |**权限**|**sysname**|与**ServerRole**关联的权限|  
   
 ## <a name="remarks"></a>备注  
- 列出的权限包括可以执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和固定服务器角色成员可执行的其他特殊活动。 若要显示固定服务器角色的列表，请执行**sp_helpsrvrole**。  
+ 列出的权限包括可以执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和固定服务器角色成员可执行的其他特殊活动。 若要显示固定服务器角色的列表，请执行 **sp_helpsrvrole**。  
   
  **Sysadmin**固定服务器角色具有其他所有固定服务器角色的权限。  
   

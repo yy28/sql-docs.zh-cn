@@ -1,5 +1,6 @@
 ---
-title: PeriodsToDate （MDX） |Microsoft Docs
+description: PeriodsToDate (MDX)
+title: PeriodsToDate (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b18fe4d90a8a0c56424c5e0a7f3607ceea0eae4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471699"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -35,9 +36,9 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 在指定级别的作用域内， **PeriodsToDate**函数返回与指定成员位于同一级别的一组期间，从第一个期间开始、到指定的成员结束。  
+ 在指定级别的作用域内， **PeriodsToDate** 函数返回与指定成员位于同一级别的一组期间，从第一个期间开始、到指定的成员结束。  
   
--   如果指定了级别，则层次结构的当前成员是推断*层次结构*。**CurrentMember**，其中*层次结构*是指定级别的层次结构。  
+-   如果指定了级别，则层次结构的当前成员是推断 *层次结构*。**CurrentMember**，其中 *层次结构*是指定级别的层次结构。  
   
 -   如果既未指定级别，也未指定成员，则该级别是度量值组中 Time 类型的第一个维度上第一个层次结构的当前成员的父级。  
   
@@ -46,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回从**艾德工作**多维`Measures.[Order Quantity]`数据集中包含在`Date`维度中的前八个月的日历年2003的成员的总和。  
+ 下面的示例返回 `Measures.[Order Quantity]` `Date` 从 **艾德工作** 多维数据集中包含在维度中的前八个月的日历年2003的成员的总和。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  

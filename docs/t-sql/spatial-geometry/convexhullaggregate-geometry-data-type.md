@@ -1,4 +1,5 @@
 ---
+description: ConvexHullAggregate（geometry 数据类型）
 title: ConvexHullAggregate（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ff540360dc48dec0d13d6c0fe1093710263ac12f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f5f27e06872c72244361fe2973b005924a2b85d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472512"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,18 +41,18 @@ ConvexHullAggregate ( geometry_operand )
  一个 **geometry** 类型的表列，表示一组 geometry 对象。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
 ## <a name="exception"></a>异常  
  在输入值无效时引发 `FormatException`。 请参阅 [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>备注  
- 在输入为空或具有不同的 SRID 时，方法返回 null  。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>注解  
+ 在输入为空或具有不同的 SRID 时，方法返回 null****。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- 方法忽略 null 输入  。  
+ 方法忽略 null 输入****。  
   
 > [!NOTE]  
->  如果所有输入值均为 null，则方法返回 null   。  
+>  如果所有输入值均为 null，则方法返回 null********。  
   
 ## <a name="examples"></a>示例  
  下面的示例在一个表变量列中返回几何图形对象集的凸包。  

@@ -1,4 +1,5 @@
 ---
+description: ALTER ASYMMETRIC KEY (Transact-SQL)
 title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.date: 04/12/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 596002d6c5440ec9896c5122aa78da4ca085506d
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0e911a6680545e1b9d1b018e257bf191abd0edd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472351"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,16 +57,16 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  *Asym_Key_Name*  
  非对称密钥在数据库中所使用的名称。  
   
- REMOVE PRIVATE KEY  
+ REMOVE PRIVATE KEY   
  从非对称密钥中删除私钥，但不删除公钥。  
   
  WITH PRIVATE KEY  
  更改私钥的保护。  
   
- ENCRYPTION BY PASSWORD ='strongPassword' ****  
- 指定用于保护私钥的新密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
+ ENCRYPTION BY PASSWORD ='strongPassword'**********  
+ 指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
   
- DECRYPTION BY PASSWORD ='oldPassword' ****  
+ DECRYPTION BY PASSWORD ='oldPassword'**********  
  指定当前用于保护私钥的旧密码。 如果私钥使用数据库主密钥进行加密，则不需要指定旧密码。  
   
 ## <a name="remarks"></a>备注  
@@ -75,9 +76,9 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
 |更改其保护|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|旧密码到新密码|必选|必选|  
-|密码到主密钥|省略|必选|  
-|主密钥到密码|必选|省略|  
+|旧密码到新密码|必选|必需|  
+|密码到主密钥|省略|必需|  
+|主密钥到密码|必需|省略|  
   
  必须首先打开数据库主密钥，然后才能使用它来保护私钥。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)。  
   

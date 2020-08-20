@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE 语句限制
 title: CREATE TABLE 语句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a83acb061cf8192dff1c6adede349f49a0b0bbdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a903484663eed886f87d983aa027e4cf5b568408
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471619"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE 语句限制
-当使用 Microsoft Access、Microsoft Excel 或 Paradoxdriver 时，如果未指定 text 或 binary 列的长度（或指定为0），则列长度将设置为255。  
+使用 Microsoft Access、Microsoft Excel 或 Paradoxdriver 时，如果未指定 text 或 binary 列 (或指定为 0) ，则列长度将设置为255。  
   
- 使用 dBASE 驱动程序时，如果未指定 text 或 binary 列的长度（或指定为0），则列长度将设置为254。  
+ 使用 dBASE 驱动程序时，如果未指定 text 或 binary 列的长度 (或指定为 0) ，则列长度将设置为254。  
   
  最多支持255列。  
   

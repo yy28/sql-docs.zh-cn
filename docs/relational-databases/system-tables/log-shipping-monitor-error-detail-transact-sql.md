@@ -1,5 +1,6 @@
 ---
-title: log_shipping_monitor_error_detail （Transact-sql） |Microsoft Docs
+description: log_shipping_monitor_error_detail (Transact-SQL)
+title: log_shipping_monitor_error_detail (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1abbc89dcd085d65f2b44aab54d731f17184b9a7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25c1187b463a52c4f5340356c23b77430ef0123f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473247"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  存储日志传送作业的错误详细信息。 该表存储在**msdb**数据库中。  
+  存储日志传送作业的错误详细信息。 该表存储在 **msdb** 数据库中。  
   
  与历史记录和监视相关的表也用于主服务器和辅助服务器。  
   
@@ -47,9 +48,9 @@ ms.locfileid: "85890182"
 ## <a name="remarks"></a>备注  
  此表包含日志传送代理的错误详细信息。 每个错误都记录为一个异常序列。 每个代理会话可以有多个错误（序列）。  
   
- 除了存储在远程监视服务器上外，与主服务器有关的信息存储在主服务器上的**log_shipping_monitor_error_detail**表中，与辅助服务器相关的信息也存储在辅助服务器上的**log_shipping_monitor_error_detail**表中。  
+ 除了存储在远程监视服务器上外，与主服务器有关的信息存储在主服务器上的 **log_shipping_monitor_error_detail** 表中，与辅助服务器相关的信息也存储在辅助服务器上的 **log_shipping_monitor_error_detail** 表中。  
   
- 若要标识代理会话，请使用列**agent_id**、 **agent_type**和**session_id**。 按**log_time**排序以便按记录的顺序查看错误。  
+ 若要标识代理会话，请使用列 **agent_id**、 **agent_type**和 **session_id**。 按 **log_time** 排序以便按记录的顺序查看错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

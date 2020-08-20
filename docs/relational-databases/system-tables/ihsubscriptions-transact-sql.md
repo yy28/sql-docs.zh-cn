@@ -1,5 +1,6 @@
 ---
-title: IHsubscriptions （Transact-sql） |Microsoft Docs
+description: IHsubscriptions (Transact-SQL)
+title: IHsubscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86483129d7fad394327cb436ee34602b3e4cccaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 87e750351fab39ad132781d25b2733daa8387176
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473243"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  使用当前分发服务器的非 SQL Server 发布服务器中的发布的每个订阅在**IHsubscriptions**系统表中各占一行。 此表存储在分发数据库中。  
+  使用当前分发服务器的非 SQL Server 发布服务器中的发布的每个订阅在 **IHsubscriptions** 系统表中各占一行。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   
@@ -39,7 +40,7 @@ ms.locfileid: "85890208"
 |**login_name**|**sysname**|添加订阅时所使用的登录名。|  
 |**distribution_jobid**|**binary(16)**|分发代理的作业 ID|  
 |**timestamp**|**timestamp**|创建订阅的日期和时间。|  
-|**queued_reinit**|**bit**|指定是否将项目标记为初始化或重新初始化。 如果值为**1** ，则指定订阅的项目已标记为进行初始化或重新初始化。|  
+|**queued_reinit**|**bit**|指定是否将项目标记为初始化或重新初始化。 如果值为 **1** ，则指定订阅的项目已标记为进行初始化或重新初始化。|  
 |**status**|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 已订阅。<br /><br /> **2** = 活动。|  
 |**sync_type**|**tinyint**|初始同步的类型：<br /><br /> **1** = 自动。<br /><br /> **2** = 无。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送-分发代理在订阅服务器上运行。<br /><br /> **1** = 请求-分发代理在分发服务器上运行。|  
@@ -48,8 +49,8 @@ ms.locfileid: "85890208"
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制视图 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   

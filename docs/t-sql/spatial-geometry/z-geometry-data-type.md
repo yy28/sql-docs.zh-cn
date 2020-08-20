@@ -1,4 +1,5 @@
 ---
+description: Z（geometry 数据类型）
 title: Z（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 854a5afed2e6764cf9c5224a6c52a6f1284b9ba1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2e90df19c6d6946c17b554c9195c03bce3f55ca8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472363"
 ---
 # <a name="z-geometry-data-type"></a>Z（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "86554872"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
   
- CLR 类型：SqlDouble   
+ CLR 类型：**SqlDouble**  
   
 ## <a name="remarks"></a>备注  
  如果 geometry 实例不是 point，则此属性的值为 null；对于未设置此属性的任何 **Point** 实例，此属性的值也为 null。  

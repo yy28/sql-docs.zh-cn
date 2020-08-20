@@ -1,5 +1,6 @@
 ---
-title: sysmail_stop_sp （Transact-sql） |Microsoft Docs
+description: sysmail_stop_sp (Transact-SQL)
+title: sysmail_stop_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e503667d51da42f5d103ae479dba3b4a1cba7fce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6630ddcb05645422ba2049636637a3e480e543c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473337"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,28 +40,28 @@ sysmail_stop_sp
 ```  
   
 ## <a name="arguments"></a>参数  
- None  
+ 无  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- 此存储过程位于**msdb**数据库中。  
+ 此存储过程位于 **msdb** 数据库中。  
   
  此存储过程可停止保留待发消息请求的数据库邮件队列，并对外部程序禁用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活。  
   
  当队列停止后，数据库邮件外部程序将不会处理消息。 通过此存储过程可以停止数据库邮件，以进行故障排除或维护。  
   
- 若要开始数据库邮件，请使用**sysmail_start_sp**。 请注意，当对象停止时， **sp_send_dbmail**仍接受 mail [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。  
+ 若要开始数据库邮件，请使用 **sysmail_start_sp**。 请注意，当对象停止时， **sp_send_dbmail** 仍接受 mail [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。  
   
 > [!NOTE]  
 >  此存储过程只停止用于数据库邮件的队列， 它不会停用数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递功能。 此存储过程不会禁用数据库邮件扩展存储过程以减少外围应用。 若要禁用扩展存储过程，请参阅**sp_configure**系统存储过程的[数据库邮件 XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- 下面的示例显示了在**msdb**数据库中停止数据库邮件。 该示例假设数据库邮件已启用。  
+ 下面的示例显示了在 **msdb** 数据库中停止数据库邮件。 该示例假设数据库邮件已启用。  
   
 ```  
 USE msdb ;  

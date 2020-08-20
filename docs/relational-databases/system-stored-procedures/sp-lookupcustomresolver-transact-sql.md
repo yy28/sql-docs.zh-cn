@@ -1,5 +1,6 @@
 ---
-title: sp_lookupcustomresolver （Transact-sql） |Microsoft Docs
+description: sp_lookupcustomresolver (Transact-SQL)
+title: sp_lookupcustomresolver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75f030013417d3cb5f68f8349d36cb26f9971a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473947"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,35 +43,35 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @article_resolver = ] 'article_resolver'`指定正在注销的自定义业务逻辑的名称。 *article_resolver*为**nvarchar （255）**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
+`[ @article_resolver = ] 'article_resolver'` 指定正在注销的自定义业务逻辑的名称。 *article_resolver* 为 **nvarchar (255) **，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT`与*article_resolver*参数中指定的自定义业务逻辑的名称关联的 COM 对象的 CLSID 值。 *resolver_clsid*为**nvarchar （50）**，默认值为 NULL。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 与 *article_resolver* 参数中指定的自定义业务逻辑的名称关联的 COM 对象的 CLSID 值。 *resolver_clsid* 为 **nvarchar (50) **，默认值为 NULL。  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT`指定正在注册的自定义业务逻辑的类型。 *is_dotnet_assembly*为**bit**，默认值为0。 **1**指示正在注册的自定义业务逻辑是一个业务逻辑处理程序程序集;**0**指示它是一个 COM 组件。  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 指定正在注册的自定义业务逻辑的类型。 *is_dotnet_assembly* 为 **bit**，默认值为0。 **1** 指示正在注册的自定义业务逻辑是一个业务逻辑处理程序程序集; **0** 指示它是一个 COM 组件。  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*为**nvarchar （255）**，默认值为 NULL。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name* 为 **nvarchar (255) **，默认值为 NULL。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`是重写 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 以实现业务逻辑处理程序的类的名称。 *dotnet_class_name*为**nvarchar （255）**，默认值为 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 是重写 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 以实现业务逻辑处理程序的类的名称。 *dotnet_class_name* 为 **nvarchar (255) **，默认值为 NULL。  
   
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_lookupcustomresolver**用于合并复制。  
+ **sp_lookupcustomresolver** 用于合并复制。  
   
  当组件未在分发时注册时， **sp_lookupcustomresolver**返回*resolver_clsid*的 NULL 值，当注册属于注册为业务逻辑处理程序的 .NET Framework 程序集时，返回值 "00000000-0000-0000-0000-000000000000"。  
   
- **sp_lookupcustomresolver**由[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)和[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)调用以验证指定的*article_resolver*。  
+ **sp_lookupcustomresolver** 由 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 调用以验证指定的 *article_resolver*。  
   
 ## <a name="permissions"></a>权限  
- 只有发布数据库上**db_owner**固定数据库角色的成员才能执行**sp_lookupcustomresolver**。  
+ 只有发布数据库上 **db_owner** 固定数据库角色的成员才能执行 **sp_lookupcustomresolver**。  
   
 ## <a name="see-also"></a>另请参阅  
- [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [在合并同步过程中执行业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
- [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [为合并项目实现业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [指定合并项目冲突解决程序](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
  [sp_registercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   

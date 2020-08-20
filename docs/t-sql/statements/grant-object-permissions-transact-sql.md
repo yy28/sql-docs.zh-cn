@@ -1,4 +1,5 @@
 ---
+description: GRANT 对象权限 (Transact-SQL)
 title: GRANT 对象权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e15656ca8506ac03f2556f202284d601b58a981
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5cca05a701f7ec0255536c496ae5288cd1105835
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472263"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 对象权限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +89,7 @@ PRIVILEGES
  WITH GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS \<database_principal> 指定一个主体，执行此查询的主体从该主体中获得授予权限的权利。  
+ AS \<database_principal>：指定一个主体，执行该查询的主体从中获得授予权限的权利。  
   
  Database_user  
  指定数据库用户。  

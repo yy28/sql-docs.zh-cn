@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_stop_collection_set （Transact-sql） |Microsoft Docs
+description: sp_syscollector_stop_collection_set (Transact-SQL)
+title: sp_syscollector_stop_collection_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46e8735e48925464d2dc715979a75998b97bd673
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1133928ce137726e4d24996132902316239f469
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473604"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +45,18 @@ sp_syscollector_stop_collection_set
   
 ## <a name="arguments"></a>参数  
  [ @collection_set_id =] *collection_set_id*  
- 收集组的唯一本地标识符。 *collection_set_id*为**int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_set_id*必须具有值。  
+ 收集组的唯一本地标识符。 *collection_set_id* 为 **int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_set_id*必须具有值。  
   
  [ @name =] "*name*"  
- 收集组的名称。 *名称*为**sysname** ，默认值为 NULL。 如果*collection_set_id*为 NULL，则*name*必须具有值。  
+ 收集组的名称。 *名称* 为 **sysname** ，默认值为 NULL。 如果*collection_set_id*为 NULL，则*name*必须具有值。  
   
  [ @stop_collection_job =] *stop_collection_job*  
- 指定应停止收集组的收集作业（如果正在运行）。 *stop_collection_job*为**bit** ，默认值为1。  
+ 指定应停止收集组的收集作业（如果正在运行）。 *stop_collection_job* 为 **bit** ，默认值为1。  
   
- *stop_collection_job*仅适用于集合模式设置为 "已缓存" 的收集组。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_syscollector_create_collection_set ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ *stop_collection_job* 仅适用于集合模式设置为 "已缓存" 的收集组。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_syscollector_create_collection_set ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  sp_syscollector_create_collection_set 必须在 msdb 系统数据库的上下文中运行。  

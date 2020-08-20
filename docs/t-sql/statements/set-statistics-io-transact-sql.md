@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS IO (Transact-SQL)
 title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25b6b222e68325e75d4be8ae10cae6e95ff408e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472190"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,9 @@ ms.locfileid: "85765696"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  当 STATISTICS IO 为“开”时，显示统计信息；为“关”时，不显示信息。   
   
  如果将此选项设置为“开”，则所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句均返回统计信息，直至将该选项设置为“关”。  
@@ -56,13 +59,13 @@ SET STATISTICS IO { ON | OFF }
 |输出项|含义|  
 |-----------------|-------------|  
 |**表**|表的名称。|  
-|**扫描计数**|在任意方向到达叶级别之后开始的搜索或扫描次数，搜索/扫描目的是检索所有用于构造输出的最终数据集的值。<br /><br /> 如果使用的索引是主键上的唯一索引或聚集索引，且只搜索一个值，则扫描计数为 0。 例如，`WHERE Primary_Key_Column = <value>` 。<br /><br /> 当使用对非主键列定义的非唯一的聚集索引搜索一个值时，扫描计数为 1。 此过程的目的是针对你正在搜索的键值检查重复值。 例如，`WHERE Clustered_Index_Key_Column = <value>` 。<br /><br /> 当 N 为通过使用索引键定位键值后，在叶级别的左侧或右侧启动的不同查找或扫描数时，则扫描计数为 N。|  
+|**扫描计数**|在任意方向到达叶级别之后开始的搜索或扫描次数，搜索/扫描目的是检索所有用于构造输出的最终数据集的值。<br /><br /> 如果使用的索引是主键上的唯一索引或聚集索引，且只搜索一个值，则扫描计数为 0。 例如，`WHERE Primary_Key_Column = <value>`。<br /><br /> 当使用对非主键列定义的非唯一的聚集索引搜索一个值时，扫描计数为 1。 此过程的目的是针对你正在搜索的键值检查重复值。 例如，`WHERE Clustered_Index_Key_Column = <value>`。<br /><br /> 当 N 为通过使用索引键定位键值后，在叶级别的左侧或右侧启动的不同查找或扫描数时，则扫描计数为 N。|  
 |**逻辑读取次数**|从数据缓存读取的页数。|  
 |**物理读取次数**|从磁盘读取的页数。|  
 |**预读次数**|为进行查询而放入缓存的页数。|  
-|**lob 逻辑读取次数**|从数据缓存读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页       。|  
-|**lob 物理读取次数**|从磁盘读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页       。|  
-|**lob 预读次数**|为进行查询而放入缓存的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页       。|
+|**lob 逻辑读取次数**|从数据缓存读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页************************。|  
+|**lob 物理读取次数**|从磁盘读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页************************。|  
+|**lob 预读次数**|为进行查询而放入缓存的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页************************。|
 
  SET STATISTICS IO 是在执行或运行时设置，而不是在分析时设置。
 

@@ -1,5 +1,6 @@
 ---
-title: sp_updateextendedproperty （Transact-sql） |Microsoft Docs
+description: sp_updateextendedproperty (Transact-SQL)
+title: sp_updateextendedproperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28341d5b79cf58d5b432d007cc7abe134da0d190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f8bedf71c6ec255aa0b81117c80e9aca6f5b1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473481"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,33 +52,33 @@ sp_updateextendedproperty
     ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @name =] {'*property_name*'}  
- 要更新的属性的名称。 *property_name*为**sysname**，且不能为 NULL。  
+ 要更新的属性的名称。 *property_name* 为 **sysname**，且不能为 NULL。  
   
  [ @value =] {"*value*"}  
  与属性关联的值。 *值* **sql_variant**，默认值为 NULL。 *值*的大小不能超过7500个字节。  
   
  [ @level0type =] {'*level0_object_type*'}  
- 用户或用户定义类型。 *level0_object_type*的值为**varchar （128）**，默认值为 NULL。 有效的输入包括： ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION schema、PLAN GUIDE、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 NULL。  
+ 用户或用户定义类型。 *level0_object_type* 是 **varchar (128) **，默认值为 NULL。 有效的输入包括： ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION schema、PLAN GUIDE、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 NULL。  
   
 > [!IMPORTANT]  
 >  作为级别 0 类型的 USER 和 TYPE 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。 改用 SCHEMA 替代 USER 作为级别 0 类型。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
  [ @level0name =] {'*level0_object_name*'}  
- 所指定的级别 1 对象类型的名称。 *level0_object_name*的值为**sysname** ，默认值为 NULL。  
+ 所指定的级别 1 对象类型的名称。 *level0_object_name* 的值为 **sysname** ，默认值为 NULL。  
   
  [ @level1type =] {'*level1_object_type*'}  
- 级别 1 对象的类型。 *level1_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 级别 1 对象的类型。 *level1_object_type* 是 **varchar (128) ** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
  [ @level1name =] {'*level1_object_name*'}  
- 所指定的级别 1 对象类型的名称。 *level1_object_name*的值为**sysname** ，默认值为 NULL。  
+ 所指定的级别 1 对象类型的名称。 *level1_object_name* 的值为 **sysname** ，默认值为 NULL。  
   
  [ @level2type =] {'*level2_object_type*'}  
- 级别 2 对象的类型。 *level2_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 级别 2 对象的类型。 *level2_object_type* 是 **varchar (128) ** ，默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  [ @level2name =] {'*level2_object_name*'}  
- 所指定的级别 2 对象类型的名称。 *level2_object_name*的默认值为**sysname**，默认值为 NULL。  
+ 所指定的级别 2 对象类型的名称。 *level2_object_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -85,7 +86,7 @@ sp_updateextendedproperty
 ## <a name="remarks"></a>备注  
  为了指定扩展属性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的对象分为三个级别（0、1、2）。 级别0是最高级别，定义为数据库作用域内包含的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。 引用某个级别中的对象必须用拥有或包含它们的更高级别对象的名称进行限制。  
   
- 给定有效*property_name*和*值*，如果所有对象类型和名称都为 null，则更新的属性属于当前数据库。  
+ 给定有效 *property_name* 和 *值*，如果所有对象类型和名称都为 null，则更新的属性属于当前数据库。  
   
 ## <a name="permissions"></a>权限  
  db_owner 和 db_ddladmin 固定数据库角色的成员可以更新任何对象的扩展属性，但以下情况例外：db_ddladmin 不能向数据库本身添加属性，也不能向用户或角色中添加属性。  

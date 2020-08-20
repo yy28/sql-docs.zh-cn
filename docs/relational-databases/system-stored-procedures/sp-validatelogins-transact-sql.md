@@ -1,5 +1,6 @@
 ---
-title: sp_validatelogins （Transact-sql） |Microsoft Docs
+description: sp_validatelogins (Transact-SQL)
+title: sp_validatelogins (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8299e334ff3219c41a3a4adfcc29f238d0ed81b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b3237ed7a7d585e128b678772ec6d3a010fe3d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473431"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,16 +46,16 @@ sp_validatelogins
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**SID**|**varbinary （85）**|Windows 用户或组的 Windows 安全性标识符 (SID)。|  
+|**SID**|**varbinary (85) **|Windows 用户或组的 Windows 安全性标识符 (SID)。|  
 |**NT Login**|**sysname**|Windows 用户或组的名称。|  
   
 ## <a name="remarks"></a>备注  
- 如果孤立的服务器级主体拥有数据库用户，则必须在删除孤立的服务器主体之前首先删除该数据库用户。 若要删除数据库用户，请使用[DROP user](../../t-sql/statements/drop-user-transact-sql.md)。 如果服务器级主体在数据库中拥有安全对象，则必须转移安全对象的所有权，或删除这些安全对象。 若要转让数据库安全对象的所有权，请使用[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
+ 如果孤立的服务器级主体拥有数据库用户，则必须在删除孤立的服务器主体之前首先删除该数据库用户。 若要删除数据库用户，请使用 [DROP user](../../t-sql/statements/drop-user-transact-sql.md)。 如果服务器级主体在数据库中拥有安全对象，则必须转移安全对象的所有权，或删除这些安全对象。 若要转让数据库安全对象的所有权，请使用 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
- 若要删除对不再存在的 Windows 用户和组的映射，请使用[删除登录名](../../t-sql/statements/drop-login-transact-sql.md)。  
+ 若要删除对不再存在的 Windows 用户和组的映射，请使用 [删除登录名](../../t-sql/statements/drop-login-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**或**securityadmin**固定服务器角色的成员身份。  
+ 要求具有 **sysadmin** 或 **securityadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  以下示例显示不存在但仍被授权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 Windows 用户和组。  
@@ -65,9 +66,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP USER &#40;Transact-sql&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
  [DROP LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  
   

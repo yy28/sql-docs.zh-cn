@@ -1,5 +1,6 @@
 ---
-title: sp_resetsnapshotdeliveryprogress （Transact-sql） |Microsoft Docs
+description: sp_resetsnapshotdeliveryprogress (Transact-SQL)
+title: sp_resetsnapshotdeliveryprogress (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a6a4c0114077910f34f548db1f2b0b26d652f4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473826"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,18 +39,18 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @verbose_level = ] verbose_level`指定返回的信息量。 *verbose_level*的值为**int**，默认值为**1**。 如果值为**1** ，则表示如果无法对**MSsnapshotdeliveryprogress**表获取必要的锁，则返回错误， **0**表示不返回错误。  
+`[ @verbose_level = ] verbose_level` 指定返回的信息量。 *verbose_level*的值为 **int**，默认值为 **1**。 如果值为 **1** ，则表示如果无法对 **MSsnapshotdeliveryprogress** 表获取必要的锁，则返回错误， **0** 表示不返回错误。  
   
-`[ @drop_table = ] 'drop_table'`指示是删除还是截断包含有关快照进度信息的表。*drop_table*为**nvarchar （5）**，默认值为**FALSE**。 false 表示截断表，true 表示删除表。  
+`[ @drop_table = ] 'drop_table'` 指示是删除还是截断包含有关快照进度信息的表。*drop_table* 为 **nvarchar (5) **，默认值为 **FALSE**。 false 表示截断表，true 表示删除表。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_resetsnapshotdeliveryprogress**删除**MSsnapshotdeliveryprogress**表中的所有行。 这可以在快照传进程中有效的删除由前一进程在订阅数据库中留下的所有元数据。  
+ **sp_resetsnapshotdeliveryprogress** 删除 **MSsnapshotdeliveryprogress** 表中的所有行。 这可以在快照传进程中有效的删除由前一进程在订阅数据库中留下的所有元数据。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_resetsnapshotdeliveryprogress**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_resetsnapshotdeliveryprogress**。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

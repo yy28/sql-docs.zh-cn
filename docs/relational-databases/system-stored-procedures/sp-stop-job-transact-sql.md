@@ -1,5 +1,6 @@
 ---
-title: sp_stop_job （Transact-sql） |Microsoft Docs
+description: sp_stop_job (Transact-SQL)
+title: sp_stop_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473669"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,30 +45,30 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'`要停止的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要停止的作业的名称。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @job_id = ] job_id`要停止的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要停止的作业的标识号。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @originating_server = ] 'master_server'`主服务器的名称。 如果指定主服务器的名称，则将停止所有多服务器作业。 *master_server*的默认值为**nvarchar （128）**，默认值为 NULL。 仅当在目标服务器上调用**sp_stop_job**时才指定此参数。  
+`[ @originating_server = ] 'master_server'` 主服务器的名称。 如果指定主服务器的名称，则将停止所有多服务器作业。 *master_server* 为 **nvarchar (128) **，默认值为 NULL。 仅当在目标服务器上调用 **sp_stop_job** 时才指定此参数。  
   
 > [!NOTE]  
 >  只能指定前三个参数之一。  
   
-`[ @server_name = ] 'target_server'`要在其上停止多服务器作业的特定目标服务器的名称。 *target_server*的默认值为**nvarchar （128）**，默认值为 NULL。 仅当在多服务器作业的主服务器上调用**sp_stop_job**时才指定此参数。  
+`[ @server_name = ] 'target_server'` 要在其上停止多服务器作业的特定目标服务器的名称。 *target_server* 为 **nvarchar (128) **，默认值为 NULL。 仅当在多服务器作业的主服务器上调用 **sp_stop_job** 时才指定此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- **sp_stop_job**将停止信号发送到数据库。 某些进程可以立即停止，某些进程必须到达稳定点（或代码路径的入口点）才能停止。 某些长时间运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（例如 BACKUP、RESTORE）和某些 DBCC 命令可能要花较长的时间才能完成。 如果这些操作正在运行，则可能需要一段时间才能取消作业。 停止作业导致在作业历史记录中记录“作业已取消”项。  
+ **sp_stop_job** 将停止信号发送到数据库。 某些进程可以立即停止，某些进程必须到达稳定点 (或代码路径的入口点) 才能停止。 某些长时间运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（例如 BACKUP、RESTORE）和某些 DBCC 命令可能要花较长的时间才能完成。 如果这些操作正在运行，则可能需要一段时间才能取消作业。 停止作业导致在作业历史记录中记录“作业已取消”项。  
   
- 如果作业当前正在执行**CmdExec**或**PowerShell**类型的步骤，则强制提前结束正在运行的进程（例如 MyProgram.exe）。 提前结束可能导致不可预知的行为，如进程正在使用的文件保持为打开状态。 因此，如果作业包含**CmdExec**或**PowerShell**类型的步骤，则只能在极极端情况下使用**sp_stop_job** 。  
+ 如果作业当前正在执行 **CmdExec** 或 **PowerShell**类型的步骤，则运行的进程 (例如，MyProgram.exe) 强制提前结束。 提前结束可能导致不可预知的行为，如进程正在使用的文件保持为打开状态。 因此，如果作业包含**CmdExec**或**PowerShell**类型的步骤，则只能在极极端情况下使用**sp_stop_job** 。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

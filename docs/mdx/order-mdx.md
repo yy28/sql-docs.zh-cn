@@ -1,5 +1,6 @@
 ---
-title: 顺序（MDX） |Microsoft Docs
+description: Order (MDX)
+title: 排序 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471739"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -45,12 +46,12 @@ Order(Set_Expression, String_Expression
  通常是单元坐标（返回以字符串表示的数字）的有效多维表达式 (MDX) 的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- **Order**函数可以是层次结构（使用**ASC**或**DESC**标志指定）或非层次结构（使用**BASC**或**BDESC**标志指定的）， **B**代表 "中断层次结构"。 如果指定了**ASC**或**DESC** ， **Order**函数将根据成员在层次结构中的位置对其进行排列，然后对每个级别进行排序。 如果指定了**BASC**或**BDESC** ，则**Order**函数将排列集中的成员，而不考虑层次结构。 在未指定标志的情况下， **ASC**为默认值。  
+ **Order**函数可以是分层 (，如使用**ASC**或**DESC**标志指定的) 或使用**BASC**或**BDESC**标志指定的非层次结构 (;**B**代表 "中断层次结构" ) 。 如果指定了 **ASC** 或 **DESC** ， **Order** 函数将根据成员在层次结构中的位置对其进行排列，然后对每个级别进行排序。 如果指定了 **BASC** 或 **BDESC** ，则 **Order** 函数将排列集中的成员，而不考虑层次结构。 在未指定标志的情况下， **ASC** 为默认值。  
   
- 如果对两个或更多层次结构都执行叉积的集使用**Order**函数，并且使用**DESC**标志，则仅对集内最后一个层次结构中的成员进行排序。 这与 Analysis Services 2000 不同，后者对集合中的所有层次结构进行排序。  
+ 如果对两个或更多层次结构都执行叉积的集使用 **Order** 函数，并且使用 **DESC** 标志，则仅对集内最后一个层次结构中的成员进行排序。 这与 Analysis Services 2000 不同，后者对集合中的所有层次结构进行排序。  
   
 ## <a name="examples"></a>示例  
- 下面的示例从**艾德公司工作**多维数据集中返回 "日期" 维度的 "日历" 层次结构中所有日历季度的分销商订单数。**Order**函数对行轴的集进行重新排序。 **Order**函数按`[Calendar]`层次结构的降序`[Reseller Order Count]`顺序对集进行排序。  
+ 下面的示例从 **艾德公司工作** 多维数据集中返回 "日期" 维度的 "日历" 层次结构中所有日历季度的分销商订单数。 **Order** 函数对行轴的集进行重新排序。 **Order**函数按 `[Reseller Order Count]` 层次结构的降序顺序对集进行排序 `[Calendar]` 。  
   
  `SELECT`  
   
@@ -68,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 请注意，在此示例中，如果**DESC**标志更改为**BDESC**，则会断开层次结构，并返回日历季度列表，而不考虑层次结构：  
+ 请注意，在此示例中，如果 **DESC** 标志更改为 **BDESC**，则会断开层次结构，并返回日历季度列表，而不考虑层次结构：  
   
  `SELECT`  
   
@@ -108,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 下面的示例使用**rank**函数根据 "分销商销售额" 度量值对 City 层次结构的成员进行排序，然后按排名顺序显示它们。 通过使用**order**函数对 City 层次结构的成员集进行第一次排序，排序只完成一次，然后在呈现排序顺序之前进行线性扫描。  
+ 下面的示例使用 **rank** 函数根据 "分销商销售额" 度量值对 City 层次结构的成员进行排序，然后按排名顺序显示它们。 通过使用 **order** 函数对 City 层次结构的成员集进行第一次排序，排序只完成一次，然后在呈现排序顺序之前进行线性扫描。  
   
 ```  
 WITH   
@@ -126,7 +127,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例返回集合中唯一的产品数，并使用**order**函数对非空元组进行排序，然后再使用**筛选器**函数。 **CurrentOrdinal**函数用于比较和消除绑定。  
+ 下面的示例返回集合中唯一的产品数，并使用 **order** 函数对非空元组进行排序，然后再使用 **筛选器** 函数。 **CurrentOrdinal**函数用于比较和消除绑定。  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -160,7 +161,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- 若要了解**DESC**标志如何处理元组集，请先考虑以下查询的结果：  
+ 若要了解 **DESC** 标志如何处理元组集，请先考虑以下查询的结果：  
   
 ```  
   
@@ -174,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- 在行轴上，您可以看到 Sales Territory Groups 已按 Tax Amount 的降序排序，如下所示：North America、Europe、Pacific、NA。 现在，如果我们将一组销售区域组与一组产品子类别结合使用并以相同的方式应用**订单**功能，则会发生什么情况，如下所示：  
+ 在行轴上，您可以看到 Sales Territory Groups 已按 Tax Amount 的降序排序，如下所示：North America、Europe、Pacific、NA。 现在，如果我们将一组销售区域组与一组产品子类别结合使用并以相同的方式应用 **订单** 功能，则会发生什么情况，如下所示：  
   
 ```  
   
@@ -190,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- 尽管 Product Subcategories 的集合已按层次结构顺序的降序进行排序，但 Sales Territory Groups 现在未排序并且以它们在层次结构上出现的顺序出现：Europe、NA、North America 和 Pacific。 其原因在于，仅对元组集合中最后一个层次结构 Product Subcategories 进行了排序。 若要重现 Analysis Services 2000 的行为，请使用一系列嵌套的**生成**函数在执行叉积之前对每个集进行排序，例如：  
+ 尽管 Product Subcategories 的集合已按层次结构顺序的降序进行排序，但 Sales Territory Groups 现在未排序并且以它们在层次结构上出现的顺序出现：Europe、NA、North America 和 Pacific。 其原因在于，仅对元组集合中最后一个层次结构 Product Subcategories 进行了排序。 若要重现 Analysis Services 2000 的行为，请使用一系列嵌套的 **生成** 函数在执行叉积之前对每个集进行排序，例如：  
   
 ```  
   

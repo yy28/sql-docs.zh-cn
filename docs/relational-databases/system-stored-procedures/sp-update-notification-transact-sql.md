@@ -1,5 +1,6 @@
 ---
-title: sp_update_notification （Transact-sql） |Microsoft Docs
+description: sp_update_notification (Transact-SQL)
+title: sp_update_notification (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b3018d982558f5d023d25695a541c8b109c015f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ddc8e2afae79b458d39f577d75176ba6f9dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473510"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @alert_name = ] 'alert'`与此通知关联的警报的名称。 *警报*为**sysname**，无默认值。  
+`[ @alert_name = ] 'alert'` 与此通知关联的警报的名称。 *警报* 为 **sysname**，无默认值。  
   
-`[ @operator_name = ] 'operator'`警报发生时要通知的操作员。 *运算符*的值为**sysname**，无默认值。  
+`[ @operator_name = ] 'operator'` 警报发生时要通知的操作员。 *运算符* 的值为 **sysname**，无默认值。  
   
-`[ @notification_method = ] notification`通知操作员使用的方法。 *通知*为**tinyint**，无默认值，并且可以是这些值中的一个或多个。  
+`[ @notification_method = ] notification` 通知操作员使用的方法。 *通知*为 **tinyint**，无默认值，并且可以是这些值中的一个或多个。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -57,15 +58,15 @@ sp_update_notification
 |**7**|所有方法|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  必须从**msdb**数据库运行**sp_update_notification** 。  
   
- 您可以使用指定的*notification_method*为没有必需的地址信息的操作员更新通知。 如果发送电子邮件或寻呼通知时出现故障，则该故障将记录到 Microsoft SQL Server 代理程序错误日志中。  
+ 您可以使用指定的 *notification_method*为没有必需的地址信息的操作员更新通知。 如果发送电子邮件或寻呼通知时出现故障，则该故障将记录到 Microsoft SQL Server 代理程序错误日志中。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
+ 若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="examples"></a>示例  
  下面的示例修改发送给警报的通知的通知方法 `François Ajenstat` `Test Alert` 。  

@@ -1,4 +1,5 @@
 ---
+description: 桌面数据库驱动程序的诊断
 title: 桌面数据库驱动程序的诊断 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99603c047e77d3cd3e077c1b07c2192eeb65f93c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb5e4233ae77979df7b4b76ea845634fd7fd6ded
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471589"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>桌面数据库驱动程序的诊断
 驱动程序管理器未检查或部分检查的所有错误和警告都由驱动程序处理。 驱动程序还将本机错误或数据源返回的错误映射到 SQLSTATEs。 *ODBC 程序员参考*中列出的每个函数都包含一个用于指定条件和消息的 "诊断" 部分。  
   
- 应用程序调用**SQLGetDiagRec**来检索 SQLSTATE、本机错误代码和诊断消息。 调用**SQLGetDiagField**并指定字段将检索各个诊断字段。 下表列出了诊断标识符的支持级别。  
+ 应用程序调用 **SQLGetDiagRec** 来检索 SQLSTATE、本机错误代码和诊断消息。 调用 **SQLGetDiagField** 并指定字段将检索各个诊断字段。 下表列出了诊断标识符的支持级别。  
   
 |DiagIdentifiers|支持级别|  
 |---------------------|-------------------|  

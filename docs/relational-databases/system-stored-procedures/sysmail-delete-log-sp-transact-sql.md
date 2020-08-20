@@ -1,5 +1,6 @@
 ---
-title: sysmail_delete_log_sp （Transact-sql） |Microsoft Docs
+description: sysmail_delete_log_sp (Transact-SQL)
+title: sysmail_delete_log_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae70fc03530ac80596ead5fe6e2e1927e323c5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473362"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,20 +42,20 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @logged_before = ] 'logged_before'`删除*logged_before*参数指定的日期和时间之前的条目。 *logged_before*为**datetime** ，默认值为 NULL。 NULL 指示所有日期。  
+`[ @logged_before = ] 'logged_before'` 删除 *logged_before* 参数指定的日期和时间之前的条目。 *logged_before* 为 **datetime** ，默认值为 NULL。 NULL 指示所有日期。  
   
-`[ @event_type = ] 'event_type'`删除指定为*event_type*的类型的日志项。 *event_type*的值为**varchar （15）** ，无默认值。 有效条目为 "**成功**"、"**警告**"、"**错误**" 和 "**信息**"。 NULL 指示所有事件类型。  
+`[ @event_type = ] 'event_type'` 删除指定为 *event_type*的类型的日志项。 *event_type* 是 **varchar (15) ** ，无默认值。 有效条目为 " **成功**"、" **警告**"、" **错误**" 和 " **信息**"。 NULL 指示所有事件类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- 使用**sysmail_delete_log_sp**存储过程从数据库邮件日志中永久删除条目。 某个可选参数通过提供日期和时间，允许您仅删除较早的记录。 早于该参数的事件将被删除。 可选参数允许您仅删除特定类型的事件，指定为**event_type**参数。  
+ 使用 **sysmail_delete_log_sp** 存储过程从数据库邮件日志中永久删除条目。 某个可选参数通过提供日期和时间，允许您仅删除较早的记录。 早于该参数的事件将被删除。 可选参数允许您仅删除特定类型的事件，指定为 **event_type** 参数。  
   
- 删除数据库邮件日志中的项不会从数据库邮件表中删除电子邮件项。 使用[sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)从数据库邮件表中删除电子邮件。  
+ 删除数据库邮件日志中的项不会从数据库邮件表中删除电子邮件项。 使用 [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) 从数据库邮件表中删除电子邮件。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能访问此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能访问此过程。  
   
 ## <a name="examples"></a>示例  
   

@@ -1,4 +1,5 @@
 ---
+description: GRANT 架构权限 (Transact-SQL)
 title: GRANT 架构权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2017
@@ -18,12 +19,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1c5c45e9ad2ffe46a836708c5686097c61227f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 25d81e7dae5f3c02311ec47148a855c0ad3304d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472257"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 架构权限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,13 +45,13 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- permission   
+ permission  
  指定可授予架构的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON SCHEMA :: schema_name    
- 指定将对其授予权限的架构。 需要使用作用域限定符 ::  。  
+ ON SCHEMA :: schema_name******  
+ 指定将对其授予权限的架构。 需要使用作用域限定符 ::。  
   
- database_principal   
+ database_principal  
  指定要向其授予权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -65,7 +66,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
-AS granting_principal   
+AS granting_principal  
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -90,7 +91,7 @@ AS granting_principal
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
 |DELETE|CONTROL|DELETE|  
-|在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
@@ -115,7 +116,7 @@ AS granting_principal
   
  如果使用 AS 选项，还必须满足以下附加要求：  
   
-|AS granting_principal |所需的其他权限|  
+|AS granting_principal|所需的其他权限|  
 |------------------------------|------------------------------------|  
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  

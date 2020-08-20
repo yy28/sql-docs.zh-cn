@@ -1,5 +1,6 @@
 ---
-title: MSmerge_history （Transact-sql） |Microsoft Docs
+description: MSmerge_history (Transact-SQL)
+title: MSmerge_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a67943dd52f12fac1d7afa3d25e58ccaa85d79f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce23db06fa76ff5ff3b5fe71fe9a11d87be36b75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473185"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "85889796"
 |**注释**|**nvarchar(255)**|消息文本。|  
 |**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)系统表中的错误的 ID。|  
 |**timestamp**|**timestamp**|该表的时间戳列。|  
-|**updatable_row**|**bit**|如果可以覆盖历史记录行，则设置为**1** 。|  
+|**updatable_row**|**bit**|如果可以覆盖历史记录行，则设置为 **1** 。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

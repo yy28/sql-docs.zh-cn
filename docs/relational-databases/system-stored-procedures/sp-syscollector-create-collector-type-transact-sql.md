@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_create_collector_type （Transact-sql） |Microsoft Docs
+description: sp_syscollector_create_collector_type (Transact-SQL)
+title: sp_syscollector_create_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba0086ac19daa4118bb411a4d2cb091ec9f1ce86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f017ab485a5a6516db76566775e12fbb612312c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473655"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,25 +48,25 @@ sp_syscollector_create_collector_type
   
 ## <a name="arguments"></a>参数  
  [ @collector_type_uid =] "*collector_type_uid*"  
- 收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier** ，如果为 NULL，则它将自动创建并作为输出返回。  
+ 收集器类型的 GUID。 *collector_type_uid* 是 **uniqueidentifier** ，如果为 NULL，则它将自动创建并作为输出返回。  
   
  [ @name =] "*name*"  
- 收集器类型的名称。 *名称*为**sysname** ，必须指定。  
+ 收集器类型的名称。 *名称* 为 **sysname** ，必须指定。  
   
  [ @parameter_schema =] "*parameter_schema*"  
- 此收集器类型的 XML 架构。 *parameter_schema*为**xml** ，默认值为 NULL。  
+ 此收集器类型的 XML 架构。 *parameter_schema* 为 **xml** ，默认值为 NULL。  
   
  [ @parameter_formatter =] "*parameter_formatter*"  
- 是用于转换 XML 以便在收集组属性页中使用的模板。 *parameter_formatter*为**xml** ，默认值为 NULL。  
+ 是用于转换 XML 以便在收集组属性页中使用的模板。 *parameter_formatter* 为 **xml** ，默认值为 NULL。  
   
  [ @collection_package_id =] *collection_package_id*  
  指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。  
   
  [ @upload_package_id =] *upload_package_id*  
- 指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier** ，且是必需的。  
+ 指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上载包的本地唯一标识符。 *upload_package_id* 是 **uniqueidentifier** ，且是必需的。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
@@ -109,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

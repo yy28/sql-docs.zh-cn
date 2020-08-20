@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_generate_wrapper_function （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_generate_wrapper_function (Transact-SQL)
+title: sys. sp_cdc_generate_wrapper_function (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68dbfaed63677a7d64c489646592fe35745ff3b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f54e99cd49c487dba0f008661da8a01d4efb837
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473430"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,13 +55,13 @@ sys.sp_cdc_generate_wrapper_function
  要为其生成脚本的捕获实例。 *capture_instance* **sysname** ，并且其默认值为 NULL。 如果不指定值，或将值显式设置为 NULL，则会为所有捕获实例生成包装脚本  
   
  [ @closed_high_end_point =] *high_end_pt_flag*  
- 一个标志位，指示生成的过程是否将提交时间等于高端点的更改包括在提取间隔内。 *high_end_pt_flag*是**bit** ，默认值为1，指示应包括端点。 值为 0 表示所有提交时间将严格小于高端点。  
+ 一个标志位，指示生成的过程是否将提交时间等于高端点的更改包括在提取间隔内。 *high_end_pt_flag* 是 **bit** ，默认值为1，指示应包括端点。 值为 0 表示所有提交时间将严格小于高端点。  
   
  [ @column_list =] "*column_list*"  
- 将包括在由包装函数返回的结果集中的捕获列的列表。 *column_list*为**nvarchar （max）** ，其默认值为 NULL。 指定 NULL 时，将包括所有捕获列。  
+ 将包括在由包装函数返回的结果集中的捕获列的列表。 *column_list* 为 **nvarchar (max) ** ，其默认值为 NULL。 指定 NULL 时，将包括所有捕获列。  
   
  [ @update_flag_list =] "*update_flag_list*"  
- 包含的列的列表，在由包装函数返回的结果集中将为这些列包括一个更新标志。 *update_flag_list*为**nvarchar （max）** ，其默认值为 NULL。 指定 NULL 时，不包括更新标志。  
+ 包含的列的列表，在由包装函数返回的结果集中将为这些列包括一个更新标志。 *update_flag_list* 为 **nvarchar (max) ** ，其默认值为 NULL。 指定 NULL 时，不包括更新标志。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -69,7 +70,7 @@ sys.sp_cdc_generate_wrapper_function
   
 |列名称|列类型|说明|  
 |-----------------|-----------------|-----------------|  
-|**function_name**|**nvarchar （145）**|生成的函数的名称。|  
+|function_name|**nvarchar (145) **|生成的函数的名称。|  
 |**create_script**|**nvarchar(max)**|创建捕获实例包装函数的脚本。|  
   
 ## <a name="remarks"></a>备注  
@@ -104,7 +105,7 @@ DEALLOCATE #hfunctions;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的变更数据捕获存储过程](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [更改数据捕获存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [更改数据捕获 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

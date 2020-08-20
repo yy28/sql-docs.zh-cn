@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Ownership Chains and Context Switching'
 title: 'Tutorial: Ownership Chains and Context Switching'
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6e8c2aeabcbfa73de3a0b02b6b3e6a637bcf1eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472947"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>教程：所有权链和上下文切换
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
 > [!NOTE]  
 > 若要在本教程中运行代码，必须已配置混合模式安全性并且已安装 AdventureWorks2017 数据库。 有关混合模式安全性的详细信息，请参阅 [选择身份验证模式](../relational-databases/security/choose-an-authentication-mode.md)。  
   
-## <a name="scenario"></a>场景  
+## <a name="scenario"></a>方案  
 在此应用场景中，两个用户需要帐户才能访问存储在 AdventureWorks2017 数据库中的采购订单数据。 要求如下：  
   
 -   第一个帐户 (TestManagerUser) 必须能够查看每个采购订单中的所有详细信息。  

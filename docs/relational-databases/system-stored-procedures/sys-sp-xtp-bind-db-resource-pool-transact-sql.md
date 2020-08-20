@@ -1,5 +1,6 @@
 ---
-title: sys. sp_xtp_bind_db_resource_pool （Transact-sql） |Microsoft Docs
+description: sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
+title: sys. sp_xtp_bind_db_resource_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 17b73b2acd00e7ea299c1d9e64bbac270485c678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473456"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "87442454"
 sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  database_name  
  启用了 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的现有数据库的名称。  
   
@@ -92,7 +93,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **数据库已绑定至其他资源池**  
- 在任何时候，数据库都只能绑定至一个资源池。 必须显式删除与资源池的数据库绑定，才能将数据库绑定至其他池。 请参阅[sys.databases &#40;transact-sql&#41;sp_xtp_unbind_db_resource_pool ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
+ 在任何时候，数据库都只能绑定至一个资源池。 必须显式删除与资源池的数据库绑定，才能将数据库绑定至其他池。 请参阅 [sys.databases &#40;transact-sql&#41;sp_xtp_unbind_db_resource_pool ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
 *数据库% s 已绑定到资源池% s。 必须先取消绑定，然后才能创建新绑定。*  
   
 ```  

@@ -1,5 +1,6 @@
 ---
-title: NumberOfFlags 属性（SInstance）
+description: NumberOfFlags 属性（SInstance 类）
+title: 'NumberOfFlags 属性 (SInstance) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: da8d6992c081cf45c3abf486f307a824b4ad90f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5d800da626f6c3dfa9f2af2d8680d10d9712b97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472767"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 属性（SInstance 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +37,11 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示服务器实例的[SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)对象。  
+ 对象  
+ 一个表示服务器实例的 [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 一个指定实例的标志数的**uint32**值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 一个指定实例的标志数的 **uint32** 值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="remarks"></a>备注  
   

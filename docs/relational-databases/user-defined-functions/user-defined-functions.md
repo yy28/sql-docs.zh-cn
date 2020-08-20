@@ -1,4 +1,5 @@
 ---
+description: 用户定义函数
 title: 用户定义函数 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
@@ -16,12 +17,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8deea6a37a8aca7791d84d9d32d9735525305913
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472909"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -169,7 +170,7 @@ ms.locfileid: "87247246"
     :::column-end:::
 :::row-end:::
  
- 下列不确定性内置函数不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数中使用。  
+ 下列不确定性内置函数不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数中使用****。  
   
 :::row:::
     :::column:::
@@ -218,11 +219,11 @@ ms.locfileid: "87247246"
 |-|-|    
 |介绍如何创建 Transact-SQL 用户定义函数。|[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |介绍如何创建 CLR 函数。|[创建 CLR 函数](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
-|介绍如何创建用户定义聚合函数。|[创建用户定义的聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
+|介绍如何创建用户定义聚合函数。|[创建用户定义聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |介绍如何修改 Transact-SQL 用户定义函数。|[修改用户定义的函数](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
 |介绍如何删除用户定义函数。|[删除用户定义的函数](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
-|介绍如何执行用户定义函数。|[执行用户定义的函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|介绍如何重命名用户定义函数。|[重命名用户定义的函数](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
-|介绍如何查看用户定义函数的定义。|[查看用户定义的函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
+|介绍如何执行用户定义函数。|[执行用户定义函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
+|介绍如何重命名用户定义函数。|[重命名用户定义函数](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|介绍如何查看用户定义函数的定义。|[查看用户定义函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 'sp_xtp_flush_temporal_history (Transact-sql) '
 title: sp_xtp_flush_temporal_history |Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
@@ -18,13 +19,14 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64b7b9b3134383182804d6efd5f98c8b91ad55c1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ead5aae7b27528c12c4d44d574106815ddf382f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473320"
 ---
-# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history （Transact-sql）
+# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   调用数据刷新任务，将所有提交的行从内存中的临时表移到基于磁盘的历史记录表。  
@@ -39,7 +41,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *\@schema_name*  
  当前表或临时表的架构名称  
   
@@ -47,7 +49,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  当前表或临时表的名称  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0（成功）或 >0 （失败）  
+ 0 (成功) 或 >0 (故障)   
   
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  

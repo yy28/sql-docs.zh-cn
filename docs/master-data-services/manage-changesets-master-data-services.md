@@ -1,4 +1,5 @@
 ---
+description: 管理变更集 (Master Data Services)
 title: 管理变更集
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e411c1f7dd09db1e0387535ffef665924193ee9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 852396b6c3eb77141e964f1ba72d141153a0badb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471895"
 ---
 # <a name="manage-changesets-master-data-services"></a>管理变更集 (Master Data Services)
 

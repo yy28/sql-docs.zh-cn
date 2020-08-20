@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_configure （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_configure (Transact-SQL)
+title: sp_syspolicy_configure (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473571"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`要配置的设置的名称。 *name*为**sysname**，是必需的，并且不能为 NULL 或空字符串。  
+`[ @name = ] 'name'` 要配置的设置的名称。 *name* 为 **sysname**，是必需的，并且不能为 NULL 或空字符串。  
   
- *名称*可以是以下任何值：  
+ *名称* 可以是以下任何值：  
   
 -   "Enabled"-确定是否启用基于策略的管理。  
   
@@ -50,24 +51,24 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - 指定基于策略的管理是否记录成功的策略评估。  
   
-`[ @value = ] value`与指定的*name*值相关联的值。 *值*是**sql_variant**的，并且是必需的。  
+`[ @value = ] value` 与指定的 *name*值相关联的值。 *值* 是 **sql_variant**的，并且是必需的。  
   
--   如果为*名称*指定 "Enabled"，则可以使用以下值之一：  
+-   如果为 *名称*指定 "Enabled"，则可以使用以下值之一：  
   
     -   0 = 禁用基于策略的管理。  
   
     -   1 = 启用基于策略的管理。  
   
--   如果为 "*名称*" 指定 "HistoryRententionInDays"，请将天数指定为整数值。  
+-   如果为 " *名称*" 指定 "HistoryRententionInDays"，请将天数指定为整数值。  
   
--   如果指定 "LogOnSuccess" 作为*名称*，则可以使用以下值之一：  
+-   如果指定 "LogOnSuccess" 作为 *名称*，则可以使用以下值之一：  
   
     -   0 = 只记录失败的策略评估。  
   
     -   1 = 记录成功和失败的策略评估。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_configure。  

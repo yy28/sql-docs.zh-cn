@@ -1,4 +1,5 @@
 ---
+description: UnionAggregate（geometry 数据类型）
 title: UnionAggregate（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1f518b22b4d7aaaf6e100a4f10c91d463d80e495
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 832c49b68150be650885176b301ecd772cac82e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472393"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,18 +41,18 @@ UnionAggregate ( geometry_operand )
  **geometry** 类型的表列，其中保存要对其执行联合操作的 **geometry** 对象的集合。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
 ## <a name="exceptions"></a>例外  
  在输入值无效时引发 `FormatException`。 请参阅 [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>备注  
- 在输入为空或具有不同的 SRID 时，方法返回 null  。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>注解  
+ 在输入为空或具有不同的 SRID 时，方法返回 null****。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- 方法忽略 null 输入  。  
+ 方法忽略 null 输入****。  
   
 > [!NOTE]  
->  如果所有输入值均为 null，则方法返回 null   。  
+>  如果所有输入值均为 null，则方法返回 null********。  
   
 ## <a name="examples"></a>示例  
  以下示例返回表变量中一组 **geometry** 对象的并集。  

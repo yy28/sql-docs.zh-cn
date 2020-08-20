@@ -1,4 +1,5 @@
 ---
+description: 修改视图
 title: 修改视图 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58f8e7f2d13c1a1c720ac13207d78a6b1fe9a1fa
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d273277eff9a9d731aca1f60115aef28ef27a25f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472951"
 ---
 # <a name="modify-views"></a>修改视图
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,17 +63,17 @@ ms.locfileid: "87396414"
   
 1.  在 **“对象资源管理器”** 中，单击视图所在的数据库旁边的加号，然后单击 **“视图”** 文件夹旁边的加号。  
   
-2.  右键单击要修改的视图，然后选择“设计”  。  
+2.  右键单击要修改的视图，然后选择“设计”****。  
   
 3.  在查询设计器的关系图窗格中，通过以下一种或多种方式更改视图：  
   
     1.  选中或清除要添加或删除的任何元素的复选框。  
   
-    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列   。  
+    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列********。  
   
-    3.  右键单击要删除的表的标题栏，然后选择“删除”  。  
+    3.  右键单击要删除的表的标题栏，然后选择“删除”****。  
   
-4.  在“文件”  菜单上，单击“保存”  以保存_视图名称_。  
+4.  在“文件”**** 菜单上，单击“保存”**** 以保存_视图名称_。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -82,7 +83,7 @@ ms.locfileid: "87396414"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例首先创建一个视图，然后使用 ALTER VIEW 修改该视图。 将一个 WHERE 子句添加到该视图定义。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例首先创建一个视图，然后使用 ALTER VIEW 修改该视图。 将一个 WHERE 子句添加到该视图定义。  
   
     ```  
     USE AdventureWorks2012 ;  

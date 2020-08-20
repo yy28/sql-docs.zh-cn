@@ -1,5 +1,6 @@
 ---
-title: sp_update_jobschedule （Transact-sql） |Microsoft Docs
+description: sp_update_jobschedule (Transact-SQL)
+title: sp_update_jobschedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5a526a5a304d790cfa0bd373f6c9f7225ffe3d2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92aa7a001a365ed9d24c0e856b304b723e57c9c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473517"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "85891332"
 >  有关 Microsoft SQL Server 早期版本中使用的语法的详细信息，请参阅 Transact-sql Referencefor Microsoft SQL Server 2000 *。*  
   
 ## <a name="remarks"></a>备注  
- 作业计划现在可以独立于作业进行管理。 若要更新计划，请使用**sp_update_schedule**。  
+ 作业计划现在可以独立于作业进行管理。 若要更新计划，请使用 **sp_update_schedule**。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85891332"
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有**sysadmin**的成员才可以使用此存储过程更新其他用户所拥有的作业计划。  
+ 只有 **sysadmin** 的成员才可以使用此存储过程更新其他用户所拥有的作业计划。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 代理存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   

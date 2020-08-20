@@ -1,5 +1,6 @@
 ---
-title: MSrepl_errors （Transact-sql） |Microsoft Docs
+description: MSrepl_errors (Transact-SQL)
+title: MSrepl_errors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 982e54a31231a9a425c55a3c3f1849a1e64c500f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab4195f63afdda44bb5e4abff1e27f8738903ea3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473183"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85889546"
 |**time**|**datetime**|出现错误的时间。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|错误源类型 ID。|  
-|**source_name**|**nvarchar （100）**|错误源名称。|  
+|**source_name**|**nvarchar (100) **|错误源名称。|  
 |**error_code**|**sysname**|错误代码。|  
 |**error_text**|**ntext**|错误消息。|  
 |**xact_seqno**|**varbinary(16)**|执行失败的批次的起始事务日志序列号。 仅由分发代理使用，是失败的执行批处理中第一个事务的日志序列号。|  
@@ -43,7 +44,7 @@ ms.locfileid: "85889546"
 |**session_id**|**int**|出现错误的代理会话 ID。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

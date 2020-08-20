@@ -1,4 +1,5 @@
 ---
+description: 'SSMA 控制台中的命令行选项 (DB2ToSQL) '
 title: SSMA 控制台中的命令行选项 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 32167639a12d86a7bf3cf84b3895537af551d8d5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5dde1168e8107f01f06d5e60fb2b1853d47abc43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472520"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 控制台中的命令行选项 (DB2ToSQL) 
 Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。  
@@ -119,7 +120,7 @@ Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和�
 ### <a name="secure-password-option--psecurepassword"></a>安全密码选项：-p/securepassword  
 此选项指示服务器连接的加密密码。 它与所有其他选项不同：该选项既不执行任何脚本，也不会在任何与迁移相关的活动中提供帮助，但有助于管理迁移项目中使用的服务器连接的密码加密。  
   
-不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅[管理密码](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)部分。  
+不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅 [管理密码](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) 部分。  
   
 支持以下子选项 `-p/securepassword` ：  
   
@@ -152,21 +153,21 @@ Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和�
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-有关 SSMA 控制台命令行选项的表格显示，请参阅[附录 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
+有关 SSMA 控制台命令行选项的表格显示，请参阅 [附录 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
   
 ### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword 帮助选项：-SecurePassword-？/Help  
 显示 SSMA 控制台选项的语法摘要：  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-如要表格显示 SSMA 控制台命令行选项，请参阅[附录-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+如要表格显示 SSMA 控制台命令行选项，请参阅 [附录-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>下一步  
 下一步取决于项目要求：  
   
-1.  若要指定密码或导出/导入密码，请参阅[管理密码 &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)。  
+1.  若要指定密码或导出/导入密码，请参阅 [管理密码 &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)。  
   
-2.  有关生成报表的详细 &#40;，请参阅[&#41;中生成报表](../../ssma/db2/generating-reports-db2tosql.md)。  
+2.  有关生成报表的详细 &#40;，请参阅 [&#41;中生成报表 ](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-3.  有关控制台中问题的疑难解答，请参阅[排查 &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
+3.  有关控制台中问题的疑难解答，请参阅 [排查 &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
   

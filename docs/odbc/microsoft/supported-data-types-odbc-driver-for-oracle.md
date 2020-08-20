@@ -1,5 +1,6 @@
 ---
-title: 支持的数据类型（Oracle ODBC 驱动程序） |Microsoft Docs
+description: 支持的数据类型（Oracle ODBC 驱动程序）
+title: Oracle)  (ODBC 驱动程序支持的数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d53cdb9a270149866b2a480496f39adcb20e4d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471509"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>支持的数据类型（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -46,4 +47,4 @@ ms.locfileid: "81301112"
 |MLSLABEL|不支持。|不支持。|  
   
 > [!NOTE]  
->  有关 VARCHAR 列允许大小的详细信息，请参阅本指南中的[Varchar 列大小](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)。
+>  有关 VARCHAR 列允许大小的详细信息，请参阅本指南中的 [Varchar 列大小](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 。

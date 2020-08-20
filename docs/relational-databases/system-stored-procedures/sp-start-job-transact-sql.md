@@ -1,5 +1,6 @@
 ---
-title: sp_start_job （Transact-sql） |Microsoft Docs
+description: sp_start_job (Transact-SQL)
+title: sp_start_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcf38d9b430943669a17e0ab1dd449eb4c75a18b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473723"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,29 +46,29 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'`要启动的作业的名称。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 *job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要启动的作业的名称。 必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @job_id = ] job_id`要启动的作业的标识号。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要启动的作业的标识号。 必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'`要在其上启动作业的目标服务器。 *server_name*的默认值为**nvarchar （128）**，默认值为 NULL。 *server_name*必须是作业当前所针对的目标服务器之一。  
+`[ @server_name = ] 'server_name'` 要在其上启动作业的目标服务器。 *server_name* 为 **nvarchar (128) **，默认值为 NULL。 *server_name* 必须是作业当前所针对的目标服务器之一。  
   
-`[ @step_name = ] 'step_name'`开始执行作业的步骤的名称。 只应用于本地作业。 *step_name*的值为**sysname**，默认值为 NULL  
+`[ @step_name = ] 'step_name'` 开始执行作业的步骤的名称。 只应用于本地作业。 *step_name* 的值为 **sysname**，默认值为 NULL  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- 此存储过程位于**msdb**数据库中。  
+ 此存储过程位于 **msdb** 数据库中。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

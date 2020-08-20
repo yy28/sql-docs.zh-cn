@@ -1,5 +1,6 @@
 ---
-title: MSmerge_errorlineage （Transact-sql） |Microsoft Docs
+description: MSmerge_errorlineage (Transact-SQL)
+title: MSmerge_errorlineage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6502c32f47668cbd2ce78ec91296ce61767a95f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf6dca4ed2e67382b9736d0883657bbe46961007
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473219"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,12 +32,12 @@ ms.locfileid: "85889804"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**int**|分配给为合并复制发布的表的整数值。 对应于**sysmergearticles**表中的昵称字段。|  
+|**tablenick**|**int**|分配给为合并复制发布的表的整数值。 对应于 **sysmergearticles** 表中的昵称字段。|  
 |**rowguid**|**uniqueidentifier**|行标识符。|  
-|**衍生**|**varbinary （501）**|存储订阅服务器和发布服务器对行进行更新的历史记录列表。 用于检测和解决冲突情况。|  
+|**衍生**|**varbinary (501) **|存储订阅服务器和发布服务器对行进行更新的历史记录列表。 用于检测和解决冲突情况。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

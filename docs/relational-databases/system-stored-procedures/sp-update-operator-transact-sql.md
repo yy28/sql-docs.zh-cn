@@ -1,5 +1,6 @@
 ---
-title: sp_update_operator （Transact-sql） |Microsoft Docs
+description: sp_update_operator (Transact-SQL)
+title: sp_update_operator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8966e5d423a24be8c7d7329f270368ea20e9ef7b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c34a2af11f50ed8d9a22bada95525cfdca6499
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473535"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,40 +55,40 @@ sp_update_operator
   
 ## <a name="arguments"></a>参数  
  [ @name =] "*name*"  
- 要修改的操作员的名称。 *名称*为**sysname**，无默认值。  
+ 要修改的操作员的名称。 *名称* 为 **sysname**，无默认值。  
   
  [ @new_name =] "*new_name*"  
- 操作员的新名称。 此名称必须唯一。 *new_name*的默认值为**sysname**，默认值为 NULL。  
+ 操作员的新名称。 此名称必须唯一。 *new_name* 的默认值为 **sysname**，默认值为 NULL。  
   
- [ @enabled =]*已启用*  
- 指示操作员当前状态的数字（如果当前已启用，则为**1** ; 如果未启用，则为**0** ）。 *enabled*为**tinyint**，默认值为 NULL。 如果未启用，操作员将不接收警报通知。  
+ [ @enabled =] *已启用*  
+ 指示操作员当前状态的数字 (**1** 如果当前已启用，则为 **0** （如果未) ）。 *enabled* 为 **tinyint**，默认值为 NULL。 如果未启用，操作员将不接收警报通知。  
   
  [ @email_address =] "*email_address*"  
- 操作员的电子邮件地址。 此字符串将直接传递到电子邮件系统。 *email_address*为**nvarchar （100）**，默认值为 NULL。  
+ 操作员的电子邮件地址。 此字符串将直接传递到电子邮件系统。 *email_address* 为 **nvarchar (100) **，默认值为 NULL。  
   
  [ @pager_address =] "*pager_number*"  
- 操作员的寻呼地址。 此字符串将直接传递到电子邮件系统。 *pager_number*为**nvarchar （100）**，默认值为 NULL。  
+ 操作员的寻呼地址。 此字符串将直接传递到电子邮件系统。 *pager_number* 为 **nvarchar (100) **，默认值为 NULL。  
   
  [ @weekday_pager_start_time =] *weekday_pager_start_time*  
- 指定从星期一到星期五可向此操作员发送寻呼通知的时间段的开始时间。 *weekday_pager_start_time*的值为**int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
+ 指定从星期一到星期五可向此操作员发送寻呼通知的时间段的开始时间。 *weekday_pager_start_time*的值为 **int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
   
  [ @weekday_pager_end_time =] *weekday_pager_end_time*  
- 指定从星期一到星期五可向此操作员发送寻呼通知的时间段的结束时间。 *weekday_pager_end_time*的值为**int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
+ 指定从星期一到星期五可向此操作员发送寻呼通知的时间段的结束时间。 *weekday_pager_end_time*的值为 **int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
   
  [ @saturday_pager_start_time =] *saturday_pager_start_time*  
- 指定在星期六可向指定操作员发送寻呼通知的时间段的开始时间。 *saturday_pager_start_time*的值为**int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
+ 指定在星期六可向指定操作员发送寻呼通知的时间段的开始时间。 *saturday_pager_start_time*的值为 **int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
   
  [ @saturday_pager_end_time =] *saturday_pager_end_time*  
- 指定在星期六可向指定操作员发送寻呼通知的时间段的结束时间。 *saturday_pager_end_time*的值为**int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
+ 指定在星期六可向指定操作员发送寻呼通知的时间段的结束时间。 *saturday_pager_end_time*的值为 **int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
   
  [ @sunday_pager_start_time =] *sunday_pager_start_time*  
- 指定在星期日可向指定操作员发送寻呼通知的时间段的开始时间。 *sunday_pager_start_time*的值为**int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
+ 指定在星期日可向指定操作员发送寻呼通知的时间段的开始时间。 *sunday_pager_start_time*的值为 **int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
   
  [ @sunday_pager_end_time =] *sunday_pager_end_time*  
- 指定在星期日可向指定操作员发送寻呼通知的时间段的结束时间。 *sunday_pager_end_time*的值为**int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
+ 指定在星期日可向指定操作员发送寻呼通知的时间段的结束时间。 *sunday_pager_end_time*的值为 **int**，默认值为 NULL，并且必须以 HHMMSS 格式输入，以便与24小时制一起使用。  
   
  [ @pager_days =] *pager_days*  
- 指定操作员可以接收寻呼的天数（取决于指定的起始/结束时间）。 *pager_days*为**tinyint**，默认值为 NULL，其值必须介于**0**到**127**之间。 *pager_days*是通过添加所需日期的各个值来计算的。 例如，从星期一到星期五是**2** + **4** + **8** + **16** + **32**  =  **64**。  
+ 指定操作员可以接收寻呼的天数（取决于指定的起始/结束时间）。 *pager_days*为 **tinyint**，默认值为 NULL，其值必须介于 **0** 到 **127**之间。 *pager_days* 是通过添加所需日期的各个值来计算的。 例如，从星期一到星期五是**2** + **4** + **8** + **16** + **32**  =  **64**。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -100,13 +101,13 @@ sp_update_operator
 |**64**|星期六|  
   
  [ @netsend_address =] "*netsend_address*"  
- 要将网络消息发送到的操作员的网络地址。 *netsend_address*为**nvarchar （100）**，默认值为 NULL。  
+ 要将网络消息发送到的操作员的网络地址。 *netsend_address*为 **nvarchar (100) **，默认值为 NULL。  
   
  [ @category_name =] "*category*"  
- 该警报的类别名称。 *category 的类型*为**sysname**，默认值为 NULL。  
+ 该警报的类别名称。 *category 的类型* 为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  sp_update_operator 必须基于 msdb 数据库运行。  

@@ -1,5 +1,6 @@
 ---
-title: sysdbmaintplan_history （Transact-sql） |Microsoft Docs
+description: sysdbmaintplan_history (Transact-SQL)
+title: sysdbmaintplan_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec49500e94a22e8ab91513fa9436cd6d21bf7959
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5871f6acc8e4df58223e1568b0a253a7e62c42d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473144"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  该表存储在**msdb**数据库中。  
+  该表存储在 **msdb** 数据库中。  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
@@ -40,11 +41,11 @@ ms.locfileid: "85881419"
 |**database_name**|**sysname**|与数据库维护计划关联的数据库的名称。|  
 |server_name|**sysname**|系统名称。|  
 |**activity**|**nvarchar(128)**|数据库维护计划执行的活动（例如备份事务日志等）。|  
-|**成功**|**bit**|**0** = 成功**1** = 失败|  
+|**succeeded**|**bit**|**0** = 成功 **1** = 失败|  
 |**end_time**|**datetime**|完成操作的时间。|  
 |**duration**|**int**|完成数据库维护计划操作所需的时间。|  
 |**start_time**|**datetime**|操作开始的时间。|  
-|error_number |**int**|失败时报告的错误号。|  
+|error_number|**int**|失败时报告的错误号。|  
 |**message**|**nvarchar(512)**|**Sqlmaint**生成的消息。|  
   
   

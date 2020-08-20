@@ -1,5 +1,6 @@
 ---
-title: sp_replmonitorhelppublisher （Transact-sql） |Microsoft Docs
+description: sp_replmonitorhelppublisher (Transact-SQL)
+title: sp_replmonitorhelppublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3edb7c7b7e2db67132b943bb0d37e04516c8981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2a37168d22bd931faa6f8033c847620b9606b11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473869"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,10 +38,10 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
     [ , [ @refreshpolicy = ] refreshpolicy ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`是要监视其状态的发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 如果为 NULL，则返回使用分发服务器的所有发布服务器的信息。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 是要监视其状态的发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。 如果为 NULL，则返回使用分发服务器的所有发布服务器的信息。  
   
-`[ @refreshpolicy = ] refreshpolicy`仅限内部使用。  
+`[ @refreshpolicy = ] refreshpolicy` 仅限内部使用。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -53,13 +54,13 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 |**publicationcount**|**int**|属于发布服务器的发布的数量。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replmonitorhelppublisher**用于所有类型的复制。  
+ **sp_replmonitorhelppublisher** 用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有分发服务器上**sysadmin**固定服务器角色的成员或分发数据库中**db_owner**或**replmonitor**固定数据库角色的成员才能执行**sp_replmonitorhelppublisher**。  
+ 只有分发服务器上 **sysadmin** 固定服务器角色的成员或分发数据库中 **db_owner** 或 **replmonitor** 固定数据库角色的成员才能执行 **sp_replmonitorhelppublisher**。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

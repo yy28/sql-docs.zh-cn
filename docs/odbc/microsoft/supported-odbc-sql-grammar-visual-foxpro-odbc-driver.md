@@ -1,5 +1,6 @@
 ---
-title: 支持的 ODBC SQL 语法（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+description: 支持的 ODBC SQL 语法（Visual FoxPro ODBC 驱动程序）
+title: " (Visual FoxPro ODBC 驱动程序) 支持的 ODBC SQL 语法Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3057520e5aca5277a68971513ef28427f27208ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471499"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>支持的 ODBC SQL 语法（Visual FoxPro ODBC 驱动程序）
 Microsoft Visual FoxPro ODBC 驱动程序支持以下各项：  
@@ -37,8 +38,8 @@ Microsoft Visual FoxPro ODBC 驱动程序支持以下各项：
 |级别|元素|项|  
 |-----------|--------------|----------|  
 |最小值|数据定义语言 (DDL)|CREATE TABLE 和 DROP TABLE|  
-||数据操作语言（DML）|SELECT、INSERT、UPDATE 和 DELETE|  
-||表达式|简单（如>B + C）|  
+|| (DML) 的数据操作语言|SELECT、INSERT、UPDATE 和 DELETE|  
+||表达式|简单 (如>B + C) |  
 ||数据类型|CHAR、VARCHAR 或 LONG VARCHAR|  
   
  除了支持的 ODBC SQL 语法外，Visual FoxPro ODBC 驱动程序还支持以下 Visual FoxPro 命令的完整本地 Visual FoxPro 语言语法：  
@@ -53,7 +54,7 @@ Microsoft Visual FoxPro ODBC 驱动程序支持以下各项：
   
  [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
- [INDEX](../../odbc/microsoft/index-command.md)  
+ [编入](../../odbc/microsoft/index-command.md)  
   
  [INSERT](../../odbc/microsoft/insert-sql-command.md)  
   

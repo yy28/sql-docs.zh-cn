@@ -1,5 +1,6 @@
 ---
-title: sysmail_update_profileaccount_sp （Transact-sql） |Microsoft Docs
+description: sysmail_update_profileaccount_sp (Transact-SQL)
+title: sysmail_update_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473338"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id`要更新的配置文件的配置文件 ID。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_id = ] profile_id` 要更新的配置文件的配置文件 ID。 *profile_id* 的值为 **int**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'`要更新的配置文件的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_name = ] 'profile_name'` 要更新的配置文件的配置文件名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @account_id = ] account_id`要更新的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 必须指定*account_id*或*account_name* 。  
+`[ @account_id = ] account_id` 要更新的帐户 ID。 *account_id* 的值为 **int**，默认值为 NULL。 必须指定 *account_id* 或 *account_name* 。  
   
-`[ @account_name = ] 'account_name'`要更新的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 必须指定*account_id*或*account_name* 。  
+`[ @account_name = ] 'account_name'` 要更新的帐户的名称。 *account_name* 的默认值为 **sysname**，默认值为 NULL。 必须指定 *account_id* 或 *account_name* 。  
   
-`[ @sequence_number = ] sequence_number`帐户的新序列号。 *sequence_number*为**int**，没有默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
+`[ @sequence_number = ] sequence_number` 帐户的新序列号。 *sequence_number* 为 **int**，没有默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -65,10 +66,10 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  如果存在具有相同序列号的多个帐户，则数据库邮件将仅使用其中一个帐户发送给定的电子邮件。 在此情况下，数据库邮件不能保证使用具有该序列号的特定帐户，也不能保证使用同一个帐户发送各个邮件。  
   
- 存储过程**sysmail_update_profileaccount_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_update_profileaccount_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  下面的示例在 `Admin-BackupServer` msdb 数据库的配置文件中更改帐户的序列号 `AdventureWorks Administrator` 。 **msdb** 执行此代码后，该帐户的序列号为 `3`，指示前两个帐户失败后将尝试使用此帐户。  

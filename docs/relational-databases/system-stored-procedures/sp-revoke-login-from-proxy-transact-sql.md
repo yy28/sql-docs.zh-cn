@@ -1,5 +1,6 @@
 ---
-title: sp_revoke_login_from_proxy （Transact-sql） |Microsoft Docs
+description: sp_revoke_login_from_proxy (Transact-SQL)
+title: sp_revoke_login_from_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0819dbe8c2b4f76e638c09861d83ddb37e76da31
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 39857bce8c0fc50c1773709d70e7e477b669b282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473832"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +43,14 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要删除其访问权限的登录名、服务器角色或**msdb**数据库角色的名称。 *名称*为**nvarchar （256）** ，无默认值。  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要删除其访问权限的登录名、服务器角色或**msdb**数据库角色的名称。 *name* 为 **nvarchar (256) ** ，无默认值。  
   
-`[ @proxy_id = ] id`要删除其访问权限的代理的 id。 必须指定*id*或*proxy_name* ，但不能同时指定两者。 *Id*为**int**，默认值为 NULL。  
+`[ @proxy_id = ] id` 要删除其访问权限的代理的 id。 必须指定 *id* 或 *proxy_name* ，但不能同时指定两者。 *Id*为**int**，默认值为 NULL。  
   
-`[ @proxy_name = ] 'proxy_name'`要删除其访问权限的代理的名称。 必须指定*id*或*proxy_name* ，但不能同时指定两者。 *Proxy_name*的值为**sysname**，默认值为 NULL。  
+`[ @proxy_name = ] 'proxy_name'` 要删除其访问权限的代理的名称。 必须指定 *id* 或 *proxy_name* ，但不能同时指定两者。 *Proxy_name*的值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  引用此代理的登录名所拥有的作业将无法运行。  

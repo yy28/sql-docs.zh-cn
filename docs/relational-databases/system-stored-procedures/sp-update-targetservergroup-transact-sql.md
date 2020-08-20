@@ -1,5 +1,6 @@
 ---
-title: sp_update_targetservergroup （Transact-sql） |Microsoft Docs
+description: sp_update_targetservergroup (Transact-SQL)
+title: sp_update_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16cd7c339a476875ee3f3a7319ddaf57f0d69711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6aa33876376560cfc90cbf7ab03a69fcf94fa6a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473511"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'current_name'`目标服务器组的名称。 *current_name* **sysname**，无默认值。  
+`[ @name = ] 'current_name'` 目标服务器组的名称。 *current_name* **sysname**，无默认值。  
   
-`[ @new_name = ] 'new_name'`目标服务器组的新名称。 *new_name* **sysname**，无默认值。  
+`[ @new_name = ] 'new_name'` 目标服务器组的新名称。 *new_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
+ 若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="remarks"></a>备注  
  必须从**msdb**数据库运行**sp_update_targetservergroup** 。  

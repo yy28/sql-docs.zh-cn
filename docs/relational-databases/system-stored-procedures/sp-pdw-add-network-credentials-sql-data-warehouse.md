@@ -1,4 +1,5 @@
 ---
+description: 'sp_pdw_add_network_credentials (SQL 数据仓库) '
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473980"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL 数据仓库) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -36,25 +37,25 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>参数  
  "*target_server_name*"  
- 指定目标服务器主机名或 IP 地址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将使用传递到此存储过程的用户名和密码凭据访问此服务器。  
+ 指定目标服务器主机名或 IP 地址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将使用传递到此存储过程的用户名和密码凭据访问此服务器。  
   
  若要通过未使用的网络进行连接，请使用目标服务器的未使用的 IP 地址。  
   
- *target_server_name*定义为 nvarchar (337) 。  
+ *target_server_name* 定义为 nvarchar (337) 。  
   
  'user_name'  
  指定有权访问目标服务器的 user_name。 如果目标服务器已有凭据，则这些凭据将更新为新凭据。  
   
- *user_name*定义为 nvarchar (513) 。  
+ *user_name* 定义为 nvarchar (513) 。  
   
  '*password*"  
- 指定*user_name*的密码。  
+ 指定 *user_name*的密码。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="permissions"></a>权限  
- 需要**ALTER SERVER STATE**权限。  
+ 需要 **ALTER SERVER STATE** 权限。  
   
 ## <a name="error-handling"></a>错误处理  
  如果在控制节点和所有计算节点上添加凭据失败，则会发生错误。  
@@ -65,7 +66,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 添加用于执行数据库备份的凭据  
- 下面的示例将域用户 seattle\david 的用户名和密码凭据与 IP 地址为10.172.63.255 的目标服务器相关联。 用户 seattle\david 对目标服务器具有读/写权限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将存储这些凭据，并根据备份和还原操作的需要，使用这些凭据在目标服务器上进行读取和写入。  
+ 下面的示例将域用户 seattle\david 的用户名和密码凭据与 IP 地址为10.172.63.255 的目标服务器相关联。 用户 seattle\david 对目标服务器具有读/写权限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将存储这些凭据，并根据备份和还原操作的需要，使用这些凭据在目标服务器上进行读取和写入。  
   
 ```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

@@ -1,5 +1,6 @@
 ---
-title: OpeningPeriod （MDX） |Microsoft Docs
+description: OpeningPeriod (MDX)
+title: OpeningPeriod (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ba59621ba52043dac56a9cfcae5ae1cb8b675f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471759"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 
@@ -37,11 +38,11 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
 ## <a name="remarks"></a>备注  
  该函数主要用于时间维度，但是也可以用于任何维度。  
   
--   如果指定了级别表达式，则**OpeningPeriod**函数将使用包含指定级别的层次结构，并返回默认成员在指定级别的后代中的第一个同级。  
+-   如果指定了级别表达式，则 **OpeningPeriod** 函数将使用包含指定级别的层次结构，并返回默认成员在指定级别的后代中的第一个同级。  
   
--   如果同时指定了级别表达式和成员表达式，则**OpeningPeriod**函数将返回指定成员在包含指定级别的层次结构内指定级别的后代中的第一个同级。  
+-   如果同时指定了级别表达式和成员表达式，则 **OpeningPeriod** 函数将返回指定成员在包含指定级别的层次结构内指定级别的后代中的第一个同级。  
   
--   如果级别表达式和成员表达式均未指定，则**OpeningPeriod**函数将使用类型为 Time 的维度的默认级别和成员。  
+-   如果级别表达式和成员表达式均未指定，则 **OpeningPeriod** 函数将使用类型为 Time 的维度的默认级别和成员。  
   
 > [!NOTE]  
 >  [ClosingPeriod](../mdx/closingperiod-mdx.md)函数类似于**OpeningPeriod**函数，不同之处在于**ClosingPeriod**函数返回最后一个同级，而不是第一个同级。  

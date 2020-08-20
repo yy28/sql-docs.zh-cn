@@ -1,5 +1,6 @@
 ---
-title: 或（MDX） |Microsoft Docs
+description: OR (MDX)
+title: 或 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5ea3e65dd9bad768ef829858d42d6e4adea7a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471749"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -38,13 +39,13 @@ Expression1 OR Expression2
  一个布尔值，如果其中一个或两个参数的计算结果都为**true**，则返回**true** ;否则**为 false**。  
   
 ## <a name="remarks"></a>备注  
- 在运算符执行逻辑析取之前，**或**运算符将两个参数都视为布尔值（零，0，为**false**; 否则为**true**）。 下表说明了**OR**运算符如何执行逻辑析取。  
+ **OR**运算符将两个参数都视为布尔值 (零，0，为**false**;否则，在运算符执行逻辑析取**之前) 。** 下表说明了 **OR** 运算符如何执行逻辑析取。  
   
-|*Expression1*|Expression2**|返回值|  
+|Expression1|Expression2|返回值|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**true**|  
-|true |**false**|true |  
-|**false**|**true**|true |  
+|true|true|true|  
+|true|**false**|true|  
+|**false**|true|true|  
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>示例  

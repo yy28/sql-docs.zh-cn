@@ -1,5 +1,6 @@
 ---
-title: sysmail_delete_account_sp （Transact-sql） |Microsoft Docs
+description: sysmail_delete_account_sp (Transact-SQL)
+title: sysmail_delete_account_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 749aee08d548f3658c5cfba3e44e4cbf4667f6b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473389"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,12 +40,12 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @account_id = ] account_id`要删除的帐户的 ID 号。 *account_id*为**int**，没有默认值。 必须指定*account_id*或*account_name* 。  
+`[ @account_id = ] account_id` 要删除的帐户的 ID 号。 *account_id* 为 **int**，没有默认值。 必须指定 *account_id* 或 *account_name* 。  
   
-`[ @account_name = ] 'account_name'`要删除的帐户的名称。 *account_name* **sysname**，无默认值。 必须指定*account_id*或*account_name* 。  
+`[ @account_name = ] 'account_name'` 要删除的帐户的名称。 *account_name* **sysname**，无默认值。 必须指定 *account_id* 或 *account_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -52,10 +53,10 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="remarks"></a>备注  
  无论配置文件是否正在使用指定的帐户，此过程都将删除该帐户。 不包含帐户的配置文件将无法成功发送电子邮件。  
   
- 存储过程**sysmail_delete_account_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_delete_account_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例显示如何删除名为 `AdventureWorks Administrator` 的数据库邮件帐户。  

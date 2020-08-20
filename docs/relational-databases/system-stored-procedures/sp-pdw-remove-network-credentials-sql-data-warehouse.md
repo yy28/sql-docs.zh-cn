@@ -1,4 +1,5 @@
 ---
+description: 'sp_pdw_remove_network_credentials (SQL 数据仓库) '
 title: sp_pdw_remove_network_credentials
 titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 200a473843e27d7096b71e675c140120da803bd2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f6ff98a4f17aa39f1b7b85959a68c0f54973a41e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473884"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL 数据仓库) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,13 +41,13 @@ sp_pdw_remove_network_credentials 'target_server_name'
  "*target_server_name*"  
  指定目标服务器主机名或 IP 地址。 将从中删除用于访问此服务器的凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 这不会更改或删除你自己的团队管理的实际目标服务器上的任何权限。  
   
- *target_server_name*定义为 nvarchar (337) 。  
+ *target_server_name* 定义为 nvarchar (337) 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="permissions"></a>权限  
- 需要**ALTER SERVER STATE**权限。  
+ 需要 **ALTER SERVER STATE** 权限。  
   
 ## <a name="error-handling"></a>错误处理  
  如果在控制节点和所有计算节点上删除凭据不成功，则会发生错误。  
@@ -54,10 +55,10 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="general-remarks"></a>一般备注  
  此存储过程将从的 NetworkService 帐户中删除网络凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 NetworkService 帐户 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在控制节点和计算节点上运行 SMP 的每个实例。 例如，在运行备份操作时，控制节点和每个计算节点将使用 NetworkService 帐户凭据来访问目标服务器。  
   
-## <a name="metadata"></a>元数据  
- 若要列出所有凭据并验证是否已删除凭据，请使用[&#40;transact-sql&#41;dm_pdw_network_credentials ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。  
+## <a name="metadata"></a>Metadata  
+ 若要列出所有凭据并验证是否已删除凭据，请使用 [&#40;transact-sql&#41;dm_pdw_network_credentials ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。  
   
- 若要添加凭据，请使用[&#41;sp_pdw_add_network_credentials &#40;SQL 数据仓库](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
+ 若要添加凭据，请使用 [&#41;sp_pdw_add_network_credentials &#40;SQL 数据仓库 ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
