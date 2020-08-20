@@ -1,4 +1,5 @@
 ---
+description: DENY 架构权限 (Transact-SQL)
 title: DENY 架构权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bedc9c9519b82018402295f30d92af12642fcd02
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fa23524c5aa024daa4b9a99a6bbeaca747c9226e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496860"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 架构权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,13 +45,13 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-permission   
+permission  
 指定可拒绝授予架构的权限。 有关这些权限的列表，请参阅本文后面的“备注”部分。  
   
-ON SCHEMA :: schema_name    
-指定权限在其中被拒绝的架构。 需要使用作用域限定符 ::  。  
+ON SCHEMA :: schema_name******  
+指定权限在其中被拒绝的架构。 需要使用作用域限定符 ::。  
   
-database_principal   
+database_principal  
 指定对其拒绝权限的主体。 *database_principal* 可以为以下主体之一：  
   
 -   数据库用户  
@@ -65,7 +66,7 @@ database_principal
 CASCADE  
 对指定 *database_principal* 授予权限的任何其他主体拒绝授予权限。
   
-denying_principal   
+denying_principal**  
 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 *denying_principal* 可以为以下主体之一：  
   
 -   数据库用户  
@@ -77,7 +78,7 @@ denying_principal
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 架构是数据库级别的安全对象。 它由权限层次结构中属于其父级的数据库进行约束。 下表列出了可在架构上拒绝的最为具体的限定权限。 该表显示通过暗示包含它们的更一般的权限。  
   
 |架构权限|架构权限隐含的权限|数据库权限隐含的权限|  
@@ -86,7 +87,7 @@ denying_principal
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
 |DELETE|CONTROL|DELETE|  
-|在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  

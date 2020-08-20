@@ -1,4 +1,5 @@
 ---
+description: SAP BW 目标
 title: SAP BW 目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79523f9e589ff24c909442024430317dd531c2e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495772"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
 
@@ -45,9 +46,9 @@ ms.locfileid: "86917843"
   
 1.  创建新的源系统：  
   
-    1.  选择类型， **“第三方/分级 BAPI”** 。  
+    1.  选择类型， **“第三方/分级 BAPI”**。  
   
-    2.  对于“与目标系统的通信类型”  ，选择“非 Unicode (非活动 MDMP 设置)”  。  
+    2.  对于“与目标系统的通信类型”****，选择“非 Unicode (非活动 MDMP 设置)”****。  
   
     3.  分配适当的程序 ID。  
   
@@ -106,15 +107,15 @@ ms.locfileid: "86917843"
   
 -   [新建 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
--   [创建事务数据的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
+-   [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
 -   [查找 InfoObject](../../integration-services/data-flow/look-up-infoobject.md)  
   
--   [创建 InfoSource](../../integration-services/data-flow/create-infosource.md)  
+-   [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)  
   
 -   [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [创建主数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [“创建主数据的 InfoSource”](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [创建 InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   

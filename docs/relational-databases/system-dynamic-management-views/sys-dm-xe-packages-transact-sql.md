@@ -1,5 +1,6 @@
 ---
-title: sys. dm_xe_packages （Transact-sql） |Microsoft Docs
+description: sys.dm_xe_packages (Transact-SQL)
+title: sys. dm_xe_packages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 98c43952212ffd101bfc822f68c39a1e04bce150
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498244"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +36,8 @@ ms.locfileid: "86942349"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|包的名称。 包自身便可显示说明。 不可为 null。|  
-|GUID|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
-|说明|**nvarchar （3072）**|包说明。 包作者设置的 descriptionis 不能为 null。|  
+|guid|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
+|description|**nvarchar (3072) **|包说明。 包作者设置的 descriptionis 不能为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此包可能具有的所有功能的列表。 可以为 Null。|  
 |module_guid|**nvarchar(60)**|公开此包的模块的 GUID。 不可为 null。|  
@@ -52,7 +53,7 @@ ms.locfileid: "86942349"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-| From | 收件人 | 关系 |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多对一|  
   

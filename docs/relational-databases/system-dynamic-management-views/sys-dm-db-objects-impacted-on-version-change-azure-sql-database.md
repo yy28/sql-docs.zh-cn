@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_objects_impacted_on_version_change（Azure SQL 数据库）
 title: sys.dm_db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0b26edb80b254ca6c7d3b161e618d2a6ad5849f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498330"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "85718789"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|class|**int**NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
-|class_desc|**nvarchar （60）** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **编入**|  
-|major_id|**int**NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
-|minor_id|**int**无效|对于约束为 **NULL**<br /><br /> 索引和堆的 Index_id|  
-|dependency|**nvarchar （60）** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **space**（用于内部）<br /><br /> **geometry**（用于系统 UDT）<br /><br /> **geography::Parse**（用于系统 UDT 方法）|  
+|class|**int** NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
+|class_desc|**nvarchar (60) ** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **编入**|  
+|major_id|**int** NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
+|minor_id|**int** 无效|对于约束为 **NULL**<br /><br /> 索引和堆的 Index_id|  
+|dependency|**nvarchar (60) ** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **space**（用于内部）<br /><br /> **geometry**（用于系统 UDT）<br /><br /> **geography::Parse**（用于系统 UDT 方法）|  
   
 ## <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  
@@ -65,9 +66,9 @@ class  class_desc        major_id    minor_id    dependency
 ### <a name="how-to-update-impacted-objects"></a>如何升级受影响的对象  
  以下有序步骤介绍将在六月份服务版本升级后要采取的纠正措施。  
   
-|顺序|受影响的对象|纠正措施|  
+|订单|受影响的对象|纠正措施|  
 |-----------|---------------------|-----------------------|  
-|1|**索引**|重新生成由 sys.databases 标识的任何索引**dm_db_objects_impacted_on_version_change**例如：`ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
-|2|**对象**|在重新计算基础表中的 geometry 和 geography 数据后，必须重新验证 **sys.dm_db_objects_impacted_on_version_change** 标识的所有约束。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**索引**|重新生成由 sys.databases 标识的任何索引 **dm_db_objects_impacted_on_version_change** 例如：  `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Object**|在重新计算基础表中的 geometry 和 geography 数据后，必须重新验证 **sys.dm_db_objects_impacted_on_version_change** 标识的所有约束。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sys. fn_trace_geteventinfo （Transact-sql） |Microsoft Docs
+description: sys.fn_trace_geteventinfo (Transact-SQL)
+title: sys. fn_trace_geteventinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03937eba8daecfab8e25735fd01b072cf71d87d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4eac53507004b832bcee19bd50bf7739062015c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498147"
 ---
 # <a name="sysfn_trace_geteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ fn_trace_geteventinfo ( trace_id )
   
 ## <a name="arguments"></a>参数  
  *trace_id*  
- 跟踪的 ID。 *trace_id*为**int**，没有默认值。  
+ 跟踪的 ID。 *trace_id* 为 **int**，没有默认值。  
   
 ## <a name="tables-returned"></a>返回的表  
   
@@ -56,7 +57,7 @@ fn_trace_geteventinfo ( trace_id )
 |**columnid**|**int**|为每个事件收集的所有列的 ID 号|  
   
 ## <a name="remarks"></a>备注  
- 当传递特定跟踪的 ID 时， **fn_trace_geteventinfo**返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  
+ 当传递特定跟踪的 ID 时， **fn_trace_geteventinfo** 返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 ALTER TRACE 权限。  
@@ -71,13 +72,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [&#40;Transact-sql 创建跟踪&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_create &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sys. fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)   
  [sys.fn_trace_getfilterinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  
   

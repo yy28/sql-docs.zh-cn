@@ -1,4 +1,5 @@
 ---
+description: 通过使用 OLE DB 目标来加载数据
 title: 通过使用 OLE DB 目标来加载数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71879f64bbe46900b27c467f37d4fdacd9cb7b13
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3165371fc1153636ae869b650468342e3614b024
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495819"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>通过使用 OLE DB 目标来加载数据
 
@@ -46,7 +47,7 @@ ms.locfileid: "86916515"
   
     -   **“表或视图”** 在包含该数据的数据库中选择一个表或视图。  
   
-    -   **表或视图 - 快速加载** 选择数据库中包含该数据的表或视图，然后设置快速加载选项：“保留标识”、“保留空值”、“表锁”、“检查约束”、“每批行数”或“最大插入提交大小”。        
+    -   **表或视图 - 快速加载** 选择数据库中包含该数据的表或视图，然后设置快速加载选项：“保留标识”、“保留空值”、“表锁”、“检查约束”、“每批行数”或“最大插入提交大小”。************************  
   
     -   **表名变量或视图名变量** 在数据库中选择包含表名称或视图名称的用户定义变量。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "86916515"
   
 9. 若要配置错误输出，请单击 **“错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

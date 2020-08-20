@@ -1,4 +1,5 @@
 ---
+description: 新建项目 (SybaseToSQL)
 title: 新项目 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: eba002acba86df808adf9e57cc9d902a6b398173
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4122e4d9deb354dded9e015f4ca4a8987cd6ff6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497662"
 ---
 # <a name="new-project-sybasetosql"></a>新建项目 (SybaseToSQL)
-使用 "**新建项目**" 对话框创建新的 SSMA 项目。 若要访问 "**新建项目**" 对话框，请在 "**文件**" 菜单上单击 "**新建项目**"。  
+使用 " **新建项目** " 对话框创建新的 SSMA 项目。 若要访问 " **新建项目** " 对话框，请在 " **文件** " 菜单上单击 " **新建项目**"。  
   
 ## <a name="options"></a>选项  
 **名称**  
@@ -35,7 +36,7 @@ ms.locfileid: "87934650"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

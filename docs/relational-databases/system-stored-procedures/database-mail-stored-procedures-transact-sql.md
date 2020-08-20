@@ -1,5 +1,6 @@
 ---
-title: 数据库邮件存储过程（Transact-sql） |Microsoft Docs
+description: 数据库邮件存储过程 (Transact-SQL)
+title: 数据库邮件存储过程 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4b4b54bbe70ab1f1362b574722fc77c6fea1bc2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: fe53eb3fb72ed20389fdd72ec9e3b7094e28ccf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498123"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>数据库邮件存储过程 (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

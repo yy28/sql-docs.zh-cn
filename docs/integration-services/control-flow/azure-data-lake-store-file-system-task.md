@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store 文件系统任务
 title: Azure Data Lake Store 文件系统任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
@@ -11,12 +12,12 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 9460730ae4756bb2862de751bc72cad649e38298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 27ee71393bfbad6c824de25bd95c9ca465cf2a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496071"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 文件系统任务
 
@@ -30,9 +31,9 @@ Azure Data Lake Store 文件系统任务是[适用于 Azure 的 SQL Server Integ
 
 ## <a name="configure-the-azure-data-lake-store-file-system-task"></a>配置 Azure Data Lake Store 文件系统任务
 
-若要将 Azure Data Lake Store 文件系统任务添加到某个包，请将它从 SSIS 工具箱拖到设计器画布中。 然后双击该任务，或右键单击该任务并选择“编辑”  ，以打开“Azure Data Lake Store 文件系统任务编辑器”  对话框。
+若要将 Azure Data Lake Store 文件系统任务添加到某个包，请将它从 SSIS 工具箱拖到设计器画布中。 然后双击该任务，或右键单击该任务并选择“编辑”****，以打开“Azure Data Lake Store 文件系统任务编辑器”**** 对话框。
 
-“操作”  属性指定要执行的文件系统操作。 请选择以下操作之一：
+“操作”**** 属性指定要执行的文件系统操作。 请选择以下操作之一：
 
 - **CopyToADLS：** 将文件上载到 ADLS。
 - **CopyFromADLS：** 从 ADLS 下载文件。

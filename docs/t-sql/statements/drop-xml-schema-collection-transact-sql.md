@@ -1,4 +1,5 @@
 ---
+description: DROP XML SCHEMA COLLECTION (Transact-SQL)
 title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c46567c63dbfda8f622f1c70d32a5dfdc82925ac
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f644ba5a1e42c309cc481d2ba7b42e6973d940e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496704"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +47,13 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-relational_schema   
+relational_schema  
 标识关系架构的名称。 如果未指定，则假定为默认的关系架构。  
   
- sql_identifier  
+sql_identifier  
 要删除的 XML 架构集合的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 删除 XML 架构集合属于事务性操作。 如果删除事务内的 XML 架构集合，然后回滚此事务，则 XML 架构集合不会被删除。  
   
 当 XML 架构集合在使用时，不能将其删除。 因此，要删除的集合不能存在下列任何情况：  

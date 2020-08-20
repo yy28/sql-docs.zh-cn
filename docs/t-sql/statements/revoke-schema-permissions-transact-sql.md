@@ -1,4 +1,5 @@
 ---
+description: REVOKE 架构权限 (Transact-SQL)
 title: REVOKE 架构权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 514b903576110c324a1ec703ecd17f54a2188ac3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5eb65bd0e66b332ab2c53dd00cb01a63979d8bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496546"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE 架构权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- permission   
+ permission  
  指定可对架构撤消的权限。 可对架构撤消的权限在本主题后面的“备注”部分中列出。  
   
  GRANT OPTION FOR  
@@ -53,10 +54,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- ON SCHEMA :: schema_name    
- 指定正在撤消其权限的架构。 需要使用作用域限定符 ::  。  
+ ON SCHEMA :: schema_name******  
+ 指定正在撤消其权限的架构。 需要使用作用域限定符 ::。  
   
- database_principal   
+ database_principal  
  指定要从中撤消权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -81,7 +82,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  指示要撤消的权限也会从此主体授予或拒绝该权限的其他主体中撤消。  
   
- AS revoking_principal   
+ AS revoking_principal**  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -100,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  架构是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可撤消的对架构最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
 |架构权限|架构权限隐含的权限|数据库权限隐含的权限|  
@@ -109,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
 |DELETE|CONTROL|DELETE|  
-|在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  

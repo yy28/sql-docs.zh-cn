@@ -1,4 +1,5 @@
 ---
+description: 通过使用 ODBC 目标来加载数据
 title: 通过使用 ODBC 目标来加载数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abbe91428fdf30d5b598063831f400b69c18f859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495834"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
 
@@ -38,7 +39,7 @@ ms.locfileid: "86904715"
   
 6.  选择数据访问方法。  
   
-    -   **表名 - 批处理**：选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”** 。  
+    -   **表名 - 批处理**：选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”**。  
   
     -   **表名 - 逐行**：选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项时，数据将一次一行加载到表中。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "86904715"
   
 10. 若要配置错误输出，请单击 **“错误输出”** 。  
   
-11. 单击“确定”。   
+11. 单击“确定”。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

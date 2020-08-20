@@ -1,5 +1,6 @@
 ---
-title: sys. dm_broker_activated_tasks （Transact-sql） |Microsoft Docs
+description: sys.dm_broker_activated_tasks (Transact-SQL)
+title: sys. dm_broker_activated_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e8e606ecddc6b57549947a1c72ba8115262bef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a09275a9b000ab673e187fdb2e1a47d35c1e548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498360"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,10 +34,10 @@ ms.locfileid: "85893962"
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**spid**|**int**|已激活存储过程的会话的 ID。 可以为 null.|  
+|spid|**int**|已激活存储过程的会话的 ID。 可以为 null.|  
 |**database_id**|**smallint**|定义队列所用数据库的 ID。 可以为 null.|  
 |**queue_id**|**int**|为其激活存储过程的队列的对象 ID。 可以为 null.|  
-|**procedure_name**|**nvarchar （650）**|已激活的存储过程的名称。 可以为 null.|  
+|**procedure_name**|**nvarchar (650) **|已激活的存储过程的名称。 可以为 null.|  
 |**execute_as**|**int**|运行存储过程的用户的 ID。 可以为 null.|  
   
 ## <a name="permissions"></a>权限  
@@ -52,7 +53,7 @@ ms.locfileid: "85893962"
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|一对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与 Service Broker 有关的动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: WMI 事件观察器任务
 title: WMI 事件观察器任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 205c755ce2a719031c0b07a2884134d81bd55d55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5187cdcfcb6ffc66ed2985123256ebf3943163a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495895"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
 
@@ -130,7 +131,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 ### <a name="static-options"></a>静态选项  
  **WMIConnectionName**  
- 从列表中选择 WMI 连接管理器，或单击“\<**New WMI Connection...**>创建新的连接管理器。  
+ 从列表中选择 WMI 连接管理器，或单击 \<**New WMI Connection...**> 创建新的连接管理器。  
   
  **相关主题：** [WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   

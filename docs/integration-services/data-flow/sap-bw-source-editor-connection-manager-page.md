@@ -1,4 +1,5 @@
 ---
+description: SAP BW 源编辑器（“连接管理器”页）
 title: SAP BW 源编辑器（“连接管理器”页）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52972f7b21a9eb7ff2fa0059e8d52848e8cc9ab4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495721"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
 
@@ -38,7 +39,7 @@ ms.locfileid: "86917827"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击“SAP BW 源”。  
+2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
 3.  在 **“SAP BW 源编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "86917827"
  从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 使用“SAP BW 连接管理器”  对话框创建新的连接管理器。  
+ 使用“SAP BW 连接管理器”**** 对话框创建新的连接管理器。  
   
  有关此对话框的详细信息，请参阅 [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86917827"
 |**E - 仅提取**|检索与某个特定请求 ID 关联的数据。 此情况下，SAP Netweaver BW 系统已将数据提取到内部表中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包只需读取这些数据。|  
   
  **预览**  
- 打开可在其中预览结果的“预览”  对话框。 有关详细信息，请参阅 [Preview](../../integration-services/data-flow/preview.md)。  
+ 打开可在其中预览结果的“预览”**** 对话框。 有关详细信息，请参阅 [Preview](../../integration-services/data-flow/preview.md)。  
   
 > [!IMPORTANT]  
 >  **“预览”** 选项位于 SAP BW 源编辑器的 **“连接管理器”** 页，实际用来提取数据。 如果您已配置 SAP Netweaver BW 只提取自从上次提取后发生更改的数据，则选择 **“预览”** 将从下次数据提取中排除已经预览过的数据。  
@@ -89,13 +90,13 @@ ms.locfileid: "86917827"
  输入服务器名称或网关主机的 IP 地址。 通常，名称或 IP 地址与 SAP 应用程序服务器相同。  
   
  **网关服务**  
- 输入网关服务的名称，格式为“sapgwNN”  ，其中 **NN** 是系统编号。  
+ 输入网关服务的名称，格式为“sapgwNN”****，其中 **NN** 是系统编号。  
   
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
  **查找**  
- 使用“查找 RFC 目标”  对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
+ 使用“查找 RFC 目标”**** 对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 #### <a name="process-chain-options"></a>进程链选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的进程链。 选定进程链后，组件会为该选项输入合适的值。  
@@ -104,7 +105,7 @@ ms.locfileid: "86917827"
  输入由源触发的进程链的名称。  
   
  **查找**  
- 使用“查找进程链”  对话框查找进程链。 有关此对话框的详细信息，请参阅 [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)。  
+ 使用“查找进程链”**** 对话框查找进程链。 有关此对话框的详细信息，请参阅 [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)。  
   
 ### <a name="execution-mode--w---wait-for-notify"></a>执行模式 = W - 等待通知  
   
@@ -115,13 +116,13 @@ ms.locfileid: "86917827"
  输入服务器名称或网关主机的 IP 地址。 通常，名称或 IP 地址与 SAP 应用程序服务器相同。  
   
  **网关服务**  
- 输入网关服务的名称，格式为“sapgwNN”  ，其中 **NN** 是系统编号。  
+ 输入网关服务的名称，格式为“sapgwNN”****，其中 **NN** 是系统编号。  
   
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
  **查找**  
- 使用“查找 RFC 目标”  对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
+ 使用“查找 RFC 目标”**** 对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 ### <a name="execution-mode--e---extract-only"></a>执行模式 = E - 仅提取  
  **请求 ID**  

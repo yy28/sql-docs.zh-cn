@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER ROLE (Transact-SQL)
 title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40e9be1315ee89990d6cfec8dc5e6ac7042bdbc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496730"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -42,10 +43,10 @@ DROP SERVER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>参数  
- role_name   
+ role_name  
  指定要从服务器中删除的用户定义的服务器角色。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  无法从服务器中删除拥有安全对象的用户定义服务器角色。 若要删除拥有安全对象的用户定义服务器角色，必须先转移这些安全对象的所有权或删除这些安全对象。  
   
  无法删除拥有成员的用户定义服务器角色。 若要删除拥有成员的用户定义服务器角色，必须先使用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 删除该角色的成员。  

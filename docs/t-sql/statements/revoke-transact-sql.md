@@ -1,4 +1,5 @@
 ---
+description: REVOKE (Transact-SQL)
 title: REVOKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -29,12 +30,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80d1eeb52c557fc1966a70e62dcfb37b9759369d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cb01b06486996a43eba3401644c34663eb05b800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496548"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -116,19 +117,19 @@ REVOKE
  PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
- permission   
+ permission  
  权限的名称。 本主题后面的[特定于安全对象的语法](#securable)部分所列出的主题介绍了权限和安全对象之间的有效映射。  
   
  *column*  
  指定表中将撤消其权限的列的名称。 需要使用括号。  
   
- class   
- 指定将撤消其权限的安全对象的类。 需要使用作用域限定符 ::  。  
+ *class*  
+ 指定将撤消其权限的安全对象的类。 需要使用作用域限定符 ::。  
   
- securable   
+ securable  
  指定将撤消其权限的安全对象。  
   
- TO | FROM principal   
+ TO | FROM principal**  
  主体的名称。 可撤消其对安全对象的权限的主体随安全对象而异。 有关有效组合的详细信息，请参阅本主题后面的[特定于安全对象的语法](#securable)部分所列出的主题。  
   
  CASCADE  
@@ -137,7 +138,7 @@ REVOKE
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS principal   
+ AS principal  
  使用 AS principal 子句指示将撤销由你以外的主体所授予的权限。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是 principal_id 15。 Mary 和 Raul 为用户 Steven 授予相同权限。 Sys.database_permissions 表两次指示该权限，但分别具有不同的 grantor_prinicpal_id 值。 Mary 可以使用 `AS RAUL` 子句撤销权限以移除 Raul 授予的权限。
  
 在此语句中使用 AS 并不意味着能够模拟其他用户。  
@@ -167,18 +168,18 @@ REVOKE
 |安全对象|主题|  
 |---------------|-----------|  
 |应用程序角色|[REVOKE 数据库主体权限 (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Assembly|[REVOKE 程序集权限 (Transact-SQL)](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
+|程序集|[REVOKE 程序集权限 (Transact-SQL)](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
 |非对称密钥|[REVOKE 非对称密钥权限 (Transact-SQL)](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
 |可用性组|[REVOKE 可用性组权限 (Transact-SQL)](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
 |证书|[REVOKE 证书权限 (Transact-SQL)](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
 |合约|[REVOKE Service Broker 权限 (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |数据库|[REVOKE 数据库权限 (Transact-SQL)](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
-|端点|[REVOKE 终结点权限 (Transact-SQL)](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
+|终结点|[REVOKE 终结点权限 (Transact-SQL)](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
 |数据库作用域凭据|[REVOKE 数据库作用域凭据 (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |全文目录|[REVOKE 全文权限 (Transact-SQL)](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |全文非索引字表|[REVOKE 全文权限 (Transact-SQL)](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |函数|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|登录|[REVOKE 服务器主体权限 (Transact-SQL)](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|登录|[撤消服务器主体权限 (Transact-SQL)](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |消息类型|[REVOKE Service Broker 权限 (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Object|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |队列|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
@@ -196,7 +197,7 @@ REVOKE
 |表|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |类型|[REVOKE 类型权限 (Transact-SQL)](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |用户|[REVOKE 数据库主体权限 (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|查看|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|视图|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML 架构集合|[REVOKE XML 架构集合权限 (Transact-SQL)](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  

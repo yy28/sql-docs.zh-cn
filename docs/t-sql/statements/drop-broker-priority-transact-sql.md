@@ -1,4 +1,5 @@
 ---
+description: DROP BROKER PRIORITY (Transact-SQL)
 title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 29f990193e9082bf9fc75135d05743c43de84693
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1159080251f5f3706f83d6351525c93db892e3d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496754"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +43,10 @@ DROP BROKER PRIORITY ConversationPriorityName
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- ConversationPriorityName   
+ ConversationPriorityName**  
  指定要删除的会话优先级的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  删除会话优先级时，现有会话将继续使用由该会话优先级分配的优先级来运行。  
   
 ## <a name="permissions"></a>权限  

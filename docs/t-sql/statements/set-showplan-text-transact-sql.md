@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_TEXT (Transact-SQL)
 title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4bad95475a55257a9f65bfc84b673b58c7e8ed47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe517575d1f02ed558912b0964463aeec0569b6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496369"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,12 +48,14 @@ ms.locfileid: "85765700"
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  SET SHOWPLAN_TEXT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
  当 SET SHOWPLAN_TEXT 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行信息，但不执行语句。 将该选项设置为 ON 以后，将返回有关所有后续 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的执行计划信息，直到将该选项设置为 OFF 为止。 例如，如果在 SET SHOWPLAN_TEXT 为 ON 时执行 CREATE TABLE 语句，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息，以便通知用户：指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_TEXT 是 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成包含执行计划信息的报表。  
   
- SET SHOWPLAN_TEXT 旨在返回可由 Microsoft Win32 命令提示符应用程序（如 sqlcmd 实用工具）读取的输出  。 SET SHOWPLAN_ALL 则返回更详细的输出，以使专门处理其输出的程序进行处理。  
+ SET SHOWPLAN_TEXT 旨在返回可由 Microsoft Win32 命令提示符应用程序（如 sqlcmd 实用工具）读取的输出****。 SET SHOWPLAN_ALL 则返回更详细的输出，以使专门处理其输出的程序进行处理。  
   
  不能在存储过程中指定 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL。 它们必须是批处理中的唯一语句。  
   
@@ -60,7 +63,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |列名称|说明|  
 |-----------------|-----------------|  
-|**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列  。|  
+|**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列****。|  
 |||
 
  有关可以在显示计划输出中看到的物理和逻辑运算符的详细信息，请参阅[显示计划逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

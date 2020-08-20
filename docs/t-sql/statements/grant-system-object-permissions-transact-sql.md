@@ -1,4 +1,5 @@
 ---
+description: GRANT 系统对象权限 (Transact-SQL)
 title: GRANT 系统对象权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 329ff28afd0aa96ba7fde0058c4cdfb179d61db3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496688"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 系统对象权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  [ sys.] .  
  只有在引用目录视图和动态管理视图时才需要 sys 限定符。  
   
- system_object   
+ system_object  
  指定要对其授予权限的对象。  
   
- principal   
+ principal  
  指定要向其授予权限的主体。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可使用该语句授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的特定存储过程、扩展存储过程、表值函数、标量函数、视图、目录视图、兼容性视图、INFORMATION_SCHEMA 视图、动态管理视图以及系统表的权限。 上述每个系统对象都作为服务器的资源数据库 (mssqlsystemresource) 中的唯一记录而存在。 该资源数据库为只读。 指向对象的链接作为各数据库的 sys 架构中的一条记录显示。 可以授予、拒绝和撤消执行或选择系统对象的权限。  
   
  授予执行或选择对象的权限不一定会提供使用该对象所需的所有权限。 多数对象执行的操作都需要其他权限。 例如，被授予对 sp_addlinkedserver 的 EXECUTE 权限的用户无法创建链接服务器，除非该用户也是 sysadmin 固定服务器角色的成员。  
@@ -60,7 +61,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级期间，对系统对象的权限将予以保留。  
   
- 在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目录视图中可以查看系统对象。 在 master 数据库中的 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目录视图中可以查看对系统对象的权限。  
+ 在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目录视图中可以查看系统对象。 在 [master](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 数据库中的 sys.database_permissions 目录视图中可以查看对系统对象的权限。  
   
  下面的查询将返回有关系统对象的权限的信息：  
   

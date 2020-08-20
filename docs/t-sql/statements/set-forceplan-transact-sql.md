@@ -1,4 +1,5 @@
 ---
+description: SET FORCEPLAN (Transact-SQL)
 title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88d97ef1c5f56a6329e59bdf6c29b8d89bc696e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496434"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765798"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  SET FORCEPLAN 从本质上覆盖了查询优化器处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句所使用的逻辑。 SELECT 语句返回的数据同样与该设置无关。 唯一的差别是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为满足查询对表进行处理的方式。  
   
  在查询中也可以使用查询优化器提示影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理 SELECT 语句的方式。  

@@ -1,5 +1,6 @@
 ---
-title: 创建服务器连接文件（DB2ToSQL） |Microsoft Docs
+description: " (DB2ToSQL 创建服务器连接文件) "
+title: " (DB2ToSQL) 创建服务器连接文件 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/14/2020
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4a1ee05cbf14f18a34b15161eec88df04be5539b
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 5a27b74e529d917cf746d617e08dd44f9953a800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497754"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>创建服务器连接文件（DB2ToSQL）
+# <a name="creating-the-server-connection-files-db2tosql"></a> (DB2ToSQL 创建服务器连接文件) 
 
 服务器信息可以在脚本文件的 "服务器" 部分中指定，也可以在单独的服务器连接文件中指定。 服务器连接文件的命令行参数为， `-c <serverconnectionfile>` 。 如果脚本文件和服务器连接文件中同时存在相同的服务器 ID，则考虑脚本文件中的服务器定义。
 
@@ -68,7 +69,7 @@ ms.locfileid: "86392775"
 
 ## <a name="next-step"></a>下一步
 
-操作控制台的下一步是[执行 SSMA 控制台 &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)
+操作控制台的下一步是 [执行 SSMA 控制台 &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)
 
 ## <a name="see-also"></a>另请参阅
 

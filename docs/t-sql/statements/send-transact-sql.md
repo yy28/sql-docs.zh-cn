@@ -1,4 +1,5 @@
 ---
+description: SEND (Transact-SQL)
 title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bed4098228eb381f4785da87bf8d7fc2c2c4095b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496521"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,16 +53,16 @@ SEND
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-ON CONVERSATION conversation_handle [.. *]@conversation_handle_n*  
-指定消息所属的会话。 conversation_handle 必须包含一个有效的会话标识符。  不能多次使用相同的会话句柄。  
+ON CONVERSATION conversation_handle [.. @conversation_handle_n]**  
+指定消息所属的会话。 conversation_handle 必须包含一个有效的会话标识符。** 不能多次使用相同的会话句柄。  
   
-MESSAGE TYPE message_type_name   
+MESSAGE TYPE message_type_name  
 指定发送的消息的消息类型。 必须将此消息类型包含在这些会话使用的服务约定中。 这些约定必须允许从此会话方发送该类型的消息。 例如，会话的目标服务只能发送在约定中指定为 SENT BY TARGET 或 SENT BY ANY 的消息。 如果省略此子句，则消息类型为 DEFAULT。  
   
-message_body_expression   
-提供一个表示消息主体的表达式。 Message_body_expression 是可选的。  但如果存在 message_body_expression，则表达式必须是一个可以转换为 varbinary(max) 的类型。   该表达式不能为 NULL。 如果省略该子句，则消息主体为空。  
+message_body_expression**  
+提供一个表示消息主体的表达式。 Message_body_expression 是可选的。** 但如果存在 message_body_expression，则表达式必须是一个可以转换为 varbinary(max) 的类型。****** 该表达式不能为 NULL。 如果省略该子句，则消息主体为空。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!IMPORTANT]  
 >  如果 SEND 语句不是批处理或存储过程中的第一个语句，则必须使用分号 (;) 终止前面的语句。  
@@ -76,7 +77,7 @@ SEND 语句将来自一个或多个 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 
   
 - 包含 SEND 语句的代码与包含提供会话句柄的 BEGIN DIALOG 或 RECEIVE 语句的代码有时是分开的。 在这些情况下，会话句柄必须是传递给包含 SEND 语句的代码的状态信息中的数据项之一。  
   
-发送到其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中的服务的消息将存储在当前数据库的传输队列中，直到可以将这些消息传输到远程实例中的服务队列为止。 发送到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的服务的消息被直接放入与这些服务关联的队列中。 如果因出现某种情况导致无法将本地消息直接放入目标服务队列中，则可以先将本地消息存储在传输队列中，直到解决了这种情况为止。 这些事件的示例包括某些类型的错误或目标服务队列处于非活动状态。 可使用 sys.transmission_queue 系统视图查看传输队列中的消息。   
+发送到其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中的服务的消息将存储在当前数据库的传输队列中，直到可以将这些消息传输到远程实例中的服务队列为止。 发送到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的服务的消息被直接放入与这些服务关联的队列中。 如果因出现某种情况导致无法将本地消息直接放入目标服务队列中，则可以先将本地消息存储在传输队列中，直到解决了这种情况为止。 这些事件的示例包括某些类型的错误或目标服务队列处于非活动状态。 可使用 sys.transmission_queue 系统视图查看传输队列中的消息。****  
   
 SEND 是一个原子语句。 如果在多个会话中发送消息的 SEND 语句失败（例如，对话处于错误状态时），则不会将任何消息存储在传输队列中，也不会将消息放入任何目标服务队列中。  
   
@@ -98,7 +99,7 @@ SEND 在用户定义的函数中无效。
 若要发送消息，当前用户必须在每个发送消息的服务的队列中具有 RECEIVE 权限。  
   
 ## <a name="examples"></a>示例  
-以下示例启动一个对话，并在该对话中发送一条 XML 消息。 为了发送此消息，该示例将 xml 对象转换为 varbinary(max)  。  
+以下示例启动一个对话，并在该对话中发送一条 XML 消息。 为了发送此消息，该示例将 xml 对象转换为 varbinary(max)****。  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

@@ -1,4 +1,5 @@
 ---
+description: “创建主数据的 InfoSource”
 title: 创建主数据的 InfoSource | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9178637db42329ba6a46644fdf2595e2bb7541bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8077abe2c92b9ce724b8e40613dde65ec5335f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495886"
 ---
 # <a name="create-infosource-for-master-data"></a>“创建主数据的 InfoSource”
 
@@ -37,7 +38,7 @@ ms.locfileid: "86923547"
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择 **“InfoSource”** ，然后单击 **“创建”** 。  
+4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择 **“InfoSource”**，然后单击 **“创建”**。  
   
 5.  在 **“创建 InfoSource”** 对话框中，选择 **“主数据”** ，然后单击 **“确定”** 。  
   
@@ -51,14 +52,14 @@ ms.locfileid: "86923547"
  在您选择 InfoObject 后，组件会将选定 InfoObject 的名称填充在 **“InfoObject 名称”** 文本框中。  
   
  **新建**  
- 新建 InfoObject。 此选项可打开“新建 InfoObject”对话框，您可在其中创建新的 InfoObject  。 有关此对话框的详细信息，请参阅 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)。  
+ 新建 InfoObject。 此选项可打开“新建 InfoObject”对话框，您可在其中创建新的 InfoObject****。 有关此对话框的详细信息，请参阅 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)。  
   
  创建 InfoObject 后，组件会将新 InfoObject 的名称填充在 **“InfoObject 名称”** 文本框中。  
   
  **简短说明**  
  输入新 InfoSource 的简短说明。  
   
- **详细说明**  
+ **长说明**  
  输入新 InfoSource 的详细说明。  
   
  **源系统**  
@@ -67,7 +68,7 @@ ms.locfileid: "86923547"
  **应用程序**  
  输入要与新 InfoSource 关联的应用程序的名称。  
   
- **属性**  
+ **特性**  
  指示主数据由属性组成。  
   
  **文本**  

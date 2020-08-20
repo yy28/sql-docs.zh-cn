@@ -1,5 +1,6 @@
 ---
-title: managed_backup sp_set_parameter （Transact-sql） |Microsoft Docs
+description: 'managed_backup sp_set_parameter (Transact-sql) '
+title: managed_backup sp_set_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8341c09305f6e02317d5b49a9e8239d18213b242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498070"
 ---
-# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup sp_set_parameter （Transact-sql）
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup sp_set_parameter (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   设置指定的智能管理系统参数的值。  
@@ -44,27 +46,27 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @parameter_name  
- 要设置值的参数的名称。 @parameter_name为 NVARCHAR （128）。 可用的参数名称为**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**和**StorageOperationDebugXevent**。  
+ 要设置值的参数的名称。 @parameter_name 为 NVARCHAR (128) 。 可用的参数名称为 **SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**和 **StorageOperationDebugXevent**。  
   
  @parameter_value  
- 要设置的参数的值。 @parameter值为 NVARCHAR （128）。  允许下列参数名称/值对：  
+ 要设置的参数的值。 @parameter 值为 NVARCHAR (128) 。  允许下列参数名称/值对：  
   
--   @parameter_name= "SSMBackup2WANotificationEmailIds"： @parameter_value = "email"  
+-   @parameter_name = "SSMBackup2WANotificationEmailIds"： @parameter_value  = "email"  
   
--   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy '： @parameter_value = {' true ' |"false"}  
+-   @parameter_name = ' SSMBackup2WAEnableUserDefinedPolicy '： @parameter_value  = {' true ' |"false"}  
   
--   @parameter_name= ' SSMBackup2WADebugXevent '： @parameter_value = {' true ' |"false"}  
+-   @parameter_name = ' SSMBackup2WADebugXevent '： @parameter_value  = {' true ' |"false"}  
   
--   @parameter_name= ' FileRetentionDebugXevent '： @parameter_value = {' true ' |"false"}  
+-   @parameter_name = ' FileRetentionDebugXevent '： @parameter_value  = {' true ' |"false"}  
   
--   @parameter_name= ' StorageOperationDebugXevent ' = {' true ' |"false"}  
+-   @parameter_name = ' StorageOperationDebugXevent ' = {' true ' |"false"}  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="best-practices"></a>最佳实践  
+## <a name="best-practices"></a>最佳方案  
  可选部分，介绍用户在执行语句或例程时应了解的最佳实践。  
   
 ## <a name="security"></a>安全性  

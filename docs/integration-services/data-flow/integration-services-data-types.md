@@ -1,4 +1,5 @@
 ---
+description: Integration Services 数据类型
 title: Integration Services 数据类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495866"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
 
@@ -57,14 +58,14 @@ ms.locfileid: "86904793"
 |DT_I8|八字节有符号整数。|  
 |DT_NUMERIC|精度和小数位数固定的精确数值。 此数据类型为具有单独符号的十六字节无符号整数，其小数位数为 0 到 38，最大精度为 38。|  
 |DT_R4|单精度浮点值。|  
-|DT_R8|双精度浮点值。|  
+|DT_R8|一个双精度浮点值。|  
 |DT_STR|以 null 值结束的 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 字符串，最大长度为 8000 个字符。 （如果列值包含其他 Null 终止符，则字符串将在第一个 Null 值出现的位置截断。）|  
 |DT_UI1|单字节无符号整数。|  
 |DT_UI2|双字节无符号整数。|  
 |DT_UI4|四字节无符号整数。|  
 |DT_UI8|八字节无符号整数。|  
 |DT_WSTR|以 Null 值结束的 Unicode 字符串，最大长度为 4000 个字符。 （如果列值包含其他 Null 终止符，则字符串将在第一个 Null 值出现的位置截断。）|  
-|DT_IMAGE|二进制值，最大大小为 2^31-1 (2,147,483,647) 个字节。 。|  
+|DT_IMAGE|二进制值，最大大小为 2^31-1 (2,147,483,647) 个字节。 .|  
 |DT_NTEXT|Unicode 字符串，最大长度为 2^30 - 1 (1,073,741,823) 个字符。|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 字符串，最大长度为 2^31-1 (2,147,483,647) 个字符。|  
   
@@ -113,7 +114,7 @@ ms.locfileid: "86904793"
   
 |将 DT_FILETIME 转换为|结果|  
 |-----------------------------|------------|  
-|DT_FILETIME|无更改。|  
+|DT_FILETIME|未进行更改。|  
 |DT_DATE|转换该数据类型。|  
 |DT_DBDATE|删除时间值。|  
 |DT_DBTIME|删除日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
@@ -127,7 +128,7 @@ ms.locfileid: "86904793"
 |将 DT_DATE 转换为|结果|  
 |-------------------------|------------|  
 |DT_FILETIME|转换该数据类型。|  
-|DT_DATE|无更改。|  
+|DT_DATE|未进行更改。|  
 |DT_DBDATE|删除 DT_DATA 数据类型表示的时间值。|  
 |DT_DBTIME|删除 DT_DATE 数据类型表示的日期值。|  
 |DT_DBTIME2|删除 DT_DATE 数据类型表示的日期值。|  
@@ -141,7 +142,7 @@ ms.locfileid: "86904793"
 |---------------------------|------------|  
 |DT_FILETIME|将 DT_FILETIME 数据类型的时间字段设置为零。|  
 |DT_DATE|将 DT_DATE 数据类型的时间字段设置为零。|  
-|DT_DBDATE|无更改。|  
+|DT_DBDATE|未进行更改。|  
 |DT_DBTIME|将 DT_DBTIME 数据类型的时间字段设置为零。|  
 |DT_DBTIME2|将 DT_DBTIME2 数据类型的时间字段设置为零。|  
 |DT_DBTIMESTAMP|将 DT_DBTIMESTAMP 数据类型的时间字段设置为零。|  
@@ -155,7 +156,7 @@ ms.locfileid: "86904793"
 |DT_FILETIME|将 DT_FILETIME 数据类型的日期字段设置为当前日期。|  
 |DT_DATE|将 DT_DATE 数据类型的日期字段设置为当前日期。|  
 |DT_DBDATE|将 DT_DBDATE 数据类型的日期字段设置为当前日期。|  
-|DT_DBTIME|无更改。|  
+|DT_DBTIME|未进行更改。|  
 |DT_DBTIME2|转换该数据类型。|  
 |DT_DBTIMESTAMP|将 DT_DBTIMESTAMP 数据类型的日期字段设置为当前日期。|  
 |DT_DBTIMESTAMP2|将 DT_DBTIMESTAMP2 数据类型的日期字段设置为当前日期。|  
@@ -183,7 +184,7 @@ ms.locfileid: "86904793"
 |DT_DBDATE|删除 DT_DBTIMESTAMP 数据类型表示的时间值。|  
 |DT_DBTIME|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIME2|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP|无更改。|  
+|DT_DBTIMESTAMP|未进行更改。|  
 |DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
@@ -241,8 +242,8 @@ ms.locfileid: "86904793"
 |DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
 |DT_I4|int|int|Long||INTEGER|INTEGER|  
 |DT_I8|bigint|bigint|||BIGINT|BIGINT|  
-|DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|real|real|Single||real|real|  
+|DT_NUMERIC|decimal、numeric|decimal、numeric|小数|NUMBER、INT|decimal、numeric|decimal、numeric|  
+|DT_R4|real|real|Single||real|REAL|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||VarChar||char、varchar|char、varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  
@@ -250,7 +251,7 @@ ms.locfileid: "86904793"
 |DT_UI4|||||||  
 |DT_UI8|||||||  
 |DT_WSTR|nchar、nvarchar、sql_variant、xml|char、varchar、nchar、nvarchar、sql_variant、xml|LongText|CHAR、ROWID、VARCHAR2、NVARCHAR2、NCHAR|GRAPHIC、VARGRAPHIC|GRAPHIC、VARGRAPHIC|  
-|DT_IMAGE|image|image|LongBinary|LONG RAW、BLOB、LOBLOCATOR、BFILE、VARGRAPHIC、LONG VARGRAPHIC、用户定义|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA、BLOB|  
+|DT_IMAGE|image|图像|LongBinary|LONG RAW、BLOB、LOBLOCATOR、BFILE、VARGRAPHIC、LONG VARGRAPHIC、用户定义|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA、BLOB|  
 |DT_NTEXT|ntext|text、ntext||LONG、CLOB、NCLOB、NVARCHAR、TEXT|LONG VARCHAR、NCHAR、NVARCHAR、TEXT|LONG VARCHAR、DBCLOB、NCHAR、NVARCHAR、TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA、CLOB|  
   

@@ -1,4 +1,5 @@
 ---
+description: DISABLE TRIGGER (Transact-SQL)
 title: DISABLE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7293b5420985321325d4afcccfd260f65b38ad39
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fd967687eabaed290f02e52853e784a375468580
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496837"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,9 +49,9 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 
 ## <a name="arguments"></a>参数
  *schema_name*  
- 触发器所属架构的名称。 不能为 DDL 或登录触发器指定 schema_name  。  
+ 触发器所属架构的名称。 不能为 DDL 或登录触发器指定 schema_name。  
   
- trigger_name   
+ trigger_name  
  要禁用的触发器的名称。  
   
  ALL  

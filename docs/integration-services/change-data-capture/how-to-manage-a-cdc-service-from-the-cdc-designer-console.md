@@ -1,4 +1,5 @@
 ---
+description: 如何从 CDC 设计器控制台管理 CDC 服务
 title: 如何从 CDC 设计器控制台管理 CDC 服务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aafabf6767248994420d781e8d8a309ed749a58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d9e45195b432dc204e155afb3270c5f4f9e5f501
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496114"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何从 CDC 设计器控制台管理 CDC 服务
 
@@ -26,9 +27,9 @@ ms.locfileid: "86921515"
   
 ### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>从 CDC 设计器控制台管理 CDC 服务  
   
-1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”** 。  
+1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
   
-2.  在左侧的窗格中，展开 **“变更数据捕获”** 。  
+2.  在左侧的窗格中，展开 **“变更数据捕获”**。  
   
 3.  选择要管理的服务。  
   

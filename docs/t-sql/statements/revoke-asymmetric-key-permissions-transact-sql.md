@@ -1,4 +1,5 @@
 ---
+description: REVOKE 非对称密钥权限 (Transact-SQL)
 title: REVOKE 非对称密钥权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a79d209646fdc6dc51961ee838863383b17148d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 54c17df591c9e4364d2efa037e6072fa4024dce6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496617"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE 非对称密钥权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,13 +51,13 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission   
+ permission  
  指定可对程序集撤消的权限。 如下所列。  
   
- ON ASYMMETRIC KEY ::asymmetric_key_name    
- 指定对其撤消权限的非对称密钥。 需要使用作用域限定符 ::  。  
+ ON ASYMMETRIC KEY ::asymmetric_key_name  
+ 指定对其撤消权限的非对称密钥。 需要使用作用域限定符 ::。  
   
- database_principal   
+ database_principal  
  指定要从中撤消权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -81,7 +82,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal   
+ AS revoking_principal**  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -100,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  非对称密钥是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出可对非对称密钥撤消的最特定权限和有限权限，并列出暗含这些权限的更常用的权限。  
   
 |非对称密钥权限|非对称密钥权限隐含的权限|数据库权限隐含的权限|  

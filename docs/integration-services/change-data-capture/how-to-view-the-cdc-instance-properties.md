@@ -1,4 +1,5 @@
 ---
+description: 如何查看 CDC 实例属性
 title: 如何查看 CDC 实例属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb49d9d3bc3b0c0ebc05b8c3e17b5a98c85c66e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 670f64d956c8b8b7df281c66598a79a38ed7ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496117"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何查看 CDC 实例属性
 
@@ -26,7 +27,7 @@ ms.locfileid: "86916514"
   
 ### <a name="to-view-information-about-a-specific-instance"></a>查看有关特定实例的信息  
   
-1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”** 。  
+1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
   
 2.  在左侧的窗格中，展开 **“变更数据捕获”** ，然后展开包含您要查看的实例的服务。  
   

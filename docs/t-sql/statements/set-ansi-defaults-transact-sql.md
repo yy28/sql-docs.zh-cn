@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_DEFAULTS (Transact-SQL)
 title: SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -21,12 +22,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087fc2be7400052c2bbd3e82999c66b052422f99
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 662915032de8a7d27262cd5729937b2160261d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496517"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -49,7 +50,9 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
 ANSI_DEFAULTS 是服务器端设置，可以为所有客户端连接启用此行为。 客户端通常请求连接或会话初始化的设置。 用户不应修改服务器设置。   
 若要更改客户端的行为，用户应该使用特定于客户端的方法，如 `SQL_COPT_SS_PRESERVE_CURSORS`。 有关详细信息，请参阅 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。
   

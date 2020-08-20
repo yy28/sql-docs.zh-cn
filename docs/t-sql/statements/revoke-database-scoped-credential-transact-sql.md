@@ -1,4 +1,5 @@
 ---
+description: REVOKE 数据库作用域凭据 (Transact-SQL)
 title: REVOKE 数据库作用域凭据 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -19,12 +20,12 @@ ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0469f4f03430433135c827bb8f6e6fa9ed5dcc4a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8bc8760b678391b2bee7cf96d6e1b0e1e0c317a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496567"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 数据库作用域凭据 (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -53,13 +54,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission   
+ permission  
  指定可对数据库作用域凭据撤消的权限。 如下所列。  
   
- ON CERTIFICATE ::credential_name    
+ ON CERTIFICATE ::credential_name  
  指定要对其撤消权限的数据库作用域凭据。 需要使用作用域限定符“::”。  
   
- database_principal   
+ database_principal  
  指定要从中撤消权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -84,7 +85,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal   
+ AS revoking_principal**  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -103,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  数据库作用域凭据是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可以对数据库作用域凭据撤消的最特定、最有限的权限，以及暗含这些权限的较一般的权限。  
   
 |数据库作用域凭据权限|数据库作用域凭据权限隐含的权限|数据库权限隐含的权限|  

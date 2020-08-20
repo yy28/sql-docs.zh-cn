@@ -1,5 +1,6 @@
 ---
-title: 更改跟踪函数（Transact-sql） |Microsoft Docs
+description: 更改跟踪函数 (Transact-SQL)
+title: " (Transact-sql) 更改跟踪函数 |Microsoft Docs"
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08a9d5907c93b020f45ec8405361626266ec1300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69a301c266ce546733ef1fb26bf1479a5c2d8a2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498209"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>更改跟踪函数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,11 +31,11 @@ ms.locfileid: "85734423"
   
 |函数|描述|  
 |--------------|-----------------|  
-|[CHANGETABLE （更改）](../../relational-databases/system-functions/changetable-transact-sql.md)|返回自指定版本起对表所做的所有更改的跟踪信息。|  
-|[CHANGETABLE （版本）](../../relational-databases/system-functions/changetable-transact-sql.md)|返回指定行的最新更改跟踪信息。|  
-|[CHANGE_TRACKING_MIN_VALID_VERSION （）](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|返回在使用[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函数时从指定表获取更改跟踪信息所使用的最小版本。|  
+|[CHANGETABLE (更改) ](../../relational-databases/system-functions/changetable-transact-sql.md)|返回自指定版本起对表所做的所有更改的跟踪信息。|  
+|[CHANGETABLE (版本) ](../../relational-databases/system-functions/changetable-transact-sql.md)|返回指定行的最新更改跟踪信息。|  
+|[CHANGE_TRACKING_MIN_VALID_VERSION ( # B1 ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|返回在使用 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 函数时从指定表获取更改跟踪信息所使用的最小版本。|  
 |[CHANGE_TRACKING_CURRENT_VERSION](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)|获取与上次提交事务关联的版本。 可以在下次使用 CHANGETABLE 枚举更改时使用此版本。|  
-|[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|解释 CHANGETABLE （CHANGES ...）函数返回的 SYS_CHANGE_COLUMNS 值。|  
+|[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|解释 CHANGETABLE (CHANGES ... ) 函数返回的 SYS_CHANGE_COLUMNS 值。|  
 |[WITH CHANGE_TRACKING_CONTEXT](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)|用于在应用程序更改数据时指定更改上下文，例如发起方 ID。|  
   
 ## <a name="see-also"></a>另请参阅  

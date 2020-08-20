@@ -1,4 +1,5 @@
 ---
+description: 列 Null 比率配置文件请求选项（数据事件探查任务）
 title: 列 Null 比率配置文件请求选项（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 470fcd41ed1605374ee3a5c4d5bb69b8b44c0c0d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f25cb279d26355461f622587aa56f9e0ef4ac1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496010"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>列 Null 比率配置文件请求选项（数据事件探查任务）
 
@@ -32,7 +33,7 @@ ms.locfileid: "86923964"
  有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“列 Null 比率请求”** ， **“请求属性”** 窗格显示下面的选项组：  
+ 对于 **“列 Null 比率请求”**， **“请求属性”** 窗格显示下面的选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   

@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496937"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,18 +66,18 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 
 ## <a name="arguments"></a>参数
  **@** _dialog_handle_  
- 一个变量，用于为 BEGIN DIALOG CONVERSATION 语句返回的新对话存储系统生成的对话句柄。 该变量的类型必须为 uniqueidentifier  。  
+ 一个变量，用于为 BEGIN DIALOG CONVERSATION 语句返回的新对话存储系统生成的对话句柄。 该变量的类型必须为 uniqueidentifier****。  
   
  FROM SERVICE *initiator_service_name*  
  指定启动对话的服务。 指定的名称必须是当前数据库中的服务的名称。 为发起方服务指定的队列将接收由目标服务返回的消息，以及 Service Broker 为此会话创建的消息。  
   
- TO SERVICE 'target_service_name'     
- 指定启动对话时的目标服务。 *target_service_name* 的类型为 **nvarchar(256)** 。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 target_service_name 字符串匹配  。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
+ TO SERVICE 'target_service_name'  
+ 指定启动对话时的目标服务。 *target_service_name* 的类型为 **nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 target_service_name 字符串匹配**。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
   
  *service_broker_guid*  
  指定承载目标服务的数据库。 如果有多个数据库承载目标服务实例，则可通过提供 *service_broker_guid* 与特定数据库通信。  
   
- *service_broker_guid* 的类型为 **nvarchar(128)** 。 若要查找数据库的 *service_broker_guid*，请在数据库中运行以下查询：  
+ *service_broker_guid* 的类型为 **nvarchar(128)**。 若要查找数据库的 *service_broker_guid*，请在数据库中运行以下查询：  
   
 ```  
 SELECT service_broker_guid  
@@ -93,13 +94,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  指定此会话遵循的约定。 当前数据库中必须有该约定。 如果目标服务不接受遵循指定约定的新会话，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 如果省略此子句，则会话会遵循名为 **DEFAULT** 的约定。  
   
- RELATED_CONVERSATION =related_conversation_handle    
+ RELATED_CONVERSATION =related_conversation_handle  
  指定将新对话添加到的现有会话组。 如果使用该子句，则新对话与 *related_conversation_handle* 指定的对话属于同一个会话组。 *related_conversation_handle* 的类型必须可隐式转换为类型 **uniqueidentifier**。 如果 *related_conversation_handle* 不引用现有的对话，则该语句将失败。  
   
- RELATED_CONVERSATION_GROUP =related_conversation_group_id    
+ RELATED_CONVERSATION_GROUP =related_conversation_group_id  
  指定将新对话添加到的现有会话组。 如果使用该子句，则新对话将添加到 *related_conversation_group_id* 指定的会话组中。 *related_conversation_group_id* 的类型必须可隐式转换为类型 **uniqueidentifier**。 如果 *related_conversation_group_id* 不引用现有的会话组，Service Broker 会使用指定的 *related_conversation_group_id* 创建一个新的会话组，并将新对话与该会话组关联。  
   
- LIFETIME =dialog_lifetime    
+ LIFETIME =dialog_lifetime  
  指定对话将保持打开状态的最长时间。 为使对话成功完成，两个端点都必须在生存期内显式结束对话。 *dialog_lifetime* 的值必须以秒表示。 生存期的类型为 **int**。如果未指定 LIFETIME 子句，则对话的生存期为 **int** 数据类型的最大值。  
   
  ENCRYPTION  
@@ -108,7 +109,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  在任何情况下，都不对同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务间交换的消息加密。 但是，如果用于会话的服务位于不同的数据库，则使用加密的会话仍然需要数据库主密钥和加密证书。 这样，在会话进行的过程中，如果将一个数据库移到其他实例，会话仍可继续进行。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  所有消息都是会话的一部分。 因此，发起方服务必须在发送消息到目标服务之前启动与目标服务的会话。 BEGIN DIALOG CONVERSATION 语句中指定的信息类似于信函上的地址；[!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用此信息将消息传递到正确的服务。 TO SERVICE 子句中指定的服务是消息发送到的地址。 FROM SERVICE 子句中指定的服务是用于答复消息的返回地址。  
   
  会话目标不需要调用 BEGIN DIALOG CONVERSATION。 当会话中来自发起方的第一条消息到达时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将在目标数据库中创建一个会话。  

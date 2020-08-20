@@ -1,5 +1,6 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION （Transact-sql） |Microsoft Docs
+description: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
+title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23e91a60672e400d658403533433a97694407a39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af42a0f719e490ce32c6f81ee92722a540f1271a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498136"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  当使用[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函数时，返回客户端上可用于从指定表获取更改跟踪信息的最小版本。  
+  当使用 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 函数时，返回客户端上可用于从指定表获取更改跟踪信息的最小版本。  
     
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,15 +41,15 @@ ms.locfileid: "85734414"
 CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *table_object_id*  
- 表的对象 ID。 *table_object_id*是**int**。  
+ 表的对象 ID。 *table_object_id* 是 **int**。  
   
 ## <a name="return-type"></a>返回类型  
  **bigint**  
   
 ## <a name="remarks"></a>备注  
- 使用此函数验证 CHANGETABLE 的*last_sync_version*参数的值。 如果*last_sync_version*小于此函数报告的值，则稍后调用 CHANGETABLE 后返回的结果可能无效。  
+ 使用此函数验证 CHANGETABLE 的 *last_sync_version* 参数的值。 如果 *last_sync_version* 小于此函数报告的值，则稍后调用 CHANGETABLE 后返回的结果可能无效。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION 使用以下信息来确定返回值：  
   
@@ -87,7 +88,7 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [更改跟踪函数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
   

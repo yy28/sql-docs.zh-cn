@@ -1,4 +1,5 @@
 ---
+description: RESTORE SERVICE MASTER KEY (Transact-SQL)
 title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8565124ea527b5c9de885a5b342d6368b99149d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8eab13b0089b289dd7a6835b20c17b4fbc2ee60c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496651"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,15 +50,15 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 
 ## <a name="arguments"></a>参数
  FILE ='path\_to\_file'  
- 指定存储服务主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径  。  
+ 指定存储服务主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径**。  
   
- PASSWORD ='password'     
+ PASSWORD ='password'  
  指定对从文件中导入的服务主密钥进行解密时所需的密码。  
   
  FORCE  
  即使存在数据丢失的风险，也要强制替换服务主密钥。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当还原服务主密钥时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对所有已使用当前服务主密钥加密的密钥和机密内容进行解密，然后使用从备份文件中加载的服务主密钥对这些密钥和机密内容进行加密。  
   
  如果有任意一种解密操作失败，则还原操作将会失败。 您可以使用 FORCE 选项忽略错误，但是该选项会使无法进行解密的数据丢失。  

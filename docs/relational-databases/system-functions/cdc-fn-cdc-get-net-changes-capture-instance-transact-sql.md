@@ -1,5 +1,6 @@
 ---
-title: cdc. fn_cdc_get_net_changes_ &lt; capture_instance &gt; （transact-sql） |Microsoft Docs
+description: 'fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) '
+title: fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9e801649cceee2aacdda530fa47c53db500bad6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498193"
 ---
-# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc fn_cdc_get_net_changes_ &lt; capture_instance &gt; （transact-sql）
+# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  为在指定的日志序列号（LSN）范围内更改的每个源行返回一个净更改行。  
+  为 (LSN) 范围内的指定日志序列号内的每个源行返回一个净更改行。  
   
- **那么，什么是 LSN？** [SQL Server 事务日志](../logs/the-transaction-log-sql-server.md)中的每个记录都由一个日志序列号（LSN）唯一标识。 Lsn 按顺序排序，如果 LSN2 大于 LSN1，则 LSN2 引用的日志记录描述的更改发生在日志记录 LSN 描述的更改**之后**。  
+ **那么，什么是 LSN？** [SQL Server 事务日志](../logs/the-transaction-log-sql-server.md)中的每个记录都由一个日志序列号 (LSN) 唯一标识。 Lsn 按顺序排序，如果 LSN2 大于 LSN1，则 LSN2 引用的日志记录描述的更改发生在日志记录 LSN 描述的更改 **之后** 。  
   
- 发生重大事件的日志记录的 LSN 对于构造正确的还原顺序可能很有用。 因为 Lsn 是有序的，所以可以比较它们是否相等（即、 \<, > =、 \<=, > =）。 构造还原顺序时，这种比较很有用。  
+ 发生重大事件的日志记录的 LSN 对于构造正确的还原顺序可能很有用。 因为 Lsn 是有序的，所以可以比较它们的相等性和不相等 (也就是说， \<, > ，=， \<=, > =) 。 构造还原顺序时，这种比较很有用。  
   
- 如果源行在 LSN 范围内有多个更改，则在下面描述的枚举函数返回一个反映该行最终内容的行。 例如，如果事务在源表中插入行，并且 LSN 范围内的后续事务更新该行中的一个或多个列，则该**函数只返回一行，** 其中包含更新后的列值。  
+ 如果源行在 LSN 范围内有多个更改，则在下面描述的枚举函数返回一个反映该行最终内容的行。 例如，如果事务在源表中插入行，并且 LSN 范围内的后续事务更新该行中的一个或多个列，则该 **函数只返回一行，** 其中包含更新后的列值。  
   
- 此枚举函数是在对某源表启用变更数据捕获并指定净跟踪时创建的。 若要启用净跟踪，源表必须具有主键或唯一索引。 函数名称是派生的，并使用格式为 cdc. fn_cdc_get_net_changes_*capture_instance*，其中*capture_instance*是为捕获实例指定的值（当源表启用变更数据捕获时）。 有关详细信息，请参阅[sys.databases&#41;sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
+ 此枚举函数是在对某源表启用变更数据捕获并指定净跟踪时创建的。 若要启用净跟踪，源表必须具有主键或唯一索引。 函数名称是派生的，并使用格式为 cdc. fn_cdc_get_net_changes_*capture_instance*，其中 *capture_instance* 是为捕获实例指定的值（当源表启用变更数据捕获时）。 有关详细信息，请参阅 [sys.databases&#41;sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,14 +54,14 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>参数  
  *from_lsn*  
- LSN，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn*为**binary （10）**。  
+ LSN，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn* 是 ** (10) 的二进制 **。  
   
- 结果集中仅包含[cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中值为 __ $ start_lsn 大于或等于*from_lsn*的行。  
+ 结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中值为 __ $ start_lsn 大于或等于 *from_lsn* 的行。  
   
  *to_lsn*  
- LSN，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn*为**binary （10）**。  
+ LSN，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn* 是 ** (10) 的二进制 **。  
   
- 结果集中仅包含[cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中*值为 __* $ start_lsn 小于或等于 from_lsn 或等于*to_lsn*的行。  
+ 结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中 *值为 __* $ start_lsn 小于或等于 from_lsn 或等于 *to_lsn* 的行。  
   
  *<row_filter_option>* ：： = {all | all with mask | all with merge}  
  控制元数据列的内容和结果集中所返回的行的选项。 可以是下列选项之一：  
@@ -69,7 +70,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  返回对行所做的最终更改的 LSN 以及应用元数据列 __ $ start_lsn 和 $operation 所需的操作 \_ \_ 。 列 \_ \_ $update _mask 始终为 NULL。  
   
  all with mask  
- 返回对行所做的最终更改的 LSN 以及应用元数据列 __ $ start_lsn 和 $operation 所需的操作 \_ \_ 。 此外，当更新操作返回（ \_ \_ $operation = 4）时，更新中修改的捕获列会在 $update _mask 中返回的值中进行标记 \_ \_ 。  
+ 返回对行所做的最终更改的 LSN 以及应用元数据列 __ $ start_lsn 和 $operation 所需的操作 \_ \_ 。 此外，当更新操作返回 (\_ \_ $operation = 4 时) 在更新中修改的捕获列会在 $update _mask 中返回的值中进行标记 \_ \_ 。  
   
  all with merge  
  返回对元数据列 __$start_lsn 中的行所做的最终更改的 LSN。 列 \_ \_ $operation 将是以下两个值之一：1表示删除，5表示应用更改所需的操作是插入或更新。 列 \_ \_ $update _mask 始终为 NULL。  
@@ -96,7 +97,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="examples"></a>示例  
  下面的示例使用函数 `cdc.fn_cdc_get_net_changes_HR_Department` 来报告在 `HumanResources.Department` 特定时间间隔内对源表所做的净更改。  
   
- 首先，`GETDATE` 函数用于标记时间间隔的开始。 在将多个 DML 语句应用到源表后，再次调用 `GETDATE` 函数可标识时间间隔的结束。 然后，使用函数[fn_cdc_map_time_to_lsn sys.databases](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)将时间间隔映射到由 lsn 值界定的变更数据捕获查询范围。 最后，查询函数 `cdc.fn_cdc_get_net_changes_HR_Department` 以获取该时间间隔内对源表所做的净更改。 请注意，插入后又删除的行在函数返回的结果集中不会出现。 这是因为在查询窗口中先添加然后又删除的行在时间间隔内对源表不生成任何净更改。 在运行此示例之前，必须先在[sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)中运行示例 B。  
+ 首先，`GETDATE` 函数用于标记时间间隔的开始。 在将多个 DML 语句应用到源表后，再次调用 `GETDATE` 函数可标识时间间隔的结束。 然后，使用函数 [fn_cdc_map_time_to_lsn sys.databases](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 将时间间隔映射到由 lsn 值界定的变更数据捕获查询范围。 最后，查询函数 `cdc.fn_cdc_get_net_changes_HR_Department` 以获取该时间间隔内对源表所做的净更改。 请注意，插入后又删除的行在函数返回的结果集中不会出现。 这是因为在查询窗口中先添加然后又删除的行在时间间隔内对源表不生成任何净更改。 在运行此示例之前，必须先在 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)中运行示例 B。  
   
 ```  
 USE AdventureWorks2012;  

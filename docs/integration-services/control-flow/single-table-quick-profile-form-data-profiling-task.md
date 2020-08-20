@@ -1,4 +1,5 @@
 ---
+description: 单个表快速配置文件窗体（数据事件探查任务）
 title: 单个表快速配置文件窗体（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495951"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>单个表快速配置文件窗体（数据事件探查任务）
 
@@ -53,7 +54,7 @@ ms.locfileid: "86920972"
 |**“与决定列一样最多 N 列”**|选择最大列数，以可能的组合作为决定列进行测试。 默认值为 1。 最大值为 1000。 例如，选择 2 可对具有以下特点的组合进行测试：单个列或两个列组合为另一个（依赖）列的决定列。|  
   
 > [!NOTE]  
->  值包含配置文件类型在“单个表快速配置文件窗体”中不可用  。  
+>   值包含配置文件类型在 **“单个表快速配置文件窗体”** 中不可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

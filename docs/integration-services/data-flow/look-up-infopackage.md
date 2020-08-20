@@ -1,4 +1,5 @@
 ---
+description: 查找 InfoPackage
 title: 查找 InfoPackage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43ad94c5f4cc7d97b99dd0cfadda9811e4ce5f05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 348ac42f2903b039e88a073cb24b1ae6d95dec7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495810"
 ---
 # <a name="look-up-infopackage"></a>查找 InfoPackage
 
@@ -37,7 +38,7 @@ ms.locfileid: "86916496"
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-4.  在“连接管理器”页面上的“InfoPackage/InfoSource”组框中，单击“查找”显示“查找 InfoPackage”对话框     。  
+4.  在“连接管理器”页面上的“InfoPackage/InfoSource”组框中，单击“查找”显示“查找 InfoPackage”对话框   。  
   
 ## <a name="lookup-options"></a>查找选项  
  在查找字段中，您可以使用星号通配符 (*) 或使用部分字符串结合星号通配符来筛选结果。 但是，如果您将查找字段保留为空，则查找操作仅与该字段中的空字符串匹配。  
@@ -60,7 +61,7 @@ ms.locfileid: "86916496"
  **InfoPackage**  
  显示在 SAP Netweaver BW 系统中定义的 InfoPackage 的名称。  
   
- 类型   
+ **类型**  
  显示 InfoPackage 的类型。 下表列出了该类型的可能值。  
   
 |值|说明|  
@@ -75,7 +76,7 @@ ms.locfileid: "86916496"
  **InfoSource**  
  显示与 InfoPackage 相关联的 InfoSource（如果有）的名称。  
   
- **Source System**  
+ **源系统**  
  显示源系统的名称。  
   
  当 InfoPackage 列表显示时，选择您需要的 InfoPackage，然后目标将使用需要的值填充关联的选项。  

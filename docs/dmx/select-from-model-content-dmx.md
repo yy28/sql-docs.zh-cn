@@ -1,5 +1,6 @@
 ---
-title: 选择 "从 &lt; 模型" &gt; 。内容（DMX） |Microsoft Docs
+description: '选择 "从 &lt; 模型" &gt; 。内容 (DMX) '
+title: 选择 "从 &lt; 模型" &gt; 。内容 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496271"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>选择 "从 &lt; 模型" &gt; 。内容（DMX）
+# <a name="select-from-ltmodelgtcontent-dmx"></a>选择 "从 &lt; 模型" &gt; 。内容 (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回指定数据挖掘模型的挖掘模型架构行集。  
@@ -46,14 +47,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
- **SELECT FROM** _\<model>_ **。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用中的 "**选择" \<model> 。** 返回模型的 NODE_RULE 列中的值的内容语句。  
+ **SELECT FROM** _\<model>_ **。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用中的 " **选择" \<model> 。** 返回模型的 NODE_RULE 列中的值的内容语句。  
   
  下表列出了挖掘模型内容中包含的列。  
   
 > [!NOTE]  
->  算法可能会为了正确表示内容而对列做出不同的解释。 有关每种算法的挖掘模型内容的说明，以及有关如何解释和查询每种模型类型的挖掘模型内容的提示，请参阅[挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
+>  算法可能会为了正确表示内容而对列做出不同的解释。 有关每种算法的挖掘模型内容的说明，以及有关如何解释和查询每种模型类型的挖掘模型内容的提示，请参阅 [挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
   
-|CONTENT 行集列|说明|  
+|CONTENT 行集列|描述|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|目录名称。 如果提供程序不支持目录，则为 NULL。|  
 |MODEL_SCHEMA|未限定的架构名称。 如果提供程序不支持架构，则为 NULL。|  
@@ -88,10 +89,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 以下查询使用**IsDescendant**函数返回上一个查询中返回的节点的直接子节点。  
+ 以下查询使用 **IsDescendant** 函数返回上一个查询中返回的节点的直接子节点。  
   
 > [!NOTE]  
->  由于 NODE_NAME 的值是字符串，因此不能使用子 select 语句将 NODE_ID 作为参数返回给**IsDescendant**函数。  
+>  由于 NODE_NAME 的值是字符串，因此不能使用子 select 语句将 NODE_ID 作为参数返回给 **IsDescendant** 函数。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_xe_object_columns （Transact-sql） |Microsoft Docs
+description: sys.dm_xe_object_columns (Transact-SQL)
+title: sys. dm_xe_object_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 005455742f1fbb782e663672c0cc104bd1cb28f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8d615d2c2de89262c0c760c56431e77b6e06086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498270"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "85898604"
 |object_package_guid|**uniqueidentifier**|包含该对象的包的 GUID。 不可为 null。|  
 |type_name|**nvarchar(256)**|此列的类型名称。 不可为 null。|  
 |type_package_guid|**uniqueidentifier**|包含列数据类型的包的 GUID。 不可为 null。|  
-|column_type|**nvarchar(60)**|指示如何使用此列。 不可为 null。 column_type 可以是以下项之一：<br /><br /> readonly。 该列包含不能被更改的静态值。<br /><br /> data。 该列可包含由对象公开的运行时数据。<br /><br /> customizable。 该列包含可以被更改的值。<br /><br /> 注意：更改此值可以修改对象的行为。|  
+|column_type|**nvarchar(60)**|指示如何使用此列。 不可为 null。 column_type 可以是以下项之一：<br /><br /> readonly。 该列包含不能被更改的静态值。<br /><br /> 模型。 该列可包含由对象公开的运行时数据。<br /><br /> customizable。 该列包含可以被更改的值。<br /><br /> 注意：更改此值可以修改对象的行为。|  
 |column_value|**nvarchar(256)**|显示与对象列关联的静态值。 可以为 Null。|  
 |capabilities|**int**|一个描述列的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此对象列的功能的说明。 此值可以为下列值之一：<br /><br /> 必需。 将父对象绑定到一个事件会话时必须设置该值。<br /><br /> 可以为 Null。|  
-|description|**nvarchar （3072）**|此对象列的说明。 可以为 Null。|  
+|description|**nvarchar (3072) **|此对象列的说明。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

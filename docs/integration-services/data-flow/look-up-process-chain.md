@@ -1,4 +1,5 @@
 ---
+description: 查找进程链
 title: 查找进程链 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14b8d6250ede770df8dae9d565e4144e389968d8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 28d354fce02498905c61df6b61a35a774d804eec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495815"
 ---
 # <a name="look-up-process-chain"></a>查找进程链
 
@@ -33,13 +34,13 @@ ms.locfileid: "86916483"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击“SAP BW 源”。  
+2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
 3.  在 **“SAP BW 源编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
 4.  在 **“进程链”** 组框中，单击 **“查找”** 显示 **“查找进程链”** 对话框。  
   
-     只有在“执行模式”为“P - 触发进程链”的情况下，“进程链”组框才会显示。     
+     只有在“执行模式”为“P - 触发进程链”的情况下，“进程链”组框才会显示。************  
   
 ## <a name="lookup-options"></a>查找选项  
  在查找字段中，您可以使用星号通配符 (*) 或使用部分字符串结合星号通配符来筛选结果。 但是，如果您将查找字段保留为空，则查找操作仅与该字段中的空字符串匹配。  

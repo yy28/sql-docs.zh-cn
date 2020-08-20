@@ -1,4 +1,5 @@
 ---
+description: Oracle CDC 服务
 title: Oracle CDC 服务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95dc655d8c1ac23df7cbb058cba2c5c7f4e41419
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38a8f0ac868968015ead8031a0a5aad37b89078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496115"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
 
@@ -98,6 +99,6 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 ## <a name="see-also"></a>另请参阅  
  [如何管理本地 CDC 服务](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [管理 Oracle CDC 服务](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

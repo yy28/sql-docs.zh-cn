@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 title: SET ANSI_NULL_DFLT_OFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,17 +25,17 @@ ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc993ab2b3dbe8d167a91bcf4c52e786844c73fe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6768c48004f8b39d6806fae05a1b1571d774e85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496497"
 ---
 # <a name="set-ansi_null_dflt_off-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  数据库的 ANSI null default 选项为 true 时，更改会话行为以覆盖新列的默认为 Null 性  。 有关设置 ANSI null default 的值的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+  数据库的 ANSI null default 选项为 true 时，更改会话行为以覆盖新列的默认为 Null 性****。 有关设置 ANSI null default 的值的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -52,10 +53,12 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 SET ANSI_NULL_DFLT_OFF OFF
 ```
 
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  仅当在 CREATE TABLE 和 ALTER TABLE 语句中没有指定列的为空性时，该设置才能影响新列的为空性。 默认情况下，当 SET ANSI_NULL_DFLT_OFF 为 ON 时，如果没有显式指定列的为空性状态，则使用 ALTER TABLE 和 CREATE TABLE 语句创建的新列将为 NOT NULL。 SET ANSI_NULL_DFLT_OFF 对使用显示 NULL 或 NOT NULL 创建的列无效。  
   
- 不能同时将 SET ANSI_NULL_DFLT_OFF 和 SET ANSI_NULL_DFLT_ON 设置为 ON。 如果将一个选项设置为 ON，则将另一个选项设置为 OFF。 因此，可以将 ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON 设置为 ON，或者将二者都设置为 OFF。 如果有一个选项为 ON，则该设置（SET ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON）生效。 如果将这两个选项都设置为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中 is_ansi_null_default_on 列的值。  
+ 不能同时将 SET ANSI_NULL_DFLT_OFF 和 SET ANSI_NULL_DFLT_ON 设置为 ON。 如果将一个选项设置为 ON，则将另一个选项设置为 OFF。 因此，可以将 ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON 设置为 ON，或者将二者都设置为 OFF。 如果有一个选项为 ON，则该设置（SET ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON）生效。 如果将这两个选项都设置为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用 sys.databases 目录视图中 [is_ansi_null_default_on](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列的值。  
   
  为使 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本在包含不同为空性设置的数据库中获得更可靠的操作，最好始终在 CREATE TABLE 和 ALTER TABLE 语句中指定 NULL 或 NOT NULL。  
   
@@ -63,11 +66,10 @@ SET ANSI_NULL_DFLT_OFF OFF
   
  要查看此设置的当前设置，请运行以下查询。  
   
-```  
+```sql  
 DECLARE @ANSI_NULL_DFLT_OFF VARCHAR(3) = 'OFF';  
 IF ( (2048 & @@OPTIONS) = 2048 ) SET @ANSI_NULL_DFLT_OFF = 'ON';  
 SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;  
-  
 ```  
   
 ## <a name="permissions"></a>权限  
@@ -76,7 +78,7 @@ SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;
 ## <a name="examples"></a>示例  
  以下示例显示当 ANSI null default 数据库选项在两种设置下时，对 `SET ANSI_NULL_DFLT_OFF` 的影响。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -116,28 +118,28 @@ GO
 ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT OFF;  
 GO  
 -- Create table t4.  
-CREATE TABLE t4 (a tinyint) ;  
+CREATE TABLE t4 (a TINYINT) ;  
 GO   
 -- NULL INSERT should fail.  
-INSERT INTO t4 (a) VALUES (null);  
+INSERT INTO t4 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to ON and create table t5.  
 SET ANSI_NULL_DFLT_OFF ON;  
 GO  
-CREATE TABLE t5 (a tinyint);  
+CREATE TABLE t5 (a TINYINT);  
 GO   
 -- NULL insert should fail.  
-INSERT INTO t5 (a) VALUES (null);  
+INSERT INTO t5 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to OFF and create table t6.  
 SET ANSI_NULL_DFLT_OFF OFF;  
 GO  
-CREATE TABLE t6 (a tinyint);   
+CREATE TABLE t6 (a TINYINT);   
 GO   
 -- NULL insert should fail.  
-INSERT INTO t6 (a) VALUES (null);  
+INSERT INTO t6 (a) VALUES (NULL);  
 GO  
   
 -- Drop tables t1 through t6.  

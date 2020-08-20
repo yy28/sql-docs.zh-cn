@@ -1,4 +1,5 @@
 ---
+description: 法律声明（SSMA for Sybase）
 title: Sybase)  (SSMA 法律声明 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6d768560eed48d70bf8d0d9ef7339fed9a231844
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c98c029db0ec72991d45b433fa8654fe4a5ae116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497673"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>法律声明（SSMA for Sybase）
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  

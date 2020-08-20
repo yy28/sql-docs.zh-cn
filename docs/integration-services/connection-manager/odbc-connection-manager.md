@@ -1,4 +1,5 @@
 ---
+description: ODBC 连接管理器
 title: ODBC 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b362f60e2fb38ce9a9eda476dd4b1077055da18
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496086"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
 
@@ -31,7 +32,7 @@ ms.locfileid: "86914158"
 
   ODBC 连接管理器使得包能够使用开放式数据库连接规范 (ODBC) 连接到多种数据库管理系统。  
   
- 将 ODBC 连接添加到包并设置连接管理器的属性时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将创建连接管理器并将该连接管理器添加到包的 Connections 集合中  。 该连接管理器在运行时决定物理 ODBC 连接。  
+ 将 ODBC 连接添加到包并设置连接管理器的属性时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将创建连接管理器并将该连接管理器添加到包的 Connections 集合中****。 该连接管理器在运行时决定物理 ODBC 连接。  
   
  该连接管理器的 **ConnectionManagerType** 属性设置为 **ODBC**。  
   
@@ -65,10 +66,10 @@ ms.locfileid: "86914158"
  查看所选 ODBC 连接管理器的属性和值。  
   
  **新建**  
- 使用“连接管理器”对话框创建 ODBC 连接管理器。  通过此对话框，您也可以在需要时创建新的 ODBC 数据源。  
+ 使用“连接管理器”对话框创建 ODBC 连接管理器。**** 通过此对话框，您也可以在需要时创建新的 ODBC 数据源。  
   
  **删除**  
- 选择某个连接，然后可以使用“删除”按钮将其删除。   
+ 选择某个连接，然后可以使用“删除”按钮将其删除。****  
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

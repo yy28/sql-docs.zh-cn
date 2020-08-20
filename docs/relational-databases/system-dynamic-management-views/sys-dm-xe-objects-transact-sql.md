@@ -1,5 +1,6 @@
 ---
-title: sys. dm_xe_objects （Transact-sql） |Microsoft Docs
+description: sys.dm_xe_objects (Transact-SQL)
+title: sys. dm_xe_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f4e4a404c2bc2ac49ad9916cef668e1eb1656ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498275"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

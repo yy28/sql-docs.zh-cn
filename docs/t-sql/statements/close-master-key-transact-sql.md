@@ -1,4 +1,5 @@
 ---
+description: CLOSE MASTER KEY (Transact-SQL)
 title: CLOSE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -22,12 +23,12 @@ ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dec9e3bcb8ddc281fa5e104806a21439abbf54c
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 23d7ea90f1bd30500ae568a8833ec88244a1e4a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496957"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ CLOSE MASTER KEY
 ## <a name="arguments"></a>参数
  无参数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  该语句可反转 OPEN MASTER KEY 执行的操作。 仅当使用 OPEN MASTER KEY 语句在当前会话中打开数据库主密钥时，OSE MASTER KEY 才能成功。  
   
 ## <a name="permissions"></a>权限  

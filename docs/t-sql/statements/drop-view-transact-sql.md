@@ -1,4 +1,5 @@
 ---
+description: DROP VIEW (Transact-SQL)
 title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -23,12 +24,12 @@ ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81d3db058663274babb0eae1e16306e2197ad2a8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 31a1fa86f6d56d5a6b9b45ec096289bcd07301a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496787"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- IF EXISTS   
+ IF EXISTS  
  **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)[!INCLUDE[sssds](../../includes/sssds-md.md)]）。|  
   
  只有在视图已存在时才对其进行有条件地删除。  
@@ -62,10 +63,10 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *schema_name*  
  视图所属架构的名称。  
   
- view_name   
+ view_name  
  要删除的视图的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  删除视图时，将从系统目录中删除视图的定义和有关视图的其他信息。 还将删除视图的所有权限。  
   
  使用 DROP TABLE 删除的表上的任何视图都必须使用 DROP VIEW 显式删除。  

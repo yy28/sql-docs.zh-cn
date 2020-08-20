@@ -1,4 +1,5 @@
 ---
+description: 如何使用 CDC 服务
 title: 如何使用 CDC 服务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 435aa5014d19c51704a5a93a7b35c365e095b9c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b98acd138794028dcecce9d121295154358799b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496116"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服务
 
@@ -26,9 +27,9 @@ ms.locfileid: "86915803"
   
 ### <a name="to-work-with-cdc-services"></a>使用 CDC 服务  
   
-1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”** 。  
+1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”**。  
   
-2.  从左侧窗格中，选择“本地 CDC 服务”（根级别）。   
+2.  从左侧窗格中，选择“本地 CDC 服务”（根级别）。****  
   
 3.  您可以执行一项或两项下列任务：  
   
@@ -36,7 +37,7 @@ ms.locfileid: "86915803"
   
          从 CDC 服务配置控制台右侧的 **“操作”** 窗格中选择此选项。  
   
-         还可以右键单击“本地 CDC 服务”  ，然后选择“准备 SQL Server”  。  
+         还可以右键单击“本地 CDC 服务”****，然后选择“准备 SQL Server”****。  
   
          “为 Oracle CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例”对话框随即将会打开。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "86915803"
   
          从 CDC 服务配置控制台右侧的 **“操作”** 窗格中，单击 **“新建服务”** 。  
   
-         还可以右键单击“本地 CDC 服务”，然后选择“新建服务”。    
+         还可以右键单击“本地 CDC 服务”，然后选择“新建服务”。   
   
          “新建 Oracle CDC 服务”对话框将打开。  
   

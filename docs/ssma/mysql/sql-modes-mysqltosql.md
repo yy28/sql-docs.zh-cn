@@ -1,4 +1,5 @@
 ---
+description: SQL 模式 (MySQLToSQL)
 title: SQL 模式 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497714"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同的客户端以不同的方式应用这些模式。  
@@ -23,11 +24,11 @@ MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同
   
 ## <a name="sql-modes-grid"></a>SQL 模式网格：  
   
--   根级别的 SQL 模式网格包含以下列： **Sql 模式名称**、已**加载的 Sql 模式**和**有效的 sql 模式**。  
+-   根级别的 SQL 模式网格包含以下列： **Sql 模式名称**、已 **加载的 Sql 模式**和 **有效的 sql 模式**。  
   
 -   "数据库"、"数据库"、"表"、"语句" 类别、"视图" 类别、"表"、"视图"、"函数"、"过程"、"UDF" 和 "事件对象" 级别的 SQL 模式网格包含以下列： **SQL 模式名称**、**继承的 Sql 模式**和**有效的 sql**  
   
--   存储过程、存储函数和触发器级别的 SQL 模式网格包含以下列： **Sql 模式名称**、**原始 Sql 模式**和**有效的 sql 模式**。  
+-   存储过程、存储函数和触发器级别的 SQL 模式网格包含以下列： **Sql 模式名称**、  **原始 Sql 模式**和 **有效的 sql 模式**。  
   
 > [!NOTE]  
 > 组模式将在 "SQL 模式名称" 列下以粗体显示。  
@@ -41,13 +42,13 @@ MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同
 除函数 category、过程类别、事件类别和触发器外，这些 SQL 模式 (数据库、表类别、语句类别、视图类别、表、视图、函数、过程、UDF 和事件对象) 的所有级别存在。  
   
 > [!NOTE]  
-> 通过选择 "**从父项继承**" 复选框，可以从父节点继承继承的 SQL 模式。 默认情况下，此复选框保持选中状态。  
+> 通过选择 " **从父项继承** " 复选框，可以从父节点继承继承的 SQL 模式。 默认情况下，此复选框保持选中状态。  
   
 ## <a name="original-sql-modes"></a>原始 SQL 模式  
 这些是仅存在于函数、过程和触发器级别的 SQL 模式。  
   
 > [!NOTE]  
-> 通过选中 "**使用原始**项" 复选框，可以使用最初在相应函数或过程或触发器中使用的 SQL 模式。 默认情况下，此复选框保持选中状态。  
+> 通过选中 " **使用原始** 项" 复选框，可以使用最初在相应函数或过程或触发器中使用的 SQL 模式。 默认情况下，此复选框保持选中状态。  
   
 ## <a name="effective-sql-modes"></a>有效的 SQL 模式  
 可以通过以下方式在不同级别定义有效的 SQL 模式：  
@@ -64,7 +65,7 @@ MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同
   
     1.  所有原始 SQL 模式都可以调用 "有效的 SQL 模式"。  
   
-    2.  在此级别，仅当取消选中 "**使用原始**项" 复选框时，才可以显式修改有效的 SQL 模式。  
+    2.  在此级别，仅当取消选中 " **使用原始** 项" 复选框时，才可以显式修改有效的 SQL 模式。  
   
     3.  显式设置的有效 SQL 模式不会反映为原始 SQL 模式，最后应用于对象。  
   
@@ -72,7 +73,7 @@ MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同
   
     1.  所有继承的 SQL 模式都可以调用 "有效的 SQL 模式"。  
   
-    2.  在此级别，仅当取消选中 "**从父项继承**" 复选框时，才可以显式修改有效的 SQL 模式。  
+    2.  在此级别，仅当取消选中 " **从父项继承** " 复选框时，才可以显式修改有效的 SQL 模式。  
   
     3.  显式设置的有效 SQL 模式不会反映为继承的 SQL 模式，最后应用于对象。  
   

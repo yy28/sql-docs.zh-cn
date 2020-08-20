@@ -1,5 +1,6 @@
 ---
-title: sys. dm_broker_queue_monitors （Transact-sql） |Microsoft Docs
+description: sys.dm_broker_queue_monitors (Transact-SQL)
+title: sys. dm_broker_queue_monitors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1df4b4387d79cc6e8b2dc59b7a5a00f61a6d07f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8290b399d91bb196c818ba61fc7b685fcc23b383
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498341"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85894597"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|数据库的对象标识符，该数据库包含了监视器所观察的队列。 可以为 null.|  
 |**queue_id**|**int**|监视器所观察的队列的对象标识符。 可以为 null.|  
-|State |**nvarchar(32)**|监视器的状态。 可以为 null. 这是以下各项之一：<br /><br /> **不用**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|State|**nvarchar(32)**|监视器的状态。 可以为 null. 这是以下各项之一：<br /><br /> **不用**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|来自队列的 RECEIVE 上次返回空结果时的时间。 可以为 null.|  
 |**last_activated_time**|**datetime**|此队列监视器上次激活存储过程时的时间。 可以为 null.|  
 |**tasks_waiting**|**int**|当前正在 RECEIVE 语句中等待此队列的会话数。 可以为 null.<br /><br /> 注意：此数字包括执行 receive 语句的任何会话，不管队列监视器是否启动了该会话。 它表示您是否与 RECEIVE 一起使用 WAITFOR。 基本上，这些任务都在等待到达队列的消息。|  
@@ -75,7 +76,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与 Service Broker 有关的动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

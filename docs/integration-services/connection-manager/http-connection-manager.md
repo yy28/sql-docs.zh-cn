@@ -1,4 +1,5 @@
 ---
+description: HTTP 连接管理器
 title: HTTP 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef8b2df4b24f50f600683a5c6e9bb815208970cc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496118"
 ---
 # <a name="http-connection-manager"></a>HTTP 连接管理器
 
@@ -35,7 +36,7 @@ ms.locfileid: "86918543"
   
  将 HTTP 连接管理器添加到包时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 HTTP 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包的 **Connections** 集合。  
   
- 该连接管理器的 **ConnectionManagerType** 属性设置为 **HTTP.** 。  
+ 该连接管理器的 **ConnectionManagerType** 属性设置为 **HTTP.**。  
   
  可以通过下列方式配置 HTTP 连接管理器：  
   
@@ -78,14 +79,14 @@ ms.locfileid: "86918543"
  **密码**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
- **域**  
+ **Domain**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **使用客户端证书**  
  指定是否希望 HTTP 连接管理器使用客户端证书进行身份验证。  
   
  **证书**  
- 使用“选择证书”对话框从列表中选择证书。  文本框显示与此证书关联的名称。  
+ 使用“选择证书”对话框从列表中选择证书。**** 文本框显示与此证书关联的名称。  
   
  **超时值(秒)**  
  提供连接 Web 服务器时允许的超时值。 此属性的默认值为 30 秒。  
@@ -94,7 +95,7 @@ ms.locfileid: "86918543"
  提供用于写入数据的块区大小。  
   
  **测试连接**  
- 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。   
+ 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。****  
   
 ## <a name="http-connection-manager-editor-proxy-page"></a>HTTP 连接管理器编辑器（“代理”页）
   可以使用 **“HTTP 连接管理器编辑器”** 对话框的 **“代理”** 选项卡配置 HTTP 连接管理器以使用代理服务器。 利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。  
@@ -120,7 +121,7 @@ ms.locfileid: "86918543"
  **密码**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
- **域**  
+ **Domain**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **代理跳过列表**  
@@ -130,7 +131,7 @@ ms.locfileid: "86918543"
  键入要跳过代理服务器的地址。  
   
  **删除**  
- 选择某个地址，再单击“删除”  即可将其删除。  
+ 选择某个地址，再单击“删除”**** 即可将其删除。  
   
 ## <a name="see-also"></a>另请参阅  
  [Web 服务任务](../../integration-services/control-flow/web-service-task.md)   

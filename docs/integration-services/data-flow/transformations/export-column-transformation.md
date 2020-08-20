@@ -1,4 +1,5 @@
 ---
+description: 导出列转换
 title: 导出列转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495710"
 ---
 # <a name="export-column-transformation"></a>导出列转换
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919363"
 ## <a name="append-and-truncate-options"></a>追加和截断选项  
  下表说明了追加和截断选项的设置如何影响结果。  
   
-|附加|Truncate|文件存在|结果|  
+|追加|Truncate|文件存在|结果|  
 |------------|--------------|-----------------|-------------|  
 |False|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |True|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
@@ -46,7 +47,7 @@ ms.locfileid: "86919363"
 |True|True|否|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
 |False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
 |False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
-|True|False|是|转换将打开文件并将数据写入到文件末尾。|  
+|True|错误|是|转换将打开文件并将数据写入到文件末尾。|  
 |True|True|是|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>导出列转换的配置  
@@ -102,7 +103,7 @@ ms.locfileid: "86919363"
  查看输出的名称。 单击名称可以展开视图以包括列。  
   
  **列**  
- 查看在“导出列转换编辑器”对话框的“列”页中选择的输出列。    
+ 查看在“导出列转换编辑器”对话框的“列”页中选择的输出列。********  
   
  **错误**  
  指定发生错误时要执行的操作：忽略失败、重定向行或使组件失败。  

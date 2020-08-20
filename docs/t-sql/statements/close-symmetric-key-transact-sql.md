@@ -1,4 +1,5 @@
 ---
+description: CLOSE SYMMETRIC KEY (Transact-SQL)
 title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f14d291cf70bcefb13404805aa717f2087695ce6
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: b279b48adb0a72060d9e7700c57f25782eb83587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496910"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,10 +46,10 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- Key_name   
+ Key_name  
  要关闭的对称密钥的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  打开的对称密钥将绑定到会话而不是安全上下文。 打开的密钥将持续有效，直到它显式关闭或会话终止。 CLOSE ALL SYMMETRIC KEYS 将通过使用 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 语句，关闭在当前会话中打开的任何数据库主密钥。  有关打开密钥的信息，请参阅 [sys.openkeys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目录视图。  
   
 ## <a name="permissions"></a>权限  

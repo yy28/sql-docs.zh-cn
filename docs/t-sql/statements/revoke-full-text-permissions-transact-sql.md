@@ -1,4 +1,5 @@
 ---
+description: REVOKE 全文权限 (Transact-SQL)
 title: REVOKE 全文权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1c127761678432295e1e41bb84581df52f7252d5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a4f331b478aeb81ef7ceed5777928b4f82898b0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496569"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 全文权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,16 +56,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission   
+ permission  
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON FULLTEXT CATALOG ::full-text_catalog_name    
- 指定对其撤消权限的全文目录。 需要使用作用域限定符 ::  。  
+ ON FULLTEXT CATALOG ::full-text_catalog_name__****  
+ 指定对其撤消权限的全文目录。 需要使用作用域限定符 ::。  
   
- ON FULLTEXT STOPLIST ::full-text_stoplist_name    
- 指定要对其撤消权限的全文非索引字表。 需要使用作用域限定符 ::  。  
+ ON FULLTEXT STOPLIST ::full-text_stoplist_name****__  
+ 指定要对其撤消权限的全文非索引字表。 需要使用作用域限定符 ::。  
   
- database_principal   
+ database_principal  
  指定要从中撤消权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -89,7 +90,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal   
+ AS revoking_principal**  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -108,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG 权限  
  全文目录是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可撤消的对全文目录最为具体的限定权限，以及隐含这些权限的更为通用的权限。  

@@ -1,4 +1,5 @@
 ---
+description: 列长度分布配置文件请求选项（数据事件探查任务）
 title: 列长度分布配置文件请求选项（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f3833327f518b935874b79747ef9cd6b129143a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8eea376c7dc204b326f7ad4bb5ac41d0a76e4ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496013"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>列长度分布配置文件请求选项（数据事件探查任务）
 
@@ -32,7 +33,7 @@ ms.locfileid: "86921407"
  有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“列长度分布配置文件请求”** ， **“请求属性”** 窗格显示下面的选项组：  
+ 对于 **“列长度分布配置文件请求”**， **“请求属性”** 窗格显示下面的选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   

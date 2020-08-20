@@ -1,4 +1,5 @@
 ---
+description: RESTORE MASTER KEY (Transact-SQL)
 title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 101b4a941f355891a7e7e6aa9578998f2d8efc4c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f5b32d1caa0562f5a5fd226387c21ec029982a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496647"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,19 +53,19 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- FILE ='path_to_file'   
- 指定存储数据库主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径  。  
+ FILE ='path_to_file'**  
+ 指定存储数据库主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径**。  
   
  DECRYPTION BY PASSWORD ='*password*'  
  指定对从文件中导入的数据库主密钥进行解密时所需的密码。  
   
- ENCRYPTION BY PASSWORD ='password'   
+ ENCRYPTION BY PASSWORD ='password'  
  指定用于在将数据库主密钥加载到数据库之后对该密钥进行加密的密码。  
   
  FORCE  
  指定即使当前数据库主密钥未打开，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法对使用该主密钥加密的某些私钥进行解密，RESTORE 过程也应继续执行。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  还原主密钥之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对使用当前活动的主密钥加密的所有密钥进行解密，然后使用还原后的主密钥对这些密钥进行加密。 这种大量消耗资源的操作应当安排在资源需求较低的时段执行。 如果当前的数据库主密钥未打开或无法打开，或者无法对任何使用该主密钥加密的密钥进行解密，则还原操作将失败。  
   
  请仅在主密钥无法恢复或解密失败时，才使用 FORCE 选项。 仅由不可恢复密钥加密的信息将会丢失。  

@@ -1,4 +1,5 @@
 ---
+description: 新建 InfoObject
 title: 新建 InfoObject | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a67dd66c18fc5700ee964a2e321bd50fef09092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495880"
 ---
 # <a name="create-new-infoobject"></a>新建 InfoObject
 
@@ -39,19 +40,19 @@ ms.locfileid: "86900311"
   
 4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 分组框，执行以下步骤之一来创建 InfoObject：  
   
-    1.  要直接创建 InfoObject，请选择 **“InfoObject”** ，然后单击 **“创建”** 打开 **“新建 InfoObject”** 对话框。  
+    1.  要直接创建 InfoObject，请选择 **“InfoObject”**，然后单击 **“创建”** 打开 **“新建 InfoObject”** 对话框。  
   
-    2.  要在创建 InfoCube 的同时创建 InfoObject，请选择 **“InfoCube”** ，然后单击 **“创建”** 。 在 **“创建事务数据的 InfoCube”** 对话框中找到列表中某一行的 **“IObject”** 列，选择 **“创建”** 打开 **“新建 InfoObject”** 对话框。  
-  
-        > [!NOTE]  
-        >  表中每一行表示包数据流中的一列。  
-  
-    3.  要在创建事务数据的 InfoSouce 的同时创建 InfoObject，请选择 **“InfoSource”** ，然后单击 **“创建”** 。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”** ，然后单击 **“确定”** 。 在 **“创建事务数据的 InfoSource”** 对话框中找到列表中某一行的 **“IObject”** 列，选择 **“创建”** 打开 **“新建 InfoObject”** 对话框。  
+    2.  要在创建 InfoCube 的同时创建 InfoObject，请选择 **“InfoCube”**，然后单击 **“创建”**。 在 **“创建事务数据的 InfoCube”** 对话框中找到列表中某一行的 **“IObject”** 列，选择 **“创建”** 打开 **“新建 InfoObject”** 对话框。  
   
         > [!NOTE]  
         >  表中每一行表示包数据流中的一列。  
   
-    4.  要在创建主数据的 InfoSource 的同时创建 InfoObject，请选择 **“InfoSource”** ，然后单击 **“创建”** 。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”** ，然后单击 **“确定”** 。 在 **“创建主数据的 InfoSource”** 对话框中，单击 **“新建”** 打开 **“新建 InfoObject”** 对话框。  
+    3.  要在创建事务数据的 InfoSouce 的同时创建 InfoObject，请选择 **“InfoSource”**，然后单击 **“创建”**。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”**，然后单击 **“确定”**。 在 **“创建事务数据的 InfoSource”** 对话框中找到列表中某一行的 **“IObject”** 列，选择 **“创建”** 打开 **“新建 InfoObject”** 对话框。  
+  
+        > [!NOTE]  
+        >  表中每一行表示包数据流中的一列。  
+  
+    4.  要在创建主数据的 InfoSource 的同时创建 InfoObject，请选择 **“InfoSource”**，然后单击 **“创建”**。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”**，然后单击 **“确定”**。 在 **“创建主数据的 InfoSource”** 对话框中，单击 **“新建”** 打开 **“新建 InfoObject”** 对话框。  
   
  您也可在 **“新建 InfoObject”** 对话框的 **“属性”** 部分中单击 **“新建”** 来打开 **“新建 InfoObject”** 对话框。  
   
@@ -68,14 +69,14 @@ ms.locfileid: "86900311"
  **简短说明**  
  输入 InfoObject 的简短说明。  
   
- **详细说明**  
+ **长说明**  
  输入 InfoObject 的详细说明。  
   
  **包含主数据**  
  指示 InfoObject 中包含属性、文本或层次结构形式的主数据。  
   
 > [!NOTE]  
->  如果 InfoObject 表示维度数据且你已选择了“特征”  选项，则应选择此选项。  
+>   如果 InfoObject 表示维度数据且您已选择了 **“特征”** 选项，应选择此选项。  
   
  **允许小写字符**  
  允许 InfoObject 数据中使用小写字符。  
@@ -137,7 +138,7 @@ ms.locfileid: "86900311"
 |-----------|-----------------|  
 |CHA|特征|  
 |KYF|关键数字|  
-|UNI|单位|  
+|UNI|单元|  
 |TIM|时间特征|  
   
 ### <a name="attributes-options"></a>属性选项  
@@ -154,7 +155,7 @@ ms.locfileid: "86900311"
  要创建和添加新的 InfoObject，请单击“新建”，然后使用 **“新建 InfoObject”** 对话框的一个新实例来创建新的 InfoObject。  
   
  **删除**  
- 从“属性”  列表删除选择的 InfoObject。  
+ 从“属性”**** 列表删除选择的 InfoObject。  
   
 ## <a name="see-also"></a>另请参阅  
  [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   

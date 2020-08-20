@@ -1,4 +1,5 @@
 ---
+description: REVOKE 程序集权限 (Transact-SQL)
 title: REVOKE 程序集权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40a79e0c59c3e392d5d36a341b663b41ed8678c2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d76b3e534226c2c8f9271bbcc4690e0900eea2df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496632"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE 程序集权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +50,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission   
+ permission  
  指定可对程序集撤消的权限。 如下所列。  
   
- ON ASSEMBLY ::assembly_name    
- 指定对其撤消权限的程序集。 需要使用作用域限定符 ::  。  
+ ON ASSEMBLY ::assembly_name****__  
+ 指定对其撤消权限的程序集。 需要使用作用域限定符 ::。  
   
- database_principal   
+ database_principal  
  指定要从中撤消权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -80,7 +81,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal   
+ AS revoking_principal**  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -99,7 +100,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  程序集是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可对程序集撤消的最特定、最有限的权限，以及暗含这些权限的更一般的权限。  
   
 |程序集权限|程序集权限隐含的权限|数据库权限隐含的权限|  

@@ -1,4 +1,5 @@
 ---
+description: 查找 InfoObject
 title: 查找 InfoObject | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fc863ce6460977b2eb91c53531983a0dde92668
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93050f2a583f3fa378778397470506787c7001f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495848"
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
 
@@ -39,11 +40,11 @@ ms.locfileid: "86916494"
   
 4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择以下选项之一：  
   
-    1.  选择 **“InfoCube”** 。 然后单击“创建”  。 在 **“创建事务数据的 InfoCube”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
+    1.  选择 **“InfoCube”**。 然后单击“创建” 。 在 **“创建事务数据的 InfoCube”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
   
-    2.  选择 **“InfoSource”** 。 然后单击“创建”  。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”** 。 在 **“创建事务数据的 InfoSource”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
+    2.  选择 **“InfoSource”**。 然后单击“创建”。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”**。 在 **“创建事务数据的 InfoSource”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
   
-    3.  选择 **“InfoSource”** 。 然后单击“创建”  。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”** 。 在 **“创建主数据的 InfoSource”** 对话框中单击 **“查找”** 。  
+    3.  选择 **“InfoSource”**。 然后单击“创建”。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”**。 在 **“创建主数据的 InfoSource”** 对话框中单击 **“查找”**。  
   
  您还可以单击 **“新建 InfoObject”** 对话框中 **“属性”** 部分中的 **“添加”** 来打开 **“查找 InfoObject”** 对话框。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "86916494"
  **特征**  
  查找代表特征的 InfoObject。  
   
- **单位**  
+ **单元**  
  查找代表单位的 InfoObject。  
   
  **关键数字**  

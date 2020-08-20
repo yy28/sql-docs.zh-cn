@@ -1,4 +1,5 @@
 ---
+description: Raw File Destination
 title: 原始文件目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93b992e9931c2e62f359beeca98d7d53e46a95eb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495771"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 
@@ -61,7 +62,7 @@ ms.locfileid: "86916036"
   
 |选项|说明|  
 |------------|-----------------|  
-|附加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
+|追加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
 |始终创建|始终创建新文件。|  
 |创建一次|创建新文件。 如果该文件已经存在，该组件将失败。|  
 |截断和追加|截断现有文件，然后将数据写入此文件。 追加数据的元数据必须与文件格式匹配。|  
@@ -119,7 +120,7 @@ ms.locfileid: "86916036"
   
 1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
-2.  将 WriteOption 属性重置为“追加”  并将 ValidateExternalMetadata 属性设置为 **False**。  
+2.  将 WriteOption 属性重置为“追加”**** 并将 ValidateExternalMetadata 属性设置为 **False**。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   
@@ -153,7 +154,7 @@ ms.locfileid: "86916036"
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”** 。  
+2.  右键单击该组件，然后单击 **“编辑”**。  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  
@@ -195,7 +196,7 @@ ms.locfileid: "86916036"
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”** 。  
+2.  右键单击该组件，然后单击 **“编辑”**。  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  

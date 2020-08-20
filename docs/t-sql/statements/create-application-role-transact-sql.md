@@ -1,4 +1,5 @@
 ---
+description: CREATE APPLICATION ROLE (Transact-SQL)
 title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8f5b67b73f4be4d8403600821ddd35843c65f2b5
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: da64f4dfa4c6013a8aba2928236db09004db8f1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496938"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,16 +49,16 @@ CREATE APPLICATION ROLE application_role_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- application_role_name   
+ application_role_name**  
  指定应用程序角色的名称。 该名称一定不能被用于引用数据库中任何主体。  
   
- PASSWORD ='password'     
- 指定数据库用户将用于激活应用程序角色的密码。 应始终使用强密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ PASSWORD ='password'  
+ 指定数据库用户将用于激活应用程序角色的密码。 应始终使用强密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
   
- DEFAULT_SCHEMA **=schema**name _\__  
- 指定服务器在解析该角色的对象名时将搜索的第一个架构。 如果未定义 DEFAULT_SCHEMA，则应用程序角色将使用 DBO 作为其默认架构。 schema_name 可以是数据库中不存在的架构  。  
+ DEFAULT_SCHEMA =_schema\_name_  
+ 指定服务器在解析该角色的对象名时将搜索的第一个架构。 如果未定义 DEFAULT_SCHEMA，则应用程序角色将使用 DBO 作为其默认架构。 schema_name 可以是数据库中不存在的架构**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!IMPORTANT]  
 >  当设置应用程序角色密码时，将检查密码复杂性。 调用应用程序角色的应用程序必须存储其密码。 而且应当始终以加密的形式存储应用程序角色密码。  

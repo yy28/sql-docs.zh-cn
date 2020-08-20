@@ -1,4 +1,5 @@
 ---
+description: STEndpoint（geometry 数据类型）
 title: STEndpoint（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ca874a25d97359e4d61beac101f3b4d88cdefae
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1ec856db5c9f528135393bdb968ac35de4e94f2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497020"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回 geometry 实例的终点  。
+返回 geometry 实例的终点****。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +40,16 @@ ms.locfileid: "86554986"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
- 开放地理空间信息联盟 (OGC) 类型：Point   
+ 开放地理空间信息联盟 (OGC) 类型：Point****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  `STEndPoint()` 等效于 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints())。  
   
- 如果针对空 geometry 实例调用此方法，则此方法返回 Null  。  
+ 如果针对空 geometry 实例调用此方法，则此方法返回 Null****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `LineString` 创建 `STGeomFromText()` 实例，并使用 `STEndpoint()` 检索 `LineString` 的终点。  

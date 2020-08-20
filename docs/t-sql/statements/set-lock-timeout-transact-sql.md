@@ -1,4 +1,5 @@
 ---
+description: SET LOCK_TIMEOUT (Transact-SQL)
 title: SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/11/2017
@@ -25,12 +26,12 @@ ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e48ac56759f41fef0d8778b7e663582759a57ed3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b3f7af205f8f75f82df45895151b00647d093376
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496461"
 ---
 # <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +49,12 @@ SET LOCK_TIMEOUT timeout_period
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- timeout_period   
+ timeout_period**  
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回锁定错误前经过的毫秒数。 值为 -1（默认值）时表示没有超时期限（即无限期等待）。  
   
  当锁等待超过超时值时，将返回错误。 值为 0 时表示根本不等待，一遇到锁就返回消息。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在连接开始时，此设置的值为 -1。 设置更改后，新设置在其余的连接时间里一直有效。  
   
  SET LOCK_TIMEOUT 的设置是在执行或运行时设置，而不是在分析时设置。  

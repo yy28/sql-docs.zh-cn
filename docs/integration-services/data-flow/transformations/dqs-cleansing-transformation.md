@@ -1,4 +1,5 @@
 ---
+description: DQS 清除转换
 title: DQS 清除转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495689"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919368"
   
 -   该列映射到的域具有兼容数据类型。  
   
- 该转换还包括您配置为处理行级错误的错误输出。 若要配置错误输出，请使用 **“DQS 清理转换编辑器”** 。  
+ 该转换还包括您配置为处理行级错误的错误输出。 若要配置错误输出，请使用 **“DQS 清理转换编辑器”**。  
   
  您可以在数据流中包含 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) 来标识可能为重复项的数据行。  
   
@@ -47,9 +48,9 @@ ms.locfileid: "86919368"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [在 Data Quality Client 中打开 Integration Services 项目](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [在数据质量客户端中打开 Integration Services 项目](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [将清理项目值导入域](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [将清理项目值导入到域中](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [将数据质量规则应用于数据源](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
@@ -60,7 +61,7 @@ ms.locfileid: "86919368"
 -   social.technet.microsoft.com 上的文章： [使用复合域清理复杂数据](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
   
 ## <a name="dqs-cleansing-transformation-editor-dialog-box"></a>“DQS 清除转换编辑器”对话框
-  可使用 Data Quality Services (DQS) 通过“DQS 清除转换编辑器”  对话框来更正数据。 有关详细信息，请参阅 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。  
+  可使用 Data Quality Services (DQS) 通过“DQS 清除转换编辑器”**** 对话框来更正数据。 有关详细信息，请参阅 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。  
   
  **您希望做什么？**  
   
@@ -78,14 +79,14 @@ ms.locfileid: "86919368"
   
 1.  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，将“DQS 清除转换”添加到 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”** 。  
+2.  右键单击该组件，然后单击 **“编辑”**。  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **数据质量连接管理器**  
- 从列表中选择现有 DQS 连接管理器，或单击“新建”  创建一个新连接。  
+ 从列表中选择现有 DQS 连接管理器，或单击“新建”**** 创建一个新连接。  
   
  **新建**  
- 使用“DQS 清除连接管理器”  对话框创建新的连接管理器。 请参阅 [设置“DQS 清除连接管理器”对话框中的选项](#manager)  
+ 使用“DQS 清除连接管理器”**** 对话框创建新的连接管理器。 请参阅 [设置“DQS 清除连接管理器”对话框中的选项](#manager)  
   
  **数据质量知识库**  
  为所连接的数据源选择现有的 DQS 知识库。 有关 DQS 知识库的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
@@ -105,9 +106,9 @@ ms.locfileid: "86919368"
   
  有效值如下：  
   
--   **“组件失败”** ，指示转换失败并且输入数据未插入 Data Quality Services 数据库中。 这是默认值。  
+-   **“组件失败”**，指示转换失败并且输入数据未插入 Data Quality Services 数据库中。 这是默认值。  
   
--   **“重定向行”** ，指示输入数据未插入 Data Quality Services 数据库中并且重定向到错误输出。  
+-   **“重定向行”**，指示输入数据未插入 Data Quality Services 数据库中并且重定向到错误输出。  
   
 ###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> 设置“映射”选项卡上的选项  
  有关如何将列映射到复合域的信息，请参阅 [Map Columns to Composite Domains](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md)。  
@@ -116,9 +117,9 @@ ms.locfileid: "86919368"
  列出所连接数据源中的列。 选择包含要更正的数据的一个或多个列。  
   
  **输入列**  
- 列出你在“可用输入列”  区域中选定的输入列。  
+ 列出你在“可用输入列”**** 区域中选定的输入列。  
   
- **域**  
+ **Domain**  
  选择要映射到输入列的域。  
   
  **源别名**  
@@ -127,7 +128,7 @@ ms.locfileid: "86919368"
  在该字段中单击可修改列名。  
   
  **输出别名**  
- 列出“DQS 清除转换”  输出的列。 该列包含原始列值或更正的值。  
+ 列出“DQS 清除转换”**** 输出的列。 该列包含原始列值或更正的值。  
   
  在该字段中单击可修改列名。  
   
@@ -151,7 +152,7 @@ ms.locfileid: "86919368"
  指示是否输出数据架构。 有关详细信息，请参阅 [将域或复合域附加到引用数据](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
 ###  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a> 设置“DQS 清除连接管理器”对话框中的选项  
- **服务器名称**  
+ 服务器名称  
  选择或键入要连接的 DQS 服务器的名称。 有关该服务器的详细信息，请参阅 [DQS Administration](../../../data-quality-services/dqs-administration.md)。  
   
  **测试连接**  
@@ -161,7 +162,7 @@ ms.locfileid: "86919368"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开现有的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目或者创建一个新项目。  
   
-2.  在连接区域中单击右键，依次单击“新建连接”  和“DQS”  。  
+2.  在连接区域中单击右键，依次单击“新建连接”**** 和“DQS”****。  
   
 3.  单击“添加”  。  
   

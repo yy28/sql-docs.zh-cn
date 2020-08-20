@@ -1,4 +1,5 @@
 ---
+description: 使用合并联接转换扩展数据集
 title: 使用合并联接转换扩展数据集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb3cb54271e151720be7a479c5fc688fe2b7dac9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7000b1593f20305c4d09f1f8ee11eb4b874ee3aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495677"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合并联接转换扩展数据集
 
@@ -46,7 +47,7 @@ ms.locfileid: "86919353"
 6.  在 **“合并联接转换编辑器”** 对话框的 **“联接类型”** 列表中，选择要用的联接类型。  
   
     > [!NOTE]  
-    >  如果选择了“左外部联接”  类型，那么可以单击“交换输入”  来切换输入，将左外部联接转换为右外部联接。  
+    >  如果选择了“左外部联接”**** 类型，那么可以单击“交换输入”**** 来切换输入，将左外部联接转换为右外部联接。  
   
 7.  将左输入中的列拖动到右输入中的列，以指定联接列。 如果这些列名称相同，则可以选中 **“联接键”** 复选框，合并联接转换将自动创建联接。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "86919353"
   
 9. 还可以更新 **“输出别名”** 列中的输出列名称。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
