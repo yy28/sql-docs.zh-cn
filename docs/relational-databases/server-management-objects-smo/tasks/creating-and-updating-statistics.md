@@ -1,4 +1,5 @@
 ---
+description: 创建和更新统计信息
 title: 创建和更新统计信息
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,11 +14,12 @@ ms.reviewer: matteot
 ms.custom: seo-dt-2019
 ms.date: 06/04/2020
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f916833f97db69370a4a01eb7d796d4016c00c9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3939942c7655206a448797f0258d883eac904fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455491"
 ---
 # <a name="create-and-update-statistics"></a>创建和更新统计信息
 
@@ -29,7 +31,7 @@ ms.locfileid: "86001232"
 
 ## <a name="example"></a>示例
 
-若要使用所提供的任何代码示例，可以选择编程环境、编程模板和创建应用程序的编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
+若要使用所提供的任何代码示例，可以选择编程环境、编程模板和创建应用程序的编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
 
 ## <a name="create-and-update-statistics-in-visual-basic"></a>在 Visual Basic 中创建和更新统计信息
 

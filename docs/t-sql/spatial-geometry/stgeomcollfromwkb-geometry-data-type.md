@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromWKB（geometry 数据类型）
 title: STGeomCollFromWKB（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 746c6f3564af7084b86babe54be88c6f25947260
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f780e521ba80822eac4de95e91b8495521e07f60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454297"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,24 +40,24 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_geometrycollection   
- 希望返回的 **geometrycollection** 实例的 WKB 表示形式。 WKB_geometrycollection 是一个 varbinary(max) 表达式   。  
+ WKB_geometrycollection**  
+ 希望返回的 **geometrycollection** 实例的 WKB 表示形式。 WKB_geometrycollection 是一个 varbinary(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>备注  
- `STGeomCollFromWKB()` 返回的 geometry 实例的 OGC 类型设置为 GeomCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入。  
+## <a name="remarks"></a>注解  
+ `STGeomCollFromWKB()` 返回的 geometry 实例的 OGC 类型设置为 GeomCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入********************。  
   
  如果输入格式不正确，此方法会抛出 FormatException 异常。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `STGeomCollFromWKB()` 创建 geometry 实例  。  
+ 下面的示例使用 `STGeomCollFromWKB()` 创建 geometry 实例。  
   
 ```  
 DECLARE @g geometry;  

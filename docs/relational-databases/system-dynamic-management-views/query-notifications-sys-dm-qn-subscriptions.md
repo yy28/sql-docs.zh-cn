@@ -1,5 +1,6 @@
 ---
-title: sys. dm_qn_subscriptions （Transact-sql） |Microsoft Docs
+description: 查询通知-sys. dm_qn_subscriptions
+title: sys. dm_qn_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455089"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85894691"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|订阅的 ID。|  
 |**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
-|**sid**|**varbinary （85）**|创建并拥有该订阅的服务器主体的安全 ID。|  
+|**sid**|**varbinary (85) **|创建并拥有该订阅的服务器主体的安全 ID。|  
 |object_id|**int**|存储有关订阅参数信息的内部表的 ID。|  
 |**created**|**datetime**|创建订阅的日期和时间。|  
 |**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意：实际触发时间可能大于指定的超时时间。但是，如果在指定的超时时间之后但在激发订阅之前发生了无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可确保在发生更改时进行触发。|  
@@ -42,7 +43,7 @@ ms.locfileid: "85894691"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|开|类型|  
+|From|功能|启用|类型|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|object_id|多对一|  
@@ -131,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与查询通知相关的动态管理视图 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

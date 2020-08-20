@@ -1,4 +1,5 @@
 ---
+description: 编程特定的任务
 title: 编程特定的任务
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -19,18 +20,19 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e3c7296ee1eb0401fce59094750471139a46967
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68b952ed0497f9c5c94b9ef71b8e06e495900616
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455476"
 ---
 # <a name="programming-specific-tasks"></a>编程特定的任务
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   使用 SMO 对象的编程特定的任务包含一些复杂主题，只有具有特定函数的程序才需要这些主题，例如，备份、监视统计信息、复制、管理实例对象以及设置配置选项。  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[在 SMO 中使用链接服务器](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|介绍 SMO 如何使用 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 对象以链接 OLE-DB 服务器。|  
 |[在 SMO 中配置 SQL Server](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|介绍如何在 SMO 中查看和修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的配置设置。|  
@@ -53,6 +55,6 @@ ms.locfileid: "85998314"
 |[实现全文搜索](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|介绍如何在 SMO 中实现全文搜索目录和索引。|  
 |[实现端点](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|介绍如何创建端点以处理用于数据库镜像、SOAP 请求和 Service Broker 的负载。|  
 |[创建和更新统计信息](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|介绍如何在 SMO 中设置和监视有关数据库的统计信息。|  
-|[跟踪和重播事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|介绍如何在 SMO 中使用**跟踪**和**重播**对象跟踪和重播事件。|  
+|[跟踪和重播事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|介绍如何在 SMO 中使用 **跟踪** 和 **重播** 对象跟踪和重播事件。|  
   
   

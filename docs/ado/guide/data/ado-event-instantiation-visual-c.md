@@ -1,4 +1,5 @@
 ---
+description: ADO 事件实例化：Visual C++
 title: ADO 事件实例化： Visual C++ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc3f3e0f70864444e4ff07ba16ac37cbd42234df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453779"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件实例化：Visual C++
-下面是有关如何在 Microsoft® Visual C++®中实例化 ADO 事件的示意图说明。 有关完整说明，请参阅[ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 。  
+下面是有关如何在 Microsoft® Visual C++®中实例化 ADO 事件的示意图说明。 有关完整说明，请参阅 [ADO 事件模型示例 (VC + +) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 。  
   
- 创建从文件 adoint 中找到的**ConnectionEventsVt**和**RecordsetEventsVt**接口派生的类。  
+ 创建从文件 adoint 中找到的 **ConnectionEventsVt** 和 **RecordsetEventsVt** 接口派生的类。  
   
 ```  
 // BeginEventExampleVC01  
@@ -49,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- 在这两个类中实现每个事件处理程序方法。 每个方法都只返回 S_OK 的 HRESULT。 但是，当你认为你的事件处理程序可用时，它们会在默认情况下连续调用。 相反，你可能希望在第一次通过将**adStatus**设置为**adStatusUnwantedEvent**时不请求进一步的通知。  
+ 在这两个类中实现每个事件处理程序方法。 每个方法都只返回 S_OK 的 HRESULT。 但是，当你认为你的事件处理程序可用时，它们会在默认情况下连续调用。 相反，你可能希望在第一次通过将 **adStatus** 设置为 **adStatusUnwantedEvent**时不请求进一步的通知。  
   
 ```  
 // BeginEventExampleVC02  
@@ -65,9 +66,9 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 事件类从**IUnknown**继承，因此还必须实现**QueryInterface**、 **AddRef**和**Release**方法。 还实现类构造函数和析构函数。 选择最适合简化此部分任务的 Visual C++ 工具。  
+ 事件类从 **IUnknown**继承，因此还必须实现 **QueryInterface**、 **AddRef**和 **Release** 方法。 还实现类构造函数和析构函数。 选择最适合简化此部分任务的 Visual C++ 工具。  
   
- 在**IConnectionPointContainer**和**IConnectionPoint**接口的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上发出**QueryInterface** ，使其了解你的事件处理程序可用。 然后对每个类发出**IConnectionPoint：： Advise** 。  
+ 在**IConnectionPointContainer**和**IConnectionPoint**接口的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上发出**QueryInterface** ，使其了解你的事件处理程序可用。 然后对每个类发出 **IConnectionPoint：： Advise** 。  
   
  例如，假设您正在使用一个布尔函数，如果该函数成功通知**记录集**对象具有可用的事件处理程序，则该函数返回**True** 。  
   
@@ -98,9 +99,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- 此时，将启用**RecordsetEvent**系列的事件，并将方法作为**记录集**事件进行调用。  
+ 此时，将启用 **RecordsetEvent** 系列的事件，并将方法作为 **记录集** 事件进行调用。  
   
- 稍后，当你希望使事件处理程序不可用时，请再次获取连接点并发出**IConnectionPoint：： Unadvise**方法。  
+ 稍后，当你希望使事件处理程序不可用时，请再次获取连接点并发出 **IConnectionPoint：： Unadvise** 方法。  
   
 ```  
 // BeginEventExampleVC04  
@@ -114,7 +115,7 @@ if (FAILED(hr)) return FALSE;
   
  您必须根据需要发布接口并销毁类对象。  
   
- 下面的代码演示**记录集**事件接收器类的完整示例。  
+ 下面的代码演示 **记录集** 事件接收器类的完整示例。  
   
 ```  
 // BeginEventExampleVC05.cpp  

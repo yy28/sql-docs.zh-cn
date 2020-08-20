@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB 简单提供程序概述
 title: Microsoft OLE DB 简单提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454019"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单提供程序概述
-Microsoft OLE DB 简单提供程序（OSP）允许 ADO 访问使用[OLE DB 简单提供程序（osp）工具包](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)为其编写提供程序的任何数据。 简单提供程序用于访问只需要基本 OLE DB 支持的数据源，例如内存中数组或 XML 文档。
+Microsoft OLE DB 简单提供程序 (OSP) 允许 ADO 访问使用 [OLE DB 简单提供程序 (OSP) 工具包](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)编写的提供程序的任何数据。 简单提供程序用于访问只需要基本 OLE DB 支持的数据源，例如内存中数组或 XML 文档。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到 OLE DB 简单提供程序 DLL，请将*提供程序*参数设置为[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性，以：
+ 若要连接到 OLE DB 简单提供程序 DLL，请将 *提供程序* 参数设置为 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 属性，以：
 
 ```vb
 MSDAOSP
 ```
 
- 还可以使用[Provider](../../../ado/reference/ado-api/provider-property-ado.md)属性设置或读取此值。
+ 还可以使用 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 属性设置或读取此值。
 
  您可以使用已注册的提供程序名称（由提供程序编写器确定），连接到已注册为完全 OLE DB 提供程序的简单提供程序。
 
@@ -50,9 +51,9 @@ MSDAOSP
 |**数据源**|指定服务器的名称。|
 
 ## <a name="xml-document-example"></a>XML 文档示例
- MDAC 2.7 或更高版本中的 OLE DB 简单提供程序（OSP）以及 Windows 数据访问组件（Windows DAC）已得到增强，以支持通过任意 XML 文件打开分层 ADO**记录集**。 这些 XML 文件可能包含 ADO XML 持久性架构，但不是必需的。 这已通过将 OSP 连接到**msxml2.dll**来实现;因此需要**msxml2.dll**或更高版本。
+ MDAC 2.7 或更高版本中的 OLE DB 简单提供程序 (OSP) ，并增强了 windows DAC) 的 Windows 数据访问 (组件，以支持通过任意 XML 文件打开分层 ADO **记录集** 。 这些 XML 文件可能包含 ADO XML 持久性架构，但不是必需的。 这已经通过将 OSP 连接到 **MSXML2.DLL**来实现;因此需要 **MSXML2.DLL** 或更高版本。
 
- 下面的示例中使用的**项目组合 .xml**文件包含以下树：
+ 下面的示例中使用的 **portfolio.xml** 文件包含以下树：
 
 ```console
 Portfolio
@@ -65,9 +66,9 @@ Portfolio
          WebSite
 ```
 
- XML DSO 使用内置试探法将 XML 树中的节点转换为分层**记录集中**的章节。
+ XML DSO 使用内置试探法将 XML 树中的节点转换为分层 **记录集中**的章节。
 
- 使用这些内置试探法，XML 树将转换为以下形式的两级分层**记录集**：
+ 使用这些内置试探法，XML 树将转换为以下形式的两级分层 **记录集** ：
 
 ```console
 Parent Recordset
@@ -76,28 +77,28 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- 请注意，"项目组合" 和 "信息" 标记不在分层**记录集中**表示。 有关 XML DSO 如何将 XML 树转换为分层**记录集**的说明，请参阅以下规则。 下一节将讨论 $Text 列。
+ 请注意，"项目组合" 和 "信息" 标记不在分层 **记录集中**表示。 有关 XML DSO 如何将 XML 树转换为分层 **记录集**的说明，请参阅以下规则。 下一节将讨论 $Text 列。
 
 ## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>将 XML 元素和属性分配给列和行的规则
  XML DSO 遵循在数据绑定应用程序中将元素和属性分配给列和行的过程。 XML 作为树建模，其中一个标记包含整个层次结构。 例如，书籍的 XML 说明可以包含章节标记、图标记和节标记。 最高级别为书籍标记，其中包含子元素章节、图和节。 当 XML DSO 将 XML 元素映射到行和列时，将转换子元素，而不是顶级元素。
 
  XML DSO 使用此过程来转换子元素：
 
--   每个子元素和属性都对应于层次结构中某些**记录集中**的列。
+-   每个子元素和属性都对应于层次结构中某些 **记录集中** 的列。
 
 -   列的名称与子元素或属性的名称相同，除非父元素具有具有相同名称的属性和子元素，在这种情况下，子元素的列名前面会出现 "！"。
 
--   每个列要么是包含标量值的*简单*列（通常是字符串），要么是包含子**记录集**的**记录集**列。
+-   每个列都是一个*简单*列，其中包含标量值 (通常为字符串) 或包含子**记录集**的**记录集**列。
 
 -   与属性相对应的列总是简单的。
 
--   如果子元素具有其自己的子元素或属性（或两者），或子元素的父元素具有作为子级的多个子元素，则与子元素对应的列是**记录集**列。 否则列很简单。
+-   如果子元素具有其自己的子元素或属性 (或两者均) ，或子元素的父项具有子元素的多个实例，则与子元素对应的列是 **记录集** 列。 否则列很简单。
 
--   如果子元素有多个实例（在不同的父项下），则如果有*任何*实例表示**记录集**列，则其列是**记录集**列;仅当*所有实例都*指简单列时，其列才简单。
+-   如果有多个子元素的实例 (在不同的父) 下，则如果有*任何*实例表示**记录集**列，则其列是**记录集**列;仅当*所有实例都*指简单列时，其列才简单。
 
--   所有**记录集**都有一个名为 $Text 的附加列。
+-   所有 **记录集** 都有一个名为 $Text 的附加列。
 
- 构造**记录集**所需的代码如下所示：
+ 构造 **记录集** 所需的代码如下所示：
 
 ```vb
 Dim adoConn as ADODB.Connection
@@ -124,24 +125,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- 一旦打开该**记录集**，就可以使用常用的 ADO**记录集**导航命令。
+ 一旦打开该 **记录集** ，就可以使用常用的 ADO **记录集** 导航命令。
 
  OSP 生成的**记录集**有一些限制：
 
--   不支持客户端游标（**adUseClient**）。
+-   不支持 (**adUseClient**) 的客户端游标。
 
--   无法使用 Recordset 保存通过任意 XML 创建的分层**记录集** **。保存**。
+-   无法使用 Recordset 保存通过任意 XML 创建的分层 **记录集** **。保存**。
 
 -   用 OSP 创建的**记录集**是只读的。
 
--   XMLDSO 向层次结构中的每个**记录集**添加一个额外的数据列（$Text）。
+-   XMLDSO 向层次结构中的每个 **记录集** 添加一个额外的数据列 ($Text) 。
 
- 有关 OLE DB 简单提供程序的详细信息，请参阅[构建简单的提供程序](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
+ 有关 OLE DB 简单提供程序的详细信息，请参阅 [构建简单的提供程序](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
 
 ## <a name="code-example"></a>代码示例
- 下面的 Visual Basic 代码演示如何打开任意 XML 文件、构造分层**记录集**，以及以递归方式将每个**记录集**的每个记录写入 "调试" 窗口。
+ 下面的 Visual Basic 代码演示如何打开任意 XML 文件、构造分层 **记录集**，以及以递归方式将每个 **记录集** 的每个记录写入 "调试" 窗口。
 
- 下面是包含股票行情的简单 XML 文件。 下面的代码使用此文件来构造两级分层**记录集**。
+ 下面是包含股票行情的简单 XML 文件。 下面的代码使用此文件来构造两级分层 **记录集**。
 
 ```xml
 <portfolio>

@@ -1,4 +1,5 @@
 ---
+description: SMO 编程语言
 title: 编程语言 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -18,18 +19,19 @@ ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed3e7bb0f116cb24b100d6b4e660bbc11046655a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d7789390d045ccf9eff918a4157129c7b9d01c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455505"
 ---
 # <a name="smo-programming-languages"></a>SMO 编程语言
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  本部分介绍如何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .net 中对管理对象（SMO）进行编程。
+  本部分介绍如何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .net 中对管理对象 (SMO) 编程。
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[Visual C&#35; .NET 中的入门](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|提供有关如何使用 Visual C# .NET 开始编写 SMO 程序的信息|  
   

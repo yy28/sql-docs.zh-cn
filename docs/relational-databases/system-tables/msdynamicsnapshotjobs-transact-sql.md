@@ -1,5 +1,6 @@
 ---
-title: MSdynamicsnapshotjobs （Transact-sql） |Microsoft Docs
+description: MSdynamicsnapshotjobs (Transact-SQL)
+title: MSdynamicsnapshotjobs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b391da6a409043949453b1ce0b6ce0029d0ca95a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d9e7a86050d2bdf7f30c896ad2567f390955b5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454662"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85889941"
 |**pubid**|**uniqueidentifier**|此发布的唯一标识号。|  
 |**job_id**|**uniqueidentifier**|分发服务器中 SQL Server 代理作业的 ID。|  
 |**agent_id**|**int**|SQL Server 代理的 ID。|  
-|**dynamic_filter_login**|**sysname**|用于计算为发布定义的参数化行筛选器中的[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函数的值。|  
-|**dynamic_filter_hostname**|**sysname**|用于计算为发布定义的参数化行筛选器中的[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数的值。|  
+|**dynamic_filter_login**|**sysname**|用于计算为发布定义的参数化行筛选器中的 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 函数的值。|  
+|**dynamic_filter_hostname**|**sysname**|用于计算为发布定义的参数化行筛选器中的 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 函数的值。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|如果使用筛选数据快照则从中读取快照文件的文件夹的路径。|  
 |**partition_id**|**int**|作业所属数据分区的 ID。|  
   

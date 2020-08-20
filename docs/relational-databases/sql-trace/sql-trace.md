@@ -1,4 +1,5 @@
 ---
+description: SQL 跟踪
 title: SQL 跟踪 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455321"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
   
 > [!IMPORTANT]
-> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用  。 
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
 > 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 探查器](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
@@ -75,17 +76,17 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
   
 |数据列|列号|说明|  
 |-----------------|-------------------|-----------------|  
-|ApplicationName |10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
+|ApplicationName|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
 |**BigintData1**|52|值（**bigint** 数据类型），取决于跟踪中指定的事件类。|  
 |**BigintData2**|53|值（**bigint** 数据类型），取决于跟踪中指定的事件类。|  
 |**Binary Data**|2|依赖于跟踪中捕获的事件类的二进制值。|  
 |**ClientProcessID**|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
 |**ColumnPermissions**|44|表示是否已设置了列权限。 可以分析语句文本来确定各列所应用权限的情况。|  
-|CPU |18|事件使用的 CPU 时间（毫秒）。|  
+|**CPU**|18|事件使用的 CPU 时间（毫秒）。|  
 |**数据库 ID**|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
 |**DatabaseName**|35|正在运行用户语句的数据库的名称。|  
 |**DBUserName**|40|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。|  
-|**Duration**|13|事件的持续时间（微秒）。<br /><br /> 服务器以微秒（百万分之一秒或 10<sup>-6</sup> 秒）为单位报告事件的持续时间，以毫秒（千分之一秒或 10<sup>-3</sup> 秒）为单位报告事件使用的 CPU 时间。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 图形用户界面默认以毫秒为单位显示 **“持续时间”** 列，但是当跟踪保存到文件或数据库表中时，将以微秒为单位写入“持续时间”  列值。|  
+|**Duration**|13|事件的持续时间（微秒）。<br /><br /> 服务器以微秒（百万分之一秒或 10<sup>-6</sup> 秒）为单位报告事件的持续时间，以毫秒（千分之一秒或 10<sup>-3</sup> 秒）为单位报告事件使用的 CPU 时间。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 图形用户界面默认以毫秒为单位显示 **“持续时间”** 列，但是当跟踪保存到文件或数据库表中时，将以微秒为单位写入“持续时间” **** 列值。|  
 |**EndTime**|15|事件的结束时间。 对指示事件开始的事件类（例如 **SQL:BatchStarting** 或 **SP:Starting**）将不填充此列。|  
 |**错误**|31|给定事件的错误号。 通常是 **sysmessages**中存储的错误号。|  
 |**EventClass**|27|捕获的事件类的类型。|  
@@ -135,8 +136,8 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
 |**TargetLoginSid**|43|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的 SID。|  
 |**TargetUserName**|39|如果是针对某个数据库用户的操作（例如，授予用户权限），这是该用户的名称。|  
 |**TextData**|1|依赖于跟踪中捕获的事件类的文本值。 但是，如果跟踪参数化查询，则不以 **TextData** 列中的数据值显示变量。|  
-|**事务 ID**|4|系统为事务分配的 ID。|  
-|类型 |57|跟踪中捕获的与事件类对应的整数值。|  
+|**Transaction ID**|4|系统为事务分配的 ID。|  
+|**类型**|57|跟踪中捕获的与事件类对应的整数值。|  
 |**Writes**|17|由服务器代表事件写入物理磁盘的次数。|  
 |**XactSequence**|50|用于说明当前事务的标记。|  
   

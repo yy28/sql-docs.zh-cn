@@ -1,4 +1,5 @@
 ---
+description: 将跟踪结果保存到文件
 title: 将跟踪结果保存到文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 056c31859fcd9eb70bb0ccf7d3ec86c3ffdcc070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5b60bea4633abcef041ad516aef972875884282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455339"
 ---
 # <a name="save-trace-results-to-a-file"></a>将跟踪结果保存到文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  可以将跟踪结果保存到文件中。 跟踪文件是写入跟踪结果的文件。 跟踪文件可以位于本地目录（如 C:\\foldername  \\filename.trc  ）中，也可以位于在网络目录（如 \\\computername\sharename\filename.trc）中。  
+  可以将跟踪结果保存到文件中。 跟踪文件是写入跟踪结果的文件。 跟踪文件可以位于本地目录（如 C:\\foldername\\filename.trc）中，也可以位于在网络目录（如 \\\computername\sharename\filename.trc）中。  
   
  可以使用跟踪文件执行下列操作：  
   
@@ -35,7 +36,7 @@ ms.locfileid: "85750955"
   
 -   执行查询优化  
   
- 为存储过程 sp_trace_create 的 \@tracefile 参数指定路径和文件名后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将跟踪结果保存到文件中。  
+ 为存储过程 sp_trace_create 的 \@tracefile 参数指定路径和文件名后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将跟踪结果保存到文件中 。  
   
 > [!NOTE]  
 >  如果为存储过程 **sp_trace_create** 指定路径用来保存跟踪文件，则服务器必须可以访问该目录。 同时注意，如果为 **sp_trace_create**指定本地目录，则该目录应是服务器上的本地目录。  

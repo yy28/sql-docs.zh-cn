@@ -1,4 +1,5 @@
 ---
+description: 对等 - 对等复制中的冲突检测
 title: 对等复制中的冲突检测 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da4d35ec8647ba799986cc696a89718870dfb253
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eacc75c7f2a5a5ba7993e7f3d574b749b86acd2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455540"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>对等 - 对等复制中的冲突检测
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85887775"
 ## <a name="understanding-conflicts-and-conflict-detection"></a>了解冲突和冲突检测  
  在单个数据库中，不同应用程序对同一行进行的更改不会导致冲突。 原因在于，事务已经过序列化，并使用锁定来处理并发更改。 在异步分布式系统（如对等复制）中，事务独立作用于每个节点，而且没有用来跨多个节点对事务进行序列化的机制。 可以使用两阶段提交之类的协议，但是这会显著影响性能。  
   
- 在对等复制之类的系统中，在单个对等节点上提交更改之后将检测不到冲突。 相反，在复制这些更改并将其应用于其他对等节点之后，才能够检测到这些更改。 在对等复制中，用来将更改应用于每个节点的存储过程会基于每个已发布表中的某个隐藏列来检测冲突。 该隐藏列所存储的 ID 将您为每个节点指定的“  发起方 ID”与行版本结合起来。 在同步期间，分发代理会针对每个表执行同步过程。 这些过程会应用来自其他对等节点的插入、更新和删除操作。 如果某个过程在读取该隐藏列的值时检测到冲突，将会引发严重级别为 16 的错误 22815：  
+ 在对等复制之类的系统中，在单个对等节点上提交更改之后将检测不到冲突。 相反，在复制这些更改并将其应用于其他对等节点之后，才能够检测到这些更改。 在对等复制中，用来将更改应用于每个节点的存储过程会基于每个已发布表中的某个隐藏列来检测冲突。 该隐藏列所存储的 ID 将您为每个节点指定的“ ** 发起方 ID”与行版本结合起来。 在同步期间，分发代理会针对每个表执行同步过程。 这些过程会应用来自其他对等节点的插入、更新和删除操作。 如果某个过程在读取该隐藏列的值时检测到冲突，将会引发严重级别为 16 的错误 22815：  
   
  `A conflict of type '%s' was detected at peer %d between peer %d (incoming), transaction id %s  and peer %d (on disk), transaction id %s`  
   

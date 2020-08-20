@@ -1,4 +1,5 @@
 ---
+description: VBScript ADO 编程
 title: VBScript ADO 编程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453959"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -39,7 +40,7 @@ ms.locfileid: "82761535"
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>在 VBScript 中创建 ADO 对象  
- 不能使用**Dim**语句将对象分配到 VBScript 中的特定类型。 另外，VBScript 不支持 Visual Basic for Applications 中**Dim**语句使用的**新**语法。 您必须改用**CreateObject**函数调用：  
+ 不能使用 **Dim** 语句将对象分配到 VBScript 中的特定类型。 另外，VBScript 不支持 Visual Basic for Applications 中**Dim**语句使用的**新**语法。 您必须改用 **CreateObject** 函数调用：  
   
 ```vb
 Dim Rs1  
@@ -47,7 +48,7 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ```  
   
 ## <a name="vbscript-examples"></a>VBScript 示例  
- 以下代码是 Active Server Page （ASP）文件中 VBScript 服务器端编程的一般示例：  
+ 下面的代码是 (ASP) 文件的 Active Server 页面中 VBScript 服务器端编程的一般示例：  
   
 ```vb
 <%  @LANGUAGE="VBSCRIPT" %>  
@@ -74,13 +75,13 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- ADO 文档附带了更为具体的 VBScript 示例。 有关详细信息，请参阅[Microsoft Visual Basic Scripting Edition 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)。  
+ ADO 文档附带了更为具体的 VBScript 示例。 有关详细信息，请参阅 [Microsoft Visual Basic Scripting Edition 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)。  
   
 ## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript 与 Visual Basic 之间的差异  
  使用 ADO 和 VBScript 类似于将 ADO 与 Visual Basic 一起使用，其中包括如何使用语法。 但存在一些重要的差异：  
   
 -   VBScript 仅支持 Variant 数据类型，该类型可以保存不同类型的数据。 您可以在变量数据类型中存储所需的数据，数据将正常运行，因为 VBScript 执行了强制转换。 它识别 ADO 所需的类型，并相应地转换变量中的值。  
   
--   在 VBScript 中，不能使用**on error goto \< label>** 。  
+-   不能在 VBScript 中**的 \<label> 错误 goto 上**使用。  
   
--   VBScript 支持某些内置 Visual Basic 函数，例如**Msgbox**、 **Date**和**IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的子集，因此并非所有内置函数都受支持。 例如，VBScript 不支持**Format**函数和文件 i/o 函数。
+-   VBScript 支持某些内置 Visual Basic 函数，例如 **Msgbox**、 **Date**和 **IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的子集，因此并非所有内置函数都受支持。 例如，VBScript 不支持 **Format** 函数和文件 i/o 函数。

@@ -1,4 +1,5 @@
 ---
+description: '使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER (Native Client OLE DB) '
 title: BLOB 数据到 SQL、IROWSETFASTLOAD、ISEQUENTIALSTREAM
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,14 +12,14 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 916fbd7596d427d06f0c01982a2bff33eb764a44
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0efc0dc4257ea0ae69ebafd30e257add9b2df95d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455682"
 ---
-# <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-in-native-client-ole-db"></a>在中使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER （Native Client OLE DB）
+# <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-in-native-client-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER (Native Client OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例说明如何使用 IRowsetFastLoad 以流的形式发送每行的变长 BLOB 数据。  
@@ -36,7 +37,7 @@ ms.locfileid: "87246973"
  有关详细信息，请参阅 [BLOB 对象和 OLE 对象](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  执行第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的表。  

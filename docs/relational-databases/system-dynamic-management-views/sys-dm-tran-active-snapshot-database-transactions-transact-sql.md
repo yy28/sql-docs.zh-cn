@@ -1,5 +1,6 @@
 ---
-title: sys. dm_tran_active_snapshot_database_transactions （Transact-sql） |Microsoft Docs
+description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
+title: sys. dm_tran_active_snapshot_database_transactions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79f609de2cc683656eb7c6b1b2db27962246bbf2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 67fc1004da354aca3eebb446300d284c85b944e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454831"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +48,7 @@ ms.locfileid: "86009369"
  此动态管理视图不包括系统事务。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_tran_active_snapshot_database_transactions**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_tran_active_snapshot_database_transactions**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,15 +70,15 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|为查找在事务上一致的版本而遍历的版本链的最大长度。|  
 |**average_version_chain_traversed**|**real**|被遍历的版本链中的行版本平均数。|  
 |**elapsed_time_seconds**|**bigint**|自事务获取其事务序列号以来所经过的时间。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
 
-## <a name="remarks"></a>注解  
- **sys. dm_tran_active_snapshot_database_transactions**报告分配有事务序列号（XSN）的事务。 XSN 在事务首次访问版本存储区时分配。 在为快照隔离或使用行版本控制的已提交读隔离启用的数据库中，下面的示例说明何时将 XSN 分配给事务：  
+## <a name="remarks"></a>备注  
+ **sys. dm_tran_active_snapshot_database_transactions** 报告分配有事务序列号 (.xsn) 的事务。 XSN 在事务首次访问版本存储区时分配。 在为快照隔离或使用行版本控制的已提交读隔离启用的数据库中，下面的示例说明何时将 XSN 分配给事务：  
   
 -   如果事务在可序列化隔离级别下运行，则 XSN 在事务首次执行导致创建行版本的语句（例如，UPDATE 操作）时分配。  
   
@@ -142,7 +144,7 @@ elapsed_time_seconds
 333  
 ```  
   
- 以下信息将从 sys.databases 计算结果**dm_tran_active_snapshot_database_transactions**：  
+ 以下信息将从 sys.databases 计算结果 **dm_tran_active_snapshot_database_transactions**：  
   
 -   XSN-57：由于此事务未在快照隔离下运行，因此， `is_snapshot` 值 `first_snapshot_sequence_num` 为 `0` 。 由于 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 数据库选项中有一个为 ON 或两者均为 ON，因此 `transaction_sequence_num` 表明已为此事务分配事务序列号。  
   
@@ -153,8 +155,8 @@ elapsed_time_seconds
 -   XSN-60：这是在快照隔离下运行的第二个事务。 输出显示了与 XSN-59 相同的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;设置事务隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [&#40;Transact-sql&#41;设置事务隔离级别 ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

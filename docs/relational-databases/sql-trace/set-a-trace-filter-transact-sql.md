@@ -1,4 +1,5 @@
 ---
+description: 设置跟踪筛选器 (Transact-SQL)
 title: 设置跟踪筛选器 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98d18b704ff407064cd18083b79f80f901d21903
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59c44a69bbe994ee7df7337213d26b4a789f5a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455320"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>设置跟踪筛选器 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85750932"
   
 ### <a name="to-set-a-trace-filter"></a>设置跟踪筛选器  
   
-1.  如果跟踪已在运行，请通过指定 `@status = 0` 执行 sp_trace_setstatus 来停止跟踪。  
+1.  如果跟踪已在运行，请通过指定 `@status = 0` 执行 sp_trace_setstatus**** 来停止跟踪。  
   
 2.  执行 **sp_trace_setfilter** 以配置有关检索跟踪事件信息的类型。  
 

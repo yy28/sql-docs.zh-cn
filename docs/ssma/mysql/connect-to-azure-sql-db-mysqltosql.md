@@ -1,4 +1,5 @@
 ---
+description: '连接到 Azure SQL 数据库 (MySQLToSQL) '
 title: " (MySQLToSQL) 连接到 Azure SQL 数据库 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -9,26 +10,26 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454129"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>连接到 Azure SQL 数据库 (MySQLToSQL) 
 使用 "连接到 SQL Azure" 对话框连接到要迁移的 Azure SQL 数据库中的数据库。  
   
-若要访问此对话框，请在 "**文件**" 菜单上，选择 "**连接到 SQL Azure**"。 如果以前已连接，则该命令将**重新连接到 SQL Azure。**  
+若要访问此对话框，请在 " **文件** " 菜单上，选择 " **连接到 SQL Azure**"。 如果以前已连接，则该命令将 **重新连接到 SQL Azure。**  
   
 ## <a name="options"></a>选项  
 **服务器名称**  
   
 选择或输入用于连接到 SQL Azure 的服务器名称。  
   
-**数据库**  
+**Database**  
   
-选择，输入或**浏览**数据库名称。  
+选择，输入或 **浏览** 数据库名称。  
   
 > [!IMPORTANT]  
 > SSMA for MySQL 不支持连接到 SQL Azure 中的 master 数据库。  
@@ -54,9 +55,9 @@ SSMA 建议将加密连接 SQL Azure。
   
 2.  如果没有数据库，将显示以下两个菜单项。  
   
-    1.  ** (找不到任何数据库) 该数据库**处于禁用状态并始终灰显  
+    1.  ** (找不到任何数据库) 该数据库 ** 处于禁用状态并始终灰显  
   
-    2.  **创建新数据库**，该数据库仅在 SQL Azure 帐户上没有数据库时才启用。 单击此菜单项时，将显示 "创建 Azure 数据库" 对话框，其中包含数据库名称和大小。  
+    2.  **创建新数据库** ，该数据库仅在 SQL Azure 帐户上没有数据库时才启用。 单击此菜单项时，将显示 "创建 Azure 数据库" 对话框，其中包含数据库名称和大小。  
   
 3.  创建数据库时，会将以下两个参数指定为输入：  
   

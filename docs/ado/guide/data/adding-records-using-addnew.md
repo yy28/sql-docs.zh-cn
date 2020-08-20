@@ -1,4 +1,5 @@
 ---
+description: 使用 AddNew 方法添加记录
 title: 使用 AddNew 添加记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abdd3bf7e23c74624a7eaa70c102112593fd3648
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 27b42b9d65a4c00d4786ed900ad35ce00ef4b8f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453869"
 ---
 # <a name="adding-records-using-addnew-method"></a>使用 AddNew 方法添加记录
-这是**AddNew**方法的基本语法：
+这是 **AddNew** 方法的基本语法：
 
- *记录集*。AddNew *FieldList*，*值*
+ *记录集*。AddNew *FieldList*， *值*
 
- *FieldList*和*Values*参数是可选的。 *FieldList*是新记录中字段的单个名称或名称数组或序号位置数组。
+ *FieldList*和*Values*参数是可选的。 *FieldList* 是新记录中字段的单个名称或名称数组或序号位置数组。
 
  *Values*参数是新记录中的字段的单个值或值数组。
 
- 通常，当你要添加单个记录时，将调用不带任何参数的**AddNew**方法。 具体来说，您将调用**AddNew**;设置新记录中每个字段的**值**;然后调用**Update**或**UpdateBatch**，或同时调用两者。 您可以通过使用带有**adAddNew**枚举常量的 "**支持**" 属性，确保您的**记录集**支持添加新记录。
+ 通常，当你要添加单个记录时，将调用不带任何参数的 **AddNew** 方法。 具体来说，您将调用 **AddNew**;设置新记录中每个字段的 **值** ;然后调用 **Update** 或 **UpdateBatch**，或同时调用两者。 您可以通过使用带有**adAddNew**枚举常量的 "**支持**" 属性，确保您的**记录集**支持添加新记录。
 
- 下面的代码使用此方法将新的货主添加到示例**记录集中**。 SQL Server 自动提供 "ShipperID" 字段值。 因此，该代码不会尝试为新记录提供字段值。
+ 下面的代码使用此方法将新的货主添加到示例 **记录集中**。 SQL Server 自动提供 "ShipperID" 字段值。 因此，该代码不会尝试为新记录提供字段值。
 
 ```
 'BeginAddNew1.1
@@ -48,4 +49,4 @@ End If
 ```
 
 ## <a name="remarks"></a>备注
- 因为此代码在批处理模式下将断开连接的**记录集**与客户端游标一起使用，所以必须使用新的**连接**对象将**记录集**重新连接到数据源，然后才能调用**UpdateBatch**方法将更改发布到数据库。 使用新的函数**GetNewConnection**可以轻松完成此操作。
+ 因为此代码在批处理模式下将断开连接的**记录集**与客户端游标一起使用，所以必须使用新的**连接**对象将**记录集**重新连接到数据源，然后才能调用**UpdateBatch**方法将更改发布到数据库。 使用新的函数 **GetNewConnection**可以轻松完成此操作。

@@ -1,4 +1,5 @@
 ---
+description: Audit Server Starts and Stops 事件类
 title: Audit Server Starts and Stops 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,22 +13,22 @@ ms.assetid: 8ddb55af-c77b-4d07-b803-a97320c0804e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c34ce9def23cfaf09abb84ca9a1612728a7c9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db0ef3200e1c7517d2c96d48f4dbb4f619225655
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456036"
 ---
 # <a name="audit-server-starts-and-stops-event-class"></a>Audit Server Starts and Stops 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  当修改   服务状态时，将发生 Audit Server Starts and Stops 事件类[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  当修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务状态时，将发生 Audit Server Starts and Stops 事件类****。  
   
 ## <a name="audit-server-starts-and-stops-event-class-data-columns"></a>Audit Server Starts and Stops 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**EventClass**|**int**|事件类型 = 18。|27|否|  
 |**EventSequence**|**int**|给定事件在请求中的顺序。|51|否|  

@@ -1,4 +1,5 @@
 ---
+description: " (类型映射的项目设置)  (AccessToSQL) "
 title: 项目设置 (类型映射)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -16,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454299"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a> (类型映射的项目设置)  (AccessToSQL) 
-"类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。 还可以为单个数据库对象指定类型映射。 有关详细信息，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
+"类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。 还可以为单个数据库对象指定类型映射。 有关详细信息，请参阅 [映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
   
-"**项目设置**" 和 "**默认项目设置**" 对话框中提供了类型映射：  
+" **项目设置** " 和 " **默认项目设置** " 对话框中提供了类型映射：  
   
--   使用 "**项目设置**" 对话框可以设置当前项目的配置选项。 若要访问类型映射设置，请在 "**工具**" 菜单上选择 "**项目设置**"，然后单击左窗格中的 "**类型映射**"。  
+-   使用 " **项目设置** " 对话框可以设置当前项目的配置选项。 若要访问类型映射设置，请在 " **工具** " 菜单上选择 " **项目设置**"，然后单击左窗格中的 " **类型映射** "。  
   
--   使用 "**默认项目设置**" 对话框可以为所有项目设置配置选项。 若要访问类型映射设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，从 "**迁移目标版本**" 下拉框中选择需要查看其设置的 "迁移项目类型"，然后单击左窗格中的 "**类型映射**"。  
+-   使用 " **默认项目设置** " 对话框可以为所有项目设置配置选项。 若要访问类型映射设置，请在 " **工具** " 菜单上，选择 " **默认项目设置**"，从 " **迁移目标版本** " 下拉框中选择需要查看其设置的 "迁移项目类型"，然后单击左窗格中的 " **类型映射** "。  
   
 ## <a name="options"></a>选项  
 **源类型**  
@@ -55,7 +56,7 @@ ms.locfileid: "87933988"
 |**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**"**|**nvarchar(max)**|  
-|**备注**-Access 97|**varchar(max)**|  
+|**备注** -Access 97|**varchar(max)**|  
 |single|**real**|  
 |**文本 [ \* ... \* ]**|**nvarchar [ \* ]**|  
 |**text [ \* ... \* ]** -Access 97|**varchar [ \* ]**|  
@@ -69,10 +70,10 @@ ms.locfileid: "87933988"
 **删除**  
 单击此选项可从 "映射" 列表中删除所选的数据类型映射。  
   
-**重置为默认值**  
+重置为默认值  
 单击此设置可将所有数据类型映射重置为 SSMA 默认值。  
   
 ## <a name="see-also"></a>另请参阅  
 [映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)  
-[ (访问) 的用户界面参考](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ (访问) 的用户界面参考 ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

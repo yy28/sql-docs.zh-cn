@@ -1,5 +1,6 @@
 ---
-title: IHcolumns （Transact-sql） |Microsoft Docs
+description: IHcolumns (Transact-SQL)
+title: IHcolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0bc33419b8bb710b223150e1880002ff49681870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454691"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  每个已发布的列在**IHcolumns**系统表中各占一行。 该表用来定义非 SQL Server 发布服务器的列数据类型在发布时如何进行表示，它实际上是在非 SQL Server 数据库管理系统 (DBMS) 和 SQL Server 之间对数据类型进行映射。 此表存储在分发数据库中。  
+  每个已发布的列在 **IHcolumns** 系统表中各占一行。 该表用来定义非 SQL Server 发布服务器的列数据类型在发布时如何进行表示，它实际上是在非 SQL Server 数据库管理系统 (DBMS) 和 SQL Server 之间对数据类型进行映射。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|标识已发布列。|  
-|**publishercolumn_id**|**int**|将已发布的列与存储在[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)系统表中的列元数据相关联。|  
+|**publishercolumn_id**|**int**|将已发布的列与存储在 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) 系统表中的列元数据相关联。|  
 |name|**sysname**|指定列名。|  
 |**article_id**|**int**|标识列所属的项目。|  
 |**column_ordinal**|**int**|按顺序标识列。|  
@@ -42,12 +43,12 @@ ms.locfileid: "85890308"
 |**mapped_length**|**bigint**|订阅服务器中列的长度。|  
 |**mapped_prec**|**int**|订阅服务器中列的精度。|  
 |**mapped_scale**|**int**|订阅服务器中列的小数位数。|  
-|**mapped_nullable**|**bit**|指示订阅服务器上的列是否接受 NULL 值，其中**1**表示接受 null 值。|  
+|**mapped_nullable**|**bit**|指示订阅服务器上的列是否接受 NULL 值，其中 **1** 表示接受 null 值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制视图 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns &#40;系统视图&#41; &#40;Transact-sql&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  

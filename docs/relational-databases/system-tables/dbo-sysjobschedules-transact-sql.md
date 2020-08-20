@@ -1,5 +1,6 @@
 ---
-title: dbo.sysjobschedules （Transact-sql） |Microsoft Docs
+description: dbo.sysjobschedules (Transact-SQL)
+title: dbo.sysjobschedules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1404af2beddd9cd3c5e5c65420cbe248396dd09c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bc479eb35d345c11a767b9e6fba410504751c662
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454714"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的作业的计划信息。 该表存储在**msdb**数据库中。  
+  包含将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的作业的计划信息。 该表存储在 **msdb** 数据库中。  
   
 > **注意：****Sysjobschedules**表每20分钟刷新一次，这可能会影响**sp_help_jobschedule**存储过程返回的值。  
   

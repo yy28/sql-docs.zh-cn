@@ -1,4 +1,5 @@
 ---
+description: STOverlaps（geometry 数据类型）
 title: STOverlaps（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454232"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,19 +41,19 @@ ms.locfileid: "86554936"
 
 ## <a name="arguments"></a>参数
  *other_geometry*  
- 将与调用 `STOverlaps()` 的实例进行比较的另一个 geometry 实例。  
+ 将与调用 `STOverlaps()` 的实例进行比较的另一个 geometry 实例****。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
- CLR 返回类型：SqlBoolean   
+ CLR 返回类型：SqlBoolean****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果表示两个 **geometry** 实例交集的区域与这两个实例具有相同的维度，而且该区域不等于这两个实例当中的任意一个，则说明这两个实例重叠。  
   
  如果两个 **geometry** 实例的交点与这两个实例具有不同的维度，则 `STOverlaps()` 始终返回 0。  
   
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `STOverlaps()` 测试两个 **geometry** 实例是否重叠。  

@@ -1,4 +1,5 @@
 ---
+description: 准备的语句的表值参数元数据
 title: TVP 预定义语句的元数据
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,16 +14,17 @@ ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e50f025aa2524a3b6fee1a92ca2fecbca214bc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c93614fa84a1758586deb72382dde042d40dd827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455855"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>准备的语句的表值参数元数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  应用程序可以通过 SQLNumParams 和 SQLDescribeParam 获取已准备的过程调用的元数据。 对于表值参数， *DataTypePtr*设置为 SQL_SS_TABLE。 可以通过 SQLGetDescField 为 SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 提供额外的元数据。  
+  应用程序可以通过 SQLNumParams 和 SQLDescribeParam 获取已准备的过程调用的元数据。 对于表值参数， *DataTypePtr* 设置为 SQL_SS_TABLE。 可以通过 SQLGetDescField 为 SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 提供额外的元数据。  
   
  SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 可以与 SQLColumns 一起使用，以获取与表值参数关联的表类型的列元数据。 在这种情况下，在调用 SQLColumns 之前，必须将 SQL_SOPT_SS_NAME_SCOPE 设置为 SQL_SS_NAME_SCOPE_TABLE_TYPE。 在应用程序检索完表值参数列元数据之后，应将 SQL_SOPT_SS_NAME_SCOPE 设置回原来的默认值 SQL_SS_NAME_SCOPE_TABLE。  
   
@@ -31,6 +33,6 @@ ms.locfileid: "85998351"
  无法获取非存储过程调用的准备的语句的表值参数元数据。 如果试图这样做，应用程序将返回错误代码为 SQLSTATE 42000 的 SQL_ERROR，以及消息“语法错误或访问冲突”。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

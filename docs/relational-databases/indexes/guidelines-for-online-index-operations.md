@@ -1,4 +1,5 @@
 ---
+description: 联机索引操作准则
 title: 联机索引操作准则 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4dde42d927732e0209fed114e6d8d50451ab6379
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455934"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 
@@ -34,7 +35,7 @@ ms.locfileid: "85629618"
 - 如果基础表包含下列大型对象 (LOB) 数据类型： **image**、 **ntext**和 **text**，则必须脱机创建、重新生成或删除聚集索引。  
 - 如果表包含 LOB 数据类型，但索引定义中未使用这些列中的任何列作为键或非键（包含性）列，则可以联机创建非唯一的非聚集索引。  
 - 无法为本地临时表联机创建、重新生成或删除索引。 全局临时表的索引则没有此限制。
-- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行  。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
+- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行****。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]  
 > 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  

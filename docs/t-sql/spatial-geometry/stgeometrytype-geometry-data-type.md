@@ -1,4 +1,5 @@
 ---
+description: STGeometryType（geometry 数据类型）
 title: STGeometryType（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a842e3ee2dcfb86f293e8ae3feba1a30665ffbe0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b297708cbd8820967463f395d765474c9881189b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454291"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,12 +40,12 @@ ms.locfileid: "86554623"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(4000)   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(4000)****  
   
- CLR 返回类型：SqlString   
+ CLR 返回类型：SqlString****  
   
-## <a name="remarks"></a>备注  
- `STGeometryType()` 可以返回的 OGC 类型名称包括 Point、LineString、CircularString、CompoundCurve、Polygon、CurvePolygon、GeometryCollection、MultiPoint、MultiLineString 和 MultiPolygon          。  
+## <a name="remarks"></a>注解  
+ `STGeometryType()` 可以返回的 OGC 类型名称包括 Point、LineString、CircularString、CompoundCurve、Polygon、CurvePolygon、GeometryCollection、MultiPoint、MultiLineString 和 MultiPolygon        。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `Polygon` 实例并使用 `STGeometryType()` 确认它是多边形。  

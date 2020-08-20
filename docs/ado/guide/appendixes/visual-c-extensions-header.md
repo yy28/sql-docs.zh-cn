@@ -1,4 +1,5 @@
 ---
+description: Visual C++ 扩展标头
 title: Visual C++ Extension 标头 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453919"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 扩展标头
-下面的标头**icrsint**，详细信息允许客户端将字段从**记录集**检索到派生自**CADORecordBinding**的类中定义的变量的接口。 您必须为要访问的每个字段指定一个 ADO 绑定宏。  
+下面的标头 **icrsint**，详细信息允许客户端将字段从 **记录集** 检索到派生自 **CADORecordBinding**的类中定义的变量的接口。 您必须为要访问的每个字段指定一个 ADO 绑定宏。  
   
 ```cpp
 #ifndef _ICRSINT_H_  

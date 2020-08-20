@@ -1,5 +1,6 @@
 ---
-title: 数据源对象（Native Client OLE DB 提供程序） |Microsoft Docs
+description: 'SQL Server Native Client 数据源对象 (OLE DB) '
+title: 数据源对象 (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,21 +20,21 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d0fb6b31376118fca3f2458c21b61c35beec618
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: abcad20ac1866e33f07d3b65f3a804949da9e2fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455776"
 ---
-#  <a name="sql-server-native-client-data-source-objects-ole-db"></a>数据源对象 SQL Server Native Client （OLE DB）
+#  <a name="sql-server-native-client-data-source-objects-ole-db"></a>SQL Server Native Client 数据源对象 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 对用于建立到数据存储的链接的一组 OLE DB 接口使用术语 "数据源"，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 创建提供程序的数据源对象的实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端使用者的第一个任务。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对用于建立到数据存储的链接的一组 OLE DB 接口使用术语 "数据源"，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 创建提供程序的数据源对象的实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端使用者的第一个任务。  
   
- 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序的 CLSID 是 C/c + + GUID CLSID_SQLNCLI10 （符号 SQLNCLI_CLSID 将解析为您引用的 sqlncli.msi 文件中的正确 progid）。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例****。  
+ 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序的 CLSID 是 C/c + + GUID CLSID_SQLNCLI10 (符号 SQLNCLI_CLSID 会解析为引用) 的 sqlncli.msi 文件中的正确 progid。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例  。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 是进程内服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 CLSCTX_INPROC_SERVER 宏创建 Native Client OLE DB 提供程序对象的实例以指示可执行上下文。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是进程内服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 CLSCTX_INPROC_SERVER 宏创建 Native Client OLE DB 提供程序对象的实例以指示可执行上下文。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序数据源对象公开 OLE DB 初始化接口，该接口允许使用者连接到现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "87242253"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 此示例使用类标识符宏来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序数据源对象并获取对其**IDBInitialize**接口的引用。  
+ 此示例使用类标识符宏来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序数据源对象并获取对其 **IDBInitialize** 接口的引用。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -74,7 +75,7 @@ else
   
  成功创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端的实例 OLE DB 提供程序数据源对象后，使用者应用程序可以通过初始化数据源并创建会话来继续。 OLE DB 会话提供允许数据访问和操作的接口。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功完成数据源初始化的过程中，使其第一次连接到指定的实例。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持****。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功完成数据源初始化的过程中，使其第一次连接到指定的实例。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持  。  
   
 ## <a name="in-this-section"></a>本节内容  
   

@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB Provider for Microsoft Active Directory 服务
 title: Microsoft OLE DB 提供商 Active Directory 服务 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a2513d8440adedaa0faecae2b544c9ea99bef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454119"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服务
-Active Directory Service 接口（ADSI）提供程序允许 ADO 通过 ADSI 连接到异类目录服务。 这使得 ADO 应用程序除了任何符合 LDAP 的目录服务和 Novell 目录服务之外，还可以对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务进行只读访问。 ADSI 本身基于提供程序模型，因此，如果有新的提供程序可访问另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序启用了自由线程和 Unicode。  
+Active Directory Service 接口 (ADSI) 提供程序允许 ADO 通过 ADSI 连接到异类目录服务。 这使得 ADO 应用程序除了任何符合 LDAP 的目录服务和 Novell 目录服务之外，还可以对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务进行只读访问。 ADSI 本身基于提供程序模型，因此，如果有新的提供程序可访问另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序启用了自由线程和 Unicode。  
   
 ## <a name="connection-string-parameters"></a>连接字符串参数  
  若要连接到该提供程序，请将[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性的**provider**参数设置为以下内容：  
@@ -32,7 +33,7 @@ Active Directory Service 接口（ADSI）提供程序允许 ADO 通过 ADSI 连�
 ADSDSOObject  
 ```  
   
- 读取[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)属性也会返回此字符串。  
+ 读取 [提供程序](../../../ado/reference/ado-api/provider-property-ado.md) 属性也会返回此字符串。  
   
 ## <a name="typical-connection-string"></a>典型连接字符串  
  此提供程序的典型连接字符串如下所示：  
@@ -43,14 +44,14 @@ ADSDSOObject
   
  字符串包含以下关键字。  
   
-|关键字|说明|  
+|关键字|描述|  
 |-------------|-----------------|  
 |**提供程序**|指定 Active Directory 服务的 OLE DB 提供程序。|  
 |**用户 ID**|指定用户名。 如果省略此关键字，则使用当前登录名。|  
 |**密码**|指定用户密码。 如果省略此关键字，则为。 则使用当前登录名。|  
   
 > [!NOTE]
->  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。  
   
 ## <a name="command-text"></a>命令文本  
  提供程序使用以下语法识别由四个部分组成的命令文本字符串：  
@@ -59,12 +60,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|*Root*|指示从其开始搜索的**ADsPath**对象（即，搜索的根目录）。|  
-|*Filter*|指示 RFC 1960 格式的搜索筛选器。|  
+|*Root*|指示从其开始搜索的 **ADsPath** 对象 (即，搜索) 的根。|  
+|*筛选器*|指示 RFC 1960 格式的搜索筛选器。|  
 |*特性*|指示要返回的属性的逗号分隔列表。|  
-|*Scope*|可选。 指定搜索范围的**字符串**。 可以是以下其中一个值：<br /><br /> -仅搜索基本对象（搜索的根目录）。<br />-OneLevel-仅搜索一级。<br />-子树-搜索整个子树。|  
+|*范围*|可选。 指定搜索范围的 **字符串** 。 可以是以下值之一：<br /><br /> -仅搜索基本对象 (搜索) 的根。<br />-OneLevel-仅搜索一级。<br />-子树-搜索整个子树。|  
   
  例如：  
   
@@ -80,37 +81,37 @@ objectClass='user' AND objectCategory='Person'"
 ```  
   
 ## <a name="remarks"></a>备注  
- 提供程序不接受存储过程调用或简单表名称（例如， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性将始终为**adCmdText**）。 有关命令文本元素的更全面说明，请参阅 Active Directory Service 接口文档。  
+ 提供程序不接受存储过程调用或简单的表名称 (例如， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) 属性将始终) 为 **adCmdText** 。 有关命令文本元素的更全面说明，请参阅 Active Directory Service 接口文档。  
   
 ## <a name="recordset-behavior"></a>记录集行为  
- 下表列出了使用此提供程序打开的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象上的可用功能。 只有静态游标类型（**adOpenStatic**）可用。  
+ 下表列出了使用此提供程序打开的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象上的可用功能。 只有静态游标类型 (**adOpenStatic**) 可用。  
   
  有关提供程序配置的**记录集**行为的详细信息，请运行[支持](../../../ado/reference/ado-api/supports-method.md)方法，并枚举**记录集**的[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合，以确定是否存在特定于提供程序的动态属性。  
   
  **标准 ADO 记录集属性的可用性：**  
   
-|Property|是否支持|  
+|属性|可用性|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|只读|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|读/写|  
+|[加入书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|读/写|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|始终**adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|始终 **adUseServer**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终 **adOpenStatic**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终 **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|  
+|[筛选器](../../../ado/reference/ado-api/filter-property.md)|读/写|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|只读|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|  
-|[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
-|[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
-|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
+|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
   
  **标准 ADO 记录集方法的可用性：**  
   
@@ -140,9 +141,9 @@ objectClass='user' AND objectCategory='Person'"
  有关 ADSI 的详细信息以及提供程序的具体信息，请参阅 Active Directory 服务接口文档或访问 ADSI 网页。  
   
 ## <a name="see-also"></a>另请参阅  
- [CommandType 属性（ADO）](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [ConnectionString 属性（ADO）](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [Properties 集合（ADO）](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Provider 属性（ADO）](../../../ado/reference/ado-api/provider-property-ado.md)   
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [CommandType 属性 (ADO) ](../../../ado/reference/ado-api/commandtype-property-ado.md)   
+ [ (ADO) 的 ConnectionString 属性 ](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+ [ADO)  (属性集合 ](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [ADO) 提供程序属性 (](../../../ado/reference/ado-api/provider-property-ado.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

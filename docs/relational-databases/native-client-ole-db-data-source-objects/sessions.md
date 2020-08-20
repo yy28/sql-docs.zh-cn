@@ -1,5 +1,6 @@
 ---
-title: 会话（Native Client OLE DB 提供程序）
+description: " (Native Client OLE DB 提供程序的会话) "
+title: " (Native Client OLE DB 提供程序的会话) "
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +15,14 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f75c9fec32105561ce3c07ba29aeec9b4779324
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce9c18021d474bfcb4af0e1418e432d779b9376a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455718"
 ---
-# <a name="sessions-native-client-ole-db-provider"></a>会话（Native Client OLE DB 提供程序）
+# <a name="sessions-native-client-ole-db-provider"></a> (Native Client OLE DB 提供程序的会话) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序会话表示到实例的单个连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -181,9 +182,9 @@ EXIT:
 }  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将 Native Client OLE DB 提供程序会话对象连接到的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会导致持续创建和释放会话对象的应用程序产生很大的开销。 可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有效地管理 Native Client OLE DB 提供程序会话对象来最大程度地降低开销。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序应用程序可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过在对象的至少一个接口上维护引用来保持会话对象的连接处于活动状态。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将 Native Client OLE DB 提供程序会话对象连接到的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会导致持续创建和释放会话对象的应用程序产生很大的开销。 可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有效地管理 Native Client OLE DB 提供程序会话对象来最大程度地降低开销。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序应用程序可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过在对象的至少一个接口上维护引用来保持会话对象的连接处于活动状态。  
   
- 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand**** 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
+ 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   
 > [!NOTE]  
 >  在前面的示例中，使用 IDBCreateCommand**** 接口的原因在于 ICommand**** 接口实现 GetDBSession**** 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  

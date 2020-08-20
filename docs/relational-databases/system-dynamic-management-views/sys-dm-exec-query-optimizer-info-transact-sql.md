@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_query_optimizer_info （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_query_optimizer_info (Transact-SQL)
+title: sys. dm_exec_query_optimizer_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ca14221b1d7c8555c03cfc2a976cd09ec562687
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454982"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,22 +34,22 @@ ms.locfileid: "86005222"
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器的操作的详细统计信息。 在优化工作负荷以确定查询优化的问题或改进之处时，可以使用此视图。 例如，可以用总优化次数、占用时间值以及最终开销值来对当前工作负荷的查询优化和优化过程中发现的任何变化进行比较。 某些计数器提供仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部诊断使用相关的数据。 这些计数器标记为“仅供内部使用”。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_query_optimizer_info**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_exec_query_optimizer_info**。  
   
 |名称|数据类型|说明|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
+|**对抗**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
 |**occurrence**|**bigint**|此计数器的优化事件的发生次数。|  
 |**value**|**float**|每次发生事件的平均属性值。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
     
-## <a name="remarks"></a>注解  
- **sys. dm_exec_query_optimizer_info**包含以下属性（计数器）。 出现的所有值将累积并在系统重新启动时设置为 0。 系统重新启动时，值字段的所有值都设置为 NULL。 指定平均值的所有“值-列”的值使用同一行中的出现次数值作为计算平均值的分母。 在确定对 dm_exec_query_optimizer_info 的更改时测量所有查询优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，包括用户和系统生成的查询。 **dm_exec_query_optimizer_info** 如果执行已缓存的计划，则不会更改**dm_exec_query_optimizer_info**中的值，只优化很重要。  
+## <a name="remarks"></a>备注  
+ **dm_exec_query_optimizer_info** 包含 (计数器) 的下列属性。 出现的所有值将累积并在系统重新启动时设置为 0。 系统重新启动时，值字段的所有值都设置为 NULL。 指定平均值的所有“值-列”的值使用同一行中的出现次数值作为计算平均值的分母。 在确定对 dm_exec_query_optimizer_info 的更改时测量所有查询优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，包括用户和系统生成的查询。 **dm_exec_query_optimizer_info** 如果执行已缓存的计划，则不会更改 **dm_exec_query_optimizer_info**中的值，只优化很重要。  
   
 |计数器|出现次数|值|  
 |-------------|----------------|-----------|  
@@ -81,7 +83,7 @@ ms.locfileid: "86005222"
 |联接提示|联接提示强制联接算法的次数。|不适用|  
 |视图引用|查询中引用视图的次数。|不适用|  
 |远程查询|查询至少引用一个远程数据源（例如，具有四部分名称或 OPENROWSET 结果的表）的优化数。|不适用|  
-|最大 DOP|总优化次数。|优化计划的平均有效 MAXDOP 值。 默认情况下，有效的 MAXDOP 取决于**最大并行度**服务器配置选项，可通过 MAXDOP 查询提示的值为特定查询重写。|  
+|最大 DOP|总优化次数。|优化计划的平均有效 MAXDOP 值。 默认情况下，有效的 MAXDOP 取决于 **最大并行度** 服务器配置选项，可通过 MAXDOP 查询提示的值为特定查询重写。|  
 |最小递归级别|已用查询提示指定 MAXRECURSION 级别大于 0 的优化次数。|已用查询提示指定最大递归级别的优化中的平均 MAXRECURSION 级别。|  
 |加载的索引视图|仅供内部使用|仅供内部使用|  
 |匹配的索引视图|已匹配一个或多个索引视图的优化数。|匹配的平均视图数。|  
@@ -127,7 +129,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_fts_parser （Transact-sql） |Microsoft Docs
+description: sys.dm_fts_parser (Transact-SQL)
+title: sys. dm_fts_parser (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,18 +20,18 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 171d63913c0d46b1d344082a5784c7507111a39b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3005c1d843796bfa9206750134d7be1c4f4546fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454932"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在将给定[断字符](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)、[同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)和[非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)组合应用于查询字符串输入后，返回最终的标记结果。 此词语切分结果等效于全文引擎针对指定查询字符串的输出。  
+  在将给定 [断字符](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)、 [同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)和 [非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 组合应用于查询字符串输入后，返回最终的标记结果。 此词语切分结果等效于全文引擎针对指定查询字符串的输出。  
   
  sys.dm_fts_parser 是动态管理函数。  
   
@@ -42,18 +43,18 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="arguments"></a>参数  
  *query_string*  
- 要分析的查询。 *query_string*可以是[包含](../../t-sql/queries/contains-transact-sql.md)语法支持的字符串链。 例如，您可以包括变形、同义词库和逻辑运算符。  
+ 要分析的查询。 *query_string* 可以是 [包含](../../t-sql/queries/contains-transact-sql.md) 语法支持的字符串链。 例如，您可以包括变形、同义词库和逻辑运算符。  
   
  *lcid*  
- 用于分析*query_string*的断字符的区域设置标识符（LCID）。  
+ 用于分析 *query_string*的断字符 (LCID) 的区域设置标识符。  
   
  *stoplist_id*  
- 由*lcid*标识的分词器使用的非索引字表的 ID （如果有）。 *stoplist_id*是**int**。如果指定 "NULL"，则不使用非索引字表。 如果指定 0，则使用系统 STOPLIST。  
+ 由 *lcid*标识的分词器使用的非索引字表的 ID （如果有）。 *stoplist_id* 是 **int**。如果指定 "NULL"，则不使用非索引字表。 如果指定 0，则使用系统 STOPLIST。  
   
- 非索引字表 ID 在数据库中是唯一的。 若要获取给定表的全文检索的非索引字表 ID，请使用[sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)目录视图。  
+ 非索引字表 ID 在数据库中是唯一的。 若要获取给定表的全文检索的非索引字表 ID，请使用 [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) 目录视图。  
   
  *accent_sensitivity*  
- 控制全文搜索是否区分音调符号的布尔值。 *accent_sensitivity*是**bit**，具有以下值之一：  
+ 控制全文搜索是否区分音调符号的布尔值。 *accent_sensitivity* 是 **bit**，具有以下值之一：  
   
 |值|区分重音为 .。。|  
 |-----------|----------------------------|  
@@ -67,20 +68,20 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是可读的，但它可用于将给定关键字关联到其他动态管理视图返回的输出，这些视图返回全文索引的内容，如[sys.databases. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示特殊字符，该字符指示文件或数据集的结尾。|  
+|关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是可读的，但它可用于将给定关键字关联到其他动态管理视图返回的输出，这些视图返回全文索引的内容，如 [sys.databases. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 和 [dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示特殊字符，该字符指示文件或数据集的结尾。|  
 |group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1：服务器<br />2：数据库<br />3：数据库|  
-|phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1对于`multi`<br />1对于`million`<br />2对于`multimillion`|  
-|occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1对于`SQL`<br />2对于`Server`<br />3对于`query`<br />4对于`processor`|  
+|phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1对于 `multi`<br />1对于 `million`<br />2对于 `multimillion`|  
+|occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1对于 `SQL`<br />2对于 `Server`<br />3对于 `query`<br />4对于 `processor`|  
 |special_term|**nvarchar(4000)**|包含有关断字符给出的字词特征的信息，可以是以下值之一：<br /><br /> 完全匹配<br /><br /> Noise word<br /><br /> End of Sentence<br /><br /> End of paragraph<br /><br /> End of Chapter|  
 |display_term|**nvarchar(4000)**|包含关键字的可读形式。 与旨在访问全文索引内容的函数一样，由于非规范化限制，此显示字词可能与原始字词并不完全相同。 不过，该字词应该具有足够高的准确性，可帮助您从原始输入中识别它。|  
 |expansion_type|**int**|包含有关给定字词的扩展特性的信息，可以是以下值之一：<br /><br /> 0 = 单个词的情况<br /><br /> 2 = 变形扩展<br /><br /> 4 = 同义词库扩展/替换<br /><br /> 例如，请考虑同义词库将 run 定义为 `jog` 扩展的情况：<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> 字词 `FORMSOF (FREETEXT, run)` 生成以下输出：<br /><br /> `run`，其中 expansion_type=0<br /><br /> `runs`，其中 expansion_type=2<br /><br /> `running`，其中 expansion_type=2<br /><br /> `ran`，其中 expansion_type=2<br /><br /> `jog`，其中 expansion_type=4|  
-|source_term|**nvarchar(4000)**|从中生成或分析给定字词的字词或短语。 例如，对 '"`word breakers" AND stemmers'` 的查询生成以下英语 source_term 值：<br /><br /> `word breakers`对于 display_term`word`<br />`word breakers`对于 display_term`breakers`<br />`stemmers`对于 display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|从中生成或分析给定字词的字词或短语。 例如，对 '"`word breakers" AND stemmers'` 的查询生成以下英语 source_term 值：<br /><br /> `word breakers` 对于 display_term`word`<br />`word breakers` 对于 display_term`breakers`<br />`stemmers` 对于 display_term`stemmers`|  
   
 ## <a name="remarks"></a>备注  
- **dm_fts_parser**支持全文谓词（如[CONTAINS](../../t-sql/queries/contains-transact-sql.md)和[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)）和函数（如[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)和[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)）的语法和功能。  
+ **dm_fts_parser** 支持全文谓词（如 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)）和函数（如 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)）的语法和功能。  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>使用 Unicode 分析特殊字符  
- 当分析查询字符串时， **sys.databases dm_fts_parser**将使用您所连接的数据库的排序规则，除非您将查询字符串指定为 Unicode。 因此，对于包含特殊字符（如ü或ç）的非 Unicode 字符串，输出可能是意外的，具体取决于数据库的排序规则。 若要独立于数据库排序规则处理查询字符串，请将字符串作为前缀 `N` ，即 `N'` *query_string* `'` 。  
+ 当分析查询字符串时， **sys.databases dm_fts_parser** 将使用您所连接的数据库的排序规则，除非您将查询字符串指定为 Unicode。 因此，对于包含特殊字符（如ü或ç）的非 Unicode 字符串，输出可能是意外的，具体取决于数据库的排序规则。 若要独立于数据库排序规则处理查询字符串，请将字符串作为前缀 `N` ，即 `N'` *query_string* `'` 。  
   
  有关详细信息，请参阅本主题后面的“C. 显示包含特殊字符的字符串的输出”。  
   
@@ -89,7 +90,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 -   了解给定断字符如何处理给定输入  
   
-     当查询返回意外结果时，问题可能出在断字符分析和断开数据的方式。 通过使用 sys.dm_fts_parser，您可以找到断字符传递给全文索引的结果。 此外，还可以查看哪些字词是在全文索引中不搜索的非索引字。 术语是否是给定语言的非索引字取决于它是否位于由函数中声明的*stoplist_id*值指定的非索引字表中。  
+     当查询返回意外结果时，问题可能出在断字符分析和断开数据的方式。 通过使用 sys.dm_fts_parser，您可以找到断字符传递给全文索引的结果。 此外，还可以查看哪些字词是在全文索引中不搜索的非索引字。 术语是否是给定语言的非索引字取决于它是否位于由函数中声明的 *stoplist_id* 值指定的非索引字表中。  
   
      还要注意重音区分标志，用户可通过该标志了解断字符是如何根据重音区分信息分析输入的。  
   
@@ -124,7 +125,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  除了上述应用场景外，sys.dm_fts_parser 还在很大程度上帮助您了解和解决很多其他的全文查询问题。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**固定服务器角色的成员身份以及对指定非索引字表的访问权限。  
+ 要求具有 **sysadmin** 固定服务器角色的成员身份以及对指定非索引字表的访问权限。  
   
 ## <a name="examples"></a>示例  
   

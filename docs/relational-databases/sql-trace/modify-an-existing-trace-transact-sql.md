@@ -1,4 +1,5 @@
 ---
+description: 修改现有跟踪 (Transact-SQL)
 title: 修改现有跟踪 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 278dd48749168495c2678e58e25ae732060b12fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6f706093032867835830d0cf98afb86c07e93f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455345"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改现有跟踪 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85750995"
   
     -   **\@on**（启用）  
   
-     修改“\@on”参数时，请记住它与“\@columnid”参数是相互作用的：  
+     修改“\@on”参数时，请记住它与“\@columnid”参数是相互作用的 ：  
   
     |ON|列 ID|结果|  
     |--------|---------------|------------|  
@@ -48,7 +49,7 @@ ms.locfileid: "85750995"
     ||NOT NULL|指定事件的列关闭。|  
   
 > [!IMPORTANT]
->  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx</strong>) 参数的类型都受到严格限制，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
+>  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx</strong>) 参数的类型都受到严格限制，不支持自动的数据类型转换**。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

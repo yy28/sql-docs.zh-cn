@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_function_stats （Transact-sql） |Microsoft Docs
+description: 'sys. dm_exec_function_stats (Transact-sql) '
+title: sys. dm_exec_function_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -18,14 +19,14 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: baa8bd4e62d66812d6f2ba32e4c94bc1b80da99f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454919"
 ---
-# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats （Transact-sql）
+# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   返回缓存函数的聚合性能统计信息。 视图为每个缓存的函数计划返回一行，行的生存期与函数保持缓存的时间相同。 从缓存中移除某个函数后，将从此视图中删除相应的行。 此时，将引发类似于 **sys.dm_exec_query_stats** 的 Performance Statistics SQL 跟踪事件。 返回有关标量函数的信息，其中包括内存中函数和 CLR 标量函数。 不返回有关表值函数的信息。  
@@ -33,7 +34,7 @@ ms.locfileid: "87396776"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。  
   
 > [!NOTE]
-> 每次执行时， **sys.databases dm_exec_function_stats**的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。 
+> 每次执行时， **sys.databases dm_exec_function_stats**  的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。 
 
   
 |列名称|数据类型|说明|  
@@ -42,12 +43,12 @@ ms.locfileid: "87396776"
 |object_id|**int**|函数的对象标识号。|  
 |type|**char(2)**|对象的类型： FN = 标量值函数|  
 |**type_desc**|**nvarchar(60)**|对象类型的说明： SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|这可用于与在此函数中执行的**dm_exec_query_stats**中的查询相关联。|  
-|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  
+|**sql_handle**|**varbinary(64)**|这可用于与在此函数中执行的 **dm_exec_query_stats** 中的查询相关联。|  
+|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于 **sys.databases dm_exec_cached_plans** 动态管理视图。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  
 |**cached_time**|**datetime**|将函数添加到缓存的时间。|  
 |**last_execution_time**|**datetime**|上次执行函数的时间。|  
 |**execution_count**|**bigint**|函数自上次编译以来已执行的次数。|  
-|**total_worker_time**|**bigint**|此函数自编译以来执行所使用的 CPU 时间总量（微秒）。<br /><br /> 对于本机编译的函数，如果许多执行所需的时间不到1毫秒， **total_worker_time**可能不准确。|  
+|**total_worker_time**|**bigint**|此函数自编译以来执行所使用的 CPU 时间总量（微秒）。<br /><br /> 对于本机编译的函数，如果许多执行所需的时间不到1毫秒， **total_worker_time** 可能不准确。|  
 |**last_worker_time**|**bigint**|上次执行函数所用的 CPU 时间（微秒）。 <sup>1</sup>|  
 |**min_worker_time**|**bigint**|此函数在单次执行期间所用的最小 CPU 时间（微秒）。 <sup>1</sup>|  
 |**max_worker_time**|**bigint**|此函数在单次执行期间所用的最大 CPU 时间（微秒）。 <sup>1</sup>|  
@@ -75,7 +76,7 @@ ms.locfileid: "87396776"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关按平均占用时间标识的前十个函数的信息。  

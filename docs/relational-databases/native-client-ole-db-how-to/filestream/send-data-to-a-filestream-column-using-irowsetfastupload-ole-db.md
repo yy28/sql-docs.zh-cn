@@ -1,5 +1,6 @@
 ---
-title: 数据 FILESTREAM、Irowsetfastupload 向（OLE DB）
+description: '使用 Irowsetfastupload 向 SQL Server Native Client (OLE DB 将数据发送到 FILESTREAM 列) '
+title: '数据 FILESTREAM，Irowsetfastupload 向 (OLE DB) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dd0a5edb17e50283a6260d7ba2c14f1ff0b450f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce03739c3ae8e1dfb7adc8e2c1cf8eab500159f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455712"
 ---
-# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-sql-server-native-client-ole-db"></a>使用 Irowsetfastupload 向 SQL Server Native Client （OLE DB）将数据发送到 FILESTREAM 列
+# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-sql-server-native-client-ole-db"></a>使用 Irowsetfastupload 向 SQL Server Native Client (OLE DB 将数据发送到 FILESTREAM 列) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例使用 IRowsetFastUpload 接口向 filestream 列发送大小在 4 MB 与 4 GB 之间的数据。  
   
- 有关 filestream 功能的详细信息，请参阅[Filestream 支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 有关 filestream 功能的详细信息，请参阅 [Filestream 支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
  编译和运行此示例前，先启用 FILESTREAM 支持（[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)）。  

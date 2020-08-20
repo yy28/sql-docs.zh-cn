@@ -1,5 +1,6 @@
 ---
-title: sys. master_files （Transact-sql） |Microsoft Docs
+description: sys.master_files (Transact-SQL)
+title: sys. master_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c30a4bba2eed0e8709b7d99d745dd51607080b9
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 52cbf9cab6e8a9d77e7bdb0d079f5c3341ec0fed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455252"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -35,15 +37,15 @@ ms.locfileid: "86091811"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|应用此文件的数据库的 ID。 Masterdatabase_id 始终为1。|  
 |file_id|**int**|数据库内文件的 ID。 主 file_id 始终为 1。|  
-|file_guid|**uniqueidentifier**|文件的唯一标识符。<br /><br /> NULL = 数据库已从的早期版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （适用于 SQL Server 2005 及更早版本）。|  
-|类型|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
+|file_guid|**uniqueidentifier**|文件的唯一标识符。<br /><br /> NULL = 数据库已从 (的早期版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 SQL Server 2005 及更低版本的) 。|  
+|type|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
 |type_desc|**nvarchar(60)**|文件类型的说明：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录。）|  
 |data_space_id|**int**|此文件所属数据空间的 ID。 数据空间是一个文件组。<br /><br /> 0 = 日志文件|  
 |name|**sysname**|数据库中文件的逻辑名称。|  
 |physical_name|**nvarchar(260)**|操作系统文件名。|  
 |state|**tinyint**|文件状态：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|文件状态的说明：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。|  
-|大小|**int**|当前文件大小（以 8 KB 为单位的页数）。 对于数据库快照来说，size 表示该快照可以一直用于文件的最大空间。<br /><br /> 注意：对于 FILESTREAM 容器，此字段填充为零。 查询 sys.databases 容器的*database_files*目录视图的实际大小。|  
+|大小|**int**|当前文件大小（以 8 KB 为单位的页数）。 对于数据库快照来说，size 表示该快照可以一直用于文件的最大空间。<br /><br /> 注意：对于 FILESTREAM 容器，此字段填充为零。 查询 sys.databases 容器的 *database_files* 目录视图的实际大小。|  
 |max_size|**int**|最大文件大小（以 8 KB 为单位的页数）：<br /><br /> 0 = 不允许增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 注意：如果使用无限制的日志文件大小升级的数据库，日志文件的最大大小将报告为-1。|  
 |growth|**int**|0 = 文件大小固定，不会增长。<br /><br /> >0 = 文件将自动增长。<br /><br /> 如果 is_percent_growth = 0，则以若干个 8 KB 页为增量递增，舍入为最小 64 KB。<br /><br /> 如果 is_percent_growth = 1，增量将用整数百分比表示。|  
 |is_media_read_onlyF|**bit**|1 = 文件位于只读介质上。<br /><br /> 0 = 文件位于可读/写介质上。|  
@@ -72,10 +74,10 @@ ms.locfileid: "86091811"
  查看相应行所必需的最低权限是 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库和文件目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [文件状态](../../relational-databases/databases/file-states.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

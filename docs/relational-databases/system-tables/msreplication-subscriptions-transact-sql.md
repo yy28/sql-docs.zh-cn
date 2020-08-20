@@ -1,5 +1,6 @@
 ---
-title: MSreplication_subscriptions （Transact-sql） |Microsoft Docs
+description: MSreplication_subscriptions (Transact-SQL)
+title: MSreplication_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d0ec6418e25b59afb3a82ed8b6b97f4e2ceadc6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f8af3b4666556e41da1e48917c584e41dbddedd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454593"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  对于为本地订阅服务器数据库提供服务的每个分发代理， **MSreplication_subscriptions**表都包含一行复制信息。 该表存储在订阅数据库中。  
+  对于为本地订阅服务器数据库提供服务的每个分发代理， **MSreplication_subscriptions** 表都包含一行复制信息。 该表存储在订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +39,7 @@ ms.locfileid: "85889462"
 |**subscription_type**|**int**|订阅的类型：<br /><br /> 0 = 推送。<br /><br /> 1 = 请求。<br /><br /> 2 = 匿名。|  
 |**distribution_agent**|**sysname**|分发代理的名称。|  
 |**时间**|**smalldatetime**|分发代理上次更新的时间。|  
-|**2008**|**nvarchar(255)**|订阅的说明。|  
+|description|**nvarchar(255)**|订阅的说明。|  
 |**transaction_timestamp**|**varbinary(16)**|仅供内部使用。|  
 |**update_mode**|**tinyint**|更新的类型。|  
 |**agent_id**|**binary(16)**|代理的 ID。|  
@@ -47,8 +48,8 @@ ms.locfileid: "85889462"
 |**immediate_sync**|**bit**|指示每次运行快照代理时是否创建或重新创建同步文件。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制视图 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

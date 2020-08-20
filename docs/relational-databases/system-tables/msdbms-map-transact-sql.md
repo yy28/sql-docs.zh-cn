@@ -1,5 +1,6 @@
 ---
-title: MSdbms_map （Transact-sql） |Microsoft Docs
+description: MSdbms_map (Transact-SQL)
+title: MSdbms_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1deb0171bb62c50e43a1d1b072bf79126e79420b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e5845aaa936dd775d0b9fff4d4ac378254693338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454690"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms_map**表包含源数据类型信息，以及指向源和目标 DBMS 对的默认目标数据类型信息的链接。 该表存储在**msdb**数据库中，用于异类发布。  
+  **MSdbms_map**表包含源数据类型信息，以及指向源和目标 DBMS 对的默认目标数据类型信息的链接。 该表存储在 **msdb** 数据库中，用于异类发布。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +48,7 @@ ms.locfileid: "85890016"
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [指定 Oracle 发布服务器的数据类型映射](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

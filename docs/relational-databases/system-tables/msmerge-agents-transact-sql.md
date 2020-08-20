@@ -1,5 +1,6 @@
 ---
-title: MSmerge_agents （Transact-sql） |Microsoft Docs
+description: MSmerge_agents (Transact-SQL)
+title: MSmerge_agents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ffc2075f3994ec24339cc74e0d87085679e379c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: adf07725fb2d2403d8b07c4f41f865e70ebc611f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454629"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在订阅服务器上运行的每个合并代理在**MSmerge_agents**表中各占一行。 此表存储在分发数据库中。  
+  在订阅服务器上运行的每个合并代理在 **MSmerge_agents** 表中各占一行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|合并代理的 ID。|  
-|**name**|**nvarchar （100）**|合并代理的名称。|  
+|**name**|**nvarchar (100) **|合并代理的名称。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
@@ -44,19 +45,19 @@ ms.locfileid: "85889904"
 |**anonymous_subid**|**uniqueidentifier**|匿名代理的 ID。|  
 |**subscriber_name**|**sysname**|订阅服务器的名称。|  
 |**creation_date**|**datetime**|创建分发或合并代理的日期和时间。|  
-|**offload_enabled**|**bit**|指定可远程激活代理。<br /><br /> **0**指定不能远程激活代理。<br /><br /> **1**指定将远程激活代理，并指定在 offload_server 属性中指定的远程计算机上。|  
+|**offload_enabled**|**bit**|指定可远程激活代理。<br /><br /> **0** 指定不能远程激活代理。<br /><br /> **1** 指定将远程激活代理，并指定在 offload_server 属性中指定的远程计算机上。|  
 |**offload_server**|**sysname**|指定用于远程代理激活的服务器网络名称。|  
-|**sid**|**varbinary （85）**|分发代理或合并代理第一次执行时的安全标识号 (SID)。|  
+|**sid**|**varbinary (85) **|分发代理或合并代理第一次执行时的安全标识号 (SID)。|  
 |**subscriber_security_mode**|**smallint**|代理在连接订阅服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。<br /><br /> **1**个  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。|  
 |**subscriber_login**|**sysname**|连接订阅服务器时所使用的登录名。|  
-|**subscriber_password**|**nvarchar （524）**|在连接到订阅服务器时所使用的密码加密值。|  
+|**subscriber_password**|**nvarchar (524) **|在连接到订阅服务器时所使用的密码加密值。|  
 |**publisher_security_mode**|**smallint**|代理在连接到发布服务器时使用的安全模式，可以是以下项之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。<br /><br /> **1**个  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接发布服务器时所使用的登录名。|  
-|**publisher_password**|**nvarchar （524）**|连接发布服务器时所使用的密码的加密值。|  
+|**publisher_password**|**nvarchar (524) **|连接发布服务器时所使用的密码的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|启动代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的唯一 ID。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 概述（SMO） |Microsoft Docs
+description: 概述 (SMO)
+title: 概述 (SMO) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -11,16 +12,17 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455525"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）是设计用于的编程管理的对象 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用 SMO 生成自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理应用程序。 尽管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用广泛的强大应用程序，但有时 SMO 应用程序可能对您更为适用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO) 是设计用于的编程管理的对象 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用 SMO 生成自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理应用程序。 尽管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用广泛的强大应用程序，但有时 SMO 应用程序可能对您更为适用。  
   
  例如，可能需要简化控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理任务的用户应用程序，以满足新用户的需要并且降低培训成本。 您可能需要创建自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，或创建用于创建和监控索引效率的应用程序。 还可以使用 SMO 应用程序将第三方硬件或软件无缝纳入数据库管理应用程序。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "86012321"
   
 -   用于在分区方案上存储数据的表和索引分区。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
--   用于管理 SOAP 请求的 HTTP 端点。 有关详细信息，请参阅[实现终结点](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)。  
+-   用于管理 SOAP 请求的 HTTP 端点。 有关详细信息，请参阅 [实现终结点](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)。  
   
 -   旨在提高并发性的快照隔离和行级版本控制。 有关详细信息，请参阅[使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
@@ -52,17 +54,17 @@ ms.locfileid: "86012321"
   
 -   用于创建数据库只读副本的快照数据库。  
   
--   针对基于消息的通信的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 支持。 有关详细信息，请参阅[SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)。  
+-   针对基于消息的通信的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 支持。 有关详细信息，请参阅 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)。  
   
--   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象的多个名称的同义词支持。 有关详细信息，请参阅[同义词 &#40;数据库引擎&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)。  
+-   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象的多个名称的同义词支持。 有关详细信息，请参阅 [同义词 &#40;数据库引擎&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)。  
   
 -   数据库邮件的管理，允许您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建电子邮件服务器、电子邮件配置文件和电子邮件帐户。 有关详细信息，请参阅[数据库邮件](../../relational-databases/database-mail/database-mail.md)。  
   
--   用于注册连接信息的已注册服务器支持。 有关详细信息，请参阅[注册服务器](../../tools/sql-server-management-studio/register-servers.md)。  
+-   用于注册连接信息的已注册服务器支持。 有关详细信息，请参阅 [注册服务器](../../tools/sql-server-management-studio/register-servers.md)。  
   
--   跟踪和重播 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 有关详细信息，请参阅[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)和[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
+-   跟踪和重播 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 有关详细信息，请参阅 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)和 [扩展事件](../../relational-databases/extended-events/extended-events.md)。  
   
--   针对用于安全控制的证书和密钥的支持。 有关详细信息，请参阅[加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
+-   针对用于安全控制的证书和密钥的支持。 有关详细信息，请参阅 [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
 -   用于在出现 DDL 事件时增强功能的 DDL 触发器。 有关详细信息，请参阅 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)。  
   
@@ -100,7 +102,7 @@ ms.locfileid: "86012321"
   
  直接执行是通常的执行方法。 语句一旦引发，就会直接发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个实例。 捕获执行是直接执行的替代方式。  
   
- 捕获执行允许您捕获通常会执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 这使 SMO 编程人员得以延迟脚本、存储它以便以后执行，或者为最终用户提供预览。 例如， **create database**、 **create table**和**create index**语句可以在一个批处理中发送，然后作为三个连续的步骤运行。 用户可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象控制此功能。  
+ 捕获执行允许您捕获通常会执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 这使 SMO 编程人员得以延迟脚本、存储它以便以后执行，或者为最终用户提供预览。 例如， **create database**、 **create table**和 **create index** 语句可以在一个批处理中发送，然后作为三个连续的步骤运行。 用户可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象控制此功能。  
   
  **WMI 提供程序**  
   
@@ -108,13 +110,13 @@ ms.locfileid: "86012321"
   
  **脚本**  
   
- 在 SMO 中，脚本编写已经过增强，并移**到了脚本编写类**中。 **脚本编写**类可以发现依赖关系，了解对象之间的关系，并允许操作依赖关系层次结构。 主要脚本对象是脚本**编写**对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
+ 在 SMO 中，脚本编写已经过增强，并移 **到了脚本编写类** 中。 **脚本编写**类可以发现依赖关系，了解对象之间的关系，并允许操作依赖关系层次结构。 主要脚本对象是脚本 **编写** 对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
   
  **脚本编写**对象支持以下高级脚本编写选项：  
   
 -   1 段式简单脚本编写（在一步中创建脚本）  
   
--   高级3阶段脚本（创建脚本，分为三个步骤：依赖项发现、列表生成、脚本生成）  
+-   高级3阶段脚本编写 (以三个步骤创建脚本;依赖项发现、列表生成、脚本生成)   
   
 -   双向依赖关系发现（允许发现依赖关系或依赖项）  
   
@@ -132,7 +134,7 @@ ms.locfileid: "86012321"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 可以通过引用对象的 URN 属性来检索该对象的 URN。 脚本编写对象还使用 Urn 作为参数，将对象引用传递给**脚本编写**对象的方法。 此外，可以为**服务器**对象的**GETSMOOBJECT**方法指定 URN。 用于创建 SMO 对象的实例。  
+ 可以通过引用对象的 URN 属性来检索该对象的 URN。 脚本编写对象还使用 Urn 作为参数，将对象引用传递给 **脚本编写** 对象的方法。 此外，可以为**服务器**对象的**GETSMOOBJECT**方法指定 URN。 用于创建 SMO 对象的实例。  
   
 ## <a name="sql-server-features-represented-in-smo"></a>SMO 中表示 SQL Server 功能  
  **表和索引分区**  
@@ -149,7 +151,7 @@ ms.locfileid: "86012321"
   
  **XML 架构命名空间、XML 索引和 XML 数据类型**  
   
- XML 架构命名空间在 SMO 中通过对象集合来表示。 XML 索引在 SMO 中由**索引**对象属性表示。  
+ XML 架构命名空间在 SMO 中通过对象集合来表示。 XML 索引在 SMO 中由 **索引** 对象属性表示。  
   
  **全文搜索增强功能**  
   

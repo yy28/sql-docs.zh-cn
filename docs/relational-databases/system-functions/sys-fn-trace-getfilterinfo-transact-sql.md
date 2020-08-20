@@ -1,5 +1,6 @@
 ---
-title: sys. fn_trace_getfilterinfo （Transact-sql） |Microsoft Docs
+description: sys.fn_trace_getfilterinfo (Transact-SQL)
+title: sys. fn_trace_getfilterinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79b86365703160ef6f15f8fd89805961997a61e4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a76efe75df29423c1f788ace0f8dde8b158c6a0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454777"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,20 +48,20 @@ fn_trace_getfilterinfo ( trace_id )
   
 ## <a name="arguments"></a>参数  
  *trace_id*  
- 跟踪的 ID。 *trace_id*为**int**，没有默认值。  
+ 跟踪的 ID。 *trace_id* 为 **int**，没有默认值。  
   
 ## <a name="tables-returned"></a>返回的表  
- 返回以下信息。 有关列的详细信息，请参阅[&#40;transact-sql&#41;sp_trace_setfilter ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
+ 返回以下信息。 有关列的详细信息，请参阅 [&#40;transact-sql&#41;sp_trace_setfilter ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|应用筛选器的列的 ID。|  
 |**logical_operator**|**int**|指定是否应用 AND 或 OR 运算符。|  
 |**comparison_operator**|**int**|指定比较类型：<br /><br /> 0 = 等于<br /><br /> 1 = 不等于<br /><br /> 2 = 大于<br /><br /> 3 = 小于<br /><br /> 4 = 大于或等于<br /><br /> 5 = 小于或等于<br /><br /> 6 = 类似于<br /><br /> 7 = 不类似于|  
-|value|**sql_variant**|指定应用筛选器的值。|  
+|**value**|**sql_variant**|指定应用筛选器的值。|  
   
 ## <a name="remarks"></a>备注  
- 用户设置*trace_id*值以标识、修改和控制跟踪。 当传递特定跟踪的 ID 时， **fn_trace_getfilterinfo**返回有关该跟踪的任何筛选器的信息。 如果指定的跟踪没有筛选器，则此函数将返回空行集。 传递无效 ID 时，此函数将返回空行集。 有关跟踪的类似信息，请参阅[transact-sql&#41;&#40;fn_trace_getinfo ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
+ 用户设置 *trace_id* 值以标识、修改和控制跟踪。 当传递特定跟踪的 ID 时， **fn_trace_getfilterinfo** 返回有关该跟踪的任何筛选器的信息。 如果指定的跟踪没有筛选器，则此函数将返回空行集。 传递无效 ID 时，此函数将返回空行集。 有关跟踪的类似信息，请参阅 [transact-sql&#41;&#40;fn_trace_getinfo ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 ALTER TRACE 权限。  
@@ -79,10 +80,10 @@ GO
  [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_create &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [sys. fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sys. fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 用于 Internet 发布的 Microsoft OLE DB 提供程序概述
 title: 用于 Internet 发布的 Microsoft OLE DB 提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 079bbefce30b5836c16394a7b8efb215725c5ce6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 051185b9b40b1f7d4472e957f3a09a8f6416c8b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454089"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>用于 Internet 发布的 Microsoft OLE DB 提供程序概述
 用于 Internet 发布的 Microsoft OLE DB 提供程序允许 ADO 访问 Microsoft FrontPage 或 Microsoft Internet Information Server 所提供的资源。 资源包括 web 源文件（如 HTML 文件）或 Windows 2000 web 文件夹。
@@ -31,7 +32,7 @@ ms.locfileid: "82758453"
 MSDAIPP.DSO
 ```
 
- 还可以使用[Provider](../../../ado/reference/ado-api/provider-property-ado.md)属性设置或读取此值。
+ 还可以使用 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 属性设置或读取此值。
 
 ## <a name="typical-connection-string"></a>典型连接字符串
  此提供程序的典型连接字符串是：
@@ -40,7 +41,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- \- 或 -
+ - 或 -
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -48,20 +49,20 @@ MSDAIPP.DSO
 
  字符串包含以下关键字：
 
-|关键字|说明|
+|关键字|描述|
 |-------------|-----------------|
 |**提供程序**|指定用于 Internet 发布的 OLE DB 提供程序。|
-|**数据源**或- **URL**|指定在 Web 文件夹中发布的文件或目录的 URL。|
+|**数据源** 或- **URL**|指定在 Web 文件夹中发布的文件或目录的 URL。|
 |**用户 ID**|指定用户名。|
 |**密码**|指定用户密码。|
 
 > [!NOTE]
->  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。
 
- 如果将连接字符串中的 "URL =" 的*ResourceURL*值设置为无效值，则默认情况下，Internet 发布提供程序会引发一个对话框，提示输入有效的值。 这对于应用程序的中间层中的组件是不需要的行为，因为它会挂起程序的执行，直至对话框被清除，并且客户端似乎已冻结，因为它未收到来自组件的响应。
+ 如果将连接字符串中的 "URL =" 的 *ResourceURL* 值设置为无效值，则默认情况下，Internet 发布提供程序会引发一个对话框，提示输入有效的值。 这对于应用程序的中间层中的组件是不需要的行为，因为它会挂起程序的执行，直至对话框被清除，并且客户端似乎已冻结，因为它未收到来自组件的响应。
 
 > [!NOTE]
->  如果为 MSDAIPP。通过使用*提供程序*连接字符串关键字或**提供程序**属性，将 DSO 显式指定为提供程序的值，而不能在连接字符串中使用 "URL ="。 如果这样做，则会发生错误。 相反，只需按主题[使用 ADO 和用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)来指定 URL。
+>  如果为 MSDAIPP。通过使用 *提供程序* 连接字符串关键字或 **提供程序** 属性，将 DSO 显式指定为提供程序的值，而不能在连接字符串中使用 "URL ="。 如果这样做，则会发生错误。 相反，只需按主题 [使用 ADO 和用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)来指定 URL。
 
 ## <a name="see-also"></a>另请参阅
  Internet 发布[方案](../../../ado/guide/data/internet-publishing-scenario.md) [OLE DB 用于 Internet 发布的提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

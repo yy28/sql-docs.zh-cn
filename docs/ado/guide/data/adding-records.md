@@ -1,4 +1,5 @@
 ---
+description: 将记录添加到记录集
 title: 添加记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3dbcdf4ab089968741a4d0b08b7b02d1324f26d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453879"
 ---
 # <a name="adding-records-to-a-recordset"></a>将记录添加到记录集
-使用**AddNew**方法可在现有**记录集中**创建和初始化新记录。 您可以使用**支持**的**CursorOptionEnum**值为**adAddNew**的方法，验证是否可以将记录添加到当前**记录集**对象。
+使用 **AddNew** 方法可在现有 **记录集中**创建和初始化新记录。 您可以使用 **支持** 的 **CursorOptionEnum** 值为 **adAddNew** 的方法，验证是否可以将记录添加到当前 **记录集** 对象。
 
- 调用**AddNew**方法之后，新记录将成为当前记录，并在调用**Update**方法后保持最新。 如果**记录集**对象不支持书签，则在移动到另一记录后，您可能无法访问新记录。 因此，根据游标类型，您可能需要调用**Requery**方法以使新记录可访问。
+ 调用 **AddNew** 方法之后，新记录将成为当前记录，并在调用 **Update** 方法后保持最新。 如果 **记录集** 对象不支持书签，则在移动到另一记录后，您可能无法访问新记录。 因此，根据游标类型，您可能需要调用 **Requery** 方法以使新记录可访问。
 
- 如果在编辑当前记录或添加新记录时调用**AddNew** ，ADO 将调用**Update**方法来保存所有更改，然后创建新记录。
+ 如果在编辑当前记录或添加新记录时调用 **AddNew** ，ADO 将调用 **Update** 方法来保存所有更改，然后创建新记录。
 
  本部分包含以下主题。
 

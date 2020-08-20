@@ -1,4 +1,5 @@
 ---
+description: '全局设置 (日志记录)  (DB2ToSQL) '
 title: 全局设置 (日志记录)  (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 020eebfe3d6ae509516eaedd8a891b0ee481bc83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 632d71f69f164ea221f9d11604e6fb07528fd583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454200"
 ---
 # <a name="global-settings-logging-db2tosql"></a>全局设置 (日志记录)  (DB2ToSQL) 
-使用 "**全局设置**" 对话框指定 SSMA 的日志记录设置。 通常，只能在使用产品支持时更改这些设置。  
+使用 " **全局设置** " 对话框指定 SSMA 的日志记录设置。 通常，只能在使用产品支持时更改这些设置。  
   
-若要访问此对话框，请在 "**工具**" 菜单上选择 "**全局设置**"，然后单击左窗格底部的 "**日志记录**" 按钮。  
+若要访问此对话框，请在 " **工具** " 菜单上选择 " **全局设置** "，然后单击左窗格底部的 " **日志记录** " 按钮。  
   
 ## <a name="options"></a>选项  
 **消息级别**  
-"**消息" 级别**下面有以下选项：  
+" **消息" 级别**下面有以下选项：  
   
 |选项|描述|  
 |----------|---------------|  
@@ -40,7 +41,7 @@ ms.locfileid: "87933778"
 |**TreeConverter**|将源元数据中的对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据。|  
 |**测试人员**|使用 SSMA 测试器时显示的消息。|  
   
-对于 "**消息级别**" 下的每个选项，请为 SSMA 配置以下日志记录级别之一：  
+对于 " **消息级别**" 下的每个选项，请为 SSMA 配置以下日志记录级别之一：  
   
 |||  
 |-|-|  
