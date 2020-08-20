@@ -1,4 +1,5 @@
 ---
+description: " (Azure SQL 数据库的防火墙规则存储过程) "
 title: 防火墙规则存储过程
 titleSuffix: Azure SQL Database
 ms.date: 07/28/2016
@@ -17,17 +18,17 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bace837ef11fc106632b84fe01ed5c8bc1448ffa
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 06909fec18be239f1f416c074fa444a14705f0ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486329"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a> (Azure SQL 数据库的防火墙规则存储过程) 
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  此部分包含以下用于设置或删除防火墙规则的存储过程。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)]防火墙规则可以与和一起 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 使用 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 。 有关详细信息，请参阅[配置 AZURE SQL 数据库防火墙规则-概述](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)。
+  此部分包含以下用于设置或删除防火墙规则的存储过程。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 防火墙规则可以与和一起 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 使用 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 。 有关详细信息，请参阅 [配置 AZURE SQL 数据库防火墙规则-概述](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)。
 
 :::row:::
     :::column:::

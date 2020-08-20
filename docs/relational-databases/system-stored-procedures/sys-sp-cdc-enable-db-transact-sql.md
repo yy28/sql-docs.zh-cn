@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_enable_db （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_enable_db (Transact-SQL)
+title: sys. sp_cdc_enable_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e39bf9c4ff4626bf957978a12d77df6e60d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485499"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +53,9 @@ sys.sp_cdc_enable_db
  无  
   
 ## <a name="remarks"></a>备注  
- 无法在[系统数据库](../../relational-databases/databases/system-databases.md)或分发数据库上启用变更数据捕获。  
+ 无法在 [系统数据库](../../relational-databases/databases/system-databases.md) 或分发数据库上启用变更数据捕获。  
   
- sys.sp_cdc_enable_db 将创建以全数据库为作用域的变更数据捕获对象，包括元数据表和 DDL 触发器。 它还创建 cdc schema 和 cdc 数据库用户，并将[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图中的数据库条目的 is_cdc_enabled 列设置为1。  
+ sys.sp_cdc_enable_db 将创建以全数据库为作用域的变更数据捕获对象，包括元数据表和 DDL 触发器。 它还创建 cdc schema 和 cdc 数据库用户，并将 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的数据库条目的 is_cdc_enabled 列设置为1。  
   
 ## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色的成员身份。  

@@ -1,5 +1,6 @@
 ---
-title: log_shipping_monitor_history_detail （Transact-sql） |Microsoft Docs
+description: log_shipping_monitor_history_detail (Transact-SQL)
+title: log_shipping_monitor_history_detail (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30679d8123bf2f5f4339d53d52cadcc39cdd4542
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4a3b6562d6b5b01ccf1bf40842dac404b1add1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485493"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  存储日志传送作业的历史记录详细信息。 该表存储在**msdb**数据库中。  
+  存储日志传送作业的历史记录详细信息。 该表存储在 **msdb** 数据库中。  
   
  与历史记录和监视相关的表也用于主服务器和辅助服务器。  
   
@@ -43,9 +44,9 @@ ms.locfileid: "85890159"
 |**message**|**nvarchar(max)**|消息正文。|  
   
 ## <a name="remarks"></a>备注  
- 此表包含日志传送代理的历史记录详细信息。 若要标识代理会话，请使用列**agent_id**、 **agent_type**和**session_id**。 若要查看代理会话的历史记录详细信息，请按**log_time**排序。  
+ 此表包含日志传送代理的历史记录详细信息。 若要标识代理会话，请使用列 **agent_id**、 **agent_type**和 **session_id**。 若要查看代理会话的历史记录详细信息，请按 **log_time**排序。  
   
- 除了存储在远程监视服务器上外，与主服务器有关的信息存储在主服务器上的**log_shipping_monitor_history_detail**表中，与辅助服务器相关的信息也存储在辅助服务器上的**log_shipping_monitor_history_detail**表中。  
+ 除了存储在远程监视服务器上外，与主服务器有关的信息存储在主服务器上的 **log_shipping_monitor_history_detail** 表中，与辅助服务器相关的信息也存储在辅助服务器上的 **log_shipping_monitor_history_detail** 表中。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

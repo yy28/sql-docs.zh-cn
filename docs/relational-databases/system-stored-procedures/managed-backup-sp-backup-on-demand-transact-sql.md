@@ -1,5 +1,6 @@
 ---
-title: managed_backup sp_backup_on_demand （Transact-sql） |Microsoft Docs
+description: 'managed_backup sp_backup_on_demand (Transact-sql) '
+title: managed_backup sp_backup_on_demand (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b2ee41dcc94e0bc84b6a5347ba84609b73e3335
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4357cc8cc214f610ef1f61c27dd8e05be3e3d56b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486290"
 ---
-# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup sp_backup_on_demand （Transact-sql）
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup sp_backup_on_demand (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   请求 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 执行对指定数据库的备份。  
@@ -47,12 +49,12 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @database_name  
  要对其执行备份的数据库的名称。 @database_name为**SYSNAME**。  
   
  @type  
- 要执行的备份类型：数据库或日志。 @type参数为**NVARCHAR （32）**。  
+ 要执行的备份类型：数据库或日志。 @type参数** (32) 为 NVARCHAR **。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  

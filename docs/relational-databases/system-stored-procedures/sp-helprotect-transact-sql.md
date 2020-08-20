@@ -1,5 +1,6 @@
 ---
-title: sp_helprotect （Transact-sql） |Microsoft Docs
+description: sp_helprotect (Transact-SQL)
+title: sp_helprotect (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eab1ad6fa3e71f4ef5c39ca06b081ed6b3889d29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485894"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85899490"
   返回一个报表，报表中包含当前数据库中某对象的用户权限或语句权限的信息。  
   
 > [!IMPORTANT]  
->  **sp_helprotect**不返回有关中引入的安全对象的信息 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 改为使用[database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)和[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
+>  **sp_helprotect** 不返回有关中引入的安全对象的信息 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 改为使用 [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 和 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
   
  不列出始终分配给固定服务器角色或固定数据库角色的权限。 不包括基于其在角色中的成员身份接收权限的登录名或用户。  
   
@@ -47,15 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'object_statement'`当前数据库或语句中具有报告权限的对象的名称。 *object_statement*为**nvarchar （776）**，默认值为 NULL，表示返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称可以_包含所有者限定符_**。**_对象_。  
+`[ @name = ] 'object_statement'` 当前数据库或语句中具有报告权限的对象的名称。 *object_statement* 为 **nvarchar (776) **，默认值为 NULL，表示将返回所有的对象权限和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称可以 _包含所有者限定符_**。**_对象_。  
   
- 如果*object_statement*是语句，则它可以是 CREATE 语句。  
+ 如果 *object_statement* 是语句，则它可以是 CREATE 语句。  
   
-`[ @username = ] 'security_account'`为其返回权限的主体的名称。 *security_account*的数据值为**sysname**，默认值为 NULL，表示将返回当前数据库中的所有主体。 当前数据库中必须存在*security_account* 。  
+`[ @username = ] 'security_account'` 为其返回权限的主体的名称。 *security_account* 的数据值为 **sysname**，默认值为 NULL，表示将返回当前数据库中的所有主体。 当前数据库中必须存在*security_account* 。  
   
-`[ @grantorname = ] 'grantor'`被授予权限的主体的名称。 *授权*者为**sysname**，默认值为 NULL，它返回数据库中任何主体授予的权限的所有信息。  
+`[ @grantorname = ] 'grantor'` 被授予权限的主体的名称。 *授权* 者为 **sysname**，默认值为 NULL，它返回数据库中任何主体授予的权限的所有信息。  
   
-`[ @permissionarea = ] 'type'`一个字符串，该字符串指示是显示对象权限（字符串**o**）、语句权限 **（字符串）** 还是同时显示两者（**os**）。 *类型*为**varchar （10）**，默认值为 " **os**"。 *类型*可以是**o**和**s**的任意组合，无论在**o**和**s**之间有或不包含逗号或空格。  
+`[ @permissionarea = ] 'type'` 一个字符串，该字符串指示是显示 (字符串 **o**) 的对象权限、语句权限 (字符串 **s**) ，还是同时显示 (**os**) 。 *类型* 为 **varchar (10) **，默认值为 **os**。 *类型* 可以是 **o** 和 **s**的任意组合，无论在 **o** 和 **s**之间有或不包含逗号或空格。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -65,11 +66,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**所有者**|**sysname**|对象所有者的名称。|  
-|**对象**|**sysname**|对象的名称。|  
+|**Object**|**sysname**|对象的名称。|  
 |**被授权者**|**sysname**|被授予权限的主体的名称。|  
 |**授权者**|**sysname**|向指定的被授权者进行授权的主体的名称。|  
-|**ProtectType**|**nvarchar （10）**|保护类型的名称：<br /><br /> GRANT REVOKE|  
-|**Action**|**nvarchar(60)**|权限的名称。 依赖于对象类型的有效的权限语句。|  
+|**ProtectType**|**nvarchar (10) **|保护类型的名称：<br /><br /> GRANT REVOKE|  
+|**操作**|**nvarchar(60)**|权限的名称。 依赖于对象类型的有效的权限语句。|  
 |**列**|**sysname**|权限的类型：<br /><br /> All = 权限适用于对象所有的当前列。<br /><br /> New = 权限适用于任何以后可以在对象上进行更改（使用 ALTER 语句）的新列。<br /><br /> All+New = All 和 New 的组合。<br /><br /> 如果权限类型不适用于列，则返回一个期间。|  
   
 ## <a name="remarks"></a>备注  
@@ -133,9 +134,9 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
   
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY &#40;Transact-sql&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT &#40;Transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
+ [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

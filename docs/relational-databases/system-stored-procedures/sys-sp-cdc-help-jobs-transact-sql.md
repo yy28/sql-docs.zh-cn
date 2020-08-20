@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_help_jobs （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_help_jobs (Transact-SQL)
+title: sys. sp_cdc_help_jobs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e5f1bc891a9ed3ce41d2b692d94995fc8ff0909
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 884d9f9b6e0cf60268d0d980f1141fee627e5a19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485524"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,23 +42,23 @@ sys.sp_cdc_help_jobs
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业 ID。|  
-|**job_type**|**nvarchar （20）**|作业类型。|  
-|**maxtrans**|**int**|在每个扫描循环中要处理的最大事务数。<br /><br /> **maxtrans**仅对捕获作业有效。|  
-|**maxscans**|**int**|为了从日志中提取所有行而要执行的扫描周期的最大数目。<br /><br /> **maxscans**仅对捕获作业有效。|  
-|**持续**|**bit**|指示捕获作业是连续运行 (1) 还是以一次性模式运行 (0) 的标志。 有关详细信息，请参阅[sys.databases&#41;sp_cdc_add_job &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> **连续**仅对捕获作业有效。|  
-|**pollinginterval**|**bigint**|日志扫描循环之间间隔的秒数。<br /><br /> **pollinginterval**仅对捕获作业有效。|  
-|**保留**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留**仅对清除作业有效。|  
+|**job_type**|**nvarchar (20) **|作业类型。|  
+|**maxtrans**|**int**|在每个扫描循环中要处理的最大事务数。<br /><br /> **maxtrans** 仅对捕获作业有效。|  
+|**maxscans**|**int**|为了从日志中提取所有行而要执行的扫描周期的最大数目。<br /><br /> **maxscans** 仅对捕获作业有效。|  
+|**持续**|**bit**|指示捕获作业是连续运行 (1) 还是以一次性模式运行 (0) 的标志。 有关详细信息，请参阅 [sys.databases&#41;sp_cdc_add_job &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> **连续** 仅对捕获作业有效。|  
+|**pollinginterval**|**bigint**|日志扫描循环之间间隔的秒数。<br /><br /> **pollinginterval** 仅对捕获作业有效。|  
+|**保留**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留** 仅对清除作业有效。|  
 |**threshold**|**bigint**|清除时可以使用一条语句删除的删除条目的最大数量。|  
   
 ## <a name="permissions"></a>权限  
- 需要**db_owner**固定数据库角色的成员身份。  
+ 需要 **db_owner** 固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下例返回有关 `AdventureWorks2012` 数据库的已定义捕获和清除作业的信息。  

@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_add_policy_category_subscription （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_add_policy_category_subscription (Transact-SQL)
+title: sp_syspolicy_add_policy_category_subscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99e27db247ca38897b65ef73c38e3eb48e1f1358
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba22b7025aa30216d94804440fec2c86eea5fc09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485644"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @target_type = ] 'target_type'`类别订阅的目标类型。 *target_type*为**sysname**，是必需的，并且必须设置为 "DATABASE"。  
+`[ @target_type = ] 'target_type'` 类别订阅的目标类型。 *target_type* 为 **sysname**，是必需的，并且必须设置为 "DATABASE"。  
   
-`[ @target_object = ] 'target_object'`将订阅该类别的数据库的名称。 *target_object* **sysname**，并且是必需的。  
+`[ @target_object = ] 'target_object'` 将订阅该类别的数据库的名称。 *target_object* **sysname**，并且是必需的。  
   
-`[ @policy_category = ] 'policy_category'`要订阅的策略类别的名称。 *policy_category* **sysname**，并且是必需的。  
+`[ @policy_category = ] 'policy_category'` 要订阅的策略类别的名称。 *policy_category* **sysname**，并且是必需的。  
   
- 若要获取*policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
+ 若要获取 *policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`类别订阅的标识符。 *policy_category_subscription_id*是**int**，并作为 OUTPUT 返回。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 类别订阅的标识符。 *policy_category_subscription_id* 是 **int**，并作为 OUTPUT 返回。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_add_policy_category_subscription。  

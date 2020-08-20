@@ -1,5 +1,6 @@
 ---
-title: sp_procoption （Transact-sql） |Microsoft Docs
+description: sp_procoption (Transact-SQL)
+title: sp_procoption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485829"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +42,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @ProcName = ] 'procedure'`要为其设置选项的过程的名称。 *过程*为**nvarchar （776）**，无默认值。  
+`[ @ProcName = ] 'procedure'` 要为其设置选项的过程的名称。 *过程* 为 **nvarchar (776) **，无默认值。  
   
-`[ @OptionName = ] 'option'`要设置的选项的名称。 *选项*的唯一值为 "**启动**"。  
+`[ @OptionName = ] 'option'` 要设置的选项的名称。 *选项*的唯一值为 "**启动**"。  
   
-`[ @OptionValue = ] 'value'`指示是将选项设置为启用（**true**或**on**）还是禁用（**false**或**off**）。 *值*为**varchar （12）**，无默认值。  
+`[ @OptionValue = ] 'value'`指示是将选项设置 (**true** **还是) 还是**关闭 (**false**或 off **) 。** *值* 为 **varchar (12) **，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或错误号（失败）  
   
 ## <a name="remarks"></a>备注  
- 启动过程必须在**master**数据库中，并且不能包含输入参数或输出参数。 所有数据库恢复后将开始执行存储过程，并在开始时记录“恢复已完成”消息。  
+ 启动过程必须在 **master** 数据库中，并且不能包含输入参数或输出参数。 所有数据库恢复后将开始执行存储过程，并在开始时记录“恢复已完成”消息。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

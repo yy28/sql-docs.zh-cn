@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_help_change_data_capture （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_help_change_data_capture (Transact-SQL)
+title: sys. sp_cdc_help_change_data_capture (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7b0fa1b0e6219ebfef9f281eec8e8503e22f0b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485541"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,18 +47,18 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>参数  
  [ @source_schema =] "*source_schema*"  
- 源表所属架构的名称。 *source_schema*的默认值为**sysname**，默认值为 NULL。 指定*source_schema*时，还必须指定*source_name* 。  
+ 源表所属架构的名称。 *source_schema* 的默认值为 **sysname**，默认值为 NULL。 指定 *source_schema* 时，还必须指定 *source_name* 。  
   
- 如果非 NULL，则当前数据库中必须存在*source_schema* 。  
+ 如果非 NULL，则当前数据库中必须存在 *source_schema* 。  
   
- 如果*source_schema*为非 null，则*source_name*也必须为非 null。  
+ 如果 *source_schema* 为非 null，则 *source_name* 也必须为非 null。  
   
  [ @source_name =] "*source_name*"  
- 源表的名称。 *source_name*的默认值为**sysname**，默认值为 NULL。 指定*source_name*时，还必须指定*source_schema* 。  
+ 源表的名称。 *source_name* 的默认值为 **sysname**，默认值为 NULL。 指定 *source_name* 时，还必须指定 *source_schema* 。  
   
- 如果非 NULL，则当前数据库中必须存在*source_name* 。  
+ 如果非 NULL，则当前数据库中必须存在 *source_name* 。  
   
- 如果*source_name*为非 null，则*source_schema*也必须为非 null。  
+ 如果 *source_name* 为非 null，则 *source_schema* 也必须为非 null。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -83,10 +84,10 @@ sys.sp_cdc_help_change_data_capture
 |captured_column_list|**nvarchar(max)**|已捕获的源列的列表。|  
   
 ## <a name="remarks"></a>备注  
- 如果*source_schema*和*source_name*都默认为 null，或者显式设置为 null，则此存储过程将返回调用方有权访问的所有数据库捕获实例的信息。 当*source_schema*且*SOURCE_NAME*为非 NULL 时，只返回有关特定命名启用表的信息。  
+ 如果 *source_schema* 和 *source_name* 都默认为 null，或者显式设置为 null，则此存储过程将返回调用方有权访问的所有数据库捕获实例的信息。 当 *source_schema* 且 *SOURCE_NAME* 为非 NULL 时，只返回有关特定命名启用表的信息。  
   
 ## <a name="permissions"></a>权限  
- 当*source_schema*和*source_name*为 NULL 时，调用方的授权将确定哪些启用的表包含在结果集中。 调用方必须对捕获实例的所有捕获列拥有 SELECT 权限，还要有任何所定义的门户角色中的成员身份，才能获得要包括的表信息。 db_owner 数据库角色的成员可以查看有关所有定义的捕获实例的信息。 在请求特定的启用表的信息时，相同的 SELECT 和成员身份条件将应用于命名表。  
+ 当 *source_schema* 和 *source_name* 为 NULL 时，调用方的授权将确定哪些启用的表包含在结果集中。 调用方必须对捕获实例的所有捕获列拥有 SELECT 权限，还要有任何所定义的门户角色中的成员身份，才能获得要包括的表信息。 db_owner 数据库角色的成员可以查看有关所有定义的捕获实例的信息。 在请求特定的启用表的信息时，相同的 SELECT 和成员身份条件将应用于命名表。  
   
 ## <a name="examples"></a>示例  
   

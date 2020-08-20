@@ -1,5 +1,6 @@
 ---
-title: sp_helpntgroup （Transact-sql） |Microsoft Docs
+description: sp_helpntgroup (Transact-SQL)
+title: sp_helpntgroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f52bf995a4d8f24d2b987ad08602cf9184cff8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9ad0853553de51ba53b363bc400facde0c01652e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485928"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @ntname = ] 'name'`Windows 组的名称。 *名称*为**sysname**，默认值为 NULL。 *名称*必须是有权访问当前数据库的有效 Windows 组。 如果未指定*名称*，则会在输出中包含对当前数据库具有访问权限的所有 Windows 组。  
+`[ @ntname = ] 'name'` Windows 组的名称。 *名称* 为 **sysname**，默认值为 NULL。 *名称* 必须是有权访问当前数据库的有效 Windows 组。 如果未指定 *名称* ，则会在输出中包含对当前数据库具有访问权限的所有 Windows 组。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -50,11 +51,11 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows 组的名称。|  
 |**NTGroupId**|**smallint**|组标识符 (ID)。|  
-|**SID**|**varbinary （85）**|**NTGroupName**的安全标识符（SID）。|  
+|**SID**|**varbinary (85) **|**NTGroupName**的安全标识符 (SID) 。|  
 |**HasDbAccess**|**int**|1 = Windows 组有权访问数据库。|  
   
 ## <a name="remarks"></a>备注  
- 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前数据库中的角色列表，请使用**sp_helprole**。  
+ 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前数据库中的角色列表，请使用 **sp_helprole**。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

@@ -1,5 +1,6 @@
 ---
-title: sp_replmonitorhelpsubscription （Transact-sql） |Microsoft Docs
+description: sp_replmonitorhelpsubscription (Transact-SQL)
+title: sp_replmonitorhelpsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9597e7a3512307367568ee14800fcbf69a3045f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485656"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,14 +44,14 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
     [ , [ @refreshpolicy = ] refreshpolicy ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`是要监视其状态的发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 如果**为 null**，则返回使用分发服务器的所有发布服务器的信息。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 是要监视其状态的发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。 如果 **为 null**，则返回使用分发服务器的所有发布服务器的信息。  
   
-`[ @publisher_db = ] 'publisher_db'`已发布数据库的名称。 *publisher_db*的值为**sysname**，默认值为 NULL。 如果为 NULL，则返回发布服务器上所有已发布数据库的信息。  
+`[ @publisher_db = ] 'publisher_db'` 已发布数据库的名称。 *publisher_db* 的值为 **sysname**，默认值为 NULL。 如果为 NULL，则返回发布服务器上所有已发布数据库的信息。  
   
-`[ @publication = ] 'publication'`正在监视的发布的名称。 *发布*为**sysname**，默认值为 NULL。  
+`[ @publication = ] 'publication'` 正在监视的发布的名称。 *发布* 为 **sysname**，默认值为 NULL。  
   
-`[ @publication_type = ] publication_type`如果发布的类型为。 *publication_type*为**int**，可以是下列值之一。  
+`[ @publication_type = ] publication_type` 如果发布的类型为。 *publication_type* 为 **int**，可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -59,9 +60,9 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|合并发布。|  
 |NULL（默认值）|由复制来确定发布类型。|  
   
-`[ @mode = ] mode`返回订阅监视信息时要使用的筛选模式。 *模式*为**int**，可以是下列值之一。  
+`[ @mode = ] mode` 返回订阅监视信息时要使用的筛选模式。 *模式* 为 **int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|返回所有订阅。|  
 |**1**|只返回带错误的订阅。|  
@@ -72,11 +73,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|只返回当前同步的订阅。|  
 |**7**|只返回当前不同步的订阅。|  
   
-`[ @topnum = ] topnum`将结果集限制为仅在返回的数据的顶部指定的订阅数。 *topnum*的值为**int**，无默认值。  
+`[ @topnum = ] topnum` 将结果集限制为仅在返回的数据的顶部指定的订阅数。 *topnum* 的值为 **int**，无默认值。  
   
-`[ @exclude_anonymous = ] exclude_anonymous`是否从结果集中排除匿名请求订阅。 *exclude_anonymous*为**bit**，默认值为**0**;值为**1**表示排除匿名订阅，值为**0**时表示包括匿名订阅。  
+`[ @exclude_anonymous = ] exclude_anonymous` 是否从结果集中排除匿名请求订阅。 *exclude_anonymous* 为 **bit**，默认值为 **0**;值为 **1** 表示排除匿名订阅，值为 **0** 时表示包括匿名订阅。  
   
-`[ @refreshpolicy = ] refreshpolicy`仅限内部使用。  
+`[ @refreshpolicy = ] refreshpolicy` 仅限内部使用。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -101,11 +102,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergeagentname**|**sysname**|合并发布订阅的合并代理作业的名称。|  
 |**mergesubscriptionfriendlyname**|**sysname**|为订阅指定的友好名称。|  
 |**mergeagentlocation**|**sysname**|运行合并代理的服务器的名称。|  
-|**mergeconnectiontype**|**int**|将订阅同步到合并发布时使用的连接，可以是下列值之一：<br /><br /> **1** = 局域网（LAN）<br /><br /> **2** = 拨号网络连接<br /><br /> **3** = Web 同步。|  
+|**mergeconnectiontype**|**int**|将订阅同步到合并发布时使用的连接，可以是下列值之一：<br /><br /> **1** = 局域网 (LAN) <br /><br /> **2** = 拨号网络连接<br /><br /> **3** = Web 同步。|  
 |**mergePerformance**|**int**|订阅的上次同步相对于其所有同步而言的性能，用上次同步的传递速率除以之前所有传递速率的平均值。|  
 |**mergerunspeed**|**float**|订阅的上次同步的传递速率。|  
 |**mergerunduration**|**int**|完成订阅的上次同步的时间长度。|  
-|**monitorranking**|**int**|用于对结果集中的订阅进行排序的排名值，可以是下列值之一：<br /><br /> 对于事务发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告：性能严重<br /><br /> **52** = 警告：即将过期或已过期<br /><br /> **50** = 警告：订阅未初始化<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 未运行（成功）<br /><br /> **20** = 正在运行（正在启动、正在运行或空闲）<br /><br /> 对于合并发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告：性能严重<br /><br /> **54** = 警告：长时间运行的合并<br /><br /> **52** = 警告：即将过期<br /><br /> **50** = 警告：订阅未初始化<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 正在运行（正在启动、正在运行或空闲）<br /><br /> **20** = 未运行（成功）|  
+|**monitorranking**|**int**|用于对结果集中的订阅进行排序的排名值，可以是下列值之一：<br /><br /> 对于事务发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告：性能严重<br /><br /> **52** = 警告：即将过期或已过期<br /><br /> **50** = 警告：订阅未初始化<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 不运行 (成功) <br /><br /> **20** = 运行 (启动、运行或空闲) <br /><br /> 对于合并发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告：性能严重<br /><br /> **54** = 警告：长时间运行的合并<br /><br /> **52** = 警告：即将过期<br /><br /> **50** = 警告：订阅未初始化<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 运行 (启动、运行或空闲) <br /><br /> **20** = 未运行 (成功) |  
 |**distributionagentjobid**|**binary(16)**|事务发布订阅的分发代理作业的 ID。|  
 |**mergeagentjobid**|**binary(16)**|合并发布订阅的合并代理作业的 ID。|  
 |**distributionagentid**|**int**|订阅的分发代理作业的 ID。|  
@@ -114,15 +115,15 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergeagentprofileid**|**int**|合并代理使用的代理配置文件的 ID。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replmonitorhelpsubscription**用于所有类型的复制。  
+ **sp_replmonitorhelpsubscription** 用于所有类型的复制。  
   
- **sp_replmonitorhelpsubscription**根据订阅状态的严重性（由*monitorranking*的值确定）对结果集进行排序。 例如，处于错误状态的所有订阅的各行排在处于警告状态的订阅的各行之上。  
+ **sp_replmonitorhelpsubscription** 根据订阅状态的严重性（由 *monitorranking*的值确定）对结果集进行排序。 例如，处于错误状态的所有订阅的各行排在处于警告状态的订阅的各行之上。  
   
 ## <a name="permissions"></a>权限  
- 只有分发数据库上的**db_owner**或**replmonitor**固定数据库角色的成员才能执行**sp_replmonitorhelpsubscription**。  
+ 只有分发数据库上的 **db_owner** 或 **replmonitor** 固定数据库角色的成员才能执行 **sp_replmonitorhelpsubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

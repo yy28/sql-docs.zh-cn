@@ -1,5 +1,6 @@
 ---
-title: sp_server_diagnostics （Transact-sql） |Microsoft Docs
+description: sp_server_diagnostics (Transact-SQL)
+title: sp_server_diagnostics (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485650"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ ms.locfileid: "85783741"
 sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'   
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'`指示存储过程将重复运行以发送运行状况信息的时间间隔。  
+## <a name="arguments"></a>参数  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 指示存储过程将重复运行以发送运行状况信息的时间间隔。  
   
- *repeat_interval_in_seconds*的值为**int** ，默认值为0。 有效参数值为 0，或等于或大于 5 的任意值。 存储过程至少要运行 5 秒钟才能返回完整数据。 存储过程以重复模式运行的最短时间为 5 秒。  
+ *repeat_interval_in_seconds* 的值为 **int** ，默认值为0。 有效参数值为 0，或等于或大于 5 的任意值。 存储过程至少要运行 5 秒钟才能返回完整数据。 存储过程以重复模式运行的最短时间为 5 秒。  
   
  如果不指定此参数或者指定值为 0，存储过程将一次性返回数据，然后退出。  
   
@@ -54,16 +55,16 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
-**sp_server_diagnostics**返回以下信息  
+**sp_server_diagnostics** 返回以下信息  
   
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
 |**component_type**|**sysname**|指示行是否包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级组件或 Always On 可用性组的信息：<br /><br /> instance<br /><br /> Always On： AvailabilityGroup|  
-|**component_name**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
-|State |**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**component_name**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 活动<br /><br /> *\<name of the availability group>*|  
+|State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0：未知<br /><br /> 1：清理<br /><br /> 2：警告<br /><br /> 3：错误|  
-|**数据**|**varchar （max）**|指定特定于组件的数据。|  
+|**data**|**varchar (max) **|指定特定于组件的数据。|  
   
  下面是对五个组件的说明：  
   
@@ -77,7 +78,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **事件**：通过存储过程收集有关服务器记录的错误和事件的数据和图面，其中包括有关环形缓冲区异常的详细信息、有关内存代理的环形缓冲区事件、内存不足、计划程序监视器、缓冲池、旋转锁、安全性和连接性。 事件将始终显示 0 作为状态。  
   
--   **\<name of the availability group>**：收集指定可用性组的数据（如果 component_type = "Always On： AvailabilityGroup"）。  
+-   **\<name of the availability group>**：如果 component_type = "Always On： AvailabilityGroup" ) ，则收集指定可用性组 (的数据。  
   
 ## <a name="remarks"></a>备注  
 从故障角度而言，系统、资源和 query_processing 组件可用于故障检测，而 io_subsystem 和事件组件只能用于诊断用途。  
@@ -90,7 +91,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|events||||x|  
+|活动||||x|  
   
 每行中的 (x) 表示组件处于有效运行状态。 例如，io_subsystem 将显示为干净或警告。 它将不显示错误状态。  
  
@@ -241,6 +242,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>另请参阅  
- [故障转移群集实例的故障转移策略](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

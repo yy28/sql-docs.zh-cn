@@ -1,5 +1,6 @@
 ---
-title: sp_reinitmergepullsubscription （Transact-sql） |Microsoft Docs
+description: sp_reinitmergepullsubscription (Transact-SQL)
+title: sp_reinitmergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5efb256d77a676cc394fb2731127deb17037a205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65bd7f5e6967bac665892de55566cf4d151144f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485752"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 ALL。  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 ALL。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的值为**sysname**，默认值为 ALL。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* 的值为 **sysname**，默认值为 ALL。  
   
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 ALL。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 ALL。  
   
-`[ @upload_first = ] 'upload_first'`在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*为**nvarchar （5）**，默认值为 FALSE。 如果**为 true**，则在重新初始化订阅之前上载更改。 如果**为 false**，则不上载更改。  
+`[ @upload_first = ] 'upload_first'` 在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first* 为 **nvarchar (5) **，默认值为 FALSE。 如果 **为 true**，则在重新初始化订阅之前上载更改。 如果 **为 false**，则不上载更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_reinitmergepullsubscription**用于合并复制。  
+ **sp_reinitmergepullsubscription** 用于合并复制。  
   
  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
   
@@ -63,7 +64,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_reinitmergepullsubscription**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_reinitmergepullsubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](../../relational-databases/replication/reinitialize-a-subscription.md)   

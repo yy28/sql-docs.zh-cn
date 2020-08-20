@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_rename_condition （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_rename_condition (Transact-SQL)
+title: sp_syspolicy_rename_condition (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1df9ab11c50340b75d51481822f4a8925df34a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485616"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`要重命名的条件的名称。 *name*为**sysname**，如果*condition_id*为 NULL，则必须指定。  
+`[ @name = ] 'name'` 要重命名的条件的名称。 *name* 为 **sysname**，如果 *condition_id* 为 NULL，则必须指定。  
   
-`[ @condition_id = ] condition_id`要重命名的条件的标识符。 *condition_id*为**int**，并且如果*name*为 NULL，则必须指定。  
+`[ @condition_id = ] condition_id` 要重命名的条件的标识符。 *condition_id* 为 **int**，并且如果 *name* 为 NULL，则必须指定。  
   
-`[ @new_name = ] 'new_name'`条件的新名称。 *new_name* **sysname**，并且是必需的。 不能为 NULL 或空字符串。  
+`[ @new_name = ] 'new_name'` 条件的新名称。 *new_name* **sysname**，并且是必需的。 不能为 NULL 或空字符串。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_rename_condition。  
   
- 必须为 "*名称*" 或 " *condition_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_conditions 系统视图。  
+ 必须为 " *名称* " 或 " *condition_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_conditions 系统视图。  
   
 ## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  

@@ -1,5 +1,6 @@
 ---
-title: sys. event_log （Azure SQL Database） |Microsoft Docs
+description: sys.event_log (Azure SQL Database)
+title: event_log (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -20,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486400"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85784926"
   返回成功的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库连接、连接失败和死锁。 您可以使用此信息跟踪与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 相关的数据库活动或排除其故障。  
   
 > [!CAUTION]  
-> 对于具有大量数据库或大量登录名的安装，sys. event_log 中的活动可能会导致性能的限制、高 CPU 使用率，并可能导致登录失败。 Sys. event_log 的查询会导致此问题。 Microsoft 正在努力解决此问题。 同时，若要减少此问题的影响，请将查询限制为 event_log。 NewRelic SQL Server 插件的用户应访问[Microsoft Azure SQL 数据库的插件优化 & 性能调整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)，以了解其他配置信息。  
+> 对于具有大量数据库或大量登录名的安装，sys. event_log 中的活动可能会导致性能的限制、高 CPU 使用率，并可能导致登录失败。 Sys. event_log 的查询会导致此问题。 Microsoft 正在努力解决此问题。 同时，若要减少此问题的影响，请将查询限制为 event_log。 NewRelic SQL Server 插件的用户应访问 [Microsoft Azure SQL 数据库的插件优化 & 性能调整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) ，以了解其他配置信息。  
   
  `sys.event_log` 视图包含以下各列。  
   
@@ -42,26 +43,26 @@ ms.locfileid: "85784926"
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库的名称。 如果连接失败，并且用户未指定数据库名称，则此列为空白。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 对于聚合事件，时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 对于聚合事件， **End_time**始终比同一行中对应的**start_time**正好晚5分钟。 对于未聚合的事件， **start_time**和**end_time**等于事件的实际 UTC 日期和时间。|  
-|**event_category**|**nvarchar （64）**|生成此事件的高级组件。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
-|event_type |**nvarchar （64）**|事件的类型。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
-|**event_subtype**|**int**|发生的事件的子类型。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
-|**event_subtype_desc**|**nvarchar （64）**|事件子类型的说明。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
+|**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 对于聚合事件， **End_time** 始终比同一行中对应的 **start_time** 正好晚5分钟。 对于未聚合的事件， **start_time** 和 **end_time** 等于事件的实际 UTC 日期和时间。|  
+|**event_category**|**nvarchar (64) **|生成此事件的高级组件。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|event_type|**nvarchar (64) **|事件的类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**event_subtype**|**int**|发生的事件的子类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**event_subtype_desc**|**nvarchar (64) **|事件子类型的说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |severity |**int**|错误的严重性。 可能的值包括：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
-|**event_count**|**int**|指定的数据库在指定的时间间隔内（**start_time**和**end_time**）发生此事件的次数。|  
-|**2008**|**nvarchar(max)**|对事件的详细说明。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
-|**additional_data**|**XML**|*注意：对于 Azure SQL 数据库 V12，此值始终为 NULL。请参阅[示例](#Deadlock)部分，了解如何检索 V12 的死锁事件。*<br /><br /> 对于**死锁**事件，此列包含死锁图。 对于其他事件类型，该列为 NULL。 |  
+|**event_count**|**int**|在指定的时间间隔内，针对指定数据库发生此事件的次数 (**start_time** 并 **end_time**) 。|  
+|description|**nvarchar(max)**|对事件的详细说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**additional_data**|**XML**|*注意：对于 Azure SQL 数据库 V12，此值始终为 NULL。请参阅 [示例](#Deadlock) 部分，了解如何检索 V12 的死锁事件。*<br /><br /> 对于 **死锁** 事件，此列包含死锁图。 对于其他事件类型，该列为 NULL。 |  
   
-##  <a name="event-types"></a><a name="EventTypes"></a>事件类型
+##  <a name="event-types"></a><a name="EventTypes"></a> 事件类型
 
- 此视图中的每一行记录的事件由类别（**event_category**）、事件类型（**event_type**）和子类型（**event_subtype**）标识。 下表列出了此视图中收集的事件类型。  
+ 此视图中的每一行记录的事件由类别标识 (**event_category**) 、事件类型 (**event_type**) 和子**类型 (event_subtype) 。** 下表列出了此视图中收集的事件类型。  
   
- 对于 "**连接**" 类别中的事件，"sys. database_connection_stats" 视图中提供了摘要信息。  
+ 对于 " **连接** " 类别中的事件，"sys. database_connection_stats" 视图中提供了摘要信息。  
   
 > [!NOTE]  
 > 此视图不包括所有可能发生的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库事件，而仅限此处列出的事件。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的未来版本中可能会添加其他类别、事件类型和子类型。  
   
-|**event_category**|event_type |**event_subtype**|**event_subtype_desc**|severity |**2008**|  
+|**event_category**|event_type|**event_subtype**|**event_subtype_desc**|severity |description|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**连接**|**connection_successful**|0|**connection_successful**|0|已成功连接到数据库。|  
 |**连接**|**connection_failed**|0|**invalid_login_name**|2|登录名在此版本的 SQL Server 中无效。|  
@@ -76,30 +77,30 @@ ms.locfileid: "85784926"
 |**连接**|**connection_failed**|9|**重新配置**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
 |**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
 |**连接**|**connection_terminated**|1|**重新配置**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
-|**连接**|**调整**|*\<reason code>*|**reason_code**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<reason code>* 。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
-|**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**调整**|*\<reason code>*|**reason_code**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<reason code>* 。 有关详细信息，请参阅 [引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅 [资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅 [资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅 [资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅 [资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅 [资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**搜索引擎优化**|**死**|0|**死**|2|发生死锁。|  
   
 ## <a name="permissions"></a>权限
 
- 有权访问**master**数据库的用户对此视图具有只读访问权限。  
+ 有权访问 **master** 数据库的用户对此视图具有只读访问权限。  
   
 ## <a name="remarks"></a>备注  
   
 ### <a name="event-aggregation"></a>事件聚合
 
- 在 5 分钟的间隔内收集和聚合此视图的事件信息。 " **Event_count** " 列表示特定数据库在给定时间间隔内发生特定**event_type**和**event_subtype**的次数。  
+ 在 5 分钟的间隔内收集和聚合此视图的事件信息。 " **Event_count** " 列表示特定数据库在给定时间间隔内发生特定 **event_type** 和 **event_subtype** 的次数。  
   
 > [!NOTE]  
-> 某些事件（如死锁）不会聚集。 对于这些事件， **event_count**将为1， **start_time**并且**end_time**将等于事件发生时的实际 UTC 日期和时间。  
+> 某些事件（如死锁）不会聚集。 对于这些事件， **event_count** 将为1， **start_time** 并且 **end_time** 将等于事件发生时的实际 UTC 日期和时间。  
   
  例如，如果用户在 2/5/2012 (UTC) 的 11:00 到 11:05 之间由于登录名无效而七次均无法连接到数据库 Database1，则此信息将出现在此视图的单一行内：  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|event_type |**event_subtype**|**event_subtype_desc**|severity |**event_count**|**2008**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|event_type|**event_subtype**|**event_subtype_desc**|severity |**event_count**|description|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -124,7 +125,7 @@ start_time                    end_time
 
  此视图可能并未包含所有连接和错误信息：  
   
-- 此视图不包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能会发生的所有数据库错误，只包括本主题的[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)中指定的错误。  
+- 此视图不包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能会发生的所有数据库错误，只包括本主题的 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 中指定的错误。  
 - 如果数据中心内存在计算机故障 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则事件表中可能缺少少量数据。  
 - 如果通过 DoSGuard 拦截了 IP 地址，则无法收集来自该 IP 地址的连接尝试事件，这些事件不会出现在此视图中。  
   
@@ -132,7 +133,7 @@ start_time                    end_time
   
 ### <a name="simple-examples"></a>简单示例
 
- 以下查询将返回在 9/25/2011 与 9/28/2011 (UTC) 之间发生的所有事件。 默认情况下，查询结果按**start_time**排序（升序）。  
+ 以下查询将返回在 9/25/2011 与 9/28/2011 (UTC) 之间发生的所有事件。 默认情况下，查询结果按) **start_time** (升序排序。  
 
 ```sql
 SELECT * FROM sys.event_log
@@ -140,7 +141,7 @@ WHERE start_time >= '2011-09-25 12:00:00'
     AND end_time <= '2011-09-28 12:00:00';  
 ```
 
-下面的查询返回数据库 Database1 的所有死锁事件（仅适用于 Azure SQL 数据库 V11）。  
+下面的查询将返回数据库 Database1 (仅适用于 Azure SQL 数据库 V11) 的所有死锁事件。  
 
 ```sql
 SELECT * FROM sys.event_log
@@ -148,7 +149,7 @@ WHERE event_type = 'deadlock'
     AND database_name = 'Database1';  
 ```
 
-<a name="Deadlock"></a>下面的查询返回数据库 Database1 的所有死锁事件（仅适用于 Azure SQL 数据库 V12）。  
+<a name="Deadlock"></a> 下面的查询将返回数据库 Database1 (仅适用于 Azure SQL 数据库 V12) 的所有死锁事件。  
 
 ```sql
 WITH CTE AS (  
@@ -173,7 +174,7 @@ WHERE event_type = 'throttling'
 
 ### <a name="db-scoped-extended-event"></a>DB 范围内的扩展事件
 
- 使用以下示例代码设置数据库范围的扩展事件（XEvent）会话：  
+ 使用以下示例代码设置 (XEvent) 会话的 db 范围扩展事件：  
 
 ```sql
 IF EXISTS  

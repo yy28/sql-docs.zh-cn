@@ -1,5 +1,6 @@
 ---
-title: sys. event_notifications （Transact-sql） |Microsoft Docs
+description: sys.event_notifications (Transact-SQL)
+title: sys. event_notifications (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +21,17 @@ ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44f10a61c79feea046b59c78e608022acfc77136
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 100faecd43b0a76bea9aa11aa8bdff3055aa7f5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486381"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  为事件通知的每个对象都返回一行，其中**sys. type** = EN。  
+  为事件通知的每个对象都返回一行，其中 **sys. type** = EN。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -40,17 +41,17 @@ ms.locfileid: "85752913"
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|父对象的非零 ID。<br /><br /> 0 = 父类是数据库。|  
 |create_date|**datetime**|创建日期。|  
-|modify_date|**datetime**|始终等于**create_date**。|  
+|modify_date|**datetime**|始终等于 **create_date**。|  
 |**service_name**|**nvarchar(256)**|向其发送通知的目标服务的名称。|  
 |**broker_instance**|**nvarchar(128)**|向其发送通知的 Broker 实例。|  
 |principal_id|**int**|拥有此事件通知的数据库主体的 ID。|  
-|**creator_sid**|**varbinary （85）**|创建事件通知的登录的 SID。<br /><br /> 如果未指定 FAN_IN 选项，则为 NULL。|  
+|**creator_sid**|**varbinary (85) **|创建事件通知的登录的 SID。<br /><br /> 如果未指定 FAN_IN 选项，则为 NULL。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

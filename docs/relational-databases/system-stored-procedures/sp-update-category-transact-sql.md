@@ -1,5 +1,6 @@
 ---
-title: sp_update_category （Transact-sql） |Microsoft Docs
+description: sp_update_category (Transact-SQL)
+title: sp_update_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485563"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,26 +43,26 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'`要更新的类别的类。 *类*为**varchar （8）**，无默认值，可以是下列值之一。  
+`[ @class = ] 'class'` 要更新的类别的类。 *类*为 **varchar (8) **，无默认值，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**发出**|更新警报类别。|  
 |**任务**|更新作业类别。|  
 |**操作员**|更新操作员类别。|  
   
-`[ @name = ] 'old_name'`类别的当前名称。 *old_name* **sysname**，无默认值。  
+`[ @name = ] 'old_name'` 类别的当前名称。 *old_name* **sysname**，无默认值。  
   
-`[ @new_name = ] 'new_name'`类别的新名称。 *new_name* **sysname**，无默认值。  
+`[ @new_name = ] 'new_name'` 类别的新名称。 *new_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  必须从**msdb**数据库运行**sp_update_category** 。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
+ 若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例将作业类别的名称由 `AdminJobs` 重命名为 `Administrative Jobs`。  

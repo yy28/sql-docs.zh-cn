@@ -1,5 +1,6 @@
 ---
-title: sp_repladdcolumn （Transact-sql） |Microsoft Docs
+description: sp_repladdcolumn (Transact-SQL)
+title: sp_repladdcolumn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48fc4ad0f7881c3afe567d65ee0e0200b59169e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485759"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,42 +46,42 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @source_object =] "*source_object*"  
- 包含要添加的新列的表项目的名称。 *source_object*为**nvarchar （358**），无默认值。  
+ 包含要添加的新列的表项目的名称。 *source_object* 为 **nvarchar (358**) ，无默认值。  
   
  [ @column =] "*column*"  
- 表中要为复制添加的列的名称。 *列*的值为**sysname**，无默认值。  
+ 表中要为复制添加的列的名称。 *列* 的值为 **sysname**，无默认值。  
   
  [ @typetext = ] \ "*typetext*"  
- 要添加的列的定义。 *typetext*的值为**nvarchar （3000）**，无默认值。 例如，如果要添加 order_filled 列，并且它是一个字符字段，而不是 NULL，并且默认值为**N**，则 order_filled 将是*列*参数，而列的定义， **CHAR （1） not NULL 约束 constraint_name 默认值 "N"** 将为*typetext*参数值。  
+ 要添加的列的定义。 *typetext* 是 **nvarchar (3000) **，无默认值。 例如，如果要添加 order_filled 列，并且它是一个字符字段，而不是 NULL，并且默认值为 **N**，则 order_filled 将是 *列* 参数，而列的定义， **CHAR (1) not NULL 约束 constraint_name 默认值 "N"** 将为 *typetext* 参数值。  
   
  [ @publication_to_add =] "*publication_to_add*"  
- 要向其中添加新列的发布的名称。 *publication_to_add*为**nvarchar （4000）**，默认值为**ALL**。 如果为**all**，则包含此表的所有发布都会受到影响。 如果指定了*publication_to_add* ，则只有此发布添加了新列。  
+ 要向其中添加新列的发布的名称。 *publication_to_add* 为 **nvarchar (4000) **，默认值为 **ALL**。 如果为 **all**，则包含此表的所有发布都会受到影响。 如果指定了 *publication_to_add* ，则只有此发布添加了新列。  
   
  [ @from_agent =] *from_agent*  
- 表示是否由复制代理执行该存储过程。 *from_agent*为**int**，默认值为0，其中默认值为**0**，在复制代理执行此存储过程时，将使用值**1** ，而在每个其他情况下，应使用默认值**0**。  
+ 表示是否由复制代理执行该存储过程。 *from_agent* 为 **int**，默认值为0，其中默认值为 **0**，在复制代理执行此存储过程时，将使用值 **1** ，而在每个其他情况下，应使用默认值 **0**。  
   
  [ @schema_change_script =] "*schema_change_script*"  
- 指定用于修改系统生成的自定义存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本的名称和路径。 *schema_change_script*为**nvarchar （4000）**，默认值为 NULL。 复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 使用 sp_repladdcolumn 对复制的表项目进行架构更改后，将执行*schema_change_script* ，并可用于执行以下操作之一：  
+ 指定用于修改系统生成的自定义存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本的名称和路径。 *schema_change_script* 为 **nvarchar (4000) **，默认值为 NULL。 复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 使用 sp_repladdcolumn 对复制的表项目进行架构更改后，将执行*schema_change_script* ，并可用于执行以下操作之一：  
   
--   如果自定义存储过程是自动重新生成的，则*schema_change_script*可用于删除这些自定义存储过程，并使用支持新架构的用户定义的自定义存储过程替换这些存储过程。  
+-   如果自定义存储过程是自动重新生成的，则 *schema_change_script* 可用于删除这些自定义存储过程，并使用支持新架构的用户定义的自定义存储过程替换这些存储过程。  
   
--   如果自定义存储过程不是自动重新生成的，则*schema_change_script*可用于重新生成这些存储过程或创建用户定义的自定义存储过程。  
+-   如果自定义存储过程不是自动重新生成的，则 *schema_change_script*可用于重新生成这些存储过程或创建用户定义的自定义存储过程。  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- 启用或禁用使快照失效的功能。 *force_invalidate_snapshot*为一个**位**，默认值为**1**。  
+ 启用或禁用使快照失效的功能。 *force_invalidate_snapshot* 为一个 **位**，默认值为 **1**。  
   
- **1**指定对项目所做的更改可能会导致快照无效，如果是这种情况，则值**1**将为新快照提供权限。  
+ **1** 指定对项目所做的更改可能会导致快照无效，如果是这种情况，则值 **1** 将为新快照提供权限。  
   
- **0**指定对项目所做的更改不会导致快照无效。  
+ **0** 指定对项目所做的更改不会导致快照无效。  
   
  [ @force_reinit_subscription =] *force_reinit_subscription*  
- 启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*是一**位**，默认值为**0**。  
+ 启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription* 是一 **位** ，默认值为 **0**。  
   
- **0**指定对项目所做的更改不会导致重新初始化订阅。  
+ **0** 指定对项目所做的更改不会导致重新初始化订阅。  
   
- **1**指定对项目所做的更改可能导致订阅重新初始化，如果是这种情况，则值**1**为重新初始化订阅提供权限。  
+ **1** 指定对项目所做的更改可能导致订阅重新初始化，如果是这种情况，则值 **1** 为重新初始化订阅提供权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

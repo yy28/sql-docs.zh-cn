@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_drop_job （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_drop_job (Transact-SQL)
+title: sys. sp_cdc_drop_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 274bd9e692b489bb7be16fe3bb8c8e6b83efecc0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 76661ae687d61d28d4f92be402f623722b540ce3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485542"
 ---
 # <a name="syssp_cdc_drop_job-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +43,10 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>参数  
  [ @job_type **=** ] '*job_type*'  
- 要删除的作业类型。 *job_type*为**nvarchar （20）** ，且不能为 NULL。 有效的输入为 'capture' 和 'cleanup'。  
+ 要删除的作业类型。 *job_type* 为 **nvarchar (20) ** ，且不能为 NULL。 有效的输入为 'capture' 和 'cleanup'。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  Nones  

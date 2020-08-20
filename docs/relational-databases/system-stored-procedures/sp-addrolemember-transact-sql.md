@@ -1,4 +1,5 @@
 ---
+description: sp_addrolemember (Transact-SQL)
 title: sp_addrolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/30/2019
@@ -18,12 +19,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 59193e08c71a7827e347be5b06bbe4cc81ffa826
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486326"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "88180082"
   为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,10 +44,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 ## <a name="arguments"></a>参数  
  [ @rolename =] "*role*"  
- 当前数据库中的数据库角色的名称。 *role*是**sysname**，无默认值。  
+ 当前数据库中的数据库角色的名称。 *role* 是 **sysname**，无默认值。  
   
  [ @membername =] "*security_account*"  
- 添加到该角色中的安全帐户。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、数据库角色、windows 登录名或 windows 组。  
+ 添加到该角色中的安全帐户。 *security_account* 是 **sysname**，无默认值。 *security_account* 可以是数据库用户、数据库角色、windows 登录名或 windows 组。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -58,7 +59,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  sp_addrolemember 无法将固定数据库角色、固定服务器角色或 dbo 添加到角色。
   
- 只能使用 sp_addrolemember 将向数据库角色添加成员。 若要将成员添加到服务器角色，请使用[&#40;transact-sql&#41;sp_addsrvrolemember ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
+ 只能使用 sp_addrolemember 将向数据库角色添加成员。 若要将成员添加到服务器角色，请使用 [&#40;transact-sql&#41;sp_addsrvrolemember ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  为灵活的数据库角色添加成员需要满足以下条件之一：  
@@ -121,7 +122,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

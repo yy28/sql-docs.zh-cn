@@ -1,5 +1,6 @@
 ---
-title: sp_setnetname （Transact-sql） |Microsoft Docs
+description: sp_setnetname (Transact-SQL)
+title: sp_setnetname (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 87401c8f90f0351f797aa3572c7717bb02360e00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68c44dfb6810b677361150cb1ce4d3807c97b1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485649"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  将**sys. server**中的网络名称设置为的远程实例的实际网络计算机名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 该过程可用于启用对计算机（其网络名中包含无效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符）的远程存储过程调用执行。  
+  将 **sys. server** 中的网络名称设置为的远程实例的实际网络计算机名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 该过程可用于启用对计算机（其网络名中包含无效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符）的远程存储过程调用执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +59,7 @@ sp_setnetname
 ## <a name="remarks"></a>备注  
  如果计算机名包含无效的标识符，对 Windows 计算机的一些远程存储过程调用则可能遇到问题。  
   
- 因为链接服务器和远程服务器驻留在相同的命名空间内，所以它们的名称不能相同。 但是，你可以通过分配不同的名称并使用**sp_setnetname**将其中一个服务器的网络名称设置为基础服务器的网络名称，从而为指定的服务器定义链接服务器和远程服务器。  
+ 因为链接服务器和远程服务器驻留在相同的命名空间内，所以它们的名称不能相同。 但是，你可以通过分配不同的名称并使用 **sp_setnetname** 将其中一个服务器的网络名称设置为基础服务器的网络名称，从而为指定的服务器定义链接服务器和远程服务器。  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -71,10 +72,10 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  不支持使用**sp_setnetname**将链接服务器指向本地服务器。 以这种方式引用的服务器不能参与分布式事务。  
+>  不支持使用 **sp_setnetname** 将链接服务器指向本地服务器。 以这种方式引用的服务器不能参与分布式事务。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**和**setupadmin**固定服务器角色的成员身份。  
+ 要求具有 **sysadmin** 和 **setupadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  以下示例显示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上发出远程存储过程调用所使用的典型管理序列。  
@@ -89,7 +90,7 @@ EXEC Win_1.master.dbo.sp_who;
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

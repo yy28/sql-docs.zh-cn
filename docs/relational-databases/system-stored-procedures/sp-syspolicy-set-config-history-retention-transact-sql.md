@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_set_config_history_retention （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_set_config_history_retention (Transact-SQL)
+title: sp_syspolicy_set_config_history_retention (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e718d545e6aeba709578f1857be81e8603a11b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8b33adfbe57765cf52b3b3572bf30b263999e773
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485603"
 ---
 # <a name="sp_syspolicy_set_config_history_retention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @value = ] value`保留基于策略的管理历史记录的天数。 *值*为**sqlvariant**。  
+`[ @value = ] value` 保留基于策略的管理历史记录的天数。 *值* 为 **sqlvariant**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_set_config_history_retention。  
   
- 如果*value*设置为0，则不会自动删除历史记录。  
+ 如果 *value* 设置为0，则不会自动删除历史记录。  
   
  若要查看历史记录保持期的当前值，请运行以下查询：  
   

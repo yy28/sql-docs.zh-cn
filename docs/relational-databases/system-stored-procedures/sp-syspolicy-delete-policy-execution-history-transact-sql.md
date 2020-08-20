@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_delete_policy_execution_history （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
+title: sp_syspolicy_delete_policy_execution_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485612"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @policy_id = ] policy_id`要删除其执行历史记录的策略的标识符。 *policy_id*为**int**，并且是必需的。 可以为 NULL。  
+`[ @policy_id = ] policy_id` 要删除其执行历史记录的策略的标识符。 *policy_id* 为 **int**，并且是必需的。 可以为 NULL。  
   
-`[ @oldest_date = ] 'oldest_date'`是要保留策略执行历史记录的最早日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date*为**datetime**，则是必需的。 可以为 NULL。  
+`[ @oldest_date = ] 'oldest_date'` 是要保留策略执行历史记录的最早日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date* 为 **datetime**，则是必需的。 可以为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_delete_policy_execution_history。  
   
- 若要获取*policy_id*的值以及查看执行历史记录日期，可以使用以下查询：  
+ 若要获取 *policy_id*的值以及查看执行历史记录日期，可以使用以下查询：  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -61,13 +62,13 @@ ON a.policy_id = b.policy_id
   
  如果您为一个或两个值指定 NULL，则下面的行为适用：  
   
--   若要删除所有策略执行历史记录，请为*policy_id*和*oldest_date*指定 NULL。  
+-   若要删除所有策略执行历史记录，请为 *policy_id* 和 *oldest_date*指定 NULL。  
   
--   若要删除特定策略的所有策略执行历史记录，请指定*policy_id*的策略标识符，并将 NULL 指定为*oldest_date*。  
+-   若要删除特定策略的所有策略执行历史记录，请指定 *policy_id*的策略标识符，并将 NULL 指定为 *oldest_date*。  
   
--   若要删除特定日期前的所有策略的策略执行历史记录，请为*policy_id*指定 NULL，并为*oldest_date*指定日期。  
+-   若要删除特定日期前的所有策略的策略执行历史记录，请为 *policy_id*指定 NULL，并为 *oldest_date*指定日期。  
   
- 若要将策略执行历史记录存档，您可以在对象资源管理器中打开策略历史记录日志，然后将执行历史记录导出到某一文件中。 若要访问策略历史记录日志，请展开 "**管理**"，右键单击 "**策略管理**"，然后单击 "**查看历史记录**"。  
+ 若要将策略执行历史记录存档，您可以在对象资源管理器中打开策略历史记录日志，然后将执行历史记录导出到某一文件中。 若要访问策略历史记录日志，请展开 " **管理**"，右键单击 " **策略管理**"，然后单击 " **查看历史记录**"。  
   
 ## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  

@@ -1,5 +1,6 @@
 ---
-title: sp_publication_validation （Transact-sql） |Microsoft Docs
+description: sp_publication_validation (Transact-SQL)
+title: sp_publication_validation (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485825"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,44 +41,44 @@ sp_publication_validation [ @publication = ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @rowcount_only = ] 'rowcount_only'`指示是否只返回表的行计数。 *rowcount_only*为**smallint** ，可以为以下值之一。  
+`[ @rowcount_only = ] 'rowcount_only'` 指示是否只返回表的行计数。 *rowcount_only* 为 **smallint** ，可以为以下值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意：水平筛选项目时，将执行行计数操作，而不是校验和操作。|  
 |**1** （默认值）|仅执行行计数检查。|  
 |**2**|执行行计数和二进制校验和。<br /><br /> 注意：对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 订阅服务器，只执行行计数验证。|  
   
-`[ @full_or_fast = ] 'full_or_fast'`用于计算行计数的方法。 *full_or_fast*为**tinyint** ，可以是下列值之一。  
+`[ @full_or_fast = ] 'full_or_fast'` 用于计算行计数的方法。 *full_or_fast* 为 **tinyint** ，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|使用 COUNT(*) 进行完整计数。|  
-|**1**|从**sysindexes**中快速计数。 计算[sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)中的行比计算实际表中的行的速度要快得多。 但是，因为[sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)被延迟更新，所以行计数可能不准确。|  
-|**2** （默认值）|首先尝试使用快速方法进行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果*expected_rowcount*为 NULL，并且存储过程用于获取该值，则始终使用完整 COUNT （*）。|  
+|**1**|从 **sysindexes**中快速计数。 计算 [sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 中的行比计算实际表中的行的速度要快得多。 但是，因为 [sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 被延迟更新，所以行计数可能不准确。|  
+|**2** （默认值）|首先尝试使用快速方法进行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果 *expected_rowcount* 为 NULL，并且存储过程用于获取该值，则始终使用 ( * ) 的完整计数。|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'`指示分发代理是否应在完成验证后立即关闭。 *shutdown_agent*为**bit**，默认值为**0**。 如果为**0**，则复制代理不会关闭。 如果为**1**，则复制代理会在最后一篇文章验证后关闭。  
+`[ @shutdown_agent = ] 'shutdown_agent'` 指示分发代理是否应在完成验证后立即关闭。 *shutdown_agent* 为 **bit**，默认值为 **0**。 如果为 **0**，则复制代理不会关闭。 如果为 **1**，则复制代理会在最后一篇文章验证后关闭。  
   
-`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  在发布服务器上请求验证时，不应使用*发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_publication_validation**用于事务复制。  
+ **sp_publication_validation** 用于事务复制。  
   
  激活与发布关联的项目后，可以随时调用**sp_publication_validation** 。 可以手动运行一次此过程，或将其作为验证数据的定期计划作业的一部分。  
   
- 如果你的应用程序具有即时更新订阅服务器， **sp_publication_validation**可能会检测到虚假错误。 **sp_publication_validation**首先计算发布服务器上的行计数或校验和，然后在订阅服务器上计算。 由于在发布服务器中完成行计数或校验和之后，但在订阅服务器中完成行计数或校验和之前，即时更新触发器可以将更新从订阅服务器传播到发布服务器，因此值可能会更改。 若要确保在验证发布时，在订阅服务器和发布服务器中的值不发生更改，请在验证期间在发布服务器中停止 Microsoft 分布式事务处理协调器 (MS DTC) 服务。  
+ 如果你的应用程序具有即时更新订阅服务器， **sp_publication_validation** 可能会检测到虚假错误。 **sp_publication_validation** 首先计算发布服务器上的行计数或校验和，然后在订阅服务器上计算。 由于在发布服务器中完成行计数或校验和之后，但在订阅服务器中完成行计数或校验和之前，即时更新触发器可以将更新从订阅服务器传播到发布服务器，因此值可能会更改。 若要确保在验证发布时，在订阅服务器和发布服务器中的值不发生更改，请在验证期间在发布服务器中停止 Microsoft 分布式事务处理协调器 (MS DTC) 服务。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_publication_validation**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_publication_validation**。  
   
 ## <a name="see-also"></a>另请参阅  
  [验证订阅服务器上的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   

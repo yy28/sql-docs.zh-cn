@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_set_log_on_success （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_set_log_on_success (Transact-SQL)
+title: sp_syspolicy_set_log_on_success (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4534c8178d20462377dcacced00e9f6cc9bbc029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb17728ab1ac9c063f2198ec707254bf6b2f8eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485581"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @value = ] value`确定是否记录成功的策略评估。 *值*为**sqlvariant**，可以为以下值之一：  
+`[ @value = ] value` 确定是否记录成功的策略评估。 *值* 为 **sqlvariant**，可以为以下值之一：  
   
 -   0 或 'false' = 不记录成功的策略评估。  
   
 -   1 或 'true' = 记录成功的策略评估。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_set_log_on_success。  
   
- 如果*value*设置为0或 ' false '，则仅记录失败的策略评估。  
+ 如果 *value* 设置为0或 ' false '，则仅记录失败的策略评估。  
   
 ## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  

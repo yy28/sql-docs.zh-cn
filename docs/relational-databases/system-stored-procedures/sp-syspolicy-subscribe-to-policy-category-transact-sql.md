@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_subscribe_to_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
+title: sp_syspolicy_subscribe_to_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b8c4ec221c0d122fa2397df7e9adbe6f1f3ef436
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: beadf9f07bb78abb750a1f94383b926e5be505ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485564"
 ---
 # <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @policy_category = ] 'policy_category'`您希望数据库订阅的策略类别的名称。 *policy_category* **sysname**，并且是必需的。  
+`[ @policy_category = ] 'policy_category'` 您希望数据库订阅的策略类别的名称。 *policy_category* **sysname**，并且是必需的。  
   
- 若要获取*policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
+ 若要获取 *policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在要添加策略类别订阅的数据库的上下文中运行 sp_syspolicy_subscribe_to_policy_category。  

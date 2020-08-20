@@ -1,5 +1,6 @@
 ---
-title: sp_replicationdboption （Transact-sql） |Microsoft Docs
+description: sp_replicationdboption (Transact-SQL)
+title: sp_replicationdboption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65839ea899d001c42478e1eb3d1e54cad0f53f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485710"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,36 +41,36 @@ sp_replicationdboption [ @dbname= ] 'db_name'
     [ , [ @from_scripting = ] from_scripting ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @dbname = ] 'dbname'`正在为其设置复制数据库选项的数据库。 *db_name* **sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @dbname = ] 'dbname'` 正在为其设置复制数据库选项的数据库。 *db_name* **sysname**，无默认值。  
   
-`[ @optname = ] 'optname'`要启用或禁用的复制数据库选项。 *optname*为**sysname**，可以是下列值之一。  
+`[ @optname = ] 'optname'` 要启用或禁用的复制数据库选项。 *optname* 为 **sysname**，可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**合并发布**|数据库可用于合并发布。|  
 |**发布**|数据库可用于其他类型的发布。|  
 |**订**|数据库为订阅数据库。|  
-|**sync with backup**|启用数据库以进行协调备份。 有关详细信息，请参阅为[事务复制启用协调备份 &#40;复制 Transact-sql 编程&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
+|**sync with backup**|启用数据库以进行协调备份。 有关详细信息，请参阅为 [事务复制启用协调备份 &#40;复制 Transact-sql 编程&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
-`[ @value = ] 'value'`指示是启用还是禁用给定的复制数据库选项。 *值*为**sysname**，可以为**true**或**false**。 如果此值为**false** ，并且*optname*为**merge publish**，则还将删除对合并发布数据库的订阅。  
+`[ @value = ] 'value'` 指示是启用还是禁用给定的复制数据库选项。 *值* 为 **sysname**，可以为 **true** 或 **false**。 如果此值为 **false** ，并且 *optname* 为 **merge publish**，则还将删除对合并发布数据库的订阅。  
   
-`[ @ignore_distributor = ] ignore_distributor`指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*是**bit**，默认值为**0**，表示分发服务器应连接到，并使用发布数据库的新状态进行更新。 仅当无法访问分发服务器并且**sp_replicationdboption**正在用于禁用发布时，才应指定值**1** 。  
+`[ @ignore_distributor = ] ignore_distributor` 指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor* 是 **bit**，默认值为 **0**，表示分发服务器应连接到，并使用发布数据库的新状态进行更新。 仅当无法访问分发服务器并且**sp_replicationdboption**正在用于禁用发布时，才应指定值**1** 。  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replicationdboption**用于快照复制、事务复制和合并复制。  
+ **sp_replicationdboption** 用于快照复制、事务复制和合并复制。  
   
- 此过程根据给定的选项创建或删除特定的复制系统表、安全帐户，等等。 设置**transacational 系统表中的相应** **is_published** （或快照复制）、 **is_merge_published** （合并复制）或**is_distributor**位，并创建所需的系统表。  
+ 此过程根据给定的选项创建或删除特定的复制系统表、安全帐户，等等。 设置相应的**is_published** (transacational 或快照复制) 、 **is_merge_published** (合并复制) 或**master 数据库**系统表中的**is_distributor**位，并创建所需的系统表。  
   
  若要禁用发布，发布数据库必须联机。 如果发布数据库存在数据库快照，则必须在禁用发布前将快照删除。 数据库快照是数据库的只读脱机副本，与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_replicationdboption**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_replicationdboption**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   

@@ -1,5 +1,6 @@
 ---
-title: sp_manage_jobs_by_login （Transact-sql） |Microsoft Docs
+description: sp_manage_jobs_by_login (Transact-SQL)
+title: sp_manage_jobs_by_login (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7d27bab8fd7593b92f52d33fd847facab4ee0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485880"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @action = ] 'action'`要对指定的登录名执行的操作。 *操作*为**varchar （10）**，无默认值。 删除*操作*时**DELETE**， **sp_manage_jobs_by_login**会删除*current_owner_login_name*拥有的所有作业。 **重新分配***操作*时，会将所有作业分配给*new_owner_login_name*。  
+`[ @action = ] 'action'` 要对指定的登录名执行的操作。 *操作* 是 **varchar (10) **，无默认值。 删除*操作*时**DELETE**， **sp_manage_jobs_by_login**会删除*current_owner_login_name*拥有的所有作业。 **重新分配***操作*时，会将所有作业分配给*new_owner_login_name*。  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'`当前作业所有者的登录名。 *current_owner_login_name* **sysname**，无默认值。  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 当前作业所有者的登录名。 *current_owner_login_name* **sysname**，无默认值。  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'`新作业所有者的登录名。 仅在*操作***重新分配**时使用此参数。 *new_owner_login_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 新作业所有者的登录名。 仅在*操作***重新分配**时使用此参数。 *new_owner_login_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
+ 若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  

@@ -1,5 +1,6 @@
 ---
-title: sp_repldropcolumn （Transact-sql） |Microsoft Docs
+description: sp_repldropcolumn (Transact-SQL)
+title: sp_repldropcolumn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 718309e24e9ad7936dfc359e6db6ac529c926345
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0724bb3be7b22dc506f6038a9a5b9d1a1d25c0a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485741"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,32 +44,32 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @source_object =] "*source_object*"  
- 包含要删除的列的表项目的名称。 *source_object*为 nvarchar （258），无默认值。  
+ 包含要删除的列的表项目的名称。 *source_object* 为 nvarchar (258) ，无默认值。  
   
  [ @column =] "*column*"  
- 表中要删除的列的名称。 *列*的值为 sysname，无默认值。  
+ 表中要删除的列的名称。 *列* 的值为 sysname，无默认值。  
   
  [ @from_agent =] *from_agent*  
- 表示是否由复制代理执行该存储过程。 *from_agent*为 int，默认值为0，其中默认值为0，在复制代理执行此存储过程时，将使用值1，而在每个其他情况下，应使用默认值0。  
+ 表示是否由复制代理执行该存储过程。 *from_agent* 为 int，默认值为0，其中默认值为0，在复制代理执行此存储过程时，将使用值1，而在每个其他情况下，应使用默认值0。  
   
  [ @schema_change_script =] "*schema_change_script*"  
- 指定用于修改系统生成的自定义存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本的名称和路径。 *schema_change_script*为 nvarchar （4000），默认值为 NULL。 复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 使用 sp_repldropcolumn 对复制的表项目进行架构更改后，将执行*schema_change_script* ，并可用于执行以下操作之一：  
+ 指定用于修改系统生成的自定义存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本的名称和路径。 *schema_change_script* 为 nvarchar (4000) ，默认值为 NULL。 复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 使用 sp_repldropcolumn 对复制的表项目进行架构更改后，将执行*schema_change_script* ，并可用于执行以下操作之一：  
   
--   如果自定义存储过程是自动重新生成的，则*schema_change_script*可用于删除这些自定义存储过程，并使用支持新架构的用户定义的自定义存储过程替换这些存储过程。  
+-   如果自定义存储过程是自动重新生成的，则 *schema_change_script* 可用于删除这些自定义存储过程，并使用支持新架构的用户定义的自定义存储过程替换这些存储过程。  
   
--   如果自定义存储过程不是自动重新生成的，则*schema_change_script*可用于重新生成这些存储过程或创建用户定义的自定义存储过程。  
+-   如果自定义存储过程不是自动重新生成的，则 *schema_change_script*可用于重新生成这些存储过程或创建用户定义的自定义存储过程。  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- 启用或禁用使快照失效的功能。 *force_invalidate_snapshot*为一个位，默认值为1。  
+ 启用或禁用使快照失效的功能。 *force_invalidate_snapshot* 为一个位，默认值为1。  
   
  1 指定对项目的更改可能导致快照无效，如果发生这种情况，值 1 提供了新建快照所需的权限。  
   
  0 指定对项目所做的更改不会导致快照失效。  
   
  [ @force_reinit_subscription =] *force_reinit_subscription*  
- 启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*是一位，默认值为0。  
+ 启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription* 是一位，默认值为0。  
   
  0 指定对项目所做的更改不会导致重新初始化订阅。  
   

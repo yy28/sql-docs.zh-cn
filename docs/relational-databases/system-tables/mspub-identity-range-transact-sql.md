@@ -1,5 +1,6 @@
 ---
-title: MSpub_identity_range （Transact-sql） |Microsoft Docs
+description: MSpub_identity_range (Transact-SQL)
+title: MSpub_identity_range (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb4ac1dbce35c3dd480e735581943d18f88094f3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f96e19282118a07fb487a64eff2eb8593f4261c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485463"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +36,11 @@ ms.locfileid: "85889605"
 |**range**|**bigint**|控制将在调整的订阅中分配的连续标识值的范围大小。|  
 |**pub_range**|**bigint**|控制将在调整的发布中分配的连续标识值的范围大小。|  
 |**current_pub_range**|**bigint**|发布使用的当前范围。 如果在**sp_changearticle**更改之后或在下一范围调整之前查看，则它可能与*pub_range*不同。|  
-|**threshold**|**int**|用于控制分发代理何时分配新标识范围的百分比值。 当使用 "*阈值*" 中指定的百分比值时，分发代理将创建一个新的标识范围。|  
+|**threshold**|**int**|用于控制分发代理何时分配新标识范围的百分比值。 当使用 " *阈值* " 中指定的百分比值时，分发代理将创建一个新的标识范围。|  
 |**last_seed**|**bigint**|当前范围的下限。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

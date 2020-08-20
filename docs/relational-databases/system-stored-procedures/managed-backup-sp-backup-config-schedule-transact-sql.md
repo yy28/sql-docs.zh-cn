@@ -1,5 +1,6 @@
 ---
-title: managed_backup sp_backup_config_schedule （Transact-sql） |Microsoft Docs
+description: 'managed_backup sp_backup_config_schedule (Transact-sql) '
+title: managed_backup sp_backup_config_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/20/2020
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23f1f96ff6d41412e8606e67aacfdc42d9afabc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486300"
 ---
-# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup sp_backup_config_schedule （Transact-sql）
+# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup sp_backup_config_schedule (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   为配置自动或自定义计划选项 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
@@ -46,7 +48,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @database_name  
  用于在特定数据库上启用托管备份的数据库名称。 如果为 NULL 或 *，则此托管备份适用于服务器上的所有数据库。  
   
@@ -66,7 +68,7 @@ EXEC managed_backup.sp_backup_config_schedule
  备份时间窗口的持续时间。 请注意，不能保证在和定义的时间范围内完成备份 @backup_begin_time @backup_duration 。 在此时间窗口中启动但超过窗口持续时间的备份操作不会被取消。  
   
  @log_backup_freq  
- 这会确定事务日志备份的频率。 这些备份定期发生，而不是按为数据库备份指定的计划进行。 @log_backup_freq可以是分钟或小时，并且 `0:00` 有效，表示没有日志备份。 禁用日志备份仅适用于具有简单恢复模式的数据库。  
+ 这会确定事务日志备份的频率。 这些备份定期发生，而不是按为数据库备份指定的计划进行。 @log_backup_freq 可以是分钟或小时，并且 `0:00` 有效，表示没有日志备份。 禁用日志备份仅适用于具有简单恢复模式的数据库。  
   
 > [!NOTE]  
 >  如果恢复模式从 simple 更改为 full，则需要将 log_backup_freq 从重新配置 `0:00` 为非零值。  
@@ -80,7 +82,7 @@ EXEC managed_backup.sp_backup_config_schedule
  要求具有**db_backupoperator**数据库角色的成员身份，具有**ALTER ANY CREDENTIAL**权限以及对**sp_delete_backuphistory**存储过程的**EXECUTE**权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [managed_backup sp_backup_config_basic （Transact-sql）](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup sp_backup_config_basic (Transact-sql) ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   
