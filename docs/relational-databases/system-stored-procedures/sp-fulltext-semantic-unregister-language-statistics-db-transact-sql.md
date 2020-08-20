@@ -1,5 +1,6 @@
 ---
-title: sp_fulltext_semantic_unregister_language_statistics_db （Transact-sql） |Microsoft Docs
+description: sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
+title: sp_fulltext_semantic_unregister_language_statistics_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3c3626bb567c99b6e43708962bfadd39cdb0f43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b016b93a7ed173e4da7e38f80706bd5fac30683c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493256"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  此过程不需要任何参数。 由于一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例仅有一个语义语言统计数据库，所以不必标识该数据库。  
   
 ## <a name="return-code-value"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-set"></a>结果集  
  无。  
@@ -52,7 +53,7 @@ GO
 ## <a name="general-remarks"></a>一般备注  
  撤消注册语义语言统计数据库后，与之关联的所有元数据也随之删除。  
   
- **sp_fulltext_semantic_unregister_language_statistics_db**执行以下步骤：  
+ **sp_fulltext_semantic_unregister_language_statistics_db** 执行以下步骤：  
   
 1.  确保当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例未在进行语义填充。  
   
@@ -60,8 +61,8 @@ GO
 
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
-## <a name="metadata"></a>元数据  
- 有关实例上安装的语义语言统计信息数据库的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请查询目录视图[fulltext_semantic_language_statistics_database Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+## <a name="metadata"></a>Metadata  
+ 有关实例上安装的语义语言统计信息数据库的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请查询目录视图 [fulltext_semantic_language_statistics_database Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   
@@ -69,7 +70,7 @@ GO
  需要具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何通过调用**sp_fulltext_semantic_unregister_language_statistics_db**取消注册语义语言统计信息数据库。  
+ 下面的示例演示如何通过调用 **sp_fulltext_semantic_unregister_language_statistics_db**取消注册语义语言统计信息数据库。  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  

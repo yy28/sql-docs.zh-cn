@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_process_memory （Transact-sql） |Microsoft Docs
+description: sys.dm_os_process_memory (Transact-SQL)
+title: sys. dm_os_process_memory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dfc95a68ca765db74e143e5efd7233d312387f7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d7910830dc463fd29af7d0fa3cfe1b32a1e28cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493609"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87396303"
  下表对进程地址空间作了完整的说明。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_process_memory**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_process_memory**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -53,13 +54,13 @@ ms.locfileid: "87396303"
 |**available_commit_limit_kb**|**bigint**|指示可供进程提交的内存量。 不可为 Null。|  
 |**process_physical_memory_low**|**bit**|指示进程正在响应物理内存不足的通知。 不可为 Null。|  
 |**process_virtual_memory_low**|**bit**|指示检测到虚拟内存不足的情况。 不可为 Null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，要求具有服务器上的 VIEW SERVER STATE 权限。  
   
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

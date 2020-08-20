@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_sys_memory （Transact-sql） |Microsoft Docs
+description: sys.dm_os_sys_memory (Transact-SQL)
+title: sys. dm_os_sys_memory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e79399d5483b84d893a2b4d3943dfd51aec7de6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 78f02c014874bdce9cf6d1f6e2c27ad0b3fad24d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493624"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87396753"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受操作系统级别的外部内存条件和基础硬件物理限制的约束并对其有所响应。 确定整个系统的状态是评估 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存使用量的重要方面。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_sys_memory**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_sys_memory**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -46,10 +47,10 @@ ms.locfileid: "87396753"
 |**system_cache_kb**|**bigint**|系统缓存内存总量，单位为 KB。|  
 |**kernel_paged_pool_kb**|**bigint**|分页内核池的总量，单位为 KB。|  
 |**kernel_nonpaged_pool_kb**|**bigint**|非分页内核池的总量，单位为 KB。|  
-|**system_high_memory_signal_state**|**bit**|系统内存资源充足的状态通知。 值为 1 指示内存充足信号已由 Windows 设置。 有关详细信息，请参阅 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
-|**system_low_memory_signal_state**|**bit**|系统内存资源不足的状态通知。 值为 1 指示内存不足信号已由 Windows 设置。 有关详细信息，请参阅 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
+|**system_high_memory_signal_state**|**bit**|系统内存资源充足的状态通知。 值为 1 指示内存充足信号已由 Windows 设置。 有关详细信息，请参阅 MSDN library 中的 [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
+|**system_low_memory_signal_state**|**bit**|系统内存资源不足的状态通知。 值为 1 指示内存不足信号已由 Windows 设置。 有关详细信息，请参阅 MSDN library 中的 [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
 |**system_memory_state_desc**|**nvarchar(256)**|内存状态的说明。 请参阅下表。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 |条件|值|  
 |---------------|-----------|  

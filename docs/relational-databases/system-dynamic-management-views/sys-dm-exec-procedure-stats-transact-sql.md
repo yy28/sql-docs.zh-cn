@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_procedure_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_procedure_stats (Transact-SQL)
+title: sys. dm_exec_procedure_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 116196bf58c37c63fe64ce9566dd21d3191c022b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493758"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,8 +36,8 @@ ms.locfileid: "86000267"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。  
   
 > [!NOTE]
-> 每次执行时， **sys.databases dm_exec_procedure_stats**的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_procedure_stats**。 
+> 每次执行时， **sys.databases dm_exec_procedure_stats**  的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_exec_procedure_stats**。 
 
   
 |列名称|数据类型|说明|  
@@ -44,8 +46,8 @@ ms.locfileid: "86000267"
 |object_id|**int**|存储过程的对象标识号。|  
 |type|**char(2)**|对象的类型：<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> X = 扩展存储过程|  
 |**type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|这可以用来与从该存储过程中执行的**dm_exec_query_stats**中的查询相关联。|  
-|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
+|**sql_handle**|**varbinary(64)**|这可以用来与从该存储过程中执行的 **dm_exec_query_stats** 中的查询相关联。|  
+|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于 **sys.databases dm_exec_cached_plans** 动态管理视图。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
 |**cached_time**|**datetime**|存储过程添加到缓存的时间。|  
 |**last_execution_time**|**datetime**|上次执行存储过程的时间。|  
 |**execution_count**|**bigint**|存储过程自上次编译以来所执行的次数。|  
@@ -73,20 +75,20 @@ ms.locfileid: "86000267"
 |**last_spills**|**bigint**|上次执行存储过程时溢出的页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**min_spills**|**bigint**|此存储过程在单次执行期间所溢出的最小页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**max_spills**|**bigint**|此存储过程在单次执行期间所用的最大页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br />**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br />**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|此存储过程自编译以来执行的页服务器读取的总次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**last_page_server_reads**|**bigint**|上次执行存储过程时所执行的页服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**min_page_server_reads**|**bigint**|此存储过程在单次执行期间所执行的最少页面服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**max_page_server_reads**|**bigint**|此存储过程在单次执行期间所执行的最大页服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
   
- <sup>1</sup>对于启用统计信息收集时的本机编译的存储过程，以毫秒为单位收集工作线程时间。 如果查询执行不到 1 毫秒，则该值将为 0。  
+ <sup>1</sup> 对于启用统计信息收集时的本机编译的存储过程，以毫秒为单位收集工作线程时间。 如果查询执行不到 1 毫秒，则该值将为 0。  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
    
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  存储过程执行完成后，将更新该视图中的统计信息。  
   
 ## <a name="examples"></a>示例  

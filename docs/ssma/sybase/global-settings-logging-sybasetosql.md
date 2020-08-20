@@ -1,4 +1,5 @@
 ---
+description: 全局设置（日志记录）(SybaseToSQL)
 title: 全局设置 (日志记录)  (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 10a0b901a8e3681e4d74eccbe31e74119ad1ad6e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc71ae0d44048d656bfba1a81ba19b9cb0ee0269
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492260"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>全局设置（日志记录）(SybaseToSQL)
-使用 "**全局设置**" 对话框指定 SSMA 的日志记录设置。 通常，只能在使用产品支持时更改这些设置。  
+使用 " **全局设置** " 对话框指定 SSMA 的日志记录设置。 通常，只能在使用产品支持时更改这些设置。  
   
-若要访问此对话框，请在 "**工具**" 菜单上选择 "**全局设置**"，然后单击左窗格底部的 "**日志记录**" 按钮。  
+若要访问此对话框，请在 " **工具** " 菜单上选择 " **全局设置** "，然后单击左窗格底部的 " **日志记录** " 按钮。  
   
 ## <a name="options"></a>选项  
 **消息级别**  
-"**消息" 级别**下面有以下选项：  
+" **消息" 级别**下面有以下选项：  
   
 |选项|描述|  
 |----------|---------------|  
@@ -39,7 +40,7 @@ ms.locfileid: "87931612"
 |**者**|将源数据库对象加载到中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**TreeConverter**|将源元数据中的对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据。|  
   
-对于 "**消息级别**" 下的每个选项，请为 SSMA 配置以下日志记录级别之一：  
+对于 " **消息级别**" 下的每个选项，请为 SSMA 配置以下日志记录级别之一：  
   
 |||  
 |-|-|  

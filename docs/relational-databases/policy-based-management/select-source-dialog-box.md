@@ -1,4 +1,5 @@
 ---
+description: “选择源”对话框
 title: “选择源”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,26 +13,26 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ebbe01dcc03ef670ac41ca0842f702c8e637cb37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ea25aebc5368295f13105ecc58d18e86bfc6071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493970"
 ---
 # <a name="select-source-dialog-box"></a>“选择源”对话框
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  此对话框用于选择要运行的策略的来源。 若要选择一个或多个包含策略的 XML 文件，请选择 **“文件”** 。 若要运行位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的策略，请选择 **“服务器”** 。  
+  此对话框用于选择要运行的策略的来源。 若要选择一个或多个包含策略的 XML 文件，请选择 **“文件”**。 若要运行位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的策略，请选择 **“服务器”**。  
   
  打开此对话框有以下几种不同的方法。  
   
  **打开此对话框**  
   
--   在“已注册的服务器”中，右键单击“本地服务器组”  或“本地服务器组”  下面的任一服务器，或右键单击“中央管理服务器”  下面的任一服务器，然后选择“评估策略”  。 在“评估策略”对话框的“策略选择”页上单击“浏览”( **...** ) 按钮。  
+-   在“已注册的服务器”中，右键单击“本地服务器组”**** 或“本地服务器组”**** 下面的任一服务器，或右键单击“中央管理服务器”**** 下面的任一服务器，然后选择“评估策略”****。 在“评估策略”**** 对话框的“策略选择”**** 页上单击“浏览”(**...**) 按钮。  
   
--   在对象资源管理器中，依次展开“管理”  和“策略管理”  ，右键单击“策略”  ，然后选择“导入策略”  。 在“导入”  对话框中，单击“浏览”( **...** ) 按钮。  
+-   在对象资源管理器中，依次展开“管理”**** 和“策略管理”****，右键单击“策略”****，然后选择“导入策略”****。 在“导入”**** 对话框中，单击“浏览”(**...**) 按钮。  
   
--   在对象资源管理器中，右键单击某个服务器、数据库或数据库对象，然后依次选择“策略”  和“评估”  。 在“评估策略”对话框的“策略选择”页上单击“浏览”( **...** ) 按钮。  
+-   在对象资源管理器中，右键单击某个服务器、数据库或数据库对象，然后依次选择“策略”**** 和“评估”****。 在“评估策略”**** 对话框的“策略选择”**** 页上单击“浏览”(**...**) 按钮。  
   
 ## <a name="options"></a>选项  
  **文件**  

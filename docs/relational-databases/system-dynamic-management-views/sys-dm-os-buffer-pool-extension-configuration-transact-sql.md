@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_buffer_pool_extension_configuration （Transact-sql） |Microsoft Docs
+description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+title: sys. dm_os_buffer_pool_extension_configuration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0654796ace5d5026539fc50f514b0407362633fc
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 463ca3dcf57856a2dae6fff308dba857e40fcd7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493631"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -35,10 +36,10 @@ ms.locfileid: "87442739"
   
 | 列名称 | 数据类型 | 说明 |
 | :---------- | :-------- | :---------- |
-|path|**nvarchar**（256）|缓冲池扩展缓存的路径和文件名。 可以为 NULL。|  
+|path|**nvarchar** (256) |缓冲池扩展缓存的路径和文件名。 可以为 NULL。|  
 |file_id|**int**|缓冲池扩展文件的 ID。 不可为 null。|  
 |state|**int**|缓冲池扩展功能的状态。 不可为 null。<br /><br /> 0 - 已禁用缓冲池扩展<br /><br /> 1 - 正在禁用缓冲池扩展<br /><br /> 2-保留以供将来使用<br /><br /> 3 - 正在启用缓冲池扩展<br /><br /> 4 - 保留以供将来使用<br /><br /> 5 - 已启用缓冲池扩展|  
-|state_description|**nvarchar**（60）|说明缓冲池扩展功能的状态。 可以为 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 已启用缓冲池扩展|
+|state_description|**nvarchar** (60) |说明缓冲池扩展功能的状态。 可以为 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 已启用缓冲池扩展|
 |current_size_in_kb|**bigint**|缓冲池扩展文件的当前大小。 不可为 null。|
 | &nbsp; | &nbsp; | &nbsp; |
 

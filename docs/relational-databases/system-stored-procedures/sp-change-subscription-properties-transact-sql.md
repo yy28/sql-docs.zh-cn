@@ -1,5 +1,6 @@
 ---
-title: sp_change_subscription_properties （Transact-sql） |Microsoft Docs
+description: sp_change_subscription_properties (Transact-SQL)
+title: sp_change_subscription_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da197fc6b4cc8b253b3597981a6973e9b77891bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493425"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,18 +42,18 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
     [ , [ @publication_type = ] publication_type ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @property = ] 'property'`要更改的属性。 *属性*为**sysname**。  
+`[ @property = ] 'property'` 要更改的属性。 *属性* 为 **sysname**。  
   
-`[ @value = ] 'value'`属性的新值。 *值*为**nvarchar （1000）**，无默认值。  
+`[ @value = ] 'value'` 属性的新值。 *值* 为 **nvarchar (1000) **，无默认值。  
   
-`[ @publication_type = ] publication_type`指定发布的复制类型。 *publication_type*为**int**，可以是下列值之一。  
+`[ @publication_type = ] publication_type` 指定发布的复制类型。 *publication_type* 为 **int**，可以是下列值之一。  
   
 |值|发布类型|  
 |-----------|----------------------|  
@@ -63,7 +64,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  下表说明项目的属性和这些属性的值。  
   
-|Property|值|描述|  
+|属性|值|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||指定快照的备用文件夹的位置。 如果设置为 NULL，则将从发布服务器指定的默认位置提取快照文件。|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
@@ -72,9 +73,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_password**||分发服务器密码。|  
 |**distributor_security_mode**|**1**|连接分发服务器时，使用 Windows 身份验证。|  
 ||**0**|连接分发服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
-|**dts_package_name**||指定 SQL Server 2000 Data Transformation Services (DTS) 包的名称。 仅当发布为事务发布或快照发布时才能指定该值。|  
-|**dts_package_password**||指定包上的密码。 *dts_package_password*的默认**值为 NULL** ，默认值为 NULL，指定密码属性保持不变。<br /><br /> 注意： DTS 包必须具有密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
-|**dts_package_location**||DTS 包的存储位置。 仅当发布为事务发布或快照发布时才能指定该值。|  
+|**** dts_package_name||指定 SQL Server 2000 Data Transformation Services (DTS) 包的名称。 仅当发布为事务发布或快照发布时才能指定该值。|  
+|**** dts_package_password||指定包上的密码。 *dts_package_password* 的默认 **值为 NULL** ，默认值为 NULL，指定密码属性保持不变。<br /><br /> 注意： DTS 包必须具有密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
+|**** dts_package_location||DTS 包的存储位置。 仅当发布为事务发布或快照发布时才能指定该值。|  
 |**dynamic_snapshot_location**||指定保存快照文件的文件夹的路径。 仅当发布为合并发布时才能指定该值。|  
 |**ftp_address**||仅为保持向后兼容。|  
 |**ftp_login**||仅为保持向后兼容。|  
@@ -89,9 +90,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_url**||表示 Web 同步的复制侦听器位置的 URL。|  
 |**merge_job_login**||用来运行代理的 Windows 帐户的登录名。|  
 |**merge_job_password**||用来运行代理的 Windows 帐户的密码。|  
-|**publisher_login**||发布服务器登录。 只有对合并发布的订阅才支持更改*publisher_login* 。|  
-|**publisher_password**||发布者密码。 只有对合并发布的订阅才支持更改*publisher_password* 。|  
-|**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 只有对合并发布的订阅才支持更改*publisher_security_mode* 。|  
+|**publisher_login**||发布服务器登录。 只有对合并发布的订阅才支持更改 *publisher_login* 。|  
+|**publisher_password**||发布者密码。 只有对合并发布的订阅才支持更改 *publisher_password* 。|  
+|**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 只有对合并发布的订阅才支持更改 *publisher_security_mode* 。|  
 ||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**use_ftp**|true|使用 FTP 代替常规协议来检索快照。|  
 ||**false**|使用常规协议来检索快照。|  
@@ -100,17 +101,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**working_directory**||使用文件传输协议 (FTP) 传输快照文件时，用于临时存储发布的数据和架构文件的工作目录的名称。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_change_subscription_properties**在所有类型的复制中使用。  
+ **sp_change_subscription_properties** 在所有类型的复制中使用。  
   
- **sp_change_subscription_properties**用于请求订阅。  
+ **sp_change_subscription_properties** 用于请求订阅。  
   
- 对于 Oracle 发布服务器，将忽略*publisher_db*的值，因为 Oracle 仅允许每个服务器实例有一个数据库。  
+ 对于 Oracle 发布服务器，将忽略 *publisher_db* 的值，因为 Oracle 仅允许每个服务器实例有一个数据库。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_change_subscription_properties**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_change_subscription_properties**。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

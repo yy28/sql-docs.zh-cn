@@ -1,5 +1,6 @@
 ---
-title: sp_sequence_get_range （Transact-sql） |Microsoft Docs
+description: sp_sequence_get_range (Transact-SQL)
+title: sp_sequence_get_range (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -19,19 +20,19 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a534a32e23c09d4e6cc41dc6bd22c9fc44c4c7f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 95e08552d65f6e14d24e8dad2116667574a5c5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493096"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   从序列对象中返回一系列序列值。 序列对象生成和发出请求的值数目，并为应用程序提供与该系列序列值相关的元数据。  
   
- 有关序列号的详细信息，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 有关序列号的详细信息，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,21 +52,21 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @sequence_name = ] N'sequence'`序列对象的名称。 架构是可选的。 *sequence_name*为**nvarchar （776）**。  
+`[ @sequence_name = ] N'sequence'` 序列对象的名称。 架构是可选的。 *sequence_name* ** (776) 为 nvarchar **。  
   
-`[ @range_size = ] range_size`要从序列中提取的值的数目。 ** \@ range_size**为**bigint**。  
+`[ @range_size = ] range_size` 要从序列中提取的值的数目。 ** \@ range_size**为**bigint**。  
   
-`[ @range_first_value = ] range_first_value`Output 参数返回序列对象的第一个（最小或最大）值，用于计算所请求的范围。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ range_first_value** 。  
+`[ @range_first_value = ] range_first_value` Output 参数返回用于计算所请求范围的序列对象的第一个 (最小值或最大) 值。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ range_first_value** 。  
   
-`[ @range_last_value = ] range_last_value`可选的输出参数将返回所请求的范围的最后一个值。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ range_last_value** 。  
+`[ @range_last_value = ] range_last_value` 可选的输出参数将返回所请求的范围的最后一个值。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ range_last_value** 。  
   
-`[ @range_cycle_count = ] range_cycle_count`可选的 output 参数返回序列对象为了返回所请求的范围而循环的次数。 ** \@ range_cycle_count**是**int**。  
+`[ @range_cycle_count = ] range_cycle_count` 可选的 output 参数返回序列对象为了返回所请求的范围而循环的次数。 ** \@ range_cycle_count**是**int**。  
   
-`[ @sequence_increment = ] sequence_increment`可选的 output 参数返回用于计算所请求范围的序列对象的增量。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ sequence_increment** 。  
+`[ @sequence_increment = ] sequence_increment` 可选的 output 参数返回用于计算所请求范围的序列对象的增量。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ sequence_increment** 。  
   
-`[ @sequence_min_value = ] sequence_min_value`可选的输出参数返回序列对象的最小值。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ sequence_min_value** 。  
+`[ @sequence_min_value = ] sequence_min_value` 可选的输出参数返回序列对象的最小值。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ sequence_min_value** 。  
   
-`[ @sequence_max_value = ] sequence_max_value`可选的输出参数返回序列对象的最大值。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ sequence_max_value** 。  
+`[ @sequence_max_value = ] sequence_max_value` 可选的输出参数返回序列对象的最大值。 与请求中使用的序列对象相同的基类型**sql_variant** ** \@ sequence_max_value** 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

@@ -1,4 +1,5 @@
 ---
+description: 日志读取器代理
 title: 日志读取器代理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0a2cadea4f97dbfdec98b57c901605d49b29de0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3225f7f90521357d0db312ea8cbd1c3272267337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493927"
 ---
 # <a name="log-reader-agent"></a>日志读取器代理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85727236"
   
 -   未运行  
   
--   正在运行  
+-   运行  
   
  **Start Time**  
  会话的开始时间。  

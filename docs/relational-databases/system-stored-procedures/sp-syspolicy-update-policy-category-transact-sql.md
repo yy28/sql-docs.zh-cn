@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_update_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_update_policy_category (Transact-SQL)
+title: sp_syspolicy_update_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 097b18fcaa15d0e6581c3e50389eb0c48b983ba5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 911dfde6ac3cb10ec67e788f7d8937e44ca6727e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492949"
 ---
 # <a name="sp_syspolicy_update_policy_category-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,23 +41,23 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`策略类别的名称。 *name*为**sysname**，如果*policy_category_id*为 NULL，则必须指定。  
+`[ @name = ] 'name'` 策略类别的名称。 *name* 为 **sysname**，如果 *policy_category_id* 为 NULL，则必须指定。  
   
-`[ @policy_category_id = ] policy_category_id`策略类别的标识符。 *policy_category_id*为**int**，并且如果*name*为 NULL，则必须指定。  
+`[ @policy_category_id = ] policy_category_id` 策略类别的标识符。 *policy_category_id* 为 **int**，并且如果 *name* 为 NULL，则必须指定。  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`确定是否对策略类别强制执行数据库订阅。 *mandate_database_subscriptions*是**位**值，默认值为 NULL。 您可以使用两个值中的一个：  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` 确定是否对策略类别强制执行数据库订阅。 *mandate_database_subscriptions* 是 **位** 值，默认值为 NULL。 您可以使用两个值中的一个：  
   
 -   0 = 不托管  
   
 -   1 = 托管  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_update_policy_category。  
   
- 必须为 "*名称*" 或 " *policy_category_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policy_categories 系统视图。  
+ 必须为 " *名称* " 或 " *policy_category_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policy_categories 系统视图。  
   
 ## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  

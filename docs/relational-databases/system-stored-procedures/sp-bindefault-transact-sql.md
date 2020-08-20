@@ -1,5 +1,6 @@
 ---
-title: sp_bindefault （Transact-sql） |Microsoft Docs
+description: sp_bindefault (Transact-SQL)
+title: sp_bindefault (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f72269bbeef0954cff5a312909c55797d82b8f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493456"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716118"
   将默认值绑定到列或绑定到别名数据类型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]建议改为使用[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)语句的 default 关键字来创建默认定义。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 建议改为使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 语句的 default 关键字来创建默认定义。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,30 +45,30 @@ sp_bindefault [ @defname = ] 'default' ,
     [ , [ @futureonly = ] 'futureonly_flag' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @defname = ] 'default'`由 CREATE DEFAULT 创建的默认值的名称。 *默认值*为**nvarchar （776）**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @defname = ] 'default'` 由 CREATE DEFAULT 创建的默认值的名称。 *默认值* 为 **nvarchar (776) **，无默认值。  
   
-`[ @objname = ] 'object_name'`要绑定默认值的表和列的名称或别名数据类型。 *object_name*为**nvarchar （776）** ，无默认值。 不能将*object_name*定义为**varchar （max）**、 **nvarchar （max）**、 **VARBINARY （max）**、 **xml**或 CLR 用户定义类型。  
+`[ @objname = ] 'object_name'` 要绑定默认值的表和列的名称或别名数据类型。 *object_name* 为 **nvarchar (776) ** ，无默认值。 不能用**varchar (max) **、 **nvarchar (max) **、 **varbinary (MAX **) 、 **xml**或 CLR 用户定义类型来定义*object_name* 。  
   
- 如果*object_name*是由一个部分组成的名称，则将其解析为别名数据类型。 如果它是由两部分或三部分组成的名称，则首先将它解析为表和列;如果此分辨率失败，则将其解析为别名数据类型。 默认情况下，别名数据类型的现有列将继承*默认值*，除非已将默认值直接绑定到列。 不能将默认值绑定到**text**、 **ntext**、 **image**、 **varchar （max**）、 **nvarchar （max）**、 **varbinary （max）**、 **xml**、 **timestamp**或 CLR 用户定义类型列、具有 IDENTITY 属性的列、计算列或已具有默认约束的列。  
+ 如果 *object_name* 是由一个部分组成的名称，则将其解析为别名数据类型。 如果它是由两部分或三部分组成的名称，则首先将它解析为表和列;如果此分辨率失败，则将其解析为别名数据类型。 默认情况下，别名数据类型的现有列将继承 *默认值*，除非已将默认值直接绑定到列。 不能将默认值绑定到 **text**、 **ntext**、 **image**、 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **、 **xml**、 **timestamp**或 CLR 用户定义类型列、具有 IDENTITY 属性的列、计算列或已具有 default 约束的列。  
   
 > [!NOTE]  
->  *object_name*可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+>  *object_name* 可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
-`[ @futureonly = ] 'futureonly_flag'`仅在将默认值绑定到别名数据类型时使用。 *futureonly_flag*的值为**varchar （15）** ，默认值为 NULL。 当此参数设置为**futureonly**时，该数据类型的现有列无法继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，则新的默认值将绑定到当前没有默认值或使用别名数据类型的现有默认值的别名数据类型的任何列。  
+`[ @futureonly = ] 'futureonly_flag'` 仅在将默认值绑定到别名数据类型时使用。 *futureonly_flag* 是 **varchar (15) ** ，默认值为 NULL。 当此参数设置为 **futureonly**时，该数据类型的现有列无法继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果 *futureonly_flag* 为 NULL，则新的默认值将绑定到当前没有默认值或使用别名数据类型的现有默认值的别名数据类型的任何列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 您可以使用**sp_bindefault**将新的默认值绑定到列，但最好使用默认约束，或将其绑定到别名数据类型，而不解除现有默认值的绑定。 原有默认值将被覆盖。 不能将默认值绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型或 CLR 用户定义类型。 如果默认值和要绑定到的列不兼容，那么在试图插入默认值时（不是在绑定时），[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将返回错误消息。  
+ 您可以使用 **sp_bindefault** 将新的默认值绑定到列，但最好使用默认约束，或将其绑定到别名数据类型，而不解除现有默认值的绑定。 原有默认值将被覆盖。 不能将默认值绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型或 CLR 用户定义类型。 如果默认值和要绑定到的列不兼容，那么在试图插入默认值时（不是在绑定时），[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将返回错误消息。  
   
- 别名数据类型的现有列将继承新的默认值，除非默认值直接绑定到这些列，否则将*futureonly_flag*指定为**futureonly**。 别名数据类型的新列始终继承默认值。  
+ 别名数据类型的现有列将继承新的默认值，除非默认值直接绑定到这些列，否则将 *futureonly_flag* 指定为 **futureonly**。 别名数据类型的新列始终继承默认值。  
   
- 将默认值绑定到列时，相关信息将添加到**sys.databases**目录视图中。 将默认值绑定到别名数据类型时，相关信息将添加到**sys.databases**目录视图中。  
+ 将默认值绑定到列时，相关信息将添加到 **sys.databases** 目录视图中。 将默认值绑定到别名数据类型时，相关信息将添加到 **sys.databases** 目录视图中。  
   
 ## <a name="permissions"></a>权限  
- 用户必须是表的成员，或者是**sysadmin**固定服务器角色的成员，或者是**db_owner**和**db_ddladmin**固定数据库角色的成员。  
+ 用户必须是表的成员，或者是 **sysadmin** 固定服务器角色的成员，或者是 **db_owner** 和 **db_ddladmin** 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
   
@@ -90,7 +91,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonly_flag"></a>C. 使用 futureonly_flag  
- 以下示例将默认值 `def_ssn` 绑定到别名数据类型 `ssn`。 由于指定了**futureonly** ，因此不会影响类型为的现有列 `ssn` 。  
+ 以下示例将默认值 `def_ssn` 绑定到别名数据类型 `ssn`。 由于指定了 **futureonly** ，因此不会影响类型为的现有列 `ssn` 。  
   
 ```  
 USE master;  
@@ -99,7 +100,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 使用分隔标识符  
- 下面的示例演示如何 `[t.1]` 在*object_name*中使用分隔标识符。  
+ 下面的示例演示如何 `[t.1]` 在 *object_name*中使用分隔标识符。  
   
 ```  
 USE master;  

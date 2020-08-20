@@ -1,4 +1,5 @@
 ---
+description: 创建和管理全文索引
 title: 创建和管理全文索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/31/2020
@@ -13,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d51f0b31729d6b061c7e8cfd82b5047796c6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493841"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,11 +65,11 @@ ms.locfileid: "85758071"
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>使用 Management Studio 查看全文索引的属性 
 1.  在 Management Studio 的对象资源管理器中展开服务器。  
   
-2.  展开“数据库”  ，然后展开包含全文索引的数据库。  
+2.  展开“数据库”，然后展开包含全文索引的数据库。  
   
 3.  展开 **“表”** 。  
   
-4.  右键单击对其定义了全文索引的表，选择  “全文索引”，然后在  “全文索引”上下文菜单中单击  “属性”。 此时将打开“全文索引属性”  对话框。  
+4.  右键单击对其定义了全文索引的表，选择“全文索引”，然后在“全文索引”上下文菜单中单击“属性”。 此时将打开“全文索引属性”  对话框。  
   
 5.  在 **“选择页”** 窗格中，您可以选择下列页中的任一页：  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_certify_removable （Transact-sql） |Microsoft Docs
+description: sp_certify_removable (Transact-SQL)
+title: sp_certify_removable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f5bf1f0fd8a73948c2cc85937af4bc4c5ec7ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493404"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbname'`指定要验证的数据库。 *dbname*为**sysname**。  
+`[ @dbname = ] 'dbname'` 指定要验证的数据库。 *dbname* 为 **sysname**。  
   
-`[ @autofix = ] 'auto'`向系统管理员提供数据库和所有数据库对象的所有权，并删除任何用户创建的数据库用户和非默认权限。 *auto*的值为**nvarchar （4）**，默认值为 NULL。  
+`[ @autofix = ] 'auto'` 向系统管理员提供数据库和所有数据库对象的所有权，并删除任何用户创建的数据库用户和非默认权限。 *auto* 为 **nvarchar (4) **，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 如果正确配置了数据库， **sp_certify_removable**将执行以下操作：  
+ 如果正确配置了数据库， **sp_certify_removable** 将执行以下操作：  
   
 -   将数据库设置为脱机，以便复制文件。  
   
@@ -73,14 +74,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  可以使用下列方法更正这些情况：  
   
--   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和过程，然后再次运行**sp_certify_removable** 。  
+-   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和过程，然后再次运行 **sp_certify_removable** 。  
   
 -   只需用**自动**值运行**sp_certify_removable** 。  
   
  注意，该存储过程只检查用户和用户权限。 可以向数据库添加组并且对这些组授予权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)的信息。  
   
 ## <a name="permissions"></a>权限  
- Execute 权限仅限于**sysadmin**固定服务器角色的成员。  
+ Execute 权限仅限于 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  下面的示例验证 `inventory` 数据库已准备好删除。  

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_sql_referencing_entities （Transact-sql） |Microsoft Docs
+description: sys.dm_sql_referencing_entities (Transact-SQL)
+title: sys. dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493574"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,16 +60,16 @@ sys.dm_sql_referencing_entities (
 }  
 ```  
   
-## <a name="arguments"></a>自变量  
- `schema_name.referenced_entity_name`被引用实体的名称。  
+## <a name="arguments"></a>参数  
+ `schema_name.referenced_entity_name` 被引用实体的名称。  
   
  `schema_name` 是必需的，但是当被引用的类是 PARTITION_FUNCTION 时除外。  
   
- `schema_name.referenced_entity_name`为**nvarchar （517）**。  
+ `schema_name.referenced_entity_name` 为 **nvarchar (517) **。  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`被引用实体的类。 每个语句只能指定一个类。  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` 被引用实体的类。 每个语句只能指定一个类。  
   
- `<referenced_class>`为**nvarchar**（60）。  
+ `<referenced_class>` 为 **nvarchar** (60) 。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -100,10 +101,10 @@ sys.dm_sql_referencing_entities (
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|视图|“是”|“是”|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|“是”|“是”|  
+|查看|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|否|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|“是”|“是”|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |XML 架构集合|否|是|  
 |分区函数|否|是|  
   
- \*仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
+ \* 仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   

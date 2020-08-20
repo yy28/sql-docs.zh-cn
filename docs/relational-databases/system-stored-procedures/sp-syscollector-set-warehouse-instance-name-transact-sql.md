@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_set_warehouse_instance_name （Transact-sql） |Microsoft Docs
+description: sp_syscollector_set_warehouse_instance_name (Transact-SQL)
+title: sp_syscollector_set_warehouse_instance_name (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 83633a43c0c01a234ce43769954d5d2d52ad9d35
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86816adb5b3683aa6cbcd5c869b233960cf1a68f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492978"
 ---
 # <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +42,17 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
 ## <a name="arguments"></a>参数  
  [ @instance_name =] "*instance_name*"  
- 实例名。 *instance_name*是**sysname** ，如果为 NULL，则默认为本地实例。  
+ 实例名。 *instance_name* 是 **sysname** ，如果为 NULL，则默认为本地实例。  
   
 > **注意：**_instance_name_必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computerName* \\ *instanceName*。    
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  在更改数据收集器的相关配置之前，必须禁用此数据收集器。 如果数据收集器处于启用状态，则此过程将失败。  
   
- 若要查看当前实例的名称，请查询 " [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)系统" 视图。  
+ 若要查看当前实例的名称，请查询 " [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) 系统" 视图。  
   
 ## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
@@ -67,7 +68,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_config_store (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
   
   

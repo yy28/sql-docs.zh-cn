@@ -1,5 +1,6 @@
 ---
-title: MStracer_history （Transact-sql） |Microsoft Docs
+description: MStracer_history (Transact-SQL)
+title: MStracer_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c9f554d57935921c068ad25cb51991c47cdbd2a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cc21b23e670c13de44fbbb6485bc1d977a23d79f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492690"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85881483"
 |**subscriber_commit**|**datetime**|向订阅服务器提交跟踪令牌记录的日期和时间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

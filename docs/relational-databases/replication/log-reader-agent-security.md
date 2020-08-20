@@ -1,4 +1,5 @@
 ---
+description: 日志读取器代理安全性
 title: 日志读取器代理安全性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,18 +16,18 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 33d63d25aa2b20959a4b36f63ba2a7f518c0230a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19bd3e83dbac4222dcdb476c5d952c0773a623e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493960"
 ---
 # <a name="log-reader-agent-security"></a>日志读取器代理安全性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  使用 **“日志读取器代理安全性”** 对话框可指定以下项：  
+  使用“日志读取器代理安全性”**** 对话框可指定以下项：  
   
--   用于在分发服务器上运行日志读取器代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 Windows 帐户也称为“进程帐户  ”，因为代理进程是在此帐户下运行。  
+-   用于在分发服务器上运行日志读取器代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 Windows 帐户也称为“进程帐户 ”，因为代理进程是在此帐户下运行。  
   
 -   日志读取器代理与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器建立连接时所处的上下文。 通过模拟 Windows 帐户，或在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户的上下文中可以进行连接。  
   

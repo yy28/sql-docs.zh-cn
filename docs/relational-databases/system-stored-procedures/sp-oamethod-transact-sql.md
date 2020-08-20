@@ -1,5 +1,6 @@
 ---
-title: sp_OAMethod （Transact-sql） |Microsoft Docs
+description: sp_OAMethod (Transact-SQL)
+title: sp_OAMethod (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98e487f2393aba0c33f91fba6a41dd096cb61368
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493097"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>参数  
  *objecttoken*  
- 是先前使用**sp_OACreate**创建的 OLE 对象的对象标记。  
+ 是先前使用 **sp_OACreate**创建的 OLE 对象的对象标记。  
   
  *名称*  
  要调用的 OLE 对象的方法名。  
@@ -50,11 +51,11 @@ sp_OAMethod objecttoken , methodname
  _returnvalue_  **输出**  
  OLE 对象的方法的返回值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
- 如果该方法返回单个值，请为*returnvalue*指定一个局部变量，该局部变量返回局部变量中的方法返回值，或不指定*returnvalue*，这会将方法返回值作为单列单行结果集返回给客户端。  
+ 如果该方法返回单个值，请为 *returnvalue*指定一个局部变量，该局部变量返回局部变量中的方法返回值，或不指定 *returnvalue*，这会将方法返回值作为单列单行结果集返回给客户端。  
   
- 如果方法返回值是 OLE 对象，则*returnvalue*必须是数据类型为**int**的局部变量。对象标记存储在局部变量中，此对象标记可用于其他 OLE 自动化存储过程。  
+ 如果方法返回值是 OLE 对象，则 *returnvalue* 必须是数据类型为 **int**的局部变量。对象标记存储在局部变量中，此对象标记可用于其他 OLE 自动化存储过程。  
   
- 当方法返回值为数组时，如果指定了*returnvalue* ，则将其设置为 NULL。  
+ 当方法返回值为数组时，如果指定了 *returnvalue* ，则将其设置为 NULL。  
   
  如果出现下列任意一种情况，则产生错误：  
   
@@ -64,11 +65,11 @@ sp_OAMethod objecttoken , methodname
   
 -   方法返回一个数组作为输出参数。  
   
-`[ _@parametername = ] parameter[ OUTPUT ]`为方法参数。 如果已指定，则*参数*必须为适当数据类型的值。  
+`[ _@parametername = ] parameter[ OUTPUT ]` 为方法参数。 如果已指定，则 *参数* 必须为适当数据类型的值。  
   
- 若要获取 output 参数的返回值，*参数*必须是相应数据类型的局部变量，并且必须指定**output** 。 如果指定了常量参数，或未指定**output** ，则将忽略输出参数的任何返回值。  
+ 若要获取 output 参数的返回值， *参数* 必须是相应数据类型的局部变量，并且必须指定 **output** 。 如果指定了常量参数，或未指定 **output** ，则将忽略输出参数的任何返回值。  
   
- 如果指定，则*parametername*必须是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量。 删除 at 符号（ **@** ），并将*parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定，则 *parametername* 必须是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量。 删除 at 符号 (**@**) ，并将 *parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  
@@ -88,7 +89,7 @@ sp_OAMethod objecttoken , methodname
   
 -   二维数组作为结果集返回给客户端，其中的列数与数组第一维中的元素数相同，行数与数组第二维中的元素数相同。 换言之，该数组以（列、行）的形式返回。  
   
- 当属性返回值或方法返回值为数组时， **sp_OAGetProperty**或**sp_OAMethod**会向客户端返回结果集。 （方法输出参数不能是数组。这些过程可扫描数组中的所有数据值，以确定用于结果集中各列的相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和数据长度。 对于某个特定的列，这些过程将使用显示该列中的所有数据值所需要的数据类型和长度。  
+ 当属性返回值或方法返回值为数组时， **sp_OAGetProperty** 或 **sp_OAMethod** 会向客户端返回结果集。 （方法输出参数不能是数组。这些过程可扫描数组中的所有数据值，以确定用于结果集中各列的相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和数据长度。 对于某个特定的列，这些过程将使用显示该列中的所有数据值所需要的数据类型和长度。  
   
  如果一列中的所有数据值具有相同的数据类型，此数据类型将用于整个列。 当列中的数据值为其他数据类型时，将基于下表选择整个列的数据类型。  
   
@@ -102,15 +103,15 @@ sp_OAMethod objecttoken , methodname
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
 ## <a name="remarks"></a>备注  
- 还可以使用**sp_OAMethod**获取属性值。  
+ 还可以使用 **sp_OAMethod** 获取属性值。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**固定服务器角色的成员身份或直接对此存储过程执行权限。 `Ole Automation Procedures`必须**启用**配置才能使用与 OLE 自动化相关的任何系统过程。  
+ 要求具有 **sysadmin** 固定服务器角色的成员身份或直接对此存储过程执行权限。 `Ole Automation Procedures` 必须 **启用** 配置才能使用与 OLE 自动化相关的任何系统过程。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calling-a-method"></a>A. 调用一个方法  
- 下面的示例调用 `Connect` 以前创建的**SQLServer**对象的方法。  
+ 下面的示例调用 `Connect` 以前创建的 **SQLServer** 对象的方法。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +124,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. 获取一个属性  
- 下面的示例获取 `HostName` 属性（以前创建的**SQLServer**对象的属性），并将其存储在本地变量中。  
+ 下面的示例获取 `HostName` 以前创建的 **SQLServer** 对象的属性 () 并将其存储在本地变量中。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -137,7 +138,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的 OLE 自动化存储过程](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的 OLE 自动化存储过程 ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

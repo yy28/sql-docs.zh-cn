@@ -1,4 +1,5 @@
 ---
+description: 'sp_query_store_force_plan (Transact-sql) '
 title: sp_query_store_force_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,12 +22,12 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 3aa708d4af93449e2efe3d26cb9b92496c497942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493047"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -44,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**，无默认值。  
+`[ @query_id = ] query_id` 查询的 id。 *query_id* 是 **bigint**，无默认值。  
   
-`[ @plan_id = ] plan_id`要强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+`[ @plan_id = ] plan_id` 要强制执行的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -54,7 +55,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有**ALTER**权限。
+ 要求对数据库具有 **ALTER** 权限。
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关查询存储中的查询的信息。  

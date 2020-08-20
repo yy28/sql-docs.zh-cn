@@ -1,5 +1,6 @@
 ---
-title: sp_unregistercustomresolver （Transact-sql） |Microsoft Docs
+description: sp_unregistercustomresolver (Transact-SQL)
+title: sp_unregistercustomresolver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 935796cb328807eb4413991eeac97a95bd9b9384
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1d5957d830b322be2b4c32030a514988583522f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492890"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,18 +38,18 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @article_resolver = ] 'article_resolver'`指定正在注销的自定义业务逻辑的名称。 *article_resolver*为**nvarchar （255）**，无默认值。 如果要删除的业务逻辑是 COM 组件，则该参数是此组件的友好名称。 如果业务逻辑是 .NET Framework 程序集，则该参数是此程序集的名称。  
+`[ @article_resolver = ] 'article_resolver'` 指定正在注销的自定义业务逻辑的名称。 *article_resolver* 为 **nvarchar (255) **，无默认值。 如果要删除的业务逻辑是 COM 组件，则该参数是此组件的友好名称。 如果业务逻辑是 .NET Framework 程序集，则该参数是此程序集的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_unregistercustomresolver**用于合并复制。  
+ **sp_unregistercustomresolver** 用于合并复制。  
   
- 在复制拓扑中的任何服务器上使用[sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) ，以返回已注册的自定义业务逻辑模块或可用于拓扑的 COM 解析器的列表。  
+ 在复制拓扑中的任何服务器上使用 [sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) ，以返回已注册的自定义业务逻辑模块或可用于拓扑的 COM 解析器的列表。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_unregistercustomresolver**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_unregistercustomresolver**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_lookupcustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

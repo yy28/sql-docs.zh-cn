@@ -1,5 +1,6 @@
 ---
-title: sp_delete_category （Transact-sql） |Microsoft Docs
+description: sp_delete_category (Transact-SQL)
+title: sp_delete_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d3441ae51bd674f41cce42fe17393bbcb6983df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493330"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,18 +41,18 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'`类别的类。 *类*为**varchar （8）**，无默认值，并且必须具有下列值之一。  
+`[ @class = ] 'class'` 类别的类。 *类* 为 **varchar (8) **，无默认值，并且必须具有以下值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**任务**|删除作业类别。|  
 |**发出**|删除警报类别。|  
 |**操作员**|删除操作员类别。|  
   
-`[ @name = ] 'name'`要删除的类别的名称。 *名称*为**sysname**，无默认值。  
+`[ @name = ] 'name'` 要删除的类别的名称。 *名称* 为 **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -62,7 +63,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  如果删除某个类别，则该类别中的所有作业、警报或操作员将重新分类到类的默认类别中。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例将删除名为 `AdminJobs` 的作业类别。  

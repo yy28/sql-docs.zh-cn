@@ -1,4 +1,5 @@
 ---
+description: 订阅服务器类型
 title: 订阅服务器类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0f067af154d19bdd2ead1682d70dba74c70bef38
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5e557028d035ae9e04f52eedfdef10d66d3ba2d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493844"
 ---
 # <a name="subscriber-types"></a>订阅服务器类型
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  进行合并发布时可以指定发布必须支持的订阅服务器的类型。 选择订阅服务器类型将会设置“发布兼容级别  ”，该级别可确定发布能够使用哪些功能。  
+  进行合并发布时可以指定发布必须支持的订阅服务器的类型。 选择订阅服务器类型将会设置“发布兼容级别 **”，该级别可确定发布能够使用哪些功能。  
   
  创建发布快照之后，可以在 **“发布属性”** 对话框的 **“常规”** 页上提高发布兼容级别（使其更为严格）；无法降低兼容级别。  
 

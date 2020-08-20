@@ -1,5 +1,6 @@
 ---
-title: sp_helpextendedproc （Transact-sql） |Microsoft Docs
+description: sp_helpextendedproc (Transact-SQL)
+title: sp_helpextendedproc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68bc88bdaddc873c0f272ffef37d6465cddb45af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493218"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881584"
   报告当前定义的扩展存储过程，以及该过程（函数）所属的动态链接库 (DLL) 的名称。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[CLR 集成](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [CLR 集成](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @funcname = ] 'procedure'`要报告其信息的扩展存储过程的名称。 *过程*的值为**sysname**，默认值为 NULL。  
+`[ @funcname = ] 'procedure'` 要报告其信息的扩展存储过程的名称。 *过程* 的值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,7 +56,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**.dll**|**nvarchar(255)**|DLL 的名称。|  
   
 ## <a name="remarks"></a>备注  
- 指定*procedure*时， **sp_helpextendedproc**有关指定扩展存储过程的报表。 如果未提供此参数， **sp_helpextendedproc**将返回所有扩展存储过程名称以及每个扩展存储过程所属的 DLL 名称。  
+ 指定 *procedure* 时， **sp_helpextendedproc** 有关指定扩展存储过程的报表。 如果未提供此参数， **sp_helpextendedproc** 将返回所有扩展存储过程名称以及每个扩展存储过程所属的 DLL 名称。  
   
 ## <a name="permissions"></a>权限  
  向**public**授予执行**sp_helpextendedproc**的权限。  

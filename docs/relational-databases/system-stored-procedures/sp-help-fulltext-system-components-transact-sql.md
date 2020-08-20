@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_system_components （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_system_components (Transact-SQL)
+title: sp_help_fulltext_system_components (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493201"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  返回注册的断字符、筛选器和协议处理程序的信息。 **sp_help_fulltext_system_components**还返回已使用指定组件的数据库和全文目录的标识符列表。  
+  返回注册的断字符、筛选器和协议处理程序的信息。 **sp_help_fulltext_system_components** 还返回已使用指定组件的数据库和全文目录的标识符列表。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +46,19 @@ sp_help_fulltext_system_components
  'all'  
  返回所有全文组件的信息。  
   
-`[ @component_type = ] component_type`指定组件的类型。 *component_type*可以是以下项之一：  
+`[ @component_type = ] component_type` 指定组件的类型。 *component_type* 可以是以下项之一：  
   
 -   **断字器**  
   
--   **筛选器**  
+-   **filter**  
   
 -   **协议处理程序**  
   
 -   **fullpath**  
   
- 如果指定了完整路径，则还必须使用组件 DLL 的完整路径指定*param* ，否则会返回错误消息。  
+ 如果指定了完整路径，则还必须使用组件 DLL 的完整路径指定 *param* ，否则会返回错误消息。  
   
-`[ @param = ] param`根据组件类型，这是以下内容之一：区域设置标识符（LCID）、带 "." 前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
+`[ @param = ] param` 根据组件类型，这是以下内容之一：区域设置标识符 (LCID) 、带有 "." 前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -67,14 +68,14 @@ sp_help_fulltext_system_components
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|组件的类型。 下列情况之一：<br /><br /> filter<br /><br /> 协议处理程序<br /><br /> 断字符|  
+|**componenttype**|**sysname**|组件的类型。 下列类型作之一：<br /><br /> filter<br /><br /> 协议处理程序<br /><br /> 断字符|  
 |**componentname**|**sysname**|组件的名称。|  
 |**clsid**|**uniqueidentifier**|组件的类标识符。|  
-|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是**serveradmin**固定服务器角色的成员。|  
+|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是 **serveradmin** 固定服务器角色的成员。|  
 |**version**|**nvarchar(30)**|组件的版本。|  
 |**提供**|**sysname**|组件制造商的名称。|  
   
- 仅当存在使用*component_type*的一个或多个全文目录时，才返回下面的结果集。  
+ 仅当存在使用 *component_type*的一个或多个全文目录时，才返回下面的结果集。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +83,7 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|全文目录的 ID。|  
   
 ## <a name="permissions"></a>权限  
- 要求具有**public**角色的成员身份;但是，用户只能查看其具有 VIEW DEFINITION 权限的全文目录的相关信息。 只有**serveradmin**固定服务器角色的成员才能查看**fullpath**列中的值。  
+ 要求具有 **public** 角色的成员身份;但是，用户只能查看其具有 VIEW DEFINITION 权限的全文目录的相关信息。 只有 **serveradmin** 固定服务器角色的成员才能查看 **fullpath** 列中的值。  
   
 ## <a name="remarks"></a>备注  
  此方法在准备升级时尤为重要。 执行特定数据库中的存储过程，然后使用输出确定升级是否将影响特定目录。  
@@ -139,6 +140,6 @@ GO
  [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: '法律公告 (DB2toSQL) '
 title: 法律声明 (DB2toSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bb579ff317bdf829ee39e227cee9bf082451a43d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 331a004ac1daba1b1d456acab86037b97f15cad5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492490"
 ---
 # <a name="legal-notice-db2tosql"></a>法律公告 (DB2toSQL) 
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  

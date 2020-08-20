@@ -1,4 +1,5 @@
 ---
+description: “策略管理”节点（对象资源管理器）
 title: “策略管理”节点（对象资源管理器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fcd37d6584b38c50b35248124ade0a146af956d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8bdc9732ab9623d4053ee0408873cc533c4564b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493980"
 ---
 # <a name="policy-management-node-object-explorer"></a>“策略管理”节点（对象资源管理器）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本部分包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”节点的以下 F1 帮助主题。  
+  本部分包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”**** 节点的以下 F1 帮助主题。  
   
 -   [“创建新条件”或“打开条件”对话框 -“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   

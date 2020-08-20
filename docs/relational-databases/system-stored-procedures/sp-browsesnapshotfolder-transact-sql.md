@@ -1,5 +1,6 @@
 ---
-title: sp_browsesnapshotfolder （Transact-sql） |Microsoft Docs
+description: sp_browsesnapshotfolder (Transact-SQL)
+title: sp_browsesnapshotfolder (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ea912014440191f1d5e200ed583366ad43ecb27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11605b404e846db81cd364eac2e9223bf563e3a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493416"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,15 +39,15 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
  [ , [ @subscriber_db = ] 'subscriber_db' ] }  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`包含项目的发布的名称。 *发布*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 包含项目的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。  
+`[ @subscriber = ] 'subscriber'` 订阅服务器的名称。 *订阅服务器* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的默认值为**sysname**，默认值为 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscriber_db* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
@@ -55,14 +56,14 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 |**snapshot_folder**|**nvarchar(512)**|快照目录的完整路径。|  
   
 ## <a name="remarks"></a>备注  
- **sp_browsesnapshotfolder**用于快照复制和事务复制。  
+ **sp_browsesnapshotfolder** 用于快照复制和事务复制。  
   
- 如果*订阅服务器*和*SUBSCRIBER_DB*字段为空，则存储过程将返回该发布的最新快照的快照文件夹。 如果指定了*订阅服务器*和*subscriber_db*字段，则存储过程将返回指定订阅的快照文件夹。 如果没有为发布生成快照，则返回空结果集。  
+ 如果 *订阅服务器* 和 *SUBSCRIBER_DB* 字段为空，则存储过程将返回该发布的最新快照的快照文件夹。 如果指定了 *订阅服务器* 和 *subscriber_db* 字段，则存储过程将返回指定订阅的快照文件夹。 如果没有为发布生成快照，则返回空结果集。  
   
- 如果将发布设置为同时在发布服务器的工作目录和发布服务器的快照文件夹中生成快照文件，则结果集将包含两行。 第一行包含发布快照文件夹，第二行包含发布服务器工作目录。 **sp_browsesnapshotfolder**可用于确定生成快照文件的目录。  
+ 如果将发布设置为同时在发布服务器的工作目录和发布服务器的快照文件夹中生成快照文件，则结果集将包含两行。 第一行包含发布快照文件夹，第二行包含发布服务器工作目录。 **sp_browsesnapshotfolder** 可用于确定生成快照文件的目录。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_browsesnapshotfolder**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_browsesnapshotfolder**。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

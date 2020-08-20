@@ -1,4 +1,5 @@
 ---
+description: 项目设置（转换）(MySQLToSQL)
 title: " (转换的项目设置)  (MySQLToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492430"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>项目设置（转换）(MySQLToSQL)
-"**项目设置**" 对话框的 "转换" 页包含用于自定义 SSMA 将 MySQL 语法转换为 SQL Server 或 SQL Azure 语法的方式的设置。  
+" **项目设置** " 对话框的 "转换" 页包含用于自定义 SSMA 将 MySQL 语法转换为 SQL Server 或 SQL Azure 语法的方式的设置。  
   
-"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "转换" 窗格。  
+" **项目设置** " 和 " **默认项目设置** " 对话框中提供了 "转换" 窗格。  
   
--   使用 "**默认项目设置**" 对话框可以为所有项目设置配置选项。 若要访问转换设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，从 "**迁移目标版本**" 下拉框中选择需要查看其设置的 "迁移项目类型"，单击左侧窗格底部的 "**常规**"，然后选择 "**转换**"。  
+-   使用 " **默认项目设置** " 对话框可以为所有项目设置配置选项。 若要访问转换设置，请在 " **工具** " 菜单上，选择 " **默认项目设置**"，从 " **迁移目标版本** " 下拉框中选择需要查看其设置的 "迁移项目类型"，单击左侧窗格底部的 " **常规** "，然后选择 " **转换**"。  
   
--   若要指定当前项目的设置，请在 "**工具**" 菜单上单击 "**项目设置**"，然后单击左窗格底部的 "**常规**"，然后单击 "**转换**"。  
+-   若要指定当前项目的设置，请在 " **工具** " 菜单上单击 " **项目设置**"，然后单击左窗格底部的 " **常规** "，然后单击 " **转换**"。  
   
 ## <a name="options"></a>选项  
   

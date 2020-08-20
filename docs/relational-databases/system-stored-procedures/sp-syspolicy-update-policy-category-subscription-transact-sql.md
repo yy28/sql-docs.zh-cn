@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_update_policy_category_subscription （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_update_policy_category_subscription (Transact-SQL)
+title: sp_syspolicy_update_policy_category_subscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492961"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,23 +43,23 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`要更新的策略类别订阅的标识符。 *policy_category_subscription_id*为**int**，并且是必需的。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 要更新的策略类别订阅的标识符。 *policy_category_subscription_id* 为 **int**，并且是必需的。  
   
-`[ @target_type = ] 'target_type'`类别订阅的目标类型。 *target_type*的默认值为**sysname**，默认值为 NULL。  
+`[ @target_type = ] 'target_type'` 类别订阅的目标类型。 *target_type* 的默认值为 **sysname**，默认值为 NULL。  
   
- 如果指定*target_type*，则该值必须设置为 "DATABASE"。  
+ 如果指定 *target_type*，则该值必须设置为 "DATABASE"。  
   
-`[ @target_object = ] 'target_object'`将订阅策略类别的数据库的名称。 *target_object*的默认值为**sysname**，默认值为 NULL。  
+`[ @target_object = ] 'target_object'` 将订阅策略类别的数据库的名称。 *target_object* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @policy_category = ] 'policy_category'`您希望数据库订阅的策略类别的名称。 *policy_category*的默认值为**sysname**，默认值为 NULL。  
+`[ @policy_category = ] 'policy_category'` 您希望数据库订阅的策略类别的名称。 *policy_category* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_update_policy_category_subscription。  
   
- 若要获取*policy_category_subscription_id*和*policy_category*的值，可以使用以下查询：  
+ 若要获取 *policy_category_subscription_id* 和 *policy_category*的值，可以使用以下查询：  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  

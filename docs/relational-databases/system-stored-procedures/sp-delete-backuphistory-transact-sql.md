@@ -1,5 +1,6 @@
 ---
-title: sp_delete_backuphistory （Transact-sql） |Microsoft Docs
+description: sp_delete_backuphistory (Transact-SQL)
+title: sp_delete_backuphistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5b2d16d3a6131d6c579a7f4f3c422ac003da73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493365"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  通过删除早于指定日期的备份集条目，减小备份和还原历史记录表的大小。 执行每个备份或还原操作后，会将其他行添加到备份和还原历史记录表中;因此，建议您定期执行**sp_delete_backuphistory**。  
+  通过删除早于指定日期的备份集条目，减小备份和还原历史记录表的大小。 执行每个备份或还原操作后，会将其他行添加到备份和还原历史记录表中;因此，建议您定期执行 **sp_delete_backuphistory**。  
   
 > [!NOTE]  
->  备份和还原历史记录表驻留在**msdb**数据库中。  
+>  备份和还原历史记录表驻留在 **msdb** 数据库中。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @oldest_date = ] 'oldest\_date'`备份和还原历史记录表中保留的最早日期。 *oldest_date*为**datetime**，无默认值。  
+`[ @oldest_date = ] 'oldest\_date'` 备份和还原历史记录表中保留的最早日期。 *oldest_date* 为 **datetime**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -72,7 +73,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  即使所有历史记录都已被删除，物理备份文件也会保留下来。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**固定服务器角色的成员身份，但权限可授予其他用户。  
+ 要求具有 **sysadmin** 固定服务器角色的成员身份，但权限可授予其他用户。  
   
 ## <a name="examples"></a>示例  
  以下示例删除备份和还原历史记录表中所有早于 2010 年 1 月 14 日中午 12:00 的条目 在备份和还原历史记录表中。  

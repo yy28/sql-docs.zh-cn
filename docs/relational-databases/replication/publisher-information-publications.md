@@ -1,4 +1,5 @@
 ---
+description: 发布服务器信息，发布
 title: 发布服务器信息，发布 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493873"
 ---
 # <a name="publisher-information-publications"></a>发布服务器信息，发布
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,17 +69,17 @@ ms.locfileid: "85719534"
  **“当前平均性能”** 和 **“当前最差的性能”**  
  仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 发布的所有订阅各自的平均性能率和最差性能率。 这些比率是基于复制监视器最近取得的度量值，并不反映某段时间内的订阅性能。  
   
- 对于事务复制，复制监视器仅为定义了性能阈值的发布显示值。 如果没有为发布定义性能阈值，则此列将显示 **“未启用”** 。 对于合并复制，在通过同一类型的连接（拨号或 LAN）进行了五次同步、并且每次同步所做的更改为 50 处或更多处之后，复制监视器将会显示值。 如果所做更改为 50 处或更多处的同步次数少于五次，或最近一次同步所做的更改少于 50 处，则此列为空白。  
+ 对于事务复制，复制监视器仅为定义了性能阈值的发布显示值。 如果没有为发布定义性能阈值，则此列将显示 **“未启用”**。 对于合并复制，在通过同一类型的连接（拨号或 LAN）进行了五次同步、并且每次同步所做的更改为 50 处或更多处之后，复制监视器将会显示值。 如果所做更改为 50 处或更多处的同步次数少于五次，或最近一次同步所做的更改少于 50 处，则此列为空白。  
   
  性能等级可以为以下值之一：  
   
--   很好  
+-   优秀  
   
 -   好  
   
 -   一般  
   
--   较差  
+-   差  
   
 -   严重  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_droptype （Transact-sql） |Microsoft Docs
+description: sp_droptype (Transact-SQL)
+title: sp_droptype (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a20b3522e7e477af826e17d7fb654e3cd99220a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493249"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  从**systypes**中删除别名数据类型。  
+  从 **systypes**中删除别名数据类型。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,8 +39,8 @@ ms.locfileid: "85783759"
 sp_droptype [ @typename = ] 'type'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @typename = ] 'type'`您所拥有的别名数据类型的名称。 *类型*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @typename = ] 'type'` 您所拥有的别名数据类型的名称。 *类型* 为 **sysname**，无默认值。  
   
 ## <a name="return-code-type"></a>返回代码类型  
  0（成功）或 1（失败）  
@@ -48,13 +49,13 @@ sp_droptype [ @typename = ] 'type'
  无  
   
 ## <a name="remarks"></a>备注  
- 如果表或其他数据库对象引用了**类型**别名数据类型，则不能将其删除。  
+ 如果表或其他数据库对象引用了 **类型** 别名数据类型，则不能将其删除。  
   
 > [!NOTE]  
 >  如果在表定义内使用某个别名数据类型，或者将某个规则或默认值绑定到这种数据类型，则不能删除它。  
   
 ## <a name="permissions"></a>权限  
- 需要**db_owner**固定数据库角色的成员身份或**db_ddladmin**固定数据库角色的成员身份。  
+ 需要 **db_owner** 固定数据库角色的成员身份或 **db_ddladmin** 固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  以下示例删除别名数据类型 `birthday`。  

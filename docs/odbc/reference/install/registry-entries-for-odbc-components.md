@@ -1,4 +1,5 @@
 ---
+description: ODBC 组件的注册表项
 title: ODBC 组件的注册表项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3364f2b38fdb0c41ae0493b545740b17ee712bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491332"
 ---
 # <a name="registry-entries-for-odbc-components"></a>ODBC 组件的注册表项
 > [!NOTE]  
@@ -33,7 +34,7 @@ ms.locfileid: "81296167"
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- 由于 Odbcinst.ini 是 HKEY_LOCAL_MACHINE 树的子项，因此计算机的所有用户都可以使用有关 ODBC 组件的信息。  
+ 由于 Odbcinst.ini 是 HKEY_LOCAL_MACHINE 树的子项，因此该计算机的所有用户都可以使用有关 ODBC 组件的信息。  
   
  本部分包含以下主题。  
   

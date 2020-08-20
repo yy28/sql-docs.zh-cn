@@ -1,5 +1,6 @@
 ---
-title: sp_delete_database_backuphistory （Transact-sql） |Microsoft Docs
+description: sp_delete_database_backuphistory (Transact-SQL)
+title: sp_delete_database_backuphistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493315"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @database_name = ] database_name`指定在备份和还原操作中涉及的数据库的名称。 *database_name* **sysname**，无默认值。  
+`[ @database_name = ] database_name` 指定在备份和还原操作中涉及的数据库的名称。 *database_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

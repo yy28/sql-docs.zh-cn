@@ -1,5 +1,6 @@
 ---
-title: 使用行集绑定（ODBC） |Microsoft Docs
+description: 使用行集绑定 (ODBC)
+title: " (ODBC) 使用行集绑定 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86fd861f50b86b502c52b916c2944a9719424798
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 763477caaba41016b5137463c6d607f548d1d5a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494060"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用行集绑定 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +33,9 @@ ms.locfileid: "86009491"
   
     -   此外，可以选择分配一个包含 R（或更多）个列缓冲区的数组以存储数据长度。  
   
-    -   调用[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) ，将列的数据值和数据长度数组绑定到行集的列。  
+    -   调用 [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) ，将列的数据值和数据长度数组绑定到行集的列。  
   
-2.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+2.  调用 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 设置以下属性：  
   
     -   将 SQL_ATTR_ROW_ARRAY_SIZE 设置为行集中的行数 (R)。  
   
@@ -45,7 +47,7 @@ ms.locfileid: "86009491"
   
 3.  执行语句。  
   
-4.  对[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的每个调用都将检索 R 行并将数据传输到绑定列。  
+4.  对 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 或 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 的每个调用都将检索 R 行并将数据传输到绑定列。  
 
 ### <a name="to-use-row-wise-binding"></a>使用按行绑定  
   
@@ -55,7 +57,7 @@ ms.locfileid: "86009491"
   
     -   第二部分是 SQLINTEGER 变量，用于包含列状态指示器。  
   
-2.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+2.  调用 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 设置以下属性：  
   
     -   将 SQL_ATTR_ROW_ARRAY_SIZE 设置为行集中的行数 (R)。  
   
@@ -65,11 +67,11 @@ ms.locfileid: "86009491"
   
     -   将 SQL_ATTR_PARAMS_STATUS_PTR 设置为指向 SQLUSSMALLINT 变量的数组 [R]，以包含行状态指示器。  
   
-3.  对于结果集中的每个列，调用[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) ，将列的数据值和数据长度指针指向其在步骤1中分配的结构数组的第一个元素中的变量。  
+3.  对于结果集中的每个列，调用 [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) ，将列的数据值和数据长度指针指向其在步骤1中分配的结构数组的第一个元素中的变量。  
   
 4.  执行语句。  
   
-5.  对[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的每个调用都将检索 R 行并将数据传输到绑定列。  
+5.  对 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 或 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 的每个调用都将检索 R 行并将数据传输到绑定列。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用游标操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   

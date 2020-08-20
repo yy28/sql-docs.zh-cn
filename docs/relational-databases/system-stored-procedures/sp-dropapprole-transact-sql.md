@@ -1,5 +1,6 @@
 ---
-title: sp_dropapprole （Transact-sql） |Microsoft Docs
+description: sp_dropapprole (Transact-SQL)
+title: sp_dropapprole (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 86aa6e39cd8086b906f3bf2c8c0dc9e80bc33034
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e02da3e5507b1376dba5ac170922a2bb9230054
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493304"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85860017"
   从当前数据库删除应用程序角色。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用 [DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +43,13 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] 'role'`要删除的应用程序角色。 *role*是**sysname**，无默认值。 *角色*必须存在于当前数据库中。  
+`[ @rolename = ] 'role'` 要删除的应用程序角色。 *role* 是 **sysname**，无默认值。 *角色* 必须存在于当前数据库中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_dropapprole**只能用于删除应用程序角色。 如果一个角色拥有任何安全对象，则不能删除此角色。 在删除拥有安全对象的应用程序角色之前，必须首先移交安全对象的所有权或将其删除。  
+ **sp_dropapprole** 只能用于删除应用程序角色。 如果一个角色拥有任何安全对象，则不能删除此角色。 在删除拥有安全对象的应用程序角色之前，必须首先移交安全对象的所有权或将其删除。  
   
  不能在用户定义的事务中执行**sp_dropapprole** 。  
   
@@ -65,7 +66,7 @@ EXEC sp_dropapprole 'SalesApp';
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [DROP &#40;Transact-sql&#41;的应用程序角色](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [DROP &#40;Transact-sql&#41;的应用程序角色 ](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [sp_changeobjectowner &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
  [sp_setapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

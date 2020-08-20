@@ -1,4 +1,5 @@
 ---
+description: sp_pkeys (Transact-SQL)
 title: sp_pkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5e7f0d0d3495abcd716fb5763b29d7e26192f60
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7a291d4b76a7fe141234a43c458b865a1d956381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493075"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,15 +44,15 @@ sp_pkeys [ @table_name = ] 'name'
   
 ## <a name="arguments"></a>参数  
  [ @table_name =] "*name*"  
- 要返回其信息的表。 *名称*为**sysname**，无默认值。 不支持通配符模式匹配。  
+ 要返回其信息的表。 *名称* 为 **sysname**，无默认值。 不支持通配符模式匹配。  
   
  [ @table_owner =] "*owner*"  
- 为指定的表指定所有者。 *所有者*为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认表可见性规则。  
+ 为指定的表指定所有者。 *所有者* 为 **sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定 *owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定*所有者*，并且当前用户没有具有指定*名称*的表，则此过程将查找数据库所有者拥有指定*名称*的表。 如果存在，则返回该表的列。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定 *所有者* ，并且当前用户没有具有指定 *名称*的表，则此过程将查找数据库所有者拥有指定 *名称* 的表。 如果存在，则返回该表的列。  
   
  [ @table_qualifier =] '*限定符*'  
- 是表限定符。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_) 。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ 是表限定符。 *限定符* 的值为 **sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_) 。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -95,7 +96,7 @@ EXEC sp_pkeys @table_name = N'DimAccount';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目录存储过程 ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 通过 PowerShell 配置使用 Always Encrypted 的列加密
 title: 通过 PowerShell 配置使用 Always Encrypted 的列加密 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -11,12 +12,12 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d89ff5d6ef855cce31e4cbde02f5a45a2131d2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493801"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>通过 PowerShell 配置使用 Always Encrypted 的列加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85765081"
 ::: moniker-end
 若要深入了解 SqlServer PowerShell 模块中的 Always Encrypted 支持，请参阅[使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要设置目标加密配置，需要确保：
 - 数据库中配置了一个列加密密钥（如果要加密或重新加密列）。 有关详细信息，请参阅[使用 PowerShell 配置 Always Encrypted 密钥](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)。
@@ -45,7 +46,7 @@ ms.locfileid: "85765081"
 
 使用脱机方法时，目标表（以及任何与目标表相关的表，例如，目标表与其具有外键关系的任何表）不可用于在操作期间写入事务。 使用脱机方法时，外键约束（**CHECK** 或 **NOCHECK**）的语义会始终保留。
 
-使用联机方法时（需要 21.x 版或更高版本的 SqlServer PowerShell 模块），对数据进行复制和加密、解密或重新加密的操作是以增量方式执行的。 应用程序可以在数据移动操作中将数据写入到目标表以及从中读取数据，除了最后一次迭代，其持续时间受到 MaxDownTimeInSeconds 参数（可自行定义）的限制  。 为了检测和处理在复制数据时应用程序可能会做的更改，cmdlet 会在目标数据库中启用[更改跟踪](../../track-changes/enable-and-disable-change-tracking-sql-server.md)。 正因如此，与脱机方法相比，联机方法有可能在服务器端上消耗的资源会更多。 使用联机方法的操作耗时也可能会更长，尤其是对数据库运行大量写入工作负荷时。 联机方法可用于一次加密一个表，该表必须具有一个主键。 默认情况下，外键约束在使用 **NOCHECK** 选项的情况下重新创建以最大限度地降低对应用程序的影响。 你可以通过指定 **KeepCheckForeignKeyConstraints** 选项强制保留外键约束的语义。 
+使用联机方法时（需要 21.x 版或更高版本的 SqlServer PowerShell 模块），对数据进行复制和加密、解密或重新加密的操作是以增量方式执行的。 应用程序可以在数据移动操作中将数据写入到目标表以及从中读取数据，除了最后一次迭代，其持续时间受到 MaxDownTimeInSeconds 参数（可自行定义）的限制****。 为了检测和处理在复制数据时应用程序可能会做的更改，cmdlet 会在目标数据库中启用[更改跟踪](../../track-changes/enable-and-disable-change-tracking-sql-server.md)。 正因如此，与脱机方法相比，联机方法有可能在服务器端上消耗的资源会更多。 使用联机方法的操作耗时也可能会更长，尤其是对数据库运行大量写入工作负荷时。 联机方法可用于一次加密一个表，该表必须具有一个主键。 默认情况下，外键约束在使用 **NOCHECK** 选项的情况下重新创建以最大限度地降低对应用程序的影响。 你可以通过指定 **KeepCheckForeignKeyConstraints** 选项强制保留外键约束的语义。 
 
 下面是在脱机和联机方法之间进行选择的指导原则：
 

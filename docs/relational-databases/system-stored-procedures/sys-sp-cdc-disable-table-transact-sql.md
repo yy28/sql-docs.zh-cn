@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_disable_table （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_disable_table (Transact-SQL)
+title: sys. sp_cdc_disable_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492834"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,29 +47,29 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @source_schema = ] 'source\_schema'`包含源表的架构的名称。 *source_schema* **sysname**，无默认值，且不能为 NULL。  
+`[ @source_schema = ] 'source\_schema'` 包含源表的架构的名称。 *source_schema* **sysname**，无默认值，且不能为 NULL。  
   
  当前数据库中必须存在*source_schema* 。  
   
-`[ @source_name = ] 'source\_name'`要禁用变更数据捕获的源表的名称。 *source_name* **sysname**，无默认值，且不能为 NULL。  
+`[ @source_name = ] 'source\_name'` 要禁用变更数据捕获的源表的名称。 *source_name* **sysname**，无默认值，且不能为 NULL。  
   
  当前数据库中必须存在*source_name* 。  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`要为指定的源表禁用的捕获实例的名称。 *capture_instance*为**sysname** ，且不能为 NULL。  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` 要为指定的源表禁用的捕获实例的名称。 *capture_instance* 为 **sysname** ，且不能为 NULL。  
   
- 当指定 "all" 时，将禁用为*source_name*定义的所有捕获实例。  
+ 当指定 "all" 时，将禁用为 *source_name* 定义的所有捕获实例。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- **sys. sp_cdc_disable_table**删除与指定的源表和捕获实例相关联的变更数据捕获更改表和系统函数。 它从变更数据捕获系统表中删除与指定捕获实例相关联的任何行，并将[sys.databases](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)目录视图中的表条目的**is_tracked_by_cdc**列设置为0。  
+ **sys. sp_cdc_disable_table** 删除与指定的源表和捕获实例相关联的变更数据捕获更改表和系统函数。 它从变更数据捕获系统表中删除与指定捕获实例相关联的任何行，并将[sys.databases](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)目录视图中的表条目的**is_tracked_by_cdc**列设置为0。  
   
 ## <a name="permissions"></a>权限  
- 需要**db_owner**固定数据库角色的成员身份。  
+ 需要 **db_owner** 固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下例对 `HumanResources.Employee` 表禁用了变更数据捕获。  

@@ -1,5 +1,6 @@
 ---
-title: sp_add_notification （Transact-sql） |Microsoft Docs
+description: sp_add_notification (Transact-SQL)
+title: sp_add_notification (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c009cd32cf3fdd92fbb638a00d5f1f4a024a1b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493524"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,20 +41,20 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @alert_name = ] 'alert'`此通知的警报。 *警报*为**sysname**，无默认值。  
+`[ @alert_name = ] 'alert'` 此通知的警报。 *警报* 为 **sysname**，无默认值。  
   
-`[ @operator_name = ] 'operator'`警报发生时要通知的操作员。 *运算符*的值为**sysname**，无默认值。  
+`[ @operator_name = ] 'operator'` 警报发生时要通知的操作员。 *运算符* 的值为 **sysname**，无默认值。  
   
-`[ @notification_method = ] notification_method`通知操作员使用的方法。 *notification_method*为**tinyint**，无默认值。 *notification_method*可以是与**or**逻辑运算符组合在一起的一个或多个值。  
+`[ @notification_method = ] notification_method` 通知操作员使用的方法。 *notification_method* 为 **tinyint**，无默认值。 *notification_method* 可以是与 **or** 逻辑运算符组合在一起的一个或多个值。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1**|电子邮件|  
 |**2**|寻呼机|  
 |**4**|**net send**|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -68,7 +69,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  如果在发送电子邮件或寻呼通知时出现故障，则该故障将被记录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务错误日志中。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_add_notification**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_add_notification**执行。  
   
 ## <a name="examples"></a>示例  
  以下示例为指定的警报 (`Test Alert`) 添加电子邮件通知。  

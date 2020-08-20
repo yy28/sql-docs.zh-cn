@@ -1,5 +1,6 @@
 ---
-title: sp_bindsession （Transact-sql） |Microsoft Docs
+description: sp_bindsession (Transact-SQL)
+title: sp_bindsession (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0204b8d56b7351173716480bd14768152089a242
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60345defb9e5038286ddc9e4011525cb516315a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493453"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>参数  
  **"** *bind_token* **"**  
- 标识最初使用**sp_getbindtoken**或开放式数据服务**srv_getbindtoken**函数获取的事务的标记。 *bind_token*为**varchar （255）**。  
+ 标识最初使用 **sp_getbindtoken** 或开放式数据服务 **srv_getbindtoken** 函数获取的事务的标记。 *bind_token*是 **varchar (255) **。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,13 +52,13 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="remarks"></a>备注  
  绑定的两个会话只共享事务和锁。 每个会话均保留自身的隔离级别，在一个会话上设置新的隔离级别不会影响另一个会话的隔离级别。 每个会话仍由其安全帐户标识，且只能访问已授权该帐户访问的数据库资源。  
   
- **sp_bindsession**使用绑定令牌绑定两个或更多个现有客户端会话。 这些客户端会话必须位于获得绑定令牌的同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。 会话是执行命令的客户端。 绑定数据库会话共享事务和锁空间。  
+ **sp_bindsession** 使用绑定令牌绑定两个或更多个现有客户端会话。 这些客户端会话必须位于获得绑定令牌的同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。 会话是执行命令的客户端。 绑定数据库会话共享事务和锁空间。  
   
- 从一个[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例获得的绑定令牌不能用于连接到另一实例的客户端会话，甚至对 DTC 事务也是如此。 绑定令牌仅在每个实例的本地有效，不能由多个实例共享。 若要将客户端会话绑定到的另一个实例 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，则必须通过执行**sp_getbindtoken**获取不同的绑定令牌。  
+ 从一个[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例获得的绑定令牌不能用于连接到另一实例的客户端会话，甚至对 DTC 事务也是如此。 绑定令牌仅在每个实例的本地有效，不能由多个实例共享。 若要将客户端会话绑定到的另一个实例 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，则必须通过执行 **sp_getbindtoken**获取不同的绑定令牌。  
   
  如果**sp_bindsession**将失败，并在使用非活动令牌时出现错误。  
   
- 使用**sp_bindsession**取消绑定，无需指定*bind_token*或通过在*bind_token*中传递 NULL。  
+ 使用 **sp_bindsession** 取消绑定，无需指定 *bind_token* 或通过在 *bind_token*中传递 NULL。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

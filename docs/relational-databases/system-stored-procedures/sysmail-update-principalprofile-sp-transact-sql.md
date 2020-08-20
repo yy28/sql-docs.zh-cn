@@ -1,5 +1,6 @@
 ---
-title: sysmail_update_principalprofile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_update_principalprofile_sp (Transact-SQL)
+title: sysmail_update_principalprofile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bdfeab82f6964abb5e48758cb4b8adba096e5b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492804"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +42,18 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @principal_id = ] principal_id`要更改的关联的**msdb**数据库中数据库用户或角色的 ID。 *principal_id*的值为**int**，默认值为 NULL。 必须指定*principal_id*或*principal_name* 。  
+`[ @principal_id = ] principal_id` 要更改的关联的 **msdb** 数据库中数据库用户或角色的 ID。 *principal_id* 的值为 **int**，默认值为 NULL。 必须指定 *principal_id* 或 *principal_name* 。  
   
-`[ @principal_name = ] 'principal_name'`要更新的关联的**msdb**数据库中数据库用户或角色的名称。 *principal_name*的默认值为**sysname**，默认值为 NULL。 可以指定*principal_id*或*principal_name* 。  
+`[ @principal_name = ] 'principal_name'` 要更新的关联的 **msdb** 数据库中数据库用户或角色的名称。 *principal_name* 的默认值为 **sysname**，默认值为 NULL。 可以指定 *principal_id* 或 *principal_name* 。  
   
-`[ @profile_id = ] profile_id`要更改的关联的配置文件的 id。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_id = ] profile_id` 要更改的关联的配置文件的 id。 *profile_id* 的值为 **int**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'`要更改的关联的配置文件的名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_name = ] 'profile_name'` 要更改的关联的配置文件的名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @is_default = ] 'is_default'`此配置文件是否为数据库用户的默认配置文件。 数据库用户只能有一个默认的配置文件。 *is_default*是**bit**，无默认值。  
+`[ @is_default = ] 'is_default'` 此配置文件是否为数据库用户的默认配置文件。 数据库用户只能有一个默认的配置文件。 *is_default* 是 **bit**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -60,19 +61,19 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="remarks"></a>备注  
  此存储过程会更改指定的配置文件是否为数据库用户的默认配置文件。 一个数据库用户只能有一个默认专用配置文件。  
   
- 如果关联的主体名称是**公共**的或关联的主体 id 为**0**，则此存储过程将更改公共配置文件。 只能有一个默认的公共配置文件。  
+ 如果关联的主体名称是 **公共** 的或关联的主体 id 为 **0**，则此存储过程将更改公共配置文件。 只能有一个默认的公共配置文件。  
   
  当** \@ is_default**为 "**1**" 并且主体与多个配置文件关联时，指定的配置文件将成为主体的默认配置文件。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
   
- 存储过程**sysmail_update_principalprofile_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_update_principalprofile_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  **A. 将一个配置文件设置为数据库的默认公共配置文件**  
   
- 下面的示例将配置文件设置 `General Use Profile` 为**msdb**数据库中的用户的默认公共配置文件。  
+ 下面的示例将配置文件设置 `General Use Profile` 为 **msdb** 数据库中的用户的默认公共配置文件。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B. 将一个配置文件设置为用户的默认专用配置文件**  
   
- 下面的示例将配置文件设置 `AdventureWorks Administrator` 为 `ApplicationUser` **msdb**数据库中主体的默认配置文件。 该配置文件必须已与主体关联。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
+ 下面的示例将配置文件设置 `AdventureWorks Administrator` 为 `ApplicationUser` **msdb** 数据库中主体的默认配置文件。 该配置文件必须已与主体关联。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

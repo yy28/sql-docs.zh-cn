@@ -1,5 +1,6 @@
 ---
-title: sp_batch_params （Transact-sql） |Microsoft Docs
+description: sp_batch_params (Transact-SQL)
+title: sp_batch_params (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceb162fa058f1dd46eea196929586b8e31f4152c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493460"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  返回一个行集，其中包含有关批中包含的参数的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 **sp_batch_params**仅分析指定的批处理，并返回有关嵌入的参数值的信息。 此命令不会执行批处理，也不会修改执行环境。  
+  返回一个行集，其中包含有关批中包含的参数的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 **sp_batch_params** 仅分析指定的批处理，并返回有关嵌入的参数值的信息。 此命令不会执行批处理，也不会修改执行环境。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,10 +40,10 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tsqlbatch = ] 'tsqlbatch'`一个 Unicode 字符串，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所需的参数信息的语句或批处理。 *tsqlbatch*为**nvarchar （max）** 或可隐式转换为**nvarchar （max）**。  
+`[ @tsqlbatch = ] 'tsqlbatch'` 一个 Unicode 字符串，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所需的参数信息的语句或批处理。 *tsqlbatch* 是 **nvarchar (max) ** 或可隐式转换为 **nvarchar (max) **。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -50,15 +51,15 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |-----------------|---------------|-----------------|  
 |**PARAMETER_NAME**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在批处理中找到的参数的名称。|  
 |**COLUMN_TYPE**|**smallint**|此字段返回下列值之一：<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> 此列始终为 0。|  
-|**DATA_TYPE**|**smallint**|参数的数据类型（ODBC 数据类型的整数代码）。 如果此数据类型无法映射到 ISO 类型，则值为 NULL。 本机数据类型名称在**TYPE_NAME**列中返回。 此值始终为 NULL。|  
+|**DATA_TYPE**|**smallint**|参数的数据类型（ODBC 数据类型的整数代码）。 如果此数据类型无法映射到 ISO 类型，则值为 NULL。 本机数据类型名称在 **TYPE_NAME** 列中返回。 此值始终为 NULL。|  
 |**TYPE_NAME**|**sysname**|数据类型的字符串表示形式，通过基础 DBMS 提供。 此值为 NULL。|  
 |**PRECISION**|**int**|有效数字位数。 **PRECISION**列的返回值以10为底。|  
 |**LENGTH**|**int**|数据的传输大小。 此值为 NULL。|  
 |**纵向**|**smallint**|小数点右边的数字位数。 此值为 NULL。|  
-|**基数**|**smallint**|数值类型的基数。 此值为 NULL。|  
+|**RADIX**|**smallint**|数值类型的基数。 此值为 NULL。|  
 |**可以为 NULL**|**smallint**|指定为空性：<br /><br /> 1 = 可以将参数数据类型创建为允许空值。<br /><br /> 0 = 不允许空值。<br /><br /> 此值为 NULL。|  
-|**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，在说明符的 TYPE 字段中显示。 除了**datetime**和 ISO **interval**数据类型之外，此列与**DATA_TYPE**列相同。 该列始终返回值。 此值为 NULL。|  
-|**SQL_DATETIME_SUB**|**smallint**|如果**SQL_DATA_TYPE**的值 SQL_DATETIME 或 SQL_INTERVAL，则为**datetime**或 ISO **interval**子代码。 对于 datetime**** 和 ISO interval**** 以外的数据类型，该列为 NULL。 此值为 NULL。|  
+|**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，在说明符的 TYPE 字段中显示。 此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外    。 该列始终返回值。 此值为 NULL。|  
+|**SQL_DATETIME_SUB**|**smallint**|如果**SQL_DATA_TYPE**的值 SQL_DATETIME 或 SQL_INTERVAL，则为**datetime**或 ISO **interval**子代码。 对于 datetime  和 ISO interval  以外的数据类型，该列为 NULL。 此值为 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|**字符**或**二进制**数据类型参数的最大长度（以字节为单位）。 对于所有其他数据类型，此列返回 NULL。 此值始终为 NULL。|  
 |**ORDINAL_POSITION**|**int**|参数在批处理中的顺序位置。 如果参数名称重复多次，则此列使用第一次出现的序号。 第一个参数的序号为 1。 该列始终返回值。|  
   

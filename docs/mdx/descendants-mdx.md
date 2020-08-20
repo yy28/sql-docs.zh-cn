@@ -1,5 +1,6 @@
 ---
-title: 子代（MDX） |Microsoft Docs
+description: Descendants (MDX)
+title: 子代 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b883d1ce73a7259b285748e5a66f283a7d830424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491436"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -48,20 +49,20 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
- *距离*  
+ *长途*  
  指定与指定成员距离的有效数值表达式。  
   
  *Desc_Flag*  
  指定用于区分可能后代集的说明标志的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了级别，则**子代**函数将返回一个集，该集包含指定成员的后代或指定集的成员（可以选择通过*Desc_Flag*中指定的标志进行修改）。  
+ 如果指定了级别，则 **子代** 函数将返回一个集，该集包含指定成员的后代或指定集的成员（可以选择通过 *Desc_Flag*中指定的标志进行修改）。  
   
- 如果指定了*距离*，则**子代**函数将返回一个集，该集包含指定成员的后代或指定集的成员，这些后代是在指定成员的层次结构中指定的级别数，可以选择通过*Desc_Flag*中指定的标志来修改。 通常情况下，此函数与 Distance 参数一同用于处理不规则的层次结构。 如果指定距离为零 (0)，该函数将返回仅由指定的成员或指定的集组成的集。  
+ 如果指定了 *距离* ，则 **子代** 函数将返回一个集，该集包含指定成员的后代或指定集的成员，这些后代是在指定成员的层次结构中指定的级别数，可以选择通过 *Desc_Flag*中指定的标志来修改。 通常情况下，此函数与 Distance 参数一同用于处理不规则的层次结构。 如果指定距离为零 (0)，该函数将返回仅由指定的成员或指定的集组成的集。  
   
- 如果指定了集表达式，则为集合中的每个成员单独解析**子代**函数，然后再次创建该集。 换言之，用于**后代**函数的语法在功能上等同于 MDX[生成](../mdx/generate-mdx.md)函数。  
+ 如果指定了集表达式，则为集合中的每个成员单独解析 **子代** 函数，然后再次创建该集。 换言之，用于 **后代** 函数的语法在功能上等同于 MDX [生成](../mdx/generate-mdx.md) 函数。  
   
- 如果未指定级别或距离，则函数使用的级别的默认值是通过调用[level](../mdx/level-mdx.md)函数（<\<Member>> 来确定的。级别）（如果指定了成员）或通过为指定集的每个成员调用**level**函数（如果指定了集）。 如果未指定级别表达式、距离或标志，此函数将在假定使用了以下语法的情况下执行操作：  
+ 如果未指定级别或距离，则函数使用的级别的默认值是通过调用 [level](../mdx/level-mdx.md) 函数 ( # B0> 确定的 \<Member> 。指定成员的级别)  (如果) 指定了成员，则为; 如果 () 指定了集，则为指定集的每个成员调用 **level** 函数。 如果未指定级别表达式、距离或标志，此函数将在假定使用了以下语法的情况下执行操作：  
   
  `Descendants`  
   
@@ -89,9 +90,9 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  `)`  
   
- 通过更改说明标志的值，可以包括或排除位于指定级别或指定距离处的后代、位于指定级别或距离之前或之后（直到叶节点为止）的子成员以及位于任何级别或距离的叶子成员。 下表描述了*Desc_Flag*参数中允许使用的标志。  
+ 通过更改说明标志的值，可以包括或排除位于指定级别或指定距离处的后代、位于指定级别或距离之前或之后（直到叶节点为止）的子成员以及位于任何级别或距离的叶子成员。 下表描述了 *Desc_Flag* 参数中允许使用的标志。  
   
-|标志|说明|  
+|Flag|描述|  
 |----------|-----------------|  
 |SELF|仅返回指定级别或指定距离处的后代成员。 如果指定级别为指定成员所在的级别，该函数将包括指定成员。|  
 |AFTER|返回指定级别或指定距离处的所有从属级别的后代成员。|  
@@ -123,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- 下面的示例返回`Measures.[Gross Profit Margin]`度量值的每日平均值，该度量值是通过来自**艾德公司**的2003会计年度中每个月的几天计算得出的。 **子代**函数返回根据`[Date].[Fiscal]`层次结构的当前成员确定的一组天数。  
+ 下面的示例返回度量值的每日平均值 `Measures.[Gross Profit Margin]` ，该度量值是通过来自 **艾德公司** 的2003会计年度中每个月的几天计算得出的。 **子代**函数返回根据层次结构的当前成员确定的一组天数 `[Date].[Fiscal]` 。  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  
@@ -140,7 +141,7 @@ FROM [Adventure Works]
 WHERE ([Date].[Fiscal Year].&[2003])  
 ```  
   
- 下面的示例使用级别表达式并返回澳大利亚每个州省/市/自治区的 Internet 销售金额，并为每个州/省返回澳大利亚的 Internet 销售总额的百分比。 此示例使用 Item 函数从**上级**函数返回的集中提取第一个（且唯一的）元组。  
+ 下面的示例使用级别表达式并返回澳大利亚每个州省/市/自治区的 Internet 销售金额，并为每个州/省返回澳大利亚的 Internet 销售总额的百分比。 此示例使用 Item 函数从 **上级** 函数返回的集中提取第一个 (并仅) 元组。  
   
 ```  
 WITH MEMBER Measures.x AS   

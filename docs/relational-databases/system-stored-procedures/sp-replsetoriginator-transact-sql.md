@@ -1,5 +1,6 @@
 ---
-title: sp_replsetoriginator （Transact-sql） |Microsoft Docs
+description: sp_replsetoriginator (Transact-SQL)
+title: sp_replsetoriginator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1811a523e23de9726517bfabd1ddf8417aa3c5fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c75f590fc0482319783d1fb94f516d43581dd39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493080"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,19 +38,19 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
     , [ @database_name= ] 'database_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @server_name = ] 'server_name'`应用事务的服务器的名称。 *originating_server* **sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @server_name = ] 'server_name'` 应用事务的服务器的名称。 *originating_server* **sysname**，无默认值。  
   
-`[ @database_name = ] 'database_name'`应用事务的数据库的名称。 *originating_db* **sysname**，无默认值。  
+`[ @database_name = ] 'database_name'` 应用事务的数据库的名称。 *originating_db* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replsetoriginator**由分发代理执行，以记录由复制应用的事务的源。 该信息用于为具有环回属性集的双向事务订阅调用环回检测。  
+ **sp_replsetoriginator** 由分发代理执行，以记录由复制应用的事务的源。 该信息用于为具有环回属性集的双向事务订阅调用环回检测。  
   
 ## <a name="permissions"></a>权限  
- 只有发布服务器上**sysadmin**固定服务器角色的成员、发布数据库上**db_owner**固定数据库角色的成员或发布访问列表（PAL）中的用户才能执行**sp_replsetoriginator**。  
+ 只有发布服务器上 **sysadmin** 固定服务器角色的成员、发布数据库上 **db_owner** 固定数据库角色的成员或发布访问列表中的用户 (PAL) 可以执行 **sp_replsetoriginator**。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,6 @@
 ---
-title: cdc. ddl_history （Transact-sql） |Microsoft Docs
+description: cdc.ddl_history (Transact-SQL)
+title: ddl_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3332c82cdfefad09c4230ae52560f7bdf4e65b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 212c97116aa3b37f78dca22af1b5e1ad58c24801
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492791"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为对启用了变更数据捕获的表所做的每一项数据定义语言 (DDL) 更改返回一行。 可以使用此表来确定源表发生 DDL 更改的时间以及更改的内容。 此表中不包含未发生 DDL 更改的源表的任何条目。  
   
- 我们建议您不要直接查询系统表， 请改为执行[sys.databases. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)存储过程。  
+ 我们建议您不要直接查询系统表， 请改为执行 [sys.databases. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 存储过程。  
    
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

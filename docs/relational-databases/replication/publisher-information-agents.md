@@ -1,4 +1,5 @@
 ---
+description: 发布服务器信息，代理
 title: 发布服务器信息，代理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,16 +14,16 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1430ec2b8ea281beeece3edbb6ef8be1dac75fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97c971a25a10c232f3ae9301caa45bb6b2123acb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493885"
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **“代理”** 选项卡显示与发布服务器关联的代理和维护作业的相关信息：  
+  “代理”选项卡显示与发布服务器关联的代理和维护作业的相关信息****：  
   
 -   快照代理，为所有发布显示。  
   
@@ -102,7 +103,7 @@ ms.locfileid: "85728279"
   
 -   重试  
   
--   正在运行  
+-   运行  
   
 -   未运行  
   
@@ -121,7 +122,7 @@ ms.locfileid: "85728279"
  **传送速率**  
  在分发数据库中提交更改的速率，以每秒的命令数为单位。  
   
- **滞后时间**  
+ **延迟**  
  从在发布数据库中提交最近的更改到在分发数据库中提交对应的命令经过的时间，以秒为单位。  
   
  **事务数**  
@@ -141,7 +142,7 @@ ms.locfileid: "85728279"
   
 -   重试  
   
--   正在运行  
+-   运行  
   
 -   未运行  
   
@@ -160,7 +161,7 @@ ms.locfileid: "85728279"
  **传送速率**  
  在分发数据库中提交更改的速率，以每秒的命令数为单位。  
   
- **滞后时间**  
+ **延迟**  
  从在订阅数据库中提交最近的更改到在发布数据库中提交对应的命令经过的时间，以秒为单位。  
   
  **事务数**  
@@ -180,7 +181,7 @@ ms.locfileid: "85728279"
   
 -   重试  
   
--   正在运行  
+-   运行  
   
 -   未运行  
   

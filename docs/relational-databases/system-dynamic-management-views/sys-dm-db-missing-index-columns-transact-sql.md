@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_missing_index_columns （Transact-sql） |Microsoft Docs
+description: sys.dm_db_missing_index_columns (Transact-SQL)
+title: sys. dm_db_missing_index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,17 +22,17 @@ ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23574f5bf194ca0d3bdc6b301cdb17b7be933ecd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f09e272586753e4b47666290c8635f9276980ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493724"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回与缺少索引（不包括空间索引）的数据库表列有关的信息。 **sys. dm_db_missing_index_columns**是动态管理功能。  
+  返回与缺少索引（不包括空间索引）的数据库表列有关的信息。 **sys. dm_db_missing_index_columns** 是动态管理功能。  
 
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +41,7 @@ ms.locfileid: "85718821"
 sys.dm_db_missing_index_columns(index_handle)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *index_handle*  
  唯一地标识缺失索引的整数。 它可以从下列动态管理对象中获得：  
   
@@ -54,7 +55,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|列的 ID。|  
 |column_name|**sysname**|表列的名称。|  
-|**column_usage**|**varchar （20）**|查询使用列的方式。 可能的值及其说明如下：<br /><br /> 相等性：列分配给表达相等性的谓词，格式为： <br />                        *表列*  = *constant_value*<br /><br /> 不等：列分配给表达不相等的谓词，例如，形式*为：*  >  *constant_value*的谓词。 “=”之外的任何比较运算符都表示不相等。<br /><br /> INCLUDE：列不用于计算谓词，但用于其他原因，例如，用于覆盖查询。|  
+|**column_usage**|**varchar (20) **|查询使用列的方式。 可能的值及其说明如下：<br /><br /> 相等性：列分配给表达相等性的谓词，格式为： <br />                        *表列*  = *constant_value*<br /><br /> 不等：列分配给表达不相等的谓词，例如，形式*为：*  >  *constant_value*的谓词。 “=”之外的任何比较运算符都表示不相等。<br /><br /> INCLUDE：列不用于计算谓词，但用于其他原因，例如，用于覆盖查询。|  
   
 ## <a name="remarks"></a>备注  
  当查询由查询优化器优化时，**sys.dm_db_missing_index_columns** 返回的信息将更新，因而不是持久化的。 缺失索引信息只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留缺失索引信息，则应定期制作缺失索引信息的备份副本。  

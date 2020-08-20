@@ -1,4 +1,5 @@
 ---
+description: '数据迁移报表 (DB2ToSQL) '
 title: 数据迁移报表 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ca2142492be2c2286178f3e51107a35fad00a212
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cd447b77c39ff0d65c238998822dcb13faaaa43c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492548"
 ---
 # <a name="data-migration-report-db2tosql"></a>数据迁移报表 (DB2ToSQL) 
-在将数据迁移到之后，将显示 "**数据迁移报表**" 对话框 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+在将数据迁移到之后，将显示 " **数据迁移报表** " 对话框 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
 **Status**  

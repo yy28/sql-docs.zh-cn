@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_query_plan （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_query_plan (Transact-SQL)
+title: sys. dm_exec_query_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b4c9264d769b535bcbc3e2f9e38e92d010f2f56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493710"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 以 XML 格式返回计划句柄指定的批查询的显示计划。 计划句柄指定的计划可以处于缓存或正在执行状态。  
   
-显示计划的 XML 架构已发布，并在[此 Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)上提供。 也可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装目录中找到该架构。  
+显示计划的 XML 架构已发布，并在 [此 Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)上提供。 也可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装目录中找到该架构。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +41,11 @@ ms.locfileid: "85734729"
 sys.dm_exec_query_plan(plan_handle)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 *plan_handle*  
-是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle*为**varbinary （64）**。   
+是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64) **。   
 
-可以从以下动态管理对象中获取*plan_handle* ：
+可以从以下动态管理对象中获取 *plan_handle* ：
   
 -   [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -64,25 +65,25 @@ sys.dm_exec_query_plan(plan_handle)
 |**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**数字**|**smallint**|为存储过程编号的整数。 例如，用于 **orders** 应用程序的一组过程可命名为 **orderproc;1**、**orderproc;2** 等等。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**过**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
-|**query_plan**|**xml**|包含与*plan_handle*一起指定的查询执行计划的编译时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
+|**query_plan**|**xml**|包含与 *plan_handle*一起指定的查询执行计划的编译时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
 ## <a name="remarks"></a>备注  
  在以下条件下，不会在为 **sys.dm_exec_query_plan** 返回的表的 **query_plan** 列中返回显示计划输出：  
   
--   如果使用*plan_handle*指定的查询计划已从计划缓存中逐出，则返回的表的**query_plan**列将为 null。 例如，如果在捕获计划句柄的时间与将其用于 **sys.dm_exec_query_plan** 的时间之间存在时间延迟，则可能会出现该情况。  
+-   如果使用 *plan_handle* 指定的查询计划已从计划缓存中逐出，则返回的表的 **query_plan** 列将为 null。 例如，如果在捕获计划句柄的时间与将其用于 **sys.dm_exec_query_plan** 的时间之间存在时间延迟，则可能会出现该情况。  
   
 -   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 除非当前正在执行此批处理，否则由于这些语句不在缓存中，而无法使用 **sys.dm_exec_query_plan** 来检索这些语句的 XML 显示计划。  
   
--   如果某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或存储过程包含对用户定义函数的调用或对动态 SQL 的调用（例如，使用 EXEC （*string*）），则用户定义函数的编译的 XML 显示计划不包含在由 sys.databases 或存储过程返回的表中 **。 dm_exec_query_plan** 。 相反，必须为与用户定义函数相对应的计划句柄单独调用**sys.databases dm_exec_query_plan** 。  
+-   如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或存储过程包含对用户定义函数或动态 SQL 调用的调用（例如，使用 EXEC (*string*) ），则用户定义函数的已编译的 XML 显示计划不包含在由 sys.databases 或存储过程的 **dm_exec_query_plan sys.databases** 返回的表中。 相反，必须为与用户定义函数相对应的计划句柄单独调用 **sys.databases dm_exec_query_plan** 。  
   
  当即席查询使用简单参数化或强制参数化时，**query_plan** 列将仅包含语句文本，而非实际查询计划。 若要返回查询计划，则应为已准备好的参数化查询的计划句柄调用 **sys.dm_exec_query_plan**。 可以通过引用 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 视图的 **sql** 列或 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 动态管理视图的文本列来确定查询是否已参数化。  
   
 > [!NOTE] 
-> 由于**xml**数据类型中允许的嵌套级别数有限制，因此**dm_exec_query_plan**无法返回满足或超过128嵌套元素级别的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **query_plan**列返回 NULL。   
-> 您可以使用[sys. dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)动态管理函数以文本格式返回查询计划的输出。  
+> 由于 **xml** 数据类型中允许的嵌套级别数有限制，因此 **dm_exec_query_plan** 无法返回满足或超过128嵌套元素级别的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **query_plan** 列返回 NULL。   
+> 您可以使用 [sys. dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) 动态管理函数以文本格式返回查询计划的输出。  
   
 ## <a name="permissions"></a>权限  
- 若要执行**dm_exec_query_plan**，用户必须是**sysadmin**固定服务器角色的成员或具有 `VIEW SERVER STATE` 对服务器的权限。  
+ 若要执行 **dm_exec_query_plan**，用户必须是 **sysadmin** 固定服务器角色的成员或具有 `VIEW SERVER STATE` 对服务器的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例显示如何使用 **sys.dm_exec_query_plan** 动态管理视图。  
@@ -163,12 +164,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sp_who &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
- [显示计划逻辑运算符和物理运算符引用](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
+ [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
  [sys. dm_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   

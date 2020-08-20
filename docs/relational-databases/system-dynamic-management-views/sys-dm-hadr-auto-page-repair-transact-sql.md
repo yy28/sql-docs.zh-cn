@@ -1,5 +1,6 @@
 ---
-title: sys. dm_hadr_auto_page_repair （Transact-sql） |Microsoft Docs
+description: sys.dm_hadr_auto_page_repair (Transact-SQL)
+title: sys. dm_hadr_auto_page_repair (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/05/2019
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53e41822c48bb61e9253ddd22eb1f348d539ca7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93c963fbe285407e56cafb8d13ebed0b7d4b3f31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493680"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85752848"
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [自动页面修复 &#40;可用性组：数据库镜像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [自动页修复（可用性组：数据库镜像）](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;Transact-sql&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

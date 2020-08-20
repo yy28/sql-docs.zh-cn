@@ -1,5 +1,6 @@
 ---
-title: sp_set_session_context （Transact-sql） |Microsoft Docs
+description: 'sp_set_session_context (Transact-sql) '
+title: sp_set_session_context (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -18,14 +19,14 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11a3bae7cc6cbf025370a947c8fa3194f978d419
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7f1aff8d7d8496604983c54099f818e98fffbf18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493045"
 ---
-# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context （Transact-sql）
+# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 在会话上下文中设置键值对。  
@@ -43,23 +44,23 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>参数  
  [ @key =] N'key '  
- 要设置的键，类型为**sysname**。 最大密钥大小为128个字节。  
+ 要设置的键，类型为 **sysname**。 最大密钥大小为128个字节。  
   
  [ @value =] "value"  
  **Sql_variant**类型的指定键的值。 如果将值设置为 NULL，则释放内存。 最大大小为 8,000 个字节。  
   
  [ @read_only =] {0 | 1}  
- 类型**位**的标志。 如果为1，则无法在此逻辑连接上再次更改指定键的值。 如果为0（默认值），则该值可以更改。  
+ 类型 **位**的标志。 如果为1，则无法在此逻辑连接上再次更改指定键的值。 如果 0 (默认值) ，则可更改该值。  
   
 ## <a name="permissions"></a>权限  
  任何用户都可以为其会话设置会话上下文。  
   
 ## <a name="remarks"></a>备注  
- 与其他存储过程一样，只有文本和变量（而不是表达式或函数调用）可以作为参数传递。  
+ 与其他存储过程一样， (不) 表达式或函数调用的文本和变量也可以作为参数传递。  
   
- 会话上下文的总大小限制为 1 MB。 如果设置的值导致超过此限制，则语句将失败。 可以监视[sys.databases&#41;dm_os_memory_objects &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)的总体内存使用情况。  
+ 会话上下文的总大小限制为 1 MB。 如果设置的值导致超过此限制，则语句将失败。 可以监视 [sys.databases&#41;dm_os_memory_objects &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)的总体内存使用情况。  
   
- 可以通过按如下所示 dm_os_memory_cache_counters 查询[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)来监视总体内存使用情况：`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 可以通过按如下所示 dm_os_memory_cache_counters 查询 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 来监视总体内存使用情况： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何设置并返回值为英语的名为 language 的会话上下文键。  

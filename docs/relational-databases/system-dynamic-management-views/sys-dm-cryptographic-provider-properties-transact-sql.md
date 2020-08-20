@@ -1,5 +1,6 @@
 ---
-title: sys. dm_cryptographic_provider_properties （Transact-sql） |Microsoft Docs
+description: sys.dm_cryptographic_provider_properties (Transact-SQL)
+title: sys. dm_cryptographic_provider_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c588e2c87783bfaeaf09b70350ec00c50c3b1f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 562c2884b0eda3488b436c1007c188ec7c64425b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493766"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,10 +53,10 @@ ms.locfileid: "85894585"
  sys.dm_cryptographic_provider_properties 视图是公开显示的。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [可扩展的密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [&#40;Transact-sql&#41;创建加密提供程序](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [与安全性相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

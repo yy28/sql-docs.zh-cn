@@ -1,4 +1,5 @@
 ---
+description: FT:Crawl Stopped 事件类
 title: FT:Crawl Stopped 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebe0c2680347336172c108753f237279648b0259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d88987358baf3e22b509b9fc6bdbc8d74eda2007
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491051"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  **:Crawl Stopped** 事件类指示全文爬网（填充）已停止。 之所以停止，可能是由于成功完成了爬网或者出错。  
+  :Crawl Stopped 事件类指示全文爬网（填充）已停止****。 之所以停止，可能是由于成功完成了爬网或者出错。  
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>FT:Crawl Stopped 事件类的数据列  
   
