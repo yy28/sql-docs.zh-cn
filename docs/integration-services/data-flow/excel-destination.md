@@ -1,4 +1,5 @@
 ---
+description: Excel 目标
 title: Excel 目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 399d5c52a2224dbd3d61832f5ec078d5b7339566
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2abf3c8a09ead6369a5201a2d582623f05bc2f79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477839"
 ---
 # <a name="excel-destination"></a>Excel 目标
 
@@ -67,10 +68,10 @@ ms.locfileid: "86914883"
   
 ### <a name="static-options"></a>静态选项  
  **Excel 连接管理器**  
- 从列表中选择现有的 Excel 连接管理器，或单击“新建”  创建新连接。  
+ 从列表中选择现有的 Excel 连接管理器，或单击“新建”**** 创建新连接。  
   
  **新建**  
- 使用“Excel 连接管理器”  对话框创建一个新连接管理器。  
+ 使用“Excel 连接管理器”**** 对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
@@ -82,10 +83,10 @@ ms.locfileid: "86914883"
 |SQL 命令|使用 SQL 查询将数据加载到 Excel 目标中。|  
   
  **Excel 表的名称**  
- 从下拉列表中选择 Excel 目标。 如果此列表为空，请单击 **“新建”** 。  
+ 从下拉列表中选择 Excel 目标。 如果此列表为空，请单击 **“新建”**。  
   
  **新建**  
- 单击“新建”将启动“创建表”对话框。   当您单击 **“确定”** 时，此对话框将创建 **“Excel 连接管理器”** 指向的 Excel 文件。  
+ 单击“新建”将启动“创建表”对话框。******** 当您单击 **“确定”** 时，此对话框将创建 **“Excel 连接管理器”** 指向的 Excel 文件。  
   
  **查看现有数据**  
  使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
@@ -102,7 +103,7 @@ ms.locfileid: "86914883"
   
 #### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。    
+ 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。********  
   
  **生成查询**  
  使用“查询生成器”  对话框可直观地构造 SQL 查询。  
@@ -137,7 +138,7 @@ ms.locfileid: "86914883"
  查看数据源的名称。  
   
  **列**  
- 查看在“Excel 源编辑器”对话框中“连接管理器”节点上选择的外部（源）列   。  
+ 查看在“Excel 源编辑器”对话框中“连接管理器”节点上选择的外部（源）列********。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  

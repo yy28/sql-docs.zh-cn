@@ -1,4 +1,5 @@
 ---
+description: DROP DEFAULT (Transact-SQL)
 title: DROP DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 976037fc77274b5b2fc6d43a4dc1a177ca6f73a9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1146be44b4ae2d02c1fcd94c4b0f2d53f52e55e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478877"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- IF EXISTS   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
+ IF EXISTS  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  只有在默认值已存在时才对其进行有条件地删除。  
   
  *schema_name*  
  默认值所属架构的名称。  
   
- default_name   
+ default_name**  
  现有默认值的名称。 若要查看现有默认值的列表，请执行 **sp_help**。 默认值必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定默认架构名称。  
   
 ## <a name="remarks"></a>备注  

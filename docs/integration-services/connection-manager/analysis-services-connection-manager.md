@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 连接管理器
 title: Analysis Services 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a30051a5fe50030df7dc784e123c266b96cabf5c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6fc6be0059b1e49c5db9cf2ced79e66c6b523b5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478209"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 连接管理器
 
@@ -33,7 +34,7 @@ ms.locfileid: "86918555"
  有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅[多维模型数据库 (SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)。  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Analysis Services 连接管理器的配置  
- 将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建在运行时作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接进行解析的连接管理器，同时还会设置该连接管理器的属性，并将该连接管理器添加到包的 Connections 集合  。 该连接管理器的 **ConnectionManagerType** 属性设置为 **MSOLAP100**。  
+ 将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建在运行时作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接进行解析的连接管理器，同时还会设置该连接管理器的属性，并将该连接管理器添加到包的 Connections 集合****。 该连接管理器的 **ConnectionManagerType** 属性设置为 **MSOLAP100**。  
   
  可以通过下列方式配置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器：  
   
@@ -44,7 +45,7 @@ ms.locfileid: "86918555"
 -   如果要连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，则应指定身份验证模式。  
 
 > [!NOTE]    
->  如果在 Azure 数据工厂 (ADF) 中使用 SSIS 并希望连接到 Azure Analysis Services (AAS) 实例，则不能使用已启用多重身份验证 (MFA) 的帐户，而必须使用不需要任何交互性/MFA 的账户或服务主体。 如要使用后者，请参阅[此处](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)创建一个并为其分配服务器管理员角色，然后选择“使用指定用户名和密码”以登录到连接管理器中的服务器，最后输入 `User name: app:YourApplicationID` 和 `Password: YourAuthorizationKey`。
+>  如果在 Azure 数据工厂 (ADF) 中使用 SSIS 并希望连接到 Azure Analysis Services (AAS) 实例，则不能使用已启用多重身份验证 (MFA) 的帐户，而必须使用不需要任何交互性/MFA 的账户或服务主体。 如要使用后者，请参阅[此处](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)创建一个并为其分配服务器管理员角色，然后选择“使用指定用户名和密码”以登录到连接管理器中的服务器，最后输入 `User name: app:YourApplicationID` 和 `Password: YourAuthorizationKey`****。
   
 -   指示是否在运行时保留从连接管理器中创建的连接。  
   

@@ -1,4 +1,5 @@
 ---
+description: RESTORE 语句 - FILELISTONLY (Transact-SQL)
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -22,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f72bc6a3a67f73fc7ab44e94514f7db7b6a905a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478759"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 语句 - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -89,8 +90,8 @@ FROM <backup_device>
 |列名称|数据类型|说明|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|文件的逻辑名称。|  
-|PhysicalName|nvarchar(260) |文件的物理名称或操作系统名称。|  
-|类型|**char(1)**|文件的类型，其中包括：<br /><br />  L = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件<br /><br />  D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件<br /><br />  F = 全文目录<br /><br />  S = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
+|PhysicalName|**nvarchar(260)**|文件的物理名称或操作系统名称。|  
+|类型|**char(1)**|文件的类型，其中包括：<br /><br /> **** L = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件<br /><br /> F = 全文目录<br /><br /> **** S = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
 |FileGroupName|**nvarchar(128)** NULL|包含文件的文件组的名称。|  
 |大小|**numeric(20,0)**|当前大小（以字节为单位）。|  
 |MaxSize|**numeric(20,0)**|允许的最大大小（以字节为单位）。|  
@@ -104,10 +105,10 @@ FROM <backup_device>
 |SourceBlockSize|**int**|包含文件的物理设备（并非备份设备）的块大小（以字节为单位）。|  
 |FileGroupID|**int**|文件组的 ID。|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL。|  
-|DifferentialBaseLSN|**numeric(25,0)** NULL|对于差异备份，日志序列号大于或等于 DifferentialBaseLSN 的更改都包含在差异中  。<br /><br /> 对于其他备份类型，该值为 NULL。|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|对于差异备份，日志序列号大于或等于 DifferentialBaseLSN 的更改都包含在差异中****。<br /><br /> 对于其他备份类型，该值为 NULL。|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|对于差异备份，该值是差异基准的唯一标识符。<br /><br /> 对于其他备份类型，该值为 NULL。|  
-|IsReadOnly|**bit**| 1 = 文件为只读文件。|  
-|IsPresent|**bit**| 1 = 文件出现在备份中。|  
+|IsReadOnly|**bit**|**** 1 = 文件为只读文件。|  
+|IsPresent|**bit**|**** 1 = 文件出现在备份中。|  
 |TDEThumbprint|**varbinary(32)** NULL|显示数据库加密密钥的指纹。 加密程序的指纹是带有加密密钥的证书的 SHA-1 哈希。 有关数据库加密的信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。|  
 |SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 备份中包含的数据库文件的 Azure 快照的 URL。 如果没有 FILE_SNAPSHOT 备份，则返回 NULL。|  
   

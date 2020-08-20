@@ -1,4 +1,5 @@
 ---
+description: 缓存连接管理器
 title: 缓存连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477927"
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
 
@@ -65,10 +66,10 @@ ms.locfileid: "86920823"
   
  查找转换在引用数据集上执行查找。  
   
- “缓存连接管理器编辑器”  对话框包含以下选项卡：  
+ “缓存连接管理器编辑器”**** 对话框包含以下选项卡：  
   
 ###  <a name="general-tab"></a><a name="generaltab"></a> “常规”选项卡  
- “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件   。  
+ “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件********。  
   
 #### <a name="options"></a>选项  
  **连接管理器名称**  
@@ -115,7 +116,7 @@ ms.locfileid: "86920823"
 > [!NOTE]  
 >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。  
   
- 类型   
+ **类型**  
  指定列的数据类型。  
   
  **长度**  

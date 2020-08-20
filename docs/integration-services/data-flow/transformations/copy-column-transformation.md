@@ -1,4 +1,5 @@
 ---
+description: 复制列转换
 title: 复制列转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af29ab26c4bd67bdb4ac00eadcfa59bb61bbb7ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 129cbbbc4c119a865f55567edc93900466013e39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477729"
 ---
 # <a name="copy-column-transformation"></a>复制列转换
 
@@ -60,7 +61,7 @@ ms.locfileid: "86914594"
  从可用的输入列列表中选择要复制的列。 通过选中 **“可用输入列”** 表中的复选框来选择列。  
   
  **输出别名**  
- 为每个新的输出列键入一个别名。 默认值为输入列名称后面跟着 **“的副本”** ；不过，您也可以任选一个唯一的描述性名称。  
+ 为每个新的输出列键入一个别名。 默认值为输入列名称后面跟着 **“的副本”**；不过，您也可以任选一个唯一的描述性名称。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   

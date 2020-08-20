@@ -1,4 +1,5 @@
 ---
+description: 传输登录名任务
 title: 传输登录名任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 242a5c58321ad211a7e27b28b4574433c45ceceb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ff8e4b35d30e9b2504dd128ca9694007647f5eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477911"
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
 
@@ -106,7 +107,7 @@ ms.locfileid: "86914765"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<New connection...>”以创建到源服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击 \<New connection...> 创建与源服务器的新连接。  
   
  **DestinationConnection**  
  从列表中选择一个 SMO 连接管理器，或单击“\<New connection...>”以创建到目标服务器的新连接。  

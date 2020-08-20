@@ -1,4 +1,5 @@
 ---
+description: DROP QUEUE (Transact-SQL)
 title: DROP QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f335af8eaeb9c217b252b6b683d3652ebac999c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 28269fcc3c3b4e43e1343bb13abb72d1716a5b0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478788"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,12 +51,12 @@ DROP QUEUE <object>
 
 ## <a name="arguments"></a>参数
  *database_name*  
- 数据库的名称，此数据库包含要删除的队列。 如果未提供 database_name，则默认为当前数据库  。  
+ 数据库的名称，此数据库包含要删除的队列。 如果未提供 database_name，则默认为当前数据库**。  
   
- schema_name（对象）   
- 架构的名称，此架构拥有要删除的队列。 如果未提供 schema_name，则默认为当前用户的默认架构  。  
+ schema_name（对象）  
+ 架构的名称，此架构拥有要删除的队列。 如果未提供 schema_name，则默认为当前用户的默认架构**。  
   
- queue_name   
+ queue_name  
  要删除的队列的名称。  
   
 ## <a name="remarks"></a>备注  

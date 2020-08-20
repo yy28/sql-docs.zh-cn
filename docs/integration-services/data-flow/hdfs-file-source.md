@@ -1,4 +1,5 @@
 ---
+description: HDFS 文件源
 title: HDFS 文件源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3be6be9e43d6e9e643ea76c4d4a08cd5b370b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b015d1d62e42b5b453c273d899c387a222c3fe2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477799"
 ---
 # <a name="hdfs-file-source"></a>HDFS 文件源
 
@@ -31,7 +32,7 @@ ms.locfileid: "86920252"
  ![HDFS 文件源编辑器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS 文件源编辑器")  
   
 ## <a name="options"></a>选项  
- 在“Hadoop 文件源编辑器”  对话框的“常规”  选项卡上配置以下选项。  
+ 在“Hadoop 文件源编辑器” **** 对话框的“常规” **** 选项卡上配置以下选项。  
   
 |字段|说明|  
 |-----------|-----------------|  
@@ -41,7 +42,7 @@ ms.locfileid: "86920252"
 |**列分隔符字符**|如果你选择文本格式，请指定列分隔符字符。|  
 |**第一个数据行中的列名称**|如果你选择文本格式，请指定文件中的第一行是否包含列名称。|  
   
- 配置这些选项后，选择“列”  选项卡，将源列映射到数据流中的目标列。  
+ 配置这些选项后，选择“列” **** 选项卡，将源列映射到数据流中的目标列。  
   
 ## <a name="see-also"></a>另请参阅  
  [Hadoop 连接管理器](../../integration-services/connection-manager/hadoop-connection-manager.md)   

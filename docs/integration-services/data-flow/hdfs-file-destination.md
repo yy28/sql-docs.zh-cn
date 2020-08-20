@@ -1,4 +1,5 @@
 ---
+description: HDFS 文件目标
 title: HDFS 文件目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2019
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ab4b9ae139d50beb707d751b14da32224bade67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfac02ca6db43d77f9157449df7319a6b67418e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477814"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 文件目标
 
@@ -31,7 +32,7 @@ ms.locfileid: "86920851"
  ![HDFS 文件目标编辑器](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS 文件目标编辑器")
 
 ## <a name="options"></a>选项
- 在“Hadoop 文件目标编辑器”  对话框的“常规”  选项卡上配置以下选项。
+ 在“Hadoop 文件目标编辑器” **** 对话框的“常规” **** 选项卡上配置以下选项。
 
 |字段|说明|
 |-----------|-----------------|
@@ -41,7 +42,7 @@ ms.locfileid: "86920851"
 |**列分隔符字符**|如果你选择文本格式，请指定列分隔符字符。|
 |**第一个数据行中的列名称**|如果你选择文本格式，请指定文件中的第一行是否包含列名称。|
 
- 配置这些选项后，选择“列”  选项卡，将源列映射到数据流中的目标列。
+ 配置这些选项后，选择“列” **** 选项卡，将源列映射到数据流中的目标列。
 
 ::: moniker range=">= sql-server-ver15"
 
@@ -58,8 +59,8 @@ Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体
 2. 从命令提示符处，运行 `sysdm.cpl`。
 3. 在“高级”选项卡上，选择“环境变量”   。
 4. 在“系统变量”部分中，选择“新建”   。
-5. 输入变量名称 `JAVA_HOME`  。
-6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹。
+5. 输入变量名称 `JAVA_HOME` 。
+6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹  。
    然后选择“确定”，“变量值”将自动进行填充   。
 7. 选择“确定”，关闭“新建系统变量”对话框   。
 8. 选择“确定”，关闭“环境变量”对话框   。

@@ -1,4 +1,5 @@
 ---
+description: “高级编辑器”
 title: “高级编辑器” | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e8c23226d43bd9d10d56b84ae0b4edccc40151d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478050"
 ---
 # <a name="advanced-editor"></a>“高级编辑器”
 
@@ -34,15 +35,15 @@ ms.locfileid: "86923163"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 数据流对象具有可以在组件级、输入和输出级以及输入和输出列级设置的属性。 **“高级编辑器”** 可以枚举所选对象的全部通用和自定义属性，并最多可在下列五个选项卡中的四个选项卡上显示相应的属性：  
   
--    “连接管理器”-- 使用此选项卡可以设置连接属性  
+-   ****“连接管理器”-- 使用此选项卡可以设置连接属性  
   
--    “组件属性”-- 使用此选项卡可以设置组件级别属性  
+-   ****“组件属性”-- 使用此选项卡可以设置组件级别属性  
   
--    “列映射”-- 使用此选项卡可将可用列映射为输出列  
+-   ****“列映射”-- 使用此选项卡可将可用列映射为输出列  
   
--    “输入列”-- 使用此选项卡可选择输入列  
+-   ****“输入列”-- 使用此选项卡可选择输入列  
   
--    “输入和输出属性”-- 使用此选项卡可设置输入和输出属性；并且可以添加和删除输出、为输入和输出选择或删除列以及为输入和输出设置属性  
+-   ****“输入和输出属性”-- 使用此选项卡可设置输入和输出属性；并且可以添加和删除输出、为输入和输出选择或删除列以及为输入和输出设置属性  
   
  所显示的属性因组件而异。 有关可能在 **“高级编辑器”** 中显示的属性的详细信息，请参阅下列主题：  
   

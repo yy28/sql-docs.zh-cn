@@ -1,4 +1,5 @@
 ---
+description: 有条件拆分转换
 title: 有条件拆分转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477752"
 ---
 # <a name="conditional-split-transformation"></a>有条件拆分转换
 
@@ -85,12 +86,12 @@ ms.locfileid: "86923195"
  **输出名称**  
  提供输出名称。 默认为带编号的名称示例列表，不过，您也可以任选一个唯一的描述性名称。  
   
- **条件**  
+ Condition  
  键入表达式，或通过从可用的列、变量、函数和运算符的列表中拖动相应项来生成表达式。  
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **相关主题：**  [Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **默认输出名称**  
  为默认输出键入名称，或使用默认名称。  

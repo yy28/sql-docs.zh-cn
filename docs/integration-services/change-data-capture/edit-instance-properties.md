@@ -1,4 +1,5 @@
 ---
+description: 编辑实例属性
 title: 编辑实例属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69eff5afd66fb7167d894e116e5a5b1f21bf9b81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 926ee3afb3828419a6863e99f27f529d4dcc1bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478071"
 ---
 # <a name="edit-instance-properties"></a>编辑实例属性
 
@@ -42,18 +43,18 @@ ms.locfileid: "86921673"
   
 2.  选择要编辑其属性的 CDC 实例。  
   
-3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”** 。  
+3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”**。  
   
-     还可以在左窗格中右键单击该服务，然后选择“属性”  。  
+     还可以在左窗格中右键单击该服务，然后选择“属性”****。  
   
-### <a name="or"></a>或  
+### <a name="or"></a>OR  
   
 1.  从 CDC 设计器控制台的左窗格中，选择您正在使用的服务。  
   
 2.  从 CDC 设计器控制台中心的列表中，选择要编辑其属性的 CDC 实例。  
   
-3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”** 。  
+3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”**。  
   
-     还可以从 CDC 设计器控制台中心的列表中右键单击该服务，然后选择“属性”  。  
+     还可以从 CDC 设计器控制台中心的列表中右键单击该服务，然后选择“属性”****。  
   
   

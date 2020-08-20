@@ -1,4 +1,5 @@
 ---
+description: 使用数据转换进行数据类型的转换
 title: 使用数据转换进行数据类型的转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb9eeaab778b314d8084ec739a1364d40e19c3b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477735"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>使用数据转换进行数据类型的转换
 
@@ -40,7 +41,7 @@ ms.locfileid: "86920623"
   
 5.  双击此数据转换。  
   
-6.  在“数据转换编辑器”对话框的“可用输入列”表中，选中位于要转换其数据类型的列旁边的复选框   。  
+6.  在“数据转换编辑器”对话框的“可用输入列”表中，选中位于要转换其数据类型的列旁边的复选框********。  
   
     > [!NOTE]  
     >  可以将多个数据转换应用到一个输入列。  
@@ -49,11 +50,11 @@ ms.locfileid: "86920623"
   
 8.  在 **“数据类型”** 列表中，选择列的新数据类型。 默认数据类型为输入列的数据类型。  
   
-9. 也可以根据所选数据类型更新 **“长度”** 、 **“精度”** 、 **“小数位数”** 和 **“代码页”** 列的值。  
+9. 也可以根据所选数据类型更新 **“长度”**、 **“精度”**、 **“小数位数”** 和 **“代码页”** 列的值。  
   
 10. 若要配置错误输出，请单击 **“配置错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 单击“确定”。   
+11. 单击“确定”。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

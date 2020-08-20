@@ -1,4 +1,5 @@
 ---
+description: 列统计信息配置文件请求选项（数据事件探查任务）
 title: 列统计信息配置文件请求选项（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4704a619f6c8230ff811dc4d7e25d1bdf031297
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 106b5de2807fe41c85d83129a6f285630fd2ab86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477910"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>列统计信息配置文件请求选项（数据事件探查任务）
 
@@ -32,7 +33,7 @@ ms.locfileid: "86913223"
  有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“列统计信息配置文件请求”** ， **“请求属性”** 窗格显示下面的选项组：  
+ 对于 **“列统计信息配置文件请求”**， **“请求属性”** 窗格显示下面的选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   

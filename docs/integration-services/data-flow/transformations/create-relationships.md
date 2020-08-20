@@ -1,4 +1,5 @@
 ---
+description: 创建关系
 title: 创建关系 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b961f1d97430b87343832710c27d79e1e329c6bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 67dcda91fa83869c927b10d769af3866b8bcd146
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477719"
 ---
 # <a name="create-relationships"></a>创建关系
 
@@ -27,7 +28,7 @@ ms.locfileid: "86918839"
   可以使用 **“创建关系”** 对话框，编辑源列与在模糊查找转换编辑器、查找转换编辑器或字词查找转换编辑器中配置的查找表列之间的映射。  
   
 > [!NOTE]  
->  通过字词查找转换编辑器调用“创建关系”  对话框时，只显示“输入列”  和“查找列”  列表。  
+>   通过字词查找转换编辑器调用 **“创建关系”** 对话框时，只显示 **“输入列”** 和 **“查找列”** 列表。  
   
  若要了解有关使用 **“创建关系”** 对话框的转换的详细信息，请参阅 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)、 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)和 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)。  
   

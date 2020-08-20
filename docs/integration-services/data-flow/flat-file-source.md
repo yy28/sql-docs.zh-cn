@@ -1,4 +1,5 @@
 ---
+description: 平面文件源
 title: 平面文件源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6eea48434554705c49e8291f01a8e32aabfd1b0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c52bae62d70212ea735ec9d0d7eb25cf8af76551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477825"
 ---
 # <a name="flat-file-source"></a>平面文件源
 
@@ -80,10 +81,10 @@ ms.locfileid: "86915000"
   
 ### <a name="options"></a>选项  
  **Flat file connection manager**  
- 从列表中选择现有的连接管理器，或单击“新建”  创建新的连接管理器。  
+ 从列表中选择现有的连接管理器，或单击“新建”**** 创建新的连接管理器。  
   
  **新建**  
- 通过使用“平面文件连接管理器编辑器”  对话框创建新的连接管理器。  
+ 通过使用“平面文件连接管理器编辑器”**** 对话框创建新的连接管理器。  
   
  **在数据流中保留源中的空值**  
  指定提取数据时是否保留空值。 此属性的默认值为 **false**。 当此值为 F**alse**时，平面文件源使用每列的相应默认值替换源数据中的空值，例如，对于字符串列使用空字符串，对于数值列使用零。  
@@ -92,7 +93,7 @@ ms.locfileid: "86915000"
  通过使用“数据视图”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ## <a name="flat-file-source-editor-columns-page"></a>平面文件源编辑器（“列”页）
-  可以使用“平面文件源编辑器”  对话框的“列”  节点，将输出列映射到每个外部（源）列。  
+  可以使用“平面文件源编辑器”**** 对话框的“列”**** 节点，将输出列映射到每个外部（源）列。  
   
 > [!NOTE]  
 >  平面文件源的 **FileNameColumnName** 属性及其输出列的 **FastParse** 属性未在 **“平面文件源编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  
@@ -108,14 +109,14 @@ ms.locfileid: "86915000"
  为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
 ## <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
-  可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。    
+  可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。********  
   
 ### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
  **列**  
- 查看在“平面文件源编辑器”对话框中“连接管理器”页上选择的外部（源）列。    
+ 查看在“平面文件源编辑器”对话框中“连接管理器”页上选择的外部（源）列。********  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
