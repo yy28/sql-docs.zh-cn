@@ -1,5 +1,6 @@
 ---
-title: ODBC 服务提供程序接口（SPI）参考 |Microsoft Docs
+description: ODBC 服务提供程序接口 (SPI) 参考
+title: ODBC 服务提供程序接口 (SPI) 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9739abd13bf2c4bed1b1b3a31c18c683594705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ef1eea6dd78537169d3394c7d048d1829e8d9a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487350"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 服务提供程序接口 (SPI) 参考
-传统上，ODBC 定义了应用程序编程接口（API）。 API 中的函数可以由应用程序调用，它们应在驱动程序管理器和驱动程序内实现。  
+传统上，ODBC 定义了一个 (API) 的应用程序编程接口。 API 中的函数可以由应用程序调用，它们应在驱动程序管理器和驱动程序内实现。  
   
- 添加了驱动程序感知连接池功能后，ODBC 会引入服务提供程序接口（SPI）。 SPI 中的函数用于驱动程序管理器和驱动程序之间的通信。 SPI 函数由驱动程序实现;驱动程序管理器不会向应用程序公开 SPI 函数。 应用程序不应直接调用这些函数。  
+ 添加了驱动程序感知连接池功能后，ODBC 将 (SPI) 引入服务提供程序接口。 SPI 中的函数用于驱动程序管理器和驱动程序之间的通信。 SPI 函数由驱动程序实现;驱动程序管理器不会向应用程序公开 SPI 函数。 应用程序不应直接调用这些函数。  
   
  包括用于 ODBC 驱动程序开发的 sqlspi。  
   

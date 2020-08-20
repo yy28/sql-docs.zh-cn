@@ -1,4 +1,5 @@
 ---
+description: '查找数据库向导 (选择位置)  (AccessToSQL) '
 title: 查找数据库向导 (选择位置)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,27 +12,27 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488308"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 (选择位置)  (AccessToSQL) 
 在 "查找数据库" 向导的 "选择位置" 页上，输入用于查找 Access 数据库的搜索参数。  
   
-若要打开 "查找数据库向导"，请在 "**文件**" 菜单上单击 "**查找数据库**"。 有关如何使用此对话框的详细信息，请参阅[添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
+若要打开 "查找数据库向导"，请在 " **文件** " 菜单上单击 " **查找数据库**"。 有关如何使用此对话框的详细信息，请参阅 [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>选项  
 **“浏览”**  
-单击浏览计算机或网络。 选择要搜索的文件夹或位置，然后单击 **"确定"**。 单击 "**添加**" 将此位置添加到列表。  
+单击浏览计算机或网络。 选择要搜索的文件夹或位置，然后单击 **"确定"**。 单击 " **添加** " 将此位置添加到列表。  
   
 **路径框**  
-显示要添加到 "位置" 框中的路径。 输入或浏览到要扫描的路径，然后单击 "**添加**" 按钮。  
+显示要添加到 "位置" 框中的路径。 输入或浏览到要扫描的路径，然后单击 " **添加** " 按钮。  
   
 **位置框**  
-列出 SSMA 将扫描的位置。 单击 "**添加**" 按钮时，会将指定的路径添加到此框。  
+列出 SSMA 将扫描的位置。 单击 " **添加** " 按钮时，会将指定的路径添加到此框。  
   
 **添加**  
 将 "路径" 文本框中的位置添加到位置列表。  
@@ -46,10 +47,10 @@ ms.locfileid: "87938658"
 若要查找名称包含特定字符串的数据库，请输入字符串。 不要使用通配符。  
   
 **创建日期**  
-若要查找在特定日期范围内创建的数据库，请在 "**发件**箱"**和 "结束日期" 框中**输入开始日期。  
+若要查找在特定日期范围内创建的数据库，请在 " **发件** 箱" **和 "结束日期" 框中** 输入开始日期。  
   
 **上次更新日期**  
-若要查找在特定日期范围内最后更新的数据库，请在 "**发件**箱"**和 "结束日期" 框中**输入开始日期。  
+若要查找在特定日期范围内最后更新的数据库，请在 " **发件** 箱" **和 "结束日期" 框中** 输入开始日期。  
   
 **大小**  
 若要查找与大小条件匹配的数据库，请在第一个框中选择一个比较字符，为大小输入一个数字，然后从第三个框中选择 "字节"、"千字节" 或 "兆字节"。  
@@ -59,5 +60,5 @@ ms.locfileid: "87938658"
   
 ## <a name="see-also"></a>另请参阅  
 [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
-[ (访问) 的用户界面参考](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ (访问) 的用户界面参考 ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

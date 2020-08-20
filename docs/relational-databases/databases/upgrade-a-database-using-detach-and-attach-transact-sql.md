@@ -1,4 +1,5 @@
 ---
+description: 使用分离和附加来升级数据库 (Transact-SQL)
 title: 使用分离和附加来升级数据库 (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -16,18 +17,18 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3bb3afe218c4087e09b8227bbcbf8c60798a3b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487075"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用分离和附加来升级数据库 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 本主题说明如何使用分离和附加操作在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中升级数据库。 在附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，数据库将立即变为可用，然后会自动进行升级。 这将阻止数据库被旧版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用。 但是，元数据升级不会影响数据库的[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)设置。 有关详细信息，请参阅本主题后面的[升级后的数据库兼容性级别](#dbcompat)。  
   
- **本主题内容**  
+ **在本主题中**  
   
 -   **开始之前：**  
   
@@ -41,7 +42,7 @@ ms.locfileid: "85694724"
   
 -   **跟进：**    
 
-     [升级 SQL Server 数据库之后](#FollowUp)  
+     [在升级 SQL Server 数据库之后](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -104,7 +105,7 @@ ms.locfileid: "85694724"
     GO  
     ```  
   
-    在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”** 。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
+    在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”**。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
   
 ##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 跟进：在升级 SQL Server 数据库之后  
 如果数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于 **upgrade_option** 服务器属性的设置。 如果将升级选项设置为“导入”(**upgrade_option** = 2) 或“重新生成”(**upgrade_option** = 0)，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，如果将升级选项设置为“导入”，并且全文目录不可用，则会重新生成关联的全文索引。 若要更改 **upgrade_option** 服务器属性的设置，请使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。  

@@ -1,5 +1,6 @@
 ---
-title: CoalesceEmpty （MDX） |Microsoft Docs
+description: CoalesceEmpty (MDX)
+title: CoalesceEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fd02400d6b560e1cc0b21908b788a257f56b26c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487580"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -45,7 +46,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  有效字符串表达式，通常为指定的字符串值（该值被第一个字符串表达式返回的 NULL 代替）。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了一个或多个数值表达式，则**CoalesceEmpty**函数将返回可解析为非空值的第一个数值表达式的数值（从左到右）。 如果指定的所有数值表达式都不能被解析为非空值，则此函数返回空单元值。 通常情况下，第二个数值表达式的值是被第一个数值表达式返回的 NULL 代替的数值。  
+ 如果指定了一个或多个数值表达式，则 **CoalesceEmpty** 函数将返回第一个数值表达式的数值， (从左到右) 可解析为非空值。 如果指定的所有数值表达式都不能被解析为非空值，则此函数返回空单元值。 通常情况下，第二个数值表达式的值是被第一个数值表达式返回的 NULL 代替的数值。  
   
  如果指定了一个或多个字符串表达式，此函数将返回可被解析为非空值的第一个（从左向右）字符串表达式的值。 如果指定的所有字符串表达式都不能被解析为非空值，则此函数返回空单元值。 通常情况下，第二个字符串表达式的值是被第一个字符串表达式返回的 NULL 代替的字符串值。  
   
@@ -54,7 +55,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  有关空单元的详细信息，请参阅 OLE DB 文档。  
   
 ## <a name="example"></a>示例  
- 下面的示例查询**艾德工作**多维数据集。 此示例将返回每个产品的订单数量以及按类别排列的订单数量百分比。 在对计算成员进行格式设置时， **CoalesceEmpty**函数可确保 null 值表示为零（0）。  
+ 下面的示例查询 **艾德工作** 多维数据集。 此示例将返回每个产品的订单数量以及按类别排列的订单数量百分比。 **CoalesceEmpty**函数确保在对计算成员进行格式设置时，将 null 值表示为零 (0) 。  
   
 ```  
 WITH   

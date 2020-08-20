@@ -1,4 +1,5 @@
 ---
+description: 从 Microsoft Excel 访问 Visual FoxPro 数据源
 title: 从 Microsoft Excel 访问 Visual FoxPro 数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4afaeebb5b3a0d2430eafc6febf98f2fb9c16bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ce4e3bf96a41918fff392117a2fbbd1b9eb47f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487570"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>从 Microsoft Excel 访问 Visual FoxPro 数据源
 如果已安装 Microsoft Query，则可以在 Microsoft Excel 中创建连接到 Visual FoxPro 数据的数据源。  
@@ -47,4 +48,4 @@ ms.locfileid: "81302070"
   
 8.  单击“使用”。  
   
- 你现在可以将表添加到打开的查询中。 有关生成查询的详细信息，请参阅[从 Visual FoxPro 数据库导入到 Microsoft Excel](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)中的数据。
+ 你现在可以将表添加到打开的查询中。 有关生成查询的详细信息，请参阅 [从 Visual FoxPro 数据库导入到 Microsoft Excel](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)中的数据。

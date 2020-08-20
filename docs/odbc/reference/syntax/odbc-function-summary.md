@@ -1,4 +1,5 @@
 ---
+description: ODBC 函数摘要
 title: ODBC 函数摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10cc7880cf941a1490f963e21e8b44bc91db215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487370"
 ---
 # <a name="odbc-function-summary"></a>ODBC 函数摘要
-下表列出了按任务类型分组的 ODBC 函数，并包括一致性指定和每个函数的用途的简要说明。 有关一致性标识的详细信息，请参阅[ODBC 和标准 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)。 有关每个函数的语法和语义的详细信息，请参阅[ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。  
+下表列出了按任务类型分组的 ODBC 函数，并包括一致性指定和每个函数的用途的简要说明。 有关一致性标识的详细信息，请参阅 [ODBC 和标准 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)。 有关每个函数的语法和语义的详细信息，请参阅 [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 应用程序可以调用**SQLGetInfo**函数来获取有关驱动程序的一致性信息。 若要获取有关驱动程序中特定函数支持的信息，应用程序可以调用**SQLGetFunctions**。  
+ 应用程序可以调用 **SQLGetInfo** 函数来获取有关驱动程序的一致性信息。 若要获取有关驱动程序中特定函数支持的信息，应用程序可以调用 **SQLGetFunctions**。  
   
 |任务|函数名称|度|目的|  
 |----------|-------------------|-----------------|-------------|  
@@ -52,21 +53,21 @@ ms.locfileid: "81298918"
 ||[SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)|ODBC|返回由驱动程序转换的 SQL 语句的文本。|  
 ||[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|ODBC|返回语句中特定参数的说明。|  
 ||[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|ISO 92|返回语句中的参数个数。|  
-||[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|ISO 92|与**SQLPutData**结合使用，以在执行时提供参数数据。 （适用于长数据值。）|  
-||[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|ISO 92|发送参数的部分或全部数据值。 （适用于长数据值。）|  
+||[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|ISO 92|与 **SQLPutData** 结合使用，以在执行时提供参数数据。  (用于长数据值。 ) |  
+||[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|ISO 92|发送参数的部分或全部数据值。  (用于长数据值。 ) |  
 |检索结果和有关结果的信息|[SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md)<br /><br /> [SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|ISO 92<br /><br /> ISO 92|返回受 insert、update 或 delete 请求影响的行数。<br /><br /> 返回结果集中的列数。|  
 ||[SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|ISO 92|描述结果集中的列。|  
 ||[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|ISO 92|描述结果集中的列的属性。|  
 ||[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|ISO 92|为结果列分配存储并指定数据类型。|  
 ||[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|ISO 92|返回多个结果行。|  
 ||[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|ISO 92|返回滚动的结果行。|  
-||[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|ISO 92|返回结果集的一行中的一个或多个列。 （适用于长数据值。）|  
+||[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|ISO 92|返回结果集的一行中的一个或多个列。  (用于长数据值。 ) |  
 ||[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|ODBC|将游标定位在已提取的数据块中，并允许应用程序刷新行集中的数据或更新或删除结果集中的数据。|  
 ||[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|ODBC|执行批量插入和批量书签操作，包括更新、删除和按书签提取。|  
 ||[SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|ODBC|确定是否有更多结果集可用，如果是这样，则初始化下一个结果集的处理。|  
-||[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|ISO 92|返回其他诊断信息（诊断数据结构的单个字段）。|  
-||[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|ISO 92|返回其他诊断信息（诊断数据结构的多个字段）。|  
-|获取有关数据源的系统表的信息（目录函数）|[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)<br /><br /> [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|ODBC<br /><br /> 打开组|返回一个或多个表的列和相关权限的列表。<br /><br /> 返回指定表中的列名列表。|  
+||[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|ISO 92|返回 (诊断数据结构) 的单个字段的其他诊断信息。|  
+||[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|ISO 92|返回 (诊断数据结构) 的多个字段的其他诊断信息。|  
+| (目录函数获取有关数据源的系统表的信息) |[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)<br /><br /> [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|ODBC<br /><br /> 打开组|返回一个或多个表的列和相关权限的列表。<br /><br /> 返回指定表中的列名列表。|  
 ||[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|ODBC|如果指定的表存在，则返回构成外键的列名的列表。|  
 ||[SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|ODBC|返回构成表的主键的列名列表。|  
 ||[SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|ODBC|返回输入和输出参数的列表，以及构成指定过程的结果集的列。|  

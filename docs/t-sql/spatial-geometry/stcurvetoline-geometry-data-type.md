@@ -1,4 +1,5 @@
 ---
+description: STCurveToLine（geometry 数据类型）
 title: STCurveToLine（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 68129b88cbd7bfa0f168f901952e9f8a40643a51
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eb3aa1d61d49b70a9526f352807a1569dfb7e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488072"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-返回包含圆弧线段的 geometry 实例的多边形近似值  。
+返回包含圆弧线段的 geometry 实例的多边形近似值****。
   
 ## <a name="syntax"></a>语法  
   
@@ -36,20 +37,20 @@ ms.locfileid: "86555052"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
 ## <a name="remarks"></a>备注  
- 为空的 geometry 实例变量返回空的 GeometryCollection 实例，为未初始化的 geometry 变量返回 NULL     。  
+ 为空的 geometry 实例变量返回空的 GeometryCollection 实例，为未初始化的 geometry 变量返回 NULL****************。  
   
  该方法返回的多边形近似值取决于用于调用该方法的 **geometry** 实例：  
   
--   为 CircularString 或 CompoundCurve 实例返回 LineString 实例    。  
+-   为 CircularString 或 CompoundCurve 实例返回 LineString 实例************。  
   
--   为 CurvePolygon 实例返回 Polygon 实例   。  
+-   为 CurvePolygon 实例返回 Polygon 实例********。  
   
--   如果 geometry 实例不是 CircularString、CompoundCurve 或 CurvePolygon 实例，则返回该实例的副本     。 例如，`STCurveToLine` 方法为属于 **Point** 实例的 **geometry** 实例返回 **Point** 实例。  
+-   如果 geometry 实例不是 CircularString、CompoundCurve 或 CurvePolygon 实例，则返回该实例的副本****************。 例如，`STCurveToLine` 方法为属于 **Point** 实例的 **geometry** 实例返回 **Point** 实例。  
   
  与 SQL/MM 规范不同，`STCurveToLine` 方法不使用 Z 坐标值来计算多边形近似值。 该方法忽略执行调用的 **geometry** 实例中存在的任何 Z 坐标值。  
   

@@ -1,4 +1,5 @@
 ---
+description: 创建域
 title: 创建域
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487878"
 ---
 # <a name="create-a-domain"></a>创建域
 
@@ -56,7 +57,7 @@ ms.locfileid: "85887996"
   
 3.  在 **“域管理”** 页上，单击域列表上方的 **“创建域”** 图标。  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>设置域属性  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> 设置域属性  
   
 1.  在 **“创建域”** 对话框中，输入名称（对知识库唯一）以及说明（可多达 256 个字符）。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "85887996"
   
 8.  如果数据类型为 **String**，则选择 **“禁用语法错误算法”** 可填充域而不会检查字符串值是否存在语法错误。  
   
-9. 单击 **“确定”** 。  
+9. 单击“确定”。  
   
 10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   

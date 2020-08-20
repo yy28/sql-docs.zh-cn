@@ -1,4 +1,5 @@
 ---
+description: 创建知识库
 title: 创建知识库
 ms.date: 06/04/2013
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: aa740172957e3f0ba08812e298db5621ba43e890
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dd8e0379d25b231de873ccfd1529284e62f0f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487896"
 ---
 # <a name="create-a-knowledge-base"></a>创建知识库
 
@@ -35,7 +36,7 @@ ms.locfileid: "85887981"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建知识库。  
   
-##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>创建知识库  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a> 创建知识库  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -59,9 +60,9 @@ ms.locfileid: "85887981"
   
     -   选择 **“匹配策略”** 可以创建匹配策略，并将其添加到知识库。  
   
-6.  单击 **“创建”** 。  
+6.  单击“创建”。  
   
-##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>跟进：在创建知识库后  
+##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a> 跟进：在创建知识库后  
  在创建一个知识库后，系统将会向您提供可用于执行知识发现的向导、可用于创建匹配策略的向导或者可用于执行域管理的若干页。 有关知识发现、域管理或匹配策略的详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   

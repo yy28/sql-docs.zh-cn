@@ -1,4 +1,5 @@
 ---
+description: Metadata-SQL Server Native Client 中的日期和时间和架构行集
 title: 日期和时间以及架构行集
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2b6ca8c13930da79d47f103f7eaa00185e64ca2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f3aa326a76a752ac7e85bd852051663f46b8c4a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486714"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets-in-sql-server-native-client"></a>Metadata-SQL Server Native Client 中的日期和时间和架构行集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,14 +29,14 @@ ms.locfileid: "87245798"
 ## <a name="columns-rowset"></a>COLUMNS 行集  
  对于日期/时间类型将返回以下列值：  
   
-|列名称|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
+|列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|清除|0|  
-|time|DBTYPE_DBTIME2|设置|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|清除|0|  
-|datetime|DBTYPE_DBTIMESTAMP|清除|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|设置|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|设置|0..7|  
+|date|DBTYPE_DBDATE|Clear|0|  
+|time|DBTYPE_DBTIME2|Set|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  在 COLUMN_FLAGS 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，并且以下标记始终为 False：  
   
@@ -77,7 +78,7 @@ ms.locfileid: "87245798"
 |CREATE_PARAMS|Null|scale|Null|Null|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|可搜索|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
+|SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|Null|Null|Null|Null|Null|Null|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

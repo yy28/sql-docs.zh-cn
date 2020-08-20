@@ -1,4 +1,5 @@
 ---
+description: CREATE TYPE (Transact-SQL)
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/05/2019
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b240f395d0305beea88f6a5fb89348fcfb815cc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: edff505f253c5c913a9330cb514c8cb72d764ba8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488050"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -206,7 +207,7 @@ column_name <data_type>
 > [!NOTE]  
 >  EXTERNAL_NAME 在包含数据库中不可用。  
   
- [. *class_name*  **]**  
+ **[.** *class_name*  **]**  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定实现用户定义类型的程序集内的类。 class_name 必须是有效的标识符，并且它必须作为类存在于可见程序集中。 class_name 区分大小写，不考虑数据库的排序规则，且必须与对应的程序集中的类名完全匹配。 如果用于编写类的编程语言使用命名空间概念（例如 C#），则类名可以是用方括号 ([ ]) 括起来的限定命名空间的名称。 如果未指定 class_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该名称与 type_name 相同 。  

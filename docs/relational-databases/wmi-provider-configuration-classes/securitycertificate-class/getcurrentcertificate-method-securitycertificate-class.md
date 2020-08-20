@@ -1,5 +1,6 @@
 ---
-title: GetCurrentCertificate 方法（SecurityCertificate）
+description: GetCurrentCertificate 方法（SecurityCertificate 类）
+title: 'GetCurrentCertificate 方法 (SecurityCertificate) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f849a8ea6734a6e65aa0ea62b9569e4297bf3613
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f245bbd7e0e7c43c1401e604ed0b69896de65ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488458"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate 方法（SecurityCertificate 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +37,12 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |*SHA*|一个在方法完成后指定当前安全证书 SHA 指纹的字符串值（输出参数）。|  
 |*SQLInstance*|一个为所需证书指定实例的字符串值。|  

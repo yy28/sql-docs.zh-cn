@@ -1,5 +1,6 @@
 ---
-title: 基于策略的管理视图（Transact-sql） |Microsoft Docs
+description: 基于策略的管理视图 (Transact-SQL)
+title: 基于策略的管理视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 501b16c830e41688fe0827483903714f3f697753
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 92d941ef8349596206010c04d53e3cd9b5580f92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486571"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>基于策略的管理视图 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: " (AccessToSQL) 设置转换和迁移选项"
 title: " (AccessToSQL) 设置转换和迁移选项 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d5113a5c007105a0fab7700d92a16672fa9ab84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488231"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a> (AccessToSQL) 设置转换和迁移选项
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项指定如何转换对象、迁移数据的方式以及源数据类型映射到目标数据类型的方式。 在将对象转换为或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 或将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，请验证配置选项是否适用于项目。  
@@ -46,14 +47,14 @@ SSMA 有四组配置设置和四种配置这些设置的模式：默认、乐观
   
 **设置默认项目选项**  
   
-1.  在 "**工具**" 菜单上，选择 "**默认项目设置**"。  
+1.  在 " **工具** " 菜单上，选择 " **默认项目设置**"。  
   
-2.  在 "**默认项目设置**" 对话框中，执行下列操作之一：  
+2.  在 " **默认项目设置** " 对话框中，执行下列操作之一：  
   
-    -   从 "**迁移目标版本**" 下拉框中选择 "需要查看或更改其设置" 的 "迁移项目类型"，单击左侧窗格底部的 "**常规**"，然后选择 "**转换" 或 "迁移" 或 SQL Azure**。  
+    -   从 " **迁移目标版本** " 下拉框中选择 "需要查看或更改其设置" 的 "迁移项目类型"，单击左侧窗格底部的 " **常规** "，然后选择 " **转换" 或 "迁移" 或 SQL Azure**。  
   
         > [!NOTE]  
-        > 仅当创建的项目类型为 SQL Azure 时，SQL Azure 选项才会出现在 "**常规**" 选项卡中。  
+        > 仅当创建的项目类型为 SQL Azure 时，SQL Azure 选项才会出现在 " **常规** " 选项卡中。  
   
     -   若要选择预定义模式，请在 "**模式**" 下拉框中选择 "**默认**"、"**乐观**" 或 "**完全**"。  
   
@@ -65,9 +66,9 @@ SSMA 有四组配置设置和四种配置这些设置的模式：默认、乐观
   
 **为当前项目自定义设置**  
   
-1.  在 "**工具**" 菜单上，选择 "**项目设置**"。  
+1.  在 " **工具** " 菜单上，选择 " **项目设置**"。  
   
-2.  在 "**项目设置**" 对话框中，执行下列操作之一：  
+2.  在 " **项目设置** " 对话框中，执行下列操作之一：  
   
     -   若要选择预定义模式，请在 "**模式**" 下拉框中选择 "**默认**"、"**乐观**" 或 "**完全**"。  
   
@@ -78,11 +79,11 @@ SSMA 有四组配置设置和四种配置这些设置的模式：默认、乐观
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于你的项目需求：  
   
--   若要自定义源和目标数据类型的映射，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)  
+-   若要自定义源和目标数据类型的映射，请参阅 [映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)  
   
--   若要自定义源和目标数据库的映射，请参阅[映射源和目标数据库](mapping-source-and-target-databases-accesstosql.md)  
+-   若要自定义源和目标数据库的映射，请参阅 [映射源和目标数据库](mapping-source-and-target-databases-accesstosql.md)  
   
--   否则，你可以将 Access 数据库对象定义转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象定义。 有关详细信息，请参阅[转换 Access 数据库对象](converting-access-database-objects-accesstosql.md)  
+-   否则，你可以将 Access 数据库对象定义转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象定义。 有关详细信息，请参阅 [转换 Access 数据库对象](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

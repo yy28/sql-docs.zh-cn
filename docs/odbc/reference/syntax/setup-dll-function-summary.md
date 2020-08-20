@@ -1,4 +1,5 @@
 ---
+description: 设置 DLL 函数摘要
 title: 安装程序 DLL 函数摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d141cdd88614c1a4881d794b345e7d2ada4ba69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8729cb681a7518125e218bac08874e8fd02cd7c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487320"
 ---
 # <a name="setup-dll-function-summary"></a>设置 DLL 函数摘要
-下表介绍了安装程序 DLL 函数。 有关每个函数的语法和语义的详细信息，请参阅[SETUP DLL API 参考](../../../odbc/reference/syntax/setup-dll-api-reference.md)。  
+下表介绍了安装程序 DLL 函数。 有关每个函数的语法和语义的详细信息，请参阅 [SETUP DLL API 参考](../../../odbc/reference/syntax/setup-dll-api-reference.md)。  
   
 |任务|函数名称|用途|  
 |----------|-------------------|-------------|  

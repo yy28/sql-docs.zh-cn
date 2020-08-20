@@ -1,4 +1,5 @@
 ---
+description: 创建跨域规则
 title: 创建跨域规则
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3124e5d844e3b0e1adc2053b0d62bdb000591f9d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96e56120e8573294ddc051932e2b629025cc76de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487953"
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
 
@@ -90,7 +91,7 @@ ms.locfileid: "85900476"
   
     4.  再次单击 **“为域规则添加新的测试字词”** 图标以便添加另一组测试值。  
   
-    5.  单击 "对**所有字词测试域规则**" 图标。 如果一组测试值有效，则 DQS 将在 **“有效性”** 列中为该行输入一个复选标记。 如果该组测试值无效，则 DQS 将在“有效性”列中为该行输入一个内含惊叹号的三角形。  
+    5.  单击 "对 **所有字词测试域规则** " 图标。 如果一组测试值有效，则 DQS 将在 **“有效性”** 列中为该行输入一个复选标记。 如果该组测试值无效，则 DQS 将在“有效性”列中为该行输入一个内含惊叹号的三角形。  
   
     6.  完成测试后，在 **“测试复合域规则”** 对话框中单击 **“关闭”** 。  
   

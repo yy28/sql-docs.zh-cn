@@ -1,4 +1,5 @@
 ---
+description: STLength（geometry 数据类型）
 title: STLength（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b30be1e5e19163ce4aefc0f2dc37cd0d2eda8693
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 713e423d0ef388ea63089bc2b4a203b8affa0fad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488087"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "86554614"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float****  
   
- CLR 返回类型：SqlDouble   
+ CLR 返回类型：SqlDouble****  
   
 ## <a name="remarks"></a>备注  
  如果 **geometry** 实例是闭合的，则其长度按围绕该实例的总长度进行计算；任何多边形的长度均为其周长，点的长度为 0。 任何 **geometrycollection** 类型的长度均为它所包含的 **geometry** 实例的长度之和。  

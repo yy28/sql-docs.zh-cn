@@ -1,5 +1,6 @@
 ---
-title: 服务器范围内的配置目录视图（Transact-sql） |Microsoft Docs
+description: 服务器范围内的配置目录视图 (Transact-SQL)
+title: 服务器范围内的配置目录视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2015
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4340e6368f3865b26c9d8fb6e18c049ca71ba263
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 558c4bd2bfcee6c7aa53bc84bfcefe646672fe6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486518"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>服务器范围内的配置目录视图 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

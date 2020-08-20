@@ -1,4 +1,5 @@
 ---
+description: 'IBCPSession：： BCPWriteFmt (Native Client OLE DB 提供程序) '
 title: IBCPSession：： BCPWriteFmt (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6653e1cf209e398548aa0274ec6f4802ebfffde3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: eaeb5d8806b09dc9239b07008dde23053f066abe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486665"
 ---
 # <a name="ibcpsessionbcpwritefmt-native-client-ole-db-provider"></a>IBCPSession：： BCPWriteFmt (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,14 +38,14 @@ HRESULT BCPWriteFmt(
 ```  
   
 ## <a name="remarks"></a>备注  
- 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用 [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法将定义数据文件的格式。 BCPWriteFmt 方法将此定义保存在 pwszFormatFile 参数引用的文件中****。  
+ 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用 [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法将定义数据文件的格式。 BCPWriteFmt 方法将此定义保存在 pwszFormatFile 参数引用的文件中  。  
   
- BCPWriteFmt 方法可以通过 xml 或文本格式保存格式化文件****。 这必须通过将 BCP_OPTION_XML 控制选项用于 [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 方法来指示。  
+ BCPWriteFmt 方法可以通过 xml 或文本格式保存格式化文件  。 这必须通过将 BCP_OPTION_XML 控制选项用于 [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 方法来指示。  
   
  若要加载已保存的格式化文件，请使用 [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 方法。  
   
 ## <a name="arguments"></a>参数  
- pwszFormatFile**[in]  
+ pwszFormatFile  [in]  
  包含数据文件格式值的文件的路径和文件名。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -52,7 +53,7 @@ HRESULT BCPWriteFmt(
  方法成功。  
   
  E_FAIL  
- 出现特定于提供程序的错误;有关详细信息，请使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)接口。  
+ 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 接口。  
   
  E_OUTOFMEMORY  
  内存不足错误。  

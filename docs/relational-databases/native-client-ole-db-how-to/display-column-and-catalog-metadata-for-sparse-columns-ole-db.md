@@ -1,5 +1,6 @@
 ---
-title: 稀疏列的元数据（OLE DB）
+description: 'SQL Server Native Client 显示稀疏列的列和目录元数据 (OLE DB) '
+title: '稀疏列 (OLE DB 的元数据) '
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f8f5c90aadc601ce6c63bcd0f6915a540f43f69
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6e9aa2f1710df5a1acee8fa7b7c7a9be72b88a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486717"
 ---
-# <a name="sql-server-native-client-display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>SQL Server Native Client 显示稀疏列的列和目录元数据（OLE DB）
+# <a name="sql-server-native-client-display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>SQL Server Native Client 显示稀疏列的列和目录元数据 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例将创建具有三个列的表，包括一个稀疏列、一个非稀疏列和一个列集列。 随后示例将显示 OLE DB 标志，指示非稀疏列和列集列的列及目录元数据。  
   
- 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 有关稀疏列的详细信息，请参阅 [SQL Server Native Client 中的稀疏列支持](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>示例  
  请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  

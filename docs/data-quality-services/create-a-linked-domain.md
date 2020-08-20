@@ -1,4 +1,5 @@
 ---
+description: 创建链接域
 title: 创建链接域
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68c8fe492dfe05945b670b137b0d2f427d82d486
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487857"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
 
@@ -45,7 +46,7 @@ ms.locfileid: "85887962"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建链接域。  
   
-##  <a name="create-a-linked-domain"></a><a name="Create"></a>创建链接域  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a> 创建链接域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85887962"
   
 7.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
-##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>将两个字段映射到链接域  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> 将两个字段映射到链接域  
   
 1.  为知识发现活动打开一个知识库，并将此知识库映射到数据库以及表或视图。  
   
@@ -74,10 +75,10 @@ ms.locfileid: "85887962"
   
 4.  在“创建域”对话框中，输入名称和说明，然后单击“确定”。  
   
-##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>跟进：在创建链接域后  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a> 跟进：在创建链接域后  
  在创建链接域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>链接域的行为  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a> 链接域的行为  
  可以更改链接域的设置，如下所示：  
   
 -   您可以更改链接域的名称和说明。  

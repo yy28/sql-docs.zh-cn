@@ -1,4 +1,5 @@
 ---
+description: '菜单命令和其他快捷键 (AccessToSQL) '
 title: 菜单命令和其他快捷键 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f7e5aa6a3b6d663c21ff57abda09ee9308a0a2af
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ce8afd47260ebc402f3d93cd191529eb7640f99d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488271"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>菜单命令和其他快捷键 (AccessToSQL) 
 以下各节介绍访问菜单命令的键盘快捷方式，以及 SSMA for Access 应用程序的各种对话框中使用的其他快捷键。  

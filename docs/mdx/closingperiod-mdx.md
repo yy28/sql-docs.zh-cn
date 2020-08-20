@@ -1,5 +1,6 @@
 ---
-title: ClosingPeriod （MDX） |Microsoft Docs
+description: ClosingPeriod (MDX)
+title: ClosingPeriod (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f457a941c8967ce6f3c6700760ff95d5c2999d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487630"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 
@@ -37,11 +38,11 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
 ## <a name="remarks"></a>备注  
  此函数主要用于具有 Time 类型的维度，但也可用于任何维度。  
   
--   如果指定了级别表达式，则**ClosingPeriod**函数将使用包含指定级别的维度，并返回位于指定级别的默认成员的后代中的最后一个同级。  
+-   如果指定了级别表达式，则 **ClosingPeriod** 函数将使用包含指定级别的维度，并返回位于指定级别的默认成员的后代中的最后一个同级。  
   
--   如果同时指定了级别表达式和成员表达式，则**ClosingPeriod**函数返回指定成员在指定级别的后代中的最后一个同级。  
+-   如果同时指定了级别表达式和成员表达式，则 **ClosingPeriod** 函数返回指定成员在指定级别的后代中的最后一个同级。  
   
--   如果级别表达式和成员表达式均未指定，则**ClosingPeriod**函数将使用多维数据集中的维度的默认级别和成员（如果有）和时间类型。  
+-   如果级别表达式和成员表达式均未指定，则 **ClosingPeriod** 函数将使用维度的默认级别和成员 (如果多维数据集中的任何) 具有时间类型。  
   
  **ClosingPeriod**函数等效于下面的 MDX 语句：  
   

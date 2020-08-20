@@ -1,4 +1,5 @@
 ---
+description: 其他表值参数的元数据
 title: 其他表值参数元数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aed8844cffc6ccfb6608e4077f792dcf8651e6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9e5f1e73c57c607ce4b223de9f5fec67ff41da9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486762"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他表值参数的元数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,11 +50,11 @@ ms.locfileid: "86004602"
   
  WVarchar 列在 ODBC 规范中定义为 Varchar，但实际上在所有最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序中作为 WVarchar 返回。 该更改是在向 ODBC 3.5 规范添加 Unicide 支持时执行的，但不能显式指出。  
   
- 若要获取表值参数的其他元数据，应用程序将使用目录函数 SQLColumns 和 SQLPrimaryKeys。 在针对表值参数调用这些函数之前，应用程序必须将语句属性 SQL_SOPT_SS_NAME_SCOPE 设置为 SQL_SS_NAME_SCOPE_TABLE_TYPE。 该值表示应用程序需要表类型的元数据，而不是实际表。 然后，应用程序将表值参数的 TYPE_NAME 作为*TableName*参数传递。 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 分别与*CatalogName*和*SchemaName*参数一起使用，以标识表值参数的目录和架构。 在应用程序检索完表值参数的元数据之后，该应用程序必须将 SQL_SOPT_SS_NAME_SCOPE 设置回原来的默认值 SQL_SS_NAME_SCOPE_TABLE。  
+ 若要获取表值参数的其他元数据，应用程序将使用目录函数 SQLColumns 和 SQLPrimaryKeys。 在针对表值参数调用这些函数之前，应用程序必须将语句属性 SQL_SOPT_SS_NAME_SCOPE 设置为 SQL_SS_NAME_SCOPE_TABLE_TYPE。 该值表示应用程序需要表类型的元数据，而不是实际表。 然后，应用程序将表值参数的 TYPE_NAME 作为 *TableName* 参数传递。 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 分别与 *CatalogName* 和 *SchemaName* 参数一起使用，以标识表值参数的目录和架构。 在应用程序检索完表值参数的元数据之后，该应用程序必须将 SQL_SOPT_SS_NAME_SCOPE 设置回原来的默认值 SQL_SS_NAME_SCOPE_TABLE。  
   
  将 SQL_SOPT_SS_NAME_SCOPE 设置为 SQL_SS_NAME_SCOPE_TABLE 时，对链接服务器的查询将失败。 对包含服务器组件的目录的 SQLColumns 或 SQLPrimaryKeys 的调用将失败。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

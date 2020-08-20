@@ -1,4 +1,5 @@
 ---
+description: DQS 中的数据事件探查和通知
 title: DQS 中的数据事件探查和通知
 ms.date: 04/01/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4857ba951d86551e95f81075d77bc1d0d9be928a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487815"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的数据事件探查和通知
 
@@ -74,7 +75,7 @@ ms.locfileid: "85882553"
   
 -   [运行匹配项目](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>活动监视中的事件探查数据  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a> 活动监视中的事件探查数据  
  知识发现、匹配策略、匹配和清除活动的事件探查信息不仅可用于数据质量客户端中的活动页，还可在活动监视中使用。 活动监视向您提供当前和过去活动的概述。 除了活动的属性和相关的计算过程之外，您还可以查看针对一个位置的每个活动生成的事件探查信息。 您可以在活动表中选择一个活动，以便在下表中显示事件探查结果。 此外，还可以导出事件探查结果。 有关详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
 ##  <a name="notifications"></a><a name="Notifications"></a> 通知  
@@ -82,7 +83,7 @@ ms.locfileid: "85882553"
   
  DQS 通知用于提出您可能感兴趣的问题或解决潜在的问题。 是否对通知进行操作取决于它是否与你的目的相关。 例如，假设当完整性和准确性均为 100% 时，如果数据清理没有生成任何更正值或建议值，则 DQS 会发布一个通知。 此通知将表明可能不需要运行该活动。 是否选择运行此活动取决于您。  
   
- 通知由 "**分析**" 选项卡中带感叹号的工具提示指示。与通知关联的统计信息为红色，以指示通知的统计理由。  
+ 通知由 " **分析** " 选项卡中带感叹号的工具提示指示。与通知关联的统计信息为红色，以指示通知的统计理由。  
   
  您可以在数据质量客户端主页中 **“管理”** 部分的 **“常规设置”** 选项卡上启用（默认）或禁用通知。 禁用通知时，不显示工具提示，并且统计信息未着色为红色。 禁用通知不会显著提高性能。 如果您禁用通知，事件探查仍会进行。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "85882553"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|任务说明|文章|  
+|任务说明|项目|  
 |----------------------|-----------|  
 |说明如何在 DQS 中启用或禁用通知。|[在 DQS 中启用或禁用事件探查通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   

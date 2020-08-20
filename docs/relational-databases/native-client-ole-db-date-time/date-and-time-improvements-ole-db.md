@@ -1,4 +1,5 @@
 ---
+description: 'SQL Server Native Client 日期和时间改进 (OLE DB) '
 title: 日期和时间改进 (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,26 +15,26 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d505096eee8e637ceb069dc1e4ed591cebb55269
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9fc1f9de3db5d2e3aa31d932b74c9971fc596c04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486761"
 ---
-# <a name="sql-server-native-client-date-and-time-improvements-ole-db"></a>SQL Server Native Client 日期和时间改进（OLE DB）
+# <a name="sql-server-native-client-date-and-time-improvements-ole-db"></a>SQL Server Native Client 日期和时间改进 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型作为本机客户端中的扩展公开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新日期和时间数据类型的 Native Client 支持的概述，请参阅[日期和时间改进](../../relational-databases/native-client/features/date-and-time-improvements.md)。 例如，请参阅[使用增强的日期和时间功能 (OLE DB)](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型作为本机客户端中的扩展公开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新日期和时间数据类型的 Native Client 支持的概述，请参阅 [日期和时间改进](../../relational-databases/native-client/features/date-and-time-improvements.md)。 例如，请参阅[使用增强的日期和时间功能 (OLE DB)](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
   
  有关日期和时间数据类型的更多常规信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [针对 OLE DB 日期和时间改进的数据类型支持](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- 提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型 OLE DB （Native Client）类型的信息。  
+ 提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型 OLE DB ( Native Client) 类型的信息。  
   
  [元数据 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
- 包含有关 DBBINDING 结构、ICommandWithParameters::GetParameterInfo****、ICommandWithParameters::SetParameterInfo****、IColumnsRowset::GetColumnsRowset**** 和 IColumnsInfo::GetColumnInfo**** 的信息。 还提供了有关 OLE DB 架构行集更新的信息。  
+ 包含有关 DBBINDING 结构、ICommandWithParameters::GetParameterInfo  、ICommandWithParameters::SetParameterInfo  、IColumnsRowset::GetColumnsRowset  和 IColumnsInfo::GetColumnInfo  的信息。 还提供了有关 OLE DB 架构行集更新的信息。  
   
  [绑定和转换 (OLE DB)](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  说明在服务器和客户端之间现有和新数据类型的转换规则。  
@@ -45,7 +46,7 @@ ms.locfileid: "87245844"
  说明支持日期/时间增强功能的 OLE DB API。  
   
  [IRowsetFind 的可比性](../../relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind.md)  
- 说明日期/时间类型和 IRowsetFind****。  
+ 说明日期/时间类型和 IRowsetFind  。  
   
  [旧 SQL Server 版本 &#40;OLE DB 的新日期和时间功能&#41;](../../relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
  说明使用日期和时间增强功能的客户端应用程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本通信时的预期行为，以及使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 早期版本编译的客户端向支持日期和时间增强功能的服务器发送命令的预期行为。  

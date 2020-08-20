@@ -1,4 +1,5 @@
 ---
+description: TM：Rollback Tran Completed 事件类
 title: 'TM: Rollback Tran Completed 事件类 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c62caf73029c60d6a683ca36333e14518de450c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 729a602d76f55f3a8218aa341ca94d545a3f3f91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486948"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed 事件类
+# <a name="tm-rollback-tran-completed-event-class"></a>TM：Rollback Tran Completed 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Rollback Tran Completed 事件类指示 ROLLBACK TRANSACTION 请求已完成。 该请求是通过事务管理界面从客户端发送的。 EventSubClass 列指示在当前事务回滚后是否启动新事务。  
   

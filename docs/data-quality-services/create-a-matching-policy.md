@@ -1,4 +1,5 @@
 ---
+description: 创建匹配策略
 title: 创建匹配策略
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c18d8d44bb595e4bfaad66296331d8dab403535e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a899d2117cf3999e93fc95628b6cccea1bbbde1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487894"
 ---
 # <a name="create-a-matching-policy"></a>创建匹配策略
 
@@ -38,7 +39,7 @@ ms.locfileid: "85881956"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建匹配策略。  
   
-##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a>如何设置匹配规则参数  
+##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a> 如何设置匹配规则参数  
  创建匹配规则是一个迭代过程，您将在其中输入各种因子来确定一个记录是否与另一个记录匹配。 您可以在表中输入任何域的条件。 当 DQS 对两条记录执行匹配时，它将比较字段中已映射到匹配规则中所含域的值。 DQS 分析规则中每个字段的值，然后使用在规则中为每个域输入的因子来计算最终匹配分数。 如果所比较的两条记录的匹配分数大于最低匹配分数，则认为这两个字段是匹配的。  
   
  您在匹配规则中输入的因子包括以下内容：  
@@ -57,12 +58,12 @@ ms.locfileid: "85881956"
   
  通过事件探查，您可以全面了解完整性和唯一性。 同时考虑完整性和唯一性。 使用完整性和唯一性数据来确定应给匹配过程中的字段什么权重。 如果字段具有很高的唯一性，则在匹配策略中使用此字段可能会减少匹配结果，这样，您可能需要将该字段的权重设置为相对小的值。 如果某列的唯一性较低，但完整性也低，则您可能不希望对该列加入某个域。 如果唯一性较低，但完整性较高，则您可能希望包括该域。 某些列（如性别）在本质上唯一性就低。 有关详细信息，请参阅 [“事件探查器”和“结果”选项卡](#Tabs)。  
   
-##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a>第一步：启动匹配策略  
+##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a> 第一步：启动匹配策略  
  您在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序的知识库管理区域中执行匹配策略活动。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”** 以便在新知识库中创建匹配策略。 为知识库输入名称，输入描述，并根据需要设置 **“创建知识库自”** 。 单击活动的 **“匹配策略”** 。 单击 **“下一步”** 继续。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”** 以便在新知识库中创建匹配策略。 为知识库输入名称，输入描述，并根据需要设置 **“创建知识库自”** 。 单击活动的 **“匹配策略”** 。 单击“下一步”继续。  
   
 3.  单击 **“打开知识库”** 以便在现有知识库中创建或修改匹配策略。 选择知识库，选择 **“匹配策略”**，然后单击 **“下一步”**。 还可以单击 **“最近的知识库”** 下的某个知识库。 如果您打开当正在处理匹配策略时关闭的知识库，您将进入关闭匹配策略活动时所在的阶段（由知识库表中或 **“最近的知识库”** 下知识库名称中的 **“状态”** 列所指示）。 如果您打开包括匹配策略且已完成的知识库，则将进入 **“匹配策略”** 页。 如果您打开不包括匹配策略但已完成的知识库，则将进入 **“映射”** 页。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "85881956"
     > [!NOTE]  
     >  单击 **“关闭”** 可保存匹配项目的这一阶段，并返回到 DQS 主页。 下次打开此项目时，它将从同一阶段启动。 单击 **“取消”** 可结束匹配活动，不保存所做的工作，并返回到 DQS 主页。  
   
-##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a>匹配策略阶段  
+##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a> 匹配策略阶段  
  创建匹配规则，并在“匹配策略”页中分别对它们进行测试。 当您在 **“匹配策略”** 页上测试匹配规则时，您将看到一个匹配结果表，其中显示 DQS 已为所选规则确定的结果集。 此表显示群集中的每条记录以及映射域值和匹配分数，以及群集的初始透视记录。 您还可以总体显示匹配过程的事件探查数据，每个匹配规则中的条件，以及分别显示针对每个匹配规则的结果的统计信息。 您可以对您想要的主规则数据进行筛选。  
   
  有关匹配规则的工作原理的详细信息，请参阅 [如何设置匹配规则参数](#MatchingRules)。  
@@ -147,7 +148,7 @@ ms.locfileid: "85881956"
   
 18. 单击 **“下一步”** 以进入匹配结果阶段。  
   
-##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a>匹配结果阶段  
+##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a> 匹配结果阶段  
  您可以在 **“匹配结果”** 页上一次测试所有匹配规则。 在此之前，您可以指定规则测试运行可确定重叠或非重叠群集。 如果您多次运行规则，则可以针对从源中重新加载的数据或针对先前数据执行此规则。  
   
  当您在 **“匹配结果”** 页上测试匹配规则时，您将看到一个匹配结果表，其中显示 DQS 已为所有规则确定的群集。 此表显示群集中的每条记录以及映射域值和匹配分数，以及群集的初始透视记录。 您还可以总体显示匹配规则的事件探查数据，每个匹配规则中的条件，以及显示针对所有匹配规则的结果的统计信息。  
@@ -156,7 +157,7 @@ ms.locfileid: "85881956"
   
 2.  单击 **“自源重新加载数据”** ，以便在运行匹配策略后，将数据源中的数据复制到临时表并对其重新编制索引。 单击 **“针对以往数据执行”** 以运行匹配策略，而不将数据复制到临时表和对数据重新编制索引。 对于第一次运行匹配策略，或如果您在 **“映射”** 页中更改映射，然后在出现的弹出菜单中按 **“是”** ，则 **“针对以往数据执行”** 为禁用状态。 在这两种情况下，您都必须重新编制索引。 如果匹配策略未发生变化，则不需要重新编制索引。 “针对以往数据执行”有助于改善性能。  
   
-3.  单击 **“启动”** 以针对已定义的所有规则运行匹配过程。 **“匹配结果”** 表将针对群集中的每条记录显示记录 ID、群集编号以及数据列（包括匹配规则中所没有的数据列）。 群集中的前导记录是随机选定的。 （当您运行匹配项目时，您可以通过在 "**导出**" 页上选择存活规则来确定存活记录。）群集中的每个附加行都被认为是重复的;结果表中提供了其匹配分数（与透视记录比较）。  
+3.  单击 **“启动”** 以针对已定义的所有规则运行匹配过程。 **“匹配结果”** 表将针对群集中的每条记录显示记录 ID、群集编号以及数据列（包括匹配规则中所没有的数据列）。 群集中的前导记录是随机选定的。  (在运行匹配项目时，通过在 " **导出** " 页上选择存活规则来确定存活的记录。 ) 群集中的每个附加行都被认为是重复的;与 "结果" 表中提供) 的透视记录相比，其匹配分数 (。  
   
 4.  您可以处理 **“匹配结果”** 表中的数据，如下所示：  
   
@@ -188,13 +189,13 @@ ms.locfileid: "85881956"
   
 9. 单击 **“取消”** 可终止“匹配策略”活动，不保存所做的工作，并返回到 DQS 主页。  
   
-##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a>跟进：在创建匹配策略之后  
+##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a> 跟进：在创建匹配策略之后  
  在创建匹配策略后，可以基于包含匹配策略的知识库运行匹配项目。 有关详细信息，请参阅 [运行匹配项目](../data-quality-services/run-a-matching-project.md)。  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a>探查器和 "结果" 选项卡  
+##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a> 探查器和 "结果" 选项卡  
  “事件探查器”和“结果”选项卡包含针对“匹配策略”页和“匹配结果”页的统计信息。  
   
-###  <a name="profiler-tab"></a><a name="Profiler"></a>事件探查器选项卡  
+###  <a name="profiler-tab"></a><a name="Profiler"></a> 事件探查器选项卡  
  单击 **“事件探查器”** 选项卡以显示源数据库以及策略规则中包含的每个字段的统计信息。 当运行策略规则时，将更新统计信息。  
   
  有关如何解释以下统计信息的详细信息，请参阅 [如何设置匹配规则参数](#MatchingRules)。  
@@ -223,7 +224,7 @@ ms.locfileid: "85881956"
   
 -   **完整性**：针对每个匹配操作映射的每个源字段的完整性  
   
-###  <a name="matching-policy-notifications"></a><a name="Notifications"></a>匹配策略通知  
+###  <a name="matching-policy-notifications"></a><a name="Notifications"></a> 匹配策略通知  
  对于匹配策略活动，以下条件会导致发送通知：  
   
 -   在所有记录中该字段为空；建议您从映射消除它。  
@@ -236,7 +237,7 @@ ms.locfileid: "85881956"
   
 -   此字段中存在高级别的唯一性。 在匹配策略中使用此字段可以减少匹配结果。  
   
-###  <a name="matching-results-tab"></a><a name="ResultsTab"></a>匹配结果选项卡  
+###  <a name="matching-results-tab"></a><a name="ResultsTab"></a> 匹配结果选项卡  
  单击 **“匹配结果”** 选项卡以显示匹配策略规则运行和前一次规则运行的统计信息。 如果您使用不同参数多次运行同一个规则，则匹配结果表将显示这两次运行的统计信息，使您能够对其进行比较。 如果您需要，您还可以还原前一个规则。  
   
  统计信息包括：  

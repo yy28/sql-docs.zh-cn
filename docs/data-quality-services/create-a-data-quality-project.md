@@ -1,4 +1,5 @@
 ---
+description: 创建数据质量项目
 title: 创建数据质量项目
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487950"
 ---
 # <a name="create-a-data-quality-project"></a>创建数据质量项目
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900467"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色才能创建数据质量项目。  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>创建数据质量项目  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> 创建数据质量项目  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85900467"
   
 4.  单击 **“创建”** 将创建数据质量项目。  
   
-##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a>跟进：在创建数据质量项目后  
+##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a> 跟进：在创建数据质量项目后  
  在创建数据质量项目后，将向您提供一个向导，可用于执行所选活动：清理或匹配。 有关清理和匹配活动的详细信息，请参阅[数据清理](../data-quality-services/data-cleansing.md)和[数据匹配](../data-quality-services/data-matching.md)。  
   
   

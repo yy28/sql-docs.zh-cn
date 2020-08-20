@@ -1,4 +1,5 @@
 ---
+description: STGeometryN（geometry 数据类型）
 title: STGeometryN（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fcc6ccdb16dbc7091defe0405588da435f672c88
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ad02bc424fe6e6ba0196e56faf060998f841b0b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488079"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "86552789"
  一个 **int** 表达式，其值介于 1 和 **geometrycollection** 中的 **geometry** 实例数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
 ## <a name="remarks"></a>备注  
  如果参数大于 `STNumGeometries()` 的结果，则此方法返回 **null**；如果 *expression* 参数小于 1，则将引发 **ArgumentOutOfRangeException**。  

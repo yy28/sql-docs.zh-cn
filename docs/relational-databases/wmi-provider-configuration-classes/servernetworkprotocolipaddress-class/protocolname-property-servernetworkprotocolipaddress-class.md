@@ -1,5 +1,6 @@
 ---
-title: ProtocolName 属性（ServerNetworkProtocolIPAddress）
+description: ProtocolName 属性（ServerNetworkProtocolIPAddress 类）
+title: 'ProtocolName 属性 (ServerNetworkProtocolIPAddress) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 993a955cd4ba30ceaf5c9b73d07eba343b534282
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e773e974bd5b0b1bfb89442c4fe4592003b44139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488378"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName 属性（ServerNetworkProtocolIPAddress 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示实例上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 对象  
+ 一个表示实例上的网络协议 IP 地址的 [ServerNetworkProtocolIPAdress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器网络协议名称的字符串值。  

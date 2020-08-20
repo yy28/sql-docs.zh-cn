@@ -1,4 +1,5 @@
 ---
+description: ISO 选项的作用
 title: ISO 选项的效果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,11 +18,12 @@ ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 743d58eee394d0ff0b6303aa5de34ae32fed4cb4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d7903ef171ecda557c723edc2d73381a2db8fa41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486815"
 ---
 # <a name="effects-of-iso-options"></a>ISO 选项的作用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,12 +40,12 @@ ms.locfileid: "86001407"
   
  在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，还会打开第四个 SET 选项 (CONCAT_NULL_YIELDS_NULL)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]如果在数据源中或在[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)或[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)中指定了 AnsiNPW = NO，则 Native Client ODBC 驱动程序不会将这些选项设置为 on。  
   
- 与前面提到的 ISO 选项一样， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序不会在数据源中或在**SQLDriverConnect**或**SQLBrowseConnect**中指定 QuotedID = NO 时打开 QUOTED_IDENTIFIER 选项。  
+ 与前面提到的 ISO 选项一样， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序不会在数据源中或在 **SQLDriverConnect** 或 **SQLBrowseConnect**中指定 QuotedID = NO 时打开 QUOTED_IDENTIFIER 选项。  
   
  若要使驱动程序能够了解 SET 选项的当前状态，ODBC 应用程序不应使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SET 语句设置这些选项。 它们只应使用数据源或连接选项设置这些选项。 如果应用程序发出 SET 语句，则驱动程序可能会生成错误的 SQL 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;执行语句](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
+ [&#40;ODBC&#41;执行语句 ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
  [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)   
  [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)  
   

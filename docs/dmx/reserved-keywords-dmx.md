@@ -1,5 +1,6 @@
 ---
-title: 保留关键字（DMX） |Microsoft Docs
+description: 保留关键字 (DMX)
+title: 保留关键字 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fa446f07b81707c9476b133a430281057c476dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487721"
 ---
 # <a name="reserved-keywords-dmx"></a>保留关键字 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86970621"
   
  在数据库中命名对象时，建议您使用命名约定以避免使用保留关键字。  
   
- 如果数据库中确实包含与保留关键字匹配的名称，则在引用这些对象时必须使用分隔符。 有关详细信息，请参阅[标识符 &#40;DMX&#41;](../dmx/identifiers-dmx.md)。  
+ 如果数据库中确实包含与保留关键字匹配的名称，则在引用这些对象时必须使用分隔符。 有关详细信息，请参阅 [标识符 &#40;DMX&#41;](../dmx/identifiers-dmx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;DMX&#41; 的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-reference.md)   

@@ -1,4 +1,5 @@
 ---
+description: STUnion（geography 数据类型）
 title: STUnion（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19982bf44aa3e1a5e0e6d894a5d73f503194f567
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ba22383c52908e44ed69efa0d54464290ace86ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488248"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,21 +40,21 @@ ms.locfileid: "86554364"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography   
+ other_geography**  
  与调用 STUnion() 的实例形成并集的另一个 **geography** 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>例外  
- 如果实例包含对拓边缘，此方法将引发 ArgumentException  。  
+ 如果实例包含对拓边缘，此方法将引发 ArgumentException****。  
   
 ## <a name="remarks"></a>备注  
- 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null  。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null****。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例  。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例****。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
@@ -91,6 +92,6 @@ SELECT @g.STUnion(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

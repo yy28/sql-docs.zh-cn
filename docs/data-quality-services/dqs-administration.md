@@ -1,4 +1,5 @@
 ---
+description: dqs 管理
 title: dqs 管理
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487776"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
@@ -42,13 +43,13 @@ ms.locfileid: "85888104"
   
 -   基于事件的严重级别配置日志记录。  
   
-##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>使用 Data Quality Client 管理活动  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> 使用 Data Quality Client 管理活动  
  使用 **中的** “管理” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能执行这些活动。  
   
 ### <a name="activity-monitoring"></a>活动监视  
  **中的** “活动监视” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 屏幕显示有关在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上执行的每个活动的详细信息。 此屏幕将主要供数据专员使用，用于对 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 应用程序所连接的 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 上执行的所有活动执行高级监视。 此屏幕不提供任何系统级别的监视。 此外，DQS 管理员还可以使用此屏幕在需要时终止正在运行的活动或停止活动中正在运行的过程，从而控制活动或活动中的过程。 为知识发现、域管理、匹配策略、清理、匹配和基于 SQL Server Integration Services (SSIS) 的清理显示此数据。  
   
-### <a name="configuration"></a>Configuration  
+### <a name="configuration"></a>配置  
  DQS 管理员使用 **中的** “配置” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 屏幕执行以下操作：  
   
 -   **引用数据**：配置引用数据服务提供程序： Azure Marketplace 或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 它还使你能够指定用于连接到 Internet 的代理设置以使用 Azure Marketplace。  
@@ -60,7 +61,7 @@ ms.locfileid: "85888104"
 > [!NOTE]  
 >  **“配置”** 屏幕仅适用于对 DQS_MAIN 数据库具有 dqs_administrator 角色的那些用户。  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Data Quality Client 以外的管理活动  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Data Quality Client 以外的管理活动  
  下面这些活动在数据质量客户端的外部执行：  
   
 -   **备份和还原 DQS 数据库**：备份和还原 DQS 数据库与备份和还原任何 SQL Server 数据库一样，但是针对 DQS 有一些注意事项。  

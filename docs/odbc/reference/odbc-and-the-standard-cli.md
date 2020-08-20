@@ -1,4 +1,5 @@
 ---
+description: ODBC 和标准 CLI
 title: ODBC 和标准 CLI |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,33 +17,33 @@ helpviewer_keywords:
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 844ca219bf912421cf859e0fc459b78d755fe159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487380"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和标准 CLI
-ODBC 与处理调用级别接口（CLI）的以下规范和标准保持一致。 （ODBC 功能是每种标准的超集。）  
+ODBC 符合以下规范和标准，它们处理 (CLI) 的调用级别接口。  (ODBC 功能是每种标准的超集。 )   
   
--   开放式组 CAE 规范 "数据管理： SQL 调用级别接口（CLI）"  
+-   开放式组 CAE 规范 "数据管理： SQL 调用级接口 (CLI) "  
   
--   ISO/IEC 9075-3:1995 （E）调用级别接口（SQL/CLI）  
+-   ISO/IEC 9075-3:1995 (E)  (SQL/CLI 的调用级别接口)   
   
  由于这种对齐方式的原因，以下是真实情况：  
   
 -   当*使用 odbc 1.x 标头*文件编译和*链接 odbc 1.x 库，* 以及通过 Odbc *1.x 驱动程序*管理器获得对驱动程序的访问权限时，写入到开放组和 ISO CLI 规范的应用程序将*使用 odbc 1.x 驱动程序或*符合标准的驱动程序。  
   
--   当使用 odbc 1.x 标头文件编译和*链接 odbc 1.x*库时，以及当应用程序*通过 odbc 1.X* *驱动程序*管理器获得对驱动程序的访问权限时，写入到开放组和 ISO CLI 规范的驱动程序将*使用 odbc 1.x*应用程序或符合标准的应用程序。 （有关详细信息，请参阅[符合标准的应用程序和驱动程序](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
+-   当使用 odbc 1.x 标头文件编译和*链接 odbc 1.x*库时，以及当应用程序*通过 odbc 1.X* *驱动程序*管理器获得对驱动程序的访问权限时，写入到开放组和 ISO CLI 规范的驱动程序将*使用 odbc 1.x*应用程序或符合标准的应用程序。  (有关详细信息，请参阅 [符合标准的应用程序和驱动程序](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
   
- 核心接口一致性级别包含了 ISO CLI 中的所有功能和开放组 CLI 中的所有 nonoptional 功能。 打开的组 CLI 的可选功能以更高的接口一致性级别显示。 由于支持核心接口一致性级别的功能需要*所有 ODBC 1.x*驱动程序，因此满足以下条件：  
+ 核心接口一致性级别包含了 ISO CLI 中的所有功能和开放组 CLI 中的所有 nonoptional 功能。 打开的组 CLI 的可选功能以更高的接口一致性级别显示。 由于支持核心接口一致性级别的功能需要 *所有 ODBC 1.x* 驱动程序，因此满足以下条件：  
   
--   ODBC 2.x 驱动程序将支持符合标准的*应用程序所*使用的所有功能。  
+-   ODBC 2.x 驱动程序将支持符合标准的 *应用程序所* 使用的所有功能。  
   
 -   仅使用 ISO CLI 中的功能和开放组 CLI 的 nonoptional 功能的 ODBC 1.x 应用程序将适用于任何符合标准的*驱动程序。*  
   
- 除了 ISO/IEC 和开放组 CLI 标准中包含的调用级别接口规范外，ODBC 还实现以下功能。 （其中一些功能存在于 ODBC 1.x 之前*的 odbc 版本中。）*  
+ 除了 ISO/IEC 和开放组 CLI 标准中包含的调用级别接口规范外，ODBC 还实现以下功能。  (*在 odbc 3.x*之前的 odbc 版本中存在其中一些功能 )   
   
 -   单个函数调用的多行提取  
   
@@ -58,7 +59,7 @@ ODBC 与处理调用级别接口（CLI）的以下规范和标准保持一致。
   
 -   确切或大致的游标行计数  
   
--   定位更新和删除操作以及按函数调用的批处理更新和删除（**SQLSetPos**）  
+-   定位更新和删除操作以及通过函数调用 (**SQLSetPos**) 的批处理更新和删除  
   
 -   目录函数，从信息架构中提取信息，无需支持信息架构视图  
   

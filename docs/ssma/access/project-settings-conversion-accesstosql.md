@@ -1,4 +1,5 @@
 ---
+description: " (转换的项目设置)  (AccessToSQL) "
 title: " (转换的项目设置)  (AccessToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 49df8709518a9654ca5c286c4381b274546007cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488259"
 ---
 # <a name="project-settings-conversion-accesstosql"></a> (转换的项目设置)  (AccessToSQL) 
 转换项目设置使你可以配置如何将对象从 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库对象。  
   
-"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "转换" 窗格。  
+" **项目设置** " 和 " **默认项目设置** " 对话框中提供了 "转换" 窗格。  
   
--   使用 "**项目设置**" 对话框可以设置当前项目的配置选项。 若要访问转换设置，请在 "**工具**" 菜单上选择 "**项目设置**"，单击左侧窗格底部的 "**常规**"，然后选择 "**转换**"。  
+-   使用 " **项目设置** " 对话框可以设置当前项目的配置选项。 若要访问转换设置，请在 " **工具** " 菜单上选择 " **项目设置**"，单击左侧窗格底部的 " **常规** "，然后选择 " **转换**"。  
   
--   使用 "**默认项目设置**" 对话框可以为所有项目设置配置选项。 若要访问转换设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，从 "**迁移目标版本**" 下拉框中选择需要查看其设置的 "迁移项目类型"，单击左侧窗格底部的 "**常规**"，然后选择 "**转换**"。  
+-   使用 " **默认项目设置** " 对话框可以为所有项目设置配置选项。 若要访问转换设置，请在 " **工具** " 菜单上，选择 " **默认项目设置**"，从 " **迁移目标版本** " 下拉框中选择需要查看其设置的 "迁移项目类型"，单击左侧窗格底部的 " **常规** "，然后选择 " **转换**"。  
   
 ## <a name="options"></a>选项  
 **添加主密钥**  
@@ -75,7 +76,7 @@ ms.locfileid: "87937773"
 -   **完整模式**：错误  
   
 **为备注列编制索引时的消息类型**  
-指定在找到包含**memo**列的索引时，SSMA 在 "输出" 窗格中显示的消息的类型 (警告、错误或无) 。  
+指定在找到包含 **memo** 列的索引时，SSMA 在 "输出" 窗格中显示的消息的类型 (警告、错误或无) 。  
   
 -   **默认模式**：警告  
   
@@ -111,5 +112,5 @@ ms.locfileid: "87937773"
 -   **完整模式**： True  
   
 ## <a name="see-also"></a>另请参阅  
-[ (访问) 的用户界面参考](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ (访问) 的用户界面参考 ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

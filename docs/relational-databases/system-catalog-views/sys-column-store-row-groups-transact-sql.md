@@ -1,5 +1,6 @@
 ---
-title: sys. column_store_row_groups （Transact-sql） |Microsoft Docs
+description: sys.column_store_row_groups (Transact-SQL)
+title: sys. column_store_row_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9722eb458485d8b0635c226dbfa952a7b6cfca48
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: a7a6f8a54469aa8a87eb02128ef91672ff69ea3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486455"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-  在各个段的基础上提供聚集列存储索引信息，以便帮助管理员作出系统管理决定。 **sys. column_store_row_groups**包含物理存储的总行数（包括标记为已删除的行数）和标记为已删除的行数的列。 使用**sys. column_store_row_groups**确定哪些行组的已删除行的百分比较高并应重新生成。  
+  在各个段的基础上提供聚集列存储索引信息，以便帮助管理员作出系统管理决定。 **sys. column_store_row_groups** 包含物理存储的总行数的列 (包括标记为已删除的行) 以及标记为已删除的行数的列。 使用 **sys. column_store_row_groups** 确定哪些行组的已删除行的百分比较高并应重新生成。  
    
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -47,21 +48,21 @@ ms.locfileid: "87442577"
 ## <a name="remarks"></a>备注  
  针对每个表中具有聚合或非聚合列存储索引的每个列存储行组返回一行。  
   
- 使用**sys. column_store_row_groups**确定包含在行组中的行数和行组的大小。  
+ 使用 **sys. column_store_row_groups** 确定包含在行组中的行数和行组的大小。  
   
  当行组中的已删除行数量增长到占总行数的较大百分比时，该表的效率将下降。 重新生成列存储索引以减少表的大小，同时减少读取该表所需的磁盘 I/O。 若要重新生成列存储索引，请使用**ALTER index**语句的**rebuild**选项。  
   
- 可更新的列存储首先将新数据插入到处于行存储格式的**打开**行组中，有时也称为增量表。  打开的行组已满后，其状态将更改为 "**已关闭**"。 由元组移动器将关闭的行组压缩为列存储格式，并将状态更改为已**压缩**。  元组搬运者是一个后台进程，它定期唤醒并检查是否有任何关闭的行组正准备要压缩成列存储行组。  元组搬运者还取消分配其中已删除每个行的行组。 解除分配的行组被标记为**TOMBSTONE**。 若要立即运行元组移动器，请使用**ALTER INDEX**语句的 "重新**组织**" 选项。  
+ 可更新的列存储首先将新数据插入到处于行存储格式的 **打开** 行组中，有时也称为增量表。  打开的行组已满后，其状态将更改为 " **已关闭**"。 由元组移动器将关闭的行组压缩为列存储格式，并将状态更改为已 **压缩**。  元组搬运者是一个后台进程，它定期唤醒并检查是否有任何关闭的行组正准备要压缩成列存储行组。  元组搬运者还取消分配其中已删除每个行的行组。 解除分配的行组被标记为 **TOMBSTONE**。 若要立即运行元组移动器，请使用**ALTER INDEX**语句的 "重新**组织**" 选项。  
   
  如果列存储行组已填充，它将进行压缩并停止接受新行。 当从压缩组中删除行时，这些行将保留但标记为已删除。 对压缩组的更新将实现为压缩组中的删除以及对打开组的插入。  
   
 ## <a name="permissions"></a>权限  
- 如果用户对表具有**VIEW DEFINITION**权限，则返回表的信息。  
+ 如果用户对表具有 **VIEW DEFINITION** 权限，则返回表的信息。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例将**sys. column_store_row_groups**表联接到其他系统表，以返回有关特定表的信息。 计算的 `PercentFull` 列是对行组效率的估计。 若要查找单个表的信息，请删除**WHERE**子句前面的注释连字符，并提供表名称。  
+ 下面的示例将 **sys. column_store_row_groups** 表联接到其他系统表，以返回有关特定表的信息。 计算的 `PercentFull` 列是对行组效率的估计。 若要查找单个表的信息，请删除 **WHERE** 子句前面的注释连字符，并提供表名称。  
   
 ```  
 SELECT i.object_id, object_name(i.object_id) AS TableName,   

@@ -1,4 +1,5 @@
 ---
+description: 数据质量客户端应用程序
 title: 数据质量客户端应用程序
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9442b966c7a7b5679e685fe330b52807c46af35f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487810"
 ---
 # <a name="data-quality-client-application"></a>数据质量客户端应用程序
 

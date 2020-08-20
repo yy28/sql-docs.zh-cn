@@ -1,4 +1,5 @@
 ---
+description: SqlService 类
 title: SqlService 类
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5d58acb2ceaf113da5701915e644d33fd5311b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd3b6052d45cdfa8378be561ec3663b7a97fab4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488344"
 ---
 # <a name="sqlservice-class"></a>SqlService 类
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)表示服务的实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
- [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)用于以编程方式管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 通过[SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)对象，您可以执行以下任务：  
+ [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)用于以编程方式管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 通过 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象，您可以执行以下任务：  
   
 -   连接到服务。  
   

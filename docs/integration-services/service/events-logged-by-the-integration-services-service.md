@@ -1,4 +1,5 @@
 ---
+description: 由 Integration Services 服务记录的事件
 title: 由 Integration Services 服务记录的事件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1a3d0272916814eb8ba9234217d6e7978c8a925e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487687"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>由 Integration Services 服务记录的事件
 
@@ -35,7 +36,7 @@ ms.locfileid: "86922011"
 ## <a name="service-status-messages"></a>服务状态消息
  当您选择安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时，系统将安装并启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，且其启动类型将设置为自动。  
   
-|事件 ID|符号名称|文本|说明|  
+|事件 ID|符号名称|文本|备注|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|正在启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务。|服务即将启动。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务已启动。|服务已启动。|  
@@ -46,7 +47,7 @@ ms.locfileid: "86922011"
 ## <a name="settings-file-messages"></a>设置文件消息  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的设置存储在一个 XML 文件中，您可以修改该文件。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
-|事件 ID|符号名称|文本|说明|  
+|事件 ID|符号名称|文本|备注|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务：%n指定配置文件的注册表设置不存在。 %n正尝试加载默认的配置文件。|包含配置文件路径的注册表项不存在或为空。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务配置文件不存在。%n正在使用默认设置加载。|在指定位置不存在配置文件自身。|  
@@ -54,14 +55,14 @@ ms.locfileid: "86922011"
   
 ## <a name="other-messages"></a>其他消息  
   
-|事件 ID|符号名称|文本|说明|  
+|事件 ID|符号名称|文本|备注|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务：正在停止运行中的包。%n包实例 ID：%1%n包 ID：%2%n包名称：%3%n包说明：%4%n包|服务正在尝试停止运行中的包。 可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中监视和停止正在运行的包。 有关如何在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中管理包的信息，请参阅[包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)。|  
 
 ## <a name="view-events"></a>查看事件
   可以使用以下两个工具来查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的事件：  
   
--   **中的** “日志文件查看器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 **“日志文件查看器”** 对话框包括导出、筛选和搜索日志的选项。 有关“日志文件查看器”  中选项的详细信息，请参阅[日志文件查看器 F1 帮助](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+-   **中的** “日志文件查看器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 **“日志文件查看器”** 对话框包括导出、筛选和搜索日志的选项。 有关“日志文件查看器”**** 中选项的详细信息，请参阅[日志文件查看器 F1 帮助](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 -   Windows 事件查看器。  
   
@@ -71,23 +72,23 @@ ms.locfileid: "86922011"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  在 **“文件”** 菜单上，单击 **“连接对象资源管理器”** 。  
+2.  在 **“文件”** 菜单上，单击 **“连接对象资源管理器”**。  
   
-3.  在 **“连接到服务器”** 对话框中，选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器类型，选择或找到要连接到的服务器，然后单击 **“连接”** 。  
+3.  在 **“连接到服务器”** 对话框中，选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器类型，选择或找到要连接到的服务器，然后单击 **“连接”**。  
   
-4.  在对象资源管理器中，右键单击 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，再单击“查看日志”  。  
+4.  在对象资源管理器中，右键单击 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，再单击“查看日志”****。  
   
 5.  若要查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，请选择 **SQL Server Integration Services**。 如果选择或清除 **SQL Server Integration Services** 选项，则会同时选择或清除 **“NT 事件”** 选项。  
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>在 Windows 事件查看器中查看 Integration Services 的服务事件  
   
-1.  在 **“控制面板”** 中，如果使用的是经典视图，请单击 **“管理工具”** ；如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”** 。  
+1.  在 **“控制面板”** 中，如果使用的是经典视图，请单击 **“管理工具”**；如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
   
-2.  单击 **“事件查看器”** 。  
+2.  单击 **“事件查看器”**。  
   
-3.  在 **“事件查看器”** 对话框中，单击 **“应用程序”** 。  
+3.  在 **“事件查看器”** 对话框中，单击 **“应用程序”**。  
   
-4.  在“应用程序”  管理单元中，找到“源”  列中具有值 **SQLISService** 的项，右键单击该项，再单击“属性”  。  
+4.  在“应用程序”**** 管理单元中，找到“源”**** 列中具有值 **SQLISService** 的项，右键单击该项，再单击“属性”****。  
   
 5.  可以选择单击向上键或向下键来显示上一个事件或下一个事件。  
   

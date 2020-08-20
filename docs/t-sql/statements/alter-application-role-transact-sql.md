@@ -1,4 +1,5 @@
 ---
+description: ALTER APPLICATION ROLE (Transact-SQL)
 title: ALTER APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6b0d65b5d4d68ac23f980e98405d4c19e0e970e1
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: c20b880e586572cb7f4ac3687663e6f7c2ba012e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488064"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 
@@ -52,17 +53,17 @@ ALTER APPLICATION ROLE application_role_name
 
 ## <a name="arguments"></a>参数
 
- application_role_name   
+ application_role_name**  
  要修改的应用程序角色的名称。  
   
- NAME =new_application_role_name   
+ NAME =new_application_role_name**  
  指定应用程序角色的新名称。 该名称一定不能被用于引用数据库中任何主体。  
   
- PASSWORD ='password'   
- 指定应用程序角色的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 应始终使用强密码。  
+ PASSWORD ='password'  
+ 指定应用程序角色的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 应始终使用强密码。  
   
- DEFAULT_SCHEMA =schema_name   
- 指定服务器在解析对象名时将搜索的第一个架构。 schema_name 可以是数据库中不存在的架构  。  
+ DEFAULT_SCHEMA =schema_name  
+ 指定服务器在解析对象名时将搜索的第一个架构。 schema_name 可以是数据库中不存在的架构**。  
   
 ## <a name="remarks"></a>备注
 
@@ -74,7 +75,7 @@ ALTER APPLICATION ROLE application_role_name
  在 sys.database_principals 目录视图中可以查看应用程序角色。  
   
 > [!CAUTION]  
->  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，架构的行为与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行为不同。 假设架构与数据库用户等效的代码可能不会返回正确的结果。 包括 sysobjects 在内的旧目录视图不应在曾经使用下列任何 DDL 语句的数据库中使用：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在曾经使用过这些语句中的任意一个语句的数据库中，必须使用新的目录视图。 新的目录视图将采用在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的使主体和架构分离的方法。 有关目录视图的详细信息，请参阅[目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
+>  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，架构的行为与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行为不同。 假设架构与数据库用户等效的代码可能不会返回正确的结果。 旧目录视图（包括 sysobjects）不应用于曾使用下列任何 DDL 语句的数据库中：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在曾经使用过这些语句中的任意一个语句的数据库中，必须使用新的目录视图。 新的目录视图将采用在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的使主体和架构分离的方法。 有关目录视图的详细信息，请参阅[目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。 若要更改默认架构，用户还需要对应用程序角色有 ALTER 权限。 应用程序角色可以修改其自身的默认架构，但不能修改其名称或密码。  

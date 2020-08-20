@@ -1,4 +1,5 @@
 ---
+description: 数据清理
 title: 数据清理
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5a45acafea032b6a0815d975f91b64f5612b2e43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d54722c2a8cf6e5364cc25d35621957164d3b9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487828"
 ---
 # <a name="data-cleansing"></a>数据清理
 
@@ -67,7 +68,7 @@ ms.locfileid: "85899129"
   
 -   **建议的**：用于 DQS 查找建议的值，这些值的置信度高于 *自动建议阈值* 但是低于 *自动更正阈值* 。 您应该检查这些值，并按需批准或拒绝它们。  
   
--   **新增**： DQS 没有足够信息（建议）的有效值，因此不能映射到任何其他选项卡。此外，此选项卡还包含置信度小于*自动建议阈值*的值，但足以标记为有效。  
+-   **新增**：对于 DQS 没有足够信息的有效值 (建议) ，因此不能映射到任何其他选项卡。此外，此选项卡还包含置信度小于 *自动建议阈值* 的值，但足以标记为有效。  
   
 -   **无效**：在知识库的域中被标记为无效的值或不符合域规则或引用数据要求的值。 此选项卡还包含在交互式清理过程中被用户在任何其他四个选项卡中拒绝的值。  
   
@@ -106,7 +107,7 @@ ms.locfileid: "85899129"
 |说明如何清理复合域。|[清理复合域中的数据](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;DQS&#41;的数据质量项目](../data-quality-services/data-quality-projects-dqs.md)   
+ [&#40;DQS&#41;的数据质量项目 ](../data-quality-services/data-quality-projects-dqs.md)   
  [数据匹配](../data-quality-services/data-matching.md)  
   
   

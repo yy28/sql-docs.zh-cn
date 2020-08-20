@@ -1,4 +1,5 @@
 ---
+description: AsGml（geometry 数据类型）
 title: AsGml（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 61673238e63ac43d30811d3ff983917ce916a6b5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5e41cc216ad67452e6a0f43e0baad30bb96fb3f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488211"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回 geometry 实例的地理标记语言 (GML) 表示形式  。
+返回 geometry 实例的地理标记语言 (GML) 表示形式****。
   
 有关地理标记语言的详细信息，请参阅下面的开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)。
   
@@ -43,9 +44,9 @@ ms.locfileid: "86555712"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml****  
   
- CLR 返回类型：SqlXml   
+ CLR 返回类型：SqlXml****  
   
 ## <a name="remarks"></a>备注  
   

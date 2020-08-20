@@ -1,5 +1,6 @@
 ---
-title: ProtocolName 属性（ServerNetworkProtocolProperty）
+description: ProtocolName 属性（ServerNetworkProtocolProperty 类）
+title: 'ProtocolName 属性 (ServerNetworkProtocolProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fde4077c88f83da6537a23dd4a13ea75953de647
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4995400c12112a19a2a8fe6dc17945ec75ac4ff0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488361"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>ProtocolName 属性（ServerNetworkProtocolProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ object.PropertyName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示实例上的网络协议属性的[ServerNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 对象  
+ 一个表示实例上的网络协议属性的 [ServerNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定具有该属性的协议名称的字符串值。  

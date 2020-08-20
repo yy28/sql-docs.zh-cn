@@ -1,4 +1,5 @@
 ---
+description: 嵌入式 SQL
 title: Embedded SQL |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b52c5a87d1df03460a833a27fcb5523b80cd1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487410"
 ---
 # <a name="embedded-sql"></a>嵌入式 SQL
 向 DBMS 发送 SQL 语句的第一种方法是嵌入式 SQL。 由于 SQL 不使用变量和控制流语句，因此它通常用作可以添加到用传统编程语言（例如 C 或 COBOL）编写的程序的数据库子语言。 这是嵌入式 SQL 的中心理念：将 SQL 语句置于用主机编程语言编写的程序中。 简单地说，以下方法用于以主机语言嵌入 SQL 语句：  
   
--   嵌入式 SQL 语句由特殊的 SQL 预编译器处理。 所有 SQL 语句都以引导开头，以结束符结尾，这两个语句均标记预编译器的 SQL 语句。 引导和终止符因主机语言而异。 例如，引导是 C 中的 "EXEC SQL" 和 "&SQL （" 在 MUMPS 中，终止符为分号（;)在 C 中为 MUMPS 中的右括号。  
+-   嵌入式 SQL 语句由特殊的 SQL 预编译器处理。 所有 SQL 语句都以引导开头，以结束符结尾，这两个语句均标记预编译器的 SQL 语句。 引导和终止符因主机语言而异。 例如，引导是 C 中的 "EXEC SQL" 和 MUMPS 中的 "&SQL ("，而终止符为分号 (; 在 C 中 ) ，在 MUMPS 中使用右括号。  
   
 -   应用程序中的变量称为主机变量，可在允许使用常量的嵌入式 SQL 语句中使用。 它们可用于输入，以便在特定情况下将 SQL 语句定制为特定情况，并用于接收查询结果。  
   
