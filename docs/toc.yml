@@ -175,11 +175,15 @@
         - name: 部署和使用应用
           items:
             - name: 使用 azdata 部署
-              href: big-data-cluster/big-data-cluster-create-apps.md
+              href: big-data-cluster/app-create.md
             - name: 使用 VS Code 进行部署
               href: big-data-cluster/app-deployment-extension.md
             - name: 使用应用
-              href: big-data-cluster/big-data-cluster-consume-apps.md
+              href: big-data-cluster/app-consume.md
+            - name: 运行应用
+              href: big-data-cluster/app-run.md
+            - name: 监视应用
+              href: big-data-cluster/app-monitor.md
         - name: 大数据/机器学习
           items:
             - name: 使用机器学习服务（Python、R）
