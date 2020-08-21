@@ -1,8 +1,8 @@
 ---
-description: SQLDriverConnect 函数
 title: SQLDriverConnect 函数 |Microsoft Docs
+description: SQLDriverConnect 函数是 ODBC API 标准的一部分，此参考文档提供了有关其语法的信息。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476140"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745897"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函数
 **度**  
  引入的版本： ODBC 1.0 标准符合性： ODBC  
   
  **摘要**  
- **SQLDriverConnect** 是 **SQLConnect**的一种替代方法。 它支持的数据源所需的连接信息超过 **SQLConnect**、对话框中的三个参数，用于提示用户输入所有连接信息，以及在系统信息中未定义的数据源。  
-  
- **SQLDriverConnect** 提供以下连接属性：  
-  
--   使用连接字符串建立连接，该字符串包含数据源名称、一个或多个用户 Id、一个或多个密码，以及数据源所需的其他信息。  
-  
--   使用部分连接字符串建立连接，或者不使用其他信息建立连接;在这种情况下，驱动程序管理器和驱动程序可以提示用户输入连接信息。  
-  
--   建立与系统信息中未定义的数据源的连接。 如果应用程序提供部分连接字符串，则驱动程序可以提示用户输入连接信息。  
-  
--   使用从 .dsn 文件中的信息构造的连接字符串建立与数据源的连接。  
-  
- 建立连接后， **SQLDriverConnect** 将返回完成的连接字符串。 应用程序可将此字符串用于后续连接请求。 有关详细信息，请参阅 [与 SQLDriverConnect 连接](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)。  
-  
+ **SQLDriverConnect** 是 **SQLConnect**的一种替代方法。 它支持的数据源所需的连接信息超过 **SQLConnect**、对话框中的三个参数，用于提示用户输入所有连接信息，以及在系统信息中未定义的数据源。 有关详细信息，请参阅 [与 SQLDriverConnect 连接](../develop-app/connecting-with-sqldriverconnect.md)。  
+
 ## <a name="syntax"></a>语法  
   
 ```cpp  
