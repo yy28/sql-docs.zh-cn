@@ -18,36 +18,36 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ef4e7b00823dcf9ce9da341ced08418a55a4bc8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70b77c60d2a2ac77a2d36a4ce29d2e20187495f9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441949"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777316"
 ---
 # <a name="status-property-ado-field"></a>Status 属性（ADO 字段）
-指示 [Field](../../../ado/reference/ado-api/field-object.md) 对象的状态。  
+指示 [Field](./field-object.md) 对象的状态。  
   
 ## <a name="return-value"></a>返回值  
- 返回 [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) 值。 默认值为 **adFieldOK**。  
+ 返回 [FieldStatusEnum](./fieldstatusenum.md) 值。 默认值为 **adFieldOK**。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="record-field-status"></a>记录字段状态  
- 在调用对象的[Update](../../../ado/reference/ado-api/update-method.md)方法之前，将缓存对[Record](../../../ado/reference/ado-api/record-object-ado.md)对象的**Field**对象的值所做的更改。 此时，如果对字段的值所做的更改导致了错误，OLE DB 将 **DB_E_ERRORSOCCURRED** (2147749409) 引发错误。 导致错误的**字段**集合中的任何**字段**对象的 Status 属性将包含[FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)中的一个值，用于描述问题的原因。  
+ 在调用对象的[Update](./update-method.md)方法之前，将缓存对[Record](./record-object-ado.md)对象的**Field**对象的值所做的更改。 此时，如果对字段的值所做的更改导致了错误，OLE DB 将 **DB_E_ERRORSOCCURRED** (2147749409) 引发错误。 导致错误的**字段**集合中的任何**字段**对象的 Status 属性将包含[FieldStatusEnum](./fieldstatusenum.md)中的一个值，用于描述问题的原因。  
   
- 为了增强性能，将缓存对**Record**对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合的添加和删除操作，直到调用**Update**方法，然后在批处理乐观更新中进行更改。 如果不调用 **Update** 方法，服务器将不会更新。 如果任何更新失败，则返回 DB_E_ERRORSOCCURRED)  (OLE DB 提供程序错误， **状态** 属性指示操作和错误状态代码的组合值。 例如， **ADFIELDPENDINGINSERT 或 adFieldPermissionDenied**。 每个**字段**的 "**状态**" 属性可用于确定不添加、修改或删除**字段**的原因。  
+ 为了增强性能，将缓存对**Record**对象的[字段](./fields-collection-ado.md)集合的添加和删除操作，直到调用**Update**方法，然后在批处理乐观更新中进行更改。 如果不调用 **Update** 方法，服务器将不会更新。 如果任何更新失败，则返回 DB_E_ERRORSOCCURRED)  (OLE DB 提供程序错误， **状态** 属性指示操作和错误状态代码的组合值。 例如， **ADFIELDPENDINGINSERT 或 adFieldPermissionDenied**。 每个**字段**的 "**状态**" 属性可用于确定不添加、修改或删除**字段**的原因。  
   
- 添加、修改或删除 **字段** 时遇到的许多类型的问题都通过 **Status** 属性进行报告。 例如，如果用户删除某个 **字段**，则会将其标记为从 **Fields** 集合中删除。 如果后续的 **更新** 返回错误，因为用户试图删除其没有权限的 **字段** ，则该 **字段** 的 **状态** 将为 **adFieldPermissionDenied 或 adFieldPendingDelete**。 调用 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 方法将恢复原始值并将 **状态** 设置为 **adFieldOK**。  
+ 添加、修改或删除 **字段** 时遇到的许多类型的问题都通过 **Status** 属性进行报告。 例如，如果用户删除某个 **字段**，则会将其标记为从 **Fields** 集合中删除。 如果后续的 **更新** 返回错误，因为用户试图删除其没有权限的 **字段** ，则该 **字段** 的 **状态** 将为 **adFieldPermissionDenied 或 adFieldPendingDelete**。 调用 [CancelUpdate](./cancelupdate-method-ado.md) 方法将恢复原始值并将 **状态** 设置为 **adFieldOK**。  
   
  同样， **Update** 方法可能会返回错误，因为添加了新 **字段** 并给出了不合适的值。 在这种情况下，新 **字段** 将位于 **Fields** 集合中，并且状态为 " **adFieldPendingInsert** "，可能是根据提供程序 **)  (的** 。 可以为新 **字段** 提供相应的值，并再次调用 **Update** 。  
   
 ## <a name="recordset-field-status"></a>记录集字段状态  
- 在调用对象的[Update](../../../ado/reference/ado-api/update-method.md)方法之前，对[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的字段集合中**字段**对象的值所做的更改将被缓存。 此时，如果对字段的值所做的更改导致了错误，OLE DB 将 **DB_E_ERRORSOCCURRED** (2147749409) 引发错误。 导致错误的**字段**集合中的任何**字段**对象的 Status 属性将包含[FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)中的一个值，用于描述问题的原因。  
+ 在调用对象的[Update](./update-method.md)方法之前，对[记录集](./recordset-object-ado.md)的字段集合中**字段**对象的值所做的更改将被缓存。 此时，如果对字段的值所做的更改导致了错误，OLE DB 将 **DB_E_ERRORSOCCURRED** (2147749409) 引发错误。 导致错误的**字段**集合中的任何**字段**对象的 Status 属性将包含[FieldStatusEnum](./fieldstatusenum.md)中的一个值，用于描述问题的原因。  
   
 ## <a name="applies-to"></a>适用于  
- [字段对象](../../../ado/reference/ado-api/field-object.md)  
+ [字段对象](./field-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [状态属性示例 ( (VB) 字段) ](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
- [Status 属性示例 (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   
+ [状态属性示例 ( (VB) 字段) ](./status-property-example-field-vb.md)   
+ [Status 属性示例 (VC++)](./status-property-example-vc.md)

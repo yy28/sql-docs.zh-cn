@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for Oracle
 title: Microsoft Connector for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430749"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -55,6 +56,10 @@ Microsoft Connector for Oracle 支持以下 Microsoft SQL Server 产品：
 - [SQL Server 2016：适用于 Oracle 的 Attunity Microsoft Connector 版本 4.0](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014：适用于 Oracle 的 Attunity Microsoft Connector 版本 3.0](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012：适用于 Oracle 的 Attunity Microsoft Connector 版本 2.0](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="limitations-and-known-issues"></a>限制和已知问题
+
+- 视图不会在 Oracle 源“表或视图的名称”下列出。 要解决此问题，请使用 SQL 命令并执行 select * from view，或在高级编辑器中将视图名称设置为属性 [Oracle Source].[TableName]。
 
 ## <a name="uninstallation"></a>卸载
 

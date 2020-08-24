@@ -1,6 +1,6 @@
 ---
 title: 手动故障转移 FCI - Linux 上的 SQL Server
-description: 了解如何对 Linux 上的 SQL Server 手动故障转移 FCI。
+description: 了解如何在 Linux 上的 SQL Server 上手动故障转移群集实例 (FCI)，尤其是 Red Hat Linux Enterprise、Ubuntu 和 Suse Linux Enterprise Server。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2be454ad7d2ca85f1648ba7f98ea503627d6c437
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897250"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088734"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>运行故障转移群集实例 - Linux 上的 SQL Server
 

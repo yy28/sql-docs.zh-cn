@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85b13a87e09d7c95ecad8b6ed283b8d8066b22f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439629"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769636"
 ---
 # <a name="procedures-append-method-example-vb"></a>过程 Append 方法示例 (VB)
-下面的代码演示了如何使用 [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象和 [过程](../../../ado/reference/adox-api/procedures-collection-adox.md) 集合 [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) 方法在基础数据源中创建新的过程。  
+下面的代码演示了如何使用 [命令](../ado-api/command-object-ado.md) 对象和 [过程](./procedures-collection-adox.md) 集合 [Append](./append-method-adox-procedures.md) 方法在基础数据源中创建新的过程。  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -75,8 +75,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [附加方法 (ADOX 过程) ](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [过程对象 (ADOX) ](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection 属性 (ADOX) ](./activeconnection-property-adox.md)   
+ [附加方法 (ADOX 过程) ](./append-method-adox-procedures.md)   
+ [目录对象 (ADOX) ](./catalog-object-adox.md)   
+ [过程对象 (ADOX) ](./procedure-object-adox.md)   
+ [过程集合 (ADOX)](./procedures-collection-adox.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fe8cb849b5b770f23fab92da84bc3bc58fdf55d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b198e9765a8d0e68e61ecd3f9ed334e34c714ea8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441269"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778336"
 ---
 # <a name="catalog-object-ado-md"></a>目录对象 (ADO MD)
 包含多维架构信息 (多维数据提供程序) 特定于多维数据访问接口 (MDP) 的多维数据集和基础维度、层次结构、级别和成员。  
@@ -29,17 +29,17 @@ ms.locfileid: "88441269"
 ## <a name="remarks"></a>备注  
  使用 **目录** 对象的集合和属性，可以执行以下操作：  
   
--   通过将 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) 属性设置为标准 ADO [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象或有效的连接字符串，打开目录。  
+-   通过将 [ActiveConnection](./activeconnection-property-ado-md.md) 属性设置为标准 ADO [连接](../ado-api/connection-object-ado.md) 对象或有效的连接字符串，打开目录。  
   
--   标识具有[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性的**编录**。  
+-   标识具有[Name](./name-property-ado-md.md)属性的**编录**。  
   
--   使用 [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) 集合循环访问目录中的多维数据集。  
+-   使用 [CubeDefs](./cubedefs-collection-ado-md.md) 集合循环访问目录中的多维数据集。  
   
  本部分包含以下主题。  
   
--   [属性、方法和事件](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
+-   [属性、方法和事件](./catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VB 的目录示例) ](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+ [ (VB 的目录示例) ](./catalog-example-vb.md)   
+ [ADO) 的连接对象 (](../ado-api/connection-object-ado.md)   
+ [CubeDefs 集合 (ADO MD)](./cubedefs-collection-ado-md.md)

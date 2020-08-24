@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5763c00222d08f8b0362351879389c43f39f3e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440049"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770516"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 和 SetPermissions 方法示例 (VB)
-此示例演示 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 和 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 方法。 以下代码为管理员用户提供 Orders 表的完全访问权限。  
+此示例演示 [GetPermissions](./getpermissions-method-adox.md) 和 [SetPermissions](./setpermissions-method-adox.md) 方法。 以下代码为管理员用户提供 Orders 表的完全访问权限。  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -96,8 +96,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions 方法 (ADOX) ](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions 方法 (ADOX) ](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [用户对象 (ADOX) ](../../../ado/reference/adox-api/user-object-adox.md)   
- [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [目录对象 (ADOX) ](./catalog-object-adox.md)   
+ [GetPermissions 方法 (ADOX) ](./getpermissions-method-adox.md)   
+ [SetPermissions 方法 (ADOX) ](./setpermissions-method-adox.md)   
+ [用户对象 (ADOX) ](./user-object-adox.md)   
+ [用户集合 (ADOX)](./users-collection-adox.md)

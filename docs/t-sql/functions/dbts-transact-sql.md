@@ -1,5 +1,6 @@
 ---
-title: '@@DBTS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;DBTS (Transact-SQL)'
+title: DBTS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -18,36 +19,39 @@ helpviewer_keywords:
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f11adca5f8a3fe72a0365e84a746cdec2d5e049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417403"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-此函数返回当前数据库的当前 timestamp 数据类型的值  。 当前数据库将具有确保唯一的时间戳值。
+此函数返回当前数据库的当前 timestamp 数据类型的值****。 当前数据库将具有确保唯一的时间戳值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
-```
+```syntaxsql
 @@DBTS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
 ## <a name="remarks"></a>备注  
-@@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 timestamp 列的行时，会产生一个新的时间戳值  。
+@@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 timestamp 列的行时，会产生一个新的时间戳值****。
   
 事务隔离级别的更改不会影响 @@DBTS 函数。
   
 ## <a name="examples"></a>示例  
-此示例从  **数据库返回当前的 timestamp**[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
+此示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp****。
   
 ```sql
 USE AdventureWorks2012;  

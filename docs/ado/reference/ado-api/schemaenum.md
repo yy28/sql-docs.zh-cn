@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442169"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777536"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-指定[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法检索的架构**记录集**的类型。  
+指定[OpenSchema](./openschema-method.md)方法检索的架构**记录集**的类型。  
   
 ## <a name="remarks"></a>备注  
- 有关为每个 ADO 常量返回的函数和列的其他信息，请参阅附录 B： OLE DB 程序员参考中的 [架构行集](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) 。 下表的 "描述" 部分的括号中列出了每个主题的名称。  
+ 有关为每个 ADO 常量返回的函数和列的其他信息，请参阅附录 B： OLE DB 程序员参考中的 [架构行集](/previous-versions/windows/desktop/ms712921(v=vs.85)) 。 下表的 "描述" 部分的括号中列出了每个主题的名称。  
   
- 有关为每个 ADO MD 常量返回的函数和列的其他信息，请参阅 OLAP) 文档 (的联机分析处理 OLE DB 中的 [OLAP 对象和架构行集 OLE DB](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) 中的相关主题。 下表的 "说明" 列中的括号内列出了每个主题的名称。  
+ 有关为每个 ADO MD 常量返回的函数和列的其他信息，请参阅 OLAP) 文档 (的联机分析处理 OLE DB 中的 [OLAP 对象和架构行集 OLE DB](/previous-versions/windows/desktop/ms723056(v=vs.85)) 中的相关主题。 下表的 "说明" 列中的括号内列出了每个主题的名称。  
   
- 您可以通过参考 ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 主题的 Description 列，将 OLE DB 文档中的列的数据类型转换为 ado 数据类型。 例如，OLE DB 的数据类型 **DBTYPE_WSTR** 等效于 ADO 数据类型 **adWChar**。  
+ 您可以通过参考 ADO [DataTypeEnum](./datatypeenum.md) 主题的 Description 列，将 OLE DB 文档中的列的数据类型转换为 ado 数据类型。 例如，OLE DB 的数据类型 **DBTYPE_WSTR** 等效于 ADO 数据类型 **adWChar**。  
   
- ADO 为常量、 **adSchemaDBInfoKeywords** 和 **adSchemaDBInfoLiterals**生成类似于架构的结果。 ADO 创建一个 **记录集**，然后使用 **IDBInfo：： GetKeywords** 和 **IDBInfo：： GetLiteralInfo** 方法分别返回的值填充每一行。 有关这些方法的其他信息可在 OLE DB 程序员参考的 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) 部分找到。  
+ ADO 为常量、 **adSchemaDBInfoKeywords** 和 **adSchemaDBInfoLiterals**生成类似于架构的结果。 ADO 创建一个 **记录集**，然后使用 **IDBInfo：： GetKeywords** 和 **IDBInfo：： GetLiteralInfo** 方法分别返回的值填充每一行。 有关这些方法的其他信息可在 OLE DB 程序员参考的 [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) 部分找到。  
   
-|返回的常量|值|描述|约束列|  
+|返回的常量|Value|说明|约束列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|返回在目录中定义的由给定用户拥有的断言。<br /><br />  (断言行集) |CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|返回与可从 DBMS 访问的目录关联的物理特性。<br /><br />  (目录行集) |CATALOG_NAME|  
@@ -127,4 +127,4 @@ ms.locfileid: "88442169"
 |AdoEnums. VIEWTABLEUSAGE|  
   
 ## <a name="applies-to"></a>适用于  
- [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)
+ [OpenSchema 方法](./openschema-method.md)

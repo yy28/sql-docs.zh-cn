@@ -1,6 +1,6 @@
 ---
 title: 对 Linux 上的 SQL Server 进行故障排除
-description: 提供有关使用 Linux 上的 SQL Server 的故障排除提示。
+description: 对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 了解在何处可以找到有关支持的功能和已知限制的信息。
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897222"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088733"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -27,7 +27,7 @@ ms.locfileid: "85897222"
 ## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> 解决连接失败问题
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。
 
-- 如果无法使用 localhost 进行本地连接，请尝试改用 IP 地址 127.0.0.1  。 Localhost 可能未正确映射到此地址  。
+- 如果无法使用 localhost 进行本地连接，请尝试改用 IP 地址 127.0.0.1****。 Localhost 可能未正确映射到此地址****。
 
 - 验证是否可从客户端计算机访问服务器名称或 IP 地址。
 
@@ -50,7 +50,7 @@ ms.locfileid: "85897222"
 
 - 验证用户名和密码是否存在任何拼写错误、多余空格或错误大小写。
 
-- 尝试以显式方式设置协议和端口号，确保服务器名称如下所示：tcp:servername,1433  。
+- 尝试以显式方式设置协议和端口号，确保服务器名称如下所示：tcp:servername,1433****。
 
 - 网络连接问题也可能导致连接错误和超时。 验证连接信息和网络连接后，请再次尝试连接。
 
@@ -76,7 +76,7 @@ ms.locfileid: "85897222"
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>管理 mssql Docker 容器的执行
 
-通过运行以下命令，可以获得最新创建的 SQL Server Docker 容器的状态和容器 ID（ID 位于“CONTAINER ID”列下）  ：
+通过运行以下命令，可以获得最新创建的 SQL Server Docker 容器的状态和容器 ID（ID 位于“CONTAINER ID”列下）****：
 
    ```bash
    sudo docker ps -l
@@ -160,7 +160,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 作为最后手段，可以选择将 master 和模型数据库重新生成为默认版本。
 
 > [!WARNING]
-> 这些步骤将删除已配置的所有 SQL Server 系统数据  ！ 这包括有关用户数据库的信息（但不包括用户数据库本身）。 它还将删除存储在系统数据库中的其他信息，包括以下各项：主密钥信息、在 master 中加载的任何证书、SA 登录密码、msdb 中的作业相关信息、msdb 中的 DB 邮件信息以及 sp_configure 选项。 只有在了解其含义后才能使用！
+> 这些步骤将删除已配置的所有 SQL Server 系统数据****！ 这包括有关用户数据库的信息（但不包括用户数据库本身）。 它还将删除存储在系统数据库中的其他信息，包括以下各项：主密钥信息、在 master 中加载的任何证书、SA 登录密码、msdb 中的作业相关信息、msdb 中的 DB 邮件信息以及 sp_configure 选项。 只有在了解其含义后才能使用！
 
 1. 停止 SQL Server。
 
@@ -168,14 +168,14 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    sudo systemctl stop mssql-server
    ```
 
-1. 使用“force-setup”参数运行 sqlservr   。 
+1. 使用“force-setup”参数运行 sqlservr********。 
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
    
    > [!WARNING]
-   > 请参阅上一个警告！ 此外，还必须以“mssql”用户身份运行，如下所示  。
+   > 请参阅上一个警告！ 此外，还必须以“mssql”用户身份运行，如下所示****。
 
 1. 看到消息“恢复已完成”后，请按 Ctrl+C。 这将关闭 SQL Server
 
@@ -191,7 +191,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    sudo systemctl start mssql-server
    ```
 
-## <a name="improve-performance"></a>改善性能
+## <a name="improve-performance"></a>提高性能
 
 影响性能的因素有很多，包括数据库设计、硬件和工作负载需求。 如果希望改善性能，请首先查看本文中的最佳做法，[适用于 Linux 上的 SQL Server 的性能最佳做法和配置指南](sql-server-linux-performance-best-practices.md)。 然后，浏览一些可用于解决性能问题的工具。
 

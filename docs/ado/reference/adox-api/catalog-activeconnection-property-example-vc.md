@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37b50500b66c4f9e4bdca19facf27e290ac242c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d5de9f7ed0956fb2983e3bc300f30028b876cb7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440389"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771236"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>目录 ActiveConnection 属性示例 (VC++)
-将 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 属性设置为有效的开放式连接 "打开" 该目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
+将 [ActiveConnection](./activeconnection-property-adox.md) 属性设置为有效的开放式连接 "打开" 该目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
@@ -113,4 +113,4 @@ void OpenConnectionWithStringX() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection 属性 (ADOX)](./activeconnection-property-adox.md)

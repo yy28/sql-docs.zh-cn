@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440959"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778066"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 属性（ADO MD 单元集）
-[使用单元坐标的坐标](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)从单元集中检索单元格。  
+[使用单元坐标的坐标](./cellset-object-ado-md.md)从单元集中检索单元格。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ Set
 Cell = Cellset.Item ( Positions)  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  *位置*  
  唯一指定单元格的值的 **VariantArray** 。 *位置* 可以是以下各项之一：  
   
@@ -46,7 +46,7 @@ Cell = Cellset.Item ( Positions)
 -   序号位置  
   
 ## <a name="remarks"></a>备注  
- 使用**Item**属性可以返回单元[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象内的[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)对象。 如果 **Item** 属性找不到对应于 *位置* 参数的单元，则会出现错误。  
+ 使用**Item**属性可以返回单元[集](./cellset-object-ado-md.md)对象内的[Cell](./cell-object-ado-md.md)对象。 如果 **Item** 属性找不到对应于 *位置* 参数的单元，则会出现错误。  
   
  **Item**属性是**单元集**对象的默认属性。 以下语法形式可互换：  
   
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  数据访问接口可能不支持按成员名称检索单元格。 有关详细信息，请参阅提供程序的文档。  
   
 ## <a name="applies-to"></a>适用于  
- [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [单元集对象 (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Cell Object (ADO MD) ](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Cell Object (ADO MD) ](./cell-object-ado-md.md)   
+ [单元集对象 (ADO MD)](./cellset-object-ado-md.md)

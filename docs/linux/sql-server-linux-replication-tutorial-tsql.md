@@ -1,6 +1,6 @@
 ---
 title: 教程：配置复制 (T-SQL)
-description: 本教程介绍如何使用 T-SQL 配置 Linux 上的 SQL Server 快照复制。
+description: 你将使用 Transact-SQL (T-SQL) 在包含两个 SQL Server 实例的 Linux 上配置 SQL Server 快照复制。
 ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: fcabf34eae115f7fed2b74989e0e76c11562c7ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cc1a6ab577a471b69394cf35149f457972aece68
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882658"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088832"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 配置复制
 

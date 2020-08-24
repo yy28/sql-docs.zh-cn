@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f30243440d9b09194bd3cd1c7ed5a162ad8de34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441209"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778306"
 ---
 # <a name="cellset-object-ado-md"></a>单元集对象 (ADO MD)
 表示多维查询的结果。 它是从多维数据集或其他单元集选择的单元的集合。  
@@ -34,35 +34,35 @@ cst.Axes(0).Positions(0).Members(0).Caption
 ```  
   
 ## <a name="remarks"></a>备注  
- 单元集内没有当前单元格的概念。 相反， [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 属性从单元集中检索特定的 [单元](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 对象。 **Item**属性的参数确定要检索的单元格。 可以指定单元格的唯一序号值。 还可以通过使用单元格集的每个轴上的位置号来检索单元格。 有关检索单元格的详细信息，请参阅 [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 属性。  
+ 单元集内没有当前单元格的概念。 相反， [Item](./item-property-ado-md-cellset.md) 属性从单元集中检索特定的 [单元](./cell-object-ado-md.md) 对象。 **Item**属性的参数确定要检索的单元格。 可以指定单元格的唯一序号值。 还可以通过使用单元格集的每个轴上的位置号来检索单元格。 有关检索单元格的详细信息，请参阅 [Item](./item-property-ado-md-cellset.md) 属性。  
   
  使用 **单元集** 对象的集合、方法和属性，可以执行以下操作：  
   
--   通过设置其[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性，将打开的连接与**单元集**对象关联起来。  
+-   通过设置其[ActiveConnection](./activeconnection-property-ado-md.md)属性，将打开的连接与**单元集**对象关联起来。  
   
--   使用 [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) 方法执行和检索多维查询的结果。  
+-   使用 [Open](./open-method-ado-md.md) 方法执行和检索多维查询的结果。  
   
--   从具有[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)属性的**单元**格集中检索**单元**。  
+-   从具有[Item](./item-property-ado-md-cellset.md)属性的**单元**格集中检索**单元**。  
   
--   返回用[轴](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)集合定义**单元集**的[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)对象。  
+-   返回用[轴](./axes-collection-ado-md.md)集合定义**单元集**的[轴](./axis-object-ado-md.md)对象。  
   
--   使用[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性检索有关用于筛选**单元**集中的数据的维度的信息。  
+-   使用[FilterAxis](./filteraxis-property-ado-md.md)属性检索有关用于筛选**单元**集中的数据的维度的信息。  
   
--   返回或指定用于定义具有[源](../../../ado/reference/ado-md-api/source-property-ado-md.md)属性的**单元集**的查询。  
+-   返回或指定用于定义具有[源](./source-property-ado-md.md)属性的**单元集**的查询。  
   
--   返回 **单元集** 的当前状态， (打开、关闭、执行或用 [state](../../../ado/reference/ado-md-api/state-property-ado-md.md) 属性连接) 。  
+-   返回 **单元集** 的当前状态， (打开、关闭、执行或用 [state](./state-property-ado-md.md) 属性连接) 。  
   
--   使用[close](../../../ado/reference/ado-md-api/close-method-ado-md.md)方法关闭打开的**单元集**。  
+-   使用[close](./close-method-ado-md.md)方法关闭打开的**单元集**。  
   
--   检索有关具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的**单元集**的特定于提供程序的信息。  
+-   检索有关具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合的**单元集**的特定于提供程序的信息。  
   
  本部分包含以下主题。  
   
--   [属性、方法和事件](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
+-   [属性、方法和事件](./cellset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VB) 单元集示例 ](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [轴集合 (ADO MD) ](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Cell Object (ADO MD) ](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [ (VB) 单元集示例 ](./cellset-example-vb.md)   
+ [轴集合 (ADO MD) ](./axes-collection-ado-md.md)   
+ [Cell Object (ADO MD) ](./cell-object-ado-md.md)   
+ [ADO) 的连接对象 (](../ado-api/connection-object-ado.md)   
+ [属性集合 (ADO)](../ado-api/properties-collection-ado.md)

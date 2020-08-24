@@ -1,6 +1,6 @@
 ---
 title: 透明数据加密
-description: 并行数据仓库（PDW）的透明数据加密（TDE）对数据和事务日志文件以及特殊 PDW 日志文件执行实时 i/o 加密和解密。
+description: 并行数据仓库 (TDE) 的透明数据加密 (PDW) 对数据和事务日志文件以及特殊 PDW 日志文件执行实时 i/o 加密和解密。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,20 +9,20 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289745"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777726"
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
-可以采取多种预防措施来帮助保护数据库，例如，设计安全系统、加密机密资产，以及围绕数据库服务器构建防火墙。 但是，对于物理介质（如驱动器或备份磁带）被盗的情况，恶意方只需还原或附加数据库并浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
+可以采取多种预防措施来帮助保护数据库，例如，设计安全系统、加密机密资产，以及围绕数据库服务器构建防火墙。 但是，对于物理媒体 (例如驱动器或备份磁带) 被盗的情况，恶意方只需还原或附加数据库并浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
   
-*透明数据加密*（TDE）对数据和事务日志文件以及特殊 PDW 日志文件执行实时 i/o 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在 SQL Server PDW 的 master 数据库中的证书保护的对称密钥。 TDE 保护“处于休眠状态”的数据，即数据和日志文件。 它提供了遵从许多法律、法规和各个行业建立的准则的能力。 利用此功能，软件开发人员可以使用 AES 和3DES 加密算法来加密数据，而无需更改现有应用程序。  
+*透明数据加密* (TDE) 执行对数据和事务日志文件以及特殊 PDW 日志文件的实时 i/o 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在 SQL Server PDW 的 master 数据库中的证书保护的对称密钥。 TDE 保护“处于休眠状态”的数据，即数据和日志文件。 它提供了遵从许多法律、法规和各个行业建立的准则的能力。 利用此功能，软件开发人员可以使用 AES 和3DES 加密算法来加密数据，而无需更改现有应用程序。  
   
 > [!IMPORTANT]  
-> TDE 不会为客户端与 PDW 之间传输的数据提供加密。 有关如何在客户端和 SQL Server PDW 之间加密数据的详细信息，请参阅[预配证书](provision-certificate.md)。  
+> TDE 不会为客户端与 PDW 之间传输的数据提供加密。 有关如何在客户端和 SQL Server PDW 之间加密数据的详细信息，请参阅 [预配证书](provision-certificate.md)。  
 >   
 > TDE 在移动或使用数据时不会对其进行加密。 SQL Server PDW 中 PDW 组件之间的内部流量未加密。 临时存储在内存缓冲区中的数据未加密。 若要缓解这种风险，请控制物理访问和与 SQL Server PDW 的连接。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "79289745"
   
 1.  在 master 数据库中创建一个主密钥。  
   
-2.  使用**sp_pdw_database_encryption**启用 SQL Server PDW 上的 TDE。 此操作会修改临时数据库，以确保对未来的临时数据的保护，如果存在任何具有临时表的活动会话，则会失败。 **sp_pdw_database_encryption**在 pdw 系统日志中打开用户数据掩码。 （有关 PDW 系统日志中用户数据屏蔽的详细信息，请参阅[sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)。）  
+2.  使用 **sp_pdw_database_encryption** 启用 SQL Server PDW 上的 TDE。 此操作会修改临时数据库，以确保对未来的临时数据的保护，如果存在任何具有临时表的活动会话，则会失败。 **sp_pdw_database_encryption** 在 pdw 系统日志中打开用户数据掩码。  (有关 PDW 系统日志中的用户数据屏蔽的详细信息，请参阅 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)。 )   
   
-3.  使用[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)创建可以对将存储证书备份的共享进行身份验证和写入的凭据。 如果目标存储服务器已有凭据，则可以使用现有凭据。  
+3.  使用 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 创建可以对将存储证书备份的共享进行身份验证和写入的凭据。 如果目标存储服务器已有凭据，则可以使用现有凭据。  
   
 4.  在 master 数据库中，创建受主密钥保护的证书。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "79289745"
   
 6.  在用户数据库中，创建数据库加密密钥并通过存储在 master 数据库中的证书对其进行保护。  
   
-7.  `ALTER DATABASE`使用 TDE 对数据库进行加密。  
+7.  使用 `ALTER DATABASE` TDE 对数据库进行加密。  
   
-下面的示例演示如何使用`AdventureWorksPDW2012`在 SQL Server PDW 中创建的`MyServerCert`名为的证书对数据库进行加密。  
+下面的示例演示如何 `AdventureWorksPDW2012` 使用 `MyServerCert` 在 SQL Server PDW 中创建的名为的证书对数据库进行加密。  
   
 **第一种：启用 SQL Server PDW 上的 TDE。** 此操作仅需要一次。  
   
@@ -75,7 +75,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**其次：在 master 数据库中创建和备份证书。** 此操作仅需要一次。 你可以为每个数据库使用单独的证书（建议），也可以使用一个证书保护多个数据库。  
+**其次：在 master 数据库中创建和备份证书。** 此操作仅需要一次。 可以为每个数据库创建一个单独的证书 (建议) ，也可以使用一个证书保护多个数据库。  
   
 ```sql  
 -- Create certificate in master  
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-加密和解密操作通过 SQL Server 在后台线程上计划。 您可以使用本文后面显示的列表中的目录视图和动态管理视图查看这些操作的状态。  
+加密和解密操作由 SQL Server 安排在后台线程中执行。 您可以使用本文后面显示的列表中的目录视图和动态管理视图查看这些操作的状态。  
   
 > [!CAUTION]  
 > 启用了 TDE 的数据库的备份文件也使用数据库加密密钥进行加密。 因此，当您还原这些备份时，用于保护数据库加密密钥的证书必须可用。 也就是说，除了备份数据库之外，您还要确保自己保留了服务器证书的备份以防数据丢失。 如果证书不再可用，将会导致数据丢失。  
@@ -123,7 +123,7 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|创建一个用于加密数据库的密钥。|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|更改用于加密数据库的密钥。|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|删除用于加密数据库的密钥。|  
-|[更改数据库](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|介绍用来启用 TDE 的 **ALTER DATABASE** 选项。|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|说明用于启用 TDE 的 **ALTER DATABASE** 选项。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>目录视图和动态管理视图  
 下表显示了 TDE 目录视图和动态管理视图。  
@@ -137,27 +137,27 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
 ## <a name="permissions"></a>权限  
 如上表中所述，TDE 的每项功能和每个命令都有各自的权限要求。  
   
-查看 TDE 所涉及的元数据需要`CONTROL SERVER`权限。  
+查看 TDE 所涉及的元数据需要 `CONTROL SERVER` 权限。  
   
 ## <a name="considerations"></a>注意事项  
 当进行数据库加密操作的重新加密扫描时，将禁用对数据库的维护操作。  
   
-可以使用**sys. dm_pdw_nodes_database_encryption_keys**动态管理视图来查找数据库加密的状态。 有关详细信息，请参阅本文前面的*目录视图和动态管理视图*部分。  
+可以使用 **sys. dm_pdw_nodes_database_encryption_keys** 动态管理视图来查找数据库加密的状态。 有关详细信息，请参阅本文前面的 *目录视图和动态管理视图* 部分。  
   
 ### <a name="restrictions"></a>限制  
-在`CREATE DATABASE ENCRYPTION KEY`、、或`ALTER DATABASE ENCRYPTION KEY` `DROP DATABASE ENCRYPTION KEY` `ALTER DATABASE...SET ENCRYPTION`语句期间，不允许执行以下操作。  
+在 `CREATE DATABASE ENCRYPTION KEY` 、、 `ALTER DATABASE ENCRYPTION KEY` 或语句期间，不允许执行以下操作 `DROP DATABASE ENCRYPTION KEY` `ALTER DATABASE...SET ENCRYPTION` 。  
   
 -   删除数据库。  
   
--   使用`ALTER DATABASE`命令。  
+-   使用 `ALTER DATABASE` 命令。  
   
 -   正在启动数据库备份。  
   
 -   启动数据库还原。  
   
-以下操作或条件将`CREATE DATABASE ENCRYPTION KEY`阻止、 `ALTER DATABASE ENCRYPTION KEY`、 `DROP DATABASE ENCRYPTION KEY`或`ALTER DATABASE...SET ENCRYPTION`语句。  
+以下操作或条件将阻止 `CREATE DATABASE ENCRYPTION KEY` 、 `ALTER DATABASE ENCRYPTION KEY` 、 `DROP DATABASE ENCRYPTION KEY` 或 `ALTER DATABASE...SET ENCRYPTION` 语句。  
   
--   正在`ALTER DATABASE`执行命令。  
+-   正在 `ALTER DATABASE` 执行命令。  
   
 -   正在进行任何数据备份。  
   
@@ -173,7 +173,7 @@ TDE 不保护诊断会话。 当使用诊断会话时，用户应注意不要使
 Master 数据库不受 TDE 保护。 尽管 master 数据库不包含用户数据，但它确实包含登录名等信息。  
   
 ### <a name="transparent-data-encryption-and-transaction-logs"></a>透明数据加密与事务日志  
-启用数据库以使用 TDE 会对虚拟事务日志的剩余部分进行清零，以强制执行下一个虚拟事务日志。 这可以保证在数据库设置为加密后事务日志中不会留有明文。 可以通过查看`encryption_state` `sys.dm_pdw_nodes_database_encryption_keys`视图中的列来查找每个 PDW 节点上的日志文件加密状态，如以下示例中所示：  
+启用数据库以使用 TDE 会对虚拟事务日志的剩余部分进行清零，以强制执行下一个虚拟事务日志。 这可以保证在数据库设置为加密后事务日志中不会留有明文。 可以通过查看视图中的列来查找每个 PDW 节点上的日志文件加密状态 `encryption_state` `sys.dm_pdw_nodes_database_encryption_keys` ，如以下示例中所示：  
   
 ```sql  
 WITH dek_encryption_state AS   
@@ -197,22 +197,22 @@ SELECT TOP 1 encryption_state
 所有在数据库加密密钥更改前写入事务日志的数据都将使用之前的数据库加密密钥加密。  
   
 ### <a name="pdw-activity-logs"></a>PDW 活动日志  
-SQL Server PDW 维护一组旨在进行故障排除的日志。 （请注意，这不是事务日志、SQL Server 错误日志或 Windows 事件日志。）这些 PDW 活动日志可以包含明文形式的完整语句，其中某些语句可以包含用户数据。 典型的示例包括**INSERT**和**UPDATE**语句。 可以使用**sp_pdw_log_user_data_masking**显式打开或关闭用户数据屏蔽。 启用加密 SQL Server PDW 会自动打开 PDW 活动日志中用户数据的屏蔽，以便对其进行保护。 **sp_pdw_log_user_data_masking**也可用于在不使用 TDE 时屏蔽语句，但不建议这样做，因为这样可以大大降低 Microsoft 支持部门团队分析问题的能力。  
+SQL Server PDW 维护一组旨在进行故障排除的日志。  (注意，这并不是事务日志、SQL Server 错误日志或 Windows 事件日志。 ) 这些 PDW 活动日志可以包含明文形式的完整语句，其中某些语句可以包含用户数据。 典型的示例包括 **INSERT** 和 **UPDATE** 语句。 可以使用 **sp_pdw_log_user_data_masking**显式打开或关闭用户数据屏蔽。 启用加密 SQL Server PDW 会自动打开 PDW 活动日志中用户数据的屏蔽，以便对其进行保护。 **sp_pdw_log_user_data_masking** 也可用于在不使用 TDE 时屏蔽语句，但不建议这样做，因为这样可以大大降低 Microsoft 支持部门团队分析问题的能力。  
   
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>透明数据加密与 tempdb 系统数据库  
-使用[sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)启用加密时，将加密 tempdb 系统数据库。 这在任何数据库可以使用 TDE 之前都是必需的。 这可能会对同一实例 SQL Server PDW 上的未加密数据库产生性能影响。  
+使用 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)启用加密时，将加密 tempdb 系统数据库。 这在任何数据库可以使用 TDE 之前都是必需的。 这可能会对同一实例 SQL Server PDW 上的未加密数据库产生性能影响。  
   
 ## <a name="key-management"></a>密钥管理  
-数据库加密密钥（DEK）受存储在 master 数据库中的证书保护。 这些证书由 master 数据库的数据库主密钥（DMK）保护。 DMK 需要受服务主密钥（SMK）的保护才能用于 TDE。  
+ (DEK) 的数据库加密密钥受存储在 master 数据库中的证书保护。 这些证书受 master 数据库 (DMK) 的数据库主密钥保护。 DMK 需要受服务主密钥 (SMK) 的保护，以便用于 TDE。  
   
-系统可以访问密钥，而无需人工干预（如提供密码）。 如果证书不可用，系统将输出一个错误，该错误说明在有正确的证书可用之前无法解密 DEK。  
+系统可以访问密钥，而无需人工干预 (例如提供密码) 。 如果证书不可用，系统将输出一个错误，该错误说明在有正确的证书可用之前无法解密 DEK。  
   
-将数据库从一台设备移到另一台设备时，必须先在目标服务器上还原用于保护其 "DEK" 的证书。 然后，可以照常还原数据库。 有关详细信息，请参阅标准 SQL Server 文档：[将受 TDE 保护的数据库移到另一个 SQL Server](https://technet.microsoft.com/library/ff773063.aspx)。  
+将数据库从一台设备移到另一台设备时，必须先在目标服务器上还原用于保护其 "DEK" 的证书。 然后，可以照常还原数据库。 有关详细信息，请参阅标准 SQL Server 文档： [将受 TDE 保护的数据库移到另一个 SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15)。  
   
 只要存在使用数据库备份的数据库备份，就应保留用于加密 Dek 的证书。 证书备份必须包含证书私钥，因为在没有私钥的情况下，不能将证书用于数据库还原。 这些证书私钥备份存储在单独的文件中，由必须为证书还原提供的密码进行保护。  
   
 ## <a name="restoring-the-master-database"></a>还原 master 数据库  
-在灾难恢复过程中，可以使用**DWConfig**还原 master 数据库。  
+在灾难恢复过程中，可以使用 **DWConfig**还原 master 数据库。  
   
 -   如果控制节点未更改（即，如果在从其创建备份 master 数据库的相同和未更改的设备上还原了 master 数据库），则无需执行其他操作即可读取 DMK 和所有证书。  
   
@@ -236,7 +236,7 @@ SQL Server PDW 维护一组旨在进行故障排除的日志。 （请注意，�
 ## <a name="upgrade-and-replacing-virtual-machines"></a>升级和替换虚拟机  
 如果在执行升级或替换 VM 的设备上存在 DMK，则必须以参数形式提供 DMK 密码。  
   
-升级操作的示例。 将`**********`替换为你的 DMK 密码。  
+升级操作的示例。 `**********`将替换为你的 DMK 密码。  
   
 `setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'`  
   
@@ -244,7 +244,7 @@ SQL Server PDW 维护一组旨在进行故障排除的日志。 （请注意，�
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-在升级过程中，如果用户数据库已加密并且未提供 DMK 密码，升级操作将失败。 替换过程中，如果存在 DMK 时未提供正确的密码，则该操作将跳过 DMK 恢复步骤。 所有其他步骤都将在 "替换 VM" 操作结束时完成，但该操作将在结束时报告失败以指示需要执行其他步骤。 在安装日志（位于**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\<时间戳> \detail-setup**）中，将在结尾附近显示以下警告。  
+在升级过程中，如果用户数据库已加密并且未提供 DMK 密码，升级操作将失败。 替换过程中，如果存在 DMK 时未提供正确的密码，则该操作将跳过 DMK 恢复步骤。 所有其他步骤都将在 "替换 VM" 操作结束时完成，但该操作将在结束时报告失败以指示需要执行其他步骤。 在 "安装日志" (位于 **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<时间戳> \detail-setup**) 中，末尾附近会显示以下警告。  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
@@ -255,7 +255,7 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';
 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY;  
 ```
   
-使用**还原 Master 数据库**段落中的步骤恢复数据库，然后重新启动设备。  
+使用 **还原 Master 数据库** 段落中的步骤恢复数据库，然后重新启动设备。  
   
 如果在操作后 DMK 已存在，但在执行该操作后未恢复，则在查询数据库时将引发以下错误消息。  
   
@@ -265,7 +265,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ```  
   
 ## <a name="performance-impact"></a>性能影响  
-TDE 对性能的影响取决于你拥有的数据类型、存储方式以及 SQL Server PDW 上的工作负荷类型。 当受 TDE 保护时，读取并解密数据或加密数据，然后写入数据的 i/o 是 CPU 密集型活动，在同时发生其他 CPU 密集型活动时，会产生更大的影响。 由于 TDE 加密`tempdb`，TDE 可能会影响未加密的数据库的性能。 为了获得准确的性能，您应该使用您的数据和查询活动来测试整个系统。  
+TDE 对性能的影响取决于你拥有的数据类型、存储方式以及 SQL Server PDW 上的工作负荷类型。 当受 TDE 保护时，读取并解密数据或加密数据，然后写入数据的 i/o 是 CPU 密集型活动，在同时发生其他 CPU 密集型活动时，会产生更大的影响。 由于 TDE 加密 `tempdb` ，TDE 可能会影响未加密的数据库的性能。 为了获得准确的性能，您应该使用您的数据和查询活动来测试整个系统。  
   
 ## <a name="related-content"></a>相关内容  
 以下链接包含有关 SQL Server 如何管理加密的一般信息。 这些文章可帮助你了解 SQL Server 加密，但这些文章没有特定于 SQL Server PDW 的信息，它们讨论了 SQL Server PDW 中不存在的功能。  
@@ -278,7 +278,7 @@ TDE 对性能的影响取决于你拥有的数据类型、存储方式以及 SQL
 
   
 ## <a name="see-also"></a>另请参阅  
-[更改数据库](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
@@ -287,4 +287,3 @@ TDE 对性能的影响取决于你拥有的数据类型、存储方式以及 SQL
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
 [sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
-  

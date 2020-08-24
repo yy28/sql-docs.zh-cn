@@ -1,6 +1,6 @@
 ---
 title: 监视加载
-description: 使用分析平台系统（AP）管理控制台或并行数据仓库（PDW）系统视图来监视活动和最近负载。
+description: 使用分析平台系统 (AP) 管理控制台或并行数据仓库 (PDW) 系统视图来监视活动和最近负载。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400967"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777716"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>监视负载到并行数据仓库
-使用分析平台系统（AP）管理控制台或并行数据仓库（PDW）[系统视图](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)监视活动和最近的[dwloader](dwloader.md)加载。 
+使用分析平台系统 (AP) 管理控制台或并行数据仓库 (PDW) [系统视图](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)来监视活动和最近的[dwloader](dwloader.md)加载。 
   
 > [!TIP]  
 > 某些负载使用 INSERT 语句或商业智能工具启动，这些工具使用 SQL 语句来执行负载。 
@@ -41,15 +41,15 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 1.  登录到管理控制台。 <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  在顶部菜单中，单击 "**加载**"。 你将看到一个可排序的表，其中显示了所有最近和活动的负载以及其他信息，例如负载是已完成还是仍处于活动状态。 单击列标题可对行进行排序。  
+2.  在顶部菜单中，单击 " **加载**"。 你将看到一个可排序的表，其中显示了所有最近和活动的负载以及其他信息，例如负载是已完成还是仍处于活动状态。 单击列标题可对行进行排序。  
   
-3.  若要查看特定负载的其他详细信息，请单击左栏中的负载**ID** 。 在详细视图中，可以查看每个负载步骤的进度。  
+3.  若要查看特定负载的其他详细信息，请单击左栏中的负载 **ID** 。 在详细视图中，可以查看每个负载步骤的进度。  
   
 请参阅以下系统视图，了解有关管理控制台中显示的负载的元数据的信息：  
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,15 +58,15 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 ### <a name="to-monitor-loads-by-using-system-views"></a>使用系统视图监视负载  
 若要使用 SQL Server PDW 视图监视活动和最近的负载，请按照以下步骤进行操作。 对于使用的每个系统视图，请参阅该视图的文档，以获取有关视图返回的列和可能值的信息。  
   
-1.  通过在此视图的`command`列中找到加载程序命令行来查找[sys.databases dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)视图中的负载。 `request_id`  
+1.  `request_id`通过在此视图的列中找到加载程序命令行来查找[sys.databases dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)视图中的负载 `command` 。  
   
-    例如，以下命令将返回命令文本和当前状态以及`request_id`。  
+    例如，以下命令将返回命令文本和当前状态以及 `request_id` 。  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  使用`request_id`可通过使用[sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)和[pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)视图检索负载的其他信息。 例如，下面的查询将返回`run_id`有关加载的开始时间、结束时间和持续时间以及所有错误的信息，以及有关处理的行数的信息：  
+2.  使用 `request_id` 可通过使用 [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 和 [pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) 视图检索负载的其他信息。 例如，下面的查询将返回有关 `run_id` 加载的开始时间、结束时间和持续时间以及所有错误的信息，以及有关处理的行数的信息：  
   
     ```sql  
     SELECT lbr.run_id,   
@@ -83,4 +83,3 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 ## See Also  
 [Common metadata query examples](metadata-query-examples.md)
 -->  
-  

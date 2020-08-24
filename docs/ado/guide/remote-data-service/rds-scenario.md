@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452089"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759557"
 ---
 # <a name="rds-scenario"></a>RDS 方案
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452089"
   
  此方案包含以下主题。  
   
--   [通讯簿应用程序的系统要求](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [通讯簿应用程序的系统要求](./system-requirements-for-the-address-book-application.md)  
   
--   [运行通讯簿 SQL 脚本](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [运行通讯簿 SQL 脚本](./running-the-address-book-sql-script.md)  
   
--   [运行通讯簿示例应用程序](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [运行通讯簿示例应用程序](./running-the-address-book-sample-application.md)  
   
--   [通讯簿数据绑定对象](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [通讯簿数据绑定对象](./address-book-data-binding-object.md)  
   
--   [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [通讯簿命令按钮](./address-book-command-buttons.md)  
   
--   [通讯簿导航按钮](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [通讯簿导航按钮](./address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [通讯簿应用程序的系统要求](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX 数据对象 (ADO) ](../../../ado/microsoft-activex-data-objects-ado.md)   
- [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [通讯簿应用程序的系统要求](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ActiveX 数据对象 (ADO) ](../../microsoft-activex-data-objects-ado.md)   
+ [RDS 基础知识](./rds-fundamentals.md)   
+ [RDS 教程](./rds-tutorial.md)

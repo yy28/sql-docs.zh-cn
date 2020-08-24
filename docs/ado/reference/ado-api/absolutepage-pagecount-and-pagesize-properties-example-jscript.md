@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60fae0949fb3ed44da3aaa585ee8af1f529575dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f5fb6b387a48fd2c08945bd8047d16f44abaf0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451819"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760017"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount 和 PageSize 属性示例 (JScript) 
 此示例演示了 AbsolutePage、PageCount 和 PageSize 属性。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AbsolutePageJS**。  
@@ -159,7 +159,7 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AbsolutePage 属性 (ADO) ](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount 属性 (ADO) ](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize 属性 (ADO) ](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage 属性 (ADO) ](./absolutepage-property-ado.md)   
+ [PageCount 属性 (ADO) ](./pagecount-property-ado.md)   
+ [PageSize 属性 (ADO) ](./pagesize-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

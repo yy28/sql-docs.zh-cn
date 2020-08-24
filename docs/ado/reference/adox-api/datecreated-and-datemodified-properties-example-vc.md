@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19f8f15f35cae97d4c6882df90889513ce0eb430
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c403ed5112bf2957b0bf09028091a05d54d16aa3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440189"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770756"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 和 DateModified 属性示例 (VC++)
-此示例演示 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 和 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 属性，方法是将新 [列](../../../ado/reference/adox-api/column-object-adox.md) 添加到现有 [表](../../../ado/reference/adox-api/table-object-adox.md) 并创建新 **表**。 若要运行此示例，需要 DateOutput 过程。  
+此示例演示 [DateCreated](./datecreated-property-adox.md) 和 [DateModified](./datemodified-property-adox.md) 属性，方法是将新 [列](./column-object-adox.md) 添加到现有 [表](./table-object-adox.md) 并创建新 **表**。 若要运行此示例，需要 DateOutput 过程。  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -116,7 +116,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [列对象 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
- [DateCreated 属性 (ADOX) ](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified 属性 (ADOX) ](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [列对象 (ADOX) ](./column-object-adox.md)   
+ [DateCreated 属性 (ADOX) ](./datecreated-property-adox.md)   
+ [DateModified 属性 (ADOX) ](./datemodified-property-adox.md)   
+ [表对象 (ADOX)](./table-object-adox.md)

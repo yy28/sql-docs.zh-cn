@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,20 +38,20 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444828"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-本文说明如何在 Azure SQL 数据仓库中使用 CREATE MATERIALIZED VIEW AS SELECT T-SQL 语句开发解决方案。 此外，本文还提供了代码示例。
+本文说明如何在 Azure SQL 数据仓库中使用 CREATE MATERIALIZED VIEW AS SELECT T-SQL 语句开发解决方案。 本文还会提供代码示例。
 
-具体化视图将保留视图定义查询返回的数据，并自动随着基础表中的数据更改而更新。   它可以提高复杂查询的性能（通常指使用联接和聚合的查询），同时还提供简单的维护操作。   由于具体化视图具有执行计划自动匹配功能，因此无需在查询中引用它，优化器即会考虑将此视图作为替换项。  通过使用这一功能，数据工程师可以将具体化视图作为改进查询响应时间的机制来实现，而不必再更改查询。  
+具体化视图会保留从视图定义查询返回的数据，并在基础表中的数据更改时自动更新。   它提高了复杂查询（通常是使用联接和聚合的查询）的性能，同时提供了简单的维护操作。   由于具体化视图具有执行计划自动匹配功能，因此无需在查询中引用它，优化器即会考虑将此视图作为替换项。  通过使用这一功能，数据工程师可以将具体化视图作为改进查询响应时间的机制来实现，而不必再更改查询。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,16 +77,16 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   
 ## <a name="arguments"></a>参数
 
-schema_name      
+schema_name     
  视图所属架构的名称。  
   
-materialized_view_name     
+materialized_view_name   
 视图名称。 视图名称必须符合有关标识符的规则。 可以选择是否指定视图所有者名称。  
 
-分布选项       
+分布选项     
 仅支持 HASH 和 ROUND_ROBIN 分步。
 
-select_statement     
+select_statement   
 具体化视图定义中的 SELECT 列表需要至少满足以下两个条件之一：
 - SELECT 列表包含聚合函数。
 - 具体化视图定义使用了 GROUP BY，并且 SELECT 列表包括 GROUP BY 中的所有列。  在 GROUP BY 子句中最多可以使用 32 列。
@@ -106,9 +107,9 @@ select_statement
 
 - 引用的基表出现 UPDATE 或 DELETE 时，将禁用具体化视图。  此限制不适用于 INSERT。  若要重新启用具体化视图，请运行 ALTER MATERIALIZED VIEW 和 REBUILD。
   
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-Azure 数据仓库中的具体化视图与 SQL Server 中的索引视图相似。  除了具体化视图支持聚合函数外，它与索引视图适用的限制几乎相同（请参阅[创建索引视图](/sql/relational-databases/views/create-indexed-views)了解详细信息）。   
+Azure 数据仓库中的具体化视图与 SQL Server 中的索引视图相似。除了具体化视图支持聚合函数外，它与索引视图适用的限制几乎相同（请参阅[创建索引视图](/sql/relational-databases/views/create-indexed-views)了解详细信息）。   
 
 具体化视图仅支持 CLUSTERED COLUMNSTORE INDEX。 
 
@@ -122,7 +123,7 @@ Azure 数据仓库中的具体化视图与 SQL Server 中的索引视图相似�
  
 具体化视图引用的表不支持 ALTER TABLE SWITCH。 请先禁用或删除具体化视图，然后再使用 ALTER TABLE SWITCH。 在以下应用场景中，需要向具体化视图添加新列，才能创建具体化视图：
 
-|场景|要添加到具体化视图的新列|注释|  
+|场景|要添加到具体化视图的新列|评论|  
 |-----------------|---------------|-----------------|
 |具体化视图定义的 SELECT 列表缺少 COUNT_BIG()| COUNT_BIG (*) |通过具体化视图创建自动添加。  不需要任何用户操作。|
 |由用户在具体化视图定义的 SELECT 列表中指定 SUM(a)，其中“a”是可为空的表达式 |COUNT_BIG (a) |用户需要手动将表达式“a”添加到具体化视图定义中。|
@@ -142,7 +143,8 @@ SQL Server Management Studio 中的 EXPLAIN 计划和图形估计执行计划可
 
 ## <a name="permissions"></a>权限
 
-要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限。 
+要求 1) 具有 REFERENCES 和 CREATE VIEW 权限，或 2) 具有在其中创建视图的架构的 CONTROL 权限。 
+
   
 ## <a name="see-also"></a>另请参阅
 

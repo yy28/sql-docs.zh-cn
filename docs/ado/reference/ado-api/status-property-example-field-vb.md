@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 148deaa16746bd964e4bed07ed673fea0ec4cb6a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441939"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777286"
 ---
 # <a name="status-property-example-field-vb"></a>Status 属性示例（字段）(VB)
-下面的示例使用 [Internet 发布提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)从读/写文件夹打开文档。 [记录](../../../ado/reference/ado-api/record-object-ado.md)的[Field](../../../ado/reference/ado-api/field-object.md)对象的[Status](../../../ado/reference/ado-api/status-property-ado-field.md)属性将首先设置为**AdFieldPendingInsert**，然后将其更新为**adFieldOk**。  
+下面的示例使用 [Internet 发布提供程序](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)从读/写文件夹打开文档。 [记录](./record-object-ado.md)的[Field](./field-object.md)对象的[Status](./status-property-ado-field.md)属性将首先设置为**AdFieldPendingInsert**，然后将其更新为**adFieldOk**。  
   
 ```  
 'BeginStatusFieldVB  
@@ -86,13 +86,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- 下面的代码从在只读文档上打开的**记录**中删除**字段**。 **状态** 将设置为 **adFieldPendingDelete**。 在 [更新](../../../ado/reference/ado-api/update-method.md)时，删除将失败，并且 **状态** 将为 **adFieldPendingDelete** + **adFieldPermissionDenied**。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 清除挂起 **状态** 设置。  
+ 下面的代码从在只读文档上打开的**记录**中删除**字段**。 **状态** 将设置为 **adFieldPendingDelete**。 在 [更新](./update-method.md)时，删除将失败，并且 **状态** 将为 **adFieldPendingDelete** + **adFieldPermissionDenied**。 [CancelUpdate](./cancelupdate-method-ado.md) 清除挂起 **状态** 设置。  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [ (ADO 记录对象) ](../../../ado/reference/ado-api/record-object-ado.md)   
- [Status 属性（ADO 字段）](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Field 对象](./field-object.md)   
+ [ (ADO 记录对象) ](./record-object-ado.md)   
+ [Status 属性（ADO 字段）](./status-property-ado-field.md)

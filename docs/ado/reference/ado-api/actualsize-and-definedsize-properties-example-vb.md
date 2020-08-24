@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43deeca92f1809dd560cd6b1a6671aa3ceaafdb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2455c3abc11498810722c1ab268e222f737a8650
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451649"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760304"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 和 DefinedSize 属性示例 (VB) 
-此示例使用 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 和 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 属性来显示字段的定义大小和实际大小。  
+此示例使用 [ActualSize](./actualsize-property-ado.md) 和 [DefinedSize](./definedsize-property.md) 属性来显示字段的定义大小和实际大小。  
   
 ```vb
 'BeginActualSizeVB  
@@ -89,6 +89,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActualSize 属性 (ADO) ](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [DefinedSize 属性](../../../ado/reference/ado-api/definedsize-property.md)   
- [字段对象](../../../ado/reference/ado-api/field-object.md)
+ [ActualSize 属性 (ADO) ](./actualsize-property-ado.md)   
+ [DefinedSize 属性](./definedsize-property.md)   
+ [字段对象](./field-object.md)

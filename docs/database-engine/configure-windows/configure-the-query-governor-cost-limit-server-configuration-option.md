@@ -1,6 +1,6 @@
 ---
 title: 配置“查询调控器开销限制”服务器配置选项 | Microsoft Docs
-description: 了解“查询调控器开销限制”选项。 了解如何使用它来将执行限制为 SQL Server 估计在特定时间内完成的查询。
+description: 了解“查询调控器开销限制”选项。 了解如何使用它来限制查询的执行。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785875"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216726"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>配置查询调控器开销限制服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询调控器开销限制” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 查询调控器开销限制选项指定查询可以运行的时间段上限。 查询开销是指在特定硬件配置中完成查询所需的估计占用时间（秒）。 此选项的默认值为 0，将设置为关闭查询调控器。 这将允许所有查询在没有任何时间限制下运行。 如果为该选项指定一个非零、非负的数值，则查询调控器将不允许执行估计开销超过该值的查询。  
+本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询调控器开销限制” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “开销限制”选项指定运行给定查询所允许的估计开销的上限。 查询开销是一个抽象数字，由查询优化器根据估计的执行要求（如 CPU 时间、内存和磁盘 IO）确定。 它是指在特定硬件配置中完成查询所需的估计占用时间（秒）。 这个抽象数字不等于在正在运行的实例上完成查询所需的时间。 应将其视为一个相对度量值。 此选项的默认值为 0，将设置为关闭查询调控器。 将值设置为 0 将允许所有查询在没有任何时间限制下运行。 如果为该选项指定一个非零、非负的数值，则查询调控器将不允许执行估计开销超过该值的查询。   
   
  **本主题内容**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85785875"
   
 3.  选中或清除“使用查询调控器防止查询长时间运行”复选框。  
   
-     如果选中此复选框，请在下面的框中输入一个正值，查询调控器将禁止执行运行长度超过该值的所有查询。  
+     如果选中此复选框，请在下面的框中输入一个正值，查询调控器将禁止执行估计开销超过该值的所有查询。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85785875"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `query governor cost limit` 选项的值设置为 `120` 秒。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `query governor cost limit` 选项的值设置为估计查询开销的 `120` 分钟上限。
   
 ```sql  
 USE AdventureWorks2012 ;  

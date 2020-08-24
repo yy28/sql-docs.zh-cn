@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8a69e5ad4f31891ec93e84e835a6c0d1ffdcdce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95755659875371a04511b1e48b4967ad07d6b93b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451639"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760294"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 属性示例 (VC + +) 
-此示例使用 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 和 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 属性来显示字段的定义大小和实际大小。  
+此示例使用 [ActualSize](./actualsize-property-ado.md) 和 [DefinedSize](./definedsize-property.md) 属性来显示字段的定义大小和实际大小。  
   
 ## <a name="example"></a>示例  
   
@@ -148,5 +148,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **定义的大小：40**  
 **实际大小：8**   
 ## <a name="see-also"></a>另请参阅  
- [ActualSize 属性 (ADO) ](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [DefinedSize 属性](../../../ado/reference/ado-api/definedsize-property.md)
+ [ActualSize 属性 (ADO) ](./actualsize-property-ado.md)   
+ [DefinedSize 属性](./definedsize-property.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1992c8c5796052e46719c34ecbc43d6b94553b6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440349"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771136"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 属性示例 (VB)
-此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为**Northwind**数据库中的所有索引的**聚集**属性返回**False** 。  
+此示例演示[索引](./index-object-adox.md)的[聚集](./clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为**Northwind**数据库中的所有索引的**聚集**属性返回**False** 。  
   
 ```  
 ' BeginClusteredVB  
@@ -74,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [聚集属性 (ADOX) ](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [索引对象 (ADOX) ](../../../ado/reference/adox-api/index-object-adox.md)   
- [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [目录对象 (ADOX) ](./catalog-object-adox.md)   
+ [聚集属性 (ADOX) ](./clustered-property-adox.md)   
+ [索引对象 (ADOX) ](./index-object-adox.md)   
+ [表对象 (ADOX)](./table-object-adox.md)

@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
+ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751226"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251509"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,50 +45,70 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 2. 连接 SQL Server 数据库引擎实例或 localhost。
 3. 展开“数据库”，右键单击数据库（下方示例的测试），指向“任务”，然后单击导入数据上方的“导入平面文件”    。
 
-![向导菜单](media/import-flat-file-wizard/importffmenu.png)
+![向导菜单](media/import-flat-file-wizard/import-flat-file-menu.png)
 
 要了解有关向导不同功能的详细信息，请参考以下教程：
 
 ## <a name="tutorial"></a>教程
 为了实现本教程的目的，请随意使用自己的平面文件。 另外，本教程会使用 Excel 生成的以下 CSV，你可以随意复制。 如果使用此 CSV，则将其标题命名为“example.csv”，确保在容易找到的位置（如桌面）将其另存为 csv  。
 
-![向导 Excel](media/import-flat-file-wizard/importffexample.png)
+![向导 Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
 ### <a name="step-1-access-wizard-and-intro-page"></a>步骤 1：访问向导和简介页
 访问如[此处](#started)所述的向导。
 
 向导第一页是欢迎页。 如果不想再次看到此页面，请随意单击“不再显示此起始页”  。
 
-![向导简介](media/import-flat-file-wizard/importffintro.png)
+![向导简介](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>步骤 2：指定输入文件
 单击“浏览”选择输入文件。 此向导默认搜索 .csv 和 .txt 文件。 
 
 新的表名称应该是唯一的，如果不是，向导不会允许执行下一步。
 
-![向导指定](media/import-flat-file-wizard/importffspecify.png)
+![向导指定](media/import-flat-file-wizard/import-flat-file-specify.png)
 
 ### <a name="step-3-preview-data"></a>步骤 3：预览数据
 在向导生成的预览中，可以查看前 50 行。 如果出现任何问题，请单击“取消”，否则将会继续进入下一页面。
 
-![向导预览](media/import-flat-file-wizard/importffpreview.png)
+![向导预览](media/import-flat-file-wizard/import-flat-file-preview.png)
 
 ### <a name="step-4-modify-columns"></a>步骤 4：修改列
 向导会标识它认为正确的列名称、数据类型等。如果字段不正确，可以在此处编辑这些字段（例如，数据类型应该是 float 而不是int）。
 
 准备就绪时，请继续。
 
-![向导修改](media/import-flat-file-wizard/importffmodify.png)
+![向导修改](media/import-flat-file-wizard/import-flat-file-modify.png)
 
 ### <a name="step-5-summary"></a>步骤 5：总结
 这只是一个显示当前配置的摘要页面。 如果出现问题，可以返回到上一部分。 或者，单击“完成”尝试导入过程。
 
-![向导摘要](media/import-flat-file-wizard/importffsummary.png)
+![向导摘要](media/import-flat-file-wizard/import-flat-file-summary.png)
 
 ### <a name="step-6-results"></a>步骤 6：结果
 此页面指示导入是否成功。 如果出现绿色的选中标记，表示成功；反之，可能需要检查配置或者输入文件是否出错。
 
-![向导结果](media/import-flat-file-wizard/importffresults.png)
+![向导结果](media/import-flat-file-wizard/import-flat-file-results.png)
+
+## <a name="troubleshooting"></a>疑难解答
+导入平面文件向导基于前 200 行检测数据类型。  在平面文件中的数据不符合自动检测到的数据类型的情况下，将在导入过程中出现错误。 错误消息类似于以下内容：
+```
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column. (System.Data)
+String or binary data would be truncated. (System.Data)
+```
+缓解此错误的技术：
+- 扩展[修改列步骤](#step-4-modify-columns)中的数据类型大小（如 nvarchar 列的长度）可能会补偿平面文件的其余部分中数据的变体。
+- 在[修改列步骤](#step-4-modify-columns)（尤其是较小数目）中启用错误报告，将显示平面文件中的哪些行包含不适合所选数据类型的数据。 例如，在第二行出现错误的平面文件中，使用范围为 1 的错误报告运行导入将提供特定的错误消息。  直接在所在位置中检查文件可以基于标识的行中的数据对数据类型进行更有针对性的更改。
+
+![报告结果时出错](media/import-flat-file-wizard/import-flat-file-error.png)
+
+```
+Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
+Failed to convert parameter value from a String to a Double. (System.Data)
+```
+
 
 ## <a name="learn-more"></a>了解详细信息
 

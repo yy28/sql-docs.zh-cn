@@ -1,7 +1,7 @@
 ---
 title: 在 RHEL 上以无人参与的方式安装 SQL Server
 titleSuffix: SQL Server
-description: SQL Server 脚本示例 - Red Hat Enterprise Linux (RHEL) 上的无人参与安装
+description: 使用示例 Bash 脚本在没有交互式输入的 Red Hat Enterprise Linux (RHEL) 上安装 SQL Server 2017。
 ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a5681a7700e77d0cc5fd4afb7267a21f298c1f87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fda9b1459cf7cd0b15252cfb0e51e0d3ad4e9374
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894128"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089017"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>示例：Red Hat Enterprise Linux 的无人参与 SQL Server 安装脚本
 

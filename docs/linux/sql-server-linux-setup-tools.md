@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 上安装 SQL Server 命令行工具
 titleSuffix: SQL Server
-description: 本文介绍如何在 Linux 上安装 SQL Server 工具。
+description: 了解如何在 Linux 上安装 SQL Server 命令行工具、Microsoft ODBC 驱动程序及其依赖项。
 author: VanMSFT
 ms.author: vanto
 ms.date: 06/30/2020
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9bffa8f183e511cdc4885635c4d23c940a82e4f9
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897335"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088736"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 

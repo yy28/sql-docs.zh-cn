@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d1ff4bf67f103b613cb925a590b4d00e54482a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4097bcdeb5460776017ce7a120ff43aa7a4420f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451589"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760241"
 ---
 # <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
-指定 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 方法是否后跟隐式重新 [同步](../../../ado/reference/ado-api/resync-method.md) 方法操作，如果是，则为该操作的范围。  
+指定 [UpdateBatch](./updatebatch-method.md) 方法是否后跟隐式重新 [同步](./resync-method.md) 方法操作，如果是，则为该操作的范围。  
   
-|返回的常量|值|描述|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|调用与所有其他 ADCPROP_UPDATERESYNC_ENUM 成员的组合值的重新 **同步** 。|  
 |**adResyncAutoIncrement**|1|默认。 尝试检索数据源自动递增或生成的列的新标识值，如 Microsoft Jet AutoNumber 字段或 Microsoft SQL Server 的标识列。|  
@@ -36,4 +36,4 @@ ms.locfileid: "88451589"
 |**adResyncUpdates**|4|为所有已成功更新的行调用重新 **同步** 。|  
   
 ## <a name="applies-to"></a>适用于  
- [Update Resync 属性 - 动态 (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
+ [Update Resync 属性 - 动态 (ADO)](./update-resync-property-dynamic-ado.md)

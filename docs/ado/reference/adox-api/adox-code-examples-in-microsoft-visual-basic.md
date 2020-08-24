@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cadc2a2f3681e9a993b398a03e44a856a11729a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ee5e076ca28d3c91f77d514ee004eb853387799
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440629"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777746"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic 中的 ADOX 代码示例
 这些主题提供了可帮助你了解如何使用 ADOX 的示例代码。 使用 Microsoft Visual Basic 编写所有代码示例。  
@@ -30,74 +30,74 @@ ms.locfileid: "88440629"
   
 ## <a name="methods"></a>方法  
   
--   [列和表 Append 方法、Name 属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [列和表 Append 方法、Name 属性示例 (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [连接的 Close 方法、表 Type 属性示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [连接的 Close 方法、表 Type 属性示例 (VB)](./connection-close-method-table-type-property-example-vb.md)  
   
--   [Create 方法示例 (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)  
+-   [Create 方法示例 (VB)](./create-method-example-vb.md)  
   
--   [GetObjectOwner 和 SetObjectOwner 方法示例 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)  
+-   [GetObjectOwner 和 SetObjectOwner 方法示例 (VB)](./getobjectowner-and-setobjectowner-methods-example-vb.md)  
   
--   [GetPermissions 和 SetPermissions 方法示例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)  
+-   [GetPermissions 和 SetPermissions 方法示例 (VB)](./getpermissions-and-setpermissions-methods-example-vb.md)  
   
--   [组和用户 Append、ChangePassword 方法示例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)  
+-   [组和用户 Append、ChangePassword 方法示例 (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)  
   
--   [索引 Append 方法示例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
+-   [索引 Append 方法示例 (VB)](./indexes-append-method-example-vb.md)  
   
--   [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule Properties Example (VB) ](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule Properties Example (VB) ](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [过程 Append 方法示例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
+-   [过程 Append 方法示例 (VB)](./procedures-append-method-example-vb.md)  
   
--   [过程 Delete 方法示例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)  
+-   [过程 Delete 方法示例 (VB)](./procedures-delete-method-example-vb.md)  
   
--   [过程 Refresh 方法示例 (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)  
+-   [过程 Refresh 方法示例 (VB)](./procedures-refresh-method-example-vb.md)  
   
--   [视图 Append 方法示例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)  
+-   [视图 Append 方法示例 (VB)](./views-append-method-example-vb.md)  
   
--   [视图 Delete 方法示例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)  
+-   [视图 Delete 方法示例 (VB)](./views-delete-method-example-vb.md)  
   
--   [视图 Refresh 方法示例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)  
+-   [视图 Refresh 方法示例 (VB)](./views-refresh-method-example-vb.md)  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
   
--   [Attributes 属性示例 (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)  
+-   [Attributes 属性示例 (VB)](./attributes-property-example-vb.md)  
   
--   [目录 ActiveConnection 属性示例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)  
+-   [目录 ActiveConnection 属性示例 (VB)](./catalog-activeconnection-property-example-vb.md)  
   
--   [Clustered 属性示例 (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)  
+-   [Clustered 属性示例 (VB)](./clustered-property-example-vb.md)  
   
--   [Command 和 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
+-   [Command 和 CommandText 属性示例 (VB)](./command-and-commandtext-properties-example-vb.md)  
   
--   [Command 属性，Parameters Collection Example (VB) ](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Command 属性，Parameters Collection Example (VB) ](./parameters-collection-command-property-example-vb.md)  
   
--   [CommandText 属性，Views 集合示例 (VB) ](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [CommandText 属性，Views 集合示例 (VB) ](./views-collection-commandtext-property-example-vb.md)  
   
--   [DateCreated 和 DateModified 属性示例 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
+-   [DateCreated 和 DateModified 属性示例 (VB)](./datecreated-and-datemodified-properties-example-vb.md)  
   
--   [DefinedSize 属性示例 (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)  
+-   [DefinedSize 属性示例 (VB)](./definedsize-property-example-vb.md)  
   
--   [DeleteRule 属性示例 (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)  
+-   [DeleteRule 属性示例 (VB)](./deleterule-property-example-vb.md)  
   
--   [IndexNulls 属性示例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
+-   [IndexNulls 属性示例 (VB)](./indexnulls-property-example-vb.md)  
   
--   [键类型、RelatedColumn、RelatedTable 和 UpdateRule 属性、键 Append 方法示例 (VB) ](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [键类型、RelatedColumn、RelatedTable 和 UpdateRule 属性、键 Append 方法示例 (VB) ](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Name 属性、列和表追加方法示例 (VB) ](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Name 属性、列和表追加方法示例 (VB) ](./columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [NumericScale 和 Precision 属性示例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
+-   [NumericScale 和 Precision 属性示例 (VB)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
--   [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)  
+-   [ParentCatalog 属性示例 (VB)](./parentcatalog-property-example-vb.md)  
   
--   [PrimaryKey 和 Unique 属性示例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)  
+-   [PrimaryKey 和 Unique 属性示例 (VB)](./primarykey-and-unique-properties-example-vb.md)  
   
--   [SortOrder 属性示例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
+-   [SortOrder 属性示例 (VB)](./sortorder-property-example-vb.md)  
   
--   [表类型属性，连接关闭方法，示例 (VB) ](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [表类型属性，连接关闭方法，示例 (VB) ](./connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>集合  
   
--   [参数集合、Command 属性示例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [参数集合、Command 属性示例 (VB)](./parameters-collection-command-property-example-vb.md)  
   
--   [视图和字段集合示例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)  
+-   [视图和字段集合示例 (VB)](./views-and-fields-collections-example-vb.md)  
   
--   [视图集合、CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+-   [视图集合、CommandText 属性示例 (VB)](./views-collection-commandtext-property-example-vb.md)
