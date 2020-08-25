@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba02a22b987384e48a750705fa3c2baf6965f920
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452309"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758747"
 ---
 # <a name="basic-rds-programming-model"></a>基本的 RDS 编程模型
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "88452309"
   
 -   调用服务器程序。 将参数传递给用于标识数据源和要发出的命令的服务器程序。  (服务器程序实际使用 ADO 获取对数据源的访问权限。 ADO 使用给定的参数之一进行连接，然后发出在其他参数中指定的命令。 )   
   
--   服务器程序从数据源中获取 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象。 或者，在服务器上处理 **Recordset** 对象。  
+-   服务器程序从数据源中获取 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象。 或者，在服务器上处理 **Recordset** 对象。  
   
 -   服务器程序将最终的 **记录集** 对象返回到客户端应用程序。  
   
@@ -45,10 +45,8 @@ ms.locfileid: "88452309"
  最后，如果你的需求介于之间，ADO 现在支持自定义默认服务器程序的行为。  
   
 ## <a name="see-also"></a>另请参阅  
- [RDS 编程模型详细信息](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [RDS 方案](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS 使用情况和安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [RDS 编程模型详细信息](./rds-programming-model-in-detail.md)   
+ [RDS 方案](./rds-scenario.md)   
+ [RDS 教程](./rds-tutorial.md)   
+ [ADO)  (Recordset 对象 ](../../reference/ado-api/recordset-object-ado.md)   
+ [RDS 使用情况和安全性](./rds-usage-and-security.md)

@@ -1,7 +1,8 @@
 ---
+description: DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 title: DROP EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,23 +19,23 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: 25a9714b02330bcaebd041c5f193700ac2f6d0ca
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7a32d1693f48ea56f3edd8c8c7373c88d6369bb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358513"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 删除用于定义外部进程资源的 Resource Governor 外部资源池。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制 `rterm.exe`、`python.exe`、`BxlServer.exe`，以及它们生成的其他进程。
 ::: moniker-end
 
@@ -77,6 +78,9 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
 ```  
+
+> [!NOTE]
+> 适用于 Linux 的 SQL 机器学习服务 2019 不支持设置 CPU 相关性。
 
 ## <a name="see-also"></a>另请参阅
 

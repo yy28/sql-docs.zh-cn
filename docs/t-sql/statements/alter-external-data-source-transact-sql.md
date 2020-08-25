@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4d963edaaea4225fa969afd7694b9970d07135d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444867"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION =“<prefix>://<path>[:<port>]”：提供外部数据源的连接协议、路径和端口。 若要了解有效的位置选项，请参阅 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport)。
 
- RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’（不适用于 Azure SQL 数据仓库）指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>'（不适用于 Azure SQL 数据仓库）指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。
 
  CREDENTIAL = Credential_Name 指定命名凭据。 请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 

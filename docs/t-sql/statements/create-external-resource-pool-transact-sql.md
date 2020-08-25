@@ -1,7 +1,8 @@
 ---
+description: CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning-services
@@ -21,24 +22,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ffb59b95b555196aa72662dd2b7111eca488872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426719"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-创建用于定义外部进程资源的外部池。 资源池表示数据库引擎实例的物理资源（内存和 CPU）的子集。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。
+创建用于定义外部进程资源的外部池。 资源池表示数据库引擎实例的物理资源（内存和 CPU）的子集。 资源调控器可以在多个资源池之间分发服务器资源，最多可为 64 个池。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制 `rterm.exe`、`python.exe`、`BxlServer.exe`，以及它们生成的其他进程。
 ::: moniker-end
   
@@ -68,25 +69,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+> [!NOTE]
+> 适用于 Linux 的 SQL 机器学习服务 2019 不支持设置 CPU 相关性。
+
 ## <a name="arguments"></a>参数
 
 pool_name  
 外部资源池的用户定义名称。 pool_name 是字母数字，最多可包含 128 个字符。 此参数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
 
 MAX_CPU_PERCENT =value  
-指定出现 CPU 争用时，外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 是一个整数。 value 的允许范围是 1 到 100。
+出现 CPU 争用时，外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 是一个整数。 value 的允许范围是 1 到 100。
 
-AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 将外部资源池附加到特定的 CPU。
+AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} 将外部资源池附加到特定的 CPU。
 
-AFFINITY CPU = ( \<CPU_range_spec> ) 将外部资源池映射到由给定 CPU_ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 。
+AFFINITY CPU = ( <CPU_range_spec> ) 将外部资源池映射到由给定 CPU_ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 。
 
-使用 AFFINITY NUMANODE = ( \<NUMA_node_range_spec> ) 时，会将外部资源池关联到对应于给定 NUMA 节点或节点范围的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU 。 
+使用 AFFINITY NUMANODE = **(\<NUMA_node_range_spec>) 时，会将外部资源池关联到对应于给定 NUMA 节点或节点范围的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU。 
 
 MAX_MEMORY_PERCENT =value  
 指定此外部资源池中的请求可使用的总服务器内存量。 value 是一个整数。 value 的允许范围是 1 到 100。
 
 MAX_PROCESSES =value  
-指定外部资源池允许的最大进程数。 指定 0 以便为池设置无限阈值，此阈值之后仅受计算机资源约束。
+外部资源池允许的最大进程数。 0 = 池的无限阈值，此阈值之后仅受计算机资源约束。
 
 ## <a name="remarks"></a>备注
 
@@ -102,7 +106,7 @@ MAX_PROCESSES =value
 
 ## <a name="examples"></a>示例
 
-下面的语句定义了一个将 CPU 使用率限制为 75% 的外部池。 该语句还将最大内存定义为计算机上可用内存的 30%。
+外部池已将 CPU 使用率限制为 75%。 最大内存为计算机上可用内存的 30%。
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1

@@ -11,18 +11,19 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa468028198839f9cf8d4dd6d12791966d254aaf
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723210"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091986"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>对内存中 OLTP 数据库的高可用性支持
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   包含内存优化表的数据库（无论是否使用本机编译的存储过程）完全支持用于 AlwaysOn 可用性组。  对于包含 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 对象的数据库和不包含这些对象的数据库，在配置和支持上没有任何区别。  
-  
- 如果在 AlwaysOn 可用性组配置中部署内存中 OLTP 数据库，则当应用 REDO 时，对主要副本上的内存优化表的更改将在内存中应用于次要副本上的表。 这意味着到辅助副本的故障转移将非常快，因为数据已经在内存中。 此外，这些表可用于已针对读取访问配置的辅助副本上的查询。  
+
+ 对主要副本上的内存优化表所做的更改会在重做过程中应用于次要副本上的表。 这样可以快速故障转移到次要副本，因为数据已在内存中。 这些表可用于已针对读取访问配置的辅助副本上的读取查询。  
+
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>AlwaysOn 可用性组和内存中 OLTP 数据库  
  通过使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 组件配置数据库来提供以下内容：  
@@ -31,13 +32,17 @@ ms.locfileid: "85723210"
     你可以使用相同的向导配置包含内存优化表的数据库，该向导具有对同步和异步次要副本的相同级别的支持。 此外，在 SQL Server Management Studio 中使用熟悉的 AlwaysOn 仪表板提供运行状况监视。  
   
 -   **可比较的故障转移时间**   
-    次要副本维持持久内存优化表的内存中状态。 在发生自动或强制故障转移时，由于不需要恢复，因此故障转移到新的主副本的时间相当于故障转移到基于磁盘的表的时间。 创建为 SCHEMA_ONLY 的内存优化表在此配置中受支持。 但是，由于未对这些表的更改进行日志记录，因此辅助副本上的这些表中不会存在任何数据。  
+    次要副本维持持久内存优化表的内存中状态。 在发生自动或强制故障转移时，由于不需要恢复，因此故障转移到新的主要副本的时间相当于故障转移到基于磁盘的表的时间。 创建为 SCHEMA_ONLY 的内存优化表在此配置中受支持。 但是，由于未对这些表的更改进行日志记录，因此辅助副本上的这些表中不会存在任何数据。  
   
 -   **可读取辅助角色**   
-    你可以访问和查询次要副本上的内存优化表（如果已针对读取访问进行配置）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，辅助副本上的读取时间戳与主副本上的读取时间戳紧密同步，这意味着在主副本上的更改很快在辅助副本上变得可见。 这种紧密同步行为不同于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 内存中 OLTP。  
+    你可以访问和查询次要副本上的内存优化表（如果已针对读取访问进行配置）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，次要副本上的读取时间戳与主要副本上的读取时间戳紧密同步，这意味着在主要副本上的更改很快在次要副本上变得可见。 这种紧密同步行为不同于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 内存中 OLTP。  
+
+### <a name="considerations"></a>注意事项
+
+- SQL Server 2019 为内存优化可用性组数据库引入了并行重做。 在 SQL Server 2016 和 2017 中，如果可用性组中的数据库也是内存优化的，则基于磁盘的表不会使用并行重做。 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>故障转移群集实例 (FCI) 和内存中 OLTP 数据库  
- 若要在共享存储配置中实现高可用性，则可以在具有一个或多个带有内存优化表的数据库的实例上，设置故障转移群集。 你需要在设置 FCI 时考虑以下因素。  
+ 若要在共享存储配置中实现高可用性，则可以使用内存优化表设置带有数据库的故障转移群集实例。 你需要在设置 FCI 时考虑以下因素。  
   
 -   **恢复时间目标**   
     故障转移时间可能会更长，因为内存优化表必须在数据库变为可用之前加载到内存中。  

@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472673"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216772"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,13 +163,12 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 - 具有 `IDENTITY` 属性的列。  
 - 具有 `ROWGUIDCOL` 属性的列。  
 - 采用非 bin2 排序规则的字符串（`varchar`、`char` 等）列。  
-- 用作使用随机加密列作为键列的非聚集索引的键的列（可以是确定性加密列）。  
-- 用作使用随机加密列作为键列的聚集索引的键的列（可以是确定性加密列）。  
-- 用作包含随机和确定性加密列的全文索引的键的列。  
+- 使用随机加密时用作聚集索引和非聚集索引的键的列（支持确定性加密）。
+- 使用随机加密时用作全文索引的键的列（支持确定性加密）。  
 - 计算列。
 - 计算列引用的列（当表达式针对 Always Encrypted 执行不受支持的操作时）。  
 - 稀疏列集。  
-- 统计信息引用的列。  
+- 使用随机加密时统计信息引用的列（支持确定性加密）。  
 - 使用别名类型的列。  
 - 分区列。  
 - 包含默认约束的列。  
@@ -177,7 +176,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 - 使用随机加密时的主键列（支持确定性加密）。  
 - 使用随机加密或确定性加密时引用外键约束中的列（如果被引用和引用列使用不同的键或算法）。  
 - Check 约束引用的列。  
-- 使用变更数据捕获的表中的列。  
+- 使用更改数据捕获捕获/跟踪的列。  
 - 具有更改跟踪的表中的主键列。  
 - 屏蔽的列（使用动态数据掩码）。  
 - Stretch Database 表中的列。 （无法为延伸启用其列已使用始终加密加密的表。）  

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506c20cddf6527e0d8c61a9a9c7133cefef0b1c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 744bb7a701207ef92bc23fa2d9728c0b86092fd0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451849"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760077"
 ---
 # <a name="using-related-technologies-with-rds"></a>对 RDS 使用相关技术
 本部分包含以下主题。  
   
--   [使用 RDS 与 ODBC 连接池](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
+-   [使用 RDS 与 ODBC 连接池](./using-rds-with-odbc-connection-pooling.md)  
   
--   [在组件服务中运行业务对象](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
+-   [在组件服务中运行业务对象](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -45,7 +45,4 @@ ms.locfileid: "88451849"
  **Microsoft WINDOWS NT server/windows 2000 服务器** 有关 Microsoft Windows NT Server 或 Windows 2000 服务器中安全性的详细信息，请参阅 Microsoft Windows 网站。  
   
 ## <a name="see-also"></a>另请参阅  
- [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [RDS 基础知识](./rds-fundamentals.md)

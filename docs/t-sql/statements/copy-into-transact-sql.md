@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL)（预览版）
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807494"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091965"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
@@ -102,7 +102,7 @@ WITH
 - ADLS Gen2 的*外部位置*： https://<account>。 dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> blob 终结点可用于 ADLS Gen2，但仅为向后兼容性而提供。 为 ADLS Gen2 使用 **dfs** 终结点可获得最佳性能。
+> blob 终结点可用于 ADLS Gen2，以实现向后兼容性。 使用 blob 终结点以获得最佳性能。
 
 - *Account*：存储帐户名称
 
@@ -139,10 +139,12 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* 指定访问外部存储帐户的身份验证机制。 身份验证方法包括：
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Azure blob 存储**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Azure blob 存储**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+*仅支持 blob 终结点
 
 使用 AAD 或公共存储帐户进行身份验证时，无需指定 CREDENTIAL。 
 
@@ -429,7 +431,7 @@ COPY 命令将具有更好的性能，具体取决于工作负载。 为了在�
 COPY 命令会在本日历年 (2020) 末正式发布。 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>文件的数量和大小有限制吗？
-文件至少应为 4 MB。
+文件的数量或大小没有限制；但是，为了获得最佳性能，建议文件至少为 4 MB。
 
 
 请向以下通讯组列表发送反馈和问题：sqldwcopypreview@service.microsoft.com

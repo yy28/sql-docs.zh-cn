@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09dabe4cdb4e897bd7b9d0916bbe1e057cbbd02f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451709"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759927"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 属性示例 (VC++)
-此示例演示了 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 属性。  
+此示例演示了 [ActiveCommand](./activecommand-property-ado.md) 属性。  
   
- 为子程序提供了一个 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象，该对象的 **ActiveCommand** 属性用于显示创建该 **记录集**的命令文本和参数。  
+ 为子程序提供了一个 [记录集](./recordset-object-ado.md) 对象，该对象的 **ActiveCommand** 属性用于显示创建该 **记录集**的命令文本和参数。  
   
 ## <a name="example"></a>示例  
   
@@ -222,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveCommand 属性 (ADO) ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand 属性 (ADO) ](./activecommand-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

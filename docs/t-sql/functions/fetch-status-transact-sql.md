@@ -1,5 +1,6 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;FETCH_STATUS (Transact-SQL)'
+title: FETCH_STATUS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73c5802df5988c323efb7ae1c5554b4835063e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310103"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,28 +36,30 @@ ms.locfileid: "85631717"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>返回类型  
  **integer**  
   
 ## <a name="return-value"></a>返回值  
   
-|返回值|说明|  
+|返回值|描述|  
 |------------------|-----------------|  
 |&nbsp;0|FETCH 语句成功。|  
 |-1|FETCH 语句失败或行不在结果集中。|  
 |-2|提取的行不存在。|
 |-9|游标未执行提取操作。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 由于 `@@FETCH_STATUS` 对于在一个连接上的所有游标都是全局性的，所以要谨慎使用。 在执行一条 FETCH 语句后，必须在对另一游标执行另一 FETCH 语句前测试 `@@FETCH_STATUS`。 在此连接上出现任何提取操作之前，`@@FETCH_STATUS` 没有定义。  
   
 例如，用户从一个游标执行一条 FETCH 语句，然后调用一个存储过程，此存储过程打开并处理另一个游标的结果。 从被调用的存储过程返回控制时，`@@FETCH_STATUS` 反映的是在存储过程中执行的最后的 FETCH 语句的结果，而不是在调用存储过程之前执行的 FETCH 语句的结果。  
   
-若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列   。  
+若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列********。  
   
 ## <a name="examples"></a>示例  
 此示例使用 `@@FETCH_STATUS` 来控制 `WHILE` 循环中的游标活动。  

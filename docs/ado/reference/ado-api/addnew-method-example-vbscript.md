@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74734bd5518f7691107fff873379879b2edd2fa8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6d402470724cfaaaa4a27e2c0d2d3843b7904c2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451549"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760199"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 方法示例 (VBScript)
-此示例使用 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 方法创建具有指定名称的新记录。  
+此示例使用 [AddNew](./addnew-method-ado.md) 方法创建具有指定名称的新记录。  
   
  在 (ASP) 的活动服务器页中使用以下示例。 使用 " **查找** " 找到文件 Adovbs，并将其放入计划使用的目录中。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AddNewVBS**。 您可以在任何客户端浏览器中查看结果。  
   
- 若要执行此示例，请在 HTML 窗体中添加一个新记录。 单击 " **新增**"。 请参阅 [Delete 方法示例](../../../ado/reference/ado-api/delete-method-example-vbscript.md) ，删除不需要的记录。  
+ 若要执行此示例，请在 HTML 窗体中添加一个新记录。 单击 " **新增**"。 请参阅 [Delete 方法示例](./delete-method-example-vbscript.md) ，删除不需要的记录。  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -214,5 +214,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AddNew 方法 (ADO) ](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew 方法 (ADO) ](./addnew-method-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

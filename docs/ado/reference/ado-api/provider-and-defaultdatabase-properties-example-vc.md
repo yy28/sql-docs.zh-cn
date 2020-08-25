@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ad64de17b67acfba0948398fbec7ba5e853eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49d1e08e421c520238573cd802a592cc970b19da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442609"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772796"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 和 DefaultDatabase 属性示例 (VC++)
-此示例通过使用不同的提供程序打开三个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象来演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)的属性。 它还使用 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 属性设置 Microsoft ODBC 提供程序的默认数据库。  
+此示例通过使用不同的提供程序打开三个[连接](./connection-object-ado.md)对象来演示[提供程序](./provider-property-ado.md)的属性。 它还使用 [DefaultDatabase](./defaultdatabase-property.md) 属性设置 Microsoft ODBC 提供程序的默认数据库。  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -135,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase 属性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider 属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [ADO) 的连接对象 (](./connection-object-ado.md)   
+ [DefaultDatabase 属性](./defaultdatabase-property.md)   
+ [Provider 属性 (ADO)](./provider-property-ado.md)

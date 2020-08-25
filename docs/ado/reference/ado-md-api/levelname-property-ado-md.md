@@ -17,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59317faca648592630df8e5ca8b483faf9521082
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49c541fcfb5a29c7b1b59e93dc700bad6c60973a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440899"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778016"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName 属性 (ADO MD)
-指示 [成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)的级别名称。  
+指示 [成员](./member-object-ado-md.md)的级别名称。  
   
 ## <a name="return-values"></a>返回值  
  返回一个 **字符串** ，并且为只读。  
   
 ## <a name="remarks"></a>备注  
- 使用 **LevelName** 属性检索成员所属的级别的名称。 这对应于[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象的[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性。  
+ 使用 **LevelName** 属性检索成员所属的级别的名称。 这对应于[Level](./level-object-ado-md.md)对象的[Name](./name-property-ado-md.md)属性。  
   
 ## <a name="applies-to"></a>适用于  
- [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [成员对象 (ADO MD)](./member-object-ado-md.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Level Object (ADO MD) ](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
- [Name 属性 (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)
+ [Level Object (ADO MD) ](./level-object-ado-md.md)   
+ [Name 属性 (ADO MD)](./name-property-ado-md.md)

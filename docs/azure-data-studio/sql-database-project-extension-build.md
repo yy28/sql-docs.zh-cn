@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519152"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171366"
 ---
 # <a name="build-and-publish-a-project"></a>生成和发布项目
 
@@ -32,7 +32,6 @@ ms.locfileid: "85519152"
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>发布数据库项目
 
 通过生成过程成功编译项目后，可将数据库发布到 SQL Server 实例。 若要发布数据库项目，请在“项目”viewlet 中“资源管理器”下，右键单击 .sqlproj 根节点的，然后选择“发布”。 
@@ -42,6 +41,4 @@ ms.locfileid: "85519152"
 ## <a name="next-steps"></a>后续步骤
 
 - [Azure Data Studio 的 SQL 数据库项目扩展](sql-database-project-extension.md)
-- [数据层应用程序](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [从命令行生成 SQL 数据库项目](sql-database-project-extension-build-from-command-line.md)

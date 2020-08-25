@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55f0eb77a498eba9d6fe2565a8647dc11d77897b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c2cd1df656d07b274fe000c427dd3eae07da76b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451719"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759907"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 属性示例 (VB)
-此示例演示了 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 属性。  
+此示例演示了 [ActiveCommand](./activecommand-property-ado.md) 属性。  
   
- 为子程序提供了一个 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象，该对象的 **ActiveCommand** 属性用于显示创建该 **记录集**的命令文本和参数。  
+ 为子程序提供了一个 [记录集](./recordset-object-ado.md) 对象，该对象的 **ActiveCommand** 属性用于显示创建该 **记录集**的命令文本和参数。  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**例程仅提供**recordset**对象，但它必须打印用于创建该**记录集**的命令文本和参数。 这可以是因为 **记录集** 对象的 **ActiveCommand** 属性生成关联的 [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象。  
+ **ActiveCommandXprint**例程仅提供**recordset**对象，但它必须打印用于创建该**记录集**的命令文本和参数。 这可以是因为 **记录集** 对象的 **ActiveCommand** 属性生成关联的 [命令](./command-object-ado.md) 对象。  
   
- **命令**对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性生成创建**记录集**的参数化命令。 **Command**对象的[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合生成的值被替换为命令的参数占位符 ( "**？**") 。  
+ **命令**对象的[CommandText](./commandtext-property-ado.md)属性生成创建**记录集**的参数化命令。 **Command**对象的[Parameters](./parameters-collection-ado.md)集合生成的值被替换为命令的参数占位符 ( "**？**") 。  
   
  最后，打印错误消息或作者名称和 ID。  
   
@@ -122,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveCommand 属性 (ADO) ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [ADO) 的命令对象 (](../../../ado/reference/ado-api/command-object-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand 属性 (ADO) ](./activecommand-property-ado.md)   
+ [ADO) 的命令对象 (](./command-object-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

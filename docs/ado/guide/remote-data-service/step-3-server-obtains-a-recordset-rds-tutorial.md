@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8da4957f44c481e2a89ca1c8c964880f1ca93fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22664ed2943800702bbb12afe6900c1ca9bac6bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451929"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759117"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步骤 3：服务器获取记录集（RDS 教程）
 服务器程序使用连接字符串和命令文本在数据源中查询所需的行。 ADO 通常用于检索此 **记录集**，但也可以使用其他 Microsoft 数据访问接口（如 OLE DB）。  
@@ -39,5 +39,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [步骤4： Server 返回记录集 (RDS 教程) ](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
- [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [步骤4： Server 返回记录集 (RDS 教程) ](./step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [RDS 教程 (VBScript)](./rds-tutorial-vbscript.md)

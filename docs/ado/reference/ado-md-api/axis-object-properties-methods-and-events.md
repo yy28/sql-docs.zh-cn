@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a8eedddcbd7a899c7b2abd1f2ab95197567854c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a20209b9c8bdfb9776ec991afb7bca7bbd755ae2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441298"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778376"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>轴对象属性、方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
- [DimensionCount 属性](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
+ [DimensionCount 属性](./dimensioncount-property-ado-md.md)  
   
- [Name 属性](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name 属性](./name-property-ado-md.md)  
   
- [位置集合](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [位置集合](./positions-collection-ado-md.md)  
   
- [Properties 集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties 集合](../ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -38,4 +38,4 @@ ms.locfileid: "88441298"
  无。  
   
 ## <a name="see-also"></a>另请参阅  
- [轴对象 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)
+ [轴对象 (ADO MD)](./axis-object-ado-md.md)

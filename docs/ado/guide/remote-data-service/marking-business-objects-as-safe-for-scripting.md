@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 404efeb169291e8c29da95f5c4d7690ef8dfd6ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ebbf64deba331308826eb7fe31c4148fd95ad1f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452149"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759728"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>将业务对象标记为“可安全编写脚本”
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要帮助确保安全的 Internet 环境，需要标记使用 RDS 实例化的任何业务对象 [。空间](../../../ado/reference/rds-api/dataspace-object-rds.md) 对象的 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 方法为 "安全编写脚本"。 你需要确保在系统注册表的 "许可证" 区域中将它们标记为这样，然后才能在 DCOM 中使用它们。  
+ 若要帮助确保安全的 Internet 环境，需要标记使用 RDS 实例化的任何业务对象 [。空间](../../reference/rds-api/dataspace-object-rds.md) 对象的 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法为 "安全编写脚本"。 你需要确保在系统注册表的 "许可证" 区域中将它们标记为这样，然后才能在 DCOM 中使用它们。  
   
 > [!NOTE]
 >  标记为 "可安全执行脚本" 的业务对象或用于初始化的安全对象可以通过网络上的任何人进行实例化和初始化。 将业务对象标记为 "可安全执行脚本" 并不安全。 至关重要的一点是，确保使用最高的安全性对业务对象进行编码，以确保此类对象不会为敏感数据提供未受保护的访问点。  
@@ -45,5 +45,3 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  在最后一个步骤中，应用程序安装向导将创建一个 .htm 和一个 .cab 文件。 然后，你可以将这两个文件复制到目标计算机，然后双击 .htm 文件以加载页面并正确注册服务器。  
   
  因为默认情况下会在 Windows\System32\Occache 目录中安装业务对象，请将其移动到 Windows\System32 目录，并更改**HKEY_CLASSES_ROOT \clsid \\ ** \<*MyActiveXGUID*> \\ **InprocServer32**注册表项以匹配正确的路径。
-
-

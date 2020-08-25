@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ae0f13b2ece4ae21e8a8f8312a561bcfd0e6c88
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452479"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758957"
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 XSLT 可应用于生成的 XML，以将其转换为另一种格式。 了解 ADO 中的 XML 格式可帮助开发 XSLT 模板，从而将其转换为更易于用户使用的形式。  
@@ -54,4 +54,4 @@ XSLT 可应用于生成的 XML，以将其转换为另一种格式。 了解 ADO
  XSLT 将 ADO Save 方法生成的 XML 流转换为 HTML 表，其中显示记录集的每个字段以及表标题。 还会为表标题和行分配不同的字体和颜色。  
   
 ## <a name="see-also"></a>另请参阅  
- [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保留记录](./persisting-records-in-xml-format.md)

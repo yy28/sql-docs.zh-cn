@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84ca29160d8d26930a3edb644b9317392dc0603f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b850e6b64c5acc8a504c5d684e4472a05f4eeef
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440419"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771316"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes 属性示例 (VC++)
-此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的 "[特性](../../../ado/reference/adox-api/attributes-property-adox.md)" 属性。 如果将其设置为**adColNullable** ，则允许用户将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)的值设置为空字符串。 在这种情况下，用户可以区分数据未知的记录和不应用数据的记录。  
+此示例演示[列](./column-object-adox.md)的 "[特性](./attributes-property-adox.md)" 属性。 如果将其设置为**adColNullable** ，则允许用户将[记录集](../ado-api/recordset-object-ado.md)[字段](../ado-api/field-object.md)的值设置为空字符串。 在这种情况下，用户可以区分数据未知的记录和不应用数据的记录。  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -204,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [特性属性 (ADOX) ](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [特性属性 (ADOX) ](./attributes-property-adox.md)   
+ [列对象 (ADOX)](./column-object-adox.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362980"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092008"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87362980"
 > [!IMPORTANT]  
 >  在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之前，强烈建议您阅读本主题的每个章节。  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 支持可用性组的 .Net 修补程序  
- 根据您将用于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]组件和功能，您可能需要安装在下表中标识的其他 .Net 修补程序。 可以按任意顺序安装这些修补程序。  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 支持可用性组的 .NET 修补程序  
+ 根据你将与 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 一起使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 组件和功能，你可能需要安装在下表中标识的其他 .NET 修补程序。 可以按任意顺序安装这些修补程序。  
   
 |依赖功能|修补程序|链接|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347：[.Net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.NET 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347：[.NET 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a>清单：要求（Windows 系统）  
@@ -162,7 +162,9 @@ ms.locfileid: "87362980"
   
     -   每个主副本为每个主数据库使用 1 个日志捕获线程。 此外，它为每个辅助数据库使用 1 个日志发送线程。 日志发送线程将在处于不活动状态 15 秒后释放。    
   
-    -   辅助副本上的备份将在备份操作持续时间内包含主副本上的一个线程。  
+    -   辅助副本上的备份将在备份操作持续时间内包含主副本上的一个线程。 
+
+-  SQL Server 2019 为内存优化可用性组数据库引入了并行重做。 在 SQL Server 2016 和 2017 中，如果可用性组中的数据库也是内存优化的，则基于磁盘的表不会使用并行重做。 
   
  有关详细信息，请参阅 [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)（CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师博客）。  
   

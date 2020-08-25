@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa7a703f9790ef49961e3324b26c32d757682e4a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452459"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758807"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基础知识
 Microsoft® ActiveX®数据定义语言和安全 (ADOX) 是 ADO 对象和编程模型的扩展。 ADOX 包含用于创建和修改架构以及安全性的对象。 由于它是一种基于对象的架构处理方法，因此你可以编写代码来处理各种数据源，而不考虑它们的本机语法差异。  
@@ -29,28 +29,28 @@ Microsoft® ActiveX®数据定义语言和安全 (ADOX) 是 ADO 对象和编程�
   
  Microsoft Jet 数据库引擎的 Microsoft OLE DB 提供程序完全支持 ADOX。 可能无法支持 ADOX 的某些功能，具体取决于您的数据访问接口。  
   
- 本文档假定你了解 Microsoft® Visual Basic®编程语言和 ADO 的一般知识。 有关 ADO 的详细信息，请参阅 [Ado 程序员指南](../../../ado/guide/ado-programmer-s-guide.md)。 有关 ADOX 的更多概述信息，请参阅以下主题：  
+ 本文档假定你了解 Microsoft® Visual Basic®编程语言和 ADO 的一般知识。 有关 ADO 的详细信息，请参阅 [Ado 程序员指南](../ado-programmer-s-guide.md)。 有关 ADOX 的更多概述信息，请参阅以下主题：  
   
--   [ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)  
+-   [ADOX 对象模型](../../reference/adox-api/adox-object-model.md)  
   
--   [ADOX 对象](../../../ado/reference/adox-api/adox-objects.md)  
+-   [ADOX 对象](../../reference/adox-api/adox-objects.md)  
   
--   [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)  
+-   [ADOX 集合](../../reference/adox-api/adox-collections.md)  
   
--   [ADOX 属性](../../../ado/reference/adox-api/adox-properties.md)  
+-   [ADOX 属性](../../reference/adox-api/adox-properties.md)  
   
--   [ADOX 方法](../../../ado/reference/adox-api/adox-methods.md)  
+-   [ADOX 方法](../../reference/adox-api/adox-methods.md)  
   
--   [ADOX 示例](../../../ado/reference/adox-api/adox-code-examples.md)  
+-   [ADOX 示例](../../reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX 代码示例](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX 枚举常量](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
- [ADOX 方法](../../../ado/reference/adox-api/adox-methods.md)   
- [ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)   
- [ADOX 对象](../../../ado/reference/adox-api/adox-objects.md)   
- [ADOX 属性](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO (多维)  (ADO MD) ](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [ADO 程序员指南](../../../ado/guide/ado-programmer-s-guide.md)
+ [ADOX API 参考](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [ADOX 代码示例](../../reference/adox-api/adox-code-examples.md)   
+ [ADOX 集合](../../reference/adox-api/adox-collections.md)   
+ [ADOX 枚举常量](../../reference/adox-api/adox-enumerated-constants.md)   
+ [ADOX 方法](../../reference/adox-api/adox-methods.md)   
+ [ADOX 对象模型](../../reference/adox-api/adox-object-model.md)   
+ [ADOX 对象](../../reference/adox-api/adox-objects.md)   
+ [ADOX 属性](../../reference/adox-api/adox-properties.md)   
+ [ADO (多维)  (ADO MD) ](../multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO 程序员指南](../ado-programmer-s-guide.md)

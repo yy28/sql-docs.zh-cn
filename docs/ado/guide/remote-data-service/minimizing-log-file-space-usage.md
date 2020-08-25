@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452159"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759717"
 ---
 # <a name="minimizing-log-file-space-usage"></a>最大程度降低日志文件空间使用
 如果 SQL Server 数据库上有大量活动，则日志文件可能会快速填满 (因此停止服务器) 。 你可以将日志文件设置为 **在检查点截断** ，以显著延长数据库日志文件的生存期。  
@@ -47,6 +47,4 @@ ms.locfileid: "88452159"
  有关 **截断检查点** 功能的详细信息，请参阅 Microsoft SQL Server 文档。  
   
 ## <a name="see-also"></a>另请参阅  
- [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [RDS 基础知识](./rds-fundamentals.md)

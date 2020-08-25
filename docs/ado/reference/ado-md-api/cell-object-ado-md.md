@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441239"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778326"
 ---
 # <a name="cell-object-ado-md"></a>单元对象 (ADO MD)
 表示单元集内包含的轴坐标相交处的数据。  
   
 ## <a name="remarks"></a>备注  
- 单元[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象的[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)属性返回**Cell**对象。  
+ 单元[集](./cellset-object-ado-md.md)对象的[Item](./item-property-ado-md-cellset.md)属性返回**Cell**对象。  
   
  使用 **Cell** 对象的集合和属性，可以执行以下操作：  
   
--   返回具有[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)属性的**单元**中的数据。  
+-   返回具有[值](./value-property-ado-md.md)属性的**单元**中的数据。  
   
--   返回一个字符串，该字符串表示带有[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)属性的**Value**属性的格式显示。  
+-   返回一个字符串，该字符串表示带有[FormattedValue](./formattedvalue-property-ado-md.md)属性的**Value**属性的格式显示。  
   
--   返回单元**集**内具有[Ordinal](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)属性的**单元**的序号值。  
+-   返回单元**集**内具有[Ordinal](./ordinal-property-ado-md-cell.md)属性的**单元**的序号值。  
   
--   确定[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)中**单元格**在[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合中的位置。  
+-   确定[CubeDef](./cubedef-object-ado-md.md)中**单元格**在[位置](./positions-collection-ado-md.md)集合中的位置。  
   
--   检索有关具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的**单元**的其他信息。  
+-   检索有关具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合的**单元**的其他信息。  
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |BackColor|显示单元格时使用的背景色。|  
 |FontFlags|字体上的位掩码细节效果。|  
@@ -54,10 +54,10 @@ ms.locfileid: "88441239"
   
  本部分包含以下主题。  
   
--   [属性、方法和事件](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
+-   [属性、方法和事件](./cell-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VBScript) 的轴示例 ](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [单元集对象 (ADO MD) ](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [位置集合 (ADO MD) ](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [ (VBScript) 的轴示例 ](./axis-example-vbscript.md)   
+ [单元集对象 (ADO MD) ](./cellset-object-ado-md.md)   
+ [位置集合 (ADO MD) ](./positions-collection-ado-md.md)   
+ [属性集合 (ADO)](../ado-api/properties-collection-ado.md)

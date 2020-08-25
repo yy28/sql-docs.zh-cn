@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c76d2efccf6f9031d21b85b3bfd3aabed47708c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: d8d91f01faa2f8ce6e81579964d7027122cd8d38
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988380"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200791"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ BULK INSERT 语句可在用户定义的事务内执行，以便将数据导入�
 
 ## <a name="logging-behavior"></a>日志记录行为
 
- 有关何时在事务日志中记录由批量导入 SQL SErver 执行的行插入操作的信息，请参阅[批量导入的最小日志记录的先决条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。 Azure SQL 数据库中不支持最小日志记录。
+ 有关何时在事务日志中记录由批量导入 SQL Server 执行的行插入操作的信息，请参阅[批量导入的最小日志记录的先决条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。 Azure SQL 数据库中不支持最小日志记录。
 
 ## <a name="restrictions"></a><a name="Limitations"></a> 限制
 

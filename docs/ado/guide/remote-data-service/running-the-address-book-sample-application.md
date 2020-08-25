@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fddb0d0fb2d7a49c7b9983c03157922862f5d96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451999"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759347"
 ---
 # <a name="running-the-address-book-sample-application"></a>运行通讯簿示例应用程序
 > [!IMPORTANT]
@@ -43,8 +43,4 @@ ms.locfileid: "88451999"
 3.  然后，你可以在通讯簿示例应用程序中尝试各种方案，例如，基于其电子邮件名称搜索某个用户，列出所有标题为 "项目经理" 的人员或编辑现有记录。 单击 " **查找** " 以使用所有可用名称填充数据网格。  
   
 ## <a name="see-also"></a>另请参阅  
- [通讯簿数据绑定对象](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+ [通讯簿数据绑定对象](./address-book-data-binding-object.md)

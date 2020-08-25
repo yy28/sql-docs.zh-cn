@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452199"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759780"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>允许 DCOM 在 DLL 上运行
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452199"
   
      - 或 -  
   
-     将 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 对象导入到包中。  
+     将 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 对象导入到包中。  
   
 3.  **在创建者的进程中**将包的激活特性设置 (库应用程序) 。  
   
      若要使 .dll 可通过 DCOM 和 IIS 在同一台计算机上访问，必须在 "组件服务" MMC 管理单元中设置组件的 "激活" 属性。 **在创建者的进程中**将属性设置为之后，你会注意到注册表中的**Inproc**服务器键已添加到 "组件服务" 代理项。  
   
  有关组件服务 (或 Microsoft Transaction Service 的详细信息，如果使用的是 Windows NT) 以及如何执行这些步骤，请访问 Microsoft Transaction Server 网站。
-
-

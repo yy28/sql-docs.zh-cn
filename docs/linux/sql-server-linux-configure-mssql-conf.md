@@ -3,17 +3,17 @@ title: 在 Linux 上配置 SQL Server 设置
 description: 本文介绍如何使用 mssql-conf 工具在 Linux 上配置 SQL Server 设置。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/30/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472183"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180006"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -42,6 +42,8 @@ mssql-conf 是随 SQL Server 2017 for Red Hat Enterprise Linux、SUSE Linux Ente
 | [本地审核目录](#localaudit) | 设置目录以添加本地审核文件。 |
 | [区域设置](#lcid) | 设置 SQL Server 要使用的区域设置。 |
 | [内存限制](#memorylimit) | 设置 SQL Server 的内存限制。 |
+| [网络设置](#network) | SQL Server 的其他网络设置。 |
+| [Microsoft 分布式事务处理协调器](#msdtc) | 在 Linux 上配置 MSDTC 并对其进行故障排除。 |
 | [TCP 端口](#tcpport) | 更改 SQL Server 侦听连接的端口。 |
 | [TLS](#tls) | 配置传输级别安全性。 |
 | [跟踪标志](#traceflags) | 设置服务要使用的跟踪标志。 |
@@ -72,6 +74,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 | [内存限制](#memorylimit) | 设置 SQL Server 的内存限制。 |
 | [Microsoft 分布式事务处理协调器](#msdtc) | 在 Linux 上配置 MSDTC 并对其进行故障排除。 |
 | [MLServices EULA](#mlservices-eula) | 对于 mlservices 包，接受 R 和 Python EULA。 仅适用于 SQL Server 2019。|
+| [网络设置](#network) | SQL Server 的其他网络设置。 |
 | [outboundnetworkaccess](#mlservices-outbound-access) |为 [mlservices](sql-server-linux-setup-machine-learning.md) R、Python 和 Java 扩展启用出站网络访问。|
 | [TCP 端口](#tcpport) | 更改 SQL Server 侦听连接的端口。 |
 | [TLS](#tls) | 配置传输级别安全性。 |
@@ -107,6 +110,34 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+### <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> 为 Linux 上的 SQL Server 设置默认数据库邮件配置文件
+
+通过 sqlpagent.databasemailprofile 可为电子邮件警报设置默认的 DB 邮件配置文件。
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
+
+### <a name="sql-agent-error-logs"></a><a id="agenterrorlog"></a> SQL 代理错误日志
+
+sqlpagent.errorlogfile 和 sqlpagent.errorlogginglevel 设置允许你分别设置 SQL 代理日志文件路径和日志记录级别。 
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+```
+
+SQL 代理日志记录级别是位掩码值，等于：
+
+- 1 = 错误
+- 2 = 警告
+- 4 = 信息
+
+如果要捕获所有级别，请使用 `7` 作为值。
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
+```
 
 ## <a name="change-the-sql-server-collation"></a><a id="collation"></a> 更改 SQL Server 排序规则
 
@@ -335,6 +366,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo systemctl restart mssql-server
    ```
 
+`errorlog.numerrorlogs` 设置允许你指定在循环日志之前所维护的错误日志数。
 
 ## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> 更改默认备份目录位置
 
@@ -400,13 +432,6 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
     | **filtered** | Filtered 采用基于减法的设计，其中包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和主机环境，从转储中排除某些区域。
     | **full** | Full 是完整的过程转储，包括 /proc/$pid/maps 中的所有区域。 这并非由 coredump.captureminiandfull 设置控制。 |
 
-## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> 为 Linux 上的 SQL Server 设置默认数据库邮件配置文件
-
-通过 sqlpagent.databasemailprofile 可为电子邮件警报设置默认的 DB 邮件配置文件。
-
-```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
-```
 ## <a name="high-availability"></a><a id="hadr"></a> 高可用性
 
 使用 hadr.hadrenabled 选项可在 SQL Server 实例上启用可用性组。 下面的命令通过将 hadr.hadrenabled 设置为 1 来启用可用性组。 必须重启 SQL Server，该设置才能生效。
@@ -485,7 +510,14 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+### <a name="additional-memory-settings"></a>其他内存设置
+
+内存设置提供以下选项。
+
+|选项 |描述 |
+|--- |--- |
+| memory.disablememorypressure | SQL Server 禁用内存压力。 值可以为 `true` 或 `false`。 |
+| memory.memory_optimized | 启用或禁用 SQL Server 内存优化功能 - 永久性内存文件启示、内存保护。 值可以为 `true` 或 `false`。 |
 
 ## <a name="configure-msdtc"></a><a id="msdtc"></a> 配置 MSDTC
 
@@ -527,7 +559,6 @@ network.rpcport 和 distributedtransaction.servertcpport 设置用于配置 Micr
 | distributedtransaction.tracefilepath | 应存储跟踪文件的文件夹 |
 | distributedtransaction.turnoffrpcsecurity | 为分布式事务启用或禁用 RPC 安全性 |
 
-::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> 接受 MLServices EULA
@@ -624,6 +655,22 @@ outboundnetworkaccess = 1
 
 有关使用 TLS 设置的示例，请参阅[加密与 Linux 上的 SQL Server 的连接](sql-server-linux-encrypted-connections.md)。
 
+## <a name="network-settings"></a><a id="network"></a> 网络设置
+
+请参阅[教程：对 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)，以获取有关在 Linux 上的 SQL Server 中使用 AD 身份验证的全面信息。
+
+以下选项是可使用 `mssql-conf` 配置的其他网络设置。
+
+|选项 |描述 |
+|--- |--- |
+| network.disablesssd | 禁用查询 SSSD 来获取 AD 帐户信息，默认为 LDAP 调用。 值可以为 `true` 或 `false`。 |
+| network.enablekdcfromkrb5conf | 允许从 krb5.conf 查找 KDC 信息。 值可以为 `true` 或 `false`。 |
+| network.forcesecureldap | 强制使用 LDAPS 联系域控制器。 值可以为 `true` 或 `false`。 |
+| network.ipaddress | 传入连接的 IP 地址。 |
+| network.kerberoscredupdatefrequency | 检查需要更新的 kerberos 凭据之间的时间（以秒为单位）。 值是一个整数。|
+| network.privilegedadaccount | 要用于 AD 身份验证的特权 AD 用户。 值为 `<username>`。 有关详细信息，请参阅[教程：对 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md#spn)|
+| uncmapping | 将 UNC 路径映射到本地路径。 例如，`sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`。 |
+
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 启用/禁用跟踪标志
 
 使用 traceflag 选项可启用或禁用 SQL Server 服务启动的跟踪标志。 若要启用/禁用跟踪标志，请使用以下命令：
@@ -676,7 +723,7 @@ outboundnetworkaccess = 1
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-请注意，此文件中未显示的所有设置均使用其默认值。 下一部分提供示例 mssql.conf 文件。
+此文件中未显示的所有设置均使用其默认值。 下一部分提供示例 mssql.conf 文件。
 
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf format

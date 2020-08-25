@@ -1,4 +1,5 @@
 ---
+description: catalog.move_project（SSISDB 数据库）
 title: catalog.move_project（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57e63a057c99c7f2e8f24b5d02a20a55da92f0db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c9e003b76cfbf6e563fc41a47e4b9aabfeecf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430059"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project - SSISDB 数据库
 
@@ -36,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>参数  
  [ @source_folder = ] *source_folder*  
- 此项目在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)** 。  
+ 此项目在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)**。  
   
  [ @project_name = ] project_name   
  要移动的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
  [ @destination_folder = ] *destination_folder*  
- 此项目在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)** 。  
+ 此项目在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -70,7 +71,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当将项目从源文件夹移到目标文件夹时，将删除源文件夹中的项目和对应的环境引用。 在目标文件夹中，将创建相同的项目和环境引用。 在移动之后，相对环境引用将解析为不同的文件夹。 移动后，绝对引用将解析为同一文件夹。  
   
 > [!NOTE]  

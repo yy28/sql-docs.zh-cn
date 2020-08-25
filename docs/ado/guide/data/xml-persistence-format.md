@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452509"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758977"
 ---
 # <a name="xml-persistence-format"></a>XML 暂留格式
 ADO 对 XML 流使用 UTF-8 编码。  
@@ -72,4 +72,4 @@ xmlns:z="#RowsetSchema">
  Data 节包含三行，其中包含有关货主的信息。 对于空行集，data 节可以为空，但 \<rs:data> 标记必须存在。 不带数据的情况下，您只需编写一个标记简写即可 \<rs:data/> 。 以 "rs" 为前缀的任何标记均表示它位于 urn：架构-microsoft-com：行集定义的命名空间中。  
   
 ## <a name="see-also"></a>另请参阅  
- [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保留记录](./persisting-records-in-xml-format.md)

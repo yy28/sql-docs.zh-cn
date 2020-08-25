@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbddab9f7536c311d55f83fc9c6ea443c3757fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442449"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772306"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-指定用于打开 [记录](../../../ado/reference/ado-api/record-object-ado.md)的选项。 可以使用或组合这些值。  
+指定用于打开 [记录](./record-object-ado.md)的选项。 可以使用或组合这些值。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|向提供程序指出，不需要最初检索与 **记录** 关联的字段，但在第一次尝试访问该字段时可进行检索。 缺少此标志时，默认行为是检索所有 **记录** 对象字段。|  
 |**adDelayFetchStream**|0x4000|向提供程序指示，不需要最初检索与 **记录** 关联的默认流。 缺少此标志时，默认行为是检索与 **Record** 对象关联的默认流。|  
@@ -39,4 +39,4 @@ ms.locfileid: "88442449"
  这些常量没有 ADO/WFC 等效项。  
   
 ## <a name="applies-to"></a>适用于  
- [Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Open 方法（ADO 记录）](./open-method-ado-record.md)

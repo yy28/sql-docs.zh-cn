@@ -8,17 +8,31 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/17/2020
-ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.date: 08/12/2020
+ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988559"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147198"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="august-2020"></a>2020 年 8 月
+
+2020 年 8 月 12 日 &nbsp; / &nbsp; 版本：1.21.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 新笔记本功能 | &bull; &nbsp; 移动单元格位置 <br/> &bull; &nbsp; 将单元格转换为文本单元格或代码单元格
+| Jupyter Books 选取器 | 用户现在可以从 Github 版本选择 Jupyter Books，并在 Azure Data Studio 中无缝打开 |
+| 已将搜索添加到笔记本 Viewlet | 用户可以通过笔记本和 Jupyter Books 轻松搜索内容 |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2020-hotfix"></a>2020 年 7 月（修补程序）
 
