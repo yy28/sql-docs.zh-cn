@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f72b8795fc060a44b83c3587f9243971b7c951
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441719"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777086"
 ---
 # <a name="type-property-example-field-vb"></a>Type 属性示例（字段）(VB)
-此示例通过显示与***Employees***表中所有[Field](../../../ado/reference/ado-api/field-object.md)对象的[Type](../../../ado/reference/ado-api/type-property-ado.md)属性值相对应的常量的名称，演示了[type](../../../ado/reference/ado-api/type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  
+此示例通过显示与***Employees***表中所有[Field](./field-object.md)对象的[Type](./type-property-ado.md)属性值相对应的常量的名称，演示了[type](./type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  
   
 ```  
 'BeginTypeFieldVB  
@@ -107,5 +107,5 @@ Attribute VB_Name = "TypeField"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field 对象](./field-object.md)   
+ [Type 属性 (ADO)](./type-property-ado.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451319"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776636"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**集对象构造 ADO**记录集**对象。  
@@ -30,11 +30,11 @@ ms.locfileid: "88451319"
   
 ## <a name="properties"></a>属性  
   
-|属性|描述|  
+|properties|说明|  
 |-|-|  
-|[章节](../../../ado/reference/ado-api/chapter-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB**章节**对象。|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB **RowPosition**对象。|  
-|[行集](../../../ado/reference/ado-api/rowset-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB**行集**对象。|  
+|[章节](./chapter-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB**章节**对象。|  
+|[RowPosition](./rowposition-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB **RowPosition**对象。|  
+|[行集](./rowset-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB**行集**对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -80,5 +80,5 @@ ms.locfileid: "88451319"
  **UUID：** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Rowset 属性 (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [Rowset 属性 (ADO)](./rowset-property-ado.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b00d145dfd718c64bbd3a87d6df353114afcb2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97f378e1be87be95682bf2eeb05e112abfb96f9d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441839"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777206"
 ---
 # <a name="stream-property"></a>Stream 属性
 获取或设置**ADOStreamConstruction**对象上/的 OLE DB**流**对象。  
@@ -39,7 +39,7 @@ HRESULT get_Stream([out, retval] IUnknown** ppStream);
 HRESULT put_Stream([in] IUnknown* pStream);  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  *ppStream*  
  指向 OLE DB **流** 对象的指针。  
   
@@ -50,4 +50,4 @@ HRESULT put_Stream([in] IUnknown* pStream);
  此属性方法返回标准的 HRESULT 值。 这包括 S_OK 和 E_FAIL。  
   
 ## <a name="applies-to"></a>适用于  
- [ADOStreamConstruction 接口](../../../ado/reference/ado-api/adostreamconstruction-interface.md)
+ [ADOStreamConstruction 接口](./adostreamconstruction-interface.md)

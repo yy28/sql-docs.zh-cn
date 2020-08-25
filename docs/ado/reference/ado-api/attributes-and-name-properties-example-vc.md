@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b482b59344f141b01979e850056fbb4da93bc3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb08bddc1e308859aa8460221136fb50fe5e6b86
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451209"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776466"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>特性和名称属性示例 (VC + +) 
-此示例显示[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的 "[属性](../../../ado/reference/ado-api/attributes-property-ado.md)" 属性的值。 它使用 [name](../../../ado/reference/ado-api/name-property-ado.md) 属性来显示每个 **字段** 和 **属性** 对象的名称。  
+此示例显示[连接](./connection-object-ado.md)、[字段](./field-object.md)和[属性](./property-object-ado.md)对象的 "[属性](./attributes-property-ado.md)" 属性的值。 它使用 [name](./name-property-ado.md) 属性来显示每个 **字段** 和 **属性** 对象的名称。  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -182,8 +182,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (特性属性 ](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [ADO)  (名称属性 ](../../../ado/reference/ado-api/name-property-ado.md)   
- [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [ADO)  (特性属性 ](./attributes-property-ado.md)   
+ [ADO) 的连接对象 (](./connection-object-ado.md)   
+ [Field 对象](./field-object.md)   
+ [ADO)  (名称属性 ](./name-property-ado.md)   
+ [属性对象 (ADO)](./property-object-ado.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 980e7c840cfb19077c6f4f1d1041d1f1eb8acf64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442969"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773796"
 ---
 # <a name="open-method-ado-record"></a>Open 方法（ADO 记录）
-打开现有 [记录](../../../ado/reference/ado-api/record-object-ado.md) 对象，或创建由 **记录**表示的新项，如文件或目录。  
+打开现有 [记录](./record-object-ado.md) 对象，或创建由 **记录**表示的新项，如文件或目录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,21 +34,21 @@ ms.locfileid: "88442969"
 Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *Source*  
- 可选。 一种 **变量** ，该变量可以表示此 **记录** 对象所表示的实体的 URL、 **命令**、打开的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 或其他 **记录** 对象、包含 SQL SELECT 语句或表名称的字符串。  
+ 可选。 一种 **变量** ，该变量可以表示此 **记录** 对象所表示的实体的 URL、 **命令**、打开的 [记录集](./recordset-object-ado.md) 或其他 **记录** 对象、包含 SQL SELECT 语句或表名称的字符串。  
   
  *ActiveConnection*  
- 可选。 一个表示连接字符串或打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的**变量**。  
+ 可选。 一个表示连接字符串或打开[连接](./connection-object-ado.md)对象的**变量**。  
   
  *模式*  
- 可选。 一个 [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) 值，该值指定结果 **记录** 对象的访问模式。 默认值为 **adModeUnknown**。  
+ 可选。 一个 [ConnectModeEnum](./connectmodeenum.md) 值，该值指定结果 **记录** 对象的访问模式。 默认值为 **adModeUnknown**。  
   
  *CreateOptions*  
- 可选。 一个 [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) 值，该值指定是否应打开现有的文件或目录，或创建新的文件或目录。 默认值为 **adFailIfNotExists**。 如果设置为默认值，则将从 [mode](../../../ado/reference/ado-api/mode-property-ado.md) 属性获取访问模式。 如果 *源* 参数不包含 URL，则会忽略此参数。  
+ 可选。 一个 [RecordCreateOptionsEnum](./recordcreateoptionsenum.md) 值，该值指定是否应打开现有的文件或目录，或创建新的文件或目录。 默认值为 **adFailIfNotExists**。 如果设置为默认值，则将从 [mode](./mode-property-ado.md) 属性获取访问模式。 如果 *源* 参数不包含 URL，则会忽略此参数。  
   
  *选项*  
- 可选。 一个 [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) 值，该值指定用于打开 **记录**的选项。 默认值为 **adOpenRecordUnspecified**。 这些值可以组合在一起。  
+ 可选。 一个 [RecordOpenOptionsEnum](./recordopenoptionsenum.md) 值，该值指定用于打开 **记录**的选项。 默认值为 **adOpenRecordUnspecified**。 这些值可以组合在一起。  
   
  *UserName*  
  可选。 一个 **字符串** 值，该值包含用户 ID，该 ID 在需要时授予对 *源*的访问权限。  
@@ -69,16 +69,16 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 -   表名称。  
   
- 如果 **Record** 对象表示无法使用 URL 访问的实体 (例如，从数据库) 派生的 **记录集** 的行，则 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) 属性和使用 **adRecordURL** 常量访问的字段的值均为 null。  
+ 如果 **Record** 对象表示无法使用 URL 访问的实体 (例如，从数据库) 派生的 **记录集** 的行，则 [ParentURL](./parenturl-property-ado.md) 属性和使用 **adRecordURL** 常量访问的字段的值均为 null。  
   
 > [!NOTE]
->  使用 http 方案的 Url 将自动调用 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  使用 http 方案的 Url 将自动调用 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [绝对和相对 url](../../guide/data/absolute-and-relative-urls.md)。  
   
 ## <a name="applies-to"></a>适用于  
- [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [记录对象 (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [开放式方法 (ADO 连接) ](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [ADO 记录集 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [ADO 流 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)
+ [开放式方法 (ADO 连接) ](./open-method-ado-connection.md)   
+ [ADO 记录集 (打开方法) ](./open-method-ado-recordset.md)   
+ [ADO 流 (打开方法) ](./open-method-ado-stream.md)   
+ [OpenSchema 方法](./openschema-method.md)

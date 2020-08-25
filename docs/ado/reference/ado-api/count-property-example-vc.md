@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a285aec87cd2bbdf832d071c99be4a70c5d53a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd196830ad1212d495778d037c915b2f4d86874
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444329"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775646"
 ---
 # <a name="count-property-example-vc"></a>Count 属性示例 (VC++)
-此示例演示了***Employee***数据库中包含两个集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。  
+此示例演示了***Employee***数据库中包含两个集合的[Count](./count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。  
   
 ```  
 // BeginCountCpp.cpp  
@@ -132,4 +132,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Count 属性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
+ [Count 属性 (ADO)](./count-property-ado.md)

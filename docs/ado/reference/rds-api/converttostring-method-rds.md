@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58bfb25264c15f051bfd7144bdcaf01bbd1eda05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b3bf5e24fdb3ef05795d4ebd66a65baea984a42
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439189"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768656"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
-将 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 转换为表示记录集数据的 MIME 字符串。  
+将 [记录集](../ado-api/recordset-object-ado.md) 转换为表示记录集数据的 MIME 字符串。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -34,9 +34,9 @@ ms.locfileid: "88439189"
 DataFactory.ConvertToString(Recordset)  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *DataFactory*  
- 表示 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 对象的对象变量。  
+ 表示 [RDSServer. DataFactory](./datafactory-object-rdsserver.md) 对象的对象变量。  
   
  *Recordset*  
  表示 **Recordset** 对象的对象变量。  
@@ -52,10 +52,8 @@ DataFactory.ConvertToString(Recordset)
 >  如果使用 Active Server Pages 将生成的 MIME 字符串嵌入到客户端 HTML 页中，请注意早于版本2.0 的 VBScript 版本将字符串大小限制为32K。 如果超过此限制，将返回错误。 通过 .asp 文件使用 MIME 嵌入时，使查询范围保持相对较小。 若要解决此问题，请从 Microsoft Windows 脚本技术网站下载最新版本的 VBScript。  
   
 ## <a name="applies-to"></a>适用于  
- [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+ [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ConvertToString 方法示例 (VB) ](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
- [ConvertToString 方法示例 (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
-
-
+ [ConvertToString 方法示例 (VB) ](../ado-api/converttostring-method-example-vb.md)   
+ [ConvertToString 方法示例 (VBScript)](./converttostring-method-example-vbscript.md)

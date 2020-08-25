@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bbca002bc1fe03f072aeeec844c08fcd6f92936
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e21ebe312534dc74221c52919cc2428abe77b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450959"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776226"
 ---
 # <a name="clone-method-example-vc"></a>Clone 方法示例 (VC++)
-此示例使用 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 方法创建 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的副本，然后让用户单独定位每个副本的记录指针。  
+此示例使用 [Clone](./clone-method-ado.md) 方法创建 [记录集](./recordset-object-ado.md) 的副本，然后让用户单独定位每个副本的记录指针。  
   
 ```  
 // BeginCloneCpp.cpp  
@@ -221,4 +221,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [记录集对象 (ADO)](./recordset-object-ado.md)

@@ -9,12 +9,12 @@ ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6f8aa2351837c43454656d468e93818adfb7ccf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401093"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767006"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -51,4 +51,4 @@ Analytics Platform System 不仅运行速度块，而且可缩放，其采用高
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 PDW 优势的更多信息，请参阅 MSDN 上的白皮书 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/dn520808%28v=msdn.10%29)（下一代数据仓库和大数据解决方案的突破性平台）。
+有关 PDW 优势的更多信息，请参阅 MSDN 上的白皮书 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](/previous-versions/sql/sql-server-2012/dn520808(v=msdn.10))（下一代数据仓库和大数据解决方案的突破性平台）。

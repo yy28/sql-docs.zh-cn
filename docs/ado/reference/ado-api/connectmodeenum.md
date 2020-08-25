@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444429"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775846"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-指定可用于修改[连接](../../../ado/reference/ado-api/connection-object-ado.md)中的数据、打开[记录](../../../ado/reference/ado-api/record-object-ado.md)或为**Record**和[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象的[Mode](../../../ado/reference/ado-api/mode-property-ado.md)属性指定值的可用权限。  
+指定可用于修改[连接](./connection-object-ado.md)中的数据、打开[记录](./record-object-ado.md)或为**Record**和[Stream](./stream-object-ado.md)对象的[Mode](./mode-property-ado.md)属性指定值的可用权限。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|指示只读权限。|  
 |**adModeReadWrite**|3|指示读取/写入权限。|  
@@ -57,11 +57,11 @@ ms.locfileid: "88444429"
 
 :::row:::
     :::column:::
-        [Mode 属性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
-        [Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)  
+        [Mode 属性 (ADO)](./mode-property-ado.md)  
+        [Open 方法（ADO 记录）](./open-method-ado-record.md)  
     :::column-end:::
     :::column:::
-        [Open 方法（ADO 流）](../../../ado/reference/ado-api/open-method-ado-stream.md)  
-        [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Open 方法（ADO 流）](./open-method-ado-stream.md)  
+        [流对象 (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::

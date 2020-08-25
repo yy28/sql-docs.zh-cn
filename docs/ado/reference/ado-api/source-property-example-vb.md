@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 635f091b668c8b0a0a8d654a65055e72c835d987
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1771eb7d0c6ed2609b5dea506e71aa4180e2370
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442019"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777386"
 ---
 # <a name="source-property-example-vb"></a>Source 属性示例 (VB)
-此示例通过打开基于不同数据源的三个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象来演示[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)属性。  
+此示例通过打开基于不同数据源的三个[记录集](./recordset-object-ado.md)对象来演示[源](./source-property-ado-recordset.md)属性。  
   
 ```  
 'BeginSourceVB  
@@ -128,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Source 属性（ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [Source 属性（ADO 记录集）](./source-property-ado-recordset.md)

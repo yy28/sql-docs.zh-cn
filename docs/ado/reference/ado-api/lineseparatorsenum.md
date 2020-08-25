@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c92b70fdee1fb492b55b18e613284d25277f55b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50cc4c05319ed146882145e42469ab27c0dec0ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443359"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774606"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
-指定在文本 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象中用作行分隔符的字符。  
+指定在文本 [流](./stream-object-ado.md) 对象中用作行分隔符的字符。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|指示回车符。|  
 |**adCRLF**|-1|默认。 指示回车换行符。|  
@@ -36,4 +36,4 @@ ms.locfileid: "88443359"
  这些常量没有 ADO/WFC 等效项。  
   
 ## <a name="applies-to"></a>适用于  
- [LineSeparator 属性 (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
+ [LineSeparator 属性 (ADO)](./lineseparator-property-ado.md)

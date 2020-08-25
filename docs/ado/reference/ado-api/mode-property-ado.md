@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fd002f54010a9bc8d5cf543fe1fd4521bc6d221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443249"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774386"
 ---
 # <a name="mode-property-ado"></a>Mode 属性 (ADO)
-指示用于修改 [连接](../../../ado/reference/ado-api/connection-object-ado.md)、 [记录](../../../ado/reference/ado-api/record-object-ado.md)或 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象中的数据的可用权限。  
+指示用于修改 [连接](./connection-object-ado.md)、 [记录](./record-object-ado.md)或 [流](./stream-object-ado.md) 对象中的数据的可用权限。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个 [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) 值。 **连接**的默认值为**adModeUnknown**。 **记录**对象的默认值为**adModeRead**。 与基础源关联的**流**的默认值 (使用 URL 作为源打开，或者作为**记录**) 的默认**流** **。** 与 (在内存中实例化的基础源) 不关联的 **流** 的默认值为 **adModeUnknown**。  
+ 设置或返回一个 [ConnectModeEnum](./connectmodeenum.md) 值。 **连接**的默认值为**adModeUnknown**。 **记录**对象的默认值为**adModeRead**。 与基础源关联的**流**的默认值 (使用 URL 作为源打开，或者作为**记录**) 的默认**流** **。** 与 (在内存中实例化的基础源) 不关联的 **流** 的默认值为 **adModeUnknown**。  
   
 ## <a name="remarks"></a>备注  
  使用 **Mode** 属性可以设置或返回当前连接上的提供程序所使用的访问权限。 仅当关闭**连接**对象时，才可以设置**Mode**属性。  
@@ -45,16 +45,16 @@ ms.locfileid: "88443249"
 
 :::row:::
     :::column:::
-        [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [连接对象 (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [记录对象 (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [流对象 (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [IsolationLevel 和 Mode Properties (VB) ](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel 和 Mode Properties (VC + +) ](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [IsolationLevel 和 Mode Properties (VB) ](./isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel 和 Mode Properties (VC + +) ](./isolationlevel-and-mode-properties-example-vc.md)

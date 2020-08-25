@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443669"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775306"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a> (VC + +) 的 Filter 和 RecordCount 属性示例
-此示例使用[Filter](../../../ado/reference/ado-api/filter-property.md)属性根据应用于现有**记录集**的指定条件来打开新的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 属性来显示两个 **记录集中**的记录数。 运行此过程需要 FilterField 函数。  
+此示例使用[Filter](./filter-property.md)属性根据应用于现有**记录集**的指定条件来打开新的[记录集](./recordset-object-ado.md)。 它使用 [RecordCount](./recordcount-property-ado.md) 属性来显示两个 **记录集中**的记录数。 运行此过程需要 FilterField 函数。  
   
 ## <a name="example"></a>示例  
   
@@ -304,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 属性 (ADO) ](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [筛选器属性](./filter-property.md)   
+ [RecordCount 属性 (ADO) ](./recordcount-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

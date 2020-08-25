@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f161c3e8e8b693b4a5be474406213116feae8ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c4a8c80c4d3ad939d88d7852730320eb30ab1e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451089"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776346"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 属性示例 (JScript)
-此示例使用 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 属性来显示用和（不含30记录缓存）执行的操作的性能差异。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **CacheSizeJS**。  
+此示例使用 [CacheSize](./cachesize-property-ado.md) 属性来显示用和（不含30记录缓存）执行的操作的性能差异。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **CacheSizeJS**。  
   
 ```  
 <!-- BeginCacheSizeJS -->  
@@ -150,5 +150,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CacheSize 属性 (ADO) ](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CacheSize 属性 (ADO) ](./cachesize-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

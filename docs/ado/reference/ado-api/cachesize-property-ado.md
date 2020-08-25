@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451099"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776356"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 属性 (ADO)
-指示 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md) 缓存到内存中的记录集的记录数。  
+指示 [记录集中](./recordset-object-ado.md) 缓存到内存中的记录集的记录数。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个必须大于0的 **长整型** 值。 默认值为 1。  
@@ -41,14 +41,14 @@ ms.locfileid: "88451099"
   
  不允许使用零的 **CacheSize** 设置，并且将返回错误。  
   
- 从缓存检索的记录不反映其他用户对源数据所做的并发更改。 若要强制执行所有缓存数据的更新，请使用 [Resync](../../../ado/reference/ado-api/resync-method.md) 方法。  
+ 从缓存检索的记录不反映其他用户对源数据所做的并发更改。 若要强制执行所有缓存数据的更新，请使用 [Resync](./resync-method.md) 方法。  
   
- 如果将 **CacheSize** 设置为大于1的值，则在检索记录后发生删除操作时，导航方法 ([Move](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能会导致导航到已删除的记录。 初始提取后，在您尝试从已删除的行访问数据值之前，后续删除将不会反映在您的数据缓存中。 但是，将 **CacheSize** 设置为 one 可消除此问题，因为无法提取删除的行。  
+ 如果将 **CacheSize** 设置为大于1的值，则在检索记录后发生删除操作时，导航方法 ([Move](./move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext 和 MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能会导致导航到已删除的记录。 初始提取后，在您尝试从已删除的行访问数据值之前，后续删除将不会反映在您的数据缓存中。 但是，将 **CacheSize** 设置为 one 可消除此问题，因为无法提取删除的行。  
   
 ## <a name="applies-to"></a>适用于  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [CacheSize 属性示例 (VB) ](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [CacheSize 属性示例 (VC + +) ](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [CacheSize 属性示例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [CacheSize 属性示例 (VB) ](./cachesize-property-example-vb.md)   
+ [CacheSize 属性示例 (VC + +) ](./cachesize-property-example-vc.md)   
+ [CacheSize 属性示例 (JScript)](./cachesize-property-example-jscript.md)

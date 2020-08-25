@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 144965d31dbb11da6cbc9a3ee6b23cd79cda800e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451309"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776626"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
 **ADOStreamConstruction**接口用于从 c/c + + 应用程序中的 OLE DB **ISTREAM**对象构造 ADO**流**对象。  
   
 ## <a name="properties"></a>属性  
   
-|属性|描述|  
+|properties|说明|  
 |-|-|  
-|[流](../../../ado/reference/ado-api/stream-property.md)|读/写。 获取/设置 OLE DB **流** 对象。|  
+|[流](./stream-property.md)|读/写。 获取/设置 OLE DB **流** 对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -74,4 +74,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID：** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)
+ [ADO API 参考](./ado-api-reference.md)

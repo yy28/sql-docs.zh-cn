@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 455db4b01f6e25b6e280a6b33461ed6747cea284
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443429"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774756"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode Properties (VC + +) 
-此示例使用 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 属性打开独占连接，使用 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 属性打开在其他事务隔离中执行的事务。  
+此示例使用 [Mode](./mode-property-ado.md) 属性打开独占连接，使用 [IsolationLevel](./isolationlevel-property.md) 属性打开在其他事务隔离中执行的事务。  
   
 ## <a name="example"></a>示例  
   
@@ -245,5 +245,5 @@ void PrintComError(_com_error &e) {
 **50年 Buckingham Palace Kitchens-trad_cook**  
 **寿司，任何人？-trad_cook**   
 ## <a name="see-also"></a>另请参阅  
- [IsolationLevel 属性](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode 属性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [IsolationLevel 属性](./isolationlevel-property.md)   
+ [Mode 属性 (ADO)](./mode-property-ado.md)

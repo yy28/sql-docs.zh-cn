@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a181482d7f0b2a1d6589209bc4b4e58ff11f9a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b73660a9eaa94cab33f11577f19bf9cc7cac19c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443099"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774026"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 方法示例 (VB)
-此示例使用 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 方法查看记录集中的数据，该记录集使用由三个单独的 **SELECT** 语句组成的复合命令语句。  
+此示例使用 [NextRecordset](./nextrecordset-method-ado.md) 方法查看记录集中的数据，该记录集使用由三个单独的 **SELECT** 语句组成的复合命令语句。  
   
 ```  
 'BeginNextRecordsetVB  
@@ -96,5 +96,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [NextRecordset 方法 (ADO) ](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [NextRecordset 方法 (ADO) ](./nextrecordset-method-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

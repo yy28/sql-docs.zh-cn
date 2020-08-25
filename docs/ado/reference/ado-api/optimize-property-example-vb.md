@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442899"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773626"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 属性示例 (VB)
-此示例演示 [字段](../../../ado/reference/ado-api/field-object.md) 对象的 "动态 **优化** " 属性。 不会为***Pubs***数据库中***作者***表的***zip***字段编制索引。 将 "***压缩***" 字段中的 "[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)" 属性设置为 " **True** " 可授予 ADO 生成索引，从而提高[Find](../../../ado/reference/ado-api/find-method-ado.md)方法的性能。  
+此示例演示 [字段](./field-object.md) 对象的 "动态 **优化** " 属性。 不会为***Pubs***数据库中***作者***表的***zip***字段编制索引。 将 "***压缩***" 字段中的 "[优化](./optimize-property-dynamic-ado.md)" 属性设置为 " **True** " 可授予 ADO 生成索引，从而提高[Find](./find-method-ado.md)方法的性能。  
   
 ```  
 'BeginOptimizeVB  
@@ -88,5 +88,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [Optimize 属性 - 动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field 对象](./field-object.md)   
+ [Optimize 属性 - 动态 (ADO)](./optimize-property-dynamic-ado.md)

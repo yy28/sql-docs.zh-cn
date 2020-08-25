@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6d8089bc7a3f0b59684a7dc1065c5b8c5dcc04c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e2817ef08ab7c5d46b459fc2b1e28f1e70c6a6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451239"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776486"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 和 GetChunk 方法示例 (VC++)
-此示例使用 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 和 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 方法来填充包含另一记录中的数据的图像字段。  
+此示例使用 [AppendChunk](./appendchunk-method-ado.md) 和 [GetChunk](./getchunk-method-ado.md) 方法来填充包含另一记录中的数据的图像字段。  
   
 ```  
 // BeginAppendChunkCpp.cpp  
@@ -267,6 +267,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AppendChunk 方法 (ADO) ](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [GetChunk 方法 (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [AppendChunk 方法 (ADO) ](./appendchunk-method-ado.md)   
+ [Field 对象](./field-object.md)   
+ [GetChunk 方法 (ADO)](./getchunk-method-ado.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439549"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769446"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定组或用户对对象的权限。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 ( # B0 H4000) |用户或组具有创建此类型的新对象的权限。|  
 |**adRightDelete**|65536 ( # B0 H10000) |用户或组有权删除对象中的数据。 对于 **表**等对象，用户有权从记录中删除数据值。|  
@@ -37,7 +37,7 @@ ms.locfileid: "88439549"
 |**adRightInsert**|32768 ( # B0 H8000) |用户或组有权插入对象。 对于 **表**等对象，用户有权将数据插入表中。|  
 |**adRightMaximumAllowed**|33554432 ( # B0 H2000000) |用户或组具有提供程序允许的最大权限数。 特定权限与提供程序相关。|  
 |**adRightNone**|0|用户或组对该对象没有任何权限。|  
-|**adRightRead**|-2147483648 ( # B0 H80000000) |用户或组有权读取对象。 对于 [表](../../../ado/reference/adox-api/table-object-adox.md)等对象，用户有权读取表中的数据。|  
+|**adRightRead**|-2147483648 ( # B0 H80000000) |用户或组有权读取对象。 对于 [表](./table-object-adox.md)等对象，用户有权读取表中的数据。|  
 |**adRightReadDesign**|1024 ( # B0 H400) |用户或组有权读取对象的设计。|  
 |**adRightReadPermissions**|131072 ( # B0 H20000) |用户或组可以查看但不能更改目录中对象的特定权限。|  
 |**adRightReference**|8192 ( # B0 H2000) |用户或组有权引用该对象。|  
@@ -51,9 +51,9 @@ ms.locfileid: "88439549"
 
 :::row:::
     :::column:::
-        [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetPermissions 方法 (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetPermissions 方法 (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

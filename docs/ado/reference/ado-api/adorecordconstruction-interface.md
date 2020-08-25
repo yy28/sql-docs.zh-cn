@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451329"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776596"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
 **ADORecordConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**对象构造 ADO**记录**对象。  
@@ -30,10 +30,10 @@ ms.locfileid: "88451329"
   
 ## <a name="properties"></a>属性  
   
-|属性|描述|  
+|properties|说明|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|只写。<br />设置此 ADO**记录**对象上 OLE DB**行**对象的容器。|  
-|[行](../../../ado/reference/ado-api/row-property-ado.md)|读/写。<br />获取/设置此 ADO**记录**对象的 OLE DB**行**对象。|  
+|[ParentRow](./parentrow-property-ado.md)|只写。<br />设置此 ADO**记录**对象上 OLE DB**行**对象的容器。|  
+|[总行](./row-property-ado.md)|读/写。<br />获取/设置此 ADO**记录**对象的 OLE DB**行**对象。|  
   
 ## <a name="methods"></a>方法  
  无。  

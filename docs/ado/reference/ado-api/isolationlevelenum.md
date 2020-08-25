@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c08da68e136d3e2cffbb492f021225a3b895a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03bd95a642f3942275e1ff9d32f1b2d1829b96d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443409"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774686"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
-指定 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象的事务隔离级别。  
+指定 [连接](./connection-object-ado.md) 对象的事务隔离级别。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|指示提供程序使用的隔离级别与指定的隔离级别不同，但是无法确定该级别。|  
 |**adXactChaos**|16|指示无法覆盖来自更高隔离事务的挂起的更改。|  
@@ -54,4 +54,4 @@ ms.locfileid: "88443409"
 |AdoEnums. IsolationLevel|  
   
 ## <a name="applies-to"></a>适用于  
- [IsolationLevel 属性](../../../ado/reference/ado-api/isolationlevel-property.md)
+ [IsolationLevel 属性](./isolationlevel-property.md)

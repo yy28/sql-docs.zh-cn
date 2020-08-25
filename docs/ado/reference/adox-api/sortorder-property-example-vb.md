@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a66fcb11780731424563526d30a4d544c60ea693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439499"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769356"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
-此示例演示已追加到[索引](../../../ado/reference/adox-api/index-object-adox.md)的[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)集合的[列](../../../ado/reference/adox-api/column-object-adox.md)的[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)属性。 该代码将升序索引追加到 **Employees** 表中的 Country 列，然后显示记录。 然后，该代码将向 **Employees** 表中的 "国家/地区" 列附加一个降序索引，并再次显示记录。 显示升序和降序索引之间的差异。  
+此示例演示已追加到[索引](./index-object-adox.md)的[Columns](./columns-collection-adox.md)集合的[列](./column-object-adox.md)的[SortOrder](./sortorder-property-adox.md)属性。 该代码将升序索引追加到 **Employees** 表中的 Country 列，然后显示记录。 然后，该代码将向 **Employees** 表中的 "国家/地区" 列附加一个降序索引，并再次显示记录。 显示升序和降序索引之间的差异。  
   
 ```  
 ' BeginSortOrderVB  
@@ -138,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [列对象 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
- [列集合 (ADOX) ](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [索引对象 (ADOX) ](../../../ado/reference/adox-api/index-object-adox.md)   
- [SortOrder 属性 (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [列对象 (ADOX) ](./column-object-adox.md)   
+ [列集合 (ADOX) ](./columns-collection-adox.md)   
+ [索引对象 (ADOX) ](./index-object-adox.md)   
+ [SortOrder 属性 (ADOX)](./sortorder-property-adox.md)

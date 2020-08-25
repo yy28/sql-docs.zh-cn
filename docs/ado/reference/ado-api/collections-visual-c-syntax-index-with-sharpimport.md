@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1e67827a5a496b6b9163d8fa8740cc620033efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450909"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776186"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合 (Visual C++ 语法索引与 #import 的) 
 了解集合继承某些常用方法和属性很有用。  
@@ -98,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (收集 ](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [ADO) 的参数集合 (](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [ADO)  (收集 ](./errors-collection-ado.md)   
+ [字段集合 (ADO) ](./fields-collection-ado.md)   
+ [ADO) 的参数集合 (](./parameters-collection-ado.md)   
+ [属性集合 (ADO)](./properties-collection-ado.md)

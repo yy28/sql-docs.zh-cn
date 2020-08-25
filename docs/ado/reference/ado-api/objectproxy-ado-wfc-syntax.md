@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7809c1b9ce4d090ed63465061045ea04000f47dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6515eb3a924aa4800d92a96d0ed705a2b7ae4caa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443029"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773996"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy（ADO - WFC 语法）
-**ObjectProxy**对象表示服务器，由 "[空间](../../../ado/reference/rds-api/dataspace-object-rds.md)" 对象的**createObject**方法返回。 ObjectProxy 类具有一个方法， **调用**，它可以在服务器上调用方法，并返回由该调用导致的对象。  
+**ObjectProxy**对象表示服务器，由 "[空间](../rds-api/dataspace-object-rds.md)" 对象的**createObject**方法返回。 ObjectProxy 类具有一个方法， **调用**，它可以在服务器上调用方法，并返回由该调用导致的对象。  
   
  **包 .com. 数据**  
   
@@ -42,7 +42,7 @@ public Object ObjectProxy.( String method, Object[] args)
  对象  
  调用方法导致的对象。  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *ObjectProxy*  
  表示服务器的 **ObjectProxy** 对象。  
   

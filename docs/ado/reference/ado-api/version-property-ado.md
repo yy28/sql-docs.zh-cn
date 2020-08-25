@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9c2a05f829ff0e9751634e9e50893cd1004db5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6740e999ddcfac16c874bae4e5933f27fa318f38
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441559"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776926"
 ---
 # <a name="version-property-ado"></a>Version 属性 (ADO)
 指示 ADO 版本号。  
@@ -34,11 +34,11 @@ ms.locfileid: "88441559"
 ## <a name="remarks"></a>备注  
  使用 **Version** 属性返回 ADO 实现的版本号。  
   
- 提供程序的版本将作为 [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 集合中的动态属性提供。  
+ 提供程序的版本将作为 [Properties](./properties-collection-ado.md) 集合中的动态属性提供。  
   
 ## <a name="applies-to"></a>适用于  
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [连接对象 (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [版本属性示例 (VB) ](../../../ado/reference/ado-api/version-property-example-vb.md)   
- [Version 属性示例 (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
+ [版本属性示例 (VB) ](./version-property-example-vb.md)   
+ [Version 属性示例 (VC++)](./version-property-example-vc.md)

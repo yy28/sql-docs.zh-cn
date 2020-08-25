@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441989"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777356"
 ---
 # <a name="stat-method"></a>Stat 方法
-检索有关 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象的信息。  
+检索有关 [流](./stream-object-ado.md) 对象的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,14 +36,14 @@ Long stream.Stat(StatStg, StatFlag)
 ## <a name="return-value"></a>返回值  
  一个 **长整型** 值，指示操作的状态。  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *StatStg*  
  将使用流的相关信息填充 STATSTG 结构。 ADO 流对象使用的 **Stat** 方法的实现并不填充结构的所有字段。  
   
  *StatFlag*  
  指定此方法不返回 STATSTG 结构中的某些成员，从而保存内存分配操作。 值取自 STATFLAG 枚举。 STATFLAG 枚举有两个值  
   
-|返回的常量|值|  
+|返回的常量|Value|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  如果未在 StatFlag 参数中指定 STATFLAG_NONAME，并且没有可用于当前流的名称，则将 E_NOTIMPL 此值。  
   
 ## <a name="applies-to"></a>适用于  
- [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [流对象 (ADO)](./stream-object-ado.md)

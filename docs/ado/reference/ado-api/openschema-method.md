@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cade08630577b32d81643cb30b6a1e20656d95bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442919"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773676"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 从提供程序中获取数据库架构信息。  
@@ -35,14 +35,14 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回一个包含架构信息的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象。 **记录集**将作为只读静态游标打开。 *QueryType*确定在**记录集中**显示的列。  
+ 返回一个包含架构信息的 [记录集](./recordset-object-ado.md) 对象。 **记录集**将作为只读静态游标打开。 *QueryType*确定在**记录集中**显示的列。  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *QueryType*  
- 表示要运行的架构查询类型的任何 [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) 值。  
+ 表示要运行的架构查询类型的任何 [SchemaEnum](./schemaenum.md) 值。  
   
  *条件*  
- 可选。 每个 *QueryType* 选项的查询约束数组，如 [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)中所列。  
+ 可选。 每个 *QueryType* 选项的查询约束数组，如 [SchemaEnum](./schemaenum.md)中所列。  
   
  *SchemaID*  
  OLE DB 规范未定义的提供程序架构查询的 GUID。 如果将 *QueryType* 设置为 **adSchemaProviderSpecific**，则此参数是必需的。否则，不使用此方法。  
@@ -59,22 +59,22 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  提供程序不需要支持所有 OLE DB 标准架构查询。 具体而言，OLE DB 规范只需要 **adSchemaTables**、 **adSchemaColumns**和 **adSchemaProviderTypes** 。 但是，提供程序不需要支持前面列出的那些架构查询的 *条件* 约束。  
   
 > [!NOTE]
->  **远程数据服务使用情况****OpenSchema**方法在客户端[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上不可用。  
+>  **远程数据服务使用情况****OpenSchema**方法在客户端[连接](./connection-object-ado.md)对象上不可用。  
   
 > [!NOTE]
->  在 Visual Basic 中，不能将具有四字节无符号整数的列 (在**连接**对象上从**OpenSchema**方法返回的**记录集中**的 UI4) 。 有关 OLE DB 数据类型的详细信息，请参阅 [OLE DB 中的数据类型 (OLE DB) ](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) 和 [附录 A：](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) Microsoft OLE DB 程序员参考中的数据类型。  
+>  在 Visual Basic 中，不能将具有四字节无符号整数的列 (在**连接**对象上从**OpenSchema**方法返回的**记录集中**的 UI4) 。 有关 OLE DB 数据类型的详细信息，请参阅 [OLE DB 中的数据类型 (OLE DB) ](/previous-versions/windows/desktop/ms714931(v=vs.85)) 和 [附录 A：](/previous-versions/windows/desktop/ms723969(v=vs.85)) Microsoft OLE DB 程序员参考中的数据类型。  
   
 > [!NOTE]
 >  **Visual c/c + + 用户** 当不使用客户端游标时，检索 ADO 中列架构的 "ORDINAL_POSITION" 将返回 MDAC 2.7、MDAC 2.8 和 Windows 数据访问组件 VT_R8 类型的变体， (Windows DAC) 6.0，而在 MDAC 2.6 中使用的类型则 VT_I4。 对于 MDAC 2.6 编写的程序，仅查找类型为 VT_I4 返回的变量，如果在不进行修改的情况下，将在 MDAC 2.7、MDAC 2.8 和 Windows DAC 6.0 下运行。 此更改是因为 OLE DB 返回的数据类型是 DBTYPE_UI4 的，而在已签名的 VT_I4 类型中没有足够的空间来包含所有可能的值，而不会发生截断，从而导致数据丢失。  
   
 ## <a name="applies-to"></a>适用于  
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [连接对象 (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [OpenSchema 方法示例 (VB) ](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
- [OpenSchema 方法示例 (VC + +) ](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
- [开放式方法 (ADO 连接) ](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [ (ADO 记录的 Open 方法) ](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [ADO 记录集 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [ADO 流 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [OpenSchema 方法示例 (VB) ](./openschema-method-example-vb.md)   
+ [OpenSchema 方法示例 (VC + +) ](./openschema-method-example-vc.md)   
+ [开放式方法 (ADO 连接) ](./open-method-ado-connection.md)   
+ [ (ADO 记录的 Open 方法) ](./open-method-ado-record.md)   
+ [ADO 记录集 (打开方法) ](./open-method-ado-recordset.md)   
+ [ADO 流 (打开方法) ](./open-method-ado-stream.md)   
+ [附录 A：提供程序](../../guide/appendixes/appendix-a-providers.md)

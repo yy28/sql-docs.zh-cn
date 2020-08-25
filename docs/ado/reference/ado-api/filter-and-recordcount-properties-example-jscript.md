@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 901fee0602957526cfa19d573161a4b9f2504900
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9de9c244d7faa115f03463a74a1dcaedb243b65
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443699"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775406"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a> (JScript) 的 Filter 和 RecordCount 属性示例
-此示例在 Northwind 数据库的 "公司" 表上打开一个 **记录集** ，然后使用 " [筛选器](../../../ado/reference/ado-api/filter-property.md) " 属性来限制对 "公司名称" 字段以字母 D 开头的记录可见的记录。剪切以下代码并将其粘贴到记事本或其他文本编辑器，并将其保存为 **FilterJS**。  
+此示例在 Northwind 数据库的 "公司" 表上打开一个 **记录集** ，然后使用 " [筛选器](./filter-property.md) " 属性来限制对 "公司名称" 字段以字母 D 开头的记录可见的记录。剪切以下代码并将其粘贴到记事本或其他文本编辑器，并将其保存为 **FilterJS**。  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -150,6 +150,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 属性 (ADO) ](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [筛选器属性](./filter-property.md)   
+ [RecordCount 属性 (ADO) ](./recordcount-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

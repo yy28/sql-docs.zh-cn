@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ff88ab9dc0c3f050be5ae8cfd593473ca2a7fa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443219"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774296"
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法示例 (VBScript)
-此示例使用 [Move](../../../ado/reference/ado-api/move-method-ado.md) 方法根据用户输入来定位记录指针。  
+此示例使用 [Move](./move-method-ado.md) 方法根据用户输入来定位记录指针。  
   
  在 (ASP) 的活动服务器页中使用以下示例。 若要查看此完全功能的示例，必须使用位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的 SDK) 安装数据源 (Advworks-srv01，或编辑示例代码中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
   
@@ -184,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO (移动方法) ](../../../ado/reference/ado-api/move-method-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ADO (移动方法) ](./move-method-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

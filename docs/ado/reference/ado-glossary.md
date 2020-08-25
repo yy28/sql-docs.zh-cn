@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441429"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776796"
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -178,7 +178,7 @@ ms.locfileid: "88441429"
  分层记录集  
  包含其他**记录集**的**记录集**。 另请参阅数据定形、章节。  
   
- 有关详细信息，请参阅 [访问分层记录集中的行](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 有关详细信息，请参阅 [访问分层记录集中的行](../guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
  层次结构  
  通常，层次结构是具有顶级和从属级别的排名结构。 在 ADO 中，分层 **记录集** 用于表示记录和章节之间的父子关系。 此外，在 ADO 中， **记录** 和 **流** 对象可用于访问层次结构树结构，如文件夹和文档。 ADO MD 还包括 **层次结构** 对象，以表示 OLAP 多维数据集中的维度级别之间的关系。 另请参阅分层记录集、父子关系、章节、树。  
@@ -187,7 +187,7 @@ ms.locfileid: "88441429"
  ISAPI (Internet 服务器应用程序编程接口)   
  一组适用于 Internet 服务器的函数，例如运行 Microsoft® Internet Information Services (IIS) 的 Windows NT® Server/Windows 2000 服务器。  
   
- 键  
+ Key  
  表中唯一标识行的一列或多列;通常用于为表编制索引。  
   
 ## <a name="m"></a>M  
