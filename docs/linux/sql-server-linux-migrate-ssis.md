@@ -1,6 +1,6 @@
 ---
 title: 使用 SSIS 在 Linux 上提取、转换和加载数据
-description: 本文介绍适用于 Linux 计算机的 SQL Server Integration Services (SSIS)
+description: 了解如何在 Linux 上运行 SQL Server Integration Services (SSIS) 包。 此外了解如何查找有关 SSIS 功能的详细信息。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882718"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088867"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>使用 SSIS 在 Linux 上提取、转换和加载数据
 
@@ -25,7 +25,7 @@ Linux 中运行的 SSIS 包可以连接到在本地或云的 Windows 中、在 L
 
 有关 SSIS 功能的详细信息，请参阅 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要在 Linux 计算机上运行 SSIS 包，首先必须安装 SQL Server Integration Services。 为 Linux 计算机安装 SQL Server 的操作不包括 SSIS。 有关安装说明，请参阅[安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)。
 
@@ -36,7 +36,7 @@ Linux 中运行的 SSIS 包可以连接到在本地或云的 Windows 中、在 L
 若要在 Linux 计算机上运行 SSIS 包，请执行以下操作：
 
 1.  将 SSIS 包复制到 Linux 计算机。
-2.  运行以下命令：
+2.  运行下面的命令：
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```
@@ -113,5 +113,5 @@ SSIS 包括以下功能：
 ## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上的 SSIS 的相关内容
 -   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
 -   [使用 ssis-conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
--   [适用于 Linux 上的 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)
+-   [适用于 Linux 上 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)
 -   [使用 cron 在 Linux 上计划 SQL Server Integration Services 包执行](sql-server-linux-schedule-ssis-packages.md)

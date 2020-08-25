@@ -11,17 +11,14 @@
 - SQL Server 2008
 - SQL Server 2005
 
-[SQL Server 2014 文档](/previous-versions/sql/2014/index?view=sql-server-2014)仍在主要的 Docs 地址中提供。
+[SQL Server 2014 文档](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true)仍在主要的 Docs 地址中提供。
 
-[SQL Server 2019 文档](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15)在主要的 Docs 地址中提供。 然后使用页面顶部附近的“版本控制”下拉列表来选择其他感兴趣的版本。
+<!--
+FYI: In the following link syntax to SQL 2014 content, the two 'view' related parameters are entirely optional in this case. The reason is that 'sql/2014/' will never be a node for say SQL 2012 or SQL 2016 content URLs on Docs. Thus no distinction from 'view' values will ever be necessary.
 
-有关 SQL Server 早期版本的文档的详细信息，请参阅[以前版本的 SQL Server 文档](/previous-versions/sql/)。
-
-<!-- GM:
-On links to file 'previous-versions-sql-server.md', append 
-    '?view=sql-server-previousversions' 
-only when customer explicitly does so. 
-If our markdown ever needs to append a ?view= for the article, best is probably 
-    '?view=sql-server-2016' . 
+[SQL Server 2014 documentation](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) is still available on our main Docs address.
 -->
 
+[SQL Server 2019 文档](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15&preserve-view=true)在主要的 Docs 地址中提供。 然后使用页面顶部附近的“版本控制”下拉列表来选择其他感兴趣的版本。
+
+有关 SQL Server 早期版本的文档的详细信息，请参阅[以前版本的 SQL Server 文档](/previous-versions/sql/)。

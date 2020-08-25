@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451899"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758997"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步骤 6：将更改发送到服务器（RDS 教程）
 如果编辑 **Recordset** 对象，则 (的任何更改（即，添加、更改或) 删除的行）都可以发送回服务器。  
@@ -35,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **部分 A** 假设在这种情况下，你只使用了 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 和 **记录集** 对象现在与 **RDS 关联。DataControl**。 如果仍设置[服务器](../../../ado/reference/rds-api/server-property-rds.md)和[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性， [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法会将数据源更新为**记录集**对象的任何更改。  
+ **部分 A** 假设在这种情况下，你只使用了 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 和 **记录集** 对象现在与 **RDS 关联。DataControl**。 如果仍设置[服务器](../../reference/rds-api/server-property-rds.md)和[连接](../../reference/rds-api/connect-property-rds.md)属性， [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md)方法会将数据源更新为**记录集**对象的任何更改。  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -53,7 +53,7 @@ DC.
 ...  
 ```  
   
- **B 部分** 或者，您可以使用 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 对象（指定连接和 **记录集** 对象）更新服务器。  
+ **B 部分** 或者，您可以使用 [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 对象（指定连接和 **记录集** 对象）更新服务器。  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -76,6 +76,6 @@ End Sub
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft OLE DB 远程处理提供程序 (ADO 服务提供程序) ](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Microsoft OLE DB 远程处理提供程序 (ADO 服务提供程序) ](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [RDS 教程](./rds-tutorial.md)   
+ [RDS 教程 (VBScript)](./rds-tutorial-vbscript.md)

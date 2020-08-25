@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23262afa30ca28c226964ebc17d4a3ac52971d5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b25e0da0cc9fdbb622f3a844efa4c4ea784100be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440069"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770586"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 属性 (ADOX)
 指示在删除主键时执行的操作。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回一个 **Long** 值，该值可以是 [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) 常数之一。 默认值为 **adRINone**。  
+ 设置并返回一个 **Long** 值，该值可以是 [RuleEnum](./ruleenum.md) 常数之一。 默认值为 **adRINone**。  
   
 ## <a name="remarks"></a>备注  
- 对于已追加到集合的 [键](../../../ado/reference/adox-api/key-object-adox.md) 对象，此属性是只读的。  
+ 对于已追加到集合的 [键](./key-object-adox.md) 对象，此属性是只读的。  
   
 ## <a name="applies-to"></a>适用于  
- [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [项对象 (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [DeleteRule 属性示例 (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+ [DeleteRule 属性示例 (VB)](./deleterule-property-example-vb.md)

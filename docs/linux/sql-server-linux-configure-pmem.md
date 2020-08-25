@@ -1,6 +1,6 @@
 ---
 title: 配置永久内存 (PMEM)
-description: 本文提供在 Linux 上配置 PMEM 的教程。
+description: 了解如何为 Linux 上的 SQL Server 配置持久性内存 (PMEM)，以及如何为 PMEM 设备创建命名空间。
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0222b763ea7898a18443175a88012b5fb5aed42
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901511"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088921"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
 

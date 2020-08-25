@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b31721320c380606c3271b52ae2ad61c808379
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439138"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768496"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 对象 (RDS)
-将数据查询 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 绑定到一个或多个控件 (例如，文本框、网格控件或组合框) ，用于在网页上显示 **记录集** 数据。  
+将数据查询 [记录集](../ado-api/recordset-object-ado.md) 绑定到一个或多个控件 (例如，文本框、网格控件或组合框) ，用于在网页上显示 **记录集** 数据。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -45,14 +45,14 @@ ms.locfileid: "88439138"
  RDS 的类 ID **。DataControl** 对象为 BD96C556-65A3-11D0-983A-00C04FC29E33。  
   
 > [!NOTE]
->  如果收到 [RDS。空间](../../../ado/reference/rds-api/dataspace-object-rds.md) 或 **RDS。DataControl** 对象不会加载，请确保使用的是正确的类 ID。 这些对象的类 Id 已从版本1.0 和1.1 更改。 另外，请注意，在使用 **RDS DataControl** 对象时，必须设置甚至可以为 null 的列。  
+>  如果收到 [RDS。空间](./dataspace-object-rds.md) 或 **RDS。DataControl** 对象不会加载，请确保使用的是正确的类 ID。 这些对象的类 Id 已从版本1.0 和1.1 更改。 另外，请注意，在使用 **RDS DataControl** 对象时，必须设置甚至可以为 null 的列。  
   
- 对于基本方案，只需设置 RDS 的 **SQL**、 **Connect**和 **Server** 属性 **。DataControl** 对象，它将自动调用默认业务对象 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。  
+ 对于基本方案，只需设置 RDS 的 **SQL**、 **Connect**和 **Server** 属性 **。DataControl** 对象，它将自动调用默认业务对象 [RDSServer. DataFactory](./datafactory-object-rdsserver.md)。  
   
  RDS 中的所有属性 **。DataControl** 是可选的，因为自定义业务对象可以替换其功能。  
   
 > [!NOTE]
->  如果查询多个结果，则仅返回第一个 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 。 如果需要多个结果集，请将每个结果集分配给它自己的 **DataControl**。 以下为多个结果的查询示例： `"Select * from Authors, Select * from Topics"`  
+>  如果查询多个结果，则仅返回第一个 [记录集](../ado-api/recordset-object-ado.md) 。 如果需要多个结果集，请将每个结果集分配给它自己的 **DataControl**。 以下为多个结果的查询示例： `"Select * from Authors, Select * from Topics"`  
   
  使用 RDS 时，将 "DFMode = 20;" 添加到连接字符串 **。** 当你更新数据时，DataControl 对象可以提高服务器的性能。 使用此设置时，服务器上的 **RDSServer DataFactory** 对象使用的资源占用资源更少。 但是，以下功能在此配置中不可用：  
   
@@ -64,15 +64,15 @@ ms.locfileid: "88439138"
   
 -   正在获取行状态。  
   
--   调用 [Resync](../../../ado/reference/ado-api/resync-method.md) 方法。  
+-   调用 [Resync](../ado-api/resync-method.md) 方法。  
   
--   通过 " [更新重新同步](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) " 属性显式刷新 (或自动) 。  
+-   通过 " [更新重新同步](../ado-api/update-resync-property-dynamic-ado.md) " 属性显式刷新 (或自动) 。  
   
--   设置 **命令** 或 [记录集](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 属性。  
+-   设置 **命令** 或 [记录集](./recordset-sourcerecordset-properties-rds.md) 属性。  
   
 -   使用 **adCmdTableDirect**。  
   
- **RDS。** 默认情况下，DataControl 对象在异步模式下运行。 如果需要对应用程序执行同步，请将 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) 参数设置为等于 **AdcExecSync** ，将 [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) 参数设置为等于 **adcFetchUpFront**，如下面的示例所示。  
+ **RDS。** 默认情况下，DataControl 对象在异步模式下运行。 如果需要对应用程序执行同步，请将 [ExecuteOptions](./executeoptions-property-rds.md) 参数设置为等于 **AdcExecSync** ，将 [FetchOptions](./fetchoptions-property-rds.md) 参数设置为等于 **adcFetchUpFront**，如下面的示例所示。  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -107,29 +107,7 @@ ms.locfileid: "88439138"
   
  本部分包含以下主题。  
   
--   [DataControl 对象 (RDS) 属性、方法和事件](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
+-   [DataControl 对象 (RDS) 属性、方法和事件](./datacontrol-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [DataControl 对象示例 (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl 对象示例 (VBScript)](./datacontrol-object-example-vbscript.md)

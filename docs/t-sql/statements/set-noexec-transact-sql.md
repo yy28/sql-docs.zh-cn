@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356623"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765774"
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>备注  
- 当 SET NOEXEC 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将编译每一批 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句但并不执行它们。 当 SET NOEXEC 设置为 OFF 时，所有批处理将在编译后执行。  
+ 当 SET NOEXEC 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将分析和编译每一批 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，但不执行它们。 当 SET NOEXEC 设置为 OFF 时，所有批处理将在编译后执行。  NOEXEC 支持延迟的名称解析；如果批处理中的一个或多个引用对象不存在，将不会引发错误。
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的语句执行包含两个阶段：编译和执行。 该设置可用于让 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码时，验证代码中的语法和对象名。 它也可以用于调试通常是较大的批处理中的部分语句。  
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd844ce2a7443180e9a16f3d3e7a392c09b7b8f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5de15074d8fc9a5005e20a36ce4f2a0b3771aa5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439489"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769306"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 指定索引列的排序顺序。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adSortAscending**|1|默认。 列的排序顺序为升序。|  
 |**adSortDescending**|2|列的排序顺序为降序。|  
   
 ## <a name="applies-to"></a>适用于  
- [SortOrder 属性 (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [SortOrder 属性 (ADOX)](./sortorder-property-adox.md)

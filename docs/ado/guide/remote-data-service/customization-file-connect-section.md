@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452259"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759843"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件 Connect 部分
 处理程序的默认行为是拒绝所有连接。 " **连接** " 部分指定该行为的例外情况。 例如，如果所有 **连接** 部分都不存在或为空，则默认情况下无法建立连接。  
@@ -54,7 +54,7 @@ connectionString
   
 ## <a name="remarks"></a>备注  
   
-|组成部分|描述|  
+|组成部分|说明|  
 |----------|-----------------|  
 |**“连接”**|指示这是一个连接字符串项的文字字符串。|  
 |**_connectionString_**|替换整个客户端连接字符串的字符串。|  
@@ -64,13 +64,10 @@ connectionString
  如果要允许 (有效的连接，请) 禁用默认处理程序行为，将 "**连接默认值**" 部分中的 "访问" 项设置为 `Access=ReadWrite` ，并删除或注释掉任何其他**连接**_标识符_部分。  
   
 ## <a name="see-also"></a>另请参阅  
- [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自定义文件 UserList 部分](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+ [自定义文件日志部分](./customization-file-logs-section.md)   
+ [自定义文件 SQL 部分](./customization-file-sql-section.md)   
+ [自定义文件 UserList 部分](./customization-file-userlist-section.md)   
+ [自定义 DataFactory](./datafactory-customization.md)   
+ [必需的客户端设置](./required-client-settings.md)   
+ [了解自定义文件](./understanding-the-customization-file.md)   
+ [编写自己的自定义处理程序](./writing-your-own-customized-handler.md)

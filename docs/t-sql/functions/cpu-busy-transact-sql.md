@@ -1,5 +1,6 @@
 ---
-title: '@@CPU_BUSY (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;CPU_BUSY (Transact-SQL)'
+title: CPU_BUSY (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f763ac74b32fd641791a45d1805b95a99230fbb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec94c40f39d2fe0dedfeef6d0b1edd37f40af5c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366473"
 ---
 # <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此函数返回自最近一次开始以来，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在活动操作中所花的时间。 `@@CPU_BUSY` 返回一个以 CPU 时间增量或“滴答数”计算的结果。 此值为所有 CPU 时间的累积，因此，可能会超出实际占用的时间。 若要转换为微秒，请乘以 [@@TIMETICKS](./timeticks-transact-sql.md)。
@@ -42,14 +44,17 @@ ms.locfileid: "85895816"
   
 ## <a name="syntax"></a>语法  
   
-```
+```syntaxsql
 @@CPU_BUSY  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## <a name="return-types"></a>返回类型
 **integer**
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 若要查看包含若干个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括 CPU 活动）的报表，请运行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)。
   
 ## <a name="examples"></a>示例  

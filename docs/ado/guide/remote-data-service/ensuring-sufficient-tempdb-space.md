@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452189"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759770"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>确保足够的 TempDB 空间
-如果处理需要在 Microsoft SQL Server 6.5 上处理空间的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象时出现错误，则可能需要增加 TempDB 的大小。  (某些查询需要临时处理空间;例如，使用 ORDER BY 子句的查询需要对 **记录集**进行排序，这需要一些临时空间。 )   
+如果处理需要在 Microsoft SQL Server 6.5 上处理空间的 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象时出现错误，则可能需要增加 TempDB 的大小。  (某些查询需要临时处理空间;例如，使用 ORDER BY 子句的查询需要对 **记录集**进行排序，这需要一些临时空间。 )   
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -57,6 +57,4 @@ ms.locfileid: "88452189"
  有关此主题的详细信息，请在 Microsoft SQL Server Enterprise 管理器帮助文件中搜索 "展开数据库对话框"。  
   
 ## <a name="see-also"></a>另请参阅  
- [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [RDS 基础知识](./rds-fundamentals.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451829"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760027"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX 数据对象 (ADO)
 
@@ -50,21 +50,19 @@ ActiveX 数据对象是一种编程模型，这意味着它不依赖于任何给
  ADOX 是核心 ADO 对象的配套库。 它公开了用于创建、修改和删除架构对象（如表和过程）的其他对象。 它还包括安全对象以维护用户和组以及授予和撤消对对象的权限。  
   
 ## <a name="documentation"></a>文档  
- [ADO 安全设计问题](../ado/guide/ado-security-design-issues.md)  
+ [ADO 安全设计问题](./guide/ado-security-design-issues.md)  
   
- [ADO 程序员指南](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO 程序员指南](./guide/ado-programmer-s-guide.md)  
   
  介绍如何使用 ADO、RDS、ADO MD 和 ADOX。  
   
- [ADO 程序员参考](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO 程序员参考](./reference/ado-programmer-s-reference.md)  
   
  ADO 文档的本节内容包含每个 ADO、RDS、ADO MD 和 ADOX 对象、集合、属性、动态属性、方法、事件和枚举的相关主题。  
   
- [ADO 术语表](../ado/ado-glossary.md)  
+ [ADO 术语表](./ado-glossary.md)  
   
 ## <a name="support"></a>支持  
  有关 ADO 问题的免费帮助，请尝试发布到 ADO 公共新闻组。 此新闻组由 Microsoft 产品支持服务监视 (PSS) 支持专业人员，以及其他有经验的 ADO 开发人员。  
   
  有关支持选项的更多信息，请访问 Microsoft 帮助和支持网站。
-
-

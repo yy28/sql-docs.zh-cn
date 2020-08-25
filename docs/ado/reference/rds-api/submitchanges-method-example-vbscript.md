@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f31eb54efbf1901471fc48b7499b7ab6190b680
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8be18e18b890dbe438a0aced23503e690985b5c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438589"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767366"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 方法示例 (VBScript)
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的代码段演示如何将 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 方法用于 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象。  
+ 下面的代码段演示如何将 [SubmitChanges](./submitchanges-method-rds.md) 方法用于 [RDS。DataControl](./datacontrol-object-rds.md) 对象。  
   
  若要测试此示例，请将此代码剪切并粘贴到普通的 ASP 文档中，然后将其命名为 **SubmitChangesCtrlVBS**。 ASP 脚本将标识您的服务器。  
   
@@ -118,7 +118,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [DataControl 对象 (RDS) ](./datacontrol-object-rds.md)   
+ [SubmitChanges 方法 (RDS)](./submitchanges-method-rds.md)

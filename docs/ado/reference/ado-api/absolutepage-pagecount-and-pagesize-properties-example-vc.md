@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce6c0042c92611c65bf243da7bbbf59bbeb748be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80c5d3666c4b3b60aa622874dfec2388fa008898
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451799"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759997"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount 和 PageSize 属性示例 (VC + +) 
-此示例使用 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)和 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 属性显示 ***Employee*** 表中的名称和雇用日期，每次显示5个记录。  
+此示例使用 [AbsolutePage](./absolutepage-property-ado.md)、 [PageCount](./pagecount-property-ado.md)和 [PageSize](./pagesize-property-ado.md) 属性显示 ***Employee*** 表中的名称和雇用日期，每次显示5个记录。  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -180,7 +180,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AbsolutePage 属性 (ADO) ](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount 属性 (ADO) ](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize 属性 (ADO) ](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage 属性 (ADO) ](./absolutepage-property-ado.md)   
+ [PageCount 属性 (ADO) ](./pagecount-property-ado.md)   
+ [PageSize 属性 (ADO) ](./pagesize-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

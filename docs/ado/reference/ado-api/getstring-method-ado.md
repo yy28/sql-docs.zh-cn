@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef3d32e1caae337ecb2a03bba6af8c7b4cd858de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a972edd11c419c1990c78635d42c44d8c06db2c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443509"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774906"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
-以字符串的形式返回 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 。  
+以字符串的形式返回 [记录集](./recordset-object-ado.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,9 +37,9 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="return-value"></a>返回值  
  以字符串值**变体**形式返回 (BSTR) 的**记录集**。  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *StringFormat*  
- 一个 [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) 值，指定应如何将 **记录集** 转换为字符串。 *RowDelimiter*、 *ColumnDelimiter*和*NullExpr*参数仅用于**adClipString**的*StringFormat* 。  
+ 一个 [StringFormatEnum](./stringformatenum.md) 值，指定应如何将 **记录集** 转换为字符串。 *RowDelimiter*、 *ColumnDelimiter*和*NullExpr*参数仅用于**adClipString**的*StringFormat* 。  
   
  *NumRows*  
  可选。 要在 **记录集中**转换的行数。 如果未指定 *NumRows* ，或大于 **记录集中**的总行数，则将转换 **记录集中** 的所有行。  
@@ -59,7 +59,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  此方法等效于 RDO **GetClipString** 方法。  
   
 ## <a name="applies-to"></a>适用于  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [GetString 方法示例 (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)
+ [GetString 方法示例 (VB)](./getstring-method-example-vb.md)

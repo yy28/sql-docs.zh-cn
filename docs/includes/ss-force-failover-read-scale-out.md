@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80407984"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88122540"
 ---
 每个可用性组仅有一个主要副本。 主要副本允许读取和写入操作。 若要更改哪个副本为主要副本，可进行故障转移。 在高可用性的可用性组中，群集管理器自动执行故障转移过程。 在群集类型为 NONE 的可用性组中，需手动执行故障转移过程。 
 
@@ -51,7 +51,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. 若要确定已将活动事务提交到主要副本和至少一个同步次要副本，请运行以下查询： 
+1. 若要确定已将活动事务提交到主要副本和至少一个同步次要副本，请运行以下查询： 
 
    ```SQL
    SELECT ag.name, 
@@ -66,7 +66,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    当 `synchronization_state_desc` 为 `SYNCHRONIZED` 时，会同步次要副本。
 
-3. 将 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 更新为 1。
+1. 将 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 更新为 1。
 
    以下脚本在名为 `ag1` 的可用性组上将 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 设置为 1。 运行以下脚本前，将 `ag1` 替换为可用性组的名称：
 
@@ -79,18 +79,18 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    >[!NOTE]
    >此设置并非特定于故障转移，应根据环境要求进行设置。
    
-4. 使主要副本脱机以为角色更改做准备。
+1. 使主要副本脱机以为角色更改做准备。
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
-5. 将目标次要副本升级为主要副本。 
+1. 将目标次要副本升级为主要副本。 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-6. 将旧的主要副本的角色更新为 `SECONDARY`，在托管主要副本的 SQL Server 实例上运行以下命令：
+1. 将旧的主要副本的角色更新为 `SECONDARY`，在托管主要副本的 SQL Server 实例上运行以下命令：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -99,3 +99,10 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    > [!NOTE] 
    > 若要删除可用性组，请使用[删除可用性组](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)。 对于使用群集类型为 NONE 或 EXTERNAL 创建的可用性组，请对可用性组的所有副本执行该命令。
+
+1. 恢复数据移动，为托管主要副本的 SQL Server 实例上的可用性组中的每个数据库运行以下命令： 
+
+   ```sql
+   ALTER DATABASE [db1]
+        SET HADR RESUME
+   ```

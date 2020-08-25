@@ -1,4 +1,5 @@
 ---
+description: 列存储索引 - 数据加载指南
 title: 列存储索引 - 数据加载指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482708"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
 
@@ -52,6 +53,8 @@ ms.locfileid: "86007537"
 -   **锁定优化：** 在将数据加载到压缩行组时，将自动获取行组的 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT，因为 X 行组锁不是锁定层次结构的一部分。  
   
 如果列存储索引上有非聚集 B 树索引，则该索引本身没有锁定优化或日志记录优化，但对聚集列存储索引的上述优化可用。  
+
+请注意，DML（插入、删除、更新）不是批处理模式操作，因为它不是并行的。
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>计划大容量加载大小，以便最大程度地减少增量行组
 当大多数的行压缩到列存储中而不位于增量行组中时，列存储索引的性能最佳。 最好调整加载大小，以便行直接进入列存储并尽量绕过增量存储。

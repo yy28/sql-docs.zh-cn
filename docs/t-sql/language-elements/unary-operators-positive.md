@@ -1,4 +1,5 @@
 ---
+description: + (Unary Plus) (Transact-SQL)
 title: + (Unary Plus) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -21,19 +22,19 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf364168338cb5aaeb60f585f1a3fc8ec016c81d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 33134b3f32620ce68edf844737e9e6c1814f1fcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459219"
 ---
 # <a name="unary-operators---positive"></a>一元运算符 - 正
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 返回数值表达式（一个一元运算符）的值。 一元运算符只对一个表达式执行操作，该表达式可以是 numeric 数据类型类别中的任何一种数据类型。   
   
-|操作员|含义|  
+|运算符|含义|  
 |--------------|-------------|  
 |[+（正）](../../t-sql/language-elements/unary-operators-positive.md)|数值为正。|  
 |[-（负）](../../t-sql/language-elements/unary-operators-negative.md)|数值为负。|  
@@ -54,7 +55,7 @@ ms.locfileid: "87396820"
 
 ## <a name="arguments"></a>参数
  *numeric_expression*  
- 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
+ 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)********。  
   
 ## <a name="result-types"></a>结果类型  
  返回 *numeric_expression*的数据类型。  

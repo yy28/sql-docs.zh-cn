@@ -1,6 +1,6 @@
 ---
 title: 安装 SCOM 管理包
-description: 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager （SCOM）管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。
+description: 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,25 +9,25 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401075"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766976"
 ---
-# <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>为分析平台系统安装 SQL Server Operations Manager （SCOM）管理包
-按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager （SCOM）管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
+# <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安装 SQL Server Operations Manager (SCOM) 用于分析平台系统的管理包
+按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>开始之前  
-**先决条件**  
+**必备条件**  
   
 必须安装并运行 System Center Operations Manager。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、System Center Operations Manager 2012 或 System Center Operations Manager 2012 Service Pack 1。  
   
 ## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>步骤1：下载管理包  
-对于 "AP PDW" 工作负荷，下载[适用于 Microsoft Analytics Platform System 的 System Center 管理包](https://go.microsoft.com/fwlink/?LinkId=396857)。  
+对于 "AP PDW" 工作负荷，下载 [适用于 Microsoft Analytics Platform System 的 System Center 管理包](https://go.microsoft.com/fwlink/?LinkId=396857)。  
   
-对于设备管理，请下载[SQL Server 设备基本管理包](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10))。  
+对于设备管理，请下载 [SQL Server 设备基本管理包](/previous-versions/system-center/packs/gg602398(v=technet.10))。  
   
 对于不带 AP 的较早版本的版本，请下载[适用于 Microsoft SQL Server 2012 并行数据仓库设备的 System Center 监视包](https://go.microsoft.com/fwlink/p/?LinkId=282661)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74401075"
   
 1.  若要运行安装，请双击下载的 SQL Server 设备基本管理包。  
   
-2.  接受许可协议，然后单击 "**下一步**"。  
+2.  接受许可协议，然后单击 " **下一步**"。  
   
     ![接受许可协议](./media/install-the-scom-management-packs/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
   
@@ -47,11 +47,11 @@ ms.locfileid: "74401075"
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  单击“安装”  。  
+4.  单击“安装”。  
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击“**关闭**”。  
+5.  单击 **“关闭”** 。  
   
     ![单击 "关闭"](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74401075"
   
 1.  若要运行安装，请双击下载的 SQL Server PDW 设备管理包。  
   
-2.  接受许可协议，然后单击 "**下一步**"。  
+2.  接受许可协议，然后单击 " **下一步**"。  
   
     ![接受许可协议](./media/install-the-scom-management-packs/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
   
@@ -67,17 +67,16 @@ ms.locfileid: "74401075"
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  单击“安装”  。  
+4.  单击“安装”。  
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击“**关闭**”。  
+5.  单击 **“关闭”** 。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>下一步  
-安装管理包后，请继续执行下一步：[导入用于 PDW 的 SCOM 管理包 &#40;分析平台系统&#41;](import-the-scom-management-pack-for-pdw.md)。  
+安装管理包后，请继续执行下一步： [导入用于 PDW 的 SCOM 管理包 &#40;分析平台系统&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

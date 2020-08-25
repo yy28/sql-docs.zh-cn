@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 066add7729712c6c8c40951a3139dcba00ed5a70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439099"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768456"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 对象 (RDSServer)
 > [!IMPORTANT]
@@ -29,11 +29,11 @@ ms.locfileid: "88439099"
   
  **RDSServer. DataFactory**对象设计为接收客户端请求的服务器端自动化对象。 在 Internet 实现中，它驻留在 Web 服务器上，由 ADISAPI 组件实例化。 **RDSServer. DataFactory**对象提供对指定数据源的读写访问权限，但不包含任何验证或业务规则逻辑。  
   
- 如果使用在 **RDSServer. DataFactory** 和 RDS 中都可用的方法。 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象，远程数据服务使用 **RDS。** 默认情况下，DataControl 版本。 默认情况下，使用的是一个基本的编程方案，其中， **RDSServer DataFactory** 用作泛型服务器端业务对象。  
+ 如果使用在 **RDSServer. DataFactory** 和 RDS 中都可用的方法。 [DataControl](./datacontrol-object-rds.md) 对象，远程数据服务使用 **RDS。** 默认情况下，DataControl 版本。 默认情况下，使用的是一个基本的编程方案，其中， **RDSServer DataFactory** 用作泛型服务器端业务对象。  
   
  如果你希望你的 Web 应用程序处理特定于任务的服务器端处理，则可以使用自定义业务对象替换**RDSServer. DataFactory。**  
   
- 你可以创建调用 **RDSServer. DataFactory** 方法的服务器端业务对象，例如 [Query](../../../ado/reference/rds-api/query-method-rds.md) 和 [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)。 如果要将功能添加到业务对象，但要利用现有远程数据服务技术，这会很有帮助。  
+ 你可以创建调用 **RDSServer. DataFactory** 方法的服务器端业务对象，例如 [Query](./query-method-rds.md) 和 [CreateRecordset](./createrecordset-method-rds.md)。 如果要将功能添加到业务对象，但要利用现有远程数据服务技术，这会很有帮助。  
   
  对于在客户端运行的脚本， **DataFactory** 对象是不安全的。  
   
@@ -41,9 +41,7 @@ ms.locfileid: "88439099"
   
  本部分包含以下主题。  
   
--   [DataFactory 对象 (RDSServer) 属性、方法和事件](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [DataFactory 对象 (RDSServer) 属性、方法和事件](./datafactory-object-rdsserver-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [DataFactory 对象、Query 方法和 CreateObject 方法示例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
-
+ [DataFactory 对象、Query 方法和 CreateObject 方法示例 (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)

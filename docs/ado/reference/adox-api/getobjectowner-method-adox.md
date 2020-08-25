@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4acea759ba213eac4365d79fa040c20e5a673cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c68adc866ce3ee73ca184a1e5e2851b3545329d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440039"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770506"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 方法 (ADOX)
-返回 [目录](../../../ado/reference/adox-api/catalog-object-adox.md)中对象的所有者。  
+返回 [目录](./catalog-object-adox.md)中对象的所有者。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +35,14 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回一个**字符串**值，该值指定拥有对象的[用户](../../../ado/reference/adox-api/user-object-adox.md)或[组](../../../ado/reference/adox-api/group-object-adox.md)的[名称](../../../ado/reference/adox-api/name-property-adox.md)。  
+ 返回一个**字符串**值，该值指定拥有对象的[用户](./user-object-adox.md)或[组](./group-object-adox.md)的[名称](./name-property-adox.md)。  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *ObjectName*  
  一个 **字符串** 值，该值指定要为其返回所有者的对象的名称。  
   
  *ObjectType*  
- 一个 **长整型** 值，可以是 [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) 常量之一，用于指定要为其获取所有者的对象的类型。  
+ 一个 **长整型** 值，可以是 [ObjectTypeEnum](./objecttypeenum.md) 常量之一，用于指定要为其获取所有者的对象的类型。  
   
  *ObjectTypeId*  
  可选。 一个 **变量** 值，指定 OLE DB 规范未定义的提供程序对象类型的 GUID。 如果 *ObjectType* 设置为 **adPermObjProviderSpecific**，则此参数是必需的;否则，不使用此方法。  
@@ -51,8 +51,8 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  如果提供程序不支持返回对象所有者，则会发生错误。  
   
 ## <a name="applies-to"></a>适用于  
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [目录对象 (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [GetObjectOwner 和 SetObjectOwner 方法示例 (VB) ](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
- [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)
+ [GetObjectOwner 和 SetObjectOwner 方法示例 (VB) ](./getobjectowner-and-setobjectowner-methods-example-vb.md)   
+ [SetObjectOwner 方法](./setobjectowner-method.md)

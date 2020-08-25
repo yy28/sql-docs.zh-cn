@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87460f060af7f3367147dd56f6bb599d260d09be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da49bbacf8ba59ba12f59fb072e9b5ec8c2ec2ea
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439539"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769456"
 ---
 # <a name="ruleenum"></a>RuleEnum
-指定删除 [密钥](../../../ado/reference/adox-api/key-object-adox.md) 时要遵循的规则。  
+指定删除 [密钥](./key-object-adox.md) 时要遵循的规则。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|级联更改。|  
 |**adRINone**|0|默认。 不执行任何操作。|  
@@ -34,4 +34,4 @@ ms.locfileid: "88439539"
 |**adRISetNull**|2|外键值设置为 null。|  
   
 ## <a name="applies-to"></a>适用于  
- [DeleteRule 属性 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
+ [DeleteRule 属性 (ADOX)](./deleterule-property-adox.md)

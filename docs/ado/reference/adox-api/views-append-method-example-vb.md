@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a481db1f6b185c082dc26cc8ede030938bbfce9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 172b45d111b74f81e416118f489ef3e0a40dd871
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439319"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768966"
 ---
 # <a name="views-append-method-example-vb"></a>视图 Append 方法示例 (VB)
-下面的代码演示如何使用 [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象和 [Views](../../../ado/reference/adox-api/views-collection-adox.md) 集合 [Append](../../../ado/reference/adox-api/append-method-adox-views.md) 方法在基础数据源中创建新视图。  
+下面的代码演示如何使用 [命令](../ado-api/command-object-ado.md) 对象和 [Views](./views-collection-adox.md) 集合 [Append](./append-method-adox-views.md) 方法在基础数据源中创建新视图。  
   
 ```  
 ' BeginCreateViewVB  
@@ -63,8 +63,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [) 的 Append 视图 (追加方法 ](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [视图对象 (ADOX) ](../../../ado/reference/adox-api/view-object-adox.md)   
- [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection 属性 (ADOX) ](./activeconnection-property-adox.md)   
+ [) 的 Append 视图 (追加方法 ](./append-method-adox-views.md)   
+ [目录对象 (ADOX) ](./catalog-object-adox.md)   
+ [视图对象 (ADOX) ](./view-object-adox.md)   
+ [视图集合 (ADOX)](./views-collection-adox.md)

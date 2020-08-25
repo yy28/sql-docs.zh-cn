@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31205bbe32dd3c09d70fe4baeb41261be985096c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451599"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760251"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
-指定哪些字段可用于在使用 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象的数据源的行的开放式更新过程中检测冲突。  
+指定哪些字段可用于在使用 [记录集](./recordset-object-ado.md) 对象的数据源的行的开放式更新过程中检测冲突。  
   
- 在[ADO 动态属性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)中引用的**记录集**"**更新条件**" 动态属性和[用于 OLE DB 文档的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)中介绍了这些常量。  
+ 在[ADO 动态属性索引](./ado-dynamic-property-index.md)中引用的**记录集**"**更新条件**" 动态属性和[用于 OLE DB 文档的 Microsoft 游标服务](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)中介绍了这些常量。  
   
-|返回的常量|值|描述|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1|如果数据源行的任何列已更改，则检测冲突。|  
 |**adCriteriaKey**|0|如果数据源行的键列已更改（这意味着行已删除），则检测冲突。|  

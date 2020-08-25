@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439079"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768436"
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
 执行请求并创建 ADO 记录集，以便在 ADO 2.5 和更高版本中使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "88439079"
 object.Execute(ConnectionString As String, HandlerString As String, QueryString As String, lFetchOptions As Long, Properties, TableId, lExecuteOptions As Long, pParameters, [lcid As Long], [pInformation])  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *ConnectionString*  
  一个字符串，用于连接到将发送请求以执行的 OLE DB 提供程序。 如果使用 *HandlerString* 指定处理程序，则它可以编辑或替换连接字符串。  
   
@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  指示异步提取的类型。  
   
- 有关详细信息，请参阅 [FetchOptions 属性 (RDS) ](../../../ado/reference/rds-api/fetchoptions-property-rds.md)。  
+ 有关详细信息，请参阅 [FetchOptions 属性 (RDS) ](./fetchoptions-property-rds.md)。  
   
  *TableID*  
  VT_EMPTY 或 VT_BSTR 类型的 **变体** 。 如果此值为 VT_EMPTY 类型，则将忽略此值。 如果它的类型为 VT_BSTR，则将使用 **adCmdTableDirect** 创建该记录集，并使用此处指定的值并忽略 *QueryString* 参数。  
@@ -82,6 +82,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 MSDFMAP.dll 会将参数解释为使用 sample.ini 检查连接和查询字符串的方向。  
   
 ## <a name="applies-to"></a>适用于  
- [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438699"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767536"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
 基于指定的排序和筛选器属性对客户端 **记录集** 执行排序或筛选。  
@@ -34,17 +34,17 @@ ms.locfileid: "88438699"
 DataControl.Reset(value)  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *DataControl*  
- 表示 RDS 的对象变量 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象。  
+ 表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
  *value*  
  可选。 如果要对当前 "已筛选" 行集进行筛选， () 默认值为**True**的**布尔**值。 **False** 表示对原始行集进行筛选，删除所有以前的筛选选项。  
   
 ## <a name="remarks"></a>备注  
- [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能根据查找条件显示记录子集，而完整的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 则保留在缓存中。 **Reset**方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
+ [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和[FilterColumn](./filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能根据查找条件显示记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 **Reset**方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
   
- 如果对尚未提交的原始数据进行了更改，则 **Reset** 方法将失败。 首先，使用 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 方法在读/写 **记录集中**保存所有更改，然后使用 **Reset** 方法对记录进行排序或筛选。  
+ 如果对尚未提交的原始数据进行了更改，则 **Reset** 方法将失败。 首先，使用 [SubmitChanges](./submitchanges-method-rds.md) 方法在读/写 **记录集中**保存所有更改，然后使用 **Reset** 方法对记录进行排序或筛选。  
   
  如果要在行集上执行多个筛选器，可以将可选的 *布尔* 参数与 **Reset** 方法一起使用。 以下示例介绍如何执行此操作：  
   
@@ -72,11 +72,8 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ```  
   
 ## <a name="applies-to"></a>适用于  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 属性和 Reset 方法示例 (VBScript) ](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
-
+ [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 属性和 Reset 方法示例 (VBScript) ](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [SubmitChanges 方法 (RDS)](./submitchanges-method-rds.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452019"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759377"
 ---
 # <a name="required-client-settings"></a>必需的客户端设置
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452019"
   
  指定以下设置以使用自定义 **DataFactory** 处理程序。  
   
--   在 [连接对象 (ado) ](../../../ado/reference/ado-api/connection-object-ado.md) 对象 [提供程序属性 (ado) ](../../../ado/reference/ado-api/provider-property-ado.md) 属性或 **连接** 对象连接字符串 "**Provider**=" 关键字中指定 "provider = MS Remote"。  
+-   在 [连接对象 (ado) ](../../reference/ado-api/connection-object-ado.md) 对象 [提供程序属性 (ado) ](../../reference/ado-api/provider-property-ado.md) 属性或 **连接** 对象连接字符串 "**Provider**=" 关键字中指定 "provider = MS Remote"。  
   
--   将 [ (ADO) ](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 属性的 "CursorLocation" 属性设置为 " **adUseClient**"。  
+-   将 [ (ADO) ](../../reference/ado-api/cursorlocation-property-ado.md) 属性的 "CursorLocation" 属性设置为 " **adUseClient**"。  
   
--   在 DataControl 对象中指定要在对象中使用的处理程序的名称 [ (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象的 **处理程序** 属性或 [记录集对象 (ADO) ](../../../ado/reference/ado-api/recordset-object-ado.md) 对象的连接字符串 "**handler**=" 关键字。  (无法在 **连接** 对象连接字符串中设置处理程序。 )   
+-   在 DataControl 对象中指定要在对象中使用的处理程序的名称 [ (RDS) ](../../reference/rds-api/datacontrol-object-rds.md) 对象的 **处理程序** 属性或 [记录集对象 (ADO) ](../../reference/ado-api/recordset-object-ado.md) 对象的连接字符串 "**handler**=" 关键字。  (无法在 **连接** 对象连接字符串中设置处理程序。 )   
   
  RDS 在名为 MSDFMAP 的服务器上提供了一个默认的处理程序 **。处理程序**。  (默认的自定义文件命名为 MSDFMAP.INI。 )   
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
-  (RDS) 属性或关键字指定 [处理程序属性 ](../../../ado/reference/rds-api/handler-property-rds.md) ，则为; [提供程序属性 (ADO) ](../../../ado/reference/ado-api/provider-property-ado.md) 属性或关键字;和 *CustomerById* 和 *CustomerDatabase* 标识符。 然后打开 **Recordset** 对象  
+  (RDS) 属性或关键字指定 [处理程序属性 ](../../reference/rds-api/handler-property-rds.md) ，则为; [提供程序属性 (ADO) ](../../reference/ado-api/provider-property-ado.md) 属性或关键字;和 *CustomerById* 和 *CustomerDatabase* 标识符。 然后打开 **Recordset** 对象  
   
  rs-232c.打开 "CustomerById (4) "、"Handler = MSDFMAP"。处理程序; "& _  
   
@@ -77,11 +77,10 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [自定义文件连接部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自定义文件 UserList 部分](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [自定义文件连接部分](./customization-file-connect-section.md)   
+ [自定义文件 SQL 部分](./customization-file-sql-section.md)   
+ [自定义文件 UserList 部分](./customization-file-userlist-section.md)   
+ [自定义 DataFactory](./datafactory-customization.md)   
+ [必需的客户端设置]()   
+ [了解自定义文件](./understanding-the-customization-file.md)   
+ [编写自己的自定义处理程序](./writing-your-own-customized-handler.md)

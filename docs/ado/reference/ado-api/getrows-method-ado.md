@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f91e83f1b4da0623b9903a5016701fc6557e1d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443559"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775046"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
-将 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象的多个记录检索到一个数组中。  
+将 [记录集](./recordset-object-ado.md) 对象的多个记录检索到一个数组中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +37,12 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## <a name="return-value"></a>返回值  
  返回一个 **变量** ，其值为二维数组。  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *行*  
- 可选。 一个 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) 值，指示要检索的记录数。 默认值为 **adGetRowsRest**。  
+ 可选。 一个 [GetRowsOptionEnum](./getrowsoptionenum.md) 值，指示要检索的记录数。 默认值为 **adGetRowsRest**。  
   
  *启动*  
- 可选。 一个 **字符串** 值或 **变量** ，其计算结果为应从中开始 **GetRows** 操作的记录的书签。 还可以使用 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) 值。  
+ 可选。 一个 **字符串** 值或 **变量** ，其计算结果为应从中开始 **GetRows** 操作的记录的书签。 还可以使用 [BookmarkEnum](./bookmarkenum.md) 值。  
   
  *字段*  
  可选。 一个表示单个字段名称或序号位置的 **变量** ，或是一个字段名称或序号位置编号的数组。 ADO 仅返回这些字段中的数据。  
@@ -52,15 +52,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
  如果未指定 *Rows* 参数的值，则 **GetRows** 方法会自动检索 **Recordset** 对象中的所有记录。 如果请求的记录超过可用记录数，则 **GetRows** 只返回可用记录的数目。  
   
- 如果**Recordset**对象支持书签，则可以通过在*Start*参数中传递该记录的 "[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)" 属性的值来指定在哪个记录中， **GetRows**方法应开始检索数据。  
+ 如果**Recordset**对象支持书签，则可以通过在*Start*参数中传递该记录的 "[书签](./bookmark-property-ado.md)" 属性的值来指定在哪个记录中， **GetRows**方法应开始检索数据。  
   
  如果要限制 **GetRows** 调用返回的字段，可以在 *fields* 参数中传递单个字段名称/数字或字段名称/数字的数组。  
   
- 调用 **GetRows**之后，下一个未读记录将成为当前记录，或者如果没有更多记录，则 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 属性将设置为 **True** 。  
+ 调用 **GetRows**之后，下一个未读记录将成为当前记录，或者如果没有更多记录，则 [EOF](./bof-eof-properties-ado.md) 属性将设置为 **True** 。  
   
 ## <a name="applies-to"></a>适用于  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VB) GetRows 方法示例 ](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [GetRows 方法示例 (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
+ [ (VB) GetRows 方法示例 ](./getrows-method-example-vb.md)   
+ [GetRows 方法示例 (VC++)](./getrows-method-example-vc.md)

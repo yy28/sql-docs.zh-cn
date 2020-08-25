@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883510"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091990"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
 
@@ -111,7 +111,7 @@ ms.locfileid: "85883510"
   
 ## <a name="known-issues"></a>已知问题  
   
--   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 该问题在[此知识库文章](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) 中定义。 若要解决此问题，请参阅该知识库文章中的 **详细信息** 部分。  
+-   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 有关详细信息，请参阅[错误 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md)。
   
 -   如果将 SMB 文件共享作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集实例的存储选项，默认情况下无法将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集诊断日志写入该文件共享，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源 DLL 缺乏对该文件共享的读/写权限。 若要解决此问题，请尝试使用以下方法之一：  
   

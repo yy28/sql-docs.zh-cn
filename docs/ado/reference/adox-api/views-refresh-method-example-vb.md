@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3112670df34b0e74e359ef0e514d9acdc8620788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03e46b4f449f0a937c21c436049692f0c95695cc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439269"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768836"
 ---
 # <a name="views-refresh-method-example-vb"></a>视图 Refresh 方法示例 (VB)
-下面的代码演示如何刷新[目录](../../../ado/reference/adox-api/catalog-object-adox.md)的[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合。 这是必需的，才能访问**目录**中的[视图](../../../ado/reference/adox-api/view-object-adox.md)对象。  
+下面的代码演示如何刷新[目录](./catalog-object-adox.md)的[Views](./views-collection-adox.md)集合。 这是必需的，才能访问**目录**中的[视图](./view-object-adox.md)对象。  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -57,5 +57,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ (ADO 的 Refresh 方法) ](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ (ADO 的 Refresh 方法) ](../ado-api/refresh-method-ado.md)   
+ [视图集合 (ADOX)](./views-collection-adox.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452069"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759517"
 ---
 # <a name="rds-tutorial"></a>RDS 教程
 本教程说明如何使用 RDS 编程模型来查询和更新数据源。 首先，它描述了完成此任务所需的步骤。 然后，Microsoft®中将重复教程，Visual Basic Scripting Edition (采用 ADO for Windows Foundation 类 (ADO/WFC) # A3。  
@@ -45,7 +45,7 @@ ms.locfileid: "88452069"
   
 -   调用服务器程序。 将参数传递给用于标识数据源和要发出的命令的服务器程序。  
   
--   服务器程序从数据源中获取 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象，通常使用 ADO。 或者，在服务器上处理 **Recordset** 对象。  
+-   服务器程序从数据源中获取 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象，通常使用 ADO。 或者，在服务器上处理 **Recordset** 对象。  
   
 -   服务器程序将最终的 **记录集** 对象返回到客户端应用程序。  
   
@@ -55,20 +55,20 @@ ms.locfileid: "88452069"
   
  本教程包含以下主题。  
   
--   [步骤 1：指定服务器程序（RDS 教程）](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [步骤 1：指定服务器程序（RDS 教程）](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [步骤 2：调用服务器程序（RDS 教程）](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [步骤 2：调用服务器程序（RDS 教程）](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [步骤 3：服务器获取记录集（RDS 教程）](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [步骤 3：服务器获取记录集（RDS 教程）](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [步骤 4：服务器返回记录集（RDS 教程）](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [步骤 4：服务器返回记录集（RDS 教程）](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [步骤 5：DataControl 变为可用（RDS 教程）](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [步骤 5：DataControl 变为可用（RDS 教程）](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [步骤 6：将更改发送到服务器（RDS 教程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [步骤 6：将更改发送到服务器（RDS 教程）](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [RDS 教程 (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [步骤1：指定服务器程序 (RDS 教程) ](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [步骤1：指定服务器程序 (RDS 教程) ](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [RDS 教程 (VBScript)](./rds-tutorial-vbscript.md)

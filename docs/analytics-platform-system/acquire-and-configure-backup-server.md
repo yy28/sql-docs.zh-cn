@@ -1,6 +1,6 @@
 ---
 title: 获取 & 配置备份服务器
-description: 本文介绍如何将非设备 Windows 系统配置为备份服务器，以与分析平台系统（AP）和并行数据仓库（PDW）中的备份和还原功能配合使用。
+description: 本文介绍如何将非设备 Windows 系统配置为备份服务器，以与分析平台系统中的备份和还原功能 (AP) 和并行数据仓库 (PDW) 一起使用。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401496"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767156"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>为并行数据仓库获取和配置备份服务器
-本文介绍如何将非设备 Windows 系统配置为备份服务器，以与分析平台系统（AP）和并行数据仓库（PDW）中的备份和还原功能配合使用。  
+本文介绍如何将非设备 Windows 系统配置为备份服务器，以与分析平台系统中的备份和还原功能 (AP) 和并行数据仓库 (PDW) 一起使用。  
   
   
 ## <a name="backup-server-basics"></a><a name="Basics"></a>备份服务器基础知识  
@@ -33,29 +33,29 @@ ms.locfileid: "74401496"
   
 -   位于你自己的客户域中，而不是设备域。 你的客户域与设备域之间没有信任关系。  
   
--   承载备份文件共享，这是一个使用服务器消息块（SMB）应用程序级网络协议的 Windows 文件共享。 "备份文件共享" 权限向 Windows 域用户（通常是专用备份用户）授予对共享执行备份和还原操作的能力。 Windows 域用户的用户名和密码凭据存储在 PDW 中，以便 PDW 可以对备份文件共享执行备份和还原操作。  
+-   承载备份文件共享，这是使用服务器消息块 (SMB) 应用程序级网络协议的 Windows 文件共享。 备份文件共享权限为 Windows 域用户 (通常这是一个专用备份用户) 在该共享上执行备份和还原操作的能力。 Windows 域用户的用户名和密码凭据存储在 PDW 中，以便 PDW 可以对备份文件共享执行备份和还原操作。  
   
 ## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>步骤1：确定容量要求  
 备份服务器的系统要求几乎完全取决于您自己的工作负载。 在购买或预配备份服务器之前，需要确定容量需求。 备份服务器不必专用于备份，前提是它将处理工作负荷的性能和存储要求。 你还可以有多个备份服务器，以将每个数据库备份并还原到多个服务器中的一个。  
   
-使用[备份服务器容量规划工作表](backup-capacity-planning-worksheet.md)来帮助确定容量需求。  
+使用 [备份服务器容量规划工作表](backup-capacity-planning-worksheet.md) 来帮助确定容量需求。  
   
 ## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>步骤2：获取备份服务器  
 既然您更好地了解了容量要求，您可以规划需要购买或预配的服务器和网络组件。 将以下要求列表纳入购买计划，然后购买服务器或预配现有服务器。  
   
 ### <a name="software-requirements"></a>软件要求  
-使用 Windows 文件共享（SMB）协议的任何文件服务器。  
+使用 Windows 文件共享 (SMB) 协议的任何文件服务器。  
   
 建议 Windows Server 2012 或更高版本，以便：  
   
 -   获取通过 SMB 进行的文件预分配的性能优势。  
   
--   使用即时文件初始化（IFI）执行备份操作。 你的 IT 团队在备份服务器上管理此设置。 PDW Configuration Manager （dwconfig）未设置或控制您的备份服务器上的 IFI。 以前版本的 Windows 没有 IFI，但仍可用作备份服务器。  
+-   使用即时文件初始化 (IFI) 执行备份操作。 你的 IT 团队在备份服务器上管理此设置。 PDW Configuration Manager ( # A0) 未设置或控制您的备份服务器上的 IFI。 以前版本的 Windows 没有 IFI，但仍可用作备份服务器。  
   
 ### <a name="networking-requirements"></a>网络要求  
 尽管不是必需的，但建议使用备份服务器的连接类型。 准备将加载服务器连接到设备的 "不工作网络"：  
   
-1.  计划将服务器的机架接近于设备，以便可以将其连接到设备未被交换机。 若要深入了解有关不受阻止的 Mellanox 技术的详细信息，请参阅白皮书[简介](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf)。  
+1.  计划将服务器的机架接近于设备，以便可以将其连接到设备未被交换机。 若要深入了解有关不受阻止的 Mellanox 技术的详细信息，请参阅白皮书 [简介](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf)。  
   
 2.  购买 Mellanox ConnectX-3 FDR 无限单或双端口网络适配器。 建议购买包含两个端口的网络适配器，以在数据传输期间获得容错。 需要两个端口网络适配器才能实现高可用性。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "74401496"
   
     -   适用于 Windows 的不受使用的驱动程序由 OpenFabrics 联盟（一种行业协会，这是一家不受人  正确的驱动程序可能已随您的 "未使用" 网络适配器一起分发。 否则，可以从 www.openfabrics.org 下载该驱动程序。  
   
-5.  为网络适配器配置 "未设置" 和 "DNS" 设置。 有关配置说明，请参阅[配置无线网络适配器](configure-infiniband-network-adapters.md)。  
+5.  为网络适配器配置 "未设置" 和 "DNS" 设置。 有关配置说明，请参阅 [配置无线网络适配器](configure-infiniband-network-adapters.md)。  
   
 ## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>步骤4：配置备份文件共享  
 PDW 通过 UNC 文件共享来访问备份服务器。 若要设置文件共享：  
@@ -118,11 +118,11 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-有关详细信息，请参见: 
+有关详细信息，请参阅： 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [还原数据库](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>安全通知  
 备份服务器未加入设备的专用域。 它位于你自己的网络中，你自己的域和专用设备域之间没有信任关系。  
@@ -136,19 +136,18 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
 > [!IMPORTANT]  
 > 若要降低数据的安全风险，建议指定一个 Windows 帐户专门用于执行备份和还原操作。 仅允许此帐户访问备份位置，不要授予对其他位置的访问权限。  
   
-若要将用户名和密码存储在 PDW 中，请使用[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)存储过程。 PDW 使用 Windows 凭据管理器来存储和加密控件节点和计算节点上的用户名和密码。 不使用 BACKUP DATABASE 命令备份凭据。  
+若要将用户名和密码存储在 PDW 中，请使用 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 存储过程。 PDW 使用 Windows 凭据管理器来存储和加密控件节点和计算节点上的用户名和密码。 不使用 BACKUP DATABASE 命令备份凭据。  
   
-若要从 PDW 删除网络凭据，请使用[sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)存储过程。  
+若要从 PDW 删除网络凭据，请使用 [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) 存储过程。  
   
-若要列出 SQL Server PDW 中存储的所有网络凭据，请使用[sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)动态管理视图。  
+若要列出 SQL Server PDW 中存储的所有网络凭据，请使用 [sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 动态管理视图。  
   
 ### <a name="secure-communications"></a>安全通信  
   
 加载服务器上的操作可以使用 UNC 路径从受信任的内部网络外部拉取数据。 网络上或具有影响名称解析能力的攻击者可以截获或修改发送到 PDW 的数据。 这会带来篡改和信息泄露的风险。 有助于降低篡改风险：
 
 - 需要对连接进行签名。 
-- 在加载服务器上，在 "安全设置 \ 本地策略 \ 安全选项： Microsoft 网络客户端：对通信进行数字签名（始终）：已启用" 中设置以下组策略选项。  
+- 在加载服务器上，在 "安全设置 \ 本地策略 \ 安全选项： Microsoft 网络客户端：对通信进行数字签名 (始终) ：已启用" 中设置以下组策略选项。  
   
 ## <a name="see-also"></a>另请参阅  
 [备份和还原](backup-and-restore-overview.md)  
-  

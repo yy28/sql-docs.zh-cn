@@ -1,8 +1,6 @@
 ---
-title: 更改服务器身份验证模式 | Microsoft Docs
+title: 更改服务器身份验证模式
 description: 了解如何在 SQL Server 中更改服务器身份验证模式。 可使用 SQL Server Management Studio 或 Transact-SQL 执行此任务。
-ms.custom: ''
-ms.date: 02/18/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,23 +14,26 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: ''
+ms.date: 02/18/2020
+ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759222"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200951"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改服务器身份验证模式。 安装过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 设置为 **“Windows 身份验证模式”** 或 **“SQL Server 和 Windows 身份验证模式”** 。 安装完成后，您可以随时更改身份验证模式。
 
 如果在安装过程中选择了“Windows 身份验证模式”，则 sa 登录名将被禁用，安装程序会分配一个密码。 如果稍后将身份验证模式更改为“SQL Server 和 Windows 身份验证模式”，则 sa 登录名仍处于禁用状态。 若要使用 sa 登录名，请使用 ALTER LOGIN 语句启用 sa 登录名并分配一个新密码。 sa 登录名只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到服务器。
 
 ## <a name="before-you-begin"></a>开始之前
 
-sa 帐户是一个广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 除非您的应用程序需要使用 sa 帐户，否则请不要启用它。 为 sa 登录名使用一个强密码非常重要。
+sa 帐户是一个广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 除非您的应用程序需要使用 sa 帐户，否则请不要启用它。 因此，为 sa 登录名使用强密码非常重要。
 
 ## <a name="change-authentication-mode-with-ssms"></a>使用 SSMS 更改身份验证模式
 
@@ -83,7 +84,12 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
+> [!Note]
+> 更改身份验证模式所需的权限为 [sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) 或 [Control Server](../../relational-databases/security/permissions-database-engine.md)
+
 ## <a name="see-also"></a>另请参阅
 
- [强密码](../../relational-databases/security/strong-passwords.md)   
- [SQL Server 安装的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) [更改登录名 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)
+- [强密码](../../relational-databases/security/strong-passwords.md)
+- [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
+- [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

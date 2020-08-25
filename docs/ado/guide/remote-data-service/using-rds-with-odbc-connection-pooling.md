@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451859"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760037"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>使用 RDS 与 ODBC 连接池
 如果正在使用 ODBC 数据源，可以使用 Internet Information Services (IIS) 中的连接池选项来实现客户端负载的高性能处理。 连接池是用于连接的资源管理器，用于维护经常使用的连接的打开状态。  
@@ -125,26 +125,4 @@ ms.locfileid: "88451859"
 5.  单击 "确定"，然后再次单击 "确定" 退出实用程序。  
   
 ## <a name="see-also"></a>另请参阅  
- [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [RDS 基础知识](./rds-fundamentals.md)
