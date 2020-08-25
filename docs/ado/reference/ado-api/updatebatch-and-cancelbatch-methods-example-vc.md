@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 848c798a92c2075cdfff04551b17a46d2d90fc76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98130e528428817f6bd43323f47d2ef4e1191dc0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441619"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776975"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和 CancelBatch 方法示例 (VC++)
-此示例演示如何将 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 方法与 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 方法结合在一起。  
+此示例演示如何将 [UpdateBatch](./updatebatch-method.md) 方法与 [CancelBatch](./cancelbatch-method-ado.md) 方法结合在一起。  
   
 ```  
 // BeginUpdateBatchCpp.cpp  
@@ -212,5 +212,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CancelBatch 方法 (ADO) ](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)
+ [CancelBatch 方法 (ADO) ](./cancelbatch-method-ado.md)   
+ [UpdateBatch 方法](./updatebatch-method.md)

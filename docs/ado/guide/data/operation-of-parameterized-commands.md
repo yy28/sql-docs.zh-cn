@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453099"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805642"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
 如果使用的是大型子 **记录集**（特别是与父 **记录集**的大小相比），但只需访问几个子章节，则可以发现使用参数化命令更有效。  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  父表和子表的列名称相同， *cust_id*。 *子命令*有一个 "？" 占位符，其中关系子句引用的是 "..." (参数 0 ") 。  
   
 > [!NOTE]
->  PARAMETER 子句仅适用于 shape 命令语法。 它不与 ADO [参数](../../../ado/reference/ado-api/parameter-object.md) 对象或 [参数](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合关联。  
+>  PARAMETER 子句仅适用于 shape 命令语法。 它不与 ADO [参数](../../reference/ado-api/parameter-object.md) 对象或 [参数](../../reference/ado-api/parameters-collection-ado.md) 集合关联。  
   
  执行参数化形状命令时，将发生以下情况：  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  访问父行的章节列时，将使用 cust_id 的值作为参数的值来执行 *子命令* 。  
   
-4.  在步骤3中创建的数据提供程序行集中的所有行都用于填充子 **记录集**。 在此示例中，这是 Orders 表中的所有行，其中 cust_id 等于 customer cust_id 的值。 默认情况下，将在客户端上缓存子 **记录集**，直到释放对父 **记录集** 的所有引用。 若要更改此行为，请将**记录集**[动态属性](../../../ado/reference/ado-api/ado-dynamic-property-index.md)**缓存子行**设置为**False**。  
+4.  在步骤3中创建的数据提供程序行集中的所有行都用于填充子 **记录集**。 在此示例中，这是 Orders 表中的所有行，其中 cust_id 等于 customer cust_id 的值。 默认情况下，将在客户端上缓存子 **记录集**，直到释放对父 **记录集** 的所有引用。 若要更改此行为，请将**记录集**[动态属性](../../reference/ado-api/ado-dynamic-property-index.md)**缓存子行**设置为**False**。  
   
 5.  对检索到的子行的引用 (也就是说，子 **记录集**) 的章节位于父 **记录集**的当前行的章节列中。  
   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  使用 WHERE 子句时，参数不能使用 text、ntext 和 image 的 SQL 数据类型，也不会生成包含以下说明的错误： `Invalid operator for data type` 。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
+ [数据定形示例](./data-shaping-example.md)   
+ [正式形状语法](./formal-shape-grammar.md)   
+ [常用 Shape 命令](./shape-commands-in-general.md)

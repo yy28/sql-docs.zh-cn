@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451429"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776696"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
-[Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)的 Visual C++ 部分通过语言提供有关如何实例化 ADO 事件模型的一般说明。 下面是在由 **#import** 指令创建的环境中实例化事件模型的特定示例。  
+[Ado 事件实例化](../../guide/data/ado-event-instantiation-by-language.md)的 Visual C++ 部分通过语言提供有关如何实例化 ADO 事件模型的一般说明。 下面是在由 **#import** 指令创建的环境中实例化事件模型的特定示例。  
   
  一般说明使用 **adoint** 作为方法签名的参考。 但是，一般说明中的一些详细信息会因使用 **#import** 指令而略有不同：  
   

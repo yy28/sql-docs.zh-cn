@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453769"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806432"
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 OLE DB 系统接口以编程方式访问、编辑和更新各种数据源中的数据。 ADO 最常见的用法是查询关系数据库中的一个或多个表，检索并显示应用程序中的结果，并可能让用户进行更改并保存对数据所做的更改。 其他任务包括：  
@@ -57,10 +57,10 @@ ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 
   
  但是，在讨论这些详细信息之前，我们将概述 ADO 对象模型和一个简单的 ADO 应用程序，该应用程序是使用 Microsoft® Visual Basic®编写的，并执行四个主要 ADO 操作：  
   
--   [ADO 对象和集合](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [ADO 对象和集合](./ado-objects-and-collections.md)  
   
--   [HelloData：简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData：简单的 ADO 应用程序](./hellodata-a-simple-ado-application.md)  
   
--   [OLE DB 提供程序](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [OLE DB 提供程序](./ole-db-providers-ado.md)  
   
--   [错误](../../../ado/guide/data/errors-ado.md)
+-   [错误](./errors-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb8c23168cb68438b2f8a74359f14b05795ad913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c388b12b70213afb297508ccac91315d828c9d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441579"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776936"
 ---
 # <a name="value-property-example-vb"></a>Value 属性示例 (VB)
-此示例通过显示 " ***Employees*** " 表的字段和属性值，来演示包含[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性。  
+此示例通过显示 " ***Employees*** " 表的字段和属性值，来演示包含[字段](./field-object.md)和[属性](./property-object-ado.md)对象的[Value](./value-property-ado.md)属性。  
   
 ```  
 'BeginValueVB  
@@ -102,6 +102,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [ADO (属性对象) ](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value 属性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field 对象](./field-object.md)   
+ [ADO (属性对象) ](./property-object-ado.md)   
+ [Value 属性 (ADO)](./value-property-ado.md)

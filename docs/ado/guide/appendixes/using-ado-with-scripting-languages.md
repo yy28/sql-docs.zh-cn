@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fd27476f577be4719489bc5ca2e1bfee95c5166
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453989"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806502"
 ---
 # <a name="using-ado-with-scripting-languages"></a>配合使用 ADO 与脚本语言
 在脚本环境中，ADO 允许通过服务器端脚本来公开数据。 在此方案中，ADO、它使用的基础 OLE DB 提供程序以及引用给定数据存储所需的任何其他组件均安装在运行 Internet Information Services (IIS) 的服务器上。 使用 Active Server Pages (ASP) ，ADO 是在可生成 HTML 的脚本中引用的组件，例如。 可以通过 HTTP 将此 HTML 内容传递到客户端 Web 浏览器。 通过使用脚本，网页可以将操作发送回服务器端脚本，从而使您可以更新、遍历或查看特定数据。  
@@ -47,7 +47,7 @@ ms.locfileid: "88453989"
 |--------------|-------------------------|  
 |形状|是|  
 |保留|是|  
-|远程|是|  
+|Remote|是|  
 |SQL Server (SQLOLEDB 的 OLE DB 提供程序) |否|  
 |ODBC (MSDASQL 提供程序 OLE DB) |否|  
   
@@ -62,11 +62,11 @@ ms.locfileid: "88453989"
   
  以下主题包含有关使用 ADO 和脚本语言的更具体的信息：  
   
--   [VBScript ADO 编程](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
+-   [VBScript ADO 编程](./vbscript-ado-programming.md)  
   
--   [JScript ADO 编程](../../../ado/guide/appendixes/jscript-ado-programming.md)  
+-   [JScript ADO 编程](./jscript-ado-programming.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft ActiveX 数据对象 (ADO) ](../../../ado/microsoft-activex-data-objects-ado.md)   
- [将 ADO 与 Microsoft Visual Basic 一起使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [配合使用 ADO 与 Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [Microsoft ActiveX 数据对象 (ADO) ](../../microsoft-activex-data-objects-ado.md)   
+ [将 ADO 与 Microsoft Visual Basic 一起使用](./using-ado-with-microsoft-visual-basic.md)   
+ [配合使用 ADO 与 Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453619"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806271"
 ---
 # <a name="creating-a-connection-string"></a>创建连接字符串
 连接字符串包含参数/值对的列表 (也就是说，参数) 由分号分隔。 例如：  
@@ -32,7 +32,7 @@ ms.locfileid: "88453619"
   
  ADO 识别连接字符串中的以下五个参数。  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |*提供程序*|指定要用于连接的访问接口的名称。|  
 |*文件名*|指定特定于提供程序的文件的名称 (例如，保留的数据源对象) 包含预设的连接信息。|  
@@ -42,7 +42,7 @@ ms.locfileid: "88453619"
   
  其他参数传递给 *提供程序* 参数中名为的提供程序，而无需 ADO 处理。  
   
- HelloData 中的 HelloData 应用程序 [：一个简单的 ADO 应用](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 程序使用以下连接字符串：  
+ HelloData 中的 HelloData 应用程序 [：一个简单的 ADO 应用](./hellodata-a-simple-ado-application.md) 程序使用以下连接字符串：  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

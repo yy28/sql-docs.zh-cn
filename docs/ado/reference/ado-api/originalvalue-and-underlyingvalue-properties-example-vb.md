@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 189ca54160090bde8b526b8feec481dc31104ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74cb7f53f7fd55332469a74e77405aa3312aef7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442869"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773606"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 属性示例 (VB) 
-此示例演示 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 和 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 属性，如果记录的基础数据在 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 批处理更新期间发生了更改，则显示一条消息。  
+此示例演示 [OriginalValue](./originalvalue-property-ado.md) 和 [UnderlyingValue](./underlyingvalue-property.md) 属性，如果记录的基础数据在 [记录集](./recordset-object-ado.md) 批处理更新期间发生了更改，则显示一条消息。  
   
 ```  
 'BeginOriginalValueVB  
@@ -121,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [OriginalValue 属性 (ADO) ](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue 属性](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue 属性 (ADO) ](./originalvalue-property-ado.md)   
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [UnderlyingValue 属性](./underlyingvalue-property.md)

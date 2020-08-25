@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ce793d1b7f62a565a19fa8efe8d11292ae5642f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454059"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806650"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>适用于 ODBC 的 Microsoft OLE DB 提供程序概述
 对于 ADO 或 RDS 程序员，理想情况下，每个数据源都公开一个 OLE DB 接口，以便 ADO 可以直接调用到数据源。 尽管数据库供应商越来越多地实现 OLE DB 接口，但某些数据源尚未以这种方式公开。 但是，目前使用的大多数 DBMS 系统都可通过 ODBC 访问。
@@ -33,13 +33,13 @@ ms.locfileid: "88454059"
  这是 ADO 的默认提供程序，并且支持所有与提供程序相关的 ADO 属性和方法。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到该提供程序，请将[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性的**provider =** 参数设置为：
+ 若要连接到该提供程序，请将[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的**provider =** 参数设置为：
 
 ```
 MSDASQL
 ```
 
- 读取 [提供程序](../../../ado/reference/ado-api/provider-property-ado.md) 属性也会返回此字符串。
+ 读取 [提供程序](../../reference/ado-api/provider-property-ado.md) 属性也会返回此字符串。
 
 ## <a name="typical-connection-string"></a>典型连接字符串
  此提供程序的典型连接字符串是：
@@ -91,7 +91,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  尽管**dsn**定义已经指定了数据库，但你也可以指定*一个**数据库*参数，以及用于连接到其他数据库的**dsn** 。 使用**DSN**时，最好*始终包含* *database*参数。 这将确保你连接到正确的数据库（如果自上次检查 **DSN** 定义后另一个用户更改了默认数据库参数）。
 
 ## <a name="provider-specific-connection-properties"></a>特定于提供程序的连接属性
- ODBC 的 OLE DB 提供程序将多个属性添加到**连接**对象的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
+ ODBC 的 OLE DB 提供程序将多个属性添加到**连接**对象的[properties](../../reference/ado-api/properties-collection-ado.md)集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
 
 |属性名称|说明|
 |-------------------|-----------------|
@@ -132,15 +132,15 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |生成可 (KAGPROP_MARSHALLABLE 封送的行集) |指示 ODBC 驱动程序生成可封送的记录集|
 
 ## <a name="command-text"></a>命令文本
- 使用 [Command](../../../ado/reference/ado-api/command-object-ado.md) 对象的方式很大程度取决于数据源以及它将接受何种类型的查询或命令语句。
+ 使用 [Command](../../reference/ado-api/command-object-ado.md) 对象的方式很大程度取决于数据源以及它将接受何种类型的查询或命令语句。
 
- ODBC 提供了一个特定的语法来调用存储过程。 对于**Command**对象的[Commandtext](../../../ado/reference/ado-api/commandtext-property-ado.md)属性，[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上的**Execute**方法的*commandtext*参数，或者[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象上**Open**方法的*Source*参数，将传入具有以下语法的字符串：
+ ODBC 提供了一个特定的语法来调用存储过程。 对于**Command**对象的[Commandtext](../../reference/ado-api/commandtext-property-ado.md)属性，[连接](../../reference/ado-api/connection-object-ado.md)对象上的**Execute**方法的*commandtext*参数，或者[记录集](../../reference/ado-api/recordset-object-ado.md)对象上**Open**方法的*Source*参数，将传入具有以下语法的字符串：
 
 ```
 "{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
- 每 **个** 引用 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合中的对象。 第一个 **呢？** 引用 **参数** (0) ，下一个 **？** 引用 **参数** (1) 等。
+ 每 **个** 引用 [Parameters](../../reference/ado-api/parameters-collection-ado.md) 集合中的对象。 第一个 **呢？** 引用 **参数** (0) ，下一个 **？** 引用 **参数** (1) 等。
 
  参数引用是可选的，具体取决于存储过程的结构。 如果要调用不定义任何参数的存储过程，则字符串将如下所示：
 
@@ -169,65 +169,65 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="recordset-behavior"></a>记录集行为
  下表列出了使用此提供程序打开的 **记录集** 对象上可用的标准 ADO 方法和属性。
 
- 有关提供程序配置的**记录集**行为的详细信息，请运行[支持](../../../ado/reference/ado-api/supports-method.md)方法，并枚举**记录集**的**Properties**集合，以确定是否存在特定于提供程序的动态属性。
+ 有关提供程序配置的**记录集**行为的详细信息，请运行[支持](../../reference/ado-api/supports-method.md)方法，并枚举**记录集**的**Properties**集合，以确定是否存在特定于提供程序的动态属性。
 
  标准 ADO **记录集** 属性的可用性：
 
 |属性|ForwardOnly|动态|Keyset|静态|
 |--------------|-----------------|-------------|------------|------------|
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
-|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|读/写|读/写|读/写|读/写|
-|[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|只读|只读|只读|
-|[加入书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|读/写|读/写|读/写|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|读/写|读/写|读/写|读/写|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|只读|只读|只读|只读|
-|[筛选器](../../../ado/reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|读/写|读/写|读/写|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|读/写|读/写|读/写|读/写|
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|读/写|读/写|读/写|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|读/写|不可用|只读|只读|
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|读/写|读/写|读/写|
-|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
+|[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
+|[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
+|[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|读/写|读/写|读/写|读/写|
+|[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|只读|只读|只读|只读|
+|[书签](../../reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
+|[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|读/写|读/写|读/写|读/写|
+|[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|读/写|读/写|读/写|读/写|
+|[CursorType](../../reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|
+|[EditMode](../../reference/ado-api/editmode-property.md)|只读|只读|只读|只读|
+|[筛选器](../../reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
+|[LockType](../../reference/ado-api/locktype-property-ado.md)|读/写|读/写|读/写|读/写|
+|[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|读/写|读/写|读/写|读/写|
+|[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|读/写|读/写|读/写|读/写|
+|[PageCount](../../reference/ado-api/pagecount-property-ado.md)|读/写|不可用|只读|只读|
+|[PageSize](../../reference/ado-api/pagesize-property-ado.md)|读/写|读/写|读/写|读/写|
+|[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
+|[Source](../../reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
+|[State](../../reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
+|[Status](../../reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
 
- 当使用 ADO 与适用于 ODBC 的 Microsoft OLE DB Provider 版本1.0 一起使用时， [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 和 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 属性是只写的。
+ 当使用 ADO 与适用于 ODBC 的 Microsoft OLE DB Provider 版本1.0 一起使用时， [AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md) 和 [AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md) 属性是只写的。
 
  标准 ADO **记录集** 方法的可用性：
 
 |方法|ForwardOnly|动态|Keyset|静态|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|是|是|是|是|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|是|是|是|是|
-|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|是|
-|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|是|是|是|
-|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
-|[移动](../../../ado/reference/ado-api/move-method-ado.md)|是|是|是|是|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|是|是|是|是|
-|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|是|是|是|
-|[重新](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|否|否|是|是|
-|[支持](../../../ado/reference/ado-api/supports-method.md)|是|是|是|是|
-|[更新](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
+|[AddNew](../../reference/ado-api/addnew-method-ado.md)|是|是|是|是|
+|[取消](../../reference/ado-api/cancel-method-ado.md)|是|是|是|是|
+|[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|是|是|是|是|
+|[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|是|是|是|是|
+|[克隆](../../reference/ado-api/clone-method-ado.md)|否|否|是|是|
+|[关闭](../../reference/ado-api/close-method-ado.md)|是|是|是|是|
+|[删除](../../reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
+|[GetRows](../../reference/ado-api/getrows-method-ado.md)|是|是|是|是|
+|[移动](../../reference/ado-api/move-method-ado.md)|是|是|是|是|
+|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
+|[MoveLast](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
+|[MoveNext](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
+|[MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
+|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)*|是|是|是|是|
+|[打开](../../reference/ado-api/open-method-ado-recordset.md)|是|是|是|是|
+|[重新](../../reference/ado-api/requery-method.md)|是|是|是|是|
+|[重新同步](../../reference/ado-api/resync-method.md)|否|否|是|是|
+|[支持](../../reference/ado-api/supports-method.md)|是|是|是|是|
+|[更新](../../reference/ado-api/update-method.md)|是|是|是|是|
+|[UpdateBatch](../../reference/ado-api/updatebatch-method.md)|是|是|是|是|
 
  * 不支持 Microsoft Access 数据库。
 
 ## <a name="dynamic-properties"></a>动态属性
- 适用于 ODBC 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的**properties**集合。
+ 适用于 ODBC 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的[连接](../../reference/ado-api/connection-object-ado.md)、[记录集](../../reference/ado-api/recordset-object-ado.md)和[命令](../../reference/ado-api/command-object-ado.md)对象的**properties**集合。
 
- 下表是每个动态属性的 ADO 和 OLE DB 名称的交叉索引。 OLE DB 程序员引用通过术语 "Description" 引用 ADO 属性名称。 可以在 OLE DB 程序员参考中找到有关这些属性的详细信息。 在索引中搜索 OLE DB 属性名称，或者参阅 [附录 C： OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是每个动态属性的 ADO 和 OLE DB 名称的交叉索引。 OLE DB 程序员引用通过术语 "Description" 引用 ADO 属性名称。 可以在 OLE DB 程序员参考中找到有关这些属性的详细信息。 在索引中搜索 OLE DB 属性名称，或者参阅 [附录 C： OLE DB 属性](/previous-versions/windows/desktop/ms723130(v=vs.85))。
 
 ## <a name="connection-dynamic-properties"></a>连接动态属性
  以下属性将添加到 **连接** 对象的 **properties** 集合中。
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |可更新性|DBPROP_UPDATABILITY|
 |使用书签|DBPROP_BOOKMARKS|
 
- 有关适用于 ODBC 的 Microsoft OLE DB 提供程序的特定实现和功能信息的详细信息，请参阅 MSDN 上的 [OLE DB 程序员参考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 或访问数据访问和存储开发人员中心网站。
+ 有关适用于 ODBC 的 Microsoft OLE DB 提供程序的特定实现和功能信息的详细信息，请参阅 MSDN 上的 [OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643(v=vs.85)) 或访问数据访问和存储开发人员中心网站。
 
 ## <a name="see-also"></a>另请参阅
- [命令对象 (ado) ](../../../ado/reference/ado-api/command-object-ado.md) [COMMANDTEXT 属性 (Ado) ](../../../ado/reference/ado-api/commandtext-property-ado.md) [连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md) ado) [ConnectionString 属性 (ado) ](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Execute 方法](../../../ado/reference/ado-api/execute-method-ado-command.md) (Ado 命令) ado 记录 (ado 记录) ado 记录[集 (](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset Object (ADO) ](../../../ado/reference/ado-api/recordset-object-ado.md) [Supports Method](../../../ado/reference/ado-api/supports-method.md) ado[记录](../../../ado/reference/ado-api/open-method-ado-recordset.md)[集)  (](../../../ado/reference/ado-api/parameters-collection-ado.md) [ado) ](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [命令对象 (ado) ](../../reference/ado-api/command-object-ado.md) [COMMANDTEXT 属性 (Ado) ](../../reference/ado-api/commandtext-property-ado.md) [连接对象 (](../../reference/ado-api/connection-object-ado.md) ado) [ConnectionString 属性 (ado) ](../../reference/ado-api/connectionstring-property-ado.md) [Execute 方法](../../reference/ado-api/execute-method-ado-command.md) (Ado 命令) ado 记录 (ado 记录) ado 记录[集 (](../../reference/ado-api/provider-property-ado.md) [Recordset Object (ADO) ](../../reference/ado-api/recordset-object-ado.md) [Supports Method](../../reference/ado-api/supports-method.md) ado[记录](../../reference/ado-api/open-method-ado-recordset.md)[集)  (](../../reference/ado-api/parameters-collection-ado.md) [ado) ](../../reference/ado-api/properties-collection-ado.md)

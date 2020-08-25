@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65f6583206ce48a0f2ee2508e369ce6256b4cdaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f76532e3904da2723f59afbf1f719f7cc212954
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451039"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776326"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 方法示例 (VB)
-此示例使用 [cancel](../../../ado/reference/ado-api/cancel-method-ado.md) 方法来取消对 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象执行的命令（如果连接繁忙）。  
+此示例使用 [cancel](./cancel-method-ado.md) 方法来取消对 [连接](./connection-object-ado.md) 对象执行的命令（如果连接繁忙）。  
   
 ```  
 'BeginCancelVB  
@@ -104,5 +104,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO (取消方法) ](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [ADO (取消方法) ](./cancel-method-ado.md)   
+ [连接对象 (ADO)](./connection-object-ado.md)

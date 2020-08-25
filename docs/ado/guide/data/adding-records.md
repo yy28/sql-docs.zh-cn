@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e38dbfbf8b0a92a0d1a8a2eff1b8b8d4d5374057
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453879"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806711"
 ---
 # <a name="adding-records-to-a-recordset"></a>将记录添加到记录集
 使用 **AddNew** 方法可在现有 **记录集中**创建和初始化新记录。 您可以使用 **支持** 的 **CursorOptionEnum** 值为 **adAddNew** 的方法，验证是否可以将记录添加到当前 **记录集** 对象。
@@ -32,10 +32,10 @@ ms.locfileid: "88453879"
 
  本部分包含以下主题。
 
--   [使用 AddNew 添加记录](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [使用 AddNew 添加记录](./adding-records-using-addnew.md)
 
--   [添加多个字段](../../../ado/guide/data/adding-multiple-fields.md)
+-   [添加多个字段](./adding-multiple-fields.md)
 
--   [确定编辑模式](../../../ado/guide/data/determining-edit-mode.md)
+-   [确定编辑模式](./determining-edit-mode.md)
 
--   [以即时和批处理模式使用 AddNew](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
+-   [以即时和批处理模式使用 AddNew](./using-addnew-in-immediate-and-batch-modes.md)

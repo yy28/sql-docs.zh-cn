@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba9487a8fb3db896a69664d8ea0075627ba457c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8927b2c74b72020485719b9d52e391919e39794c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443039"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773976"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和 Precision 属性示例 (VC++)
-此示例使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  
+此示例使用[NumericScale](./numericscale-property-ado.md)和[Precision](./precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [NumericScale 属性 (ADO) ](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Precision 属性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [NumericScale 属性 (ADO) ](./numericscale-property-ado.md)   
+ [Precision 属性 (ADO)](./precision-property-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79cc1b0b69914e8f2a00c3e8cf4557ac89c54c6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83b78ff80ab428daf616014a316c14e2e3185c27
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451069"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776536"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 属性示例 (VC++)
-此示例使用 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 属性来显示用和（不含30记录缓存）执行的操作的性能差异。  
+此示例使用 [CacheSize](./cachesize-property-ado.md) 属性来显示用和（不含30记录缓存）执行的操作的性能差异。  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -162,5 +162,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CacheSize 属性 (ADO) ](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CacheSize 属性 (ADO) ](./cachesize-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

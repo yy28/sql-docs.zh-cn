@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453859"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806693"
 ---
 # <a name="ado-errors"></a>ADO 错误
-**ErrorValueEnum**常数描述 ADO 错误值。 有关这些枚举常量（包括值）的完整列表，请参阅 [附录 B： ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将介绍一些更有趣的错误，并说明一些可能引发这些错误的特定情况，或解决问题的解决方案。 同时列出了 **ErrorValueEnum** 常量和短的十进制数字。
+**ErrorValueEnum**常数描述 ADO 错误值。 有关这些枚举常量（包括值）的完整列表，请参阅 [附录 B： ADO 错误](../appendixes/appendix-b-ado-errors.md)。 本部分将介绍一些更有趣的错误，并说明一些可能引发这些错误的特定情况，或解决问题的解决方案。 同时列出了 **ErrorValueEnum** 常量和短的十进制数字。
 
 |Number|ErrorValueEnum 常量|说明/可能的原因|
 |------------|-----------------------------|----------------------------------|

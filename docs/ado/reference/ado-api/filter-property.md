@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443679"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775316"
 ---
 # <a name="filter-property"></a>Filter 属性
-指示 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)数据的筛选器。  
+指示 [记录集中](./recordset-object-ado.md)数据的筛选器。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值
 
@@ -34,11 +34,11 @@ ms.locfileid: "88443679"
   
 -   **书签的数组：** 指向 **记录集** 对象中的记录的唯一书签值的数组。  
   
--   [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)值。  
+-   [FilterGroupEnum](./filtergroupenum.md)值。  
   
 ## <a name="remarks"></a>备注
 
-使用 **Filter** 属性可以有选择地将记录 **集** 对象中的记录显示为屏幕。 筛选后的 **记录集** 将成为当前游标。 基于当前 **游标** 返回值的其他属性会受到影响，如 [ABSOLUTEPOSITION 属性 (ado) ](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage 属性 (ado) ](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [RecordCount 属性 (ado) ](../../../ado/reference/ado-api/recordcount-property-ado.md)和 [PageCount 属性 (ado) ](../../../ado/reference/ado-api/pagecount-property-ado.md)。 将 " **筛选器** " 属性设置为特定的新值会将当前记录移动到满足新值的第一条记录。
+使用 **Filter** 属性可以有选择地将记录 **集** 对象中的记录显示为屏幕。 筛选后的 **记录集** 将成为当前游标。 基于当前 **游标** 返回值的其他属性会受到影响，如 [ABSOLUTEPOSITION 属性 (ado) ](./absoluteposition-property-ado.md)、 [AbsolutePage 属性 (ado) ](./absolutepage-property-ado.md)、 [RecordCount 属性 (ado) ](./recordcount-property-ado.md)和 [PageCount 属性 (ado) ](./pagecount-property-ado.md)。 将 " **筛选器** " 属性设置为特定的新值会将当前记录移动到满足新值的第一条记录。
   
 条件字符串由 " *FieldName-Operator-值* " 格式的子句组成 (例如， `"LastName = 'Smith'"`) 。 您可以通过将单个子句与 **AND** (（例如， `"LastName = 'Smith' AND FirstName = 'John'"`) 或 **或** (例如) ）来创建复合子句 `"LastName = 'Smith' OR LastName = 'Jones'"` 。 对于条件字符串，请使用以下准则：
 
@@ -59,9 +59,9 @@ ms.locfileid: "88443679"
   
 -   在 **LIKE** 子句中，可以在模式的开头和结尾使用通配符。 例如，可以使用 `LastName Like '*mit*'`。 或者使用 **LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'`。  
   
- 例如，使用筛选器常量可以在批处理更新模式下更轻松地解决单个记录冲突，只允许查看在上一次 [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md) 方法调用期间受影响的记录。  
+ 例如，使用筛选器常量可以在批处理更新模式下更轻松地解决单个记录冲突，只允许查看在上一次 [UpdateBatch 方法](./updatebatch-method.md) 方法调用期间受影响的记录。  
   
-由于与基础数据发生冲突，设置 **Filter** 属性本身可能会失败。 例如，如果另一个用户已删除记录，则可能发生此失败。 在这种情况下，提供程序会将警告 [ (ADO) ](../../../ado/reference/ado-api/errors-collection-ado.md) 收集返回到错误集合，但不会暂停程序执行。 仅当所有请求的记录存在冲突时，才会发生运行时错误。 使用 [Status 属性 (ADO Recordset) ](../../../ado/reference/ado-api/status-property-ado-recordset.md) 属性可查找存在冲突的记录。  
+由于与基础数据发生冲突，设置 **Filter** 属性本身可能会失败。 例如，如果另一个用户已删除记录，则可能发生此失败。 在这种情况下，提供程序会将警告 [ (ADO) ](./errors-collection-ado.md) 收集返回到错误集合，但不会暂停程序执行。 仅当所有请求的记录存在冲突时，才会发生运行时错误。 使用 [Status 属性 (ADO Recordset) ](./status-property-ado-recordset.md) 属性可查找存在冲突的记录。  
   
 将 **Filter** 属性设置为长度为零的字符串 ( "" ) 与使用 **adFilterNone** 常量的效果相同。
   
@@ -74,7 +74,7 @@ ms.locfileid: "88443679"
 
 此配置在运行时产生错误。 但是， `rs.Filter = "C=2"` 对同一字段应用时将不会产生任何错误。 并筛选出当前记录集的字段。
 
-有关书签值的说明，请参阅 [Bookmark 属性 (ADO) ](../../../ado/reference/ado-api/bookmark-property-ado.md) 属性，可在其中生成用于筛选器属性的数组。
+有关书签值的说明，请参阅 [Bookmark 属性 (ADO) ](./bookmark-property-ado.md) 属性，可在其中生成用于筛选器属性的数组。
 
 只有条件字符串形式的筛选器会影响持久 **记录集**的内容。 条件字符串的一个示例是 `OrderDate > '12/31/1999'` 。 使用书签数组或 **FilterGroupEnum**中的值创建的筛选器不会影响持久 **记录集**的内容。 这些规则适用于使用客户端或服务器端游标创建的记录集。
   
@@ -94,17 +94,17 @@ ms.locfileid: "88443679"
 |各种|非键|单个键|多个键|
 |-|--------------|----------------|-------------------|
 |**非键**|+|+|+|
-|**单个键**|+|-|空值|
-|**多个键**|+|空值|+|
+|**单个键**|+|-|不适用|
+|**多个键**|+|不适用|+|
 |||||
   
 ## <a name="applies-to"></a>适用于
 
-[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅
 
-[ (VB) ](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
- 的 Filter 和 RecordCount 属性示例[ (VC + +) 的 Filter 和 RecordCount 属性示例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
-[ADO) ](../../../ado/reference/ado-api/clear-method-ado.md) 
- (Clear 方法[优化属性-动态 (ADO) ](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[ (VB) ](./filter-and-recordcount-properties-example-vb.md) 
+ 的 Filter 和 RecordCount 属性示例[ (VC + +) 的 Filter 和 RecordCount 属性示例](./filter-and-recordcount-properties-example-vc.md) 
+[ADO) ](./clear-method-ado.md) 
+ (Clear 方法[优化属性-动态 (ADO) ](./optimize-property-dynamic-ado.md)

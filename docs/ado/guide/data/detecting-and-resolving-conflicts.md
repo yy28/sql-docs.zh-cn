@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453509"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806911"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果在即时模式下处理记录集，则可能会有很少的并发问题发生。 另一方面，如果应用程序使用批处理模式更新，则可能会有很好的机会，让一个用户在另一个用户编辑相同记录所做的更改保存之前更改记录。 在这种情况下，你将希望应用程序妥善处理冲突。 你可能希望最后一位用户将更新发送到服务器 "wins"。 或者，您可能想让最近的用户通过在两个冲突值之间进行选择来决定哪个更新的优先级。  
@@ -114,7 +114,7 @@ ms.locfileid: "88453509"
   
  您可以使用当前记录或特定字段的 Status 属性来确定发生了哪种冲突。  
   
- 有关错误处理的详细信息，请参阅 [错误处理](../../../ado/guide/data/error-handling.md)。  
+ 有关错误处理的详细信息，请参阅 [错误处理](./error-handling.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [批处理模式](../../../ado/guide/data/batch-mode.md)
+ [批处理模式](./batch-mode.md)

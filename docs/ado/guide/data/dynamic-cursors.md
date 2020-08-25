@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6904bc0b3459f25af955d804ed4764ae57238b90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453469"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806162"
 ---
 # <a name="dynamic-cursors"></a>动态游标
 动态游标检测对结果集中的行所做的所有更改，而不考虑更改是发生在游标内部还是游标外的其他用户。 所有用户发出的所有 insert、update 和 delete 语句均通过游标可见。 动态游标可以检测在打开游标后对结果集中的行、顺序和值所做的任何更改。 除非将游标事务隔离级别设置为 "未提交" ) ，否则在游标外进行的更新将不可见，除非将它们提交 (。  
@@ -29,6 +29,6 @@ ms.locfileid: "88453469"
  如果你的应用程序必须检测其他用户进行的所有并发更新，则动态游标是一个不错的选择。 使用 **AdOpenDynamic CursorTypeEnum** 指示要在 ADO 中使用动态游标。  
   
 ## <a name="see-also"></a>另请参阅  
- [只进游标](../../../ado/guide/data/forward-only-cursors.md)   
- [静态游标](../../../ado/guide/data/static-cursors.md)   
- [键集游标](../../../ado/guide/data/keyset-cursors.md)
+ [只进游标](./forward-only-cursors.md)   
+ [静态游标](./static-cursors.md)   
+ [键集游标](./keyset-cursors.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 285fba254c025268abc9ea93f6d6e53e39a87aca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453909"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806728"
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 URL
 URL 指定本地计算机或联网计算机上存储的目标位置。 目标可以是文件、目录、HTML 页面、图像、程序等。  
@@ -46,22 +46,22 @@ URL 指定本地计算机或联网计算机上存储的目标位置。 目标可
  如果包含，则 *资源* 是目标，通常为文件的名称。 它可以是一个 *简单文件，* 其中包含单个二进制字节流或 *结构化文档，* 其中包含一个或多个存储和字节流。  
   
 ## <a name="url-scheme-registration"></a>URL 方案注册  
- 如果提供程序支持 Url，则提供程序将注册一个或多个 URL 方案。 注册意味着使用方案的任何 Url 都将自动调用已注册的提供程序。 例如，将 *http* 方案注册到 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 ADO 假定所有以 "http" 为前缀的 Url 表示要与 Internet 发布提供程序一起使用的 Web 文件夹或文件。 有关提供程序注册的方案的信息，请参阅提供程序文档。  
+ 如果提供程序支持 Url，则提供程序将注册一个或多个 URL 方案。 注册意味着使用方案的任何 Url 都将自动调用已注册的提供程序。 例如，将 *http* 方案注册到 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 ADO 假定所有以 "http" 为前缀的 Url 表示要与 Internet 发布提供程序一起使用的 Web 文件夹或文件。 有关提供程序注册的方案的信息，请参阅提供程序文档。  
   
 ## <a name="defining-context-with-a-url"></a>使用 URL 定义上下文  
- [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象表示的打开连接的一个功能是，将后续操作限制为该连接所表示的数据源。 也就是说，该连接定义了用于后续操作的上下文。  
+ [连接](../../reference/ado-api/connection-object-ado.md)对象表示的打开连接的一个功能是，将后续操作限制为该连接所表示的数据源。 也就是说，该连接定义了用于后续操作的上下文。  
   
- 使用 ADO 2.7 或更高版本时，绝对 URL 还可以定义上下文。 例如，使用绝对 URL 打开 [记录](../../../ado/reference/ado-api/record-object-ado.md) 对象时，将隐式创建一个 **连接** 对象来表示由 URL 指定的资源。  
+ 使用 ADO 2.7 或更高版本时，绝对 URL 还可以定义上下文。 例如，使用绝对 URL 打开 [记录](../../reference/ado-api/record-object-ado.md) 对象时，将隐式创建一个 **连接** 对象来表示由 URL 指定的资源。  
   
- 可在**Record**对象[Open](../../../ado/reference/ado-api/open-method-ado-record.md)方法的*ActiveConnection*参数中指定定义上下文的绝对 URL。 绝对 URL 还可以指定为 **连接** 对象 [打开](../../../ado/reference/ado-api/open-method-ado-connection.md) 方法 *CONNECTIONSTRING* 参数中的 "URL =" 关键字的值，并且 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象 [打开](../../../ado/reference/ado-api/open-method-ado-recordset.md) 方法 *ActiveConnection* 参数。  
+ 可在**Record**对象[Open](../../reference/ado-api/open-method-ado-record.md)方法的*ActiveConnection*参数中指定定义上下文的绝对 URL。 绝对 URL 还可以指定为 **连接** 对象 [打开](../../reference/ado-api/open-method-ado-connection.md) 方法 *CONNECTIONSTRING* 参数中的 "URL =" 关键字的值，并且 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象 [打开](../../reference/ado-api/open-method-ado-recordset.md) 方法 *ActiveConnection* 参数。  
   
  还可以通过打开表示目录的 **记录** 或 **记录集** 对象来定义上下文，因为这些对象已具有指定上下文的隐式或显式声明的 **连接** 对象。  
   
 ## <a name="scoped-operations"></a>作用域操作  
- 上下文还定义作用域，即，可参与后续操作的目录及其子目录。 **Record**对象具有多个作用域方法，这些方法对目录及其所有子目录进行操作。 这些方法包括 [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)和 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)。  
+ 上下文还定义作用域，即，可参与后续操作的目录及其子目录。 **Record**对象具有多个作用域方法，这些方法对目录及其所有子目录进行操作。 这些方法包括 [CopyRecord](../../reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../reference/ado-api/moverecord-method-ado.md)和 [DeleteRecord](../../reference/ado-api/deleterecord-method-ado.md)。  
   
 ## <a name="relative-urls-as-command-text"></a>相对 Url 作为命令文本  
- 您可以通过在**连接**对象的[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法的*CommandText*参数中键入字符串，并在**Recordset**对象的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法的*source*参数中键入字符串，来指定要对数据源执行的命令。  
+ 您可以通过在**连接**对象的[Execute](../../reference/ado-api/execute-method-ado-connection.md)方法的*CommandText*参数中键入字符串，并在**Recordset**对象的[Open](../../reference/ado-api/open-method-ado-recordset.md)方法的*source*参数中键入字符串，来指定要对数据源执行的命令。  
   
  可以在 *CommandText* 或 *Source* 参数中指定相对 URL。 相对 URL 并不实际表示一个命令，如 SQL 命令;它仅指定参数。 活动连接的上下文必须是绝对 URL，并且 *选项* 参数必须设置为 **adCmdTableDirect**。  
   
@@ -86,9 +86,9 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 提供程序提供的 URL 方案  
  完全限定 URL 的主要部分是用于访问由 URL 的其余部分标识的资源的 *方案* 。 例如 HTTP (超文本传输协议) 和 FTP (文件传输协议) 。  
   
- ADO 支持可识别自己的 URL 方案 OLE DB 提供程序。 例如， [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*（* 访问 "已发布的" Windows 2000 文件）可以识别现有的 HTTP 方案。  
+ ADO 支持可识别自己的 URL 方案 OLE DB 提供程序。 例如， [用于 Internet 发布的 Microsoft OLE DB 提供程序](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*（* 访问 "已发布的" Windows 2000 文件）可以识别现有的 HTTP 方案。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ (ADO 记录对象) ](../../../ado/reference/ado-api/record-object-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ADO) 的连接对象 (](../../reference/ado-api/connection-object-ado.md)   
+ [ (ADO 记录对象) ](../../reference/ado-api/record-object-ado.md)   
+ [记录集对象 (ADO)](../../reference/ado-api/recordset-object-ado.md)

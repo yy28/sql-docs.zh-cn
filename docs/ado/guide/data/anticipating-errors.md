@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453729"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806410"
 ---
 # <a name="anticipating-errors"></a>预测错误
 错误防护至少与错误处理一样重要。 最后一节包含应用程序可用于帮助减少错误发生次数的简短注意事项列表。  
@@ -29,7 +29,7 @@ ms.locfileid: "88453729"
   
 -   任何接受来自用户的数据的程序都必须包含在将数据发送到数据存储之前验证这些数据的代码。 你不能依赖于数据存储、提供程序、ADO 甚至你的编程语言来向你通知问题。 必须检查用户输入的每个字节，确保数据对于其字段是正确的类型，并且必填字段不为空。  
   
- 在尝试将任何数据写入数据存储之前，请检查数据。 要执行此操作，最简单的方法是处理 **WillMove** 事件或 **WillUpdateRecordset** 事件。 有关处理 ADO 事件的更完整的讨论，请参阅 [处理 Ado 事件](../../../ado/guide/data/handling-ado-events.md)。  
+ 在尝试将任何数据写入数据存储之前，请检查数据。 要执行此操作，最简单的方法是处理 **WillMove** 事件或 **WillUpdateRecordset** 事件。 有关处理 ADO 事件的更完整的讨论，请参阅 [处理 Ado 事件](./handling-ado-events.md)。  
   
  在尝试移动记录指针之前，请确保 **recordset** 对象不在 **记录集** 的边界之外。 如果尝试在**EOF**为 true 时执行**MoveNext** ，或在**BOF**为 true 时进行**MovePrev** ，则会发生错误。 如果在**EOF**和**BOF**都为 True 时执行任何**移动**方法，则将生成错误。  
   

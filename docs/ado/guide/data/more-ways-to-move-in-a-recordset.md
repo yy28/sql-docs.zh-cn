@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453159"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805820"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>在记录集中移动的更多方法
-以下四个方法用于在 **记录集中**移动或滚动记录： [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。  (这些方法中的某些方法对于只进游标不可用。 )   
+以下四个方法用于在 **记录集中**移动或滚动记录： [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。  (这些方法中的某些方法对于只进游标不可用。 )   
   
  **MoveFirst** 将当前记录位置更改为 **记录集中**的第一条记录。 **MoveLast** 将当前记录位置更改为 **记录集中**的最后一条记录。 若要使用 **MoveFirst** 或 **MoveLast**， **Recordset** 对象必须支持书签或后向光标移动;否则，此方法调用将生成错误。  
   

@@ -1,6 +1,6 @@
 ---
 title: 使用临时数据库
-description: SQL Server 并行数据仓库（PDW）在加载过程中使用临时数据库临时存储数据。
+description: SQL Server 并行数据仓库 (PDW) 使用临时数据库在加载过程中暂时存储数据。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,21 +10,21 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400283"
 ---
-# <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>在并行数据仓库（PDW）中使用临时数据库
-SQL Server 并行数据仓库（PDW）在加载过程中使用临时数据库临时存储数据。 默认情况下，SQL Server PDW 使用目标数据库作为临时数据库，这可能会导致表碎片。 若要减少表碎片，可以创建用户定义的临时数据库。 或者，如果不考虑从负载故障中回滚，则可以使用 fastappend 加载模式来提高性能，方法是跳过临时表并直接加载到目标表中。  
+# <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>使用并行数据仓库中的临时数据库 (PDW) 
+SQL Server 并行数据仓库 (PDW) 使用临时数据库在加载过程中暂时存储数据。 默认情况下，SQL Server PDW 使用目标数据库作为临时数据库，这可能会导致表碎片。 若要减少表碎片，可以创建用户定义的临时数据库。 或者，如果不考虑从负载故障中回滚，则可以使用 fastappend 加载模式来提高性能，方法是跳过临时表并直接加载到目标表中。  
   
 ## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>临时数据库基础知识  
 *临时数据库*是用户创建的 PDW 数据库，用于在将数据加载到设备时暂时存储数据。 如果为负载指定了临时数据库，则设备首先将数据复制到临时数据库，然后将临时数据库中的临时表中的数据复制到目标数据库中的永久表中。  
   
 如果没有为负载指定暂存数据库，SQL ServerPDW 将在目标数据库中创建临时表，并使用这些表存储加载的数据，然后将加载的数据插入到永久目标表中。  
   
-当负载使用*fastappend 模式*时，SQL ServerPDW 将跳过使用临时表，并将数据直接追加到目标表。 对于从应用程序的角度而言，将数据加载到作为临时表的表中的 ELT 方案，fastappend 模式将提高其负载性能。 例如，ELT 进程可以将数据加载到临时表中，通过清除和 duping 来处理数据，然后将数据插入到目标事实数据表中。 在这种情况下，PDW 在将数据插入到应用程序的临时表之前，不需要先将数据加载到内部临时表中。 Fastappend 模式避免了额外的负载步骤，从而显著提高了负载性能。 若要使用 fastappend 模式，你必须使用多事务模式，这意味着从失败或中止的负载中进行的恢复必须由你自己的加载进程处理。  
+当负载使用 *fastappend 模式*时，SQL ServerPDW 将跳过使用临时表，并将数据直接追加到目标表。 对于从应用程序的角度而言，将数据加载到作为临时表的表中的 ELT 方案，fastappend 模式将提高其负载性能。 例如，ELT 进程可以将数据加载到临时表中，通过清除和 duping 来处理数据，然后将数据插入到目标事实数据表中。 在这种情况下，PDW 在将数据插入到应用程序的临时表之前，不需要先将数据加载到内部临时表中。 Fastappend 模式避免了额外的负载步骤，从而显著提高了负载性能。 若要使用 fastappend 模式，你必须使用多事务模式，这意味着从失败或中止的负载中进行的恢复必须由你自己的加载进程处理。  
   
 **临时数据库的优点**  
   
@@ -39,7 +39,7 @@ SQL Server 并行数据仓库（PDW）在加载过程中使用临时数据库临
 -   对于加载到行存储聚集索引中的临时表，临时表是一个行存储聚集索引。  
   
 ## <a name="permissions"></a><a name="Permissions"></a>权限  
-需要对临时数据库具有 CREATE 权限（用于创建临时表）。 
+需要创建权限 (以便在临时数据库中创建临时表) 。 
 
 <!-- MISSING LINKS
 
@@ -51,7 +51,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
 1.  每个设备只能有一个临时数据库。 所有目标数据库的所有加载作业都可以共享临时数据库。  
   
-2.  临时数据库的大小是特定于客户的。 最初，在首次填充设备时，临时数据库应足够大以容纳初始加载作业。 由于多个加载可能会并发发生，因此这些加载作业很大。 初始加载作业完成并且系统投入生产后，每个加载作业的大小可能较小。 当负载较小时，可以减小暂存数据库的大小，以适应较小的负载大小。 若要减小其大小，可以删除临时数据库，并使用较小的分配重新创建它，或者可以使用[ALTER database](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)语句。  
+2.  临时数据库的大小是特定于客户的。 最初，在首次填充设备时，临时数据库应足够大以容纳初始加载作业。 由于多个加载可能会并发发生，因此这些加载作业很大。 初始加载作业完成并且系统投入生产后，每个加载作业的大小可能较小。 当负载较小时，可以减小暂存数据库的大小，以适应较小的负载大小。 若要减小其大小，可以删除临时数据库，并使用较小的分配重新创建它，或者可以使用 [ALTER database](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 语句。  
   
     创建临时数据库时，请使用以下准则。  
   

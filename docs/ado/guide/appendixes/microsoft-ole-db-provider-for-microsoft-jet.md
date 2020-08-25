@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454069"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806616"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 的 microsoft OLE DB 提供程序概述
 Microsoft Jet 的 OLE DB 提供程序允许 ADO 访问 Microsoft Jet 数据库。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到该提供程序，请将[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性的*provider*参数设置为以下内容：
+ 若要连接到该提供程序，请将[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的*provider*参数设置为以下属性：
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- 读取 [提供程序](../../../ado/reference/ado-api/provider-property-ado.md) 属性也会返回此字符串。
+ 读取 [提供程序](../../reference/ado-api/provider-property-ado.md) 属性也会返回此字符串。
 
 ## <a name="typical-connection-string"></a>典型连接字符串
  此提供程序的典型连接字符串是：
@@ -54,7 +54,7 @@ Microsoft.Jet.OLEDB.4.0
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。
 
 ## <a name="provider-specific-connection-parameters"></a>特定于提供程序的连接参数
- Microsoft Jet 的 OLE DB 提供程序除了支持 ADO 定义的动态属性以外，还支持多个特定于提供程序的动态属性。 与所有其他**连接**参数一样，可以使用**连接**对象的**Properties**集合或连接字符串的一部分来设置这些参数。
+ 除 ADO 定义的属性外，Microsoft Jet 的 OLE DB 提供程序还支持多个特定于提供程序的动态属性。 与所有其他**连接**参数一样，可以使用**连接**对象的**Properties**集合或连接字符串的一部分来设置这些参数。
 
  下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
 
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB：加密数据库 (DBPROP_JETOLEDB_ENCRYPTDATABASE) |指示是否应对压缩的数据库进行加密。 如果未设置此属性，则在原始数据库也已加密的情况下，压缩的数据库将被加密。|
 |Jet OLEDB：引擎类型 (DBPROP_JETOLEDB_ENGINE) |指示用于访问当前数据存储的存储引擎。|
 |Jet OLEDB：独占异步延迟 (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY) |表示以毫秒为单位的最大时间长度，当数据库以独占方式打开时，Jet 可以将异步写入延迟到磁盘中。<br /><br /> 除非 **JET OLEDB：刷新事务超时** 设置为0，否则将忽略此属性。|
-|Jet OLEDB：刷新事务超时 (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT) |指示在缓存中存储的异步写入数据实际写入磁盘之前要等待的时间量。 此设置将替代 " **JET oledb：共享异步延迟** " 和 " **Jet Oledb：独占异步延迟**" 的值。|
+|Jet OLEDB：刷新事务超时 (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT) |指示在缓存中存储用于异步写入的数据写入磁盘之前要等待的时间量。 此设置将替代 " **JET oledb：共享异步延迟** " 和 " **Jet Oledb：独占异步延迟**" 的值。|
 |Jet OLEDB：全局批量事务 (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS) |指示是否对 SQL 大容量事务进行事务处理。|
 |Jet OLEDB：全局部分大容量 Ops (DBPROP_JETOLEDB_GLOBALBULKPARTIAL) |指示用于打开数据库的密码。|
 |Jet OLEDB：隐式提交同步 (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC) |指示是否在同步或异步模式下编写在内部隐式事务中所做的更改。|
@@ -106,16 +106,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB：存储查询 (DBPROP_JETOLEDB_STOREDQUERY) |指示是否应将命令文本解释为存储查询而不是 SQL 命令。|
 |Jet OLEDB：验证 Set (DBPROP_JETOLEDB_VALIDATEONSET 的规则) |指示在设置列数据或将更改提交到数据库时，是否计算 Jet 验证规则。|
 
- 默认情况下，Microsoft Jet 的 OLE DB 提供程序在读/写模式下打开 Microsoft Jet 数据库。 若要以只读模式打开数据库，请将 ADO**连接**对象的[mode](../../../ado/reference/ado-api/mode-property-ado.md)属性设置为**adModeRead**。
+ 默认情况下，Microsoft Jet 的 OLE DB 提供程序在读/写模式下打开 Microsoft Jet 数据库。 若要以只读模式打开数据库，请将 ADO**连接**对象的[mode](../../reference/ado-api/mode-property-ado.md)属性设置为**adModeRead**。
 
 ## <a name="command-object-usage"></a>命令对象使用情况
- [Command](../../../ado/reference/ado-api/command-object-ado.md)对象中的命令文本使用 MICROSOFT Jet SQL 方言。 您可以在命令文本中指定返回行的查询、操作查询和表名称;但是，不支持存储过程，且不应指定。
+ [Command](../../reference/ado-api/command-object-ado.md)对象中的命令文本使用 MICROSOFT Jet SQL 方言。 您可以在命令文本中指定返回行的查询、操作查询和表名称;但是，不支持存储过程，且不应指定。
 
 ## <a name="recordset-behavior"></a>记录集行为
- Microsoft Jet 数据库引擎不支持动态游标。 因此，Microsoft Jet 的 OLE DB 提供程序不支持 **adLockDynamic** 游标类型。 请求动态游标时，提供程序将返回键集游标并重置 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 属性，以指示返回的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的类型。 此外，如果请求可更新的 **记录集** (**LockType** 为 **adLockOptimistic**、 **adLockBatchOptimistic**或 **adLockPessimistic**) 提供程序也将返回键集游标并重置 **CursorType** 属性。
+ Microsoft Jet 数据库引擎不支持动态游标。 因此，Microsoft Jet 的 OLE DB 提供程序不支持 **adLockDynamic** 游标类型。 请求动态游标时，提供程序将返回键集游标并重置 [CursorType](../../reference/ado-api/cursortype-property-ado.md) 属性，以指示返回的 [记录集](../../reference/ado-api/recordset-object-ado.md) 的类型。 此外，如果请求可更新的 **记录集** (**LockType** 为 **adLockOptimistic**、 **adLockBatchOptimistic**或 **adLockPessimistic**) 提供程序也将返回键集游标并重置 **CursorType** 属性。
 
 ## <a name="dynamic-properties"></a>动态属性
- 用于 Microsoft Jet 的 OLE DB 提供程序将多个动态属性插入未打开的[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的**properties**集合。
+ 用于 Microsoft Jet 的 OLE DB 提供程序将多个动态属性插入未打开的[连接](../../reference/ado-api/connection-object-ado.md)、[记录集](../../reference/ado-api/recordset-object-ado.md)和[命令](../../reference/ado-api/command-object-ado.md)对象的**properties**集合。
 
  下表是每个动态属性的 ADO 和 OLE DB 名称的交叉索引。 OLE DB 程序员引用通过术语 "Description" 引用 ADO 属性名称。 可以在 OLE DB 程序员参考中找到有关这些属性的详细信息。
 
@@ -336,4 +336,4 @@ Microsoft.Jet.OLEDB.4.0
 |可更新性|DBPROP_UPDATABILITY|
 |使用书签|DBPROP_BOOKMARKS|
 
- 有关适用于 Microsoft Jet 的 OLE DB 提供程序的具体实现详细信息和功能信息，请参阅 OLE DB 文档中的 [Jet 提供程序](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) 。
+ 有关适用于 Microsoft Jet 的 OLE DB 提供程序的具体实现详细信息和功能信息，请参阅 OLE DB 文档中的 [Jet 提供程序](/previous-versions/windows/desktop/ms722791(v=vs.85)) 。

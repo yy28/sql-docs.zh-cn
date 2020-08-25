@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453139"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805777"
 ---
 # <a name="namespaces"></a>命名空间
 ADO 中的 XML 持久性格式使用以下四个命名空间。  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  用户可以将此名称定义为任何名称，只要该名称在整个 XML 文档中始终使用。 ADO 始终写出 "s"、"rs"、"dt" 和 "z"，但这些前缀名称未硬编码为加载组件。  
   
 ## <a name="see-also"></a>另请参阅  
- [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保留记录](./persisting-records-in-xml-format.md)

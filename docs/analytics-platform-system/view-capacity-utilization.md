@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: c2dafa2df09bb8141fca8c30a80c6471ffe1e060
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399451"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>查看分析平台系统中的容量利用率
 本主题说明如何查看 SQL Server PDW 设备中的容量利用率。  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>使用管理控制台查看容量利用率  
-若要查看所使用的空间，请打开管理控制台，然后单击 "**存储**" 选项卡。PDW 区域有一个 "**存储**" 选项卡。  
+若要查看所使用的空间，请打开管理控制台，然后单击 " **存储** " 选项卡。PDW 区域有一个 " **存储** " 选项卡。  
   
 ![PDW 管理控制台存储](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
@@ -29,7 +29,7 @@ ms.locfileid: "74399451"
   
 如果卷中的可用空间低于30%，SQL Server PDW 将在[sys. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)中生成一个**警告**警报。  此警报将保留，直到可用空间可用为止。  
   
-如果卷内的可用空间降到10% 下面，SQL Server PDW 会生成一个**严重**警报。 这被视为重要，因为如果查询导致数据库展开，查询可能会失败。  
+如果卷内的可用空间降到10% 下面，SQL Server PDW 会生成一个 **严重** 警报。 这被视为重要，因为如果查询导致数据库展开，查询可能会失败。  
   
 若要检索卷的使用情况，请参阅以下示例。  
   

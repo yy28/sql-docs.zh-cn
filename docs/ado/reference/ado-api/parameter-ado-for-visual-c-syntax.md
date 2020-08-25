@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d80c216e6e62a523c26c5b9690a8135163873904
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c225103bb02debecfbcc81776f056ff76672f9b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442839"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773486"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>参数（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  
@@ -52,4 +52,4 @@ put_Value(VARIANT val)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter 对象](./parameter-object.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8d13a3d1ce8db32e01e20608dd1d7b3b3fb5be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442259"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777506"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 方法和 Index 属性示例 (VC++)
-此示例将 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象的 [Seek](../../../ado/reference/ado-api/seek-method.md) 方法和 [Index](../../../ado/reference/ado-api/index-property.md) 属性与给定的 ***雇员 ID***结合使用，以便在 Nwind 数据库的 ***Employees*** 表中查找雇员的姓名。  
+此示例将 [记录集](./recordset-object-ado.md) 对象的 [Seek](./seek-method.md) 方法和 [Index](./index-property.md) 属性与给定的 ***雇员 ID***结合使用，以便在 Nwind 数据库的 ***Employees*** 表中查找雇员的姓名。  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -227,6 +227,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Index 属性](../../../ado/reference/ado-api/index-property.md)   
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek 方法](../../../ado/reference/ado-api/seek-method.md)
+ [Index 属性](./index-property.md)   
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [Seek 方法](./seek-method.md)

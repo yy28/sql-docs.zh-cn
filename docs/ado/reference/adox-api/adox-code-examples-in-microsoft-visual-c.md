@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e316cb14da5b10e7eb0525c621c5ffaa67ec53e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85c363b9b5daadb2e223a04b0d4f09356adf6e10
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440619"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777736"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ 中的 ADOX 代码示例
 这些主题提供了可帮助你了解如何使用 ADOX 的示例代码。 使用 Microsoft Visual C++ 编写所有代码示例。  
@@ -30,54 +30,54 @@ ms.locfileid: "88440619"
   
 ## <a name="methods"></a>方法  
   
--   [列和表的 Append 方法、Name 属性示例 (VC++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [列和表的 Append 方法、Name 属性示例 (VC++)](./columns-and-tables-append-methods-name-property-example-vc.md)  
   
--   [连接的 Close 方法、表 Type 属性示例 (VC++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [连接的 Close 方法、表 Type 属性示例 (VC++)](./connection-close-method-table-type-property-example-vc.md)  
   
--   [Create 方法示例 (VC++)](../../../ado/reference/adox-api/create-method-example-vc.md)  
+-   [Create 方法示例 (VC++)](./create-method-example-vc.md)  
   
--   [GetObjectOwner 和 SetObjectOwner 方法示例 (VC++)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vc.md)  
+-   [GetObjectOwner 和 SetObjectOwner 方法示例 (VC++)](./getobjectowner-and-setobjectowner-methods-example-vc.md)  
   
--   [GetPermissions 和 SetPermissions 方法示例 (VC++)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vc.md)  
+-   [GetPermissions 和 SetPermissions 方法示例 (VC++)](./getpermissions-and-setpermissions-methods-example-vc.md)  
   
--   [组和用户 Append、ChangePassword 方法示例 (VC++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)  
+-   [组和用户 Append、ChangePassword 方法示例 (VC++)](./groups-and-users-append-changepassword-methods-example-vc.md)  
   
--   [索引 Append 方法示例 (VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
+-   [索引 Append 方法示例 (VC++)](./indexes-append-method-example-vc.md)  
   
--   [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VC + +) ](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VC + +) ](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
   
--   [Attributes 属性示例 (VC++)](../../../ado/reference/adox-api/attributes-property-example-vc.md)  
+-   [Attributes 属性示例 (VC++)](./attributes-property-example-vc.md)  
   
--   [目录 ActiveConnection 属性示例 (VC++)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vc.md)  
+-   [目录 ActiveConnection 属性示例 (VC++)](./catalog-activeconnection-property-example-vc.md)  
   
--   [Clustered 属性示例 (VC++)](../../../ado/reference/adox-api/clustered-property-example-vc.md)  
+-   [Clustered 属性示例 (VC++)](./clustered-property-example-vc.md)  
   
--   [Command 和 CommandText 属性示例 (VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
+-   [Command 和 CommandText 属性示例 (VC++)](./command-and-commandtext-properties-example-vc.md)  
   
--   [Command 属性，Parameters Collection Example (VC + +) ](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command 属性，Parameters Collection Example (VC + +) ](./parameters-collection-command-property-example-vc.md)  
   
--   [DateCreated 和 DateModified 属性示例 (VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
+-   [DateCreated 和 DateModified 属性示例 (VC++)](./datecreated-and-datemodified-properties-example-vc.md)  
   
--   [DefinedSize 属性示例 (VC++)](../../../ado/reference/adox-api/definedsize-property-example-vc.md)  
+-   [DefinedSize 属性示例 (VC++)](./definedsize-property-example-vc.md)  
   
--   [DeleteRule 属性示例 (VC++)](../../../ado/reference/adox-api/deleterule-property-example-vc.md)  
+-   [DeleteRule 属性示例 (VC++)](./deleterule-property-example-vc.md)  
   
--   [IndexNulls 属性示例 (VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
+-   [IndexNulls 属性示例 (VC++)](./indexnulls-property-example-vc.md)  
   
--   [键类型、RelatedColumn、RelatedTable、UpdateRule 属性、键 Append 方法示例 (VC + +) ](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [键类型、RelatedColumn、RelatedTable、UpdateRule 属性、键 Append 方法示例 (VC + +) ](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [名称属性、列和表追加方法示例 (VC + +) ](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [名称属性、列和表追加方法示例 (VC + +) ](./columns-and-tables-append-methods-name-property-example-vc.md)  
   
--   [NumericScale 和 Precision 属性示例 (VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
+-   [NumericScale 和 Precision 属性示例 (VC++)](./numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
--   [ParentCatalog 属性示例 (VC++)](../../../ado/reference/adox-api/parentcatalog-property-example-vc.md)  
+-   [ParentCatalog 属性示例 (VC++)](./parentcatalog-property-example-vc.md)  
   
--   [PrimaryKey 和 Unique 属性示例 (VC++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
+-   [PrimaryKey 和 Unique 属性示例 (VC++)](./primarykey-and-unique-properties-example-vc.md)  
   
--   [表类型属性、连接关闭方法示例 (VC + +) ](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [表类型属性、连接关闭方法示例 (VC + +) ](./connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>集合  
   
--   [参数集合、Command 属性示例 (VC++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)
+-   [参数集合、Command 属性示例 (VC++)](./parameters-collection-command-property-example-vc.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ede3bc72d9270e1a74fa0ced3abc5cd519452187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e3c576f5cd06b5fe075ca60a06ad1cc8877c49b4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442939"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773746"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法示例 (VB)
-此示例使用 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 方法来显示 ***Pubs*** 数据库中每个表的名称和类型。  
+此示例使用 [OpenSchema](./openschema-method.md) 方法来显示 ***Pubs*** 数据库中每个表的名称和类型。  
   
 ```  
 'BeginOpenSchemaVB  
@@ -86,5 +86,5 @@ Attribute VB_Name = "OpenSchema"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [OpenSchema 方法](./openschema-method.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

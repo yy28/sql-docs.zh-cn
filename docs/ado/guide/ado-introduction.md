@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 861b170e55c37f333f09dc8168c35ad7088d17fa
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355433"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805493"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概述和优势
 ActiveX 数据对象 (ADO) 是用于 OLE DB 的高级、易于使用的界面。 OLE DB 是对各种数据存储的低级别、高性能的接口。 ADO 和 OLE DB 都可以使用关系 (表格) 和非关系 (层次结构或流) 数据。
@@ -27,14 +27,14 @@ ActiveX 数据对象 (ADO) 是用于 OLE DB 的高级、易于使用的界面。
 
  本部分包含以下主题。
 
--   [ADO 历史记录](../../ado/guide/ado-history.md)
+-   [ADO 历史记录](./ado-history.md)
 
--   [使用 ADO 文档的先决条件](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [使用 ADO 文档的先决条件](./prerequisites-for-using-the-ado-documentation.md)
 
--   [引用 ADO 库](../../ado/guide/referencing-the-ado-libraries.md)
+-   [引用 ADO 库](./referencing-the-ado-libraries.md)
 
--   [ADO 任务表](../../ado/guide/ado-task-table.md)
+-   [ADO 任务表](./ado-task-table.md)
 
--   [ADO 技术表](../../ado/guide/ado-technology-table.md)
+-   [ADO 技术表](./ado-technology-table.md)
 
--   [ADO 安全设计问题](../../ado/guide/ado-security-design-issues.md)
+-   [ADO 安全设计问题](./ado-security-design-issues.md)

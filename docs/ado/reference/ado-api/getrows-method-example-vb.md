@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4f57460813cc72e4d513b9954739bcc02a5e4b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443519"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775016"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 方法示例 (VB)
-此示例使用 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 方法从 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md) 检索指定数目的行，并使用生成的数据来填充数组。 在以下两种情况下， **GetRows** 方法将返回小于所需的行数：如果已达到 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或者 **getrows** 试图检索其他用户删除的记录，则为。 仅当发生第二种情况时，函数才返回 **False** 。 运行此过程需要 GetRowsOK 函数。  
+此示例使用 [GetRows](./getrows-method-ado.md) 方法从 [记录集中](./recordset-object-ado.md) 检索指定数目的行，并使用生成的数据来填充数组。 在以下两种情况下， **GetRows** 方法将返回小于所需的行数：如果已达到 [EOF](./bof-eof-properties-ado.md) ，或者 **getrows** 试图检索其他用户删除的记录，则为。 仅当发生第二种情况时，函数才返回 **False** 。 运行此过程需要 GetRowsOK 函数。  
   
 ```  
 'BeginGetRowsVB  
@@ -114,5 +114,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ (ADO 的 GetRows 方法) ](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO 的 GetRows 方法) ](./getrows-method-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

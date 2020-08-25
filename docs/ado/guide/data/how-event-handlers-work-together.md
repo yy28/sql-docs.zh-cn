@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453249"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805981"
 ---
 # <a name="how-event-handlers-work-together"></a>事件处理程序的协同工作原理
-除非您正在 Visual Basic 进行编程，否则不管是否确实处理所有事件，都必须实现 **连接** 事件和 **记录集** 事件的所有事件处理程序。 您必须执行的实现工作量取决于编程语言。 有关详细信息，请参阅 [按语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
+除非您正在 Visual Basic 进行编程，否则不管是否确实处理所有事件，都必须实现 **连接** 事件和 **记录集** 事件的所有事件处理程序。 您必须执行的实现工作量取决于编程语言。 有关详细信息，请参阅 [按语言的 ADO 事件实例化](./ado-event-instantiation-by-language.md)。  
   
 ## <a name="paired-event-handlers"></a>配对事件处理程序  
  每个都将有一个关联的 **完整** 事件处理程序。 例如，当应用程序更改字段的值时，将调用 **WillChangeField** 事件处理程序。 如果更改是可接受的，则应用程序保持 **adStatus** 参数不变，并执行操作。 操作完成后， **FieldChangeComplete** 事件会通知应用程序操作已完成。 如果成功完成， **adStatus** 将包含 **adStatusOK**;否则， **adStatus** 将包含 **adStatusErrorsOccurred** ，必须检查 **错误** 对象以确定错误的原因。  
@@ -46,7 +46,7 @@ ms.locfileid: "88453249"
   
  单个 **完整** 事件处理程序对于管理异步操作非常有用。 每个异步操作都有一个适当的 **完整** 事件。  
   
- 例如，填充大型 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 对象可能需要很长时间。 如果你的应用程序已适当编写，你可以启动 `Recordset.Open(...,adAsyncExecute)` 操作并继续其他处理。 当 **记录集** 由 **ExecuteComplete** 事件填充时，最终会收到通知。  
+ 例如，填充大型 [Recordset](../../reference/ado-api/recordset-object-ado.md) 对象可能需要很长时间。 如果你的应用程序已适当编写，你可以启动 `Recordset.Open(...,adAsyncExecute)` 操作并继续其他处理。 当 **记录集** 由 **ExecuteComplete** 事件填充时，最终会收到通知。  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>单个事件处理程序和多个对象  
  编程语言（例如 Microsoft Visual C++®）的灵活性使您能够从多个对象处理一个事件处理程序事件。 例如，你可能有一个从多个**连接**对象的 "**断开连接**" 事件处理程序事件。 如果某个连接结束，则会调用 " **断开连接** " 事件处理程序。 由于事件处理程序对象参数将设置为相应的 **连接** 对象，因此可以告知哪个连接引发了事件。  
@@ -55,7 +55,7 @@ ms.locfileid: "88453249"
 >  此方法不能在 Visual Basic 中使用，因为该语言只能将一个对象关联到一个事件处理程序。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [按语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [事件参数](../../../ado/guide/data/event-parameters.md)   
- [事件类型](../../../ado/guide/data/types-of-events.md)
+ [ADO 事件处理程序摘要](./ado-event-handler-summary.md)   
+ [按语言的 ADO 事件实例化](./ado-event-instantiation-by-language.md)   
+ [事件参数](./event-parameters.md)   
+ [事件类型](./types-of-events.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453559"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806175"
 ---
 # <a name="data-shaping-example"></a>数据整理示例
 以下数据定形命令演示了如何在 Northwind 数据库的**Customers**和**Orders**表中生成分层**记录集**。  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- 如果使用此命令打开**记录集**对象 (如[Visual Basic 数据定形) 示例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)所示），则它将为从**Customers**表返回的每个记录创建一个 (**chapOrders**) 章节。 本章包含从**Orders**表返回的**记录集**的一个子集。 **ChapOrders**章节包含给定客户所下订单的所有请求信息。 在此示例中，本章包含三列： **订单 id**、 **订货日期**和 **CustomerID**。  
+ 如果使用此命令打开**记录集**对象 (如[Visual Basic 数据定形) 示例](./visual-basic-example-of-data-shaping.md)所示），则它将为从**Customers**表返回的每个记录创建一个 (**chapOrders**) 章节。 本章包含从**Orders**表返回的**记录集**的一个子集。 **ChapOrders**章节包含给定客户所下订单的所有请求信息。 在此示例中，本章包含三列： **订单 id**、 **订货日期**和 **CustomerID**。  
   
  结果形状 **记录集** 的前两个条目如下所示：  
   
@@ -42,10 +42,10 @@ RELATE customerID TO customerID)
   
  还有另一种使用形状命令的方法：即，从子**记录集**生成父**记录集**。 子 **记录集中** 的记录通常通过使用 by 子句进行分组，并向子记录集中的每个结果组的父记录 **集** 添加一行。 如果省略了 BY 子句，则子 **记录集** 将形成单个组并且父 **记录集** 将只包含一行。 这对于计算整个子 **记录集**的 "总计" 聚合很有用。  
   
- 使用 SHAPE command 构造，还可以以编程方式创建形状 **记录集**。 然后，你可以通过编程方式或通过适当的视觉对象访问该 **记录集** 的组件。 像任何其他 ADO 命令文本一样发出一个 shape 命令。 有关详细信息，请参阅 [常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)。  
+ 使用 SHAPE command 构造，还可以以编程方式创建形状 **记录集**。 然后，你可以通过编程方式或通过适当的视觉对象访问该 **记录集** 的组件。 像任何其他 ADO 命令文本一样发出一个 shape 命令。 有关详细信息，请参阅 [常规的形状命令](./shape-commands-in-general.md)。  
   
  无论父 **记录集** 的构成方式如何，它都将包含一个用于将其与子 **记录集**相关联的章节列。 如果需要，父 **记录集** 还可以具有包含聚合的列 (SUM、MIN、MAX 等) 子行。 父 **记录集和子记录集** 的列都可以包含 **记录集中**行的表达式，还可以包含新的和初始为空的列。  
   
  本部分继续介绍以下主题。  
   
--   [Visual Basic 数据整理示例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [Visual Basic 数据整理示例](./visual-basic-example-of-data-shaping.md)

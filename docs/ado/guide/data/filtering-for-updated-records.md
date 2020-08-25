@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453379"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806835"
 ---
 # <a name="filtering-for-updated-records"></a>筛选更新的记录
 在调用 UpdateBatch 之前，您可以使用 "记录集筛选器" 属性来仅查看自打开记录集以来或上次调用 UpdateBatch 后发生更改的记录。 为此，请将筛选器设置为等于 adFilterPendingRecords 以确定将更新多少条记录，如下面的代码示例中所示。  
@@ -56,4 +56,4 @@ ms.locfileid: "88453379"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [批处理模式](../../../ado/guide/data/batch-mode.md)
+ [批处理模式](./batch-mode.md)

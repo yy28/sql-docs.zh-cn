@@ -10,35 +10,35 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400143"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>并行数据仓库中的 tempdb 数据库
-**tempdb**是一个 SQL Server PDW 系统数据库，用于存储用户数据库的本地临时表。 临时表通常用于提高查询性能。 例如，可以使用临时表模块化脚本，并重复使用计算的数据。  
+**tempdb** 是一个 SQL Server PDW 系统数据库，用于存储用户数据库的本地临时表。 临时表通常用于提高查询性能。 例如，可以使用临时表模块化脚本，并重复使用计算的数据。  
   
-有关系统数据库的详细信息，请参阅[系统数据库](system-databases.md)。  
+有关系统数据库的详细信息，请参阅 [系统数据库](system-databases.md)。  
   
 ## <a name="key-terms-and-concepts"></a><a name="Basics"></a>关键术语和概念  
 *本地临时表*  
 *本地临时表*在表名称前使用 # 前缀，并且是由本地用户会话创建的临时表。 每个会话仅可访问本地临时表中的数据以供其自己的会话使用。  
   
-每个会话都可以在所有会话中查看本地临时表的元数据。 例如，所有会话都可以通过`SELECT * FROM tempdb.sys.tables`查询查看所有本地临时表的元数据。  
+每个会话都可以在所有会话中查看本地临时表的元数据。 例如，所有会话都可以通过查询查看所有本地临时表的元数据 `SELECT * FROM tempdb.sys.tables` 。  
   
 全局临时表  
 此版本的 SQL Server PDW 不支持在具有 # # 语法的 SQL Server 中支持的*全局临时表*。  
   
 pdwtempdb  
-**pdwtempdb**是存储本地临时表的数据库。  
+**pdwtempdb** 是存储本地临时表的数据库。  
   
-PDW 不使用 SQL Server**tempdb**数据库来实现临时表。 PDW 会将它们存储在名为 pdwtempdb 的数据库中。 此数据库存在于每个计算节点上，并通过 PDW 接口对用户不可见。 在管理控制台中的 "存储" 页上，你将在名为 " **tempdb-sql**" 的 PDW 系统数据库中看到这些项。  
+PDW 不使用 SQL Server**tempdb** 数据库来实现临时表。 PDW 会将它们存储在名为 pdwtempdb 的数据库中。 此数据库存在于每个计算节点上，并通过 PDW 接口对用户不可见。 在管理控制台中的 "存储" 页上，你将在名为 " **tempdb-sql**" 的 PDW 系统数据库中看到这些项。  
   
 tempdb  
-**tempdb**是 SQL Server tempdb 数据库。 它使用最小日志记录。 SQL Server 使用计算节点上的 tempdb 来存储在执行 SQL Server 操作过程中所需的临时表。  
+**tempdb** 是 SQL Server tempdb 数据库。 它使用最小日志记录。 SQL Server 使用计算节点上的 tempdb 来存储在执行 SQL Server 操作过程中所需的临时表。  
   
-当以下情况时，SQL Server PDW 从**tempdb**中删除表：  
+当以下情况时，SQL Server PDW 从 **tempdb** 中删除表：  
   
 -   执行 DROP TABLE 语句。  
   
@@ -52,23 +52,23 @@ tempdb
 除非明确声明，否则 SQL Server PDW 对临时表和永久表执行相同的操作。 例如，本地临时表中的数据与永久表一样，都是在计算节点之间进行分布或复制。  
   
 ## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>限制和局限  
-SQL Server PDW**tempdb**数据库的限制和限制。 *不能：*  
+SQL Server PDW**tempdb** 数据库的限制和限制。 *不能：*  
   
 -   创建一个以 # # 开头的全局临时表。  
   
--   执行**tempdb**的备份或还原。  
+-   执行 **tempdb**的备份或还原。  
   
 -   用**GRANT**、 **DENY**或**REVOKE**语句修改对**tempdb**的权限。  
   
 -   为**tempdb**Tempdb 执行**DBCC SHRINKLOG** 。  
   
--   对**tempdb**执行 DDL 操作。 这也有一些例外。 有关详细信息，请参阅下面的限制和对本地临时表的限制列表。  
+-   对 **tempdb**执行 DDL 操作。 这也有一些例外。 有关详细信息，请参阅下面的限制和对本地临时表的限制列表。  
   
 对本地临时表的限制和限制。 *不能：*  
   
 -   重命名临时表  
   
--   在临时表上创建分区、视图或非聚集索引。 **ALTER index**可用于为使用一个创建的表重新生成聚集索引。  
+-   在临时表上创建分区、视图或非聚集索引。 **ALTER index** 可用于为使用一个创建的表重新生成聚集索引。  
   
 -   用 GRANT、DENY 或 REVOKE 语句修改临时表的权限。  
   
@@ -86,10 +86,10 @@ SQL Server PDW**tempdb**数据库的限制和限制。 *不能：*
   
 |任务|说明|  
 |---------|---------------|  
-|在**tempdb**中创建表。|您可以使用 "CREATE TABLE" 和 "CREATE TABLE" 作为 SELECT 语句来创建用户临时表。 有关详细信息，请参阅[CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)和[CREATE TABLE 选择](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。|  
-|查看**tempdb**中现有表的列表。|`SELECT * FROM tempdb.sys.tables;`|  
-|查看**tempdb**中现有列的列表。|`SELECT * FROM tempdb.sys.columns;`|  
-|查看**tempdb**中现有对象的列表。|`SELECT * FROM tempdb.sys.objects;`|  
+|在 **tempdb**中创建表。|您可以使用 "CREATE TABLE" 和 "CREATE TABLE" 作为 SELECT 语句来创建用户临时表。 有关详细信息，请参阅 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) 和 [CREATE TABLE 选择](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。|  
+|查看 **tempdb**中现有表的列表。|`SELECT * FROM tempdb.sys.tables;`|  
+|查看 **tempdb**中现有列的列表。|`SELECT * FROM tempdb.sys.columns;`|  
+|查看 **tempdb**中现有对象的列表。|`SELECT * FROM tempdb.sys.objects;`|  
   
 <!-- MISSING LINKS 
 ## See Also  

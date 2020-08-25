@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4729574b92b841da48f7cf6de6f1dcabc369b4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c5e863a694aa63e568e388304d964752dbae325
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450799"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776066"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
 比较两个书签，并返回其相对值的指示值。  
@@ -36,9 +36,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回一个 [CompareEnum](../../../ado/reference/ado-api/compareenum.md) 值，该值指示由其书签表示的两个记录的相对行位置。  
+ 返回一个 [CompareEnum](./compareenum.md) 值，该值指示由其书签表示的两个记录的相对行位置。  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *Bookmark1*  
  第一行的书签。  
   
@@ -46,9 +46,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  第二行的书签。  
   
 ## <a name="remarks"></a>备注  
- 书签必须应用于相同的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象或 **记录集** 对象及其 [克隆](../../../ado/reference/ado-api/clone-method-ado.md)。 不能从不同的 **记录集** 对象中可靠地比较书签，即使它们是从同一源或命令创建的也是如此。 您也不能对其基础提供程序不支持比较的 **记录集** 对象的书签进行比较。  
+ 书签必须应用于相同的 [记录集](./recordset-object-ado.md) 对象或 **记录集** 对象及其 [克隆](./clone-method-ado.md)。 不能从不同的 **记录集** 对象中可靠地比较书签，即使它们是从同一源或命令创建的也是如此。 您也不能对其基础提供程序不支持比较的 **记录集** 对象的书签进行比较。  
   
- 书签唯一标识 **Recordset** 对象中的行。 使用当前行的 " [书签](../../../ado/reference/ado-api/bookmark-property-ado.md) " 属性获取其书签。  
+ 书签唯一标识 **Recordset** 对象中的行。 使用当前行的 " [书签](./bookmark-property-ado.md) " 属性获取其书签。  
   
  由于书签的数据类型特定于每个提供程序，因此 ADO 将其作为 **变量**公开。 例如，SQL Server 书签 DBTYPE_R8 类型 (**双重**) 。 ADO 将此类型公开为具有**双精度**类型的**变体**。  
   
@@ -57,9 +57,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  无效或格式不正确的书签将导致错误。  
   
 ## <a name="applies-to"></a>适用于  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [CompareBookmarks 方法示例 (VB) ](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [CompareBookmarks 方法示例 (VC + +) ](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
- [Bookmark 属性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)
+ [CompareBookmarks 方法示例 (VB) ](./comparebookmarks-method-example-vb.md)   
+ [CompareBookmarks 方法示例 (VC + +) ](./comparebookmarks-method-example-vc.md)   
+ [Bookmark 属性 (ADO)](./bookmark-property-ado.md)

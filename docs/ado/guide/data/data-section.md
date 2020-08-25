@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453569"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806200"
 ---
 # <a name="data-section"></a>数据部分
 Data 节定义行集的数据以及任何挂起的更新、插入或删除。 数据节可以包含零行或多行。 它只能包含一个行集中的数据，该行由架构定义。 另外，如上所述，可以省略没有任何数据的列。 如果在 data 节中使用了某个特性或子元素，并且该构造未在 schema 节中定义，则它将以无提示方式忽略。  
@@ -86,4 +86,4 @@ Data 节定义行集的数据以及任何挂起的更新、插入或删除。 �
  更新始终包含整个原始行数据，后跟已更改的行数据。 已更改的行可能包含所有列，或者只包含实际更改的那些列。 在上面的示例中，货主2的行未发生更改，并且只有 Phone 列已更改发货方3的值，因此在已更改的行中只包含一个列。 货主12、13和14的插入行在一个 rs： insert 标记下一起分批分批。 请注意，删除的行也可以一起分批显示，但在前面的示例中未显示这种情况。  
   
 ## <a name="see-also"></a>另请参阅  
- [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保留记录](./persisting-records-in-xml-format.md)

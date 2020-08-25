@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453459"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806875"
 ---
 # <a name="editing-data"></a>编辑数据
 我们介绍了如何使用 ADO 连接到数据源、执行命令、获取 **记录集** 对象中的结果，以及在 **记录集中**导航。 本部分重点介绍下一基本 ADO 操作：编辑数据。  
   
- 此部分继续使用[检查数据](../../../ado/guide/data/examining-data.md)时引入的示例**记录集**，其中一项重要更改。 以下代码用于打开 **记录集**：  
+ 此部分继续使用[检查数据](./examining-data.md)时引入的示例**记录集**，其中一项重要更改。 以下代码用于打开 **记录集**：  
   
 ```  
 'BeginEditIntro  
@@ -44,7 +44,7 @@ ms.locfileid: "88453459"
 'EndEditIntro  
 ```  
   
- 代码的重要变化涉及到在*GetNewConnection*函数中设置等于**adUseClient**的**连接**对象的**CursorLocation**属性 (在下一个示例) 中显示，指示客户端游标的使用。 有关客户端和服务器端游标之间的差异的详细信息，请参阅 [了解游标和锁定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
+ 代码的重要变化涉及到在*GetNewConnection*函数中设置等于**adUseClient**的**连接**对象的**CursorLocation**属性 (在下一个示例) 中显示，指示客户端游标的使用。 有关客户端和服务器端游标之间的差异的详细信息，请参阅 [了解游标和锁定](./understanding-cursors-and-locks.md)。  
   
  **CursorLocation**属性的**adUseClient**设置会将数据源中光标的位置移 (SQL Server，在这种情况下)  (桌面工作站) 的客户端代码的位置。 此设置强制 ADO 调用客户端上的 OLE DB 客户端游标引擎，以便创建和管理游标。  
   
@@ -84,12 +84,12 @@ End Function
   
  本部分包含以下主题。  
   
--   [编辑现有记录](../../../ado/guide/data/editing-existing-records.md)  
+-   [编辑现有记录](./editing-existing-records.md)  
   
--   [添加记录](../../../ado/guide/data/adding-records.md)  
+-   [添加记录](./adding-records.md)  
   
--   [确定支持的功能](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [确定支持的功能](./determining-what-is-supported.md)  
   
--   [使用 Delete 方法删除记录](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [使用 Delete 方法删除记录](./deleting-records-using-the-delete-method.md)  
   
--   [替代方法：使用 SQL 语句](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [替代方法：使用 SQL 语句](./alternatives-using-sql-statements.md)

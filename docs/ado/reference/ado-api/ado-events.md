@@ -14,46 +14,46 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07ef1c379dcf59b386b86d5b9fce38f77c521e01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4644596d216bd459b19778607e309cb7713d6fc4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451419"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776656"
 ---
 # <a name="ado-events"></a>ADO 事件
 
 |事件|说明|  
 |-|-|  
-|[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在 **BeginTrans** 操作后调用。|  
-|[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在 **CommitTrans** 操作后调用。|  
-|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|在连接开始后调用。|  
-|[取消](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|在连接结束后调用。|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|尝试移到超过 **记录集**末尾的行时调用。|  
-|[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|执行完命令后调用。|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|在将较长异步操作中的所有记录都检索到 **记录集**后调用。|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|在长时间异步操作期间定期调用，以报告当前已检索到 **记录集中**的行数。|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|在一个或多个 **字段** 对象的值更改后调用。|  
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|在 **ConnectionEvent** 操作期间出现警告时调用。|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|在 **记录集中** 的当前位置发生更改后调用。|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|在一个或多个记录发生更改后调用。|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|在 **记录集** 更改后调用。|  
-|[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在 **RollbackTrans** 操作后调用。|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|在挂起操作之前调用，更改**记录集中**一个或多个**字段**对象的值。|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|在 **记录集** (行) 中的一个或多个记录更改之前调用。|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|在挂起的操作更改 **记录集**之前调用。|  
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|在连接启动之前调用。|  
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|在此连接上执行挂起命令之前调用，并为用户给出检查和修改挂起执行参数的机会。|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|在挂起的操作更改**记录集中**的当前位置*之前*，调用**WillMove**事件。|  
+|[BeginTransComplete](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在 **BeginTrans** 操作后调用。|  
+|[CommitTransComplete](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在 **CommitTrans** 操作后调用。|  
+|[ConnectComplete](./connectcomplete-and-disconnect-events-ado.md)|在连接开始后调用。|  
+|[取消](./connectcomplete-and-disconnect-events-ado.md)|在连接结束后调用。|  
+|[EndOfRecordset](./endofrecordset-event-ado.md)|尝试移到超过 **记录集**末尾的行时调用。|  
+|[ExecuteComplete](./executecomplete-event-ado.md)|执行完命令后调用。|  
+|[FetchComplete](./fetchcomplete-event-ado.md)|在将较长异步操作中的所有记录都检索到 **记录集**后调用。|  
+|[FetchProgress](./fetchprogress-event-ado.md)|在长时间异步操作期间定期调用，以报告当前已检索到 **记录集中**的行数。|  
+|[FieldChangeComplete](./willchangefield-and-fieldchangecomplete-events-ado.md)|在一个或多个 **字段** 对象的值更改后调用。|  
+|[InfoMessage](./infomessage-event-ado.md)|在 **ConnectionEvent** 操作期间出现警告时调用。|  
+|[MoveComplete](./willmove-and-movecomplete-events-ado.md)|在 **记录集中** 的当前位置发生更改后调用。|  
+|[RecordChangeComplete](./willchangerecord-and-recordchangecomplete-events-ado.md)|在一个或多个记录发生更改后调用。|  
+|[RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|在 **记录集** 更改后调用。|  
+|[RollbackTransComplete](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在 **RollbackTrans** 操作后调用。|  
+|[WillChangeField](./willchangefield-and-fieldchangecomplete-events-ado.md)|在挂起操作之前调用，更改**记录集中**一个或多个**字段**对象的值。|  
+|[WillChangeRecord](./willchangerecord-and-recordchangecomplete-events-ado.md)|在 **记录集** (行) 中的一个或多个记录更改之前调用。|  
+|[WillChangeRecordset](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|在挂起的操作更改 **记录集**之前调用。|  
+|[WillConnect](./willconnect-event-ado.md)|在连接启动之前调用。|  
+|[WillExecute](./willexecute-event-ado.md)|在此连接上执行挂起命令之前调用，并为用户给出检查和修改挂起执行参数的机会。|  
+|[WillMove](./willmove-and-movecomplete-events-ado.md)|在挂起的操作更改**记录集中**的当前位置*之前*，调用**WillMove**事件。|  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
- [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
- [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [ADO 枚举常量](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附录 B： ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [处理 ADO 事件](../../../ado/guide/data/handling-ado-events.md)   
- [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
- [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO 对象和接口](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [ADO 属性](../../../ado/reference/ado-api/ado-properties.md)
+ [ADO API 参考](./ado-api-reference.md)   
+ [ADO 集合](./ado-collections.md)   
+ [ADO 动态属性](./ado-dynamic-properties.md)   
+ [ADO 枚举常量](./ado-enumerated-constants.md)   
+ [附录 B： ADO 错误](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [处理 ADO 事件](../../guide/data/handling-ado-events.md)   
+ [ADO 方法](./ado-methods.md)   
+ [ADO 对象模型](./ado-object-model.md)   
+ [ADO 对象和接口](./ado-objects-and-interfaces.md)   
+ [ADO 属性](./ado-properties.md)

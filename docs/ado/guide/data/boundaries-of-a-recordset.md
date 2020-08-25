@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453709"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806375"
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
 **Recordset** 支持 **BOF** 和 **EOF** 属性，分别描绘数据集的开头和结尾。 可以将 **BOF** 和 **EOF** 视为位于 **记录集**开头和结尾的 "虚拟" 记录。 计算 **BOF** 和 **EOF**后，示例 **记录集** 现在如下所示：  
@@ -70,4 +70,4 @@ else
   
  此方案适用于所有类型的游标，并且独立于基础提供程序。 如果尝试通过检查 **记录集** 的 **RecordCount** 属性值是否为零 (0) 来确定 Recordset 对象的空，则必须采取预防措施，以便使用支持返回结果中的记录数的适当游标和提供程序。  
   
- 如果删除 **记录集** 对象中的最后一个记录，游标将保持不确定状态。 在您尝试重新定位当前记录（具体取决于提供程序）之前， **BOF** 和 **EOF** 属性可能会保留 **为 False** 。 有关详细信息，请参阅 [使用 Delete 方法删除记录](../../../ado/guide/data/deleting-records-using-the-delete-method.md)。
+ 如果删除 **记录集** 对象中的最后一个记录，游标将保持不确定状态。 在您尝试重新定位当前记录（具体取决于提供程序）之前， **BOF** 和 **EOF** 属性可能会保留 **为 False** 。 有关详细信息，请参阅 [使用 Delete 方法删除记录](./deleting-records-using-the-delete-method.md)。

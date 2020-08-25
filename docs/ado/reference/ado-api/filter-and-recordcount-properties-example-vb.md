@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bf78308afe6a48a071daa8a68a0a3cfaecd907c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443689"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775296"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 和 RecordCount 属性示例 (VB)
-此示例打开***Pubs***数据库的发布服务器表中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 然后，它使用 [筛选器](../../../ado/reference/ado-api/filter-property.md) 属性将可见记录的数目限制为特定国家/地区的发布者。 **RecordCount**属性用于显示已筛选和未筛选的记录集之间的差异。  
+此示例打开***Pubs***数据库的发布服务器表中的[记录集](./recordset-object-ado.md)。 然后，它使用 [筛选器](./filter-property.md) 属性将可见记录的数目限制为特定国家/地区的发布者。 **RecordCount**属性用于显示已筛选和未筛选的记录集之间的差异。  
   
 ```  
 'BeginFilterVB  
@@ -116,6 +116,6 @@ Attribute VB_Name = "Filter"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 属性 (ADO) ](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [筛选器属性](./filter-property.md)   
+ [RecordCount 属性 (ADO) ](./recordcount-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

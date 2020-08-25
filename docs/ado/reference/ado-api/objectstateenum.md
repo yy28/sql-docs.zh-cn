@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c387240e36225f03c8ba1287618ab59a98fb63c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43e511329ba2b32784718d6edb381e6b7085aeb9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443019"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773906"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定对象是打开还是关闭，连接到数据源，执行命令，或检索数据。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指示对象已关闭。|  
 |**adStateOpen**|1|指示对象已打开。|  
@@ -49,9 +49,9 @@ ms.locfileid: "88443019"
 
 :::row:::
     :::column:::
-        [State 属性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+        [State 属性 (ADO)](./state-property-ado.md)  
     :::column-end:::
     :::column:::
-        [State 属性 (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+        [State 属性 (ADO MD)](../ado-md-api/state-property-ado-md.md)  
     :::column-end:::
 :::row-end:::

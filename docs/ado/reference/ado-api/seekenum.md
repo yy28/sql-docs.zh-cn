@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bea36687e0fbe8aea4768386f4435ceece621bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e60bbc81f7b40dac7d1564a32f1e60eb8456c9bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442109"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777496"
 ---
 # <a name="seekenum"></a>SeekEnum
-指定要执行的 [搜索](../../../ado/reference/ado-api/seek-method.md) 的类型。  
+指定要执行的 [搜索](./seek-method.md) 的类型。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|查找等于 *架构*的第一个键。|  
 |**adSeekLastEQ**|2|查找等于 *架构*的最后一个键。|  
@@ -48,4 +48,4 @@ ms.locfileid: "88442109"
 |AdoEnums.Seek.BEFORE|  
   
 ## <a name="applies-to"></a>适用于  
- [Seek 方法](../../../ado/reference/ado-api/seek-method.md)
+ [Seek 方法](./seek-method.md)

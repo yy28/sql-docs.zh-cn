@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be80fc6c09279920a992b25bb91ee7621aabf5a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451139"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776586"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF 和 Bookmark 属性示例 (VC + +) 
-如果用户尝试移过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的第一个或最后一个记录，则此示例中的第一个函数使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性来显示消息。 它使用 [书签](../../../ado/reference/ado-api/bookmark-property-ado.md) 属性允许用户标记记录 **集中** 的记录并稍后返回到该记录。  
+如果用户尝试移过[记录集](./recordset-object-ado.md)的第一个或最后一个记录，则此示例中的第一个函数使用[BOF](./bof-eof-properties-ado.md)和[EOF](./bof-eof-properties-ado.md)属性来显示消息。 它使用 [书签](./bookmark-property-ado.md) 属性允许用户标记记录 **集中** 的记录并稍后返回到该记录。  
   
  第二个函数使用 Bookmark 属性将**记录集中**的每个其他记录的**书签**置于数组中，然后使用数组筛选记录集。  
   
@@ -207,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BOF、EOF 属性 (ADO) ](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [ (ADO) 的书签属性 ](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF、EOF 属性 (ADO) ](./bof-eof-properties-ado.md)   
+ [ (ADO) 的书签属性 ](./bookmark-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

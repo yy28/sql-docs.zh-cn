@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26d148aff616f36f3244cbe65b315378573278
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf807a1883aaaa85b8485a9f58a1414248f02075
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451279"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776526"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 和 CreateParameter 方法示例 (VB)
-此示例使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 和 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法执行具有输入参数的存储过程。  
+此示例使用 [Append](./append-method-ado.md) 和 [CreateParameter](./createparameter-method-ado.md) 方法执行具有输入参数的存储过程。  
   
 ```  
 'BeginAppendVB  
@@ -121,8 +121,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO (追加方法) ](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法 (ADO) ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)
+ [ADO (追加方法) ](./append-method-ado.md)   
+ [CreateParameter 方法 (ADO) ](./createparameter-method-ado.md)   
+ [Field 对象](./field-object.md)   
+ [字段集合 (ADO) ](./fields-collection-ado.md)   
+ [Parameter 对象](./parameter-object.md)
