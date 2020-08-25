@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442079"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777446"
 ---
 # <a name="sort-property-example-vb"></a>Sort 属性示例 (VB)
-此示例使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Sort](../../../ado/reference/ado-api/sort-property.md)属性对从***Pubs***数据库的***Authors***表中派生的**记录集**的行重新排序。 辅助实用程序例程打印每行。  
+此示例使用[Recordset](./recordset-object-ado.md)对象的[Sort](./sort-property.md)属性对从***Pubs***数据库的***Authors***表中派生的**记录集**的行重新排序。 辅助实用程序例程打印每行。  
   
 ```  
 'BeginSortVB  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort 属性](../../../ado/reference/ado-api/sort-property.md)
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [Sort 属性](./sort-property.md)

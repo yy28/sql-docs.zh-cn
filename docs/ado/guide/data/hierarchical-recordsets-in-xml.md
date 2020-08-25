@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453259"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806020"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的分层记录集
 ADO 允许将分层记录集对象持久保存到 XML 中。 使用分层记录集对象，父记录集中某个字段的值就是另一个记录集。 此类字段表示为 XML 流中的子元素，而不是特性。  
@@ -126,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   如果子记录引用了多个父记录，则在重新打开记录集时，子记录集可能包含重复记录。 但是，仅当用户直接使用基础子行集时，才会显示这些重复项。 如果某个章节用于导航子记录集 (这是通过 ADO) 导航的唯一方法，则不会显示重复项。  
   
 ## <a name="see-also"></a>另请参阅  
- [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保留记录](./persisting-records-in-xml-format.md)

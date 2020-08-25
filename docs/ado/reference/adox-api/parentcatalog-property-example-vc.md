@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86c12345995ff71ddb75121114ff70400d36aa05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25f633631f18ec1ec0ae5c954c541e4687f559da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439689"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769796"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog 属性示例 (VC++)
-下面的代码演示了如何在将表追加到目录之前，使用 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 属性访问特定于提供程序的属性。 属性为 **自动增量**，这会在 Microsoft Jet 数据库中创建自动增量字段。  
+下面的代码演示了如何在将表追加到目录之前，使用 [ParentCatalog](./parentcatalog-property-adox.md) 属性访问特定于提供程序的属性。 属性为 **自动增量**，这会在 Microsoft Jet 数据库中创建自动增量字段。  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  

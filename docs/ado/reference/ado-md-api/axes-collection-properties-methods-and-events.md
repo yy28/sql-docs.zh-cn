@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5fdda44ced1510b4a9ca6179cad9a5224dc705
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0cfc62edcff2603d3a2e9e52149fd32597f6eedc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441335"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776678"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>轴集合属性、方法和事件
-## <a name="properties"></a>“属性”  
- [Count 属性](../../../ado/reference/ado-api/count-property-ado.md)  
+## <a name="properties"></a>属性  
+ [Count 属性](../ado-api/count-property-ado.md)  
   
- [Item 属性](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item 属性](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>方法  
- [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh 方法](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>事件  
  无。  
   
 ## <a name="see-also"></a>另请参阅  
- [轴集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)
+ [轴集合 (ADO MD)](./axes-collection-ado-md.md)

@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2528c9b7a8cf9eb2918983d90e57ac39e6ee989e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c7ea7ccbf1a588458db9e213bfa57837e89898f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441449"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776816"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-指定 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象的事务特性。  
+指定 [连接](./connection-object-ado.md) 对象的事务特性。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262144|通过调用 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 以自动启动新事务来执行保留中止。 并非所有提供程序都支持此行为。|  
-|**adXactCommitRetaining**|131072|通过调用 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 以自动启动新事务来执行保留提交。 并非所有提供程序都支持此行为。|  
+|**adXactAbortRetaining**|262144|通过调用 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 以自动启动新事务来执行保留中止。 并非所有提供程序都支持此行为。|  
+|**adXactCommitRetaining**|131072|通过调用 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 以自动启动新事务来执行保留提交。 并非所有提供程序都支持此行为。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
@@ -40,4 +40,4 @@ ms.locfileid: "88441449"
 |AdoEnums.XactAttribute.COMMITRETAINING|  
   
 ## <a name="applies-to"></a>适用于  
- [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes 属性 (ADO)](./attributes-property-ado.md)

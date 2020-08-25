@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439029"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768306"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 属性 (RDS)
 指示是否启用异步执行。  
@@ -30,26 +30,24 @@ ms.locfileid: "88439029"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
   
-|返回的常量|描述|  
+|返回的常量|说明|  
 |--------------|-----------------|  
-|**adcExecSync**|同步执行 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的下一次刷新。|  
+|**adcExecSync**|同步执行 [记录集](../ado-api/recordset-object-ado.md) 的下一次刷新。|  
 |**adcExecAsync**|默认。 异步执行 **记录集** 的下一次刷新。|  
   
 > [!NOTE]
 >  使用这些常量的每个可执行文件都必须为其提供声明。 你可以从文件 Adcvbs 中剪切并粘贴所需的常量声明，该文件位于 RDS 库的默认安装文件夹中。  
   
 ## <a name="remarks"></a>备注  
- 如果将 **ExecuteOptions** 设置为 **adcExecAsync**，则这会异步执行对 RDS 的下一个 **刷新** 调用 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象的 **记录集**。  
+ 如果将 **ExecuteOptions** 设置为 **adcExecAsync**，则这会异步执行对 RDS 的下一个 **刷新** 调用 [。DataControl](./datacontrol-object-rds.md) 对象的 **记录集**。  
   
- 如果尝试调用 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)或 [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) ，而另一个可能更改 RDS 的异步操作 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象的 **记录集** 正在执行，发生错误。  
+ 如果尝试调用 [Reset](./reset-method-rds.md)、 [Refresh](./refresh-method-rds.md)、 [SubmitChanges](./submitchanges-method-rds.md)、 [CancelUpdate](../ado-api/cancelupdate-method-ado.md)或 [Recordset](./recordset-sourcerecordset-properties-rds.md) ，而另一个可能更改 RDS 的异步操作 [。DataControl](./datacontrol-object-rds.md) 对象的 **记录集** 正在执行，发生错误。  
   
- 如果在异步操作过程中发生错误，则将使用**RDS。DataControl**对象的[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)值从**adcReadyStateLoaded**更改为**adcReadyStateComplete**， **Recordset**属性值不会更改 *。*  
+ 如果在异步操作过程中发生错误，则将使用**RDS。DataControl**对象的[ReadyState](./readystate-property-rds.md)值从**adcReadyStateLoaded**更改为**adcReadyStateComplete**， **Recordset**属性值不会更改 *。*  
   
 ## <a name="applies-to"></a>适用于  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ExecuteOptions 和 FetchOptions 属性示例 (VBScript) ](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [ExecuteOptions 和 FetchOptions 属性示例 (VBScript) ](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel 方法 (RDS)](./cancel-method-rds.md)

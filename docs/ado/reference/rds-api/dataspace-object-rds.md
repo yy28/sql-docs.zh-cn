@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092af21c57b733e12c233cb201304cbc27930c80
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439059"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768376"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 对象 (RDS)
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "88439059"
   
  创建位于中间层上的自定义业务对象的客户端代理。  
   
- 远程数据服务需要业务对象代理，以便客户端组件可以与位于中间层的业务对象通信。 通过代理，unpackaging 和传输 (跨进程或计算机边界封送处理应用程序的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 数据) 。  
+ 远程数据服务需要业务对象代理，以便客户端组件可以与位于中间层的业务对象通信。 通过代理，unpackaging 和传输 (跨进程或计算机边界封送处理应用程序的 [记录集](../ado-api/recordset-object-ado.md) 数据) 。  
   
- 远程数据服务使用 **RDS。** 用于创建业务对象代理的空间对象的 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 方法。 每次创建业务对象代理中间层业务对象对应项的实例时，都会动态创建该代理。 远程数据服务支持以下协议： HTTP、HTTPS (HTTP 安全套接字) 、DCOM 和进程内 (客户端组件以及业务对象驻留在同一台计算机上) 。  
+ 远程数据服务使用 **RDS。** 用于创建业务对象代理的空间对象的 [CreateObject](./createobject-method-rds.md) 方法。 每次创建业务对象代理中间层业务对象对应项的实例时，都会动态创建该代理。 远程数据服务支持以下协议： HTTP、HTTPS (HTTP 安全套接字) 、DCOM 和进程内 (客户端组件以及业务对象驻留在同一台计算机上) 。  
   
 > [!NOTE]
 >  Rds 时，RDS 的行为方式为 "无状态" **。空间** 对象使用 HTTP 或 HTTPS 协议。 也就是说，在服务器返回响应后，任何有关客户端请求的内部信息都将被丢弃。  
@@ -46,9 +46,7 @@ ms.locfileid: "88439059"
   
  本部分包含以下主题。  
   
--   [DataSpace 对象 (RDS) 属性、方法和事件](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [DataSpace 对象 (RDS) 属性、方法和事件](./dataspace-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [DataSpace 对象和 CreateObject 方法示例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
-
+ [DataSpace 对象和 CreateObject 方法示例 (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)

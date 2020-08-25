@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b92cb5f1d2ba02b58237f9c7776a4bf243d73a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28aca75b9bf0abba7a87a035ebcf565edb0b5fa5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442029"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777376"
 ---
 # <a name="source-property-example-vc"></a>Source 属性示例 (VC++)
-此示例通过打开基于不同数据源的三个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象来演示[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)属性。  
+此示例通过打开基于不同数据源的三个[记录集](./recordset-object-ado.md)对象来演示[源](./source-property-ado-recordset.md)属性。  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -158,5 +158,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Source 属性（ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [Source 属性（ADO 记录集）](./source-property-ado-recordset.md)

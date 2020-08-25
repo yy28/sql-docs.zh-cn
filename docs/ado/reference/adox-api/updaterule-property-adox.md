@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8fba97eb12a79c20322f53dbd8574165dc3dee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88223eae0a6a6709dc5c45d2ed0da5e17f3e7c17
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439399"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769116"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 属性 (ADOX)
-指示在 [更新主键时](../../../ado/reference/adox-api/key-object-adox.md) 执行的操作。  
+指示在 [更新主键时](./key-object-adox.md) 执行的操作。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回一个 **Long** 值，该值可以是 [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) 常数之一。 默认值为 **adRINone**。  
+ 设置并返回一个 **Long** 值，该值可以是 [RuleEnum](./ruleenum.md) 常数之一。 默认值为 **adRINone**。  
   
 ## <a name="remarks"></a>备注  
- 对于已追加到集合的 [键](../../../ado/reference/adox-api/key-object-adox.md) 对象，此属性是只读的。  
+ 对于已追加到集合的 [键](./key-object-adox.md) 对象，此属性是只读的。  
   
 ## <a name="applies-to"></a>适用于  
- [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [项对象 (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [项 Append 方法、项 Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [项 Append 方法、项 Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

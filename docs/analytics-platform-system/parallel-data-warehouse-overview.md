@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400934"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>并行数据仓库组件-分析平台系统
@@ -44,7 +44,7 @@ To learn more about Analytics Platform System, see:
   
 ### <a name="control-node"></a>控制节点  
 MPP 引擎  
-MPP 引擎是大规模并行处理（MPP）系统的大脑。 它执行以下操作：  
+MPP 引擎是 (MPP) 系统的大规模并行处理的大脑。 它执行以下操作：  
   
 -   在计算节点上创建并行查询计划并协调并行查询执行。  
   
@@ -54,8 +54,8 @@ MPP 引擎是大规模并行处理（MPP）系统的大脑。 它执行以下操
   
 -   跟踪硬件和软件状态。  
   
-### <a name="data-movement-service-dms"></a>数据移动服务（DMS）  
-数据移动服务（DMS）是 PDW "secret 酱" 的一部分。 它执行以下操作：  
+### <a name="data-movement-service-dms"></a>数据移动服务 (DM)   
+数据移动服务 (DM) 是 PDW "机密酱" 的一部分。 它执行以下操作：  
   
 -   在 SQL Server PDW 节点之间传输数据。  
   
@@ -67,7 +67,7 @@ MPP 引擎是大规模并行处理（MPP）系统的大脑。 它执行以下操
 管理控制台是一个 web 应用程序，用于显示设备状态、运行状况和性能信息。  
   
 ### <a name="configuration-manager"></a>Configuration Manager  
-Configuration Manager （dwconfig）是设备管理员用于配置分析平台系统的工具。  
+Configuration Manager ( # A0) 是设备管理员用于配置分析平台系统的工具。  
   
 ### <a name="control-node-databases"></a>控制节点数据库  
 SQL Server 管理控制节点上的所有数据库。  
@@ -81,8 +81,8 @@ SQL Server 管理控制节点上的所有数据库。
 ### <a name="compute-node"></a>计算节点  
 计算节点是并行数据处理和存储单元。 它们具有直接连接的存储，并使用 SQL Server 来管理用户数据。  
   
-### <a name="data-movement-service-dms"></a>数据移动服务（DMS）  
-数据移动服务（DMS）在每个计算节点上运行，以执行以下操作：  
+### <a name="data-movement-service-dms"></a>数据移动服务 (DM)   
+数据移动服务 (DM) 在每个计算节点上运行，以执行以下操作：  
   
 -   作为处理并行查询的一部分，DMS 将数据传入和传出其他计算机节点和控制节点。  
   
@@ -99,21 +99,21 @@ SQL Server 管理控制节点上的所有数据库。
 设备结构提供设备的操作系统、服务和网络基础结构。  
   
 ### <a name="domain-controller"></a>域控制器  
-Active Directory （AD）域服务（DS）  
+Active Directory (AD) 域服务 (DS)   
 分析平台系统在分析平台系统节点之间执行身份验证，并管理 SQL Server PDW Windows 身份验证登录名的身份验证。  
   
 DNS 服务  
-Windows 域名服务（DNS）将域名解析为分析平台系统设备的 IP 地址。  
+Windows 域名服务 (DNS) 将域名解析为分析平台系统设备的 IP 地址。  
   
 ### <a name="windows-deployment-service"></a>Windows 部署服务  
-Windows 部署服务（WDS）将 Windows Server 操作系统部署到设备上。 它部署在设备上的每个主机和虚拟机上。  
+Windows 部署服务 (WDS) 将 Windows Server 操作系统部署到设备上。 它部署在设备上的每个主机和虚拟机上。  
   
 DHCP 服务将创建 IP 地址，以便设备域中的主机无需预配置的 IP 地址即可加入设备网络。  
   
 ### <a name="virtual-machine-manager"></a>Virtual Machine Manager  
 分析平台系统使用虚拟化实现高可用性。 Virtual Machine Manager 托管 System Center，以将操作系统部署到物理主机上。  
   
-Windows Server Update Services （WSUS）在所有主机和虚拟机中应用或删除 Windows 更新。  
+Windows Server Update Services (WSUS) ，以便在所有主机和虚拟机上应用或删除 Windows 更新。  
   
 ### <a name="windows-server"></a>Windows Server  
 设备中的所有主机和虚拟机都运行 Windows Server 操作系统。  
@@ -138,7 +138,7 @@ PolyBase 技术将 SQL Server PDW 数据与外部 Hadoop 数据集成。 Hadoop 
   
 ## <a name="query-tools"></a>查询工具   
   
-查询通过修改的 Transact-sql\-来编写，以适合查询的 MPP 特性。 所有查询都将提交到控制节点，该节点会生成并行查询计划，以便跨计算节点运行查询。  
+查询通过修改的 Transact-sql \- 来编写，以适合查询的 MPP 特性。 所有查询都将提交到控制节点，该节点会生成并行查询计划，以便跨计算节点运行查询。  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools 在 Visual Studio 中运行，是我们建议用于将查询提交到 SQL Server PDW 的 GUI 工具。 它类似于通过使用对象资源管理器导航来 SQL Server Management Studio。  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>sqlcmd 命令行查询工具  
-sqlcmd 是用于运行 Transact-sql\-语句和系统命令的 SQL Server 命令行工具。 它与 SQL Server PDW 一起使用，是我们建议用于查询 SQL Server PDW 的命令行工具。 使用 sqlcmd，你可以从\-命令行以批处理文件或从 Windows PowerShell 以交互方式运行 transact-sql 语句。  
+sqlcmd 是用于运行 Transact-sql \- 语句和系统命令的 SQL Server 命令行工具。 它与 SQL Server PDW 一起使用，是我们建议用于查询 SQL Server PDW 的命令行工具。 使用 sqlcmd，你可以 \- 从命令行以批处理文件或从 Windows PowerShell 以交互方式运行 transact-sql 语句。  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>链接服务器  
-通过使用 SQL Server 链接服务器连接，可以使用 SQL Server 将 Transact-sql\-语句提交给 SQL Server PDW。 
+通过使用 SQL Server 链接服务器连接，可以使用 SQL Server 将 Transact-sql \- 语句提交给 SQL Server PDW。 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 
@@ -173,7 +173,7 @@ For more information, see [Connect With SQL Server Linked Server &#40;SQL Server
 ## <a name="business-intelligence-tools"></a>商业智能工具
   
 ### <a name="analysis-services"></a>Analysis Services  
-SQL Server PDW 是 Analysis Services 数据库和 Excel PowerPivot 模型的有效数据源。 使用 OLE DB 提供程序，您可以将 Analysis Services 多维数据集配置为使用多维联机分析处理（MOLAP）或关系联机分析处理（ROLAP）存储。  
+SQL Server PDW 是 Analysis Services 数据库和 Excel PowerPivot 模型的有效数据源。 使用 OLE DB 提供程序，您可以将 Analysis Services 多维数据集配置为使用多维联机分析处理 (MOLAP) 或关系联机分析处理 (ROLAP) 存储。  
   
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Analysis Services &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-analysis-services-sql-server-pdw.md).  
@@ -224,10 +224,10 @@ For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase
 ## <a name="database-backup-and-restore"></a>数据库备份和还原  
 SQL Server PDW 使用 Transact-sql 数据库备份和还原命令与备份服务器并行备份和还原用户数据库。 SQL Server PDW 将备份写入 Windows 文件共享中的目录，然后同样还原 Windows 文件共享中的数据。  
   
-有关详细信息，请参阅[规划备份和加载硬件](backup-and-loading-hardware.md)以及[备份和还原概述](backup-and-restore-overview.md)  
+有关详细信息，请参阅 [规划备份和加载硬件](backup-and-loading-hardware.md) 以及 [备份和还原概述](backup-and-restore-overview.md)  
   
 ## <a name="remote-table-copy"></a>远程表复制  
-通过 "远程表复制" 功能，可以将表从 SQL Server PDW 数据库复制到远程（非设备） SMP SQL Server 数据库。 这为 SQL Server PDW 提供了中心辐射型方案。  
+通过远程表复制功能，可以将表从 SQL Server PDW 数据库复制到远程 (非设备) SMP SQL Server 数据库。 这为 SQL Server PDW 提供了中心辐射型方案。  
   
 <!-- MISSING LINKS
 
@@ -241,15 +241,15 @@ For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw
 ### <a name="admin-console"></a>管理控制台  
 管理员控制台允许您查看有关设备运行状况的当前状态。 这将作为 web 应用程序在控制节点上运行，并且可通过 https 进行访问。  
   
-有关详细信息，请参阅[使用管理控制台监视设备 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+有关详细信息，请参阅 [使用管理控制台监视设备 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>系统视图  
 管理控制台基于系统视图查询。 您可以单独查询系统视图以获取所需的特定信息。  
 
-有关详细信息，请参阅[使用系统视图监视设备 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md) 
+有关详细信息，请参阅 [使用系统视图监视设备 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
-SQL Server PDW 有 System Center Operations Manager （SCOM）管理包。 
+SQL Server PDW System Center Operations Manager (SCOM) 管理包。 
 
-若要为 SCOM 配置设备，请参阅[使用 System Center Operations Manager &#40;Analytics 平台系统监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+若要为 SCOM 配置设备，请参阅 [使用 System Center Operations Manager &#40;Analytics 平台系统监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

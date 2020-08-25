@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439199"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768636"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 为目标业务对象创建代理并返回指向它的指针。 代理会将数据打包并封送到服务器端存根，以便与业务对象通信，以便通过 Internet 发送请求和数据。 对于进程内组件对象，不使用代理，只提供指向对象的指针。  
@@ -37,12 +37,12 @@ ms.locfileid: "88439199"
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  *Object*  
  一个对象变量，其计算结果为作为 *ProgID*中指定的类型的对象。  
   
  *空间*  
- 表示 RDS 的对象变量 [。](../../../ado/reference/rds-api/dataspace-object-rds.md) 用于创建新对象的实例的空间对象。  
+ 表示 RDS 的对象变量 [。](./dataspace-object-rds.md) 用于创建新对象的实例的空间对象。  
   
  *ProgID*  
  一个 **字符串** 值，该值包含编程标识符，该标识符指定实现应用程序业务规则的服务器端业务对象。  
@@ -54,11 +54,9 @@ ms.locfileid: "88439199"
  *HTTP 协议*是标准 Web 协议;*HTTPS*是一种安全的 Web 协议。 在不使用 HTTP 的情况下运行局域网时使用 *DCOM 协议* 。 *进程内*协议是 (DLL) 的本地动态链接库;它不使用网络。  
   
 ## <a name="applies-to"></a>适用于  
- [DataSpace 对象 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace 对象 (RDS)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [DataFactory 对象、查询方法和 CreateObject 方法示例 (VBScript) ](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [ (VBScript) 的空间对象和 CreateObject 方法示例 ](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [DataFactory 对象、查询方法和 CreateObject 方法示例 (VBScript) ](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [ (VBScript) 的空间对象和 CreateObject 方法示例 ](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [CreateRecordset 方法 (RDS)](./createrecordset-method-rds.md)

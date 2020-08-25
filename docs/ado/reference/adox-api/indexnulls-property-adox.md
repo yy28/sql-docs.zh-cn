@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c197a7eb88472f609d2d2713b292bc5f98c88c9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b71e3298c18b10fa34615e3382d561f454b5eb4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439889"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770166"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls 属性 (ADOX)
 指示在其索引字段中具有 null 值的记录是否具有索引条目。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回一个 [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) 值。 默认值为 **adIndexNullsDisallow**。  
+ 设置并返回一个 [AllowNullsEnum](./allownullsenum.md) 值。 默认值为 **adIndexNullsDisallow**。  
   
 ## <a name="remarks"></a>备注  
- 对于已追加到集合的 [索引](../../../ado/reference/adox-api/index-object-adox.md) 对象，此属性是只读的。  
+ 对于已追加到集合的 [索引](./index-object-adox.md) 对象，此属性是只读的。  
   
 ## <a name="applies-to"></a>适用于  
- [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [索引对象 (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [IndexNulls 属性示例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+ [IndexNulls 属性示例 (VB)](./indexnulls-property-example-vb.md)

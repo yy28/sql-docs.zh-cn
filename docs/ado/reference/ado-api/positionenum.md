@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 326fc4f1b9b77c8a4470fedc7d55f2d379aff6f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d7b443e94f3bea5977aeaf953e84c66c826daeb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442709"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773166"
 ---
 # <a name="positionenum"></a>PositionEnum
-指定记录指针在 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前位置。  
+指定记录指针在 [记录集中](./recordset-object-ado.md)的当前位置。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
-|**adPosBOF**|-2|指示当前记录指针处于 BOF (也就是说， [bof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 属性为 **True**) 。|  
-|**adPosEOF**|-3|指示当前记录指针位于 EOF (即， [eof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 属性为 **True**) 。|  
-|**adPosUnknown**|-1|指示 **记录集** 为空，当前位置未知，或者提供程序不支持 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 或 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 属性。|  
+|**adPosBOF**|-2|指示当前记录指针处于 BOF (也就是说， [bof](./bof-eof-properties-ado.md) 属性为 **True**) 。|  
+|**adPosEOF**|-3|指示当前记录指针位于 EOF (即， [eof](./bof-eof-properties-ado.md) 属性为 **True**) 。|  
+|**adPosUnknown**|-1|指示 **记录集** 为空，当前位置未知，或者提供程序不支持 [AbsolutePage](./absolutepage-property-ado.md) 或 [AbsolutePosition](./absoluteposition-property-ado.md) 属性。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
@@ -45,9 +45,9 @@ ms.locfileid: "88442709"
 
 :::row:::
     :::column:::
-        [AbsolutePage 属性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+        [AbsolutePage 属性 (ADO)](./absolutepage-property-ado.md)  
     :::column-end:::
     :::column:::
-        [AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+        [AbsolutePosition 属性 (ADO)](./absoluteposition-property-ado.md)  
     :::column-end:::
 :::row-end:::

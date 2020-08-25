@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09d345a0f08d9fa2e9e3696941aba1ef49443efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442819"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773466"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>参数（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 .com. 数据  
@@ -66,7 +66,7 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>参数访问器方法  
- [参数](../../../ado/reference/ado-api/parameter-object.md)对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性可获取或设置该对象的内容。 内容表示为一种变量，一种可以为其分配值和多个数据类型的对象的类型。  
+ [参数](./parameter-object.md)对象的[Value](./value-property-ado.md)属性可获取或设置该对象的内容。 内容表示为一种变量，一种可以为其分配值和多个数据类型的对象的类型。  
   
  ADO/WFC 使用**getValue**方法实现**Value**属性，该方法返回变量对象;和**setValue**方法，该方法采用变量作为参数。 变体在某些语言（如 Microsoft Visual Basic）中效率高。  
   
@@ -96,4 +96,4 @@ public void setNull()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter 对象](./parameter-object.md)

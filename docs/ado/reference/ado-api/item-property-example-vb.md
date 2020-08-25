@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443389"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774646"
 ---
 # <a name="item-property-example-vb"></a>Item 属性示例 (VB)
-此示例演示 [Item](../../../ado/reference/ado-api/item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开***Pubs***数据库的***Authors***表。  
+此示例演示 [Item](./item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开***Pubs***数据库的***Authors***表。  
   
- 对于数据库发出的命令中的参数，可通过索引和名称从 [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象的 [参数](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合进行访问。 然后，将根据索引和名称从该对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合访问返回的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的字段。  
+ 对于数据库发出的命令中的参数，可通过索引和名称从 [命令](./command-object-ado.md) 对象的 [参数](./parameters-collection-ado.md) 集合进行访问。 然后，将根据索引和名称从该对象的[字段](./fields-collection-ado.md)集合访问返回的[记录集](./recordset-object-ado.md)的字段。  
   
 ```  
 'BeginItemVB  
@@ -136,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO) 的命令对象 (](../../../ado/reference/ado-api/command-object-ado.md)   
- [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [项属性 (ADO) ](../../../ado/reference/ado-api/item-property-ado.md)   
- [ADO) 的参数集合 (](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ADO) 的命令对象 (](./command-object-ado.md)   
+ [字段集合 (ADO) ](./fields-collection-ado.md)   
+ [项属性 (ADO) ](./item-property-ado.md)   
+ [ADO) 的参数集合 (](./parameters-collection-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 839137cb2787ec35f8a49d6f66a8577e4d9d959a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1f7441fe32e361d15f80a6368065548e7fe39ae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441549"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776916"
 ---
 # <a name="version-property-example-vb"></a>Version 属性示例 (VB)
-此示例使用[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Version](../../../ado/reference/ado-api/version-property-ado.md)属性显示当前 ADO 版本。 它还使用几个动态属性来显示：  
+此示例使用[连接](./connection-object-ado.md)对象的[Version](./version-property-ado.md)属性显示当前 ADO 版本。 它还使用几个动态属性来显示：  
   
 -   当前 DBMS 名称和版本。  
   
@@ -79,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version 属性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [ADO) 的连接对象 (](./connection-object-ado.md)   
+ [Version 属性 (ADO)](./version-property-ado.md)

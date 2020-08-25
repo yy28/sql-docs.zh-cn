@@ -34,7 +34,7 @@ ms.locfileid: "88773636"
   
  当[CursorLocation](./cursorlocation-property-ado.md)属性设置为**AdUseClient**时， **Optimize**是追加到[Field](./field-object.md)对象[Properties](./properties-collection-ado.md) collection 的动态属性。  
   
-## <a name="usage"></a>使用情况  
+## <a name="usage"></a>用法  
   
 ```  
 Dim rs As New Recordset  

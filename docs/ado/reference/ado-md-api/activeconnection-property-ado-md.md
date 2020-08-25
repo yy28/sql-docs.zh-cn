@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea9319e89c44b9cbb66b3acecdcbea4afa3e61c4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441439"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776775"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 属性 (ADO MD)
-指示当前单元集或目录当前属于哪个 ADO [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象。  
+指示当前单元集或目录当前属于哪个 ADO [连接](../ado-api/connection-object-ado.md) 对象。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **变量** ，该变量包含定义连接或 **连接** 对象的字符串。 默认值为空。  
@@ -34,9 +34,9 @@ ms.locfileid: "88441439"
 ## <a name="remarks"></a>备注  
  可将此属性设置为有效的 ADO **连接** 对象或有效的连接字符串。 如果将此属性设置为连接字符串，则提供程序将使用此定义创建新的 **连接** 对象，并打开连接。  
   
- 如果使用[open](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法的*ActiveConnection*参数打开[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象，则**ActiveConnection**属性将继承参数的值。  
+ 如果使用[open](./open-method-ado-md.md)方法的*ActiveConnection*参数打开[单元集](./cellset-object-ado-md.md)对象，则**ActiveConnection**属性将继承参数的值。  
   
- 将[目录](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)对象的**ActiveConnection**属性设置为 "**无**" 可释放关联的数据，包括[CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合中的数据以及任何相关的[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象。 关闭用于打开**目录**的**连接**对象具有与将**ActiveConnection**属性设置为**Nothing**相同的效果。  
+ 将[目录](./catalog-object-ado-md.md)对象的**ActiveConnection**属性设置为 "**无**" 可释放关联的数据，包括[CubeDefs](./cubedefs-collection-ado-md.md)集合中的数据以及任何相关的[维度](./dimension-object-ado-md.md)、[层次结构](./hierarchy-object-ado-md.md)、[级别](./level-object-ado-md.md)和[成员](./member-object-ado-md.md)对象。 关闭用于打开**目录**的**连接**对象具有与将**ActiveConnection**属性设置为**Nothing**相同的效果。  
   
  更改**目录**对象的**ActiveConnection**属性所引用的连接的默认数据库将会使该**目录**的内容失效。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "88441439"
 
 :::row:::
     :::column:::
-        [目录对象 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [目录对象 (ADO MD)](./catalog-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+        [单元集对象 (ADO MD)](./cellset-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [ (VB) 单元集示例 ](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [ (VB) 单元集示例 ](./cellset-example-vb.md)   
+ [ADO) 的连接对象 (](../ado-api/connection-object-ado.md)   
+ [Open 方法 (ADO MD)](./open-method-ado-md.md)

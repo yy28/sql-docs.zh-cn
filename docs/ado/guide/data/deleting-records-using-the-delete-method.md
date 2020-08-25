@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d8a29f2e1f35ddddc28e4aa3fb3c52c649e3056
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2f6f3fa47c53a5a6873024284e58604a8e8a2c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453529"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806918"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法删除记录
-使用 **Delete** 方法将当前记录或记录 **集** 对象中的一组记录标记为删除。 如果 **记录集** 对象不允许删除记录，则会发生错误。 如果处于立即更新模式，则会立即删除数据库中的删除操作。 如果由于数据库完整性冲突而无法成功删除记录 (例如) ，则在调用 Update 后，该记录将继续处于编辑模式 **。** 这意味着，必须先使用 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 取消更新，然后再离开当前记录 (例如，使用 [Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)或 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)) 。  
+使用 **Delete** 方法将当前记录或记录 **集** 对象中的一组记录标记为删除。 如果 **记录集** 对象不允许删除记录，则会发生错误。 如果处于立即更新模式，则会立即删除数据库中的删除操作。 如果由于数据库完整性冲突而无法成功删除记录 (例如) ，则在调用 Update 后，该记录将继续处于编辑模式 **。** 这意味着，必须先使用 [CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md) 取消更新，然后再离开当前记录 (例如，使用 [Close](../../reference/ado-api/close-method-ado.md)、 [Move](../../reference/ado-api/move-method-ado.md)或 [NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)) 。  
   
  如果处于批处理更新模式，记录将标记为从缓存中删除，并且在调用 **UpdateBatch** 方法时会发生实际的删除。  (若要查看已删除的记录，请在调用**Delete**后将**Filter**属性设置为**adFilterAffectedRecords** 。 )   
   

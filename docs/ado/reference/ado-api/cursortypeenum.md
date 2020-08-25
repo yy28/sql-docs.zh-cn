@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444239"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775466"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-指定 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象中使用的游标类型。  
+指定 [记录集](./recordset-object-ado.md) 对象中使用的游标类型。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|使用动态游标。 其他 **用户的添加** 、更改和删除是可见的，并且允许所有类型的移动（书签除外，如果提供程序不支持）。|  
 |**adOpenForwardOnly**|0|默认。 使用只进游标。 与静态游标相同，不同之处在于只能向前滚动记录。 当只需通过 **记录集**进行一次传递时，这可以提高性能。|  
@@ -46,4 +46,4 @@ ms.locfileid: "88444239"
 |AdoEnums. CursorType。未指定|  
   
 ## <a name="applies-to"></a>适用于  
- [CursorType 属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [CursorType 属性 (ADO)](./cursortype-property-ado.md)

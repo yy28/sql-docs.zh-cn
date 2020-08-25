@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400718"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
@@ -21,7 +21,7 @@ ms.locfileid: "74400718"
 本文介绍如何在 SQL Server 实例上使用 PolyBase 查询 Azure Blob 存储中的外部数据。
 
 > [!NOTE]
-> AP 目前仅支持标准常规用途 v1 本地冗余（LRS） Azure Blob 存储。
+> AP 目前仅支持标准常规用途 v1 本地冗余 (LRS) Azure Blob 存储。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -32,7 +32,7 @@ ms.locfileid: "74400718"
 
 首先，将 AP 配置为使用 Azure Blob 存储。
 
-1. 运行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)并将 "hadoop 连接" 设置为 Azure Blob 存储提供程序。 若要查找提供程序的值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+1. 运行 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 并将 "hadoop 连接" 设置为 Azure Blob 存储提供程序。 若要查找提供程序的值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -45,7 +45,7 @@ ms.locfileid: "74400718"
    GO
    ```  
 
-2. 使用[设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
+2. 使用 [设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
   
 ## <a name="configure-an-external-table"></a>配置外部表
 
@@ -66,7 +66,7 @@ ms.locfileid: "74400718"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 使用[CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)创建外部数据源。
+1. 使用 [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)创建外部数据源。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -173,7 +173,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>查看 SSDT 中的 PolyBase 对象  
 
-在 SQL Server Data Tools 中，外部表在单独的文件夹**外部表**中显示。 外部数据源和外部文件格式位于“外部资源” **** 下的子文件夹中。  
+在 SQL Server Data Tools 中，外部表在单独的文件夹 **外部表**中显示。 外部数据源和外部文件格式位于“外部资源” **** 下的子文件夹中。  
   
 ![SSDT 中的 PolyBase 对象](media/polybase/external-tables-datasource.png)  
 

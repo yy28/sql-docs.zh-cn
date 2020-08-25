@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50b8465e5f7f816007526b66d8cc0696e0c47fca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441709"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777066"
 ---
 # <a name="type-property-example-field-vc"></a>Type 属性示例（字段）(VC++)
-此示例通过显示与***Employees***表中所有[Field](../../../ado/reference/ado-api/field-object.md)对象的**Type**属性值相对应的常量的名称，演示了[type](../../../ado/reference/ado-api/type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  
+此示例通过显示与***Employees***表中所有[Field](./field-object.md)对象的**Type**属性值相对应的常量的名称，演示了[type](./type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  
   
 ## <a name="example"></a>示例  
   
@@ -172,5 +172,5 @@ void PrintComError(_com_error &e) {
  **名称： hire_date**  
  **类型： adDBTimeStamp**   
 ## <a name="see-also"></a>另请参阅  
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field 对象](./field-object.md)   
+ [Type 属性 (ADO)](./type-property-ado.md)

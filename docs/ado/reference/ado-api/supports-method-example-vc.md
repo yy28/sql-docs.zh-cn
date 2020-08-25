@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66592f099b5d125acb92cbcb85bf7e8964aeda8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441759"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777126"
 ---
 # <a name="supports-method-example-vc"></a>Supports 方法示例 (VC++)
-此示例使用 [支持](../../../ado/reference/ado-api/supports-method.md) 方法显示使用不同游标类型打开的记录集支持的选项。 运行此示例需要 DisplaySupport 函数。  
+此示例使用 [支持](./supports-method.md) 方法显示使用不同游标类型打开的记录集支持的选项。 运行此示例需要 DisplaySupport 函数。  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -227,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports 方法](../../../ado/reference/ado-api/supports-method.md)
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [Supports 方法](./supports-method.md)
