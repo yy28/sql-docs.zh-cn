@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438569"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767326"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 使用连接字符串指定的数据库同步给定的记录集，以便在 ADO 2.5 和更高版本中使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "88438569"
 object.Synchronize(ConnectionString As String, HandlerString As String, lSynchronizeOptions As Long, ppRecordset As Object, pStatusArray, [lcid As Long], [pInformation)  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *ConnectionString*  
  一个字符串，用于连接到将在其中发送请求的 OLE DB 提供程序。 如果使用处理程序，则处理程序可以编辑或替换连接字符串。  
   
@@ -68,6 +68,4 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *HandlerString*参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 然后 Msdfmap.dll 会将参数解释为一个方向，以使用 sample.ini 检查连接和查询字符串。  
   
 ## <a name="applies-to"></a>适用于  
- [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)

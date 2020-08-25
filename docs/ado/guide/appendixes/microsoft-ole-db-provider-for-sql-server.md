@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffb627b0994afbe2b51f946e4ab7dca881e9a9a4
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454039"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806544"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>适用于 SQL Server 的 Microsoft OLE DB 提供程序概述
 适用于 SQL Server 的 Microsoft OLE DB 提供程序，SQLOLEDB 允许 ADO 访问 Microsoft SQL Server。
@@ -29,13 +29,13 @@ ms.locfileid: "88454039"
 > 适用于 SQL Server 的 Microsoft OLE DB 提供程序 (SQLOLEDB) 保持不推荐使用，不建议用于新的开发工作。 相反，请使用新的 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其将使用最新的服务器功能进行更新。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到该提供程序，请将 *提供程序* 参数设置为 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 属性，以：
+ 若要连接到该提供程序，请将 *提供程序* 参数设置为 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) 属性，以：
 
 ```vb
 SQLOLEDB
 ```
 
- 还可以使用 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 属性设置或读取此值。
+ 还可以使用 [Provider](../../reference/ado-api/provider-property-ado.md) 属性设置或读取此值。
 
 ## <a name="typical-connection-string"></a>典型连接字符串
  此提供程序的典型连接字符串是：
@@ -60,11 +60,11 @@ User ID=MyUserID;Password=MyPassword;"
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。
 
 ## <a name="provider-specific-connection-parameters"></a>特定于提供程序的连接参数
- 提供程序除 ADO 定义的连接参数外，还支持多个特定于提供程序的连接参数。 与 ADO 连接属性一样，这些特定于提供程序的属性可以通过[连接](../../../ado/reference/ado-api/connection-object-ado.md)的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合进行设置，也可以设置为**ConnectionString**的一部分。
+ 提供程序除 ADO 定义的连接参数外，还支持多个特定于提供程序的连接参数。 与 ADO 连接属性一样，这些特定于提供程序的属性可以通过[连接](../../reference/ado-api/connection-object-ado.md)的[properties](../../reference/ado-api/properties-collection-ado.md)集合进行设置，也可以设置为**ConnectionString**的一部分。
 
 |参数|说明|
 |---------------|-----------------|
-|Trusted_Connection|指示用户身份验证模式。 这可以设置为 **"是" 或 "** **否**"。 默认值为 " **否**"。 如果将此属性设置为 **"是"**，则 SQLOLEDB 将使用 MICROSOFT Windows NT 身份验证模式来授权用户访问由 **Location** 和 [Datasource](../../../ado/reference/ado-api/datasource-property-ado.md) 属性值指定的 SQL Server 数据库。 如果将此属性设置为 " **否**"，则 SQLOLEDB 将使用混合模式来授予用户对 SQL Server 数据库的访问权限。 SQL Server 登录名和密码在 " **用户 Id** " 和 " **密码** " 属性中指定。|
+|Trusted_Connection|指示用户身份验证模式。 这可以设置为 **"是" 或 "** **否**"。 默认值为 " **否**"。 如果将此属性设置为 **"是"**，则 SQLOLEDB 将使用 MICROSOFT Windows NT 身份验证模式来授权用户访问由 **Location** 和 [Datasource](../../reference/ado-api/datasource-property-ado.md) 属性值指定的 SQL Server 数据库。 如果将此属性设置为 " **否**"，则 SQLOLEDB 将使用混合模式来授予用户对 SQL Server 数据库的访问权限。 SQL Server 登录名和密码在 " **用户 Id** " 和 " **密码** " 属性中指定。|
 |当前语言|指示 SQL Server 语言名称。 标识用于系统消息选择和格式化的语言。 必须在 SQL Server 上安装该语言，否则打开该连接将失败。|
 |网络地址|指示 **Location** 属性指定的 SQL Server 的网络地址。|
 |Network Library|指示用于与 SQL Server 通信的网络库 (DLL) 的名称。 该名称不应当包含路径或 .dll 文件扩展名。 默认值由 SQL Server 客户端配置提供。|
@@ -109,7 +109,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```
 
 ## <a name="sql-server-features"></a>SQL Server 功能
- 使用 SQL Server，ADO 可以使用 XML 作为 **命令** 输入，并以 xml 流格式而不是在 **Recordset** 对象中检索结果。 有关详细信息，请参阅将 [流用于命令输入](../../../ado/guide/data/command-streams.md) 和 [检索流中的结果](../../../ado/guide/data/retrieving-resultsets-into-streams.md)集。
+ 使用 SQL Server，ADO 可以使用 XML 作为 **命令** 输入，并以 xml 流格式而不是在 **Recordset** 对象中检索结果。 有关详细信息，请参阅将 [流用于命令输入](../data/command-streams.md) 和 [检索流中的结果](../data/retrieving-resultsets-into-streams.md)集。
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>使用 MDAC 2.7、MDAC 2.8 或 Windows DAC 6.0 访问 sql_variant 数据
  Microsoft SQL Server 具有一个名为 **sql_variant**的数据类型。 与 OLE DB **DBTYPE_VARIANT**类似， **sql_variant** 数据类型可以存储多种不同类型的数据。 但 **DBTYPE_VARIANT** 和 **sql_variant**之间存在一些重要差异。 ADO 还会以不同于处理其他数据类型的方式处理存储为 **sql_variant** 值的数据。 以下列表描述了访问 **sql_variant**类型的列中存储的 SQL Server 数据时要考虑的问题。
@@ -134,9 +134,9 @@ EXECUTE SalesByCategory 'Produce', '1995'
  SQL Server 游标支持可滚动的 SQLOLEDB 记录集。 SQL Server 对对数据库的其他用户所做更改敏感的游标施加限制。 具体而言，某些游标中的行无法排序，尝试使用包含 SQL ORDER BY 子句的命令创建记录集可能会失败。
 
 ## <a name="dynamic-properties"></a>动态属性
- 用于 SQL Server 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的**properties**集合。
+ 用于 SQL Server 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的[连接](../../reference/ado-api/connection-object-ado.md)、[记录集](../../reference/ado-api/recordset-object-ado.md)和[命令](../../reference/ado-api/command-object-ado.md)对象的**properties**集合。
 
- 下表是每个动态属性的 ADO 和 OLE DB 名称的交叉索引。 OLE DB 程序员参考是指 ADO 属性名称，术语为 "Description"。 可以在 OLE DB 程序员参考中找到有关这些属性的详细信息。 在索引中搜索 OLE DB 属性名称，或者参阅 [附录 C： OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是每个动态属性的 ADO 和 OLE DB 名称的交叉索引。 OLE DB 程序员参考是指 ADO 属性名称，术语为 "Description"。 可以在 OLE DB 程序员参考中找到有关这些属性的详细信息。 在索引中搜索 OLE DB 属性名称，或者参阅 [附录 C： OLE DB 属性](/previous-versions/windows/desktop/ms723130(v=vs.85))。
 
 ## <a name="connection-dynamic-properties"></a>连接动态属性
  将以下属性添加到**连接**对象的**properties**集合。
@@ -356,7 +356,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML 根|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- 有关 Microsoft SQL Server OLE DB 提供程序的特定实现细节和功能信息，请参阅 [SQL Server 提供程序](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)。
+ 有关 Microsoft SQL Server OLE DB 提供程序的特定实现细节和功能信息，请参阅 [SQL Server 提供程序](/previous-versions/windows/desktop/ms720897(v=vs.85))。
 
 ## <a name="see-also"></a>另请参阅
- [ConnectionString 属性 (ado) ](../../../ado/reference/ado-api/connectionstring-property-ado.md) [提供程序属性 (Ado) ](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset 对象 (ado) ](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ConnectionString 属性 (ado) ](../../reference/ado-api/connectionstring-property-ado.md) [提供程序属性 (Ado) ](../../reference/ado-api/provider-property-ado.md) [Recordset 对象 (ado) ](../../reference/ado-api/recordset-object-ado.md)

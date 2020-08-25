@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453749"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806958"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、CALC 函数和 NEW 关键字
 数据定形支持以下功能。 分配给包含要操作的列的章节的名称是 *章节别名*。  
@@ -40,7 +40,7 @@ ms.locfileid: "88453749"
   
 |计算表达式|说明|  
 |---------------------------|-----------------|  
-|计算 (*表达式*) |计算任意表达式，但仅在包含 CALC 函数的 **记录集** 的行上。 允许使用这些 [Visual Basic for Applications (VBA) 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md) 的任何表达式。|  
+|计算 (*表达式*) |计算任意表达式，但仅在包含 CALC 函数的 **记录集** 的行上。 允许使用这些 [Visual Basic for Applications (VBA) 函数](./visual-basic-for-applications-functions.md) 的任何表达式。|  
   
 |NEW 关键字|说明|  
 |-----------------|-----------------|  
@@ -74,6 +74,6 @@ ms.locfileid: "88453749"
  如果新字段的类型为 decimal (OLE DB、DBTYPE_DECIMAL 或 ADO adDecimal) 中，则必须指定精度和小数位数。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
+ [数据定形示例](./data-shaping-example.md)   
+ [正式形状语法](./formal-shape-grammar.md)   
+ [常用 Shape 命令](./shape-commands-in-general.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439049"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768396"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 执行请求并创建 ADO 记录集以在 ADO 2.1 中使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "88439049"
 object.Execute21(ConnectionString As String, HandlerString As String, QueryString As String, lMarshalOptions As Long, Properties, TableId, lExecuteOptions As Long, pParameters)  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *ConnectionString*  
  一个字符串，用于连接到将发送请求以执行的 OLE DB 提供程序。 如果使用 *HandlerString*指定处理程序，则它可以编辑或替换连接字符串。  
   
@@ -74,9 +74,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*参数可以为 null。 在这种情况下，会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 MSDFMAP.dll 会将参数解释为使用 sample.ini 检查连接和查询字符串的方向。  
   
 > [!NOTE]
->  **Execute21**方法是[ (RDS) 的 Execute 方法](../../../ado/reference/rds-api/execute-method-rds.md)的版本。 如果需要使用 **Execute** 方法与 ADO 2.1 进行通信，则可以改为调用 **Execute21** 方法。 ADO 2.5 和更高版本中 **执行** 方法的功能是为 ADO 2.1 中的同一方法提供的功能的超集。  
+>  **Execute21**方法是[ (RDS) 的 Execute 方法](./execute-method-rds.md)的版本。 如果需要使用 **Execute** 方法与 ADO 2.1 进行通信，则可以改为调用 **Execute21** 方法。 ADO 2.5 和更高版本中 **执行** 方法的功能是为 ADO 2.1 中的同一方法提供的功能的超集。  
   
 ## <a name="applies-to"></a>适用于  
- [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)

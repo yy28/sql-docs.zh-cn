@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454019"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806525"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单提供程序概述
-Microsoft OLE DB 简单提供程序 (OSP) 允许 ADO 访问使用 [OLE DB 简单提供程序 (OSP) 工具包](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)编写的提供程序的任何数据。 简单提供程序用于访问只需要基本 OLE DB 支持的数据源，例如内存中数组或 XML 文档。
+Microsoft OLE DB 简单提供程序 (OSP) 允许 ADO 访问使用 [OLE DB 简单提供程序 (OSP) 工具包](/previous-versions/windows/desktop/ms715822(v=vs.85))编写的提供程序的任何数据。 简单提供程序用于访问只需要基本 OLE DB 支持的数据源，例如内存中数组或 XML 文档。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到 OLE DB 简单提供程序 DLL，请将 *提供程序* 参数设置为 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 属性，以：
+ 若要连接到 OLE DB 简单提供程序 DLL，请将 *提供程序* 参数设置为 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) 属性，以：
 
 ```vb
 MSDAOSP
 ```
 
- 还可以使用 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 属性设置或读取此值。
+ 还可以使用 [Provider](../../reference/ado-api/provider-property-ado.md) 属性设置或读取此值。
 
  您可以使用已注册的提供程序名称（由提供程序编写器确定），连接到已注册为完全 OLE DB 提供程序的简单提供程序。
 
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO 向层次结构中的每个 **记录集** 添加一个额外的数据列 ($Text) 。
 
- 有关 OLE DB 简单提供程序的详细信息，请参阅 [构建简单的提供程序](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
+ 有关 OLE DB 简单提供程序的详细信息，请参阅 [构建简单的提供程序](/previous-versions/windows/desktop/ms721067(v=vs.85))。
 
 ## <a name="code-example"></a>代码示例
  下面的 Visual Basic 代码演示如何打开任意 XML 文件、构造分层 **记录集**，以及以递归方式将每个 **记录集** 的每个记录写入 "调试" 窗口。

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a4667b6524cef6694340d917dad04fad04ad3f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438969"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768136"
 ---
 # <a name="handler-property-example-vb"></a>Handler 属性示例 (VB)
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此示例演示了 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象 [处理程序](../../../ado/reference/rds-api/handler-property-rds.md) 属性。 有关详细信息，请参阅 [DataFactory 自定义](../../../ado/guide/remote-data-service/datafactory-customization.md) 。 )  (  
+ 此示例演示了 [RDS DataControl](./datacontrol-object-rds.md) 对象 [处理程序](./handler-property-rds.md) 属性。 有关详细信息，请参阅 [DataFactory 自定义](../../guide/remote-data-service/datafactory-customization.md) 。 )  (  
   
  假设参数文件 Msdfmap.ini 中的以下部分位于服务器上：  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 你的代码如下所示。 分配给 [SQL](../../../ado/reference/rds-api/sql-property.md) 属性的命令将与 ***AuthorById*** 标识符匹配，并将为作者 Michael O'Leary 检索行。 将 **DataControl** 对象 **记录集** 属性分配给完全作为编码便利的断开连接的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象。  
+ 你的代码如下所示。 分配给 [SQL](./sql-property.md) 属性的命令将与 ***AuthorById*** 标识符匹配，并将为作者 Michael O'Leary 检索行。 将 **DataControl** 对象 **记录集** 属性分配给完全作为编码便利的断开连接的 [记录集](../ado-api/recordset-object-ado.md) 对象。  
   
 ```  
 'BeginHandlerVB  
@@ -80,7 +80,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handler 属性 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
+ [DataControl 对象 (RDS) ](./datacontrol-object-rds.md)   
+ [Handler 属性 (RDS)](./handler-property-rds.md)

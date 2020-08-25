@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c383eec4ac09c41aef6953f63e5accbab40ff7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0669f8c4762717311cab83d35c80c5b35e791f59
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453999"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806504"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>配合使用 ADO 与 Microsoft Visual C++
 有关使用 ADO 和 Visual C++ 的信息，请参阅以下部分：  
   
--   [Visual C++ ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
+-   [Visual C++ ADO 编程](./visual-c-ado-programming.md)  
   
--   [ADO 的 Visual C++ 扩展](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)  
+-   [ADO 的 Visual C++ 扩展](./visual-c-extensions-for-ado.md)  
   
--   [使用 Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)  
+-   [使用 Visual C++ 扩展](./using-visual-c-extensions.md)  
   
--   [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)  
+-   [Visual C++ 扩展标头](./visual-c-extensions-header.md)  
   
--   [Visual C++ 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
+-   [Visual C++ 扩展示例](./visual-c-extensions-example.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft ActiveX 数据对象 (ADO) ](../../../ado/microsoft-activex-data-objects-ado.md)   
- [用于 COM Visual C++ 语法索引的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [ADO for Visual C++ 语法索引与 #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [将 ADO 与 Microsoft Visual Basic 一起使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [使用 ADO 和脚本语言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
- [ADO 的 Visual C++ 扩展](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)
+ [Microsoft ActiveX 数据对象 (ADO) ](../../microsoft-activex-data-objects-ado.md)   
+ [用于 COM Visual C++ 语法索引的 ADO](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [ADO for Visual C++ 语法索引与 #import](../../reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [将 ADO 与 Microsoft Visual Basic 一起使用](./using-ado-with-microsoft-visual-basic.md)   
+ [使用 ADO 和脚本语言](./using-ado-with-scripting-languages.md)   
+ [ADO 的 Visual C++ 扩展](./visual-c-extensions-for-ado.md)

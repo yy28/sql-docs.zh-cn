@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765137d5b04c2077e113cb5eb1f515b569311161
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70719d77ce00cac42af05d7e42ce98c2b2c485af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440319"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771126"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 属性示例 (VC++)
-此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为*Northwind*数据库中的所有索引的**聚集**属性返回**False** 。  
+此示例演示[索引](./index-object-adox.md)的[聚集](./clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为*Northwind*数据库中的所有索引的**聚集**属性返回**False** 。  
   
 ```  
 // BeginClusteredCpp.cpp  
@@ -89,5 +89,5 @@ void ClusteredX() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [聚集属性 (ADOX) ](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [聚集属性 (ADOX) ](./clustered-property-adox.md)   
+ [索引对象 (ADOX)](./index-object-adox.md)

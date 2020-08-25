@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c24d7d5470ed4c78f74b78b38158113e3f4894
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7f994f29b41015d60912901100ac5b73c829e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440089"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770556"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 属性示例 (VC++)
-此示例演示[密钥](../../../ado/reference/adox-api/key-object-adox.md)对象的[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)属性。 该代码追加一个新 [表](../../../ado/reference/adox-api/table-object-adox.md) ，然后定义新的主键，并将 **DeleteRule** 设置为 **adRICascade**。  
+此示例演示[密钥](./key-object-adox.md)对象的[DeleteRule](./deleterule-property-adox.md)属性。 该代码追加一个新 [表](./table-object-adox.md) ，然后定义新的主键，并将 **DeleteRule** 设置为 **adRICascade**。  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -109,5 +109,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DeleteRule 属性 (ADOX) ](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [DeleteRule 属性 (ADOX) ](./deleterule-property-adox.md)   
+ [项对象 (ADOX)](./key-object-adox.md)

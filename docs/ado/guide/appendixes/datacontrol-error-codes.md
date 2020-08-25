@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422191"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806662"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 对象错误代码
-下表列出了 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象错误代码。 低2字节的正十进制转换、完整错误代码的负小数转换以及十六进制值。
+下表列出了 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 对象错误代码。 低2字节的正十进制转换、完整错误代码的负小数转换以及十六进制值。
 
-|RDS.DataControl 错误代码|Number|描述|
+|RDS.DataControl 错误代码|Number|说明|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|异步操作挂起时，无法执行操作。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|错误的内联 tablegram。|
@@ -48,4 +48,4 @@ ms.locfileid: "88422191"
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL** 属性需要系统文件 Urlmon.dll，但找不到该文件。|
 
 ## <a name="see-also"></a>另请参阅
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [DataControl 对象 (RDS)](../../reference/rds-api/datacontrol-object-rds.md)
