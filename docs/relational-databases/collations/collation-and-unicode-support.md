@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d8025daba4b4006b0d87422cffe8ea73f82c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39803c2063bf6afbae9bc6797d85499fc91a10bd
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466109"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564667"
 ---
 # <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -372,9 +372,6 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |约鲁巴语（尼日利亚）|0x046a|0x0409|Latin1_General_CI_AS|
 |祖鲁语（南非）|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中不能选择仅 Unicode 排序规则，因为不支持将它们用作服务器级排序规则。    
-    
 为服务器分配排序规则后，只能通过导出所有数据库对象和数据来更改它，重新生成 master 数据库，并导入所有数据库对象和数据。 与更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则相反，可在创建新数据库或数据库列时指定所需的排序规则。    
 
 若要查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器排序规则，请使用下列 `SERVERPROPERTY` 函数：

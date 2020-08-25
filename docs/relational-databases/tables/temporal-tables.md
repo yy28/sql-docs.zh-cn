@@ -12,16 +12,18 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3543738d8987beaeb6eafc69a446ab63e9b0c27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a12607d7279b8a7789d6365c11825608f57ad628
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463724"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646077"
 ---
 # <a name="temporal-tables"></a>临时表
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由系统控制版本的时态表）的支持，其附带的内置支持可以提供表中存储的数据在任意时间点的相关信息，而不仅仅是数据在当前时刻正确的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能。
 

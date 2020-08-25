@@ -12,16 +12,18 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 654648ba7206c3d5ce01a715a0ee24eae2d3212b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ae1efd305215d0e64287e6c0a7ad7aa9a70a36
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419001"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646437"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改由系统控制版本的时态表中的数据
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 系统版本控制的临时表中的数据使用常规的 DML 语句进行修改，但有一个重要的区别：无法直接修改时间段列数据。 当数据更新时，它就是版本控制的，每个已更新行的以前版本都将插入到历史记录表中。 当删除数据时，删除是逻辑的，行将从当前表格移动到历史记录表中 - 不会被永久删除。
 

@@ -12,16 +12,18 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4298cbc0c80937f01f37126c93b01f927c8cbd2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21e97c74d99a3ce653a79c68727e714d773cbba9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427479"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645773"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统控制版本的时态表中查询数据
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将“PERIOD”列指定为隐藏，其值将不会出现在 SELECT \* 查询中。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。
 

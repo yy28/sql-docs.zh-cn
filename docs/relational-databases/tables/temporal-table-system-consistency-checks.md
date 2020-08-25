@@ -12,16 +12,18 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8eac6400caf5a1d94e3b23aee4f59db252619eab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c5fb93aa131d856f0a1aeaad3f6da1265b649357
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473006"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645991"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>时态表系统一致性检查
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 使用临时表时，系统将执行若干一致性检查以确保架构符合临时要求，而且数据一致且将始终一致。 此外，已将临时检查添加到 **DBCC CHECKCONSTRAINTS** 语句。
 

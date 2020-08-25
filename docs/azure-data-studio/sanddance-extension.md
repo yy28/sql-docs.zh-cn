@@ -4,17 +4,17 @@ description: 了解如何使用 Azure Data Studio 扩展快速创建数据的可
 ms.custom: seodec18
 ms.date: 07/03/2019
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: b40ad2646f1eaa1534ab84cb0d638465588f2cd2
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 6369224595efffa83eb1bd3bed370f76030efe38
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411233"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745637"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>适用于 Azure Data Studio 的 SandDance（预览版）
 Azure Data Studio 现在可为数据创建快速可视化效果。 当你尝试查看数据并了解发生的情况时，此扩展会非常有用。 我们使用 Microsoft Research 的 SandDance 技术生成现成可用的数据可视化效果。

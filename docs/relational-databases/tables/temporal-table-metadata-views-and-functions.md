@@ -12,16 +12,18 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66873e27182013af7ac50dd8670b3b794e3d75ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74b1ef7c9af95ade874303c868bb586c603b6b3b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427429"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646548"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>临时表元数据视图和函数
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 包括多个元数据库视图和函数，可以让管理员检索有关临时表的信息。
 
