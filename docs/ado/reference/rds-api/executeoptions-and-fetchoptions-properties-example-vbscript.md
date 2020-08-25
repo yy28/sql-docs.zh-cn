@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b241eb84e4ea7766d209a61542562c2522a80849
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 277226353ad9e06aed7774f9195d429940165c26
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439039"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768336"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 属性示例 (VBScript)
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的代码演示如何在设计时设置 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) 和 [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) 属性。 如果未设置 **ExecuteOptions** ，则默认为 **adcExecSync**。 此设置指示当 **RDS。刷新** 方法被调用，它将在当前调用线程上执行（即，同步）。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **ExecuteOptionsDesignVBS**。  
+ 下面的代码演示如何在设计时设置 [ExecuteOptions](./executeoptions-property-rds.md) 和 [FetchOptions](./fetchoptions-property-rds.md) 属性。 如果未设置 **ExecuteOptions** ，则默认为 **adcExecSync**。 此设置指示当 **RDS。刷新** 方法被调用，它将在当前调用线程上执行（即，同步）。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **ExecuteOptionsDesignVBS**。  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -95,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- 下面的示例演示如何在运行时在 VBScript 代码中设置 **ExecuteOptions** 和 **FetchOptions** 属性。 有关这些属性的工作示例，请参阅 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) 方法。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **ExecuteOptionsRuntimeVBS**。  
+ 下面的示例演示如何在运行时在 VBScript 代码中设置 **ExecuteOptions** 和 **FetchOptions** 属性。 有关这些属性的工作示例，请参阅 [Refresh](./refresh-method-rds.md) 方法。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **ExecuteOptionsRuntimeVBS**。  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -171,8 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ExecuteOptions 属性 (RDS) ](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [FetchOptions 属性 (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
-
-
-
+ [ExecuteOptions 属性 (RDS) ](./executeoptions-property-rds.md)   
+ [FetchOptions 属性 (RDS)](./fetchoptions-property-rds.md)

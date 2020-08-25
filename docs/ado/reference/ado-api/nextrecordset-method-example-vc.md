@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9543501582e8cff357a2677f88e7a917224d866
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77d6e70dcc1d2fa7d3fc0ad3d4e14139e8e4dace
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443079"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774036"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset 方法示例 (VC++)
-此示例使用 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 方法查看记录集中的数据，该记录集使用由三个单独的 **SELECT** 语句组成的复合命令语句。  
+此示例使用 [NextRecordset](./nextrecordset-method-ado.md) 方法查看记录集中的数据，该记录集使用由三个单独的 **SELECT** 语句组成的复合命令语句。  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -140,4 +140,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [NextRecordset 方法 (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)
+ [NextRecordset 方法 (ADO)](./nextrecordset-method-ado.md)

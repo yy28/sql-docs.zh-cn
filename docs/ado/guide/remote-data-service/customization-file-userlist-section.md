@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452229"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759811"
 ---
 # <a name="customization-file-userlist-section"></a>自定义文件 UserList 部分
 **Userlist**部分适用于具有相同节*标识符*参数的**connect**部分。  
@@ -35,18 +35,16 @@ ms.locfileid: "88452229"
  _用户名_**=**   
  **_accessRights_**  
   
-|组成部分|描述|  
+|组成部分|说明|  
 |----------|-----------------|  
 |*userName*|采用此连接的人员的 *用户名* 。 有效用户名与 IIS **Service Manager** 对话框建立在一起。|  
 |**_accessRights_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取数据源。<br />-   **ReadWrite** -用户可以读取或写入数据源。|  
   
 ## <a name="see-also"></a>另请参阅  
- [自定义文件连接部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [自定义文件连接部分](./customization-file-connect-section.md)   
+ [自定义文件日志部分](./customization-file-logs-section.md)   
+ [自定义文件 SQL 部分](./customization-file-sql-section.md)   
+ [自定义 DataFactory](./datafactory-customization.md)   
+ [必需的客户端设置](./required-client-settings.md)   
+ [了解自定义文件](./understanding-the-customization-file.md)   
+ [编写自己的自定义处理程序](./writing-your-own-customized-handler.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb942aac538e73697435d94c77530ed1531a7325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7bbad7f16191b6ff9d1c3b5c497995733ab10b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442289"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777666"
 ---
 # <a name="resync-method-example-vb"></a>Resync 方法示例 (VB)
-此示例演示如何使用 [Resync](../../../ado/reference/ado-api/resync-method.md) 方法刷新静态记录集中的数据。  
+此示例演示如何使用 [Resync](./resync-method.md) 方法刷新静态记录集中的数据。  
   
 ```  
 'BeginResyncVB  
@@ -105,5 +105,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [重新同步方法](../../../ado/reference/ado-api/resync-method.md)
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [重新同步方法](./resync-method.md)

@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71142aac94003987267a6d4a6b30d2c9d17c1bfd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73fb0218b9a4a9437dbe8c103c8496f0a209e9b1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444419"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775806"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-指定在 (同步建立连接后，是否应返回[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法) 或 (异步) 之前返回。  
+指定在 (同步建立连接后，是否应返回[连接](./connection-object-ado.md)对象的[Open](./open-method-ado-connection.md)方法) 或 (异步) 之前返回。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|以异步方式打开连接。 可以使用 [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) 事件来确定连接何时可用。|  
+|**adAsyncConnect**|16|以异步方式打开连接。 可以使用 [ConnectComplete](./connectcomplete-and-disconnect-events-ado.md) 事件来确定连接何时可用。|  
 |**adConnectUnspecified**|-1|默认。 同步打开连接。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
@@ -40,4 +40,4 @@ ms.locfileid: "88444419"
 |AdoEnums.ConnectOption.CONNECTUNSPECIFIED|  
   
 ## <a name="applies-to"></a>适用于  
- [Open 方法（ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)
+ [Open 方法（ADO 连接）](./open-method-ado-connection.md)

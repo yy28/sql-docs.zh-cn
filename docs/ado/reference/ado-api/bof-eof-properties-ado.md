@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451122"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776396"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 属性 (ADO)
--   **BOF** 指示当前记录位置位于 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象中的第一条记录之前。  
+-   **BOF** 指示当前记录位置位于 [记录集](./recordset-object-ado.md) 对象中的第一条记录之前。  
   
 -   **EOF** 指示当前记录位置在 **Recordset** 对象的最后一条记录之后。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88451122"
   
  如果 **BOF** 或 **EOF** 属性为 **True**，则没有当前记录。  
   
- 如果打开的 **记录集** 对象不包含任何记录，则 **BOF** 和 **EOF** 属性将设置为 **True** (查看 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 属性以获取有关 **记录集** 的此状态的详细信息) 。 如果打开的 **记录集** 对象至少包含一条记录，则第一条记录为当前记录， **BOF** 和 **EOF** 属性为 **False**。  
+ 如果打开的 **记录集** 对象不包含任何记录，则 **BOF** 和 **EOF** 属性将设置为 **True** (查看 [RecordCount](./recordcount-property-ado.md) 属性以获取有关 **记录集** 的此状态的详细信息) 。 如果打开的 **记录集** 对象至少包含一条记录，则第一条记录为当前记录， **BOF** 和 **EOF** 属性为 **False**。  
   
  如果您删除 **记录集** 对象中的最后一个记录，则 **BOF** 和 **EOF** 属性可能会保持 **为假** ，直到您尝试重新定位当前记录为止。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88451122"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> 移动 < 0|移动0|MoveNext<br /><br /> 移动 > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF** =**True**， **EOF** = **False**|然后用户才能访问|错误|错误|然后用户才能访问|  
+|**BOF** =**True**， **EOF** = **False**|允许|错误|错误|允许|  
 |**BOF** =**False**， **EOF** = **True**|允许|允许|错误|错误|  
 |均 **为 True**|错误|错误|错误|错误|  
 |均 **为 False**|允许|允许|允许|允许|  
@@ -67,8 +67,8 @@ ms.locfileid: "88451122"
 |**MoveNext**， **移动** > 0|没有变化|设置为 **True**|  
   
 ## <a name="applies-to"></a>适用于  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [BOF、EOF 和 Bookmark 属性示例 (VB) ](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF、EOF 和 Bookmark 属性示例 (VC + +) ](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF、EOF 和 Bookmark 属性示例 (VB) ](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF、EOF 和 Bookmark 属性示例 (VC + +) ](./bof-eof-and-bookmark-properties-example-vc.md)

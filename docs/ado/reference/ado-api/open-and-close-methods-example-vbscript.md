@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3847fb3f9beaba4abe7820dae16cd57eba1cedd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442999"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773826"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 和 Close 方法示例 (VBScript)
-此示例使用已打开的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上的[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法。  
+此示例使用已打开的[记录集](./recordset-object-ado.md)和[连接](./connection-object-ado.md)对象上的[打开](./open-method-ado-recordset.md)和[关闭](./close-method-ado.md)方法。  
   
  在 (ASP) 的活动服务器页中使用以下示例。 使用 " **查找** " 找到文件 Adovbs，并将其放入计划使用的目录中。 将以下代码剪切并粘贴到记事本或其他文本编辑器中，并将其保存为 **OpenVBS**。 您可以在任何浏览器中查看结果。  
   
@@ -163,8 +163,8 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO (关闭方法) ](../../../ado/reference/ado-api/close-method-ado.md)   
- [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
- [开放式方法 (ADO 连接) ](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [ADO 记录集 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ADO (关闭方法) ](./close-method-ado.md)   
+ [ADO) 的连接对象 (](./connection-object-ado.md)   
+ [开放式方法 (ADO 连接) ](./open-method-ado-connection.md)   
+ [ADO 记录集 (打开方法) ](./open-method-ado-recordset.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

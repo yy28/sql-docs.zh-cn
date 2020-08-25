@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ba912f082cbd621d2d2205c6505e8c2be309bec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443329"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774546"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定在编辑过程中放置在记录上的锁的类型。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|指示开放式批处理更新。 对于批处理更新模式是必需的。|  
-|**adLockOptimistic**|3|指示开放式锁定，按记录记录。 提供程序使用开放式锁定，仅在调用 [Update](../../../ado/reference/ado-api/update-method.md) 方法时锁定记录。|  
+|**adLockOptimistic**|3|指示开放式锁定，按记录记录。 提供程序使用开放式锁定，仅在调用 [Update](./update-method.md) 方法时锁定记录。|  
 |**adLockPessimistic**|2|指示悲观锁定，按记录记录。 提供程序执行必要的操作以确保成功编辑记录，通常是在编辑后直接在数据源中锁定记录。|  
 |**adLockReadOnly**|1|指示只读记录。 不能更改数据。|  
 |**adLockUnspecified**|-1|不指定锁的类型。 对于克隆，会创建克隆，其锁定类型与原始副本相同。|  
@@ -49,11 +49,11 @@ ms.locfileid: "88443329"
 
 :::row:::
     :::column:::
-        [Clone 方法 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
-        [LockType 属性 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+        [Clone 方法 (ADO)](./clone-method-ado.md)  
+        [LockType 属性 (ADO)](./locktype-property-ado.md)  
     :::column-end:::
     :::column:::
-        [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
-        [WillExecute 事件 (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+        [Open 方法（ADO 记录集）](./open-method-ado-recordset.md)  
+        [WillExecute 事件 (ADO)](./willexecute-event-ado.md)  
     :::column-end:::
 :::row-end:::

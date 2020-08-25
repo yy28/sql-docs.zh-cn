@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d9b0ae19ce5fbac150a86fc7db3d08b16840fbd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 859fca56653250ee1070981db048aafeb2e4011a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444279"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775506"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、LockType 和 EditMode 属性示例 (VB) 
-此示例演示如何在打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)之前设置[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性。 它还在各种条件下显示 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 属性的值。 运行此过程需要 EditModeOutput 函数。  
+此示例演示如何在打开[记录集](./recordset-object-ado.md)之前设置[CursorType](./cursortype-property-ado.md)和[LockType](./locktype-property-ado.md)属性。 它还在各种条件下显示 [EditMode](./editmode-property.md) 属性的值。 运行此过程需要 EditModeOutput 函数。  
   
 ```  
 'BeginEditModeVB  
@@ -124,10 +124,10 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CursorType 属性 (ADO) ](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
- [EditMode 属性](../../../ado/reference/ado-api/editmode-property.md)   
- [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
- [LockType 属性 (ADO) ](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType 属性 (ADO) ](./cursortype-property-ado.md)   
+ [CursorTypeEnum](./cursortypeenum.md)   
+ [EditMode 属性](./editmode-property.md)   
+ [EditModeEnum](./editmodeenum.md)   
+ [LockType 属性 (ADO) ](./locktype-property-ado.md)   
+ [LockTypeEnum](./locktypeenum.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

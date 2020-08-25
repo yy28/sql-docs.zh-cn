@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442889"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773576"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 属性示例 (VC + +) 
-此示例演示 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 和 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 属性，如果记录的基础数据在 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 批处理更新期间发生了更改，则显示一条消息。  
+此示例演示 [OriginalValue](./originalvalue-property-ado.md) 和 [UnderlyingValue](./underlyingvalue-property.md) 属性，如果记录的基础数据在 [记录集](./recordset-object-ado.md) 批处理更新期间发生了更改，则显示一条消息。  
   
 ## <a name="example"></a>示例  
   
@@ -221,6 +221,6 @@ void PrintComError(_com_error &e) {
 **原始值：心理学**   
 **基础值：社会学**    
 ## <a name="see-also"></a>另请参阅  
- [OriginalValue 属性 (ADO) ](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue 属性](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue 属性 (ADO) ](./originalvalue-property-ado.md)   
+ [ADO)  (Recordset 对象 ](./recordset-object-ado.md)   
+ [UnderlyingValue 属性](./underlyingvalue-property.md)

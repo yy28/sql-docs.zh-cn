@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ee7fc06923a4e0010fab835ea05e00768cbb94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441919"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777306"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 属性示例（记录集）(VB)
-此示例使用 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 属性来显示批处理操作中修改了哪些记录，然后才能进行批处理更新。  
+此示例使用 [Status](./status-property-ado-recordset.md) 属性来显示批处理操作中修改了哪些记录，然后才能进行批处理更新。  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -99,4 +99,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 属性（ADO 记录集）](./status-property-ado-recordset.md)

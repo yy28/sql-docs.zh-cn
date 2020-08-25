@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f3a7551a94fa9f079aa56d24de9c1d7a072480
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5203cc9a896e42a18f2c3eedcbfbcb41d4f6ec4a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451169"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776436"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法示例 (VC + +) 
-此示例将更改数据库的 ***Titles*** 表中所有心理学书籍的类型。 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动了一个事务，该事务隔离对***标题***表所做的所有更改时， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会保存这些更改。 可以使用 [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法撤消使用 [Update](../../../ado/reference/ado-api/update-method.md) 方法保存的更改。  
+此示例将更改数据库的 ***Titles*** 表中所有心理学书籍的类型。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动了一个事务，该事务隔离对***标题***表所做的所有更改时， [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会保存这些更改。 可以使用 [Rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法撤消使用 [Update](./update-method.md) 方法保存的更改。  
   
 ## <a name="example"></a>示例  
   
@@ -268,5 +268,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO) ](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Update 方法](../../../ado/reference/ado-api/update-method.md)
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO) ](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Update 方法](./update-method.md)

@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acd8895c8fa727d3be71712c575e3edaee445ec6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e74c8faf741150c9f91d4956709189b4f0007de4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441369"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776736"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 对象模型
 本主题介绍如何在 ADO MD 中表示和相关对象。  
   
  ![ADO MD 对象模型](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
   
- [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)和[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)对象每个都有一个[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合。  
+ [Axis](./axis-object-ado-md.md)和[Cell](./cell-object-ado-md.md)对象每个都有一个[位置](./positions-collection-ado-md.md)集合。  
   
- [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)和[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象均具有[成员](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合。  
+ [Level](./level-object-ado-md.md)和[Position](./position-object-ado-md.md)对象均具有[成员](./members-collection-ado-md.md)集合。  
   
- [轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、[单元格、单元](../../../ado/reference/ado-md-api/cell-object-ado-md.md)[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)、[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象都具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+ [轴](./axis-object-ado-md.md)、[单元格、单元](./cell-object-ado-md.md)[集](./cellset-object-ado-md.md)、 [CubeDef](./cubedef-object-ado-md.md)、[维度](./dimension-object-ado-md.md)、[层次结构](./hierarchy-object-ado-md.md)、[级别](./level-object-ado-md.md)和[成员](./member-object-ado-md.md)对象都具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD 代码示例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD 枚举常量](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD 方法](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [ADO MD 对象](../../../ado/reference/ado-md-api/ado-md-objects.md)   
- [ADO MD 属性](../../../ado/reference/ado-md-api/ado-md-properties.md)   
- [ADO (多维)  (ADO MD) ](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [多维架构和数据的概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [ADO MD API 参考](?view=sql-server-ver15)   
+ [ADO MD 代码示例](./ado-md-code-examples.md)   
+ [ADO MD 集合](./ado-md-collections.md)   
+ [ADO MD 枚举常量](./ado-md-enumerated-constants.md)   
+ [ADO MD 方法](./ado-md-methods.md)   
+ [ADO MD 对象](./ado-md-objects.md)   
+ [ADO MD 属性](./ado-md-properties.md)   
+ [ADO (多维)  (ADO MD) ](../../guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [多维架构和数据的概述](../../guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+ [使用多维数据](../../guide/multidimensional/working-with-multidimensional-data.md)

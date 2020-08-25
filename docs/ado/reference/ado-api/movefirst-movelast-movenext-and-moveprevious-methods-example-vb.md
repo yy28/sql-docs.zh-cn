@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38725ffc91ff14d45c8f7d3fa1fb65825833f797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f4015e2dca626824e8621fe9d2398d5022b23b5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443189"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774266"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例 (VB) 
-此示例使用 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法基于提供的命令移动记录 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 的记录指针。 此过程需要 MoveAny 过程才能运行。  
+此示例使用 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法基于提供的命令移动记录 [集](./recordset-object-ado.md) 的记录指针。 此过程需要 MoveAny 过程才能运行。  
   
 ```  
 'BeginMoveFirstVB  
@@ -125,5 +125,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

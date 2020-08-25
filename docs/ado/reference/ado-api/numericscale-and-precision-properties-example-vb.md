@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443059"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773986"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和 Precision 属性示例 (VB)
-此示例使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  
+此示例使用[NumericScale](./numericscale-property-ado.md)和[Precision](./precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  
   
 ```  
 'BeginNumericScaleVB  
@@ -75,7 +75,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale 属性 (ADO) ](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)   
- [Precision 属性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Field 对象](./field-object.md)   
+ [NumericScale 属性 (ADO) ](./numericscale-property-ado.md)   
+ [参数对象](./parameter-object.md)   
+ [Precision 属性 (ADO)](./precision-property-ado.md)

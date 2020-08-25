@@ -1,6 +1,6 @@
 ---
 title: T-SQL 语句
-description: 用于分析平台系统（AP） SQL Server 并行数据仓库（PDW）的 t-sql 语句。
+description: 用于分析平台系统的 t-sql 语句 (AP) SQL Server 并行数据仓库 (PDW) 。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,36 +9,36 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ce80d7a27384f628af02bfa58abcaa351b569d56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 078c0364e64ddca8974544734e8e5a45950e14e0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399813"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778396"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>并行数据仓库的 t-sql 语句
-用于分析平台系统（AP） SQL Server 并行数据仓库（PDW）的 transact-sql （T-sql）语句。
+Transact-sql (用于分析平台系统的 T-sql) 语句 (AP) SQL Server 并行数据仓库 (PDW) 。
 
 ## <a name="data-definition-language-ddl-statements"></a>数据定义语言 (DDL) 语句
-* [更改数据库](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-* [创建数据库范围的凭据](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)
+* [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)
-* [CREATE 函数](../t-sql/statements/create-function-sql-data-warehouse.md)
-* [创建索引](../t-sql/statements/create-index-transact-sql.md)
+* [CREATE FUNCTION](../t-sql/statements/create-function-sql-data-warehouse.md)
+* [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
 * [CREATE SCHEMA](../t-sql/statements/create-schema-transact-sql.md)
-* [创建统计信息](../t-sql/statements/create-statistics-transact-sql.md)
+* [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 * [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
-* [创建视图](../t-sql/statements/create-view-transact-sql.md)
+* [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
 * [DROP EXTERNAL DATA SOURCE](../t-sql/statements/drop-external-data-source-transact-sql.md)
 * [DROP EXTERNAL FILE FORMAT](../t-sql/statements/drop-external-file-format-transact-sql.md)
 * [DROP EXTERNAL TABLE](../t-sql/statements/drop-external-table-transact-sql.md)
@@ -47,7 +47,7 @@ ms.locfileid: "74399813"
 * [DROP STATISTICS](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
 * [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
-* [删除视图](../t-sql/statements/drop-view-transact-sql.md)
+* [DROP VIEW](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
 * [UPDATE STATISTICS](../t-sql/statements/update-statistics-transact-sql.md)
@@ -59,12 +59,12 @@ ms.locfileid: "74399813"
 
 ## <a name="database-console-commands"></a>数据库控制台命令
 * [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)
-* [DBCC FREEPROCCACHE](https://msdn.microsoft.com/library/mt204018.aspx)
-* [DBCC SHRINKLOG](https://msdn.microsoft.com/library/mt204020.aspx)
-* [DBCC PDW_SHOWEXECUTIONPLAN](https://msdn.microsoft.com/library/mt204017.aspx)
-* [DBCC PDW_SHOWPARTITIONSTATS](https://msdn.microsoft.com/library/mt204013.aspx)
+* [DBCC FREEPROCCACHE](/previous-versions/sql/sql-server-2016/mt204018(v=sql.130))
+* [DBCC SHRINKLOG](../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md?view=aps-pdw-2016-au7)
+* [DBCC PDW_SHOWEXECUTIONPLAN](../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md?view=aps-pdw-2016-au7)
+* [DBCC PDW_SHOWPARTITIONSTATS](../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md?view=aps-pdw-2016-au7)
 * [DBCC PDW_SHOWSPACEUSED](../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md)
-* [DBCC SHOW_STATISTICS](https://msdn.microsoft.com/library/mt204043.aspx)
+* [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md?view=sql-server-ver15)
 
 ## <a name="query-statements"></a>查询语句
 * [SELECT](../t-sql/queries/select-transact-sql.md)
@@ -76,9 +76,9 @@ ms.locfileid: "74399813"
 * [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
 * [HAVING](../t-sql/queries/select-having-transact-sql.md)
 * [ORDER BY](../t-sql/queries/select-order-by-clause-transact-sql.md)
-* [选](../t-sql/queries/option-clause-transact-sql.md)
-* [交集](../t-sql/language-elements/set-operators-union-transact-sql.md)
-* [其中](../t-sql/queries/where-transact-sql.md)
+* [OPTION](../t-sql/queries/option-clause-transact-sql.md)
+* [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
+* [WHERE](../t-sql/queries/where-transact-sql.md)
 * [TOP](../t-sql/queries/top-transact-sql.md)
 * [别名](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
 * [搜索条件](../t-sql/queries/search-condition-transact-sql.md)
@@ -97,10 +97,10 @@ ms.locfileid: "74399813"
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
 * [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [创建登录名](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
 * [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)
-* [创建用户](../t-sql/statements/create-user-transact-sql.md)
+* [CREATE USER](../t-sql/statements/create-user-transact-sql.md)
 * [DROP CERTIFICATE](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
@@ -110,7 +110,7 @@ ms.locfileid: "74399813"
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
 ## <a name="next-steps"></a>后续步骤
-有关更多参考信息，请参阅[t-sql 语言元素](tsql-language-elements.md)和[t-sql 系统视图](tsql-system-views.md)。
+有关更多参考信息，请参阅 [t-sql 语言元素](tsql-language-elements.md) 和 [t-sql 系统视图](tsql-system-views.md)。
 
 <!--Image references-->
 

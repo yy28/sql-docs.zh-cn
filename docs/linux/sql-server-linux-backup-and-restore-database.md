@@ -1,6 +1,6 @@
 ---
 title: 备份和还原 Linux 上的 SQL Server 数据库
-description: 了解如何备份和还原 Linux 上的 SQL Server 数据库。
+description: 了解如何备份和还原 Linux 上的 SQL Server 数据库。 此外，了解如何使用 SQL Server Management Studio (SSMS) 进行备份和还原。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882334"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088945"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-可以使用多个不同的选项备份 Linux 上的 SQL Server 2017 中的数据库。 在 Linux 服务器上，可以使用 sqlcmd 连接到 SQL Server 并进行备份  。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 各平台间的备份功能都是相同的。 例如，可以将数据库备份到本地、远程驱动器或 [Microsoft Azure Blob 存储服务](../relational-databases/backup-restore/sql-server-backup-to-url.md)中。
+可以使用多个不同的选项备份 Linux 上的 SQL Server 2017 中的数据库。 在 Linux 服务器上，可以使用 sqlcmd 连接到 SQL Server 并进行备份****。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 各平台间的备份功能都是相同的。 例如，可以将数据库备份到本地、远程驱动器或 [Microsoft Azure Blob 存储服务](../relational-databases/backup-restore/sql-server-backup-to-url.md)中。
 
 ## <a name="backup-a-database"></a>备份数据库
 
-下例使用 sqlcmd 连接到本地 SQL Server 实例，并对名为 `demodb` 的用户数据库进行完整备份。
+下例使用 sqlcmd 连接到本地 SQL Server 实例，并对名为 `demodb` 的用户数据库进行完整备份****。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
@@ -51,7 +51,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 
 ### <a name="backup-the-transaction-log"></a>备份事务日志
 
-如果数据库处于完整恢复模式，还可以进行事务日志备份以获得更精细的还原选项。 下例使用 sqlcmd 连接到本地 SQL Server 实例，并对事务日志进行备份  。
+如果数据库处于完整恢复模式，还可以进行事务日志备份以获得更精细的还原选项。 下例使用 sqlcmd 连接到本地 SQL Server 实例，并对事务日志进行备份****。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
@@ -59,7 +59,7 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/dat
 
 ## <a name="restore-a-database"></a>还原数据库
 
-下例使用 sqlcmd 连接到 SQL Server 本地实例，并对 demodb 数据库进行还原  。 请注意，`NORECOVERY` 选项用于其他日志文件备份的还原。 如果不打算还原其他日志文件，请删除 `NORECOVERY` 选项。
+下例使用 sqlcmd 连接到 SQL Server 本地实例，并对 demodb 数据库进行还原****。 请注意，`NORECOVERY` 选项用于其他日志文件备份的还原。 如果不打算还原其他日志文件，请删除 `NORECOVERY` 选项。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
@@ -87,9 +87,9 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 
 1. 启动 SSMS 并连接到 Linux 上的 SQL Server 2017 中的服务器。
 
-1. 在“对象资源管理器”中，右键单击数据库，单击“任务”，然后单击“备份...”   。
+1. 在“对象资源管理器”中，右键单击数据库，单击“任务”，然后单击“备份...”********。
 
-1. 在“备份数据库”对话框中，验证参数和选项，然后单击“确定”   。
+1. 在“备份数据库”对话框中，验证参数和选项，然后单击“确定”********。
  
 SQL Server 将完成数据库备份。
 
@@ -97,13 +97,13 @@ SQL Server 将完成数据库备份。
 
 以下步骤将引导你使用 SSMS 完成数据库还原。
 
-1. 在 SSMS 中，右键单击“数据库”，然后单击“还原数据库...”   。 
+1. 在 SSMS 中，右键单击“数据库”，然后单击“还原数据库...”********。 
 
-1. 单击“源”下的“设备:”，然后单击省略号 (...)   。
+1. 单击“源”下的“设备:”，然后单击省略号 (...)********。
 
-1. 查找数据库备份文件，然后单击“确定”  。 
+1. 查找数据库备份文件，然后单击“确定”****。 
 
-1. 在“还原计划”下，验证备份文件和设置  。 单击“确定”。  
+1. 在“还原计划”下，验证备份文件和设置****。 单击“确定”。 
 
 1. SQL Server 将还原数据库。 
 
@@ -112,4 +112,4 @@ SQL Server 将完成数据库备份。
 * [创建完整数据库备份 (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [备份事务日志 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [SQL Server 的 URL 备份](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+* [SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)

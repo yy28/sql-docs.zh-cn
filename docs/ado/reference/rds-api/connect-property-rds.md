@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3b5e535d2f4b6f6e4777c8c3ac1bbaaa3381c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 749133cdc079faf011e77e9925ca8d39dbe10219
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439209"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768696"
 ---
 # <a name="connect-property-rds"></a>Connect 属性 (RDS)
 指示运行查询和更新操作的数据库名称。  
   
- 您可以在设计时在 RDS 中设置 **Connect** 属性 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象的对象标记，或在运行时，在脚本代码 (例如，VBScript) 。  
+ 您可以在设计时在 RDS 中设置 **Connect** 属性 [。DataControl](./datacontrol-object-rds.md) 对象的对象标记，或在运行时，在脚本代码 (例如，VBScript) 。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -37,9 +37,9 @@ Design time: <PARAM NAME="Connect" VALUE="ConnectionString">
 Run time: DataControl.Connect = "ConnectionString"  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *ConnectionString*  
- 有效的连接字符串。 有关连接字符串的更多常规信息，请参阅 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 属性或提供程序文档。  
+ 有效的连接字符串。 有关连接字符串的更多常规信息，请参阅 [ConnectionString](../ado-api/connectionstring-property-ado.md) 属性或提供程序文档。  
   
 > [!NOTE]
 >  将 MS Remote 指定为 RDS 的提供程序 **。DataControl** 会创建一个四层方案。 超过三个层的方案尚未经过测试，因此不需要这样做。  
@@ -48,12 +48,10 @@ Run time: DataControl.Connect = "ConnectionString"
  表示 RDS 的对象变量 **。DataControl** 对象。  
   
 ## <a name="applies-to"></a>适用于  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VBScript) 连接属性示例 ](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
- [查询方法 (RDS) ](../../../ado/reference/rds-api/query-method-rds.md)   
- [Refresh 方法 (RDS) ](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [ (VBScript) 连接属性示例 ](./connect-property-example-vbscript.md)   
+ [查询方法 (RDS) ](./query-method-rds.md)   
+ [Refresh 方法 (RDS) ](./refresh-method-rds.md)   
+ [SubmitChanges 方法 (RDS)](./submitchanges-method-rds.md)

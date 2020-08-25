@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442381"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772126"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-指定有关批更新和其他批量操作的记录的 [状态](../../../ado/reference/ado-api/status-property-ado-recordset.md) 。  
+指定有关批更新和其他批量操作的记录的 [状态](./status-property-ado-recordset.md) 。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|指示未保存记录，因为该操作已取消。|  
 |**adRecCantRelease**|0x400|指示未保存新记录，因为现有记录已锁定。|  
@@ -74,4 +74,4 @@ ms.locfileid: "88442381"
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>适用于  
- [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 属性（ADO 记录集）](./status-property-ado-recordset.md)

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6fc0eca4668aeaff00b8add8532ce633517eb64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9648445435cc1f26a28c43110584fb6280739f64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439169"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768626"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 方法示例 (VBScript)
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此代码示例将在服务器端创建一个 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 。 它有两个列，每列包含四行。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **CreateRecordsetVBS**。  
+ 此代码示例将在服务器端创建一个 [记录集](../ado-api/recordset-object-ado.md) 。 它有两个列，每列包含四行。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **CreateRecordsetVBS**。  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -169,7 +169,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CreateRecordset 方法 (RDS) ](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
+ [CreateRecordset 方法 (RDS) ](./createrecordset-method-rds.md)   
+ [记录集对象 (ADO)](../ado-api/recordset-object-ado.md)

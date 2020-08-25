@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5888cf1ce3bb058c7c71e4bcec5b448d4f0ab9bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa326f24e1c8d3e6e7fab3adf691f3dd3a80a0c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443259"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774376"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 属性示例 (VC++)
-此示例使用 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 属性打开一个 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) ，其中包含 ***标题*** 表中的10个最昂贵的标题。  
+此示例使用 [MaxRecords](./maxrecords-property-ado.md) 属性打开一个 [记录集](./recordset-object-ado.md) ，其中包含 ***标题*** 表中的10个最昂贵的标题。  
   
 ## <a name="example"></a>示例  
   
@@ -178,5 +178,5 @@ void PrintComError(_com_error &e) {
 **寿司，任何人？---14.99**  
 **50年 Buckingham Palace Kitchens---11.95**   
 ## <a name="see-also"></a>另请参阅  
- [MaxRecords 属性 (ADO) ](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords 属性 (ADO) ](./maxrecords-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

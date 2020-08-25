@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003f3f80e9a544e5b33929cf434f6b39855ca49d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442669"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773056"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 属性示例 (VC++)
-此示例通过打开两个[命令](../../../ado/reference/ado-api/command-object-ado.md)对象（一项已准备，一个未准备）来演示已[准备](../../../ado/reference/ado-api/prepared-property-ado.md)的属性。  
+此示例通过打开两个[命令](./command-object-ado.md)对象（一项已准备，一个未准备）来演示已[准备](./prepared-property-ado.md)的属性。  
   
 ## <a name="example"></a>示例  
   
@@ -145,5 +145,5 @@ void PrintComError(_com_error &e) {
 **未准备就绪：0.016 秒**  
 **准备就绪：0.016 秒**   
 ## <a name="see-also"></a>另请参阅  
- [ADO) 的命令对象 (](../../../ado/reference/ado-api/command-object-ado.md)   
- [Prepared 属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [ADO) 的命令对象 (](./command-object-ado.md)   
+ [Prepared 属性 (ADO)](./prepared-property-ado.md)

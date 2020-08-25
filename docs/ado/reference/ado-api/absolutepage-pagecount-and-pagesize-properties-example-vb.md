@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6896f47b29b4ad65e63ba999d2699e7f92231500
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8adbe7524bbf7886744b9753eb8dfb5417a1898a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451809"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760007"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、PageCount 和 PageSize 属性示例 (VB) 
 ```  
@@ -102,7 +102,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AbsolutePage 属性 (ADO) ](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount 属性 (ADO) ](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize 属性 (ADO) ](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage 属性 (ADO) ](./absolutepage-property-ado.md)   
+ [PageCount 属性 (ADO) ](./pagecount-property-ado.md)   
+ [PageSize 属性 (ADO) ](./pagesize-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

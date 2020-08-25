@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47a35f2f0c756d1dfde36a42900d83e1e9677b43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0de6b1bfef3f7c036fda8102757e63b8d7049189
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451120"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776366"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 指定指示操作开始位置的书签。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|从当前记录开始。|  
 |**adBookmarkFirst**|1|从第一条记录开始。|  
@@ -45,9 +45,9 @@ ms.locfileid: "88451120"
 
 :::row:::
     :::column:::
-        [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)  
+        [GetRows 方法 (ADO)](./getrows-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)  
+        [Move 方法 (ADO)](./move-method-ado.md)  
     :::column-end:::
 :::row-end:::

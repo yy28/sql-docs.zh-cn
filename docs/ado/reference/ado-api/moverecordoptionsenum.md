@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443139"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774176"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-指定 [Record](../../../ado/reference/ado-api/record-object-ado.md) object [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) 方法的行为。  
+指定 [Record](./record-object-ado.md) object [MoveRecord](./moverecord-method-ado.md) 方法的行为。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|默认。 执行默认移动操作：如果目标文件或目录已存在，操作将失败，并且操作将更新超文本链接。|  
 |**adMoveOverWrite**|1|覆盖目标文件或目录（即使它已存在）。|  
@@ -37,4 +37,4 @@ ms.locfileid: "88443139"
  这些常量没有 ADO/WFC 等效项。  
   
 ## <a name="applies-to"></a>适用于  
- [MoveRecord 方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [MoveRecord 方法 (ADO)](./moverecord-method-ado.md)

@@ -1,6 +1,6 @@
 ---
 title: Linux 上的 SQL 代理的 DB 邮件和电子邮件警报
-description: 本文介绍如何在 Linux 上的 SQL Server 中使用 DB 邮件和电子邮件警报
+description: 了解如何使用 DB 邮件以及使用 Linux 上的 SQL Server 代理 (mssql-server-agent) 设置电子邮件警报。
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: d2e759d5cfa0f7b1fa918bde8547d3cbee2439af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92306aa0c6fa28b2cd094e85f439d654605483b6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896516"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088963"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Linux 上的 SQL 代理的 DB 邮件和电子邮件警报
 

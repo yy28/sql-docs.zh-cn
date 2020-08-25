@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a70c445858b24dfe8cffc44c2dea70e9d007ab9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 004a875656b9dc772985f965ec8c2c2910b127ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443489"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774876"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法示例 (VC++)
-此示例演示了 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 方法。  
+此示例演示了 [GetString](./getstring-method-ado.md) 方法。  
   
- 假设您正在调试数据访问问题，并想要一种快速、简单的方式来打印小型 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的当前内容。  
+ 假设您正在调试数据访问问题，并想要一种快速、简单的方式来打印小型 [记录集](./recordset-object-ado.md)的当前内容。  
   
 ## <a name="example"></a>示例  
   
@@ -185,5 +185,5 @@ Sylvia   Panteley   1956 Arlington Pl.   Rockville
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GetString 方法 (ADO) ](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetString 方法 (ADO) ](./getstring-method-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

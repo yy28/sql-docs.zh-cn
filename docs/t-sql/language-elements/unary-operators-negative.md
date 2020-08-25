@@ -1,4 +1,5 @@
 ---
+description: '- （负值）(Transact-SQL)'
 title: '- （负值）(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,19 +20,19 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 456190fd25a3ca7ce362c276d33096afb768b941
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 873bff9e761f83f0b15493810d0c684afa189748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459228"
 ---
 # <a name="unary-operators---negative"></a>一元运算符 - 负值
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回数值表达式的值的负值（一元运算符）。 一元运算符只对一个表达式执行操作，该表达式可以是 numeric 数据类型类别中的任何一种数据类型。   
   
-|操作员|含义|  
+|运算符|含义|  
 |--------------|-------------|  
 |[+（正）](../../t-sql/language-elements/unary-operators-positive.md)|数值为正。|  
 |[-（负）](../../t-sql/language-elements/unary-operators-negative.md)|数值为负。|  
@@ -54,7 +55,7 @@ ms.locfileid: "86917083"
  数值数据类型类别中任何数据类型（日期和时间类别除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
- 除了无符号 tinyint 表达式被提升为有符号的 smallint 结果之外，返回 numeric_expression 的数据类型    。  
+ 除了无符号 tinyint 表达式被提升为有符号的 smallint 结果之外，返回 numeric_expression 的数据类型**********。  
   
 ## <a name="examples"></a>示例  
   
@@ -138,7 +139,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 返回列的负值  
- 下面的示例返回 `BaseRate` 表中每位员工的 `dimEmployee` 值的负值。  
+ 下面的示例返回 `dimEmployee` 表中每位员工的 `BaseRate` 值的负值。  
   
 ```  
 USE ssawPDW;  

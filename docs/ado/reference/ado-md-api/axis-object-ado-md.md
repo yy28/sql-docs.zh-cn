@@ -16,35 +16,35 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 733a2962e381a7b8918fccfd076f44dbbc23da1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f280021ec705bf530b77bce695510eccd654ce88
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441279"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778366"
 ---
 # <a name="axis-object-ado-md"></a>轴对象 (ADO MD)
 表示单元集的位置或筛选轴，其中包含一个或多个维度的选定成员。  
   
 ## <a name="remarks"></a>备注  
- Axis 对象可以包含**Axis** [集合，](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)或由[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)的[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性返回。  
+ Axis 对象可以包含**Axis** [集合，](./axes-collection-ado-md.md)或由[单元集](./cellset-object-ado-md.md)的[FilterAxis](./filteraxis-property-ado-md.md)属性返回。  
   
  使用 **Axis** 对象的集合和属性，可以执行以下操作：  
   
--   标识具有[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性的**轴**。  
+-   标识具有[Name](./name-property-ado-md.md)属性的**轴**。  
   
--   使用[position](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合循环访问**轴**上的每个位置。  
+-   使用[position](./positions-collection-ado-md.md)集合循环访问**轴**上的每个位置。  
   
--   通过[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)属性获取**轴**上的维度数。  
+-   通过[DimensionCount](./dimensioncount-property-ado-md.md)属性获取**轴**上的维度数。  
   
--   获取具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的**轴**特定于提供程序的属性。  
+-   获取具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合的**轴**特定于提供程序的属性。  
   
  本部分包含以下主题。  
   
--   [属性、方法和事件](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
+-   [属性、方法和事件](./axis-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VBScript) 的轴示例 ](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [轴集合 (ADO MD) ](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [位置集合 (ADO MD) ](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [ (VBScript) 的轴示例 ](./axis-example-vbscript.md)   
+ [轴集合 (ADO MD) ](./axes-collection-ado-md.md)   
+ [位置集合 (ADO MD) ](./positions-collection-ado-md.md)   
+ [属性集合 (ADO)](../ado-api/properties-collection-ado.md)

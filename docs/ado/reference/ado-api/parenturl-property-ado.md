@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442749"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773236"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 属性 (ADO)
-指示指向当前**记录**对象的父[记录](../../../ado/reference/ado-api/record-object-ado.md)的绝对 URL 字符串。  
+指示指向当前**记录**对象的父[记录](./record-object-ado.md)的绝对 URL 字符串。  
   
 ## <a name="return-value"></a>返回值  
  返回一个 **字符串** 值，该值指示父 **记录**的 URL。  
   
 ## <a name="remarks"></a>备注  
- **ParentURL**属性取决于用于打开**Record**对象的源。 例如，可以使用包含[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性引用的目录的相对路径名称的源打开**记录**。  
+ **ParentURL**属性取决于用于打开**Record**对象的源。 例如，可以使用包含[ActiveConnection](./activeconnection-property-ado.md)属性引用的目录的相对路径名称的源打开**记录**。  
   
  假设 "second" 是包含在 "first" 下的文件夹。 使用以下语法打开 **Record** 对象：  
   
@@ -49,16 +49,16 @@ record.Open "second"
   
 -   **Record**对象表示不能使用 URL 指定的实体。  
   
- 此属性为只读。  
+ 此属性是只读的。  
   
 > [!NOTE]
->  此属性仅受文档源提供程序支持，例如 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [记录和提供程序提供的字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)。  
+>  此属性仅受文档源提供程序支持，例如 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [记录和提供程序提供的字段](../../guide/data/records-and-provider-supplied-fields.md)。  
   
 > [!NOTE]
->  使用 http 方案的 Url 将自动调用 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  使用 http 方案的 Url 将自动调用 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [绝对和相对 url](../../guide/data/absolute-and-relative-urls.md)。  
   
 > [!NOTE]
 >  如果当前记录包含 ADO **记录集**的数据记录，则访问 **ParentURL** 属性将导致运行时错误，指示不可能存在 URL。  
   
 ## <a name="applies-to"></a>适用于  
- [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [记录对象 (ADO)](./record-object-ado.md)

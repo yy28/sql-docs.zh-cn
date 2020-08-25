@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8571790b596f037bb528df375c43c98b6b77c3a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f416d8223e828d724f1eabbe4ab82061204af0f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440479"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771406"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法（ADOX 过程）
-将新 [过程](../../../ado/reference/adox-api/procedure-object-adox.md) 对象添加到 [过程](../../../ado/reference/adox-api/procedures-collection-adox.md) 集合。  
+将新 [过程](./procedure-object-adox.md) 对象添加到 [过程](./procedures-collection-adox.md) 集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +34,12 @@ ms.locfileid: "88440479"
 Procedures.Append Name, Command  
 ```  
   
-#### <a name="parameters"></a>参数  
- *名称*  
+#### <a name="parameters"></a>parameters  
+ *Name*  
  一个 **字符串** 值，该值指定要创建并追加的过程的名称。  
   
  *命令*  
- 一个 ADO [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象，表示要创建和追加的过程。  
+ 一个 ADO [命令](../ado-api/command-object-ado.md) 对象，表示要创建和追加的过程。  
   
 ## <a name="remarks"></a>备注  
  使用 **Command** 对象中指定的名称和属性在数据源中创建一个新过程。  
@@ -50,14 +50,14 @@ Procedures.Append Name, Command
 >  使用适用于 Microsoft Jet 的 OLE DB 提供程序时 **，过程**集合**Append**方法将允许您在*Command*参数中指定**视图**，而不是**过程**。 **视图**将添加到数据源，并将添加到 "**过程**" 集合中。 **追加**后，如果刷新了 "**过程**" 和 "**视图**" 集合，则该**视图**将不再出现在 "**过程**" 集合中，并将显示在 "**视图**" 集合中。  
   
 ## <a name="applies-to"></a>适用于  
- [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [过程集合 (ADOX)](./procedures-collection-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [步骤 Append 方法示例 (VB) ](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Append 列 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [将方法追加 (ADOX 组) ](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 索引 (Append 方法) ](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [追加方法 (ADOX 密钥) ](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 表 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [ADOX 用户 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 方法（ADOX 视图）](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [步骤 Append 方法示例 (VB) ](./procedures-append-method-example-vb.md)   
+ [Append 列 (追加方法) ](./append-method-adox-columns.md)   
+ [将方法追加 (ADOX 组) ](./append-method-adox-groups.md)   
+ [Append 索引 (Append 方法) ](./append-method-adox-indexes.md)   
+ [追加方法 (ADOX 密钥) ](./append-method-adox-keys.md)   
+ [Append 表 (追加方法) ](./append-method-adox-tables.md)   
+ [ADOX 用户 (追加方法) ](./append-method-adox-users.md)   
+ [Append 方法（ADOX 视图）](./append-method-adox-views.md)

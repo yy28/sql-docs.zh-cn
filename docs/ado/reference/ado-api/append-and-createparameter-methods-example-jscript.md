@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0701577bbd569e1b7c01239bd3613591864696d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 177ba5a63cb8503c51e3264ac5fea48ebf44a3e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451299"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776546"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>追加和 CreateParameter 方法示例 (JScript) 
-此示例使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 和 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法执行具有输入参数的存储过程。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AppendJS**。  
+此示例使用 [Append](./append-method-ado.md) 和 [CreateParameter](./createparameter-method-ado.md) 方法执行具有输入参数的存储过程。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AppendJS**。  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -143,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO (追加方法) ](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法 (ADO) ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)
+ [ADO (追加方法) ](./append-method-ado.md)   
+ [CreateParameter 方法 (ADO) ](./createparameter-method-ado.md)   
+ [Field 对象](./field-object.md)   
+ [字段集合 (ADO) ](./fields-collection-ado.md)   
+ [Parameter 对象](./parameter-object.md)
