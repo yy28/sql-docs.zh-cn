@@ -2,7 +2,7 @@
 title: 在单用户模式下启动 SQL Server | Microsoft Docs
 description: 了解 SQL Server 中的单用户模式。 了解此模式何时有用以及如何使用启动选项“-m”在该模式下启动 SQL Server 实例。
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764008"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147298"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ ms.locfileid: "85764008"
   
 > [!IMPORTANT]  
 >  不要将此选项作为安全功能使用。 客户端应用程序提供客户端应用程序名称，并且提供假名称来作为连接字符串的一部分。  
-  
+
+下面的示例在单用户模式下启动 SQL Server 实例，并且只允许通过 SQL Server Management Studio 查询编辑器进行连接。
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>针对群集安装的说明  
  对于群集环境中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，群集资源 dll 将占用可用连接，因此阻塞与服务器的任何其他连接。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处于此状态下时，如果您尝试使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理资源处于联机状态，则在该资源配置为对组产生影响时，它可能会将 SQL 资源故障转移到其他节点。  
   

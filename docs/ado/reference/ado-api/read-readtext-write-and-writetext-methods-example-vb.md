@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de640c5348b43fa7da5ad7e10b2dfa404f9ff4b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32bc949827c943352808cb4981ef4f436e1b27d2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442539"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772656"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a> (VB) 读取、ReadText、写入和 WriteText 方法示例
-此示例演示如何将文本框的内容同时读入文本 [流](../../../ado/reference/ado-api/stream-object-ado.md) 和二进制 **流**中。 显示的其他属性和方法包括 [位置](../../../ado/reference/ado-api/position-property-ado.md)、 [大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)、 [字符集](../../../ado/reference/ado-api/charset-property-ado.md)和 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
+此示例演示如何将文本框的内容同时读入文本 [流](./stream-object-ado.md) 和二进制 **流**中。 显示的其他属性和方法包括 [位置](./position-property-ado.md)、 [大小](./size-property-ado-parameter.md)、 [字符集](./charset-property-ado.md)和 [SetEOS](./seteos-method.md)。  
   
 ```  
 'BeginReadVB  
@@ -112,12 +112,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [字符集属性 (ADO) ](../../../ado/reference/ado-api/charset-property-ado.md)   
- [ (ADO 的位置属性) ](../../../ado/reference/ado-api/position-property-ado.md)   
- [Read 方法](../../../ado/reference/ado-api/read-method.md)   
- [ReadText 方法](../../../ado/reference/ado-api/readtext-method.md)   
- [SetEOS 方法](../../../ado/reference/ado-api/seteos-method.md)   
- [ADO 流 (大小属性) ](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [ (ADO) 的流对象 ](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Write 方法](../../../ado/reference/ado-api/write-method.md)   
- [WriteText 方法](../../../ado/reference/ado-api/writetext-method.md)
+ [字符集属性 (ADO) ](./charset-property-ado.md)   
+ [ (ADO 的位置属性) ](./position-property-ado.md)   
+ [Read 方法](./read-method.md)   
+ [ReadText 方法](./readtext-method.md)   
+ [SetEOS 方法](./seteos-method.md)   
+ [ADO 流 (大小属性) ](./size-property-ado-stream.md)   
+ [ (ADO) 的流对象 ](./stream-object-ado.md)   
+ [Write 方法](./write-method.md)   
+ [WriteText 方法](./writetext-method.md)

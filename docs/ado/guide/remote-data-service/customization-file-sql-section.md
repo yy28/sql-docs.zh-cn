@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452239"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759821"
 ---
 # <a name="customization-file-sql-section"></a>自定义文件 SQL 部分
 **Sql**部分可以包含替换客户端命令字符串的新 sql 字符串。 如果部分中没有 SQL 字符串，则将忽略该部分。  
@@ -46,18 +46,16 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|组成部分|描述|  
+|组成部分|说明|  
 |----------|-----------------|  
 |**SQL**|指示这是一个 SQL 节条目的文字字符串。|  
 |***sqlString***|替换客户端字符串的 SQL 字符串。|  
   
 ## <a name="see-also"></a>另请参阅  
- [自定义文件连接部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自定义文件 UserList 部分](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [自定义文件连接部分](./customization-file-connect-section.md)   
+ [自定义文件日志部分](./customization-file-logs-section.md)   
+ [自定义文件 UserList 部分](./customization-file-userlist-section.md)   
+ [自定义 DataFactory](./datafactory-customization.md)   
+ [必需的客户端设置](./required-client-settings.md)   
+ [了解自定义文件](./understanding-the-customization-file.md)   
+ [编写自己的自定义处理程序](./writing-your-own-customized-handler.md)

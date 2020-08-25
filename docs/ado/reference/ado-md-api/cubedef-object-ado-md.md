@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2a25f9a964e6a8e9644eb737897dd15e3948974
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441149"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778256"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
 表示多维架构中的一个多维数据集，其中包含一组相关的维度。  
@@ -29,17 +29,17 @@ ms.locfileid: "88441149"
 ## <a name="remarks"></a>备注  
  使用 **CubeDef** 对象的集合和属性，可以执行以下操作：  
   
--   标识具有[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性的**CubeDef** 。  
+-   标识具有[Name](./name-property-ado-md.md)属性的**CubeDef** 。  
   
--   返回一个字符串，该字符串描述具有 [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) 属性的多维数据集。  
+-   返回一个字符串，该字符串描述具有 [Description](./description-property-ado-md.md) 属性的多维数据集。  
   
--   返回与 [维度](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) 集合构成多维数据集的维度。  
+-   返回与 [维度](./dimensions-collection-ado-md.md) 集合构成多维数据集的维度。  
   
--   获取有关具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的**CubeDef**的其他信息。  
+-   获取有关具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合的**CubeDef**的其他信息。  
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |CreatedOn|多维数据集的创建日期和时间。|  
@@ -47,18 +47,18 @@ ms.locfileid: "88441149"
 |CubeName|多维数据集的名称。|  
 |CubeType|多维数据集的类型。|  
 |DataUpdatedBy|执行上次数据更新的人员的用户 ID。|  
-|描述|多维数据集的有意义的说明。|  
+|说明|多维数据集的有意义的说明。|  
 |LastSchemaUpdate|上次架构更新的日期和时间。|  
 |SchemaName|此多维数据集所属架构的名称。|  
 |SchemaUpdatedBy|执行最后一个架构更新的人员的用户 ID。|  
   
  本部分包含以下主题。  
   
--   [属性、方法和事件](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
+-   [属性、方法和事件](./cubedef-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [VBScript) 的 CubeDef 示例 (](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [目录对象 (ADO MD) ](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs 集合 (ADO MD) ](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [维度集合 (ADO MD) ](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [VBScript) 的 CubeDef 示例 (](./cubedef-example-vbscript.md)   
+ [目录对象 (ADO MD) ](./catalog-object-ado-md.md)   
+ [CubeDefs 集合 (ADO MD) ](./cubedefs-collection-ado-md.md)   
+ [维度集合 (ADO MD) ](./dimensions-collection-ado-md.md)   
+ [属性集合 (ADO)](../ado-api/properties-collection-ado.md)

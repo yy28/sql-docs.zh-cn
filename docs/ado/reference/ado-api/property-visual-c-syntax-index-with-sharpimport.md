@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4774f6224a156f11ac4c08c1576321f7dc42986b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7894f7d665ace4790544ce781d895c29f0918510
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442629"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772886"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>Visual C++ 语法索引与 #import (的属性) 
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
   
 ```  
 long GetAttributes( );  
@@ -44,4 +44,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [属性对象 (ADO)](./property-object-ado.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bc7e233b109266a7918576dadb24631cbb210d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85915249832be8ab6ee6a5db318f8dcfdda78b3e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451519"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760167"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript 中的 ADO 代码示例
 使用以下代码示例来了解如何在使用 JScript 编写时使用 ADO 方法、属性和事件。  
@@ -30,34 +30,34 @@ ms.locfileid: "88451519"
   
 ## <a name="methods"></a>方法  
   
--   [AddNew 方法示例](../../../ado/reference/ado-api/addnew-method-example-jscript.md)  
+-   [AddNew 方法示例](./addnew-method-example-jscript.md)  
   
--   [Append 和 CreateParameter 方法示例](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
+-   [Append 和 CreateParameter 方法示例](./append-and-createparameter-methods-example-jscript.md)  
   
--   [执行、再次查询和清除方法示例](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
+-   [执行、再次查询和清除方法示例](./execute-requery-and-clear-methods-example-jscript.md)  
   
--   [Find 方法示例](../../../ado/reference/ado-api/find-method-example-jscript.md)  
+-   [Find 方法示例](./find-method-example-jscript.md)  
   
--   [GetRows 方法示例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
+-   [GetRows 方法示例](./getrows-method-example-vb.md)  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
   
--   [AbsolutePage、PageCount 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
+-   [AbsolutePage、PageCount 和 PageSize 属性示例](./absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
--   [AbsolutePosition 和 CursorLocation 属性示例](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
+-   [AbsolutePosition 和 CursorLocation 属性示例](./absoluteposition-and-cursorlocation-properties-example-jscript.md)  
   
--   [ActiveCommand 属性示例](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)  
+-   [ActiveCommand 属性示例](./activecommand-property-example-jscript.md)  
   
--   [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)  
+-   [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例](./activeconnection-commandtext-timeout-type-size-example-jscript.md)  
   
--   [ActualSize 和 DefinedSize 属性示例](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-jscript.md)  
+-   [ActualSize 和 DefinedSize 属性示例](./actualsize-and-definedsize-properties-example-jscript.md)  
   
--   [CacheSize 属性示例](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)  
+-   [CacheSize 属性示例](./cachesize-property-example-jscript.md)  
   
--   [Filter 和 RecordCount 属性示例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
+-   [Filter 和 RecordCount 属性示例](./filter-and-recordcount-properties-example-jscript.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Visual C++ 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [附录 D：ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Visual Basic 中的 ADO 代码示例](./ado-code-examples-in-visual-basic.md)   
+ [ADO 代码示例 VBScript](./ado-code-examples-vbscript.md)   
+ [Visual C++ 中的 ADO 代码示例](./ado-code-examples-in-visual-c.md)   
+ [附录 D：ADO 示例](../../guide/appendixes/appendix-d-ado-samples.md)

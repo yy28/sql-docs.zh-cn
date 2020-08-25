@@ -1,6 +1,6 @@
 ---
 title: T-SQL 语言元素
-description: 用于分析平台系统（AP） SQL Server 并行数据仓库（PDW）的 t-sql 语言元素。
+description: 用于分析平台系统 (AP 的 t-sql 语言元素) SQL Server 并行数据仓库 (PDW) 。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,26 +9,26 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399834"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778406"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>并行数据仓库的 t-sql 语言元素
-用于分析平台系统（AP） SQL Server 并行数据仓库（PDW）的 t-sql 语言元素。
+用于分析平台系统 (AP 的 t-sql 语言元素) SQL Server 并行数据仓库 (PDW) 。
 
 ## <a name="core-elements"></a>核心元素
 * [语法约定](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [对象命名规则](../relational-databases/databases/database-identifiers.md)
-* [保留关键字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [规则](https://msdn.microsoft.com/library/ff848763.aspx)
-* [提出](../t-sql/language-elements/comment-transact-sql.md)
-* [称作](../t-sql/data-types/constants-transact-sql.md)
+* [保留的关键字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
+* [排序规则](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [注释](../t-sql/language-elements/comment-transact-sql.md)
+* [常量](../t-sql/data-types/constants-transact-sql.md)
 * [数据类型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [表达](../t-sql/language-elements/expressions-transact-sql.md)
+* [表达式](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [IDENTITY 属性解决方法](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -37,7 +37,7 @@ ms.locfileid: "74399834"
 ## <a name="batches-control-of-flow-and-variables"></a>批、流控制和变量
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
-* [把@local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
+* [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
 * [IF...ELSE](../t-sql/language-elements/if-else-transact-sql.md)
 * [RAISERROR](../t-sql/language-elements/raiserror-transact-sql.md)
 * [SET@local_variable](../t-sql/language-elements/set-local-variable-transact-sql.md)
@@ -47,11 +47,11 @@ ms.locfileid: "74399834"
 
 ## <a name="operators"></a>运算符
 * [+（加）](../t-sql/language-elements/add-transact-sql.md)
-* [+ （字符串串联）](../t-sql/language-elements/string-concatenation-transact-sql.md)
+* [+（字符串串联）](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [-（负）](../t-sql/language-elements/unary-operators-negative.md)
 * [-（减）](../t-sql/language-elements/subtract-transact-sql.md)
 * [*（乘）](../t-sql/language-elements/multiply-transact-sql.md)
-* [/（相除）](../t-sql/language-elements/divide-transact-sql.md)
+* [/（除）](../t-sql/language-elements/divide-transact-sql.md)
 * [取模](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>要匹配的通配符
@@ -60,8 +60,8 @@ ms.locfileid: "74399834"
 * [<（小于）](../t-sql/language-elements/less-than-transact-sql.md)
 * [>=（大于或等于）](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [<=（小于或等于）](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
-* [<>  （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [\!= （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [<>（不等于）](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
+* [\!= (不等于) ](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -69,12 +69,12 @@ ms.locfileid: "74399834"
 * [不是](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [或](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>位运算符
 * [&（位与）](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [|（位或）](../t-sql/language-elements/bitwise-or-transact-sql.md)
-* [^ （位异或）](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
+* [^（位异或）](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~（位非）](../t-sql/language-elements/bitwise-not-transact-sql.md)
 * [^=（位异或等于）](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
 * [|=（位或等于）](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
@@ -217,7 +217,7 @@ ms.locfileid: "74399834"
 * [TYPEPROPERTY](../t-sql/functions/typeproperty-transact-sql.md)
 * [UNICODE](../t-sql/functions/unicode-transact-sql.md)
 * [UPPER](../t-sql/functions/upper-transact-sql.md)
-* [用户](../t-sql/functions/user-transact-sql.md)
+* [USER](../t-sql/functions/user-transact-sql.md)
 * [USER_NAME](../t-sql/functions/user-name-transact-sql.md)
 * [VAR](../t-sql/functions/var-transact-sql.md)
 * [VARP](../t-sql/functions/varp-transact-sql.md)
@@ -225,7 +225,7 @@ ms.locfileid: "74399834"
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>事务
-* [记录](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [事务](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>诊断会话
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -276,7 +276,7 @@ ms.locfileid: "74399834"
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>后续步骤
-有关更多参考信息，请参阅[t-sql 语句](tsql-statements.md)和[t-sql 系统视图](tsql-system-views.md)。
+有关更多参考信息，请参阅 [t-sql 语句](tsql-statements.md) 和 [t-sql 系统视图](tsql-system-views.md)。
 
 <!--Image references-->
 

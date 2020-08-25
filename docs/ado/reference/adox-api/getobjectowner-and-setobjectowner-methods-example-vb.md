@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 502bad9d142df67096f23bf89f60184a958de55a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc9a111b3315c7737229ec0240e5ee4ed6e406b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440079"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770546"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 和 SetObjectOwner 方法示例 (VB)
-此示例演示 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 和 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 方法。 此代码假定存在组记帐 (请参阅 [组和用户追加，ChangePassword 方法示例 (VB) ](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) ，以了解如何将此组添加到系统) 。 "类别" 表的所有者设置为 "记帐"。  
+此示例演示 [GetObjectOwner](./getobjectowner-method-adox.md) 和 [SetObjectOwner](./setobjectowner-method.md) 方法。 此代码假定存在组记帐 (请参阅 [组和用户追加，ChangePassword 方法示例 (VB) ](./groups-and-users-append-changepassword-methods-example-vb.md) ，以了解如何将此组添加到系统) 。 "类别" 表的所有者设置为 "记帐"。  
   
 ```  
 ' BeginOwnersVB  
@@ -63,6 +63,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetObjectOwner 方法 (ADOX) ](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
- [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)
+ [目录对象 (ADOX) ](./catalog-object-adox.md)   
+ [GetObjectOwner 方法 (ADOX) ](./getobjectowner-method-adox.md)   
+ [SetObjectOwner 方法](./setobjectowner-method.md)

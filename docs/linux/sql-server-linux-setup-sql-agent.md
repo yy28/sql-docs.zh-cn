@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上配置 SQL Server 代理
-description: 本文介绍如何在 Linux 上启用或安装 SQL Server 代理。
+description: 了解如何在 Linux 上启用或安装 SQL Server 代理。 从 SQL Server 2017 CU4 开始，SQL Server 代理包含在 mssql-server 包中。
 author: VanMSFT
 ms.author: vanto
 ms.date: 12/05/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 85869c797e8f91ca28d468c6a4a52dd52ea45a92
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882529"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088783"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
 
@@ -60,7 +60,7 @@ sudo systemctl restart mssql-server
 对于 SQL Server 2017 CU3 及更低版本，必须安装 SQL Server 代理包。
 
 > [!NOTE]
-> 下面的安装说明适用于 SQL Server 版本 2017 CU3 及更低版本。 在安装 SQL Server 代理前，首先请[安装 SQL Server](sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-agent 包时要用到的密钥和存储库  。
+> 下面的安装说明适用于 SQL Server 版本 2017 CU3 及更低版本。 在安装 SQL Server 代理前，首先请[安装 SQL Server](sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-agent 包时要用到的密钥和存储库****。
 
 为以下平台安装 SQL Server 代理：
 - [Red Hat Enterprise Linux](#RHEL)
@@ -69,14 +69,14 @@ sudo systemctl restart mssql-server
 
 ### <a name=""></a><a name="RHEL">在 RHEL 上安装</a>
 
-通过下列步骤在 Red Hat Enterprise Linux 上安装 mssql-server-agent  。 
+通过下列步骤在 Red Hat Enterprise Linux 上安装 mssql-server-agent****。 
 
 ```bash
 sudo yum install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果已安装 mssql-server-agent，则可使用下列命令将其更新至最新版本  ：
+如果已安装 mssql-server-agent，则可使用下列命令将其更新至最新版本****：
 
 ```bash
 sudo yum check-update
@@ -88,7 +88,7 @@ sudo systemctl restart mssql-server
 
 ### <a name=""></a><a name="ubuntu">在 Ubuntu 上安装</a>
 
-通过下列步骤在 Ubuntu 上安装 mssql-server-agent  。 
+通过下列步骤在 Ubuntu 上安装 mssql-server-agent****。 
 
 ```bash
 sudo apt-get update 
@@ -96,7 +96,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果已安装 mssql-server-agent，则可使用下列命令将其更新至最新版本  ：
+如果已安装 mssql-server-agent，则可使用下列命令将其更新至最新版本****：
 
 ```bash
 sudo apt-get update 
@@ -108,16 +108,16 @@ sudo systemctl restart mssql-server
 
 ### <a name=""></a><a name="SLES">在 SLES 上安装</a>
 
-通过下列步骤在 SUSE Linux Enterprise Server 上安装 mssql-server-agent  。 
+通过下列步骤在 SUSE Linux Enterprise Server 上安装 mssql-server-agent****。 
 
-安装 mssql-server-agent  
+安装 mssql-server-agent**** 
 
 ```bash
 sudo zypper install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果已安装 mssql-server-agent，则可使用下列命令将其更新至最新版本  ：
+如果已安装 mssql-server-agent，则可使用下列命令将其更新至最新版本****：
 
 ```bash
 sudo zypper refresh

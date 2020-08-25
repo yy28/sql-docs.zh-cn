@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cafd18a7701ed5de5018a3e8dc23bc8d5d9640fa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401216"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767036"
 ---
 # <a name="determine-polling-frequency"></a>确定轮询频率
 本文介绍如何确定分析平台系统设备警报的轮询频率。  
@@ -30,11 +30,10 @@ ms.locfileid: "74401216"
   
 -   性能计数器-三秒  
   
-轮询警报的常见时间间隔，也由 System Center 使用，**每15分钟一次**。  很显然，您可以查询更多或更少，但不建议每六个小时轮询一次。  
+轮询警报的常见时间间隔，也由 System Center 使用， **每15分钟一次**。  很显然，您可以查询更多或更少，但不建议每六个小时轮询一次。  
   
-更频繁的轮询是可接受的，但轮询过于频繁可能会混乱[dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV。  轮询太频繁会使用户难以在快速退出视图时诊断查询性能问题。  
+更频繁的轮询是可接受的，但轮询过于频繁可能会混乱 [dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=sql-server-ver15) DMV。  轮询太频繁会使用户难以在快速退出视图时诊断查询性能问题。  
   
 ## <a name="see-also"></a>另请参阅  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [设备监视 &#40;分析平台系统&#41;](appliance-monitoring.md)  
-  

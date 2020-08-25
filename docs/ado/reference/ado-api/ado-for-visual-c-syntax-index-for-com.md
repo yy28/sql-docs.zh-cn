@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c5febeb8727348525a9fe4a4dd5f8e22a17678b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddd21ab22fb018004673e1a9655117d913e27a7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451409"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771836"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>用于 COM 的 ADO for Visual C++ 语法索引‎
 此索引是基于 Microsoft Visual C++ 的 ADO 语言参考的交叉引用。  
@@ -33,24 +33,24 @@ ms.locfileid: "88451409"
   
  为以下元素列出了 Visual C++ 中的方法和属性语法：  
   
--   [集合](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [集合](./collections-ado-for-visual-c-syntax.md)  
   
--   [Command 对象](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
+-   [Command 对象](./command-ado-for-visual-c-syntax.md)  
   
--   [Connection 对象](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
+-   [Connection 对象](./connection-ado-for-visual-c-syntax.md)  
   
--   [Error 对象](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
+-   [Error 对象](./error-ado-for-visual-c-syntax.md)  
   
--   [Field 对象](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
+-   [Field 对象](./field-ado-for-visual-c-syntax.md)  
   
--   [参数对象](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
+-   [参数对象](./parameter-ado-for-visual-c-syntax.md)  
   
--   [Record 对象](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [Record 对象](./record-ado-for-visual-c-syntax.md)  
   
--   [Recordset 对象](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
+-   [Recordset 对象](./recordset-ado-for-visual-c-syntax.md)  
   
--   [Stream 对象](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
+-   [Stream 对象](./stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO for Visual C++ 语法索引与 #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
+ [ADO for Visual C++ 语法索引与 #import](./ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Microsoft ActiveX 数据对象 (ADO)](../../microsoft-activex-data-objects-ado.md)

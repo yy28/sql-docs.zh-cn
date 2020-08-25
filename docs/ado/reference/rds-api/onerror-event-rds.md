@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438889"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767946"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 只要在操作过程中发生错误，就会调用 **onError** 事件。  
@@ -34,11 +34,11 @@ ms.locfileid: "88438889"
 onError SCode, Description, Source, CancelDisplay  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *SCode*  
  一个整数，指示错误的状态代码。  
   
- *说明*  
+ *描述*  
  指示错误说明的 **字符串** 。  
   
  *Source*  
@@ -48,10 +48,8 @@ onError SCode, Description, Source, CancelDisplay
  一个 **布尔** 值，如果设置为 **True**，则将阻止错误显示在对话框中。  
   
 ## <a name="applies-to"></a>适用于  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VC + + 的 ADO 事件模型示例) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+ [ (VC + + 的 ADO 事件模型示例) ](../ado-api/ado-events-model-example-vc.md)   
+ [ADO 事件处理程序摘要](../../guide/data/ado-event-handler-summary.md)

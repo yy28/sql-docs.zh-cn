@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3c6d6b33177f3c3db7c2d414759a5067a91b80d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e16fb5d00ed38a0adbbb28b9c13e34f75f26236
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451579"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760229"
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
-为可更新的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象创建新记录。  
+为可更新的 [记录集](./recordset-object-ado.md) 对象创建新记录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,17 +45,17 @@ recordset.AddNew FieldList, Values
  可选。 单个值，或新记录中的字段的值数组。 如果 *Fieldlist* 是一个数组，则 *值* 也必须是具有相同成员数的数组;否则，将发生错误。 字段名称的顺序必须与每个数组中的字段值顺序相匹配。  
   
 ## <a name="remarks"></a>备注  
- 使用 **AddNew** 方法创建并初始化新记录。 使用 [支持](../../../ado/reference/ado-api/supports-method.md) 方法 with **adAddNew** ([CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) 值) ，验证是否可以将记录添加到当前 **记录集** 对象。  
+ 使用 **AddNew** 方法创建并初始化新记录。 使用 [支持](./supports-method.md) 方法 with **adAddNew** ([CursorOptionEnum](./cursoroptionenum.md) 值) ，验证是否可以将记录添加到当前 **记录集** 对象。  
   
- 调用 **AddNew** 方法之后，新记录将成为当前记录，并在调用 [Update](../../../ado/reference/ado-api/update-method.md) 方法后保持最新。 由于新记录将追加到 **记录集中**，因此 **，对更新** 进行的调用将移过 **记录集**的末尾，使 **EOF** 为 True。 如果 **记录集** 对象不支持书签，则在移动到另一记录后，您可能无法访问新记录。 根据游标类型，可能需要调用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法以使新记录可访问。  
+ 调用 **AddNew** 方法之后，新记录将成为当前记录，并在调用 [Update](./update-method.md) 方法后保持最新。 由于新记录将追加到 **记录集中**，因此 **，对更新** 进行的调用将移过 **记录集**的末尾，使 **EOF** 为 True。 如果 **记录集** 对象不支持书签，则在移动到另一记录后，您可能无法访问新记录。 根据游标类型，可能需要调用 [Requery](./requery-method.md) 方法以使新记录可访问。  
   
  如果在编辑当前记录或添加新记录时调用 **AddNew** ，ADO 将调用 **Update** 方法来保存所有更改，然后创建新记录。  
   
  **AddNew**方法的行为取决于**记录集**对象的更新模式，以及是否传递*Fieldlist*和*Values*参数。  
   
- 在 *即时更新模式下* (在调用 **update** 方法) 时，提供程序将更改写入基础数据源，调用不带参数的 **AddNew** 方法会将 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 属性设置为 **adEditAdd** ([EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) 值) 。 提供程序在本地缓存任何字段值更改。 调用 **Update** 方法会将新记录发送到数据库，并将 **EditMode** 属性重置为 **adEditNone** (**EditModeEnum** 值) 。 如果传递了 *Fieldlist* 和 *Values* 参数，则 ADO 会立即将新记录发布到数据库 (不需要 **更新** 调用) ; **EditMode** 属性值不会更改 (**adEditNone**) 。  
+ 在 *即时更新模式下* (在调用 **update** 方法) 时，提供程序将更改写入基础数据源，调用不带参数的 **AddNew** 方法会将 [EditMode](./editmode-property.md) 属性设置为 **adEditAdd** ([EditModeEnum](./editmodeenum.md) 值) 。 提供程序在本地缓存任何字段值更改。 调用 **Update** 方法会将新记录发送到数据库，并将 **EditMode** 属性重置为 **adEditNone** (**EditModeEnum** 值) 。 如果传递了 *Fieldlist* 和 *Values* 参数，则 ADO 会立即将新记录发布到数据库 (不需要 **更新** 调用) ; **EditMode** 属性值不会更改 (**adEditNone**) 。  
   
- 在 *批处理更新模式下* (提供程序将在其中缓存多个更改，并仅在调用 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 方法) 时将这些更改写入基础数据源，调用不带参数的 **AddNew** 方法会将 **EditMode** 属性设置为 **adEditAdd**。 提供程序在本地缓存任何字段值更改。 调用 **Update** 方法会将新记录添加到当前 **记录集**，但访问接口不会将更改发布到基础数据库中，也不会将 **EditMode** 重置为 **adEditNone**，直到调用 **UpdateBatch** 方法。 如果传递 *Fieldlist* 和 *VALUES* 参数，ADO 会将新记录发送到缓存中的存储提供程序，并将 **EditMode** 设置为 **adEditAdd**;需要调用 **UpdateBatch** 方法将新记录发布到基础数据库。  
+ 在 *批处理更新模式下* (提供程序将在其中缓存多个更改，并仅在调用 [UpdateBatch](./updatebatch-method.md) 方法) 时将这些更改写入基础数据源，调用不带参数的 **AddNew** 方法会将 **EditMode** 属性设置为 **adEditAdd**。 提供程序在本地缓存任何字段值更改。 调用 **Update** 方法会将新记录添加到当前 **记录集**，但访问接口不会将更改发布到基础数据库中，也不会将 **EditMode** 重置为 **adEditNone**，直到调用 **UpdateBatch** 方法。 如果传递 *Fieldlist* 和 *VALUES* 参数，ADO 会将新记录发送到缓存中的存储提供程序，并将 **EditMode** 设置为 **adEditAdd**;需要调用 **UpdateBatch** 方法将新记录发布到基础数据库。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何对包含的字段列表和值列表使用 AddNew 方法，以了解如何将字段列表和值列表作为数组包含在内。  
@@ -84,15 +84,15 @@ rs.Update
 ```  
   
 ## <a name="applies-to"></a>适用于  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [将 AddNew 方法示例 (VB) ](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
- [VBScript 方法示例 (VBScript) ](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
- [ (VC + +) 的 AddNew 方法示例 ](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
- [CancelUpdate 方法 (ADO) ](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [EditMode 属性](../../../ado/reference/ado-api/editmode-property.md)   
- [Requery 方法](../../../ado/reference/ado-api/requery-method.md)   
- [支持方法](../../../ado/reference/ado-api/supports-method.md)   
- [Update 方法](../../../ado/reference/ado-api/update-method.md)   
- [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)
+ [将 AddNew 方法示例 (VB) ](./addnew-method-example-vb.md)   
+ [VBScript 方法示例 (VBScript) ](./addnew-method-example-vbscript.md)   
+ [ (VC + +) 的 AddNew 方法示例 ](./addnew-method-example-vc.md)   
+ [CancelUpdate 方法 (ADO) ](./cancelupdate-method-ado.md)   
+ [EditMode 属性](./editmode-property.md)   
+ [Requery 方法](./requery-method.md)   
+ [支持方法](./supports-method.md)   
+ [Update 方法](./update-method.md)   
+ [UpdateBatch 方法](./updatebatch-method.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76ec899a26485a81a5ec81006d0dbd4c838738dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f73261f51a457144010aec6871f2acbf083b0361
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452489"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758967"
 ---
 # <a name="xml-security-considerations"></a>XML 安全注意事项
 Recordset 对象上 ADO Save 和 Open 方法不被视为在 Internet Explorer 中运行的安全操作。 因此，如果在浏览器承载的应用程序或控件中运行的脚本代码中使用这些方法，浏览器的安全配置将对其行为产生影响。  
@@ -26,4 +26,4 @@ Recordset 对象上 ADO Save 和 Open 方法不被视为在 Internet Explorer �
  Internet Explorer 5 默认情况下，在 Internet 区域中为此类操作提供安全限制。 在该配置下，记录集无法对客户端上的本地文件系统进行任何访问，也无法访问从中下载该页的服务器的域之外的任何数据源。 具体而言，在浏览器宿主内运行时，仅当记录集位于下载该页的同一服务器上时，才能将该记录集保存回文件中。 同样，仅当记录集位于从中下载页面的同一服务器上时，才能使用该文件从文件中加载该记录集。  
   
 ## <a name="see-also"></a>另请参阅  
- [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保留记录](./persisting-records-in-xml-format.md)

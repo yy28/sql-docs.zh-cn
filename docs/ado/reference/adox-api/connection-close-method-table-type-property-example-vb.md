@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440229"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770906"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>连接的 Close 方法、表 Type 属性示例 (VB)
-将 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 属性设置为 **Nothing** 应关闭到目录的连接。 关联的集合将为空。 从目录中的架构对象创建的任何对象都将是孤立对象。 那些已缓存的对象上的所有属性仍可用，但读取需要调用提供程序的属性的尝试将失败。  
+将 [ActiveConnection](./activeconnection-property-adox.md) 属性设置为 **Nothing** 应关闭到目录的连接。 关联的集合将为空。 从目录中的架构对象创建的任何对象都将是孤立对象。 那些已缓存的对象上的所有属性仍可用，但读取需要调用提供程序的属性的尝试将失败。  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -67,17 +67,17 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- 关闭用于打开目录的 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象应具有与将 **ActiveConnection** 属性设置为 **Nothing**相同的效果。  
+ 关闭用于打开目录的 [连接](../ado-api/connection-object-ado.md) 对象应具有与将 **ActiveConnection** 属性设置为 **Nothing**相同的效果。  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [列对象 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
- [列集合 (ADOX) ](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Table 对象 (ADOX) ](../../../ado/reference/adox-api/table-object-adox.md)   
- [表集合 (ADOX) ](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type 属性（表）(ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection 属性 (ADOX) ](./activeconnection-property-adox.md)   
+ [目录对象 (ADOX) ](./catalog-object-adox.md)   
+ [列对象 (ADOX) ](./column-object-adox.md)   
+ [列集合 (ADOX) ](./columns-collection-adox.md)   
+ [Table 对象 (ADOX) ](./table-object-adox.md)   
+ [表集合 (ADOX) ](./tables-collection-adox.md)   
+ [Type 属性（表）(ADOX)](./type-property-table-adox.md)

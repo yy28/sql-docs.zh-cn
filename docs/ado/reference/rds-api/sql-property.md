@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438599"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767406"
 ---
 # <a name="sql-property"></a>SQL 属性
-指示用于检索 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的查询字符串。  
+指示用于检索 [记录集](../ado-api/recordset-object-ado.md)的查询字符串。  
   
- 您可以在设计时在 RDS 中设置 **SQL** 属性 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象的对象标记，或在运行时在脚本代码中运行。  
+ 您可以在设计时在 RDS 中设置 **SQL** 属性 [。DataControl](./datacontrol-object-rds.md) 对象的对象标记，或在运行时在脚本代码中运行。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -37,7 +37,7 @@ Design time: <PARAM NAME="SQL" VALUE="QueryString">
 Run time: DataControl.SQL = "QueryString"  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *字符串*  
  一个 **字符串** 值，该值包含有效的 SQL 数据请求。  
   
@@ -50,13 +50,11 @@ Run time: DataControl.SQL = "QueryString"
  如果自定义服务器端业务对象检索客户端的数据，则 **SQL** 属性是可选的。  
   
 ## <a name="applies-to"></a>适用于  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 属性示例 (VBScript) ](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [ (RDS) 连接属性 ](../../../ado/reference/rds-api/connect-property-rds.md)   
- [查询方法 (RDS) ](../../../ado/reference/rds-api/query-method-rds.md)   
- [Refresh 方法 (RDS) ](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [SQL 属性示例 (VBScript) ](./sql-property-example-vbscript.md)   
+ [ (RDS) 连接属性 ](./connect-property-rds.md)   
+ [查询方法 (RDS) ](./query-method-rds.md)   
+ [Refresh 方法 (RDS) ](./refresh-method-rds.md)   
+ [SubmitChanges 方法 (RDS)](./submitchanges-method-rds.md)

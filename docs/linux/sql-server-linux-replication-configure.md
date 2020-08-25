@@ -1,6 +1,6 @@
 ---
 title: 配置复制 (SSMS)
-description: 本文介绍如何配置 Linux 上的 SQL Server 复制。
+description: 了解如何配置 Linux 上的 SQL Server 复制。 使用 SQL Server Management Studio (SSMS) 或 Transact-SQL 复制存储过程配置复制。
 ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,12 +12,12 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f367f7d6c41600ddb26d12b28ae14d0fc1cdffc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61943baf9083d3ca33bd37e0fe9759a4c530dfe2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882694"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088836"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>配置 Linux 上的 SQL Server 复制
 
@@ -73,27 +73,27 @@ ms.locfileid: "85882694"
 
 1. 在 SSMS 上，连接到对象资源管理器中的 SQL Server 实例。
 
-1. 右键单击“复制”文件夹，然后单击“配置分发...”   。
+1. 右键单击“复制”文件夹，然后单击“配置分发...”********。
 
-1. 按照配置分发向导上的说明操作操作  。
+1. 按照配置分发向导上的说明操作操作****。
 
 ### <a name="create-publication-and-articles"></a>创建发布和项目
 
 创建发布和项目：
 
-1. 在对象资源管理器中，单击“复制” > “本地发布”> “新建发布...”    。
+1. 在对象资源管理器中，单击“复制” > “本地发布”> “新建发布...”  。
 
-1. 按照“新建发布”向导上的说明配置复制的类型和属于该发布的项目  。
+1. 按照“新建发布”向导上的说明配置复制的类型和属于该发布的项目****。
 
 ### <a name="configure-the-subscription"></a>配置订阅
 
-若要在对象资源管理器中配置订阅，请单击“复制” > “本地订阅”> “新建订阅...”    。
+若要在对象资源管理器中配置订阅，请单击“复制” > “本地订阅”> “新建订阅...”  。
 
 ### <a name="monitor-replication-jobs"></a>监视复制作业
 
 使用复制监视器监视复制作业。
 
-在对象资源管理器中，右键单击“复制”，然后单击“启动复制监视器”   。
+在对象资源管理器中，右键单击“复制”，然后单击“启动复制监视器”********。
 
 ## <a name="next-steps"></a>后续步骤
 

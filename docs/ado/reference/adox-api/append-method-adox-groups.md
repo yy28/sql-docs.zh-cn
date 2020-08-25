@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dc46d1c0d44ec175b442df943ce72a38ec2b761
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14900e34ef93f2ad738779b0cf7478372ab59179
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440489"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771476"
 ---
 # <a name="append-method-adox-groups"></a>Append 方法（ADOX 组）
-向[Groups](../../../ado/reference/adox-api/groups-collection-adox.md)集合添加一个新的[组](../../../ado/reference/adox-api/group-object-adox.md)对象。  
+向[Groups](./groups-collection-adox.md)集合添加一个新的[组](./group-object-adox.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,27 +34,27 @@ ms.locfileid: "88440489"
 Groups.Append Group  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *组*  
  要追加的 **组** 对象或要创建和追加的组的名称。  
   
 ## <a name="remarks"></a>备注  
- [目录](../../../ado/reference/adox-api/catalog-object-adox.md)的**Groups**集合表示所有目录的组帐户。 [用户](../../../ado/reference/adox-api/user-object-adox.md)的**Groups**集合仅表示该用户所属的组。  
+ [目录](./catalog-object-adox.md)的**Groups**集合表示所有目录的组帐户。 [用户](./user-object-adox.md)的**Groups**集合仅表示该用户所属的组。  
   
  如果提供程序不支持创建组，将出现错误。  
   
 > [!NOTE]
->  在将**组**对象追加到**用户**对象的**groups**集合之前，**目录**的**组**集合中必须已经存在与要追加的组[对象同名的](../../../ado/reference/adox-api/name-property-adox.md)**组**对象。  
+>  在将**组**对象追加到**用户**对象的**groups**集合之前，**目录**的**组**集合中必须已经存在与要追加的组[对象同名的](./name-property-adox.md)**组**对象。  
   
 ## <a name="applies-to"></a>适用于  
- [组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [组集合 (ADOX)](./groups-collection-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [组和用户追加，ChangePassword 方法示例 (VB) ](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append 列 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 索引 (Append 方法) ](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [追加方法 (ADOX 密钥) ](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [附加方法 (ADOX 过程) ](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 表 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [ADOX 用户 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 方法（ADOX 视图）](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [组和用户追加，ChangePassword 方法示例 (VB) ](./groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Append 列 (追加方法) ](./append-method-adox-columns.md)   
+ [Append 索引 (Append 方法) ](./append-method-adox-indexes.md)   
+ [追加方法 (ADOX 密钥) ](./append-method-adox-keys.md)   
+ [附加方法 (ADOX 过程) ](./append-method-adox-procedures.md)   
+ [Append 表 (追加方法) ](./append-method-adox-tables.md)   
+ [ADOX 用户 (追加方法) ](./append-method-adox-users.md)   
+ [Append 方法（ADOX 视图）](./append-method-adox-views.md)

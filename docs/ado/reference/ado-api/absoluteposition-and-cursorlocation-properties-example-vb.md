@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 409d54437c8f43ce3b2f42e42fe8abe67f77d964
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5869e8203ca5e07564a6d3c6bc7767bccfd9d553
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451769"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759957"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 属性示例 (VB) 
-此示例演示 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 属性如何跟踪枚举 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 属性来启用 **AbsolutePosition** 属性。  
+此示例演示 [AbsolutePosition](./absoluteposition-property-ado.md) 属性如何跟踪枚举 [记录集](./recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用 [CursorLocation](./cursorlocation-property-ado.md) 属性来启用 **AbsolutePosition** 属性。  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -93,6 +93,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AbsolutePosition 属性 (ADO) ](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [CursorLocation 属性 (ADO) ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePosition 属性 (ADO) ](./absoluteposition-property-ado.md)   
+ [CursorLocation 属性 (ADO) ](./cursorlocation-property-ado.md)   
+ [记录集对象 (ADO)](./recordset-object-ado.md)

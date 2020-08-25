@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442759"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773336"
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
-包含[Command](../../../ado/reference/ado-api/command-object-ado.md)对象的所有[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
+包含[Command](./command-object-ado.md)对象的所有[参数](./parameter-object.md)对象。  
   
 ## <a name="remarks"></a>备注  
  **命令**对象具有由**参数**对象组成的**参数**集合。  
   
- 对**command**对象的**Parameters**集合使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法将检索在**命令**对象中指定的存储过程或参数化查询的提供程序参数信息。 某些提供程序不支持存储过程调用或参数化查询;使用此类提供程序时对**参数**集合调用**Refresh**方法将返回错误。  
+ 对**command**对象的**Parameters**集合使用[Refresh](./refresh-method-ado.md)方法将检索在**命令**对象中指定的存储过程或参数化查询的提供程序参数信息。 某些提供程序不支持存储过程调用或参数化查询;使用此类提供程序时对**参数**集合调用**Refresh**方法将返回错误。  
   
  如果尚未定义自己的**参数**对象，并且在调用**Refresh**方法之前访问**参数**集合，则 ADO 将自动调用方法并为您填充集合。  
   
- 如果知道与要调用的存储过程或参数化查询相关联的参数的属性，则可以最大程度地减少对提供程序的调用以提高性能。 使用 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法创建具有相应属性设置的 **参数** 对象，并使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 方法将它们添加到 **Parameters** 集合。 这使你可以设置和返回参数值，而无需调用提供程序来获取参数信息。 如果要写入未提供参数信息的提供程序，则必须使用此方法手动填充 **参数** 集合，以便能够使用参数。 如有必要，请使用[Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法从**Parameters**集合中删除**参数**对象。  
+ 如果知道与要调用的存储过程或参数化查询相关联的参数的属性，则可以最大程度地减少对提供程序的调用以提高性能。 使用 [CreateParameter](./createparameter-method-ado.md) 方法创建具有相应属性设置的 **参数** 对象，并使用 [Append](./append-method-ado.md) 方法将它们添加到 **Parameters** 集合。 这使你可以设置和返回参数值，而无需调用提供程序来获取参数信息。 如果要写入未提供参数信息的提供程序，则必须使用此方法手动填充 **参数** 集合，以便能够使用参数。 如有必要，请使用[Delete](./delete-method-ado-parameters-collection.md)方法从**Parameters**集合中删除**参数**对象。  
   
  **记录**集的**参数**集合中的对象超出范围 (因此关闭**记录集**时将变为不可用) 。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "88442759"
   
  本部分包含以下主题。  
   
--   [参数集合属性、方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [参数集合属性、方法和事件](./parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO (追加方法) ](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法 (ADO) ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)
+ [ADO (追加方法) ](./append-method-ado.md)   
+ [CreateParameter 方法 (ADO) ](./createparameter-method-ado.md)   
+ [Parameter 对象](./parameter-object.md)

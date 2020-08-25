@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a50d983365285ccf0001f46450613bdf78bd87
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 462b701250f285b26e5b778897e221e97fc4c9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440199"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770816"
 ---
 # <a name="create-method-example-vb"></a>Create 方法示例 (VB)
-下面的代码演示如何使用 [create](../../../ado/reference/adox-api/create-method-adox.md) 方法创建新的 Microsoft Jet 数据库。  
+下面的代码演示如何使用 [create](./create-method-adox.md) 方法创建新的 Microsoft Jet 数据库。  
   
 ```  
 Attribute VB_Name = "Create"  
@@ -51,5 +51,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Create 方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [目录对象 (ADOX) ](./catalog-object-adox.md)   
+ [Create 方法 (ADOX)](./create-method-adox.md)

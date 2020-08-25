@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f122574ba5aa405ca4493b498bb0179249cccf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2777b5dc9043cfce45dd1ff3b721cacf842b8991
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440139"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770716"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 属性 (ADOX)
 指示列的指定最大大小。  
@@ -36,10 +36,10 @@ ms.locfileid: "88440139"
 ## <a name="remarks"></a>备注  
  默认值为零 (0)。  
   
- 对于已追加到集合的 [列](../../../ado/reference/adox-api/column-object-adox.md) 对象，此属性是只读的。  
+ 对于已追加到集合的 [列](./column-object-adox.md) 对象，此属性是只读的。  
   
 ## <a name="applies-to"></a>适用于  
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [列对象 (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [DefinedSize 属性示例 (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)
+ [DefinedSize 属性示例 (VB)](./definedsize-property-example-vb.md)

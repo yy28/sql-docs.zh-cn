@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452419"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758357"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多维架构和数据的概述
 ## <a name="understanding-multidimensional-schemas"></a>了解多维架构  
@@ -32,7 +32,7 @@ ms.locfileid: "88452419"
   
  *成员*是维度中的数据项。 通常，使用成员创建标题或描述数据库的度量值。  
   
- 多维数据集由 ADO MD 中的 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 对象表示。 维度、层次结构、级别和成员还由其对应的 ADO MD 对象表示： [维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、 [层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、 [级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和 [成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
+ 多维数据集由 ADO MD 中的 [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) 对象表示。 维度、层次结构、级别和成员还由其对应的 ADO MD 对象表示： [维度](../../reference/ado-md-api/dimension-object-ado-md.md)、 [层次结构](../../reference/ado-md-api/hierarchy-object-ado-md.md)、 [级别](../../reference/ado-md-api/level-object-ado-md.md)和 [成员](../../reference/ado-md-api/member-object-ado-md.md)。  
   
 ### <a name="dimensions"></a>维度  
  多维数据集的维度依赖于要在数据库中建模的业务实体和数据类型。 通常，每个维度都是独立的入口点或用于选择数据的机制。  
@@ -85,8 +85,8 @@ Hamburg, Munich, Stuttgart}
  此示例还说明了另一种特征： "年-周" 层次结构的 "周" 级别的某些成员未出现在 "今年季度" 层次结构中的任何级别。 因此，层次结构不需要包含维度的所有成员。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (多维)  (ADO MD) ](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [用 ADO MD 进行编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [使用 ADO 与 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [ADO MD 对象模型](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (多维)  (ADO MD) ](./ado-multidimensional-ado-md.md)   
+ [用 ADO MD 进行编程](./programming-with-ado-md.md)   
+ [使用 ADO 与 ADO MD](./using-ado-with-ado-md.md)   
+ [使用多维数据](./working-with-multidimensional-data.md)

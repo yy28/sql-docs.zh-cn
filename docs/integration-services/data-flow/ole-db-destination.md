@@ -1,4 +1,5 @@
 ---
+description: OLE DB 目标
 title: OLE DB 目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477789"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908293"
   
 > [!NOTE]  
 >  OLE DB 目标的 **CommandTimeout** 属性未在 **“OLE DB 目标编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
+> 
+>  仅当数据访问模式为“SQL 命令”时，CommandTimeout 属性才有效。
   
 ### <a name="static-options"></a>静态选项  
  **“无缓存”**  

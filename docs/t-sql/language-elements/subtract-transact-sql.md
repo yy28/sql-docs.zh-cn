@@ -1,4 +1,5 @@
 ---
+description: '- （减法）(Transact-SQL)'
 title: '- （减法）(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f24d5937b7f573951051fa3e27aaf111bdacaa40
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cfe1427b432645915c6becec53df5e879a2d9b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445400"
 ---
 # <a name="--subtraction-transact-sql"></a>-（减法）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ expression - expression
 
 ## <a name="arguments"></a>参数
  *expression*  
- 数值数据类型类别的任一数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 不能与 date、time、datetime2 或 datetimeoffset 数据类型一起使用     。  
+ 数值数据类型类别的任一数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。 不能与 date、time、datetime2 或 datetimeoffset 数据类型一起使用****************。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
