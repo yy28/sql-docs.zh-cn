@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453829"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806452"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件实例化：ADO 和 WFC
 适用于 Windows 基础类 (ado/WFC) 的 ADO 构建于 ADO 事件模型上，并提供简化的应用程序编程接口。 通常情况下，ADO/WFC 会截获 ADO 事件，将事件参数合并为单个事件类，然后调用事件处理程序。  
@@ -53,7 +53,7 @@ ms.locfileid: "88453829"
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     第一个参数是发送事件 ([连接](../../../ado/reference/ado-api/connection-object-ado.md) 或 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)) 的对象的类型，第二个参数是 ADO/WFC 事件对象 (**ConnectionEvent** 或 **RecordsetEvent**) 。  
+     第一个参数是发送事件 ([连接](../../reference/ado-api/connection-object-ado.md) 或 [记录集](../../reference/ado-api/recordset-object-ado.md)) 的对象的类型，第二个参数是 ADO/WFC 事件对象 (**ConnectionEvent** 或 **RecordsetEvent**) 。  
   
      事件处理程序的签名比 ADO 事件简单。 但是，您仍然必须了解 ADO 事件模型，才能了解哪些参数适用于事件以及如何做出响应。  
   
@@ -62,8 +62,8 @@ ms.locfileid: "88453829"
 7.  完成处理后，从 ADO/WFC 事件处理程序列表中删除处理程序。 使用具有名称（如 **removeOn**_事件_ 名称） (*处理程序*) 的方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-WFC 语法索引](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [事件参数](../../../ado/guide/data/event-parameters.md)   
- [事件处理程序如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [事件类型](../../../ado/guide/data/types-of-events.md)
+ [ADO 事件处理程序摘要](./ado-event-handler-summary.md)   
+ [ADO-WFC 语法索引](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [事件参数](./event-parameters.md)   
+ [事件处理程序如何协同工作](./how-event-handlers-work-together.md)   
+ [事件类型](./types-of-events.md)

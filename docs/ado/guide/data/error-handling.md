@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26cbadd4f9c6a33c6dc43a6dcc88e0a92f23d65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092f1a767e614b3426db63c95ca8bf4e14954dd0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453439"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806871"
 ---
 # <a name="error-handling-in-ado"></a>ADO 中的错误处理
 ADO 使用多种不同的方法来通知应用程序发生的错误。 本部分讨论在使用 ADO 时可能发生的错误类型以及应用程序的通知方式。 它通过提出有关如何处理这些错误的建议来结束。  
@@ -34,7 +34,7 @@ ADO 使用多种不同的方法来通知应用程序发生的错误。 本部分
   
 -   如果错误特定于您的数据访问接口，则在发生错误时，将一个或多个**错误**对象置于用于访问数据存储的**连接**对象的**错误**集合中。  
   
--   如果引发事件的进程还产生了错误，则会将错误消息放置在 **错误** 对象中，并将其作为参数传递给事件。 有关事件的详细信息，请参阅 [处理 ADO 事件](../../../ado/guide/data/handling-ado-events.md) 。  
+-   如果引发事件的进程还产生了错误，则会将错误消息放置在 **错误** 对象中，并将其作为参数传递给事件。 有关事件的详细信息，请参阅 [处理 ADO 事件](./handling-ado-events.md) 。  
   
 -   处理批处理更新或涉及**记录集**的其他大容量操作时出现的问题可以通过**记录集**的**Status**属性来指示。 例如，可以通过 **RecordStatusEnum** 值指定架构约束冲突或权限不足。  
   
@@ -42,14 +42,14 @@ ADO 使用多种不同的方法来通知应用程序发生的错误。 本部分
   
  本部分包含以下主题。  
   
--   [ADO 错误](../../../ado/guide/data/ado-errors.md)  
+-   [ADO 错误](./ado-errors.md)  
   
--   [提供程序错误](../../../ado/guide/data/provider-errors.md)  
+-   [提供程序错误](./provider-errors.md)  
   
--   [字段相关错误信息](../../../ado/guide/data/field-related-error-information.md)  
+-   [字段相关错误信息](./field-related-error-information.md)  
   
--   [记录集相关错误信息](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [记录集相关错误信息](./recordset-related-error-information.md)  
   
--   [处理其他语言中的处理错误](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [处理其他语言中的处理错误](./handling-errors-in-other-languages.md)  
   
--   [预测错误](../../../ado/guide/data/anticipating-errors.md)
+-   [预测错误](./anticipating-errors.md)

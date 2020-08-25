@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05e65643884d57d991028394f9f5b1ba7b752533
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442209"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777576"
 ---
 # <a name="save-method"></a>Save 方法
-将 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 保存到文件或 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象中。  
+将 [记录集](./recordset-object-ado.md) 保存到文件或 [流](./stream-object-ado.md) 对象中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,17 +34,17 @@ ms.locfileid: "88442209"
 recordset.Save Destination, PersistFormat  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  *目标*  
  可选。 一个 **变量** ，表示要保存 **记录集** 的文件的完整路径名称，或者是对 **流** 对象的引用。  
   
  *PersistFormat*  
- 可选。 一个 [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) 值，指定将 **记录集** 保存 (XML 或 ADTG) 的格式。 默认值为 **adPersistADTG**。  
+ 可选。 一个 [PersistFormatEnum](./persistformatenum.md) 值，指定将 **记录集** 保存 (XML 或 ADTG) 的格式。 默认值为 **adPersistADTG**。  
   
 ## <a name="remarks"></a>备注  
- 只能对打开的**记录集**调用[Save 方法](../../../ado/reference/ado-api/save-method.md)方法。 使用[Open 方法 (ADO Recordset) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法稍后从*目标*还原**记录集**。  
+ 只能对打开的**记录集**调用[Save 方法]()方法。 使用[Open 方法 (ADO Recordset) ](./open-method-ado-recordset.md)方法稍后从*目标*还原**记录集**。  
   
- 如果 [筛选器属性](../../../ado/reference/ado-api/filter-property.md) 属性对 **记录集**有效，则仅保存在筛选器下可访问的行。 如果 **记录集** 是分层的，则保存当前子 **记录集** 及其子记录集（包括父 **记录**集）。 如果调用子记录集的 Save 方法，则会保存子记录集及其所有子级，但不会保存父 **记录集** 。  
+ 如果 [筛选器属性](./filter-property.md) 属性对 **记录集**有效，则仅保存在筛选器下可访问的行。 如果 **记录集** 是分层的，则保存当前子 **记录集** 及其子记录集（包括父 **记录**集）。 如果调用子记录集的 Save 方法，则会保存子记录集及其所有子级，但不会保存父 **记录集** 。  
   
  第一次保存 **记录集**时，可以选择指定 *目标*。 如果省略 " *目标*"，则将创建一个新文件，其名称设置为 **记录集**的 "源" 属性的值。  
   
@@ -58,14 +58,14 @@ recordset.Save Destination, PersistFormat
   
  记录从 **记录集**的第一行开始保存。 当 **Save** 方法完成后，当前行位置将移到 **记录集**的第一行。  
   
- 为获得最佳结果，请将[CursorLocation 属性 (ADO) ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为 "**保存**" 的**adUseClient** 。 如果提供程序不支持保存 **记录集** 对象所需的所有功能，则游标服务将提供该功能。  
+ 为获得最佳结果，请将[CursorLocation 属性 (ADO) ](./cursorlocation-property-ado.md)属性设置为 "**保存**" 的**adUseClient** 。 如果提供程序不支持保存 **记录集** 对象所需的所有功能，则游标服务将提供该功能。  
   
- 当 **记录集** 的 **CursorLocation** 属性设置为 **adUseServer**时， **记录集** 的更新功能会受到限制。 通常，仅允许单个表更新、插入和删除 (依赖提供程序功能) 。 此配置中也不能使用 [Resync 方法](../../../ado/reference/ado-api/resync-method.md) 方法。  
+ 当 **记录集** 的 **CursorLocation** 属性设置为 **adUseServer**时， **记录集** 的更新功能会受到限制。 通常，仅允许单个表更新、插入和删除 (依赖提供程序功能) 。 此配置中也不能使用 [Resync 方法](./resync-method.md) 方法。  
   
 > [!NOTE]
 >  ADO 不支持使用类型为**adVariant**、 **adIDispatch**或**AdIUnknown**的**字段**保存**记录集**，这可能会导致不可预知的结果。  
   
- 只有条件字符串形式的筛选器 (例如，) 日期的 > "12/31/1999" 影响持久 **记录集**的内容。 使用 **书签** 数组或 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 中的值创建的筛选器不会影响持久 **记录集**的内容。 这些规则适用于使用客户端或服务器端游标创建的 **记录集**。  
+ 只有条件字符串形式的筛选器 (例如，) 日期的 > "12/31/1999" 影响持久 **记录集**的内容。 使用 **书签** 数组或 [FilterGroupEnum](./filtergroupenum.md) 中的值创建的筛选器不会影响持久 **记录集**的内容。 这些规则适用于使用客户端或服务器端游标创建的 **记录集**。  
   
  由于 *目标* 参数可以接受支持 OLE DB IStream 接口的任何对象，因此可以将 **记录集** 直接保存到 ASP 响应对象。 有关更多详细信息，请参阅 **XML 记录集持久性方案**。  
   
@@ -92,16 +92,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 
 :::row:::
     :::column:::
-        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [记录集对象 (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [流对象 (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [ (VB 保存和打开方法示例) ](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [保存并打开方法示例 (VC + +) ](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [ADO 记录集 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [ADO 流 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)
+ [ (VB 保存和打开方法示例) ](./save-and-open-methods-example-vb.md)   
+ [保存并打开方法示例 (VC + +) ](./save-and-open-methods-example-vc.md)   
+ [ADO 记录集 (打开方法) ](./open-method-ado-recordset.md)   
+ [ADO 流 (打开方法) ](./open-method-ado-stream.md)   
+ [SaveToFile 方法](./savetofile-method.md)

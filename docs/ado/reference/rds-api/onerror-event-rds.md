@@ -38,7 +38,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  一个整数，指示错误的状态代码。  
   
- *描述*  
+ *说明*  
  指示错误说明的 **字符串** 。  
   
  *Source*  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d0f6502ccfa58b28f0faeaf10b2670a42759a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9dfaba8c2ae2511de9a07aa800abc08f76ec885
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453549"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806946"
 ---
 # <a name="data-shaping-overview"></a>数据整理概述
-*数据定形* 指的是在查询中的两个或多个逻辑实体之间建立层次关系。 可以在一个记录 [集](../../../ado/reference/ado-api/recordset-object-ado.md)的记录之间的父子关系中查看层次结构，也可以在一个或多个记录 (也称为另一个 **记录集**的章节) 。 在父子关系中，父 **记录集** 包含子 **记录集**。 例如，客户和订单就是这种层次结构关系。 对于数据库中的每个客户，可以有零个或多个订单。 层次结构关系可以是递归的，也就是说，孙记录可以嵌套在子记录中。 原则上，分层记录可以嵌套到任何深度。 在实践中，ADO 将递归限制在最多512个 **记录集**。  
+*数据定形* 指的是在查询中的两个或多个逻辑实体之间建立层次关系。 可以在一个记录 [集](../../reference/ado-api/recordset-object-ado.md)的记录之间的父子关系中查看层次结构，也可以在一个或多个记录 (也称为另一个 **记录集**的章节) 。 在父子关系中，父 **记录集** 包含子 **记录集**。 例如，客户和订单就是这种层次结构关系。 对于数据库中的每个客户，可以有零个或多个订单。 层次结构关系可以是递归的，也就是说，孙记录可以嵌套在子记录中。 原则上，分层记录可以嵌套到任何深度。 在实践中，ADO 将递归限制在最多512个 **记录集**。  
   
  通常，形状 **记录集** 的列可以包含来自数据提供程序的数据，例如 Microsoft® SQL Server、对另一 **记录集**的引用、从 **记录集**的单个行上的计算派生的值，或对整个 **记录集**的列的操作派生的值。 列还可以是新的，也可以是空的。  
   

@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e2e3777ac272980c453bbb850e117a1739b0de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8477be0be104731abb91c9d6353a7272df02111c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355413"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805466"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>ADO 用于使用 ADO 对象的程序员指南
 本文档概述了如何使用 ADO 对象处理来自各种数据源的数据。 首先，简介概述了用于安装、使用和重新分发 ADO 组件的新功能和要求。 以下各节讨论各种类型的 ADO 对象的用法。 最后，附录还讨论了各种 Microsoft 提供的数据和服务提供程序、错误消息以及有关如何在多种编程语言中使用 ADO 以及示例和术语表的提示。
 
  本部分包含以下主题。
 
--   [介绍](../../ado/guide/ado-introduction.md)
+-   [介绍](./ado-introduction.md)
 
--   [ActiveX 数据对象 (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
+-   [ActiveX 数据对象 (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15)
 
--   [远程数据服务 (RDS) ](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [远程数据服务 (RDS) ](./remote-data-service/remote-data-service-rds.md)
 
--   [ADO（多维）(ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
+-   [ADO（多维）(ADO MD)](./multidimensional/ado-multidimensional-ado-md.md)
 
--   [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+-   [数据定义语言和安全性的 ADO 扩展 (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [附录](../../ado/guide/appendixes/ado-appendixes.md)
+-   [附录](./appendixes/appendix-a-providers.md?view=sql-server-ver15)

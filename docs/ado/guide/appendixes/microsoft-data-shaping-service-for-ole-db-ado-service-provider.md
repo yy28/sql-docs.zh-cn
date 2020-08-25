@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c61e40220b99bd68c92e2651d58ea13ee10be29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d0acedc118c2789945f3b02a438655176179ef0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454099"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806636"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>适用于 OLE DB 的 Microsoft 数据定形服务概述
 > [!IMPORTANT]
 >  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，应用程序应使用 XML。
 
- 用于 OLE DB 服务提供商的 Microsoft 数据定形服务支持从数据提供程序构造分层 (形状) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 对象。
+ 用于 OLE DB 服务提供商的 Microsoft 数据定形服务支持从数据提供程序构造分层 (形状) [Recordset](../../reference/ado-api/recordset-object-ado.md) 对象。
 
 ## <a name="provider-keyword"></a>Provider 关键字
  若要为 OLE DB 调用数据定形服务，请在连接字符串中指定以下关键字和值。
@@ -35,9 +35,9 @@ ms.locfileid: "88454099"
 ```
 
 ## <a name="dynamic-properties"></a>动态属性
- 调用此服务提供程序时，会将以下动态属性添加到[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合。
+ 调用此服务提供程序时，会将以下动态属性添加到[连接](../../reference/ado-api/connection-object-ado.md)对象的[properties](../../reference/ado-api/properties-collection-ado.md)集合。
 
-|动态属性名称|描述|
+|动态属性名称|说明|
 |---------------------------|-----------------|
 |**唯一改变名称**|指示是否允许为其重设其**名称**属性的重复值的**记录集**对象。 如果此动态属性为**True** ，并且使用与现有**记录集**相同的用户指定的重设名称来创建新的**记录集**，则会修改新的**记录集**对象的重设名称，使其唯一。 如果此属性为**False** ，并且使用与现有**记录集**相同的用户指定的重设名称创建新的**记录集**，则这两个**记录集**对象将具有相同的改变名称。 因此，只要两个记录集都存在，就不能改变 **记录集** 。<br /><br /> 此属性的默认值为 **False**。|
 |**数据访问接口**|指示提供程序的名称，该提供程序将提供要整形的行。 如果提供程序将不用于提供行，则此值可以为 "无"。|
@@ -49,7 +49,7 @@ Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- 还可以通过将动态属性的名称指定为 [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 属性的索引来设置或检索该属性。 例如，下面的代码示例获取并输出 **数据提供程序** 动态属性的当前值，并在 cn 中设置一个新值。DataProvider 已设置为 "MSDataShape" (直接或间接地通过连接字符串) 并且尚未打开该连接：
+ 还可以通过将动态属性的名称指定为 [Properties](../../reference/ado-api/properties-collection-ado.md) 属性的索引来设置或检索该属性。 例如，下面的代码示例获取并输出 **数据提供程序** 动态属性的当前值，并在 cn 中设置一个新值。DataProvider 已设置为 "MSDataShape" (直接或间接地通过连接字符串) 并且尚未打开该连接：
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  只能对未打开的**连接**对象设置动态属性**数据提供程序**。 打开连接后， **数据访问接口** 属性将变为只读。
 
- 有关数据定形的详细信息，请参阅 [数据定形](../../../ado/guide/data/data-shaping-overview.md)。
+ 有关数据定形的详细信息，请参阅 [数据定形](../data/data-shaping-overview.md)。
 
 ## <a name="see-also"></a>另请参阅
- [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](./appendix-a-providers.md)

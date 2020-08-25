@@ -23,7 +23,7 @@ ms.locfileid: "88776666"
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
 
-|properties|说明|  
+|属性|说明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|指示当前单元集或目录当前属于哪个 ADO **连接** 对象。|  
 |[Caption](./caption-property-ado-md.md)|指示在显示 **级别** 或 **成员** 对象时要使用的文本标题。|  
@@ -31,7 +31,7 @@ ms.locfileid: "88776666"
 |[Children](./children-property-ado-md.md)|返回当前**成员**是层次结构中的父成员的**成员**的集合。|  
 |[Count](../ado-api/count-property-ado.md)|指示集合中的对象数。|  
 |[Depth](./depth-property-ado-md.md)|指示 **级别** 与层次结构级别的根之间的级别数。|  
-|[描述](./description-property-ado-md.md)|返回当前对象的文本说明。|  
+|[说明](./description-property-ado-md.md)|返回当前对象的文本说明。|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|指示轴上的维度数。|  
 |[DrilledDown](./drilleddown-property-ado-md.md)|指示是否没有子级在轴上紧跟在该成员之后。|  
 |[FilterAxis](./filteraxis-property-ado-md.md)|指示当前单元集的筛选器信息。|  

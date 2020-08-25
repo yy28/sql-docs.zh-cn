@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 104070ca1f23a4bd142a3a7c755c6c0eb1f409fc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453959"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806750"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -75,7 +75,7 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- ADO 文档附带了更为具体的 VBScript 示例。 有关详细信息，请参阅 [Microsoft Visual Basic Scripting Edition 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)。  
+ ADO 文档附带了更为具体的 VBScript 示例。 有关详细信息，请参阅 [Microsoft Visual Basic Scripting Edition 中的 ADO 代码示例](../../reference/ado-api/ado-code-examples-vbscript.md)。  
   
 ## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript 与 Visual Basic 之间的差异  
  使用 ADO 和 VBScript 类似于将 ADO 与 Visual Basic 一起使用，其中包括如何使用语法。 但存在一些重要的差异：  

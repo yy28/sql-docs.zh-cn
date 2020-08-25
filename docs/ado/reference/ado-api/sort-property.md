@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442059"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777416"
 ---
 # <a name="sort-property"></a>Sort 属性
-指示 [记录记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的一个或多个字段名称，以及是否按升序或降序对每个字段进行排序。  
+指示 [记录记录集](./recordset-object-ado.md) 的一个或多个字段名称，以及是否按升序或降序对每个字段进行排序。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值，该值指示作为排序依据的 **记录集** 中的字段名称。 每个名称之间用逗号分隔，后面可以跟空白和关键字 **ASC**，后者按升序对字段进行排序 **，或使用降序对**字段进行排序。 默认情况下，如果未指定关键字，则字段将按升序排序。  
   
 ## <a name="remarks"></a>备注  
- 此属性需要将 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 属性设置为 **adUseClient**。 如果索引不存在，则将为 **Sort** 属性中指定的每个字段创建临时索引。  
+ 此属性需要将 [CursorLocation](./cursorlocation-property-ado.md) 属性设置为 **adUseClient**。 如果索引不存在，则将为 **Sort** 属性中指定的每个字段创建临时索引。  
   
  排序操作非常高效，因为数据不会进行物理重新排列，而只是按索引指定的顺序进行访问。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "88442059"
  不能将字段命名为 "ASC" 或 "DESC"，因为这些名称与关键字 **ASC** 和 **DESC**冲突。 您可以通过在返回**记录集**的查询中使用**AS**关键字，为具有冲突名称的字段创建别名。  
   
 ## <a name="applies-to"></a>适用于  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ (VB) 对属性示例排序 ](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [ (VC + + 的排序属性示例) ](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [优化属性-动态 (ADO) ](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [SortColumn 属性 (RDS) ](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection 属性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+ [ (VB) 对属性示例排序 ](./sort-property-example-vb.md)   
+ [ (VC + + 的排序属性示例) ](./sort-property-example-vc.md)   
+ [优化属性-动态 (ADO) ](./optimize-property-dynamic-ado.md)   
+ [SortColumn 属性 (RDS) ](../rds-api/sortcolumn-property-rds.md)   
+ [SortDirection 属性 (RDS)](../rds-api/sortdirection-property-rds.md)

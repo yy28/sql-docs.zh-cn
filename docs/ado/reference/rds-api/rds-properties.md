@@ -25,7 +25,7 @@ ms.locfileid: "88767736"
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-|properties|说明|  
+|属性|说明|  
 |-|-|  
 |[连接 (RDS) ](./connect-property-rds.md)|指示运行查询和更新操作的数据库名称。|  
 |[ExecuteOptions (RDS) ](./executeoptions-property-rds.md)|指示是否启用异步执行。|  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453949"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806772"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 编程
 ADO API 参考介绍了 ADO 应用程序编程接口的功能 (API) 使用类似于 Microsoft Visual Basic 的语法。 尽管目标受众是所有用户，但 ADO 程序员使用各种语言（如 Visual Basic）、Visual C++ (，但不使用 **#import** 指令) ，而 Visual j + + (使用 ADO/WFC 类包) 。  
@@ -29,7 +29,7 @@ ADO API 参考介绍了 ADO 应用程序编程接口的功能 (API) 使用类似
 > [!NOTE]
 > Microsoft 在2004中结束了对 Visual j + + 的支持。
 
- 为了适应这种多样性， [Visual C++ 语法索引的 ADO](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) 提供了 Visual C++ 语言特定的语法，其中包含指向 API 参考中的功能、参数、异常行为等的常用说明的链接。  
+ 为了适应这种多样性， [Visual C++ 语法索引的 ADO](./using-ado-with-microsoft-visual-c.md) 提供了 Visual C++ 语言特定的语法，其中包含指向 API 参考中的功能、参数、异常行为等的常用说明的链接。  
   
  ADO 是通过 COM (组件对象模型) 接口实现的。 但是，程序员在某些编程语言中使用 COM 比使用其他语言更容易。 例如，几乎所有使用 COM 的细节都是为 Visual Basic 程序员隐式处理的，而 Visual C++ 程序员必须亲自参与这些细节。  
   
@@ -205,7 +205,7 @@ pRecordset->NextRecordset(NULL);
   
  请记住，这些是 ADO 错误：它们是由于 ADO 操作失败导致的。 基础提供程序返回的错误显示为**连接**对象**错误**集合中的**错误**对象。  
   
- **#Import**指令只为在 ADO 中声明的方法和属性创建错误处理例程。 但是，您可以通过编写自己的错误检查宏或内联函数来利用这一相同的错误处理机制。 有关示例，请参阅主题 [Visual C++ 扩展](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)或以下部分中的代码。  
+ **#Import**指令只为在 ADO 中声明的方法和属性创建错误处理例程。 但是，您可以通过编写自己的错误检查宏或内联函数来利用这一相同的错误处理机制。 有关示例，请参阅主题 [Visual C++ 扩展](./visual-c-extensions-for-ado.md)或以下部分中的代码。  
   
 ## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual Basic 约定 Visual C++ 等效项  
  下面概述了 ADO 文档中的多个约定，在 Visual Basic 中编码，以及它们在 Visual C++ 中的等效项。  

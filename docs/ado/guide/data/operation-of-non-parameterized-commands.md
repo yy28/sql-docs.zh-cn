@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453109"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805671"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>操作非参数化命令
 对于非参数化命令，会执行所有提供程序命令，并在命令执行过程中创建 **记录集** 。 如果以同步方式执行命令，将完全填充所有 **记录集** 。 如果选择了异步填充模式，则 **记录集** 的填充状态将取决于填充模式和 **记录集**的大小。  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  访问 "章节" 列中的引用时，ADO 会自动检索引用所表示的 **记录集** 。 请注意，虽然已检索整个子 **记录集** ，但在非参数化命令中，章节只显示行的子集。  
   
- 如果追加列没有 *章节别名*，将自动为其生成名称。 该列的 [字段](../../../ado/reference/ado-api/field-object.md) 对象将追加到 **Recordset** 对象的 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 集合，其数据类型将为 **adChapter**。  
+ 如果追加列没有 *章节别名*，将自动为其生成名称。 该列的 [字段](../../reference/ado-api/field-object.md) 对象将追加到 **Recordset** 对象的 [Fields](../../reference/ado-api/fields-collection-ado.md) 集合，其数据类型将为 **adChapter**。  
   
- 有关导航分层 **记录集**的信息，请参阅 [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 有关导航分层 **记录集**的信息，请参阅 [访问分层记录集中的行](./accessing-rows-in-a-hierarchical-recordset.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
+ [数据定形示例](./data-shaping-example.md)   
+ [正式形状语法](./formal-shape-grammar.md)   
+ [常用 Shape 命令](./shape-commands-in-general.md)

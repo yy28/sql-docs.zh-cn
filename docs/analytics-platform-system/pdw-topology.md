@@ -10,14 +10,14 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5dd758cec82a9839d14ae98c03bd232d560e48e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400838"
 ---
 # <a name="pdw-topology"></a>PDW 拓扑
-显示有关 SQL Server PDW 组件的名称和网络信息。 使用 "**设备拓扑网络配置**" 页可以更改网络 IP 地址。  
+显示有关 SQL Server PDW 组件的名称和网络信息。 使用 " **设备拓扑网络配置** " 页可以更改网络 IP 地址。  
   
 ![DWConfig PDW 顶级菜单](./media/pdw-topology/SQL_Server_PDW_DWConfig_PDWTop.png "SQL_Server_PDW_DWConfig_PDWTop")  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442559"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772866"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-指定 [属性](../../../ado/reference/ado-api/property-object-ado.md) 对象的特性。  
+指定 [属性](./property-object-ado.md) 对象的特性。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指示该提供程序不支持该属性。|  
 |**adPropRequired**|1|指示在初始化数据源之前，用户必须为此属性指定一个值。|  
@@ -46,4 +46,4 @@ ms.locfileid: "88442559"
 |AdoEnums. PropertyAttributes|  
   
 ## <a name="applies-to"></a>适用于  
- [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes 属性 (ADO)](./attributes-property-ado.md)

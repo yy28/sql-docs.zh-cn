@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399767"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>卸载分析平台系统修补程序 
@@ -36,7 +36,7 @@ ms.locfileid: "74399767"
   
 2.  使用 "以管理员身份运行" 选项打开命令提示符。  
   
-3.  将目录更改`C:\PDWINST\Patches\<kbarticle>\media`为*<kbarticle>* ，其中是要卸载的修补程序的知识库文章编号。  
+3.  将目录更改为 `C:\PDWINST\Patches\<kbarticle>\media` ，其中 *<kbarticle>* 是要卸载的修补程序的知识库文章编号。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
@@ -49,8 +49,8 @@ ms.locfileid: "74399767"
     ```  
   
 ## <a name="see-also"></a>另请参阅  
-[&#40;Analytics Platform System&#41;下载并应用 Microsoft 更新](download-and-apply-microsoft-updates.md)  
-[&#40;Analytics Platform System&#41;卸载 Microsoft 更新](uninstall-microsoft-updates.md)  
-[&#40;Analytics Platform System&#41;应用分析平台系统修补程序](apply-analytics-platform-system-hotfixes.md)  
+[&#40;Analytics Platform System&#41;下载并应用 Microsoft 更新 ](download-and-apply-microsoft-updates.md)  
+[&#40;Analytics Platform System&#41;卸载 Microsoft 更新 ](uninstall-microsoft-updates.md)  
+[&#40;Analytics Platform System&#41;应用分析平台系统修补程序 ](apply-analytics-platform-system-hotfixes.md)  
 [软件服务 &#40;分析平台系统&#41;](software-servicing.md)  
   

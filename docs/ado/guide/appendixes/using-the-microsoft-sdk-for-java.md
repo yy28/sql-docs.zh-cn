@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453969"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806491"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Java 适用的 Microsoft SDK
 
@@ -32,7 +32,7 @@ Microsoft SDK for Java 是适用于 Microsoft Internet Explorer 环境的开发�
   
  此机制读取 ADO 类型库，并生成可在应用程序中实例化的类。 它在以下位置生成这些类： \\<windows 目录 \> \Java\trustlib\msado15。  
   
- 使用 Microsoft SDK for Java 在 Java 中创建 ADO 应用程序与使用 Java 类型库向导在本质上完全相同。 有关示例代码，请参阅 [ADO Java 类包装](../../../ado/guide/appendixes/ado-java-class-wrappers.md)。 唯一的区别在于首先如何生成包装类，如以下步骤中所示。  
+ 使用 Microsoft SDK for Java 在 Java 中创建 ADO 应用程序与使用 Java 类型库向导在本质上完全相同。 有关示例代码，请参阅 [ADO Java 类包装](./ado-java-class-wrappers.md)。 唯一的区别在于首先如何生成包装类，如以下步骤中所示。  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java 创建 ADO 项目  
   
@@ -51,4 +51,4 @@ Microsoft SDK for Java 是适用于 Microsoft Internet Explorer 环境的开发�
 3.  若要使用这些文件，请在 Visual j + + 中打开项目。 从 " **项目** " 菜单中，选择 " **添加到项目**"。 选择 " **文件**"，并添加所有。在项目的 trustlib\msado15 目录中生成的 JAVA 文件。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO Java 类包装器](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+ [ADO Java 类包装器](./ado-java-class-wrappers.md)

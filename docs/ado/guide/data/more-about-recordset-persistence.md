@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453179"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805838"
 ---
 # <a name="more-about-recordset-persistence"></a>更多有关记录集暂留的信息
-ADO 记录集对象支持使用其[Save](../../../ado/reference/ado-api/save-method.md)方法在文件中存储**记录集**对象的内容。 持久存储的文件可能位于本地驱动器、服务器或网站上的 URL。 稍后，可以通过**Recordset**对象的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法或[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法来还原文件。  
+ADO 记录集对象支持使用其[Save](../../reference/ado-api/save-method.md)方法在文件中存储**记录集**对象的内容。 持久存储的文件可能位于本地驱动器、服务器或网站上的 URL。 稍后，可以通过**Recordset**对象的[Open](../../reference/ado-api/open-method-ado-recordset.md)方法或[连接](../../reference/ado-api/connection-object-ado.md)对象的[Execute](../../reference/ado-api/execute-method-ado-connection.md)方法来还原文件。  
   
- 此外， [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 方法将 **记录集** 对象转换为一个窗体，其中的列和行用指定的字符分隔。  
+ 此外， [GetString](../../reference/ado-api/getstring-method-ado.md) 方法将 **记录集** 对象转换为一个窗体，其中的列和行用指定的字符分隔。  
   
- 若要保存 **记录集**，请首先将其转换为可以存储在文件中的窗体。 **记录集** 对象可以存储在专用的高级数据 TABLEGRAM (ADTG) 格式或 open 可扩展标记语言 (XML) 格式。 下一节显示了 ADTG 示例。 有关 XML 持久性的详细信息，请参阅 [以 xml 格式保存记录](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
+ 若要保存 **记录集**，请首先将其转换为可以存储在文件中的窗体。 **记录集** 对象可以存储在专用的高级数据 TABLEGRAM (ADTG) 格式或 open 可扩展标记语言 (XML) 格式。 下一节显示了 ADTG 示例。 有关 XML 持久性的详细信息，请参阅 [以 xml 格式保存记录](./persisting-records-in-xml-format.md)。  
   
  保存持久文件中的任何挂起的更改。 这样一来，您就可以发出返回 **recordset** 对象的查询，编辑 **记录集**，保存并保存挂起的更改，然后再还原 **记录集**，然后使用保存的挂起更改更新数据源。  
   
- 有关永久存储 **流** 对象的信息，请参阅 [流和暂留](../../../ado/guide/data/streams-and-persistence.md)。  
+ 有关永久存储 **流** 对象的信息，请参阅 [流和暂留](./streams-and-persistence.md)。  
   
  有关 **记录集** 持久性的示例，请参阅 XML 记录集持久性方案。  
   
@@ -79,7 +79,7 @@ dc.Refresh
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GetString 方法 (ADO) ](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Microsoft OLE DB 永久性提供程序 (ADO 服务提供程序) ](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [流和暂留](../../../ado/guide/data/streams-and-persistence.md)
+ [GetString 方法 (ADO) ](../../reference/ado-api/getstring-method-ado.md)   
+ [Microsoft OLE DB 永久性提供程序 (ADO 服务提供程序) ](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [ADO)  (Recordset 对象 ](../../reference/ado-api/recordset-object-ado.md)   
+ [流和暂留](./streams-and-persistence.md)

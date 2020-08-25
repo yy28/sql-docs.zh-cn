@@ -23,7 +23,7 @@ ms.locfileid: "88771626"
 ---
 # <a name="adox-properties"></a>ADOX 属性
 
-|properties|说明|  
+|属性|说明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-adox.md)|指示目录所属的 ADO **连接** 对象。|  
 |[特性](./attributes-property-adox.md)|介绍列特性。|  
