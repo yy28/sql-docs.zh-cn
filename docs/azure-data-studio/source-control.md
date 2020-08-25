@@ -2,19 +2,19 @@
 title: 源代码管理
 description: Azure Data Studio 支持使用 Git 进行源代码管理 (SCM)。 了解如何打开现有的 Git 存储库，以及如何初始化新存储库。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c8b3ad59ac518eebefa9fbb073544fdb7791a419
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522501"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746147"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio 中的源代码管理
 

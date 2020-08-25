@@ -2,19 +2,19 @@
 title: 创建可重用代码片段
 description: 了解如何创建和使用 Azure Data Studio SQL 代码片段，以便轻松创建数据库和数据库对象。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8ef725a83a0800dbe5027e4d76bc8f7f51f7f3b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 95b0385178a5e2bd25f8b64be5f910d4f885e34b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411163"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746087"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>创建和使用代码片段，以便在 Azure Data Studio 中快速创建 Transact-SQL (T-SQL) 脚本
 

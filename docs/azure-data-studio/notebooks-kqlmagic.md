@@ -6,19 +6,19 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f05030869b66ca0d2f57000aa85f02c93079f08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920465"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766826"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Azure Data Studio 中的 Kqlmagic 扩展
 
-Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](notebooks-guidance.md)中扩展 Python 内核的功能。 可以组合使用 Python 和 [Kusto 查询语言 (KQL)](https://docs.microsoft.com/azure/data-explorer/kusto/query)，以通过与 `render` 命令集成的丰富 Plot.ly 库查询和可视化数据。 Kqlmagic 使你可以在同一个位置获得笔记本、数据分析和丰富 Python 功能的优势。 具有 Kqlmagic 的受支持数据源包括 [Azure 数据资源管理器](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)、[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)、[Azure Monitor 日志](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)。
+Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](notebooks-guidance.md)中扩展 Python 内核的功能。 可以组合使用 Python 和 [Kusto 查询语言 (KQL)](/azure/data-explorer/kusto/query)，以通过与 `render` 命令集成的丰富 Plot.ly 库查询和可视化数据。 Kqlmagic 使你可以在同一个位置获得笔记本、数据分析和丰富 Python 功能的优势。 具有 Kqlmagic 的受支持数据源包括 [Azure 数据资源管理器](/azure/data-explorer/data-explorer-overview)、[Application Insights](/azure/azure-monitor/app/app-insights-overview)、[Azure Monitor 日志](/azure/azure-monitor/platform/data-platform-logs)。
 
 本文演示对于 Azure 数据资源管理器群集、Application Insights 日志和 Azure Monitor 日志，如何使用 Kqlmagic 扩展在 Azure Data Studio 中创建和运行笔记本。
 
@@ -114,7 +114,7 @@ Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](notebooks-guidan
 
 ### <a name="query-and-visualize-for-azure-data-explorer"></a>对 Azure 数据资源管理器进行查询和可视化
 
-查询数据使用 [render 运算符](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)，而可视化数据使用 ploy.ly 库。 此查询和可视化操作提供了使用本机 KQL 的集成体验。
+查询数据使用 [render 运算符](/azure/data-explorer/kusto/query/renderoperator)，而可视化数据使用 ploy.ly 库。 此查询和可视化操作提供了使用本机 KQL 的集成体验。
 
 1. 按状态和频率分析前 10 个暴风雨事件：
 
@@ -179,7 +179,7 @@ Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](notebooks-guidan
 
 ### <a name="query-and-visualize-for-application-insights"></a>对 Application Insights 进行查询和可视化
 
-查询数据使用 [render 运算符](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)，而可视化数据使用 ploy.ly 库。 此查询和可视化操作提供了使用本机 KQL 的集成体验。
+查询数据使用 [render 运算符](/azure/data-explorer/kusto/query/renderoperator)，而可视化数据使用 ploy.ly 库。 此查询和可视化操作提供了使用本机 KQL 的集成体验。
 
 1. 显示页面视图：
 
@@ -234,7 +234,7 @@ Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](notebooks-guidan
 
 ### <a name="query-and-visualize-for-azure-monitor-logs"></a>对 Azure Monitor 日志进行查询和可视化
 
-查询数据使用 [render 运算符](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)，而可视化数据使用 ploy.ly 库。 此查询和可视化操作提供了使用本机 KQL 的集成体验。
+查询数据使用 [render 运算符](/azure/data-explorer/kusto/query/renderoperator)，而可视化数据使用 ploy.ly 库。 此查询和可视化操作提供了使用本机 KQL 的集成体验。
 
 1. 查看时间线图表：
 
@@ -251,7 +251,7 @@ Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](notebooks-guidan
 
 了解有关笔记本和 Kqlmagic 的详细信息：
 
-- [使用 Jupyter Notebook 和 Kqlmagic 扩展分析 Azure 数据资源管理器中的数据](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
+- [使用 Jupyter Notebook 和 Kqlmagic 扩展分析 Azure 数据资源管理器中的数据](/azure/data-explorer/Kqlmagic)
 - [Jupyter Notebook 和 Jupyter 实验室的扩展 (Magic)，使笔记本体验适用于 Kusto、Application Insights 和 LogAnalytics 数据](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)

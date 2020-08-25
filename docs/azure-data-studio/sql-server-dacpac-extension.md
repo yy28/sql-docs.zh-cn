@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: eeff69a65751097017383399784ea9a717f3b7e8
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 709e218727ad85fdf220033e3d8ea8741451fd9e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522471"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766006"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 扩展
 
@@ -33,7 +33,7 @@ ms.locfileid: "87522471"
 
 ## <a name="why-would-i-use-the-data-tier-application-wizard"></a>为什么要使用数据层应用程序向导？
 
-通过该向导，可以更轻松地管理 dacpac 和 bacpac 文件，从而简化支持应用程序的数据层元素的开发和部署。 若要了解有关使用数据层应用程序的详细信息，[请查看我们的文档。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+通过该向导，可以更轻松地管理 dacpac 和 bacpac 文件，从而简化支持应用程序的数据层元素的开发和部署。 若要了解有关使用数据层应用程序的详细信息，[请查看我们的文档。](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)
 
 
 ## <a name="install-the-extension"></a>安装扩展
@@ -56,5 +56,5 @@ ms.locfileid: "87522471"
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 dacpac 的详细信息，[请查看我们的文档。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+若要了解有关 dacpac 的详细信息，[请查看我们的文档。](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)
 请在[此处](https://github.com/microsoft/azuredatastudio/issues)报告问题和提出功能请求。

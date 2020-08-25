@@ -5,22 +5,22 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 9ecee71588cb54cb23c813cf5009b92159cf94d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522451"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765916"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 导入扩展（预览版）
 
 SQL Server 导入扩展（预览版）将 .txt 和 .csv 文件转换为 SQL 表。 此向导使用名为 [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) 的 Microsoft 研究框架，以使用最少的用户输入来智能分析文件。 它是功能强大的数据整理框架，也是在 Microsoft Excel 中为“快速填充”提供支持的技术
 
-若要了解有关此功能的 SSMS 版本的详细信息，请阅读[本文](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)。
+若要了解有关此功能的 SSMS 版本的详细信息，请阅读[本文](../relational-databases/import-export/import-flat-file-wizard.md)。
 
 
 ## <a name="install-the-sql-server-import-extension"></a>安装 SQL Server 导入扩展

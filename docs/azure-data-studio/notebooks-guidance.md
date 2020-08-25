@@ -6,15 +6,15 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d6e2c33cfc76736c3678ff9c802e3059f53baa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920495"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767816"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>在 Azure Data Studio 中使用 Jupyter Notebook
 
@@ -22,7 +22,7 @@ ms.locfileid: "86920495"
 
 Jupyter Notebook 是一种开源 Web 应用程序，可用于创建和共享包含实时代码、公式、可视化效果和叙述性文本的文档。 使用情况包括数据清理和转换、数值模拟、统计建模、数据可视化和机器学习。
 
-本文介绍如何在最新版的 [Azure Data Studio](../azure-data-studio/download.md) 中创建新笔记本，以及如何使用不同的内核开始创作自己的笔记本。
+本文介绍如何在最新版的 [Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15) 中创建新笔记本，以及如何使用不同的内核开始创作自己的笔记本。
 
 观看此短暂的 5 分钟视频，了解 Azure Data Studio 中的笔记本简介：
 
@@ -51,7 +51,7 @@ Azure Data Studio 笔记本支持多种不同的内核，包括 SQL Server、Pyt
 “附加到”提供内核的上下文。 例如，如果使用的是 SQL 内核，则可以附加到任何 SQL Server 实例。
 如果使用的是 Python3 内核附加到 localhost，可将此内核用于本地 Python 开发。
 
-SQL 内核还可用于连接到 PostgreSQL 服务器实例。 如果你是 PostgreSQL 开发人员，并想要将笔记本连接到 PostgreSQL 服务器，请在 Azure Data Studio 扩展市场中下载 [PostgreSQL 扩展](../azure-data-studio/postgres-extension.md)，然后连接到 PostgreSQL 服务器。
+SQL 内核还可用于连接到 PostgreSQL 服务器实例。 如果你是 PostgreSQL 开发人员，并想要将笔记本连接到 PostgreSQL 服务器，请在 Azure Data Studio 扩展市场中下载 [PostgreSQL 扩展](./postgres-extension.md)，然后连接到 PostgreSQL 服务器。
 
 如果已连接到 SQL Server 2019 大数据群集，则默认“附加到”是群集的终点。 可以使用群集的 Spark 计算提交 Python、Scala 和 R 代码。
 

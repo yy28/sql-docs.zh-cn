@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988600"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778476"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>用于 Azure Data Studio 的 Azure SQL 托管实例仪表板（预览版）
 
-Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中与 [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)搭配使用。 此扩展提供以下功能：
+Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中与 [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance-index)搭配使用。 此扩展提供以下功能：
 
 - 显示 SQL 托管实例属性，包括 vCore 数和已用存储
 - 监视前两小时的 CPU 和存储使用情况
@@ -29,7 +29,7 @@ Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio
 
 ## <a name="install"></a>安装
 
-可以安装此扩展的正式版本。 按照 [Azure Data Studio 文档](https://docs.microsoft.com/sql/azure-data-studio/extensions)中的步骤进行操作。
+可以安装此扩展的正式版本。 按照 [Azure Data Studio 文档](./extensions.md)中的步骤进行操作。
 在“扩展”窗格中，搜索“托管实例”并在此处安装它。 安装之后，会自动向你通知未来的任何扩展更新。
 
 安装扩展后，会在 Azure Data Studio 中看到“托管实例”  选项卡。 在此处可以找到特定于托管实例的信息。
@@ -58,8 +58,8 @@ Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio
 - **即将达到存储空间限制**。 删除不必要的数据或增加实例存储大小。 达到存储限制的数据库可能无法处理均匀读取查询。
 - **即将达到实例吞吐量限制**。 在负载接近以下服务层级限制时通知你：对于常规用途为 22 MB/s，对于业务关键为 48 MB/s。 请注意，托管实例会限制负载，以确保可以进行备份。
 - **内存压力**。 低页生存期或大量 `PAGEIOLATCH` 等待统计信息可能表明实例正在从内存中退出页面，并不断尝试从磁盘加载更多页面。
-- **日志文件限制**。 如果日志文件接近[常规用途服务层级上的文件 I/O 限制](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，则可能需要增大日志文件大小以获得更好的性能。
-- **数据文件限制**。 如果数据文件接近[常规用途服务层级上的文件 I/O 限制](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，则可能需要增大文件大小以获得更好的性能。 此问题可能会导致内存压力并降低备份速度。
+- **日志文件限制**。 如果日志文件接近[常规用途服务层级上的文件 I/O 限制](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，则可能需要增大日志文件大小以获得更好的性能。
+- **数据文件限制**。 如果数据文件接近[常规用途服务层级上的文件 I/O 限制](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，则可能需要增大文件大小以获得更好的性能。 此问题可能会导致内存压力并降低备份速度。
 - **可用性问题**。 大量虚拟日志文件可能会影响性能。 如果发生进程故障，则此类问题可能会导致常规用途服务层级上的数据库恢复时间较长。
 
 请定期查看这些建议，调查根本原因，并采取措施以纠正任何问题。 SQL 托管实例扩展提供了一些脚本，你可运行它们来缓解报告的某些问题。

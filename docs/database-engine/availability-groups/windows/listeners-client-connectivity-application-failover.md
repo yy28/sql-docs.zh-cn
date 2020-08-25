@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882726"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746177"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>连接到 Always On 可用性组侦听器 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 域管理员必须在 Active Directory 中为每个可用性组侦听器配置服务主体名称 (SPN)，以便为到侦听器的客户端连接启用 Kerberos。 注册 SPN 时，必须使用托管可用性副本的服务器实例的服务帐户。 对于跨所有副本工作的 SPN，必须为承载可用性组的 WSFC 群集中的所有实例使用相同的服务帐户。  
   
- 使用 Windows 命令行工具 **setspn** 配置 SPN。  例如，要为一组 SQL Server 实例上承载的名为 `AG1listener.Adventure-Works.com` 的可用性组配置 SPN，所有实例都应被配置为在域帐户 `corp/svclogin2`下运行：  
+ 使用 Windows 命令行工具 **setspn** 配置 SPN。  例如，要为一组 SQL Server 实例上承载的名为 `AG1listener.Adventure-Works.com` 的可用性组配置 SPN，所有实例都应被配置为在域帐户 `corp\svclogin2`下运行：  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  有关为 SQL Server 手动注册 SPN 的详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  

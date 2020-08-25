@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: a273850f64168caeb48304606e50703ba8fc54f4
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: ac218ec447ef338b4df770e9251e6fdb37e5db5f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411323"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766636"
 ---
 # <a name="postgresql-extension-preview"></a>ibanPostgreSQL 扩展（预览版）
 
@@ -33,7 +33,7 @@ PostgreSQL 可以使用的 Azure Data Studio 功能包括：
 
 ## <a name="install-the-postgresql-extension-preview"></a>安装 PostgreSQL 扩展（预览版）
 
-如果尚未安装 Azure Data Studio，请参阅其[安装说明](download.md)。
+如果尚未安装 Azure Data Studio，请参阅其[安装说明](./download-azure-data-studio.md?view=sql-server-ver15)。
 
 1. 从 Azure Data Studio 的边栏中选择扩展图标。
    ![扩展图标](media/extensions/postgresql-extension/extensions-icon.png)
@@ -46,4 +46,3 @@ PostgreSQL 可以使用的 Azure Data Studio 功能包括：
 ## <a name="next-steps"></a>后续步骤
 
 了解[如何从 Azure Data Studio 连接和查询 Postgres](quickstart-postgres.md)。
-

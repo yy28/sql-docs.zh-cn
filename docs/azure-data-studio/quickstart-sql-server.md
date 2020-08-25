@@ -2,19 +2,19 @@
 title: 快速入门：连接并查询 SQL Server
 description: 学习本快速入门，了解如何使用 Azure Data Studio 连接到 SQL Server，然后使用 Transact-SQL (T-SQL) 语句来创建数据库。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411283"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766356"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>快速入门：使用 Azure Data Studio 连接和查询 SQL Server
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411283"
 
 若要完成本快速入门，需要 Azure Data Studio 以及对 SQL Server 的访问权限。
 
-- [安装 Azure Data Studio](download.md)。
+- [安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
 
 如果没有 SQL Server 的访问权限，请从以下链接选择你的平台（请确保记住 SQL 登录名和密码！）：
 
 - [Windows - 下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS - 在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux - 下载 SQL Server 2017 Developer 版本](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - 只需按照以下步骤操作即可创建和查询数据。
+- [macOS - 在 Docker 上下载 SQL Server 2017](../linux/quickstart-install-connect-docker.md)
+- [Linux - 下载 SQL Server 2017 Developer 版本](../linux/sql-server-linux-overview.md#install) - 只需按照以下步骤操作即可创建和查询数据。
 
 ## <a name="connect-to-a-sql-server"></a>连接到 SQL Server
 

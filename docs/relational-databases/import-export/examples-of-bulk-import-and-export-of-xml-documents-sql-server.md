@@ -19,28 +19,29 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012457"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646049"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-    
-##  <a name="top"></a>
- 可以将 XML 文档大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，也可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中大容量导出 XML 文档。 本主题提供了这两种情况的示例。  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+## <a name="top"></a>
+
+可以将 XML 文档大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，也可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中大容量导出 XML 文档。 本主题提供了这两种情况的示例。
+
+若要将数据从一个数据文件大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区视图，可以使用以下工具或命令：  
   
- 若要将数据从一个数据文件大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区视图，可以使用以下工具或命令：  
+- **bcp** 实用工具  
+   还可以使用 **bcp** 实用工具将数据从可执行 SELECT 语句的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的任意位置（包括分区视图）导出。  
+
+- BULK INSERT  
   
--   **bcp** 实用工具  
-    还可以使用 **bcp** 实用工具将数据从可执行 SELECT 语句的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的任意位置（包括分区视图）导出。  
-  
--   BULK INSERT  
-  
--   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
+- INSERT ... SELECT * FROM OPENROWSET(BULK...)  
 
 有关详细信息，请参阅以下主题。
 - [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

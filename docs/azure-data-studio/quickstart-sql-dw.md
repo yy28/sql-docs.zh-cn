@@ -2,19 +2,19 @@
 title: 连接并查询 Azure SQL 数据仓库
 description: 本快速入门演示如何使用 Azure Data Studio 连接到 Azure SQL 数据仓库并运行查询
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728008"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766366"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用 Azure Data Studio 连接并查询 Azure SQL 数据仓库中的数据
 
@@ -23,9 +23,9 @@ ms.locfileid: "85728008"
 ## <a name="prerequisites"></a>先决条件
 若要完成此快速入门，需要 Azure Data Studio 和 Azure SQL 数据仓库。
 
-- [安装 Azure Data Studio](download.md)。
+- [安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
 
-如果还没有 SQL 数据仓库，请参阅[创建 SQL 数据仓库](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
+如果还没有 SQL 数据仓库，请参阅[创建 SQL 数据仓库](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
 
 请记下服务器名称和登录凭据！
 
@@ -52,7 +52,7 @@ ms.locfileid: "85728008"
 
    ![“新建连接”图标](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 如果服务器没有可允许 Azure Data Studio 连接的防火墙规则，则会打开“新建防火墙规则”窗体。 填写窗体以新建防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果服务器没有可允许 Azure Data Studio 连接的防火墙规则，则会打开“新建防火墙规则”窗体。 填写窗体以新建防火墙规则。 有关详细信息，请参阅[防火墙规则](/azure/sql-database/sql-database-firewall-configure)。
 
    ![新建防火墙规则](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ ms.locfileid: "85728008"
 ## <a name="clean-up-resources"></a>清理资源
 
 此集合中的其他项目将在本快速入门的基础上生成。 如果打算继续使用后续的快速入门，请勿清除在本快速入门中创建的资源。 如果不打算继续使用，请在 Azure 门户中按照以下步骤删除本快速入门创建的资源。
-通过删除不再需要的资源组来清理资源。 有关详细信息，请参阅[清理资源](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
+通过删除不再需要的资源组来清理资源。 有关详细信息，请参阅[清理资源](/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 
 ## <a name="next-steps"></a>后续步骤

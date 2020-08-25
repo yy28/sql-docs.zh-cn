@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 928c258dff70f861c33cc59125171a467eb12bf8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411223"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766216"
 ---
 # <a name="schema-compare-extension"></a>架构比较扩展
 架构比较扩展提供了一种易于使用的体验，以比较两个数据库定义，并将源的区别应用于目标。
@@ -68,5 +68,5 @@ ms.locfileid: "87411223"
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关架构比较的详细信息，[请查看我们的文档。](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+若要了解有关架构比较的详细信息，[请查看我们的文档。](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)
 在[此处](https://github.com/microsoft/azuredatastudio/issues)报告问题和提出功能请求。

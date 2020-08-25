@@ -4,17 +4,17 @@ description: 学习本快速入门，了解如何使用 Azure Data Studio 连接
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 99e52735f317a538c9a11d3c048c513b153d5da7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411303"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766546"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>快速入门：使用 Azure Data Studio 连接并查询 PostgreSQL
 
@@ -24,9 +24,9 @@ ms.locfileid: "87411303"
 
 若要完成本快速入门，需要 Azure Data Studio、Azure Data Studio 的 PostgreSQL 扩展以及对 PostgreSQL 服务器的访问权限。
 
-- [安装 Azure Data Studio](download.md)。
+- [安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
 - [安装 Azure Data Studio 的 PostgreSQL 扩展](postgres-extension.md)。
-- [安装 PostgreSQL](https://www.postgresql.org/download/)。 （或者，可以使用 [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli) 在云中创建 Postgres 数据库）。 
+- [安装 PostgreSQL](https://www.postgresql.org/download/)。 （或者，可以使用 [az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli) 在云中创建 Postgres 数据库）。 
 
 ## <a name="connect-to-postgresql"></a>连接到 PostgreSQL
 
@@ -133,4 +133,4 @@ ms.locfileid: "87411303"
 
 ## <a name="next-steps"></a>后续步骤
 
-了解 [Azure Data Studio 中可用于 Postgres 的方案](postgres-extension.md)。 
+了解 [Azure Data Studio 中可用于 Postgres 的方案](postgres-extension.md)。
