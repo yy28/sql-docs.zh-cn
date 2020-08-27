@@ -19,12 +19,12 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 6edd7864c127ea068e3017c7aa26ad5be86a4c8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85b57b65e79dbe72c039f694f0fd3977847230b7
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323243"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900980"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-sql) 
 
@@ -35,17 +35,16 @@ ms.locfileid: "88323243"
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|配置选项的 ID。|
-|**name**|**nvarchar(60)**|配置选项的名称。 有关可能的配置的信息，请参阅 [ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
+|name |**nvarchar(60)**|配置选项的名称。 有关可能的配置的信息，请参阅 [ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
 |**value**|**sqlvariant**|为主副本的此配置选项设置的值。|
 |**value_for_secondary**|**sqlvariant**|为辅助副本的此配置选项设置的值。|
 |**is_value_default**|**bit** |指定设置的值是否为默认值。|
-|**dw_compatibility_level**|**int**|数据库 (预览) 的兼容级别。  默认值 = 0 (自动) |
 
 ## <a name="permissions"></a><a name="Permissions"></a> 权限
 
 要求 **公共** 角色具有成员身份。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 如果返回 NULL 作为 **value_for_secondary**的值，这意味着辅助数据库将设置为 PRIMARY。
  
