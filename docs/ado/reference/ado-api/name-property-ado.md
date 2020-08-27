@@ -3,7 +3,7 @@ description: Name 属性 (ADO)
 title: ADO)  (名称属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da88b8e5a98e7d3ae105cc6e826804158f4bf7c8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0636b77959a003248ee798684fc74c6309145737
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774166"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990478"
 ---
 # <a name="name-property-ado"></a>Name 属性 (ADO)
 指示对象的名称。  
@@ -30,7 +30,7 @@ ms.locfileid: "88774166"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值，该值指示对象的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 "**名称**" 属性可以为命令、**属性**、**字段**或**参数**对象指定名称或检索**命令**的名称。  
   
  对于 **Command** 对象，值为读/写，对 **属性** 对象为只读。  

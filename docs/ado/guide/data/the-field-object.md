@@ -3,7 +3,7 @@ description: 字段对象
 title: Field 对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16f1b85006366702b0f95d5a41a74abf91ac7997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2d0130d00c86830614242363914105605031ef4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452759"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979428"
 ---
 # <a name="the-field-object"></a>字段对象
 每个 **字段** 对象通常对应于数据库表中的一个列。 但是， **字段** 还可以表示指向另一 **记录集**的指针，称为章节。 在本指南的后面部分将介绍一些例外（如章节列）。  

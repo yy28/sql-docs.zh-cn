@@ -3,7 +3,7 @@ description: ErrorValueEnum
 title: ErrorValueEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48962e163804eaa779f82789082e5b8d493bc3cd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443929"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973578"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 运行时错误的类型。  
@@ -37,7 +37,7 @@ ms.locfileid: "88443929"
 > [!NOTE]
 >  可能会向 ADO 应用程序传递 OLE DB 错误。 通常，可以通过 Windows 设备代码 *4*来标识这些。 例如，0x800***4***。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|无法更改将**命令**对象作为其源的**记录集**对象的**ActiveConnection**属性。|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|服务器无法完成此操作。|  

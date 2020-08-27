@@ -3,7 +3,7 @@ description: 适用于 ODBC 的 Microsoft OLE DB 提供程序概述
 title: 适用于 ODBC 的 Microsoft OLE DB 提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806650"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991018"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>适用于 ODBC 的 Microsoft OLE DB 提供程序概述
 对于 ADO 或 RDS 程序员，理想情况下，每个数据源都公开一个 OLE DB 接口，以便 ADO 可以直接调用到数据源。 尽管数据库供应商越来越多地实现 OLE DB 接口，但某些数据源尚未以这种方式公开。 但是，目前使用的大多数 DBMS 系统都可通过 ODBC 访问。
@@ -81,7 +81,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  如果使用 **DSN** 或 **FileDSN**，则必须通过 Windows 控制面板中的 "ODBC 数据源管理器" 进行定义。 在 Microsoft Windows 2000 中，ODBC 管理员位于 "管理工具" 下。 在早期版本的 Windows 中，ODBC 管理员图标名为 **32 位 ODBC** 或只是 **odbc**。
 
  除了设置 **DSN**外，还可以指定 ODBC 驱动程序 (**driver =**) ，例如 "SQL Server;" 服务器名称 (**server =**) ;数据库名称 (**database =**) 。
@@ -93,7 +93,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>特定于提供程序的连接属性
  ODBC 的 OLE DB 提供程序将多个属性添加到**连接**对象的[properties](../../reference/ado-api/properties-collection-ado.md)集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
 
-|属性名称|说明|
+|属性名|说明|
 |-------------------|-----------------|
 |可访问过程 (KAGPROP_ACCESSIBLEPROCEDURES) |指示用户是否有权访问存储过程。|
 |可访问的表 (KAGPROP_ACCESSIBLETABLES) |指示用户是否有权对数据库表执行 SELECT 语句。|
@@ -120,7 +120,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>特定于提供程序的记录集和命令属性
  ODBC 的 OLE DB 提供程序将多个属性添加到**Recordset**和**Command**对象的**properties**集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
 
-|属性名称|说明|
+|属性名|说明|
 |-------------------|-----------------|
 |基于查询的更新/删除/插入 (KAGPROP_QUERYBASEDUPDATES) |指示是否可以使用 SQL 查询执行更新、删除和插入操作。|
 |ODBC 并发类型 (KAGPROP_CONCURRENCY) |指示用于减少两个用户尝试同时访问数据源中的相同数据而导致的潜在问题的方法。|
@@ -173,13 +173,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  标准 ADO **记录集** 属性的可用性：
 
-|属性|ForwardOnly|动态|Keyset|静态|
+|properties|ForwardOnly|动态|Keyset|静态|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|读/写|读/写|读/写|读/写|
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|只读|只读|只读|只读|
-|[书签](../../reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
+|[加入书签](../../reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|读/写|读/写|读/写|读/写|
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|读/写|读/写|读/写|读/写|
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|

@@ -3,7 +3,7 @@ description: 事件参数
 title: 事件参数 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: cc36f0ab059bb7b605b02316008a969411663a8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806861"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991298"
 ---
 # <a name="event-parameters"></a>事件参数
 每个事件处理程序都有一个状态参数，用于控制事件处理程序。 对于完整事件，此参数还用于指示生成事件的操作是成功还是失败。 大多数完整事件还具有错误参数，以提供有关可能已发生的任何错误的信息，以及引用用于执行操作的 ADO 对象的一个或多个对象参数。 例如， [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) 事件包含与事件关联的 **命令**、 **记录集**和 **连接** 对象的对象参数。 在下面的 Microsoft® Visual Basic®示例中，可以看到 pCommand、pRecordset 和 pConnection 对象，这些对象表示**Execute**方法使用的**命令**、**记录集**和**连接**对象。  
@@ -44,7 +44,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>状态参数  
  调用事件处理程序例程后， *Status* 参数将设置为以下值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**adStatusOK**|传递给和完成的事件。 此值表示导致事件的操作已成功完成。|  
 |**adStatusErrorsOccurred**|仅传递到完成事件。 该值表示导致事件的操作未成功，或将事件取消了操作。 请检查 *错误* 参数以了解更多详细信息。|  
@@ -54,7 +54,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  如果不再想要处理事件，可以将 *状态* 设置为 **adStatusUnwantedEvent** ，应用程序将不再接收该事件的通知。 但请记住，某些事件可能会出于多种原因而引发。 在这种情况下，你必须为每个可能的原因指定 **adStatusUnwantedEvent** 。 例如，若要停止接收挂起的**RecordChange**事件的通知，必须在发生时将**adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、 **adRsnUndoUpdate**、 **adRsnUndoAddNew**、 **adRsnUndoDelete**和**adRsnFirstChange**的*Status*参数设置为**adStatusUnwantedEvent** 。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|请求此事件处理程序没有收到进一步的通知。|  
 |**adStatusCancel**|请求取消要发生的操作。|  

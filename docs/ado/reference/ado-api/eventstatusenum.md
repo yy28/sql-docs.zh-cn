@@ -3,7 +3,7 @@ description: EventStatusEnum
 title: EventStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d696d7b971b5f6624a85addb3f023f2090ac90d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 853dd54afbb8753b05ce95f17b20aa600fea493c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443899"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973558"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定事件的当前执行状态。  
   
-|返回的常量|值|描述|  
+|返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|请求取消导致事件发生的操作。|  
 |**adStatusCantDeny**|3|指示操作无法请求取消挂起的操作。|  

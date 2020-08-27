@@ -3,7 +3,7 @@ description: 使用连接对象
 title: 使用连接对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3041abc535557f9f92e3a994d536fb07abde8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452619"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979118"
 ---
 # <a name="using-a-connection-object"></a>使用连接对象
 在打开 **连接** 对象之前，必须定义有关数据源和连接类型的某些信息。 此信息中的大部分信息由**connection**对象上[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的*connectionstring*参数或**连接**对象的[connectionstring 属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)保存。 连接字符串包含由分号分隔的参数/值对列表，其值括在单引号内。 例如：  

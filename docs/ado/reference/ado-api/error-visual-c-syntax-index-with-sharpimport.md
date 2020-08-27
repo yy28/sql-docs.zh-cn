@@ -3,7 +3,7 @@ description: Visual C++ 语法索引 (#import) 错误
 title: Visual C++ 语法索引 (#import) 时出现错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4802a03c6178dff720b67bbdc17f0ca339a4886
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1fac075369646a991bf199e193bd636690d27c48
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443959"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973608"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>Visual C++ 语法索引 (#import) 错误
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
   
 ```  
 _bstr_t GetDescription( );  
@@ -50,4 +50,4 @@ __declspec(property(get=GetSQLState)) _bstr_t SQLState;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Error 对象](../../../ado/reference/ado-api/error-object.md)
+ [错误对象](../../../ado/reference/ado-api/error-object.md)

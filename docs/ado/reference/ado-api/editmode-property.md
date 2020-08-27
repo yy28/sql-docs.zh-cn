@@ -3,7 +3,7 @@ description: EditMode 属性
 title: EditMode 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e330e1bbe559940324962cfde772258d3345594b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6dd04a089d5a28a7eec3b67ebe1c48fe563ff69
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444059"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973828"
 ---
 # <a name="editmode-property"></a>EditMode 属性
 指示当前记录的编辑状态。  
@@ -29,7 +29,7 @@ ms.locfileid: "88444059"
 ## <a name="return-value"></a>返回值  
  返回 [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  ADO 维护与当前记录相关联的编辑缓冲区。 此属性指示是否已对此缓冲区进行了更改，或者是否已创建新记录。 使用 **EditMode** 属性可确定当前记录的编辑状态。 如果编辑进程已中断并确定是否需要使用 [Update](../../../ado/reference/ado-api/update-method.md) 或 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 方法，则可以测试挂起的更改。  
   
  在*即时更新模式*中，在调用**update**方法的成功调用后， **EditMode**属性重置为**adEditNone** 。 当调用[delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)时，如果不能成功删除数据源中的记录或记录 (例如，因为存在引用完整性冲突) ，则 (**EditMode**adEditInProgress) [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)仍处于编辑模式  =  **adEditInProgress** 。 因此，必须先调用 **CancelUpdate** [，然后](../../../ado/reference/ado-api/move-method-ado.md)才能将当前记录移 (例如， [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)或 [Close](../../../ado/reference/ado-api/close-method-ado.md) ) 。  

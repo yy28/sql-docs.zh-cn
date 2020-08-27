@@ -3,7 +3,7 @@ description: 数据整理概述
 title: 数据定形概述 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9dfaba8c2ae2511de9a07aa800abc08f76ec885
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 45538bd81be1e4a64c41479ab6c4fb2165b26b78
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806946"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991428"
 ---
 # <a name="data-shaping-overview"></a>数据整理概述
 *数据定形* 指的是在查询中的两个或多个逻辑实体之间建立层次关系。 可以在一个记录 [集](../../reference/ado-api/recordset-object-ado.md)的记录之间的父子关系中查看层次结构，也可以在一个或多个记录 (也称为另一个 **记录集**的章节) 。 在父子关系中，父 **记录集** 包含子 **记录集**。 例如，客户和订单就是这种层次结构关系。 对于数据库中的每个客户，可以有零个或多个订单。 层次结构关系可以是递归的，也就是说，孙记录可以嵌套在子记录中。 原则上，分层记录可以嵌套到任何深度。 在实践中，ADO 将递归限制在最多512个 **记录集**。  

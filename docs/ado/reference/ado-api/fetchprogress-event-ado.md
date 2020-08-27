@@ -3,7 +3,7 @@ description: FetchProgress 事件 (ADO)
 title: FetchProgress 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53f22936f17e70c02a7640355250cdb5f2bcea95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b84b963f42c83191c613dbb4849288fc862df474
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443809"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973328"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 事件 (ADO)
 在长时间异步操作期间会定期调用 **FetchProgress**事件，以报告当前已检索到 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的行数。  
@@ -47,7 +47,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  作为要检索其记录的对象的 **记录集** 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对子**记录集**使用**FetchProgress**时，请注意，*进度*和*MaxProgress*参数值派生自基础[游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)行集。 返回的值表示基础行集中的记录总数，而不仅仅是当前章节中的记录数。  
   
 > [!NOTE]

@@ -3,7 +3,7 @@ description: ADOX 对象
 title: ADOX 对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca5131235b4c34c05f4cc3b783087f25dc027e95
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c38b184164109ee3e6fed18a439cd904119a3ec6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771576"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985658"
 ---
 # <a name="adox-objects"></a>ADOX 对象
 ## <a name="adox-object-summary"></a>ADOX 对象摘要  
@@ -31,7 +31,7 @@ ms.locfileid: "88771576"
 |[组](./group-object-adox.md)|表示在受保护的数据库中具有访问权限的组帐户。|  
 |[Index](./index-object-adox.md)|表示数据库表中的索引。|  
 |[Key](./key-object-adox.md)|表示数据库表中的主键或唯一键字段。|  
-|[方法](./procedure-object-adox.md)|表示存储过程。|  
+|[过程](./procedure-object-adox.md)|表示存储过程。|  
 |[表](./table-object-adox.md)|表示数据库表，其中包括列、索引和键。|  
 |[用户](./user-object-adox.md)|表示在受保护的数据库中具有访问权限的用户帐户。|  
 |[视图](./view-object-adox.md)|表示一组筛选的记录或虚拟表。|  

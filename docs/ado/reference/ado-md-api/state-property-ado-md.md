@@ -3,7 +3,7 @@ description: State 属性 (ADO MD)
 title: State 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efc3b140b2864aec7151e1235010c4a14b0b3a64
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 78b96e242cc27d27326d97f51cf378d9c5cbb51e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777856"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985978"
 ---
 # <a name="state-property-ado-md"></a>State 属性 (ADO MD)
 指示单元集的当前状态。  
@@ -30,7 +30,7 @@ ms.locfileid: "88777856"
 ## <a name="return-values"></a>返回值  
  返回一个 **长** 整数，该整数指示 [单元集](./cellset-object-ado-md.md) 对象的当前条件，并且为只读。 以下值有效： **adStateClosed** (0) 和 **adStateOpen** (1) 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要使用 [ObjectStateEnum](../ado-api/objectstateenum.md) 常量名称，必须在项目中引用 ADO 类型库。 有关详细信息，请参阅将 [ADO 与 ADO MD 配合使用](../../guide/multidimensional/using-ado-with-ado-md.md) 。  
   
 ## <a name="applies-to"></a>适用于  

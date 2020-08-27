@@ -3,7 +3,7 @@ description: DateCreated 属性 (ADOX)
 title: DateCreated 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae2c0fcfdc164906f0216abb45f98f705de9cd4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 46b94255726bde107e52b6ca9c3546b9744b4a9f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770736"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984748"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated 属性 (ADOX)
 指示对象的创建日期。  
@@ -31,7 +31,7 @@ ms.locfileid: "88770736"
 ## <a name="return-values"></a>返回值  
  返回指定创建日期的 **变量** 值。 如果提供程序不支持 **DateCreated** ，则该值为 null。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  新追加的对象的 **DateCreated** 属性为 null。 追加新的[视图](./view-object-adox.md)或[过程](./procedure-object-adox.md)之后，必须调用[视图](./views-collection-adox.md)或[过程](./procedures-collection-adox.md)集合的[Refresh](../ado-api/refresh-method-ado.md)方法，以获取**DateCreated**属性的值。  
   
 ## <a name="applies-to"></a>适用于  

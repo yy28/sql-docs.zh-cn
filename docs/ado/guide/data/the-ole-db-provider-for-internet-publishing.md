@@ -3,7 +3,7 @@ description: 用于 Internet 发布的 OLE DB 提供程序
 title: 用于 Internet 发布的 OLE DB 提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7203dd65a652cfdc71c088777ac9dd42d1da098
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452729"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979358"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>用于 Internet 发布的 OLE DB 提供程序
 ADO [记录](../../../ado/reference/ado-api/record-object-ado.md) 和 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象可与 microsoft OLE DB 提供商一起使用，以便 Internet 发布 (internet 发布提供程序) 访问和操作资源，如 Microsoft FrontPage 提供的 Web 文件夹或文件。 使用 ADO，你可以将 **记录**、 **流**或 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的源指定为 URL。 然后，可以上传、下载、移动、复制和删除资源，或直接操作资源属性。  

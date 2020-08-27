@@ -3,7 +3,7 @@ description: Shape APPEND 子句
 title: Shape APPEND 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452859"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979618"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 Shape command APPEND 子句向 **记录集**追加一列或多列。 通常，这些列是章节列，它们引用子 **记录集**。  
@@ -65,7 +65,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *子记录集*  
  -   括在大括号中的提供程序命令 ( " {} " ) 返回 **记录集** 对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  追加关键字后面的子句实际上是一个列表，其中每个子句都用逗号分隔，并定义另一个要追加到父级的列。  
   
-## <a name="remarks"></a>备注  
- 当你作为 SHAPE 命令的一部分从用户输入构造提供程序命令时，形状会将用户提供的提供程序命令视为不透明的字符串，并将其切实传递给提供程序。 例如，在下面的 SHAPE 命令中，  
+当你作为 SHAPE 命令的一部分从用户输入构造提供程序命令时，形状会将用户提供的提供程序命令视为不透明的字符串，并将其切实传递给提供程序。 例如，在下面的 SHAPE 命令中，  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

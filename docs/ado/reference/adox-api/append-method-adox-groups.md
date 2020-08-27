@@ -3,7 +3,7 @@ description: Append 方法（ADOX 组）
 title: ) 的 ADOX 组 (追加方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14900e34ef93f2ad738779b0cf7478372ab59179
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5890ffa77884927574f10edeb0d2acc3a428185e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771476"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985488"
 ---
 # <a name="append-method-adox-groups"></a>Append 方法（ADOX 组）
 向[Groups](./groups-collection-adox.md)集合添加一个新的[组](./group-object-adox.md)对象。  
@@ -34,11 +34,11 @@ ms.locfileid: "88771476"
 Groups.Append Group  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *组*  
  要追加的 **组** 对象或要创建和追加的组的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [目录](./catalog-object-adox.md)的**Groups**集合表示所有目录的组帐户。 [用户](./user-object-adox.md)的**Groups**集合仅表示该用户所属的组。  
   
  如果提供程序不支持创建组，将出现错误。  

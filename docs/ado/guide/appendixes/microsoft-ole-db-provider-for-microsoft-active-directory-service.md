@@ -3,7 +3,7 @@ description: Microsoft OLE DB Provider for Microsoft Active Directory 服务
 title: Microsoft OLE DB 提供商 Active Directory 服务 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c196b790299c4c241e5c8eda762b43115b71a038
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806573"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991048"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服务
 Active Directory Service 接口 (ADSI) 提供程序允许 ADO 通过 ADSI 连接到异类目录服务。 这使得 ADO 应用程序除了任何符合 LDAP 的目录服务和 Novell 目录服务之外，还可以对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务进行只读访问。 ADSI 本身基于提供程序模型，因此，如果有新的提供程序可访问另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序启用了自由线程和 Unicode。  
@@ -60,7 +60,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |*Root*|指示从其开始搜索的 **ADsPath** 对象 (即，搜索) 的根。|  
 |*筛选器*|指示 RFC 1960 格式的搜索筛选器。|  
@@ -90,13 +90,13 @@ objectClass='user' AND objectCategory='Person'"
   
  **标准 ADO 记录集属性的可用性：**  
   
-|属性|可用性|  
+|properties|可用性|  
 |--------------|------------------|  
 |[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|读/写|  
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|读/写|  
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|只读|  
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[书签](../../reference/ado-api/bookmark-property-ado.md)|读/写|  
+|[加入书签](../../reference/ado-api/bookmark-property-ado.md)|读/写|  
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|读/写|  
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|始终 **adUseServer**|  
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|始终 **adOpenStatic**|  
@@ -121,20 +121,20 @@ objectClass='user' AND objectCategory='Person'"
 |[取消](../../reference/ado-api/cancel-method-ado.md)|否|  
 |[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|否|  
 |[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|否|  
-|[克隆](../../reference/ado-api/clone-method-ado.md)|是|  
-|[关闭](../../reference/ado-api/close-method-ado.md)|是|  
+|[克隆](../../reference/ado-api/clone-method-ado.md)|适合|  
+|[关闭](../../reference/ado-api/close-method-ado.md)|适合|  
 |[删除](../../reference/ado-api/delete-method-ado-recordset.md)|否|  
-|[GetRows](../../reference/ado-api/getrows-method-ado.md)|是|  
-|[移动](../../reference/ado-api/move-method-ado.md)|是|  
-|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[MoveLast](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[MoveNext](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|是|  
-|[打开](../../reference/ado-api/open-method-ado-recordset.md)|是|  
-|[重新](../../reference/ado-api/requery-method.md)|是|  
-|[重新同步](../../reference/ado-api/resync-method.md)|是|  
-|[支持](../../reference/ado-api/supports-method.md)|是|  
+|[GetRows](../../reference/ado-api/getrows-method-ado.md)|适合|  
+|[移动](../../reference/ado-api/move-method-ado.md)|适合|  
+|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|适合|  
+|[MoveLast](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|适合|  
+|[MoveNext](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|适合|  
+|[MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|适合|  
+|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|适合|  
+|[打开](../../reference/ado-api/open-method-ado-recordset.md)|适合|  
+|[重新](../../reference/ado-api/requery-method.md)|适合|  
+|[重新同步](../../reference/ado-api/resync-method.md)|适合|  
+|[支持](../../reference/ado-api/supports-method.md)|适合|  
 |[更新](../../reference/ado-api/update-method.md)|否|  
 |[UpdateBatch](../../reference/ado-api/updatebatch-method.md)|否|  
   

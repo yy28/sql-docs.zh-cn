@@ -3,7 +3,7 @@ description: 使用书签
 title: 使用书签 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452589"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979030"
 ---
 # <a name="using-bookmarks"></a>使用书签
 当在 **记录集中** 四处移动后直接返回到特定记录，而不必滚动每个记录和比较值时，这通常很有用。 例如，如果您尝试使用 **Find** 方法搜索一条记录，但该搜索未返回任何记录，则您将自动置于该记录 **集**的任一端。 如果提供程序支持，则可以使用书签来标记你的位置，然后再使用 **Find** 方法，以便可以返回到你的位置。 书签是唯一标识**Recordset**对象中的记录的**变量**类型值。  

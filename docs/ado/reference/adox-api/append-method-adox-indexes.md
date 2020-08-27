@@ -3,7 +3,7 @@ description: Append 方法（ADOX 索引）
 title: 追加方法 (ADOX 索引) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28e396e85dc68a3d622a173dad440c5dff68dea1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 00b37055efe15f204049d02c337b54c228468419
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771456"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985508"
 ---
 # <a name="append-method-adox-indexes"></a>Append 方法（ADOX 索引）
 将新 [索引](./index-object-adox.md) 对象添加到 [索引](./indexes-collection-adox.md) 集合。  
@@ -33,14 +33,14 @@ ms.locfileid: "88771456"
 Indexes.Append Index [,Columns]  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Index*  
  要追加的 **索引** 对象或要创建并追加的索引的名称。  
   
  *“列”*  
  可选。 一个 **变量** 值，指定要编制索引的列)  ( (s) 的名称。 *Columns*参数对应于[列](./column-object-adox.md)对象的[Name](./name-property-adox.md)属性的值 (s) 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *Columns*参数可以采用列的名称或列名的数组。  
   
  如果提供程序不支持创建索引，则会出现错误。  

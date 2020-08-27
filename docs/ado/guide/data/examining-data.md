@@ -3,7 +3,7 @@ description: 检查数据
 title: 检查数据 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28c548316ebb6ede317f13d20ff82de0b802659e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1f13e39dd6c1740fb29fc0347a835d568aee352a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806121"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991288"
 ---
 # <a name="examining-data"></a>检查数据
 " [获取数据](./getting-data.md) " 部分说明了如何将数据源中的数据作为一个或多个 **记录集** 对象进行检索。 本节将更详细地讨论 **记录集** ，包括如何在 **记录集中** 导航并查看其数据。  

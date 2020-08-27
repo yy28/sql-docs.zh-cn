@@ -3,7 +3,7 @@ description: CreateRecordset 方法示例 (VB)
 title: CreateRecordset 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4934fc5e5d0f7b5c65db6d36edf27282afb50c60
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5abd786b445df3afe6cbaf8ab76e132ea912b42f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775596"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974488"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 方法示例 (VB)
 您可以创建 [记录集](./recordset-object-ado.md) 对象并指定列信息。 然后，可以将数据插入 **Recordset** 对象;基础行集缓冲插入。  

@@ -3,7 +3,7 @@ description: InfoMessage 事件 (ADO)
 title: InfoMessage 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cab5acb3ccedb9a1e42426da3701bc015f0ec2d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8695dc364a649dff204fcd689ab4722f19e125b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990798"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 事件 (ADO)
 只要在**ConnectionEvent**操作过程中出现警告，就会调用**InfoMessage**事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "88774826"
 InfoMessage pError, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *pError*  
  一个 [错误](./error-object.md) 对象。 此参数包含返回的任何错误。 如果返回多个错误，则枚举 **错误** 集合以找到它们。  
   

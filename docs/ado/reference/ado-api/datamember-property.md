@@ -3,7 +3,7 @@ description: DataMember 属性
 title: DataMember 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f698c4a20fb76839460ca0930d45b8d18b2738be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 034afc971021f6bcfa4db7877d0409aeb817fc6f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444229"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974268"
 ---
 # <a name="datamember-property"></a>DataMember 属性
 指示将从[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)属性所引用的[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索的数据成员的名称。  
@@ -29,7 +29,7 @@ ms.locfileid: "88444229"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值。 该名称不区分大小写。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此属性用于通过数据环境创建数据绑定控件。 数据环境维护数据源 (数据源的集合) 包含 (数据成员) 的命名对象，这些成员将表示为 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象。  
   
  **DataMember**和**DataSource**属性必须一起使用。  

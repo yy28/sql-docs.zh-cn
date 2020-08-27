@@ -3,7 +3,7 @@ description: 目录对象 (ADOX)
 title: " (ADOX) 的目录对象 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968142adb0cb633a19a574c2d0994360faa3fadb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8329c4a94a6c9e01f0730b3244eabc6c74511cfa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771196"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985308"
 ---
 # <a name="catalog-object-adox"></a>目录对象 (ADOX)
 包含描述数据源的架构目录)  ([表](./tables-collection-adox.md)、 [视图](./views-collection-adox.md)、 [用户](./users-collection-adox.md)、 [组](./groups-collection-adox.md)和 [过程](./procedures-collection-adox.md) 的集合。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  您可以通过添加或删除对象或通过修改现有对象来修改 **目录** 对象。 某些提供程序可能不支持所有 **目录** 对象，也可能只支持查看架构信息。  
   
  使用 **Catalog** 对象的属性和方法，你可以：  

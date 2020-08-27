@@ -3,7 +3,7 @@ description: 成员对象 (ADO MD)
 title: 成员对象 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c53b22dc0b5129fc822c4a012eefcf99041f5b45
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 784dd3e842547c97f26107beaec67767363ce4ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777996"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986458"
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示多维数据集中某一级别的成员、某一级别的某个成员的子级或沿某个单元集的一个位置的成员。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **成员**的属性因使用它的上下文而异。 [CubeDef](./cubedef-object-ado-md.md)中某一[级别](./level-object-ado-md.md)的**成员**具有一个[子](./children-property-ado-md.md)属性，该属性返回当前**成员**在层次结构中的下一个较低级别上的**成员**。 对于[位置](./position-object-ado-md.md)的**成员**，**子**集合始终为空。 此外， [Type](./type-property-ado-md.md)属性仅适用于**级别**的**成员**。  
   
  **位置**的**成员**具有两个属性，这些属性在显示[单元集](./cellset-object-ado-md.md)： [DrilledDown](./drilleddown-property-ado-md.md)和[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)时非常有用。 如果在某一**级别**的**成员**上访问这些属性，则会发生错误。  

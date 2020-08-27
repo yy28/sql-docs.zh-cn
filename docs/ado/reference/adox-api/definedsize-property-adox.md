@@ -3,7 +3,7 @@ description: DefinedSize 属性 (ADOX)
 title: DefinedSize 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2777b5dc9043cfce45dd1ff3b721cacf842b8991
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fa8da838f47be7aa9af4827481a59982a081449d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984658"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 属性 (ADOX)
 指示列的指定最大大小。  
@@ -33,7 +33,7 @@ ms.locfileid: "88770716"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 **Long** 值，该值为数据值的最大长度（以字符为单位）。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  默认值为零 (0)。  
   
  对于已追加到集合的 [列](./column-object-adox.md) 对象，此属性是只读的。  

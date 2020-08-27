@@ -3,7 +3,7 @@ description: '用于 OLE DB (ADO 服务组件的 Microsoft 游标服务) '
 title: 用于 OLE DB (ADO 服务组件的 Microsoft 游标服务) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e1f1e1ecfef6725cfb15640486d7aeb63e348af
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 02eaad96593af153b1692beed4bcf846ff92ab7f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806601"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991088"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 的 Microsoft 游标服务概述
 适用于 OLE DB 的 Microsoft 游标服务对数据提供程序的游标支持函数进行了补充。 因此，用户从所有数据访问接口体验的功能相对比较统一。
@@ -57,7 +57,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  游标服务不支持动态属性 DBPROP_SERVERDATAONINSERT，即使基础数据提供程序支持该属性。
 
-|属性名称|说明|
+|属性名|说明|
 |-------------------|-----------------|
 |自动重新计算 (DBPROP_ADC_AUTORECALC) |对于用数据定形服务创建的记录集，此值指示计算计算列和聚合列计算的频率。 如果数据定形服务确定值已更改，则默认 (值 = 1) 重新计算。 如果该值为0，则仅在首次生成层次结构时计算计算列或聚合列。|
 |批大小 (DBPROP_ADC_BATCHSIZE) |指示在发送到数据存储之前可以批处理的 update 语句的数目。 批处理中的语句越多，数据存储的往返次数就越少。|
@@ -83,7 +83,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>内置属性行为
  OLE DB 的游标服务还会影响某些内置属性的行为。
 
-|属性名称|说明|
+|属性名|说明|
 |-------------------|-----------------|
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|对可用于 **记录集**的游标类型进行补充。|
 |[LockType](../../reference/ado-api/locktype-property-ado.md)|对 **记录集**的可用锁类型进行补充。 启用批更新。|

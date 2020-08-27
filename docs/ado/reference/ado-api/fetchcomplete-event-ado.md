@@ -3,7 +3,7 @@ description: FetchComplete 事件 (ADO)
 title: FetchComplete 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4fd58f7783b8fdf2b98d8e295bbf96137cfa5ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ef8df9f6d4ea113d5cca9ad9ffba9c4888776d8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443819"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973348"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
 当长时间异步操作中的所有记录都已检索到[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)后，将调用**FetchComplete**事件。  
@@ -46,7 +46,7 @@ FetchComplete pError, adStatus, pRecordset
  *pRecordset*  
  **记录集**对象。 为其检索记录的对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要将 **FetchComplete** 与 Microsoft Visual Basic 一起使用，需要 Visual Basic 6.0 或更高版本。  
   
 ## <a name="see-also"></a>另请参阅  

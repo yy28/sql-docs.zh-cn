@@ -3,7 +3,7 @@ description: Command 属性 (ADOX)
 title: 命令属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17dcabb379e9cc5d111b5c6914a99672039a2681
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73224966d9cab18253c18dd4f8bb183cd3381f76
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984908"
 ---
 # <a name="command-property-adox"></a>Command 属性 (ADOX)
 指定可用于创建或执行该过程的 ADO [命令](../ado-api/command-object-ado.md) 对象。  
@@ -30,7 +30,7 @@ ms.locfileid: "88770926"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回有效的 ADO **命令** 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果提供程序不支持保留命令，则在获取和设置此属性时将发生错误。  
   
 ## <a name="applies-to"></a>适用于  

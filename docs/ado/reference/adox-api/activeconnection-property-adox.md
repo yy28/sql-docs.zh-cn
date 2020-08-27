@@ -3,7 +3,7 @@ description: ActiveConnection 属性 (ADOX)
 title: ActiveConnection 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ea35e9a1549c35a50ef7f15e8a3b84d1e31e056
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2268458425af400e4d8b2530a1cdabf2decb16b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777766"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985808"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 属性 (ADOX)
 指示[目录](./catalog-object-adox.md)所属的 ADO[连接](../ado-api/connection-object-ado.md)对象。  
@@ -35,7 +35,7 @@ ms.locfileid: "88777766"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置 **连接** 对象或包含连接定义的 **字符串** 。 返回活动的 **连接** 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  默认值为 null 对象引用。  
   
 ## <a name="applies-to"></a>适用于  

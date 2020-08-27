@@ -3,7 +3,7 @@ description: HelpContext、HelpFile 属性
 title: HelpContext，帮助的属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d4aacd44cc6dd245026f84b826d4c007f6b696
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d9ac9c7f712514f50ab8d40704700924ac344d23
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774865"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990838"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile 属性
 指示与 [错误](./error-object.md) 对象关联的帮助文件和主题。  
@@ -38,7 +38,7 @@ ms.locfileid: "88774865"
   
 -   **帮助** 返回一个 **字符串** 值，该值的计算结果为帮助文件的完全解析路径。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 **在 "帮助文件" 属性** 中指定了帮助文件，则将使用 **HelpContext** 属性来自动显示它所标识的帮助主题。 如果没有可用的相关帮助主题，则 **HelpContext** 属性返回零，而 " **帮助** 值" 属性返回长度为零的字符串 ( "" ) 。  
   
 ## <a name="applies-to"></a>适用于  

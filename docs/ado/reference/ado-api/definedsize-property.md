@@ -3,7 +3,7 @@ description: DefinedSize 属性
 title: DefinedSize 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35330c6cae4a3450d4a970edddf360296ce33148
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444179"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974148"
 ---
 # <a name="definedsize-property"></a>DefinedSize 属性
 指示 [Field](../../../ado/reference/ado-api/field-object.md) 对象的数据容量。  
@@ -37,7 +37,7 @@ ms.locfileid: "88444179"
   
 4.  对于没有长度的数据类型，此值设置为 ~ 0 (按位运算，该值不是 0;所有位均设置为 1) 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **DefinedSize** 属性可确定 **Field** 对象的数据容量。  
   
  **DefinedSize**和[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)属性不同。 例如，假设某个 **字段** 对象的类型为 **adVarChar** ， **DefinedSize** 属性值为50，其中包含单个字符。 它返回的 **ActualSize** 属性值是单个字符的长度（以字节为单位）。  

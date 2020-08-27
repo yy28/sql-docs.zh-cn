@@ -3,7 +3,7 @@ description: Item 属性 (ADO)
 title: ADO)  (项属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bea35ef148aa2f5646420a1c2b46197ce66f0d6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3f54ba0276affc1b098b3e499c31769f4cf9f927
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774676"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990748"
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
 按名称或序号指示集合中的特定成员。  
@@ -65,11 +65,11 @@ Set object = collection.Item ( Index )
 ## <a name="return-value"></a>返回值  
  返回对象引用。  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *Index*  
  **变量**表达式，计算结果为集合中对象的名称或序号。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Item** 属性返回集合中的特定对象。 如果 **项** 在与 *Index* 参数对应的集合中找不到对象，则会发生错误。 此外，某些集合不支持命名对象;对于这些集合，必须使用序号引用。  
   
  **Item**属性是所有集合的默认属性;因此，以下语法形式可互换：  
