@@ -3,7 +3,7 @@ description: 添加多个字段和值
 title: 添加多个字段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2543741749c1521526aea18bc4600168559eb45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c661e8e99ae9651a4b89f8facad238d5f83564e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453889"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991768"
 ---
 # <a name="adding-multiple-fields-and-values"></a>添加多个字段和值
 有时，将字段及其相应值传入到 **AddNew** 方法可能更高效，而不是为每个新字段多次设置 **值** 。 如果 *FieldList* 是一个数组，则 *值* 也必须是具有相同成员数的数组;否则，将发生错误。 字段名称的顺序必须与每个数组中的字段值顺序相匹配。 下面的代码将字段数组和值数组传递到 **AddNew** 方法。

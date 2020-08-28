@@ -3,7 +3,7 @@ description: Name 属性 (ADO MD)
 title: 名称属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83207cd13db790d645bea146b2a031604e598256
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4dfec86bb631dda661b957e02667cd320c20fec6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777946"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986238"
 ---
 # <a name="name-property-ado-md"></a>Name 属性 (ADO MD)
 指示对象的名称。  
@@ -36,7 +36,7 @@ ms.locfileid: "88777946"
 ## <a name="return-values"></a>返回值  
  返回一个 **字符串** ，并且为只读。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可以按序号引用检索对象的 **Name** 属性，之后可以按名称直接引用对象。 例如，如果 `cdf.CubeDefs(0).Name` 生成 "Bobs-sfpreviewcluster Video Store"，则可以将此 [CubeDef](./cubedef-object-ado-md.md) 称为 `cdf.CubeDefs("Bobs Video Store")` 。  
   
 ## <a name="applies-to"></a>适用于  

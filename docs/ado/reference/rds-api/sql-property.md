@@ -1,7 +1,7 @@
 ---
 description: SQL 属性
 title: SQL 属性 |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5da63f3c5a5acbf217a5bc585dc1be9d9af7feab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981078"
 ---
 # <a name="sql-property"></a>SQL 属性
 指示用于检索 [记录集](../ado-api/recordset-object-ado.md)的查询字符串。  
@@ -37,14 +37,14 @@ Design time: <PARAM NAME="SQL" VALUE="QueryString">
 Run time: DataControl.SQL = "QueryString"  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *字符串*  
  一个 **字符串** 值，该值包含有效的 SQL 数据请求。  
   
  *DataControl*  
  表示 RDS 的对象变量 **。DataControl** 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  通常，这是使用数据库服务器的方言 (的 SQL 语句) ，例如 `"Select * from NewTitles"` 。 若要确保记录匹配并正确更新，可更新查询必须包含长二进制字段或计算字段之外的字段。  
   
  如果自定义服务器端业务对象检索客户端的数据，则 **SQL** 属性是可选的。  

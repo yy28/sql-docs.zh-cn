@@ -3,7 +3,7 @@ description: 参数化命令与中间 COMPUTE 命令
 title: 带有干预计算命令的参数化命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f5e4edf28f14763d4a7592f018f47135cae9981
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6870d6670bb0cda3db0d301621196121f2289cd8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453089"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980148"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>参数化命令与中间 COMPUTE 命令
 典型的参数化形状 APPEND 命令包含一个子句，该子句使用查询命令创建父 **记录集** ，并使用另一个子句创建具有参数化查询命令的子 **记录** 集，即包含参数占位符 (问号 "？" 的命令) 。 生成的整形 **记录集** 具有两个级别，其中父级占据较高级别，而子级占据较低级别。  

@@ -1,7 +1,7 @@
 ---
 description: SortDirection 属性 (RDS)
 title: SortDirection 属性 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a8aca2bb5dd4acf6a2b7b2702eb7807d520f73
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: aa7bdefd98c908ed97b225ebe268b33f353b5042
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767466"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981138"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 属性 (RDS)
 指示排序顺序是升序还是降序。  
@@ -34,14 +34,14 @@ ms.locfileid: "88767466"
 DataControl.SortDirection = value  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
  *值*  
  一个 **布尔** 值，如果设置为 **True**，则指示排序方向为升序。 **False** 指示降序。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [SortColumn](./sortcolumn-property-rds.md)、 **SortDirection**、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和[FilterColumn](./filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能通过使用一列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 [Reset](./reset-method-rds.md)方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
   
 ## <a name="applies-to"></a>适用于  

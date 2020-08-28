@@ -1,7 +1,7 @@
 ---
 description: SubmitChanges 方法 (RDS)
 title: SubmitChanges 方法 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86645c9a8735c8764bbd210e55858a6de81e387d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bc4b05a804bcb544b2d4b7e532d78d9526c62e92
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980998"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 将本地缓存的可更新 [记录集](../ado-api/recordset-object-ado.md) 的挂起的更改提交到 [Connect](./connect-property-rds.md) 属性或 [URL](./url-property-rds.md) 属性中指定的数据源。  
@@ -34,7 +34,7 @@ ms.locfileid: "88767356"
 DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
@@ -47,7 +47,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Recordset*  
  表示 **Recordset** 对象的对象变量。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  必须先设置 [Connect](./connect-property-rds.md)、 [Server](./server-property-rds.md)和 [SQL](./sql-property.md) 属性，然后才能将 **SubmitChanges** 方法与 RDS 一起使用 **。DataControl** 对象。  
   
  如果在为同一**Recordset**对象调用**SubmitChanges**后调用[CancelUpdate](./cancelupdate-method-rds.md)方法，则**CancelUpdate**调用失败，因为这些更改已提交。  

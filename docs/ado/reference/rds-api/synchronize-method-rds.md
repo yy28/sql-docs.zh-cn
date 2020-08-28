@@ -1,7 +1,7 @@
 ---
 description: Synchronize 方法 (RDS)
 title: " (RDS) 同步方法 |Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 36cf462cf7f004055acedb215146d6c909175e79
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767326"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980968"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 使用连接字符串指定的数据库同步给定的记录集，以便在 ADO 2.5 和更高版本中使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "88767326"
 object.Synchronize(ConnectionString As String, HandlerString As String, lSynchronizeOptions As Long, ppRecordset As Object, pStatusArray, [lcid As Long], [pInformation)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  一个字符串，用于连接到将在其中发送请求的 OLE DB 提供程序。 如果使用处理程序，则处理程序可以编辑或替换连接字符串。  
   
@@ -64,7 +64,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  一个指针，指向 **执行**返回的信息错误。 如果为 NULL，则不返回错误信息。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *HandlerString*参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 然后 Msdfmap.dll 会将参数解释为一个方向，以使用 sample.ini 检查连接和查询字符串。  
   
 ## <a name="applies-to"></a>适用于  

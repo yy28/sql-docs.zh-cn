@@ -3,7 +3,7 @@ description: 位置对象 (ADO MD)
 title: " (ADO MD 的位置对象) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f1d8dce821fe0b287477ca603b71e93f789f016
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2ba534b2de1ed6f85412010e441f0b1afb5daf72
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777886"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986148"
 ---
 # <a name="position-object-ado-md"></a>位置对象 (ADO MD)
 表示一个或多个不同维度的成员的集合，这些成员定义沿轴的点。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对于 **Position** 对象的属性和集合，可以执行以下操作：  
   
 -   使用**ordinal**属性可以返回沿[轴](./axis-object-ado-md.md)的**位置**的序号位置。  

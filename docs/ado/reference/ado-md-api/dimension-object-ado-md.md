@@ -3,7 +3,7 @@ description: 维度对象 (ADO MD)
 title: 维度对象 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73feb1e20320a418804666e11cb2410ab4451c52
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f034dd2bea6b7b37f69dcff58013263ec9ba5187
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778196"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986878"
 ---
 # <a name="dimension-object-ado-md"></a>维度对象 (ADO MD)
 表示多维数据集的一个维度，其中包含一个或多个成员的层次结构。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **维度** 对象的集合和属性，可以执行以下操作：  
   
 -   标识具有[Name](./name-property-ado-md.md)和[UniqueName](./uniquename-property-ado-md.md)属性的**维度**。  

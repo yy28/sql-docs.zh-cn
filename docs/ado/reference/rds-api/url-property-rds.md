@@ -1,7 +1,7 @@
 ---
 description: URL 属性 (RDS)
 title: URL 属性 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f0db677fcd63e3532553f0051ba88930d0f5c8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d9223d61d7ca2a6463bcd21dd52a0c3aabc51bc5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767266"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980908"
 ---
 # <a name="url-property-rds"></a>URL 属性 (RDS)
 指示一个字符串，该字符串包含相对或绝对 URL。  
@@ -37,14 +37,14 @@ Design time: <PARAM NAME="URL" VALUE="Server">
 Run time: DataControl.URL="Server"  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Server*  
  一个 **字符串** 值，该值包含有效的 URL。  
   
  *DataControl*  
  表示 **DataControl** 对象的对象变量。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  通常，该 URL 将标识一个活动服务器页 ( .asp) 文件，该文件可生成并返回 [记录集](../ado-api/recordset-object-ado.md)。 因此，用户可以获取 **记录集** ，而无需调用服务器端 [DataFactory](./datafactory-object-rdsserver.md) 对象，也无需编写自定义业务对象。  
   
  如果已设置 **url** 属性， [SubmitChanges](./submitchanges-method-rds.md) 会将更改提交到 url 指定的位置。  
