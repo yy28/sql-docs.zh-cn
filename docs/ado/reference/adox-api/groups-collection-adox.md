@@ -3,7 +3,7 @@ description: 组集合 (ADOX)
 title: 组集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5edecbbfebeea82d28f97bc31d15e04bf28c576a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9624a30970e5a6f6a0186d2cb9e2390c98968d9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770326"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984368"
 ---
 # <a name="groups-collection-adox"></a>组集合 (ADOX)
 包含目录或用户的所有存储的 [组](./group-object-adox.md) 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [目录](./catalog-object-adox.md)的**Groups**集合表示所有目录的组帐户。 [用户](./user-object-adox.md)的**Groups**集合仅表示该用户所属的组。  
   
- **组**集合的[APPEND](./append-method-adox-groups.md)方法对于 ADOX 是唯一的。 方法：  
+ **组**集合的[APPEND](./append-method-adox-groups.md)方法对于 ADOX 是唯一的。 可以：  
   
 -   使用 **Append** 方法将新的安全组添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 方法：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的组。  
   

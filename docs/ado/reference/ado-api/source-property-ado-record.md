@@ -3,7 +3,7 @@ description: Source 属性（ADO 记录）
 title: " (ADO 记录) 的源属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e755fb4a34e170efea760428021b540a182156c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b9c551e52864caca8834350d5107b76aed88700d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988938"
 ---
 # <a name="source-property-ado-record"></a>Source 属性（ADO 记录）
 指示 [记录](./record-object-ado.md)所表示的数据源或对象。  
@@ -34,7 +34,7 @@ ms.locfileid: "88777406"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **变量** 值，该值指示由 **记录**表示的实体。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Source**属性返回**Record**对象[Open](./open-method-ado-record.md)方法的*source*参数。 它可以包含绝对或相对的 URL 字符串。 可以使用绝对 URL，而无需将 [ActiveConnection](./activeconnection-property-ado.md) 属性设置为直接打开 **记录** 对象。 在这种情况下，将创建一个隐式 **连接** 对象。  
   
  **Source**属性还可以包含对已打开的**记录集**的引用，该记录集打开表示**记录集中**的当前行的**记录**对象。  

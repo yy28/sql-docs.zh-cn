@@ -3,7 +3,7 @@ description: Cancel 方法示例 (VC++)
 title: 取消方法示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 268ad6abff03bf37d8ef712d37a09af58fe03a9e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3546816eb19d0b87d901b395959c2777dbb803c8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776316"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975598"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel 方法示例 (VC++)
 此示例使用 [cancel](./cancel-method-ado.md) 方法来取消对 [连接](./connection-object-ado.md) 对象执行的命令（如果连接繁忙）。  

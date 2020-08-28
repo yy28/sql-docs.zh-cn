@@ -3,7 +3,7 @@ description: BOF、EOF 属性 (ADO)
 title: BOF、EOF 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 710a116e28a102eeac8a7a062a9f66cd8dcbe79c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776396"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975778"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 属性 (ADO)
 -   **BOF** 指示当前记录位置位于 [记录集](./recordset-object-ado.md) 对象中的第一条记录之前。  
@@ -33,7 +33,7 @@ ms.locfileid: "88776396"
 ## <a name="return-value"></a>返回值  
  **BOF**和**EOF**属性返回**布尔**值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **BOF** 和 **EOF** 属性来确定 **recordset** 对象是否包含记录，或者在从记录移到记录时是否超出 **recordset** 对象的限制。  
   
  如果当前记录位置在第一条记录之前，则 **BOF** 属性返回 **True** (-1) ; 如果当前记录位置位于第一条记录的前面或后面，则 **为 False** (0) 。  

@@ -3,7 +3,7 @@ description: 表对象 (ADOX)
 title: 表对象 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847918f13dd6c91a707e660e97d1dbc4de499442
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f6803b4afc7f50a08f305a619e9c0ca328e5e988
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769296"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983248"
 ---
 # <a name="table-object-adox"></a>表对象 (ADOX)
 表示包含列、索引和键的数据库表。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  下面的代码创建一个新 **表**：  
   
 ```  

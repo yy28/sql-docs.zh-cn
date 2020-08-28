@@ -3,7 +3,7 @@ description: 'NumericScale 和 Precision 属性 ADO 代码示例 (VB) '
 title: NumericScale 和 Precision 属性 ADO (VB) 的 ADO 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ed3e4337c38ac11966e261b993beaef0f7f3113f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773986"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990418"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和 Precision 属性示例 (VB)
 此示例使用[NumericScale](./numericscale-property-ado.md)和[Precision](./precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  

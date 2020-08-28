@@ -3,7 +3,7 @@ description: SQLState 属性
 title: SQLState 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65d72fed54723f525f4e1426ed04886e9d474985
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbc849f19c91f7b2387df5e0e71b3455efa0db09
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777366"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988858"
 ---
 # <a name="sqlstate-property"></a>SQLState 属性
 指示给定 [错误](./error-object.md) 对象的 SQL 状态。  
@@ -31,7 +31,7 @@ ms.locfileid: "88777366"
 ## <a name="return-value"></a>返回值  
  返回一个包含五个字符的字符串值，该 **字符串** 值遵循 ANSI SQL 标准并指示错误代码。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **SQLState** 属性可读取在处理 SQL 语句期间出错时提供程序返回的五个字符的错误代码。 例如，将 Microsoft OLE DB Provider for ODBC 与 Microsoft SQL Server 数据库一起使用时，SQL 状态错误代码是从 ODBC 开始，基于特定于 ODBC 的错误或源自 Microsoft SQL Server 的错误，然后映射到 ODBC 错误。 ANSI SQL 标准中记录了这些错误代码，但不同的数据源可能以不同的方式实现这些错误代码。  
   
 ## <a name="applies-to"></a>适用于  

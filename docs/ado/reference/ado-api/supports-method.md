@@ -3,7 +3,7 @@ description: Supports 方法
 title: 支持方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea56dc34cc2c69c7bb9ef30433a6c7c75f26c552
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8a91268668dae9ba430ba696ffb0186749047af9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777116"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988318"
 ---
 # <a name="supports-method"></a>Supports 方法
 确定指定的 [记录集](./recordset-object-ado.md) 对象是否支持特定类型的功能。  
@@ -37,11 +37,11 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="return-value"></a>返回值  
  返回一个 **布尔** 值，该值指示提供程序是否支持由 *CursorOptions* 参数标识的所有功能。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *CursorOptions*  
  包含一个或多个[CursorOptionEnum](./cursoroptionenum.md)值的**长**表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **支持** 方法可以确定 **Recordset** 对象支持的功能类型。 如果 **Recordset** 对象支持其对应常量在 *CursorOptions*中的功能，则 **支持** 方法返回 **True**。 否则，返回 **False**。  
   
 > [!NOTE]

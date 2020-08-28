@@ -3,7 +3,7 @@ description: AppendChunk 方法 (ADO)
 title: " (ADO) 的 AppendChunk 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0df71772820d5871c32e40827400b8cdd40db99d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 260f1bddfe4433e26463bd58b594d2766ccbc531
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776476"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976008"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 将数据追加到大文本或二进制数据 [字段](./field-object.md)，或追加到 [参数](./parameter-object.md) 对象。  
@@ -34,14 +34,14 @@ ms.locfileid: "88776476"
 object.AppendChunk Data  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 对象  
+#### <a name="parameters"></a>参数  
+ *object*  
  一个 **字段** 或 **参数** 对象。  
   
- 数据  
+ *数据*  
  一个包含要追加到对象的数据的 **变量** 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对**字段**或**参数**对象使用**AppendChunk**方法，以使用较长的二进制或字符数据填充它。 在系统内存有限的情况下，可以使用 **AppendChunk** 方法在部分中而不是完整地操作长值。  
   
 ## <a name="field"></a>字段  

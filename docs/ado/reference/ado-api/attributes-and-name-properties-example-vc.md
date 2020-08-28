@@ -3,7 +3,7 @@ description: '特性和名称属性示例 (VC + +) '
 title: 特性和名称属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb08bddc1e308859aa8460221136fb50fe5e6b86
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c4eb8b682e7e539c1c0af784eb70016fa1bb25c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776466"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975958"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>特性和名称属性示例 (VC + +) 
 此示例显示[连接](./connection-object-ado.md)、[字段](./field-object.md)和[属性](./property-object-ado.md)对象的 "[属性](./attributes-property-ado.md)" 属性的值。 它使用 [name](./name-property-ado.md) 属性来显示每个 **字段** 和 **属性** 对象的名称。  

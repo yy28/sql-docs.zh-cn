@@ -1,7 +1,7 @@
 ---
 description: Recordset、SourceRecordset 属性 (RDS)
 title: 记录集，SourceRecordset 属性 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5e45e835df5c6d9c48d606b34741b2cf2d64bd0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27b6cf791b3b980000662f2073280d53f24aeaa1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767636"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981428"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset 属性 (RDS)
 指示从自定义业务对象返回的 **记录集** 对象。  
@@ -37,14 +37,14 @@ DataControl.SourceRecordset = Recordset
 Recordset = DataControl.Recordset   
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
  *Recordset*  
  表示 **Recordset** 对象的对象变量。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可以将 **SourceRecordset** 属性设置为从自定义业务对象返回的 [记录集](../ado-api/recordset-object-ado.md) 。  
   
  通过这些属性，应用程序可以通过自定义进程来处理绑定过程。 它们将接收包装在 **记录集中** 的行集，以便可以直接与 **记录集**交互，执行设置属性或循环访问 **记录集**等操作。  

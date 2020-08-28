@@ -3,7 +3,7 @@ description: ADO 语法索引
 title: ADO 语法索引 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d8f16ee617b74ee98d83a1cdf8dad408cab2f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acb84a462e6648badb71be752342f7fb1f3ae0da
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776604"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976298"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 语法索引
 调用 ADO 方法和属性的语法因开发环境而异。 ADO 语言参考的其余部分使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 但是，请参阅以下部分，了解基于你的编程语言和方法的更具体的语法示例：  

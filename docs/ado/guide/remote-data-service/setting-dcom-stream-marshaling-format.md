@@ -3,7 +3,7 @@ description: 设置 DCOM 流封送格式
 title: 设置 DCOM 流封送处理格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42d49824bc814026348c6f3aef99860b40f20f76
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d1841c497faaab71b9d8cc9434adb686ca7293ab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759257"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977638"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>设置 DCOM 流封送格式
 使用 RDS 1.5 或更低版本中的组件的客户端计算机与使用 RDS 2.0 或更高版本中的组件的服务器不兼容。 使用 DCOM 作为基础协议时，对 RDS 2.0 或更高版本的支持在传输 [Recordset](../../reference/ado-api/recordset-object-ado.md) 对象时更有效。 如果客户端运行的是 RDS 1.5 或更早版本中的组件，则可以将服务器设置为与以前的 RDS 支持 (（称为 RDS 1.0) ）或更高版本的 RDS 支持 (称为 RDS 2.0 或更高版本) 。 设置以下注册表项之一：  

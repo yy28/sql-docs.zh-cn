@@ -3,7 +3,7 @@ description: DefinedSize 属性示例 (VB)
 title: DefinedSize 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a1cfa4cae20e2f43ae666e7bb99ae5b65b92a74
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e5c3010ce4e320ef0fd8a8bb1fbe09a5ebafad6b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770726"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984648"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 属性示例 (VB)
 此示例演示[列](./column-object-adox.md)的[DefinedSize](./definedsize-property-adox.md)属性。 该代码将重新定义*Northwind*数据库的**Employees**表的 FirstName 列的大小。 然后，将显示基于 " **Employees** " 表的[记录集](../ado-api/recordset-object-ado.md)的 "名字"[字段](../ado-api/field-object.md)值的更改。 请注意，在您重新定义 **DefinedSize** 属性后，默认情况下，FirstName 字段会用空格填充。  

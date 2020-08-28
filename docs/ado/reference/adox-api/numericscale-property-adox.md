@@ -3,7 +3,7 @@ description: NumericScale 属性 (ADOX)
 title: NumericScale 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3420a3e3d1e6ee06eaa63926604f3688b3f0590b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 161b6049ca5392eafacaf0fd97db653070f105e0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769906"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983888"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 属性 (ADOX)
 指示列中数值的小数位数。  
@@ -33,7 +33,7 @@ ms.locfileid: "88769906"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 **字节** 值，该值表示当 [类型](./type-property-column-adox.md) 属性为 **adNumeric** 或 **adDecimal**时，列中的数据值的小数位数。 对于所有其他数据类型，将忽略**NumericScale** 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  默认值为零 (0)。  
   
  对于已追加到集合的[列](./column-object-adox.md)对象， **NumericScale**为只读。  

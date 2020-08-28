@@ -3,7 +3,7 @@ description: GetObjectOwner 和 SetObjectOwner 方法示例 (VB)
 title: GetObjectOwner 和 SetObjectOwner 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc9a111b3315c7737229ec0240e5ee4ed6e406b9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b3033c06d7853768069b20493494e128991abff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770546"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984568"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 和 SetObjectOwner 方法示例 (VB)
 此示例演示 [GetObjectOwner](./getobjectowner-method-adox.md) 和 [SetObjectOwner](./setobjectowner-method.md) 方法。 此代码假定存在组记帐 (请参阅 [组和用户追加，ChangePassword 方法示例 (VB) ](./groups-and-users-append-changepassword-methods-example-vb.md) ，以了解如何将此组添加到系统) 。 "类别" 表的所有者设置为 "记帐"。  

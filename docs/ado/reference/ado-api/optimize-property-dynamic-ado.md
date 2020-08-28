@@ -3,7 +3,7 @@ description: Optimize 属性 - 动态 (ADO)
 title: 优化属性-动态 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91da30a49a0eff7d8b32274e8486002f78f2a05f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3393bbfbfbaeb50c6a608db92dae42bb29fb3b1d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773636"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990258"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 属性 - 动态 (ADO)
 指定是否应在 [字段](./field-object.md)上创建索引。  
@@ -27,14 +27,14 @@ ms.locfileid: "88773636"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **布尔** 值，该值指示是否应创建索引。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  索引可以提高在 [记录集中](./recordset-object-ado.md)查找或排序值的操作的性能。 索引是 ADO 内部的;你不能在应用程序中显式访问或使用该应用程序。  
   
  若要对字段创建索引，请将 **Optimize** 属性设置为 **True**。 若要删除索引，请将此属性设置为 **False**。  
   
  当[CursorLocation](./cursorlocation-property-ado.md)属性设置为**AdUseClient**时， **Optimize**是追加到[Field](./field-object.md)对象[Properties](./properties-collection-ado.md) collection 的动态属性。  
   
-## <a name="usage"></a>用法  
+## <a name="usage"></a>使用情况  
   
 ```  
 Dim rs As New Recordset  

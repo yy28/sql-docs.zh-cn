@@ -3,7 +3,7 @@ description: DateCreated 和 DateModified 属性示例 (VB)
 title: DateCreated 和 DateModified 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bab3ba9d4cff5036e6024c7c13c3ba8404a7987
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7ea4c3fb59c2df1bba8cccb0d1ce9074b97950c9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770766"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984798"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 和 DateModified 属性示例 (VB)
 此示例演示 [DateCreated](./datecreated-property-adox.md) 和 [DateModified](./datemodified-property-adox.md) 属性，方法是将新 [列](./column-object-adox.md) 添加到现有 [表](./table-object-adox.md) 并创建新 **表**。 若要运行此示例，需要 DateOutput 过程。  

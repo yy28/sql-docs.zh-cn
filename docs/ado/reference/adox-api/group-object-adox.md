@@ -3,7 +3,7 @@ description: 组对象 (ADOX)
 title: 组对象 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0442ca3bd785269fed49dc86d982971a8feec4ea
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 21514bbcbe91e1320a4a2806e545d5f7b40df8d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770416"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984428"
 ---
 # <a name="group-object-adox"></a>组对象 (ADOX)
 表示在受保护的数据库中具有访问权限的组帐户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [目录](./catalog-object-adox.md)的[Groups](./groups-collection-adox.md)集合表示所有目录的组帐户。 [用户](./user-object-adox.md)的**Groups**集合仅表示该用户所属的组。  
   
  利用 **组** 对象的属性、集合和方法，您可以：  

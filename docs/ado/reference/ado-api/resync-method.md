@@ -3,7 +3,7 @@ description: 重新同步方法
 title: 重新同步方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e64c2f297e4628f04f99a7e97a6b9df00f6efa1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 79a43a36fb68063c2f0c880f0d8d086714dcfffe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777646"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989478"
 ---
 # <a name="resync-method"></a>重新同步方法
 刷新当前[记录集](./recordset-object-ado.md)对象中的数据，或从基础数据库刷新[记录](./record-object-ado.md)对象的[字段](./fields-collection-ado.md)集合中的数据。  
@@ -36,14 +36,14 @@ ms.locfileid: "88777646"
 Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *AffectRecords*  
  可选。 一个 [AffectEnum](./affectenum.md) 值，用于确定 **Resync** 方法将影响的记录数。 默认值为 **adAffectAll**。 此值不能用于**Record**对象的 "**字段**" 集合的 "重新**同步**" 方法。  
   
  *ResyncValues*  
  可选。 一个 [ResyncEnum](./resyncenum.md) 值，该值指定是否覆盖基础值。 默认值为 **adResyncAllValues**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="recordset"></a>记录集  
  使用 "重新 **同步** " 方法可使当前 **记录集中** 的记录与基础数据库重新同步。 如果你使用的是静态或只进游标，但你想要查看基础数据库中的任何更改，这会很有用。  

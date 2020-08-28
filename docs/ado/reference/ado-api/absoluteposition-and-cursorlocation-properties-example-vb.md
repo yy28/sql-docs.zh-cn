@@ -3,7 +3,7 @@ description: 'AbsolutePosition 和 CursorLocation 属性示例 (VB) '
 title: AbsolutePosition 和 CursorLocation 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5869e8203ca5e07564a6d3c6bc7767bccfd9d553
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a693873e674a0a12dc523994faa1eded7e52a3ed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759957"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977188"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 属性示例 (VB) 
 此示例演示 [AbsolutePosition](./absoluteposition-property-ado.md) 属性如何跟踪枚举 [记录集](./recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用 [CursorLocation](./cursorlocation-property-ado.md) 属性来启用 **AbsolutePosition** 属性。  

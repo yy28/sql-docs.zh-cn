@@ -3,7 +3,7 @@ description: Parameter 对象
 title: 参数对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eac5abf388644cff05c4a3a81955f025c65dd7aa
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 123ca1553ede61735565a6f82cb36b0035c56dcb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990168"
 ---
 # <a name="parameter-object"></a>Parameter 对象
 表示基于参数化查询或存储过程与 [命令](./command-object-ado.md) 对象关联的参数或参数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  许多提供程序都支持参数化命令。 这是一次定义所需操作的命令，但变量 (或参数) 用于更改命令的某些详细信息。 例如，SQL SELECT 语句可以使用参数来定义 WHERE 子句的匹配条件，并使用另一个参数定义 SORT BY 子句的列名称。  
   
  **参数** 对象表示与参数化查询关联的参数，或 in/out 参数和存储过程的返回值。 **参数**对象的某些集合、方法或属性可能不可用，具体取决于提供程序的功能。  

@@ -3,7 +3,7 @@ description: ChildCount 属性 (ADO MD)
 title: ChildCount 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 049e6e9326fecc9835c0ac6e5d01b150403a9d12
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a5c3668a115de8137cd96f489f3e11483cb50045
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778286"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987128"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 属性 (ADO MD)
 指示当前 [成员](./member-object-ado-md.md) 对象作为层次结构中的父级的成员的数目。  
@@ -30,7 +30,7 @@ ms.locfileid: "88778286"
 ## <a name="return-values"></a>返回值  
  返回一个 **长** 整型，并且为只读。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **ChildCount** 属性可以返回某个 **成员** 具有的子级数量的估计值。 **成员**的实际子级可以由[子级](./children-property-ado-md.md)属性返回。  
   
  对于[位置](./position-object-ado-md.md)对象中的**成员**对象，返回的最大值为65536。 如果子项的实际数目超过65536，则返回的值仍为65536。 因此，应用程序应将65536的 **ChildCount** 解释为等于或大于65536子级。  

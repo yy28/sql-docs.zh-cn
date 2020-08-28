@@ -3,7 +3,7 @@ description: Position 属性 (ADO)
 title: " (ADO) 的位置属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be31e95a3929243602baaa10c5a36a9348f812b8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 55ae275db06b8b0c73598977e78954bac0fd22be
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773176"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990058"
 ---
 # <a name="position-property-ado"></a>Position 属性 (ADO)
 指示 [流](./stream-object-ado.md) 对象内的当前位置。  
@@ -29,7 +29,7 @@ ms.locfileid: "88773176"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **长整型** 值，该值指定相对于流开头的当前位置的偏移量（以字节为单位）。 默认值为0，表示流中的第一个字节。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当前位置可移至流末尾之后的某个点。 如果指定超出流末尾的当前位置，则会相应地增加**流**对象的[大小](./size-property-ado-stream.md)。 以这种方式添加的任何新字节都将为 null。  
   
 > [!NOTE]

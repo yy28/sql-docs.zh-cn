@@ -3,7 +3,7 @@ description: Sort 属性
 title: 排序属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9397d99d2d020fcf2c703bd96420ee4af4b1a610
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777416"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988988"
 ---
 # <a name="sort-property"></a>Sort 属性
 指示 [记录记录集](./recordset-object-ado.md) 的一个或多个字段名称，以及是否按升序或降序对每个字段进行排序。  
@@ -35,7 +35,7 @@ ms.locfileid: "88777416"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值，该值指示作为排序依据的 **记录集** 中的字段名称。 每个名称之间用逗号分隔，后面可以跟空白和关键字 **ASC**，后者按升序对字段进行排序 **，或使用降序对**字段进行排序。 默认情况下，如果未指定关键字，则字段将按升序排序。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此属性需要将 [CursorLocation](./cursorlocation-property-ado.md) 属性设置为 **adUseClient**。 如果索引不存在，则将为 **Sort** 属性中指定的每个字段创建临时索引。  
   
  排序操作非常高效，因为数据不会进行物理重新排列，而只是按索引指定的顺序进行访问。  

@@ -3,7 +3,7 @@ description: 参数集合 (ADO)
 title: ADO)  (参数集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bad2570c368e469afeb7c69e4f283bdbdfe04674
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773336"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990118"
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
 包含[Command](./command-object-ado.md)对象的所有[参数](./parameter-object.md)对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **命令**对象具有由**参数**对象组成的**参数**集合。  
   
  对**command**对象的**Parameters**集合使用[Refresh](./refresh-method-ado.md)方法将检索在**命令**对象中指定的存储过程或参数化查询的提供程序参数信息。 某些提供程序不支持存储过程调用或参数化查询;使用此类提供程序时对**参数**集合调用**Refresh**方法将返回错误。  
