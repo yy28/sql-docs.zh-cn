@@ -3,7 +3,7 @@ description: HelloData：简单的 ADO 应用程序
 title: HelloData：一个简单的 ADO 应用程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: bec2b55f7daee865489c3f32e1ee70e53b9102a6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806024"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980628"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData：简单的 ADO 应用程序
 这个简单的应用程序逐步介绍四个主要 ADO 操作：获取、检查、编辑和更新数据。 这些操作是针对 Microsoft® SQL Server 包含的 Northwind 示例数据库执行的。 为了重点介绍 ADO 的基本知识并防止代码混乱，示例中的错误处理是最小的。  
@@ -43,14 +43,14 @@ ms.locfileid: "88806024"
   
  ![显示 HelloData VB 应用程序的 Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|控件类型|属性|值|  
+|控件类型|properties|“值”|  
 |------------------|--------------|-----------|  
 |窗体|名称|Form1|  
 ||高度|6500|  
 ||宽度|6500|  
 |MS DataGrid|名称|grdDisplay1|  
 |TextBox|名称|txtDisplay1|  
-||多行|是|  
+||多行|true|  
 |命令按钮|名称|cmdGetData|  
 ||Caption|获取数据|  
 |命令按钮|名称|cmdExamineData|  

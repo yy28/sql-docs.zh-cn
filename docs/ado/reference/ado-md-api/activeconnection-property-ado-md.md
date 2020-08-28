@@ -3,7 +3,7 @@ description: ActiveConnection 属性 (ADO MD)
 title: ActiveConnection 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea9319e89c44b9cbb66b3acecdcbea4afa3e61c4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 541f6800a440019d210bdf427ab8dafd58acc3b5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776775"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987638"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 属性 (ADO MD)
 指示当前单元集或目录当前属于哪个 ADO [连接](../ado-api/connection-object-ado.md) 对象。  
@@ -31,7 +31,7 @@ ms.locfileid: "88776775"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **变量** ，该变量包含定义连接或 **连接** 对象的字符串。 默认值为空。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可将此属性设置为有效的 ADO **连接** 对象或有效的连接字符串。 如果将此属性设置为连接字符串，则提供程序将使用此定义创建新的 **连接** 对象，并打开连接。  
   
  如果使用[open](./open-method-ado-md.md)方法的*ActiveConnection*参数打开[单元集](./cellset-object-ado-md.md)对象，则**ActiveConnection**属性将继承参数的值。  

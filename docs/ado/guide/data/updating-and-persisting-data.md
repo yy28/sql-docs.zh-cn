@@ -3,7 +3,7 @@ description: 更新和保留数据
 title: 更新和保存数据 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19e281e6108005279cd807e5ee76d383437b8814
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05ca0196ef59df1f67d5f65f3abc52133b81869a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452649"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979168"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保留数据
 前面的章节讨论了如何使用 ADO 获取数据源中的数据、如何在数据中移动，甚至如何编辑数据。 当然，如果您的应用程序的目标是允许用户对数据进行更改，则您将需要了解如何保存这些更改。 您可以使用**Save**方法将**记录集**更改保存到文件，也可以使用**Update**或**UpdateBatch**方法将更改发送回数据源以进行存储。  

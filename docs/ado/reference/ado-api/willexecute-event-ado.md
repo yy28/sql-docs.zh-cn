@@ -3,7 +3,7 @@ description: WillExecute 事件 (ADO)
 title: WillExecute 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: affe058e06d20ffec9c27a5f4a60812f6fee1b03
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f56e864efd37b927ae657edc2ef2e8307d839104
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776866"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987768"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 在连接上执行挂起命令之前，就会调用 **WillExecute** 事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "88776866"
 WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordset, pConnection  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Source*  
  包含 SQL 命令或存储过程名称的 **字符串** 。  
   
@@ -59,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  此事件通知适用 [ (ADO) 对象的连接对象 ](./connection-object-ado.md) 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  由于连接，可能会发生 **WillExecute** 事件。  [执行方法 (Ado 连接) ](./execute-method-ado-connection.md)， [执行方法 (ado 命令) ](./execute-method-ado-command.md)，或 [Open 方法 (Ado Recordset) ](./open-method-ado-recordset.md) 方法， *pConnection* 参数应始终包含对 **连接** 对象的有效引用。 如果事件是 **Connection.Exe很漂亮**的，则 *pRecordset* 和 *PCommand* 参数将设置为 **Nothing**。 如果事件是由 **recordset**引起的，则 *pRecordset* 参数将引用 **recordset** 对象并将 *pCommand* 参数设置为 **Nothing**。 如果事件是 **Command.Exe很漂亮**的，则 *pCommand* 参数将引用 **Command** 对象并将 *pRecordset* 参数设置为 **Nothing**。  
   
  **WillExecute** 允许你检查和修改挂起的执行参数。 此事件可能会返回一个请求，要求取消挂起的命令。  

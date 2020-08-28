@@ -3,7 +3,7 @@ description: 以 XML 格式保留记录
 title: 用 XML 格式保存记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453039"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980058"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保留记录
 与 ADTG 格式一样，XML 格式的 **记录集** 持久性是通过 Microsoft OLE DB 永久性提供程序实现的。 此提供程序从保存的 XML 文件或包含 ADO 生成的架构信息的流中生成只进只读行集。 同样，它可以采用 ADO **记录集**，生成 XML，并将其保存到文件或实现 COM **IStream** 接口的任何对象。  (事实上，文件只是支持 **IStream**的对象的另一个示例。 ) 对于版本2.5 及更高版本，ADO 依赖 Microsoft XML PARSER (MSXML) 将 XML 加载到 **记录集中**;因此 msxml.dll 是必需的。  

@@ -3,7 +3,7 @@ description: 了解游标和锁定
 title: 了解游标和锁 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfe2d50af04309a439c276674581f07a26f9cb04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 428ef18e9bfe6e8a0b71580a16306ed55bb58460
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452669"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979198"
 ---
 # <a name="understanding-cursors-and-locks"></a>了解游标和锁定
 务必要了解游标的工作方式，以便为应用程序的数据访问要求选择最佳和最有效的游标类型。 小于最佳的游标配置可以使数据访问操作不厌其烦缓慢。  

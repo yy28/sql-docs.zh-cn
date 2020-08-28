@@ -3,7 +3,7 @@ description: 事件处理程序的协同工作原理
 title: 事件处理程序如何协同工作 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 37e1c5d081ccbcacaf50aa385a87afa9555ad2ca
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805981"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980518"
 ---
 # <a name="how-event-handlers-work-together"></a>事件处理程序的协同工作原理
 除非您正在 Visual Basic 进行编程，否则不管是否确实处理所有事件，都必须实现 **连接** 事件和 **记录集** 事件的所有事件处理程序。 您必须执行的实现工作量取决于编程语言。 有关详细信息，请参阅 [按语言的 ADO 事件实例化](./ado-event-instantiation-by-language.md)。  

@@ -3,7 +3,7 @@ description: 检索流中的结果集
 title: 检索流中的结果集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452919"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979748"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>检索流中的结果集
 ADO 不必接收传统 **记录集** 对象中的结果，而是可以将查询结果检索到流中。 ADO **流** 对象 (或支持 COM **IStream** 接口的其他对象，如 ASP **请求** 和 **响应** 对象) 可用于包含这些结果。 此功能的一种用途是检索 XML 格式的结果。 例如，使用 SQL Server，可以通过多种方式返回 XML 结果，例如，使用带有 SQL SELECT 查询的 FOR XML 子句或使用 XPath 查询。  
@@ -179,5 +179,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>注解  
  此时，XML 已流式传输到客户端浏览器，并已准备好显示。 为此，可使用客户端 VBScript 将 XML 文档绑定到 DOM 实例，并循环遍历每个子节点以在 HTML 中生成产品列表。

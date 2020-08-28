@@ -3,7 +3,7 @@ description: 最大程度降低日志文件空间使用
 title: 最小化日志文件空间使用情况 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6eeb933553d37df7db377d56ff0ff2e713ffef9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759717"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978008"
 ---
 # <a name="minimizing-log-file-space-usage"></a>最大程度降低日志文件空间使用
 如果 SQL Server 数据库上有大量活动，则日志文件可能会快速填满 (因此停止服务器) 。 你可以将日志文件设置为 **在检查点截断** ，以显著延长数据库日志文件的生存期。  

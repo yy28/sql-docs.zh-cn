@@ -3,7 +3,7 @@ description: onError 事件 (RDS)
 title: onError 事件 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: adef4e3eea01e966b87f939ce1a5b961ba87847b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767946"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981898"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 只要在操作过程中发生错误，就会调用 **onError** 事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "88767946"
 onError SCode, Description, Source, CancelDisplay  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *SCode*  
  一个整数，指示错误的状态代码。  
   

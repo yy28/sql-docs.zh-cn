@@ -3,7 +3,7 @@ description: 使用记录集
 title: 使用记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a8ffeab33125b3b13ca5725125654bd3ed1f822
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452519"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978838"
 ---
 # <a name="working-with-recordsets"></a>使用记录集
 **Recordset**对象提供内置功能，使你可以重新排列结果集中数据的顺序，以根据你提供的条件搜索特定记录，甚至还可以使用索引来优化这些搜索操作。 这些功能是否可用于使用取决于提供程序和在某些情况下（例如， [索引](../../../ado/reference/ado-api/index-property.md) 属性的结构）的数据源本身的结构。  
@@ -112,7 +112,7 @@ ms.locfileid: "88452519"
 ### <a name="filtering-with-a-constant"></a>使用常量进行筛选  
  以下常量可用于筛选 **记录集**。  
   
-|返回的常量|描述|  
+|返回的常量|说明|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|用于仅查看受上次 **删除**、重新 **同步**、 **UpdateBatch**或 **CancelBatch** 调用影响的记录的筛选器。|  
 |**adFilterConflictingRecords**|用于查看上次批处理更新失败的记录的筛选器。|  

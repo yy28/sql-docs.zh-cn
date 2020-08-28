@@ -3,7 +3,7 @@ description: 键集游标
 title: 键集游标 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8c84bf798dcdb543dd0ae407474aa68cfb06a9ba
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805848"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980338"
 ---
 # <a name="keyset-cursors"></a>键集游标
 键集游标在静态游标和动态游标的功能检测更改时提供其功能。 比如静态游标，它不会始终检测对结果集的成员身份和顺序的更改。 比如动态游标，它会检测对结果集中的行值的更改。  

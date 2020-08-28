@@ -18,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474965"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042471"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-sql) 
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88474965"
 sys.dm_exec_query_plan_stats(plan_handle)  
 ``` 
 
-## <a name="arguments"></a>参数 
+## <a name="arguments"></a>自变量 
 *plan_handle*  
 是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64) **。   
 
@@ -62,39 +62,37 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**过**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
 |**query_plan**|**xml**|包含与 *plan_handle*一起指定的实际查询执行计划的上一个已知运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。| 
 
-## <a name="remarks"></a>备注
-从 CTP 2.4 开始，此系统函数可用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。
-
-这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 起，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 LAST_QUERY_PLAN_STATS 选项。
+## <a name="remarks"></a>注解
+这是一项可以选择使用的功能。 若要在服务器级别启用，请使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 若要在数据库级别启用，请使用 [ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)中的 LAST_QUERY_PLAN_STATS 选项。
 
 此系统函数在 **轻型** 查询执行统计信息分析基础结构下工作。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 
-Sys. dm_exec_query_plan_stats 的显示计划输出包含以下信息：
+的显示计划输出 `sys.dm_exec_query_plan_stats` 包含以下信息：
 -  在缓存计划中找到的所有编译时信息
 -  运行时信息，例如每个运算符的实际行数、查询总 CPU 时间和执行时间，溢出警告，实际 DOP，最大已用内存和授予的内存
 
-在以下条件下，与 **实际执行计划等效** 的显示计划输出将在返回的表的 **query_plan** 列中返回 **dm_exec_query_plan_stats**：  
+在以下条件下，与 **实际执行计划等效** 的显示计划输出将在返回的表的 **query_plan** 列中返回 `sys.dm_exec_query_plan_stats` ：  
 
 -   可在 [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
     **AND**    
 -   正在执行的查询是复杂的或消耗资源的查询。
 
-在以下情况下，将在返回的表的**query_plan**列中返回**sys.databases 为 dm_exec_query_plan_stats**的**简化<sup>1</sup> **显示计划输出：  
+在以下情况下，在返回的表的**query_plan**列中返回**简化的<sup>1</sup> **显示计划输出 `sys.dm_exec_query_plan_stats` ：  
 
 -   可在 [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
     **AND**    
 -   查询非常简单，通常归类为 OLTP 工作负载的一部分。
 
-<sup>1</sup> 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 开始，这是指仅包含根节点运算符 (选择) 的显示计划。 对于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4，这是指通过获取的缓存计划 `sys.dm_exec_cached_plans` 。
+<sup>1</sup> 表示只包含根节点运算符 (选择) 的显示计划。
 
-在以下条件下， **不从 sys.databases 返回任何输出** **dm_exec_query_plan_stats**：
+在以下情况下， **不会返回任何输出** `sys.dm_exec_query_plan_stats` ：
 
--   使用 *plan_handle* 指定的查询计划已从计划缓存中逐出。     
-    **OR**    
+-   使用指定的查询计划已 `plan_handle` 从计划缓存中逐出。     
+    **或者**    
 -   最初无法缓存查询计划。 有关详细信息，请参阅 [执行计划缓存和重复使用 ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。
   
 > [!NOTE] 
-> 由于 **xml** 数据类型中允许的嵌套级别数有限制，因此 **dm_exec_query_plan** 无法返回满足或超过128嵌套元素级别的查询计划。 在的早期版本中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此条件阻止查询计划返回，并生成 [错误 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **query_plan** 列返回 NULL。  
+> 由于 **xml** 数据类型允许的嵌套级别数有限制， `sys.dm_exec_query_plan` 因此无法返回满足或超过128嵌套元素级别的查询计划。 在的早期版本中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此条件阻止查询计划返回，并生成 [错误 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， `query_plan` 列返回 NULL。  
 
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  

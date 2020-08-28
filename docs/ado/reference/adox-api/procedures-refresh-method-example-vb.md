@@ -3,7 +3,7 @@ description: 过程 Refresh 方法示例 (VB)
 title: " (VB) 的过程 Refresh 方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bc0bd69e4b184b91c1d337d6b9e1b9c490b3116
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 757c410982f43258f25729f5e88a5705c1ca814d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769556"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983488"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>过程 Refresh 方法示例 (VB)
 下面的代码演示如何刷新[目录](./catalog-object-adox.md)的[过程](./procedures-collection-adox.md)集合。 这是必需的，然后才能访问**目录**中的[过程](./procedure-object-adox.md)对象。  

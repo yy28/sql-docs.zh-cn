@@ -3,7 +3,7 @@ description: Source 属性示例 (VC++)
 title: " (VC + +) 的源属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28aca75b9bf0abba7a87a035ebcf565edb0b5fa5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7b582582fa3acc91921aeee41a465915979a6c7d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777376"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988888"
 ---
 # <a name="source-property-example-vc"></a>Source 属性示例 (VC++)
 此示例通过打开基于不同数据源的三个[记录集](./recordset-object-ado.md)对象来演示[源](./source-property-ado-recordset.md)属性。  

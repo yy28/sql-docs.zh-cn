@@ -3,7 +3,7 @@ description: ConvertToString 方法 (RDS)
 title: ConvertToString 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b3bf5e24fdb3ef05795d4ebd66a65baea984a42
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6f0d262e3ffeee6b5c5fecf32a12f89a5b5b8c12
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768656"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982618"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
 将 [记录集](../ado-api/recordset-object-ado.md) 转换为表示记录集数据的 MIME 字符串。  
@@ -34,14 +34,14 @@ ms.locfileid: "88768656"
 DataFactory.ConvertToString(Recordset)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataFactory*  
  表示 [RDSServer. DataFactory](./datafactory-object-rdsserver.md) 对象的对象变量。  
   
  *Recordset*  
  表示 **Recordset** 对象的对象变量。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 .asp 文件，使用 **ConvertToString** 将 **记录集** 嵌入到服务器上生成的 HTML 页面，以将其传输到客户端计算机。  
   
  **ConvertToString** 首先将 **记录集** 加载到游标服务表中，然后以 MIME 格式生成流。  

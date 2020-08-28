@@ -3,7 +3,7 @@ description: RelatedTable 属性 (ADOX)
 title: RelatedTable 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac92921f32197eb07372e9e63147869bdca202af
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f7fdbe6977ee2ddfc586e152b02b4994697a39db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769486"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983448"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable 属性 (ADOX)
 指示相关表的名称。  
@@ -33,7 +33,7 @@ ms.locfileid: "88769486"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 **字符串** 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  默认值为空字符串 ("")。  
   
  如果键为外键，则 **RelatedTable** 是包含该键的表的名称。  

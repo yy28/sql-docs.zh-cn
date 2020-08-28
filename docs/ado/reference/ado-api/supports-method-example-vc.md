@@ -3,7 +3,7 @@ description: Supports 方法示例 (VC++)
 title: 支持 (VC + +) 的方法示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66592f099b5d125acb92cbcb85bf7e8964aeda8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 639beb1e3fe5728ced23e9496b74947b3dfb0428
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777126"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988348"
 ---
 # <a name="supports-method-example-vc"></a>Supports 方法示例 (VC++)
 此示例使用 [支持](./supports-method.md) 方法显示使用不同游标类型打开的记录集支持的选项。 运行此示例需要 DisplaySupport 函数。  

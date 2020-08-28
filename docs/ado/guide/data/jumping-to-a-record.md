@@ -3,7 +3,7 @@ description: 跳转到记录
 title: 跳转到记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcbdf68a7d79b64e25dcb700b989628a6a72b8e2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 96987a5c51d7a888672609aa28f3fd223ccfffa1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805855"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980398"
 ---
 # <a name="jumping-to-a-record"></a>跳转到记录
 使用 [Move](../../reference/ado-api/move-method-ado.md) 方法，您可以使用以下语法在 **记录集中** 向前或向后移动指定数量的记录：  
@@ -28,7 +28,7 @@ ms.locfileid: "88805855"
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Move**方法在所有**记录集**对象上都受支持。  
   
  如果 *NumRecords* 参数大于零，则当前记录位置将向前移动 (向 **记录集** 的末尾) 。 如果 *NumRecords* 小于零，则当前记录位置 (向后) **记录集** 的开头向后移动。  

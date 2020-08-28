@@ -3,7 +3,7 @@ description: OpenSchema 方法
 title: OpenSchema 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cade08630577b32d81643cb30b6a1e20656d95bf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ce524119367b53cac86c4bd29e3dc6927671c871
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773676"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990278"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 从提供程序中获取数据库架构信息。  
@@ -37,7 +37,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="return-value"></a>返回值  
  返回一个包含架构信息的 [记录集](./recordset-object-ado.md) 对象。 **记录集**将作为只读静态游标打开。 *QueryType*确定在**记录集中**显示的列。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *QueryType*  
  表示要运行的架构查询类型的任何 [SchemaEnum](./schemaenum.md) 值。  
   
@@ -47,7 +47,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  OLE DB 规范未定义的提供程序架构查询的 GUID。 如果将 *QueryType* 设置为 **adSchemaProviderSpecific**，则此参数是必需的。否则，不使用此方法。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **OpenSchema**方法返回有关数据源的自定义信息，如数据源中的表、表中的列以及支持的数据类型。  
   
  *QueryType*参数是一个 GUID，用于指示) 返回的架构 (列。 OLE DB 规范包含架构的完整列表。  

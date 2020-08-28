@@ -3,7 +3,7 @@ description: 记录和提供程序提供的字段
 title: 记录和提供程序提供的字段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452999"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979948"
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 打开 [记录](../../../ado/reference/ado-api/record-object-ado.md) 对象时，它的源可以是打开的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的当前行、绝对 url 或与打开的 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象关联的相对 url。  
@@ -56,7 +56,7 @@ ms.locfileid: "88452999"
 ## <a name="resource-recordset-columns"></a>资源记录集列  
  *资源记录集*由以下列组成。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|只读。 指示资源的 URL。|  
 |RESOURCE_PARENTNAME|AdVarWChar|只读。 指示父记录的绝对 URL。|  

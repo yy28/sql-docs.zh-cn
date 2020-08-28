@@ -3,7 +3,7 @@ description: CommandStream 属性 (ADO)
 title: " (ADO) 的 CommandStream 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20b52a91429e2db6478aab36f2db5928bc2d30f5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 463468f8e39d1187a36ac6fa1279e8a2aeb3a73b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776146"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975198"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 属性 (ADO)
 指示用作 [命令](./command-object-ado.md) 对象的输入的流。  
@@ -29,7 +29,7 @@ ms.locfileid: "88776146"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回用作 **命令** 对象输入的流。 此流的格式特定于提供程序;有关详细信息，请参阅提供程序的文档。 此属性类似于 [CommandText](./commandtext-property-ado.md) 属性，该属性用于指定 **命令**输入的字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **CommandStream** 和 **CommandText** 互相排斥。 当用户设置 **CommandStream** 属性时， **CommandText** 属性将设置为空字符串 ( "" ) 。 如果用户设置 **CommandText** 属性，则 **CommandStream** 属性将设置为 **Nothing**。  
   
  命令的行为。 **参数** 和 **命令。 Prepare** 方法由提供程序定义。 流中的参数值无法刷新。  

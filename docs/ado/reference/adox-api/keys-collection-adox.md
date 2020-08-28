@@ -3,7 +3,7 @@ description: 项集合 (ADOX)
 title: 项集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95d1b5b927f03a0592f25cc4cc79c0ffe78cee74
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 675584dd52cd1a403b9d9d44351b86e88caba382
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770056"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983978"
 ---
 # <a name="keys-collection-adox"></a>项集合 (ADOX)
 包含[表](./table-object-adox.md)的所有[关键](./key-object-adox.md)对象。  
   
-## <a name="remarks"></a>备注  
- [键集合]()的[APPEND](./append-method-adox-keys.md)方法对于 ADOX 是唯一的。 方法：  
+## <a name="remarks"></a>注解  
+ [键集合]()的[APPEND](./append-method-adox-keys.md)方法对于 ADOX 是唯一的。 可以：  
   
 -   使用 [Append](./append-method-adox-keys.md) 方法向集合中添加一个新项。  
   
- 其余属性和方法对于 ADO 集合是标准的。 方法：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的键。  
   

@@ -3,7 +3,7 @@ description: ExecuteComplete 事件 (ADO)
 title: ExecuteComplete 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e7b800f7dba925230ade048f3792020ad8a44ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e27f8a86fce348dbf2061a1c7be91f43be9adc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443839"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973388"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
 执行完命令后，将调用 **ExecuteComplete** 事件。  
@@ -55,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 执行操作时所用的连接。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  由于连接的原因，可能会发生 **ExecuteComplete** 事件 **。**[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)、 **命令。**[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)、 **Recordset。**[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)， **记录集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或 **记录集。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 方法。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -3,7 +3,7 @@ description: Move 方法 (ADO)
 title: ADO)  (移动方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57a5b882148c899136ff92315ff109b68868aa66
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b394d64a9d1b1f403137e9875db83fdd82c2ac1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990588"
 ---
 # <a name="move-method-ado"></a>Move 方法 (ADO)
 移动 [记录集](./recordset-object-ado.md) 对象中的当前记录的位置。  
@@ -34,14 +34,14 @@ ms.locfileid: "88774406"
 recordset.Move NumRecords, Start  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *NumRecords*  
  一个有符号 **长** 表达式，指定当前记录位置移动的记录数。  
   
  *启动*  
  可选。 计算结果为书签的 **字符串** 值或 **变量** 。 还可以使用 [BookmarkEnum](./bookmarkenum.md) 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Move**方法在所有**记录集**对象上都受支持。  
   
  如果 *NumRecords* 参数大于零，则当前记录位置将向前移动 (向 **记录集** 的末尾) 。 如果 *NumRecords* 小于零，则当前记录位置 (向后) **记录集** 的开头向后移动。  

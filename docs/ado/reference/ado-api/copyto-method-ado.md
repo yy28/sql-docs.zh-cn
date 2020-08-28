@@ -3,7 +3,7 @@ description: CopyTo 方法 (ADO)
 title: " (ADO) 的 CopyTo 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59894d6632cd5dae3887099db2d6e71b1174af43
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7bbb394810ebbfe8d8c0e1d598641a1e77e7d204
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775706"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974548"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 根据[流](./stream-object-ado.md)中的[类型](./type-property-ado-stream.md)) 将指定数量的字符或字节 (复制到另一个**流**对象。  
@@ -34,7 +34,7 @@ ms.locfileid: "88775706"
 Stream.CopyTo DestStream, NumChars  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DestStream*  
  一个对象变量值，该值包含对打开的 **流** 对象的引用。 当前**流**将复制到由*DestStream*指定的目标**流**中。 目标 **流** 必须已打开。 否则，将发生运行时错误。  
   
@@ -44,7 +44,7 @@ Stream.CopyTo DestStream, NumChars
  *NumChars*  
  可选。 一个 **整数** 值，指定要从源 **流** 中的当前位置复制到目标 **流**的字节数或字符数。 默认值为-1，指定将所有字符或字节从当前位置复制到 [EOS](./eos-property.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此方法从 [位置](./position-property-ado.md) 属性指定的当前位置开始复制指定数量的字符或字节。 如果指定的数字大于在 **eos**之前的可用字节数，则仅复制当前位置到 **eos** 之间的字符或字节。 如果 *NumChars* 的值为-1 或省略，则会复制从当前位置开始的所有字符或字节。  
   
  如果目标流中存在现有字符或字节，则不会保留副本结束点之外的所有内容，并且不会被截断。 **位置** 成为紧接最后复制的字节之后的字节。 如果要截断这些字节，请调用 [SetEOS](./seteos-method.md)。  

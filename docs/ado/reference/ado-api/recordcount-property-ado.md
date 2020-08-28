@@ -3,7 +3,7 @@ description: RecordCount 属性 (ADO)
 title: " (ADO) 的 RecordCount 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b307a4116731016858ce4cc74f37bdcfbd258f3a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2c2fbd70c1195d0fedf5041a672b704f4bf482d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772476"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989828"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 属性 (ADO)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88772476"
 
 返回一个 **长整型** 值，该值指示记录 **集中**的记录数。
   
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 使用 **RecordCount** 属性可查看 **记录集** 对象中的记录数。 如果 ADO 无法确定记录数，或者提供程序或游标类型不支持 **RecordCount**，则属性将返回-1。 读取已关闭**记录集**的**RecordCount**属性会导致错误。
 

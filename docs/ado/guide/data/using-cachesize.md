@@ -3,7 +3,7 @@ description: 使用 CacheSize
 title: 使用 CacheSize |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5514f7b3a08d212e435a40341fc32033ec226c78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97f6dba7bf01b3236d6b8b00e6338185cf6a8d41
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452579"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978998"
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用 **CacheSize** 属性可控制从提供程序在本地内存中一次检索的记录数。 例如，如果 **CacheSize** 为10，则在第一次打开 **Recordset** 对象之后，提供程序会在本地内存中检索前10条记录。 当您在 **Recordset** 对象中移动时，提供程序将从本地内存缓冲区返回数据。 一旦移过缓存中的最后一条记录，提供程序就会将数据源中的后10个记录检索到缓存中。  

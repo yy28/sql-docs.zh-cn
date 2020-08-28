@@ -3,7 +3,7 @@ description: 编写自己的自定义处理程序
 title: 编写您自己的自定义处理程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e421b128faa5a7d90ec658a7c42e246110d921fb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760067"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977338"
 ---
 # <a name="writing-your-own-customized-handler"></a>编写自己的自定义处理程序
 如果您是需要默认 RDS 支持的 IIS 服务器管理员，但对用户请求和访问权限有更多控制，则您可能需要编写自己的处理程序。  
@@ -37,7 +37,7 @@ ms.locfileid: "88760067"
 ## <a name="getrecordset-method"></a>Dl.getrecordset 方法  
  此方法查询数据源，并使用提供的参数创建新的 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象。 **记录集**必须用**adLockBatchOptimistic**打开，并且不能异步打开。  
   
-### <a name="arguments"></a>参数  
+### <a name="arguments"></a>自变量  
  ***conn***  连接字符串。  
   
  ***args***  处理程序的参数。  
@@ -49,7 +49,7 @@ ms.locfileid: "88760067"
 ## <a name="reconnect-method"></a>重新连接方法  
  此方法更新数据源。 它将创建一个新的 [连接](../../reference/ado-api/connection-object-ado.md) 对象并附加给定的 **记录集**。  
   
-### <a name="arguments"></a>参数  
+### <a name="arguments"></a>自变量  
  ***conn***  连接字符串。  
   
  ***args***  处理程序的参数。  

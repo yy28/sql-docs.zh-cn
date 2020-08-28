@@ -3,7 +3,7 @@ description: CursorType 属性 (ADO)
 title: " (ADO) 的 CursorType 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85bb0f624c5f5a3100bfba5d33d63a574fa9d0e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775496"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974318"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 属性 (ADO)
 指示 [记录集](./recordset-object-ado.md) 对象中使用的游标的类型。  
@@ -29,7 +29,7 @@ ms.locfileid: "88775496"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 [CursorTypeEnum](./cursortypeenum.md) 值。 默认值为 **adOpenForwardOnly**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **CursorType** 属性可以指定在打开 **Recordset** 对象时应使用的游标类型。  
   
  如果[CursorLocation](./cursorlocation-property-ado.md)属性设置为**adUseClient**，则仅支持**adOpenStatic**的设置。 如果设置了不受支持的值，则不会产生错误;将改用最近支持的 **CursorType** 。  

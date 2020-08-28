@@ -3,7 +3,7 @@ description: Index 属性
 title: Index 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 084c27d5101c5aa08d25e7d073158a859d275d3b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 44dab27756e71142b59ae27b2d8499e1dd2f639a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774801"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990808"
 ---
 # <a name="index-property"></a>Index 属性
 指示当前对 [记录集](./recordset-object-ado.md) 对象有效的索引的名称。  
@@ -29,7 +29,7 @@ ms.locfileid: "88774801"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值，该值是索引的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **索引**属性命名的索引之前必须在**Recordset**对象的基础表上声明。 也就是说，必须以编程方式将索引声明为 ADOX [索引](../adox-api/index-object-adox.md) 对象，或创建基表。  
   
  如果无法设置索引，则会发生运行时错误。 在下列条件下，不能设置 **Index** 属性：  

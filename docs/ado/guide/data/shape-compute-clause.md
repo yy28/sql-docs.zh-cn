@@ -3,7 +3,7 @@ description: Shape COMPUTE 子句
 title: 形状计算子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452839"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979598"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape 计算子句生成父 **记录集**，其列包含对子 **记录集**的引用;其内容为章节、新列或计算列的可选列，或者对子 **记录** 集或之前形状的 **记录集**执行聚合函数的结果。可选的 from 子句中列出的子 **记录集中** 的任何列。  
@@ -77,15 +77,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  例如，假设有一个名为 "人口统计" 的表，其中包含州、城市和人口字段。 表中的人口 (仅作为) 示例提供。  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
 |WA|西雅图|700000|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
+|或|Medford|200,000|  
+|或|Portland|400,000|  
 |CA|Los Angeles|800000|  
 |CA|San Diego|600000|  
 |WA|Tacoma|500,000|  
-|OR|Corvallis|300,000|  
+|或|Corvallis|300,000|  
   
  现在，请发出以下 shape 命令：  
   
@@ -109,29 +109,29 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1300000|对 child1 的引用|CA|  
 |1200000|对 child2 的引用|WA|  
-|1100000|对 child3 的引用|OR|  
+|1100000|对 child3 的引用|或|  
   
 ## <a name="child1"></a>Child1  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800000|  
 |CA|San Diego|600000|  
   
 ## <a name="child2"></a>Child2  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
 |WA|西雅图|700000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|OR|Corvallis|300,000|  
+|或|Medford|200,000|  
+|或|Portland|400,000|  
+|或|Corvallis|300,000|  
   
 ## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
