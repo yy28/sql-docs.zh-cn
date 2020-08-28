@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772511"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564657"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 
@@ -123,6 +123,10 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 9. 右键单击导入的证书，指向“所有任务”，然后单击“管理私钥”。 在“安全”对话框中，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户使用的用户帐户添加读取权限。  
   
 10. 完成 **证书导入向导**，将证书添加到计算机中，然后关闭 MMC 控制台。 有关向计算机添加证书的详细信息，请参阅 Windows 文档。  
+
+> [!IMPORTANT]
+> 对于生产环境，建议从证书颁发机构获取可信证书。    
+> 在测试中，也可以使用自签名证书。 若要创建自签名证书，请参阅 [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) 或 [certreq 命令](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1)。
   
 ## <a name="install-across-multiple-servers"></a>跨多个服务器安装
 
@@ -141,7 +145,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 将服务器配置为强制使用加密连接。
 
 > [!IMPORTANT]
-> SQL Server 服务帐户必须具有用于在 SQL Server 上强制加密的证书的读取权限。 对于非特权服务帐户，需要将读取权限添加到证书中， 否则可能会导致 SQL Server 服务重启失败。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须具有对用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上强制加密的证书的读取权限。 对于非特权服务帐户，需要将读取权限添加到证书中， 否则可能会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务重启失败。
   
 1. 在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，右键单击“\<server instance> 的协议”，然后选择“属性”。    
   
@@ -168,7 +172,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
   
 ## <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
   
-通过 SQL Server Management Studio 加密连接：  
+若要从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 加密连接，请执行以下操作：  
 
 1. 在对象资源管理器工具栏上，单击 **“连接”** ，再单击 **“数据库引擎”** 。  
   
@@ -183,3 +187,4 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 
 + [针对 Microsoft SQL Server 的 TLS 1.2 支持](https://support.microsoft.com/kb/3135244)     
 + [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357803"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778556"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ target_table 所属架构的名称。
 target_table 不得是远程表。 target_table 不得有任何针对它定义的规则。  
   
 [ AS ] *table_alias*  
-用于引用表的替代名称。  
+用于为 target_table 引用表的替代名称。  
   
 USING \<table_source>  
 指定根据 \<merge_search condition> 与 target_table 中的数据行进行匹配的数据源。 此匹配的结果指出了要由 MERGE 语句的 WHEN 子句采取的操作。 \<table_source> 可以是一个远程表，或者是一个能够访问远程表的派生表。
   
 \<table_source> 可以是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [表值构造函数](../../t-sql/queries/table-value-constructor-transact-sql.md)通过指定多行来构造表。  
+  
+ [ AS ] *table_alias*  
+用于为 table_source 引用表的替代名称。   
   
 有关此子句的语法和参数的详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   

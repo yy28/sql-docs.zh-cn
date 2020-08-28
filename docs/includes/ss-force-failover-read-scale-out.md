@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122540"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655197"
 ---
 每个可用性组仅有一个主要副本。 主要副本允许读取和写入操作。 若要更改哪个副本为主要副本，可进行故障转移。 在高可用性的可用性组中，群集管理器自动执行故障转移过程。 在群集类型为 NONE 的可用性组中，需手动执行故障转移过程。 
 
@@ -43,7 +43,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 手动故障转移（无数据丢失）：
 
-1. 使目标次要副本 `SYNCHRONOUS_COMMIT`。
+1. 将当前的主要副本和目标次要副本设置为 `SYNCHRONOUS_COMMIT`。
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. 将旧的主要副本的角色更新为 `SECONDARY`，在托管主要副本的 SQL Server 实例上运行以下命令：
+1. 将旧的主要副本的角色更新为 `SECONDARY`，在托管旧的主要副本的 SQL Server 实例上运行以下命令：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. 重新创建出于读取缩放目的创建且不受群集管理器管理的所有侦听器。 如果原始侦听器指向旧的主要副本，请将其删除，然后将其重新创建为指向新的主要副本。

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748411"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618126"
 ---
 # <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748411"
 |在数据库镜像上执行的重做操作|延迟的事务|  
 |文件组脱机|延迟的事务|  
   
+### <a name="requirements-and-limitations"></a>要求和限制
+
+ - 数据库必须使用完整恢复模式或大容量日志恢复模式。
+ - 必须为数据库完成至少一个数据库和日志备份
+ - 延迟的事务不适用于数据库联机后回滚事务期间遇到的错误。 （例如运行时错误）
+ - 数据库附加期间，无法为恢复失败延迟事务
+ - 诸如系统事务 （例如页面分配）之类的某些事务无法延迟
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>将事务移出 DEFERRED 状态  
   
 > [!IMPORTANT]  

@@ -13,18 +13,18 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
-ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
+ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251509"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646040"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > 有关导入和导出向导的相关内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
-利用导入平面文件向导可以轻松地将数据从平面文件 (.csv, .txt) 复制到数据库中的新表。 本概述描述了使用此向导的原因、查找此向导的方法，以及可遵循的简单示例。
+利用导入平面文件向导可以轻松地将数据从平面文件 (.csv, .txt) 复制到数据库中的新表。  导入平面文件向导支持以逗号分隔的文件和固定宽度格式的文件。 本概述描述了使用此向导的原因、查找此向导的方法，以及可遵循的简单示例。
 
 ## <a name="why-would-i-use-this-wizard"></a>为什么使用此向导？
 创建此向导的目的在于利用称为 Program Synthesis using Examples 的智能框架改善当前的导入体验 ([PROSE](https://microsoft.github.io/prose/))。 对于没有专业领域知识的用户来说，导入数据通常是一项复杂、易于出错并且乏味的任务。 此向导尽可能简化导入流程，只需要选择输入文件和唯一的表名称，PROSE 框架就会处理剩余的事情。
@@ -36,7 +36,7 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>先决条件
-此功能仅在 SQL Server Management Studio (SSMS) v17.3 或更高版本中可用。 请确保使用最新版本。 可以在[此处](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
+此功能适用于 SQL Server Management Studio (SSMS) v17.3 或更高版本。 请确保使用最新版本。 可以在[此处](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
  
 ## <a name="getting-started"></a><a id="started"></a>入门
 要访问导入平面文件向导，请执行以下步骤：
@@ -54,6 +54,14 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 ![向导 Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
+概述：
+1. [访问向导](#step-1-access-wizard-and-intro-page)
+2. [指定输入文件](#step-2-specify-input-file)
+3. [预览数据](#step-3-preview-data)
+4. [修改列](#step-4-modify-columns)
+5. [摘要](#step-5-summary)
+6. [结果](#step-6-results)
+
 ### <a name="step-1-access-wizard-and-intro-page"></a>步骤 1：访问向导和简介页
 访问如[此处](#started)所述的向导。
 
@@ -62,7 +70,7 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 ![向导简介](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>步骤 2：指定输入文件
-单击“浏览”选择输入文件。 此向导默认搜索 .csv 和 .txt 文件。 
+单击“浏览”选择输入文件。 此向导默认搜索 .csv 和 .txt 文件。 无论文件扩展名是什么，PROSE 都将检测文件采用的是逗号分隔格式，还是固定宽度格式。
 
 新的表名称应该是唯一的，如果不是，向导不会允许执行下一步。
 
@@ -75,6 +83,8 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 ### <a name="step-4-modify-columns"></a>步骤 4：修改列
 向导会标识它认为正确的列名称、数据类型等。如果字段不正确，可以在此处编辑这些字段（例如，数据类型应该是 float 而不是int）。
+
+检测到空值的列将选中“允许 Null”。 但如果你希望列中包含 null，并且不选中“允许 Null”，则可以在此处更新表定义以允许一列或所有列中包含 null。
 
 准备就绪时，请继续。
 

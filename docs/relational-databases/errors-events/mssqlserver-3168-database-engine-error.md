@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1545722c9a2cb46bc42cb6a0e697c111e4e7f3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5c3daa848ced9eb6ca784e68d14a66a9bea53aa
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424339"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618108"
 ---
 # <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,5 +52,5 @@ ms.locfileid: "88424339"
 在此情况下的还原过程相当复杂，应在不得已的情况下才使用。 有关详细信息，请参阅“[无法将系统数据库备份还原到不同内部版本的 SQL Server](https://support.microsoft.com/kb/264474)”。  
   
 ## <a name="see-also"></a>另请参阅  
-[备份和还原系统数据库 (SQL Server)](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
+[对还原系统数据库的限制 &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)  
   

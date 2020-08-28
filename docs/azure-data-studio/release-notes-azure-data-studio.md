@@ -2,23 +2,23 @@
 title: 发行说明
 description: 本文提供了从 2017 年 11 月至今的 Azure Data Studio 版本的发行说明。 对于许多汇总问题，提供了指向其他详细信息的链接。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 08/12/2020
-ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147198"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766186"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
-**[下载并安装最新版本！](download.md)**
+**[下载并安装最新版本！](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="august-2020"></a>2020 年 8 月
 
@@ -76,7 +76,7 @@ ms.locfileid: "88147198"
 | :----- | :------ |
 | 向 Azure 门户集成添加了 Azure Data Studio | 用户现可通过 Azure SQL 数据库连接和 Azure Postgres 等途径直接转到 Azure 门户。 |
 | 新笔记本功能 | &bull; &nbsp; 新建笔记本工具栏 <br/> &bull; &nbsp; 新建编辑单元格工具栏 <br/> &bull; &nbsp; Python 依赖项向导 UX 更新 <br/> &bull; &nbsp; 缩减了笔记本之间的间距 |
-| 发布 SQL 评估 API 扩展 | 此扩展在 ADS 中添加了 SQL Server 的最佳做法评估。 它公开了 SQL 评估 API（以前仅在 PowerShell SqlServer 模块和 SMO 中可用），让你可评估 SQL Server 实例，并接收 SQL Server 团队对它们的建议。 在[本文](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)中了解 SQL 评估 API 及其功能的详细信息。 |
+| 发布 SQL 评估 API 扩展 | 此扩展在 ADS 中添加了 SQL Server 的最佳做法评估。 它公开了 SQL 评估 API（以前仅在 PowerShell SqlServer 模块和 SMO 中可用），让你可评估 SQL Server 实例，并接收 SQL Server 团队对它们的建议。 在[本文](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15)中了解 SQL 评估 API 及其功能的详细信息。 |
 | [机器学习扩展改进](https://go.microsoft.com/fwlink/?linkid=2129918) | 现在支持 Azure SQL 托管实例。 |
 | 数据虚拟化扩展改进 | 现在支持 MongoDB 和 Teradata |
 | Postgres 扩展 bug 修复 | 已修复 Azure MFA |
@@ -149,7 +149,7 @@ ms.locfileid: "88147198"
 | :----- | :------ |
 | 在 SQL 笔记本中添加了图表支持 | 在代码单元中运行 SQL 查询时，用户现在可以创建和保存图表。 |
 | 添加了创建 Jupyter 书籍体验 | 用户现在可以使用笔记本创建自己的 Jupyter 书籍。 |
-| 添加了对 Postgres 扩展的 AAD 支持 | |
+| 添加了对 Postgres 扩展的 Azure AD 支持 | |
 | 修复了许多辅助功能 bug | [辅助功能错误列表](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
 | VS Code 合并到 1.42 | 此版本包含对前 3 个 VS Code 版本中 VS Code 的更新。 [阅读其发行说明](https://code.visualstudio.com/updates/v1_42)以了解详细信息。 |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed)。 |
@@ -314,7 +314,7 @@ ms.locfileid: "88147198"
 | 发布 SandDance 1.3.1 扩展 | &bull; &nbsp; 智能图表检测 <br/>&bull; &nbsp; 3D 可视化效果 <br/> &bull; &nbsp; 数据筛选 |
 | 笔记本改进 | &bull; &nbsp; 在行中添加代码或文本单元格 <br/>&bull; &nbsp; 新增了以下功能：右键单击 SQL 结果网格可以将结果另存为 CSV、JSON 等 <br/> &bull; &nbsp; 提升了笔记本加载性能，以便更快地加载 JSON <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)查看完整的改进列表 |
 | SQL Server 2019 支持 |  此版本中包括对其他 SQL Server 2019 大数据群集功能的支持，包括： <br/> &bull; &nbsp; 缩短了加载“对象映射”页面上的表和列信息所需的时间。 <br/> &bull; &nbsp; 修复了在“连接详细信息”页面上加载现有数据库范围凭据时出现的 bug。 <br/> &bull; &nbsp; 增加了用于 PROSE 分析的默认样本大小。 | 
-| Dacpac 扩展现在支持 AAD | 
+| Dacpac 扩展现在支持 Azure AD | 
 | Visual Studio Code 7 月发布合并 1.37 | 可在[此处](https://code.visualstudio.com/updates/v1_37)查看最新的改进内容。 |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)。 |
 | &nbsp; | &nbsp; |
@@ -345,7 +345,7 @@ ms.locfileid: "88147198"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 发布中央管理服务器 (CMS) 扩展 | 中央管理服务器存储组织到一个或多个中央管理服务器组中的 SQL Server 实例列表。 用户可以连接到自己的现有 CMS 服务器并管理服务器，例如添加和删除服务器。 有关详细信息，请参阅[此处](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| 发布中央管理服务器 (CMS) 扩展 | 中央管理服务器存储组织到一个或多个中央管理服务器组中的 SQL Server 实例列表。 用户可以连接到自己的现有 CMS 服务器并管理服务器，例如添加和删除服务器。 有关详细信息，请参阅[此处](../relational-databases/administer-multiple-servers-using-central-management-servers.md) |
 | 发布适用于 Windows 的数据库管理工具扩展 | 此扩展在 Azure Data Studio 中启用了 SQL Server Management Studio 中两个最常用的体验。 用户可以右键单击很多不同的对象（例如数据库、表、列、视图等等）并选择“属性”以查看该对象的 SSMS 属性对话框。 此外，用户可以右键单击数据库并选择“生成脚本”以启动广为人知的 SSMS 生成脚本向导。 
 | 架构比较改进 | &bull; &nbsp; 添加了排除/包含选项 <br/>&bull; &nbsp; “生成脚本”在脚本生成后打开脚本 <br/>&bull; &nbsp; 删除了双滚动条  <br/>&bull; &nbsp; 格式设置和布局改进 <br/>&bull; &nbsp; 可在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)查看完整的更改内容|
 | 将“消息”部分移动到专用选项卡 | 以前用户运行 SQL 查询时，结果和消息都在堆叠面板上。 现在它们会在面板中的单独选项卡上，例如在 SSMS 中。 |
@@ -361,7 +361,7 @@ ms.locfileid: "88147198"
     - 无法启动 Azure 服务器的属性
     - 并非所有对象都有属性对话框
     - 启动对话框需要很长时间
-    - 在通过部分类型的连接（例如 AAD）启动服务器时出错
+    - 在通过部分类型的连接（例如 Azure AD）启动服务器时出错
 - 笔记本
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) 允许用户对笔记本使用系统 Python
 - 架构比较
@@ -446,7 +446,7 @@ ms.locfileid: "88147198"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 添加了“SQL Server 的管理包”扩展包。 | 这样更便于安装 SQL Server 管理相关的扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 导入](sql-server-import-extension.md?view=sql-server-2017) |
+| 添加了“SQL Server 的管理包”扩展包。 | 这样更便于安装 SQL Server 管理相关的扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 导入](sql-server-import-extension.md?view=sql-server-2017) |
 | 在 Profiler 扩展中添加了筛选扩展事件支持。 | &nbsp; |
 | 添加了“另存为 XML”功能，可将 T-SQL 结果保存为 XML。 | &nbsp; |
 | 添加了数据层应用程序向导方面的改进。 | &bull; &nbsp; 添加了“生成脚本”按钮<br/>&bull; &nbsp; 添加了视图，用于在部署过程中针对潜在数据丢失发出警告。 |
@@ -498,7 +498,7 @@ ms.locfileid: "88147198"
 | 引入增强色查询扩展，包括 SSMS 编辑器主题。 | &nbsp; |
 | 修复 SQL Server 代理、Profiler 和导入扩展中的问题。 | &nbsp; |
 | 修复导致 macOS 上丢失非活动连接的 .NET Core 套接字 KeepAlive 问题。 | &nbsp; |
-| 将 SQL 工具服务升级至 .NET Core 2.2 Preview 3（获得最终的 AAD 支持）。 | &nbsp; |
+| 将 SQL 工具服务升级至 .NET Core 2.2 Preview 3（获得最终的 Azure AD 支持）。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>Bug 修复，2018 年 11 月

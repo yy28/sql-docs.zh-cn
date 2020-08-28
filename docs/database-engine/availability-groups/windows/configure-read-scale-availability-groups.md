@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565293"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564503"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组配置读取缩放
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 可根据以下两种方法之一连接到只读次要副本：
 * 应用程序可直接连接到托管次要副本的 SQL Server 实例并查询数据库。 有关详细信息，请参阅[可读次要副本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。
-* 应用程序还可以使用只读路由，这需要一个侦听器。 有关详细信息，请参阅[只读路由](listeners-client-connectivity-application-failover.md#ConnectToSecondary)。
+* 应用程序还可以使用只读路由，这需要一个侦听器。 如果在不使用群集管理器的情况下部署读取缩放方案，你仍然可以创建一个侦听器，该侦听器指向当前主要副本的 IP 地址和与 SQL Server 所侦听端口不同的端口。 故障转移后，需要重新创建指向新的主 IP 地址的侦听器。 有关详细信息，请参阅[只读路由](listeners-client-connectivity-application-failover.md#ConnectToSecondary)。
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>故障转移读取缩放可用性组上的主要副本
 

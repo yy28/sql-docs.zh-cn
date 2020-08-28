@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459245"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807028"
 ---
 # <a name="variables-transact-sql"></a>变量 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Transact-SQL 局部变量是可以保存单个特定类型数据值的对象。 
 * 保存存储过程返回代码要返回的数据值或函数返回值。
 
 > [!NOTE]
-> 一些 Transact-SQL 系统函数的名称以两个 at 符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@函数称为全局变量，但它们不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
-
-> [!NOTE]
-> 不能在视图中使用变量。
+> - 一些 Transact-SQL 系统函数的名称以两个 at 符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@ 函数称为全局变量，但 \@\@ 函数不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
+> - 不能在视图中使用变量。
+> - 事务回滚不影响对变量所做的更改。
 
 以下脚本创建一个小的测试表并向其填充 26 行。 脚本使用变量来执行下列三个操作： 
 

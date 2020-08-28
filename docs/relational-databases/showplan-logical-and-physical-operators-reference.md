@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455490"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760197"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -259,7 +259,7 @@ GetNext() 方法返回一个数据行，它的调用次数作为 ActualRows 显�
 |![Population Query Cursor 运算符图标](../relational-databases/media/poulation-query-32x.gif "Population Query Cursor 运算符图标")|**Population Query**|**Population Query** 运算符在打开游标时填充游标的工作表。| 
 |![Refresh Query Cursor 运算符图标](../relational-databases/media/refresh-query-32x.gif "Refresh Query Cursor 运算符图标")|**Refresh Query**|**Refresh Query** 运算符为提取缓冲区中的行提取当前数据。| 
 |![Remote Delete 运算符图标](../relational-databases/media/remote-delete-32x.gif "Remote Delete 运算符图标")|**Remote Delete**|**Remote Delete** 运算符用于从远程对象中删除输入行。 **Remote Delete** 既是一个逻辑运算符，也是一个物理运算符。| 
-|![Remote Index Seek Showplan 运算符](../relational-databases/media/remote-index-scan-32x.gif "Remote Index Seek Showplan 运算符")|**Remote Index Scan**|**Remote Index Scan** 运算符可以扫描在 Argument 列中指定的远程索引。 **Remote Index Scan** 既是一个逻辑运算符，也是一个物理运算符。| 
+|![Remote Index Scan Showplan 运算符](../relational-databases/media/remote-index-scan-32x.gif "Remote Index Scan Showplan 运算符")|**Remote Index Scan**|**Remote Index Scan** 运算符可以扫描在 Argument 列中指定的远程索引。 **Remote Index Scan** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Remote Index Seek Showplan 运算符](../relational-databases/media/remote-index-seek-32x.gif "Remote Index Seek Showplan 运算符")|**Remote Index Seek**|**Remote Index Seek** 运算符利用远程索引对象的查找功能来检索行。 **Argument** 列包含所使用的远程索引名称和 SEEK:() 谓词。 **Remote Index Seek** 是一个逻辑物理运算符。| 
 |![Remote Insert 运算符图标](../relational-databases/media/remote-insert-32x.gif "Remote Insert 运算符图标")|**Remote Insert**|**Remote Insert** 运算符将输入行插入到远程对象。 **Remote Insert** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Remote Query 运算符图标](../relational-databases/media/remote-query-32x.gif "Remote Query 运算符图标")|**Remote Query**|**Remote Query** 运算符将查询提交给远程源。 发送给远程服务器的查询文本显示在 **Argument** 列中。 **Remote Query** 既是一个逻辑运算符，也是一个物理运算符。| 

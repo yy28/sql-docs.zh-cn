@@ -1,21 +1,21 @@
 ---
 title: PowerShell 扩展
-description: 了解如何安装和使用 Azure Data Studio PowerShell 扩展，它为脚本的编写和调试提供丰富的 Powershell 编辑器支持。
+description: 了解如何安装和使用 Azure Data Studio PowerShell 扩展，它为脚本的编写和调试提供丰富的 PowerShell 编辑器支持。
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411313"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766536"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 编辑器支持
 
@@ -39,7 +39,7 @@ ms.locfileid: "87411313"
 
 ## <a name="installing-the-extension"></a>安装扩展
 
-可以按照 [Azure Data Studio 文档](https://docs.microsoft.com/sql/azure-data-studio/extensions)中的步骤安装 PowerShell 扩展的官方版本。
+可以按照 [Azure Data Studio 文档](./extensions.md)中的步骤安装 PowerShell 扩展的官方版本。
 在“扩展”窗格中，搜索“PowerShell”扩展并将其安装在此处。  未来有任何扩展更新，你都会收到系统自动发送的消息！
 
 你还可以从[发布页](https://github.com/PowerShell/vscode-powershell/releases)安装 VSIX 包，并通过命令行进行安装：
@@ -63,8 +63,8 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 PowerShell Core 是 [GitHub](https://github.com/powershell/powershell) 上的开放源代码项目。
 有关在 MacOS 或 Linux 平台上安装 PowerShell Core 的详细信息，请参阅以下文章：
 
-- [在 Linux 上安装 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [在 macOS 上安装 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [在 Linux 上安装 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [在 macOS 上安装 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>示例脚本
 
