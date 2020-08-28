@@ -3,7 +3,7 @@ description: 确定编辑模式
 title: 确定编辑模式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 788a91fc3de259210a5f2756f148161fbb90308e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec235cfd012b79449fdebfab9c99399d967ca32f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453499"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991358"
 ---
 # <a name="determining-edit-mode"></a>确定编辑模式
 ADO 维护与当前记录相关联的编辑缓冲区。 **EditMode**属性指示是否已对此缓冲区进行了更改或者是否已创建新记录。 使用 **EditMode** 确定当前记录的编辑状态。 如果编辑进程已中断并确定是否需要使用 **Update** 或 **CancelUpdate** 方法，则可以测试挂起的更改。  
   
  **EditMode** 返回下表中列出的一个 **EditModeEnum** 常量。  
   
-|返回的常量|描述|  
+|返回的常量|说明|  
 |--------------|-----------------|  
 |**adEditNone**|指示没有正在进行的编辑操作。|  
 |**adEditInProgress**|指示当前记录中的数据已修改但未保存。|  

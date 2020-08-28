@@ -3,7 +3,7 @@ description: 使用 AddNew 方法添加记录
 title: 使用 AddNew 添加记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27b42b9d65a4c00d4786ed900ad35ce00ef4b8f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 408f93b0054709de09d5556be94371dd9adc472f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453869"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991758"
 ---
 # <a name="adding-records-using-addnew-method"></a>使用 AddNew 方法添加记录
 这是 **AddNew** 方法的基本语法：
@@ -48,5 +48,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  因为此代码在批处理模式下将断开连接的**记录集**与客户端游标一起使用，所以必须使用新的**连接**对象将**记录集**重新连接到数据源，然后才能调用**UpdateBatch**方法将更改发布到数据库。 使用新的函数 **GetNewConnection**可以轻松完成此操作。

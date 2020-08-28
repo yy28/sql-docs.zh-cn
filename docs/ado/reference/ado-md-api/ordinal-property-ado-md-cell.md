@@ -3,7 +3,7 @@ description: Ordinal 属性（ADO MD 单元）
 title: 序号属性 (ADO MD 单元格) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0217267b73a449e40beff1134b3cdcc744246f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b4d14b2cdfc61fd76221a2071f15593807b5f1ba
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986218"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal 属性（ADO MD 单元）
 按单元格集中的位置唯一标识 [单元格](./cell-object-ado-md.md) 。  
@@ -30,7 +30,7 @@ ms.locfileid: "88777926"
 ## <a name="return-values"></a>返回值  
  返回一个 **长** 整型，并且为只读。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  单元格的序号值用于唯一标识单元格集中的单元格。 从概念上讲，单元在单元集中编号，就如同单元集 *是一个二维*数组，其中 *p* 是 [轴](./axes-collection-ado-md.md)的数目。 单元按行优先顺序从零开始编号。 下面是用于计算单元序号的公式：  
   
  单元格的序号值可以与单元格[集](./cellset-object-ado-md.md)对象的[Item](./item-property-ado-md-cellset.md)属性一起使用，以快速检索[单元](./cell-object-ado-md.md)。  

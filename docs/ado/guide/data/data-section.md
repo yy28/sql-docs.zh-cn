@@ -3,7 +3,7 @@ description: 数据部分
 title: Data 部分 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806200"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991448"
 ---
 # <a name="data-section"></a>数据部分
 Data 节定义行集的数据以及任何挂起的更新、插入或删除。 数据节可以包含零行或多行。 它只能包含一个行集中的数据，该行由架构定义。 另外，如上所述，可以省略没有任何数据的列。 如果在 data 节中使用了某个特性或子元素，并且该构造未在 schema 节中定义，则它将以无提示方式忽略。  
   
-## <a name="string"></a>字符串  
+## <a name="string"></a>String  
  文本数据中的保留 XML 字符必须替换为相应的字符实体。 例如，在公司名称 "Joe，车库" 中，单引号必须替换为实体。 实际行如下所示：  
   
 ```  

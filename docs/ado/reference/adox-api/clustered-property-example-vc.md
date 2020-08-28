@@ -3,7 +3,7 @@ description: Clustered 属性示例 (VC++)
 title: 聚集属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70719d77ce00cac42af05d7e42ce98c2b2c485af
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1338f81714ba096b5b129847dd312b6affeb2ef6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771126"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985128"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 属性示例 (VC++)
 此示例演示[索引](./index-object-adox.md)的[聚集](./clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为*Northwind*数据库中的所有索引的**聚集**属性返回**False** 。  

@@ -3,7 +3,7 @@ description: 处理失败的更新
 title: 处理失败的更新 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ca4c5a094e263ca0c44c58a9d9118d4e2ce01538
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806932"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991408"
 ---
 # <a name="dealing-with-failed-updates"></a>处理失败的更新
 如果更新结束时出现错误，则解决这些错误的方式取决于错误的性质和严重性以及应用程序的逻辑。 但是，如果数据库与其他用户共享，则典型的错误是，其他人在执行此操作之前会修改该字段。 这种类型的错误被称为冲突。 ADO 检测到这种情况并报告错误。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果存在更新错误，将在错误处理例程中捕获这些错误。 筛选包含 adFilterConflictingRecords 常量的记录集，以便仅显示冲突的行。 在此示例中，错误解决策略只是打印作者的名字和姓氏 (au_fname 和 au_lname) 。  
   
  提醒用户发生更新冲突的代码如下所示：  

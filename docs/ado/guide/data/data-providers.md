@@ -3,7 +3,7 @@ description: 数据提供程序
 title: 数据访问接口 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb448efeb0b78ba6cb29d9acff661308a6bf14bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8322aba6e78b88846bdce7e53dc8886ae31c197a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453579"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991468"
 ---
 # <a name="data-providers"></a>数据提供程序
 数据访问接口表示不同的数据源，例如 SQL 数据库、索引顺序文件、电子表格、文档存储和邮件文件。 提供程序使用称为行集的通用抽象来统一公开数据。  

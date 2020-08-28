@@ -3,7 +3,7 @@ description: Microsoft Jet 的 microsoft OLE DB 提供程序概述
 title: Microsoft Jet 的 microsoft OLE DB 提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: bc04cce33d3a1170c01b604ef8b71ef82bc98fe2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806616"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991028"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 的 microsoft OLE DB 提供程序概述
 Microsoft Jet 的 OLE DB 提供程序允许 ADO 访问 Microsoft Jet 数据库。
@@ -92,7 +92,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>特定于提供程序的记录集和命令属性
  Jet 提供程序还支持多个特定于提供程序的 **记录集** 和 **命令** 属性。 这些属性通过**Recordset**或**Command**对象的**properties**集合进行访问和设置。 该表列出了 ADO 属性名称及其对应的 OLE DB 属性名称。
 
-|属性名称|说明|
+|属性名|说明|
 |-------------------|-----------------|
 |Jet OLEDB：批量事务 (DBPROP_JETOLEDB_BULKNOTRANSACTIONS) |指示是否对 SQL 大容量操作进行事务处理。 由于资源延迟，大型大容量操作在事务处理时可能会失败。|
 |Jet OLEDB： DBPROP_JETOLEDB_ENABLEFATCURSOR 启用 Fat 游标 () |指示在为远程行源填充记录集时，Jet 是否应缓存多个行。|

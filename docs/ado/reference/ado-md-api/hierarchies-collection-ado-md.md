@@ -3,7 +3,7 @@ description: 层次结构集合 (ADO MD)
 title: 层次结构集合 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2a8bee4258be5d4f457a54b35840e19de97a289
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8a2420fbb920bb47e8db70c9c9c1584f102abfe2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778106"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986678"
 ---
 # <a name="hierarchies-collection-ado-md"></a>层次结构集合 (ADO MD)
 包含维度中的 [层次结构](./hierarchy-object-ado-md.md) 对象集。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **层次结构** 是标准 ADO 集合。 通过集合的属性和方法，你可以执行以下操作：  
   
 -   获取集合中具有 [Count](../ado-api/count-property-ado.md) 属性的对象的数目。  
