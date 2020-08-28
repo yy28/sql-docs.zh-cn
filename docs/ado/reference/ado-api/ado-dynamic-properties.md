@@ -2,7 +2,7 @@
 description: ADO 动态属性
 title: ADO 动态属性 |Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ab2320d3400c5be066af246b50daccaf468462
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd0186fba696d2fe3528f113bd0e07aeadd801f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771756"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976508"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 动态属性
 可以将动态属性添加到[连接](./connection-object-ado.md)、[命令](./command-object-ado.md)或[记录集](./recordset-object-ado.md)对象的[properties](./properties-collection-ado.md)集合。 这些属性的来源是数据提供程序，例如 [用于 SQL Server 的 OLE DB 提供程序](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)或服务提供程序（如 [用于 OLE DB 的 Microsoft 游标服务](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)）。 有关特定动态属性的详细信息，请参阅相应的数据提供程序或服务提供程序文档。  

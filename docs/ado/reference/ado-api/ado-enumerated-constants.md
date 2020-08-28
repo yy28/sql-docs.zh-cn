@@ -3,7 +3,7 @@ description: ADO 枚举常量
 title: ADO 枚举的常量 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2b7890cc9926025e7662e8571fb79309590f9de
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3c19b98cbb000abc93755c3de43ac5420db164d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776676"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976478"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 枚举常量
 为了帮助进行调试，ADO 枚举列出了每个常量的值。 不过，此值是纯粹的建议，可能会从 ADO 的一种版本更改为另一版本。 你的代码只应依赖于每个枚举常量的名称，而不是实际值。  

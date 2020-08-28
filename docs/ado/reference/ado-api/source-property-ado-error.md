@@ -3,7 +3,7 @@ description: Source 属性（ADO 错误）
 title: " (ADO 错误) 的源属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0edf4941ac2fa985c644c37627f86cfd40f2e62
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 117e6e1f16800daaf94cba6e4a7643d5aa1c8c1f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777426"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988978"
 ---
 # <a name="source-property-ado-error"></a>Source 属性（ADO 错误）
 指示最初生成错误的对象或应用程序的名称。  
@@ -31,7 +31,7 @@ ms.locfileid: "88777426"
 ## <a name="return-value"></a>返回值  
  返回一个 **字符串** 值，该值指示对象或应用程序的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用[错误](./error-object.md)对象上的**Source**属性来确定最初生成错误的对象或应用程序的名称。 这可能是对象的类名或编程 ID。 对于 ADO 中的错误，属性值将为 **adodb.recordset。**_Objectname_，其中 *objectname* 是触发错误的对象的名称。 对于 ADOX 和 ADO MD，该值将为 **adox。**_ObjectName_ 和 **ADOMD。**_ObjectName_。  
   
  根据**错误**对象的 "**源**"、"[编号](./number-property-ado.md)" 和 "[说明](./description-property.md)" 属性中的错误文档，您可以编写将相应处理错误的代码。  

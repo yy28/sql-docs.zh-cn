@@ -3,7 +3,7 @@ description: Append 方法 (ADO)
 title: ADO)  (追加方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87c4c1b9842dbd104a69ff4ba6a90eae2d7b1369
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84969b95751726579bdc7d4a61aee311b95b6108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776506"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976078"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 将对象追加到集合。 如果集合是 [字段](./fields-collection-ado.md)，则可在将新字段对象追加到集合之前创建新的 [字段](./field-object.md) 对象。  
@@ -34,17 +34,17 @@ collection.Append object
 fields.Append Name, Type, DefinedSize, Attrib, FieldValue  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *集合*  
+#### <a name="parameters"></a>参数  
+ *collection*  
  集合对象。  
   
  *字段*  
  **字段**集合。  
   
- 对象  
+ *object*  
  一个对象变量，表示要追加的对象。  
   
- *Name*  
+ *名称*  
  一个包含新**字段**对象名称的**字符串**值，不能与*字段*中的任何其他对象同名。  
   
  *类型*  
@@ -59,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  可选。 一个表示新字段的值的 **变量** 。 如果未指定，则使用 null 值追加字段。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="parameters-collection"></a>Parameters 集合  
  必须先设置[参数](./parameter-object.md)对象的[Type](./type-property-ado.md)属性，然后再将其追加到[Parameters](./parameters-collection-ado.md)集合。 如果选择可变长度的数据类型，则还必须将 " [Size](./size-property-ado-parameter.md) " 属性设置为大于零的值。  

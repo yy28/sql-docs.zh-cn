@@ -3,7 +3,7 @@ description: Execute21 方法 (RDS)
 title: Execute21 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84c8c977615fdc99da45a255e5306d4066b13406
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768396"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982298"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 执行请求并创建 ADO 记录集以在 ADO 2.1 中使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "88768396"
 object.Execute21(ConnectionString As String, HandlerString As String, QueryString As String, lMarshalOptions As Long, Properties, TableId, lExecuteOptions As Long, pParameters)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  一个字符串，用于连接到将发送请求以执行的 OLE DB 提供程序。 如果使用 *HandlerString*指定处理程序，则它可以编辑或替换连接字符串。  
   
@@ -70,7 +70,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  一个包含参数定义的安全数组的变体。 如果在*lExecuteOptions*中指定了*GetInfo*选项，则此参数用于返回从 OLE DB 提供程序获取的参数定义。 否则，此参数可能为空。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *HandlerString*参数可以为 null。 在这种情况下，会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 MSDFMAP.dll 会将参数解释为使用 sample.ini 检查连接和查询字符串的方向。  
   
 > [!NOTE]

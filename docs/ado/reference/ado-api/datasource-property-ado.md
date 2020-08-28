@@ -3,7 +3,7 @@ description: DataSource 属性 (ADO)
 title: 数据源属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b85f163ddb3f1fc31116966127bc01efa17a262
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48c5969df864364cd87d131fce2740a5a0e043f7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444219"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974258"
 ---
 # <a name="datasource-property-ado"></a>DataSource 属性 (ADO)
 指示包含要表示为 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象的数据的对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此属性用于通过数据环境创建数据绑定控件。 数据环境维护数据源 (数据源的集合) 包含 (数据成员) 的命名对象，这些成员将表示为 **记录集** 对象。  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md)和**DataSource**属性必须结合使用。  

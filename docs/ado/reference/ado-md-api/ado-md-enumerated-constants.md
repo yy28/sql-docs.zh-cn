@@ -3,7 +3,7 @@ description: ADO MD 枚举常量
 title: ADO MD 枚举常量 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24e742f36dfda2c76059eb8055a903bac4ced9ac
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c302bde71ea759a068aaa9e7274ec0182217a0cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776746"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987548"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 枚举常量
 为了协助调试，ADO MD 枚举的常量会列出每个常量的值。 不过，此值是纯粹的建议，可能会从 ADO MD 的一种版本更改为另一版本。 你的代码只应依赖于枚举常量的名称，而不是实际值。  

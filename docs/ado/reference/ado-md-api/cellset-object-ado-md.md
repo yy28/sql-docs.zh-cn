@@ -3,7 +3,7 @@ description: 单元集对象 (ADO MD)
 title: " (ADO MD) 的单元集对象 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,24 +16,23 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 411ed21d5fecf5c9791a5d96aac60724e7446958
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778306"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987148"
 ---
 # <a name="cellset-object-ado-md"></a>单元集对象 (ADO MD)
 表示多维查询的结果。 它是从多维数据集或其他单元集选择的单元的集合。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用直接的、类似数组的访问检索 **单元集** 内的数据。 您可以向下钻取到特定的成员，以获取有关该成员的数据。 例如，下面的代码返回名为的单元集的第一个轴上第一个位置的第一个成员的标题 `cst` ：  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>备注  
  单元集内没有当前单元格的概念。 相反， [Item](./item-property-ado-md-cellset.md) 属性从单元集中检索特定的 [单元](./cell-object-ado-md.md) 对象。 **Item**属性的参数确定要检索的单元格。 可以指定单元格的唯一序号值。 还可以通过使用单元格集的每个轴上的位置号来检索单元格。 有关检索单元格的详细信息，请参阅 [Item](./item-property-ado-md-cellset.md) 属性。  
   
  使用 **单元集** 对象的集合、方法和属性，可以执行以下操作：  

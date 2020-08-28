@@ -3,7 +3,7 @@ description: 连接对象 (ADO)
 title: ADO)  (连接对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ce6a6e3c2e665c57b9a82d968dac3cf3c74a731
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 38a28bf434998943b07ef6463970c26510195299
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775956"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974898"
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
 表示到数据源的连接是打开的。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Connection**对象表示与数据源的唯一会话。 在客户端/服务器数据库系统中，它可能等效于到服务器的实际网络连接。 根据提供程序支持的功能， **连接** 对象的某些集合、方法或属性可能不可用。  
   
  使用 **连接** 对象的集合、方法和属性，可以执行以下操作：  

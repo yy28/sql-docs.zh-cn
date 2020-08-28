@@ -3,7 +3,7 @@ description: Find 方法示例 (JScript)
 title: Find 方法示例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a37d907547359fd1366bc5b756fbcbb65b4ed20
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bcc1014b589ab45af5aeaaf85b86d4b863f09712
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775216"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972938"
 ---
 # <a name="find-method-example-jscript"></a>Find 方法示例 (JScript)
 此示例使用 [Recordset](./recordset-object-ado.md) 对象的 [Find](./find-method-ado.md) 方法在 ***Northwind*** 数据库中查找和显示名称以字母 G 开头的公司，并将以下代码粘贴到记事本或其他文本编辑器中，并将其保存为 **FindJS**。  

@@ -3,7 +3,7 @@ description: ActiveConnection 属性 (ADO)
 title: " (ADO) 的 ActiveConnection 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 344e712551e46d1ec28f75864dacbdfc39989248
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760097"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976958"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 属性 (ADO)
 指示指定的[命令](./command-object-ado.md)、[记录集](./recordset-object-ado.md)或[记录](./record-object-ado.md)对象当前属于哪个[连接](./connection-object-ado.md)对象。  
@@ -31,7 +31,7 @@ ms.locfileid: "88760097"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  如果连接已关闭，则设置或返回一个**字符串**值，该值包含连接的定义; 如果连接处于打开状态，则为包含当前**连接**对象的**变体**。 默认值为 null 对象引用。 请参见 [ConnectionString](./connectionstring-property-ado.md) 属性。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用**ActiveConnection**属性可确定要对其执行指定**命令**对象的**连接**对象，或者将打开指定的**记录集**。  
   
 ## <a name="command"></a>Command  
@@ -41,7 +41,7 @@ ms.locfileid: "88760097"
   
  如果将 **连接** 对象分配给 **ActiveConnection** 属性，则必须打开该对象。 分配关闭的连接对象会导致错误。  
   
-### <a name="note"></a>注意  
+### <a name="note"></a>说明  
  **Microsoft Visual Basic** 将 **ActiveConnection** 属性设置为 " *无* " 将 **命令** 对象与当前 **连接** 取消关联，并使提供程序释放数据源上的任何关联资源。 然后，可以将 **命令** 对象与相同或其他 **连接** 对象关联。 某些提供程序允许您将属性设置从一个连接更改为另一个 **连接** ，而无需先将该属性设置为 *Nothing*。  
   
  如果**Command**对象的[parameters](./parameters-collection-ado.md)集合包含提供程序提供的参数，则如果将**ActiveConnection**属性设置为*Nothing*或其他**连接**对象，则会清除该集合。 如果手动创建[参数](./parameter-object.md)对象，并使用它们来填充**Command**对象的**Parameters**集合，则将**ActiveConnection**属性设置为*Nothing*或另一个**连接**对象会使**参数**集合保持不变。  

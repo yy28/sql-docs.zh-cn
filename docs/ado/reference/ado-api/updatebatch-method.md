@@ -3,7 +3,7 @@ description: UpdateBatch 方法
 title: UpdateBatch 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b462fb22758481f3237a2a8c793b76dc50956ad
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 648e6f8e64d4001851afb3838c901ab2b1172108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776956"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987998"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 方法
 将所有挂起的批更新写入磁盘。  
@@ -34,14 +34,14 @@ ms.locfileid: "88776956"
 recordset.UpdateBatch AffectRecords, PreserveStatus  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *AffectRecords*  
  可选。 一个 [AffectEnum](./affectenum.md) 值，指示 **UpdateBatch** 方法将影响的记录数。  
   
  *PreserveStatus*  
  可选。 一个 **布尔** 值，指定是否应提交 [状态](./status-property-ado-recordset.md) 属性指示的本地更改。 如果此值设置为 " **True**"，则在更新完成后，每条记录的 " **状态** " 属性保持不变。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在批处理更新模式下修改**记录集**对象时使用**UpdateBatch**方法，以将**记录集**对象中所做的所有更改传输到基础数据库。  
   
  如果 **Recordset** 对象支持批处理更新，则可以在调用 **UpdateBatch** 方法之前，将多个更改缓存到本地一个或多个记录。 如果在调用 **UpdateBatch** 方法时编辑当前记录或添加新记录，ADO 将自动调用 [Update](./update-method.md) 方法，以便在将批处理更改传输到提供程序之前保存当前记录的所有挂起的更改。 只应将批处理更新用于键集或静态游标。  

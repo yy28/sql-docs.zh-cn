@@ -3,7 +3,7 @@ description: MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)
 title: MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 151c111db94cd0132196437fc86e2aa9f80be7e8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8feb41ff7ff1069d29beacc3b5dc0d323cdfd72b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767996"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981908"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)
 移动到指定 [记录集](../ado-api/recordset-object-ado.md) 对象中的第一条、最后一条、下一条记录或上一条记录。  
@@ -37,11 +37,11 @@ ms.locfileid: "88767996"
 DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可以将 **Move** 方法用于 **RDS。DataControl** 对象，用于在网页上浏览数据绑定控件中的数据记录。 例如，假设您通过绑定到 RDS 在网格中显示一个 **记录集** **。DataControl** 对象。 然后，你可以包括 "第一个"、"最后一个"、"下一个" 和 "上一个" 按钮，用户可以单击这些按钮移动到所显示的 **记录集中**的第一个、最后一个、下一个或 为此，可调用 **MoveFirst**、 **MoveLast**、 **MoveNext**和 **MovePrevious** 方法 **。** 第一个、最后一个、下一个和上一个按钮的 onClick 过程中的 DataControl 对象。 [通讯簿示例](../../guide/remote-data-service/address-book-navigation-buttons.md)显示了如何执行此操作。  
   
 ## <a name="applies-to"></a>适用于  

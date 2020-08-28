@@ -3,7 +3,7 @@ description: WillConnect 事件 (ADO)
 title: WillConnect 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a63bf9d324fc9c2e0363576814e1c97c9ad6aeb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 259ef55060d7968d9ec557c831412ad58609a6df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776856"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987778"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 在连接开始之前调用 **WillConnect** 事件。  
@@ -36,7 +36,7 @@ ms.locfileid: "88776856"
 WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  一个 **字符串** ，其中包含挂起连接的连接信息。  
   
@@ -59,7 +59,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  此事件通知适用的 [连接](./connection-object-ado.md) 对象。 **WillConnect**事件处理程序对**连接**参数的更改将不会对**连接**产生任何影响。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  调用 **WillConnect** 时， *ConnectionString*、 *UserID*、 *Password*和 *Options* 参数设置为由导致此事件的操作所建立的值 (挂起的连接) ，并且可以在事件返回前更改。 **WillConnect** 可能会返回挂起的连接被取消的请求。  
   
  当取消此事件时，将调用 **ConnectComplete** ，并将其 *adStatus* 参数设置为 **adStatusErrorsOccurred**。  

@@ -3,7 +3,7 @@ description: CreateRecordset 方法 (RDS)
 title: CreateRecordset 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768616"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982518"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空的、断开连接的 [记录集](../ado-api/recordset-object-ado.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "88768616"
 object.CreateRecordset(ColumnInfos)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Object*  
  一个对象变量，它表示 [RDSServer](./datafactory-object-rdsserver.md) 或 [RDS。DataControl](./datacontrol-object-rds.md) 对象。  
   
@@ -57,7 +57,7 @@ object.CreateRecordset(ColumnInfos)
   
  然后，将列数组集分组到一个数组中，该数组定义 **记录集**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  服务器端业务对象可以使用非 OLE DB 的数据访问接口中的数据（例如包含股票行情的操作系统文件）来填充生成的 **记录集** 。  
   
  下表列出了**CreateRecordset**方法支持的[DataTypeEnum](../ado-api/datatypeenum.md)值。 列出的数字是用于定义字段的引用编号。  

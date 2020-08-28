@@ -3,7 +3,7 @@ description: 目录对象 (ADO MD)
 title: 目录对象 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b198e9765a8d0e68e61ecd3f9ed334e34c714ea8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0e62b4eedd835cff2d5bd99e054648339ffd9bc0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778336"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987298"
 ---
 # <a name="catalog-object-ado-md"></a>目录对象 (ADO MD)
 包含多维架构信息 (多维数据提供程序) 特定于多维数据访问接口 (MDP) 的多维数据集和基础维度、层次结构、级别和成员。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **目录** 对象的集合和属性，可以执行以下操作：  
   
 -   通过将 [ActiveConnection](./activeconnection-property-ado-md.md) 属性设置为标准 ADO [连接](../ado-api/connection-object-ado.md) 对象或有效的连接字符串，打开目录。  

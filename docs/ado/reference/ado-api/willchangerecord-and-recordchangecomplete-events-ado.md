@@ -3,7 +3,7 @@ description: WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 title: WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f69b16392204722e4efd3dc91602a920316919d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e22e922a240643d499408dda3941fdf638a529ff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776876"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987858"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**事件将在[记录集](./recordset-object-ado.md))  (行中的一个或多个记录发生更改之前调用。 在一个或多个记录发生更改后调用 **RecordChangeComplete** 事件。  
@@ -37,7 +37,7 @@ WillChangeRecord adReason, cRecords, adStatus, pRecordset
 RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *adReason*  
  一个 [EventReasonEnum](./eventreasonenum.md) 值，该值指定此事件的原因。 其值可以是 **adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、 **adRsnUndoUpdate**、 **adRsnUndoAddNew**、 **adRsnUndoDelete**或 **adRsnFirstChange**。  
   
@@ -61,7 +61,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  **记录集**对象。 发生此事件的 **记录集** 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  由于以下**记录集**操作，行中第一个已更改的字段可能发生**WillChangeRecord**或**RecordChangeComplete**事件： [Update](./update-method.md)、 [Delete](./delete-method-ado-recordset.md)、 [CancelUpdate](./cancelupdate-method-ado.md)、 [AddNew](./addnew-method-ado.md)、 [UpdateBatch](./updatebatch-method.md)和[CancelBatch](./cancelbatch-method-ado.md)。 **记录集** [CursorType](./cursortype-property-ado.md)的值确定导致事件发生的操作。  
   
  在**WillChangeRecord**事件期间，"**记录集**[筛选器](./filter-property.md)" 属性设置为 " **adFilterAffectedRecords**"。 在处理事件时，不能更改此属性。  

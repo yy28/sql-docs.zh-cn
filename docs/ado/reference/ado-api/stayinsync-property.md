@@ -3,7 +3,7 @@ description: StayInSync 属性
 title: StayInSync 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8da28769a68cf95e727e61114235e76218f1bae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9677a776273e83ad31fecde3a7ea436138d3784e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777246"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988618"
 ---
 # <a name="stayinsync-property"></a>StayInSync 属性
 指示在分层 [记录集](./recordset-object-ado.md) 对象中，对基础子记录的引用 (即，该 *章节*) 父行位置发生更改时所做的更改。  
@@ -33,7 +33,7 @@ ms.locfileid: "88777246"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **布尔** 值。 默认值为 **True**。 如果 **为 True**，则当父 **记录集** 对象更改行位置时，将更新该章节;如果 **为 False**，则即使父 **记录集** 对象已更改行位置，本章仍将继续引用前一章节中的数据。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此属性适用于分层记录集（例如[OLE DB 的 Microsoft 数据定形服务](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)支持的层次记录集），并且必须在检索子**记录集**之前对父**记录**集进行设置。 此属性可简化层次记录集导航。  
   
 ## <a name="applies-to"></a>适用于  

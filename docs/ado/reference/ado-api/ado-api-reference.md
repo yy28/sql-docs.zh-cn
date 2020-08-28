@@ -3,7 +3,7 @@ description: ADO API 参考
 title: ADO API 参考 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 521d22dc7b61e6f7b807a959af567655f39e61be
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 12bc8aa9075ad92d7ee9fe84a62b735b29fa0ee3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760188"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976678"
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
 ADO 文档的本节包含有关每个 ADO 对象、集合、属性、动态属性、方法、事件和枚举的主题。 此外，它还包含一个 ADO 语法索引列表，该列表将与 Microsoft Visual C++ 和 Windows 基础类 (WFC) 一起使用。  

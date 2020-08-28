@@ -3,7 +3,7 @@ description: FilterColumn 属性 (RDS)
 title: FilterColumn 属性 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df85b0a5493e73613ac5ee5d4f1d7e7470fe645b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1af2eb386f3d61387158a3a654ff900f6b6ad43a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768256"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982198"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 属性 (RDS)
 指示用于计算筛选条件的列。  
@@ -34,14 +34,14 @@ ms.locfileid: "88768256"
 DataControl.FilterColumn = String  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
  *字符串*  
  一个 **字符串** 值，该值指定要对其计算筛选条件的列。 筛选条件是在 [FilterCriterion](./filtercriterion-property-rds.md) 属性中指定的。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和**FilterColumn**属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 [Reset](./reset-method-rds.md)方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
   
 ## <a name="applies-to"></a>适用于  

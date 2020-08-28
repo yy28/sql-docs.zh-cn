@@ -3,7 +3,7 @@ description: Clone 方法 (ADO)
 title: ) ADO (克隆方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c91960975b04e5c09cf2745e1bb77e7b343dbd2e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: cc7bab8106ba0d9b023999f80ce77935ae30cc8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776246"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975428"
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 从现有**记录集**对象创建重复的[记录集](./recordset-object-ado.md)对象。 还可以指定克隆为只读。  
@@ -37,7 +37,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
 ## <a name="return-value"></a>返回值  
  返回 **记录集** 对象引用。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *rstDuplicate*  
  标识要创建的重复 **记录集** 对象的对象变量。  
   
@@ -47,7 +47,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  可选。 一个 [LockTypeEnum](./locktypeenum.md) 值，该值指定原始 **记录集**的锁定类型或只读 **记录集**。 有效值为 **adLockUnspecified** 或 **adLockReadOnly**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Clone** 方法可创建多个重复的 **记录集** 对象，尤其是在您想要在一组给定的记录中维护多个当前记录时。 使用 **Clone** 方法比创建和打开使用与原始方法相同的定义的新 **Recordset** 对象更有效。  
   
  原始**记录集**（如果有）的[筛选器](./filter-property.md)属性将不会应用于克隆。 设置新**记录集**的 "**筛选器**" 属性以筛选结果。 复制任何现有筛选器值的最简单方法是直接分配 **筛选器** 值，如下所示。  
@@ -73,12 +73,12 @@ rsNew.Filter = rsOriginal.Filter
 |[EndOfRecordset](./endofrecordset-event-ado.md)|否|  
 |[FetchComplete](./fetchcomplete-event-ado.md)|否|  
 |[FetchProgress](./fetchprogress-event-ado.md)|否|  
-|[FieldChangeComplete](./willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
+|[FieldChangeComplete](./willchangefield-and-fieldchangecomplete-events-ado.md)|适合|  
 |[MoveComplete](./willmove-and-movecomplete-events-ado.md)|否|  
-|[RecordChangeComplete](./willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
+|[RecordChangeComplete](./willchangerecord-and-recordchangecomplete-events-ado.md)|适合|  
 |[RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
-|[WillChangeField](./willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
-|[WillChangeRecord](./willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
+|[WillChangeField](./willchangefield-and-fieldchangecomplete-events-ado.md)|适合|  
+|[WillChangeRecord](./willchangerecord-and-recordchangecomplete-events-ado.md)|适合|  
 |[WillChangeRecordset](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
 |[WillMove](./willmove-and-movecomplete-events-ado.md)|否|  
   

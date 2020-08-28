@@ -1,7 +1,7 @@
 ---
 description: Server 属性 (RDS)
 title: 服务器属性 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c7d2c095c9f10e95df54849ce729ffdcbbca135
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 43a92ce6f71d8c9ad4cca25f1c657150b28bde27
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767516"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981258"
 ---
 # <a name="server-property-rds"></a>Server 属性 (RDS)
 指示 IIS) 名称和通信协议 (Internet Information Services。  
@@ -107,7 +107,7 @@ DataControl.Server="computername"
 DataControl.Server=""  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *awebsrvr*或 *computername*  
  如果服务器位于远程计算机上，则为包含 Internet 或 intranet 路径或计算机名称的 **字符串** 值;或者，如果服务器在本地计算机上，则为空字符串。  
   
@@ -117,7 +117,7 @@ DataControl.Server=""
  *DataControl*  
  表示 RDS 的对象变量 **。DataControl** 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  服务器是 RDS 的位置 **。DataControl** 请求 (也就是说，处理) 的查询或更新。 默认情况下，所有请求均由 [RDSServer DataFactory](./datafactory-object-rdsserver.md) 对象 [MSDFMAP 处理。处理程序](../../guide/remote-data-service/datafactory-customization.md) 组件，并 [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) 指定服务器上的文件。 请记住，在将服务器更改为协调新旧 **MSDFMAP.INI** 文件中的设置时。 不兼容性可能会导致一台服务器上的成功请求在另一台服务器上失败。 如果服务器属性设置为空字符串 ""，则将在本地计算机上使用这些对象。  
   
 ## <a name="applies-to"></a>适用于  

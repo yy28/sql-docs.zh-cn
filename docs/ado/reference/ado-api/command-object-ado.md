@@ -3,7 +3,7 @@ description: 命令对象 (ADO)
 title: " (ADO) 的命令对象 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d876be4883844790815a0640d26cee2933ca17f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 252a59f63c4ce782a915a1e1cf11af58fd2f233b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776156"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975228"
 ---
 # <a name="command-object-ado"></a>命令对象 (ADO)
 定义要对数据源执行的特定命令。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Command** 对象可以查询数据库并返回记录 [集](./recordset-object-ado.md) 对象中的记录，执行大容量操作或操作数据库的结构。 根据提供程序的功能，在引用某些 **命令** 集、方法或属性时，可能会生成错误。  
   
  使用 **Command** 对象的集合、方法和属性，可以执行以下操作：  

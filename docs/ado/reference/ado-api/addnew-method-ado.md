@@ -3,7 +3,7 @@ description: AddNew 方法 (ADO)
 title: 在 ADO)  (AddNew 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e16fb5d00ed38a0adbbb28b9c13e34f75f26236
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4695d1cf70328adad910d5b2b34e6b346b8049a4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760229"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976798"
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 为可更新的 [记录集](./recordset-object-ado.md) 对象创建新记录。  
@@ -44,7 +44,7 @@ recordset.AddNew FieldList, Values
  *值*  
  可选。 单个值，或新记录中的字段的值数组。 如果 *Fieldlist* 是一个数组，则 *值* 也必须是具有相同成员数的数组;否则，将发生错误。 字段名称的顺序必须与每个数组中的字段值顺序相匹配。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **AddNew** 方法创建并初始化新记录。 使用 [支持](./supports-method.md) 方法 with **adAddNew** ([CursorOptionEnum](./cursoroptionenum.md) 值) ，验证是否可以将记录添加到当前 **记录集** 对象。  
   
  调用 **AddNew** 方法之后，新记录将成为当前记录，并在调用 [Update](./update-method.md) 方法后保持最新。 由于新记录将追加到 **记录集中**，因此 **，对更新** 进行的调用将移过 **记录集**的末尾，使 **EOF** 为 True。 如果 **记录集** 对象不支持书签，则在移动到另一记录后，您可能无法访问新记录。 根据游标类型，可能需要调用 [Requery](./requery-method.md) 方法以使新记录可访问。  

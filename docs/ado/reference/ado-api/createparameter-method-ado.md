@@ -3,7 +3,7 @@ description: CreateParameter 方法 (ADO)
 title: " (ADO) 的 CreateParameter 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c3ed02109806232f8301b33e8b0387ea78b6ef4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8fd075dff5ae67c7965082a9b7d0f75f5c4d47eb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775606"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974478"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 创建具有指定属性的新 [参数](./parameter-object.md) 对象。  
@@ -37,8 +37,8 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## <a name="return-value"></a>返回值  
  返回一个 **参数** 对象。  
   
-#### <a name="parameters"></a>parameters  
- *Name*  
+#### <a name="parameters"></a>参数  
+ *名称*  
  可选。 一个包含**参数**对象名称的**字符串**值。  
   
  *类型*  
@@ -53,7 +53,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *值*  
  可选。 一个 **变量** ，指定 **参数** 对象的值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **CreateParameter** 方法创建一个具有指定名称、类型、方向、大小和值的新 **参数** 对象。 您在参数中传递的任何值都将写入相应的 **参数** 属性。  
   
  此方法不会将**参数**对象自动追加到[Command](./command-object-ado.md)对象的**Parameters**集合。 这使你可以设置其他属性，这些属性的值会在你将 **参数** 对象追加到集合时进行验证。  

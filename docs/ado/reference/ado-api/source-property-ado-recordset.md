@@ -3,7 +3,7 @@ description: Source 属性（ADO 记录集）
 title: ADO 记录集)  (源属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29ce12027267918822ed49185f06ab28a6448190
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3a71efe111a58ab8f799db512e77da4365ba5f48
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777396"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988898"
 ---
 # <a name="source-property-ado-recordset"></a>Source 属性（ADO 记录集）
 指示 [记录集](./recordset-object-ado.md) 对象的数据源。  
@@ -35,7 +35,7 @@ ms.locfileid: "88777396"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置**字符串**值或[命令](./command-object-ado.md)对象引用;仅返回一个指示**记录集**的源的**字符串**值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Source** 属性可以通过以下方法之一指定 **记录集** 对象的数据源： **命令** 对象变量、SQL 语句、存储过程或表名。  
   
  如果将**Source**属性设置为**Command**对象，则**Recordset**对象的[ActiveConnection](./activeconnection-property-ado.md)属性将继承指定**命令**对象的**ActiveConnection**属性的值。 但是，读取**源**属性不会返回**命令**对象;相反，它将返回您为其设置**源**属性的**命令**对象的[CommandText](./commandtext-property-ado.md)属性。  

@@ -3,7 +3,7 @@ description: 'CopyRecord、CopyTo 和 SaveToFile 方法示例 (VB) '
 title: CopyRecord、CopyTo 和 SaveToFile 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cef4b99210f4b9e066753a3a81ed0153f2c2392
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1db7959c2a36f0595e8861926adce079b8864544
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775727"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974638"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、CopyTo 和 SaveToFile 方法示例 (VB) 
 此示例演示如何使用 [Stream](./stream-object-ado.md) 或 [Record](./record-object-ado.md) 对象创建文件的副本。 一个副本用于 Internet 发布的 Web 文件夹。 显示的其他属性和方法包括 [流类型](./type-property-ado-stream.md)、 **打开**、 [LoadFromFile](./loadfromfile-method-ado.md)和 [打开的记录](./open-method-ado-record.md)。  
