@@ -2,7 +2,7 @@
 description: ADO 动态属性索引
 title: ADO 动态属性索引 |Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771736"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976488"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态属性索引
 数据访问接口、服务提供程序和服务组件可以将动态属性添加到未打开的[连接](./connection-object-ado.md)和[记录集](./recordset-object-ado.md)对象的**属性**集合中。 指定的提供程序还可以在打开这些对象时插入其他属性。 其中一些属性在 " [ADO 动态属性](./ado-dynamic-properties.md) " 部分列出。 [附录 A： providers](../../guide/appendixes/appendix-a-providers.md)部分的特定提供程序下列出了更多详细信息。  

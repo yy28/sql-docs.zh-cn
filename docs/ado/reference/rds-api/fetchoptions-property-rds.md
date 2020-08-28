@@ -3,7 +3,7 @@ description: FetchOptions 属性 (RDS)
 title: FetchOptions 属性 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5608c03744ff632adb4b5e8b9f4da32797bfe8ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768276"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982208"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 属性 (RDS)
 指示异步提取的类型。  
@@ -39,7 +39,7 @@ ms.locfileid: "88768276"
 > [!NOTE]
 >  每个使用这些常量的客户端可执行文件都必须为其提供声明。 你可以从文件 Adcvbs 中剪切并粘贴所需的常量声明，该文件位于 RDS 库的默认安装文件夹中。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在 Web 应用程序中，你通常会希望使用 **adcFetchAsync** (默认值) ，因为它提供更好的性能。 在已编译的客户端应用程序中，通常需要使用 **adcFetchBackground**。  
   
 ## <a name="applies-to"></a>适用于  

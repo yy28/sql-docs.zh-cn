@@ -3,7 +3,7 @@ description: 索引集合 (ADOX)
 title: 索引集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0075ca8340d869f803a10d296672e03326c5bad6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: daea070c8bd39d6208404f119578773382078634
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770266"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984188"
 ---
 # <a name="indexes-collection-adox"></a>索引集合 (ADOX)
 包含表的所有 [索引](./index-object-adox.md) 对象。  
   
-## <a name="remarks"></a>备注  
- **索引**集合的[APPEND](./append-method-adox-indexes.md)方法对于 ADOX 是唯一的。 方法：  
+## <a name="remarks"></a>注解  
+ **索引**集合的[APPEND](./append-method-adox-indexes.md)方法对于 ADOX 是唯一的。 可以：  
   
 -   使用 **Append** 方法向集合中添加一个新索引。  
   
- 其余属性和方法对于 ADO 集合是标准的。 方法：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的索引。  
   

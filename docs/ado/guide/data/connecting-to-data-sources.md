@@ -3,7 +3,7 @@ description: 连接到数据源
 title: 连接到数据源 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1de885a14dd2647df08ae6245f64a629d706796d
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 988eef3a3eb706480e50f0feb6d2fe363b4faabd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806315"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991518"
 ---
 # <a name="connecting-to-data-sources"></a>连接到数据源
 ADO **连接** 对象表示与数据源的唯一会话，包括 DBMS、文件存储区或逗号分隔的文本文件。 对于客户端/服务器数据库系统，ADO 连接可以是与服务器的实际网络连接。  

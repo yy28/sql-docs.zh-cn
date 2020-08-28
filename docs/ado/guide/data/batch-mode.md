@@ -3,7 +3,7 @@ description: 批处理模式
 title: 批处理模式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 353e5ae0fe15fb21f04f6efcc97195a5e237b58e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a2cda3a14dc51532d52184f8b2101981d4f36cd3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806395"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991598"
 ---
 # <a name="batch-mode"></a>批处理模式
 当 **LockType** 属性设置为 **adLockBatchOptimistic** ，并且提供程序支持批处理更新时，批处理模式有效。 某些锁类型设置不可用，具体取决于游标位置。 例如，当 **CursorLocation** 设置为 **adUseClient**时，悲观锁定类型不可用。 相反，当光标位于服务器上时，提供程序不支持批处理开放式锁定。 只应将批处理更新用于键集或静态游标。  

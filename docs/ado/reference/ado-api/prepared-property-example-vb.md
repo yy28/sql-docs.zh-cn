@@ -3,7 +3,7 @@ description: Prepared 属性示例 (VB)
 title: " (VB) 的已准备属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ae1e12bf05312f96e4647bb1185e3ac8359b0ed
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0442b231be45132c486ae45e5f8850b115b932bc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773096"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990028"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 属性示例 (VB)
 此示例通过打开两个[命令](./command-object-ado.md)对象（一项已准备，一个未准备）来演示已[准备](./prepared-property-ado.md)的属性。  

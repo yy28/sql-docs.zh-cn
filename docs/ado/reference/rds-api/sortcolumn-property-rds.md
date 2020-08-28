@@ -1,7 +1,7 @@
 ---
 description: SortColumn 属性 (RDS)
 title: SortColumn 属性 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cb2c1ba329537acd5b9ffe2008f334b34a45c2f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 555ad28129e0a2868f0c1b9bc8c338e40022caa0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767476"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981198"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 属性 (RDS)
 指示对记录进行排序所依据的列。  
@@ -34,14 +34,14 @@ ms.locfileid: "88767476"
 DataControl.SortColumn = String  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
  *字符串*  
  一个 **字符串** 值，该值表示对记录进行排序所依据的列的名称或别名。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **SortColumn**、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和[FilterColumn](./filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 [Reset](./reset-method-rds.md)方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
   
  若要对 **记录集**进行排序，必须先保存所有挂起的更改。 如果你使用的是 **RDS。DataControl**，可以使用 [SubmitChanges](./submitchanges-method-rds.md) 方法。 例如，如果你的 **RDS。DataControl** 名为 ADC1，则你的代码将为 `ADC1.SubmitChanges` 。 如果使用 ADO **记录集**，则可以使用其 [UpdateBatch](../ado-api/updatebatch-method.md) 方法。 使用**UpdateBatch**是使用[CreateRecordset](./createrecordset-method-rds.md)方法创建的**记录集**对象的建议方法。 例如，你的代码可以是 `myRS.UpdateBatch` 或 `ADC1.Recordset.UpdateBatch` 。  

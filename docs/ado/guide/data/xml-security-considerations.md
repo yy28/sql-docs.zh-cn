@@ -3,7 +3,7 @@ description: XML 安全注意事项
 title: XML 安全注意事项 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f73261f51a457144010aec6871f2acbf083b0361
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 608ad67d531573d0124ea312252e6d30c289bf15
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758967"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978788"
 ---
 # <a name="xml-security-considerations"></a>XML 安全注意事项
 Recordset 对象上 ADO Save 和 Open 方法不被视为在 Internet Explorer 中运行的安全操作。 因此，如果在浏览器承载的应用程序或控件中运行的脚本代码中使用这些方法，浏览器的安全配置将对其行为产生影响。  

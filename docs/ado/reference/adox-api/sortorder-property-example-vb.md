@@ -3,7 +3,7 @@ description: SortOrder 属性示例 (VB)
 title: 排序 (VB) 的属性示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5196f4391a37e5881cfc4c7e5743e56cf671c976
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983268"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
 此示例演示已追加到[索引](./index-object-adox.md)的[Columns](./columns-collection-adox.md)集合的[列](./column-object-adox.md)的[SortOrder](./sortorder-property-adox.md)属性。 该代码将升序索引追加到 **Employees** 表中的 Country 列，然后显示记录。 然后，该代码将向 **Employees** 表中的 "国家/地区" 列附加一个降序索引，并再次显示记录。 显示升序和降序索引之间的差异。  

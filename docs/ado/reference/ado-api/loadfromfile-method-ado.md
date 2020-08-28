@@ -3,7 +3,7 @@ description: LoadFromFile 方法 (ADO)
 title: " (ADO) 的 LoadFromFile 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da662437c19f9c5105b7602035c5bcc519ea2d0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 76c00998c8fd7c3c6f737ab9b2ab0e2e35c74101
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774586"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990698"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 将现有文件的内容加载到 [流](./stream-object-ado.md)中。  
@@ -33,11 +33,11 @@ ms.locfileid: "88774586"
 Stream.LoadFromFileFileName  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *FileName*  
  一个 **字符串** 值，该值包含要加载到 **流**中的文件的名称。 *文件名* 可以包含 UNC 格式的任何有效路径和名称。 如果指定的文件不存在，则会发生运行时错误。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此方法可用于将本地文件的内容加载到 **流** 对象中。 这可用于将本地文件的内容上载到服务器。  
   
  在调用**LoadFromFile**之前，**流**对象必须已打开。 此方法不更改**流**对象的绑定;它仍将绑定到最初打开**流**时所指定的 URL 或**记录**的对象。  

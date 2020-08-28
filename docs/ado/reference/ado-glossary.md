@@ -6,19 +6,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0a9f2795906dce8c6a43b66397eefc1679ea22d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776796"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987658"
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -187,7 +187,7 @@ ms.locfileid: "88776796"
  ISAPI (Internet 服务器应用程序编程接口)   
  一组适用于 Internet 服务器的函数，例如运行 Microsoft® Internet Information Services (IIS) 的 Windows NT® Server/Windows 2000 服务器。  
   
- Key  
+ 键  
  表中唯一标识行的一列或多列;通常用于为表编制索引。  
   
 ## <a name="m"></a>M  

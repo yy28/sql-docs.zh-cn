@@ -3,7 +3,7 @@ description: 用户集合 (ADOX)
 title: 用户集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d452075b3659d3ad01ba28540217b8447950084
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a1f511e637696e5b14905bcccba50cb13737d6e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769036"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983028"
 ---
 # <a name="users-collection-adox"></a>用户集合 (ADOX)
 包含[目录](./catalog-object-adox.md)或[组](./group-object-adox.md)的所有存储的[用户](./user-object-adox.md)对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [目录](./catalog-object-adox.md)的**用户**集合表示所有目录的用户。 [组](./group-object-adox.md)的**用户**集合仅表示在特定组中具有成员身份的用户。  
   
- **用户**集合的[APPEND](./append-method-adox-users.md)方法对于 ADOX 是唯一的。 方法：  
+ **用户**集合的[APPEND](./append-method-adox-users.md)方法对于 ADOX 是唯一的。 可以：  
   
 -   使用 **Append** 方法将新用户添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 方法：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的用户。  
   

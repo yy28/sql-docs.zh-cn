@@ -3,7 +3,7 @@ description: 视图 Append 方法示例 (VB)
 title: " (VB) 查看 Append 方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 172b45d111b74f81e416118f489ef3e0a40dd871
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3be71b5bf0ba2e6424d3b90a7165dcc570cc4cda
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768966"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982878"
 ---
 # <a name="views-append-method-example-vb"></a>视图 Append 方法示例 (VB)
 下面的代码演示如何使用 [命令](../ado-api/command-object-ado.md) 对象和 [Views](./views-collection-adox.md) 集合 [Append](./append-method-adox-views.md) 方法在基础数据源中创建新视图。  

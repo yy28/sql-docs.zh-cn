@@ -3,7 +3,7 @@ description: Prompt 属性 - 动态 (ADO)
 title: 提示符属性-动态 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f5e8d379f1ef2a756505675b2969374ec130feb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 67e8df1a59edecaf601f0ec4c5fd4b7782877e8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773016"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990008"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 属性 - 动态 (ADO)
 指定 OLE DB 提供程序是否应提示用户提供初始化信息。  
@@ -27,7 +27,7 @@ ms.locfileid: "88773016"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 [ConnectPromptEnum](./connectpromptenum.md) 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Prompt** 是动态属性，OLE DB 提供程序可以将其附加到 [连接](./connection-object-ado.md) 对象的 [Properties](./properties-collection-ado.md) 集合。 为了提示输入初始化信息，OLE DB 提供程序通常会向用户显示一个对话框。  
   
  **连接关闭**时，[连接](./connection-object-ado.md)对象的动态属性将丢失。 必须先重置 **Prompt** 属性，然后再重新打开 **连接** ，才能使用默认值以外的值。  

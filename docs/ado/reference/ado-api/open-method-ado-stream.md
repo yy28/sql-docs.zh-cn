@@ -3,7 +3,7 @@ description: Open 方法（ADO 流）
 title: " (ADO Stream) 打开方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333d20ee58123e9f1120e22d1770bd2a74ad97ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ef760da2bad97cec017c7a58735200be1a14f85d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773776"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990318"
 ---
 # <a name="open-method-ado-stream"></a>Open 方法（ADO 流）
 打开一个 [流](./stream-object-ado.md) 对象以处理二进制或文本数据的流。  
@@ -34,7 +34,7 @@ ms.locfileid: "88773776"
 Stream.Open Source, Mode , OpenOptions, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Source*  
  可选。 一个 **变量** 值，指定 **流**的数据源。 *源* 可以包含指向已知树结构（如电子邮件或文件系统）中的现有节点的绝对 URL 字符串。 应使用 url 关键字 ( "url =*方案*：//*server* / *folder*" ) 指定 url。 另外， *Source* 可能包含对已打开的 [record](./record-object-ado.md) 对象的引用，该对象将打开与该 **记录**关联的默认流。 如果未指定 *源* ，则默认情况下，将实例化并打开一个 **流** ，而不会关联到任何基础源。 有关 URL 方案及其关联的提供程序的详细信息，请参阅 [绝对和相对 url](../../guide/data/absolute-and-relative-urls.md)。  
   
@@ -50,7 +50,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *密码*  
  可选。 一个 **字符串** 值，该值包含在需要时访问 **流** 对象的密码。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  作为 source 参数传入 **记录** 对象时，不使用 *UserID* 和 *Password* 参数，因为对 **记录** 对象的访问已可用。 同样，将**记录**对象的[模式](./mode-property-ado.md)传输到**Stream**对象。 如果未指定 *源* ，则打开的 **流** 不包含任何数据，并且 [大小](./size-property-ado-stream.md) 为零 (0) 。 若要避免在**流**关闭时丢失写入到此**流**的任何数据，请用[CopyTo](./copyto-method-ado.md)或[SaveToFile](./savetofile-method.md)方法保存该**流**，或将其保存到其他内存位置。  
   
  **AdOpenStreamFromRecord**的*OpenOptions*值将*源*参数的内容标识为已打开的**记录**对象。 默认行为是将 *源* 视为直接指向树结构（如文件）中的节点的 URL。 将打开与该节点关联的默认流。  

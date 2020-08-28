@@ -3,7 +3,7 @@ description: '唯一表、唯一架构、唯一目录属性-动态 (ADO) '
 title: " (ADO) 控制对记录集基表的更改 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 50a17938a2e1cffd3cc0bf76d3cc3758358318d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777036"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988158"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一表、唯一架构、唯一目录属性-动态 (ADO) 
 使您能够在 [记录集中](./recordset-object-ado.md) 控制对多个基表上的联接操作所形成的特定基表的修改。  
@@ -35,7 +35,7 @@ ms.locfileid: "88777036"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值，该值是表、架构或目录的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  所需基表由其目录、架构和表名唯一标识。 设置 **Unique table** 属性后，将使用 **唯一架构** 或 **唯一目录** 属性的值来查找基表。 它在设置**唯一的表**属性前设置，但不是必需的，也可以是**唯一的架构**和唯一的**目录**属性。  
   
  **唯一表**的主键被视为整个**记录集**的主键。 这是用于需要主键的任何方法的键。  

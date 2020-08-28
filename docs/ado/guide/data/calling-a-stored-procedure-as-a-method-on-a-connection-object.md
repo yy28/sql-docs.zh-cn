@@ -3,7 +3,7 @@ description: 在连接对象上作为方法调用存储过程
 title: 在连接对象上调用存储过程作为方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7772a1c8583619288177dd5115f532b6d51532d9
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 6194c9374258e23e7c5a388df9424f986fc899b0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806367"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991568"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>在连接对象上作为方法调用存储过程
 您可以调用存储过程，就像它是关联打开的 **连接** 对象上的本机方法一样。 这类似于在 **连接** 对象上调用命名命令。  

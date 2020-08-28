@@ -3,7 +3,7 @@ description: Microsoft OLE DB Microsoft 索引服务提供商概述
 title: Microsoft OLE DB Provider for Microsoft 索引服务 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec90db7109363cc017fd314dc674c143be01d185
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806625"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991038"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Microsoft 索引服务提供商概述
 Microsoft OLE DB Provider for Microsoft 索引服务提供对 Microsoft 索引服务编制索引的文件系统和 Web 数据的只读访问。 ADO 应用程序可以发出 SQL 查询来检索内容和文件属性信息。
@@ -67,7 +67,7 @@ MSIDXS
 
  **标准 ADO 记录集属性的可用性：**
 
-|属性|可用性|
+|properties|可用性|
 |--------------|------------------|
 |[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|读/写|
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|读/写|
@@ -97,20 +97,20 @@ MSIDXS
 |方法|是否可用？|
 |------------|----------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|否|
-|[取消](../../reference/ado-api/cancel-method-ado.md)|是|
+|[取消](../../reference/ado-api/cancel-method-ado.md)|适合|
 |[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|否|
 |[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|否|
-|[克隆](../../reference/ado-api/clone-method-ado.md)|是|
-|[关闭](../../reference/ado-api/close-method-ado.md)|是|
+|[克隆](../../reference/ado-api/clone-method-ado.md)|适合|
+|[关闭](../../reference/ado-api/close-method-ado.md)|适合|
 |[删除](../../reference/ado-api/delete-method-ado-recordset.md)|否|
-|[GetRows](../../reference/ado-api/getrows-method-ado.md)|是|
-|[移动](../../reference/ado-api/move-method-ado.md)|是|
-|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|
-|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|是|
-|[打开](../../reference/ado-api/open-method-ado-recordset.md)|是|
-|[重新](../../reference/ado-api/requery-method.md)|是|
-|[重新同步](../../reference/ado-api/resync-method.md)|是|
-|[支持](../../reference/ado-api/supports-method.md)|是|
+|[GetRows](../../reference/ado-api/getrows-method-ado.md)|适合|
+|[移动](../../reference/ado-api/move-method-ado.md)|适合|
+|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|适合|
+|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|适合|
+|[打开](../../reference/ado-api/open-method-ado-recordset.md)|适合|
+|[重新](../../reference/ado-api/requery-method.md)|适合|
+|[重新同步](../../reference/ado-api/resync-method.md)|适合|
+|[支持](../../reference/ado-api/supports-method.md)|适合|
 |[更新](../../reference/ado-api/update-method.md)|否|
 |[UpdateBatch](../../reference/ado-api/updatebatch-method.md)|否|
 

@@ -3,7 +3,7 @@ description: Count 属性示例 (VB)
 title: Count 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 665ad3516143696c7b286b90e70b42ce1c7b5dd6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 772d06ca8fa854f2af77e45007944d7217dd36a7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775656"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974508"
 ---
 # <a name="count-property-example-vb"></a>Count 属性示例 (VB)
 此示例演示了***Employee***数据库中包含两个集合的[Count](./count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。 枚举这些集合而不使用 **Count** 属性的另一种方法是使用 `For Each...Next` 语句。  

@@ -3,7 +3,7 @@ description: 使用 ADO 进行 Internet 发布
 title: 使用 ADO 进行 Internet 发布 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f08edfbd56b900759c004cbf0fca8a634ab1010
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452599"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979029"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 进行 Internet 发布
 [用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) 演示了使用 ADO 访问异类数据的特定示例。 虽然本部分中的示例将特定于使用 Internet 发布提供程序，但在将 ADO 用于其他提供程序的异类数据（如提供程序到电子邮件存储）时，演示的原则应类似。  

@@ -3,7 +3,7 @@ description: Open 方法（ADO 记录）
 title: 开放式方法 (ADO 记录) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 980e7c840cfb19077c6f4f1d1041d1f1eb8acf64
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1ad606821e423892d49feb49a0920c7aea9056aa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773796"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990338"
 ---
 # <a name="open-method-ado-record"></a>Open 方法（ADO 记录）
 打开现有 [记录](./record-object-ado.md) 对象，或创建由 **记录**表示的新项，如文件或目录。  
@@ -34,7 +34,7 @@ ms.locfileid: "88773796"
 Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Source*  
  可选。 一种 **变量** ，该变量可以表示此 **记录** 对象所表示的实体的 URL、 **命令**、打开的 [记录集](./recordset-object-ado.md) 或其他 **记录** 对象、包含 SQL SELECT 语句或表名称的字符串。  
   
@@ -56,7 +56,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *密码*  
  可选。 一个包含密码的 **字符串** 值（如果需要）将验证 *用户名*。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *源* 可能是：  
   
 -   URL。 如果 URL 的协议是 http，则默认情况下将调用 Internet 访问接口。 如果 URL 指向包含可执行脚本的节点 (如。ASP page) 中，默认情况下会打开包含源（而不是执行的内容）的 **记录** 。 使用 *Options* 参数来修改此行为。  
