@@ -3,7 +3,7 @@ description: Type 属性（项）(ADOX)
 title: " (Key) 类型属性 (ADOX) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc85218dd65c900c1e62afb54bdd73becc7b9161
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ced8d2083fe4c6d34c752cc77d54f9f1a5e2569e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769206"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983108"
 ---
 # <a name="type-property-key-adox"></a>Type 属性（项）(ADOX)
 指示密钥的类型。  
@@ -33,7 +33,7 @@ ms.locfileid: "88769206"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回可以是[KeyTypeEnum](./keytypeenum.md)常量之一的**Long**值。 默认值为 **adKeyPrimary**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对于已追加到集合的 [键](./key-object-adox.md) 对象，此属性是只读的。  
   
 ## <a name="applies-to"></a>适用于  

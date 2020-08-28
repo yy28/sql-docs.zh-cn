@@ -3,7 +3,7 @@ description: AbsolutePage 属性 (ADO)
 title: " (ADO) 的 AbsolutePage 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c5c9d802dd6ba373b7bf92f063125f0b656eab8
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 1d735a8a61d4b62e6fa57427ecbee247d4589040
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759987"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977238"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 属性 (ADO)
 指示当前记录所在的页。  
@@ -31,7 +31,7 @@ ms.locfileid: "88759987"
   
  对于64位代码，请使用提供的数据类型来存储64位值。 例如，你可以使用 **Long** 或其他64值（如 DBORDINAL）。 不要使用 **PositionEnum** 值，因为它们限制为32位长度。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此属性可用于标识当前记录所在的页码。 它使用 [PageSize](./pagesize-property-ado.md) 属性以逻辑方式将 **记录集** 对象的总行集计数划分为一系列页面，其中每个页面的记录数等于 **PageSize** (除了最后一页，其中可能包含) 的记录。 提供程序必须支持适当的功能，此属性才可用。  
   
 -   获取或设置 **AbsolutePage** 属性时，ADO 将 [AbsolutePosition](./absoluteposition-property-ado.md) 属性和 [PageSize](./pagesize-property-ado.md) 属性一起使用，如下所示：  

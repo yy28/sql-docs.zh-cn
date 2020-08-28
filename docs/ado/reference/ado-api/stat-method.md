@@ -3,7 +3,7 @@ description: Stat 方法
 title: Stat 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: db386d8e39c57883c7e456962d57e884383d62ff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988848"
 ---
 # <a name="stat-method"></a>Stat 方法
 检索有关 [流](./stream-object-ado.md) 对象的信息。  
@@ -36,7 +36,7 @@ Long stream.Stat(StatStg, StatFlag)
 ## <a name="return-value"></a>返回值  
  一个 **长整型** 值，指示操作的状态。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *StatStg*  
  将使用流的相关信息填充 STATSTG 结构。 ADO 流对象使用的 **Stat** 方法的实现并不填充结构的所有字段。  
   
@@ -48,7 +48,7 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  为 ADO 流对象实现的 Stat 方法版本将填充 STATSTG 结构的以下字段：  
   
  *pwcsName*  

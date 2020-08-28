@@ -3,7 +3,7 @@ description: ReadText 方法
 title: ReadText 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca797d4a6a8be7ee547f8bc80163469d0761ca29
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d2e55657dc0bf2e5cd508897196138e842e23b8e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772646"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989868"
 ---
 # <a name="readtext-method"></a>ReadText 方法
 从文本 [流](./stream-object-ado.md) 对象中读取指定数目的字符。  
@@ -34,14 +34,14 @@ ms.locfileid: "88772646"
 String = Stream.ReadText ( NumChars)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *NumChars*  
  可选。 一个 **长整型** 值，指定要从文件中读取的字符数或 [StreamReadEnum](./streamreadenum.md) 值。 默认值为 **adReadAll**。  
   
 ## <a name="return-value"></a>返回值  
  **ReadText**方法从**流**对象读取指定数目的字符、整行或整个流，并返回生成的字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 *NumChar* 大于流中剩余的字符数，则仅返回剩余字符数。 不填充字符串 read 来匹配 *NumChar*指定的长度。 如果没有要读取的字符，则返回值为 null 的变量。 **ReadText** 不能用于向后读取。  
   
 > [!NOTE]

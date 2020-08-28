@@ -3,7 +3,7 @@ description: 记录对象 (ADO)
 title: ADO)  (记录对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6860e10d3639fcbfdf59e8ff5fe8a5a8b675662a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6066d43bfa52d65ee133fd748f76fc651fac7379
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772596"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989858"
 ---
 # <a name="record-object-ado"></a>记录对象 (ADO)
 表示 [记录集](./recordset-object-ado.md) 或数据提供程序中的行，或由半结构化数据访问接口（如文件或目录）返回的对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Record**对象表示一行数据，并与一行**记录集**有一些概念上的相似之处。 根据提供程序的功能，可以直接从提供程序（而不是单行**记录集**）返回**记录**对象，例如，当执行仅选择一行的 SQL 查询时。 或者，可以直接从**记录集**对象获取**记录**对象。 或者， **记录** 可以直接从提供程序返回到半结构化数据，例如 Microsoft Exchange OLE DB 提供程序。  
   
  您可以通过**record**对象上的[字段](./fields-collection-ado.md)集合来查看与**record**对象相关联的字段。 ADO 允许对象值列，包括**记录**对象的**Fields**集合中的**记录集**、 **SafeArray**和标量值。  

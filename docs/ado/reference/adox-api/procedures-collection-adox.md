@@ -3,7 +3,7 @@ description: 过程集合 (ADOX)
 title: 过程集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97421c9020750627dcd27f6188ae5cda72a2d90c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b3f98420fc85cabd2ccc584817ac6ca9a9203081
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769626"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983568"
 ---
 # <a name="procedures-collection-adox"></a>过程集合 (ADOX)
 包含目录的所有 [过程](./procedure-object-adox.md) 对象。  
   
-## <a name="remarks"></a>备注  
- **过程**集合的[APPEND](./append-method-adox-procedures.md)方法对于 ADOX 是唯一的。 方法：  
+## <a name="remarks"></a>注解  
+ **过程**集合的[APPEND](./append-method-adox-procedures.md)方法对于 ADOX 是唯一的。 可以：  
   
 -   使用 **Append** 方法向集合中添加一个新过程。  
   
- 其余属性和方法对于 ADO 集合是标准的。 方法：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的过程。  
   

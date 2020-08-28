@@ -3,7 +3,7 @@ description: Filter 属性
 title: Filter 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2519fdf691cc0f982f16a3aa77fdb66036bd86e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775316"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972998"
 ---
 # <a name="filter-property"></a>Filter 属性
 指示 [记录集中](./recordset-object-ado.md)数据的筛选器。  
@@ -36,7 +36,7 @@ ms.locfileid: "88775316"
   
 -   [FilterGroupEnum](./filtergroupenum.md)值。  
   
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 使用 **Filter** 属性可以有选择地将记录 **集** 对象中的记录显示为屏幕。 筛选后的 **记录集** 将成为当前游标。 基于当前 **游标** 返回值的其他属性会受到影响，如 [ABSOLUTEPOSITION 属性 (ado) ](./absoluteposition-property-ado.md)、 [AbsolutePage 属性 (ado) ](./absolutepage-property-ado.md)、 [RecordCount 属性 (ado) ](./recordcount-property-ado.md)和 [PageCount 属性 (ado) ](./pagecount-property-ado.md)。 将 " **筛选器** " 属性设置为特定的新值会将当前记录移动到满足新值的第一条记录。
   

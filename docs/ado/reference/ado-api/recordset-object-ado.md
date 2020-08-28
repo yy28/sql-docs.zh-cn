@@ -3,7 +3,7 @@ description: 记录集对象 (ADO)
 title: ADO)  (Recordset 对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9fade9e23303c9adaa22cad9822381fd10bb513
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ff23c57ae3ecf25e7328d304f9716ad24f2aba7e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772266"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989735"
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示基表中的整个记录集或执行的命令的结果。 **记录集**对象随时仅指集内的单个记录作为当前记录。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  您可以使用 **Recordset** 对象处理来自提供程序的数据。 使用 ADO 时，几乎完全可以使用 **Recordset** 对象处理数据。 所有 **记录集** 对象都包含 (行) 和字段 (列) 中的记录。 某些 **记录集** 方法或属性可能不可用，具体取决于提供程序支持的功能。  
   
  ADODB.RECORDSET.记录集是应用于创建 **记录集** 对象的 ProgID。 引用过时 ADOR 的现有应用程序。记录集 ProgID 将继续运行而无需重新编译，但新开发应引用 ADODB.RECORDSET。记录集.  

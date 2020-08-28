@@ -3,7 +3,7 @@ description: 属性集合 (ADO)
 title: ADO)  (属性集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e1526ceeb62b8205a8c0d40af39a72731d17634
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5e9d13eb3c985bdc5e13a44ec59661225476942e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772986"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989988"
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
 包含对象的特定实例的所有 [属性](./property-object-ado.md) 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  某些 ADO 对象具有属性**集合，其中包含****属性**对象。 每个 **属性** 对象对应于特定于提供程序的 ADO 对象的特性。  
   
 > [!NOTE]

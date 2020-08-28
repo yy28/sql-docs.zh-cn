@@ -3,7 +3,7 @@ description: Sort 属性示例 (VC++)
 title: " (VC + +) 对属性示例排序 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 091c79539472cc46c31f508dea560636dac37cc0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0fe3fdab656afa12de49ee5858783ef97c89c24c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777436"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989018"
 ---
 # <a name="sort-property-example-vc"></a>Sort 属性示例 (VC++)
 此示例使用[Recordset](./recordset-object-ado.md)对象的[Sort](./sort-property.md)属性对从**Pubs**数据库的***Authors***表中派生的**记录集**的行重新排序。 辅助实用程序例程打印每行。  

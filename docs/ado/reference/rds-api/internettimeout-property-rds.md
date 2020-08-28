@@ -3,7 +3,7 @@ description: InternetTimeout 属性 (RDS)
 title: InternetTimeout 属性 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83613f9083c0e532b4a2124b4beff20d4772c2fd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f69b6909630f2930939bc7757c9a4d9d1f1dd943
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768056"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981978"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 属性 (RDS)
 指示请求超时前等待的毫秒数。  
@@ -30,7 +30,7 @@ ms.locfileid: "88768056"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **长整型** 值，该值表示请求超时前等待的毫秒数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此属性仅适用于通过 HTTP 或 HTTPS 协议发送的请求。  
   
  三层环境中的请求可能需要几分钟的时间来执行。 使用此属性为长时间运行的请求指定额外的时间。  

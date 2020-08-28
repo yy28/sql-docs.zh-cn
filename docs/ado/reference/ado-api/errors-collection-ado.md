@@ -3,7 +3,7 @@ description: 错误集合 (ADO)
 title: ADO)  (收集错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f4719c9dcf182b6840ad950373b35c7ea8f0361
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3606827f95330bf75915463bba8225bccdc62cd7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443949"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973618"
 ---
 # <a name="errors-collection-ado"></a>错误集合 (ADO)
 包含为响应单个提供程序相关的失败而创建的所有 [错误](../../../ado/reference/ado-api/error-object.md) 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  涉及 ADO 对象的任何操作都可能会生成一个或多个提供程序错误。 发生每个错误时，可以将一个或多个**错误**对象放置在[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的**Errors**集合中。 当另一个 ADO 操作生成错误时，将清除 **错误** 集合，并将一组新的 **错误** 对象放置在 **错误** 集合中。  
   
  每个 **错误** 对象都表示特定提供程序错误，而不是 ADO 错误。 ADO 错误将公开给运行时异常处理机制。 例如，在 Microsoft Visual Basic 中，出现特定于 ADO 的错误将触发 [onError](../../../ado/reference/rds-api/onerror-event-rds.md) 事件，并出现在 **Err** 对象中。  

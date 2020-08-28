@@ -3,7 +3,7 @@ description: Status 属性（ADO 字段）
 title: " (ADO 字段) 的状态属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70b77c60d2a2ac77a2d36a4ce29d2e20187495f9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 11f59e99eab0a742a4d7618f7ac66cb486af2933
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777316"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988718"
 ---
 # <a name="status-property-ado-field"></a>Status 属性（ADO 字段）
 指示 [Field](./field-object.md) 对象的状态。  
@@ -31,7 +31,7 @@ ms.locfileid: "88777316"
 ## <a name="return-value"></a>返回值  
  返回 [FieldStatusEnum](./fieldstatusenum.md) 值。 默认值为 **adFieldOK**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="record-field-status"></a>记录字段状态  
  在调用对象的[Update](./update-method.md)方法之前，将缓存对[Record](./record-object-ado.md)对象的**Field**对象的值所做的更改。 此时，如果对字段的值所做的更改导致了错误，OLE DB 将 **DB_E_ERRORSOCCURRED** (2147749409) 引发错误。 导致错误的**字段**集合中的任何**字段**对象的 Status 属性将包含[FieldStatusEnum](./fieldstatusenum.md)中的一个值，用于描述问题的原因。  

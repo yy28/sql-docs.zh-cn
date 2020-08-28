@@ -3,7 +3,7 @@ description: ActiveCommand 属性 (ADO)
 title: " (ADO) 的 ActiveCommand 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e8c969c8e611c8e2bff76dc045a28a9c6d6ab96
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: df737543e8cc09735c7da413b89406b6f2385079
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759937"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977148"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 属性 (ADO)
 指示创建关联[记录集](./recordset-object-ado.md)对象的[命令](./command-object-ado.md)对象。  
@@ -29,7 +29,7 @@ ms.locfileid: "88759937"
 ## <a name="return-value"></a>返回值  
  返回一个包含**命令**对象的**变量**。 默认值为 null 对象引用。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **ActiveCommand**属性是只读的。  
   
  如果未使用 **命令** 对象创建当前 **记录集**，则返回 **Null** 对象引用。  

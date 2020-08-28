@@ -3,7 +3,7 @@ description: CopyRecord 方法 (ADO)
 title: " (ADO) 的 CopyRecord 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b72860215018a9a869aed8f0a06e280a601947e5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0056d33f1ad07ed48002bb7638acd84a963fb566
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775776"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974578"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 将 [记录](./record-object-ado.md) 表示的实体复制到其他位置。  
@@ -34,7 +34,7 @@ ms.locfileid: "88775776"
 Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Source*  
  可选。 一个 **字符串** 值，其中包含指定要复制的实体 (例如，) 文件或目录。 如果省略了 *Source* 或指定了空字符串，则将复制当前 [记录](./record-object-ado.md) 所表示的文件或目录。  
   
@@ -56,7 +56,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="return-value"></a>返回值  
  通常返回*Destination*值的**字符串**值。 但是，返回的确切值与提供程序相关。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *源*和*目标*的值不得完全相同;否则，会发生运行时错误。 至少一个服务器、路径或资源名称必须不同。  
   
  所有子级 (例如 *，将以* 递归方式复制子目录) ，除非指定了 **adCopyNonRecursive** 。 在递归操作中， *目标* 不能是 *源*的子目录;否则，操作将不会完成。  

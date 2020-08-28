@@ -3,7 +3,7 @@ description: SchemaEnum
 title: SchemaEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777536"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989258"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定[OpenSchema](./openschema-method.md)方法检索的架构**记录集**的类型。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  有关为每个 ADO 常量返回的函数和列的其他信息，请参阅附录 B： OLE DB 程序员参考中的 [架构行集](/previous-versions/windows/desktop/ms712921(v=vs.85)) 。 下表的 "描述" 部分的括号中列出了每个主题的名称。  
   
  有关为每个 ADO MD 常量返回的函数和列的其他信息，请参阅 OLAP) 文档 (的联机分析处理 OLE DB 中的 [OLAP 对象和架构行集 OLE DB](/previous-versions/windows/desktop/ms723056(v=vs.85)) 中的相关主题。 下表的 "说明" 列中的括号内列出了每个主题的名称。  

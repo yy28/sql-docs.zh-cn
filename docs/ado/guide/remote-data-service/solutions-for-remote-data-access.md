@@ -3,7 +3,7 @@ description: 远程数据访问的解决方案
 title: 远程数据访问的解决方案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d337ef92600dbda0a54d2c2c51ab4e8caeed646c
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 849ef40c124cfe611f72c6ad5f258d678c24c963
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759207"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977598"
 ---
 # <a name="solutions-for-remote-data-access"></a>远程数据访问的解决方案
 ## <a name="the-issue"></a>问题  

@@ -3,7 +3,7 @@ description: Size 属性（ADO 参数）
 title: ADO 参数) 的大小属性 (|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bede13c00304565a0e3b7819be7c8e6a5b5ca48
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 914f751c4bfd48755470ce3da9e994dae4a33477
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777476"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989118"
 ---
 # <a name="size-property-ado-parameter"></a>Size 属性（ADO 参数）
 指示 [参数](./parameter-object.md) 对象的最大大小，以字节或字符为单位。  
@@ -29,7 +29,7 @@ ms.locfileid: "88777476"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **长整型** 值，该值指示 **参数** 对象中的值的最大大小（以字节为单位）。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 " **Size** " 属性可确定从**参数**对象的[Value](./value-property-ado.md)属性写入或读取的值的最大大小。  
   
  如果为 **参数** 对象指定长度可变的数据类型 (例如，任何 **字符串** 类型（如 **adVarChar**) ），则必须先设置对象的 **Size** 属性，然后再将其追加到 [Parameters](./parameters-collection-ado.md) 集合中;否则，将发生错误。  

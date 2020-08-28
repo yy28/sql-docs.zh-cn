@@ -3,7 +3,7 @@ description: 了解自定义文件
 title: 了解自定义文件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759865"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977388"
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个节标头由方括号 (**[]**) ，其中包含类型和参数。 四种节类型由文本字符串 **connect**、 **sql**、 **userlist**或 **日志**指示。 参数是文本字符串、默认值、用户指定的标识符或没有任何内容。  
@@ -45,7 +45,7 @@ identifier
 |组成部分|说明|  
 |----------|-----------------|  
 |**connect**|修改连接字符串的文本字符串。|  
-|**sql**|用于修改命令字符串的文字字符串。|  
+|**transact-sql**|用于修改命令字符串的文字字符串。|  
 |**userlist**|用于修改特定用户的访问权限的文字字符串。|  
 |**logs**|指定记录操作错误的日志文件的文本字符串。|  
 |**default**|如果未指定或找不到标识符，则使用文本字符串。|  

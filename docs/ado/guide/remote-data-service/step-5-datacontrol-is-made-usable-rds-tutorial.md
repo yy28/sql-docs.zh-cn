@@ -3,7 +3,7 @@ description: 步骤 5：DataControl 变为可用（RDS 教程）
 title: 步骤5： DataControl 在 RDS 教程)  (可用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759017"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977508"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步骤 5：DataControl 变为可用（RDS 教程）
 返回的 **记录集** 对象可供使用。 您可以检查、导航或编辑它，就像对待任何其他 **记录集**一样。 您可以对 **记录集** 执行哪些操作取决于您的环境。 Visual Basic 和 Visual C++ 具有可直接或间接使用 **记录集** 来实现数据控件的可视化控件。  
