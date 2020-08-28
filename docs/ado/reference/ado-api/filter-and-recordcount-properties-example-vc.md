@@ -3,7 +3,7 @@ description: " (VC + +) 的 Filter 和 RecordCount 属性示例"
 title: " (VC + +) 的 Filter 和 RecordCount 属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4d01d2acc51b89fbe1100e535c9aada7dcb8a603
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775306"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973008"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a> (VC + +) 的 Filter 和 RecordCount 属性示例
 此示例使用[Filter](./filter-property.md)属性根据应用于现有**记录集**的指定条件来打开新的[记录集](./recordset-object-ado.md)。 它使用 [RecordCount](./recordcount-property-ado.md) 属性来显示两个 **记录集中**的记录数。 运行此过程需要 FilterField 函数。  

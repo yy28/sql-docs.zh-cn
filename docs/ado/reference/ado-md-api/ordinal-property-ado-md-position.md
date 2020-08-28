@@ -3,7 +3,7 @@ description: Ordinal 属性（ADO MD 位置）
 title: 序号属性 (ADO MD 位置) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2f145cf96222eb08ab154dc9d683c0973cad861
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6d2485e8331a3eee95cfd5937ffbdbd570b2ecdc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777916"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986188"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal 属性（ADO MD 位置）
 唯一标识沿轴的 [位置](./position-object-ado-md.md) 。  
@@ -30,7 +30,7 @@ ms.locfileid: "88777916"
 ## <a name="return-values"></a>返回值  
  返回一个 **长** 整型，并且为只读。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [Position](./position-object-ado-md.md)对象的**序号**属性对应于[位置集合中的](./positions-collection-ado-md.md)**位置**的索引。  
   
  使用单元格[集](./cellset-object-ado-md.md)对象的[Item](./item-property-ado-md-cellset.md)属性沿每个轴上的**位置****序号**，可以快速检索单元格。  

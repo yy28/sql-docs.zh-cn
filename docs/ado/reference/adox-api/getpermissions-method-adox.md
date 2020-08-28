@@ -3,7 +3,7 @@ description: GetPermissions 方法 (ADOX)
 title: GetPermissions 方法 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9533ca5260a8e5dc900a28d883f66994d7a9669
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 31d2bd1d17f790a29674b99ee24a668876e53492
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770456"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984418"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
 返回 [组](./group-object-adox.md) 或 [用户](./user-object-adox.md) 对对象或对象容器的权限。  
@@ -39,8 +39,8 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ## <a name="return-value"></a>返回值  
  返回一个 **长整型** 值，该值指定包含组或用户对对象的权限的位掩码。 此值可以是一个或多个 [RightsEnum](./rightsenum.md) 常量。  
   
-#### <a name="parameters"></a>parameters  
- *Name*  
+#### <a name="parameters"></a>参数  
+ *名称*  
  一个 **变量** 值，指定要为其设置权限的对象的名称。 如果要获取对象容器的权限，请将 " *名称* " 设置为 null 值。  
   
  *ObjectType*  

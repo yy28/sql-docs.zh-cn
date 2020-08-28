@@ -3,7 +3,7 @@ description: 组和用户 Append、ChangePassword 方法示例 (VC++)
 title: 组和用户追加，ChangePassword 方法示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6776783df8ae47cdd15eb1a6a116f25ff038277
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a31781893fc992ff94080621a59c97f628b55f94
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770346"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984348"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>组和用户 Append、ChangePassword 方法示例 (VC++)
 此示例演示了[组](./groups-collection-adox.md)的[追加](./append-method-adox-groups.md)方法，以及[用户](./users-collection-adox.md)通过向系统添加新[组](./group-object-adox.md)和新[用户](./user-object-adox.md)的[附加](./append-method-adox-users.md)方法。 新**组**将追加到新**用户**的 "**组**" 集合中。 因此，新 **用户** 将添加到 **该组**中。 此外， [ChangePassword](./changepassword-method-adox.md) 方法用于指定 **用户** 密码。  

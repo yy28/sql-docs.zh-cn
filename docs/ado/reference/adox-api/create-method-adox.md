@@ -3,7 +3,7 @@ description: Create 方法 (ADOX)
 title: Create Method (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5add8972d95413841a6c9c45de2dcc26d8cbb24
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 588f73fcd2ced95be3cd7f8586faed864b38f8ad
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770836"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984838"
 ---
 # <a name="create-method-adox"></a>Create 方法 (ADOX)
 创建新的目录。  
@@ -34,11 +34,11 @@ ms.locfileid: "88770836"
 Catalog.Create ConnectString  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectString*  
  用于连接到数据源的 **字符串** 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Create**方法创建新的 ADO 连接并打开与*ConnectString*中指定的数据源的[连接](../ado-api/connection-object-ado.md)。 如果成功，新 **连接** 对象将分配给 [ActiveConnection](./activeconnection-property-adox.md) 属性。  
   
  如果提供程序不支持创建新目录，则会发生错误。  

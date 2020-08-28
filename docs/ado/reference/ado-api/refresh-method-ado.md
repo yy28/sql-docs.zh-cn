@@ -3,7 +3,7 @@ description: Refresh 方法 (ADO)
 title: " (ADO) 刷新方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b172179adefc880034443b29ed36bb309215ec5a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 66324860f931a919cccc36d3de9464d2ad2e48d0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771976"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989608"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。  
@@ -38,7 +38,7 @@ collection.Refresh
 ## <a name="remarks"></a>备注  
  **Refresh**方法完成不同的任务，具体取决于调用该方法的集合。  
   
-### <a name="parameters"></a>parameters  
+### <a name="parameters"></a>参数  
  对[command](./command-object-ado.md)对象的[Parameters](./parameters-collection-ado.md)集合使用**Refresh**方法将检索在**命令**对象中指定的存储过程或参数化查询的提供程序端参数信息。 对于不支持存储过程调用或参数化查询的访问接口，该集合将为空。  
   
  在调用**Refresh**方法之前，应将**命令**对象的[ActiveConnection](./activeconnection-property-ado.md)属性设置为有效的[连接](./connection-object-ado.md)对象，将[CommandText](./commandtext-property-ado.md)属性设置为有效的命令，并将[CommandType](./commandtype-property-ado.md)属性设置为**adCmdStoredProc** 。  

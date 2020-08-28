@@ -3,7 +3,7 @@ description: OLE DB 提供程序 (ADO)
 title: ADO) OLE DB 提供程序 (|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb247f62173a0c622a08eb2d55af005efcb2669
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 25eea144ab0f9301f79a74773258cf399802af9d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805681"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980178"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供程序 (ADO)
 OLE DB 定义一组 COM 接口，以使应用程序能够统一访问存储在不同信息源中的数据。 此方法允许数据源通过支持适用于数据源的 DBMS 功能量的接口来共享其数据。 按照设计，OLE DB 的高性能体系结构基于基于组件的灵活服务模型的使用方式。 OLE DB 只需要满足特定任务所需的组件数量，而不是在应用程序和数据之间采用指定数目的中间层。  
   
- 例如，假设用户要运行查询。 请考虑下列情形：  
+ 例如，假设用户要运行查询。 请考虑以下方案：  
   
 -   数据驻留在一个关系数据库中，该数据库当前存在一个 ODBC 驱动程序，但没有本机 OLE DB 提供程序：该应用程序使用 ADO 与用于 ODBC 的 OLE DB 提供程序进行通信，后者随后加载相应的 ODBC 驱动程序。 驱动程序将 SQL 语句传递给 DBMS，后者检索数据。  
   

@@ -3,7 +3,7 @@ description: 事务处理
 title: 事务处理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bde1338e56f4685359f8d1260b36c39a24455083
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452699"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979328"
 ---
 # <a name="transaction-processing"></a>事务处理
 用于分隔跨连接执行的一系列数据访问操作的开始和结束的 *事务* 。 根据数据源的事务功能， **连接** 对象还允许您创建和管理事务。 例如，使用 Microsoft OLE DB 提供程序 SQL Server 访问 Microsoft SQL Server 上的数据库时，可以为执行的命令创建多个嵌套事务。  

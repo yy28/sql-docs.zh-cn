@@ -3,7 +3,7 @@ description: 确保足够的 TempDB 空间
 title: 确保 TempDB 空间充足 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6b93097b3a21e3858139146b50f15ddc79c6569
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759770"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978128"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>确保足够的 TempDB 空间
 如果处理需要在 Microsoft SQL Server 6.5 上处理空间的 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象时出现错误，则可能需要增加 TempDB 的大小。  (某些查询需要临时处理空间;例如，使用 ORDER BY 子句的查询需要对 **记录集**进行排序，这需要一些临时空间。 )   

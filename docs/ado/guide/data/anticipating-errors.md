@@ -3,7 +3,7 @@ description: 预测错误
 title: 预测错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: f5affe90da5a982a6e01bd5719793581fb3c5f13
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806410"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991608"
 ---
 # <a name="anticipating-errors"></a>预测错误
 错误防护至少与错误处理一样重要。 最后一节包含应用程序可用于帮助减少错误发生次数的简短注意事项列表。  

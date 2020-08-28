@@ -3,7 +3,7 @@ description: 使用多维数据
 title: 使用多维数据 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0589b1fe5ca6da29f088e26b2236cfc5205bfe0c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758767"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978568"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 *单元集*是针对多维数据的查询的结果。 它包含轴的集合，通常不超过四个轴，通常只有2到3个轴。 *轴*是一个或多个维度的成员集合，用于在多维数据集中查找或筛选特定值。  

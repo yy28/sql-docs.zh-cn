@@ -3,7 +3,7 @@ description: ADOX 代码示例：NumericScale 和 Precision 属性示例 (VB)
 title: NumericScale 和 Precision 属性 ADOX 代码示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71bd5eb4ba0768f91ccf145933067164e668c942
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 92ebc6f3d861251d197686a00df54ee88b145dd8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777756"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985778"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 代码示例：NumericScale 和 Precision 属性示例 (VB)
 此示例演示[列](./column-object-adox.md)对象的[NumericScale](./numericscale-property-adox.md)和[Precision](./precision-property-adox.md)属性。 此代码显示*Northwind*数据库的 "**订单详细信息**" 表的值。  

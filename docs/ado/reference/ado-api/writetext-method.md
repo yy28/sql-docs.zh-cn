@@ -3,7 +3,7 @@ description: WriteText 方法
 title: WriteText 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a4e42733013a7ea756924199d05a93ae08e0c08
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987718"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 向 [Stream](./stream-object-ado.md) 对象写入指定的文本字符串。  
@@ -34,14 +34,14 @@ ms.locfileid: "88776826"
 Stream.WriteText Data, Options  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 数据  
+#### <a name="parameters"></a>参数  
+ *数据*  
  一个 **字符串** 值，该值包含要写入的字符中的文本。  
   
  *选项*  
  可选。 一个 [StreamWriteEnum](./streamwriteenum.md) 值，该值指定是否必须在指定字符串的末尾写入行分隔符。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  将指定的字符串写入 **流** 对象，而不会在每个字符串之间插入空格或字符。  
   
  [当前位置设置为写入](./position-property-ado.md)数据后的字符。 **WriteText**方法不会截断流中的其余数据。 如果要截断这些字符，请调用 [SetEOS](./seteos-method.md)。  

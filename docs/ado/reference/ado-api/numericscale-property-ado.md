@@ -3,7 +3,7 @@ description: NumericScale 属性 (ADO)
 title: " (ADO) 的 NumericScale 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57375b89595c6ed3e5c377692709deacd8f0ff28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 120d88e82f77af622de962ac306442625487ff08
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773966"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990408"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 属性 (ADO)
 指示 [参数](./parameter-object.md) 或 [字段](./field-object.md) 对象中数值的小数位数。  
@@ -30,7 +30,7 @@ ms.locfileid: "88773966"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字节** 值，该值指示将对数值解析成的小数位数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **NumericScale** 属性可确定小数点右边的位数，将用来表示数值 **参数** 或 **字段** 对象的值。  
   
  对于 **参数** 对象， **NumericScale** 属性是可读/写的。  

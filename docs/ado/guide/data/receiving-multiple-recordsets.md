@@ -3,7 +3,7 @@ description: 接收多个记录集
 title: 接收多个记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5aad021e1d6003ba3c8d30915f1648f57124984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abac183f348553f30bf0cf5ed91725ef421afb3e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453009"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979968"
 ---
 # <a name="receiving-multiple-recordsets"></a>接收多个记录集
 [适用于 SQL Server 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)支持为包含多个 sql 语句的单个命令返回多个**记录集**对象，每个 Sql 语句一个**记录集**。 返回 **记录集**的顺序遵循 SQL 语句在命令文本中的放置顺序。  

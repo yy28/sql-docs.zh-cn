@@ -3,7 +3,7 @@ description: 'AbsolutePosition 和 CursorLocation 属性示例 (JScript) '
 title: AbsolutePosition 和 CursorLocation 属性示例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fcad0360e9ae15263860c45b9f9c4a96c4d36bc
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 058a6046d7ac4010413bb4d124dd92ff9af902df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759977"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977228"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 属性示例 (JScript) 
 此示例演示 [AbsolutePosition](./absoluteposition-property-ado.md) 属性如何跟踪枚举 [记录集](./recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用 [CursorLocation](./cursorlocation-property-ado.md) 属性来启用 **AbsolutePosition** 属性。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AbsolutePositionJS**。  

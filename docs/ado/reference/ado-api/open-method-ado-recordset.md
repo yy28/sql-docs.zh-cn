@@ -3,7 +3,7 @@ description: Open 方法（ADO 记录集）
 title: " (ADO 记录集) 打开方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdece8acce83c9e87a84dbeffe7ebc486287fcc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 879456c30c3b34773d6f6b1395a88e04f5faaf9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773766"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990308"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法（ADO 记录集）
 打开 [记录集](./recordset-object-ado.md) 对象上的游标。  
@@ -34,7 +34,7 @@ ms.locfileid: "88773766"
 recordset.Open Source, ActiveConnection, CursorType, LockType, Options  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Source*  
  可选。 一个**变量**，该变量的计算结果为有效的[命令](./command-object-ado.md)对象、SQL 语句、表名、存储过程调用、URL 或包含持久存储的[记录集](./recordset-object-ado.md)的文件或[流](./stream-object-ado.md)对象的名称。  
   
@@ -56,7 +56,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **AdExecuteNoRecords**或**adExecuteStream**的**ExecuteOpenEnum**值不应与**Open**一起使用。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  ADO **记录集** 的默认游标是位于服务器上的只进只读游标。  
   
  对**Recordset**对象使用**Open**方法将打开一个游标，该游标表示基表、查询结果或以前保存的**记录集**的记录。  

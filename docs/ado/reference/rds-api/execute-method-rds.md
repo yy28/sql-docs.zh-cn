@@ -3,7 +3,7 @@ description: Execute 方法 (RDS)
 title: " (RDS) 的 Execute 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1be1721851bc5f0b969e8f38700ea1f63d91bbcc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768436"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982318"
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
 执行请求并创建 ADO 记录集，以便在 ADO 2.5 和更高版本中使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "88768436"
 object.Execute(ConnectionString As String, HandlerString As String, QueryString As String, lFetchOptions As Long, Properties, TableId, lExecuteOptions As Long, pParameters, [lcid As Long], [pInformation])  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  一个字符串，用于连接到将发送请求以执行的 OLE DB 提供程序。 如果使用 *HandlerString* 指定处理程序，则它可以编辑或替换连接字符串。  
   
@@ -78,7 +78,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  一个指针，指向执行返回的信息错误。 如果为 NULL，则不返回错误信息。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *HandlerString*参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 MSDFMAP.dll 会将参数解释为使用 sample.ini 检查连接和查询字符串的方向。  
   
 ## <a name="applies-to"></a>适用于  

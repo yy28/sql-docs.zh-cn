@@ -3,7 +3,7 @@ description: DeleteRule 属性示例 (VB)
 title: DeleteRule 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d662516dd705ede8bd62f9a92866bd569120807f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e87e17c77e22efe38a80d2ed7990b49ef297e101
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770566"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984598"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 属性示例 (VB)
 此示例演示[密钥](./key-object-adox.md)对象的[DeleteRule](./deleterule-property-adox.md)属性。 该代码追加一个新 [表](./table-object-adox.md) ，然后定义新的主键，并将 **DeleteRule** 设置为 **adRICascade**。  

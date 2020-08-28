@@ -3,7 +3,7 @@ description: Optimize 属性示例 (VB)
 title: " (VB) 优化属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773626"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990268"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 属性示例 (VB)
 此示例演示 [字段](./field-object.md) 对象的 "动态 **优化** " 属性。 不会为***Pubs***数据库中***作者***表的***zip***字段编制索引。 将 "***压缩***" 字段中的 "[优化](./optimize-property-dynamic-ado.md)" 属性设置为 " **True** " 可授予 ADO 生成索引，从而提高[Find](./find-method-ado.md)方法的性能。  

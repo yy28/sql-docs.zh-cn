@@ -3,7 +3,7 @@ description: 级别对象 (ADO MD)
 title: Level Object (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b77a0fad1b2ebe0f03855d9ff6c0ff689599774
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778046"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986508"
 ---
 # <a name="level-object-ado-md"></a>级别对象 (ADO MD)
 包含一组成员，其中每个成员在层次结构中具有相同的级别。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Level** 对象的集合和属性，可以执行以下操作：  
   
 -   标识具有[Name](./name-property-ado-md.md)和[UniqueName](./uniquename-property-ado-md.md)属性的**级别**。  

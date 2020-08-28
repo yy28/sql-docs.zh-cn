@@ -3,7 +3,7 @@ description: 重新整理
 title: 改变 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b0173b04e64365d1dad08ecc5f8d26880d05504
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04c43b9fcca56959aec242f344da6ec81a825030
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452929"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979768"
 ---
 # <a name="reshaping"></a>重新整理
 可以为 shape 命令的子句创建的 **记录集** 指定 *别名* ， (通常使用 AS 关键字) 。 可以在完全不同的命令中引用成形 **记录集** 的别名。 也就是说，您可以在新的 shape 命令中重复使用或 *改变*先前形状的 **记录集** 。 为了支持此功能，ADO 提供了一个属性，该属性 [调整了名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  

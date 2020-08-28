@@ -3,7 +3,7 @@ description: XML 中的分层记录集
 title: XML 中的分层记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a9563782851575970d9f2ab9a5fcabce5efa32d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806020"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980528"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的分层记录集
 ADO 允许将分层记录集对象持久保存到 XML 中。 使用分层记录集对象，父记录集中某个字段的值就是另一个记录集。 此类字段表示为 XML 流中的子元素，而不是特性。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  下面的示例演示了这种情况：  
   
 ```  

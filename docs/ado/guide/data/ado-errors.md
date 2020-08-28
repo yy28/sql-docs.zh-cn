@@ -3,7 +3,7 @@ description: ADO 运行时错误
 title: ADO 错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f753e66e6711c3abcf59e2541b9bad6cd390e71a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0b1da9cd8e7afd2b56921fa6b413b5d349d7027f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806689"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991728"
 ---
 # <a name="ado-run-time-errors"></a>ADO 运行时错误
 ADO 错误作为运行时错误报告给你的程序。 您可以使用编程语言的错误捕获机制来捕获和处理它们。 例如，在 Visual Basic 中，使用 **On Error** 语句。 在 Visual C++ 中，它取决于用于访问 ADO 库的方法。 使用 #import 时，请使用 **try-catch** 块。 否则，c + + 程序员需要通过调用 **GetErrorInfo**显式检索 error 对象。 以下 Visual Basic sub 过程演示捕获 ADO 错误：
