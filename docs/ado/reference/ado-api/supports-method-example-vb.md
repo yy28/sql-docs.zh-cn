@@ -3,7 +3,7 @@ description: Supports 方法示例 (VB)
 title: " (VB) 支持方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e644bc69ec4d77dfdb280a263836784eebc39df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 749137891e00e52f0ed2e321c689e8f4ae923f73
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777146"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988358"
 ---
 # <a name="supports-method-example-vb"></a>Supports 方法示例 (VB)
 此示例使用 [支持](./supports-method.md) 方法显示使用不同游标类型打开的记录集支持的选项。 此过程需要 DisplaySupport 过程才能运行。  

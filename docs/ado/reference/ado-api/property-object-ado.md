@@ -3,7 +3,7 @@ description: 属性对象 (ADO)
 title: ADO)  (属性对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f51334996eaeeaf7bdaae599dcbad16dc90824a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7edc57495968cb94dbf8714e3b519acac578775f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772976"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989978"
 ---
 # <a name="property-object-ado"></a>属性对象 (ADO)
 表示由提供程序定义的 ADO 对象的动态特性。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  ADO 对象具有两种类型的属性：内置和动态。  
   
  内置属性是在 ADO 中实现并使用语法立即可用于任何新对象的属性 `MyObject.Property` 。 它们不会在对象的[Properties](./properties-collection-ado.md)集合中显示为**属性**对象，因此虽然您可以更改其值，但不能修改它们的特征。  

@@ -3,7 +3,7 @@ description: RecordType 属性 (ADO)
 title: " (ADO) 的 RecordType 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c7cc82893ce5c20c27f44851b555850db4cd9cc8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 852ca0eeacfddfe7e60db20870dadf0c59962c21
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772096"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989678"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 属性 (ADO)
 指示 [记录](./record-object-ado.md) 对象的类型。  
@@ -31,7 +31,7 @@ ms.locfileid: "88772096"
 ## <a name="return-value"></a>返回值  
  返回 [RecordTypeEnum](./recordtypeenum.md) 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **RecordType**属性是只读的。  
   
 ## <a name="applies-to"></a>适用于  

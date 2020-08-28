@@ -3,7 +3,7 @@ description: Item 属性示例 (VC++)
 title: Item 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dee5bda39c96dbfe70818a6b0e0aa4eb4f6ee6b7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4359302bbd32d110ce55d073f155b74438586563
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774636"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990728"
 ---
 # <a name="item-property-example-vc"></a>Item 属性示例 (VC++)
 此示例演示 [Item](./item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开***Pubs***数据库的***Authors***表。  

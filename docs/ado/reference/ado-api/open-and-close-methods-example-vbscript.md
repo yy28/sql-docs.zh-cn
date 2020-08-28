@@ -3,7 +3,7 @@ description: Open 和 Close 方法示例 (VBScript)
 title: " (VBScript) 的打开和关闭方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3847fb3f9beaba4abe7820dae16cd57eba1cedd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c126e00d424e01bfa25fd74356678245ca1eac8b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990358"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 和 Close 方法示例 (VBScript)
 此示例使用已打开的[记录集](./recordset-object-ado.md)和[连接](./connection-object-ado.md)对象上的[打开](./open-method-ado-recordset.md)和[关闭](./close-method-ado.md)方法。  

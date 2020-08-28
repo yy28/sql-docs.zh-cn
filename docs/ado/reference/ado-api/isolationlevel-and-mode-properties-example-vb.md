@@ -3,7 +3,7 @@ description: 'IsolationLevel 和 Mode Properties (VB) '
 title: IsolationLevel 和 Mode Properties (VB) 的示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7a098c81362a74682bd889dbb245cb68d734810
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4fe64eda02cf769ba12b5cafb86df6f3514da7de
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774776"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990778"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode Properties (VB) 
 此示例使用 [Mode](./mode-property-ado.md) 属性打开独占连接，使用 [IsolationLevel](./isolationlevel-property.md) 属性打开在其他事务隔离中执行的事务。  

@@ -3,7 +3,7 @@ description: XSLT 转换
 title: XSLT 转换 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ae0f13b2ece4ae21e8a8f8312a561bcfd0e6c88
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a704245d166b0d53cb7ed17e6a5f8cdfa32d9447
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758957"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978798"
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 XSLT 可应用于生成的 XML，以将其转换为另一种格式。 了解 ADO 中的 XML 格式可帮助开发 XSLT 模板，从而将其转换为更易于用户使用的形式。  
   
  例如，您知道记录集的每一行都保存为 rs： data 元素中的 z:row 元素。 同样，记录集的每个字段都将保存为此元素的属性/值对。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  以下 XSLT 脚本可应用于上一部分所示的 XML，以将其转换为要在浏览器中显示的 HTML 表：  
   
 ```  

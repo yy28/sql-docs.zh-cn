@@ -3,7 +3,7 @@ description: 步骤 4：填充详细信息文本框
 title: 步骤4：填充 "详细信息" 文本框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59b074b3e635457f8d96060575d941e26846281d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 868066b8225a3e87a2aad37ddd7569cc5be6bd75
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452779"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979478"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>步骤 4：填充详细信息文本框
 若要填充 "详细信息" 文本框，请创建名为 **recFields** 的新子程序，并插入以下代码：  

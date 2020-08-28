@@ -3,7 +3,7 @@ description: ADO 基础知识
 title: ADO 基础 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: dedb841f9889d71da89107766ff26e3f870d1193
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806432"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991658"
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 OLE DB 系统接口以编程方式访问、编辑和更新各种数据源中的数据。 ADO 最常见的用法是查询关系数据库中的一个或多个表，检索并显示应用程序中的结果，并可能让用户进行更改并保存对数据所做的更改。 其他任务包括：  

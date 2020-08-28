@@ -3,7 +3,7 @@ description: RelatedColumn 属性 (ADOX)
 title: RelatedColumn 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 003d3e1fb3ff13c7608e5629c23d5eda8dc3bf05
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ce854ad82338bd6aee43b85b98abfea5adb64646
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769496"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983438"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 属性 (ADOX)
 指示相关列对象的名称 [ (ADOX) ](./column-object-adox.md) 在相关表中 (键列仅) 。  
@@ -33,7 +33,7 @@ ms.locfileid: "88769496"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 **字符串** 值，该值是相关表中相关列的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  默认值为空字符串 ("")。  
   
  对于已追加到集合的 [列](./column-object-adox.md) 对象，此属性是只读的。  

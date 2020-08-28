@@ -3,7 +3,7 @@ description: 游标和锁定特征
 title: 光标和锁定特征 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f903cdf8feab9b3e6d649f95b33b68c2de107194
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bd8b88ab3a90669982a752023d8a983c188dcbf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453589"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991458"
 ---
 # <a name="cursor-and-lock-characteristics"></a>游标和锁定特征
 尽管游标的特征取决于提供程序的功能，但以下优点和缺点通常适用于各种类型的游标和锁。  

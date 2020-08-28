@@ -3,7 +3,7 @@ description: Append 方法（ADOX 视图）
 title: )  (ADOX 视图的 Append 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74432aa3bb610b1cd5688e1f52c7d7ea81166f75
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 77682d479d65c7ccc0dd01fd1fd86627a580d8c5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985388"
 ---
 # <a name="append-method-adox-views"></a>Append 方法（ADOX 视图）
 创建新的 [视图](./view-object-adox.md) 对象并将其追加到 [Views](./views-collection-adox.md) 集合。  
@@ -34,14 +34,14 @@ ms.locfileid: "88771356"
 Views.Append Name, Command  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *Name*  
+#### <a name="parameters"></a>参数  
+ *名称*  
  一个 **字符串** 值，该值指定要创建的视图的名称。  
   
  *命令*  
  一个 ADO [命令](../ado-api/command-object-ado.md) 对象，表示要创建的视图。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Command** 对象中指定的名称和属性在数据源中创建新视图。  
   
  如果用户指定的命令文本表示过程而不是视图，则行为取决于提供程序。 如果提供程序不支持保留命令，则**Append**将会失败。  

@@ -3,7 +3,7 @@ description: Internet 服务器错误：拒绝访问
 title: Internet 服务器错误：访问被拒绝 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8daeb97bd4bcb8a01556f6ece38e977f1cf0068f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d5902892fa850808afe69e0795c485ce5e46a604
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759738"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978058"
 ---
 # <a name="internet-server-error-access-denied"></a>Internet 服务器错误：拒绝访问
 如果收到此错误，则通常意味着 Microsoft Internet Information Services (IIS) 返回以下状态：  

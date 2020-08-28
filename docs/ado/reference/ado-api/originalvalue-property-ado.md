@@ -3,7 +3,7 @@ description: OriginalValue 属性 (ADO)
 title: " (ADO) 的 OriginalValue 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5aedfa688b2d29a80eb0bc2e06d113e908e122c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ab73e79f86ac1e504322a0606ee3839997ce5811
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773566"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990208"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 属性 (ADO)
 指示在进行任何更改之前，记录中是否存在 [字段](./field-object.md) 的值。  
@@ -29,7 +29,7 @@ ms.locfileid: "88773566"
 ## <a name="return-value"></a>返回值  
  返回一个表示字段值的 **变量** 值，此值在任何更改之前。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **OriginalValue** 属性可以返回当前记录中字段的原始字段值。  
   
  在 *即时更新模式下* (在调用 [update](./update-method.md) 方法) 后，提供程序将更改写入基础数据源， **OriginalValue** 属性返回在任何更改前存在的字段值 (也就是说，自上次 **更新** 方法调用) 之后。 此值与 [CancelUpdate](./cancelupdate-method-ado.md) 方法用来替换 [value](./value-property-ado.md) 属性的值相同。  

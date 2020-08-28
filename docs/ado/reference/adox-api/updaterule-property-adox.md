@@ -3,7 +3,7 @@ description: UpdateRule 属性 (ADOX)
 title: UpdateRule 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88223eae0a6a6709dc5c45d2ed0da5e17f3e7c17
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d3113bf5c77dbef03378d2c1359673bf32782f73
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769116"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983038"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 属性 (ADOX)
 指示在 [更新主键时](./key-object-adox.md) 执行的操作。  
@@ -33,7 +33,7 @@ ms.locfileid: "88769116"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 **Long** 值，该值可以是 [RuleEnum](./ruleenum.md) 常数之一。 默认值为 **adRINone**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对于已追加到集合的 [键](./key-object-adox.md) 对象，此属性是只读的。  
   
 ## <a name="applies-to"></a>适用于  

@@ -3,7 +3,7 @@ description: Mode 属性 (ADO)
 title: ADO)  (模式属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eab9f3db1bfe9417411dc832cfa24e3d4496257b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774386"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990598"
 ---
 # <a name="mode-property-ado"></a>Mode 属性 (ADO)
 指示用于修改 [连接](./connection-object-ado.md)、 [记录](./record-object-ado.md)或 [流](./stream-object-ado.md) 对象中的数据的可用权限。  
@@ -31,7 +31,7 @@ ms.locfileid: "88774386"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 [ConnectModeEnum](./connectmodeenum.md) 值。 **连接**的默认值为**adModeUnknown**。 **记录**对象的默认值为**adModeRead**。 与基础源关联的**流**的默认值 (使用 URL 作为源打开，或者作为**记录**) 的默认**流** **。** 与 (在内存中实例化的基础源) 不关联的 **流** 的默认值为 **adModeUnknown**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Mode** 属性可以设置或返回当前连接上的提供程序所使用的访问权限。 仅当关闭**连接**对象时，才可以设置**Mode**属性。  
   
  对于 **流** 对象，如果未指定访问模式，则从用于打开 **流** 对象的源继承。 例如，如果从**记录**对象打开流，则默认情况下，将以与**记录**相同的模式打开**流**。  

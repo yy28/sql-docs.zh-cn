@@ -3,7 +3,7 @@ description: 配合使用 ADO 与 Microsoft Visual C++
 title: 将 ADO 用于 Microsoft Visual C++ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0669f8c4762717311cab83d35c80c5b35e791f59
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1956e7fff574174e9566f489a22bd725020336fc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806504"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990958"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>配合使用 ADO 与 Microsoft Visual C++
 有关使用 ADO 和 Visual C++ 的信息，请参阅以下部分：  

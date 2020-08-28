@@ -3,7 +3,7 @@ description: Open 方法（ADO 连接）
 title: 开放式方法 (ADO 连接) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b16abd21f49f9c3dc7e317e5b7079e9b124f5e12
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3691f6b7b86d7f48ea570a542f85af75c53d017
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773836"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990328"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法（ADO 连接）
 打开与数据源的连接。  
@@ -35,7 +35,7 @@ ms.locfileid: "88773836"
 connection.Open ConnectionString, UserID, Password, Options  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  可选。 一个包含连接信息的 **字符串** 值。 有关有效设置的详细信息，请参阅 [ConnectionString](./connectionstring-property-ado.md) 属性。  
   
@@ -48,7 +48,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *选项*  
  可选。 一个 [ConnectOptionEnum](./connectoptionenum.md) 值，该值确定此方法是在 (同步之后) 还是在建立连接 (异步) 之前返回。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对[连接](./connection-object-ado.md)对象使用**Open**方法可建立与数据源的物理连接。 此方法成功完成后，连接将处于活动中，你可以对其发出命令并处理结果。  
   
  使用可选的 *ConnectionString* 参数指定包含一系列由分号分隔的 *参数* *= 值* 语句或使用 URL 标识的文件或目录资源的连接字符串。 **Connectionstring**属性会自动继承用于*ConnectionString*参数的值。 因此，您可以在打开连接对象之前设置**连接**对象的**connectionstring**属性，或使用*ConnectionString*参数在**Open**方法调用期间设置或重写当前连接参数。  

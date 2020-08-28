@@ -3,7 +3,7 @@ description: Unique 属性 (ADOX)
 title: 唯一属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 109e7d004e65bc18e4af0e67d9fbada19fc538d5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b0357d0ea75f6949437d9a38bdedc4031700a238
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769166"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983088"
 ---
 # <a name="unique-property-adox"></a>Unique 属性 (ADOX)
 指示索引键是否必须唯一。  
@@ -31,7 +31,7 @@ ms.locfileid: "88769166"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 **Boolean** 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  默认值为 **False**。  
   
  对于已追加到集合的 [索引](./index-object-adox.md) 对象，此属性是只读的。  

@@ -3,7 +3,7 @@ description: Append 方法（ADOX 过程）
 title: )  (ADOX 过程的 Append 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f416d8223e828d724f1eabbe4ab82061204af0f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2bc35ccb48211f6a849dc102ba2d1806a79b2426
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985458"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法（ADOX 过程）
 将新 [过程](./procedure-object-adox.md) 对象添加到 [过程](./procedures-collection-adox.md) 集合。  
@@ -34,14 +34,14 @@ ms.locfileid: "88771406"
 Procedures.Append Name, Command  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *Name*  
+#### <a name="parameters"></a>参数  
+ *名称*  
  一个 **字符串** 值，该值指定要创建并追加的过程的名称。  
   
  *命令*  
  一个 ADO [命令](../ado-api/command-object-ado.md) 对象，表示要创建和追加的过程。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **Command** 对象中指定的名称和属性在数据源中创建一个新过程。  
   
  如果用户指定的命令文本表示视图而不是过程，则行为取决于所使用的提供程序。 如果提供程序不支持保留命令，则**Append**将会失败。  

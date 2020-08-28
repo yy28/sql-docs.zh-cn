@@ -3,7 +3,7 @@ description: Save 方法
 title: Save 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05e65643884d57d991028394f9f5b1ba7b752533
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4ffd13c07fad10d4b0386d342a6ddcbec37256da
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777576"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989328"
 ---
 # <a name="save-method"></a>Save 方法
 将 [记录集](./recordset-object-ado.md) 保存到文件或 [流](./stream-object-ado.md) 对象中。  
@@ -34,14 +34,14 @@ ms.locfileid: "88777576"
 recordset.Save Destination, PersistFormat  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *目标*  
  可选。 一个 **变量** ，表示要保存 **记录集** 的文件的完整路径名称，或者是对 **流** 对象的引用。  
   
  *PersistFormat*  
  可选。 一个 [PersistFormatEnum](./persistformatenum.md) 值，指定将 **记录集** 保存 (XML 或 ADTG) 的格式。 默认值为 **adPersistADTG**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  只能对打开的**记录集**调用[Save 方法]()方法。 使用[Open 方法 (ADO Recordset) ](./open-method-ado-recordset.md)方法稍后从*目标*还原**记录集**。  
   
  如果 [筛选器属性](./filter-property.md) 属性对 **记录集**有效，则仅保存在筛选器下可访问的行。 如果 **记录集** 是分层的，则保存当前子 **记录集** 及其子记录集（包括父 **记录**集）。 如果调用子记录集的 Save 方法，则会保存子记录集及其所有子级，但不会保存父 **记录集** 。  

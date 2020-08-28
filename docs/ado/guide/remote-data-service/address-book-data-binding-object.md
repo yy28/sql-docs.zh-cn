@@ -3,7 +3,7 @@ description: 通讯簿数据绑定对象
 title: 通讯簿数据绑定对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2028a27c547d92903188c49e608dcc75b51fa27
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6b6bb99ea218268a7ccb988acb2f49fb4898f32
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758617"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978438"
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 对象，用于将 SQL Server 数据库中的数据绑定到可视对象 (在这种情况下，将在应用程序的客户端 HTML 页中) 一个 DHTML 表。 事件驱动的 VBScript 程序逻辑使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) ：  

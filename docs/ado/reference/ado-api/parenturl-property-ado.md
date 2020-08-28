@@ -3,7 +3,7 @@ description: ParentURL 属性 (ADO)
 title: " (ADO) 的 ParentURL 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e3a8323223f97034750c7e6bf7927ac87aefd3bd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773236"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990108"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 属性 (ADO)
 指示指向当前**记录**对象的父[记录](./record-object-ado.md)的绝对 URL 字符串。  
@@ -29,7 +29,7 @@ ms.locfileid: "88773236"
 ## <a name="return-value"></a>返回值  
  返回一个 **字符串** 值，该值指示父 **记录**的 URL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **ParentURL**属性取决于用于打开**Record**对象的源。 例如，可以使用包含[ActiveConnection](./activeconnection-property-ado.md)属性引用的目录的相对路径名称的源打开**记录**。  
   
  假设 "second" 是包含在 "first" 下的文件夹。 使用以下语法打开 **Record** 对象：  

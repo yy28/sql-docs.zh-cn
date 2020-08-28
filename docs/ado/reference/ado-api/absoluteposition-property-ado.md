@@ -3,7 +3,7 @@ description: AbsolutePosition 属性 (ADO)
 title: " (ADO) 的 AbsolutePosition 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8660c2b5fecaeb99c0e0f3b4bcc57b1b2fc222a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0ecb3290d73032568af7e0a92baf0c9d1b2628f4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759967"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977153"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition 属性 (ADO)
 指示 [记录集](./recordset-object-ado.md) 对象的当前记录的序号位置。  
@@ -31,7 +31,7 @@ ms.locfileid: "88759967"
   
  对于64位代码，请使用提供的数据类型来存储64位值。 例如，你可以使用 Long 或其他64位长度的值，例如 DBORDINAL。 不要使用 **PositionEnum** 值，因为它们限制为32位长度。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  为了设置 **AbsolutePosition** 属性，ADO 要求使用的 OLE DB 提供程序实现 [IRowsetLocate： IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85)) 接口。  
   
  访问使用只进或动态游标打开的**记录集**的**AbsolutePosition**属性时，将引发错误**adErrFeatureNotAvailable**。 对于其他游标类型，只要 OLE DB 提供程序支持 **IRowsetScroll： IRowsetLocate** 接口，就会返回正确的位置。 如果提供程序不支持 **IRowsetScroll** 接口，则将属性设置为 **adPosUnknown**。 请参阅提供程序的文档，以确定它是否支持 **IRowsetScroll**。  

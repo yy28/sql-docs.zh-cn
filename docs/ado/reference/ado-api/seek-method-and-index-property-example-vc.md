@@ -3,7 +3,7 @@ description: Seek 方法和 Index 属性示例 (VC++)
 title: 查找方法和索引属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8d13a3d1ce8db32e01e20608dd1d7b3b3fb5be6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4b1e9f5822260259e34761cc8cb05d80b962fed2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777506"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989188"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 方法和 Index 属性示例 (VC++)
 此示例将 [记录集](./recordset-object-ado.md) 对象的 [Seek](./seek-method.md) 方法和 [Index](./index-property.md) 属性与给定的 ***雇员 ID***结合使用，以便在 Nwind 数据库的 ***Employees*** 表中查找雇员的姓名。  

@@ -3,7 +3,7 @@ description: “读取可重复”隔离级别的死锁
 title: 具有读取可重复隔离级别的死锁 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d37567639158e9d9d18e305e74ac4d5d93e95fa3
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9d404533b950aea7549a64b7863d2c1623118594
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759791"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978148"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>“读取可重复”隔离级别的死锁
 如果自定义业务对象使用可重复读取的隔离级别来访问 SQL Server，且在同一事务中发送查询和更新的两个客户端同时调用业务对象，则可能会发生死锁。 远程数据服务旨在允许其中一个进程超时以释放死锁，但该客户端的更新将失败。  

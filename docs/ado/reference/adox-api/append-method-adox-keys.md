@@ -3,7 +3,7 @@ description: Append 方法（ADOX 项）
 title: 追加方法 (ADOX 密钥) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6334f4edb0d98e7fa0dca49f1c024f63e471c7f8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2531031808c16db4892fb0b759a8a8d819a2222d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771426"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985478"
 ---
 # <a name="append-method-adox-keys"></a>Append 方法（ADOX 项）
 向[Keys](./keys-collection-adox.md)集合添加新的[Key](./key-object-adox.md)对象。  
@@ -34,7 +34,7 @@ ms.locfileid: "88771426"
 Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Key*  
  要追加的 **密钥** 对象或要创建和追加的密钥的名称。  
   
@@ -50,7 +50,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *RelatedColumn*  
  可选。 一个 **字符串** 值，该值指定外键的相关列的名称。 *RelatedColumn*参数对应于[列](./column-object-adox.md)对象的**Name**属性的值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *Columns*参数可以采用列的名称或列名的数组。  
   
 ## <a name="applies-to"></a>适用于  

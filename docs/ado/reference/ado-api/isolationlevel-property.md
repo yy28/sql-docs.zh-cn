@@ -3,7 +3,7 @@ description: IsolationLevel 属性
 title: IsolationLevel 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f46199512521e6fe6fda6dc40fe894ba113c0229
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 91945d36801005fb7f7c4dbcc9df5a464c6e4fa4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990768"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel 属性
 指示 [连接](./connection-object-ado.md) 对象的隔离级别。  
@@ -29,7 +29,7 @@ ms.locfileid: "88774716"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 [IsolationLevelEnum](./isolationlevelenum.md) 值。 默认值为 **adXactReadCommitted**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **IsolationLevel** 属性可以设置 **连接** 对象的隔离级别。 直到下一次调用 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法时，此设置才会生效。 如果请求的隔离级别不可用，则提供程序可能返回下一个更高的隔离级别，而不更新 **IsolationLevel** 属性。  
   
  **IsolationLevel**属性是可读/写的。  

@@ -3,7 +3,7 @@ description: Visual Basic for Applications 函数
 title: Visual Basic for Applications 函数 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452549"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978928"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
 以下 Visual Basic for Applications 函数可用于数据定形 CALC 表达式：  
@@ -58,7 +58,7 @@ ms.locfileid: "88452549"
         DatePart  
         DateSerial  
         DateValue  
-        日期  
+        天  
         DDB  
         错误  
         Error$  
@@ -71,7 +71,7 @@ ms.locfileid: "88452549"
     :::column-end:::
     :::column:::
         Hex$  
-        Hour  
+        小时  
         IIF  
         InStr  
         int  
@@ -120,7 +120,7 @@ ms.locfileid: "88452549"
         Rnd  
         RTrim  
         RTrim $  
-        秒  
+        Second  
         Sgn  
         正弦  
         SLN  
@@ -133,7 +133,7 @@ ms.locfileid: "88452549"
         StrConv  
     :::column-end:::
     :::column:::
-        字符串  
+        String  
         String$  
         SYD  
         Tan  

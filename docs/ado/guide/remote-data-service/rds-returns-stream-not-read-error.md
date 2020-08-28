@@ -3,7 +3,7 @@ description: RDS 返回 " &quot; 未读取流" &quot; 错误
 title: RDS 返回 " &quot; 未读取流" &quot; 错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0da62851a5cab542a64e219aecc70a13720570f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 23de3604b57f2b424a2166cc25f79bcb4ccbde09
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977898"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 返回 " &quot; 未读取流" &quot; 错误
 "无法读取流对象，因为它是空的，或当前位置位于流的末尾。 对于非空流，请将当前位置设置为 Position 属性。 若要确定流是否为空，请检查 "大小" 属性。  

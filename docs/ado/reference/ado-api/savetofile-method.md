@@ -3,7 +3,7 @@ description: SaveToFile 方法
 title: SaveToFile 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1f6890d25922789a4b3656429582e4e8a60efc1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6aa3269e73f9823eb47dddeb039b62e3affdd3c6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777546"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989288"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
 将 [流](./stream-object-ado.md) 的二进制内容保存到文件。  
@@ -34,7 +34,7 @@ ms.locfileid: "88777546"
 Stream.SaveToFile FileName, SaveOptions  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *FileName*  
  一个 **字符串** 值，该值包含 **流** 的内容将保存到的文件的完全限定名称。 可以保存到任何有效的本地位置，也可以通过 UNC 值进行访问。  
   
@@ -44,7 +44,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  如果在将 **adSaveCreateOverwrite** 设置为) 时覆盖现有文件 (，则 **SaveToFile** 将从新的 [EOS](./eos-property.md)之后的原始现有文件中截断任何字节。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **SaveToFile** 可用于将 **Stream** 对象的内容复制到本地文件。 **Stream**对象的内容或属性没有变化。 在调用**SaveToFile**之前，必须打开**流**对象。  
   
  此方法不会更改 **流** 对象与基础源的关联。 **流**对象仍将与打开时源的原始 URL 或**记录**相关联。  
