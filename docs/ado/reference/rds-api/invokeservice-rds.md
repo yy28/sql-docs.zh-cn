@@ -3,7 +3,7 @@ description: InvokeService (RDS)
 title: InvokeService (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acd5dc5f78319c8fc75891dbaad5a98fc4463196
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768046"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981968"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 返回一个指针，该指针指向对象的更好的版本上所请求的接口。  
@@ -34,7 +34,7 @@ ms.locfileid: "88768046"
 object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown** ppunkMoreFunctionalInterface) As HRESULT  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *riid*  
   
  中所请求的接口的标识符。  
@@ -50,7 +50,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>返回值  
  一个 HRESULT 值，该值指示是否成功调用了 **InvokeService** 方法。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **InvokeService**的 RDS 游标引擎实现采用输入行集 (或多个结果对象) ，用输入行集填充游标引擎，然后在其自身上返回指针。  
   
 ## <a name="applies-to"></a>适用于  

@@ -3,7 +3,7 @@ description: CacheSize 属性 (ADO)
 title: " (ADO) 的 CacheSize 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b1fa8499a2fa25a2c112474ba6a6212d933c4815
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975718"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 属性 (ADO)
 指示 [记录集中](./recordset-object-ado.md) 缓存到内存中的记录集的记录数。  
@@ -29,7 +29,7 @@ ms.locfileid: "88776356"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个必须大于0的 **长整型** 值。 默认值为 1。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **CacheSize** 属性可控制从提供程序在本地内存中一次检索的记录数。 例如，如果 **CacheSize** 为10，则在第一次打开 **Recordset** 对象之后，提供程序会在本地内存中检索前10条记录。 当您在 **Recordset** 对象中移动时，提供程序将从本地内存缓冲区返回数据。 一旦移过缓存中的最后一条记录，提供程序就会将数据源中的后10个记录检索到缓存中。  
   
 > [!NOTE]

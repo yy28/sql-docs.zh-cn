@@ -3,7 +3,7 @@ description: CancelBatch 方法 (ADO)
 title: " (ADO) 的 CancelBatch 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db1ae959094c07ea44e7e236e540070bea7814e5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0baf8d291bbb45961163dfc80106724c48d71613
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776306"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975578"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 方法 (ADO)
 取消挂起的批更新。  
@@ -34,11 +34,11 @@ ms.locfileid: "88776306"
 recordset.CancelBatchAffectRecords  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *AffectRecords*  
  可选。 一个 [AffectEnum](./affectenum.md) 值，指示 **CancelBatch** 方法将影响的记录数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **CancelBatch** 方法可取消批处理更新模式中 [记录集中](./recordset-object-ado.md) 的任何挂起的更新。 如果**记录集**处于立即更新模式，则在没有**adAffectCurrent**的情况下调用**CancelBatch**将生成错误。  
   
  如果要编辑当前记录或在调用 **CancelBatch**时添加新记录，ADO 首先会调用 [CancelUpdate](./cancelupdate-method-ado.md) 方法来取消任何缓存的更改。 之后， **记录集中** 的所有挂起的更改都将被取消。  

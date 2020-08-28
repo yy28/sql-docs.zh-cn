@@ -3,7 +3,7 @@ description: Query 方法 (RDS)
 title: " (RDS) 的 Query 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39bd8ccc67b0181088c267a60d6af2bf99035c02
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 16220bf51fceb83cf22abb2779ad8a5804af4326
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981848"
 ---
 # <a name="query-method-rds"></a>Query 方法 (RDS)
 使用有效的 SQL 查询字符串返回 [记录集](../ado-api/recordset-object-ado.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "88767926"
 Set Recordset = DataFactory.Query(Connection, Query)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Recordset*  
  表示 **Recordset** 对象的对象变量。  
   
@@ -47,7 +47,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *查询*  
  一个包含 SQL 查询的 **字符串** 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  查询应使用数据库服务器的 SQL 语言。 如果执行的查询出现错误，则返回结果状态。 **查询**方法不对**查询**字符串执行任何语法检查。  
   
 ## <a name="applies-to"></a>适用于  

@@ -3,7 +3,7 @@ description: Attributes 和 Name 属性示例 (VB)
 title: 属性和名称属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fb0d90d8e6fd5a999d3596af600c140c75e9617
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2740ed58b5592c0f57519de12c9a518af024c3e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776456"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975968"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes 和 Name 属性示例 (VB)
 此示例显示[连接](./connection-object-ado.md)、[字段](./field-object.md)和[属性](./property-object-ado.md)对象的 "[属性](./attributes-property-ado.md)" 属性的值。 它使用 [name](./name-property-ado.md) 属性来显示每个 **字段** 和 **属性** 对象的名称。  

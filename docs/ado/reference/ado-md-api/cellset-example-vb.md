@@ -3,7 +3,7 @@ description: 单元集示例 (VB)
 title: " (VB) 的单元集示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6f7b3fc6b60429783ba942b30193e72c60c6711
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adb68e81e177c52f1be349f04535237a1babf119
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441219"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987198"
 ---
 # <a name="cellset-example-vb"></a>单元集示例 (VB)
 此 Visual Basic 项目演示了使用 ADO MD 访问多维数据集数据的基础知识。 它显示列标题和行标题的成员标题，然后在单元集内显示特定单元格的格式化值。  

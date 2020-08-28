@@ -3,7 +3,7 @@ description: ADO MD 属性
 title: ADO MD 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f6628f0f172e81a490d0abd6a8cb2ae2a73679e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776666"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987418"
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
 
-|属性|说明|  
+|properties|说明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|指示当前单元集或目录当前属于哪个 ADO **连接** 对象。|  
 |[Caption](./caption-property-ado-md.md)|指示在显示 **级别** 或 **成员** 对象时要使用的文本标题。|  
@@ -40,7 +40,7 @@ ms.locfileid: "88776666"
 |[FormattedValue](./formattedvalue-property-ado-md.md)|指示单元格值的格式化显示。|  
 |[LevelDepth](./leveldepth-property-ado-md.md)|指示层次结构的根和成员之间的级别数。|  
 |[LevelName](./levelname-property-ado-md.md)|指示成员的级别名称。|  
-|[Name](./name-property-ado-md.md)|指示对象的名称。|  
+|[名称](./name-property-ado-md.md)|指示对象的名称。|  
 |[序数 (单元) ](./ordinal-property-ado-md-cell.md)|按单元格集中的位置唯一标识单元格。|  
 |[序号 (位置) ](./ordinal-property-ado-md-position.md)|唯一标识沿轴的位置。|  
 |[Parent](./parent-property-ado-md.md)|指示作为层次结构中当前成员的父成员的成员。|  

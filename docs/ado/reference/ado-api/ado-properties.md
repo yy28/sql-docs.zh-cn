@@ -3,7 +3,7 @@ description: ADO 属性
 title: ADO 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7f6ddee8a1d7629da95e233d02512e8e5cd3f35
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a8a53f4b901209a1ef59be6ca2eb8b531bc52d7c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776576"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976278"
 ---
 # <a name="ado-properties"></a>ADO 属性
 
@@ -32,7 +32,7 @@ ms.locfileid: "88776576"
 |[ActualSize](./actualsize-property-ado.md)|指示字段值的实际长度。|  
 |[特性](./attributes-property-ado.md)|指示对象的一个或多个特征。|  
 |[BOF 和 EOF](./bof-eof-properties-ado.md)|**BOF** 指示当前记录位置位于记录集对象中的第一条记录之前。<br /><br /> **EOF** 指示当前记录位置在 Recordset 对象的最后一条记录之后。|  
-|[书签](./bookmark-property-ado.md)|指示一个书签，该书签唯一标识 **recordset** 对象中的当前记录，或将 **记录集** 对象中的当前记录设置为有效书签标识的记录。|  
+|[加入书签](./bookmark-property-ado.md)|指示一个书签，该书签唯一标识 **recordset** 对象中的当前记录，或将 **记录集** 对象中的当前记录设置为有效书签标识的记录。|  
 |[CacheSize](./cachesize-property-ado.md)|指示 **记录集中** 缓存到内存中的记录集的记录数。|  
 |[章节](./chapter-property-ado.md)|获取或设置**ADORecordsetConstruction**对象上/上的 OLE DB**章节**对象。|  
 |[字符集](./charset-property-ado.md)|指示文本 **流** 内容应翻译成的字符集。|  
@@ -49,7 +49,7 @@ ms.locfileid: "88776576"
 |[DataSource](./datasource-property-ado.md)|指示包含要表示为 **记录集** 对象的数据的对象。|  
 |[DefaultDatabase](./defaultdatabase-property.md)|指示 **连接** 对象的默认数据库。|  
 |[DefinedSize](./definedsize-property.md)|指示 **Field** 对象的数据容量。|  
-|[描述](./description-property.md)|描述 **错误** 对象。|  
+|[说明](./description-property.md)|描述 **错误** 对象。|  
 |[Dialect-p](./dialect-property.md)|指示提供程序将用于分析 **CommandText** 或 **CommandStream** 属性的语法和一般规则。|  
 |[方向](./direction-property.md)|指示 **参数** 是表示输入参数和/或输出参数，还是如果参数是来自存储过程的返回值，则为。|  
 |[EditMode](./editmode-property.md)|指示当前记录的编辑状态。|  
@@ -64,7 +64,7 @@ ms.locfileid: "88776576"
 |[MarshalOptions](./marshaloptions-property-ado.md)|指示哪些记录将被封送回服务器。|  
 |[MaxRecords](./maxrecords-property-ado.md)|指示要从查询返回到 **记录集** 的最大记录数。|  
 |[模式](./mode-property-ado.md)|指示用于修改 **连接**、 **记录**或 **流** 对象中的数据的可用权限。|  
-|[Name](./name-property-ado.md)|指示对象的名称。|  
+|[名称](./name-property-ado.md)|指示对象的名称。|  
 |[NativeError](./nativeerror-property-ado.md)|指示特定 **错误** 对象的特定于提供程序的错误代码。|  
 |[数字](./number-property-ado.md)|指示唯一标识 **错误** 对象的数字。|  
 |[NumericScale](./numericscale-property-ado.md)|指示 **参数** 或 **字段** 对象中数值的小数位数。|  

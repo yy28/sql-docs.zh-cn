@@ -3,7 +3,7 @@ description: CubeDefs 集合 (ADO MD)
 title: CubeDefs 集合 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7232ddba31d52aa3508fa78580f0e203a923727
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8dcb5bde1aead1bc5b88b35d212f029b937bb965
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778236"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986968"
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs 集合 (ADO MD)
 包含 [CubeDef](./cubedef-object-ado-md.md) 对象，这些对象表示多维目录中的多维数据集。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **CubeDefs** 是标准 ADO 集合。 通过集合的属性和方法，你可以执行以下操作：  
   
 -   获取集合中具有 [Count](../ado-api/count-property-ado.md) 属性的对象的数目。  

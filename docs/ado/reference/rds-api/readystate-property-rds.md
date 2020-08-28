@@ -1,7 +1,7 @@
 ---
 description: ReadyState 属性 (RDS)
 title: ReadyState 属性 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a7e27abfa2464f84e130d789db93a3d7606df21
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767656"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981478"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 属性 (RDS)
 指示 [DataControl](./datacontrol-object-rds.md) 对象在其 [Recordset](../ado-api/recordset-object-ado.md) 对象中检索数据时的进度。  
@@ -30,7 +30,7 @@ ms.locfileid: "88767656"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|当前查询仍在执行，未提取行。 **DataControl**对象的**记录集**不可用。|  
 |**adcReadyStateInteractive**|当前查询检索到的初始行集已存储在 **DataControl** 对象的 **记录集中** ，可供使用。 仍在提取剩余行。|  
@@ -39,7 +39,7 @@ ms.locfileid: "88767656"
 > [!NOTE]
 >  每个使用这些常量的客户端可执行文件都必须为其提供声明。 你可以从文件 Adcvbs 中剪切并粘贴所需的常量声明，该文件位于 RDS 库的默认安装文件夹中。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在异步查询操作期间，使用 [onReadyStateChange](./onreadystatechange-event-rds.md) 事件监视 **ReadyState** 属性中的更改。 这比定期检查属性值更有效。  
   
  如果在异步操作过程中发生错误，则**ReadyState**属性更改为**adcReadyStateComplete**，[状态](../ado-api/state-property-ado.md)属性从**adStateExecuting**更改为**adStateClosed**，而**Recordset**对象的[值](../ado-api/value-property-ado.md)属性则不*会。*  

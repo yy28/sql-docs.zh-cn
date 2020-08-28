@@ -3,7 +3,7 @@ description: Write 方法
 title: Write 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26e9311a760e3d4349fdbbcececa9b9533741a4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 90f67c0804424e15d51cc8538413f3c4464ff775
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776836"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987748"
 ---
 # <a name="write-method"></a>Write 方法
 向 [Stream](./stream-object-ado.md) 对象写入二进制数据。  
@@ -34,11 +34,11 @@ ms.locfileid: "88776836"
 Stream.Write Buffer  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Buffer*  
  一个 **变量** ，包含要写入的字节数组。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  指定的字节将写入 **流** 对象，而不会在每个字节之间插入空格。  
   
  [当前位置设置为写入](./position-property-ado.md)数据之后的字节。 **写入**方法不会截断流中的其余数据。 如果要截断这些字节，请调用 [SetEOS](./seteos-method.md)。  

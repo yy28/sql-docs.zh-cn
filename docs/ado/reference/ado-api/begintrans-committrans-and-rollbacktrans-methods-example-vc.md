@@ -3,7 +3,7 @@ description: 'BeginTrans、CommitTrans 和 RollbackTrans 方法示例 (VC + +) '
 title: BeginTrans、CommitTrans 和 RollbackTrans 方法示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5203cc9a896e42a18f2c3eedcbfbcb41d4f6ec4a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 67cce0063dd0c41dbba173e246b4c3884fb3c8f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776436"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975878"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法示例 (VC + +) 
 此示例将更改数据库的 ***Titles*** 表中所有心理学书籍的类型。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动了一个事务，该事务隔离对***标题***表所做的所有更改时， [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会保存这些更改。 可以使用 [Rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法撤消使用 [Update](./update-method.md) 方法保存的更改。  

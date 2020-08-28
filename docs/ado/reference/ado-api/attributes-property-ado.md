@@ -3,7 +3,7 @@ description: Attributes 属性 (ADO)
 title: ADO)  (特性属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ceb141b0ecdbc278e324f19f3bd4b3d7ed1b4eb6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776446"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975938"
 ---
 # <a name="attributes-property-ado"></a>Attributes 属性 (ADO)
 指示对象的一个或多个特征。  
@@ -39,7 +39,7 @@ ms.locfileid: "88776446"
   
  对于 [属性](./property-object-ado.md) 对象，" **属性** " 属性是只读的，它的值可以是任何一个或多个 [PropertyAttributesEnum](./propertyattributesenum.md) 值的总和。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 " **属性** " 属性可设置或返回 **连接** 对象、 **参数** 对象、 **字段** 对象或 **属性** 对象的特征。  
   
  设置多个属性时，可以对相应的常量求和。 如果将属性值设置为包含不兼容常量的总和，则会发生错误。  

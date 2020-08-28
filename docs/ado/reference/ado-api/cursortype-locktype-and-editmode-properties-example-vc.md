@@ -3,7 +3,7 @@ description: 'CursorType、LockType 和 EditMode 属性示例 (VC + +) '
 title: CursorType、LockType 和 EditMode 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 034e7ef1bd472c8ebcc6749797decd8176455801
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e8c31affe3afd6a5bbbc3926bd724e8daf40834
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775486"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974338"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType 和 EditMode 属性示例 (VC + +) 
 此示例演示如何在打开[记录集](./recordset-object-ado.md)之前设置[CursorType](./cursortype-property-ado.md)和[LockType](./locktype-property-ado.md)属性。 它还在各种条件下显示 [EditMode](./editmode-property.md) 属性的值。 运行此过程需要 EditModeOutput 函数。  

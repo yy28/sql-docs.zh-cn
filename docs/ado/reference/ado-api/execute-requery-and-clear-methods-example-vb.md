@@ -3,7 +3,7 @@ description: '执行、再次查询和清除方法示例 (VB) '
 title: " (VB) 执行、再次查询和清除方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e3a1690414f136adb9de3f54b48720b298f20c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c98f60ad44be5a0348298a29f9e09033b5c68897
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443869"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973428"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>执行、再次查询和清除方法示例 (VB) 
 此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。  (通过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的**连接**对象来访问**Errors**集合。 ) 运行此过程需要 ExecuteCommand 和 PrintOutput 过程。  

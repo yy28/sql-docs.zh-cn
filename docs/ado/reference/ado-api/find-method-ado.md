@@ -3,7 +3,7 @@ description: Find 方法 (ADO)
 title: Find 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0312fb8a8f91e8b56cb6c29a3a64b3a36bcec69d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 18b4dc88dfedbb5a9a06968ebb5b02300439ed1b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775226"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972948"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 在 [记录集中](./recordset-object-ado.md) 搜索满足指定条件的行。 或者，可以指定搜索方向、起始行和起始行的偏移量。 如果满足条件，则在找到的记录上设置当前行位置;否则，将位置设置为 **记录集**的 (或开始) 。  
@@ -34,7 +34,7 @@ ms.locfileid: "88775226"
 Find (Criteria, SkipRows, SearchDirection, Start)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *条件*  
  一个包含语句的 **字符串** 值，该语句指定要在搜索中使用的列名称、比较运算符和值。  
   
@@ -47,7 +47,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *启动*  
  可选。 作为搜索的起始位置的 **变量** 书签。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  仅可在 *条件*中指定单列名称。 此方法不支持多列搜索。  
   
  *条件*中的比较运算符可以是 " **>** " (大于) ，"* * \<**" (less than), "=" (equal), "> =" (大于或等于) ，"<=" (小于或等于) ，"<>" (不等于) ，或 "like" (模式匹配) 。  

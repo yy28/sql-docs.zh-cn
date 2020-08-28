@@ -3,7 +3,7 @@ description: Update 方法
 title: Update 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 819e6ebaa3932f19a693cb3d50651f7c451200e6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776996"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988098"
 ---
 # <a name="update-method"></a>Update 方法
 保存对记录[集](./recordset-object-ado.md)对象的当前行所做的任何更改，或[记录](./record-object-ado.md)对象的[字段](./fields-collection-ado.md)集合。  
@@ -34,14 +34,14 @@ recordset.Update Fields, Values
 record.Fields.Update  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *字段*  
  可选。 表示单个名称的 **变量** ，或表示要修改的一个或多个字段的名称或序号位置的 **variant** 数组。  
   
  *值*  
  可选。 一个表示单个值的 **变量** ，或一个表示新记录中的一个或多个字段的值的 **变体** 数组。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="recordset"></a>记录集  
  使用 **Update** 方法保存对 **记录集** 对象的当前记录所做的任何更改，因为调用了 [AddNew](./addnew-method-ado.md) 方法或更改了现有记录中的任何字段值。 **Recordset**对象必须支持更新。  

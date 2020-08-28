@@ -3,7 +3,7 @@ description: Execute 方法（ADO 命令）
 title: ADO 命令 (的 Execute 方法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b33ada4ce6ac53c1caafbec80c19d1fd31deb6ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5bd7e8d98f7d7ccecfce2ce66852f92efa1dae77
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443889"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973508"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法（ADO 命令）
 执行[命令对象](../../../ado/reference/ado-api/command-object-ado.md)的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性中指定的查询、SQL 语句或存储过程。  
@@ -50,7 +50,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 > [!NOTE]
 >  使用 **ExecuteOptionEnum** 值 **adExecuteNoRecords** ，通过最大限度地减少内部处理来提高性能。 如果指定了 **adExecuteStream** ，则将忽略选项 **adAsyncFetch** 和 **adAsynchFetchNonBlocking** 。 不要将**adCmdFile**或**adCmdTableDirect**的**CommandTypeEnum**值用于**Execute**。 这些值只能用作**记录集**的[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和重新[查询](../../../ado/reference/ado-api/requery-method.md)方法的选项。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对**命令**对象使用**Execute**方法会执行在对象的**CommandText**属性或**CommandStream**属性中指定的查询。  
   
  结果在默认情况下将在 **记录集中** 返回 () 或作为二进制信息流。 若要获取二进制流，请在 "*选项*" 中指定**adExecuteStream** ，然后通过设置命令来提供流 **。属性 ( "输出流" ) **。 可以指定 ADO **流** 对象来接收结果，也可以指定另一个流对象，如 IIS 响应对象。 如果在使用**adExecuteStream**调用**Execute**之前未指定流，则会发生错误。 从 **Execute** 返回的流的位置是特定于提供程序的。  

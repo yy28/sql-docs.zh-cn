@@ -3,7 +3,7 @@ description: CommandText 属性 (ADO)
 title: " (ADO) 的 CommandText 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e23ae5bffca27d7ad9940fb4f03df81645094792
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c0e7f2e9e346a5379051b101236df186b815aa85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776116"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975188"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 属性 (ADO)
 指示要对提供程序发出的命令的文本。  
@@ -29,7 +29,7 @@ ms.locfileid: "88776116"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  获取或设置一个 **字符串** 值，该值包含提供程序命令，如 SQL 语句、表名、相对 URL 或存储过程调用。 默认为空字符串 ("")。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **CommandText** 属性可以设置或返回 [命令](./command-object-ado.md) 对象表示的命令的文本。 通常，这将是一条 SQL 语句，但也可以是提供程序所识别的任何其他类型的命令语句，如存储过程调用。 SQL 语句必须是提供程序的查询处理器支持的特定方言或版本。  
   
  如果在设置**CommandText**属性时，**命令**对象的 "已[准备](./prepared-property-ado.md)" 属性设置为 " **True** "，并且**命令**对象绑定到打开的连接，则 ADO 将准备该查询 (即，当调用[Execute](./execute-method-ado-command.md)或[open](./open-method-ado-connection.md)方法时，由提供程序存储的编译形式的查询) 。  

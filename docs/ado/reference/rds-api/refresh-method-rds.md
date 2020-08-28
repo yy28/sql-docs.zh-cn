@@ -1,7 +1,7 @@
 ---
 description: Refresh 方法 (RDS)
 title: Refresh 方法 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b55794815808b65ae4ad7f1dc5cc684360766aa8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bf89101c070b883fe33cf1b4065f732f2c305943
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767546"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981318"
 ---
 # <a name="refresh-method-rds"></a>Refresh 方法 (RDS)
 重新查询 [连接](./connect-property-rds.md) 属性中指定的数据源，并更新查询结果。  
@@ -38,11 +38,11 @@ ms.locfileid: "88767546"
 DataControl.Refresh  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  必须先设置 [Connect](./connect-property-rds.md)、 [Server](./server-property-rds.md)和 [SQL](./sql-property.md) 属性，然后才能使用 **Refresh** 方法。 窗体上的所有与 RDS 关联的数据绑定控件 **。DataControl** 对象将反映新的记录集。 将释放任何预先存在的 [记录集](../ado-api/recordset-object-ado.md) 对象，并放弃任何未保存的更改。 **Refresh**方法自动使第一条记录成为当前记录。  
   
  在处理数据时，最好定期调用 **Refresh** 方法。 如果检索数据，然后将数据保留在客户端计算机上一段时间，则可能会过时。 您所做的任何更改都可能会失败，因为其他人可能已在您之前更改了记录并提交了更改。  

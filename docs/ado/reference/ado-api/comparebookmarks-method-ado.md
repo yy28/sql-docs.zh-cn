@@ -3,7 +3,7 @@ description: CompareBookmarks 方法 (ADO)
 title: " (ADO) 的 CompareBookmarks 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c5e863a694aa63e568e388304d964752dbae325
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 785f2b61e4a6197a287ce9f97b27fef5cb8742b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776066"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975048"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
 比较两个书签，并返回其相对值的指示值。  
@@ -38,14 +38,14 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ## <a name="return-value"></a>返回值  
  返回一个 [CompareEnum](./compareenum.md) 值，该值指示由其书签表示的两个记录的相对行位置。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Bookmark1*  
  第一行的书签。  
   
  *Bookmark2*  
  第二行的书签。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  书签必须应用于相同的 [记录集](./recordset-object-ado.md) 对象或 **记录集** 对象及其 [克隆](./clone-method-ado.md)。 不能从不同的 **记录集** 对象中可靠地比较书签，即使它们是从同一源或命令创建的也是如此。 您也不能对其基础提供程序不支持比较的 **记录集** 对象的书签进行比较。  
   
  书签唯一标识 **Recordset** 对象中的行。 使用当前行的 " [书签](./bookmark-property-ado.md) " 属性获取其书签。  

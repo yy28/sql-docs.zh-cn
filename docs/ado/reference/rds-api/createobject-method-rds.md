@@ -3,7 +3,7 @@ description: CreateObject 方法 (RDS)
 title: CreateObject 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0fd3e6c7ad67b058920963c7e2dc92f60a2a84d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768636"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982608"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 为目标业务对象创建代理并返回指向它的指针。 代理会将数据打包并封送到服务器端存根，以便与业务对象通信，以便通过 Internet 发送请求和数据。 对于进程内组件对象，不使用代理，只提供指向对象的指针。  
@@ -37,7 +37,7 @@ ms.locfileid: "88768636"
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *Object*  
  一个对象变量，其计算结果为作为 *ProgID*中指定的类型的对象。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88768636"
  *awebsrvr* 或 *computername*  
  一个 **字符串** 值，表示一个 URL，该 URL 标识在其中创建服务器业务对象实例的 IIS) Web 服务器 (Internet Information Services。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *HTTP 协议*是标准 Web 协议;*HTTPS*是一种安全的 Web 协议。 在不使用 HTTP 的情况下运行局域网时使用 *DCOM 协议* 。 *进程内*协议是 (DLL) 的本地动态链接库;它不使用网络。  
   
 ## <a name="applies-to"></a>适用于  

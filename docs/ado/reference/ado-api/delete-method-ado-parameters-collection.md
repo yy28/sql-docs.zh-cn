@@ -3,7 +3,7 @@ description: Delete 方法（ADO 参数集合）
 title: 删除方法 (ADO 参数集合) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76353f62fc2b30ea8e7eae16c97469027a98110
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3860a824690d9dca469a22135d35e040cc000dca
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444159"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974118"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 方法（ADO 参数集合）
 从 [参数](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合中删除对象。  
@@ -35,10 +35,10 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>参数  
- *索引*  
+ *Index*  
  一个 **字符串** 值，其中包含要删除的对象的名称，或该对象在集合中 (索引) 的序号位置。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  通过对集合使用 **Delete** 方法，您可以删除集合中的某个对象。 此方法仅可用于[Command](../../../ado/reference/ado-api/command-object-ado.md)对象的**Parameters**集合。 在调用**Delete**方法时，必须使用[参数](../../../ado/reference/ado-api/parameter-object.md)对象的[Name](../../../ado/reference/ado-api/name-property-ado.md)属性或其集合索引-对象变量不是有效的参数。  
   
 ## <a name="applies-to"></a>适用于  

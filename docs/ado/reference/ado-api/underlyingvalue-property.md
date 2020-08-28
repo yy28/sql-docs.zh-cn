@@ -3,7 +3,7 @@ description: UnderlyingValue 属性
 title: UnderlyingValue 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 869daa9afc840e7580e6498510ef07d4be002802
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a96924a682a0c916da8c6834ea7b290b88b6f690
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777076"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988168"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 属性
 指示数据库中 [Field](./field-object.md) 对象的当前值。  
@@ -31,7 +31,7 @@ ms.locfileid: "88777076"
 ## <a name="return-value"></a>返回值  
  返回一个表示**字段**值的**变量**值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **UnderlyingValue** 属性从数据库返回当前字段值。 **UnderlyingValue**属性中的字段值是对你的事务可见的值，可能是另一个事务的最新更新导致的。 这可能不同于 [OriginalValue](./originalvalue-property-ado.md) 属性，后者反映最初返回到 [记录集](./recordset-object-ado.md)的值。  
   
  这类似于使用 [Resync](./resync-method.md) 方法，但 **UnderlyingValue** 属性仅返回当前记录中特定字段的值。 此值与 [Resync](./resync-method.md) 方法用来替换 [value](./value-property-ado.md) 属性的值相同。  

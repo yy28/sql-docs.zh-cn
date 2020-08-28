@@ -3,7 +3,7 @@ description: 字段集合 (ADO)
 title: 字段集合 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d94803ecbe53addb2efb7ef738863bc6541a5801
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775376"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973118"
 ---
 # <a name="fields-collection-ado"></a>字段集合 (ADO)
 包含[Recordset](./recordset-object-ado.md)或[Record](./record-object-ado.md)对象的所有[字段](./field-object.md)对象。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **记录集**对象包含由**字段**对象组成的**字段**集合。 每个 **字段** 对象都对应于 **记录集中**的一列。 您可以通过对集合调用[Refresh](./refresh-method-ado.md)方法，在打开**记录集**之前填充**字段**集合。  
   
 > [!NOTE]

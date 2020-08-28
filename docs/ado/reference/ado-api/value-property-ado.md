@@ -3,7 +3,7 @@ description: Value 属性 (ADO)
 title: ADO)  (值属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ab44fcbb8409cd866167d4fb58bebc1de906274
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bc7ea2b5f571429d05b8201d8e23dc594bb896e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776966"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987988"
 ---
 # <a name="value-property-ado"></a>Value 属性 (ADO)
 
@@ -32,7 +32,7 @@ ms.locfileid: "88776966"
 
 设置或返回一个表示对象的值的 **变量** 值。 默认值取决于 [Type](./type-property-ado.md) 属性。
   
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 使用 **Value** 属性可以设置或返回 **字段** 对象中的数据，使用 **参数** 对象设置或返回参数值，或者使用 **属性** 对象设置或返回属性设置。 **Value**属性是可读/写还是只读取决于许多因素。 有关详细信息，请参阅各自的对象主题。
 
