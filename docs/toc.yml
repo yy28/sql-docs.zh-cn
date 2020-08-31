@@ -61,19 +61,19 @@
             - name: 安装 azdata
               items:
                 - name: 安装
-                  href: big-data-cluster/deploy-install-azdata.md
+                  href: azdata/install/deploy-install-azdata.md
                 - name: macOS
-                  href: big-data-cluster/deploy-install-azdata-macos.md
+                  href: azdata/install/deploy-install-azdata-macos.md
                 - name: Windows
-                  href: big-data-cluster/deploy-install-azdata-installer.md
+                  href: azdata/install/deploy-install-azdata-installer.md
                 - name: 带有 apt 的 Linux
-                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                  href: azdata/install/deploy-install-azdata-linux-package.md
                 - name: 带有 yum 的 Linux
-                  href: big-data-cluster/deploy-install-azdata-yum.md
+                  href: azdata/install/deploy-install-azdata-yum.md
                 - name: 带有 zypper 的 Linux
-                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                  href: azdata/install/deploy-install-azdata-zypper.md
                 - name: 使用 pip
-                  href: big-data-cluster/deploy-install-azdata-pip.md
+                  href: azdata/install/deploy-install-azdata-pip.md
         - name: 部署
           items:
             - name: 部署指南
@@ -381,59 +381,59 @@
             - name: azdata
               items:
                 - name: azdata
-                  href: big-data-cluster/reference-azdata.md
+                  href: azdata/reference/reference-azdata.md
                 - name: 笔记本
-                  href: big-data-cluster/reference-azdata-notebook.md
+                  href: azdata/reference/reference-azdata-notebook.md
                 - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
+                  href: azdata/reference/reference-azdata-sql.md
             - name: 应用部署
               items:
                 - name: 应用
-                  href: big-data-cluster/reference-azdata-app.md
+                  href: azdata/reference/reference-azdata-app.md
                 - name: 应用模板
-                  href: big-data-cluster/reference-azdata-app-template.md
+                  href: azdata/reference/reference-azdata-app-template.md
             - name: 群集
               items:
                 - name: bdc
-                  href: big-data-cluster/reference-azdata-bdc.md
+                  href: azdata/reference/reference-azdata-bdc.md
                 - name: bdc 应用
-                  href: big-data-cluster/reference-azdata-bdc-app.md
+                  href: azdata/reference/reference-azdata-bdc-app.md
                 - name: bdc 应用状态
-                  href: big-data-cluster/reference-azdata-bdc-app-status.md
+                  href: azdata/reference/reference-azdata-bdc-app-status.md
                 - name: bdc 配置
-                  href: big-data-cluster/reference-azdata-bdc-config.md
+                  href: azdata/reference/reference-azdata-bdc-config.md
                 - name: bdc 控件
-                  href: big-data-cluster/reference-azdata-bdc-control.md
+                  href: azdata/reference/reference-azdata-bdc-control.md
                 - name: bdc 控件状态
-                  href: big-data-cluster/reference-azdata-bdc-control-status.md
+                  href: azdata/reference/reference-azdata-bdc-control-status.md
                 - name: bdc 调试
-                  href: big-data-cluster/reference-azdata-bdc-debug.md
+                  href: azdata/reference/reference-azdata-bdc-debug.md
                 - name: bdc 终结点
-                  href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                  href: azdata/reference/reference-azdata-bdc-endpoint.md
                 - name: bdc 网关
-                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                  href: azdata/reference/reference-azdata-bdc-gateway.md
                 - name: bdc 网关状态
-                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
+                  href: azdata/reference/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
-                  href: big-data-cluster/reference-azdata-bdc-hdfs.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs 装载
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs 状态
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-status.md
                 - name: bdc spark
-                  href: big-data-cluster/reference-azdata-bdc-spark.md
+                  href: azdata/reference/reference-azdata-bdc-spark.md
                 - name: bdc spark 批处理
-                  href: big-data-cluster/reference-azdata-bdc-spark-batch.md
+                  href: azdata/reference/reference-azdata-bdc-spark-batch.md
                 - name: bdc spark 会话
-                  href: big-data-cluster/reference-azdata-bdc-spark-session.md
+                  href: azdata/reference/reference-azdata-bdc-spark-session.md
                 - name: bdc spark 语句
-                  href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                  href: azdata/reference/reference-azdata-bdc-spark-statement.md
                 - name: bdc spark 状态
-                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                  href: azdata/reference/reference-azdata-bdc-spark-status.md
                 - name: bdc sql
-                  href: big-data-cluster/reference-azdata-bdc-sql.md
+                  href: azdata/reference/reference-azdata-bdc-sql.md
                 - name: bdc 状态
-                  href: big-data-cluster/reference-azdata-bdc-status.md
+                  href: azdata/reference/reference-azdata-bdc-status.md
 - name: 业务连续性
   items:
     - name: 概述
