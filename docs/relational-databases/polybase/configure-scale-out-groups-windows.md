@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892050"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042494"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上配置 PolyBase 横向扩展组
 
@@ -34,7 +34,7 @@ ms.locfileid: "85892050"
   
 1. 在 N 台计算机上安装相同版本的具有 PolyBase 的 SQL Server。
   
-2. 选择一个 SQL Server 实例作为头节点。 只能在运行 SQL Server Enterprise 的实例上指定头节点。
+2. 选择一个 SQL Server 实例作为头节点。 
   
 3. 使用 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)将剩余的 SQL Server 实例添加为计算节点。
 
