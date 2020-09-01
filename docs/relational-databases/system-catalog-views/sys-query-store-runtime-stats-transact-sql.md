@@ -22,12 +22,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca567df477cf06c6f40e7f9a2d7c8b4964eaa6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f59f8e08001ac926a0e129944753ecb40153217
+ms.sourcegitcommit: e103ae3f2d05431fdb8334aeaf1ed3b4fa1f593c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377373"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89225197"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -94,11 +94,11 @@ ms.locfileid: "88377373"
 |**min_log_bytes_used**|**bigint**|查询计划在聚合间隔内使用的数据库日志中的最小字节数。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|
 |**max_log_bytes_used**|**bigint**|查询计划在聚合间隔内使用的数据库日志中的最大字节数。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|
 |**stdev_log_bytes_used**|**float**|查询计划在聚合间隔内使用的数据库日志中的字节数的标准偏差。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
-|**avg_tempdb_space_used**|**float**|聚合间隔内查询计划的平均页读取数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**last_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最后页读取次数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**min_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最小页读取数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**max_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最大页读取次数。 (表示为多个8KB 页读取) 。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**stdev_tempdb_space_used**|**float**|查询计划在聚合间隔内的页读取标准偏差。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**avg_tempdb_space_used**|**float**|聚合间隔内查询计划的 tempdb 页读取平均次数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**last_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最后 tempdb 页读取数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**min_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最小 tempdb 页读取数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**max_tempdb_space_used**|**bigint**|聚合间隔内查询计划的 tempdb 页读取的最大数目。 (表示为多个8KB 页读取) 。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**stdev_tempdb_space_used**|**float**|Tempdb 页的数目在聚合间隔内读取查询计划的标准偏差。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**avg_page_server_io_reads**|**float**|聚合间隔内查询计划的页服务器 i/o 读取平均次数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** Azure SQL Database 超大规模</br>**注意：** Azure sql 数据仓库、Azure SQL 数据库、azure SQL 托管实例 (超大规模) 将始终返回零 (0) 。|
 |**last_page_server_io_reads**|**bigint**|聚合间隔内查询计划的最后页服务器 i/o 读取次数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** Azure SQL Database 超大规模</br>**注意：** Azure sql 数据仓库、Azure SQL 数据库、azure SQL 托管实例 (超大规模) 将始终返回零 (0) 。|
 |**min_page_server_io_reads**|**bigint**|聚合间隔内查询计划的最小页服务器 i/o 读取次数。  (表示为多个8KB 页面，) 读取。<br><br/>**适用于：** Azure SQL Database 超大规模</br>**注意：** Azure sql 数据仓库、Azure SQL 数据库、azure SQL 托管实例 (超大规模) 将始终返回零 (0) 。|
