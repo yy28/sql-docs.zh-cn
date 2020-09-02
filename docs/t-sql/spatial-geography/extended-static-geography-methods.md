@@ -41,7 +41,7 @@ ms.locfileid: "88360113"
   
 -   [Null](../../t-sql/spatial-geography/null-geography-data-type.md)  
   
--   Parse  
+-   [Parse](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
 -   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   

@@ -77,7 +77,7 @@ ms.locfileid: "88496090"
  连接管理器的名称。  
   
  **服务文档位置**  
- OData 服务的 URL。 例如：https://services.odata.org/V3/Northwind/Northwind.svc/。  
+ OData 服务的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/。  
   
  **身份验证**  
 选择以下选项之一：
