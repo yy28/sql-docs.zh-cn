@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435434"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991858"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
@@ -63,7 +63,7 @@ ms.locfileid: "87435434"
 
 -   如果计算机已安装 32 位版本的 Office，则必须安装 32 位版本的组件。 还必须确保在 32 位模式下运行 SSIS 包，或运行 32 位版本的导入和导出向导。
 
--   如果拥有 Office 365 订阅，则运行安装程序时可能会显示错误消息。 错误消息指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
+-   如果拥有 Microsoft 365 订阅，则运行安装程序时可能会显示错误消息。 错误消息指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

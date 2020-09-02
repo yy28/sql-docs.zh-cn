@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 0012b7d1122de32834d6d71b2a32bbec45369c49
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916153"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195133"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>验证部署到 Azure 的 SQL Server Integration Services (SSIS) 包
 
@@ -67,7 +67,7 @@ ms.locfileid: "86916153"
 
 -   Attunity 提供的 Oracle 源和目标
 -   Attunity 提供的 Teradata 源和目标
--   SAP BI 源和目标
+-   SAP BW 源和目标
 
 ## <a name="validate-tasks-and-components"></a>验证任务和组件
 

@@ -47,12 +47,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0330b644851a40c7485a05939407d482657e7d5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 380d8d9dcd7d2812251203a91caaa2b9d056d616
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862455"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -921,7 +921,7 @@ Test1Col
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>排查 Azure SQL 数据库的全局临时表存在的问题
 
-有关 tempdb 疑难解答，请参阅[如何监视 tempdb 使用情况](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use)。
+有关 tempdb 疑难解答，请参阅[如何监视 tempdb 使用情况](../../relational-databases/databases/tempdb-database.md#monitoring-tempdb-use)。
 
 > [!NOTE]
 > 只有服务器管理员才能访问 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中的疑难解答 DMV。

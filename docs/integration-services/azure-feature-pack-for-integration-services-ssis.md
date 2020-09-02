@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb40e52398faac830e740f8aa57a3412559149cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe5c1f52cb17b721efb1d3083a0679040d858343
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457856"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942320"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -232,4 +232,4 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 #### <a name="bugfixes"></a>Bug 修复
 
 1. 在某些情况下，Data Lake Storage Gen2 的测试连接发生故障，并显示错误消息“尝试访问作为与数组不兼容的类型的元素”
-1. 恢复对 Azure 存储模拟器的支持
+1. 恢复对 Azure 存储仿真器的支持

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80d04346e20567d546b2ea73b361f1a1fff2c694
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ce4bdf5570b7871a4b04c351ae1222de6c479b6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495569"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991883"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>连接到 Access 数据源（SQL Server 导入和导出向导）
 
@@ -79,7 +79,7 @@ ms.locfileid: "88495569"
 
 如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，还须确保在 32 位模式下运行程序包。
 
-如果有 Office 365 订阅，请确保下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。 运行安装程序时，可能会看到一条错误消息，指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
+如果有 Microsoft 365 订阅，请确保下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。 运行安装程序时，可能会看到一条错误消息，指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

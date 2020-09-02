@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a625b369deeeae69475c94350b30f68b4cc8e5cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 244a70115f293b3723359cbb3966db37d240c186
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426709"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042472"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -148,7 +148,9 @@ WITH ( LANGUAGE = <language> )
 
 **library_name**
 
-将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2` 。 不过，如果 RUser1 要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
+上传到实例的库可以是公共的也可以是私有的。 如果是由 `dbo` 成员创建的库，则该库是公共的且所有的用户都可以共享。 否则，该库就仅为用户私有。
+
+在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2` 。 不过，如果 RUser1 要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。
 
 不能随意分配库名称；库名称应与在外部脚本中加载库时所需的名称相同。
 
@@ -228,6 +230,8 @@ WITH ( LANGUAGE = <language> )
 `CREATE EXTERNAL LIBRARY` 语句将库位上载到数据库。 当用户使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 运行外部脚本并调用包或库时，会安装该库。
 
 上传到实例的库可以是公共的也可以是私有的。 如果是由 `dbo` 成员创建的库，则该库是公共的且所有的用户都可以共享。 否则，该库就仅为用户私有。
+
+许多包（称为“系统包”）都预安装在 SQL 实例中。 用户无法添加、更新或删除系统包。
 
 ## <a name="permissions"></a>权限
 

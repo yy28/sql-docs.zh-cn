@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602202"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901573"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
@@ -432,6 +432,15 @@ COPY 命令会在本日历年 (2020) 末正式发布。
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>文件的数量和大小有限制吗？
 文件的数量或大小没有限制；但是，为了获得最佳性能，建议文件至少为 4 MB。
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>使用 Synapse 工作区（预览版）的 COPY 是否有任何限制？
+
+COPY 语句或 PolyBase（包括在管道中使用时）不支持使用托管标识 (MSI) 进行身份验证。 你可能会遇到类似的错误消息：
+
+*com.microsoft.sqlserver.jdbc.SQLServerException：此服务器尚未启用托管服务标识。请先启用托管服务标识，再重试。*
+
+当存储帐户与 VNet 关联时，需要 MSI 身份验证。 如果将存储帐户附加到 VNet，则必须使用 BCP/BULK INSERT 来加载数据，而不是使用 COPY 或 PolyBase。
+
+此限制仅适用于属于 Synapse 工作区（预览版）的 SQL 池。 在即将发布的版本中，我们将在 Synapse 工作区中启用 MSI 支持。 
 
 请向以下通讯组列表发送反馈和问题：sqldwcopypreview@service.microsoft.com
 

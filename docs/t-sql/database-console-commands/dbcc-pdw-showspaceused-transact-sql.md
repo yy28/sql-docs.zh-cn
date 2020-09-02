@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb279fea42cd37af2c0e215f8dcd66ddecb766cc
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479816"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042450"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -51,7 +51,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 ## <a name="result-sets"></a>结果集
 
-下面是针对所有表的结果集。
+下面是针对所有表的结果集。  在为复制的 Synapse 表创建缓存之前，DBCC 结果反映每个分布区中基础轮循机制表的总大小。  创建缓存后，该结果将反映轮循机制表和缓存的总大小。   
   
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
@@ -71,7 +71,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |index_space|bigint|用于索引的空间，单位为 KB。||  
 |unused_space|bigint|保留空间中未使用的空间，单位为 KB。||  
 |pdw_node_id|int|用于报告空间使用量的计算节点。||  
-|distribution_id|int|用于报告空间使用量的分发。|复制的表的值为 -1。|  
+|distribution_id|int|用于报告空间使用量的分发。|对于并行数据仓库，对于复制的表，其值为 -1。|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 基本语法  

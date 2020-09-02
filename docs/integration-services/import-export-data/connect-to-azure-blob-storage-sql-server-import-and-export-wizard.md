@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425259"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042390"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>连接到 Azure Blob 存储（SQL Server 导入和导出向导）
 
@@ -52,7 +52,7 @@ ms.locfileid: "88425259"
  指定是使用 HTTP 还是 HTTPS 连接到存储帐户。  
   
  **使用本地开发人员帐户**  
- 指定是否在本地计算机上使用存储仿真程序。  
+ 指定是否在本地计算机上使用 Azure 存储仿真器。  
   
  **Blob 容器名称**  
  从指定的存储帐户中可用的存储容器列表中选择。  

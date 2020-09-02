@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c231fef9f3700e5d131d15916dfbfe3e100751a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362827"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901004"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 
@@ -168,14 +168,14 @@ ms.locfileid: "87362827"
 
 - <a name="GMSA"></a> 组托管服务帐户
 
-  组托管服务帐户是针对多个服务器的 MSA。 Windows 为在一组服务器上运行的服务管理服务帐户。 Active Directory 自动更新组托管服务帐户密码，而不重启服务。 你可以配置 SQL Server 服务以使用组托管服务帐户主体。 从 SQL Server 2014 开始，SQL Server 支持适用于独立实例的组管理服务帐户，而 SQL Server 2016 及更高版本还支持适用于故障转移群集实例和可用性组的组管理服务帐户。
+  组托管服务帐户 (gMSA) 是针对多个服务器的 MSA。 Windows 为在一组服务器上运行的服务管理服务帐户。 Active Directory 自动更新组托管服务帐户密码，而不重启服务。 你可以配置 SQL Server 服务以使用组托管服务帐户主体。 从 SQL Server 2014 开始，SQL Server 支持适用于独立实例的组管理服务帐户，而 SQL Server 2016 及更高版本还支持适用于故障转移群集实例和可用性组的组管理服务帐户。
 
-  若要使用 SQL Server 2014 或更高版本的组托管服务帐户，操作系统必须是 Windows Server 2012 R2 或更高版本。 装有 Windows Server 2012 R2 的服务器需要应用 [KB 2998082](https://support.microsoft.com/kb/2998082) ，以便服务可以在密码更改后立即登录而不中断。
+  若要使用 SQL Server 2014 或更高版本的 gMSA，操作系统必须是 Windows Server 2012 R2 或更高版本。 装有 Windows Server 2012 R2 的服务器需要应用 [KB 2998082](https://support.microsoft.com/kb/2998082) ，以便服务可以在密码更改后立即登录而不中断。
 
   有关详细信息，请参阅[组托管服务帐户](https://technet.microsoft.com/library/hh831782.aspx)
 
   > [!NOTE]
-  > 域管理员必须先在 Active Directory 中创建组托管服务帐户，然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序才能将其用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。
+  > 域管理员必须先在 Active Directory 中创建 gMSA，然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序才能将其用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 

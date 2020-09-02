@@ -2,7 +2,7 @@
 description: DROP EXTERNAL LIBRARY (Transact-SQL)
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3576afa1a3abe1454088178562366a69f807dcb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 219bb12f51542b178eabd0ae94ffe8c625f3072c
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88415913"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042512"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -74,6 +74,8 @@ DROP EXTERNAL LIBRARY library_name
 ## <a name="remarks"></a>备注
 
 不同于 SQL Server 中的其他 `DROP` 语句，此语句支持指定一个可选的授权子句。 这允许 db_owner 角色中的 dbo 或用户删除由数据库的常规用户上传的包库 。
+
+许多包（称为“系统包”）都预安装在 SQL 实例中。 用户无法添加、更新或删除系统包。
 
 ## <a name="examples"></a>示例
 

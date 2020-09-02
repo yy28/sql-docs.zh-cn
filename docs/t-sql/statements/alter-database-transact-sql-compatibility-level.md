@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d470d95b2d6999d4f6825dce63a1a9c5b991d20a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1035d6b4cd6eedd12c2c9a193657fd8741488f2a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426929"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901142"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -82,7 +82,12 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } 是�
 - 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。
 - 如果升级前用户数据库的兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 支持的最低兼容级别。
 - 在给定的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中，tempdb、model、msdb 和 Resource 数据库的兼容性级别将设置为默认兼容性级别。 
-- master 系统数据库保留它在升级之前的兼容性级别。
+- master 系统数据库保留它在升级之前的兼容性级别。 这不会影响用户数据库行为。 
+
+对于在较低的兼容级别运行的预先存在的数据库，只要应用程序不需要使用仅在更高数据库兼容性级别中可用的增强功能，它就是维护之前的数据库兼容性级别的有效方法。 对于新的开发工作，或当现有应用程序需要使用新功能（如[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)）以及一些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 时，请计划将数据库兼容性级别升级到可用的最新级别。 有关详细信息，请参阅[兼容性级别和数据库引擎升级](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades)。     
+
+> [!NOTE]
+> 如果没有用户对象和依赖项，则升级到默认兼容性级别通常是安全的。 有关详细信息，请参阅[建议 - master 数据库](../../relational-databases/databases/master-database.md#recommendations)。
 
 使用 `ALTER DATABASE` 更改数据库的兼容性级别。 当发出 `USE <database>` 命令或使用该数据库作为默认数据库上下文来处理新登录时，数据库的新兼容性级别设置会生效。
 若要查看数据库的当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `compatibility_level` 列。

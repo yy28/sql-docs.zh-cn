@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467327"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042380"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -450,9 +450,9 @@ MODIFY (MAXSIZE = [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定数据库的�
 |250 GB|空值|√ (D)|√ (D)|√|√|
 |300 GB|空值|√|√|√|√|
 |400 GB|空值|√|√|√|√|
-|500 GB|空值|√|√ (D)|√ (D)|√|
+|500 GB|空值|√|√|√ (D)|√|
 |750 GB|空值|√|√|√|√|
-|1024 GB|空值|√|√|√ (D)|√ (D)|
+|1024 GB|空值|√|√|√|√ (D)|
 |从 1024 GB 到最大 4096 GB，增量为 256 GB*|不适用|不适用|空值|空值|√|
 
 \* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
@@ -602,7 +602,7 @@ WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, 
 ELASTIC_POOL (name = \<elastic_pool_name>) 未指定 ELASTIC_POOL 时，不会在弹性池中创建辅助数据库。 指定了 ELASTIC_POOL 时，会在指定池中创建辅助数据库。
 
 > [!IMPORTANT]
-> 执行 ADD SECONDARY 命令的用户必须是主服务器上的 DBManager，在本地数据库中拥有 db_owner 成员身份，以及是辅助服务器上的 DBManager。
+> 执行 ADD SECONDARY 命令的用户必须是主服务器上的 DBManager，在本地数据库中拥有 db_owner 成员身份，以及是辅助服务器上的 DBManager。 必须将客户端 IP 地址添加到主服务器和辅助服务器的防火墙规则下的允许列表中。 如果存在不同的客户端 IP 地址，则还必须将已在主服务器上添加的完全相同的客户端 IP 地址添加到辅助服务器。 这是在运行 ADD SECONDARY 命令以启动异地复制之前需要执行的步骤。
 
 REMOVE SECONDARY ON SERVER \<partner_server_name> 删除指定服务器上的指定异地复制辅助数据库。 命令会对承载主数据库的服务器上的 master 数据库执行。
 

@@ -11,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b115c4249a0eded065ed95d45a7892ec1595911
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 187dcb7ca6da6802b60b36e2ae7f0fa5c66b0df1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467535"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858105"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  返回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句的查询计划，但不运行该语句。 使用 EXPLAIN 预览需要数据移动的操作和查看查询操作的预计成本。 `WITH RECOMMENDATIONS` 适用于 Azure SQL 数据仓库（预览）
+  返回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句的查询计划，但不运行该语句。 使用 EXPLAIN 预览需要数据移动的操作和查看查询操作的预计成本。 `WITH RECOMMENDATIONS` 适用于 Azure SQL 数据仓库。
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  EXPLAIN 将在其上运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句。 SQL_statement 可以是以下任何命令  ：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
 
-WITH_RECOMMENDATIONS  （预览）
+WITH_RECOMMENDATIONS 
 
 返回包含建议的查询计划以优化 SQL 语句性能。  
   

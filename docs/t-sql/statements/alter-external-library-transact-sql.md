@@ -2,7 +2,7 @@
 description: ALTER EXTERNAL LIBRARY (Transact-SQL)
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b899136782f19af9707e7855987b74647da4c8f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0c6ad88976ff2c61f77c5b00f15cd3e551ce111
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479084"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042402"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -220,6 +220,8 @@ WITH ( LANGUAGE = <language> )
 ::: moniker-end
 
 `ALTER EXTERNAL LIBRARY` 语句只将库位上载到数据库。 当用户在调用库的 [sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中运行代码时，安装已修改的库。
+
+许多包（称为“系统包”）都预安装在 SQL 实例中。 用户无法添加、更新或删除系统包。
 
 ## <a name="permissions"></a>权限
 
