@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
+ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486496"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385968"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486496"
 |**group_id**|**uniqueidentifier**|副本所属于的可用性组的唯一 ID。|  
 |**replica_metadata_id**|**int**|数据库引擎中可用性副本的本地元数据对象的 ID。|  
 |**replica_server_name**|**nvarchar(256)**|承载此副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。|  
-|**owner_sid**|**varbinary (85) **|为此可用性副本的外部所有者向此服务器实例注册的安全标识符 (SID)。<br /><br /> 对于非本地可用性副本则为 NULL。|  
+|**owner_sid**|**varbinary(85)**|为此可用性副本的外部所有者向此服务器实例注册的安全标识符 (SID)。<br /><br /> 对于非本地可用性副本则为 NULL。|  
 |**endpoint_url**|**nvarchar(128)**|用户指定的数据库镜像端点的字符串表示形式，该数据库镜像端点由用于数据同步的主副本和辅助副本之间的连接使用。 有关这些端点 URL 语法的信息，请参阅[在添加或修改可用性副本时指定端点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。<br /><br /> NULL = 无法联系 WSFC 故障转移群集。<br /><br /> 若要更改此终结点，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 ENDPOINT_URL 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**availability_mode**|**tinyint**|副本的可用性模式，可为下列值之一：<br /><br /> 0 &#124; 异步提交。 主副本可以不必等待辅助副本将日志写入磁盘，即可提交事务。<br /><br /> 1 &#124; 同步提交。 主副本等待提交给定的事务，直到辅助副本将事务写入磁盘。<br /><br />4仅 &#124; 配置。 主副本将可用性组配置元数据同步发送到副本。 用户数据不会传输到副本。 在 SQL Server 2017 CU1 及更高版本中可用。<br /><br /> 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。|  
 |**availability_mode_desc**|**nvarchar(60)**|**可用性 \_ 模式**说明：<br /><br /> 异步 \_ 提交<br /><br /> 同步 \_ 提交<br /><br /> \_仅配置<br /><br /> 若要更改可用性副本的可用性模式，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 AVAILABILITY_MODE 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br/><br>不能将副本的可用性模式仅更改为 "配置" \_ 。 不能将仅配置 \_ 副本改为辅助副本或主要副本。 |  
@@ -57,6 +57,8 @@ ms.locfileid: "88486496"
 |modify_date|**datetime**|上次修改副本的日期。<br /><br /> NULL = 副本不位于此服务器实例上。|  
 |**backup_priority**|**int**|表示相对于同一可用性组中的其他副本，在此副本上执行备份的用户指定的优先级。 该值是范围 0..100 中的整数。<br /><br /> 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。|  
 |**read_only_routing_url**|**nvarchar(256)**|只读可用性副本的连接端点 (URL)。 有关详细信息，请参阅 [为可用性组配置只读路由 (SQL Server)](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。|  
+|**seeding_mode**|**tinyint**|即以下函数之一： </br></br> 0：手动 </br></br> 1：自动|
+|**seeding_mode_desc**|**nvarchar(60)**|介绍种子设定模式。 </br></br> MANUAL </br></br> AUTOMATIC|
   
 ## <a name="security"></a>安全性  
   
