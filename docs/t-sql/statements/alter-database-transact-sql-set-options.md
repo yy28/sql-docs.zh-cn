@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778546"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900958"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -753,13 +753,13 @@ ON
 启用查询存储。
 
 OFF      
-禁用查询存储。 OFF 是默认值。 FORCED 是可选项。 FORCED 会中止所有正在运行的查询存储后台任务，并在查询存储关闭时跳过同步刷新。 使查询存储尽快关闭。 立即有效地关闭查询存储。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 引入了 FORCED。
+禁用查询存储。 OFF 是默认值。 FORCED 是可选项。 FORCED 会中止所有正在运行的查询存储后台任务，并在查询存储关闭时跳过同步刷新。 使查询存储尽快关闭。 FORCED 适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 和更高版本。
 
 > [!NOTE]  
 > 无法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的单一数据库和弹性池中禁用查询存储。 执行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 将返回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
 
 CLEAR     
-删除查询存储的内容。
+从查询存储中删除与查询相关的数据。 ALL 是可选项。 ALL 将从查询存储中删除与查询相关的数据和元数据。
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 描述查询存储的操作模式。
