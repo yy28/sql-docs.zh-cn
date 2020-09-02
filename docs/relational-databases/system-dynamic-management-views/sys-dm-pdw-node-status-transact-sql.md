@@ -13,14 +13,15 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b93d177ad3f73982386407e019629401d70ec57f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78b6370a7041a5e29720acce5dfcf2b0bdf1c607
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447481"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283568"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-sql) 
+
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   保存有关所有设备节点的性能和状态的 [dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 的附加信息 (。 它为设备中的每个节点列出一行。  
