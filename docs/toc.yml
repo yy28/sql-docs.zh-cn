@@ -6222,6 +6222,8 @@
               items:
                 - name: 非对称密钥加密强度
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: 备份文件位于与数据库文件分开的设备上
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: 检查磁盘输入和输入字系统是否存在 I/O 延迟问题
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: 检查磁盘 I/O 子系统是否存在读取重试问题
@@ -6230,6 +6232,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: 正确的关联掩码和关联输入/输出掩码重叠
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: 数据库恢复模式
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: 默认跟踪日志文件已禁用
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: 检测失败的输入和输出请求
@@ -6264,6 +6268,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: 将 AUTO_SHRINK 数据库选项设置为 OFF
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: 将用户数据库的排序规则设置为与 master 和 model 数据库的排序规则一致
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: 设置最大并行度选项以获取最佳性能
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: 将 PAGE_VERIFY 数据库选项设置为 CHECKSUM

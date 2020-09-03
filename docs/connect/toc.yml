@@ -5787,6 +5787,10 @@
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
     - name: 步骤 3：使用 Ruby 连接到 SQL 的概念证明
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
+- name: Spark
+  items:
+    - name: SQL Server 的连接器
+      href: ../connect/spark/connector.md
 - name: ADO
   items:
     - name: Microsoft ActiveX 数据对象 (ADO)

@@ -84,10 +84,18 @@
           href: extensibility.md
         - name: 扩展构建
           href: extension-authoring.md
-        - name: 创建一个扩展
-          href: tutorial-create-extension.md
         - name: 扩展性 API
           href: extensibility-apis.md
+        - name: 键映射扩展
+          href: extensions/keymap-extension.md
+        - name: 仪表板扩展
+          href: extensions/dashboard-extension.md
+        - name: 笔记本扩展
+          href: extensions/notebook-extension.md
+        - name: Jupyter 书籍扩展
+          href: extensions/jupyter-book-extension.md
+        - name: 向导扩展
+          href: extensions/wizard-extension.md
     - name: 集成终端（PowerShell、Bash）
       href: integrated-terminal.md
     - name: 键盘快捷方式
