@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445353"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062326"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445353"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 建议在表提示之间使用逗号。  
   
 > [!IMPORTANT]  
->  用空格而不用逗号分隔提示是一项已弃用的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> 用空格而不用逗号分隔提示是一项已弃用的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅[使用 NOEXPAND](#using-noexpand)。  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多个索引的名称或 ID。 另一供选择的 INDEX = 语法指定单个索引值。 只能为每个表指定一个索引提示。  
+INDEX  (<index\_value> [,... n ] ) | INDEX =  ( <index\_value>)  
+INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多个索引的名称或 ID。 另一供选择的 `INDEX =` 语法指定单个索引值。 只能为每个表指定一个索引提示。  
   
-如果存在聚集索引，则 INDEX(0) 强制执行聚集索引扫描，INDEX(1) 强制执行聚集索引扫描或查找。 如果不存在聚集索引，则 INDEX(0) 强制执行表扫描，INDEX(1) 被解释为错误。  
+如果存在聚集索引，则 `INDEX(0)` 强制执行聚集索引扫描，`INDEX(1)` 强制执行聚集索引扫描或查找。 如果不存在聚集索引，则 `INDEX(0)` 强制执行表扫描，`INDEX(1)` 被解释为错误。  
   
  如果在单个提示列表中使用了多个索引，则会忽略重复项，其余列出的索引将用于检索表中的行。 索引提示中的索引顺序很重要。 多索引提示还强制执行索引 AND 运算，查询优化器将对所访问的每个索引应用尽可能多的条件。 如果提示索引的集合并未包含查询引用的所有列，则会在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检索所有索引列后执行提取操作以检索其余列。  
   
@@ -181,7 +180,7 @@ KEEPDEFAULTS
   
 有关在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句中使用此提示的示例，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ (<index\_value>(<index\_column\_name> [ ,... n ] )) ]  
 指定查询优化器仅使用索引查找操作作为表或视图中的数据的访问途径。 
 
 > [!NOTE]
@@ -234,7 +233,7 @@ FORCESCAN 适用范围：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-m
 FORCESCAN 提示存在以下限制：  
 -   不能为作为 INSERT、UPDATE 或 DELETE 语句的目标的表指定该提示。  
 -   该提示不能与一个以上的索引提示一起使用。  
--   该提示阻止优化器考虑表的任何空间或 XML 索引。  
+-   该提示阻止查询优化器考虑表的任何空间或 XML 索引。  
 -   不能为远程数据源指定该提示。  
 -   该提示不能与 FORCESEEK 提示一起指定。  
   
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = <integer\_value>  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
-指定在分割 geometry 或 geography 对象时使用的最大单元格数。 *number* 是介于 1 和 8192 之间的值。  
+指定在分割 geometry 或 geography 对象时使用的最大单元格数。 <integer\_value> 是介于 1 和 8192 之间的值。  
   
 通过使用此选项，可以在主要和辅助筛选器执行时间之间权衡性能以微调查询执行时间。 较大的数字将减少辅助筛选器执行时间，但会增加主要筛选器执行时间，而较小的数字恰相反。 对于较密的空间数据，较大的数字通过为主要筛选器提供更好的近似值并减少辅助筛选器执行时间，从而缩短了执行时间。 对于较稀疏的数据，较小的数字将减少主要筛选器执行时间。  
   
@@ -393,9 +392,9 @@ GO
 如果 SET 选项不包含筛选索引所需的值，查询优化器将不考虑使用索引提示。 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="using-noexpand"></a>使用 NOEXPAND  
-NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)、[SQL Server 2017 各个版本支持的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)和 [SQL Server 2019 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
-但是，为了使优化器考虑使用索引视图进行匹配，或者使用通过 NOEXPAND 提示引用的索引视图，则必须将以下 SET 选项设置为 ON。  
+但是，为了使查询优化器考虑使用索引视图进行匹配，或者使用通过 NOEXPAND 提示引用的索引视图，则必须将以下 SET 选项设置为 ON。  
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持在不指定 NOEXPAND 提示的情况下自动使用索引视图。
@@ -411,13 +410,13 @@ NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯�
 
 另外，必须将 NUMERIC_ROUNDABORT 选项设置为 OFF。  
   
- 若要强制优化器对索引视图使用索引，请指定 NOEXPAND 选项。 仅当查询中也命名了此视图时才能使用此提示。 如果某个查询没有在 FROM 子句中直接命名特定索引视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供用于在此查询中强制使用此视图的提示；但是，即使查询中未直接引用索引视图，查询优化器仍会考虑使用索引视图。 使用 NOEXPAND 表提示时，SQL Server 仅自动创建索引视图的统计信息。 忽略此提示可能会导致出现执行计划警告：缺少无法通过手动创建统计信息解决的统计信息。 查询优化期间，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用查询直接引用视图时自动或手动创建的视图统计信息，并使用 NOEXPAND 提示。    
+ 若要强制查询优化器对索引视图使用索引，请指定 NOEXPAND 选项。 仅当查询中也命名了此视图时才能使用此提示。 如果某个查询没有在 FROM 子句中直接命名特定索引视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供用于在此查询中强制使用此视图的提示；但是，即使查询中未直接引用索引视图，查询优化器仍会考虑使用索引视图。 使用 NOEXPAND 表提示时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 仅自动创建索引视图的统计信息。 忽略此提示可能会导致出现执行计划警告：缺少无法通过手动创建统计信息解决的统计信息。 查询优化期间，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将使用查询直接引用视图时自动或手动创建的视图统计信息，并使用 NOEXPAND 提示。    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>将表提示用作查询提示  
  也可以使用 OPTION (TABLE HINT) 子句将*表提示*指定为查询提示。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="permissions"></a>权限  
- KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要具有对表的 ALTER 权限。  
+ KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要具有对表的 `ALTER` 权限。  
   
 ## <a name="examples"></a>示例  
   

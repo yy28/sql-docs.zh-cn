@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8640f7adc7e5da1e5095e44d16d201396c0924
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482545"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991848"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,14 +88,23 @@ ms.locfileid: "88482545"
 * 统一盘区，由单个对象所有。盘区中的所有八页只能由所属对象使用。
 * 混合盘区，最多可由八个对象共享。 区中八页的每页可由不同的对象所有。
 
-一直到（并且包括）[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会将所有盘区分配给包含少量数据的表。 新表或索引通常从混合区分配页。 当表或索引增长到 8 页时，将变成使用统一区进行后续分配。 如果对现有表创建索引，并且该表包含的行足以在索引中生成 8 页，则对该索引的所有分配都使用统一区进行。 但是，从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，数据库中所有分配的默认值都是统一区。
+![统一盘区和混合盘区](../relational-databases/media/extents.gif)
 
-![Extents](../relational-databases/media/extents.gif)
+一直到（并且包括）[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会将所有盘区分配给包含少量数据的表。 新表或索引通常从混合区分配页。 当表或索引增长到 8 页时，将变成使用统一区进行后续分配。 如果对现有表创建索引，并且该表包含的行足以在索引中生成 8 页，则对该索引的所有分配都使用统一区进行。 
+
+从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，用户数据库和 tempdb 中大多数分配的默认值都是使用统一盘区，但属于 [IAM 链](#IAM)的前八页的分配除外。 master、msdb 和 model 数据库的分配仍保留以前的行为。 
 
 > [!NOTE]
 > 一直到，并且包括 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，跟踪标志 1118 可用于将默认分配更改为始终使用统一区。 有关此跟踪标志的详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 TempDB 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 tempdb 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+
+从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，`sys.dm_db_database_page_allocations` 系统函数可以报告数据库、表、索引和分区的页分配信息。
+
+> [!IMPORTANT]
+> 未记录 `sys.dm_db_database_page_allocations` 系统函数，并且可能会发生更改。 不保证兼容性。 
+
+从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) 系统函数可用，并返回有关数据库中的页的信息。 该函数将返回包含页中标头信息的一行，包括 object_id、index_id 和 partition_id。 在大多数情况下，此函数取代了使用 `DBCC PAGE` 的需要。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理区分配和可用空间 
 
@@ -141,7 +150,7 @@ ms.locfileid: "88482545"
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>管理对象使用的空间 
+## <a name="managing-space-used-by-objects"></a><a name="IAM"></a> 管理对象使用的空间 
 
 “索引分配映射 (IAM)”页将映射分配单元使用的数据库文件中 4-GB 部分中的盘区。 分配单元有下列三种类型：
 
@@ -149,10 +158,10 @@ ms.locfileid: "88482545"
     用于存储堆分区或索引分区。
 
 - LOB_DATA   
-   包含大型对象 (LOB) 数据类型，如 xml、varbinary(max) 和 varchar(max)。
+   包含大型对象 (LOB) 数据类型，如 XML、VARBINARY(max) 和 VARCHAR(max)。
 
 - ROW_OVERFLOW_DATA   
-   包含超过 8,060 字节行大小限制的 varchar、nvarchar、varbinary 或 sql_variant 列中存储的可变长度数据。 
+   包含超过 8,060 字节行大小限制的 VARCHAR、NVARCHAR、VARBINARY 或 SQL_VARIANT 列中存储的可变长度数据。 
 
 堆或索引的每个分区至少包含一个 IN_ROW_DATA 分配单元。 根据堆或索引的架构，可能还包含一个 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。
 
@@ -160,10 +169,10 @@ ms.locfileid: "88482545"
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-IAM 页根据需要分配给每个分配单元，在文件中的位置也是随机的。 系统视图 (sys.system_internals_allocation_units) 指向分配单元的第一个 IAM 页。 该分配单元的所有 IAM 页都链接到一个链中。
+IAM 页根据需要分配给每个分配单元，在文件中的位置也是随机的。 `sys.system_internals_allocation_units` 系统视图指向分配单元的第一个 IAM 页。 该分配单元的所有 IAM 页都链接到一个 IAM 链中。
 
 > [!IMPORTANT]
-> `sys.system_internals_allocation_units` 系统视图仅供内部使用，随时可能更改。 不保证兼容性。 此视图在 Azure SQL 数据库中不可用。 
+> `sys.system_internals_allocation_units` 系统视图仅供内部使用，随时可能更改。 不保证兼容性。 此视图在 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]中不可用。 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -192,5 +201,6 @@ DCM 页和 BCM 页的间隔与 GAM 和 SGAM 页的间隔相同，都是 64,000 �
 ## <a name="see-also"></a>另请参阅
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [堆（没有聚集索引的表）](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [读取页](../relational-databases/reading-pages.md)   
 [写入页](../relational-databases/writing-pages.md)   
