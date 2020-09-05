@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eb71586e014d9f7faac664c12a57914272428a73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d96811924faed2d48c58a3fcc516536e63d7385
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461731"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480299"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型对象权限 (Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88461731"
  一般情况下，应分配对模型对象的“全部” **** 权限，然后显式分配对其下对象的权限。  
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章 [安全性改进](https://go.microsoft.com/fwlink/p/?LinkId=615376)。  
+ msdn.com 上的博客文章 [安全性改进](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Master Data Services 分配模型对象权限&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

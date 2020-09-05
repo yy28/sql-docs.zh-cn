@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812823"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480313"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "85812823"
   本文介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的管理员类型：模型管理员、实体管理员和超级用户。  
   
 ## <a name="model-administrators"></a>模型管理员  
- 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，模型管理员是对 "**模型对象**" 选项卡上的顶级模型对象拥有 "**管理员**" 权限的用户。当用户对特定模型具有管理员权限时，该模型的子对象上的任何其他权限（模型对象和成员权限）都将被模型**管理员**权限超越并有效地忽略。  
+ 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，模型管理员是对 "**模型对象**" 选项卡上的顶级模型对象拥有 "**管理员**" 权限的用户。当用户对特定模型具有管理员权限时，该模型的子对象上的任何其他权限 (模型对象和成员权限) 由模型**管理员**权限超越并有效地忽略。  
   
 -   如果用户具有对 **“资源管理器”** 功能区域的访问权限，此用户可以添加、删除和更新此区域中的所有主数据。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85812823"
  可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或通过编程方式将用户配置为模型管理员。 有关详细信息，请参阅 [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="entity-administrators"></a>实体管理员  
- 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，实体管理员是对 "模型对象" 选项卡上的实体对象具有 "管理员" 权限的用户。当用户对实体具有管理员权限时，该实体子对象上的任何其他权限（模型对象和成员权限）都将被管理员权限取代，并将被忽略。  
+ 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，实体管理员是对 "模型对象" 选项卡上的实体对象具有 "管理员" 权限的用户。当用户对实体具有管理员权限时，该实体的子对象上的任何其他权限 (模型对象和成员权限) 将被管理员权限取代，并将被忽略。  
   
 -   如果用户具有对 **“资源管理器”** 功能区域的访问权限，此用户可以添加、删除和更新此区域中的所有主数据。  
   
@@ -65,14 +65,14 @@ ms.locfileid: "85812823"
   
 ## <a name="comparing-administrator-types"></a>比较管理员类型  
   
-|管理员类型|描述|  
+|管理员类型|说明|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 超级用户|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中分配的权限对于管理员的访问权限没有影响。<br /><br /> 可以是基于显式分配的功能区域权限或从组继承的权限的超级用户。<br /><br /> 会自动拥有对所有模型的所有权限。<br /><br /> 自动对所有功能区域具有访问权限。|  
 |模型管理员|可以是基于显式分配的管理员权限或者从组继承的权限的模型管理员。<br /><br /> 仅对向其分配访问权限的功能区域具有访问权限。<br /><br /> 自动对特定模型中的所有对象和成员具有所有权限。|  
 |实体管理员|可以是基于显式分配的管理员权限或者从组继承的权限的实体管理员。<br /><br /> 仅对向其分配访问权限的功能区域具有访问权限。<br /><br /> 自动对特定实体中的所有对象和成员具有所有权限。<br /><br /> 如果实体变更需要批准，则可以批准挂起的变更集。|  
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章 [安全性改进](https://go.microsoft.com/fwlink/p/?LinkId=615376)。  
+ msdn.com 上的博客文章 [安全性改进](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建模型管理员 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

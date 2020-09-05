@@ -12,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 88304221dfa827679f787c55ec5065722cc9bc39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbbe6d602472a62e6d94c747a8856c507d8b2e06
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344153"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480543"
 ---
 # <a name="deprecated-master-data-services-features"></a>弃用的 Master Data Services 功能
 
@@ -54,7 +54,7 @@ ms.locfileid: "88344153"
 * [成员修订历史记录](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章 [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)（已弃用：显式层次结构和集合）。  
+ msdn.com 上的博客文章 [Deprecated: Explicit Hierarchies and Collections](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221)（已弃用：显式层次结构和集合）。  
   
 ## <a name="see-also"></a>另请参阅  
  [弃用的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  

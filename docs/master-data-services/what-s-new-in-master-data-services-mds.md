@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813921"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480566"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
@@ -71,7 +71,7 @@ ms.locfileid: "85813921"
   
  碎片率超过 30% 的索引将在线重新生成。 重新生成期间，对同一个表的 CRUD 操作的性能将受影响。 如果性能下降会造成问题，建议你在非工作时间运行该存储过程。 有关索引碎片的详细信息，请参阅 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
- 有关详细信息，请参阅这篇有关 Master Data Services 的博客文章： [Performance and Scale Improvement in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375)（SQL Server 2016 中的性能和缩放性改进）。  
+ 有关详细信息，请参阅这篇有关 Master Data Services 的博客文章： [Performance and Scale Improvement in SQL Server 2016](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225)（SQL Server 2016 中的性能和缩放性改进）。  
   
 ##  <a name="improved-security"></a>提高了安全性  
   
@@ -166,7 +166,7 @@ ms.locfileid: "85813921"
  
  **编辑派生层次结构中的多对多关系**  
   
- 可以通过修改映射实体成员来编辑多对多关系。 有关详细信息，请参阅[显示派生层次结构中的多对多关系 &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)。  
+ 可以通过修改映射实体成员来编辑多对多关系。 有关详细信息，请参阅 [显示派生层次结构中的多对多关系 &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)。  
  
  **改进了派生层次结构管理体验**  
   
@@ -178,7 +178,7 @@ ms.locfileid: "85813921"
     
  **自定义索引**  
   
- 您可以对实体中的一个属性（单个索引）或一系列属性（组合索引）创建非聚集索引，以帮助提高查询性能。 有关详细信息，请参阅[自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
+ 您可以 (单个索引) 或实体中 (组合索引) 的特性列表创建非聚集索引，以帮助提高查询性能。 有关详细信息，请参阅[自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
  
   **属性筛选器**  
   

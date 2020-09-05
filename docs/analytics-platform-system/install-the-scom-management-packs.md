@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 666eb33667f9badc2c09e4f7afa872622bedb67f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766976"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480301"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安装 SQL Server Operations Manager (SCOM) 用于分析平台系统的管理包
 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
@@ -29,7 +29,7 @@ ms.locfileid: "88766976"
   
 对于设备管理，请下载 [SQL Server 设备基本管理包](/previous-versions/system-center/packs/gg602398(v=technet.10))。  
   
-对于不带 AP 的较早版本的版本，请下载[适用于 Microsoft SQL Server 2012 并行数据仓库设备的 System Center 监视包](https://go.microsoft.com/fwlink/p/?LinkId=282661)。  
+对于不带 AP 的较早版本的版本，请下载[适用于 Microsoft SQL Server 2012 并行数据仓库设备的 System Center 监视包](https://docs.microsoft.com/sql/analytics-platform-system/download-and-apply-microsoft-updates?view=aps-pdw-2016-au7)。  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -51,7 +51,7 @@ ms.locfileid: "88766976"
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭” 。  
   
     ![单击 "关闭"](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "88766976"
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭” 。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

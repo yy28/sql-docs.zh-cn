@@ -14,12 +14,12 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53c818a6d5146d8fffec64c4cbe97b54672f9ba6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f87d123e9400d068b31ad45d193c17d8df2c526
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498846"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480323"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>查找更多 SQL Server Native Client 信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88498846"
  [数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)  
  该站点提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和其他数据访问技术的技术文章、示例代码和其他资源。  
   
- [数据访问博客](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [数据访问博客](https://docs.microsoft.com/archive/blogs/dataaccess/quick-update-re-data-access-blog)  
  该博客站点提供有关数据访问技术的信息，并允许您直接与产品团队的成员交互。  
   
  [Windows 数据访问组件](https://go.microsoft.com/fwlink/?LinkId=107907)  
