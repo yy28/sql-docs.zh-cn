@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494890"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480605"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 数据定义 - ALTER CUBE
 
 
-  更改指定多维数据集的结构，通常用于支持维度写回。 有关在应用程序中使用写回的详细信息，请参阅此博客文章： [使用 Analysis Services (博客生成写回应用程序) ](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  更改指定多维数据集的结构，通常用于支持维度写回。 有关在应用程序中使用写回的详细信息，请参阅此博客文章： [使用 Analysis Services (博客生成写回应用程序) ](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
   
  请注意，并发写回会造成死锁，其中，第一个写回会因为由第二个写回保持的共享锁而无法完成提交。 在这种情况下，不会生成错误，但是也不能继续操作。 最终会发生超时和回滚。  
   

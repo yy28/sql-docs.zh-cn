@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bfaa5eb1d111b29de1354a48f779c5d628e041dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f98afd4445d135ba7437f42c7f71355e265217c
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342243"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480336"
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
 
@@ -94,7 +94,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 |通过撤消事务来撤消操作（仅限管理员）。|[撤消事务 (Master Data Services)](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博文 [Transactions, Validation Issue and Staging table cleanup（事务、验证问题和临时表清除）](https://go.microsoft.com/fwlink/p/?LinkId=615374)。  
+ msdn.com 上的博文 [Transactions, Validation Issue and Staging table cleanup（事务、验证问题和临时表清除）](https://techcommunity.microsoft.com/t5/sql-server-integration-services/transactions-validation-issue-and-staging-table-cleanup/ba-p/388209)。  
   
 ## <a name="related-content"></a>相关内容  
   

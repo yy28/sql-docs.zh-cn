@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344093"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480659"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "88344093"
 |----------------|-----------------|  
 |**读取**|显示成员。<br /><br /> <br /><br /> 注意：如果仅将“读取”权限分配给“根”，则“根”下的成员为只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。********************|  
 |**创建**|层次结构成员权限中不提供创建权限。|  
-|**更新**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
+|**Update**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
 |**删除**|显示成员，用户可以删除它们。|  
 |**拒绝**|不显示成员。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88344093"
 -   如果为一个层次结构节点分配**创建** / **读取** / **更新** / **删除**权限的任意组合，并为另一个节点分配了 "**拒绝**" 权限，则对该节点中的成员的访问被拒绝。  
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章 [安全性改进](https://go.microsoft.com/fwlink/p/?LinkId=615376)。  
+ msdn.com 上的博客文章 [安全性改进](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)。  
   
 ## <a name="see-also"></a>另请参阅  
  [将层次结构成员权限分配 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
