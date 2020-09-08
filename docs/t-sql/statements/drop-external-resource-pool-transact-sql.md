@@ -19,12 +19,12 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: 7a32d1693f48ea56f3edd8c8c7373c88d6369bb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77f1985a83109718f4185d691adb316b1b214ea3
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358513"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283766"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -78,9 +78,6 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
 ```  
-
-> [!NOTE]
-> 适用于 Linux 的 SQL 机器学习服务 2019 不支持设置 CPU 相关性。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47f946f2a8c06d2c14f343a4c2a8eec11ac30cce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35016718bc38b959dd91d2c91f41bdf9d5b73627
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893202"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480858"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>为 Always On 可用性组配置只读路由
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -252,7 +252,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--    [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
+-    [CSS SQL Server 工程师博客](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 **白皮书：**  
   

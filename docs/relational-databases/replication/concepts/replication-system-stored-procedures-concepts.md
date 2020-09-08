@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 39f0033ead272fe448c6146fec502aa4a62d8469
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475638"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480616"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,7 +131,7 @@ GO
  创建完复制脚本后，可以通过下列方式之一执行所创建的复制脚本：  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 SQL 查询文件  
- 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 创建 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本的详细信息，请参阅[查询和文本编辑器 &#40;SQL Server Management Studio&#41;](../../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
+ 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 创建 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本的详细信息，请参阅[查询和文本编辑器 &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)。  
   
  若要使用包含脚本变量的脚本，[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 必须在 **sqlcmd** 模式下运行。 在 **sqlcmd** 模式下，查询编辑器可接受特定于 **sqlcmd** 的附加语法，如可用于变量值的 `:setvar`。 有关 **sqlcmd** 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。 在下面的脚本中，`:setvar` 用于为 `$(DistPubServer)` 变量提供值。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 52ac6d145638ff6d003724793487be46afc7191b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4ee9154593b5c1d2d3d1bdf083796134d441fad
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901289"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480809"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>将日志传送转换为 Always On 可用性组的先决条件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "85901289"
   
      [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **白皮书：**  
   

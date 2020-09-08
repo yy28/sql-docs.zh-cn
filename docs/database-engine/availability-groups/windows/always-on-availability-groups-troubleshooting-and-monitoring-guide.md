@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 096e416b5abaf7e6c148cba469cd4f7453be092e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922427"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480482"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>监视可用性组并对其进行故障排除
  本指南可帮助你开始监视 Always On 可用性组并排查可用性组的一些常见问题。 它提供了原始内容，以及在其他位置发布的有用信息的登陆页。 尽管本指南不能全面探讨大范围可用性组中出现的所有问题，但它可为分析根本原因和解决问题指出正确的方向。 
@@ -73,6 +73,6 @@ ms.locfileid: "82922427"
 
 ## <a name="next-steps"></a>后续步骤  
  [SQL Server Always On 团队博客](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
+ [CSS SQL Server 工程师博客](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

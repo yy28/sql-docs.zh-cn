@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2bc9a5c4ca7481d9d3d1039e0e467e35d5c2631b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 0073698d4cc7ce29912be8bbce3badf3eeea6742
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363037"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288329"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -93,7 +93,7 @@ LocalDB 支持两种类型的实例：自动实例和命名实例。
 
 ### <a name="connect-to-the-automatic-instance"></a>连接到自动实例
 
-使用 LocalDB 的最简单方法是通过使用连接字符串 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true` 连接到当前用户拥有的自动实例。 若要通过使用文件名连接到特定数据库，请使用类似于 `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf` 的连接字符串进行连接。
+使用 LocalDB 的最简单方法是通过使用连接字符串 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true` 连接到当前用户拥有的自动实例。 若要通过使用文件名连接到特定数据库，请使用类似于 `Server=(LocalDB)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=D:\Data\MyDB1.mdf` 的连接字符串进行连接。
 
 在 SQL Server 2014 中，LocalDB 格式的命名约定和连接字符串发生了变化。 以前，实例名称是一个 v 字符，后跟 LocalDB 和版本号。 自 SQL Server 2014 起，不再支持这种实例名称格式，而应改用前面提到的连接字符串。  
 

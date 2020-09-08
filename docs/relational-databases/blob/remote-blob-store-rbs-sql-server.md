@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 92b7abe9bee2ac7d8d7058f2fcc03a551b64e200
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765487"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480962"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "85765487"
  RBS 包括 FILESTREAM 提供程序，因此，您可以使用 RBS 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上存储 BLOB。 如果要使用 RBS 在其他存储解决方案中存储 BLOB，则必须使用为该存储解决方案开发的第三方 RBS 提供程序，或者使用 RBS API 开发自定义 RBS 提供程序。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)上以学习资源的形式提供了在 NTFS 文件系统中存储 BLOB 的示例提供程序。  
   
 ## <a name="rbs-security"></a>RBS 安全性  
- SQL 远程 Blob 存储团队博客是有关此功能的一个非常好的信息源。 [RBS 安全模型](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)一文中介绍了 RBS 安全模型。  
+ SQL 远程 Blob 存储团队博客是有关此功能的一个非常好的信息源。 [RBS 安全模型](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model)一文中介绍了 RBS 安全模型。  
   
 ### <a name="custom-providers"></a>自定义提供程序  
  使用自定义提供程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部存储 BLOB 时，请确保使用适合于自定义提供程序所使用的存储介质的权限和加密选项保护存储的 BLOB。  
@@ -89,7 +89,7 @@ ms.locfileid: "85765487"
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 示例演示如何开发 RBS 应用程序，如何开发和安装自定义 RBS 提供程序。  
   
  **RBS 博客**  
- [RBS 博客](https://go.microsoft.com/fwlink/?LinkId=210315) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
+ [RBS 博客](https://docs.microsoft.com/archive/blogs/sqlrbs/) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> 密钥轮换脚本  
  此示例创建一个名为 `sp_rotate_rbs_symmetric_credential_key` 的存储过程，以将当前使用的 RBS 凭据存储对称密钥替换为  

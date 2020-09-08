@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456866"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480818"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 
@@ -363,7 +363,7 @@ ms.locfileid: "88456866"
  维度处理目标不适用于 SQL 2016 兼容级别的表格模型。  进行表格处理时，只需使用 Analysis Services 处理任务和分区处理目标。 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> 支持内置 R Services  
- SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供内置 R Services 支持。 可以使用 SSIS 来提取数据和加载分析的输出，以及构建、运行和定期重新定型 R 模型。 有关详细信息，请参阅以下日志文章。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)（使用 SQL Server 2016 SSIS 和 R Services 实施机器学习项目）。 
+ SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供内置 R Services 支持。 可以使用 SSIS 来提取数据和加载分析的输出，以及构建、运行和定期重新定型 R 模型。 有关详细信息，请参阅以下日志文章。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296)（使用 SQL Server 2016 SSIS 和 R Services 实施机器学习项目）。 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML 任务中丰富的 XML 验证输出  
  通过启用 XML 任务的 **ValidationDetails** 属性，验证 XML 文档并获取丰富的错误输出。 在可以使用 **ValidationDetails** 属性之前，XML 任务的 XML 验证仅返回 true 或 false 结果，而不包含关于错误或其位置的详细信息。 现在，当你将 **ValidationDetails** 设置为 true 时，输出文件将包含关于每个错误的详细信息，包括行号和位置。 此信息可用于了解、查找和修复 XML 文档中的错误。 有关详细信息，请参阅 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)。  

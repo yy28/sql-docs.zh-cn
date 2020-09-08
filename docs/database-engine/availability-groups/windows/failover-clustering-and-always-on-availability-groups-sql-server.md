@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f53ae6f4a35cb539da1d5689ad2ba1086dd4c1b
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: c10980b60d41f107ff0104eedd5b51aa40cd6a6e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522929"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480643"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
@@ -117,7 +117,7 @@ ms.locfileid: "87522929"
   
      [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **白皮书：**  
   

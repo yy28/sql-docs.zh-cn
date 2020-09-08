@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 203c87b39165330d7d58106c4a4d888af11e9751
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2012b96d3b6ddd9e257a47a3b5aed97f9a068c00
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430279"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480761"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
 
@@ -248,7 +248,7 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>外部资源  
   
--   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](https://go.microsoft.com/fwlink/?LinkId=215661)。  
+-   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](https://docs.microsoft.com/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations)。  
   
 ## <a name="see-also"></a>另请参阅  
  [引用脚本解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   

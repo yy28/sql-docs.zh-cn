@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477692"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480899"
 ---
 # <a name="lookup-transformation"></a>查找转换
 
@@ -172,7 +172,7 @@ ms.locfileid: "88477692"
  如果选中 **“指定如何处理无匹配项的行”** 列表框中的任何其他选项，则行将作为错误处理。 **“错误输出”** 页上的 **“错误”** 选项不可用。  
   
 ### <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“连接”** 页选择连接管理器。 在选择 OLE DB 连接管理器时，会同时选择用来生成引用数据集的查询、表或视图。  
@@ -219,7 +219,7 @@ ms.locfileid: "88477692"
  使用“预览查询结果”  对话框预览结果。 此选项最多可以显示 200 行。  
   
 ### <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>查找转换编辑器（“列”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“列”** 页，指定源表与引用表之间的联接以及从引用表中选择查找列。  
@@ -276,7 +276,7 @@ ms.locfileid: "88477692"
  使用“设置查询参数”**** 对话框将输入列映射到参数。  
   
 ### <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="see-also"></a>另请参阅  
  [模糊查找转换](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
