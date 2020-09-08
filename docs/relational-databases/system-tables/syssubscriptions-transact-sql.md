@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syssubscriptions system table
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4ca29b9f24251db261dea3d1718485a97fb44cd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05a664a82c29a8c8db721b8d3d110011afc3ad48
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427539"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523520"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88427539"
 |**dest_db**|**sysname**|目标数据库的名称。|  
 |**status**|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 已订阅。<br /><br /> **2** = 活动。|  
 |**sync_type**|**tinyint**|初始同步的类型：<br /><br /> **1** = 自动。<br /><br /> **2** = 无|  
-|**login_name**|**sysname**|添加订阅时所使用的登录名。|  
+|login_name|**sysname**|添加订阅时所使用的登录名。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> 0 = 推送 - 分发代理在分发服务器上运行。<br /><br /> 1 = 请求 - 分发代理在订阅服务器上运行。|  
 |**distribution_jobid**|**binary(16)**|分发代理的作业 ID。|  
 |**timestamp**|**timestamp**|时间戳。|  

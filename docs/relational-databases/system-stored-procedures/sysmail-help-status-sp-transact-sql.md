@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_status_sp
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 53f0512a2d6d57606a146c39325692b9c3d351e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b40f86ddb3fd349e11f25e655ac06e757c559a56
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469156"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525260"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sysmail_help_status_sp
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Status**|**nvarchar (7) **|数据库邮件的状态。 可能的值为 " **已启动** " 和 " **已停止**"。|  
+|**状态**|**nvarchar (7) **|数据库邮件的状态。 可能的值为 " **已启动** " 和 " **已停止**"。|  
   
 ## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才能访问此过程。  
