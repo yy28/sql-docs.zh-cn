@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Size property
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9e4f68470d13431221e52c2932b5a4e84aa3ea53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee827ab5ca4291ce127a5cf92cd8b7df6afdbc32
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488483"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523253"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size 属性（ClientNetLibInfo 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.Size [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示有关客户端网络库的信息的 [ClientNetLibInfo 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
