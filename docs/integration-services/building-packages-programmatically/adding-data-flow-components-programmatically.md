@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0c43fc088fbf6ed8f95fdd418b50dc93563b662
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ef015c1cdaef9794546c8284e968b53a20ca197
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457833"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480701"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以编程方式添加数据流组件
 
@@ -285,7 +285,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章 [EzAPI - 为 SQL Server 2012 更新](https://go.microsoft.com/fwlink/?LinkId=243223)。  
+ blogs.msdn.com 上的博客文章 [EzAPI - 为 SQL Server 2012 更新](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)。  
 
 ## <a name="see-also"></a>另请参阅  
  [以编程方式连接数据流组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

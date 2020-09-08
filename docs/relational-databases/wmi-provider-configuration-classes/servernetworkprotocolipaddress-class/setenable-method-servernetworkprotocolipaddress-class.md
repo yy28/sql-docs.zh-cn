@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetEnable method
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 52f19e66fcb11941dadfcaf9e1bb85e8001b0b1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8ab50b50fa68f7d3c44d2790ce9f95304dc209c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446140"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516835"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>SetEnable 方法（ServerNetworkProtocolIPAddress 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.SetEnable()
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示实例上的网络协议 IP 地址的 [ServerNetworkProtocolIPAdress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

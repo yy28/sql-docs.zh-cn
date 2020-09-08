@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e507742ac9da235499749ed2345b25cfa11d87e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2050734b89c8b5ae74aa40316c9b1f980705dc3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484896"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480281"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
 
@@ -40,7 +40,7 @@ ms.locfileid: "88484896"
   
  要维护 **SSISDB** 数据库，建议您应用管理用户数据库的标准企业策略。 有关创建维护计划的信息，请参阅 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)。  
   
- **SSISDB** 目录和 **SSISDB** 数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
+ **SSISDB** 目录和 **SSISDB** 数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)。  
   
  有关如何查看操作数据的详细信息，请参阅 [监视运行包和其他操作](../../integration-services/performance/monitor-running-packages-and-other-operations.md)。  
   
@@ -360,7 +360,7 @@ ms.locfileid: "88484896"
   
     ```  
   
-     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
+     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
 
 ## <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
   使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
@@ -677,8 +677,8 @@ SSISDB 不支持约束委派。 在双跃点环境中，如果为约束委派设
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
+-   blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)。  
   
--   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
+-   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)。  
   
 -   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  

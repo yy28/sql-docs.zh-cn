@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetValue method
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e400d07a8e14bed9337cd0e889cb6ca13b44f674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 87d6daffaee3454dbb53decaf15aafe9750e1800
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427269"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517157"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 方法（ServerSettingsGeneralFlag 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务器设置的常规标志的 [ServerSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*值*|一个指定标志的值的布尔值。|  
   

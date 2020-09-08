@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f09e272586753e4b47666290c8635f9276980ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd142eba7a56351c3d0825b4d3e9679987c8fa52
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493724"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89518193"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sys.dm_db_missing_index_columns(index_handle)
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**int**|列的 ID。|  
+|column_id|**int**|列的 ID。|  
 |column_name|**sysname**|表列的名称。|  
 |**column_usage**|**varchar (20) **|查询使用列的方式。 可能的值及其说明如下：<br /><br /> 相等性：列分配给表达相等性的谓词，格式为： <br />                        *表列*  = *constant_value*<br /><br /> 不等：列分配给表达不相等的谓词，例如，形式*为：*  >  *constant_value*的谓词。 “=”之外的任何比较运算符都表示不相等。<br /><br /> INCLUDE：列不用于计算谓词，但用于其他原因，例如，用于覆盖查询。|  
   

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 30e8719aac08d87d4b4ce4f86f8766c46ca397b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 78fd096b7ce59bcfe0f17fb5be6d4dbc02536f7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427239"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517180"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName 属性（ServerSettingsGeneralFlag 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务器设置的常规标志的 [ServerSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

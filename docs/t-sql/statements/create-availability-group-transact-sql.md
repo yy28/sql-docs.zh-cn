@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65d05786dcd0cd7bc42834de6da2df133fee7fab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db4140d13fa0e521264a70bfcfb2363260327bdb
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458826"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480433"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -155,7 +155,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
 |级别|失败条件|  
 |-----------|-----------------------|  
-|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> -由于没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租用时间到期。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)。|  
+|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> -由于没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租用时间到期。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的 HEALTH_CHECK_TIMEOUT 阈值。<br /><br /> -可用性副本处于失败状态。|  
 |3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 此选项为默认行为。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  

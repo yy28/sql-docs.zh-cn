@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e696c5f44059f47af6f4b27f030c2979a25c1b6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496914"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480853"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -440,7 +440,7 @@ BUFFERCOUNT = { buffercount | @buffercount\_variable } 指定用于备份操作�
 缓冲区使用的总空间是由以下公式确定：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
-> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。
+> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition)博客。
 
 MAXTRANSFERSIZE **=** { maxtransfersize |  **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
 
@@ -1057,7 +1057,7 @@ BUFFERCOUNT = { buffercount | @buffercount\_variable } 指定用于备份操作�
 缓冲区使用的总空间是由以下公式确定：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
-> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。
+> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition)博客。
 
 MAXTRANSFERSIZE **=** { maxtransfersize |  **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
 

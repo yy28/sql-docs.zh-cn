@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDisable method
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cd7f7fbc3fb0480183789ec19557b923037d8341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ce3332f08e8044ed6e4797eb144043de8f82e6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463557"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516876"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>SetDisable 方法（ServerNetworkProtocolIPAddress 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.SetDisable()
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示 [实例上的网络协议 IP 地址的](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) ServerNetworkProtocolIPAdress 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
