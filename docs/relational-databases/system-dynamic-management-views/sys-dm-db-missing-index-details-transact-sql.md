@@ -19,15 +19,15 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2229cbb859443a8b3669aa1b0b819af30d9893e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f88249c10b9e6c58e1ae68b598cfb92a876bf56a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490008"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89518514"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88490008"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|标识特定的缺失索引。 该标识符在服务器中是唯一的。 **index_handle** 是此表的键。|  
-|**database_id**|**smallint**|标识带有缺失索引的表所驻留的数据库。|  
+|database_id|**smallint**|标识带有缺失索引的表所驻留的数据库。|  
 |object_id|**int**|标识索引缺失的表。|  
 |**equality_columns**|**nvarchar(4000)**|构成相等谓词的列的逗号分隔列表，谓词的形式如下：<br /><br /> *表列*  =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：<br /><br /> *表列*  > *constant_value*<br /><br /> “=”之外的任何比较运算符都表示不相等。|  
