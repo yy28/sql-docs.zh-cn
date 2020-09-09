@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a7abcc7d0f4ad148f18e90a29a8f411804e0d4a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 368e5694231f52c9c7c73835308cd6a3d5fe5b81
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446715"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547253"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,13 +79,13 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in` 指定是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应该在通知消息中包含 Windows 应用程序日志中的错误说明。 *include_event_description_in* 的数据值为 **tinyint**，默认值为 NULL，可以是下列值中的一个或多个。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|无|  
 |**1**|电子邮件|  
 |**2**|寻呼机|  
 |**4**|**net send**|  
-|**7**|全部|  
+|**7**|All|  
   
 `[ @database_name = ] 'database'` 必须发生错误才能触发警报的数据库的名称。 *数据库* 为 **sysname。** 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   

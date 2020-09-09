@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446729"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545914"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast` 用于计算行计数的方法。 *full_or_fast* 为 **tinyint**，默认值为 **2**，可以为以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|使用 COUNT(*) 进行完整计数。|  
 |**1**|从 **sysindexes**中快速计数。 在 **sysindexes** 中对行进行计数比在实际表中计算行的速度要快得多。 但是，因为 **sysindexes** 被延迟更新，所以行计数可能不准确。|  

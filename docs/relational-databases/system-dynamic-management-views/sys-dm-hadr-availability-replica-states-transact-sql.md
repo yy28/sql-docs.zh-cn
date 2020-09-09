@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 347d05c0bfc37b1c14fddb728df5508e062cb13d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398693"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546553"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88398693"
   
  正在**解析：** 如果可用性副本处于解析角色中，则可能的操作状态如下表中所示。  
   
-|操作状态|描述|  
+|操作状态|说明|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|正在为可用性组处理故障转移命令。|  
 |OFFLINE|可用性副本的所有配置数据都已在 WSFC 群集上更新，并且也在本地元数据中更新，但可用性组目前缺少主副本。|  
@@ -68,7 +68,7 @@ ms.locfileid: "88398693"
   
  **主要：** 当某个可用性副本正在执行主角色时，该副本当前是主副本。 可能的操作状态如下表中所示。  
   
-|操作状态|描述|  
+|操作状态|说明|  
 |-----------------------|-----------------|  
 |PENDING|这是一个临时状态，但是，如果工作线程无法处理请求，主副本可能会处于此状态。|  
 |ONLINE|可用性组资源已处于联机状态，并且所有数据库工作线程均已选取。|  
@@ -76,7 +76,7 @@ ms.locfileid: "88398693"
   
  **辅助：** 当某个可用性副本正在执行辅助角色时，该副本当前为辅助副本。 可能的操作状态如下表中所示。  
   
-|操作状态|描述|  
+|操作状态|说明|  
 |-----------------------|-----------------|  
 |ONLINE|本地辅助副本连接到主副本。|  
 |FAILED|本地辅助副本无法从 WSFC 群集读取和/或写入。|  

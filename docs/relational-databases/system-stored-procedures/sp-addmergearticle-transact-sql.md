@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef60a3770d579358d561d98648d4bc7a54309555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40c50362e8976552f80bf7a023a49f05a5bb5043
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489693"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546285"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +82,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'` 项目的类型。 *type* 的数据类型为 **sysname**，默认值为 **table**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**表** (默认值) |具有架构和数据的表。 复制会监视该表以确定要复制的数据。|  
 |**func schema only**|仅具有架构的函数。|  
@@ -102,7 +102,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'` 指定应用快照时，如果订阅服务器上存在该表，系统将执行的操作。 *pre_creation_cmd* 为 **nvarchar (10) **，可以是以下值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 |**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
@@ -116,7 +116,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option` 给定项目的架构生成选项的位图。 *schema_option* 是 **二进制 (8) **，可以是一个或多个值的 [| (按位 "或") ](../../t-sql/language-elements/bitwise-or-transact-sql.md) "。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0x00**|禁用快照代理的脚本，并使用在 *creation_script*中定义的提供的架构预创建脚本。|  
 |**0x01**|生成对象创建（CREATE TABLE、CREATE PROCEDURE 等）。 这是存储过程项目的默认值。|  
@@ -213,7 +213,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions` 是在合并代理将更改应用于发布服务器时验证的表级权限的位图。 如果合并进程使用的发布服务器登录名/用户帐户没有正确的表权限，则无效更改将被记录为冲突。 *check_permissions* 为 **int**，可以是以下一个或多个值的 [| (位或) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 乘积。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0x00** (默认值) |不检查权限。|  
 |**0x10**|检查了发布服务器上的权限后，才能上载订阅服务器上的插入操作。|  
@@ -254,7 +254,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options` 定义项目中数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，将启用性能优化。 *partition_options* 为 **tinyint**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|项目的筛选是静态的，或者不会为每个分区生成一个唯一数据子集（即“重叠”分区）。|  
 |**1**|分区是重叠的，订阅服务器中执行的数据操作语言 (DML) 更新不能更改行所属的分区。|  
@@ -268,7 +268,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options` 定义对具有客户端订阅的订阅服务器上所做的更新的限制。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。 *subscriber_upload_options* 为 **tinyint**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|无限制。 将订阅服务器上所做的更改上载到发布服务器。|  
 |**1**|允许在订阅服务器上进行更改，但不将更改上载到发布服务器。|  
@@ -281,7 +281,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption` 指定如何处理项目的标识范围管理。 *identityrangemanagementoption* 是 **nvarchar (10) **，可以是以下值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**无**|禁用标识范围管理。|  
 |**手动**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  
@@ -330,7 +330,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="default-schema-option-table"></a>默认架构选项表  
  此表描述存储过程设置的默认值（如果为 *schema_option*指定了 NULL 值，这取决于项目类型）。  
   
-|项目类型|架构选项值|  
+|文章类型|架构选项值|  
 |------------------|-------------------------|  
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
@@ -344,7 +344,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="valid-schema-option-table"></a>有效架构选项表  
  下表描述了根据项目类型 *schema_option* 允许的值。  
   
-|项目类型|架构选项值|  
+|文章类型|架构选项值|  
 |------------------|--------------------------|  
 |**func schema only**|**0x01** 和 **0x2000**|  
 |**indexed view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和 **0x200000**|  
@@ -362,8 +362,8 @@ sp_addmergearticle [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_dropmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

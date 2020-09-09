@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f03bffcfefbe20386885523aaf75419e56c87dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02b97900b86eac3c4fb5ffc61b7cf6922d4800e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464614"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546308"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -92,19 +92,19 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'` 同步模式。 *sync_method* 为 **nvarchar (13) **，可以是以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**native**|生成所有表的本机模式大容量复制程序输出。 *对于 Oracle 发布服务器不支持*。|  
-|**字符**|生成所有表的字符模式大容量复制程序输出。 _对于 Oracle 发布服务器，_ **字符**_仅对快照复制有效_。|  
+|**character**|生成所有表的字符模式大容量复制程序输出。 _对于 Oracle 发布服务器，_ **字符**_仅对快照复制有效_。|  
 |**发出**|生成所有表的本机模式大容量复制程序输出，但在快照过程中并不锁定表。 只有事务发布支持该值。 *对于 Oracle 发布服务器不支持*。|  
 |**concurrent_c**|生成所有表的字符模式大容量复制程序输出，但在快照过程中并不锁定表。 只有事务发布支持该值。|  
-|**database snapshot**|从数据库快照生成所有表的本机模式大容量复制程序输出。 并非在的每个版本中都提供了数据库快照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
+|**数据库快照**|从数据库快照生成所有表的本机模式大容量复制程序输出。 并非在的每个版本中都提供了数据库快照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
 |**database snapshot character**|从数据库快照生成所有表的字符模式大容量复制程序输出。 并非在的每个版本中都提供了数据库快照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
 |NULL（默认值）|对于发布服务器，默认为 **本机** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，当*repl_freq*的值为**Snapshot** ，并为所有其他情况**concurrent_c**时，默认为**字符**。|  
   
 `[ \@repl_freq = ] 'repl_freq'` 复制频率的类型， *repl_freq* 为 **nvarchar (10) **，可以是以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**连续** (默认值) |发布服务器提供所有基于日志的事务的输出。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将 *sync_method* 设置为 **concurrent_c**。|  
 |**概述**|发布服务器仅生成计划的同步事件。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将 *sync_method* 设置为 " **字符**"。|  
@@ -113,7 +113,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'` 指定发布数据是否可用。 *状态* 为 **nvarchar (8) **，可以为以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**active**|发布数据可立即用于订阅服务器。|  
 |**非活动** (默认值) |首次创建发布时，发布数据不能由订阅服务器使用（订阅服务器可以订阅，但这些订阅不被处理）。|  
@@ -136,9 +136,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 指定是否在发布服务器上生成用于更新订阅的同步存储过程。 *autogen_sync_procs* 为 **nvarchar (5) **，可以是以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
-|true|在启用更新订阅时自动设置。|  
+|**true**|在启用更新订阅时自动设置。|  
 |**false**|在未启动更新订阅或没有为 Oracle 发布服务器启动更新订阅时自动设置。|  
 |NULL（默认值）|如果启用更新订阅，则默认值为 **true;** 如果未启用更新订阅，则默认为 **false** 。|  
   
@@ -177,7 +177,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'` 指定使用排队更新订阅服务器选项时的冲突解决策略。 *conflict_policy* 为 **nvarchar (100) ** ，默认值为 NULL，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**pub wins**|发布服务器在冲突中入选。|  
 |**sub reinit**|重新初始化订阅。|  
@@ -192,7 +192,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'` 指定使用的队列类型。 *queue_type* 为 **nvarchar (10) **，默认值为 NULL，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**transact-sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。|  
 |NULL（默认值）|默认为 **sql**，它指定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储事务。|  
@@ -215,9 +215,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` 指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 *allow_initialize_from_backup* 为 **nvarchar (5) **，可以是以下值之一：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
-|true|启用从备份进行的初始化。|  
+|**true**|启用从备份进行的初始化。|  
 |**false**|禁用从备份进行的初始化。|  
 |NULL（默认值）|对于对等复制拓扑中的发布，默认值为 **true** ，对于所有其他发布，默认值为 **false** 。|  
   
@@ -333,7 +333,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>另请参阅  
  [sp_addlogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_addpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

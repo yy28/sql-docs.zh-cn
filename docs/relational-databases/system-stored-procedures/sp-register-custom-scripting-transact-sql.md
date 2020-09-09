@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f73353cc5d2e0e9be02be5a0e6dc59eaf2f909f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446857"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547486"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>参数  
 `[ @type = ] 'type'` 要注册的自定义存储过程或脚本的类型。 *类型* 为 **varchar (16) **，无默认值，并且可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**insert**|复制 INSERT 语句时，将执行注册的自定义存储过程。|  
 |**update**|复制 UPDATE 语句时，将执行注册的自定义存储过程。|  

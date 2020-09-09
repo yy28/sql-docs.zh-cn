@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 491ff79e6337ee7ec9767c73138174ac2fe64c8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf5b55565a97669b78deedeb2487881e2aa1d808
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498428"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546828"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88498428"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|数据库 ID。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
+|database_id|**int**|数据库 ID。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
 |**mirroring_guid**|**uniqueidentifier**|镜像合作关系的 ID。<br /><br /> NULL = 数据库不可访问或未进行镜像。<br /><br /> 注意：如果数据库未参与镜像，则所有以 "mirroring_" 为前缀的列均为 NULL。|  
 |**mirroring_state**|**tinyint**|镜像数据库的状态和数据库镜像会话的状态。<br /><br /> 0 = 已挂起<br /><br /> 1 = 与其他伙伴断开<br /><br /> 2 = 正在同步<br /><br /> 3 = 挂起故障转移<br /><br /> 4 = 已同步<br /><br /> 5 = 伙伴未同步。 现在无法进行故障转移。<br /><br /> 6 = 伙伴已同步。 可以进行故障转移。 有关故障转移的要求的信息，请参阅 [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_state_desc**|**nvarchar(60)**|镜像数据库状态和数据库镜像会话状态的说明，可以是下列值之一：<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> Null<br /><br /> 有关详细信息，请参阅[镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。|  
@@ -57,7 +57,7 @@ ms.locfileid: "88498428"
 |**mirroring_failover_lsn**|**numeric(25,0)**|保证将被镜像到两个伙伴服务器磁盘中的最新事务日志记录的日志序列号 (LSN)。 故障转移后，伙伴使用 **mirroring_failover_lsn** 作为协调点，新的镜像服务器将开始将新的镜像数据库与新的主体数据库进行同步。|  
 |**mirroring_connection_timeout**|**int**|镜像连接超时值（秒）。 这是等待伙伴或见证服务器回复的秒数，超过该时间后，伙伴或见证服务器将被视为不可用。 默认超时值为 10 秒。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_redo_queue**|**int**|对镜像服务器重做的最大日志量。 如果 mirroring_redo_queue_type 已设置为默认设置 UNLIMITED，则此列为 NULL。 如果数据库未联机，则该列也为 NULL。<br /><br /> 否则，该列包含最大日志量 (MB)。 如果达到最大值，则当镜像服务器也达到同一值时，日志将在主体服务器上临时停止。 此功能限制故障转移时间。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|  
-|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED 指示镜像不会禁止重做队列。 这是默认设置。<br /><br /> 以兆字节为单位的重做队列的最大大小 (MB)。 请注意，如果队列大小以 KB 或 GB 形式指定，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将该值转换为 MB。<br /><br /> 如果数据库未联机，则该列为 NULL。|  
+|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED 指示镜像不会禁止重做队列。 此为默认设置。<br /><br /> 以兆字节为单位的重做队列的最大大小 (MB)。 请注意，如果队列大小以 KB 或 GB 形式指定，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将该值转换为 MB。<br /><br /> 如果数据库未联机，则该列为 NULL。|  
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|已刷新到磁盘本地日志末尾。 这相当于镜像服务器的强制 LSN (参阅 **mirroring_failover_lsn** 列) 。|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|可以发送复制的最大 LSN。|  
   

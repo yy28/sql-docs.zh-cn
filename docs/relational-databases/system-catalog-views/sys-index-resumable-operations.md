@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490303"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546759"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql) 
 
@@ -36,7 +36,7 @@ ms.locfileid: "88490303"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|此索引所属的对象的 ID (不可为空) 。|  
-|**index_id**|**int**|不能为 null) 的索引 (ID。 **index_id** 仅在对象中是唯一的。|
+|index_id|**int**|不能为 null) 的索引 (ID。 **index_id** 仅在对象中是唯一的。|
 |name|**sysname**|索引的名称。 **名称** 仅在对象中是唯一的。|  
 |**sql_text**|**nvarchar(max)**|DDL T-sql 语句文本|
 |**last_max_dop**|**smallint**|上次 MAX_DOP 使用 (默认值 = 0) |

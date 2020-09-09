@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f85830c11ca64f3540995411a2cfe1dac6044544
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce3aa58526b458619b9875a19118fd4575aca3bf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474022"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546051"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**sysname**|标识列。|  
+|column_id|**sysname**|标识列。|  
 |column_name|**sysname**|表或视图的列名。|  
 |**发布**|**bit**|指定是否发布列名称。<br /><br /> **1** 指定正在发布列。<br /><br /> **0** 指定不发布。|  
   

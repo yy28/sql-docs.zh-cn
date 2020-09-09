@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0247061b99b53cb53e12fa4e5e3a1284430287e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb9545e4a74fdf6831317ee31f36488e781239d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480921"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547284"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>参数  
 `[ @type = ] 'type'` 要删除的自定义存储过程或脚本的类型。 *类型* 为 **varchar (16) **，无默认值，并且可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**insert**|复制 INSERT 语句时，执行注册的自定义存储过程或脚本。|  
 |**update**|复制 UPDATE 语句时，执行注册的自定义存储过程或脚本。|  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ServiceName property
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 937171a5267ac2b8dc6bab4b019fcfa9189e3404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2c77827eb4846a39c6b68387cc7b34323690089
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427159"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546949"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 属性（SqlServiceAdvancedProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.ServiceName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488859"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545792"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "88488859"
 |**schedule_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划 ID。|  
 |**schedule_uid**|**uniqueidentifier**|作业计划的唯一标识符。 此值用于标识分布式作业的计划。|  
 |**originating_server_id**|**int**|作为作业计划来源的主服务器 ID。|  
-|**name**|**sysname (nvarchar (128) # B3 **|作业计划的用户定义名称。 该名称在作业中必须唯一。|  
-|**owner_sid**|**varbinary (85) **|拥有作业计划的用户或组的 Microsoft Windows *security_identifier* 。|  
+|name |**sysname (nvarchar (128) # B3 **|作业计划的用户定义名称。 该名称在作业中必须唯一。|  
+|**owner_sid**|**varbinary(85)**|拥有作业计划的用户或组的 Microsoft Windows *security_identifier* 。|  
 |**enabled**|**int**|作业计划的状态：<br /><br /> **0** = 未启用。<br /><br /> **1** = 已启用。<br /><br /> 如果未启用计划，则不会运行该计划中的任何作业。|  
 |**freq_type**|**int**|此计划中作业运行的频率。<br /><br /> **1** = 仅限一次<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于 **freq_interval**<br /><br /> **64** = 在 SQL Server 代理服务启动时运行<br /><br /> **128** = 在计算机空闲时运行|  
 |**freq_interval**|**int**|执行作业的间隔天数。 取决于 **freq_type**的值。 默认值为 **0**，指示不使用 **freq_interval** 。 请参阅下表，了解可能的值及其影响。|  

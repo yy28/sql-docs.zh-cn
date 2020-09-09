@@ -11,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74546998aeba42167659eabcbed4571c2f15c492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 130b23f2961f1b2d2abec96c1f0f1b32400db0a4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401713"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546860"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "88401713"
 |name|**sysname**|外部数据源的名称。||  
 |location|**nvarchar(4000)**|连接字符串，其中包括用于外部数据源的协议、IP 地址和端口。||  
 |type_desc|**nvarchar(255)**|以字符串形式显示的数据源类型。|HADOOP、RDBMS、SHARD_MAP_MANAGER、RemoteDataArchiveTypeExtDataSource|  
-|type|**tinyint**|以数字形式显示的数据源类型。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
+|类型|**tinyint**|以数字形式显示的数据源类型。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|对于类型 HADOOP，为 Hadoop 资源管理器的 IP 和端口位置。 这用于在 Hadoop 数据源上提交作业。<br /><br /> 对于其他类型的外部数据源为 NULL。||  
 |credential_id|**int**|用于连接到外部数据源的数据库范围凭据的对象 ID。||  
 |database_name|**sysname**|对于类型 RDBMS，为远程数据库的名称。 对于 "类型"，请 SHARD_MAP_MANAGER 分片映射管理器数据库的名称。 对于其他类型的外部数据源为 NULL。||  

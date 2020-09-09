@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474425"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546204"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` 指定的属性的新值。 *值*为 **nvarchar (255) **，可以是表中的值之一。  
   
-|属性|值|描述|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||快照文件夹的存储位置（如果该位置不同于默认位置或是默认位置之外的位置）。|  
 |description||对该合并请求订阅的说明。|  
@@ -75,7 +75,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||表示 Web 同步的复制侦听器位置的 URL。|  
 |**merge_job_login**||用来运行代理的 Windows 帐户的登录名。|  
 |**merge_job_password**||用来运行代理的 Windows 帐户的密码。|  
-|**大事**||仅可用于向后兼容;改为在发布服务器上运行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改订阅的优先级。|  
+|**priority**||仅可用于向后兼容;改为在发布服务器上运行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改订阅的优先级。|  
 |**publisher_login**||在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**publisher_password**||在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
 |**publisher_security_mode**|**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
@@ -83,11 +83,11 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**2**|同步触发器使用静态 **sysservers** 项执行远程过程调用 (RPC) ，发布服务器必须在 **sysservers** 表中定义为远程服务器或链接服务器。|  
 |**sync_type**|**自动**|已发布表的架构和初始数据将首先传输到订阅服务器。|  
 ||**无**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
-|**use_ftp**|true|使用 FTP 而不是典型协议来检索快照。|  
+|**use_ftp**|**true**|使用 FTP 而不是典型协议来检索快照。|  
 ||**false**|使用典型协议来检索快照。|  
-|**use_web_sync**|true|可以通过 HTTP 同步订阅。|  
+|**use_web_sync**|**true**|可以通过 HTTP 同步订阅。|  
 ||**false**|不能通过 HTTP 同步订阅。|  
-|**use_interactive_resolver**|true|在调解过程中使用交互式冲突解决程序。|  
+|**use_interactive_resolver**|**true**|在调解过程中使用交互式冲突解决程序。|  
 ||**false**|不使用交互式冲突解决程序。|  
 |**working_directory**||如果指定了使用 FTP 的选项，则是使用 FTP 将快照文件传输到的目录的完全限定路径。|  
 |NULL（默认值）||返回 *属性*的支持值的列表。|  

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.function_order_columns catalog view
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 77617e5be43286218fce0b40dbd35825fa8d105a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c7ac555630f4472e5cf58ad9017cdb03643ae2b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88324003"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546787"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88324003"
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要定义其顺序的对象（CLR 表值函数）的 ID。|  
 |**order_column_id**|**int**|排序列的 ID。 **order_column_id** 仅在 **object_id**中是唯一的。<br /><br /> **order_column_id** 表示此列在排序中的位置。|  
-|**column_id**|**int**|**Object_id**中的列的 ID。<br /><br /> **column_id** 仅在 **object_id**中是唯一的。|  
+|column_id|**int**|**Object_id**中的列的 ID。<br /><br /> **column_id** 仅在 **object_id**中是唯一的。|  
 |**is_descending**|**bit**|1 = 排序列采用降序排序。<br /><br /> 0 = 排序列采用升序排序。|  
   
 ## <a name="permissions"></a>权限  

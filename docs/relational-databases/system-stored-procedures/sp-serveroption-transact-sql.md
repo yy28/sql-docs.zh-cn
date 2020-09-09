@@ -17,14 +17,14 @@ helpviewer_keywords:
 - 7343 (Database Engine error)
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c9235c9307c679d80aa869990c6f43ca5ef301dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba6045caf5d95aed6d11c0844c16afd93365368f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481023"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547364"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_serveroption [@server = ] 'server'
   
 `[ @optname = ] 'option_name'` 为指定的服务器设置的选项。 *option_name* 是 **varchar (** 35 **) **，无默认值。 *option_name* 可以是以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**排序规则兼容**|影响分布式查询在链接服务器上的执行。 如果将此选项设置为 **true**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定链接服务器中的所有字符都与本地服务器兼容，无论字符集和排序规则顺序如何)  (或排序顺序。 这使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 得以将字符列上的比较发送给提供程序。 如果没有设置该选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将始终在本地进行字符列上的比较。<br /><br /> 只有在确信链接服务器所对应的数据源与本地服务器有相同的字符集和排序顺序时，才应当设置该选项。|  
 |**排序规则名称**|如果 " **使用远程排序规则** " 为 **true** ，并且数据源不是数据源，则指定远程数据源使用的排序规则的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此名称必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的排序规则之一。<br /><br /> 如果访问的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外的 OLE DB 数据源，但该数据源的排序规则与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个排序规则匹配，则使用该选项。<br /><br /> 链接服务器必须支持该服务器中所有列使用的单个排序规则。 如果链接服务器支持单个数据源内的多个排序规则，或者如果无法确定链接服务器的排序规则是否与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个排序规则匹配，则不要设置该选项。|  

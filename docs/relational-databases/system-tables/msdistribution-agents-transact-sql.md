@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9802c60aed31ec8e5cb04f7d053761382e5f90df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2433e5dcc96cc8b60adbc231a4f40e5a726dc62
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454674"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547145"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88454674"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|分发代理的 ID。|  
-|**name**|**nvarchar (100) **|分发代理的名称。|  
+|name |**nvarchar (100) **|分发代理的名称。|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
@@ -57,7 +57,7 @@ ms.locfileid: "88454674"
 |**** dts_package_name|**sysname**|DTS 包的名称。 例如，对于名为 **DTSPub_Package**的包，请指定 `@dts_package_name = N'DTSPub_Package'` 。|  
 |**** dts_package_password|**nvarchar (524) **|包上的密码。|  
 |**** dts_package_location|**int**|包位置。 包的位置可以是 **分发服务器** 或 **订阅服务器**。|  
-|**sid**|**varbinary (85) **|分发代理或合并代理第一次执行时的安全标识号 (SID)。|  
+|**sid**|**varbinary(85)**|分发代理或合并代理第一次执行时的安全标识号 (SID)。|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|代理在连接订阅服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 身份验证<br /><br /> **1**个  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。|  
 |**subscriber_login**|**sysname**|连接订阅服务器时所使用的登录名。|  
