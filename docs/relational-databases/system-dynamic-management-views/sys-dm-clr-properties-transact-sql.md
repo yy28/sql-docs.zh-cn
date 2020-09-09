@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7db1f2a88248f01929326f02cf19cd42ac5a5e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498367"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551280"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "88498367"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|属性的名称。|  
+|name |**nvarchar(128)**|属性的名称。|  
 |**value**|**nvarchar(128)**|属性的名称。|  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
  **Directory**属性指示在服务器上安装 .NET Framework 的目录。 在服务器上可能存在多个 .NET Framework 安装，该属性的值标识了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用的安装。  
   
  **Version**属性指示服务器上的 .NET Framework 和宿主 CLR 的版本。  
   
- **Sys. dm_clr_properties**动态托管视图可为**state**属性返回六个不同的值，这反映了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管 clr 的状态。 它们分别是：  
+ **Sys. dm_clr_properties**动态托管视图可为**state**属性返回六个不同的值，这反映了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管 clr 的状态。 它们是：  
   
 -   Mscoree 未加载。  
   

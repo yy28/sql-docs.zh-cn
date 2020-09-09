@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b10aa1339769b49a6bd05fbc96a102583960cd99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a9f7b7d1cb6f3c3f9af3dcb9f64b42fa48af78c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374673"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551304"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>数据库镜像-sys. dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88374673"
 |**connect_time**|**datetime**|打开连接的日期和时间。|  
 |**login_time**|**datetime**|连接登录成功的日期和时间。|  
 |**authentication_method**|**nvarchar(128)**|Windows 身份验证方法的名称，如 NTLM 或 KERBEROS。 该值由 Windows 提供。|  
-|**principal_name**|**nvarchar(128)**|验证其连接权限的登录的名称。 对于 Windows 身份验证，此值为远程用户名。 对于证书身份验证，该值为证书所有者。|  
+|principal_name|**nvarchar(128)**|验证其连接权限的登录的名称。 对于 Windows 身份验证，此值为远程用户名。 对于证书身份验证，该值为证书所有者。|  
 |**remote_user_name**|**nvarchar(128)**|Windows 身份验证所使用的来自其他数据库的对等方用户名。|  
 |**last_activity_time**|**datetime**|上次使用连接发送或接收信息的日期和时间。|  
 |**is_accept**|**bit**|指示连接是否源自远程端。<br /><br /> 1 = 连接是从远程实例接受的请求。<br /><br /> 0 = 连接由本地实例启动。|  
@@ -69,7 +69,7 @@ ms.locfileid: "88374673"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|一对一|  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33aa400800103c2f2b695dbb01e0caf908451ace
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f145ef3109ed9ba755ee006a218313d5a7956df4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482154"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551488"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88482154"
 |**desired_state**|**smallint**|指示查询存储所需的操作模式，由用户显式设置。<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
 |**desired_state_desc**|**nvarchar(60)**|查询存储所需操作模式的文本说明：<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|指示查询存储的操作模式。 除了用户需要的所需状态的列表之外，实际状态可能是错误状态。<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = 错误|  
-|**actual_state_desc**|**nvarchar(60)**|查询存储实际操作模式的文本说明。<br />OFF<br />READ_ONLY<br />READ_WRITE<br />错误<br /><br /> 在某些情况下，实际状态与所需状态不同：<br />-如果数据库设置为只读模式，或者查询存储大小超过其配置的配额，则查询存储可能会在只读模式下运行（即使用户指定了读写）。<br />-在极端方案中查询存储可能会由于内部错误而进入错误状态。 从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ，如果发生这种情况，可以通过 `sp_query_store_consistency_check` 在受影响的数据库中执行存储过程来恢复查询存储。 如果运行 `sp_query_store_consistency_check` 不起作用，或者使用的是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，则需要通过运行 `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
+|**actual_state_desc**|**nvarchar(60)**|查询存储实际操作模式的文本说明。<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERROR<br /><br /> 在某些情况下，实际状态与所需状态不同：<br />-如果数据库设置为只读模式，或者查询存储大小超过其配置的配额，则查询存储可能会在只读模式下运行（即使用户指定了读写）。<br />-在极端方案中查询存储可能会由于内部错误而进入错误状态。 从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ，如果发生这种情况，可以通过 `sp_query_store_consistency_check` 在受影响的数据库中执行存储过程来恢复查询存储。 如果运行 `sp_query_store_consistency_check` 不起作用，或者使用的是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，则需要通过运行 `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
 |**readonly_reason**|**int**|当 READ_WRITE **desired_state_desc** 并且 **actual_state_desc** READ_ONLY 时， **readonly_reason** 返回一个位图以指示查询存储处于只读模式的原因。<br /><br /> **1** -数据库处于只读模式<br /><br /> **2** -数据库处于单用户模式<br /><br /> **4** -数据库处于紧急模式<br /><br /> **8** -数据库是辅助副本 (适用于 Always On 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 异地复制) 。 只能在 **可读** 辅助副本上有效观察此值<br /><br /> **65536** -查询存储已达到选项设置的大小限制 `MAX_STORAGE_SIZE_MB` 。 有关此选项的详细信息，请参阅 [ALTER DATABASE SET options (transact-sql) ](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br /> **131072** -查询存储中的不同语句数已达到内部内存限制。 请考虑删除不需要的查询或升级到更高的服务层，以允许将查询存储传输到读写模式。<br />适用对象：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> **262144** -等待保留在磁盘上的内存中项的大小已达到内部内存限制。 查询存储将暂时处于只读模式，直到内存中的项保留在磁盘上。 <br />适用对象：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> **524288** -数据库已达到磁盘大小限制。 查询存储是用户数据库的一部分，因此，如果数据库没有更多的可用空间，这意味着查询存储不能再进一步增长。<br />适用对象：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 <br /> <br /> 若要将查询存储操作模式改回为读写模式，请参阅验证查询存储是否正在[与查询存储的最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)**持续收集查询数据**部分。|  
 |**current_storage_size_mb**|**bigint**|磁盘上的查询存储大小（以 mb 为单位）。|  
 |**flush_interval_seconds**|**bigint**|将查询存储数据定期刷新到磁盘的时间（以秒为单位）。 默认值为 **900** (15 分钟) 。<br /><br /> 使用语句进行更改 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` 。|  

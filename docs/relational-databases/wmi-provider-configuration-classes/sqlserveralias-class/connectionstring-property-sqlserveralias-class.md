@@ -15,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - ConnectionString property
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 15bf8e72cfccbb6d1c9790ab4f8c48dcfaf661b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b0a8cacce04ad0ef376d7ed6516b017f3c1b85d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446129"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550903"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 属性（SqlServerAlias 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ object.ConnectionString [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示别名的 [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) 对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

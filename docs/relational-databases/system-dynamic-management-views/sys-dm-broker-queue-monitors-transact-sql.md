@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8290b399d91bb196c818ba61fc7b685fcc23b383
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15090a3b52be40dba3735bb0b10ef185efe5de2b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498341"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551293"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88498341"
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|数据库的对象标识符，该数据库包含了监视器所观察的队列。 可以为 null.|  
+|database_id|**int**|数据库的对象标识符，该数据库包含了监视器所观察的队列。 可以为 null.|  
 |**queue_id**|**int**|监视器所观察的队列的对象标识符。 可以为 null.|  
 |State|**nvarchar(32)**|监视器的状态。 可以为 null. 这是以下各项之一：<br /><br /> **不用**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|来自队列的 RECEIVE 上次返回空结果时的时间。 可以为 null.|  

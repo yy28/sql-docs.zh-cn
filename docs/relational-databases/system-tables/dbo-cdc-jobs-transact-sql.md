@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - dbo.cdc_jobs
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ccb4db642eb449dfad33e5b1cd1f92aad59ddc6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c7b71f64a66adaf829bd4041a0a14f4e91e30dc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419171"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551058"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88419171"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|特定数据库的 ID，作业在此数据库中运行。|  
+|database_id|**int**|特定数据库的 ID，作业在此数据库中运行。|  
 |**job_type**|**nvarchar (20) **|作业的类型，为“capture”或“cleanup”。|  
 |**job_id**|**uniqueidentifier**|与作业关联的唯一 ID。|  
 |**maxtrans**|**int**|在每个扫描循环中要处理的最大事务数。<br /><br /> **maxtrans** 仅对捕获作业有效。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 88123b9997d1111c0254d38fd770bb1fd8949d0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 494e284bb9df06094116d075979673bf2b033dea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485562"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551176"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,12 +77,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level` 指定何时将条目放入此作业的 Microsoft Windows 应用程序日志中。 *eventlog_level*为 **int**，可以是下列值之一。  
   
-|Value|说明（操作）|  
+|值|说明（操作）|  
 |-----------|----------------------------|  
 |**0**|从不|  
 |**1**|成功时|  
 |**2**|失败时|  
-|**3**|Always|  
+|**3**|始终|  
   
 `[ @notify_level_email = ] email_level` 指定在完成该作业后何时发送电子邮件。 *email_level*是 **int**。 *email_level*使用与 *eventlog_level*相同的值。  
   

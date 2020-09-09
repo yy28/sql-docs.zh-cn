@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f5d800da626f6c3dfa9f2af2d8680d10d9712b97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0a2cc72927f8eb6f1cff3dbfd1aeea3d35d4b26f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472767"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550925"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 属性（SInstance 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务器实例的 [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

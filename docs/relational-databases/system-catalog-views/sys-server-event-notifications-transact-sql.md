@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e6a8decda6dd98ad4c6bda353c70884d0f0c84c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c9d10906885eefeb6be66d8f353fd7a553c57288
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377213"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551408"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88377213"
 |modify_date|**datetime**|上次使用 ALTER 语句修改对象的日期。|  
 |**service_name**|**nvarchar(256)**|向其发送通知的目标服务的名称。|  
 |**broker_instance**|**nvarchar(128)**|定义命名目标服务的 service broker。|  
-|**creator_sid**|**varbinary (85) **|执行事件通知创建语句的登录名的 SID。 如果在事件通知定义中未指定 WITH FAN_IN，则为 NULL。|  
+|**creator_sid**|**varbinary(85)**|执行事件通知创建语句的登录名的 SID。 如果在事件通知定义中未指定 WITH FAN_IN，则为 NULL。|  
 |principal_id|**int**|拥有此对象的服务器主体的 ID。|  
   
 ## <a name="permissions"></a>权限  
