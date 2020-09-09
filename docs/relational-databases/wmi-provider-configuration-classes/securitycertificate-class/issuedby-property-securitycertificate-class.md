@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IssuedBy property
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bad30b00ec6ac87b9f0784456a5d99457c153c88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 34f236942b7e38fbceb73b21b0d29093ae3f8d3b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418851"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537763"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy 属性（SecurityCertificate 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.IssuedBy [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

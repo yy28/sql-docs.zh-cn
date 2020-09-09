@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6511df5406c72778b970a317ab7182b9db5bdd7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486529"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539701"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "88486529"
 |**asymmetric_key_id**|**int**|密钥的 ID。 在该数据库中是唯一的。|  
 |**pvt_key_encryption_type**|**char(2)**|对密钥进行加密的方式。<br /><br /> NA = 未加密<br /><br /> MK = 使用主密钥对密钥进行加密。<br /><br /> PW = 使用用户定义密码对密钥进行加密<br /><br /> SK = 使用服务主密钥对密钥进行加密。|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|对私钥加密方式的说明。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**thumbprint**|**varbinary(32)**|密钥的 SHA-1 哈希。 该哈希是全局唯一的。|  
+|**指纹**|**varbinary(32)**|密钥的 SHA-1 哈希。 该哈希是全局唯一的。|  
 |**算法**|**char(2)**|密钥使用的算法。<br /><br /> 1R = 512 位 RSA<br /><br /> 2R = 1024 位 RSA<br /><br /> 3R = 2048 位 RSA|  
 |**algorithm_desc**|**nvarchar(60)**|对密钥所用算法的说明。<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|密钥的位长度。|  
-|**sid**|**varbinary (85) **|该密钥的登录 SID。 对于可扩展密钥管理密钥，此值将为 NULL。|  
+|**sid**|**varbinary(85)**|该密钥的登录 SID。 对于可扩展密钥管理密钥，此值将为 NULL。|  
 |**string_sid**|**nvarchar(128)**|密钥的登录 SID 的字符串表示形式。 对于可扩展密钥管理密钥，此值将为 NULL。|  
 |**public_key**|**varbinary(max)**|公钥。|  
 |**attested_by**|**nvarchar(260)**|仅供系统使用。|  

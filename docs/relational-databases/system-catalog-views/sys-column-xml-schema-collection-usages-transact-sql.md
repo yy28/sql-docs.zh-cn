@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_xml_schema_collection_usages catalog view
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a7d2896f0d2a242c6fce0fd789137697b68a318c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18201751b357b719b07c34eb1ff2520260ad92d3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469965"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539661"
 ---
 # <a name="syscolumn_xml_schema_collection_usages-transact-sql"></a>sys.column_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88469965"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|此列所属的对象的 ID。|  
-|**column_id**|**int**|列的 ID。 在对象中是唯一的。|  
+|column_id|**int**|列的 ID。 在对象中是唯一的。|  
 |**xml_collection_id**|**int**|包含列的验证 XML 架构命名空间的集合的 ID。|  
   
 ## <a name="permissions"></a>权限  

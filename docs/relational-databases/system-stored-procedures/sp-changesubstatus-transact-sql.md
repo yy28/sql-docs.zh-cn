@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f08825d906705d87596347742c6481dda9c07d7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faee6b09f682c5d13a3c005d95b1d513d9206026
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486228"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539106"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -73,7 +73,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`**Syssubscriptions**表中的订阅状态。 *状态* 为 **sysname**，无默认值，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**active**|订阅服务器已被同步并且正在接收数据。|  
 |**inactive**|存在订阅服务器项，但没有订阅。|  
@@ -92,7 +92,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|第三个|  
 |**8**|第四个|  
 |**16**|最后一个|  
@@ -105,9 +105,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  

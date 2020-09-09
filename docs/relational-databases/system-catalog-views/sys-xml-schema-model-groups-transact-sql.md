@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_model_groups catalog view
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 52ed63e272d03263ea6148f85a8b91ec73ec370e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 683c13fa49e689d9b6fc857f49b581a38119f3f0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419901"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539455"
 ---
 # <a name="sysxml_schema_model_groups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88419901"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**||从 [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)中继承列。|  
-|**compositor**|**char (1) **|组的排序种类：<br /><br /> A = XSD \<all> 组<br /><br /> C = XSD \<choice> 组<br /><br /> S = XSD \<sequence> 组|  
+|**compositor**|**char(1)**|组的排序种类：<br /><br /> A = XSD \<all> 组<br /><br /> C = XSD \<choice> 组<br /><br /> S = XSD \<sequence> 组|  
 |**compositor_desc**|**nvarchar (60) **|组的排序种类的说明：<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
   
 ## <a name="permissions"></a>权限  

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_database_replica_states dynamic management view
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a40c5ba80bc3e9929109d9acc5f58f454db243d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 217f9e691ceb0da86834eb452d6b608fdbb8f091
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490028"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537661"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88490028"
    
 |列名称|数据类型|说明（针对主副本）|  
 |-----------------|---------------|----------------------------------------|  
-|**database_id**|**int**|数据库的标识符。|  
+|database_id|**int**|数据库的标识符。|  
 |**group_id**|**uniqueidentifier**|数据库所属的可用性组的标识符。|  
 |**replica_id**|**uniqueidentifier**|可用性组内可用性副本的标识符。|  
 |**group_database_id**|**uniqueidentifier**|可用性组内数据库的标识符。 在此数据库联接到的每个副本上，该标识符都是相同的。|  

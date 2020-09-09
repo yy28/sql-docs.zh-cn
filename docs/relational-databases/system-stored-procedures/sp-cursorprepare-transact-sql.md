@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a2b001c3e08c9d68be113e351bcf0482205e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3418727f21a0132390a1c1334919b2be6dc36965
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489418"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539013"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,14 +62,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项* 需要以下 **int** 输入值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  滚动选项。 *scrollopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  并发控制选项。 *ccopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
@@ -110,7 +110,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>备注  
  RPC 状态参数为以下值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失败|  

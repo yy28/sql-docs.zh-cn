@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5503291dc5011366ab6fe3b4a2d60b0a1310ba79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 49573995e7a89b0cb2cc9cdecd55009320f565f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489272"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538768"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode' OUTPUT` 返回在订阅服务器上进行数据修改时所采用的模式。 *failover_mode* 为 **nvarchar (10) ** ，默认值为 NULL。 为 **输出** 参数。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**版**|立即更新：使用两阶段提交协议 (2PC)，将订阅服务器中的更新立即传播到发布服务器。|  
 |**好**|排队更新：将订阅服务器中的更新存储在队列中。|  

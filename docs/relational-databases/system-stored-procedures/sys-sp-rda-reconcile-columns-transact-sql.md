@@ -1,5 +1,5 @@
 ---
-title: sys. sp_rda_reconcile_columns （Transact-sql） |Microsoft Docs
+title: sys. sp_rda_reconcile_columns (Transact-sql) |Microsoft Docs
 description: 了解 sys.databases. sp_rda_reconcile_columns。 使用此存储过程来协调远程 Azure 表和启用 Stretch SQL Server 表中的列。
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 939bc5cbe299ce144b8617391fd33d740011b08a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245744"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538438"
 ---
-# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns （Transact-sql）
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   将远程 Azure 表中的列与启用 Stretch SQL Server 表中的列协调。  
     
-  **sp_rda_reconcile_columns**将列添加到已启用 Stretch SQL Server 表中但不在远程表中的远程表中。 这些列可能是您意外从远程表中删除的列。 但是， **sp_rda_reconcile_columns**不会删除远程表中存在的远程表中的列，而不会删除 SQL Server 表中的列。
+  **sp_rda_reconcile_columns** 将列添加到已启用 Stretch SQL Server 表中但不在远程表中的远程表中。 这些列可能是您意外从远程表中删除的列。 但是， **sp_rda_reconcile_columns** 不会删除远程表中存在的远程表中的列，而不会删除 SQL Server 表中的列。
   
   > [!IMPORTANT]
   > 当 **sp_rda_reconcile_columns** 重新创建你从远程表中意外删除的列时，不会还原之前位于已删除列中的数据。
@@ -44,12 +44,12 @@ sp_rda_reconcile_columns @objname = '@objname'
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  \@objname = '* \@ objname*'  
  已启用延伸的 SQL Server 表的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0（成功）或 >0 （失败）  
+ 0 (成功) 或 >0 (故障)   
   
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  

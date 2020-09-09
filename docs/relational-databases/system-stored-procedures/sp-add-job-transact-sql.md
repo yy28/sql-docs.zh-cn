@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 76503d17117e6a6dd0787539d96c6e16f3a0bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 632d9a16af35f5b889a03892c92cb7836e3f9d50
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489660"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539184"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -74,12 +74,12 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level` 一个值，该值指示何时将条目放入此作业的 Microsoft Windows 应用程序日志中。 *eventlog_level*为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|从不|  
 |**1**|成功时|  
 |**2** （默认值）|失败时|  
-|**3**|Always|  
+|**3**|始终|  
   
 `[ @notify_level_email = ] email_level` 一个值，该值指示在完成该作业后何时发送电子邮件。 *email_level*的值为 **int**，默认值为 **0**，表示从不。 *email_level*使用与 *eventlog_level*相同的值。  
   

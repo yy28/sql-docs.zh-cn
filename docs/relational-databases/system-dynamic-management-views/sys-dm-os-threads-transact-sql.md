@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80986f9bce91034d8950915f5048e3f4ee895f57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adb5a15510d5139481d05e2d9673817c265d2cc9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474819"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539287"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "88474819"
 |stack_bytes_committed|**int**|在堆栈中提交的字节数。|  
 |stack_bytes_used|**int**|线程目前使用的字节数。|  
 |affinity|**bigint**|该线程运行时使用的 CPU 掩码。 这取决于 **ALTER SERVER CONFIGURATION SET PROCESS 地缘** 语句配置的值。 在软关联的情况下，可能与计划程序不同。|  
-|优先度|**int**|该线程的优先级值。|  
+|优先级|**int**|该线程的优先级值。|  
 |Locale|**int**|线程的缓存区域设置 LCID。|  
-|标记|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
+|令牌|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
 |is_impersonating|**int**|指示该线程是否使用 Win32 模拟。<br /><br /> 1 = 该线程使用与进程默认的安全凭据不同的安全凭据。 这表明线程正在模拟创建该进程的实体以外的其他实体。|  
 |is_waiting_on_loader_lock|**int**|指示线程是否正在等待加载程序锁的操作系统状态。|  
 |fiber_data|**varbinary(8)**|线程当前运行的 Win32 纤程。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置了轻型池时，这才适用。|  

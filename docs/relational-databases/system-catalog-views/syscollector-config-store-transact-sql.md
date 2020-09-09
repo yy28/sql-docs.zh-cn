@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 339bbba2335512c582251f960224baae15513618
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ceeb3ad0d977282c88314a7305099f7c0db0496
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399783"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537669"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88399783"
 ## <a name="remarks"></a>备注  
  可用属性的列表是固定的，这些属性的值只能使用适当的存储过程来更改。 下表描述了通过此视图公开的属性。  
   
-|属性名称|描述|  
+|属性名称|说明|  
 |-------------------|-----------------|  
 |CacheDirectory|文件系统中目录的名称，收集器类型包在该目录中存储临时信息。<br /><br /> NULL = 使用默认的临时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录。|  
 |CacheWindow|指示缓存目录保留上载失败数据的数据保留策略。<br /><br /> -1 = 保留所有上载失败的数据。<br /><br /> 0 = 不保留任何上载失败的数据。<br /><br /> *n* = 保留 *n* 个以前的上载失败的数据，其中 *n* >= 1。<br /><br /> 可使用 sp_syscollector_set_cache_window 存储过程更改此值。|  
@@ -60,7 +60,7 @@ FROM msdb.dbo.syscollector_config_store;
   
 ## <a name="see-also"></a>另请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的数据收集器视图 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_enable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   

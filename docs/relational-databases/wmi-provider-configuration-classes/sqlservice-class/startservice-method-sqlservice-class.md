@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5add2aebb0a2a148b803fadbab454d2d72c2bf3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a8e4f618436ed4b563d2f6dd623bd84cd099c21c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485057"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539962"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 方法（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.StartService()
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -47,7 +47,7 @@ object.StartService()
  成功。 已接受该请求。  
   
  1  
- 。 不支持该请求。  
+ 不提供支持。 不支持该请求。  
   
  2  
  拒绝访问。 用户没有相应的访问权限。  

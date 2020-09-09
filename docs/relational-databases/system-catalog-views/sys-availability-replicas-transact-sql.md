@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_replicas catalog view
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
-ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385968"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539723"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "89385968"
 |**会话 \_ 超时**|**int**|超时期限（秒）。 超时期限是指副本接收来自其他副本的消息而等待的最长时间，超过此时间，将主副本和辅助副本之间的连接视为已失败。 会话超时检测辅助副本是否与主副本相连接。<br /><br /> 在检测到与辅助副本的连接失败时，主副本将辅助副本视为不 \_ 同步。 在检测到与辅助副本的连接失败时，辅助副本只会尝试重新连接。<br /><br /> **注意：** 会话超时不会导致自动故障转移。<br /><br /> 若要更改此值，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 SESSION_TIMEOUT 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**主要 \_ 角色 \_ 允许 \_ 连接**|**tinyint**|可用性是允许所有连接还是仅允许读写连接，其中：<br /><br /> 2 = 所有（默认值）<br /><br /> 3 = 读写|  
 |**主要 \_ 角色 \_ 允许 \_ 连接 \_ desc**|**nvarchar(60)**|**主要角色的 \_ 说明 \_ 允许 \_ 连接**，其中一项是：<br /><br /> ALL<br /><br /> 读 \_ 写|  
-|**辅助 \_ 角色 \_ 允许 \_ 连接**|**tinyint**|正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：<br /><br /> 0 = 否。 不允许连接到辅助副本中的数据库，且不支持读取这些数据库。 这是默认设置。<br /><br /> 1 = 只读。 仅允许针对辅助副本中的数据库进行只读连接。 副本中的所有数据库都可用于读访问。<br /><br /> 2 = 全部。 允许针对辅助副本中的数据库的所有连接进行只读访问。<br /><br /> 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。|  
+|**辅助 \_ 角色 \_ 允许 \_ 连接**|**tinyint**|正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：<br /><br /> 0 = 否。 不允许连接到辅助副本中的数据库，且不支持读取这些数据库。 此为默认设置。<br /><br /> 1 = 只读。 仅允许针对辅助副本中的数据库进行只读连接。 副本中的所有数据库都可用于读访问。<br /><br /> 2 = 全部。 允许针对辅助副本中的数据库的所有连接进行只读访问。<br /><br /> 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。|  
 |**secondary_role_allow_connections_desc**|**nvarchar(60)**|**Secondary_role_allow_connections**的说明，请执行以下操作之一：<br /><br /> 是<br /><br /> READ_ONLY<br /><br /> ALL|  
 |create_date|**datetime**|副本的创建日期。<br /><br /> NULL = 副本不位于此服务器实例上。|  
 |modify_date|**datetime**|上次修改副本的日期。<br /><br /> NULL = 副本不位于此服务器实例上。|  

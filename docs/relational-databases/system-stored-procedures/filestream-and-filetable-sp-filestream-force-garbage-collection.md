@@ -17,14 +17,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 63880b69a9c33b0f388fd25945aa9b8f0fae7cdf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eeb70b4bc548496dcb8d0c93eeba27a9644c5bca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427709"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539182"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,16 +54,16 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>返回代码值  
   
-| 值 | 描述 |
+| 值 | 说明 |
 | ----- | ----------- |   
 |0|操作成功|  
 |1|操作失败|  
   
 ## <a name="result-sets"></a>结果集  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|*file_name*|指示 FILESTREAM 容器名称|  
+|file_name|指示 FILESTREAM 容器名称|  
 |*num_collected_items*|指示此容器中已回收（删除）的 FILESTREAM 项目（文件/目录）数。|  
 |*num_marked_for_collection_items*|指示此容器中已标记为回收（删除）的 FILESTREAM 项目（文件/目录）数。 尚未删除这些项，但可以在垃圾回收阶段后删除这些项。|  
 |*num_unprocessed_items*|指示此 FILESTREAM 容器中符合条件但未进行垃圾回收处理的 FILESTREAM 项目（文件或目录）数。 可能由于各种原因而未处理项目，其中包括：<br /><br /> 由于尚未执行日志备份或检查点操作，需要暂时锁定文件。<br /><br /> 文件处于 FULL 或 BULK_LOGGED 恢复模式。<br /><br /> 有长时间运行的活动事务。<br /><br /> 复制日志读取器作业尚未运行。 有关详细信息，请参阅 [SQL Server 2008 中的白皮书 FILESTREAM 存储](https://go.microsoft.com/fwlink/?LinkId=209156) 。|  

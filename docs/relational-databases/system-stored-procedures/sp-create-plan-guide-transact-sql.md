@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0595885b12cc70d5634058eeb9650ee323921ba5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e7cc07a0878eefdb6f8c0cdf33cf6e063651afb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489523"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539044"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@ module_or_batch =] {N ' [ *schema_name*。 ] *object_name*"|N "*batch_text*" |无效  
  指定在其中出现 *statement_text* 的对象的名称，或 *statement_text* 出现的批处理文本。 批处理文本不能包含 USE*database* 语句。  
   
- 若要将计划指南与从应用程序提交的批处理相匹配，则必须以与提交到的格式相同的格式（字符对字符）提供 *batch_tex* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不会执行内部转换来帮助完成该匹配。 有关详细信息，请参见“备注”部分。  
+ 若要将计划指南与从应用程序提交的批处理相匹配，则必须以与提交到的格式相同的格式（字符对字符）提供 *batch_tex* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不会执行内部转换来帮助完成该匹配。 有关详细信息，请参阅“备注”部分。  
   
  [*schema_name*.]*object_name*指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 包含 statement_text 的存储过程、标量函数、多语句表值函数或 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器的名称。 *statement_text* 如果未指定 *schema_name* ， *schema_name* 将使用当前用户的架构。 如果指定了 NULL 并且 \@ 类型 = ' SQL '，则 module_or_batch 的值将 \@ 设置为 stmt 的值 \@ 。如果 \@ type = ' TEMPLATE **\'** ， \@ MODULE_OR_BATCH 必须为 NULL。  
   
@@ -85,7 +85,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   *statement_text* 使用 sp_executesql 进行提交，并 \@ 指定 params 参数的值，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在参数化语句后在内部提交该语句。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来说，从数据库 API（包括 ODBC、OLE DB 和 ADO.NET）提交参数化查询类似于调用 sp_executesql 或 API 服务器游标例程；因此，它们也可以通过 SQL 或 TEMPLATE 计划指南进行匹配。  
   
- 必须以完全相同的格式提供* \@ parameter_name data_type* ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 方法是使用 sp_executesql 或在参数化后在内部提交。 有关详细信息，请参见“备注”部分。 如果批处理不包含参数，则必须指定 NULL。 Params 的大小 \@ 仅受可用服务器内存限制。  
+ 必须以完全相同的格式提供* \@ parameter_name data_type* ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 方法是使用 sp_executesql 或在参数化后在内部提交。 有关详细信息，请参阅“备注”部分。 如果批处理不包含参数，则必须指定 NULL。 Params 的大小 \@ 仅受可用服务器内存限制。  
   
  [ \@ 提示 =] {N'OPTION (*query_hint* [，*.。。n* ] ) "|N "*XML_showplan*" |无效  
  N'OPTION (*query_hint* [，*.。。n* ] )   
@@ -330,12 +330,12 @@ GO
  [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides (Transact-SQL)](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
- [sys. fn_validate_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
+ [sys.fn_validate_plan_guide (Transact-SQL)](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
  [sp_get_query_template &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

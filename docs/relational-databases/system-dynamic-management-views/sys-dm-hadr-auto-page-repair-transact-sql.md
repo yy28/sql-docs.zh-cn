@@ -19,14 +19,14 @@ helpviewer_keywords:
 - automatic page repair
 - sys.dm_hadr_auto_page_repair dynamic management view
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93c963fbe285407e56cafb8d13ebed0b7d4b3f31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dfdf8d99f4166bdcfd913f38e23b00cd1cd365
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493680"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539394"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "88493680"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|此行对应的数据库的 ID。|  
-|**file_id**|**int**|页所在文件的 ID。|  
+|database_id|**int**|此行对应的数据库的 ID。|  
+|file_id|**int**|页所在文件的 ID。|  
 |**page_id**|**bigint**|文件中页的 ID。|  
 |**error_type**|**int**|错误类型。 值可以是：<br /><br /> **-** 1 = 所有硬件823错误<br /><br /> 1 = 错误的校验和或页撕裂以外的 824 错误（例如，错误的页 ID）<br /><br /> 2 = 错误的校验和<br /><br /> 3 = 页撕裂|  
 |**page_status**|**int**|页修复尝试的状态：<br /><br /> 2 = 排队等候来自伙伴的请求。<br /><br /> 3 = 请求已发送到伙伴。<br /><br /> 4 = 已成功修复页面。<br /><br /> 5 = 上一次尝试时无法修复页面/自动页修复将再次尝试修复页面。|  

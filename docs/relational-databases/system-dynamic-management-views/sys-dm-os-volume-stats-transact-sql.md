@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474809"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539240"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sys.dm_os_volume_stats (database_id, file_id)
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
- *database_id*  
+ database_id  
  数据库 ID。 database_id 的数据类型为 int，无默认值******。 不能为 NULL。  
   
- *file_id*  
+ file_id  
  文件的 ID。 *file_id* 为 **int**，没有默认值。 不能为 NULL。  
   
 ## <a name="table-returned"></a>返回的表  
@@ -51,19 +51,19 @@ sys.dm_os_volume_stats (database_id, file_id)
 ||||  
 |-|-|-|  
 |**列**|**Data type**|**说明**|  
-|**database_id**|**int**|数据库 ID。 不可为 null。|  
-|**file_id**|**int**|文件的 ID。 不可为 null。|  
+|database_id|**int**|数据库 ID。 不能为 null。|  
+|file_id|**int**|文件的 ID。 不能为 null。|  
 |**volume_mount_point**|**nvarchar(512)**|根卷上的装入点。 可返回空字符串。|  
 |**volume_id**|**nvarchar(512)**|操作系统卷 ID。 可以返回空字符串|  
 |**logical_volume_name**|**nvarchar(512)**|逻辑卷名称。 可以返回空字符串|  
 |**file_system_type**|**nvarchar(512)**|文件系统卷的类型（例如 NTFS、FAT、RAW）。 可以返回空字符串|  
-|**total_bytes**|**bigint**|卷的总大小（字节）。 不可为 null。|  
-|**available_bytes**|**bigint**|卷上的可用空间。 不可为 null。|  
-|**supports_compression**|**bit**|指示卷是否支持操作系统压缩。 不可为 null。|  
-|**supports_alternate_streams**|**bit**|指示卷是否支持备用流。 不可为 null。|  
-|**supports_sparse_files**|**bit**|指示卷是否支持稀疏文件。  不可为 null。|  
-|**is_read_only**|**bit**|指示卷当前是否标记为只读。 不可为 null。|  
-|**is_compressed**|**bit**|指示此卷当前是否已压缩。 不可为 null。|  
+|**total_bytes**|**bigint**|卷的总大小（字节）。 不能为 null。|  
+|**available_bytes**|**bigint**|卷上的可用空间。 不能为 null。|  
+|**supports_compression**|**bit**|指示卷是否支持操作系统压缩。 不能为 null。|  
+|**supports_alternate_streams**|**bit**|指示卷是否支持备用流。 不能为 null。|  
+|**supports_sparse_files**|**bit**|指示卷是否支持稀疏文件。  不能为 null。|  
+|**is_read_only**|**bit**|指示卷当前是否标记为只读。 不能为 null。|  
+|**is_compressed**|**bit**|指示此卷当前是否已压缩。 不能为 null。|  
   
 ## <a name="security"></a>安全性  
   

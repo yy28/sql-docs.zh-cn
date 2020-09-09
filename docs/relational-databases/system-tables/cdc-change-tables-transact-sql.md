@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6938dffda791dc77e8e304e25e705189b82e2ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0205d5ca01ab1d969af8803bfa0e7f11daaafb08
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480848"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538376"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88480848"
 |**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，此列始终返回 NULL。|  
 |**supports_net_changes**|**bit**|对更改表启用了查询净更改支持。|  
 |**has_drop_pending**|**bit**|捕获进程收到关于源表已被删除的通知。|  
-|**role_name**|**sysname**|用于访问更改数据的数据库角色的名称。<br /><br /> NULL = 未使用角色。|  
+|role_name|**sysname**|用于访问更改数据的数据库角色的名称。<br /><br /> NULL = 未使用角色。|  
 |index_name|**sysname**|用于唯一标识源表中的行的索引名称。 **index_name** 为源表的主键索引的名称，或者在对源表启用了变更数据捕获时指定的唯一索引的名称。<br /><br /> NULL = 在变更数据捕获启用时，源表无主键，且未指定唯一索引。<br /><br /> 注意：如果对具有主键的表启用了变更数据捕获，则不管是否启用了净更改，"变更数据捕获" 功能都将使用索引。 启用变更数据捕获之后，将不允许对主键进行修改。 如果该表没有主键，则仍可以启用变更数据捕获，但是只能将净更改设置为 False。 启用变更数据捕获之后，即可以创建主键。 由于变更数据捕获功能不使用主键，因此还可以修改主键。|  
 |filegroup_name|**sysname**|更改表所驻留的文件组的名称。<br /><br /> NULL = 更改表在数据库的默认文件组中。|  
 |create_date|**datetime**|启用源表的日期。|  

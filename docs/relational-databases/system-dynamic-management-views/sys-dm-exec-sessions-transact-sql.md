@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364b8c255054d10d8ae7ee10d1231ade99615bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489997"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539426"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88489997"
 |host_process_id|**int**|启动会话的客户端程序的进程 ID。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |client_version|**int**|客户端连接到服务器所用接口的 TDS 协议版本。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |client_interface_name|**nvarchar(32)**|客户端用于与服务器通信的库/驱动程序的名称。 对于内部会话，该值为 NULL。 可以为 Null。|  
-|security_id|**varbinary (85) **|与登录名关联的 Microsoft Windows 安全 ID。 不可为 null。|  
+|security_id|**varbinary(85)**|与登录名关联的 Microsoft Windows 安全 ID。 不可为 null。|  
 |login_name|**nvarchar(128)**|当前执行的会话所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 有关创建此会话的原始登录名，请参阅 original_login_name。 可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经过身份验证的登录名或 Windows 身份验证的域用户名。 不可为 null。|  
 |nt_domain|**nvarchar(128)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 客户端的 Windows 域（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
 |nt_user_name|**nvarchar(128)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 客户端的 Windows 用户名（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
@@ -80,7 +80,7 @@ ms.locfileid: "88489997"
 |deadlock_priority|**int**|会话的 DEADLOCK_PRIORITY 设置。 不可为 null。|  
 |row_count|**bigint**|到目前为止会话返回的行数。 不可为 null。|  
 |prev_error|**int**|会话返回的最近一个错误的 ID。 不可为 null。|  
-|original_security_id|**varbinary (85) **|与 original_login_name 关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全 ID。 不可为 null。|  
+|original_security_id|**varbinary(85)**|与 original_login_name 关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全 ID。 不可为 null。|  
 |original_login_name|**nvarchar(128)**|客户端用于创建此会话的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 可以是经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名、经过 Windows 身份验证的域用户名，也可以是包含数据库用户。 请注意，此会话在初次连接后可能已进行多次隐式或显式上下文切换。 例如，如果使用 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 。 不可为 null。|  
 |last_successful_logon|**datetime**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 当前会话开始前 original_login_name 上一次成功登录的时间。|  
 |last_unsuccessful_logon|**datetime**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 当前会话开始前，original_login_name 上一次登录失败的时间。|  
@@ -115,7 +115,7 @@ ms.locfileid: "88489997"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|对于/应用|关系|  
+|From|到|对于/应用|关系|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|一对零或一对多|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|一对零或一对多|  

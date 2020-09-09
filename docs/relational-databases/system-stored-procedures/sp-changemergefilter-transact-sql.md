@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 64922bb6150d7d3b637984a740abbb9e9f825854
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e5a5208eeb1a47971e1960bd9c9c581d5d6517e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474437"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539102"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|描述|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|联接筛选器。<br /><br /> 若要支持 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器，此选项是必需的。|  
 ||**2**|逻辑记录关系。|  
@@ -64,7 +64,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filtername**||筛选器名称。|  
 |**join_articlename**||联接项目名。|  
 |**join_filterclause**||筛选子句。|  
-|**join_unique_key**|true|联接位于唯一键上。|  
+|**join_unique_key**|**true**|联接位于唯一键上。|  
 ||**false**|联接没有位于唯一键上。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot* 是一 **位**，默认值为 **0**。  
@@ -94,8 +94,8 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>另请参阅  
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

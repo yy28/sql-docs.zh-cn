@@ -18,15 +18,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d819bde874fb5e81a7b6b670ebdeca61d18f127c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486400"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539647"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -48,7 +48,7 @@ ms.locfileid: "88486400"
 |event_type|**nvarchar (64) **|事件的类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**event_subtype**|**int**|发生的事件的子类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**event_subtype_desc**|**nvarchar (64) **|事件子类型的说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
-|severity |**int**|错误的严重性。 可能的值包括：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
+|severity |**int**|错误的严重性。 可能的值为：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
 |**event_count**|**int**|在指定的时间间隔内，针对指定数据库发生此事件的次数 (**start_time** 并 **end_time**) 。|  
 |description|**nvarchar(max)**|对事件的详细说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**additional_data**|**XML**|*注意：对于 Azure SQL 数据库 V12，此值始终为 NULL。请参阅 [示例](#Deadlock) 部分，了解如何检索 V12 的死锁事件。*<br /><br /> 对于 **死锁** 事件，此列包含死锁图。 对于其他事件类型，该列为 NULL。 |  
