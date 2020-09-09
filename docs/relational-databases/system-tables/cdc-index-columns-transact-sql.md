@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.index_columns
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0725f3eaa01da493681b2f45186c077a46d20e5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5cf09c3a66a3db1b7275dfe8017d953aaf57b42d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460408"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544622"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc.index_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88460408"
 |object_id|**int**|更改表的 ID。|  
 |column_name|**sysname**|索引列的名称。|  
 |**index_ordinal**|**tinyint**|索引中的列序号（从 1 开始）。|  
-|**column_id**|**int**|源表中的列 ID。|  
+|column_id|**int**|源表中的列 ID。|  
   
 ## <a name="see-also"></a>另请参阅  
  [change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  

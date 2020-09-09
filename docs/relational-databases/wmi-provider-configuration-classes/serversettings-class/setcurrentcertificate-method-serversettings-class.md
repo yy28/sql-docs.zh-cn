@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 97c5e5e099a105e8d5a13e95aef5bc1878ba6b42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 87b63717d6387302793269e14c239a2b5c066581
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460083"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544288"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 方法（ServerSettings 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.SetCurrentCertificate(SHA)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示实例上的服务器设置的 [ServerSettings 类](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*SHA*|一个指定当前安全证书的字符串值。|  
   

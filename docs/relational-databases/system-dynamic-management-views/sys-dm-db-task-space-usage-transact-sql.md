@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_task_space_usage dynamic management view
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f1780eebd0ea64039b72b7447ca651ad5a21040
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6676eba5608202de4a1ba1df69a8134ac4ece208
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399393"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543991"
 ---
 # <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "88399393"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|会话 ID。|  
-|**request_id**|**int**|会话内的请求 ID。<br /><br /> 请求也称为批，可以包含一个或多个查询。 一个会话可以同时具有多个活动请求。 如果使用并行执行计划，则请求中的每个查询可以启动多个线程（任务）。|  
+|request_id|**int**|会话内的请求 ID。<br /><br /> 请求也称为批，可以包含一个或多个查询。 一个会话可以同时具有多个活动请求。 如果使用并行执行计划，则请求中的每个查询可以启动多个线程（任务）。|  
 |**exec_context_id**|**int**|任务的执行上下文 ID。 有关详细信息，请参阅 [sys.databases&#41;dm_os_tasks &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。|  
-|**database_id**|**smallint**|数据库 ID。|  
+|database_id|**smallint**|数据库 ID。|  
 |**user_objects_alloc_page_count**|**bigint**|此任务为用户对象保留或分配的页数。|  
 |**user_objects_dealloc_page_count**|**bigint**|此任务为用户对象释放并不再保留的页数。|  
 |**internal_objects_alloc_page_count**|**bigint**|此任务为内部对象保留或分配的页数。|  
@@ -92,7 +92,7 @@ ms.locfileid: "88399393"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |dm_db_task_space_usage.request_id|dm_exec_requests.request_id|一对一|  
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|一对一|  

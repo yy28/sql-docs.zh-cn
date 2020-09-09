@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93223f6d7c63402161e48b0359bf735b14593c9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419221"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544691"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ xp_msver [ optname ]
  *optname*  
  是选项名，可以是下列值之一。  
   
-|选项/列名|描述|  
+|选项/列名|说明|  
 |-------------------------|-----------------|  
 |**ProductName**|产品名称;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ProductVersion**|产品版本。|  
@@ -77,7 +77,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>另请参阅  
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的常规扩展存储过程 ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION (Transact-SQL)](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

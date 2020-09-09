@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_columns catalog view
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7942f17460b0fb7dbdd111ae4657dd12b3d528ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1475fdaee1e96ecb5a9498a135bc65109ececf05
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475217"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544947"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88475217"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|该列的唯一 ID。|  
-|**name**|**nvarchar(128)**|该列的唯一名称。 此参数未本地化。|  
+|name |**nvarchar(128)**|该列的唯一名称。 此参数未本地化。|  
 |type_name|**nvarchar(128)**|该列的数据类型名称。|  
 |**max_size**|**int**|该列数据的最大大小，以字节表示。|  
 |**is_filterable**|**bit**|指示是否可在筛选器说明中使用该列。<br /><br /> 0 = false<br /><br /> 1 = true|  

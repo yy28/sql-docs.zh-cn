@@ -1,5 +1,5 @@
 ---
-title: 复制表（Transact-sql） |Microsoft Docs
+title: Transact-sql)  (复制表 |Microsoft Docs
 description: 复制系统表支持复制拓扑。 复制将系统表添加到配置为发布服务器或订阅服务器的数据库。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - system tables [SQL Server], replication
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 88a35375a4aef80f9305987af7b3b0081f8ed2f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 016d1c2b16d2901870589e0ae21db00a9701d0f2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123008"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544427"
 ---
 # <a name="replication-tables-transact-sql"></a>复制表 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  复制系统表支持复制拓扑。 如果将用户数据库配置为发布服务器或订阅服务器，则复制会将系统表添加到数据库中。 从复制拓扑删除用户数据库时，将删除这些表。 有关使用系统表的一般规则，请参阅[系统表 &#40;transact-sql&#41;](system-tables-transact-sql.md)。  
+  复制系统表支持复制拓扑。 如果将用户数据库配置为发布服务器或订阅服务器，则复制会将系统表添加到数据库中。 从复制拓扑删除用户数据库时，将删除这些表。 有关使用系统表的一般规则，请参阅 [系统表 &#40;transact-sql&#41;](system-tables-transact-sql.md)。  
   
 ## <a name="replication-tables"></a>复制表  
  下面是复制所使用的系统表的列表，列表按数据库分组。  
@@ -150,7 +150,7 @@ ms.locfileid: "87123008"
     :::column-end:::
 :::row-end:::
 
- 分发数据库中的这些表用于从非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器复制数据。 有关详细信息，请参阅[非 SQL Server 发布服务器](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
+ 分发数据库中的这些表用于从非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器复制数据。 有关详细信息，请参阅 [非 SQL Server 发布服务器](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
 
 :::row:::
     :::column:::

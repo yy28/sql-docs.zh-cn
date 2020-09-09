@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 544854219f8fbc26a06b80280c6f36f64fe726c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481232"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543365"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |值|说明|  
 |-----------|-----------------|  
 |**add**|将*qualified_table_name* *column_name*添加到表的不活动全文索引中。 此操作可启用列以进行全文索引。|  
-|**drop**|从表的不活动全文索引中移除*qualified_table_name* *column_name* 。|  
+|**击落**|从表的不活动全文索引中移除*qualified_table_name* *column_name* 。|  
   
 `[ @language = ] 'language_term'` 列中存储的数据的语言。 有关中包含的语言的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [transact-sql&#41;&#40;fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
@@ -119,7 +119,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_columns_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

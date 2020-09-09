@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributiondb （Transact-sql） |Microsoft Docs
+title: sp_dropdistributiondb (Transact-sql) |Microsoft Docs
 description: 如果一个分发数据库和其他数据库未使用该数据库，则删除该数据库所使用的文件。 此存储过程在分发服务器上的任何数据库上运行。
 ms.custom: ''
 ms.date: 03/03/2017
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d5c1cb17767cf61b49345b93f7c5ee5ebfbc9d27
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786970"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543457"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "85786970"
 sp_dropdistributiondb [ @database= ] 'database'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @database = ] 'database'`要删除的数据库。 *数据库*为**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @database = ] 'database'` 要删除的数据库。 *数据库* 为 **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_dropdistributiondb**在所有类型的复制中使用。  
+ **sp_dropdistributiondb** 在所有类型的复制中使用。  
   
- 在删除分发服务器之前，必须通过执行**sp_dropdistributor**来执行此存储过程。  
+ 在删除分发服务器之前，必须通过执行 **sp_dropdistributor**来执行此存储过程。  
   
- **sp_dropdistributiondb**还会删除分发数据库的队列读取器代理作业（如果存在）。  
+ **sp_dropdistributiondb** 还会删除分发数据库的队列读取器代理作业（如果存在）。  
   
  要禁用分发，分发数据库必须联机。 如果存在分发数据库的数据库快照，必须在禁用分发之前删除该快照。 数据库快照是数据库的只读脱机副本，与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
@@ -56,13 +56,13 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_dropdistributiondb**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropdistributiondb**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

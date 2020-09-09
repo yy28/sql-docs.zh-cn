@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e998b531c867d78bbf27bff516aaecda6f7f9f88
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322593"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543770"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|内存消耗者的内部 ID。|  
 |memory_consumer_type|**int**|一个整数，表示具有以下值之一的内存使用者的类型：<br /><br /> 0-不应显示。 聚合两个或多个使用者的内存使用量。<br /><br /> 1-后备链表：跟踪系统后备链表的内存占用情况。<br /><br /> VARHEAP：跟踪长度可变的堆的内存占用情况。<br /><br /> 4-IO 页池：跟踪用于 IO 操作的系统页池的内存占用情况。|  

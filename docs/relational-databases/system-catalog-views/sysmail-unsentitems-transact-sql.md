@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f17a4cc00724bab836c74ed1622d383d3969b16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ef61a0c08d1ddc2e3a268571521b4da47cee90f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419861"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543947"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88419861"
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|如果值为1，则查询结果包含列标题。 如果该值为0，则查询结果不包括列标题。|  
 |**query_result_width**|**int**|消息的 **query_result_width** 参数。|  
-|**query_result_separator**|**char (1) **|用于分隔查询输出中的各列的字符。|  
+|**query_result_separator**|**char(1)**|用于分隔查询输出中的各列的字符。|  
 |**exclude_query_output**|**bit**|消息的 **exclude_query_output** 参数。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_send_dbmail ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
 |**append_query_error**|**bit**|消息的 **append_query_error** 参数。 0 指示如果查询中存在错误，则数据库邮件不应发送电子邮件。|  
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  

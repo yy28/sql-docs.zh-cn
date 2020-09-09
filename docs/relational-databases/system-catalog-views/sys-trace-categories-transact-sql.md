@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_categories catalog view
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c93fa579a54543ff1c08936796347c5bd1bc75d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a7f9b84010eb7d562dccb2f22c2e04bcadff2a1c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375013"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544965"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88375013"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|此类别的唯一 ID。 此列也位于 **trace_events sys.databases** 目录视图中。|  
-|**name**|**nvarchar(128)**|此类别的唯一名称。 此参数未本地化。|  
+|name |**nvarchar(128)**|此类别的唯一名称。 此参数未本地化。|  
 |type|**tinyint**|类别类型：<br /><br /> 0 = 正常<br /><br /> 1 = 连接<br /><br /> 2 = 错误|  
   
 ## <a name="permissions"></a>权限  

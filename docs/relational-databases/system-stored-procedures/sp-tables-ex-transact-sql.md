@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480976"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544725"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,16 +55,16 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'` 要返回的表的类型。 *table_type* 的数据值为 **sysname**，默认值为 NULL，可以具有以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**A**|别名。|  
 |**GLOBAL TEMPORARY**|系统范围内可用的临时表的名称。|  
 |**LOCAL TEMPORARY**|只限当前任务可用的临时表的名称。|  
-|**同义词**|同义词的名称。|  
+|**SYNONYM**|同义词的名称。|  
 |**系统表**|系统表的名称。|  
 |**系统视图**|系统视图的名称。|  
-|**数据表**|用户表的名称。|  
-|**显示**|视图的名称。|  
+|**TABLE**|用户表的名称。|  
+|**VIEW**|视图的名称。|  
   
 `[ @fUsePattern = ] 'fUsePattern'` 确定字符 **_**、 **%** 、 **[** 和 **]** 是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern* 的值为 **bit**，默认值为1。  
   

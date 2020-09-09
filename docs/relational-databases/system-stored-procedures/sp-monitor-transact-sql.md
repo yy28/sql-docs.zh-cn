@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446964"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544740"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_monitor
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**last_run**|上次运行时间 **sp_monitor** 。|  
 |**current_run**|正在运行的时间 **sp_monitor** 。|  
-|**计算**|自运行 **sp_monitor** 以来经过的秒数。|  
+|**seconds**|自运行 **sp_monitor** 以来经过的秒数。|  
 |**cpu_busy**|服务器计算机的 CPU 处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作所用的秒数。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在输入和输出操作上花费的秒数。|  
 |**时间**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已空闲的秒数。|  
@@ -97,7 +97,7 @@ total_read     total_write   total_errors    connections
 ```
   
 ## <a name="see-also"></a>另请参阅  
- [sp_who &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

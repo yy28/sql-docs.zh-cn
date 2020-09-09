@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 57844d95977ed2a56324698037fb576678b0f8fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1dd4a0fc40cf24896de912c1254b154a5538866
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486237"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543657"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @value = ] 'value'` 指定的 *属性*的新值。 *值* 为 **nvarchar (4000) **，可以是表中的值之一。  
   
-|属性|Value|说明|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理的 Windows 帐户的密码。|  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eddc690043c541c3726c66bba40f4a81d188e91a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3099e86d00f0541fc4c5b3408ec8708d04042b3e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489994"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544767"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88489994"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 除了 Azure SQL 数据仓库以外，此值与**sys.databases**目录视图中**partition_id**的值相同。|  
 |object_id|**int**|包含该分区的表或索引视图的对象 ID。|  
-|**index_id**|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
+|index_id|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|  
 |**in_row_data_page_count**|**bigint**|分区中存储行内数据所用的页数。 如果分区是堆的一部分，则该值为堆中的数据页数。 如果分区是索引的一部分，则该值为叶级别中的页数。 B 树中的 (非叶级页不包含在计数中。在任何一种情况下，都不会 ) IAM (索引分配映射) 。 对于 xVelocity 内存优化列存储索引，始终为 0。|  
 |**in_row_used_page_count**|**bigint**|用于存储和管理分区中的行内数据的总页数。 该计数包括非叶 B 树页、IAM 页以及 **in_row_data_page_count** 列包含的全部页。 对列存储索引始终为 0。|  

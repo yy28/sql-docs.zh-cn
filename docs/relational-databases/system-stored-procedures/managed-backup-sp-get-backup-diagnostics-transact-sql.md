@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54e81df3d503b5c520ed812fefec8601d4979cd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481599"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543680"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup sp_get_backup_diagnostics (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -62,7 +62,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 | ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512) |扩展事件的类型。|  
 |事件|NVARCHAR (512) |事件日志的摘要。|  
-|Timestamp|TIMESTAMP|显示事件发生时间的事件时间戳。|  
+|时间戳|TIMESTAMP|显示事件发生时间的事件时间戳。|  
   
 ## <a name="security"></a>安全性  
   

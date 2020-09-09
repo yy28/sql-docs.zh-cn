@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54e0462bc447ce1e2125ed13fbb09f64f48f5d14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 96cce9a9d9a0b9bf74a1ac3b67d3089f4fcd23ed
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469731"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543661"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -73,11 +73,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type` 用于计划分发任务的频率。 *frequency_type* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**16**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -88,10 +88,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 分发任务的日期。 如果 *frequency_type* 设置为 **32** (每月相对) ，则使用此参数。 *frequency_relative_interval* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|第三个|  
 |**8**|第四个|  
 |**16**|最后一个|  
@@ -100,12 +100,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday` 在定义的时间段内重新计划的频率。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequence_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
   
@@ -121,7 +121,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode` 实现的安全模式。 *security_mode* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证|  
 |**1**|Windows 身份验证|  

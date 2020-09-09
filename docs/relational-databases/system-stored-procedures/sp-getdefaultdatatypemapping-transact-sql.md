@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6bbd01e86f8b5cfbc24a04dee1482ddb4652354f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6d7737d0c4d8d44901da52bad6ad6867d7080554
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469415"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543329"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>参数  
 `[ @source_dbms = ] 'source_dbms'` 要从中映射数据类型的 DBMS 的名称。 *source_dbms* **sysname**，可以是下列值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|源为 Oracle 数据库。|  
@@ -75,7 +75,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'` 目标 DBMS 的名称。 *destination_dbms* **sysname**，可以是下列值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|目标为 Oracle 数据库。|  

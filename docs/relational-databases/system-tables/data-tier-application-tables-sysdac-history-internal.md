@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f89db526d638a6e934e8db7ac791875b467e487
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480839"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544625"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

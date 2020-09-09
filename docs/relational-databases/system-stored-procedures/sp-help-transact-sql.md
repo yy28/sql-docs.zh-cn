@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486009"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543331"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,7 +106,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**标识**|**nvarchar (** 128 **) **|其数据类型被声明为标识的列名。|  
-        |**种子**|**numeric**|标识列的起始值。|  
+        |**Seed**|**numeric**|标识列的起始值。|  
         |**增量**|**numeric**|用于此列中的值的增量。|  
         |**不用于复制**|**int**|当复制登录名（如 **sqlrepl**）将数据插入到表中时，不会强制使用 IDENTITY 属性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -198,7 +198,7 @@ GO
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [ Transact-sql&#41;的sys.sys对象 &#40;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

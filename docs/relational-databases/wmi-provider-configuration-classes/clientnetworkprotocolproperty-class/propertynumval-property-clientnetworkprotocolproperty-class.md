@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b11713099134c61df82edda603796b2080494bb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 82b10261ba0e753bfec6efc8bae134957cf6a0ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485215"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544419"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal 属性（ClientNetworkProtocolProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.PropertyNumVal [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  表示客户端使用的网络协议属性的 [ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

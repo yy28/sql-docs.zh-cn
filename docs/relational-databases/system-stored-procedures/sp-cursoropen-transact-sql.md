@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489483"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543565"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  滚动选项。 *scrollopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -75,7 +75,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  并发控制选项。 *ccopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  

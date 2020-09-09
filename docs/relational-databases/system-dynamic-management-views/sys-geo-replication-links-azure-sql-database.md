@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d0771578b9d9b478a9f6947fd131abb66b0654d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36849d6fc285839ebf99b75452735ddf5073f4ec
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322293"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543741"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links（Azure SQL 数据库）
 
@@ -41,10 +41,10 @@ ms.locfileid: "88322293"
 |partner_database|**sysname**|链接的 SQL 数据库服务器上异地复制的数据库的名称。|  
 |replication_state|**tinyint**|此数据库的异地复制状态，其中之一为：。<br /><br /> 0 = 挂起。 已计划创建活动辅助数据库，但尚未完成必要的准备步骤。<br /><br /> 1 = 种子设定。 异地复制目标正在进行种子设定，但两个数据库尚未同步。 在完成种子设定之前，你无法连接到辅助数据库。 从主数据库中删除辅助数据库将取消播种操作。<br /><br /> 2 = 追赶。 辅助数据库处于事务一致的状态，并与主数据库保持同步。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|角色 (role)|**tinyint**|异地复制角色，如下所示：<br /><br /> 0 = 主要。 Database_id 指的是异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助。  Database_id 指的是异地复制合作关系中的主数据库。|  
+|role|**tinyint**|异地复制角色，如下所示：<br /><br /> 0 = 主要。 Database_id 指的是异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助。  Database_id 指的是异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|辅助类型，为以下类型之一：<br /><br /> 0 = 否。 在故障转移之前，辅助数据库不可访问。<br /><br /> 1 = 只读。 只有 ApplicationIntent = ReadOnly 的客户端连接才能访问辅助数据库。<br /><br /> 2 = 全部。 任何客户端连接都可以访问辅助数据库。|  
-|secondary_allow_connections _desc|**nvarchar(256)**|否<br /><br /> 全部<br /><br /> 只读|  
+|secondary_allow_connections _desc|**nvarchar(256)**|否<br /><br /> All<br /><br /> 只读|  
   
 ## <a name="permissions"></a>权限
 

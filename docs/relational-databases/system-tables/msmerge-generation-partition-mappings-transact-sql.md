@@ -1,5 +1,5 @@
 ---
-title: MSmerge_generation_partition_mappings （T-sql）
+title: 'MSmerge_generation_partition_mappings (T-sql) '
 description: 描述用于跟踪对合并发布中的分区所做的更改的 MSmerge_generation_partition_mappings 存储过程。
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_generation_partition_mappings system table
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7760b7893632f2171edc2b4823f8b87b8313000f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ae8e89600a76da91ccf06d0a561319af9bec3f1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889827"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544507"
 ---
 # <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85889827"
 |**changecount**|**int**|分区更改的次数。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

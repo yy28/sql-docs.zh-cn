@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b45f7ae858a9769c1563d34397119b75273e3edc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1badd8c51d3d12f8243324cf8afae58d6ef4ae04
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469894"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544829"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ sys.dm_db_index_operational_stats (
 
 :::row:::
     :::column:::
-        *database_id*
+        database_id
     :::column-end:::
     :::column:::
         Null
@@ -98,7 +98,7 @@ sys.dm_db_index_operational_stats (
 
 :::row:::
     :::column:::
-        *index_id*
+        index_id
     :::column-end:::
     :::column:::
         0
@@ -143,9 +143,9 @@ sys.dm_db_index_operational_stats (
     
 |列名称|数据类型|说明|    
 |-----------------|---------------|-----------------|    
-|**database_id**|**smallint**|数据库 ID。|    
+|database_id|**smallint**|数据库 ID。|    
 |object_id|**int**|表或视图的 ID。|    
-|**index_id**|**int**|索引或堆的 ID。<br /><br /> 0 = 堆| 
+|index_id|**int**|索引或堆的 ID。<br /><br /> 0 = 堆| 
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。| 
 |**hobt_id**|**bigint**|**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通过 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))  ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 跟踪列存储索引的内部数据的堆或B 树数据行集的 ID。<br /><br /> NULL-这不是内部列存储行集。<br /><br /> 有关更多详细信息，请参阅 [internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|叶级插入的累积计数。|    
@@ -302,7 +302,7 @@ GO
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys. dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
- [sys. dm_os_latch_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
+ [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys. dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    

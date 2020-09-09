@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumerOfFlags property
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 478a91ae1d2d4e11cf11a7e1efb95f7db81fb522
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3c684fb64a29bd50a26285a546671a48fbf650f6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446134"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544344"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags 属性（ServerSettings 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示 [实例上的服务器设置的](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

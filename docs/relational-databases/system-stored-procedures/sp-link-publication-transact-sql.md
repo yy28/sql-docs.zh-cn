@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b80c28d86ae4d7022ad8784adfa7ab9023e3ebd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446945"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543212"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode` 订阅服务器用于连接到远程发布服务器以立即更新的安全模式。 *security_mode* 为 **int**，可以是下列值之一。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对此存储过程中指定的登录名使用身份验证作为*登录名*和*密码*。<br /><br /> 注意：在以前版本的中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此选项用于指定 (RPC) 的动态远程过程调用。|  
 |**1**|使用在订阅服务器上进行更改的用户的安全上下文（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Windows 身份验证）。<br /><br /> 注意：此帐户还必须存在于具有足够权限的发布服务器上。 使用 Windows 身份验证时，必须支持安全策略帐户委托。|  

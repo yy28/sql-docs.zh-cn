@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489308"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543268"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|订阅状态：<br /><br /> **0** = 非活动订阅<br /><br /> **1** = 有效订阅<br /><br /> **2** = 已删除订阅<br /><br /> **3** = 已分离订阅<br /><br /> **4** = 附加订阅<br /><br /> **5** = 已将订阅标记为重新初始化并上传<br /><br /> **6** = 附加订阅失败<br /><br /> **7** = 从备份还原的订阅|  
 |**subscriber_type**|**int**|订阅服务器的类型：<br /><br /> **1** = 全局<br /><br /> **2** = 本地<br /><br /> **3** = 匿名|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
-|**大事**|**float (8) **|订阅优先级。 该值必须小于 **100.00**。|  
+|**priority**|**float (8) **|订阅优先级。 该值必须小于 **100.00**。|  
 |**sync_type**|**tinyint**|订阅同步类型：<br /><br /> **1** = 自动<br /><br /> **2** = 不使用快照。|  
 |description|**nvarchar(255)**|对请求订阅的简短说明。|  
 |**merge_jobid**|**binary(16)**|合并代理的作业 ID。|  

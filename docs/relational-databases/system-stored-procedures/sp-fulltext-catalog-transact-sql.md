@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 892b0e24bb76625b5d245a7314d368c0e0dc0cf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb810e5130f04a7f55ac0e262ecfe6f11b784a98
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469504"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543410"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**击落**|删除 *fulltext_catalog_name* ，方法是将其从文件系统中删除，并删除 **sysfulltextcatalogs**中的关联行。 如果此目录中包含一个或多个表的索引，则此操作将失败。 **sp_fulltext_table** 应执行 "*table_name*"，以从目录中删除表。<br /><br /> 如果目录不存在，则会显示错误。|  
 |**start_incremental**|开始 *fulltext_catalog_name*的增量填充。 如果目录不存在，则会显示错误。 如果一个全文索引填充已经是活动的，则会显示一个警告，而不发生填充操作。 使用增量填充时，将检索全文索引的已更改行，前提是表中存在一个要进行全文索引的 **时间戳** 列。|  
 |**start_full**|启动 *fulltext_catalog_name*的完全填充。 即使与此全文目录相关联的每一个表的每一行都进行过索引，也会对其检索全文索引。|  
-|**Stop**|停止 *fulltext_catalog_name*的索引填充。 如果目录不存在，则会显示错误。 如果已经停止了填充，则不会显示警告。|  
+|**停止**|停止 *fulltext_catalog_name*的索引填充。 如果目录不存在，则会显示错误。 如果已经停止了填充，则不会显示警告。|  
 |**重新生成**|重新生成 *fulltext_catalog_name*。 重新生成目录时，将删除现有目录，并在其原位置创建一个新目录。 具有全文索引引用的所有表都与此新目录相关联。 重新生成会重置数据库系统表中的全文元数据。<br /><br /> 如果更改跟踪为 OFF，重新生成并不会导致重新填充新创建的全文目录。 在这种情况下，若要重新填充，请执行 **sp_fulltext_catalog** ，并 **start_full** 或 **start_incremental** 操作。|  
   
 `[ @path = ] 'root_directory'` 是根目录 (**创建** 操作的完整物理路径) 。 *root_directory* 为 **nvarchar (100) ** ，其默认值为 NULL，表示使用安装时指定的默认位置。 这是 Mssql 目录中的 Ftdata 子目录;例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData. 指定的根目录必须驻留在同一台计算机的某一驱动器上，它不能只包含驱动器号，也不能是相对路径。 不支持使用网络驱动器、可移动驱动器、软盘和 UNC 路径。 全文目录必须在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联的本地硬盘上创建。  
@@ -135,11 +135,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FULLTEXTCATALOGPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)  
   
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 688cafb3413d1252113ecb226daef76d2e730d1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 921a2c9e1b2f40c308c4f93b291d57ea1c39ef7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397953"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543863"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88397953"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|与时钟关联的缓存的地址。 不可为 null。|  
-|**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|name |**nvarchar(256)**|缓存的名称。 不可为 null。|  
 |type|**nvarchar(60)**|缓存存储的类型。 可存在相同类型的多个缓存。 不可为 null。|  
 |**clock_hand**|**nvarchar(60)**|手动类型。 这是以下各项之一：<br /><br /> 外部<br /><br /> 内部<br /><br /> 不可为 null。|  
 |**clock_status**|**nvarchar(60)**|时钟的状态。 这是以下各项之一：<br /><br /> 已挂起<br /><br /> 运行<br /><br /> 不可为 null。|  

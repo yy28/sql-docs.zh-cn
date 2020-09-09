@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b016b93a7ed173e4da7e38f80706bd5fac30683c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6db576de824f098911229409498527e1aaf9d3ad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493256"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543377"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ GO
 
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>元数据  
  有关实例上安装的语义语言统计信息数据库的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请查询目录视图 [fulltext_semantic_language_statistics_database Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  

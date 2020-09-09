@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e6d350d42a057177ef488d581dd247e93eb9e29d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e423df4dcda235063e496b1474055c8d7de4e28e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464187"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543262"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|快照代理的 ID。|  
-|**name**|**nvarchar (100) **|快照代理的名称。|  
+|name |**nvarchar (100) **|快照代理的名称。|  
 |**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
 |**publisher_password**|**nvarchar (524) **|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
