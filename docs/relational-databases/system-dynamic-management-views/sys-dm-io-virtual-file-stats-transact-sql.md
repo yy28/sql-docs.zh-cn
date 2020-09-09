@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71cdc5b88a525e88e79ccebd0b61f20d2c391c6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 330c14ca06fab7a67c580c1aa1337d1d5c7699cb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474858"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532246"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,8 +77,8 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库名称。</br></br>对于 SQL 数据仓库，这是节点上存储的数据库的名称，由 pdw_node_id 标识。 每个节点都有一个包含13个文件的 tempdb 数据库。 每个节点在每个分发中也有一个数据库，每个分发数据库都有5个文件。 例如，如果每个节点都包含4个分布区，则结果将显示每个 pdw_node_id 20 个分发数据库文件。 
-|**database_id**|**smallint**|数据库的 ID。|  
-|**file_id**|**smallint**|文件的 ID。|  
+|database_id|**smallint**|数据库的 ID。|  
+|file_id|**smallint**|文件的 ID。|  
 |**sample_ms**|**bigint**|自从计算机启动以来的毫秒数。 可以使用此列来比较该函数的不同输出。</br></br>数据类型的数据类型为**int** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|对文件发出的读取次数。|  
 |**num_of_bytes_read**|**bigint**|在此文件中读取的总字节数。|  

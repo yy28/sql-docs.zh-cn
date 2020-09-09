@@ -21,14 +21,14 @@ helpviewer_keywords:
 - csv name
 - cluster shared volume names
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f81bd26a6ec2a43e9f063466bfa77c793ac4d8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18a1e01e893486a7ce32f1c3510fb52d5fd7ec0e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419651"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532012"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88419651"
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar (512) **|可以用作数据库和日志文件的根目录的卷装入点或驱动器路径。 不可为 null。|  
 |**cluster_owner_node**|**Nvarchar (64) **|驱动器的当前所有者。 对于群集共享卷 (CSV)，所有者是承载元数据服务器的节点。 不可为 null。|  
-|**is_cluster_shared_volume**|**小段**|如果此路径所在的驱动器是群集共享卷，则返回 1；否则，返回 0。|  
+|**is_cluster_shared_volume**|**bit**|如果此路径所在的驱动器是群集共享卷，则返回 1；否则，返回 0。|  
   
 ## <a name="remarks"></a>备注  
  SQL Server 故障转移群集实例 (FCI) 必须在 FCI 的所有节点之间使用共享存储，以便进行数据和日志文件存储。 此视图中列出的磁盘是处于与实例关联的群集资源组中的磁盘，并且是可以用于数据或日志文件存储的唯一一组磁盘。  
