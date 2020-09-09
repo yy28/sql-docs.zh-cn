@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ResumeService method
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d1e5e368f9fc33898d251f3508f2bcaffd9622f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5c533cde7bccdbf198e207e6026beb0404f19cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460043"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542825"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.ResumeService()
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

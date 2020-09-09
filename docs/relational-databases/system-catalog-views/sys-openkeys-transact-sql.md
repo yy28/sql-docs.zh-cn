@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.openkeys catalog view
 ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93294903059bfd2db6b3bcb2995ce1318da8a309
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 456b0dd1e8d5343d405c06e6f54029ab2c84baaa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420071"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542516"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "88420071"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|包含密钥的数据库的 ID。|  
+|database_id|**int**|包含密钥的数据库的 ID。|  
 |**database_name**|**sysname**|包含密钥的数据库的名称。|  
 |**key_id**|**int**|密钥的 ID。 该 ID 在数据库中是唯一的。|  
-|**key_name**|**sysname**|密钥的名称。 在数据库中是唯一的。|  
-|**key_guid**|**varbinary**|密钥的 GUID。 在数据库中是唯一的。|  
+|key_name|**sysname**|密钥的名称。 在数据库中是唯一的。|  
+|key_guid|**varbinary**|密钥的 GUID。 在数据库中是唯一的。|  
 |**opened_date**|**datetime**|打开密钥的日期和时间。|  
 |**status**|**int**|如果密钥在元数据中有效，则为 1。 如果在元数据中找不到密钥，则为 0。|  
   

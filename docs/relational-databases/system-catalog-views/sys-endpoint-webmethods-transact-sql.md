@@ -20,14 +20,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoint_webmethods catalog view
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2dba0b1984351c0197b55cc7c318bd8b6065e947
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dedd1e20af6eed937efa67d655476efc521f9621
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377853"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542545"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88377853"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|定义了 Web 方法的端点的 ID。|  
-|namespace|**nvarchar (384) **|Web 方法的命名空间。|  
+|命名空间|**nvarchar (384) **|Web 方法的命名空间。|  
 |method_alias|**nvarchar (64) **|方法的别名。<br /><br /> 注意： [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符允许在 WSDL 方法名称中不合法的字符。<br /><br /> 别名用于将端点 WSDL 说明中公开的名称映射到调用 Web 方法时调用的实际基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可执行对象。|  
 |object_name|**nvarchar (776) **|Web 方法重定向到的对象名称，在 NAME = 选项中指定。 名称部分以句点 )  ( 分隔，并使用方括号分隔 `[``]` 。<br /><br /> 对象名称必须由三个部分组成，在 WSDL 选项中指定。|  
 |result_schema|**tinyint**|确定将哪个 XSD（如果有）与响应一起发回的选项。<br /><br /> 0 = 无<br /><br /> 1 = Standard<br /><br /> 2 = Default|  

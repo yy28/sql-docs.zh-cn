@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a8616c3b10257440210f80de1ef45832d3b88e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5aead8188bbdaac714bb68e44be0c54cce12fce6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480902"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541574"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,10 +66,10 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type` 指示何时执行作业的值。 *freq_type*的数据值为 **int**，默认值为 **0**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**16**|每月一次|  
 |**32**|每月，相对于 *频率间隔*|  
@@ -90,7 +90,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type` 指定 freq_subday_interval 的单位 ** *。* *freq_subday_type*的数据值为 **int**，默认值为 **0**，可以是下列值之一。  
   
-|Value|说明（单位）|  
+|值|说明（单位）|  
 |-----------|--------------------------|  
 |**0x1**|在指定的时间|  
 |**0x2**|秒|  
@@ -101,10 +101,10 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`如果*freq_interval*为**32** (月相对) ，则每个月*freq_interval*的作业出现。 *freq_relative_interval*的数据值为 **int**，默认值为 **0**，可以是下列值之一。  
   
-|Value|说明（单位）|  
+|值|说明（单位）|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|第三个|  
 |**8**|第四个|  
 |**16**|最后一个|  

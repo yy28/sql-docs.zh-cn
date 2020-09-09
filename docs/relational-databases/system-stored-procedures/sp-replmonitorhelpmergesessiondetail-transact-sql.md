@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesessiondetail （T-sql）
+title: 'sp_replmonitorhelpmergesessiondetail (T-sql) '
 description: 介绍 sp_replmonitorhelpmergesessiondetail 存储过程，该存储过程返回有关特定复制合并代理会话的详细文章级信息。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725718"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543178"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "85725718"
 sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @session_id = ] session_id`指定一个代理会话。 *session_id*为**int** ，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @session_id = ] session_id` 指定一个代理会话。 *session_id* 为 **int** ，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|同步会话的阶段，可以是下列值之一：<br /><br /> **0** = 初始化或汇总行<br /><br /> **1** = 上载<br /><br /> **2** = 下载|  
-|**ArticleName**|**sysname**|被同步的项目的名称。 **ArticleName**还包含结果集中不表示项目详细信息的行的汇总信息。|  
-|**完成**|**decimal**|指示当前正在运行或已失败的会话中，给定的项目详细信息行中应用的全部更改的百分比。|  
+|**ArticleName**|**sysname**|被同步的项目的名称。 **ArticleName** 还包含结果集中不表示项目详细信息的行的汇总信息。|  
+|**PercentComplete**|**decimal**|指示当前正在运行或已失败的会话中，给定的项目详细信息行中应用的全部更改的百分比。|  
 |**RelativeCost**|**decimal**|指示同步项目所花时间占会话的同步总时间的百分比。|  
-|**Duration**|**int**|代理会话的长度。|  
+|**持续时间**|**int**|代理会话的长度。|  
 |**Inserts**|**int**|会话中的插入数。|  
 |**更新**|**int**|会话中的更新数。|  
 |**Deletes**|**int**|会话中的删除数。|  
@@ -59,12 +59,12 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**SchemaChanges**|**int**|会话中的架构更改数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replmonitorhelpmergesessiondetail**用于监视合并复制。  
+ **sp_replmonitorhelpmergesessiondetail** 用于监视合并复制。  
   
- 在订阅服务器上执行时， **sp_replmonitorhelpmergesessiondetail**仅返回最近5合并代理会话的详细信息。  
+ 在订阅服务器上执行时， **sp_replmonitorhelpmergesessiondetail** 仅返回最近5合并代理会话的详细信息。  
   
 ## <a name="permissions"></a>权限  
  只有分发服务器上的分发数据库或订阅服务器上的**replmonitor**固定数据库角色的**db_owner**成员才能执行**sp_replmonitorhelpmergesessiondetail**。  

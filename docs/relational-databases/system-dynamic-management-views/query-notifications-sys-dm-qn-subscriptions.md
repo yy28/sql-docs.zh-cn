@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455089"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542364"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "88455089"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|订阅的 ID。|  
-|**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
-|**sid**|**varbinary (85) **|创建并拥有该订阅的服务器主体的安全 ID。|  
+|database_id|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
+|**sid**|**varbinary(85)**|创建并拥有该订阅的服务器主体的安全 ID。|  
 |object_id|**int**|存储有关订阅参数信息的内部表的 ID。|  
 |**created**|**datetime**|创建订阅的日期和时间。|  
 |**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意：实际触发时间可能大于指定的超时时间。但是，如果在指定的超时时间之后但在激发订阅之前发生了无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可确保在发生更改时进行触发。|  
@@ -43,9 +43,9 @@ ms.locfileid: "88455089"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|启用|类型|  
+|From|到|开|类型|  
 |----------|--------|--------|----------|  
-|**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
+|**sys.dm_qn_subscriptions**|**sys.databases**|database_id|多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|object_id|多对一|  
   
 ## <a name="remarks"></a>备注  

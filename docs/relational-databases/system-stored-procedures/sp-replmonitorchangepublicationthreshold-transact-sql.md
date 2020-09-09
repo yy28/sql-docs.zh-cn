@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorchangepublicationthreshold （T-sql）
+title: 'sp_replmonitorchangepublicationthreshold (T-sql) '
 description: 描述为发布更改监视阈值指标的 sp_replmonitorchangepublicationthreshold 存储过程。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6114d52b0db23d04c3b8cf001b0881dbc38844a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749280"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543147"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,14 +45,14 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
     [ , [ @mode = ] mode ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'`已发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 已发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-`[ @publication = ] 'publication'`正在更改其监视阈值属性的发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 正在更改其监视阈值属性的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @publication_type = ] publication_type`如果发布的类型为。 *publication_type*为**int**，可以是下列值之一。  
+`[ @publication_type = ] publication_type` 如果发布的类型为。 *publication_type* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -61,36 +61,36 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|合并发布。|  
 |NULL（默认值）|复制尝试确定发布类型。|  
   
-`[ @metric_id = ] metric_id`正在更改的发布阈值指标的 ID。 *metric_id*为**int**，默认值为 NULL，可以是下列值之一。  
+`[ @metric_id = ] metric_id` 正在更改的发布阈值指标的 ID。 *metric_id* 为 **int**，默认值为 NULL，可以是下列值之一。  
   
 |值|标准名称|  
 |-----------|-----------------|  
 |**1**|**expiration** - 监视对事务发布的订阅是否即将过期。|  
 |**2**|**latency** - 监视对事务发布的订阅的性能。|  
 |**4**|**mergeexpiration** - 监视对合并发布的订阅是否即将过期。|  
-|**5**|**mergeslowrunduration** -监视通过低带宽（拨号）连接进行的合并同步的持续时间。|  
-|**6**|**mergefastrunduration** -监视通过高带宽局域网（LAN）连接进行的合并同步的持续时间。|  
+|**5**|**mergeslowrunduration** -监视通过低带宽 (拨号) 连接进行的合并同步的持续时间。|  
+|**6**|**mergefastrunduration** -监视通过高带宽局域网 (LAN) 连接进行的合并同步的持续时间。|  
 |**7**|**mergefastrunspeed** - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
-|**8**|**mergeslowrunspeed** -监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
+|**8**|**mergeslowrunspeed** -监视通过低带宽 (拨号) 连接进行的合并同步的同步速率。|  
   
- 必须指定*metric_id*或*thresholdmetricname*。 如果指定了*thresholdmetricname* ，则*METRIC_ID*应为 NULL。  
+ 必须指定 *metric_id* 或 *thresholdmetricname*。 如果指定了 *thresholdmetricname* ，则 *METRIC_ID* 应为 NULL。  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`正在更改的发布阈值指标的名称。 *thresholdmetricname*的值为**sysname**，默认值为 NULL。 必须指定*thresholdmetricname*或*metric_id*。 如果指定*metric_id* ，则*THRESHOLDMETRICNAME*应为 NULL。  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` 正在更改的发布阈值指标的名称。 *thresholdmetricname* 的值为 **sysname**，默认值为 NULL。 必须指定 *thresholdmetricname* 或 *metric_id*。 如果指定 *metric_id* ，则 *THRESHOLDMETRICNAME* 应为 NULL。  
   
-`[ @value = ] value`发布阈值指标的新值。 *值*为**int**，默认值为 NULL。 如果**为 null**，则不更新指标值。  
+`[ @value = ] value` 发布阈值指标的新值。 *值* 为 **int**，默认值为 NULL。 如果 **为 null**，则不更新指标值。  
   
-`[ @shouldalert = ] shouldalert`当达到发布阈值指标时是否生成警报。 *shouldalert*的值为**bit**，默认值为 NULL。 值为**1**表示生成警报，值为**0**表示不生成警报。  
+`[ @shouldalert = ] shouldalert` 当达到发布阈值指标时是否生成警报。 *shouldalert* 的值为 **bit**，默认值为 NULL。 值为 **1** 表示生成警报，值为 **0** 表示不生成警报。  
   
-`[ @mode = ] mode`如果已启用发布阈值指标，则为。 *mode*的值为**tinyint**，默认值为**1**。 如果值为**1** ，则表示启用了此指标的监视，值为**2**表示禁用了此指标的监视。  
+`[ @mode = ] mode` 如果已启用发布阈值指标，则为。 *mode* 的值为 **tinyint**，默认值为 **1**。 如果值为 **1** ，则表示启用了此指标的监视，值为 **2** 表示禁用了此指标的监视。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replmonitorchangepublicationthreshold**用于所有类型的复制。  
+ **sp_replmonitorchangepublicationthreshold** 用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有分发数据库中**db_owner**或**replmonitor**固定数据库角色的成员才能执行**sp_replmonitorchangepublicationthreshold**。  
+ 只有分发数据库中 **db_owner** 或 **replmonitor** 固定数据库角色的成员才能执行 **sp_replmonitorchangepublicationthreshold**。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

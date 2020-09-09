@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9525434eb17f33700f819ef45a8be4392bbfd69a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a56a267fb7f10da12f0679c74f26b72a205fbf4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492865"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541459"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程-参数和属性
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88492865"
   
 `[ @xml_output = ] 'xml_output'` 一个输出参数，它在 XML 片段中返回结果集。 *xml_output* 为 **xml** ，无默认值。  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
  设置** \@ verboseoutput** = 0 以返回核心属性，如下表所示;** \@ verboseoutput** > 0 返回空间索引的所有属性。  
   
  **Base_Table_Rows**  

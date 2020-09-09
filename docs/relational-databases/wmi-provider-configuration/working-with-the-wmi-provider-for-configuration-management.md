@@ -18,14 +18,14 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, late binding
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da0f68133473e746b7eaae898273b3c8a8bab0cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2b95e9593493524a0a86579acdd2d96193ea2fb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880465"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542734"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>使用 WMI 提供程序进行配置管理
 
@@ -79,7 +79,7 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
  WMI 管理脚本可用于更新运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务所使用的帐户。  
   
- 用于配置管理的 WMI 提供程序支持安全证书。 有关证书的详细信息，请参阅[加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
+ 用于配置管理的 WMI 提供程序支持安全证书。 有关证书的详细信息，请参阅 [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)  

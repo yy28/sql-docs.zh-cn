@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHsubscriptions system table
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 87e750351fab39ad132781d25b2733daa8387176
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b8dafdba96014fe7c60524a34d76d8bc36792762
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473243"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540917"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88473243"
 |**article_id**|**int**|唯一地标识已发布的项目。|  
 |**srvid**|**smallint**|订阅服务器的服务器 ID。|  
 |**dest_db**|**sysname**|目标数据库的名称|  
-|**login_name**|**sysname**|添加订阅时所使用的登录名。|  
+|login_name|**sysname**|添加订阅时所使用的登录名。|  
 |**distribution_jobid**|**binary(16)**|分发代理的作业 ID|  
 |**timestamp**|**timestamp**|创建订阅的日期和时间。|  
 |**queued_reinit**|**bit**|指定是否将项目标记为初始化或重新初始化。 如果值为 **1** ，则指定订阅的项目已标记为进行初始化或重新初始化。|  

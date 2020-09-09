@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d5678c74d6fbbb703e6f6fd0a93b205bc2903059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: af93d167af59eb95b4a1edd83109eebbd12782c7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419681"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542157"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +44,10 @@ ms.locfileid: "88419681"
 |**早期**|**bit**|1 = 模块是预发行版本的已加载模块。|  
 |**private_build**|**bit**|1 = 模块是专用版本的已加载模块。|  
 |**special_build**|**bit**|1 = 模块是特殊版本的已加载模块。|  
-|language|**int**|模块的版本信息语言。|  
-|**上市公司**|**nvarchar(256)**|创建模块的公司的名称。|  
+|**language**|**int**|模块的版本信息语言。|  
+|**company**|**nvarchar(256)**|创建模块的公司的名称。|  
 |description|**nvarchar(256)**|模块的说明。|  
-|**name**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
+|name |**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
 |pdw_node_id|**int**|适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
