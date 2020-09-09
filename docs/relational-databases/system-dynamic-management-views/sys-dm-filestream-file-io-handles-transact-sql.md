@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 543d74e0c62c80ea768009b6a7c9c9f965acbd54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7e8e059ad9d10ccd3b8fd0b51299cc91edb5c6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489895"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89533300"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示命名空间所有者 (NSO) 已知的文件句柄。 此视图显示了使用 **OpenSqlFilestream** 获取的客户端的 Filestream 句柄。  
   
-|列|类型|描述|  
+|列|类型|说明|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|显示与客户端的句柄关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**creation_request_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 null。|  
