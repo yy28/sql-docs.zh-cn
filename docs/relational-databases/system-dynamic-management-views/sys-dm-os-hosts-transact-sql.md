@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_hosts dynamic management view
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8e740acbef6a2980c0fed6c27b4d7c892883803b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 482ce9c2e7e29aa0b1f137e3941136b6552d305b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489810"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548478"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "88489810"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|主机对象的内部内存地址。|  
-|type|**nvarchar(60)**|宿主组件的类型。 例如，<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server 本机接口<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 访问接口<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft 数据访问运行时|  
-|**name**|**nvarchar(32)**|主机名称。|  
+|type|**nvarchar(60)**|宿主组件的类型。 例如，应用于对象的<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server 本机接口<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 访问接口<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft 数据访问运行时|  
+|name |**nvarchar(32)**|主机名称。|  
 |**enqueued_tasks_count**|**int**|该主机放置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的队列上的任务总数。|  
 |**active_tasks_count**|**int**|该主机放在队列中的、正在运行的任务数。|  
 |**completed_ios_count**|**int**|通过该主机发出和完成的 I/O 总数。|  
@@ -57,7 +57,7 @@ ms.locfileid: "88489810"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|一对一|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|一对一|  

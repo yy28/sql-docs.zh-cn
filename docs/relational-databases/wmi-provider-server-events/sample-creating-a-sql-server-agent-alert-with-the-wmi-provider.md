@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d0c3835f35df6a8e39de23cd215a651c391c8c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4577642217bbebeefcdaef460c0e131faae5be1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888211"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550792"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>示例：使用 WMI 提供程序创建 SQL Server 代理警报
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85888211"
  每当记录死锁图形跟踪事件时，警报都将运行该作业。 对于 WMI 警报，SQL Server 代理使用指定的命名空间和 WQL 语句创建一个通知查询。 对于此警报，SQL Server 代理监视本地计算机上的默认实例。 WQL 语句请求默认实例中的任何 `DEADLOCK_GRAPH` 事件。 若要更改警报监视的实例，请替换该警报的 `MSSQLSERVER` 中 `@wmi_namespace` 的实例名称。  
   
 > [!NOTE]  
->  对于接收 WMI 事件的 SQL Server 代理， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 必须在**msdb**和中启用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
+>  对于接收 WMI 事件的 SQL Server 代理， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 必须在 **msdb** 和中启用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 USE AdventureWorks ;  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>测试示例  
- 若要查看作业运行情况，请造成死锁。 在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，打开两个**SQL 查询**选项卡，并将两个查询连接到同一个实例。 在其中一个查询选项卡中运行以下脚本。 此脚本生成一个结果集，然后结束。  
+ 若要查看作业运行情况，请造成死锁。 在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，打开两个 **SQL 查询** 选项卡，并将两个查询连接到同一个实例。 在其中一个查询选项卡中运行以下脚本。 此脚本生成一个结果集，然后结束。  
   
 ```  
 USE AdventureWorks ;  

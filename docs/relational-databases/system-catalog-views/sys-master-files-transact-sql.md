@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52cbf9cab6e8a9d77e7bdb0d079f5c3341ec0fed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecf00931301e468f3fcaa92b95e15f778bd1607c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455252"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548697"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88455252"
 |database_id|**int**|应用此文件的数据库的 ID。 Masterdatabase_id 始终为1。|  
 |file_id|**int**|数据库内文件的 ID。 主 file_id 始终为 1。|  
 |file_guid|**uniqueidentifier**|文件的唯一标识符。<br /><br /> NULL = 数据库已从 (的早期版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 SQL Server 2005 及更低版本的) 。|  
-|type|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
+|类型|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
 |type_desc|**nvarchar(60)**|文件类型的说明：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录。）|  
 |data_space_id|**int**|此文件所属数据空间的 ID。 数据空间是一个文件组。<br /><br /> 0 = 日志文件|  
 |name|**sysname**|数据库中文件的逻辑名称。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9802a6087bd3747c8fe715d56482b54149ee55d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489325"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549619"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登录名。|  
-|**SID**|**varbinary (85) **|登录安全标识符 (SID)。|  
+|**SID**|**varbinary(85)**|登录安全标识符 (SID)。|  
 |**DefDBName**|**sysname**|**LoginName**在连接到实例时使用的默认数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**DefLangName**|**sysname**|**LoginName**使用的默认语言。|  
 |**Auser**|**char (5) **|Yes = **LoginName** 在数据库中具有关联的用户名。<br /><br /> No = **LoginName** 没有关联的用户名。|  
@@ -101,7 +101,7 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 155dce156469f5ee629143b7613bbf5e6c174c71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b45e1caf164cd367af4811d8e7cbc1f33a70921
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88324063"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550489"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88324063"
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**|-|从 **sys.databases** 中继承列 (有关详细信息，请参阅 [transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)) 中的 sys.databases &#40;。|  
 |**role**|**tinyint**|镜像角色，为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = 伙伴<br /><br /> **2** = 见证服务器<br /><br /> **3** = 全部<br /><br /> 注意：此值仅适用于数据库镜像。|  
-|**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **见证**<br /><br /> ALL<br /><br /> 注意：此值仅适用于数据库镜像。|  
+|**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **见证**<br /><br /> **ALL**<br /><br /> 注意：此值仅适用于数据库镜像。|  
 |**is_encryption_enabled**|**bit**|**1** 表示启用了加密。<br /><br /> **0** 表示禁用加密。|  
 |**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM，证书<br /><br /> **6** -KERBEROS，证书<br /><br /> **7** -协商，证书<br /><br /> **8** 证书，NTLM<br /><br /> **9** 证书，KERBEROS<br /><br /> **10** -证书，协商|  
 |**connection_auth_desc**|**Nvarchar (60)**|连接到此端点所需的身份验证类型的说明，为以下值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  

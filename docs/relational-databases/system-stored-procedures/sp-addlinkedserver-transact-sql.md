@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5bb18a45998661d3252c41da4222dfd24a585237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81cc7901dd6e9bfab24e0fb3d926173353978f40
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474550"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548363"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,13 +90,13 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> （默认值）||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的网络名称（用于默认实例）|||数据库名称（可选）|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|*servername* \\特定实例的*instancename* () |||数据库名称（可选）|  
-|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
-|ODBC 数据源|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC 数据源的系统 DSN||||  
-|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 连接字符串||  
-|文件系统|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|Any|**MSIDXS**|索引服务目录名称||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
-|IBM DB2 数据库|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|Any|**DB2OLEDB**|||请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
+|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|任意|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
+|ODBC 数据源|Microsoft OLE DB Provider for ODBC|任意|**MSDASQL**|ODBC 数据源的系统 DSN||||  
+|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|任意|**MSDASQL**|||ODBC 连接字符串||  
+|文件系统|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|任意|**MSIDXS**|索引服务目录名称||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
+|IBM DB2 数据库|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|任意|**DB2OLEDB**|||请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
   
  <sup>1</sup> 通过这种设置链接服务器的方式，可以强制链接服务器的名称与的远程实例的网络名称相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 *data_source* 指定服务器。  
   
@@ -330,9 +330,9 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

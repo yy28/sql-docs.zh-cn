@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93d907cec14712af625867a14537060e33b3f09b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b35458a0c99eb14db60a058ef72e98df529c217
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489264"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547967"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |server|**sysname**|本地服务器上定义的远程服务器的名称。|  
 |local_user_name|**sysname**|本地服务器上的登录名，来自服务器的远程登录名映射到该登录名。|  
 |remote_user_name|**sysname**|远程服务器上的登录，该登录映射到 local_user_name。|  
-|options|**sysname**|Trusted = 从远程服务器连接到本地服务器时，远程登录名不需要提供密码。<br /><br /> Untrusted（或空白）= 从远程服务器连接到本地服务器时，提示远程登录名提供密码。|  
+|选项|**sysname**|Trusted = 从远程服务器连接到本地服务器时，远程登录名不需要提供密码。<br /><br /> Untrusted（或空白）= 从远程服务器连接到本地服务器时，提示远程登录名提供密码。|  
   
 ## <a name="remarks"></a>备注  
  使用 sp_helpserver 列出在本地服务器上定义的远程服务器的名称。  

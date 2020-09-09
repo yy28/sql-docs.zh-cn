@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464461"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548211"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,13 +63,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
 |**filter**||要用于筛选表（水平筛选）的新存储过程。 默认值为 NULL。 对于对等复制中的发布，此值不能更改。|  
-|**fire_triggers_on_snapshot**|true|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：对于要复制的触发器， *schema_option* 的位掩码值必须包括值 **0x100**。|  
+|**fire_triggers_on_snapshot**|**true**|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：对于要复制的触发器， *schema_option* 的位掩码值必须包括值 **0x100**。|  
 ||**false**|应用初始快照时不会执行已复制的用户触发器。|  
 |**identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**ins_cmd**||要执行的 INSERT 语句，否则从日志构造。|  
 |**pre_creation_cmd**||可以在应用同步之前除去、删除或截断目标表的预创建命令。|  
 ||**无**|不使用命令。|  
-||**drop**|删除目标表。|  
+||**击落**|删除目标表。|  
 ||**delete**|删除目标表。|  
 ||**truncate**|截断目标表。|  
 |**pub_identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
@@ -211,7 +211,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>有效架构选项  
  下表描述了 *schema_option* 允许的值，这些值基于在顶部) 中 (显示的复制类型，并且项目类型 (在第一列) 下显示。  
   
-| 项目类型 | 复制类型-事务性 | 复制类型-快照 |
+| 文章类型 | 复制类型-事务性 | 复制类型-快照 |
 | ------------ | -------------------------------- | --------------------------- |
 |**logbased**|所有选项|所有选项，但 **0x02**|  
 |**logbased manualfilter**|所有选项|所有选项，但 **0x02**|  
@@ -240,8 +240,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [查看和修改项目属性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   

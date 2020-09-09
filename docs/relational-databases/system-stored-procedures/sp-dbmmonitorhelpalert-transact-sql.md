@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 942696e1d05ac149780ca226d4a6ba500a3aa11c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9483733ddcaca469ea162ff9dba884ef857a9493
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489407"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548151"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ sp_dbmmonitorhelpalert database_name
 |**threshold**|**int**|警告的阈值。 如果在更新镜像状态时返回大于此阈值的值，则会在 Windows 事件日志中输入项。 此值表示 KB、分钟或毫秒，具体取决于警告。 如果当前未设置阈值，则该值是 NULL。<br /><br /> **注意：** 若要查看当前值，请运行 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 存储过程。|  
 |**enabled**|**bit**|0 = 禁用事件。<br /><br /> 1 = 启用事件。<br /><br /> **注意：** 保持期始终处于启用状态。|  
   
-|值|性能指标|计价单位|  
+|值|性能指标|单位|  
 |-----------|------------------------|----------|  
 |1|最早的未发送事务|分钟数|  
 |2|未发送日志|KB|  

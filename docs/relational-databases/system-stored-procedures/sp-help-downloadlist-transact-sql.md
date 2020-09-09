@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469381"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549720"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'` 指定作业的有效操作。 *操作* 是 **varchar (64) **，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**故障**|请求目标服务器脱离主 **SQLServerAgent** 服务的服务器操作。|  
 |**DELETE**|作业操作，删除整个作业。|  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.databases catalog view
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73141e7bc09d2748ff79cba0de4ebf9d4758cd65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379083"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550555"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -39,9 +39,9 @@ ms.locfileid: "88379083"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|数据库名称，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
-|**database_id**|**int**|数据库的 ID，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
+|database_id|**int**|数据库的 ID，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
 |**source_database_id**|**int**|Non-NULL = 该数据库快照的源数据库 ID。<br /> NULL = 非数据库快照。|  
-|**owner_sid**|**varbinary (85) **|注册到服务器的数据库外部所有者的 SID（安全标识符）。 有关谁可以拥有数据库的信息，请参阅[ALTER authorization](../../t-sql/statements/alter-authorization-transact-sql.md)中的**alter authorization for** database 部分。|  
+|**owner_sid**|**varbinary(85)**|注册到服务器的数据库外部所有者的 SID（安全标识符）。 有关谁可以拥有数据库的信息，请参阅[ALTER authorization](../../t-sql/statements/alter-authorization-transact-sql.md)中的**alter authorization for** database 部分。|  
 |create_date|**datetime**|数据库的创建或重命名日期。 对于 **tempdb**，每次服务器重启时，此值都会发生更改。|  
 |**compatibility_level**|**tinyint**|对应于兼容行为的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整数：<br /><br /><table border="0"><tr><td>**值**</td><td>**适用于**</td></tr><tr><td>70</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]</td></tr><tr><td>80</td><td>[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 周一至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]</td></tr><tr><td>90</td><td>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 周一至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]</td></tr><tr><td>100</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>110</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>120</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>130</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>140</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>150</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr></table>|  
 |**collation_name**|**sysname**|数据库的排序规则。 作为数据库中的默认排序规则。<br /> NULL = 数据库不处于联机状态，或者 AUTO_CLOSE 设置为 ON 且数据库已关闭。|  

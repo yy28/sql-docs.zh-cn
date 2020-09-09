@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_resource_pools catalog view
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b48957c69ee952e4239a8c4cd4709dca2ff19dd8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24c19d78cdd0d4b38398b4212568134aaee74e15
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490162"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550422"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "88490162"
 |min_memory_percent|**int**|资源池中的所有请求可获得的有保证的内存量。 不与其他资源池共享这部分内存。 不可为 null。|  
 |max_memory_percent|**int**|此资源池中的请求可使用的总服务器内存量的百分比。 不可为 null。 有效的最大值取决于池的最小值。 例如，可将 max_memory_percent 设置为 100，但有效的最大值会更低一些。|  
 |cap_cpu_percent|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽限制为指定的级别。 允许的值范围为 1 到 100。|  
-|min_iops_per_volume|**int**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 针对该池的每个卷设置的每秒最小 I/O 操作数 (IOPS)。 0 = 不预留。 不可为 null。|  
-|max_iops_per_volume|**int**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 针对该池的每个卷设置的每秒最大 I/O 操作数 (IOPS)。 0 = 无限制。 不可为 null。|  
+|min_iops_per_volume|**int**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 针对该池的每个卷设置的每秒最小 I/O 操作数 (IOPS)。 0 = 不预留。 不能为 null。|  
+|max_iops_per_volume|**int**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 针对该池的每个卷设置的每秒最大 I/O 操作数 (IOPS)。 0 = 无限制。 不能为 null。|  
   
 ## <a name="remarks"></a>备注  
  目录视图显示存储的元数据。 若要查看内存中的配置，请使用对应的动态管理视图 [&#40;transact-sql&#41;dm_resource_governor_resource_pools ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  

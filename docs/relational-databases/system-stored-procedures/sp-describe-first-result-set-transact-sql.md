@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469602"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548084"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**位非 NULL**|指示列是出于浏览信息目的而额外添加的列，该列不会实际显示在结果集中。|  
 |**column_ordinal**|**int NOT NULL**|在结果集中包含列的序号位置。 第一列的位置将指定为1。|  
-|**name**|**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
+|name |**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
 |**is_nullable**|**位非 NULL**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int NOT NULL**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar (256) NULL**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  

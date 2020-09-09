@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493574"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550187"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ sys.dm_sql_referencing_entities (
 |referencing_class_desc|**nvarchar(60)**|引用实体的类的说明。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|指示被引用的实体的 ID 解析发生在运行时，因为它依赖于调用方的架构。<br /><br /> 1 = 引用实体可能会引用该实体，但是，被引用的实体的 ID 解析依赖于调用方，因此不能确定此解析。 仅对于非绑定到架构的引用且被引用对象为存储过程、扩展存储过程或在 EXECUTE 语句中调用的用户定义函数时，才会出现这种情况。<br /><br /> 0 = 被引用的实体不依赖于调用方。|  
   
-## <a name="exceptions"></a>例外  
+## <a name="exceptions"></a>异常  
  在满足以下任一条件时将返回空的结果集：  
   
 -   指定了系统对象。  

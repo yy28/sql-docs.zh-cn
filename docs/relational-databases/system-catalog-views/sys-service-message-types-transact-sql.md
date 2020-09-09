@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_message_types catalog view
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b56665ff1a780cdcf8052c063f817b542e65ac3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3eaaa45f6f34e690b7b8abc3fc0366b54748b16c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455174"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550388"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "88455174"
 |name|**sysname**|消息类型的名称，在数据库中是唯一的。 不可为 NULL。|  
 |**message_type_id**|**int**|消息类型的标识符，在数据库中是唯一的。 不可为 NULL。|  
 |principal_id|**int**|拥有该消息类型的数据库主体的标识符。 可以为 null.|  
-|**检查**|**char(2)**|在发送该类型的消息之前由 Broker 执行的验证。 不可为 NULL。 下列其中一项：<br /><br /> N = 无<br /><br /> X = XML<br /><br /> E = 空|  
-|**validation_desc**|**nvarchar(60)**|在发送该类型的消息之前由 Broker 执行的验证的说明。 可以为 null. 下列其中一项：<br /><br /> 无<br /><br /> XML<br /><br /> EMPTY|  
+|**validation**|**char(2)**|在发送该类型的消息之前由 Broker 执行的验证。 不可为 NULL。 即以下函数之一：<br /><br /> N = 无<br /><br /> X = XML<br /><br /> E = 空|  
+|**validation_desc**|**nvarchar(60)**|在发送该类型的消息之前由 Broker 执行的验证的说明。 可以为 null. 即以下函数之一：<br /><br /> 无<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|对于使用 XML 架构的验证，使用该架构集合的标识符。<br /><br /> 否则为 NULL。|  
   
 ## <a name="permissions"></a>权限  

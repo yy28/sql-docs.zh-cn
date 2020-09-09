@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93efe6b64ade77e8a9761bf5efbbcb8454d75df4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8e5c15e1892f6640e8fddbcc0b89898ffce4f6b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447412"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549945"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'` 更新的类型。 *update_mode* 为 **nvarchar (30) **，可以为以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**只读** (默认值) |该订阅是只读的。 在订阅服务器上所做的任何更改不会发送回发布服务器。 应在订阅服务器不进行更新时使用。|  
 |**同步事务**|支持立即更新订阅。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5dcf8a6fa773497e119b73a9b623d414a1ad4d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485998"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549678"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,9 +62,9 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'` 要显示的作业属性。 *job_aspect* 是 **varchar (9) **，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|ALL|作业特征信息|  
+|**ALL**|作业特征信息|  
 |**任务**|作业信息|  
 |**计划**|计划信息|  
 |**逐步**|作业步骤信息|  
@@ -82,7 +82,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status` 作业的执行状态。 *状态* 为 **int**，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|只返回那些空闲的或挂起的作业。|  
 |**1**|正在执行。|  

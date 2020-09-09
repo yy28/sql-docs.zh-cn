@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ee48556a3e06eef76975f17ea698a8372d71f0cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 20f119f3db641ebffd61ba4465abeea3c99515e5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447777"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550399"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "88447777"
 |server_specification_id|**int**|审核服务器规范的 ID|  
 |audit_action_id|**int**|审核操作的 ID|  
 |audit_action_name|**sysname**|组名称或审核操作名称|  
-|class|**tinyint**|保留|  
-|class_desc|**nvarchar(60)**|保留|  
-|major_id|**int**|保留|  
-|minor_id|**int**|保留|  
-|audited_principal_id|**int**|保留|  
+|class|**tinyint**|预留|  
+|class_desc|**nvarchar(60)**|预留|  
+|major_id|**int**|预留|  
+|minor_id|**int**|预留|  
+|audited_principal_id|**int**|预留|  
 |audited_result|**nvarchar(60)**|审核结果：<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|审核对象是否为组：<br /><br /> 0 - 不是组<br /><br /> 1 - 组|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88447777"
   
 ## <a name="see-also"></a>另请参阅  
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

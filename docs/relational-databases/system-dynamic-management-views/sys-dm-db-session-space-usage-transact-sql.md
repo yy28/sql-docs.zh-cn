@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_session_space_usage dynamic management view
 ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6829043a007506c33ccbc240dcba7f3610ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 571b3a474e8b6f40745ca0534d40b76dea4dd0fb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475077"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550312"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88475077"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|会话 ID。<br /><br /> **session_id**映射到[dm_exec_sessions sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)中**session_id** 。|  
-|**database_id**|**smallint**|数据库 ID。|  
+|database_id|**smallint**|数据库 ID。|  
 |**user_objects_alloc_page_count**|**bigint**|由该会话为用户对象保留或分配的页数。|  
 |**user_objects_dealloc_page_count**|**bigint**|由该会话释放并不再为用户对象保留的页数。|  
 |**internal_objects_alloc_page_count**|**bigint**|由该会话为内部对象保留或分配的页数。|  
@@ -93,7 +93,7 @@ ms.locfileid: "88475077"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|一对一|  
   

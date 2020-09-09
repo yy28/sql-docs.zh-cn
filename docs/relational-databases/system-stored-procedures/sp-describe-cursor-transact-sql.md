@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 97f7d5b17fdd06199b11bfa82c6795407e28127f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2e24c729dce92d05827466d9931916a9002adc1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493290"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548092"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|来自 DECLARE CURSOR 语句的游标的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果是通过将游标变量设置为游标来创建游标，则 cursor_name 返回该游标变量的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，此输出列可返回一个系统生成的名称。|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |状态|**int**|与 CURSOR_STATUS 系统函数报告的值相同的值：<br /><br /> 1 = 游标名称或游标变量引用的游标为打开状态。 如果游标是不敏感的、静态的或是键集，则至少具有一行。 如果游标是动态的，则结果集具有零行或多行。<br /><br /> 0 = 游标名称或游标变量引用的游标为打开状态，但不包含任何行。 动态游标从不返回此值。<br /><br /> -1 = 游标名称或游标变量引用的游标为关闭状态。<br /><br /> -2 = 仅适用于游标变量。 没有为该变量分配任何游标。 这可能是由于某个 OUTPUT 参数为该变量分配了游标，但存储过程在返回前关闭了游标。<br /><br /> -3 = 指定名称的游标或游标变量不存在，或没有为该游标变量分配游标。|  
-|模型|**tinyint**|1 = 不敏感（或静态）<br /><br /> 2 = 键集<br /><br /> 3 = 动态<br /><br /> 4 = 快进|  
+|model|**tinyint**|1 = 不敏感（或静态）<br /><br /> 2 = 键集<br /><br /> 3 = 动态<br /><br /> 4 = 快进|  
 |concurrency|**tinyint**|1 = 只读<br /><br /> 2 = 滚动锁<br /><br /> 3 = 乐观|  
 |scrollable|**tinyint**|0 = 只进<br /><br /> 1 = 可滚动|  
 |open_status|**tinyint**|0 = 关闭的<br /><br /> 1 = 打开的|  

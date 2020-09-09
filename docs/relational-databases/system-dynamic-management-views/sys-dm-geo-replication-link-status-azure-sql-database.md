@@ -15,16 +15,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6ebfac02130a40d7c8ad091c1825fcc0655913bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474886"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548465"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status（Azure SQL 数据库）
 
@@ -41,10 +41,10 @@ ms.locfileid: "88474886"
 |replication_lag_sec|**int**|基于主数据库时钟，在主数据库上的 last_replication 值与该事务的提交时间戳之间的时间差（以秒为单位）。  此值仅在主数据库上可用。|  
 |replication_state|**tinyint**|此数据库的异地复制状态，其中之一为：。<br /><br /> 1 = 种子设定。 异地复制目标正在进行种子设定，但两个数据库尚未同步。 在完成种子设定之前，你无法连接到辅助数据库。 从主数据库中删除辅助数据库将取消播种操作。<br /><br /> 2 = 追赶。 辅助数据库处于事务一致的状态，并与主数据库保持同步。<br /><br /> 4 = 已挂起。 这不是活动的连续复制关系。 此状态通常指示可用的互连带宽不足，无法满足主数据库上事务活动的水平。 但是，连续复制关系仍保持不变。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|角色 (role)|**tinyint**|异地复制角色，如下所示：<br /><br /> 0 = 主要。 Database_id 指的是异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助。  Database_id 指的是异地复制合作关系中的主数据库。|  
+|role|**tinyint**|异地复制角色，如下所示：<br /><br /> 0 = 主要。 Database_id 指的是异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助。  Database_id 指的是异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|辅助类型，为以下类型之一：<br /><br /> 0 = 不允许直接连接到辅助数据库，并且数据库不可用于读访问。<br /><br /> 2 = 允许对辅助复制中的数据库进行所有连接; i 用于只读访问。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> 全部|  
+|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> All|  
 |last_commit|**datetimeoffset**|上次提交给数据库的事务的时间。 如果在主数据库上检索，它表示主数据库上的上次提交时间。 如果在辅助数据库上检索，它将指示辅助数据库上的上次提交时间。 如果在复制链接的主节点关闭时在辅助数据库上检索，它将指示辅助数据库在哪个位置上捕获。|
   
 > [!NOTE]  
