@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492803"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525652"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88492803"
 |**page_size**|**int**|页大小（字节）。|  
 |**file_number**|**数值 (10，0) **|数据库中唯一的文件标识号 (对应于 **database_files**。**file_id**) 。|  
 |**backed_up_page_count**|**数值 (10，0) **|已备份的页数。 可以为 NULL。|  
-|**file_type**|**char (1) **|已备份文件，可以是下列类型之一：<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件。<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件。<br /><br /> F = 全文目录。<br /><br /> 可以为 NULL。|  
+|**file_type**|**char(1)**|已备份文件，可以是下列类型之一：<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件。<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件。<br /><br /> F = 全文目录。<br /><br /> 可以为 NULL。|  
 |**source_file_block_size**|**数值 (10，0) **|原始数据或日志文件备份时所在的设备。 可以为 NULL。|  
 |**file_size**|**numeric(20,0)**|备份文件的长度（字节）。 可以为 NULL。|  
 |**logical_name**|**nvarchar(128)**|备份文件的逻辑名称。 可以为 NULL。|  

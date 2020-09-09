@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485690"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525961"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours` 返回历史代理会话信息的时间范围（以小时为单位）。 *小时数* 为 **int**，可以是下列范围之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |< **0**|返回代理过去运行的信息，最多返回 100 条运行信息。|  
 |**0** （默认值）|返回代理过去运行的所有信息。|  
@@ -55,7 +55,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @session_type = ] session_type` 根据会话最终结果筛选结果集。 *session_type* 为 **int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|具有重试或成功结果的代理会话。|  
 |**0**|具有失败结果的代理会话。|  
@@ -71,10 +71,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|代理作业会话的 ID。|  
-|**Status**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
+|**状态**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
 |**StartTime**|**datetime**|时间代理作业会话开始。|  
 |**EndTime**|**datetime**|时间代理作业会话已完成。|  
-|**Duration**|**int**|此作业会话的累计时间（以秒为单位）。|  
+|**持续时间**|**int**|此作业会话的累计时间（以秒为单位）。|  
 |**UploadedCommands**|**int**|在代理会话过程中上载的命令的数目。|  
 |**DownloadedCommands**|**int**|在代理会话过程中下载的命令的数目。|  
 |**ErrorMessages**|**int**|在代理会话过程中生成的错误消息的数目。|  

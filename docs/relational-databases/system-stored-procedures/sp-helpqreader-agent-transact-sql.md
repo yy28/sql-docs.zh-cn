@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c638e7895d95518f59627643deb0b0070a19fa70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bdc306ed3622690e97b721f96c99dbc8efe0d1e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489277"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526518"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理的 ID。|  
-|**name**|**nvarchar (100) **|代理的名称。|  
+|name |**nvarchar (100) **|代理的名称。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|用于运行分发代理的 Windows 帐户，以*域* \\ *用户名*的格式返回。|  
 |**job_password**|**sysname**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
