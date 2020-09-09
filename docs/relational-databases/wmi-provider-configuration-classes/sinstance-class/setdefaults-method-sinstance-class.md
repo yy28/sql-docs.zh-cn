@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c454a5b2819a07ecb9152b0b9fbece48434c2fd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd00c04c726885966014cb40d0174e2226a4feb2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463601"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537594"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 方法（SInstance 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务器实例的 [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*OverwriteAll*|指定是否覆盖客户端实例上的现有值的布尔值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：如果覆盖现有数据， **则为 true** ; 如果不覆盖现有数据，则为 **false** 。|  
   

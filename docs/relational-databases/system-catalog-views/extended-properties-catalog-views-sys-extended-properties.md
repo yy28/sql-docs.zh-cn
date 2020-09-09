@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.extended_properties catalog view
 ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76a910b12f744aa0620ba81c3db872db3d63b3d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 154fadb3b2f5fc1fe5654c2e8ec70b213651b10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460723"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537534"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>扩展属性目录视图-sys. extended_properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88460723"
 |major_id|**int**|其上存在扩展属性的项的 ID，根据项类进行解释。 对于大多数项，该 ID 适用于类所表示的项。 下列是非标准主 ID 的解释：<br /><br /> 如果 class 为 0，则 major_id 始终为 0。<br /><br /> 如果 class 为 1、2 或 7，则 major_id 为 object_id。|  
 |minor_id|**int**|其上存在扩展属性的项的辅助 ID，根据项类进行解释。 对于大多数项，ID 为 0；否则，ID 为下列值之一：<br /><br /> 如果 class = 1，则 minor_id 在项为列的情况下等于 column_id，在项为对象的情况下等于 0。<br /><br /> 如果 class = 2，则 minor_id 为 parameter_id。<br /><br /> 如果 class = 7，则 minor _id 为 index_id。|  
 |name|**sysname**|属性名，其 class、major_id 和 minor_id 是唯一的。|  
-|value|**sql_variant**|扩展属性的值。|  
+|值|**sql_variant**|扩展属性的值。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

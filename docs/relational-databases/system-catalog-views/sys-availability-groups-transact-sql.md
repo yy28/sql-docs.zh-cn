@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17b30c17ba2102846f27904fe4678fa5072f317c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9d68c407a7a9e34cf5362f34e749f414a99130bd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498442"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537504"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88498442"
 ## <a name="failure-condition-level--values"></a>故障条件级别值  
  下表描述了 **failure_condition_level** 列的可能的失败条件级别。  
   
-|Value|失败条件|  
+|值|失败条件|  
 |-----------|-----------------------|  
 |1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> <br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务已关闭。<br /><br /> -用于连接到 WSFC 故障转移群集的可用性组的租约过期，因为没有从服务器实例接收到 ACK。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> <br /><br /> -的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未连接到群集，并且超出了可用性组的用户指定的 **health_check_timeout** 阈值。<br /><br /> -可用性副本处于失败状态。|  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 73406c2860dbff4dfb5f6488a2195a9f00be4bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10bc612a0dc2598c973f6a6d2e3db26b5e0d69ca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464441"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536685"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**16**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -83,7 +83,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|日期|  
+|**8**|天|  
 |**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
@@ -93,9 +93,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
@@ -105,7 +105,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|第三个|  
 |**8**|第四个|  
 |**16**|最后一个|  

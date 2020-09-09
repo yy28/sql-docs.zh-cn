@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481347"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536669"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,10 +51,10 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  一个必需参数，它指定游标将执行的操作。 *optype* 需要以下 **int** 输入值之一。  
   
-|值|名称|描述|  
+|值|名称|说明|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|用于更新提取缓冲区中的一行或多行。  重新访问和更新 *rownum* 中指定的行。|  
-|0x0002|删除|用于删除提取缓冲区中的一行或多个行。 重新访问和删除 *rownum* 中指定的行。|  
+|0x0002|DELETE|用于删除提取缓冲区中的一行或多个行。 重新访问和删除 *rownum* 中指定的行。|  
 |0X0004|INSERT|插入数据而不生成 SQL **INSERT** 语句。|  
 |0X0008|REFRESH|用于从基础表中重新填充缓冲区，并且可用于刷新行（如果由于乐观并发控制导致更新或删除失败或在某个 UPDATE 之后）。|  
 |0X10|LOCK|导致在包含指定行的页上获取 SQL Server U-锁。 此锁与 S 锁兼容，但不与 X 锁或其他 U 锁兼容。 可用于实现短期锁定。|  

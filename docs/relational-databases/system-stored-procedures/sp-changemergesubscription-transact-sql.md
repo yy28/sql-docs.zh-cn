@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1df7bd62aa2cecb23096121630eb0d89ce21dc8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474449"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536643"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,10 +53,10 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` 指定的 *属性*的新值。 *值* 为 **nvarchar (255) **，可以是表中的值之一。  
   
-|属性|值|描述|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |description||对该合并订阅的说明。|  
-|**大事**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  
+|**priority**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  
 |**merge_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**merge_job_password**||用来运行代理的 Windows 帐户的密码。|  
 |**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。|  
@@ -69,7 +69,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_password**||提供的订阅服务器登录的强密码。|  
 |**sync_type**|**自动**|已发布表的架构和初始数据将首先传输到订阅服务器。|  
 ||**无**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
-|**use_interactive_resolver**|true|允许交互式地解决所有允许交互式解决的项目的冲突。|  
+|**use_interactive_resolver**|**true**|允许交互式地解决所有允许交互式解决的项目的冲突。|  
 ||**false**|使用默认解决程序或自定义解决程序自动解决冲突。|  
 |NULL（默认值）|NULL（默认值）||  
   

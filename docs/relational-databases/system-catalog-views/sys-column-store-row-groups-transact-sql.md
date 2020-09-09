@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_row_groups catalog view
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a7a6f8a54469aa8a87eb02128ef91672ff69ea3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e10a81e518b9b82b8aea1ed100bad29974438c21
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486455"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537448"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88486455"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|对其定义此索引的表的 ID。|  
-|**index_id**|**int**|具有此列存储索引的表的索引 ID。|  
+|index_id|**int**|具有此列存储索引的表的索引 ID。|  
 |**partition_number**|**int**|保留行组 row_group_id 的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|**int**|与此行组关联的行组编号。 这在分区中是唯一的。<br /><br /> -1 = 内存中表的尾部。|  
 |**delta_store_hobt_id**|**bigint**|增量存储中打开的行组的 hobt_id。<br /><br /> 如果行组不在增量存储中，则为 NULL。<br /><br /> 对于内存中表的尾部，为 NULL。|  

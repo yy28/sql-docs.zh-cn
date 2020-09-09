@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumValue method
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7a40a838f9df9621314b87048ec4b5e143f692ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c886de5179bbcbfdc81c08e0ac910d0c2272eb39
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472881"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537162"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>SetNumValue 方法（ClientNetworkProtocolProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.SetNumValue [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  表示客户端使用的网络协议属性的 [ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*value*|一个指定所引用属性的数值的 **uint32** 值。|  
   

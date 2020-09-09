@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_pools dynamic management view
 ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5108e097ae54800a6a41c99d52af0ca4a92ce5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24ac0a1611d9b5996f2181a4d2c533bc2972bc86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493635"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536983"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88493635"
 |**memory_pool_address**|**varbinary(8)**|代表内存池的项的内存地址。 不可为 null。|  
 |**pool_id**|**int**|在一组池中的特定池的 ID。 不可为 null。|  
 |type|**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅 [sys.databases&#41;dm_os_memory_clerks &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
-|**name**|**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
+|name |**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
 |**max_free_entries_count**|**bigint**|池可以拥有的最大可用项的个数。 不可为 null。|  
 |**free_entries_count**|**bigint**|池中当前可用项的个数。 不可为 null。|  
 |**removed_in_all_rounds_count**|**bigint**|自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启动以来从池中删除的项数。 不可为 null。|  

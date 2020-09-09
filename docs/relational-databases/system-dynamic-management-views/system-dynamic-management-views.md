@@ -22,15 +22,15 @@ helpviewer_keywords:
 - server scoped dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server]
 ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1644a542a7f7c70b3f2293fbd340ddda9474721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ac37d2e2a908d25c9c4b90c8517d127086ed68
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322683"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536926"
 ---
 # <a name="system-dynamic-management-views"></a>系统动态管理视图
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ SELECT wait_type, wait_time_ms
 FROM sys.dm_os_wait_stats;  
 ```  
   
-### <a name="required-permissions"></a>所需权限  
+### <a name="required-permissions"></a>所需的权限  
  查询动态管理视图或函数需要对于对象具有 SELECT 权限以及 VIEW SERVER STATE 或 VIEW DATABASE STATE 权限。 这样您可以有选择地限制用户或登录名对动态管理视图和函数的访问。 为此，首先在 master 中创建用户，然后拒绝该用户对不希望被访问的动态管理视图或函数的 SELECT 权限。 此后，无论该用户的数据库上下文如何，用户都将无法选择这些动态管理视图或函数。  
   
 > [!NOTE]  

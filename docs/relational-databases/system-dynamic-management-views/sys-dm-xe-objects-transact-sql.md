@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0df750dd3f582e712c41a01ce1406586b2cecf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498275"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536880"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88498275"
  |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|对象的名称。 名称在特定对象类型的包中是唯一的。 不可为 null。|  
-|object_type|**nvarchar(60)**|对象的类型。 object_type 是以下项之一：<br /><br /> event<br /><br /> action<br /><br /> 目标<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可为 null。|  
+|object_type|**nvarchar(60)**|对象的类型。 object_type 是以下项之一：<br /><br /> event<br /><br /> action<br /><br /> 目标<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 类型<br /><br /> 不可为 null。|  
 |package_guid|**uniqueidentifier**|公开此操作的包的 GUID。 与 sys.dm_xe_packages.package_id 存在多对一关系。 不可为 null。|  
 |description|**nvarchar(256)**|操作的说明。 说明由包作者设置。 不可为 null。|  
 |capabilities|**int**|说明对象功能的位图。 可以为 Null。|  
@@ -59,7 +59,7 @@ ms.locfileid: "88498275"
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|多对一|  
   

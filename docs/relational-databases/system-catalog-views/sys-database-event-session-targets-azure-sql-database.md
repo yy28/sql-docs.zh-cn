@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db6c71d95637f2ddbdea6100ec94ff76aaa1f0ae
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 680cac9474fd63806c046ffeede22e83c04773c5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646115"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537393"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets（Azure SQL 数据库）
 
@@ -40,10 +40,10 @@ ms.locfileid: "88646115"
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-|From|功能|关系|  
+|From|到|关系|  
 |-|-|-|  
 |sys. database_event_session_targets event_session_id|sys. database_event_sessions event_session_id|多对一|  
   

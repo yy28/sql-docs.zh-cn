@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStringValue method
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 81424c3ca4819c04dd70483fcaa691278a6e10da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c74fb2f5aad5551c0c880e04037647b769c299a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446259"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537143"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>SetStringValue 方法（ClientNetworkProtocolProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  表示客户端使用的网络协议属性的 [ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*StrValue*|一个指定当前属性的新值的字符串值。|  
   

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetFlag method
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 726835f48299c1184b103029cdd0ef419435e987
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 287e52a1725eef212c545c622ec31436329c1ab6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485167"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537116"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag 方法（ServerNetworkProtocolProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.SetFlag(BoolValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示实例上的网络协议属性的 [ServerNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*BoolValue*|一个指定标志的新值的布尔值。|  
   

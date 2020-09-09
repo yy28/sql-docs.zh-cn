@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDisable method
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b5401d0eb4aa5d4682a078beb194e944c5923d88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 772e6c3eac9a6e6b9434e2cbb9e76f884cc031aa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488481"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537192"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法（ClientNetworkProtocol 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.SetDisable()
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示客户端使用的网络协议的 [ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

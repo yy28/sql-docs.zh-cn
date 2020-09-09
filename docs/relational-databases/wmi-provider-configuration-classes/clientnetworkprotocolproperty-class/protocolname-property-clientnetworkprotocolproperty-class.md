@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8c3d2a862204db74e4fbd381e8dcbd41345e2d0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0f8d790da05fb4a73aab0c96f1b35a56c26158b4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460163"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537182"
 ---
 # <a name="protocolname-property-clientnetworkprotocolproperty-class"></a>ProtocolName 属性（ClientNetworkProtocolProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  表示客户端使用的网络协议属性的 [ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 83fa8a16f7e541c2db9b48a132108825471fd662
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1d82a2f1a152bacf4458a92727d62da5d93f4c31
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447705"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537257"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>数据库镜像-sys. dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "88447705"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|此行对应的数据库的 ID。|  
-|**file_id**|**int**|页所在文件的 ID。|  
+|database_id|**int**|此行对应的数据库的 ID。|  
+|file_id|**int**|页所在文件的 ID。|  
 |**page_id**|**bigint**|文件中页的 ID。|  
 |**error_type**|**int**|错误类型。 值可以是：<br /><br /> **-** 1 = 所有硬件823错误<br /><br /> 1 = 错误的校验和或页撕裂以外的 824 错误（例如，错误的页 ID）<br /><br /> 2 = 错误的校验和<br /><br /> 3 = 页撕裂|  
 |**page_status**|**int**|页修复尝试的状态：<br /><br /> 2 = 排队等候来自伙伴的请求。<br /><br /> 3 = 请求已发送到伙伴。<br /><br /> 4 = 排队等候自动页修复（已收到来自伙伴的响应）。<br /><br /> 5 = 自动页修复已成功，页应当可用。<br /><br /> 6 = 无法修复页。 这表示在页修复尝试期间发生了错误，例如，可能是由于伙伴上的页也已损坏、已经断开与伙伴的连接或网络发生故障。 此状态不是最终状态；如果在此页上再次发现损坏，则将再次请求伙伴上的该页。|  

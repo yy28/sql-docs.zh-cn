@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_counters dynamic management view
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e6ba50ffa5695a5137c1bccd30b6c63ff7b0fa9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2455d20419ebb8f23b2146ca25637ac689a3c9b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397863"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536966"
 ---
 # <a name="sysdm_os_memory_cache_counters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88397863"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|指示与特定缓存关联的计数器的地址（主键）。 不可为 null。|  
-|**name**|**nvarchar(256)**|指定缓存的名称。 不可为 null。|  
+|name |**nvarchar(256)**|指定缓存的名称。 不可为 null。|  
 |type|**nvarchar(60)**|指示与该项关联的缓存的类型。 不可为 null。|  
 |**single_pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 已分配的单页内存量（千字节）。 这是通过单页分配器分配的内存量。 它指的是从此缓存的缓冲池中直接获取的 8 KB 页。 不可为 null。|  
 |**pages_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定缓存中分配的内存量 (KB)。 不可为 null。|  

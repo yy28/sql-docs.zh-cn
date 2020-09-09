@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_segments catalog view
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ebc2fe3ce3ddbdd02184e56d3629e8e6ccb0ce03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8e1bcb9bc00d8f8a4da1f511246fd3aedd2e366e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379223"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537434"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88379223"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|指示分区 ID。 在数据库中是唯一的。|  
 |**hobt_id**|**bigint**|具有此 columnstore 索引的表的堆或 B 树 (hobt) 的 ID。|  
-|**column_id**|**int**|列存储列的 ID。|  
+|column_id|**int**|列存储列的 ID。|  
 |**segment_id**|**int**|行组的 ID。 为实现向后兼容性，即使这是行组 ID，列名仍将继续 segment_id 调用。 使用 <segment_id> 可以唯一地标识段 \<hobt_id, partition_id, column_id> 。|  
 |**version**|**int**|列段格式的版本。|  
 |**encoding_type**|**int**|用于该段的编码类型：<br /><br /> 1 = 不包含字典的 VALUE_BASED 非字符串/二进制文件 (与4相比有一些内部变体) <br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。|  

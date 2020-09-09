@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e52c737798c6aff82194d74808edb1e37a9f8531
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2255471d44962aae91147f7a3e903bfe9a240cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486410"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537381"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88486410"
   
 |列|类型|说明|  
 |------------|----------|-----------------|  
-|**database_id**|**int**|数据库的 ID。 此值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
+|database_id|**int**|数据库的 ID。 此值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
 |**directory_name**|**nvarchar(255)**|所有 FileTable 命名空间的数据库级别目录。|  
 |**non_transacted_access**|**tinyint**|已启用的针对 FILESTREAM 数据的非事务性访问的级别。 访问级别由 **CREATE database** 或 **ALTER database** 语句的 NON_TRANSACTED_ACCESS 选项设置。<br /><br /> 此设置具有以下值之一：<br /><br /> 0-未启用。 这是默认值。 通过为**NON_TRANSACTED_ACCESS**选项提供 " **OFF** " 值来设置此级别。<br /><br /> 1-只读访问。 通过提供**NON_TRANSACTED_ACCESS**选项**READ_ONLY**的值来设置此级别。<br /><br /> 3-完全访问权限。 通过为**NON_TRANSACTED_ACCESS**选项提供**FULL**值来设置此级别。<br /><br /> 5 - 正在转换到 READONLY<br /><br /> 6-正在转换为 OFF|  
 |**non_transacted_access_desc**|**nvarchar(60)**|Non_transacted_access 中标识的非事务性访问级别的说明。<br /><br /> 此设置具有以下值之一：<br /><br /> 无-这是默认值。<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  

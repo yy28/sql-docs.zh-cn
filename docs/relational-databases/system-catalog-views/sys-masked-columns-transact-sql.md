@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.masked_columns catalog view
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7884ec6f980c001578b8e049ed8c1ee1f3da8629
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 2e8c61cfbce42517f63729f35e159b479b3120f6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646107"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537360"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-sql) 
 
@@ -41,7 +41,7 @@ ms.locfileid: "88646107"
 |is_masked|**bit**|指示是否屏蔽该列。 1表示掩码。|  
 |masking_function|**nvarchar(4000)**|列的掩码函数。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
  此视图返回有关用户对表具有某种权限或用户具有 VIEW ANY DEFINITION 权限的表的信息。  

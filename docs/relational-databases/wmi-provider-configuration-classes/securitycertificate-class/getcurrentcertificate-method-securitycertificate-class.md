@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f245bbd7e0e7c43c1401e604ed0b69896de65ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a341dec5f50a798cd2534e102416df2bc21a538
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488458"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537153"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate 方法（SecurityCertificate 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*SHA*|一个在方法完成后指定当前安全证书 SHA 指纹的字符串值（输出参数）。|  
 |*SQLInstance*|一个为所需证书指定实例的字符串值。|  
