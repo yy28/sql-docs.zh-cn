@@ -2,7 +2,7 @@
 description: sys.dm_os_volume_stats (Transact-SQL)
 title: sys. dm_os_volume_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2019
+ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6e6eb3ccf2823af437fc37cdddfa2b0b640ae12
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539240"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614604"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,18 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**列**|**Data type**|**说明**|  
 |database_id|**int**|数据库 ID。 不能为 null。|  
 |file_id|**int**|文件的 ID。 不能为 null。|  
-|**volume_mount_point**|**nvarchar(512)**|根卷上的装入点。 可返回空字符串。|  
-|**volume_id**|**nvarchar(512)**|操作系统卷 ID。 可以返回空字符串|  
-|**logical_volume_name**|**nvarchar(512)**|逻辑卷名称。 可以返回空字符串|  
-|**file_system_type**|**nvarchar(512)**|文件系统卷的类型（例如 NTFS、FAT、RAW）。 可以返回空字符串|  
+|**volume_mount_point**|**nvarchar(512)**|根卷上的装入点。 可返回空字符串。 在 Linux 操作系统上返回 null。|  
+|**volume_id**|**nvarchar(512)**|操作系统卷 ID。 可返回空字符串。 在 Linux 操作系统上返回 null。|  
+|**logical_volume_name**|**nvarchar(512)**|逻辑卷名称。 可返回空字符串。 在 Linux 操作系统上返回 null。|  
+|**file_system_type**|**nvarchar(512)**|文件系统卷的类型（例如 NTFS、FAT、RAW）。 可返回空字符串。 在 Linux 操作系统上返回 null。|  
 |**total_bytes**|**bigint**|卷的总大小（字节）。 不能为 null。|  
 |**available_bytes**|**bigint**|卷上的可用空间。 不能为 null。|  
-|**supports_compression**|**bit**|指示卷是否支持操作系统压缩。 不能为 null。|  
-|**supports_alternate_streams**|**bit**|指示卷是否支持备用流。 不能为 null。|  
-|**supports_sparse_files**|**bit**|指示卷是否支持稀疏文件。  不能为 null。|  
-|**is_read_only**|**bit**|指示卷当前是否标记为只读。 不能为 null。|  
-|**is_compressed**|**bit**|指示此卷当前是否已压缩。 不能为 null。|  
+|**supports_compression**|**tinyint**|指示卷是否支持操作系统压缩。 在 Windows 上不能为 null，并且在 Linux 操作系统上返回 null。|  
+|**supports_alternate_streams**|**tinyint**|指示卷是否支持备用流。 在 Windows 上不能为 null，并且在 Linux 操作系统上返回 null。|  
+|**supports_sparse_files**|**tinyint**|指示卷是否支持稀疏文件。  在 Windows 上不能为 null，并且在 Linux 操作系统上返回 null。|  
+|**is_read_only**|**tinyint**|指示卷当前是否标记为只读。 不能为 null。|  
+|**is_compressed**|**tinyint**|指示此卷当前是否已压缩。 在 Windows 上不能为 null，并且在 Linux 操作系统上返回 null。|  
+|**incurs_seek_penalty**|**tinyint**|指示支持此卷的存储的类型。 可能的值为：<br /><br />0：在此卷上无搜寻惩罚，通常是在存储设备为 PMM 或 SSD 时<br /><br />1：在此卷上搜寻惩罚，通常是在存储设备是 HDD 时<br /><br />2：当卷位于 UNC 路径或装载的共享上时，无法确定存储类型<br /><br />NULL：无法在 Linux 操作系统上确定存储类型<br /><br />**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从) 开始 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|  
   
 ## <a name="security"></a>安全性  
   
