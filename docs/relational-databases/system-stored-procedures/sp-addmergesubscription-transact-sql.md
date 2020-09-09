@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 197715e613e35e71068723fe90f2643e2373817e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d89340dfb073548378e8d4a9eb4929f836a2bbb9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489575"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529721"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -75,7 +75,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'` 订阅服务器的类型。 *subscriber_type*为 **nvarchar (15) **，可以为以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**本地** (默认值) |订阅服务器仅对发布服务器是已知的。|  
 |**global**|订阅服务器对所有服务器都是已知的。|  
@@ -91,10 +91,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type` 指示何时运行合并代理的值。 *frequency_type* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**10**|每月一次|  
 |**20**|每月，相对于频率间隔|  
@@ -103,7 +103,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval` 合并代理运行的日期。 *frequency_interval* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -112,17 +112,17 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|日期|  
+|**8**|天|  
 |**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 每月计划合并频率间隔。 *frequency_relative_interval* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|第三个|  
 |**8**|第四个|  
 |**16**|最后一个|  
@@ -132,12 +132,12 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`*Frequency_subday_interval*的单位。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval` 每次合并之间 *frequency_subday* 发生的频率。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
@@ -189,7 +189,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="see-also"></a>另请参阅  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [交互式冲突解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
+ [交互式冲突解决方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

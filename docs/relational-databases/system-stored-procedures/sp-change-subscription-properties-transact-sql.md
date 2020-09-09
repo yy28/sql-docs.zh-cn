@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da197fc6b4cc8b253b3597981a6973e9b77891bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493425"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528638"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|描述|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||指定快照的备用文件夹的位置。 如果设置为 NULL，则将从发布服务器指定的默认位置提取快照文件。|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
@@ -94,9 +94,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_password**||发布者密码。 只有对合并发布的订阅才支持更改 *publisher_password* 。|  
 |**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 只有对合并发布的订阅才支持更改 *publisher_security_mode* 。|  
 ||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
-|**use_ftp**|true|使用 FTP 代替常规协议来检索快照。|  
+|**use_ftp**|**true**|使用 FTP 代替常规协议来检索快照。|  
 ||**false**|使用常规协议来检索快照。|  
-|**use_web_sync**|true|启用 Web 同步。|  
+|**use_web_sync**|**true**|启用 Web 同步。|  
 ||**false**|禁用 Web 同步。|  
 |**working_directory**||使用文件传输协议 (FTP) 传输快照文件时，用于临时存储发布的数据和架构文件的工作目录的名称。|  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489630"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529830"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,10 +87,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'` 发布服务器的初始同步模式。 *sync_mode* 为 **nvarchar (10) **，可以是以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**本机** (默认值) |生成所有表的本机模式大容量复制程序输出。|  
-|**字符**|生成所有表的字符模式大容量复制程序输出。 需要支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。|  
+|**character**|生成所有表的字符模式大容量复制程序输出。 需要支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。|  
   
 `[ @allow_push = ] 'allow_push'` 指定是否可以为给定发布创建推送订阅。 *allow_push* 为 **nvarchar (5) **，默认值为 TRUE，表示允许对发布使用推送订阅。  
   
@@ -163,9 +163,9 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'` 指定应使用预计算分区来优化同步过程。 *use_partition_groups* 为 **nvarchar (5) **，可以是以下值之一：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
-|true|发布使用预计算分区。|  
+|**true**|发布使用预计算分区。|  
 |**false**|发布不使用预计算分区。|  
 |NULL（默认值）|由系统确定分区策略。|  
   
@@ -173,7 +173,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level` 指示发布的向后兼容性。 *backward_comp_level* 为 **nvarchar (6) **，可以是以下值之一：  
   
-|Value|版本|  
+|值|版本|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -201,10 +201,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`指定保持期设置的保持期的单位 *。* *retention_period_unit* 为 **nvarchar (10) **，可以是以下值之一。  
   
-|Value|版本|  
+|值|版本|  
 |-----------|-------------|  
 |**日期** (默认值) |按天指定保持期。|  
-|week|按周指定保持期。|  
+|week |按周指定保持期。|  
 |**month**|按月指定保持期。|  
 |**year**|按年指定保持期。|  
   
@@ -217,7 +217,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'` 指定存储冲突记录的位置。 *conflict_logging* 为 **nvarchar (15) **，可以为以下值之一：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**publisher**|在发布服务器上存储冲突记录。|  
 |**订阅服务器**|在导致冲突的订阅服务器上存储冲突记录。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器不支持此值。|  
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>另请参阅  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
