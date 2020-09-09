@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_background_job_queue dynamic management function
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e169cfdf49a4808f53796acc4a6c2923b722d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4499bbffd3e5b14eb870db2bf55e639188c08912
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454969"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89533935"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "88454969"
 |-----------------|---------------|-----------------|  
 |**time_queued**|**datetime**|作业添加到队列中的时间。|  
 |**job_id**|**int**|作业标识符。|  
-|**database_id**|**int**|执行作业所在的数据库。|  
-|**object_id1**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id2**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id3**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id4**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
+|database_id|**int**|执行作业所在的数据库。|  
+|**object_id1**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id2**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id3**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id4**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
 |**error_code**|**int**|如果因失败而重新插入作业，则为错误代码。 如果作业已挂起、未被选取或已完成，则为 NULL。|  
 |**request_type**|**smallint**|作业请求的类型。|  
 |**retry_count**|**smallint**|从队列中选取作业又因缺少资源或其他原因而将其重新插入队列的次数。|  

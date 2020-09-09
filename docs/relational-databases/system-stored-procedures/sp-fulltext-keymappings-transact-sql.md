@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59445fdd9d4d7588291b2fac0073b962155cde04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c426c12b38adc491e42b9392d7a36c47f3fd46f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464336"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536340"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -63,7 +63,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|与键值相对应的内部文档标识符 (DocId) 列。|  
-|键|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
+|密钥|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
   
  <sup>*</sup> Key 的数据类型与基表中全文键列的数据类型相同。  
   

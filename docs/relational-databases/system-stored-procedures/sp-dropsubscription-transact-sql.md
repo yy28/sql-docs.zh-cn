@@ -1,5 +1,5 @@
 ---
-title: sp_dropsubscription （Transact-sql） |Microsoft Docs
+title: sp_dropsubscription (Transact-sql) |Microsoft Docs
 description: 删除对发布服务器上的项目、发布或订阅的订阅。 此存储过程在发布服务器的发布数据库上运行。
 ms.custom: ''
 ms.date: 03/03/2017
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8c13030b1232a01aac14ac936323c05c540ab1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783025"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536528"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,14 +42,14 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
     [ , [ @reserved= ] 'reserved' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publication = ] 'publication'`关联发布的名称。 *发布*为**sysname**，默认值为 NULL。 如果为**all**，则取消对指定订阅服务器的所有发布的所有订阅。 *发布*是必需的参数。  
+## <a name="arguments"></a>参数  
+`[ @publication = ] 'publication'` 关联发布的名称。 *发布* 为 **sysname**，默认值为 NULL。 如果为 **all**，则取消对指定订阅服务器的所有发布的所有订阅。 *发布* 是必需的参数。  
   
-`[ @article = ] 'article'`项目的名称。 *项目*的值为**sysname**，默认值为 NULL。 如果为**all**，则删除针对每个指定发布和订阅服务器的所有项目的订阅。 对于允许立即更新的发布，请使用**all** 。  
+`[ @article = ] 'article'` 项目的名称。 *项目* 的值为 **sysname**，默认值为 NULL。 如果为 **all**，则删除针对每个指定发布和订阅服务器的所有项目的订阅。 对于允许立即更新的发布，请使用 **all** 。  
   
-`[ @subscriber = ] 'subscriber'`将删除其订阅的订阅服务器的名称。 *订阅服务器*的**sysname**，无默认值。 如果为**all**，则删除所有订阅服务器的所有订阅。  
+`[ @subscriber = ] 'subscriber'` 将删除其订阅的订阅服务器的名称。 *订阅服务器* 的 **sysname**，无默认值。 如果为 **all**，则删除所有订阅服务器的所有订阅。  
   
-`[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db*的默认值为**sysname**，默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
+`[ @destination_db = ] 'destination_db'` 目标数据库的名称。 *destination_db* 的默认值为 **sysname**，默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -58,10 +58,10 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_dropsubscription**用于快照复制和事务复制。  
+ **sp_dropsubscription** 用于快照复制和事务复制。  
   
  如果删除即时同步发布中的一个项目上的订阅，则不能再对其进行重新添加，除非是删除发布中所有项目上的订阅并同时对它们进行重新添加。  
   
@@ -69,7 +69,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员、 **db_owner**固定数据库角色的成员或创建订阅的用户才能执行**sp_dropsubscription**。  
+ 只有 **sysadmin** 固定服务器角色的成员、 **db_owner** 固定数据库角色的成员或创建订阅的用户才能执行 **sp_dropsubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   

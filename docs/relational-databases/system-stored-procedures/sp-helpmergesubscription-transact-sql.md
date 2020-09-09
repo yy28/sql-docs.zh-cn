@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464227"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535186"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'` 订阅的类型。 *subscription_type*为 **nvarchar (15) **，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**推送** (默认值) |推送订阅|  
 |**请求**|请求订阅|  
@@ -77,7 +77,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|订阅状态：<br /><br /> **0** = 所有作业都在等待启动<br /><br /> **1** = 一个或多个作业正在启动<br /><br /> **2** = 所有作业都已成功执行<br /><br /> **3** = 至少有一个作业正在执行<br /><br /> **4** = 所有作业都已计划且空闲<br /><br /> **5** = 在上次失败后至少有一个作业正在尝试执行<br /><br /> **6** = 至少有一个作业无法成功执行|  
 |**subscriber_type**|**int**|订阅服务器的类型。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 两者|  
-|**大事**|**float (8) **|指示订阅优先级的数字。|  
+|**priority**|**float (8) **|指示订阅优先级的数字。|  
 |**sync_type**|**tinyint**|订阅同步类型。|  
 |description|**nvarchar(255)**|对该合并订阅的简短说明。|  
 |**merge_jobid**|**binary(16)**|合并代理的作业 ID。|  

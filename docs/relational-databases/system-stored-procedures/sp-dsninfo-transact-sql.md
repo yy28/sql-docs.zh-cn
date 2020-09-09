@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 378b50379ab03124db37c296be273f0a68db59d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 451d19531bbee4814fe9335bc4aaba7707263a10
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486070"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535991"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'` 要返回的信息的类型。 如果未指定 *info_type* 或指定 NULL，则返回所有信息类型。 *info_type* 是 **varchar (128) **，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**DBMS_NAME**|指定数据源供应商名称。|  
 |**DBMS_VERSION**|指定数据源版本。|  
@@ -59,7 +59,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type` 数据源类型。 *dso_type* 为 **int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|ODBC 数据源|  
 |**3**|OLE DB 数据源|  

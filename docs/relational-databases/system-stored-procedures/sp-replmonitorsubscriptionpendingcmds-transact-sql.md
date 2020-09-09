@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds （T-sql）
+title: 'sp_replmonitorsubscriptionpendingcmds (T-sql) '
 description: 介绍 sp_replmonitorsubscriptionpendingcmds 存储过程，该存储过程返回有关对事务发布的订阅的挂起命令的数目的信息。
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f8f07a38d612375030f43e2faf2194d4bc65bca8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b83c6492f065f29335bc4665156c02a18367795
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786129"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534895"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,20 +42,20 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
         , [ @subscription_type = ] subscription_type  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'`已发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 已发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的**sysname**，无默认值。  
+`[ @subscriber = ] 'subscriber'` 订阅服务器的名称。 *订阅服务器* 的 **sysname**，无默认值。  
   
-`[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db* **sysname**，无默认值。  
+`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscriber_db* **sysname**，无默认值。  
   
-`[ @subscription_type = ] subscription_type`如果订阅的类型为。 *publication_type*是**int**，没有默认值，可以是下列值之一。  
+`[ @subscription_type = ] subscription_type` 如果订阅的类型为。 *publication_type* 是 **int**，没有默认值，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|推送订阅|  
 |**1**|请求订阅|  
@@ -68,13 +68,13 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |**estimatedprocesstime**|**int**|将所有等待的命令传递到订阅服务器所需的估计秒数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replmonitorsubscriptionpendingcmds**用于事务复制。  
+ **sp_replmonitorsubscriptionpendingcmds** 用于事务复制。  
   
 ## <a name="permissions"></a>权限  
- 只有分发服务器上**sysadmin**固定服务器角色的成员或分发数据库中**db_owner**固定数据库角色的成员才能执行**sp_replmonitorsubscriptionpendingcmds**。 使用分发数据库的发布的发布访问列表的成员可以执行**sp_replmonitorsubscriptionpendingcmds**以返回该发布的挂起命令。  
+ 只有分发服务器上 **sysadmin** 固定服务器角色的成员或分发数据库中 **db_owner** 固定数据库角色的成员才能执行 **sp_replmonitorsubscriptionpendingcmds**。 使用分发数据库的发布的发布访问列表的成员可以执行 **sp_replmonitorsubscriptionpendingcmds** 以返回该发布的挂起命令。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

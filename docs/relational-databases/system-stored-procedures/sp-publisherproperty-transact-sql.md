@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3b04284605289d731b0a8eb955830ab149827114
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 459e5c7c702f01cbae74843e4ed8b3152d25626f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489199"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534965"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'` 要设置的属性的名称。 *propertyname* 为 **sysname**，可以为以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**xactsetbatching**|是否将发布服务器上的事务分组成在事务上一致的集合（称为 Xactset），以进行后续处理。 值为 **enabled** 表示可以创建 xactset，这是默认值。 如果值为 " **禁用** "，则表示不会创建新的 xactset 来处理现有的 xactset。|  
 |**xactsetjob**|是否启用 Xactset 作业以创建 Xactset。 值为 **enabled** 表示 Xactset 作业定期运行以在发布服务器上创建 xactset。 如果值为 " **禁用** "，则表示 xactset 仅在轮询发布服务器的更改时由日志读取器代理创建。|  

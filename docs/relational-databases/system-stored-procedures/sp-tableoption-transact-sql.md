@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06655c8dd684ca89d6e67b065d3943ee57f752fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3920007400a4ae407303f3fddff50c0a5ace2328
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473557"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534792"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] "*option_name*"  
  表选项名称。 *option_name* 是 **varchar (35) **，无默认值 NULL。 *option_name* 可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |table lock on bulk load|禁用时（默认值），使用户定义表的大容量处理获得行锁。 启用时，使用户定义表的大容量处理获得大容量更新锁。|  
 |insert row lock|不再支持。<br /><br /> 此选项对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的锁定行为没有影响，保留此选项只是为了与现有脚本和过程兼容。|  
@@ -137,7 +137,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ## <a name="see-also"></a>另请参阅  
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dccdb0f168b7b1e113a38c64a111e35e5bf62d77
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485825"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534980"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'` 指示是否只返回表的行计数。 *rowcount_only* 为 **smallint** ，可以为以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意：水平筛选项目时，将执行行计数操作，而不是校验和操作。|  
 |**1** （默认值）|仅执行行计数检查。|  
@@ -54,7 +54,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] 'full_or_fast'` 用于计算行计数的方法。 *full_or_fast* 为 **tinyint** ，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|使用 COUNT(*) 进行完整计数。|  
 |**1**|从 **sysindexes**中快速计数。 计算 [sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 中的行比计算实际表中的行的速度要快得多。 但是，因为 [sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 被延迟更新，所以行计数可能不准确。|  

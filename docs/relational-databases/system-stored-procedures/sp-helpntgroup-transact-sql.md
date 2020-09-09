@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9ad0853553de51ba53b363bc400facde0c01652e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a88caee8d332a4802f4281360f93392ae29aa2c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485928"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535158"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows 组的名称。|  
 |**NTGroupId**|**smallint**|组标识符 (ID)。|  
-|**SID**|**varbinary (85) **|**NTGroupName**的安全标识符 (SID) 。|  
+|**SID**|**varbinary(85)**|**NTGroupName**的安全标识符 (SID) 。|  
 |**HasDbAccess**|**int**|1 = Windows 组有权访问数据库。|  
   
 ## <a name="remarks"></a>备注  
@@ -68,10 +68,10 @@ EXEC sp_helpntgroup;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_revokedbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
+ [sp_revokedbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
