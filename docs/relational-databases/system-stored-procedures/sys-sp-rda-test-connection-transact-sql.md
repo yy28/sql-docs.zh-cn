@@ -1,5 +1,5 @@
 ---
-title: sys. sp_rda_test_connection （Transact-sql） |Microsoft Docs
+title: sys. sp_rda_test_connection (Transact-sql) |Microsoft Docs
 description: 了解如何使用 sp_rda_test_connection 来测试从 SQL Server 到远程 Azure 服务器的连接，并报告可能阻止数据迁移的问题。
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246486"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540395"
 ---
-# <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection （Transact-sql）
+# <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   测试从 SQL Server 到远程 Azure 服务器的连接，并报告可能阻止数据迁移的问题。  
@@ -43,36 +43,36 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>参数  
- @database_name= N '*db_name*'  
+ @database_name = N '*db_name*'  
  已启用延伸的 SQL Server 数据库的名称。 此参数是可选的。  
   
- @server_address= N '*azure_server_fully_qualified_address*'  
+ @server_address = N '*azure_server_fully_qualified_address*'  
  Azure 服务器的完全限定的地址。  
   
 -   如果为** \@ database_name**提供了一个值，但指定的数据库未启用 Stretch，则必须为** \@ server_address**提供一个值。  
   
 -   如果为** \@ database_name**提供了一个值，并且指定的数据库已启用 Stretch，则无需为** \@ server_address**提供值。 如果为** \@ server_address**提供值，存储过程将忽略它，并使用已与已启用延伸的数据库相关联的现有 Azure 服务器。  
   
- @azure_username= N '*azure_username*  
+ @azure_username = N '*azure_username*  
  远程 Azure 服务器的用户名。  
   
- @azure_password= N '*azure_password*'  
+ @azure_password = N '*azure_password*'  
  远程 Azure 服务器的密码。  
   
- @credential_name= N '*credential_name*'  
+ @credential_name = N '*credential_name*'  
  您可以提供已启用 Stretch 的数据库中存储的凭据的名称，而不是提供用户名和密码。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 如果**成功**，sp_rda_test_connection 将返回错误14855（STRETCH_MAJOR，STRETCH_CONNECTION_TEST_PROC_SUCCEEDED），其中包含严重性 EX_INFO 和成功返回代码。  
+ 如果 **成功**，sp_rda_test_connection 将返回错误 14855 (STRETCH_MAJOR，STRETCH_CONNECTION_TEST_PROC_SUCCEEDED 包含严重性) 的 EX_INFO 和成功返回代码。  
   
- 如果**出现故障**，sp_rda_test_connection 将返回错误14856（STRETCH_MAJOR，STRETCH_CONNECTION_TEST_PROC_FAILED），其严重性为 EX_USER 并返回错误。  
+ 如果 **失败**，sp_rda_test_connection 将返回错误 14856 (STRETCH_MAJOR，STRETCH_CONNECTION_TEST_PROC_FAILED 包含严重性) 的 EX_USER 和错误返回代码。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|link_state|int|以下值之一，对应于**link_state_desc**的值。<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
-|link_state_desc|varchar(32)|以下值之一，对应于**link_state**前面的值。<br /><br /> -正常<br />     SQL Server 与远程 Azure 服务器之间的状况良好。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火墙阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-ERROR_NO_CONNECTION<br />     SQL Server 无法建立与远程 Azure 服务器的连接。<br />-ERROR_AUTH_FAILURE<br />     身份验证失败会阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-错误<br />     不是身份验证问题、连接问题或防火墙问题的错误正在阻止 SQL Server 与远程 Azure 服务器之间的链接。|  
+|link_state|int|以下值之一，对应于 **link_state_desc**的值。<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
+|link_state_desc|varchar(32)|以下值之一，对应于 **link_state**前面的值。<br /><br /> -正常<br />     SQL Server 与远程 Azure 服务器之间的状况良好。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火墙阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-ERROR_NO_CONNECTION<br />     SQL Server 无法建立与远程 Azure 服务器的连接。<br />-ERROR_AUTH_FAILURE<br />     身份验证失败会阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-错误<br />     不是身份验证问题、连接问题或防火墙问题的错误正在阻止 SQL Server 与远程 Azure 服务器之间的链接。|  
 |error_number|int|错误号。 如果没有错误，则此字段为 NULL。|  
 |error_message|nvarchar(1024)|错误消息。 如果没有错误，则此字段为 NULL。|  
   

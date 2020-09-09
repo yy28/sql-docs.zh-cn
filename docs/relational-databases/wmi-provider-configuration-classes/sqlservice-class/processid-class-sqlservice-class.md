@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProcessId property
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0e998dad0b768ebfcca33b83a8128dc44c776acc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4e6ceb18ecda885481860bf9889143bccfd0ed6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463591"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539998"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 类（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.ProcessId [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

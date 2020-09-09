@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb32803d759ff89a7c41addde56d9fa5dd76644
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473779"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540491"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *Mode*参数可具有以下值：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |ALL|返回对象或数据库的存储统计信息，其中包括本地部分和远程部分。|  
 |LOCAL_ONLY|返回仅对象或数据库的本地部分的存储统计信息。 如果对象或数据库未启用 Stretch，则返回与 = ALL 相同的统计信息 @mode 。|  
@@ -71,7 +71,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 `[ @oneresultset = ] oneresultset` 指示是否返回单个结果集。 *Oneresultset*参数可具有以下值：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|当* \@ objname*为 null 或未指定时，将返回两个结果集。 默认行为是两个结果集。|  
 |1|如果* \@ objname* = null 或未指定，则返回单个结果集。|  
@@ -118,8 +118,8 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|请求其空间使用信息的对象的名称。<br /><br /> 不返回对象的架构名称。 如果架构名称是必需的，请使用 [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 或 [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理视图获取等效大小的信息。|  
-|**各**|**char (20) **|表中现有的行数。 如果指定的对象是 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列，该列将指示队列中的消息数。|  
+|name |**nvarchar(128)**|请求其空间使用信息的对象的名称。<br /><br /> 不返回对象的架构名称。 如果架构名称是必需的，请使用 [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 或 [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理视图获取等效大小的信息。|  
+|**行**|**char (20) **|表中现有的行数。 如果指定的对象是 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列，该列将指示队列中的消息数。|  
 |**保护**|**varchar (18) **|*Objname*的保留空间总量。|  
 |**data**|**varchar (18) **|*Objname*中的数据所用的空间总量。|  
 |**index_size**|**varchar (18) **|*Objname*中的索引使用的空间总量。|  
@@ -253,8 +253,8 @@ GO
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

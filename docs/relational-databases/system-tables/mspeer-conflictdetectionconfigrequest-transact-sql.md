@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigrequest （T-sql）
+title: 'MSpeer_conflictdetectionconfigrequest (T-sql) '
 description: 描述用于跟踪对等发布的拓扑范围配置请求的 MSPeer_conflictdetectionconfigurerequest 存储过程。
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigurerequest
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef226872ae70f7b089e118fffd799d1f3394a228
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ad027934c2ff0a0009512334c0d7d1a89a7bcb7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889691"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540321"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "85889691"
 |sent_date|**datetime**|发起冲突配置请求的日期和时间。|  
 |timeout|**int**|过程应等待所有对等方返回冲突信息的时间。|  
 |modified_date|**datetime**|阶段的完成日期和时间。|  
-|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> 已开始<br /><br /> 正在浏览拓扑<br /><br /> 正在收集状态<br /><br /> 已收集状态|  
+|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> Started<br /><br /> 正在浏览拓扑<br /><br /> 正在收集状态<br /><br /> 已收集状态|  
 |phase_timed_out|**bit**|指示当前阶段是否已超时。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

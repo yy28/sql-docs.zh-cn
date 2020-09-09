@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Date property
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9e3e2cc272cb233e110d331ac5c607e9332954f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2d87dc569ce146bbdecbabf42cf07a90092af4b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463687"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540804"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 属性（ClientNetLibInfo 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.Date [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示有关客户端网络库的信息的 [ClientNetLibInfo 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 63937cb2d7a3aaf3994712aa493097597cd26c53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446445"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540011"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 类
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ class SQLErrorLogFile
 ## <a name="properties"></a>属性  
  SQLErrorLogFile 类定义以下属性。  
   
-| 属性 | 描述 |
+| 属性 | 说明 |
 | -------- | ----------- |
 |ArchiveNumber|数据类型： **uint32**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 日志文件的存档号。|  
 |InstanceName|数据类型： **字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  

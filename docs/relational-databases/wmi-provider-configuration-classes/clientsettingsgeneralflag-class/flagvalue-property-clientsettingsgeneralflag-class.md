@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagValue property
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0e4c94c1a96688859b10418ca0fc1625cb96fe92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 715a36cc672e48b7b900d9acf167c8637109db91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427289"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540073"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 属性（ClientSettingsGeneralFlag 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.FlagValue [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务器设置的常规标志的 [ClientSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
