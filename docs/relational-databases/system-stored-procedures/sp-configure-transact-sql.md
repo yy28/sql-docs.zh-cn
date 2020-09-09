@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 17a4e6aa23b7792daf2d7fe27c694f88cc8abe70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481419"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536625"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -75,7 +75,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>结果集  
  在不带参数的情况下执行时， **sp_configure** 将返回包含五列的结果集，并按字母顺序升序排列选项，如下表所示。  
   
- **Config_value**和**run_value**的值不是自动等效的。 使用 **sp_configure**更新配置设置后，系统管理员必须使用 "重新配置" 或 "使用替代重新配置" 更新正在运行的配置值。 有关详细信息，请参见“备注”部分。  
+ **Config_value**和**run_value**的值不是自动等效的。 使用 **sp_configure**更新配置设置后，系统管理员必须使用 "重新配置" 或 "使用替代重新配置" 更新正在运行的配置值。 有关详细信息，请参阅“备注”部分。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -174,7 +174,7 @@ EXEC sp_configure @configname='hadoop connectivity';
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [软件 NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
