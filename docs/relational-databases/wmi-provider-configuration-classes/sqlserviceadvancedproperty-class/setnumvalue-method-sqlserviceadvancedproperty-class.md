@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumValue method
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a67607dcf70b5d8a77eba098ba3090bd1ec552f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e9c06349348b24e58f16644fa77dfd602a7570b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427149"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545214"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue 方法（SqlServiceAdvancedProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.SetNumValue(NumValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 #### <a name="parameters"></a>参数  

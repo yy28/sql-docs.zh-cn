@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a5c74d4d45b374ae9c33b38a9872526333890856
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2a99b8bbc94bf8e62cd8125e01327a4691a296cb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488521"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545304"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance 类 - SetDefaults 方法
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,12 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示 [客户端实例的](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) CInstance 类 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*OverwriteAll*|指定是否覆盖客户端实例上的现有值的布尔值：如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **true 则** 覆盖现有数据，则为 **false** ; 如果不覆盖现有数据，则为 false。|  
   

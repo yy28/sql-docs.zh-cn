@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Context property
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2a39850d2b4dfa2e298e48baf42db2cc60615c95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e6c2c0d42e7b6d38e5a252cb8a1052fc87ed47b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460131"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545274"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context 属性（SecurityCertificate 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.Context [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ErrorControl property
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 47b62734773d7b3e4f027d0e31671f65a66ae9a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c0c802c236495a5de48c2617a76f4422e608fca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427199"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545230"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 属性（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -55,7 +55,7 @@ object.ErrorControl [= value]
  严重  
  系统将尝试使用正确的配置重新启动。  
   
- 未知  
+ Unknown  
  严重性未知。  
   
 ## <a name="remarks"></a>备注  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.symmetric_keys catalog view
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e87378465e9b3f74d14b9b70f4ab84ff00c1159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbaba2c61112726b2dcecdfb02740cfc6a040079
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490071"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545044"
 ---
 # <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88490071"
 |**algorithm_desc**|**nvarchar(60)**|对于密钥所用算法的说明：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL（仅限于可扩展密钥管理算法）|  
 |create_date|**datetime**|密钥的创建日期。|  
 |modify_date|**datetime**|密钥的修改日期。|  
-|**key_guid**|**uniqueidentifier**|与密钥关联的全局唯一标识符 (GUID)。 对于持久化密钥，此标识符是自动生成的。 临时密钥的 GUID 从用户提供的通行短语中派生。|  
+|key_guid|**uniqueidentifier**|与密钥关联的全局唯一标识符 (GUID)。 对于持久化密钥，此标识符是自动生成的。 临时密钥的 GUID 从用户提供的通行短语中派生。|  
 |**key_thumbprint**|**sql_variant**|密钥的 SHA-1 哈希。 该哈希是全局唯一的。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
 |**provider_type**|**nvarchar(120)**|加密提供程序的类型：<br /><br /> CRYPTOGRAPHIC PROVIDER = 可扩展密钥管理密钥<br /><br /> NULL = 非可扩展密钥管理密钥|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|加密提供程序的 GUID。 对于非可扩展密钥管理密钥，此值将为 NULL。|  

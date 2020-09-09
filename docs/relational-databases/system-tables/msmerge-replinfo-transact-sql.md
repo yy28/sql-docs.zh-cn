@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a5dc2aeae67fabd1ae53a1f6f6744e104017f596
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce4bee70ea5ef410512ce399e8d715fbc321e1a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488737"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545603"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88488737"
 |**use_interactive_resolver**|**bit**|指定调解期间是否使用交互式冲突解决程序。<br /><br /> **0** = 不使用交互式冲突解决程序。<br /><br /> **1** = 使用交互式冲突解决程序。|  
 |**validation_level**|**int**|对订阅执行的验证类型。 指定的验证级别可以是以下值之一：<br /><br /> **0** = 无验证。<br /><br /> **1** = 仅限行计数验证。<br /><br /> **2** = 行计数和校验和验证。<br /><br /> **3** = 行计数和二进制校验和验证。|  
 |**resync_gen**|**bigint**|用于重新同步订阅的生成数。 如果值为 **-1** ，则表示订阅未标记为重新同步。|  
-|**login_name**|**sysname**|创建订阅的用户名。|  
+|login_name|**sysname**|创建订阅的用户名。|  
 |**hostname**|**sysname**|为订阅生成分区时由参数化行筛选器使用的值。|  
 |**merge_jobid**|**binary(16)**|此订阅的合并作业 ID。|  
 |**sync_info**|**int**|仅供内部使用。|  

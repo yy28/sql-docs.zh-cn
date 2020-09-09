@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IpAddresses property
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d499e84bef9a88ddb094586f6ff61904ef6f42ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bd31cf4758415cc235942607319a26c1a283437
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446215"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545418"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses 属性（ServerNetworkProtocol 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ object.IpAddresses [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个 **ServerNetworkProtocol** 对象，该对象表示实例使用的网络协议 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
