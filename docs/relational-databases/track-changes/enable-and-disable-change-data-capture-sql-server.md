@@ -74,7 +74,7 @@ GO
   
  创建捕获实例时，可以指定以下选项：  
   
- **Columns in the source table to be captured**。  
+ 要在源表中捕获的列  
   
  默认情况下，源表中的所有列都将标识为已捕获列。 如果只需跟踪这些列中的部分列（如出于保密或性能方面的原因），请使用 \@captured_column_list 参数指定这些列中要跟踪的部分列。  
   
