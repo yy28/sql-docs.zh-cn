@@ -37,8 +37,8 @@ ms.locfileid: "88345993"
 |SQL Server 的目标版本|SSIS 包的开发环境|  
 |----------------------------------|-----------------------------------------------|  
 |2016|适用于 Visual Studio 2015 的 SQL Server Data Tools|  
-|2014|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
-|2012|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
+|2014|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> or<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
+|2012|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> or<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
 |2008|来自 SQL Server 2008 的 Business Intelligence Development Studio|  
   
  当将现有包添加到现有项目时，包将转换为项目所面向的格式。  

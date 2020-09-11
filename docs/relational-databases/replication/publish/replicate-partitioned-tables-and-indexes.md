@@ -32,7 +32,7 @@ ms.locfileid: "88448156"
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>事务复制和合并复制的项目属性  
  下表列出了用于对数据进行分区的对象。  
   
-|Object|使用以下内容创建|  
+|对象|使用以下内容创建|  
 |------------|----------------------|  
 |已分区表或已分区索引|CREATE TABLE 或 CREATE INDEX|  
 |分区函数|CREATE PARTITION FUNCTION|  

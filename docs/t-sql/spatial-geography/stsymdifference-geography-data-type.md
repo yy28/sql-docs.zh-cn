@@ -77,6 +77,6 @@ SELECT @g.STSymDifference(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

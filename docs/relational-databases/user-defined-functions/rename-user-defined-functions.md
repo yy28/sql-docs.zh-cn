@@ -81,6 +81,6 @@ ms.locfileid: "88488564"
   
 ## <a name="see-also"></a>另请参阅  
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [查看用户定义的函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
+ [查看用户定义函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   
   

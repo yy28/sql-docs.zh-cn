@@ -47,7 +47,7 @@ ms.locfileid: "88456010"
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|拥有生成此事件的连接的用户的名称。|6|是|  
 |**ObjectName**|**nvarchar**|会话另一方的服务名称和远程数据库用来连接至此数据库的连接字符串。|34|否|  
-|**RoleName**|**nvarchar**|接收此消息的端点的角色。 取下列值之一。<br /><br /> **initiator**：接收端点为会话的发起方。<br /><br /> **target**：接收端点为会话的目标。|38|否|  
+|**RoleName**|**nvarchar**|接收此消息的端点的角色。 以下值之一。<br /><br /> **initiator**：接收端点为会话的发起方。<br /><br /> **target**：接收端点为会话的目标。|38|否|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |**严重性**|**int**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的错误的严重性。|29|否|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  

@@ -73,7 +73,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 * **nvarchar**  
 * **varchar**  
 
-或  
+or  
 
 * sql_variant（如果 sql_variant 的基类型为字符串数据类型）********。  
   

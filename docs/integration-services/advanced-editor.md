@@ -1,5 +1,5 @@
 ---
-description: “高级编辑器”
+description: 高级编辑器
 title: “高级编辑器” | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -24,7 +24,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/17/2020
 ms.locfileid: "88478050"
 ---
-# <a name="advanced-editor"></a>“高级编辑器”
+# <a name="advanced-editor"></a>高级编辑器
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 

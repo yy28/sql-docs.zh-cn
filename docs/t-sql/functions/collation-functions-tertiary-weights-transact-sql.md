@@ -50,7 +50,7 @@ non_Unicode_character_string_expression**
 ## <a name="return-types"></a>返回类型
 non_Unicode_character_string_expression 是 char 或 varchar 时，`TERTIARY_WEIGHTS` 返回 varbinary；non_Unicode_character_string_expression 具有 varchar(max) 数据类型时，返回 varbinary(max)************************。
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 SQL 第三排序规则未定义 non_Unicode_character_string_expression 时，`TERTIARY_WEIGHTS` 返回 NULL**。 下表显示了 SQL 第三排序规则：
   
 |排序次序 ID|SQL 排序规则|  

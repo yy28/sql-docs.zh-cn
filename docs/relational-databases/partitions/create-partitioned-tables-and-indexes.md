@@ -410,7 +410,7 @@ ms.locfileid: "88482521"
     GO  
     ```  
   
- 有关详细信息，请参阅：  
+ 有关详细信息，请参见:  
   
 -   [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   

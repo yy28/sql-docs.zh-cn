@@ -53,7 +53,7 @@ SQL Server 返回类型：hierarchyid****
   
 CLR 返回类型：SqlHierarchyId****
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 用于测试输出中的每个节点是否将当前节点作为指定级别的祖先。
   
 如果传递的数字大于 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md)，则返回 NULL。

@@ -69,7 +69,7 @@ catalog.create_environment [ @folder_name = ] folder_name
   
 -   指定的文件夹中已存在同名的环境  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  环境名称在文件夹中必须是唯一的。  
   
   
