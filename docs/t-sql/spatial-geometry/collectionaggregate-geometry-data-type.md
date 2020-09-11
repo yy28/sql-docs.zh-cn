@@ -43,7 +43,7 @@ CollectionAggregate ( geometry_operand )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
-## <a name="exceptions"></a>例外  
+## <a name="exceptions"></a>异常  
  在输入值无效时引发 `FormatException`。 请参阅 [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>注解  

@@ -44,7 +44,7 @@ ms.locfileid: "88445147"
   
  CLR 返回类型：SqlInt32****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此方法对 geography 实例说明中的点进行计数****。 重复的点被计算在内；但是，段之间的连接点只计算一次。 如果此实例为集合，则此方法将返回该集合内的总点数。  
   
 ## <a name="examples"></a>示例  

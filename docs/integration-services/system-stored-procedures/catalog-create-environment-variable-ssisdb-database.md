@@ -47,7 +47,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
  [@variable_name =] variable_name**  
- 环境变量的名称。 variable_name 为 nvarchar(128)******。  
+ 环境变量名。 variable_name 为 nvarchar(128)******。  
   
  [@data_type =] data_type**  
  变量的数据类型。 支持的环境变量数据类型包括 Boolean****、Byte****、DateTime****、Double****、Int16****、Int32****、Int64****、Single****、String****、UInt32**** 和 UInt64****。 不支持的环境变量数据类型包括 Char****、DBNull****、Object**** 和 Sbyte****。 data_type** 参数的数据类型为 nvarchar(128)****。  

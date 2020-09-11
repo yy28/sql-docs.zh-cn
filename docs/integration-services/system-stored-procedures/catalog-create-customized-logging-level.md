@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  level_id** 为 bigint****。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  若要合并 Transact-SQL 中用于 profile_value 或 events_value 参数的的多个值，请按此示例中的操作执行****。 若要捕获 OnError (8) 和 DiagnosticEx (15) 事件，计算 events_value 的公式为 `2^8 + 2^15 = 33024`**。  
   
 ## <a name="return-codes"></a>返回代码  

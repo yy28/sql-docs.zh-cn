@@ -55,7 +55,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  cursor_variable_name  
  游标变量的名称，该变量引用一个游标。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果使用 INSENSITIVE 或 STATIC 选项声明了游标，那么 OPEN 将创建一个临时表以保留结果集。 如果结果集中任意行的大小超过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的最大行大小，OPEN 将失败。 如果使用 KEYSET 选项声明了游标，那么 OPEN 将创建一个临时表以保留键集。 临时表存储在 tempdb 中。  
   
  打开游标后，可以使用 @@CURSOR_ROWS 函数在上次打开的游标中接收合格行的数目。  

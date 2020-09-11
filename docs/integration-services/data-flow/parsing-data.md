@@ -185,7 +185,7 @@ ms.locfileid: "88457335"
 |分钟数|添加 00:00。|  
 |小时|添加 00:00:00。|  
 |天|添加 01，表示一个月中的第几天。|  
-|Month|添加 01，表示一年中的第几个月。|  
+|月份|添加 01，表示一年中的第几个月。|  
   
  有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "88457335"
   
 4.  在“属性”窗口中，展开 **“自定义属性”** 节点，然后将 **FastParse** 属性设置为 **True**。  
   
-5.  单击“确定”。  
+5.  单击“确定”。   
 
 ## <a name="standard-parse"></a>Standard Parse
 标准分析是一组受区域设置影响的分析例程，这些例程支持 Oleaut32.dll 和 Ole2dsip.dll 中可用的自动数据类型转换 API 所提供的全部数据类型转换。 标准分析相当于 OLE DB 分析 API。  

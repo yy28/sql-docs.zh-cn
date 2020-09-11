@@ -51,7 +51,7 @@ CONTEXT_INFO()
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中返回 NULL。  
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中返回特定于会话的唯一 GUID。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 多个活动的结果集 (MARS) 功能将使应用程序能够使用相同连接同时运行多个批处理或请求。 当 MARS 连接中的一个批处理运行 SET CONTEXT_INFO 时，如果 `CONTEXT_INFO` 函数作为 SET 语句运行在同一批处理中，则该 `CONTEXT_INFO` 函数将返回新的上下文值。 如果 `CONTEXT_INFO` 函数运行一个或多个其他连接批处理，则 `CONTEXT_FUNCTION` 不返回新值，除非这些批处理在完成运行 SET 语句的批处理后启动。
   
 ## <a name="permissions"></a>权限  

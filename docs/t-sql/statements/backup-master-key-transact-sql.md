@@ -56,7 +56,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
  PASSWORD ='password'  
  用于加密文件中主密钥的密码。 此密码应通过复杂性检查。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  主密钥必须为打开状态，因此在备份主密钥之前应对其进行解密。 如果主密钥使用服务主密钥进行加密，则不必显式打开。 但如果主密钥仅使用密码进行加密，则必须显式打开。  
   
  我们建议您在创建主密钥之后立即对其进行备份，并存储于另外一个安全的位置中。  

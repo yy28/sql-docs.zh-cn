@@ -50,7 +50,7 @@ expression -= expression
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  有关详细信息，请参阅 [-（减法）(Transact-SQL)](../../t-sql/language-elements/subtract-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

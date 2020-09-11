@@ -61,7 +61,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   操作已停止  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  一次只能有一个用户应停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的操作。 如果多个用户试图停止操作，则存储过程在第一次尝试时将返回成功（值 `0`），但后续尝试将引发错误。  
   
   

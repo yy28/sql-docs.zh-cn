@@ -77,8 +77,8 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 |更改其保护|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
 |旧密码到新密码|必选|必需|  
-|密码到主密钥|省略|必需|  
-|主密钥到密码|必需|省略|  
+|密码到主密钥|省略|必选|  
+|主密钥到密码|必选|省略|  
   
  必须首先打开数据库主密钥，然后才能使用它来保护私钥。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)。  
   

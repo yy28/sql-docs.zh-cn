@@ -55,7 +55,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  使用 WITH OVERRIDE 选项几乎可以重新配置任何配置选项，但仍然要避免某些灾难性错误。 例如，不能使用大于max server memory 配置选项中指定的值来配置 min server memory 配置选项********。
       
-## <a name="remarks"></a>注解    
+## <a name="remarks"></a>备注    
  sp_configure 不接受超出所记录的各配置选项值有效范围的新配置选项值****。    
     
  不允许在显式或隐式事务中使用 RECONFIGURE。 同时对多个选项进行重新配置时，如果任意重新配置操作失败，所有重新配置操作都将无效。    

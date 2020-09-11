@@ -41,7 +41,7 @@ ms.locfileid: "88444947"
   
  CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  空的一维 **geometry** 实例返回 0。 当 **geometry** 实例不是一维实例或为未初始化的实例时，将返回 **NULL**。  
   
 ## <a name="examples"></a>示例  

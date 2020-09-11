@@ -44,7 +44,7 @@ ms.locfileid: "88444926"
   
  CLR 返回类型：SqlInt32****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 geometry 实例不是多边形，则此方法返回 NULL****。  
   
 ## <a name="examples"></a>示例  
