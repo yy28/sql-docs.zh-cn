@@ -46,7 +46,7 @@ ms.locfileid: "88445126"
  CLR 返回类型：SqlBoolean****  
   
 ## <a name="remarks"></a>注解  
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STWithin()` 来测试两个 `geography` 实例，以查看第一个实例是否完全包含在第二个实例中。  

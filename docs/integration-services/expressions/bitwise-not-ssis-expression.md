@@ -43,7 +43,7 @@ ms.locfileid: "88430609"
 ## <a name="result-types"></a>结果类型  
  返回 integer_expression** 数据类型。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  无  
   
 ## <a name="expression-examples"></a>表达式示例  

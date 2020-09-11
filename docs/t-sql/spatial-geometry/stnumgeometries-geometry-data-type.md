@@ -44,7 +44,7 @@ ms.locfileid: "88444933"
   
  CLR 返回类型：SqlInt32****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 geometry 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geometry 实例为空，则返回 0************************。  
   
 > [!NOTE]  

@@ -48,7 +48,7 @@ ms.locfileid: "88445082"
   
  CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  对于集合类型，此算法单独作用于包含在该实例中的每个 **geometry**。  
   
  此算法不会修改“Point”实例****。  

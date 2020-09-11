@@ -61,7 +61,7 @@ FOR SERVER AUDIT audit_name
  WITH ( STATE = { ON | OFF } )************  
  允许或禁止审核收集此审核规范的记录。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  审核必须已存在，才能为它创建服务器审核规范。 服务器审核规范在创建之后处于禁用状态。  
   
 ## <a name="permissions"></a>权限  

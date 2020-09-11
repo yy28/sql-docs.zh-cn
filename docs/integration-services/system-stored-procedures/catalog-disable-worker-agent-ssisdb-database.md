@@ -30,7 +30,7 @@ ms.locfileid: "88430119"
 catalog.disable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## <a name="arguments"></a>参数
-[@WorkerAgentId =] WorkerAgentId** Scale Out Worker 的辅助角色代理 ID。 WorkerAgentId 为 uniqueidentifier******。
+[@WorkerAgentId =] WorkerAgentId** Scale Out Worker 的辅助角色代理 ID。 WorkerAgentId 为 uniqueidentifier。
 
 ## <a name="example"></a>示例
 此示例在 MachineA 上禁用 Scale Out Worker。

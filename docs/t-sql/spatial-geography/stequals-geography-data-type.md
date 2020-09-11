@@ -49,7 +49,7 @@ ms.locfileid: "88416963"
  CLR 返回类型：SqlBoolean****  
   
 ## <a name="remarks"></a>注解  
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomFromText()` 创建两个等效但又不完全相等的 `geography` 实例，并使用 `STEquals()` 测试它们的等效性。 因为 `LINESTRING` 和 `POINT` 包含在 `POLYGON` 中，所以这两个实例相等。  
@@ -63,6 +63,6 @@ SELECT @g.STEquals(@h);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

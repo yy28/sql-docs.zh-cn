@@ -46,7 +46,7 @@ ms.locfileid: "88359443"
   
  CLR 返回类型：SqlBytes****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定****。  
   
 ## <a name="examples"></a>示例  
@@ -59,6 +59,6 @@ SELECT @g.STAsBinary();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
