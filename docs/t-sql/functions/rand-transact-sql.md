@@ -51,7 +51,7 @@ RAND ( [ seed ] )
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用同一个种子值重复调用 RAND() 会返回相同的结果。  
   
  对于一个连接，如果使用指定的种子值调用 RAND()，则 RAND() 的所有后续调用将基于使用该指定种子值的 RAND() 调用生成结果。 例如，以下查询将始终返回相同的数字序列。  

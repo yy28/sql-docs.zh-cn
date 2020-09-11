@@ -58,7 +58,7 @@ SQL Server 返回类型：hierarchyid****
   
 CLR 返回类型：SqlHierarchyId****
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 如果 Parse 收到的值不是 hierarchyid 的有效字符串表示形式，则会引发异常****。 例如，如果 char 数据类型包含尾随空格，则会引发异常****。
   
 ## <a name="examples"></a>示例  

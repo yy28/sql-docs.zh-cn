@@ -58,7 +58,7 @@ object_name ([schema_name.]table_name.column_name)
     - *table_name* - 是已分类的列所属表的名称。
     - column_name** - 是从中删除分类的列的名称。
 
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 
 - 可以使用单个“DROP SENSITIVITY CLASSIFICATION”语句删除多个对象分类。
 

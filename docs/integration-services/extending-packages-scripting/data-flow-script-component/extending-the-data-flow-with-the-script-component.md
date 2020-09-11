@@ -1,5 +1,5 @@
 ---
-description: 使用脚本组件扩展数据流
+description: Extending the Data Flow with the Script Component
 title: 使用脚本组件扩展数据流 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -32,7 +32,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/17/2020
 ms.locfileid: "88425389"
 ---
-# <a name="extending-the-data-flow-with-the-script-component"></a>使用脚本组件扩展数据流
+# <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 

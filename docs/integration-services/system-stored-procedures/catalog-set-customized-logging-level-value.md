@@ -50,7 +50,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  property_value 为 bigint******。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="return-codes"></a>返回代码  
  0（成功）  

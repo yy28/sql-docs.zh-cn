@@ -46,7 +46,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>返回类型
  numeric(38,0)****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  SCOPE_IDENTITY、IDENT_CURRENT 和 @@IDENTITY 是相似的函数，因为它们都返回插入到标识列中的值。  
   
  IDENT_CURRENT 不受作用域和会话的限制，而受限于指定的表。 IDENT_CURRENT 返回为任何会话和作用域中的特定表所生成的值。 有关详细信息，请参阅 [IDENT_CURRENT (Transact-SQL)](../../t-sql/functions/ident-current-transact-sql.md)。  

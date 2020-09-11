@@ -53,7 +53,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>返回类型  
  从传递到函数的类型集中返回优先级最高的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  CHOOSE 像索引一样进入数组中，其中，数组由跟在索引参数之后的各参数组成。 索引参数确定将返回以下哪些值。  
   
 ## <a name="examples"></a>示例  

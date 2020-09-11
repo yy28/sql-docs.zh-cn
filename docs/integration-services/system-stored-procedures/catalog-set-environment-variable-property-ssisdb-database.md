@@ -45,7 +45,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
  [ @variable_name = ] variable_name**  
- 环境变量的名称。 variable_name 为 nvarchar(128)******。  
+ 环境变量名。 variable_name 为 nvarchar(128)******。  
   
  [ @property_name = ] property_name**  
  环境变量属性的名称。 property_name 为 nvarchar(128)******。  
@@ -81,7 +81,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在这一版本中，仅可设置 `Description` 属性。 `Description` 属性的属性值不能超过 4000 个字符。  
   
   
