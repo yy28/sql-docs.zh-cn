@@ -44,7 +44,7 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
  [ @variable_name = ] variable_name**  
- 环境变量的名称。 variable_name 为 nvarchar(128)******。  
+ 环境变量名。 variable_name 为 nvarchar(128)******。  
   
  [ @sensitive = ] sensitive**  
  指示变量是否包含敏感值。 使用值 `1` 表示环境变量的值是敏感值，值为 `0` 表示该值不是敏感值。 存储敏感值时将对其加密。 不敏感的值以纯文本形式存储。 sensitive 参数为 bit******。  

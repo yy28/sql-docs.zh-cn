@@ -48,7 +48,7 @@ ms.locfileid: "88416893"
   
  CLR 返回类型：SqlBoolean****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果两个 geometry 实例的点集交集是空的，则这两个实例不相联****。  
   
  如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  

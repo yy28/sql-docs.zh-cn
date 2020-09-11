@@ -51,7 +51,7 @@ ms.locfileid: "88417033"
 ## <a name="exceptions"></a>例外  
  如果实例包含对拓边缘，此方法将引发 ArgumentException****。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null****。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例****。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。 此方法不精确。  
@@ -80,6 +80,6 @@ SELECT @g.STDifference(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

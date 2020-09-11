@@ -44,7 +44,7 @@ ms.locfileid: "88416933"
   
  CLR 返回类型：SqlInt32****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 **geometry** 实例为空，则 `STDimension()` 返回 -1。  
   
 ## <a name="examples"></a>示例  

@@ -44,7 +44,7 @@ ms.locfileid: "88422281"
   
  CLR 返回类型：SqlDouble****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 geometry 实例仅包含 0 维和 1 维图形，或者为空，则 `STArea()` 返回 0****。 如果 geometry 实例尚未初始化，则 `STArea()` 返回 NULL********。  
   
 ## <a name="examples"></a>示例  

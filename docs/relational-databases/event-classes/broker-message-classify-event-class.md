@@ -47,7 +47,7 @@ ms.locfileid: "88331073"
 |**RoleName**|**nvarchar**|指明该消息是从网络中收到的，还是在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中产生的。|38|否|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
-|**Start Time**|**datetime**|事件（如果有）的开始时间。|14|是|  
+|**开始时间**|**datetime**|事件（如果有）的开始时间。|14|是|  
 |**TargetUserName**|**nvarchar**|下一个跃点中介器的网络地址。|39|否|  
 |**TransactionID**|**bigint**|系统为事务分配的 ID。|4|否|  
   

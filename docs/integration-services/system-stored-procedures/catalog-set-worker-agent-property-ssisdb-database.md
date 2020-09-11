@@ -37,13 +37,13 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 
 ## <a name="arguments"></a>参数
 [@WorkerAgentId =] *WorkerAgentId*  
-Scale Out Worker 的 Worker 代理 ID。 WorkerAgentId 为 uniqueidentifier******。
+Scale Out Worker 的 Worker 代理 ID。 WorkerAgentId 为 uniqueidentifier。
 
 [@PropertyName =] *PropertyName*  
 属性的名称。 *PropertyName* 为 **nvarchar(256)**。
 
 [@PropertyValue =] *PropertyValue*  
-该属性的值。 *PropertyValue* 为 **nvarchar(max)**。
+该属性的值。 *PropertyValue* 为 **nvarchar(max)** 。
 
 ## <a name="remarks"></a>备注
 有效的属性名称为 **DisplayName**、**Description**、**Tags**。

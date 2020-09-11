@@ -42,7 +42,7 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
   
  level_description** 为 nvarchar(1024)****。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="return-codes"></a>返回代码  
  0（成功）  

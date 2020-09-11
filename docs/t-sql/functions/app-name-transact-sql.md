@@ -51,7 +51,7 @@ APP_NAME  ( )
 ## <a name="return-types"></a>返回类型
 **nvarchar(128)**
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 使用 `APP_NAME` 可区分不同的应用程序，这可作为对这些应用程序执行不同操作的一种方式。 例如，`APP_NAME` 可以区分不同的应用程序，允许每个应用程序使用不同的日期格式。 它还可允许向特定应用程序返回信息性消息。
   
 要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中设置应用程序名称，请单击“连接到数据库引擎”对话框中的“选项”********。 在“其他连接参数”选项卡上，提供 app 属性，格式为 `;app='application_name'`********

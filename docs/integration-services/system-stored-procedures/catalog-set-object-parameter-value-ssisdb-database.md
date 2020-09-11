@@ -89,7 +89,7 @@ catalog.set_object_parameter_value [ @object_type = ] object_type
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   如果未指定 value_type**，则默认为 parameter_value** 使用文本值。 使用文本值时，[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 视图中的 value_set** 将设置为 `1`。 不允许 NULL 参数值。  
   

@@ -72,7 +72,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  还原某个项目后，将为所有参数分配默认值，并且所有环境引用都保持不变。 目录中保留的最大项目版本数量由目录属性 MAX_VERSIONS_PER_PROJECT**** 决定，如 [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 视图中所示。  
   
 > [!WARNING]  

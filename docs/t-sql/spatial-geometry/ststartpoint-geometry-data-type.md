@@ -46,7 +46,7 @@ ms.locfileid: "88416853"
   
  开放地理空间信息联盟 (OGC) 类型：Point****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  `STStartPoint()` 等效于 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1)。  
   
 ## <a name="examples"></a>示例  
