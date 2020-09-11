@@ -74,7 +74,7 @@ ms.locfileid: "88470452"
   
 7.  选择 **“文件组或分区方案名称”** 并从列表中选择要将索引移动到的文件组或分区方案。  
   
-8.  单击“关闭”。  
+8.  单击“关闭”  。  
   
 9. 在“文件”**** 菜单上，选择“保存”**** 以保存 _table_name_。  
 
@@ -100,7 +100,7 @@ ms.locfileid: "88470452"
   
      在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅“SQL Server 2016 各个版本支持的功能”。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-8.  单击“确定”。  
+8.  单击“确定”。   
   
  “索引属性 - index_name”对话框的“存储”页面中提供了以下信息******** __：  
   

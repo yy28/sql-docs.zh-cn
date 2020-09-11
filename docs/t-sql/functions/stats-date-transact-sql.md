@@ -57,7 +57,7 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="return-types"></a>返回类型  
  如果成功，则返回 datetime****。 如果未创建统计信息 blob，则返回 NULL****。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。  
  
  统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 如果未读取到任何数据，无法生成统计信息数据，则不会创建统计信息 blob，且该日期不可用。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。

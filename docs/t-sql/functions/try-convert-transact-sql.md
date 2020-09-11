@@ -59,7 +59,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ## <a name="return-types"></a>返回类型  
  返回转换为指定数据类型的值（如果转换成功）；否则返回 Null。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  TRY_CONVERT 接收传递给它的值，并尝试将该值转换为指定的 data_type******。 如果强制转换成功，TRY_CONVERT 按指定的 data_type 返回值；如果发生错误，则返回 NULL******。 但是，如果请求的转换是显式不允许执行的转换，则 TRY_CONVERT 失败并显示错误****。  
   
  TRY_CONVERT 是兼容级别 110 和更高级别中的保留关键字****。  

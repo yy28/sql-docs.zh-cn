@@ -46,7 +46,7 @@ EnvelopeAngle( )
   
  CLR 返回类型：SqlDouble****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此方法返回 geography 实例中的点（以度数为单位）****。 在与 EnvelopeCenter() 一起使用时，`EnvelopeAngle()` 返回 geography 实例的一个边框圆****。  
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例  。  

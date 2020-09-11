@@ -51,7 +51,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
   
  CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  `STGeomFromText()` 返回的 **geometry** 实例的 OGC 类型设置为相应的 WKT 输入。  
   
  如果输入的格式不正确，此方法将引发 FormatException****。  

@@ -55,7 +55,7 @@ GeomFromGml ( GML_input, SRID )
   
  CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  

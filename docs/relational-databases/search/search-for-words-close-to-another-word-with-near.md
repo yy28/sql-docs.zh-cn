@@ -122,7 +122,7 @@ GO
   
 -   CONTAINS('NEAR((term1, term2),5) OR NEAR((term3, term4),2, TRUE)')********  
   
- 例如，  
+ 例如，应用于对象的  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  

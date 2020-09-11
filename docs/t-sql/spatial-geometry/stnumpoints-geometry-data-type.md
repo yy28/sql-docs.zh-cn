@@ -44,7 +44,7 @@ ms.locfileid: "88467357"
   
  CLR 返回类型：SqlInt32****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此方法对 **** 实例说明中的点进行计数。 重复的点将计算在内。 如果此实例为 **** collection 类型，则此方法返回它的每个元素中的点数的总和。  
   
 ## <a name="examples"></a>示例  

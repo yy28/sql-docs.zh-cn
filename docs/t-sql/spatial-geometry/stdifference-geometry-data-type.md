@@ -48,7 +48,7 @@ ms.locfileid: "88458931"
   
  CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。   只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
 ## <a name="examples"></a>示例  

@@ -41,7 +41,7 @@ ms.locfileid: "88461954"
   
 5.  在“Deployment Tutorial 属性页”**** 对话框的右窗格中，确认“AllowConfigurationChanges”**** 设为“true”****，将“CreateDeploymentUtility”**** 设为“true”****，并更新“DeploymentOutputPath”**** 的默认值（可选）。  
   
-6.  单击“确定”。  
+6.  单击“确定”。   
   
 ### <a name="to-build-the-deployment-utility"></a>生成部署实用工具  
   

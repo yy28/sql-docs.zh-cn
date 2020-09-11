@@ -51,7 +51,7 @@ ms.locfileid: "88467455"
 ## <a name="remarks"></a>注解  
  如果两个 geography 实例的点集交集是空的，则这两个实例不相联****。  
   
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STDisjoint()` 来测试两个 `geography` 实例，以查看它们是否在空间上不相联。  

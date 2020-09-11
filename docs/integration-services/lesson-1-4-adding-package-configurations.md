@@ -54,7 +54,7 @@ ms.locfileid: "88477199"
     > [!NOTE]  
     > 为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。 如果不希望重新启动计算机，则可以键入该环境变量的名称。  
   
-7.  单击“下一步”。  
+7.  单击“下一步”。   
   
 8.  在“完成向导”页上，在“配置名称”框中键入“DataTransfer EV Configuration”，在“预览”窗格中查看配置内容，然后单击“完成”。****************  
   
@@ -82,7 +82,7 @@ ms.locfileid: "88477199"
   
 10. 在“连接管理器”内，展开“NewCustomers”后，选中“连接字符串”复选框。****  
   
-11. 单击“下一步”。  
+11. 单击“下一步”。   
   
 12. 在“完成向导”页上，在“配置名称”框中键入“DataTransfer 配置”，查看配置的内容，然后单击“完成”。************  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88477199"
     > [!NOTE]  
     > 为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。  
   
-7.  单击“下一步”。  
+7.  单击“下一步”。   
   
 8.  在“完成向导”页上，在“配置名称”框中键入“LoadXMLData EV 配置”，查看配置的内容，然后单击“完成”。************  
   
@@ -129,7 +129,7 @@ ms.locfileid: "88477199"
   
 9. 在“选择要导出的属性”页上，依次展开“LoadXMLData”、“可执行文件”、“加载 XML 数据”和“属性”，然后选中“[XMLSource].[XMLData]”和“[XMLSource].[XMLSchemaDefinition]”复选框。********  
   
-10. 单击“下一步”。  
+10. 单击“下一步”。   
   
 11. 在“完成向导”页上，在“配置名称”框中键入“LoadXMLData 配置”，查看配置的内容，然后单击“完成”。************  
   
@@ -141,4 +141,4 @@ ms.locfileid: "88477199"
 ## <a name="see-also"></a>另请参阅  
 [包配置](../integration-services/packages/package-configurations.md)  
 [创建包配置](../integration-services/packages/create-package-configurations.md)  
-[对包使用的文件的访问](../integration-services/security/security-overview-integration-services.md#files)  
+[访问包使用的文件](../integration-services/security/security-overview-integration-services.md#files)  

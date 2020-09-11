@@ -64,7 +64,7 @@ ms.locfileid: "88463814"
   
      有关架构的详细信息，请参阅 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)。  
   
-9. 从“文件”菜单中，选择“保存”表名称******** **。  
+9. 从“文件”菜单中，选择“保存”表名称 。  
   
 10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”**。  
   
