@@ -41,7 +41,7 @@ ms.locfileid: "88497030"
   
  CLR 返回类型：string****  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  下表包含可能的返回值：  
   
 |返回值|说明|  

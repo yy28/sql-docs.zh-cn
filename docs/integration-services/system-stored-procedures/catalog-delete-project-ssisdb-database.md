@@ -64,7 +64,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对应项目的所有对象和环境引用将与项目一起删除。 但是，直到下次运行操作清除作业之前，将保留项目版本和相关的操作记录。  
   
   

@@ -55,7 +55,7 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 请参阅[用于部署的身份验证方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)。
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>启动 Integration Services 部署向导
-1. 打开命令提示符窗口。
+1. 打开“命令提示符”窗口。
 
 2. 运行 `ISDeploymentWizard.exe`。 Integration Services 部署向导随即打开。
 
