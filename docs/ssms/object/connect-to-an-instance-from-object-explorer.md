@@ -1,4 +1,5 @@
 ---
+description: 连接到 SQL Server 或 Azure SQL 数据库
 title: 连接到 SQL Server 或 Azure SQL 数据库
 ms.custom: seo-lt-2019
 ms.date: 01/28/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d489dac9355a573473063d1cafb32d42ed5fd98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417933"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>连接到 SQL Server 或 Azure SQL 数据库
 
@@ -26,15 +27,15 @@ ms.locfileid: "86001996"
   
 ## <a name="connecting-to-a-server"></a>连接到服务器  
 
-1. 在“对象资源管理器”中，单击“连接”>“数据库引擎...”   。
+1. 在“对象资源管理器”中，单击“连接”>“数据库引擎...”********。
 
    ![连接](../media/connect-to-server/connect-db-engine.png)
 
-1. 填写“连接到服务器”窗体，并单击“连接”   ：
+1. 填写“连接到服务器”窗体，并单击“连接”********：
 
    ![连接到服务器](../media/connect-to-server/connect.png)
 
-1. 如果正在连接 Azure SQL Server，系统可能提示登录创建防火墙规则。 单击“登录...”（如果不执行此操作，请跳到下方步骤 6） 
+1. 如果正在连接 Azure SQL Server，系统可能提示登录创建防火墙规则。 单击“登录...”（如果不执行此操作，请跳到下方步骤 6）****
 
    ![防火墙](../media/connect-to-server/firewall-rule-sign-in.png)
 
@@ -42,9 +43,9 @@ ms.locfileid: "86001996"
 
    ![防火墙](../media/connect-to-server/new-firewall-rule.png)
 
-1. 要创建防火墙规则并连接到服务器，请单击“确定”  。
+1. 要创建防火墙规则并连接到服务器，请单击“确定”****。
 
-1. 成功连接后，服务器将出现在“对象资源管理器”中  ：
+1. 成功连接后，服务器将出现在“对象资源管理器”中****：
 
    ![已连接](../media/connect-to-server/connected.png)
 

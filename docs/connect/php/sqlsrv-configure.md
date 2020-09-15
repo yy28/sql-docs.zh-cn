@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_configure
 title: sqlsrv_configure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17c0024e75dacc56b2f5a10d26a899256dbad7fc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c99aff2e8453a2c2d16db34894935d5b1f7e5ff5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413863"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "80902783"
 sqlsrv_configure( string $setting, mixed $value )  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$setting*：要配置的设置的名称。 有关设置列表，请参阅下表。  
   
 *$value*：要应用于在 *$setting* 参数中指定的设置的值。 此参数的可能值取决于指定的设置。 下表列出了可能的组合：  
@@ -45,12 +46,12 @@ sqlsrv_configure( string $setting, mixed $value )
 |ClientBufferMaxKBSize<sup>1</sup>|达到 PHP 内存限制的非负数。<br /><br />不允许使用零和负数。|10240 KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL (-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN (2)<br /><br />SQLSRV_LOG_SYSTEM_INIT (1)<br /><br />SQLSRV_LOG_SYSTEM_OFF (0)<br /><br />SQLSRV_LOG_SYSTEM_STMT (4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL (8)|SQLSRV_LOG_SYSTEM_OFF (0)|  
-|WarningsReturnAsErrors<sup>3</sup>|true  (1) 或 false  (0)| true (1)|  
+|WarningsReturnAsErrors<sup>3</sup>|true**** (1) 或 false**** (0)| true (1)|  
   
 ## <a name="return-value"></a>返回值  
 如果使用不受支持的设置或值调用 **sqlsrv_configure** ，该函数将返回 **false**。 否则，该函数返回 **true**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 (1) 有关客户端查询的详细信息，请参阅[游标类型 &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 (2) 有关日志记录活动的详细信息，请参阅[日志记录活动](../../connect/php/logging-activity.md)。  

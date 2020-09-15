@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_execute
 title: sqlsrv_execute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_execute
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba15ea2e756e6c83b2fcdb6cf56c39511bd95296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6daa3c227735f99d258590fbd281e306b7b84344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413753"
 ---
 # <a name="sqlsrv_execute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,13 +41,13 @@ sqlsrv_execute( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>参数  
-$stmt  ：用于指定要执行的语句的资源。 有关如何创建语句资源的详细信息，请参阅 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。  
+*$stmt*：指定要执行的语句的资源。 有关如何创建语句资源的详细信息，请参阅 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。  
   
 ## <a name="return-value"></a>返回值  
 布尔值：如果成功执行语句，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-以下示例执行在 AdventureWorks 数据库的 [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 表中更新字段的语句。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例执行在 AdventureWorks 数据库的 [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 表中更新字段的语句**。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  

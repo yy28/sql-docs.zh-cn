@@ -1,4 +1,5 @@
 ---
+description: 在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
 title: 在同一查询中使用 HAVING 和 WHERE 子句
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 511f8a5d8fb239da7f125231083264d798939bbb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6e02a61bd221c35cac2dfacd51602364035c2ba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422941"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,9 +61,9 @@ HAVING AVG(price) > 10
   
 2.  如果 WHERE 条件要基于的列不在“条件”窗格中，请添加该列。  
   
-3.  除非数据列是 GROUP BY 子句的一部分或包含在聚合函数中，否则请清除“输出”  列。  
+3.  除非数据列是 GROUP BY 子句的一部分或包含在聚合函数中，否则请清除“输出”**** 列。  
   
-4.  在“筛选器”  列中，指定 WHERE 条件。 查询和视图设计器会将该条件添加到 SQL 语句的 HAVING 子句中。  
+4.  在“筛选器”**** 列中，指定 WHERE 条件。 查询和视图设计器会将该条件添加到 SQL 语句的 HAVING 子句中。  
   
     > [!NOTE]  
     > 此过程的示例中显示的查询将联接 `titles` 和 `publishers`这两张表。  
@@ -77,7 +78,7 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  在“分组依据”  列中，从组和汇总选项的列表中选择 **Where**。 查询和视图设计器将从 SQL 语句的 HAVING 子句中移除该条件，并将其添加到 WHERE 子句中。  
+5.  在“分组依据”**** 列中，从组和汇总选项的列表中选择 **Where**。 查询和视图设计器将从 SQL 语句的 HAVING 子句中移除该条件，并将其添加到 WHERE 子句中。  
   
     SQL 语句更改为包含 WHERE 子句：  
   
@@ -90,6 +91,6 @@ HAVING AVG(price) > 10
     ```  
   
 ## <a name="see-also"></a>另请参阅  
-[对查询结果进行排序和分组](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[排序和对查询结果进行分组](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [汇总查询结果](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

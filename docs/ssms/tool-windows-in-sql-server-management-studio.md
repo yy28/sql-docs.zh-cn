@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio 中的工具窗口
 title: SQL Server Management Studio 中的工具窗口
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ec93cc023145e051115318c67c644ea98403663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417843"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "87236741"
   
 |工具|目的|  
 |-|-|   
-|[对象资源管理器](../ssms/object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”  菜单访问该工具。|  
-|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”  菜单访问该工具。|  
-|[模板资源管理器](../ssms/template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”  菜单访问该工具。|  
+|[对象资源管理器](../ssms/object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”**** 菜单访问该工具。|  
+|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”**** 菜单访问该工具。|  
+|[模板资源管理器](../ssms/template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”**** 菜单访问该工具。|  
 |[动态帮助](../ssms/user-assistance-in-sql-server-management-studio.md)|单击组件或类型代码时，显示相关帮助主题的列表。|  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具可以一起工作。 例如，你能够：  

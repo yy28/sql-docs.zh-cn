@@ -1,4 +1,5 @@
 ---
+description: 为同一列指定多个搜索条件 (Visual Database Tools)
 title: 为一个列指定多个搜索条件
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 090d5376079546c461f3db9dc44572452c61f03d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f714f78a9ad1840f0471486a8e5af4d8eddc9a94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417733"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>为同一列指定多个搜索条件 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +47,9 @@ ms.locfileid: "85999276"
   
 1.  在[“条件窗格”](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在刚刚添加的数据列的“筛选器”  列中，指定第一个条件。  
+2.  在刚刚添加的数据列的“筛选器”**** 列中，指定第一个条件。  
   
-3.  在同一数据列的“或...”  列中，指定第二个条件。  
+3.  在同一数据列的“或...”**** 列中，指定第二个条件。  
   
 查询和视图设计器将创建包含 OR 条件的 WHERE 子句，如下所示：  
   
@@ -68,11 +69,11 @@ WHERE (salary < 30000) OR (salary > 100000)
   
 1.  在“条件”窗格中，添加要搜索的列。  
   
-2.  在刚刚添加的数据列的“筛选器”  列中，指定第一个条件。  
+2.  在刚刚添加的数据列的“筛选器”**** 列中，指定第一个条件。  
   
 3.  将同一数据列再次添加到“条件”窗格中，将其放在网格的空行中。  
   
-4.  在数据列的第二个实例的“筛选器”  列中，指定第二个条件。  
+4.  在数据列的第二个实例的“筛选器”**** 列中，指定第二个条件。  
   
 查询设计器将创建包含 AND 条件的 WHERE 子句，如下所示：  
   

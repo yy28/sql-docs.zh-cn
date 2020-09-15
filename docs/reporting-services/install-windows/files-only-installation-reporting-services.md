@@ -1,4 +1,5 @@
 ---
+description: “仅文件”安装 (Reporting Services)
 title: “仅文件”安装 (Reporting Services) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
@@ -10,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8874115765a659b76e5d187df7414bedb3548ed9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2b27341f5181b8774f56d0d648cfdfe40b1629a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65502943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418643"
 ---
 # <a name="files-only-installation-reporting-services"></a>“仅文件”安装 (Reporting Services)
-  “仅文件安装”  指的是一种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装模式，在该安装模式中，安装程序为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程序文件创建文件夹结构、将文件复制到磁盘、在本地计算机上注册报表服务器服务、配置服务帐户、向服务帐户授予文件权限以及注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序。  
+  “仅文件安装”** 指的是一种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装模式，在该安装模式中，安装程序为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程序文件创建文件夹结构、将文件复制到磁盘、在本地计算机上注册报表服务器服务、配置服务帐户、向服务帐户授予文件权限以及注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序。  
   
  “仅文件”安装包括以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能：报表服务器服务（它承载报表服务器 Web 服务和后台处理应用程序）、报表生成器、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令行实用工具（rsconfig.exe、rskeymgmt.exe 和 rs.exe）。 它不适用于共享功能，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。必须将此类功能指定为独立项，才能安装它们。  
   
@@ -52,7 +53,7 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
 ```  
   
 #### <a name="installation-wizard"></a>安装向导  
- 在“功能选择”页中选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，安装程序将提供可用于指定安装模式的“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页。 要指定“仅文件”安装，请在“[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页上选择“安装但不配置报表服务器”。  
+ 在“功能选择”页中选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，安装程序将提供可用于指定安装模式的“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页。 要指定“仅文件”安装，请在“[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页上选择“安装但不配置报表服务器”****。  
   
 ## <a name="see-also"></a>另请参阅  
  [验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   

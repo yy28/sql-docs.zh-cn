@@ -1,4 +1,5 @@
 ---
+description: 打开数据库关系图 (Visual Database Tools)
 title: 打开数据库关系图
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 07ea1f96ac38a99a13aa9957960ae523e5f10609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 17c86c408ca67a6d4eea656850b6126a55dbe2f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417753"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>打开数据库关系图 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "85999820"
   
 ### <a name="to-open-a-database-diagram"></a>打开数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”**** 文件夹。  
   
 2.  双击要打开的数据库关系图的名称。  
   
-    -或-  
+    - 或 -  
   
-    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”  。  
+    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”****。  
   
 此时，将在数据库关系图设计器中打开该数据库关系图，您可以在其中编辑关系图。  
   

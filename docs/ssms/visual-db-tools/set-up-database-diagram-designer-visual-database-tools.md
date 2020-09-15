@@ -1,4 +1,5 @@
 ---
+description: 设置数据库关系图设计器 (Visual Database Tools)
 title: 设置数据库关系图设计器
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,16 +17,16 @@ ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 811905581cf0bb8f7bbd73f71a751e3c3da028c3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b993b6503f721ddfb88f2c34b09df3cc7ded0a68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417793"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>设置数据库关系图设计器 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-若要使用数据库关系图设计器，必须首先由 **db_owner** 角色的成员对其进行设置，以控制对关系图的访问。  
+ 要使用数据库关系图设计器，必须首先由 db_owner 角色的成员对其进行设置，以控制对关系图的访问****。  
   
 ### <a name="to-set-up-database-diagramming"></a>设置数据库关系图创建功能  
   
@@ -33,7 +34,7 @@ ms.locfileid: "85999334"
   
 2.  展开该数据库连接下的“数据库关系图”节点。  
   
-3.  如果希望设置数据库关系图，请在出现提示时选择“是”  。  
+3.  如果希望设置数据库关系图，请在出现提示时选择“是”****。  
   
     > [!NOTE]  
     > 这将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上创建数据库关系图表、系统存储过程和一个系统函数。  

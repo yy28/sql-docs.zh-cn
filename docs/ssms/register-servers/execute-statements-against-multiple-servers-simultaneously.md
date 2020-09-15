@@ -1,4 +1,5 @@
 ---
+description: 同时对多个服务器执行语句
 title: 同时对多个服务器执行语句
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: f492f130da8e30493e1e1a446a951f90b1312464
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 627eff46acaae38b675814e84ea76e7a7ea64f2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417953"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>同时对多个服务器执行语句
 
@@ -37,9 +38,9 @@ ms.locfileid: "86001728"
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>同时对多个配置目标执行语句  
 
-1.  在 SQL Server Management Studio 中的“视图”  菜单上，单击  “已注册的服务器”。  
+1.  在 SQL Server Management Studio 中的“视图”**** 菜单上，单击****“已注册的服务器”。  
   
-2.  展开一个中央管理服务器，右键单击某个服务器组，指向“连接”  ，然后单击“新建查询”  。  
+2.  展开一个中央管理服务器，右键单击某个服务器组，指向“连接”****，然后单击“新建查询”****。  
   
 3.  在查询编辑器中，键入并执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，例如：  
   
@@ -54,11 +55,11 @@ ms.locfileid: "86001728"
   
 #### <a name="to-change-the-multiserver-results-options"></a>更改多服务器结果选项  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”** 。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”**。  
   
-2.  依次展开 **“查询结果”** 和 **“SQL Server”** ，然后单击 **“多服务器结果”** 。  
+2.  依次展开 **“查询结果”** 和 **“SQL Server”**，然后单击 **“多服务器结果”**。  
   
-3.  在 **“多服务器结果”** 页上，指定所需的选项设置，然后单击 **“确定”** 。  
+3.  在 **“多服务器结果”** 页上，指定所需的选项设置，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用中央管理服务器管理多台服务器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  

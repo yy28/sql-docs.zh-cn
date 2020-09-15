@@ -1,4 +1,5 @@
 ---
+description: 项目 (SQL Server Management Studio)
 title: 项目 (SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13845b7e7903207f7d5b3c026663d6b1d44d4795
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 321257f45a593afdaf8c69228b2018347074d7ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417873"
 ---
 # <a name="projects-sql-server-management-studio"></a>项目 (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86011590"
 项目还可以集成到源代码管理系统中。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>从脚本项目连接到 SQL Server 实例  
-脚本项目可能包含与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 通过单击连接，可以连接到项目中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这将打开一个 SQL 脚本窗口，该窗口将连接到在所选连接中定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的连接打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 脚本，则在打开编辑器并且加载脚本之后，系统将使用“连接到 SQL Server”  对话框提示你输入密码。  
+脚本项目可能包含与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 通过单击连接，可以连接到项目中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这将打开一个 SQL 脚本窗口，该窗口将连接到在所选连接中定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的连接打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 脚本，则在打开编辑器并且加载脚本之后，系统将使用“连接到 SQL Server”**** 对话框提示你输入密码。  
   
 相应窗口关闭后，连接也将随之关闭。  
   
@@ -59,5 +60,5 @@ ms.locfileid: "86011590"
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  
 [解决方案 (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[解决方案资源管理器源代码管理](https://msdn.microsoft.com/library/ms173879.aspx)  
+[解决方案资源管理器源代码管理](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

@@ -1,4 +1,5 @@
 ---
+description: 关系图窗格 (Visual Database Tools)
 title: “关系图”窗格
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 82e1f9f4ecfcf1752165a8c71df90673b2b69bba
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3c468994dcfa80b1db2ee8c6c49dd881dd7bcf85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417803"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>关系图窗格 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,19 +39,19 @@ ms.locfileid: "85999717"
   
 ## <a name="options"></a>选项  
 **表**  
-列出可以添加到“关系图”窗格中的表。 若要添加某个表，请选择该表，再单击“添加”  。 若要同时添加多个表，请选中这些表，再单击“添加”  。  
+列出可以添加到“关系图”窗格中的表。 若要添加某个表，请选择该表，再单击“添加”****。 若要同时添加多个表，请选中这些表，再单击“添加”****。  
   
-**视图**  
-列出可以添加到“关系图”窗格中的视图。 若要添加某个视图，请选择该视图，再单击“添加”  。 若要同时添加多个视图，请选中这些视图，再单击“添加”  。  
+**Views**  
+列出可以添加到“关系图”窗格中的视图。 若要添加某个视图，请选择该视图，再单击“添加”****。 若要同时添加多个视图，请选中这些视图，再单击“添加”****。  
   
 **函数**  
-列出可以添加到“关系图”窗格中的用户定义的函数。 若要添加某个函数，请选择该函数，再单击“添加”  。 若要同时添加多个函数，请选中这些函数，再单击“添加”  。  
+列出可以添加到“关系图”窗格中的用户定义的函数。 若要添加某个函数，请选择该函数，再单击“添加”****。 若要同时添加多个函数，请选中这些函数，再单击“添加”****。  
   
 **本地表**  
 列出由查询创建的表而不是数据库中的表。  
   
 **同义词**  
-列出可以添加到“关系图”窗格中的同义词。 若要添加某个同义词，请选择该同义词，再单击“添加”  。 若要同时添加多个同义词，请选中这些同义词，再单击“添加”  。  
+列出可以添加到“关系图”窗格中的同义词。 若要添加某个同义词，请选择该同义词，再单击“添加”****。 若要同时添加多个同义词，请选中这些同义词，再单击“添加”****。  
   
 |图标|对象类型|  
 |--------|---------------|  
@@ -66,7 +67,7 @@ ms.locfileid: "85999717"
   
 |复选框或符号|说明|  
 |-----------------------|---------------|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 图标")|指定某个数据列是否出现在查询结果集内（“选择”查询），或者是否用于“更新”、“插入源”、“生成表”或“插入到”查询中。 选择要添加到结果中的列。 如果选择“(所有列)”  ，则所有数据列都将出现在输出中。<br /><br />与复选框一起使用的图标会根据要创建的查询类型而更改。 在创建“删除”查询时，不能选择单个列。|  
+|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 图标")|指定某个数据列是否出现在查询结果集内（“选择”查询），或者是否用于“更新”、“插入源”、“生成表”或“插入到”查询中。 选择要添加到结果中的列。 如果选择“(所有列)”****，则所有数据列都将出现在输出中。<br /><br />与复选框一起使用的图标会根据要创建的查询类型而更改。 在创建“删除”查询时，不能选择单个列。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools 图标")|表示数据列用于对查询结果进行排序（是 ORDER BY 子句的一部分）。 如果排序顺序为升序，则图标显示为 A-Z；如果排序顺序为降序，则图标显示为 Z-A。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools 图标")|表示数据列用于在聚合查询中创建分组结果集（是 GROUP BY 子句的一部分）。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools 图标")|表示数据列包含在查询的搜索条件中（是 WHERE 或 HAVING 子句的一部分）。|  

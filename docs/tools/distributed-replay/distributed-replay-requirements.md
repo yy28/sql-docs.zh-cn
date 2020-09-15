@@ -1,4 +1,5 @@
 ---
+description: Distributed Replay 要求
 title: Distributed Replay 要求
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
@@ -10,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/18/2018
-ms.openlocfilehash: 26fdf4b982b27b7ad7c4d832b7320a263d4a09ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b75a40618d327c077c36b93d6368e245a2669dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414833"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 要求
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85681669"
   
 -   SPID  
   
--   Start Time  
+-   开始时间  
   
 -   EndTime  
   
@@ -118,11 +119,11 @@ ms.locfileid: "85681669"
 |输入跟踪数据的版本|目标服务器实例支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|  
 |---------------------------------|------------------------------------------------------------------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
