@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28cbd4f91992ceb98d8c983099e0bbb0bed56971
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671027"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178711"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>适用于 SQL 机器学习的 R 教程
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文介绍适用于 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)和[大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)的 R 教程和快速入门。
@@ -44,7 +44,7 @@ ms.locfileid: "85671027"
 | [使用决策树预测雪橇租赁](r-predictive-model-introduction.md) | 使用 R 和决策树模型预测将来的雪橇租赁数量。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
 | [使用 k-means 聚类分析对客户进行分类](r-clustering-model-introduction.md) | 使用 R 开发和部署 K-Means 聚类分析模型，对客户进行分类。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
 | [适用于数据科学家的数据库内 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 对于刚接触 SQL 机器学习的 R 开发者，本教程介绍了如何在 SQL 中执行常见的数据科学任务。 加载和可视化数据，定型模型并将其保存在数据库中，以及使用模型进行预测分析。 |
-| [适用于 SQL 开发者的数据库内 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | 仅使用 SQL 工具来生成并部署一个完整的 R 解决方案。 重点介绍如何将解决方案移动到生产环境中。 学习如何将 R 代码包含在存储过程中，将 R 模型保存在数据库中，以及参数化调用 R 模型用于预测。 |
+| [适用于 SQL 开发者的数据库内 R 分析](../tutorials/r-taxi-classification-introduction.md) | 仅使用 SQL 工具来生成并部署一个完整的 R 解决方案。 重点介绍如何将解决方案移动到生产环境中。 学习如何将 R 代码包含在存储过程中，将 R 模型保存在数据库中，以及参数化调用 R 模型用于预测。 |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | 教程 | 说明 |

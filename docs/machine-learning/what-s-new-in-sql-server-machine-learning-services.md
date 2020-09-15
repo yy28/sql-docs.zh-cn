@@ -10,16 +10,15 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e4092bd98749006b6f68b8c55fee3baca678255
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9f5cd84574a5e1a009c96863808e3cdaaf8818c5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245238"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179696"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的新增功能
-
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 随着我们继续扩大、扩展和深化数据平台、高级分析和数据科学之间的集成，机器学习功能会添加到每个版本的 SQL Server 中。 
 

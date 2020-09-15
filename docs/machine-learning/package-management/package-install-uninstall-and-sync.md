@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: defbd4fc4fe0872b84f1816ae93bc12d9ad0ded3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757153"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179686"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server R 包同步
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 SQL Server 2017 附带的 RevoScaleR 版本包含在文件系统与使用包的实例和数据库之间同步 R 包集合的功能。
 

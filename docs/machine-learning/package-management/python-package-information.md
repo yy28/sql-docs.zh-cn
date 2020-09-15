@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cecd267627b32b989913ace5e374c74543e69ba4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2232b844fc6955118e2da878caf9ff425f160c55
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671100"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178944"
 ---
 # <a name="get-python-package-information"></a>获取 Python 包信息
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文介绍如何获取 [SQL Server 的机器学习服务上](../sql-server-machine-learning-services.md)以及[大数据群集](../../big-data-cluster/machine-learning-services.md)上安装的 Python 包的相关信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。

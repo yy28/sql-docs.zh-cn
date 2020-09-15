@@ -9,15 +9,15 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f93fc25139a69f80afa15840d254c33d2195b335
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730453"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178544"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>适用于 SQL 机器学习的 Python 教程
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文介绍适用于 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)和[大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)的 Python 教程和快速入门。
@@ -39,7 +39,7 @@ ms.locfileid: "85730453"
 | [使用线性回归预测雪橇租赁](python-ski-rental-linear-regression.md) | 使用 Python 和线性回归来预测滑雪租赁数量。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
 | [使用 k-means 聚类分析对客户进行分类](python-clustering-model.md) | 使用 Python 开发和部署 K-Means 群集模型，对客户进行分类。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
 | [使用 Revoscalepy 创建模型](use-python-revoscalepy-to-create-model.md) | 演示如何使用 SQL Server 作为计算上下文来运行远程 Python 客户端中的代码。 本教程使用 revoscalepy 库中的 rxLinMod 创建模型 。 |
-| [适用于 SQL 开发者的 Python 数据分析](sqldev-in-database-python-for-sql-developers.md) | 本端到端演练演示使用 T-SQL 构建完整的 Python 解决方案的过程。 |
+| [适用于 SQL 开发者的 Python 数据分析](python-taxi-classification-introduction.md) | 本端到端演练演示使用 T-SQL 构建完整的 Python 解决方案的过程。 |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | 教程 | 说明 |

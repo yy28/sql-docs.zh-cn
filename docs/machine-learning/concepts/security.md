@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406220"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179846"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中扩展性框架的安全性概述
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文介绍用于将 SQL Server 数据库引擎和相关组件与 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中的扩展性框架集成的整体安全体系结构。 它检查安全对象、服务、进程标识和权限。 有关 SQL Server 中扩展性的主要概念和组件的详细信息，请参阅 [SQL Server 机器学习服务中的扩展性体系结构](extensibility-framework.md)。
 
@@ -77,7 +77,7 @@ SQL Server 的数据库登录名和角色的数据安全模型扩展到外部脚
 
 扩展性框架向 SQL Server 安装中的[服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)添加一个新的 NT 服务：[SQL Server Launchpad (MSSSQLSERVER)](extensibility-framework.md#launchpad)  。
 
-数据库引擎使用 SQL Server Launchpad 服务将外部脚本会话实例化为单独的进程。 
+数据库引擎使用 SQL Server Launchpad 服务将外部脚本会话实例化为单独的进程  。 
 该进程在低权限帐户下运行；与 SQL Server、Launchpad 本身以及执行存储过程或主机查询的用户标识不同。 在单独的进程中以低权限帐户运行脚本是 SQL Server 中外部脚本的安全和隔离模型的基础。
 
 SQL Server 还将调用用户的标识映射到用于启动附属进程的低权限工作人员帐户。 在某些情况下，脚本或代码回调到 SQL Server 以获取数据和操作时，SQL Server 能够无缝地管理标识传输。 如果发出调用的用户具有足够的权限，则包含 SELECT 语句或调用函数以及其他编程对象的脚本通常都会成功。
@@ -192,7 +192,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ## <a name="implied-authentication-loopback-requests"></a>默示身份验证（环回请求）
 
-默示身份验证介绍了连接请求行为，在该行为下，环回请求数据或操作时，以低权限工作人员帐户运行的外部进程会作为受信任的用户标识呈现给 SQL Server  。 默示身份验证概念是 Windows 身份验证特有的，在指定信任连接的 SQL Server 连接字符串中，用于处理来自外部进程（如 R 或 Python 脚本）的请求。 有时，它也称为环回。
+默示身份验证介绍了连接请求行为，在该行为下，环回请求数据或操作时，以低权限工作人员帐户运行的外部进程会作为受信任的用户标识呈现给 SQL Server  。 默示身份验证概念是 Windows 身份验证特有的，在指定信任连接的 SQL Server 连接字符串中，用于处理来自外部进程（如 R 或 Python 脚本）的请求。 有时，它也称为环回  。
 
 信任连接可从外部脚本使用，但仅适用于其他配置。 在扩展性体系结构中，外部进程在工作人员帐户下运行，从父级 SQLRUserGroup 继承权限  。 连接字符串指定 `Trusted_Connection=True` 时，连接请求中会显示工作人员帐户的标识，此请求对 SQL Server 是默认未知的。
 

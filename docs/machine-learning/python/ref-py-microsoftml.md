@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae408162ada9b43a9601c4058b9850db5a4afec4
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c638b3c32af037b8c597c840d4bdf388aad56efc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406190"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178584"
 ---
 # <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml（SQL Server 机器学习服务中的 Python 包）
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 microsoftml 是 Microsoft 推出的 Python 包，可提供高性能的机器学习算法。 它包括用于定型和转换、评分、文本和图像分析的功能，以及用于从现有数据中派生值的特征提取功能。 该包在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中提供，支持高性能的大数据、多核处理及快速数据流式处理。
 

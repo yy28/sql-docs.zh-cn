@@ -9,16 +9,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67071e8a13f0f7935064daa6dabdd857a3644d92
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730539"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178923"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 包的提示
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 本文提供了关于在 SQL Server 中使用 R 包的有用提示。 这些提示适用于不熟悉 R 的 DBA 以及拥有丰富经验但对 SQL Server 实例中的包访问不熟悉的 R 开发人员。
 

@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7f711ae8b90762003f903b7fd4a59771c5d3f53
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916623"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178684"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>使用 SQL Server 机器学习服务在 Azure Data Studio 笔记本中运行 Python 和 R 脚本
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 了解如何使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)在 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 笔记本中运行 Python 和 R 脚本。 Azure Data Studio 是一种跨平台数据库工具。
 

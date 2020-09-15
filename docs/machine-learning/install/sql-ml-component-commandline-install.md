@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3c3d469cb016a562f069473923f470ce750dd5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883904"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179796"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>从命令行安装 SQL Server 机器学习 R 和 Python 组件
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文提供从命令行安装 SQL Server 机器学习组件的说明：
 
@@ -216,4 +216,4 @@ Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server
 R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
 + [快速入门：在 T-SQL 中运行 R](../tutorials/quickstart-r-create-script.md)
-+ [教程：适用于 R 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教程：适用于 R 开发人员的数据库内分析](../tutorials/r-taxi-classification-introduction.md)

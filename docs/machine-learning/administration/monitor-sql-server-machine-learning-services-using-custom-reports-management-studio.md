@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 708d805ff810876ba5871b2e1e887dd97aceba3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 878c83f76a0235a43bcc22bb65e10dfa9eceb1b1
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659622"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179649"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的自定义报表监视 Python 和 R 脚本执行
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 使用 SQL Server Management Studio (SSMS) 中的自定义报表来监视外部脚本（Python 和 R）的执行情况、使用的资源、诊断问题，以及 SQL Server 机器学习服务中的优化性能。
 

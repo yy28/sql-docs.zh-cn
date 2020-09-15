@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896384"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178894"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上建立 R 开发的数据科学客户端
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 从 SQL Server 2016 及更高版本开始，如果在 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 或 [SQL Server 机器学习服务（数据库内）](../install/sql-machine-learning-services-windows-install.md)安装中包含 R 语言选项，则可使用 R 集成功能。 
 
@@ -38,7 +38,7 @@ ms.locfileid: "85896384"
 
 对于简单的 R 开发方案，可以使用 RGUI 可执行文件，该文件捆绑在 MRO 和 SQL Server 的基本 R 分发中。 本文介绍如何将 RGUI 用于本地和远程 R 会话。 为了提高工作效率，应使用功能齐全的 IDE，如 [RStudio 或 Visual Studio](#install-ide)。
 
-SSMS 需单独下载，它用于在 SQL Server 上创建和运行存储过程，其中包括包含 R 代码的存储过程。 在开发环境中编写的几乎所有 R 代码都可以嵌入到存储过程中。 你可以逐步完成其他教程，以便了解 [SSMS 和嵌入式 R](../tutorials/sqldev-in-database-r-for-sql-developers.md)。
+SSMS 需单独下载，它用于在 SQL Server 上创建和运行存储过程，其中包括包含 R 代码的存储过程。 在开发环境中编写的几乎所有 R 代码都可以嵌入到存储过程中。 你可以逐步完成其他教程，以便了解 [SSMS 和嵌入式 R](../tutorials/r-taxi-classification-introduction.md)。
 
 ## <a name="1---install-r-packages"></a>1 - 安装 R 包
 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242319"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179988"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能：结果和资源
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文是系列文章中的第四篇也是最后一篇文章，这些文章介绍了 R Services 的性能优化。 本文总结了测试各种优化方法的两个案例研究的方法、结果和结论。
 

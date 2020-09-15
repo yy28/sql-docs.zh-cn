@@ -12,15 +12,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e1482824da2d83e56538ce094e74c91cee224867
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8b6e6b67a73fe61997c847b33e66400855e80a50
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967748"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173422"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python 教程：将 K-Means 聚类分析与 SQL 机器学习配合使用，对客户进行聚类分析
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本系列教程由四个部分组成，引导你使用 Python 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或在[大数据群集](../../big-data-cluster/machine-learning-services.md)上开发和部署 K-Means 聚类分析模型，以便对客户数据进行聚类分析。

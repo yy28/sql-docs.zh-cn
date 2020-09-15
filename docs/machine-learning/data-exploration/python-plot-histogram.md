@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: dca97c6ad00a0678d277447b03dd6b7c863e8fe3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4ec56f02dd038d87e8b4e8e4c8597b7ba047ffa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242367"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179806"
 ---
 # <a name="plot-histograms-in-python"></a>在 Python 中绘制直方图 
-[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 本文介绍如何使用 Python 包 [pandas'.hist()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html) 来绘制数据。 SQL 数据库提供一种源可用于可视化具有连续的非重叠值的直方图数据间隔。
 

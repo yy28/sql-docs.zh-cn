@@ -10,15 +10,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf93d618ad03122cc7eecf641573d70b2b72158e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783508"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173511"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>使用 miniCRAN 创建本地 R 包存储库
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 本文介绍如何使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 来创建包和依赖项的本地存储库，从而脱机安装 R 包。 miniCRAN 识别包和依赖项，并将其下载到一个文件夹中，你将该文件夹复制到其他计算机以脱机安装 R 包  。
 

@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ab427983bdd327775ab817d6b56f496afe733127
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406150"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179962"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR（SQL Server 机器学习服务中的 R 包）
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 RevoScaleR 是 Microsoft 推出的 R 包，支持分布式计算、远程计算上下文和高性能数据科学算法。 还支持数据导入、数据转换、摘要、可视化和分析。 该包在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](sql-server-r-services.md) 中提供。
 
@@ -151,6 +151,6 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 + [R 教程](../tutorials/sql-server-r-tutorials.md)
 + [了解如何使用计算上下文](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [面向 SQL 开发者的 R：定型和操作模型](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [面向 SQL 开发者的 R：定型和操作模型](../tutorials/r-taxi-classification-introduction.md)
 + [GitHub 上的 Microsoft 产品示例](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R 引用 (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

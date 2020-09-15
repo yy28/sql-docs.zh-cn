@@ -9,47 +9,47 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 26c5e6f344d9fb0a14a21fa195214c4460673de0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e5239520d6c19de51b20f33d43ce72bb1079eba
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748511"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173538"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 和 SQL Server 支持的数据类型
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍如何针对数据结构和 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 上的参数将 SQL Server 数据类型映射到 Java 数据类型。
 
 输入/输出数据集和输入/输出参数当前支持以下 SQL 和 Java 数据类型。
 
-| SQL 数据类型        | Java 数据类型 | 注释 | |
-| ------------- |-------------|-|-|
-| bit      | boolean | | |
-| Tinyint      | short      | | |
-| Smallint | short      | | |
-| Int | int      | | |
-| Real | FLOAT      | | |
-| Bigint | long      | | |
-| FLOAT | double      | | |
-| nchar(n) | String      | | |
-| nvarchar(n) | String      | | |
-| binary(n) | byte[]      | | |
-| varbinary(n) | byte[]      | | |
-| nvarchar(max) | String      | | |
-| varbinary(max) | byte[]      | | |
-| uniqueidentifier | String | | |
-| char(n) | String | 仅支持 UTF8 字符串 | |
-| varchar(n) | String | 仅支持 UTF8 字符串 | |
-| varchar(max) | String | 仅支持 UTF8 字符串 | |
-| date | java.sql.date  | | |
-| numeric | java.math.BigDecimal  | | |
-| Decimal | java.math.BigDecimal  | | |
-| money | java.math.BigDecimal  | | |
-| smallmoney | java.math.BigDecimal  | | |
-| smalldatetime | java.sql.timestamp  | | |
-| datetime | java.sql.timestamp  | | |
-| datetime2 | java.sql.timestamp  | | |
+| SQL 数据类型        | Java 数据类型 | 注释 |
+| ------------- |-------------|-|
+| bit      | boolean | |
+| Tinyint      | short      | |
+| Smallint | short      | |
+| Int | int      | |
+| Real | FLOAT      | |
+| Bigint | long      | |
+| FLOAT | double      | |
+| nchar(n) | String      | |
+| nvarchar(n) | String      | |
+| binary(n) | byte[]      | |
+| varbinary(n) | byte[]      | |
+| nvarchar(max) | String      | |
+| varbinary(max) | byte[]      | |
+| uniqueidentifier | String | |
+| char(n) | String | 仅支持 UTF8 字符串 |
+| varchar(n) | String | 仅支持 UTF8 字符串 |
+| varchar(max) | String | 仅支持 UTF8 字符串 |
+| date | java.sql.date  | |
+| numeric | java.math.BigDecimal  | |
+| Decimal | java.math.BigDecimal  | |
+| money | java.math.BigDecimal  | |
+| smallmoney | java.math.BigDecimal  | |
+| smalldatetime | java.sql.timestamp  | |
+| datetime | java.sql.timestamp  | |
+| datetime2 | java.sql.timestamp  | |
 
 
 ## <a name="next-steps"></a>后续步骤

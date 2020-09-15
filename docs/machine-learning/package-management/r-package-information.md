@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 877728812d36a7d4db8370254c0fdccbe1011350
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b998c66511dc749002df01349bcb965b7f42e713
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723936"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178904"
 ---
 # <a name="get-r-package-information"></a>获取 R 包信息
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文介绍如何获取在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和[大数据群集](../../big-data-cluster/machine-learning-services.md)上安装的 R 包的相关信息。 示例 R 脚本显示如何列出包信息，如安装路径和版本。

@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: d7b48e547d402e15404e39e849c262320c5ee59e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406170"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179934"
 ---
 # <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML（SQL Server 机器学习服务中的 R 包）
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 “MicrosoftML”是 Microsoft 的一个 R 包，可提供高性能的机器学习算法。 它包括用于定型和转换、评分、文本和图像分析的功能，以及用于从现有数据中派生值的特征提取功能。 该包包含在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](sql-server-r-services.md) 中，为大数据提供高性能支持，使用多核处理，支持快速数据流式处理。 此外，MicrosoftML 还包括大量的文本和图像处理转换。
 
@@ -152,6 +152,6 @@ logisticRegression(args);
 
 + [R 教程](../tutorials/sql-server-r-tutorials.md)
 + [了解如何使用计算上下文](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [面向 SQL 开发者的 R：定型和操作模型](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [面向 SQL 开发者的 R：定型和操作模型](../tutorials/r-taxi-classification-introduction.md)
 + [GitHub 上的 Microsoft 产品示例](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R 引用 (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

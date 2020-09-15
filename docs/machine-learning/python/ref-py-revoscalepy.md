@@ -1,6 +1,6 @@
 ---
 title: revoscalepy Python 包
-description: revoscalepy 是 Microsoft 推出的 Python 包，支持分布式计算、远程计算上下文和高性能数据科学算法。 该包在 SQL Server 机器学习服务中提供。
+description: revoscalepy 是 Microsoft 推出的 Python 包，支持分布式计算、远程计算上下文和高性能数据科学算法。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406180"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178598"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy（SQL Server 机器学习服务中的 Python 包）
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 revoscalepy 是 Microsoft 推出的 Python 包，支持分布式计算、远程计算上下文和高性能数据科学算法。 该包在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中提供。
 
@@ -54,7 +54,7 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 在某些情况下，SQL Server 和 Python 使用不同的数据类型。 有关 SQL 和 Python 数据类型之间的映射的列表，请参阅 [Python 到 SQL 数据类型](python-libraries-and-data-types.md)。
 
-| 函数| 描述|
+| 函数| 说明|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  创建 SQL Server 计算上下文对象以将计算推送到远程实例。 好几个 revoscalepy 函数都将计算上下文作为参数  。 有关上下文切换示例，请参阅[使用 revoscalepy 创建模型](../tutorials/use-python-revoscalepy-to-create-model.md)。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | 基于 SQL Server 查询或表创建数据对象。 |
@@ -66,7 +66,7 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 ## <a name="2-data-manipulation-etl"></a>2 数据操作 (ETL)
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | 将数据导入 .xdf 文件或数据框。|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 将数据从输入数据集转换为输出数据集。|
@@ -75,7 +75,7 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 ## <a name="3-training-and-summarization"></a>3 训练和摘要
 
-| 函数| 描述|
+| 函数| 说明|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 调整随机梯度提升的决策树|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 调整分类和回归决策林|
@@ -105,7 +105,7 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 准备好将 Python 脚本封装在存储过程 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 中时，建议将代码重写为具有明确定义的输入和输出的单个函数。 
 
-输入和输出必须为 pandas 数据帧  。 完成此操作后，可从任何支持 T-SQL 的客户端调用存储过程，轻松地将 SQL 查询作为输入传递，并将结果保存到 SQL 表中。 有关示例，请参阅[了解面向 SQL 开发者的数据库内 Python 分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)。
+输入和输出必须为 pandas 数据帧  。 完成此操作后，可从任何支持 T-SQL 的客户端调用存储过程，轻松地将 SQL 查询作为输入传递，并将结果保存到 SQL 表中。 有关示例，请参阅[了解面向 SQL 开发者的数据库内 Python 分析](../tutorials/python-taxi-classification-introduction.md)。
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>将 revoscalepy 与 microsoftml 配合使用
 

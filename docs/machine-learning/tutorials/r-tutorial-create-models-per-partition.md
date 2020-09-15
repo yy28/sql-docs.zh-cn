@@ -9,15 +9,15 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756396"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179714"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中使用 R 创建基于分区的模型
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在 SQL Server 2019 中，“基于分区的建模”功能可用于根据分区数据创建和训练模型。 对于自然分割为给定分类方案的分层数据（例如地理区域、日期和时间、年龄或性别），可以对整个数据集执行脚本，并能够对在所有这些操作中保持不变的分区进行建模、训练和评分。 
 

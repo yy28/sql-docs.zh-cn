@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2ed46c4c4fc79d47bf2ca60b16f7d5563fd15d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723981"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179146"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>使用 Python 工具在 SQL Server 上安装包
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 本文介绍了如何使用标准 Python 工具在 SQL Server 机器学习服务的实例上安装新的 Python 包。 通常情况下，安装新包的流程与在标准 Python 环境中安装类似。 不过，如果服务器未连接到 Internet，还必须执行其他一些步骤。
 

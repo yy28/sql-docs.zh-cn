@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 844489b4c9f3e0e92848ebb1c9cb3b725ac5fedd
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ba5f9677022eb07a8810f3ea9c5dcffeaa716e7c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406160"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179920"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR（SQL Server 机器学习服务中的 R 包）
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 olapR 是 Microsoft 提供的 R 包，用于针对 SQL Server Analysis Services OLAP 多维数据集进行 MDX 查询。 函数不支持所有 MDX 操作，但可以生成对维度进行详尽分析、向下钻取、汇总和透视的查询。 该包在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](sql-server-r-services.md) 中提供。
 
