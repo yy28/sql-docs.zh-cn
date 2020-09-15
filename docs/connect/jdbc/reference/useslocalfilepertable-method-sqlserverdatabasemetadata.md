@@ -1,4 +1,5 @@
 ---
+description: usesLocalFilePerTable 方法 (SQLServerDatabaseMetaData)
 title: usesLocalFilePerTable 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2f0f2088f372b35059bbfaf480e90d94e6f277f9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c9d597c32dfad01fcedb257b0d9213bd18a56c6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396253"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>usesLocalFilePerTable 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean usesLocalFilePerTable()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果为每个表使用一个文件，则为 true  。 否则为 **false**。  
+ 如果为每个表使用一个文件，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
