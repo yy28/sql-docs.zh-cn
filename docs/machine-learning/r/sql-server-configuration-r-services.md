@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730896"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180461"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>进行 SQL Server 配置以供 R 使用
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文是基于两个案例研究介绍 R Services 的性能优化的系列文章中的第二篇。  本文提供有关用于运行 SQL Server R Services 的计算机的硬件和网络配置的指导。 它还包含有关配置解决方案中使用的 SQL Server 实例、数据库或表的方式的信息。 由于在 SQL Server 中使用 NUMA 模糊了硬件和数据库优化之间的界限，因此第三部分将详细讨论 CPU 关联和资源调控。
 

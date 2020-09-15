@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8b384e62220d15c53ddd500adc8260cf6a1b9d8a
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247516"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216744"
 ---
 # <a name="planning-for-reporting-services"></a>Reporting Services 规划
   通过这些主题可以更好地了解 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 了解如何安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 环境以满足您的需要。  
@@ -24,7 +24,7 @@ ms.locfileid: "87247516"
   
  [规划报表设计和报表部署 |Reporting Services](https://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
- [在 Microsoft Surface 设备和 Apple iOS 设备上查看 Reporting Services 报表](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
+ [在 Microsoft Surface 设备和 Apple iOS 设备上查看 Reporting Services 报表](https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)  
   
  ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小文件文件夹图标") Reporting Services 安装程序  
  [Reporting Services 报表服务器](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
