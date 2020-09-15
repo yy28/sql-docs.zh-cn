@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547469"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390652"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>启用和禁用 Reporting Services 的客户端打印
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547469"
   
  ![报表工具栏](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "报表工具栏")  
   
-|||  
+|交互|用户界面|  
 |-|-|  
 |对于所有浏览器而言，第一个对话框都一样，你可以更改基本布局属性，例如方向。 单击“打印” 时，体验会略有不同，具体取决于所使用的浏览器。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |在 Chrome 中，将打开详细的浏览器打印对话框。   你可以更改打印配置、打印和打开操作系统打印对话框。|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

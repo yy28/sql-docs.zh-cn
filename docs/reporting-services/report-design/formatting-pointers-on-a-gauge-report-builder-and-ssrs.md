@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 21f02918ca00e272292b0f88557677848dae0aab
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681486"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939227"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表指针指示仪表的当前值。   
@@ -44,12 +44,12 @@ ms.locfileid: "84681486"
  只能在径向仪表上指定可绘制在指针上面或下面的顶端。 所有指针顶端样式都是使用无法修改的内置渐变绘制的。 但 **RoundedDark** 样式除外，你可以为该样式指定渐变颜色和渐变样式。  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> 设置对齐间隔  
- 对齐间隔定义一个数值，舍入后的值是它的倍数。 默认情况下，仪表将指向已在数据窗格中指定的字段的精确值。 但是，您可能希望该精确值向上舍入或向下舍入，以使指针与预设的间隔对齐。 例如，如果仪表上的值为 34.2 并且您将对齐间隔指定为 5，则仪表指针将指向 35。 如果仪表上的值为 31.2 并且您将对齐间隔指定为 5，则仪表指针将指向 30。 有关详细信息，请参阅 [在仪表上设置对齐间隔（报表生成器和 SSRS）](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)。  
+ 对齐间隔定义一个数值，舍入后的值是它的倍数。 默认情况下，仪表将指向已在数据窗格中指定的字段的精确值。 但是，您可能希望该精确值向上舍入或向下舍入，以使指针与预设的间隔对齐。 例如，如果仪表上的值为 34.2 并且您将对齐间隔指定为 5，则仪表指针将指向 35。 如果仪表上的值为 31.2 并且您将对齐间隔指定为 5，则仪表指针将指向 30。 有关详细信息，请参阅 [在仪表上设置对齐间隔（报表生成器和 SSRS）](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)。  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> 指定图像作为径向仪表的指针  
  除指针样式的内置列表以外，还可以指定图像作为指针。 当使用图像替换现有针式指针样式时，该方法最有效。 图像叠加在指针之上，但所有指针功能都适用。 将图像用作指针时，颜色和渐变选项不适用。  
   
- 如果指针图像的形状不规则，则应将颜色指定为透明色，以隐藏不应在仪表上显示的图像区域。 定义透明色时，仪表将图像转置到现有指针之上并裁剪该图像，以便仅显示指针形状。 仪表重新缩放图像，使其适合指针大小。 为指针指定图像时，在仪表上面添加的所有后续指针均绘制到该图像下面。 为此，如果仪表上存在多个指针，最好不要为指针指定图像。 有关详细信息，请参阅[指定图像作为仪表指针（报表生成器和 SSRS）](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)。  
+ 如果指针图像的形状不规则，则应将颜色指定为透明色，以隐藏不应在仪表上显示的图像区域。 定义透明色时，仪表将图像转置到现有指针之上并裁剪该图像，以便仅显示指针形状。 仪表重新缩放图像，使其适合指针大小。 为指针指定图像时，在仪表上面添加的所有后续指针均绘制到该图像下面。 为此，如果仪表上存在多个指针，最好不要为指针指定图像。 
   
 ## <a name="see-also"></a>另请参阅  
  [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

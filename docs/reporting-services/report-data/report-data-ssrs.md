@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d9581fe8ae3f250d40eeaf21e76c4e1f373e12cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458899"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395338"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据简介
 
@@ -98,9 +98,8 @@ ms.locfileid: "86458899"
 
  与创建数据连接以及从外部数据源、数据集和查询添加数据相关的任务。  
   
-|||  
+|常见任务|链接|  
 |-|-|  
-|**常见任务**|**链接**|  
 |创建数据连接|[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |创建数据集和查询|[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |在发布后管理数据源|[管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)|  

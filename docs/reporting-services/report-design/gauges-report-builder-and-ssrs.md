@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011855"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939217"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表数据区域显示数据集的单个值。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 在单个仪表面板中，可以创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  
@@ -283,16 +283,13 @@ ms.locfileid: "84011855"
   
 -   [设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [对仪表设置四舍五入间隔（报表生成器和 SSRS）](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [指定图像作为仪表指针（报表生成器和 SSRS）](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [对仪表设置四舍五入间隔（报表生成器和 SSRS）](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  下列主题提供与使用仪表有关的其他信息。  
   
-|||  
-|-|-|  
 |术语|定义|  
+|-|-|  
 |[设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上刻度的格式有关的一般信息，并且提供与径向仪表和线性仪表上刻度的格式设置选项有关的详细信息。|  
 |[设置仪表上指针的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上指针的格式有关的一般信息，并且提供与可用于径向仪表和线性仪表的指针样式的格式设置选项有关的详细信息。|  
 |[设置仪表上范围的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上范围的格式以便指示仪表上一段重要的值或者以直观方式指示指针值何时进入某一值范围有关的信息。|  
