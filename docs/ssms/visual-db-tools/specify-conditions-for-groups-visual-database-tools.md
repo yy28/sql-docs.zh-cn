@@ -1,4 +1,5 @@
 ---
+description: 为组指定条件 (Visual Database Tools)
 title: 为组指定条件
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 97a416830b2849b41e88dbf7c66f03f98027e7b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4bd698f250585e967511f9846bec34da0e2e80d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88369043"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>为组指定条件 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85999292"
   
 2.  如果条件要基于的列不在“[条件](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)”窗格中，请添加该列。 （大多数情况下，该条件所涉及的列已经是组或汇总列。）不能使用未包含在聚合函数或 GROUP BY 子句中的列。  
   
-3.  在“筛选器”  列中，指定要对组应用的条件。  
+3.  在“筛选器”**** 列中，指定要对组应用的条件。  
   
     [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将自动在“[SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)”的语句中创建 HAVING 子句，如下例所示：  
   

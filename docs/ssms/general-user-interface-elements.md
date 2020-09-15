@@ -1,4 +1,5 @@
 ---
+description: 常规用户界面元素
 title: 常规用户界面元素
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba6becbf3ef8ceb2804f068ab6e1d848728b366
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68517b526b042ad2085cc539b90ff769bb72e712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371083"
 ---
 # <a name="general-user-interface-elements"></a>常规用户界面元素
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-“编辑器”  、“属性”  窗口以及“工具箱”  是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
+“编辑器”****、“属性”**** 窗口以及“工具箱”**** 是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
   
 ## <a name="in-this-section"></a>本节内容  
 [“关于”对话框](../ssms/about-dialog-box.md)  
@@ -32,7 +33,7 @@ ms.locfileid: "86004756"
 介绍 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何在文档窗口中承载 Web 浏览器。  
   
 [外部工具对话框](../ssms/external-tools-dialog-box.md)  
-允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的工具添加到“工具”菜单中。  
+允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的工具添加到“工具”**** 菜单中。  
   
 [属性窗口 (Management Studio)](../ssms/properties-window-management-studio.md)  
 允许用户查看编辑器和设计器中所选对象的属性和事件。 还允许用户编辑和查看文件、项目和解决方案的属性。 在“属性”窗口中可以对某些属性进行编辑。  

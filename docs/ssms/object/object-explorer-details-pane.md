@@ -1,4 +1,5 @@
 ---
+description: 对象资源管理器详细信息窗格
 title: 对象资源管理器详细信息窗格
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370783"
 ---
 # <a name="object-explorer-details-pane"></a>对象资源管理器详细信息窗格
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 对象资源管理器详细信息是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的一个组件，它提供服务器中所有对象的表格视图，并显示一个用于管理这些对象的用户界面。 对象资源管理器的功能根据服务器的类型稍有不同，但一般都包括用于数据库的开发功能和用于所有服务器类型的管理功能。  
   
-默认情况下，“对象资源管理器详细信息”窗格在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 是可见的。 如果看不到对象资源管理器，请在“视图”  菜单上单击“对象资源管理器详细信息”  或按 **F7**。  
+默认情况下，“对象资源管理器详细信息”窗格在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 是可见的。 如果看不到对象资源管理器，请在“视图”**** 菜单上单击“对象资源管理器详细信息”**** 或按 **F7**。  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示的数据采用启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时有效的 Microsoft Windows 的“区域和语言选项”的格式。 重新启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以反映更新的设置。  
@@ -41,8 +42,8 @@ ms.locfileid: "86001913"
   
 |图标|操作|  
 |--------|----------|  
-|**返回**|移动到对象资源管理器详细信息中显示的前几个项。 如果以前的显示内容是搜索操作的结果，则重新运行搜索。|  
-|**前进**|选择“后退”  操作后，移动到下一个屏幕。|  
+|**后退**|移动到对象资源管理器详细信息中显示的前几个项。 如果以前的显示内容是搜索操作的结果，则重新运行搜索。|  
+|**前进**|选择“后退”**** 操作后，移动到下一个屏幕。|  
 |**Up**|转到父对象或父文件夹。|  
 |**同步**|将对象资源管理器的焦点设置为对象资源管理器详细信息中的选定对象。|  
 |**筛选器**|如果有，显示对象的可配置子集。|  
@@ -59,10 +60,10 @@ ms.locfileid: "86001913"
 单击列标题一次，可按该列进行排序。 再次单击同一个列标题，可按该列进行反向排序。 对于对象和文件夹范围内的每个用户将保留排序选择，重新启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时也会保留。  
   
 ### <a name="filtering"></a>Filtering  
-可以使用对象资源管理器详细信息工具栏上的“筛选器”  图标，筛选对象资源管理器详细信息中显示的某些对象列表。 在可以进行筛选时，将启用该图标。  
+可以使用对象资源管理器详细信息工具栏上的“筛选器”**** 图标，筛选对象资源管理器详细信息中显示的某些对象列表。 在可以进行筛选时，将启用该图标。  
   
 ### <a name="details-pane"></a>“详细信息”窗格  
-对象资源管理器详细信息的最底部区域包含一个窗格，用于显示所选对象的某些详细信息。 如果选择多个对象，则只显示对象的计数。 在该窗格中选择项后，单击“复制”  图标可将显示的文本复制到剪贴板。  
+对象资源管理器详细信息的最底部区域包含一个窗格，用于显示所选对象的某些详细信息。 如果选择多个对象，则只显示对象的计数。 在该窗格中选择项后，单击“复制”**** 图标可将显示的文本复制到剪贴板。  
   
 向下箭头键将所选内容移至列表中的下一项。 向上箭头键将所选内容移至列表中的上一项。 按住箭头键将快速通过这些项。 所选内容将停止在属性列表的底部或顶部。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "86001913"
 如果属性窗格中属性的数目超过了在内容区域中适合的数目，一个滚动条将出现在属性窗格的右侧。 使用滚动条可以调整内容区域中属性值的视图。  
   
 ### <a name="multiple-object-selection"></a>多重对象选择  
-对象资源管理器详细信息支持多重对象选择。 例如，如果在对象资源管理器中选择了表，则在“对象资源管理器详细信息”窗口中按住 **Ctrl** 键，即可选择多个表，右键单击这些表，然后选择“删除”  或“生成表脚本”  ，可立即对所有所选表执行操作。 标准复制命令可将显示的文本复制到剪贴板。  
+对象资源管理器详细信息支持多重对象选择。 例如，如果在对象资源管理器中选择了表，则在“对象资源管理器详细信息”窗口中按住 **Ctrl** 键，即可选择多个表，右键单击这些表，然后选择“删除”**** 或“生成表脚本”****，可立即对所有所选表执行操作。 标准复制命令可将显示的文本复制到剪贴板。  
   
 ## <a name="sql-server-object-search"></a>SQL Server 对象搜索  
 通配符  

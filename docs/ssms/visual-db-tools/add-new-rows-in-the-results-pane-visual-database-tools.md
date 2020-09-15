@@ -1,4 +1,5 @@
 ---
+description: 在“结果”窗格中添加新行 (Visual Database Tools)
 title: 在“结果”窗格中添加新行
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d504f1c3aefd598a65848e34b1bd37c79de2c280
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9e976858478d896a1057cc561a2e61a540d0cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370233"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中添加新行 (Visual Database Tools)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86009321"
   
 1.  定位到“结果”窗格底部，此处有一个可用于添加新数据行的空白行。  
   
-    所有列的初始值都将为 NULL  。  
+    所有列的初始值都将为 NULL**。  
   
     > [!TIP]  
     > 若要直接转到第一个空行，请使用“结果”窗格底部的导航栏。  
@@ -46,7 +47,7 @@ ms.locfileid: "86009321"
     > [!NOTE]  
     > 如果所粘贴的一行或多行无法提交到数据库，则您将收到消息，指示哪些行不能提交。  
   
-3.  为新行输入数据。 如果要粘贴数据，请从“编辑”  菜单中选择“粘贴”  。  
+3.  为新行输入数据。 如果要粘贴数据，请从“编辑”**** 菜单中选择“粘贴”****。  
   
 4.  离开该行可以将其提交到数据库。  
   

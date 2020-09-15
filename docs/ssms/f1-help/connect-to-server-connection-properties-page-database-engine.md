@@ -1,4 +1,5 @@
 ---
+description: 连接到服务器（“连接属性”页）（数据库引擎）
 title: 连接到服务器（“连接属性”页）（数据库引擎）
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,20 +14,20 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370843"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例或在“已注册的服务器”  中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例时，此对话框中才显示“连接”  和“选项”  。 注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，此对话框中仅显示“测试”  和“保存”  。  
+使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例或在“已注册的服务器”**** 中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例时，此对话框中才显示“连接”**** 和“选项”****。 注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，此对话框中仅显示“测试”**** 和“保存”****。  
   
 **连接到数据库**  
-从列表中选择要连接到的数据库。 如果选择“<default>”  ，则将连接到服务器的默认数据库。 如果选择 **<Browse server>** ，则可以浏览要连接的数据库的服务器。  
+从列表中选择要连接到的数据库。 如果选择“<default>”，则将连接到服务器的默认数据库。 如果选择 **<Browse server>** ，则可以浏览要连接的数据库的服务器。  
   
 在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”  对话框的“连接属性”  选项卡上指定一个数据库。请确保选中“加密连接”  复选框。  
   
@@ -48,16 +49,16 @@ ms.locfileid: "87123065"
 强制对连接进行加密。  
   
 **使用自定义颜色**  
-选择此选项可以指定 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 查询编辑器窗口中状态栏的背景颜色。 若要指定颜色，请单击“选择”  。 在“颜色”  对话框中，从“基本颜色”  网格中选择一种预定义颜色，或者单击“定义自定义颜色”  定义并使用自定义颜色。  
+选择此选项可以指定 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 查询编辑器窗口中状态栏的背景颜色。 若要指定颜色，请单击“选择”****。 在“颜色”**** 对话框中，从“基本颜色”**** 网格中选择一种预定义颜色，或者单击“定义自定义颜色”**** 定义并使用自定义颜色。  
   
--   如果在“对象资源管理器”  窗格中指定了服务器条目的颜色，则在打开查询编辑器窗口时将使用此颜色。 若要打开查询编辑器窗口，可以右键单击服务器条目，然后选择“新建查询”  ，或者如果“对象资源管理器”  窗格处于活动状态且其焦点位于此服务器上，则可以单击工具栏上的“新建查询”  。  
+-   如果在“对象资源管理器”**** 窗格中指定了服务器条目的颜色，则在打开查询编辑器窗口时将使用此颜色。 若要打开查询编辑器窗口，可以右键单击服务器条目，然后选择“新建查询”****，或者如果“对象资源管理器”**** 窗格处于活动状态且其焦点位于此服务器上，则可以单击工具栏上的“新建查询”****。  
   
--   如果在“已注册的服务器”  窗格中指定了服务器条目的颜色，则在打开查询编辑器窗口时将使用此颜色。 若要打开查询编辑器窗口，可以右键单击服务器条目，然后选择“新建查询”  ，或者如果“已注册的服务器”  窗格处于活动状态且其焦点位于此服务器上，则可以单击工具栏上的“新建查询”  。  
+-   如果在“已注册的服务器”**** 窗格中指定了服务器条目的颜色，则在打开查询编辑器窗口时将使用此颜色。 若要打开查询编辑器窗口，可以右键单击服务器条目，然后选择“新建查询”****，或者如果“已注册的服务器”**** 窗格处于活动状态且其焦点位于此服务器上，则可以单击工具栏上的“新建查询”****。  
   
--   依次单击“文件”  菜单上的“新建”  和“数据库引擎查询”  后，在“连接到服务器”  对话框中指定的颜色即应用于此查询编辑器窗口。  
+-   依次单击“文件”**** 菜单上的“新建”**** 和“数据库引擎查询”**** 后，在“连接到服务器”**** 对话框中指定的颜色即应用于此查询编辑器窗口。  
   
 **AD 域名或租户 ID**  
-通过“Active Directory - 含 MFA 支持的通用身份验证”  连接时，请指定身份验证的域。 仅当使用 SSMS 17.2 或更高版本时，此选项才可用。 
+通过“Active Directory - 含 MFA 支持的通用身份验证”**** 连接时，请指定身份验证的域。 仅当使用 SSMS 17.2 或更高版本时，此选项才可用。 
 
 **全部重置**  
 将所有手动输入的连接属性值替换为默认值。  
@@ -68,11 +69,11 @@ ms.locfileid: "87123065"
 **选项**  
 单击此选项更改对话框并隐藏其他服务器连接选项，例如记住密码。  
   
-**Test**  
-在“已注册的服务器”  中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，单击此选项可以测试连接。  
+**测试**  
+在“已注册的服务器”**** 中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，单击此选项可以测试连接。  
   
 **保存**  
-保存“已注册的服务器”  中的设置。  
+保存“已注册的服务器”**** 中的设置。  
   
 ## <a name="see-also"></a>另请参阅  
 [“连接属性”对话框](../../ssms/f1-help/connection-properties-dialog-box.md)  
