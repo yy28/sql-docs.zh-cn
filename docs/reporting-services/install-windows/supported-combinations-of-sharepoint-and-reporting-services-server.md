@@ -14,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5499ace3a3a0b0f1ba98b8ae1859b51d9867eeb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866060"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397086"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支持的 SharePoint 和 Reporting Services 服务器组合
 
@@ -38,7 +38,7 @@ ms.locfileid: "74866060"
 
 ### <a name="supported-combinations"></a>支持的组合
 
-||报表服务器|外接程序|SharePoint 版本|
+|Number|报表服务器|外接程序|SharePoint 版本|
 |-|-------------------|-------------|------------------------|
 |1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
@@ -61,7 +61,7 @@ ms.locfileid: "74866060"
 
  有关外接程序下载页的链接，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
 
- 其他注意事项： 
+ 其他注意事项：
 
 - 请确保升级，以升级场中所有的 SharePoint 服务器。 这包括应用和 Web 前端服务器。
 

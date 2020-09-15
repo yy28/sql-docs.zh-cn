@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812627"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362504"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用情况和诊断数据收集的本地审核 (CEIP)
 
@@ -78,29 +78,29 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
   >[!NOTE] 
   >在 SQL Server 安装路径之外配置本地审核目录路径，以免审核功能和修补导致 SQL Server 出现潜在问题。
 
-  ||设计决策|建议|  
-  |------|-----------------|----------|  
-  |![复选框](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|空间可用性 |对于大约具有 10 个数据库的中等工作负荷，计划每个实例每个数据库使用大约 2 MB 磁盘空间。|  
-|![复选框](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|单独的目录 | 为每个实例创建一个目录。 例如，对名为 `MSSQLSERVER` 的 SQL Server 实例使用 C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\  。 这简化了文件管理。
-|![复选框](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|单独的文件夹 |对每个服务使用特定文件夹。 例如对于给定实例名称，对数据库引擎使用一个文件夹。 如果有 Analysis Services 的实例使用相同实例名称，则为 Analysis Services 创建单独的文件夹。 如果将数据库引擎实例和 Analysis Services 实例配置到相同的文件夹，会导致本地审核将这两个实例中的所有数据都写入同一日志文件。| 
-|![复选框](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|向 SQL Server CEIP 服务登录帐户授予权限|向 SQL Server CEIP 服务登录帐户授予“列出文件夹内容”  、“读取”  和“写入”  访问权限|
+|设计决策|建议|  
+|-----------------|----------|  
+|空间可用性 |对于大约具有 10 个数据库的中等工作负荷，计划每个实例每个数据库使用大约 2 MB 磁盘空间。|  
+|单独的目录 | 为每个实例创建一个目录。 例如，对名为 `MSSQLSERVER` 的 SQL Server 实例使用 C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\**。 这简化了文件管理。
+|单独的文件夹 |对每个服务使用特定文件夹。 例如对于给定实例名称，对数据库引擎使用一个文件夹。 如果有 Analysis Services 的实例使用相同实例名称，则为 Analysis Services 创建单独的文件夹。 如果将数据库引擎实例和 Analysis Services 实例配置到相同的文件夹，会导致本地审核将这两个实例中的所有数据都写入同一日志文件。| 
+|向 SQL Server CEIP 服务登录帐户授予权限|向 SQL Server CEIP 服务登录帐户授予“列出文件夹内容”****、“读取”**** 和“写入”**** 访问权限|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>向 SQL Server CEIP 服务登录帐户授予权限
   
-1. 在“文件资源管理器”  中，导航到新文件夹所在的位置。
+1. 在“文件资源管理器”**** 中，导航到新文件夹所在的位置。
 
-1. 右键单击新文件夹，然后选择“属性”  。 
+1. 右键单击新文件夹，然后选择“属性”****。 
 
-1. 在“安全性”选项卡上，选择“编辑”以管理权限   。
+1. 在“安全性”选项卡上，选择“编辑”以管理权限********。
 
-1. 选择“添加”  ，并键入 SQL Server CEIP 服务的凭据。 例如，`NT Service\SQLTELEMETRY`。
+1. 选择“添加”****，并键入 SQL Server CEIP 服务的凭据。 例如，`NT Service\SQLTELEMETRY`。
 
-1. 选择“检查名称”以验证所提供的名称，然后选择“确定”   。
+1. 选择“检查名称”以验证所提供的名称，然后选择“确定”********。
 
-1. 在“权限”  对话框中，选择 SQL Server CEIP 服务登录帐户，并依次选择“列出文件夹内容”  、“读取”  和“写入”  。
+1. 在“权限”**** 对话框中，选择 SQL Server CEIP 服务登录帐户，并依次选择“列出文件夹内容”****、“读取”**** 和“写入”****。
 
-1. 选择“确定”以立即应用权限更改  。 
+1. 选择“确定”以立即应用权限更改****。 
   
 ### <a name="create-a-registry-key-setting-to-configure-local-audit-target-directory"></a>创建注册表项设置以配置本地审核目标目录
 
@@ -108,28 +108,28 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 1. 导航到相应的 CPE 路径：
 
-   | 版本 | 数据库引擎 - 注册表项 |
+   | 版本 | 数据库引擎 - 注册表项****** |
    | :------ | :----------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL13.Your-Instance-Name\\CPE   |
-   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.Your-Instance-Name\\CPE   |
-   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL15  .Your-Instance-Name  \\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL13.Your-Instance-Name\\CPE****** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.Your-Instance-Name\\CPE****** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL15****.Your-Instance-Name**\\CPE |
    | &nbsp; | &nbsp; |
 
-   | 版本 | Analysis Services - 注册表项 |
+   | 版本 | Analysis Services - 注册表项****** |
    | :------ | :------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS13.Your-Instance-Name\\CPE   |
-   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.Your-Instance-Name\\CPE   |
-   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS15  .Your-Instance-Name  \\CPE |  
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS13.Your-Instance-Name\\CPE****** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.Your-Instance-Name\\CPE****** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS15****.Your-Instance-Name**\\CPE |  
    | &nbsp; | &nbsp; |
 
-   | 版本 | Integration Services - 注册表项 |
+   | 版本 | Integration Services - 注册表项****** |
    | :------ | :---------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\130  |
-   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\140  |
-   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\150  |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\130**** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\140**** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\150**** |
    | &nbsp; | &nbsp; |
 
-1. 右键单击 CPE 路径并选择“新建”  。 选择“字符串值”  。
+1. 右键单击 CPE 路径并选择“新建”****。 选择“字符串值”****。
 
 1. 对新的注册表项 `UserRequestedLocalAuditDirectory` 进行命名。 
  
@@ -141,32 +141,32 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 1. 导航到相应的 CPE [路径](#create-a-registry-key-setting-to-configure-local-audit-target-directory)。 
 
-1. 右键单击“UserRequestedLocalAuditDirectory”，然后选择“修改”   。 
+1. 右键单击“UserRequestedLocalAuditDirectory”，然后选择“修改”******。 
 
-1. 若要启用本地审核，请键入本地审核路径（例如，“C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\”  ）。
+1. 若要启用本地审核，请键入本地审核路径（例如，“C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\”）。
  
-    若要禁用本地审核，请清空“UserRequestedLocalAuditDirectory”  中的值。
+    若要禁用本地审核，请清空“UserRequestedLocalAuditDirectory”中的值。
 
 1. 关闭 **regedit**。 
 
 如果服务已在运行，SQL Server CEIP 应该会立即识别出本地审核设置。 若要启动 SQL Server CEIP 服务，系统管理员或具有启动或停止 Windows 服务的访问权限的人员可以执行以下步骤： 
 
-1. 启动“服务”控制台  。 若要执行此操作，请选择键盘上的“Windows 徽标键+R”以打开“运行”对话框   。 然后在文本字段中键入 services.msc 并选择“确定”，以启动“服务”控制台    。  
+1. 启动“服务”控制台****。 若要执行此操作，请选择键盘上的“Windows 徽标键+R”以打开“运行”对话框********。 然后在文本字段中键入 services.msc 并选择“确定”，以启动“服务”控制台**********。  
 
 1. 导航到相应的服务。 
 
-    - 对于数据库引擎，使用 SQL Server CEIP 服务 (Your-Instance-Name)  。     
-    - 对于 Analysis Services，使用 SQL Server Analysis Services CEIP (Your-Instance-Name)  。
+    - 对于数据库引擎，使用 SQL Server CEIP 服务 (Your-Instance-Name)******。     
+    - 对于 Analysis Services，使用 SQL Server Analysis Services CEIP (Your-Instance-Name)******。
     - 对于 Integration Services， 
-        - 对于 SQL 2016，使用 SQL Server Integration Services CEIP 服务 13.0  。
-        - 对于 SQL 2017，使用 SQL Server Integration Services CEIP 服务 14.0  。
-    - 对于 SQL 2019，使用 SQL Server Integration Services CEIP 服务 15.0  。
+        - 对于 SQL 2016，使用 SQL Server Integration Services CEIP 服务 13.0**。
+        - 对于 SQL 2017，使用 SQL Server Integration Services CEIP 服务 14.0**。
+    - 对于 SQL 2019，使用 SQL Server Integration Services CEIP 服务 15.0**。
 
 1. 右键单击服务，然后选择“重新启动”。 
 
-1. 验证服务的状态是否为“正在运行”  。 
+1. 验证服务的状态是否为“正在运行”****。 
 
-本地审核每天生成一个日志文件。 日志文件会采用 `<YYYY-MM-DD>.json` 的形式。 例如 2016-07-12.json  。 如果指定目录中已有当天的文件，本地审核会向此文件追加信息。 否则，它会为该天创建新文件。 
+本地审核每天生成一个日志文件。 日志文件会采用 `<YYYY-MM-DD>.json` 的形式。 例如 2016-07-12.json**。 如果指定目录中已有当天的文件，本地审核会向此文件追加信息。 否则，它会为该天创建新文件。 
 
   >[!NOTE]
   > 启用本地审核后，首次写入日志文件可能最多需要 5 分钟才能完成。 
@@ -179,13 +179,13 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>本地审核输出数据结构的数据字典 
 
-- 本地审核日志文件采用 JSON 格式，其中包含一组对象（行），表示在 emitTime  发送回 Microsoft 的数据点。
+- 本地审核日志文件采用 JSON 格式，其中包含一组对象（行），表示在 emitTime 发送回 Microsoft 的数据点。
 - 每行都遵循由 **schemaVersion**标识的特定架构。
 - 每行都是标识为 **sessionID**的 SQLCEIP 服务会话的输出。
 - 这些行按 **sequence**标识的顺序发出。
-- 每个数据点行都包含 queryIdentifier 的输出，可以是与某种类型的跟踪（标识为 traceName）相关的 T-SQL 查询、XE 会话或消息   。
+- 每个数据点行都包含 queryIdentifier 的输出，可以是与某种类型的跟踪（标识为 traceName）相关的 T-SQL 查询、XE 会话或消息 。
 - **queryIdentifiers** 会进行分组并随同及 **querySetVersion**一起进行版本管理。
-- data 包含对应查询执行（花费时间为 queryTimeInTicks）的输出   。
+- data 包含对应查询执行（花费时间为 queryTimeInTicks）的输出 。
 - T-SQL 查询的**queryIdentifiers** 具有查询中存储的 T-SQL 查询定义。
 
 | 逻辑本地审核信息层次结构 | 相关列 |
@@ -214,9 +214,9 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 |querySetVersion | 一组查询定义的版本 | 1.0.0.0 
 |traceName | 跟踪的类别：（SQLServerXeQueries、SQLServerPeriodicQueries、SQLServerOneSettingsException） | SQLServerPeriodicQueries 
 |queryIdentifier | 查询的标识符 | SQLServerProperties.002 
-|data   | 以 T-SQL 查询、XE 会话或应用程序输出的形式，对 queryIdentifier 收集的信息的输出 |  [{"Collation":"SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled":"0" "SqlIntSec":"1","IsSingleUser":"0","SqlFilestreamMode":"0","SqlPbInstalled":"0","SqlPbNodeRole": "","SqlVersionMajor":"13","SqlVersionMinor":"0","SqlVersionBuild":"2161","ProductBuildType": "","ProductLevel":"RTM","ProductUpdateLevel":"CU2","ProductUpdateReference":"KB3182270","ProductRevision":"3","SQLEditionId": "-1534726760","IsClustered":"0","IsHadrEnabled":"0","SqlAdvAInstalled":"0","PacketReceived":"1210","Version":"Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|query| 如果适用，是与生成数据的 queryIdentifier 相关的 T-SQL 查询定义。        此组件不会由 SQL Server CEIP 服务上传。 它包含在本地审核中，仅供客户参考。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | 执行具有以下跟踪类别的查询所需的持续时间：（SQLServerXeQueries、SQLServerPeriodicQueries） |  0 
+|data   | 以 T-SQL 查询、XE 会话或应用程序输出的形式，对 queryIdentifier 收集的信息的输出 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|查询| 如果适用，是与生成数据的 queryIdentifier 相关的 T-SQL 查询定义。        此组件不会由 SQL Server CEIP 服务上传。 它包含在本地审核中，仅供客户参考。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | 具有以下跟踪类别的查询执行所需的持续时间：（SQLServerXeQueries、SQLServerPeriodicQueries） |  0 
  
 ### <a name="trace-categories"></a>跟踪类别 
 我们当前收集以下跟踪类别： 
