@@ -1,18 +1,19 @@
 ---
+description: SQL 文档的版本控制系统
 title: SQL 文档的版本控制系统
-ms.date: 07/22/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373163"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 文档的版本控制系统
 
@@ -164,7 +165,7 @@ ms.locfileid: "87247362"
     - [SQL Server 2014 脱机文档](/sql/sql-server/sql-server-offline-documentation)
 
 - 2016 及更高版本：&nbsp; SQL Server 2016 及更高版本已完全实现版本控制系统。
-    - [欢迎使用 2016 及更高版本的 SQL Server 文档](/sql/sql-server/?view=sql-server-2016)
+    - [欢迎使用 2016 及更高版本的 SQL Server 文档](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
     - [SQL Server 2016 脱机文档](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>另请参阅

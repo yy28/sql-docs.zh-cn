@@ -1,4 +1,5 @@
 ---
+description: SecureConnectionLevel 属性 (WMI MSReportServer_ConfigurationSetting)
 title: SecureConnectionLevel 属性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59c833c86c632c0f5a0838a98f31d89f4f0df5fb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: dcf7fdc038f5284d78835e64e568bb348756a3d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373153"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 属性 - SecureConnectionLevel
   返回 RSReportServer.config 文件中指定的安全连接级别。 只读。  

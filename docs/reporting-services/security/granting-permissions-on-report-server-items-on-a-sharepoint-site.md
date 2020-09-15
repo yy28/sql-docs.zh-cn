@@ -1,4 +1,5 @@
 ---
+description: 在 SharePoint 站点上授予对报表服务器项的权限
 title: 在 SharePoint 站点上授予对报表服务器项的权限 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dfaece778331dd84a3d24283d11c5721180ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373353"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上授予对报表服务器项的权限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了内置安全功能。使用这些功能，可以授予对从 SharePoint 站点和库访问的报表服务器项的访问权限。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  
@@ -56,15 +57,15 @@ ms.locfileid: "65580039"
  服务器管理员或网站集管理员可设置确定其他站点所有者是否可以设置权限的选项。 根据您拥有的权限级别，您可能无法创建或自定义 SharePoint 组或权限级别。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用预定义的 SharePoint 组和权限级别  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议使用标准 SharePoint 组（即“Site name 所有者”、“Site name 成员”和“Site name 访问者”）并在站点级分配权限       。 为其分配权限的多数用户都应是 Site name 访问者或 Site name 成员组的成员     。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议使用标准 SharePoint 组（即“Site name 所有者”、“Site name 成员”和“Site name 访问者”）并在站点级分配权限** ****** ****** ****。 为其分配权限的多数用户都应是 Site name 访问者或 Site name 成员组的成员** ****** ****。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
   
  下列 SharePoint 组拥有以下预定义的权限级别：  
   
--   “所有者”  组拥有“完全控制”权限，通过这些权限，组成员可以更改站点内容、页面或功能。 “完全控制”访问权限应仅限于站点管理员。  
+-   “所有者” **** 组拥有“完全控制”权限，通过这些权限，组成员可以更改站点内容、页面或功能。 “完全控制”访问权限应仅限于站点管理员。  
   
--    “成员”组拥有“参与讨论”级别权限，此权限允许组成员查看页面、编辑项、提交更改以待审批、添加项以及从列表中删除项。  
+-   **** “成员”组拥有“参与讨论”级别权限，此权限允许组成员查看页面、编辑项、提交更改以待审批、添加项以及从列表中删除项。  
   
--    “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。  
+-   **** “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。  
   
  SharePoint 组拥有的权限级别可提供对许多报表服务器操作的快速访问。 如果您发现内置安全设置未提供所需访问级别，可创建自定义组或权限级别。  
   

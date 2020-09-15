@@ -1,4 +1,5 @@
 ---
+description: 报表服务器项的 SharePoint 站点和列表权限参考
 title: 报表服务器项的 SharePoint 站点和列表权限参考 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373363"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>报表服务器项的 SharePoint 站点和列表权限参考
   本主题提供了 SharePoint 中的权限参考，对于在 SharePoint 集成模式下运行的报表服务器，可使用这些权限来授予对报表服务器操作的访问权限。 如果要创建自定义权限级别，本主题可帮助您选择要使用何种权限。  
@@ -34,11 +35,18 @@ ms.locfileid: "65570687"
 |访问者|**V**|  
   
  不会影响报表服务器的权限未在表中列出。 所有个性化权限均未列出在该参考文章中。 尽管可以将报表服务器项包括在个性化网站中，但报表服务器不会直接处理个性化请求或操作。  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | SharePoint 2010 和 SharePoint 2013。|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 和 SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>列表权限  
  对包含报表服务器项的库设置的权限将确定用户如何访问这些项。  
   
