@@ -1,4 +1,5 @@
 ---
+description: setTime 方法 (java.lang.String, java.sql.Time, java.util.Calendar)
 title: 设置时间和日历值的 setTime 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f3cb2e75e65d997c5162d93827263b33483ac77
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f3b14b5c914b54145c13fd57026e1f9568609110
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431599"
 ---
 # <a name="settime-method-javalangstring-javasqltime-javautilcalendar"></a>setTime 方法 (java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +37,10 @@ public void setTime(java.lang.String sCol,
                     java.util.Calendar c)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- sCol   
+#### <a name="parameters"></a>参数  
+ sCol**  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
  *x*  
   
@@ -55,7 +56,7 @@ public void setTime(java.lang.String sCol,
 ## <a name="remarks"></a>备注  
  此 setTime 方法是由 java.sql.CallableStatement 接口中的 setTime 方法指定的。  
   
- 自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 驱动程序 3.0 起，此方法的行为由 sendTimeAsDatetime  连接属性（[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)）和 [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改。  
+ 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始，此方法的行为由 sendTimeAsDatetime**** 连接属性（[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)）和 [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改。  
   
  有关详细信息，请参阅[配置将 java.sql.Time 值发送到服务器的方式](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   

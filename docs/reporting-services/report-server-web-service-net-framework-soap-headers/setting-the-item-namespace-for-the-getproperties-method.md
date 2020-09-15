@@ -1,4 +1,5 @@
 ---
+description: 为 GetProperties 方法设置项命名空间
 title: 为 GetProperties 方法设置项命名空间 | Microsoft Docs
 Description: 了解如何使用 GetProperties 方法和 ItemNamespaceHEADER SOAP 标头检索基于项的路径或 ID 的属性。
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc0dee4442b18913521deb97c0c9655188f64631
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc0d61726a885b6a2422a4fe048121e65b8642f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423241"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>为 GetProperties 方法设置项命名空间
   可以根据两个不同的项标识符在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 <xref:ReportService2010.ItemNamespaceHeader> SOAP 标头：项的完整路径或项的 ID。  

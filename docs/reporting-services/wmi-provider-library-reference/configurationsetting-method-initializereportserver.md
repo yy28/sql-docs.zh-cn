@@ -1,4 +1,5 @@
 ---
+description: InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
 title: InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e38c90a85039fe8f4da6098faff4c8224de64ef1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423181"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 方法 - InitializeReportServer
   初始化指定的报表服务实例。  
@@ -37,7 +38,7 @@ public void InitializeReportServer(string InstallationID,
     out Int32 HRESULT, out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *InstallationID*  
  用于在加密密钥返回之前对其进行加密的字符串。  
   
@@ -57,7 +58,7 @@ public void InitializeReportServer(string InstallationID,
   
  必须对已能访问安全信息的报表服务器调用 *InitializeReportServer* 方法，以便此方法可以解密加密密钥。 然后，所产生的已加密的加密密钥将存储在报表服务器数据库中。  
   
- 如果在调用 InitializeReportServer 方法时报表服务器的 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 属性设置为 true ，则此方法成功返回，而不尝试对加密密钥进行加密  。  
+ 如果在调用 InitializeReportServer 方法时报表服务器的 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 属性设置为 true ，则此方法成功返回，而不尝试对加密密钥进行加密。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

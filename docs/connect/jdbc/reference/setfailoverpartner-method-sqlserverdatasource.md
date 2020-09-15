@@ -1,4 +1,5 @@
 ---
+description: setFailoverPartner 方法 (SQLServerDataSource)
 title: setFailoverPartner 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 58604614f5f5025e0e0982f7d191868e3baf23e0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c90a6cd4850ad746bafde4646cd459fbcff3e825
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431879"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>setFailoverPartner 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80922337"
 public void setFailoverPartner(java.lang.String serverName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *serverName*  
   
- 包含故障转移服务器名称的 String  。  
+ 包含故障转移服务器名称的 String****。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果在与主服务器进行初始连接时失败，则使用由此方法设置的值；建立初始连接后，将忽略此值。 此外，还应将此方法与 [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md) 方法结合使用，否则将引发异常。  
   
  驱动程序不支持在设置故障转移服务器名称时指定故障转移服务器的端口号。 但是，它支持在调用 [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) 方法和 [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) 方法时，同时调用 [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 方法。  

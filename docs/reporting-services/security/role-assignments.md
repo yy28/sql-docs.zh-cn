@@ -1,4 +1,5 @@
 ---
+description: 角色分配
 title: 角色分配 | Microsoft Docs
 ms.date: 05/07/2017
 ms.prod: reporting-services
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db55abd24cac0fa4cc6aacab03f0b1f68969d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423251"
 ---
 # <a name="role-assignments"></a>角色分配
 
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“角色分配”  确定对报表服务器上的存储项和报表服务器自身的访问权限。 角色分配由以下几部分组成：  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“角色分配” ** 确定对报表服务器上的存储项和报表服务器自身的访问权限。 角色分配由以下几部分组成：  
   
 - 要控制其访问权限的安全对象。 安全对象的示例包括文件夹、报表和资源。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "65570571"
 
 您可以通过为各项分别定义角色分配来覆盖继承的安全性。 文件夹层次结构的所有部分都必须至少由一个角色分配进行保护。 不能创建不安全的项，而且在处理设置时应采用安全的方式，以避免创建不安全的项。  
   
- 下图显示了一个角色分配，它将一个组和一个特定用户映射到文件夹 B 的“发布者”  角色：  
+ 下图显示了一个角色分配，它将一个组和一个特定用户映射到文件夹 B 的“发布者” **** 角色：  
   
  ![角色分配关系图](../../reporting-services/security/media/report-securityarch.gif "角色分配关系图")  
 角色分配关系图  

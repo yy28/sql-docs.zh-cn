@@ -1,4 +1,5 @@
 ---
+description: 在 SharePoint 站点上为报表服务器项设置权限
 title: 在 SharePoint 站点上为报表服务器项设置权限 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2eacc9d9163773076ce1792d3c58a07fef83f126
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423191"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上为报表服务器项设置权限
   如果默认安全设置未提供您需要的访问权限级别，则可以创建新的权限级别以提供对特定报表服务器项或操作的访问权限。 如果希望限制对特定报表的访问权限，则自定义安全设置非常有用。  
@@ -35,13 +36,13 @@ ms.locfileid: "65570620"
   
 2.  指向报表、报表模型或共享数据源文件。  
   
-3.  单击向下箭头，并在菜单上单击 **“管理权限”** 。  
+3.  单击向下箭头，并在菜单上单击 **“管理权限”**。  
   
-4.  在 **“操作”** 菜单上，单击 **“编辑权限”** ，然后单击 **“确定”** 以确认此操作。  
+4.  在 **“操作”** 菜单上，单击 **“编辑权限”**，然后单击 **“确定”** 以确认此操作。  
   
-5.  若要为尚未拥有文件使用权限的用户或组授予权限，请单击 **“新建”** ，然后单击 **“添加用户”** 。  
+5.  若要为尚未拥有文件使用权限的用户或组授予权限，请单击 **“新建”**，然后单击 **“添加用户”**。  
   
-6.  若要删除或修改现有用户或组的权限，请单击用户或组旁边的复选框，单击 **“操作”** ，然后单击 **“删除用户权限”** 或 **“编辑用户权限”** 。  
+6.  若要删除或修改现有用户或组的权限，请单击用户或组旁边的复选框，单击 **“操作”**，然后单击 **“删除用户权限”** 或 **“编辑用户权限”**。  
   
 ### <a name="to-set-permissions-that-enable-model-item-security"></a>设置启用模型项安全性的权限  
   
@@ -51,11 +52,11 @@ ms.locfileid: "65570620"
   
 3.  指向模型。  
   
-4.  单击该模型旁边的向下箭头，并单击 **“管理权限”** 。  
+4.  单击该模型旁边的向下箭头，并单击 **“管理权限”**。  
   
 5.  单击 **“操作”** 。  
   
-6.  单击 **“编辑权限”** 。 单击“确定”。   
+6.  单击 **“编辑权限”**。 单击“确定”。  
   
 7.  单击 **“新建”** 。  
   
@@ -63,11 +64,11 @@ ms.locfileid: "65570620"
   
 9. 在“用户/组”中输入用户帐户。  
   
-10. 选择 **“直接授予用户权限”** 。  
+10. 选择 **“直接授予用户权限”**。  
   
-11. 单击 **“完全控制”** 。  
+11. 单击 **“完全控制”**。  
   
-12. 单击“确定”。  用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
+12. 单击“确定”。 用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [将 Windows SharePoint Services 中的内置安全性用于报表服务器项](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   

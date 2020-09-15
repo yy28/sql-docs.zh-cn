@@ -1,4 +1,5 @@
 ---
+description: setCharacterStream 方法 (SQLServerClob)
 title: setCharacterStream 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b4edd69c4712c1842163bcb48797edc154cc5cf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f79891e2a2492a225896495651f8f0746353e6a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432229"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "80929027"
 public java.io.Writer setCharacterStream(long pos)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- pos   
+#### <a name="parameters"></a>参数  
+ pos  
   
  开始写入 CLOB 对象的位置。  
   
@@ -45,7 +46,7 @@ public java.io.Writer setCharacterStream(long pos)
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此 setCharacterStream 方法是由 java.sql.Clob 接口中的 setCharacterStream 方法指定的。  
   
  编写器从指定位置开始覆盖 CLOB 中的字符数据，并可以超过 CLOB 的初始长度。 指定“位置+1”值将追加字符。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  

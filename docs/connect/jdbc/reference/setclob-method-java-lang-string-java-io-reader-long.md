@@ -1,4 +1,5 @@
 ---
+description: setClob 方法 (java.lang.String, java.io.Reader, long)
 title: setClob 方法 (java.lang.String, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbe5407948691ebe8d551e274e9ed29ace96350c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 40992ee39a6e7a3dc27bb41969e555988b49b397
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432139"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>setClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,10 +32,10 @@ public final void setClob(java.lang.String parameterName,
             long length)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- parameterName   
+#### <a name="parameters"></a>参数  
+ parameterName  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
  *value*  
   
@@ -42,7 +43,7 @@ public final void setClob(java.lang.String parameterName,
   
  *length*  
   
- 指示流中字符数的 long  。  
+ 指示流中字符数的 long****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

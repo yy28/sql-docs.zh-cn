@@ -1,4 +1,5 @@
 ---
+description: setCursorName 方法 (SQLServerStatement)
 title: setCursorName 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a635fa491d800ac3955451fd0e3a3764ebb00590
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9b820e378338eac88adae654f21b29fad8bec05b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432089"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>setCursorName 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80924610"
   将 SQL 游标名称设置为给定字符串，该字符串将由随后的执行方法使用。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支持此方法。 调用此方法将不起作用。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支持此方法。 调用此方法不起任何作用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +38,10 @@ ms.locfileid: "80924610"
 public final void setCursorName(java.lang.String name)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- name   
+#### <a name="parameters"></a>参数  
+ *name*  
   
- 一个包含游标名称的 String  。  
+ 一个包含游标名称的 String****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

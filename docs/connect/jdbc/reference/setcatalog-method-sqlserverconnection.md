@@ -1,4 +1,5 @@
 ---
+description: setCatalog 方法 (SQLServerConnection)
 title: setCatalog 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7da2d69f4865eda439b0fb1219be6357c1c40e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 655da723b4f3babb1cd3dd7a938f38382b4e93e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432329"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80929099"
 public void setCatalog(java.lang.String catalog)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *catalog*  
   
  一个包含目录名称的字符串  。  
@@ -45,7 +46,7 @@ public void setCatalog(java.lang.String catalog)
 ## <a name="remarks"></a>备注  
  此 setCatalog 方法是由 java.sql.Connection 接口中的 setCatalog 方法指定的。  
   
- catalog  参数自动由 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 转义。 使用此方法可为 Connection 对象设置目录属性。 无法通过任何其他方法隐式设置该属性。  
+ catalog** 参数自动由 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 转义。 使用此方法可为 Connection 对象设置目录属性。 无法通过任何其他方法隐式设置该属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

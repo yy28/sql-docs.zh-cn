@@ -1,4 +1,5 @@
 ---
+description: supportsOrderByUnrelated 方法 (SQLServerDatabaseMetaData)
 title: supportsOrderByUnrelated 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9ea6c534-8132-49f3-aac3-a12ec4c46df2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33526c2b101fb26d8668b13d7d467e3cf7c699bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8402f4ee1f7e5fb17280fcf450a3eb94f89b1ba5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431479"
 ---
 # <a name="supportsorderbyunrelated-method-sqlserverdatabasemetadata"></a>supportsOrderByUnrelated 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean supportsOrderByUnrelated()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true  。 否则为 **false**。  
+ 如果支持，则值为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

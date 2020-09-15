@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 方法 - RemoveUnattendedExecutionAccount
 title: ConfigurationSetting 方法 - RemoveUnattendedExecutionAccount | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b3aa092ca92951b543d3b9377d2004a426afbc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d92387b35820853d03fff3677a1156e582fa3ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423141"
 ---
 # <a name="configurationsetting-method---removeunattendedexecutionaccount"></a>ConfigurationSetting 方法 - RemoveUnattendedExecutionAccount
   从报表服务器配置文件中删除无人参与的执行帐户条目。  
@@ -35,7 +36,7 @@ Public Sub RemoveUnattendedExecutionAccount(ByRef HRESULT as Int32)
 public void RemoveUnattendedExecutionAccount (out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *HRESULT*  
  [out] 指示调用是成功还是失败的值。  
   

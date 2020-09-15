@@ -1,4 +1,5 @@
 ---
+description: updateFloat 方法 (int, float)
 title: updateFloat 方法 (int, float) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b8cb92a23a9d3c3c9725dc555ff66c967ed4ecd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 08757f382cd247d4b9da233e10d8eec5d906d97d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431369"
 ---
 # <a name="updatefloat-method-int-float"></a>updateFloat 方法 (int, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列索引使用 float 值更新指定的列  。  
+  根据给定的列索引使用 float 值更新指定的列****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +36,14 @@ public void updateFloat(int index,
                         float x)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
  指示列索引的 int  。  
   
  *x*  
   
- float  值。  
+ float **** 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

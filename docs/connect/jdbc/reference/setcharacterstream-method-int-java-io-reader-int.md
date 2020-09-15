@@ -1,4 +1,5 @@
 ---
+description: setCharacterStream 方法 (int, java.io.Reader, int)
 title: setCharacterStream 方法 (int, java.io.Reader, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e85062ff6902b7a39770f517fc61f920413e673
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 054ed60f4bc5993a5f6bc0b41be2840a13cc0330
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432289"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream 方法 (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +37,12 @@ public final void setCharacterStream(int n,
                                      int length)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *n*  
   
- 指示参数编号的 int  。  
+ 指示参数编号的 int****。  
   
- reader   
+ reader  
   
  Reader 对象。  
   
@@ -55,9 +56,9 @@ public final void setCharacterStream(int n,
 ## <a name="remarks"></a>备注  
  此 setCharacterStream 方法是由 java.sql.PreparedStatement 接口中的 setCharacterStream 方法指定的。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常**。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度**。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

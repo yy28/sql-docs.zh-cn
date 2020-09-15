@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
 title: GetDatabaseVersionDisplayName 方法 (WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 598bc82d266bfff12f085275a03598f2caf6fc48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423221"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
   获取给定报表服务器数据库版本字符串的显示名称。  
@@ -30,8 +31,8 @@ Public Sub GetDatabaseVersionDisplayName(Version As String, DisplayName As Strin
 public void GetDatabaseVersionDisplayName(string Version, string DisplayName, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
- *版本*  
+## <a name="parameters"></a>参数  
+ *Version*  
  包含报表服务器数据库的版本字符串的字符串。  
   
  *DisplayName*  
@@ -40,10 +41,10 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] 指示调用是成功还是失败的值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  下表显示的是从数据库版本到显示字符串的映射。  
   
-|**版本**|**版本**|**显示名称**|  
+|**版本**|**Version**|**显示名称**|  
 |-----------------|-----------------|----------------------|  
 |RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
 |RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
@@ -53,7 +54,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 |RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |修补程序||最接近的适用版本|  
   
- 如果版本早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000，返回的 HRESULT 为 ACT_E_BAD_VERSION。  
+ 如果版本早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000，返回的 HRESULT 为 ACT_E_BAD_VERSION**。  
   
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  

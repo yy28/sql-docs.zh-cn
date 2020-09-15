@@ -1,4 +1,5 @@
 ---
+description: setMaxFieldSize 方法 (SQLServerStatement)
 title: setMaxFieldSize 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74d306815016e58d57418f5b72b4d4901553e8d6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b63564218687d9cc12973d044f04c94ec056f615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431689"
 ---
 # <a name="setmaxfieldsize-method-sqlserverstatement"></a>setMaxFieldSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "80925706"
 public final void setMaxFieldSize(int max)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- max   
+#### <a name="parameters"></a>参数  
+ *max*  
   
- 指示最大字节数的 int  值。  
+ 指示最大字节数的 int**** 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

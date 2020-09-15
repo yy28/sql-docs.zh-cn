@@ -1,4 +1,5 @@
 ---
+description: setDisableStatementPooling 方法 (SQLServerDataSource)
 title: setDisableStatementPooling 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 57a751f9a985f256e412399986aa6dc049b58931
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1a9647ecc1182731ffe74c0bf142bd13f8f8a642
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431949"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverdatasource"></a>setDisableStatementPooling 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  设置 disableStatementPooling  连接属性的值。 如果为 false，则在与 statementPoolingCacheSize 值 > 0 的耦合中启用要使用的语句池。  
+  设置 disableStatementPooling**** 连接属性的值。 如果为 false，则在与 statementPoolingCacheSize 值 > 0 的耦合中启用要使用的语句池。  
 
 ## <a name="syntax"></a>语法  
   
@@ -28,10 +29,10 @@ ms.locfileid: "80919991"
 public void setDisableStatementPooling(boolean disableStatementPooling);  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *disableStatementPooling*  
   
- disableStatementPooling  连接属性的新值。  
+ disableStatementPooling**** 连接属性的新值。  
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

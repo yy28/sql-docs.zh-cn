@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting 成员
 title: MSReportServer_ConfigurationSetting 成员 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae51a72f0dc2be73e4175c9e50d03246d5d3b49d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7643435954c74285992c6a21ebd1df5d8998164b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423091"
 ---
 # <a name="msreportserver_configurationsetting-members"></a>MSReportServer_ConfigurationSetting 成员
   MSReportServer_ConfigurationSetting 类包含以下属性和方法。  
   
 ## <a name="public-properties"></a>公共属性  
   
-|||  
+|属性|说明|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|返回连接池大小，报表服务器用来与托管报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例进行通信。 只读。|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|指定报表服务器连接到承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例时使用的登录帐户。 只读。|  
@@ -58,7 +59,7 @@ ms.locfileid: "81632518"
   
 ## <a name="public-methods"></a>公共方法  
   
-|||  
+|方法|说明|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|备份实例的加密密钥。 加密密钥会在使用密码加密后存储。|  
 |[CreateSSLCertificateBinding 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|创建 TLS/SSL 证书绑定。|  

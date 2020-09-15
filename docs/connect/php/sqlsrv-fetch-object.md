@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch_object
 title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426299"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,11 +39,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>参数  
 *$stmt*：对应于已执行语句的语句资源。  
   
-*$className* [可选]：指定要实例化的类名称的字符串。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
+$className [可选]：指定要实例化的类名称的字符串**。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
   
-*$ctorParams* [可选]：含有传递到通过 $className  参数指定的类构造函数的值的阵列。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
+$ctorParams [可选]：含有传递到通过 $className 参数指定的类构造函数的值的阵列****。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
   
-*row* [可选]：以下值之一，用于指定要在使用可滚动游标的结果集中访问的行。 （如果指定了 row，则必须显式指定 $className 和 $ctorParams，即使必须将 $className 和 $ctorParams 指定为 null      。）  
+*row* [可选]：以下值之一，用于指定要在使用可滚动游标的结果集中访问的行。 （如果指定了 row，则必须显式指定 $className 和 $ctorParams，即使必须将 $className 和 $ctorParams 指定为 null    。）  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -65,7 +66,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 返回对象中值的数据类型将是默认 PHP 数据类型。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 如果使用可选 *$className* 参数指定类名，将实例化此类类型的对象。 如果该类所具有的属性名称与结果集字段名称相匹配，则相应的结果集值将应用到该属性。 如果结果集字段名称不匹配类属性，则具有结果集字段名称的属性将添加到该对象，并该结果集值将应用到该属性。  
   
 使用 *$className* 参数指定某个类时，应用以下规则：  
@@ -131,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>示例  
-以下示例将每一行结果集检索为在脚本中定义的 *Product* 类的实例。 该示例将从产品（具有指定到期日期 DueDate 且库存量 StockQty 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 和 Production.Product 表中检索产品信息     。 该示例重点介绍在对 **sqlsrv_fetch_object**的调用中指定某个类时所应用的某些规则：  
+以下示例将每一行结果集检索为在脚本中定义的 *Product* 类的实例。 该示例将从产品（具有指定到期日期 DueDate 且库存量 StockQty 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 和 Production.Product 表中检索产品信息   。 该示例重点介绍在对 **sqlsrv_fetch_object**的调用中指定某个类时所应用的某些规则：  
   
 -   *$product* 变量是 *Product* 类的实例，为存在使用 *$className* 参数和 *Product* 类指定的“Product”。  
   
@@ -233,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据  。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据****。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果返回不含名称的字段， **sqlsrv_fetch_object** 会丢弃该字段值并发出一条警告。 例如，考虑可将某个值插入数据库表并检索服务器生成的主键的 Transact-SQL 语句：  
   

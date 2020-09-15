@@ -1,4 +1,5 @@
 ---
+description: setByte 方法 (SQLServerPreparedStatement)
 title: setByte 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 39c5ca20-d5f0-40dd-a853-29c3b8cd38e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a79aa9cf57939d595cccfdabf78f44a6a2bf46a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3f9291df82ff8222d7114134737a08d15194cc2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432349"
 ---
 # <a name="setbyte-method-sqlserverpreparedstatement"></a>setByte 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定参数设置为给定的 byte  值。  
+  将指定参数设置为给定的 byte**** 值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +36,14 @@ public final void setByte(int n,
                           byte x)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *n*  
   
- 指示参数编号的 int  。  
+ 指示参数编号的 int****。  
   
  *x*  
   
- 一个 byte 值  。  
+ 一个 byte 值****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,4 +1,5 @@
 ---
+description: SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting)
 title: SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1d746ec97ef320cb9527d3a4be4dc3011c7b875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423101"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>ConfigurationSetting 方法 - SetEmailConfiguration
   配置报表服务器用来发送电子邮件的电子邮件传递扩展插件。  
@@ -39,7 +40,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
    out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *SendUsingSMTPServer*  
  指示相应服务器是否将使用 SMTP 服务器发送电子邮件的布尔值。 此值仅可设置为 true。 默认值为 false。  
   

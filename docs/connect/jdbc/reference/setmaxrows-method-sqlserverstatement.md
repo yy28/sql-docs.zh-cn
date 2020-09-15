@@ -1,4 +1,5 @@
 ---
+description: setMaxRows 方法 (SQLServerStatement)
 title: setMaxRows 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 544eb34b40bc81afbed34809f3348c5649c3d0be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431759"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "67973978"
 public final void setMaxRows(int max)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- max   
+#### <a name="parameters"></a>参数  
+ *max*  
   
- 一个 int 值，此值指示最大行数；如果没有限制，则为 0  。  
+ 一个 int 值，此值指示最大行数；如果没有限制，则为 0****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
