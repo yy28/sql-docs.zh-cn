@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062326"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288230"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -307,13 +307,19 @@ READUNCOMMITTED 和 NOLOCK 提示仅适用于数据锁。 所有查询（包括�
 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 > [!NOTE]  
-> 如果在指定了 READUNCOMMITTED 的情况下收到 601 号错误消息，则按解决死锁错误 (1205) 的方法解决该错误，然后重试语句。  
+> 如果在指定 READUNCOMMITTED 时收到[错误消息 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999)，则按解决死锁错误（[错误消息 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)）的方法解决该错误，然后重试语句。  
   
 REPEATABLEREAD  
 指定事务在 REPEATABLE READ 隔离级别运行时，使用相同的锁定语义执行一次扫描。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 ROWLOCK  
-指定通常采用页锁或表锁时，采用行锁。 在从 SNAPSHOT 隔离级别操作的事务中指定时，除非将 ROWLOCK 与需要锁的其他表提示（例如，UPDLOCK 和 HOLDLOCK）组合，否则不会取得行锁。  
+指定通常采用页锁或表锁时，采用行锁。 在从 SNAPSHOT 隔离级别操作的事务中指定时，除非将 ROWLOCK 与需要锁的其他表提示（例如，UPDLOCK 和 HOLDLOCK）组合，否则不会取得行锁。 ROWLOCK 不能用于具有聚集列存储索引的表。 以下示例将向应用程序返回[错误 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999)。  
+
+```sql 
+UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)
+SET UnitPrice = 50
+WHERE ProductKey = 150;
+```  
   
 SERIALIZABLE  
 等同于 HOLDLOCK。 保持共享锁直到事务完成，使共享锁更具有限制性；而不是无论事务是否完成，都在不再需要所需表或数据页时立即释放共享锁。 执行扫描时所用的语义与在 SERIALIZABLE 隔离级别运行的事务的语义相同。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
@@ -321,11 +327,11 @@ SERIALIZABLE
 SNAPSHOT  
 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。 
   
-内存优化表在 SNAPSHOT 隔离下访问。 SNAPSHOT 只能用于内存优化表 (不能用于基于磁盘的表)。 有关详细信息，请参阅[内存优化表简介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
+内存优化表在 SNAPSHOT 隔离下访问。 SNAPSHOT 只能用于内存优化表（不能用于基于磁盘的表），如以下示例所示。 有关详细信息，请参阅[内存优化表简介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
 ```sql 
-SELECT * FROM dbo.Customers AS c   
-WITH (SNAPSHOT)   
+SELECT * 
+FROM dbo.Customers AS c WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
     ON c.customer_id=oh.customer_id;  
 ```  

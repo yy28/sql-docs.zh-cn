@@ -1,20 +1,20 @@
 ---
-title: 教程：生成自定义见解小组件
+title: 生成自定义见解小组件
 description: 本教程演示如何生成自定义见解小组件，并将其添加到 Azure Data Studio 中的数据库和服务器仪表板。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745750"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283748"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>教程：生成自定义见解小组件
 
@@ -104,7 +104,7 @@ ms.locfileid: "88745750"
 
 7. 保存“用户设置”文件，并打开“TutorialDB”数据库仪表板以查看活动会话小组件   ：
 
-   ![activesession 见解](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![activesession 见解仪表板](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>将详细信息添加到自定义见解
 
@@ -159,7 +159,7 @@ ms.locfileid: "88745750"
 
 7. 保存“用户设置”文件，并打开“TutorialDB”数据库仪表板   。 单击“我的小组件”旁边的省略号 (...) 按钮以显示详细信息  ：
 
-    ![activesession 见解](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![activesession 见解详细信息](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>后续步骤
 在本教程中，你了解了如何执行以下操作：

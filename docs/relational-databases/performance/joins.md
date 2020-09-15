@@ -18,19 +18,29 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915841"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511309"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用内存中的排序和哈希联接技术执行排序、交集、并集、差分等操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这种类型的查询计划支持垂直表分区（有时称为分列存储）。   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用内存中的排序和哈希联接技术执行排序、交集、并集、差分等操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这种类型的查询计划支持垂直表分区。   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用四种类型的联接操作：    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实现由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法确定的逻辑联接操作：
+-   内部联接
+-   左外部联接
+-   右外部联接
+-   完全外联
+-   交叉联接
+
+> [!NOTE]
+> 有关联接语法的详细信息，请参阅 [FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用四种类型的物理联接操作来执行逻辑联接操作：    
 -   嵌套循环联接     
 -   合并联接   
 -   哈希联接   
@@ -41,50 +51,57 @@ ms.locfileid: "86915841"
 
 联接条件可通过以下方式定义两个表在查询中的关联方式：    
 -   指定每个表中要用于联接的列。 典型的联接条件在一个表中指定一个外键，而在另一个表中指定与其关联的键。    
--   指定用于比较各列的值的逻辑运算符（例如 = 或 <>）。    
+-   指定用于比较各列的值的逻辑运算符（例如 = 或 <>）。   
 
-可以在 `FROM` 或 `WHERE` 子句中指定内部联接。 只能在 `FROM` 子句中指定外部联接。 联接条件与 `WHERE` 和 `HAVING` 搜索条件相结合，用于控制从 `FROM` 子句所引用的基表中选定的行。    
+联接使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法以逻辑方式表示：
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-在 `FROM` 子句中指定联接条件有助于将这些联接条件与 `WHERE` 子句中可能指定的其他任何搜索条件分开，建议用这种方法来指定联接。 简化的 ISO FROM 子句联接语法如下：
+可以在 `FROM` 或 `WHERE` 子句中指定内部联接。 只能在 `FROM` 子句中指定外部联接和交叉联接 。 联接条件与 `WHERE` 和 `HAVING` 搜索条件相结合，用于控制从 `FROM` 子句所引用的基表中选定的行。    
+
+在 `FROM` 子句中指定联接条件有助于将这些联接条件与 `WHERE` 子句中可能指定的其他任何搜索条件分开，建议用这种方法来指定联接。 简化的 ISO `FROM` 子句联接语法如下：
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-join_type 指定执行的联接类型：内部、外部或交叉联接。 join_condition 定义用于对每一对联接行进行求值的谓词。 下面是 FROM 子句联接规范示例：
+join_type 指定执行的联接类型：内部、外部或交叉联接。 join_condition 定义用于对每一对联接行进行求值的谓词。 下面是 `FROM` 子句联接规范示例：
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-下面是使用此联接的一个简单 SELECT 语句：
+下面是使用此联接的一个简单 `SELECT` 语句：
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-此选择会返回某个公司所提供的一组产品以及供应商信息，该公司名以字母 F 开头，并且产品价格在 10 美元以上。   
+`SELECT` 语句会返回某个公司所提供的一组产品以及供应商信息，该公司名以字母 F 开头，并且产品价格在 10 美元以上。   
 
-当在单个查询中引用多个表时，所有列引用都必须是明确的。 在上面的示例中，ProductVendor 和 Vendor 表都具有一个名为 BusinessEntityID 的列。 在查询所引用的两个或多个表中，任何重复的列名都必须用表名加以限定。 此示例中对 Vendor 列的所有引用均已限定。   
+当在单个查询中引用多个表时，所有列引用都必须是明确的。 在上例中，`ProductVendor` 和 `Vendor` 表都含有名为 `BusinessEntityID` 的列。 在查询所引用的两个或多个表中，任何重复的列名都必须用表名加以限定。 此示例中对 `Vendor` 列的所有引用均已限定。   
 
-如果某个列名在查询用到的两个或多个表中不重复，则对该列的引用就必用表名加以限定。 如上例所示。 由于没有指明提供每个列的表，因此这样的 SELECT 语句有时会难以理解。 如果所有的列都用它们的表名加以限定，将会提高查询的可读性。 如果使用了表的别名，将会进一步提高可读性，尤其是当表名自身必须用数据库名和所有者名加以限定时。 下例与上例相同，只不过分配了表的别名并且用表的别名对列加以限定，从而提高了可读性：
+如果某个列名在查询用到的两个或多个表中不重复，则对该列的引用就必用表名加以限定。 如上例所示。 由于没有指明提供每个列的表，因此这样的 `SELECT` 子句有时会难以理解。 如果所有的列都用它们的表名加以限定，将会提高查询的可读性。 如果使用了表的别名，将会进一步提高可读性，尤其是当表名自身必须用数据库名和所有者名加以限定时。 下例与上例相同，只不过分配了表的别名并且用表的别名对列加以限定，从而提高了可读性：
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-上例是在 FROM 子句中指定联接条件的，这是首选的方法。 下列查询包含相同的联接条件，该联接条件在 WHERE 子句中指定：
+上例是在 `FROM` 子句中指定联接条件的，这是首选的方法。 下列查询包含相同的联接条件，该联接条件在 `WHERE` 子句中指定：
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-联接选择列表可以引用联接表中的所有列或任意一部分列。 选择列表不必包含联接中每个表的列。 例如，在三表联接中，只能用一个表作为中间表来联接另外两个表，而选择列表不必引用该中间表的任何列。   
+联接的 `SELECT` 列表可以引用联接表中的所有列或任意一部分列。 `SELECT` 列表不必包含联接中每个表的列。 例如，在三表联接中，只能用一个表作为中间表来联接另外两个表，而选择列表不必引用该中间表的任何列。 这也称为“反半联接”。  
 
 虽然联接条件通常使用相等比较 (=)，但也可以像指定其他谓词一样指定其他比较运算符或关系运算符。 有关详细信息，请参阅[比较运算符 (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
 
-当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理联接时，查询引擎会从多种可行的方法中选择最有效的方法来处理联接。 由于各种联接的实际执行过程会采用多种不同的优化，因此无法可靠地预测。   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理联接时，查询优化器会从多种可行的方法中选择最有效的方法来处理联接。 这包括选择最有效的物理联接类型、表的联接顺序，甚至使用无法通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法直接表示的逻辑联接操作类型，例如半联接和反半联接 。 由于各种联接的实际执行过程会采用多种不同的优化，因此无法可靠地预测。 有关半联接和反半联接的详细信息，请参阅[显示计划逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)。  
 
-联接条件中用到的列不必具有相同的名称或相同的数据类型。 但如果数据类型不相同，则必须兼容，或者是可由 SQL Server 进行隐式转换的类型。 如果数据类型不能进行隐式转换，则联接条件必须使用 `CAST` 函数显式转换数据类型。 有关隐式和显式转换的详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。    
+联接条件中用到的列不必具有相同的名称或相同的数据类型。 但如果数据类型不相同，则必须兼容，或者是可由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行隐式转换的类型。 如果数据类型不能进行隐式转换，则联接条件必须使用 `CAST` 函数显式转换数据类型。 有关隐式和显式转换的详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。    
 
 大多数使用联接的查询可以用子查询（嵌套在其他查询中的查询）重写，并且大多数子查询可以重写为联接。 有关子查询的详细信息，请参阅[子查询](../../relational-databases/performance/subqueries.md)。   
 
@@ -356,3 +373,4 @@ NULL        three  NULL        NULL
 [数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [子查询](../../relational-databases/performance/subqueries.md)      
 [自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

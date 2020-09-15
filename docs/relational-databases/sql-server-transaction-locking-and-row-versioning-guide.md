@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403053"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480933"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -424,7 +424,7 @@ GO
   
  应用程序一般不直接请求锁。 锁由[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的一个部件（称为“锁管理器”）在内部管理。 当[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例处理 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]查询处理器会决定将要访问哪些资源。 查询处理器根据访问类型和事务隔离级别设置来确定保护每一资源所需的锁的类型。 然后，查询处理器将向锁管理器请求适当的锁。 如果与其他事务所持有的锁不会发生冲突，锁管理器将授予该锁。  
   
-### <a name="lock-granularity-and-hierarchies"></a>锁粒度和层次结构  
+## <a name="lock-granularity-and-hierarchies"></a>锁粒度和层次结构  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]具有多粒度锁定，允许一个事务锁定不同类型的资源。 为了尽量减少锁定的开销，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]自动将资源锁定在适合任务的级别。 锁定在较小的粒度（例如行）可以提高并发度，但开销较高，因为如果锁定了许多行，则需要持有更多的锁。 锁定在较大的粒度（例如表）会降低了并发度，因为锁定整个表限制了其他事务对表中任意部分的访问。 但其开销较低，因为需要维护的锁较少。  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通常必须获取多粒度级别上的锁才能完整地保护资源。 这组多粒度级别上的锁称为锁层次结构。 例如，为了完整地保护对索引的读取，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例可能必须获取行上的共享锁以及页和表上的意向共享锁。  
@@ -448,7 +448,7 @@ GO
 > [!NOTE]  
 > 使用 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) 的 LOCK_ESCALATION 选项会对 HoBT 和 TABLE 锁带来影响。  
   
-### <a name="lock-modes"></a><a name="lock_modes"></a>锁模式  
+## <a name="lock-modes"></a><a name="lock_modes"></a>锁模式  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用不同的锁模式锁定资源，这些锁模式确定了并发事务访问资源的方式。  
   
  下表显示了[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用的资源锁模式。  
@@ -463,20 +463,20 @@ GO
 |**大容量更新 (BU)**|在将数据大容量复制到表中且指定了 TABLOCK 提示时使用。|  
 |**键范围**|当使用可序列化事务隔离级别时保护查询读取的行的范围。 确保再次运行查询时其他事务无法插入符合可序列化事务的查询的行。|  
   
-#### <a name="shared-locks"></a><a name="shared"></a>共享锁  
+### <a name="shared-locks"></a><a name="shared"></a>共享锁  
  共享锁（S 锁）允许并发事务在封闭式并发控制下读取 (SELECT) 资源。 资源上存在共享锁（S 锁）时，任何其他事务都不能修改数据。 读取操作一完成，就立即释放资源上的共享锁（S 锁），除非将事务隔离级别设置为可重复读或更高级别，或者在事务持续时间内用锁定提示保留共享锁（S 锁）。  
   
-#### <a name="update-locks"></a><a name="update"></a>更新锁  
+### <a name="update-locks"></a><a name="update"></a>更新锁  
  更新锁（U 锁）可以防止常见的死锁。 在可重复读或可序列化事务中，此事务读取数据 [获取资源（页或行）的共享锁（S 锁）]，然后修改数据 [此操作要求锁转换为排他锁（X 锁）]。 如果两个事务获得了资源上的共享模式锁，然后试图同时更新数据，则一个事务尝试将锁转换为排他锁（X 锁）。 共享模式到排他锁的转换必须等待一段时间，因为一个事务的排他锁与其他事务的共享模式锁不兼容；发生锁等待。 第二个事务试图获取排他锁（X 锁）以进行更新。 由于两个事务都要转换为排他锁（X 锁），并且每个事务都等待另一个事务释放共享模式锁，因此发生死锁。  
   
  若要避免这种潜在的死锁问题，请使用更新锁（U 锁）。 一次只有一个事务可以获得资源的更新锁（U 锁）。 如果事务修改资源，则更新锁（U 锁）转换为排他锁（X 锁）。  
   
-#### <a name="exclusive-locks"></a><a name="exclusive"></a>排他锁  
+### <a name="exclusive-locks"></a><a name="exclusive"></a>排他锁  
  排他锁（X 锁）可以防止并发事务对资源进行访问。 使用排他锁（X 锁）时，任何其他事务都无法修改数据；仅在使用 NOLOCK 提示或未提交读隔离级别时才会进行读取操作。  
   
  数据修改语句（如 INSERT、UPDATE 和 DELETE）合并了修改和读取操作。 语句在执行所需的修改操作之前首先执行读取操作以获取数据。 因此，数据修改语句通常请求共享锁和排他锁。 例如，UPDATE 语句可能根据与一个表的联接修改另一个表中的行。 在此情况下，除了请求更新行上的排他锁之外，UPDATE 语句还将请求在联接表中读取的行上的共享锁。  
   
-#### <a name="intent-locks"></a><a name="intent"></a>意向锁  
+### <a name="intent-locks"></a><a name="intent"></a>意向锁  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用意向锁来保护共享锁（S 锁）或排他锁（X 锁）放置在锁层次结构的底层资源上。 意向锁之所以命名为意向锁，是因为在较低级别锁前可获取它们，因此会通知意向将锁放置在较低级别上。  
   
  意向锁有两种用途：  
@@ -497,14 +497,14 @@ GO
 |**共享意向更新 (SIU)**|S 锁和 IU 锁的组合，作为分别获取这些锁并且同时持有两种锁的结果。 例如，事务执行带有 PAGLOCK 提示的查询，然后执行更新操作。 带有 PAGLOCK 提示的查询将获取 S 锁，更新操作将获取 IU 锁。|  
 |**更新意向排他 (UIX)**|U 锁和 IX 锁的组合，作为分别获取这些锁并且同时持有两种锁的结果。|  
   
-#### <a name="schema-locks"></a><a name="schema"></a>架构锁  
+### <a name="schema-locks"></a><a name="schema"></a>架构锁  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]在表数据定义语言 (DDL) 操作（例如添加列或删除表）的过程中使用架构修改 (Sch-M) 锁。 保持该锁期间，Sch-M 锁将阻止对表进行并发访问。 这意味着 Sch-M 锁在释放前将阻止所有外围操作。  
   
  某些数据操作语言 (DML) 操作（例如表截断）使用 Sch-M 锁阻止并发操作访问受影响的表。  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]在编译和执行查询时使用架构稳定性 (Sch-S) 锁。 Sch-S 锁不会阻止某些事务锁，其中包括排他 (X) 锁。 因此，在编译查询的过程中，其他事务（包括那些针对表使用 X 锁的事务）将继续运行。 但是，无法针对表执行获取 Sch-M 锁的并发 DDL 操作和并发 DML 操作。  
   
-#### <a name="bulk-update-locks"></a><a name="bulk_update"></a>大容量更新锁  
+### <a name="bulk-update-locks"></a><a name="bulk_update"></a>大容量更新锁  
  大容量更新锁（BU 锁）允许多个线程将数据并发地大容量加载到同一表，同时防止其他不进行大容量加载数据的进程访问该表。 在满足以下两个条件时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用大容量更新 (BU) 锁。  
   
 -   使用 [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT 语句或 OPENROWSET(BULK) 函数，或者使用某个大容量插入 API 命令（如 .NET SqlBulkCopy、OLEDB 快速加载 API 或 ODBC 大容量复制 API）将数据大容量复制到表。  
@@ -513,10 +513,10 @@ GO
 > [!TIP]  
 > 与持有较少限制性大容量更新锁的 BULK INSERT 语句不同，具有 TABLOCK 提示的 INSERT INTO…SELECT 语句持有一个针对表的排他 (X) 锁。 也就是说您不能使用并行插入操作插入行。  
   
-#### <a name="key-range-locks"></a><a name="key_range"></a>键范围锁  
+### <a name="key-range-locks"></a><a name="key_range"></a>键范围锁  
  在使用可序列化事务隔离级别时，对于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句读取的记录集，键范围锁可以隐式保护该记录集中包含的行范围。 键范围锁可防止虚拟读取。 通过保护行之间键的范围，它还防止对事务访问的记录集进行虚拟插入或删除。  
   
-### <a name="lock-compatibility"></a><a name="lock_compatibility"></a>锁兼容性  
+## <a name="lock-compatibility"></a><a name="lock_compatibility"></a>锁兼容性  
  锁兼容性控制多个事务能否同时获取同一资源上的锁。 如果资源已被另一事务锁定，则仅当请求锁的模式与现有锁的模式相兼容时，才会授予新的锁请求。 如果请求锁的模式与现有锁的模式不兼容，则请求新锁的事务将等待释放现有锁或等待锁超时间隔过期。 例如，没有与排他锁兼容的锁模式。 如果具有排他锁（X 锁），则在释放排他锁（X 锁）之前，其他事务均无法获取该资源的任何类型（共享、更新或排他）的锁。 另一种情况是，如果共享锁（S 锁）已应用到资源，则即使第一个事务尚未完成，其他事务也可以获取该项的共享锁或更新锁（U 锁）。 但是，在释放共享锁之前，其他事务无法获取排他锁。  
   
 <a name="lock_compat_table"></a>下表显示了最常见的锁模式的兼容性。  
@@ -538,14 +538,14 @@ GO
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
-### <a name="key-range-locking"></a>键范围锁定  
+## <a name="key-range-locking"></a>键范围锁定  
  在使用可序列化事务隔离级别时，对于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句读取的记录集，键范围锁可以隐式保护该记录集中包含的行范围。 可序列化隔离级别要求每当在事务期间执行任一查询时，该查询都必须获取相同的行集。 键范围锁可防止其他事务插入其键值位于可序列化事务读取的键值范围内的新行，从而确保满足此要求。  
   
  键范围锁可防止虚拟读取。 通过保护行之间的键范围，它还可以防止对事务访问的记录集进行虚拟插入。  
   
  键范围锁放置在索引上，指定开始键值和结束键值。 此锁将阻止任何要插入、更新或删除任何带有该范围内的键值的行的尝试，因为这些操作会首先获取索引上的锁。 例如，可序列化事务可以发出 `SELECT` 语句，该语句读取键值与条件 `BETWEEN 'AAA' AND 'CZZ'` 匹配的所有行。 从“AAA”到“CZZ”范围内的键值上的键范围锁可阻止其他事务插入带有该范围内的键值（例如“ADG”、“BBD”或“CAL”）的行          。  
   
-#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a>键范围锁模式  
+### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a>键范围锁模式  
  键范围锁包括按范围-行格式指定的范围组件和行组件：  
   
 -   范围表示保护两个连续索引项之间的范围的锁模式。  
@@ -575,7 +575,7 @@ GO
 |**RangeI-N**|是|是|是|否|否|是|否|  
 |**RangeX-X**|否|否|否|否|否|否|否|  
   
-#### <a name="conversion-locks"></a><a name="lock_conversion"></a>转换锁  
+### <a name="conversion-locks"></a><a name="lock_conversion"></a>转换锁  
  当键范围锁与其他锁重叠时，将创建转换锁。  
   
 |锁定 1|锁 2|转换锁|  
@@ -588,7 +588,7 @@ GO
   
  在不同的复杂环境下（有时是在运行并发进程时），可以在一小段时间内观察到转换锁。  
   
-#### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>可序列化范围扫描、单独提取、删除和插入  
+### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>可序列化范围扫描、单独提取、删除和插入  
  键范围锁定确保以下操作是可序列化的：  
   
 -   范围扫描查询  
@@ -601,12 +601,12 @@ GO
 -   事务隔离级别必须设置为 SERIALIZABLE。  
 -   查询处理器必须使用索引来实现范围筛选谓词。 例如，SELECT 语句中的 WHERE 子句可以用以下谓词建立范围条件：ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** 。 仅当 ColumnX 被索引键覆盖时，才能获取键范围锁。  
   
-#### <a name="examples"></a>示例  
+### <a name="examples"></a>示例  
  以下表和索引用作随后的键范围锁定示例的基础。  
   
  ![btree](../relational-databases/media/btree4.png)  
   
-##### <a name="range-scan-query"></a>范围扫描查询  
+#### <a name="range-scan-query"></a>范围扫描查询  
  为了确保范围扫描查询是可序列化的，每次在同一事务中执行的相同查询应返回同样的结果。 其他事务不能在范围扫描查询中插入新行；否则这些插入将成为虚拟插入。 例如，以下查询将使用上图中的表和索引：  
   
 ```sql  
@@ -615,12 +615,12 @@ FROM mytable
 WHERE name BETWEEN 'A' AND 'C';  
 ```  
   
- 键范围锁放置在与数据行范围（名称在值 Adam 与 Dale 之间的行）对应的索引项上，以防止添加或删除满足上述查询条件的新行。 尽管此范围中的第一个名称是 Adam，但是此索引项上的 RangeS-S 模式键范围锁确保了以字母 A 开头的新名称（例如 Abigail）不能添加在 Adam 之前。 同样，Dale 索引项上的 RangeS-S 键范围锁确保了以字母 C 开头的新名称（例如 Clive）不能添加在 Carlos 之后。  
+ 键范围锁放置在与数据行范围（名称在值 `Adam` 与 `Dale` 之间的行）对应的索引项上，以防止添加或删除满足上述查询条件的新行。 尽管此范围中的第一个名称是 `Adam`，但是此索引项的 RangeS-S 模式键范围锁确保了以字母 A 开头的新名称（例如 `Abigail`）不能添加在 `Adam` 之前。 同样，`Dale` 索引项的 RangeS-S 键范围锁确保了以字母 C 开头的新名称（例如 `Clive`）不能添加在 `Carlos` 之后。  
   
 > [!NOTE]  
 > 包含的 RangeS-S 锁数量为 n+1，此处 n 是满足查询条件的行数 。  
   
-##### <a name="singleton-fetch-of-nonexistent-data"></a>对不存在的数据的单独提取  
+#### <a name="singleton-fetch-of-nonexistent-data"></a>对不存在的数据的单独提取  
  如果事务中的查询试图选择不存在的行，则以后在相同的事务中发出这一查询时，必须返回相同的结果。 不允许其他事务插入不存在的行。 例如，对于下面的查询：  
   
 ```sql  
@@ -631,7 +631,7 @@ WHERE name = 'Bill';
   
  键范围锁放置在与从 `Ben` 到 `Bing` 的名称范围对应的索引项上，因为名称 `Bill` 将插入到这两个相邻的索引项之间。 RangeS-S 模式键范围锁放置在索引项 `Bing` 上。 这样可阻止其他任何事务在索引项 `Bill` 与 `Ben` 之间插入值（例如 `Bing`）。  
   
-##### <a name="delete-operation"></a>删除操作  
+#### <a name="delete-operation"></a>删除操作  
  在事务中删除值时，在事务执行删除操作期间不必锁定该值所属的范围。 锁定删除的键值直至事务结束足以保持可序列化性。 例如，对于下面的 DELETE 语句：  
   
 ```sql  
@@ -641,9 +641,9 @@ WHERE name = 'Bob';
   
  排他锁（X 锁）放置在与名称 `Bob` 对应的索引项上。 其他事务可以在删除的值 `Bob` 的前后插入或删除值。 但是任何试图读取、插入或删除值 `Bob` 的事务都将被阻塞，直到删除的事务提交或回滚为止。  
   
- 可以使用三个基本锁模式执行范围删除：行锁、页锁或表锁。 行、页或表锁定策略由查询优化器确定，或者可以由用户通过优化程序提示（例如 ROWLOCK、PAGLOCK 或 TABLOCK）来指定。 当使用 PAGLOCK 或 TABLOCK 时，如果从某个索引页中删除所有的行，则[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将立即释放该索引页。 相反，当使用 ROWLOCK 时，所有删除的行只是标记为已删除；以后通过后台任务从索引页中删除它们。  
+ 可以使用三个基本锁模式执行范围删除：行锁、页锁或表锁。 行、页或表锁定策略由查询优化器确定，也可以由用户通过查询优化器提示（例如 ROWLOCK、PAGLOCK 或 TABLOCK）来指定。 当使用 PAGLOCK 或 TABLOCK 时，如果从某个索引页中删除所有的行，则[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将立即释放该索引页。 相反，当使用 ROWLOCK 时，所有删除的行只是标记为已删除；以后通过后台任务从索引页中删除它们。  
   
-##### <a name="insert-operation"></a>插入操作  
+#### <a name="insert-operation"></a>插入操作  
  在事务中插入值时，在事务执行插入操作期间不必锁定该值所属的范围。 锁定插入的键值直至事务结束足以维护可序列化性。 例如，对于下面的 INSERT 语句：  
   
 ```sql  
@@ -652,7 +652,162 @@ INSERT mytable VALUES ('Dan');
   
  RangeI-N 模式键范围锁放置在与名称 David 对应的索引项上，以测试范围。 如果已授权锁，则插入 `Dan`，并且排他锁（X 锁）将放置在值 `Dan` 上。 RangeI-N 模式键范围锁仅对测试范围是必需的，而不在执行插入操作的事务期间保留。 其他事务可以在插入的值 `Dan` 的前后插入或删除值。 但是，任何试图读取、插入或删除值 `Dan` 的事务都将被阻塞，直到插入的事务提交或回滚为止。  
   
-### <a name="dynamic-locking"></a><a name="dynamic_locks"></a>动态锁定  
+## <a name="lock-escalation"></a>锁升级
+锁升级是将许多较细粒度的锁转换成数量更少的较粗粒度的锁的过程，这样可以减少系统开销，但却增加了并发争用的可能性。
+
+当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 获取低级别的锁时，它还将在包含更低级别对象的对象上放置意向锁：
+
+-   当锁定行或索引键范围时，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 将在包含这些行或键的页上放置意向锁。
+-   当锁定页时，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 将在包含这些页的更高级别对象上放置意向锁。 除了对象上的意向锁以外，以下对象上还需要意向页锁：
+    -  非聚集索引的叶级页
+    -  聚集索引的数据页
+    -  堆数据页
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以为同一语句执行行锁定和页锁定，以最大程度地减少锁的数量，并降低需要进行锁升级的可能性。 例如，数据库引擎可以在非聚集索引上放置页锁（如果在索引节点中选择了足够的连续键来满足查询），而在数据上放置行锁。
+
+升级锁时，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 会尝试将表的意向锁改为对应的全锁，例如，将意向排他 (IX) 锁改为排他 (X) 锁，或将意向共享 (IS) 锁改为共享 (S) 锁。 如果锁升级尝试成功并获取全表锁，将释放事务在堆或索引上所持有的所有堆或 B 树锁、页锁（PAGE 锁）或行级锁（RID 锁）。 如果无法获取全锁，当时不会发生锁升级，而数据库引擎将继续获取行、键或页锁。
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] 不会将行锁或键范围锁升级到页锁，而是将它们直接升级到表锁。 同样，页锁始终升级到表锁。 对于关联的分区，已分区表的锁定可以升级到 HoBT 级别，而不是表锁。 HoBT 级锁不一定会锁定该分区的对齐 HoBT。
+
+> [!NOTE]
+> HoBT 级锁通常会增加并发情况，但是当锁定不同分区的每个事务都希望将其排他锁扩展到其他分区时，有可能会发生死锁。 在极少数情况下，TABLE 锁定粒度可能更适合。
+
+如果由于并发事务所持有的锁冲突而导致锁升级尝试失败，则 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 将对事务获取的其他 1,250 个锁重试锁升级。
+
+每个升级事件主要在单个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句级别操作。 当事件启动时，只要活动语句满足升级阈值的要求，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 就会尝试升级当前事务在活动语句所引用的任何表中持有的所有锁。 如果升级事件在语句访问表之前启动，则不会尝试升级该表上的锁。 如果锁升级成功，只要表被当前语句引用并且包括在升级事件中，上一个语句中事务获取的、在事件启动时仍被持有的锁都将被升级。
+
+例如，假定某个会话执行下列操作：
+
+-  开始一个事务。
+-  更新 `TableA`。 这将在 TableA 中生成排他行锁，直到事务完成后才会释放该锁。
+-  更新 `TableB`。 这将在 TableB 中生成排他行锁，直到事务完成后才会释放该锁。
+-  执行联接 `TableA` 与 `TableC` 的 SELECT。 查询执行计划要求先从 `TableA` 中检索行，然后才从 `TableC` 中检索行。
+-  SELECT 语句在从 `TableA` 中检索行时（此时还没有访问 `TableC`）触发锁升级。
+
+如果锁升级成功，只有会话在 `TableA` 中持有的锁才会升级。 这包括来自 SELECT 语句的共享锁和来自上一个 UPDATE 语句的排他锁。 由于决定是否应进行锁升级时只考虑会话的 SELECT 语句在 `TableA` 中获取的锁，所以一旦升级成功，会话在 `TableA` 中持有的所有锁都将被升级到该表的排他锁，而 `TableA` 的所有其他较低粒度的锁（包括意向锁）都将被释放。
+
+不会尝试升级 `TableB` 的锁，因为 SELECT 语句中没有 `TableB` 的活动引用。 同样，也不会尝试升级 `TableC` 上尚未升级的锁，因为发生升级时尚未访问过该表。
+
+### <a name="lock-escalation-thresholds"></a>锁升级阈值
+
+如果没有使用 `ALTER TABLE SET LOCK_ESCALATION` 选项来禁用表的锁升级并且满足以下任一条件，则将触发锁升级：
+
+-  单个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句在单个未分区表或索引上获得至少 5,000 个锁。
+-  单个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句在已分区表的单个分区上获得至少 5,000 个锁，并且 `ALTER TABLE SET LOCK_ESCALATION` 选项设为 AUTO。
+-  [!INCLUDE[ssde_md](../includes/ssde_md.md)] 实例中的锁数量超出了内存或配置阈值。
+
+如果由于锁冲突导致无法升级锁，则每当获取 1,250 个新锁时 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 便会触发锁升级。
+
+### <a name="escalation-threshold-for-a-transact-sql-statement"></a>Transact-SQL 语句的升级阈值
+当 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 在每 1,250 个新获取的锁上检查可能的升级时，并且当且仅当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句已在表的单个引用上获得至少 5,000 个锁时，才会进行锁升级。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句在表的单个引用上获得至少 5,000 个锁时，将触发锁升级。 例如，如果该语句在一个索引上获取 3,000 个锁，在同一表中的另一个索引上获取 3,000 个锁，这种情况下不会触发锁升级。 同样，如果语句中含有表的自联接，并且表的每一个引用仅在表中获取 3,000 个锁，则不会触发锁升级。
+
+只有触发升级时已经访问的表才会发生锁升级。 假定某个 SELECT 语句是一个按 `TableA`、`TableB` 和 `TableC` 顺序访问三个表的联接。 该语句在 `TableA` 的聚集索引中获取 3,000 个行锁，在 `TableB` 的聚集索引中获取至少 5,000 个行锁，但是尚未访问 `TableC`。 当 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 检测到该语句在 `TableB` 中获取至少 5,000 个行锁时，会尝试升级当前事务在 `TableB` 中持有的所有锁。 它还会尝试升级当前事务在 `TableA` 中持有的所有锁，但是由于 `TableA` 中锁的数量小于 5,000，因此，升级无法成功。 但它不会尝试在 `TableC` 中进行锁升级，因为发生升级时尚未访问该表。
+
+### <a name="escalation-threshold-for-an-instance-of-the-database-engine"></a>数据库引擎实例的升级阈值
+每当锁的数量大于锁升级的内存阈值时，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 都会触发锁升级。 内存阈值取决于[锁配置选项](../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)的设置：
+
+-   如果“锁”选项设置为默认值 0，当锁对象使用的内存是数据库引擎所使用内存的 24%（不包括 AWE 内存）时，将达到锁升级阈值。 用于表示锁的数据结构大约有 100 个字节长。 该阈值是动态的，因为数据库引擎动态地获得和释放内存，以针对变化的工作负载进行调整。
+
+-   如果“锁”选项设置为非 0 值，则锁升级阈值是“所”选项值的 40%（或者更低，如果存在内存压力）。
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以为升级选择任何会话中的活动语句，而且，只要实例中使用的锁内存保持在阈值之上，每获取 1,250 个新锁，它就会为升级选择语句。
+
+### <a name="escalating-mixed-lock-types"></a>升级混合锁类型
+发生锁升级时，为堆或索引选择的锁必须足够强，才能满足限制性最强的较低级别的锁的要求。
+
+例如，假定会话执行下列操作：
+
+-  开始一个事务。
+-  更新包含聚集索引的表。
+-  发出引用同一个表的 SELECT 语句。
+
+UPDATE 语句将获取下列锁：
+
+-  已更新数据行上的排他锁（X 锁）。
+-  包含那些行的聚集索引页上的意向排他锁（IX 锁）。
+-  聚集索引上的 IX 锁和表上的 IX 锁。
+
+SELECT 语句将获取下列锁：
+
+-  所读取的所有数据行上的共享锁（S 锁），除非行已被来自 UPDATE 语句的 X 锁保护。
+-  包含那些行的所有聚集索引页上的意向共享锁，除非页已被 IX 锁保护。
+-  在聚集索引或表上不会获取锁，因为它们已被 IX 锁保护。
+
+如果 SELECT 获取了触发锁升级的足够锁并且升级成功，表上的 IX 锁将被转换为 X 锁，而所有行、页和索引锁都将被释放。 更新和读取操作都受表上的 X 锁保护。
+
+### <a name="reducing-locking-and-escalation"></a>减少锁定和升级
+在大多数情况下，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 在使用默认的锁定和锁升级设置进行操作时提供最佳的性能。 如果 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 实例生成大量锁并且频繁进行锁升级，请考虑通过下列方法减少锁定数量：
+
+-   对于读取操作，使用不会生成共享锁的隔离级别：
+    -  当 READ_COMMITTED_SNAPSHOT 数据库选项为 ON 时，使用 READ COMMITTED 隔离级别。
+    -  使用 SNAPSHOT 隔离级别。
+    -  使用 READ UNCOMMITTED 隔离级别。 此隔离级别只能用于能对脏读进行操作的系统。    
+  
+    > [!NOTE]
+    > 更改隔离级别会影响 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 实例上的所有表。
+
+-   使用 PAGLOCK 或 TABLOCK 表提示，使数据库引擎使用页、堆或索引锁而不是行锁。 但是，使用此选项增加了用户阻止其他用户尝试访问相同数据的问题，对于并发用户较多的系统，不应使用此选项。
+
+-   对于已分区表，使用 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) 的 LOCK_ESCALATION 选项将锁升级到 HoBT 级别而不是表级别，或者禁用锁升级。
+
+-   将大批操作分成多个小批操作。 例如，假设你运行以下查询以从审核表中删除几十万条旧记录，然后发现它导致了会阻止其他用户的锁升级：
+   
+    ```sql
+    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    ```
+
+    通过一次删除几百条记录，可以显著减少每个事务累积的锁数量，并防止锁升级。 例如：
+
+    ```sql
+    SET ROWCOUNT 500
+    delete_more:
+      DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    IF @@ROWCOUNT > 0 GOTO delete_more
+    SET ROWCOUNT 0
+    ```
+
+-   通过尽量提高查询的效率，减少查询的锁占用时间。 大型扫描或大量的书签查找可能会增加锁升级的几率；此外，它还会增加死锁的可能性，并且通常会对并发和性能产生不利影响。 找到导致锁升级的查询后，寻找机会创建新索引，或向现有索引添加列以删除索引或表扫描，并最大程度地提高索引查找的效率。 请考虑使用[数据库引擎优化顾问](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)对查询执行自动索引分析。 有关详细信息，请参阅[教程：数据库引擎优化顾问](../tools/dta/tutorial-database-engine-tuning-advisor.md)。
+    此优化的一个目标是使索引查找尽可能少地返回行，以最大程度地降低书签查找的成本（最大程度地提高特定查询的索引选择性）。 如果 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 估计书签查找逻辑运算符可能返回多个行，则它可能使用 PREFETCH 来执行书签查找。 如果 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 使用 PREFETCH 进行书签查找，则它必须将部分查询的事务隔离级别提升至可重复读取部分查询。 这意味着，在已提交读隔离级别看起来类似于 SELECT 语句的内容可能会获得数千个键锁（在两个聚集索引和一个非聚集索引上），这会导致此类查询超出锁升级阈值。 如果你发现已升级的锁是共享表锁（但该锁在默认的已提交读隔离级别并不常见），则这一点特别重要。 如果书签查找 WITH PREFETCH 子句导致升级，请考虑向索引查找中出现的非聚集索引，或查询计划中书签查找逻辑运算符下方的索引扫描逻辑运算符添加其他列。 可以创建覆盖索引（一种索引，可包含查询所使用表中的全部列），也可以至少创建一个包含联接条件或 WHERE 子句所使用列的索引（如果无法在选择列列表中包含所有列）。
+    嵌套循环联接也可能使用 PREFETCH，并且这会导致相同的锁定行为。
+   
+-   如果其他 SPID 当前持有不兼容的表锁，则不会发生锁升级。 锁升级始终升级至表锁，而不是页锁。 此外，如果由于另一个 SPID 持有不兼容的 TAB 锁而导致锁升级尝试失败，则尝试升级的查询在等待 TAB 锁时不会被阻止。 相反，它会继续在其原始、更细化的级别（行、键或页）获取锁，并定期进行其他升级尝试。 因此，阻止特定表发生锁升级的一种方法是获取并持有与已升级锁类型不兼容的其他连接的锁。 表级的 IX（意向排他）锁不会锁定任何行或页，但仍与已升级的 S（共享）或 X（排他）TAB 锁不兼容。 例如，假设你需要运行一个批处理作业，该作业会修改 mytable 表中的大量行，并且导致了由锁升级造成的阻止行为。 如果此作业始终在不到一个小时内完成，你可以创建一个包含以下代码的 [!INCLUDE[tsql](../includes/tsql-md.md)] 作业，并将此新作业计划为在批处理作业开始时间之前的几分钟启动：
+  
+    ```sql
+    BEGIN TRAN
+    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    WAITFOR DELAY '1:00:00'
+    COMMIT TRAN
+    ```
+   
+    此查询将获取 mytable 表的 IX 锁，并持有该锁一个小时，这会阻止在此时间段内该表发生锁升级。 此批处理作业不会修改任何数据或阻止其他查询（除非另一个查询使用 TABLOCK 提示强制执行表锁，或者管理员已使用 sp_indexoption 存储过程禁用了页锁或行锁）。
+
+还可以使用跟踪标志 1211 和 1224 来禁用所有或某些锁升级。 不过，这些[跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)会对整个 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 全局禁用所有锁升级。 锁升级在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中非常有用，它最大程度地提高了查询效率（该效率会因为获取和释放数千个锁产生的开销而降低）。 此外，锁升级还可以帮助最大程度地减少跟踪锁所需的内存。 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以为锁结构动态分配的内存是有限的，因此，如果禁用锁升级并且锁内存增长到足够大，则尝试为任何查询分配额外的锁可能会失败并出现以下错误：
+
+```Error: 1204, Severity: 19, State: 1
+The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
+```
+
+> [!NOTE]
+> 在出现[错误 1204](../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md) 时，它将停止处理当前语句并导致活动事务回滚。 如果重启数据库服务，则回滚本身可能会阻止用户或导致较长的数据库恢复时间。
+
+> [!NOTE]
+> 使用锁提示（如 ROWLOCK）只会更改初始锁计划。 锁提示不会阻止锁升级。 
+
+此外，使用 `lock_escalation` 扩展事件 (xEvent) 来监视锁升级，如以下示例中所示：
+
+```sql
+-- Session creates a histogram of the number of lock escalations per database 
+CREATE EVENT SESSION [Track_lock_escalation] ON SERVER 
+ADD EVENT sqlserver.lock_escalation(SET collect_database_name=(1),collect_statement=(1)
+    ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.username))
+ADD TARGET package0.histogram(SET source=N'sqlserver.database_id')
+GO
+```
+
+> [!IMPORTANT]
+> 应使用 `lock_escalation` 扩展事件 (xEvent)，而不是 SQL 跟踪或 SQL 探查器中的 Lock:Escalation 事件类
+
+## <a name="dynamic-locking"></a><a name="dynamic_locks"></a>动态锁定
  使用低级锁（如行锁）可以降低两个事务同时在相同数据块上请求锁的可能性，从而提高并发性。 使用低级锁还会增加锁的数量以及管理锁所需的资源。 使用高级表锁或页锁可以减少开销，但代价是降低了并发性。  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -665,15 +820,15 @@ INSERT mytable VALUES ('Dan');
 -   提高性能。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通过使用适合任务的锁使系统开销减至最小。  
 -   应用程序开发人员可以集中精力进行开发。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动调整锁定。  
   
- 自 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 起，锁升级的行为已发生改变，其中引入了 `LOCK_ESCALATION` 选项。 有关详细信息，请参阅 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) 的 `LOCK_ESCALATION` 选项。  
-  
+ 自 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 起，锁升级的行为已发生改变，其中引入了 `LOCK_ESCALATION` 选项。 有关详细信息，请参阅 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) 的 `LOCK_ESCALATION` 选项。 
+   
 ## <a name="deadlocks"></a><a name="deadlocks"></a> 死锁数  
  在两个或多个任务中，如果每个任务锁定了其他任务试图锁定的资源，此时会造成这些任务永久阻塞，从而出现死锁。 例如：  
   
 -   事务 A 获取了行 1 的共享锁。  
 -   事务 B 获取了行 2 的共享锁。  
--   现在，事务 A 请求行 2 的排他锁，但在事务 B 完成并释放其对行 2 持有的共享锁之前被阻塞。  
--   现在，事务 B 请求行 1 的排他锁，但在事务 A 完成并释放其对行 1 持有的共享锁之前被阻塞。  
+-   现在，事务 A 请求行 2 的排他锁，但在事务 B 完成并释放其对行 2 持有的共享锁之前被阻止。  
+-   现在，事务 B 请求行 1 的排他锁，但在事务 A 完成并释放其对行 1 持有的共享锁之前被阻止。  
   
  事务 B 完成之后事务 A 才能完成，但是事务 B 由事务 A 阻塞。该条件也称为循环依赖关系：事务 A 依赖于事务 B，事务 B 通过对事务 A 的依赖关系关闭循环。  
   
@@ -688,7 +843,7 @@ INSERT mytable VALUES ('Dan');
   
  ![关系图显示了事务死锁](../relational-databases/media/deadlock.png)  
   
- 在示例中，对于 Part 表锁资源，事务 T1 依赖于事务 T2。 同样，对于 Supplier 表锁资源，事务 T2 依赖于事务 T1。 因为这些依赖关系形成了一个循环，所以在事务 T1 和事务 T2 之间存在死锁。  
+ 在示例中，对于 `Part` 表锁资源，事务 T1 依赖于事务 T2。 同样，对于 `Supplier` 表锁资源，事务 T2 依赖于事务 T1。 因为这些依赖关系形成了一个循环，所以在事务 T1 和事务 T2 之间存在死锁。  
   
  当表进行了分区并且 `ALTER TABLE` 的 `LOCK_ESCALATION` 设置设为 AUTO 时也会发生死锁。 当 `LOCK_ESCALATION` 设为 AUTO 时，通过允许 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在 HoBT 级别而非 TABLE 级别锁定表分区会增加并发情况。 但是，当单独的事务在某个表中持有分区锁并希望在其他事务分区上的某处持有锁时，会导致发生死锁。 通过将 `LOCK_ESCALATION` 设置为 `TABLE` 可以避免这种类型的死锁，但此设置会因强制某个分区的大量更新以等待某个表锁而减少并发情况。  
   
@@ -747,7 +902,7 @@ INSERT mytable VALUES ('Dan');
   
  检测到死锁后，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通过选择其中一个线程作为死锁牺牲品来结束死锁。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]终止正为线程执行的当前批处理，回滚死锁牺牲品的事务并将 1205 错误返回到应用程序。 回滚死锁牺牲品的事务会释放事务持有的所有锁。 这将使其他线程的事务解锁，并继续运行。 1205 死锁牺牲品错误将有关死锁涉及的线程和资源的信息记录在错误日志中。  
   
- 默认情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]选择运行回滚开销最小的事务的会话作为死锁牺牲品。 此外，用户也可以使用 SET DEADLOCK_PRIORITY 语句指定死锁情况下会话的优先级。 可以将 DEADLOCK_PRIORITY 设置为 LOW、NORMAL 或 HIGH，也可以将其设置为范围（-10 到 10）间的任一整数值。 死锁优先级的默认设置为 NORMAL。 如果两个会话的死锁优先级不同，则会选择优先级较低的会话作为死锁牺牲品。 如果两个会话的死锁优先级相同，则会选择回滚开销最低的事务的会话作为死锁牺牲品。 如果死锁循环中会话的死锁优先级和开销都相同，则会随机选择死锁牺牲品。  
+ 默认情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]选择运行回滚开销最小的事务的会话作为死锁牺牲品。 此外，用户也可以使用 `SET DEADLOCK_PRIORITY` 语句指定死锁情况下会话的优先级。 可以将 DEADLOCK_PRIORITY 设置为 LOW、NORMAL 或 HIGH，也可以将其设置为范围（-10 到 10）间的任一整数值。 死锁优先级的默认设置为 NORMAL。 如果两个会话的死锁优先级不同，则会选择优先级较低的会话作为死锁牺牲品。 如果两个会话的死锁优先级相同，则会选择回滚开销最低的事务的会话作为死锁牺牲品。 如果死锁循环中会话的死锁优先级和开销都相同，则会随机选择死锁牺牲品。  
   
  使用 CLR 时，死锁监视器将自动检测托管过程中访问的同步资源（监视器、读取器/编写器锁和线程联接）的死锁。 但是，死锁是通过在已选为死锁牺牲品的过程中引发异常来解决的。 因此，请务必理解异常不会自动释放牺牲品当前拥有的资源；必须显式释放资源。 用于标识死锁牺牲品的异常与异常行为一样，也会被捕获和解除。  
   
@@ -757,7 +912,7 @@ INSERT mytable VALUES ('Dan');
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> 死锁扩展事件
 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起，应使用 `xml_deadlock_report` 扩展事件 (xEvent)，而不使用 SQL 跟踪或 SQL 探查器中的死锁图事件类。
 
-此外，自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起，当发生死锁时，system\_health 会话将捕获所有包含死锁图的 `xml_deadlock_report` xEvent。 由于 system\_health 会话默认情况下处于启用状态，因此不需要将单独的 xEvent 会话配置为捕获死锁信息。 
+此外，自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起，当发生死锁时，system\_health 会话已捕获所有包含死锁图的 `xml_deadlock_report` xEvent。 由于 system\_health 会话默认情况下处于启用状态，因此不需要将单独的 xEvent 会话配置为捕获死锁信息。 
 
 捕获的死锁图通常具有三个不同的节点：
 -   **牺牲品列表**。 死锁牺牲品进程标识符。
@@ -1762,7 +1917,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  有关特定锁提示及其行为的详细信息，请参阅[表提示 (Transact-SQL)](../t-sql/queries/hints-transact-sql-table.md)。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]查询优化器几乎总是会选择正确的锁级别。 建议只在必要时才使用表级锁提示来更改默认的锁行为。 禁止锁级别反过来会影响并发。  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 几乎总是会选择正确的锁级别。 建议只在必要时才使用表级锁提示来更改默认的锁行为。 禁止锁级别反过来会影响并发。  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]在读取元数据时可能必须获取锁，即使是处理使用了防止在读取数据时请求共享锁的锁提示的选择。 例如，使用 `NOLOCK` 提示的 `SELECT` 在读取数据时不获取共享锁，但有时在读取系统目录视图时可能会请求锁。 这意味着可能会阻止使用 `NOLOCK` 的 `SELECT`语句。  
   
@@ -1793,7 +1948,7 @@ ROLLBACK;
 GO  
 ```  
   
- 引用 HumanResources.Employee 的唯一采用的锁是架构稳定性锁（Sch-S 锁）。 在这种情况下，不再保证可序列化性。  
+ 引用 `HumanResources.Employee` 唯一采用的锁是架构稳定性锁（Sch-S 锁）。 在这种情况下，不再保证可序列化性。  
   
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，`ALTER TABLE` 的 `LOCK_ESCALATION` 选项可以禁用表锁，并在已分区表上启用 HoBT 锁。 此选项不是一个锁提示，但是可用来减少锁升级。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md)。  
   
@@ -1957,7 +2112,7 @@ GO
  您可能必须使用 KILL 语句。 但是，在使用此语句时请务必小心，特别是在运行重要的进程时。 有关详细信息，请参阅 [KILL (Transact-SQL)](../t-sql/language-elements/kill-transact-sql.md)。  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他阅读主题   
-[行版本控制的系统开销](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[行版本控制的系统开销](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [扩展事件](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [动态管理视图和函数 (Transact-SQL)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

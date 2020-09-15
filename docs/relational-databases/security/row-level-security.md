@@ -2,7 +2,7 @@
 title: 行级安全性 | Microsoft Docs
 description: 了解行级别安全性如何使用组成员身份或执行上下文来控制对 SQL Server 中数据库表中行的访问权限。
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000529"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392185"
 ---
 # <a name="row-level-security"></a>行级安全性
 
@@ -256,7 +256,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 现在通过作为每个用户从 Sales 表进行选择来测试筛选器谓词。
 
 ```sql
@@ -272,6 +271,7 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
+
 管理员应看到所有六行。 Sales1 和 Sales2 用户应只能看到自己的销售情况。
 
 更改安全策略以禁用策略。
@@ -298,18 +298,26 @@ DROP SCHEMA Security;
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. 对 Azure Synapse 外部表使用行级别安全性的方案
 
-此简短示例创建三个用户，以及一个包含六行的外部表。 然后，它为外部表创建内联表值函数和安全策略。 该示例演示如何为各种用户筛选选择语句。
+此简短示例创建三个用户，以及一个包含六行的外部表。 然后，它为外部表创建内联表值函数和安全策略。 该示例演示如何为各种用户筛选选择语句。 
 
-创建将演示不同访问功能的三个用户帐户。
+### <a name="prerequisites"></a>先决条件
+
+1. 必须具有一个 SQL 池。 请参阅[创建 Synapse SQL 池](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. 托管 SQL 池的服务器必须向 AAD 注册，并且你应具有一个包含存储博客参与者权限的 Azure 存储帐户。 按照[此处](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步骤操作。
+1. 为 Azure 存储帐户创建一个文件系统。 使用存储资源管理器查看存储帐户。 右键单击容器，然后选择“创建文件系统”。  
+
+满足先决条件后，创建三个用户帐户来演示不同的访问功能。
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,12 +338,12 @@ CREATE TABLE Sales
 使用六行数据填充该表（对于每个销售代表显示三个订单）。  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -343,15 +351,15 @@ SELECT * FROM Sales;
 通过已创建的 Sales 表，创建 Synapse Analytics 外部表。
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
@@ -363,7 +371,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-将会话 A 中的函数用作筛选谓词，对外部表创建安全策略。 状态必须设置为 ON 以启用该策略。
+创建一个新架构和一个内联表值函数，你可能已在示例 A 中完成了此操作。该函数在 SalesRep 列中的行与执行查询的用户相同时 (`@SalesRep = USER_NAME()`)，或者在执行查询的用户是 Manager 用户 (`USER_NAME() = 'Manager'`) 时返回 1。
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+将内联表值函数用作筛选谓词，对外部表创建安全策略。 状态必须设置为 ON 以启用该策略。
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext

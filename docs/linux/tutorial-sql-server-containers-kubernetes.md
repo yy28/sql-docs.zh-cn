@@ -5,16 +5,16 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2018
+ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4da229070afa69dc9f6f181ada1db21bc87b713b
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902314"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424407"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes 服务 (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -35,17 +35,17 @@ ms.locfileid: "85902314"
 
 Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/concepts/storage/storage-classes/)、[永久性卷声明](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)和 [Azure 磁盘卷类型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 可以在 Kubernetes 中本机创建和管理 SQL Server 实例。 本文中的示例介绍如何创建[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)，以实现类似于共享磁盘故障转移群集实例的高可用性配置。 在此配置中，Kubernetes 充当群集业务流程协调程序的作用。 容器中的 SQL Server 实例发生故障时，业务流程协调程序会启动其他附加到同一永久性存储的容器的实例。
 
-![Kubernetes SQL Server 群集示意图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+![Kubernetes 群集中的 SQL Server 容器](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
 在上图中，`mssql-server`是 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中的容器。 Kubernetes 协调群集中的资源。 [副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 Pod。 应用程序会连接到服务。 在这种情况下，该服务表示负载均衡器，承载着 `mssql-server` 发生故障后保持不变的 IP 地址。
 
 在下图中，`mssql-server` 容器发生了故障。 作为业务流程协调程序，Kubernetes 可保证副本集中正常实例的计数正确，并根据配置启动新容器。 业务流程协调程序会在同一节点上启动新 Pod，并且 `mssql-server` 会重新连接到同一个永久性存储。 该服务会连接到重新创建的 `mssql-server`。
 
-![Kubernetes SQL Server 群集示意图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Kubernetes 群集中的 SQL Server Pod 失败](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 在下图中，托管 `mssql-server` 容器的节点发生了故障。 业务流程协调程序在不同的节点上启动新 Pod，并且 `mssql-server` 重新连接到同一个永久性存储。 该服务会连接到重新创建的 `mssql-server`。
 
-![Kubernetes SQL Server 群集示意图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Kubernetes 群集中的 SQL Server Pod 恢复](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -174,10 +174,12 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
          labels:
            app: mssql
        spec:
-         terminationGracePeriodSeconds: 10
+         terminationGracePeriodSeconds: 30
+         securityContext:
+           fsGroup: 10001
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server:2017-latest
+           image: mcr.microsoft.com/mssql/server:2019-latest
            ports:
            - containerPort: 1433
            env:
@@ -227,10 +229,12 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD 
+         key: SA_PASSWORD
      ```
 
-     Kubernetes 部署容器时，它引用名为 `mssql` 的密钥以获取密码的值。 
+    Kubernetes 部署容器时，它引用名为 `mssql` 的密钥以获取密码的值。
+
+   * `securityContext`：SecurityContext 定义 Pod 或容器的特权和访问控制设置，在本例中，它是在 Pod 级别指定的，因此所有容器（在本例中只有一个）都遵循该安全性上下文。 在安全性上下文中，我们使用值 10001（即 mssql 组的 GID）定义 fsGroup，这意味着，容器的所有进程也是补充组 ID 10001 (mssql) 的一部分。 卷 /var/opt/mssql 以及在该卷中创建的任何文件的所有者将是组 ID 10001（mssql 组）。
 
    >[!NOTE]
    >使用 `LoadBalancer` 服务类型，可在端口 1433 远程访问（通过 Internet）SQL Server 实例。
@@ -272,7 +276,19 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
-   ```  
+   ```
+
+1. 还可以通过运行以下命令来验证容器是否以非根用户身份运行：
+
+    ```azurecli
+    kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
+    ```
+
+    然后运行“whoami”，你应该会看到用户名为 mssql。 这是一个非根用户。
+
+    ```azurecli
+    whoami
+    ```
 
 ## <a name="connect-to-the-sql-server-instance"></a>连接到 SQL Server 实例
 
@@ -285,7 +301,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 * [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
-   
+
    要使用 `sqlcmd` 进行连接，请运行以下命令：
 
    ```cmd
@@ -293,9 +309,9 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
    ```
 
    请替换以下值：
-      
-    - 将 `<External IP Address>` 替换为 `mssql-deployment` 服务的 IP 地址 
-    - 将 `MyC0m9l&xP@ssw0rd` 替换为自己的密码
+
+  * 将 `<External IP Address>` 替换为 `mssql-deployment` 服务的 IP 地址 
+  * 将 `MyC0m9l&xP@ssw0rd` 替换为自己的密码
 
 ## <a name="verify-failure-and-recovery"></a>验证故障和恢复
 
@@ -314,6 +330,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
+
    `mssql-deployment-0` 是从上一步返回的 Pod 名称的值。 
 
 Kubernetes 会自动重新创建 Pod 以恢复 SQL Server 实例，并连接到永久性存储。 使用 `kubectl get pods` 验证是否部署了新的 Pod。 使用 `kubectl get services` 验证新容器的 IP 地址是否相同。 
@@ -333,5 +350,3 @@ Kubernetes 会自动重新创建 Pod 以恢复 SQL Server 实例，并连接到�
 
 > [!div class="nextstepaction"]
 >[Kubernetes 简介](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-
-

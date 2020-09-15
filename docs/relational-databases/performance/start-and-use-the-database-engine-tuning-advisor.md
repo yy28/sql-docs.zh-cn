@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457610"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480499"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457610"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>在 SQL Server Management Studio 查询编辑器中启动数据库引擎优化顾问  
   
-1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]脚本文件。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
+1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]脚本文件。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)。  
   
 2.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中选择一个查询，或选择整个脚本，右键单击选定的内容，再选择“在数据库引擎优化顾问中分析查询”。 此时将打开数据库引擎优化顾问图形用户界面，并将该脚本作为 XML 文件工作负荷导入。 可以指定会话名称和优化选项，以将选定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询作为工作负荷进行优化。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "86457610"
 > [!NOTE]  
 >  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。    
   
-##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>使用工作负荷文件或表作为输入来优化数据库  
+#### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>使用工作负荷文件或表作为输入来优化数据库  
   
 1.  确定您希望数据库引擎优化顾问在分析过程中考虑添加、删除或保留的数据库功能（索引、索引视图、分区）。  
   
@@ -195,7 +195,6 @@ ms.locfileid: "86457610"
      指定表的格式为  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -235,7 +234,7 @@ ms.locfileid: "86457610"
   
  有关 **dta** 实用工具语法和示例的详细信息，请参阅 [dta Utility](../../tools/dta/dta-utility.md)。  
   
-##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>使用计划缓存优化数据库  
+#### <a name="to-tune-a-database-by-using-the-plan-cache"></a>使用计划缓存优化数据库  
   
 1.  指定 **-ip** 选项。 分析选定数据库的前 1000 个计划缓存事件。  
   
@@ -257,7 +256,7 @@ ms.locfileid: "86457610"
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>使用工作负荷和 dta 实用工具的默认设置优化数据库  
+#### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>使用工作负荷和 dta 实用工具的默认设置优化数据库  
   
 1.  确定您希望数据库引擎优化顾问在分析过程中考虑添加、删除或保留的数据库功能（索引、索引视图、分区）。  
   
@@ -273,7 +272,7 @@ ms.locfileid: "86457610"
   
      此处显示的四个选项（数据库名称、工作负荷、连接类型和会话名称）是必需的。  
   
-##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>在特定的持续时间内优化远程数据库或命名实例  
+#### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>在特定的持续时间内优化远程数据库或命名实例  
   
 1.  确定您希望数据库引擎优化顾问在分析过程中考虑添加、删除或保留的数据库功能（索引、索引视图、分区）。  
   
@@ -288,7 +287,7 @@ ms.locfileid: "86457610"
   
      其中， `-S` 指定远程服务器的名称和实例（而不是本地服务器上的命名实例）， `-D` 指定要优化的数据库的名称。 `-it` 选项指定工作负荷表的名称， `-U` 和 `-P` 指定登录远程数据库的登录 ID 和密码， `-s` 指定优化会话的名称， `-A` 指定优化会话的持续时间（分钟）。 默认情况下， **dta** 实用工具使用的优化持续时间为 8 小时。 如果希望数据库引擎优化顾问在时间长度不限的条件下优化工作负荷，请将 **选项指定为** 0 `-A` （零）。  
   
-##### <a name="to-tune-a-database-using-an-xml-input-file"></a>使用 XML 输入文件优化数据库  
+#### <a name="to-tune-a-database-using-an-xml-input-file"></a>使用 XML 输入文件优化数据库  
   
 1.  确定您希望数据库引擎优化顾问在分析过程中考虑添加、删除或保留的数据库功能（索引、索引视图、分区）。  
   
@@ -311,7 +310,7 @@ ms.locfileid: "86457610"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构位于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的以下位置：  
   
- C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  此 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 网站 [上也在线提供了](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)优化顾问 XML 架构。  
   
@@ -415,7 +414,7 @@ database_name.owner_name.table_name
  限制当前优化会话的时间。 提供更多优化时间可以提高建议质量。 为了确保获取最佳的建议，请不要选中此选项。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问在分析期间会占用系统资源。 使用 **“限制优化时间”** 会在对服务器上预期的高工作负荷进行优化之前停止优化。  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问在分析期间会占用系统资源。 使用 **“限制优化时间”** 会在对服务器上预期的高工作负荷进行优化之前停止优化。  
   
  **“高级选项”**  
  使用“高级优化选项”对话框可以配置有关最大空间、最大键列数和联机索引的建议设置。  
@@ -518,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>另请参阅  
  [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta 实用工具](../../tools/dta/dta-utility.md)  
-  
+ [dta 实用工具](../../tools/dta/dta-utility.md)    
+ [教程：数据库引擎优化顾问](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
   

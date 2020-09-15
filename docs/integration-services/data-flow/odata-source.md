@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425819"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424417"
 ---
 # <a name="odata-source"></a>OData 源
 
@@ -54,6 +54,13 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
 
 > [!IMPORTANT]
 > OData 源组件不支持 SharePoint 列表中的复杂类型，例如多选项。
+
+> [!Note]
+> 如果源仅允许 TLS 1.2 连接，则需要通过注册表设置在计算机上强制执行 TLS 1.2。 在提升的命令提示符下运行以下命令：
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## <a name="odata-format-and-performance"></a>OData 格式和性能
  大多数 OData 服务都可以多种格式返回结果。 可以使用 `$format` 查询选项指定结果集的格式。 JSON 和 JSON 轻型这类格式比 ATOM 或 XML 更高效，并且在传输大量数据时的性能更佳。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换至 JSON 后，性能提高 30-53%，从 ATOM 切换至新的 JSON 轻型格式（WCF Data Services 5.1 中提供）后，性能提高 67%。  

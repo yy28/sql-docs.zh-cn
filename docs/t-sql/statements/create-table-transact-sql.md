@@ -2,7 +2,7 @@
 description: CREATE TABLE (Transact-SQL)
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 02/24/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -44,15 +44,16 @@ helpviewer_keywords:
 - CREATE TABLE statement
 - number of columns per table
 - maximum number of bytes per row
+- data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 380d8d9dcd7d2812251203a91caaa2b9d056d616
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862455"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511259"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -237,14 +238,19 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
+        , RETENTION_PERIOD = {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }) ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -762,7 +768,8 @@ SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name .history_table_name [, DA
 
 如果数据类型、为 Null 性约束和主键约束需要都满足了，则可启动系统版本控制。 如果未使用 `HISTORY_TABLE` 参数，系统将在与当前表相同的文件组中生成一个符合当前表架构的新历史记录表，从而在两个表之间创建链接，使系统能在历史记录表中记录当前表中每行的历史记录。 此历史记录表的名称为 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 默认情况下，历史记录表是经过 **PAGE** 压缩的。 如果 `HISTORY_TABLE` 参数用于创建指向现有历史记录表的链接并使用此表，则会在当前表和指定表之间创建链接。 如果当前表已分区，则历史记录表在默认文件组上创建，因为不会自动将分区配置从当前表复制到历史记录表。 如果历史记录表的名称在历史记录表创建期间指定，则必须指定架构和表的名称。 创建现有历史记录表的链接时，可以选择执行数据一致性检查。 数据一致性检查可确保现有记录不重叠。 系统默认执行数据一致性检查。 将此参数与 `PERIOD FOR SYSTEM_TIME` 和 `GENERATED ALWAYS AS ROW { START | END }` 参数结合使用来对表启用系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
+REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }**   
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
 创建已启用或禁用 Stretch Database 的新表。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -793,6 +800,23 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoV
    此操作会产生数据传输费用，并且不可取消。
 
 - 指定 `PAUSED` 可暂停或推迟数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
+
+DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+**适用于：** 仅限 Azure SQL Edge
+
+允许基于保留策略清除数据库内各表中的旧数据或过期数据。 有关详细信息，请参阅[启用和禁用数据保留](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)。 若要启用数据保留，必须指定以下参数。 
+
+- FILTER_COLUMN = { column_name }  
+指定应用于确定表中的行是否过时的列。 筛选器列支持以下数据类型。
+  - Date
+  - DateTime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+  指定表的保留期策略。 保留期指定为正整数值和日期部分单位的组合。   
 
 MEMORY_OPTIMIZED 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 Azure SQL 托管实例不支持内存优化表。
 
@@ -1573,6 +1597,20 @@ Invalid object name '##test'
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### <a name="w-enable-data-retention-policy-on-a-table"></a>W. 对表启用数据保留策略
+
+以下示例创建了一个表，该表启用了数据保留，并且保留期为 1 周。 此示例仅适用于 Azure SQL Edge。
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## <a name="next-steps"></a>后续步骤

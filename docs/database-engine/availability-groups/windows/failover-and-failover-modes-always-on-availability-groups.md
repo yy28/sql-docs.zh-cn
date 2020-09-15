@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395052"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424427"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395052"
   在可用性组的上下文中，可用性副本的主角色和辅助角色在称为“故障转移” 的过程中通常是可互换的。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”。 自动故障转移和计划的手动故障转移会保留您的所有数据。 可用性组在可用性副本级别进行故障转移。 也就是说，可用性组故障转移到其次要副本之一（当前故障转移目标）。  
   
 > [!NOTE]  
->  在数据库级别，诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏之类的数据库问题不会导致可用性组进行故障转移。  
+>   除非已配置[数据库级运行状况检测](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)，否则数据库级别的问题（例如因数据文件丢失、数据库删除操作或事务日志损坏而使数据库成为可疑数据库）不会导致可用性组进行故障转移。  
   
  在故障转移期间，故障转移目标将接管主角色、恢复其数据库并且使它们作为新的主数据库处于联机状态。 以前的主副本一旦可用将切换为辅助角色，并且其数据库成为辅助数据库。 在可能的情况下，这些角色可以来回切换（或切换为不同的故障转移目标），以应对多次故障或满足管理的需要。  
   

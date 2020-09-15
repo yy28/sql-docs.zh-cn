@@ -6,22 +6,21 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 08/26/2020
+ms.openlocfilehash: 477e93dc272c4a26e40333b02728c643299161ce
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778416"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283714"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>通过创建 Azure Data Studio 扩展来扩展功能
 
 借助 Azure Data Studio 中的扩展，可轻松地向基本 Azure Data Studio 安装添加更多功能。
 
 扩展由 Azure Data Studio 团队 (Microsoft) 以及第三方社区（你）提供。
-
 
 ## <a name="author-an-extension"></a>编写扩展
 
@@ -35,7 +34,7 @@ ms.locfileid: "88778416"
 
 若要创建新的扩展，可使用 Azure Data Studio 扩展生成器。 Yeoman [扩展生成器](https://www.npmjs.com/package/generator-azuredatastudio)是扩展项目的一个有用起点。 若要启动生成器，请在命令提示符中键入以下内容：
 
-```
+```console
 npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
@@ -46,23 +45,22 @@ yo azuredatastudio
 
 若要了解 Azure Data Studio 扩展性，请参阅[扩展性概述](extensibility.md)。 还可在现有[示例](https://github.com/Microsoft/azuredatastudio/tree/main/samples)中查看如何使用 API 的示例。
 
-
 ## <a name="debug-an-extension"></a>调试扩展
 
 可使用 Visual Studio Code 扩展 [Azure Data Studio 调试](https://github.com/kevcunnane/sqlops-debug)来调试新扩展。
 
-步骤
-1. 使用 [Visual Studio Code](https://code.visualstudio.com/) 打开扩展。
-1. 安装 Azure Data Studio 调试扩展。
-1. 按“F5”或单击“调试”图标，然后单击“启动” 。
-1. Azure Data Studio 的新实例在特殊模式（扩展开发主机）下启动，此新实例现在可以识别你的扩展。
+步骤：
 
+1. 使用 [Visual Studio Code](https://code.visualstudio.com/) 打开扩展。
+2. 安装 Azure Data Studio 调试扩展。
+3. 按“F5”或单击“调试”图标，然后单击“启动” 。
+4. Azure Data Studio 的新实例在特殊模式（扩展开发主机）下启动，此新实例现在可以识别你的扩展。
 
 ## <a name="create-an-extension-package"></a>创建扩展包
 
-编写扩展后，需要创建 VSIX 包，以便能够在 Azure Data Studio 中安装它。 可以使用 [vsce](https://github.com/Microsoft/vscode-vsce)（Visual Studio Code 扩展）创建 VSIX 包。 
+编写扩展后，需要创建 VSIX 包，以便能够在 Azure Data Studio 中安装它。 可以使用 [vsce](https://github.com/Microsoft/vscode-vsce)（Visual Studio Code 扩展）创建 VSIX 包。
 
-```
+```console
 npm install -g vsce
 cd myExtensionName
 vsce package
@@ -70,7 +68,6 @@ vsce package
 ```
 
 借助 VSIX 包，可以通过共享 `.vsix` 文件并使用“命令面板”中的命令“扩展：从 VSIX 文件安装”将扩展安装到 Azure Data Studio 中，从而以本地和非公开形式共享扩展。
-
 
 ## <a name="publish-an-extension"></a>发布扩展
 
@@ -86,3 +83,13 @@ vsce package
 **发布扩展更新**
 
 发布更新的过程与发布扩展的过程类似。 请确保在 package.json 中更新版本。
+
+## <a name="next-steps"></a>后续步骤
+
+有关如何开始的分步说明，请参阅以下扩展创作教程之一：
+
+- [键映射扩展教程](extensions/keymap-extension.md)
+- [仪表板扩展教程](extensions/dashboard-extension.md)
+- [笔记本扩展教程](extensions/notebook-extension.md)
+- [Jupyter 书籍扩展教程](extensions/jupyter-book-extension.md)
+- [向导扩展教程](extensions/wizard-extension.md)

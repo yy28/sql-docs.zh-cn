@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 选项 (Transact-SQL) | Microsoft Docs
 description: 了解如何在 SQL Server 和 Azure SQL 数据库中设置自动优化、加密和查询存储等数据库选项。
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,6 +22,7 @@ helpviewer_keywords:
 - snapshot isolation framework option
 - checksums [SQL Server]
 - Automatic tuning
+- " Data Retention Policy"
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: c7e35b474e33da25b2d323d4af4aced5c4fe50f1
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900958"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511299"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -115,6 +116,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -305,6 +307,10 @@ SET
 
 <temporal_history_retention> ::=
     TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## <a name="arguments"></a>参数
@@ -504,6 +510,17 @@ GLOBAL
 该游标仅在断开连接时才被隐式释放。 有关详细信息，请参阅 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_local_cursor_default` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsLocalCursorsDefault` 属性来确定状态。
+
+\<data_retention_policy> ::=
+
+**适用对象**：仅限 Azure SQL Edge
+
+DATA_RETENTION { ON | OFF }   
+ON    
+对数据库启用基于数据保留策略的清理。
+
+OFF   
+对数据库禁用基于数据保留策略的清理。
 
 **\<database_mirroring>**     
 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]

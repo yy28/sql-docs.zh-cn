@@ -6,17 +6,17 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a7d3ca36634e449dd26dfdb0df75f09608d25f51
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765796"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283688"
 ---
-# <a name="backup-and-restore-databases-using-azure-data-studio"></a>使用 Azure Data Studio 备份和还原数据库
+# <a name="tutorial-backup-and-restore-databases-using-azure-data-studio"></a>教程：使用 Azure Data Studio 备份和还原数据库
 
 在本教程中，将了解如何使用 Azure Data Studio 执行以下操作：
 > [!div class="checklist"]
@@ -36,16 +36,16 @@ ms.locfileid: "88765796"
 
 ## <a name="back-up-a-database"></a>备份数据库
 
-1. 打开 TutorialDB 数据库仪表板（打开“服务器”边栏 (Ctrl+G)，展开“数据库”，右键单击“TutorialDB”，然后选择“管理”）    。
+1. 打开 TutorialDB 数据库仪表板（打开“服务器”边栏 (Ctrl+G)，展开“数据库”，右键单击 TutorialDB ，然后选择“管理”）    。
 
-2. 打开“备份数据库”对话框（在“任务”小组件上单击“备份”）  。
+2. 打开“备份数据库”对话框（在“任务”小组件上选择“备份”）  。
 
    ![任务小组件](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. 本教程使用默认备份选项，因此请单击“备份”。
+3. 本教程使用默认备份选项，因此请选择“备份”。
    ![备份对话框](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-单击“备份”后，“备份数据库”对话框将会消失，备份过程将开始 。
+选择“备份”后，“备份数据库”对话框将会消失，备份过程开始 。
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>查看备份状态和查看备份脚本
 
@@ -59,20 +59,20 @@ ms.locfileid: "88765796"
 
 ## <a name="restore-a-database-from-a-backup-file"></a>从备份文件中还原数据库
 
-1. 打开“服务器”边栏 (Ctrl+G)，右键单击服务器，然后选择“管理”  。
+1. 打开“服务器”边栏 (Ctrl+G)，右键单击你的服务器，然后选择“管理”  。
 
-2. 打开“还原数据库”对话框（在“任务”小组件上单击“还原”）  。
+2. 打开“还原数据库”对话框（在“任务”小组件上选择“还原”）  。
 
-   ![还原任务](media/tutorial-backup-restore-sql-server/tasks-restore.png)
+   ![任务还原](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
 3. 在“还原来源”字段中选择“备份文件” 。
 
-4. 单击“备份文件路径”字段中的省略号 (...)，然后选择 TutorialDB 的最新备份文件。
+4. 选择“备份文件路径”字段中的省略号 (…)，然后选择 TutorialDB 的最新备份文件。
 
 5. 在“目标”部分的“目标数据库”字段中，键入“TutorialDB_Restored”以将备份文件还原到新数据库  。 然后选择“还原”。
 
-   ![还原](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![还原备份](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. 要查看还原操作的状态，请按 Ctrl+T，打开“任务历史记录” 。
 
-   ![还原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![历史任务还原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
