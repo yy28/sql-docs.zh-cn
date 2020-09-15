@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio 中的输出窗口
 title: SSMS 输出窗口
 ms.custom: seo-lt-2019
 ms.date: 08/09/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 88cda0f8a0ead013e09bdc656cc4a129870a5125
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98a7e2695c2327e26043ef9bf3e4f1578e7abfe6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316963"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio 中的输出窗口
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

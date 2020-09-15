@@ -1,4 +1,5 @@
 ---
+description: 删除服务器组 (SQL Server Management Studio)
 title: 删除服务器组
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: dee1d250227f7123ea003447bdfe191db8e90042
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d8febbb040b0410676eb8cc458991b55eabbe8a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85981930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316583"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>删除服务器组 (SQL Server Management Studio)
 
@@ -33,9 +34,9 @@ ms.locfileid: "85981930"
   
 #### <a name="to-remove-a-server-group"></a>删除服务器组  
   
-1.  在“已注册的服务器”中，右键单击某个服务器组，然后单击“删除”  。  
+1.  在“已注册的服务器”中，右键单击某个服务器组，然后单击“删除”****。  
   
-2.  在 **“确认删除”** 对话框中，单击 **“是”** 。  
+2.  在 **“确认删除”** 对话框中，单击 **“是”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [移动已注册的服务器或已注册的服务器组 (SQL Server Management Studio)](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  

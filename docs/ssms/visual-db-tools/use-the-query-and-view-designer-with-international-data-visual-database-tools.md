@@ -1,4 +1,5 @@
 ---
+description: 对国际数据使用查询和视图设计器 (Visual Database Tools)
 title: 使用国际数据的查询和视图设计器
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 99e6d84d96171747977852caa1ceeef287d3e337
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf7402047138bc70810aec16e6ea99845e85dbef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312653"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>对国际数据使用查询和视图设计器 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-在 [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  
+ 在[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>“条件”窗格和 SQL 窗格中的本地化信息  
 如果使用“条件”窗格创建查询，则可以使用与计算机中的 Windows 区域设置相应的格式输入信息。 例如，如果要搜索数据，则可以在“条件”列中采用您所习惯的格式输入数据，但以下情况除外：  
@@ -59,4 +60,4 @@ ms.locfileid: "86008128"
   
 ## <a name="see-also"></a>另请参阅
 
-[设计查询和查看操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+[有关设计查询和视图的操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

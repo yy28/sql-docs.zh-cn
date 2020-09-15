@@ -1,4 +1,5 @@
 ---
+description: 创建 UNION 查询 (Visual Database Tools)
 title: 创建 UNION 查询
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9a7a274c092a98cbe63313f633ec37fc4377aa75
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 12731ff7960a8376c8f0a79d933d62fde43e76dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314983"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>创建 UNION 查询 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,12 +47,12 @@ ms.locfileid: "86000018"
     FROM dbo.Gloves;  
     ```  
   
-3.  在“查询设计器”  菜单中，单击“执行 SQL”  以运行该查询。  
+3.  在“查询设计器”**** 菜单中，单击“执行 SQL”**** 以运行该查询。  
   
     UNION 查询现在由查询设计器进行格式设置。  
   
 ## <a name="see-also"></a>另请参阅  
 [支持的查询类型](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
-[设计查询和查看操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[有关设计查询和视图的操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [执行基本的查询操作](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)

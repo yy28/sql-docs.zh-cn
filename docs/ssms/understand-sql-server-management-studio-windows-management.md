@@ -1,4 +1,5 @@
 ---
+description: 了解 SQL Server Management Studio Windows 管理
 title: 了解 SQL Server Management Studio Windows 管理
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee287295ca0d1e9912f5bb2f349f868734bcbc5b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9f7c34e9904cef3ce3719873aa907a7d06c74d08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315403"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>了解 SQL Server Management Studio Windows 管理
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "86010803"
   
 操作窗口是 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境的中心。 用户可以很方便地访问频繁使用的工具和窗口。 用户可以控制其想要分配给不同信息的空间量，相应地，环境会使用于编辑查询的空间最大化。 可以将窗口移动到屏幕上的不同位置。 很多窗口都可以从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 框架中取消停靠并拖出。 如果正在使用多个监视器，该功能会特别有用。  
   
-为了在保持功能的同时增大编辑空间，所有窗口都提供了自动隐藏功能，该功能可使窗口显示为主 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境中边框栏上的选项卡。 在将指针放在其中一个选项卡之上时，将显示其对应的窗口。 通过单击“自动隐藏”  按钮（以窗口右上角的图钉表示），可以切换窗口的自动隐藏。 “窗口”菜单上还提供了一个“自动全部隐藏”选项。  
+为了在保持功能的同时增大编辑空间，所有窗口都提供了自动隐藏功能，该功能可使窗口显示为主 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境中边框栏上的选项卡。 在将指针放在其中一个选项卡之上时，将显示其对应的窗口。 通过单击“自动隐藏”**** 按钮（以窗口右上角的图钉表示），可以切换窗口的自动隐藏。 “窗口”**** 菜单上还提供了一个“自动全部隐藏”**** 选项。  
   
-可以在两种模式下配置某些组件：一种是选项卡式模式，在该模式下组件作为选项卡出现在相同的停靠位置；另一种是多文档界面 (MDI) 模式，在该模式下每个文档都有其自己的窗口。 若要配置该功能，请在“工具”  菜单上，单击“选项”  ，单击“环境”  ，然后单击“常规”  。  
+可以在两种模式下配置某些组件：一种是选项卡式模式，在该模式下组件作为选项卡出现在相同的停靠位置；另一种是多文档界面 (MDI) 模式，在该模式下每个文档都有其自己的窗口。 若要配置该功能，请在“工具”**** 菜单上，单击“选项”****，单击“环境”****，然后单击“常规”****。  
   
 > [!IMPORTANT]  
 > 当一个登录名（或包含的数据库用户）进行连接并经过身份验证后，该连接存储有关该登录名的标识信息。 对于 Windows 身份验证登录，此标识信息包含有关 Windows 组中的成员身份的信息。 只要保持连接，该登录名的标识就保持已经过身份验证的状态。 若要在标识中强制进行更改（例如，重置密码或更改 Windows 组成员身份），则必须从身份验证机构（Windows 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]）注销，然后再次登录。 **sysadmin** 固定服务器角色的成员或任何使用 **ALTER ANY CONNECTION** 权限的登录名都可以使用 **KILL** 命令结束连接，并强制登录名重新连接。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以在打开与对象资源管理器和查询编辑器窗口之间的多个连接时重用连接信息。 关闭所有连接可强制重新连接。  

@@ -1,4 +1,5 @@
 ---
+description: SQL 窗格 (Visual Database Tools)
 title: SQL 窗格
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 5b9136e9f24447f57bc375a8ff9d8ec83ef17bd9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d40b0d19d401f6fa9e0f21e1158b1b029b2bffac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313552"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL 窗格 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以使用 SQL 窗格创建自己的 SQL 语句，也可以使用“条件”窗格和“关系图”窗格创建语句，在后面这种情况下将在 SQL 窗格中相应地创建 SQL 语句。 生成查询时，SQL 窗格将自动更新并重新设置格式以便于阅读。  
   
-若要打开 SQL 窗格，请首先打开查询和视图设计器（在服务器资源管理器中选择相应的数据库对象后，在“数据库”  菜单中单击“新建查询”  ）。 然后在“查询设计器”  菜单中指向“窗格”  ，再单击“SQL”  。  
+若要打开 SQL 窗格，请首先打开查询和视图设计器（在服务器资源管理器中选择相应的数据库对象后，在“数据库”**** 菜单中单击“新建查询”****）。 然后在“查询设计器”**** 菜单中指向“窗格”****，再单击“SQL”****。  
   
 在 SQL 窗格中，可以进行以下操作：  
   

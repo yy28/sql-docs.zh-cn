@@ -1,4 +1,5 @@
 ---
+description: 更改与查询关联的连接
 title: 更改与查询关联的连接
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49801a4ac617de832b5a20e3803daa364a0ad614
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ef80ec05c61edbe4ecff12fc53a251570f202601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316633"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>更改与查询关联的连接
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +29,9 @@ ms.locfileid: "86003284"
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>更改与查询关联的连接  
   
-1.  在查询编辑器中，右键单击查询编辑器的空白区域，指向“连接”  ，再单击“更改连接”  。  
+1.  在查询编辑器中，右键单击查询编辑器的空白区域，指向“连接”****，再单击“更改连接”****。  
   
-2.  在“连接到数据库引擎”  对话框中，提供新连接信息，再单击“连接”  。  
+2.  在“连接到数据库引擎”**** 对话框中，提供新连接信息，再单击“连接”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

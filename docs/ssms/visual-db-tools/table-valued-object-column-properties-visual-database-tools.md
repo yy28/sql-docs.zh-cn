@@ -1,4 +1,5 @@
 ---
+description: 表值对象（列）属性 (Visual Database Tools)
 title: 表值对象（列）属性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,31 +13,31 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d64ccb277d9016cd94b5613529e2d1c322162a73
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f33c6df2e1acfa5c014b6739acd61c4d0153631c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312703"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>表值对象（列）属性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-在查询设计器和视图设计器的“关系图”  窗格中选择表值对象中的列时，将显示这些属性。  
+ 在查询和视图设计器的“关系图”窗格中选择表值对象中的列时，将显示这些属性****。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 > [!NOTE]  
-> 根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。  
   
 **标识类别**  
-展开此项可显示“名称”  属性。  
+展开此项可显示“名称”**** 属性。  
   
-**名称**  
+**Name**  
 显示所选列的名称。  
   
 **查询设计器类别**  
-展开此项可显示“允许 Null 值”  、“排序规则”  、“数据类型”  、“长度”  、“精度”  、“确定位数”  和“大小”  属性。  
+展开此项可显示“允许 Null 值”****、“排序规则”****、“数据类型”****、“长度”****、“精度”****、“确定位数”**** 和“大小”**** 属性。  
   
 **允许 Null 值**  
 显示列的数据类型是否允许空值。  
@@ -51,7 +52,7 @@ ms.locfileid: "86004177"
 显示所选列的数据类型允许的字符数或位数。 此属性仅可用于基于字符的数据类型。  
   
 > [!NOTE]  
-> 有关以字节为单位的大小信息，请参阅下面的“大小”  属性。  
+> 有关以字节为单位的大小信息，请参阅下面的“大小”**** 属性。  
   
 **精度**  
 显示数值数据类型所允许的最大位数。 对于非数值数据类型，此属性显示 **0** 。  

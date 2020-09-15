@@ -1,4 +1,5 @@
 ---
+description: “属性”窗口的 F1 帮助 (Management Studio)
 title: “属性”窗口的 F1 帮助 (Management Studio)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,20 +24,20 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d6cbc1291e5370053f0cf1ebf70265f02187e449
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f38ebd07eedcfe8ece4cc904def24186b76b7a8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317443"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-使用“属性”  窗口可以查看所选元素的属性。 使用“属性”  窗口还可以查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  
+使用“属性”**** 窗口可以查看所选元素的属性。 使用“属性”窗口还可以查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  
   
-“属性”  窗口可根据特定属性的需要显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
+“属性”**** 窗口可根据特定属性的需要显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
   
 ## <a name="options"></a>选项
 
@@ -53,7 +54,7 @@ ms.locfileid: "87246426"
 显示对象的属性。  
   
 **说明窗格**  
-说明窗格显示在“属性”  窗口的底部，用于显示属性类型和属性的简短说明。 可以使用快捷菜单上的“说明”  命令打开或关闭属性的说明。  
+说明窗格显示在“属性”窗口的底部，用于显示属性类型和属性的简短说明。 可以使用快捷菜单上的“说明”**** 命令打开或关闭属性的说明。  
   
 ## <a name="see-also"></a>另请参阅
 

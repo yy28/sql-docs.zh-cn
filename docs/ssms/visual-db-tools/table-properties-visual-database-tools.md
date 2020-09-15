@@ -1,5 +1,6 @@
 ---
-title: 表的属性
+description: 表属性 (Visual Database Tools)
+title: 表属性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312813"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "86000744"
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 **标识类别**  
-展开此项可显示“名称”  、“说明”  和“架构”  的属性。  
+展开此项可显示“名称”****、“说明”**** 和“架构”**** 的属性。  
   
-**名称**  
+**Name**  
 显示表的名称。 若要编辑名称，请在文本框中键入相应的内容。  
   
 > [!CAUTION]  
@@ -45,7 +46,7 @@ ms.locfileid: "86000744"
 显示所选表的数据源的名称。  
   
 **说明**  
-显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)  。  
+显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。  
   
 **架构**  
 显示此表所属的架构的名称。 （仅适用于 Microsoft SQL Server。）  
@@ -54,7 +55,7 @@ ms.locfileid: "86000744"
 显示用于数据源的服务器的名称。  
   
 **表设计器类别**  
-展开此项可显示“标识列”  、“可编制索引”  和“是复制的”  的属性。  
+展开此项可显示“标识列”****、“可编制索引”**** 和“是复制的”**** 的属性。  
   
 **标识列**  
 显示用作表的标识列的列。 若要更改标识列，请从下拉列表中进行选择。 该列表中只显示数值数据类型的列。  
@@ -66,7 +67,7 @@ ms.locfileid: "86000744"
 显示是否在另一个位置复制了该表。  
   
 **常规数据空间规范类别**  
-展开此项可显示“（数据空间类型）”  、“文件组或分区方案名称”  和“分区列列表”  的属性。  
+展开此项可显示“（数据空间类型）”****、“文件组或分区方案名称”**** 和“分区列列表”**** 的属性。  
   
 **(数据空间类型)**  
 显示是使用文件组还是使用分区方案存储此表。  
@@ -75,7 +76,7 @@ ms.locfileid: "86000744"
 显示文件组或分区方案的名称。  
   
 **分区列列表**  
-通过此项可访问“分区列列表”  对话框。  
+通过此项可访问“分区列列表”**** 对话框。  
   
 **行 GUID 列**  
 显示由 Microsoft SQL Server 用作表的 ROWGUID 列的列。 若要更改 ROWGUID 列，请从下拉列表中进行选择。 （仅适用于 SQL Server 7.0 或更高版本。）  

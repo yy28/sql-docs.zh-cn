@@ -1,4 +1,5 @@
 ---
+description: 支持的查询类型 (Visual Database Tools)
 title: 支持的查询类型
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6fa2d2e5502bc47d0631263b0b42c254fead0bfc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3253aef57da9eb34ddd87b17aa9a0e690fd866b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312354"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支持的查询类型 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-可以在 [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)的“关系图”窗格和“条件”窗格（图形化窗格）中创建以下类型的查询：  
+ 可以在[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)的“关系图”窗格和“条件”窗格（图形化窗格）中创建以下类型的查询：  
   
 -   **“选择”查询** 从一个或多个表或视图中检索数据。 此类型的查询将创建一个 SQL SELECT 语句。  
   
@@ -53,6 +54,6 @@ ms.locfileid: "86008131"
 在使用 SQL 语句创建无法在图形化窗格中显示的查询时，查询和视图设计器会将这些图形化窗格显示为灰色，以表示它们不再反映正在创建的查询。 不过，变成灰色的窗格仍然是活动的，而且在许多情况下，仍可以在这些窗格中对查询进行修改。 如果所做的更改产生的查询可以在图形化窗格中显示，则这些窗格将不再显示为灰色。  
   
 ## <a name="see-also"></a>另请参阅  
-[设计查询和查看操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[有关设计查询和视图的操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [查询类型](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: SQL 编辑器 (Visual Database Tools)
 title: SQL 编辑器
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 95f34dec91f727bfb366af3e39ce9d3ef697e4ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6787c74845424603353e346b841c98a4bcb02d7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313543"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ SQL 编辑器提供了许多有用的 SQL 文本编辑功能，包括：
   
 -   提供有用的编辑功能，包括剪切、复制、粘贴和拖动操作。  
   
--   更改编辑器的行为（在“工具”菜单中选择“选项”）以修改虚空格、自动换行、行号和制表符大小。  
+-   更改编辑器的行为（在“工具”**** 菜单中选择“选项”****）以修改虚空格、自动换行、行号和制表符大小。  
   
 -   帮助管理调试断点。  
   

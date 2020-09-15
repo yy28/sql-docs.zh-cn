@@ -1,4 +1,5 @@
 ---
+description: 在 SQL Server 工具中将 WMI 配置为显示服务器状态
 title: 在 SQL Server 工具中将 WMI 配置为显示服务器状态
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 848a0b7a22f0a90e355b32d1391f18bdbfab0ea6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 199ce23eee967ff19a026cf267209247cab09eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317723"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>在 SQL Server 工具中将 WMI 配置为显示服务器状态
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,17 +27,17 @@ ms.locfileid: "86000184"
   
 ## <a name="to-configure-wmi-permission"></a><a name="SSMSProcedure"></a>配置 WMI 权限  
   
-1.  在远程服务器的“开始”  菜单上，单击“运行”  。  
+1.  在远程服务器的“开始”**** 菜单上，单击“运行”****。  
   
-2.  在“打开”  框中，键入 **wmimgmt.msc**，然后单击“确定”  。  
+2.  在“打开”**** 框中，键入 **wmimgmt.msc**，然后单击“确定”****。  
   
-3.  在 **Windows 管理体系结构**程序中，右键单击“WMI 控制(本地)”  ，再单击“属性”  。  
+3.  在 **Windows 管理体系结构**程序中，右键单击“WMI 控制(本地)”****，再单击“属性”****。  
   
-4.  在“WMI 控制(本地) 属性”  对话框的“安全性”  选项卡中，展开“Root”  ，再单击“CIMV2”  。  
+4.  在“WMI 控制(本地) 属性”**** 对话框的“安全性”**** 选项卡中，展开“Root”****，再单击“CIMV2”****。  
   
-5.  单击“安全设置”  打开“安全设置 ROOT\CIMV2”  对话框。  
+5.  单击“安全设置”**** 打开“安全设置 ROOT\CIMV2”**** 对话框。  
   
-6.  向“组或用户名称”  框中添加一个组或用户，并将其选中。  
+6.  向“组或用户名称”**** 框中添加一个组或用户，并将其选中。  
   
 7.  在“<group or user> 权限”框中，为希望远程检测服务状态的用户选择“远程启用”权限的“允许”列。  
   

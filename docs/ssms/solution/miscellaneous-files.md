@@ -1,4 +1,5 @@
 ---
+description: 杂项文件
 title: 杂项文件
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4fc8fee177588824a8dd1a93dae3387056c89b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9604b8c236411355cac4142e00f85689c4d2825
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315273"
 ---
 # <a name="miscellaneous-files"></a>杂项文件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-不属于任何项目的文件称为杂项文件  。 当您打开解决方案时，可以打开并修改与该项目相关的杂项文件。 如果文件扩展名与项目代码编辑器不关联，则将此文件归类为杂项文件。 例如，在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目中，扩展名为 .txt 或 .mdx 的文件被视为杂项文件。 在 MDX 项目中，扩展名为 .txt 或 .sql 的文件被视为杂项文件。 若要使文件扩展名与代码编辑器相关联，请参阅 [如何将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+不属于任何项目的文件称为杂项文件**。 当您打开解决方案时，可以打开并修改与该项目相关的杂项文件。 如果文件扩展名与项目代码编辑器不关联，则将此文件归类为杂项文件。 例如，在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目中，扩展名为 .txt 或 .mdx 的文件被视为杂项文件。 在 MDX 项目中，扩展名为 .txt 或 .sql 的文件被视为杂项文件。 若要使文件扩展名与代码编辑器相关联，请参阅 [如何将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
   
 为项目添加杂项文件的功能非常有用，许多理由都可以说明这一点。 您的某个文件可能是无需识别的脚本，但却是解决方案开发中不可缺少的一部分。 常见示例包括开发注释或说明、数据文件和代码片段。  
   

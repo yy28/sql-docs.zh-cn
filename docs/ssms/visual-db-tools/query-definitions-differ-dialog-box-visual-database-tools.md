@@ -1,4 +1,5 @@
 ---
+description: “查询定义不同”对话框 (Visual Database Tools)
 title: “查询定义不同”对话框
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 530f7dafce6d34bf38de2407a94f792234743b1c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a2517d930333f9a17e7746db29074456281ecf9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313853"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>“查询定义不同”对话框 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "86004190"
 -   SQL 语句有效但包含特定于所使用数据连接的语法。  
   
 > [!TIP]  
-> 可以使用“查询”工具栏上的“验证 SQL 语句”按钮来检查语句是否有效。  
+> 可以使用“查询”**** 工具栏上的“验证 SQL 语句”**** 按钮来检查语句是否有效。  
   
 该对话框将显示一条消息，指示不能显示 SQL 语句的原因，并询问如何继续。  
   
 > [!NOTE]  
-> 如果已经隐藏了“关系图”窗格和“条件”窗格，则不会显示“查询定义不同”  对话框。  
+> 如果已经隐藏了“关系图”窗格和“条件”窗格，则不会显示“查询定义不同”**** 对话框。  
   
 ## <a name="options"></a>选项  
 **“忽略”按钮**  

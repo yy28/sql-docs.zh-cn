@@ -1,4 +1,5 @@
 ---
+description: “排序规则”对话框 (Visual Database Tools)
 title: “排序规则”对话框
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 23ba5cfb04712ebb0bf7f2e744cc0e7dcb5234e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c1e4c82b90c9b3c569f9f179ed16242c4ca76f40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314653"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "86003856"
   
 在以下情况下将显示此对话框：  
   
--   在“列属性”  选项卡的“排序规则”  字段中输入无效的排序规则名称。  
+-   在“列属性”**** 选项卡的“排序规则”**** 字段中输入无效的排序规则名称。  
   
--   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)    。  
+-   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)************。  
   
 ## <a name="options"></a>选项  
 **SQL 排序规则**  
@@ -38,10 +39,10 @@ ms.locfileid: "86003856"
 在下拉列表中由 Windows 定义的排序规则顺序之间进行选择。  
   
 **二进制排序**  
-使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”  后才适用。  
+使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”**** 后才适用。  
   
 **字典排序**  
-使用字母比较选项。 只有在选择了“Windows 排序规则”  后才适用。 字母比较选项包括：  
+使用字母比较选项。 只有在选择了“Windows 排序规则”**** 后才适用。 字母比较选项包括：  
   
 -   **区分大小写** 如果希望在比较中将大写字母和小写字母视为不相同，请选择此选项。  
   

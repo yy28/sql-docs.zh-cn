@@ -1,4 +1,5 @@
 ---
+description: 将查询与项目中的连接关联
 title: 将查询与项目中的连接关联
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33607941be3289124c216dc5e62a0e4ee790bc35
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 511ee704f1e9e0cc256b0265ba882be8205c7860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316273"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>将查询与项目中的连接关联
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +29,9 @@ ms.locfileid: "86003292"
   
 ### <a name="to-associate-a-query-with-a-connection-in-a-project"></a>将查询与项目中的连接关联  
   
-1.  如果查询在查询编辑器中处于打开状态，请右键单击查询编辑器的空白区域，指向“连接”  ，再单击“连接”  。 如果查询未打开，请在解决方案资源管理器中双击查询，以连接该查询。  
+1.  如果查询在查询编辑器中处于打开状态，请右键单击查询编辑器的空白区域，指向“连接”****，再单击“连接”****。 如果查询未打开，请在解决方案资源管理器中双击查询，以连接该查询。  
   
-2.  在“连接到数据库引擎”  对话框中，提供连接信息。 如果连接信息与现有连接匹配，该查询将与此连接关联。  
+2.  在“连接到数据库引擎”**** 对话框中，提供连接信息。 如果连接信息与现有连接匹配，该查询将与此连接关联。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

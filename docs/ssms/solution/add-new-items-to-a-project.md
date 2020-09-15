@@ -1,4 +1,5 @@
 ---
+description: 向项目添加新项
 title: 向项目添加新项
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0440f720923ebfa6378766372e4bcdb48a2a166d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bd7c686682a83b95e6053d60323fe1829a500752
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316183"
 ---
 # <a name="add-new-items-to-a-project"></a>向项目添加新项
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "86003303"
   
 1.  在解决方案资源管理器中，选择目标项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“添加新项”** 。  
+2.  在 **“项目”** 菜单上，单击 **“添加新项”**。  
   
-3.  在“添加新项”  对话框的左窗格中，选择一个类别。  
+3.  在“添加新项”**** 对话框的左窗格中，选择一个类别。  
   
-4.  在右窗格中选择一个查询模板，再单击“添加”  。 新查询随即被添加到项目的“查询”  文件夹中。  
+4.  在右窗格中选择一个查询模板，再单击“添加”****。 新查询随即被添加到项目的“查询”**** 文件夹中。  
   
-5.  在“连接到数据库引擎”  对话框中，为新查询指定一个连接，再单击“连接”  。 如果不希望将连接与新查询关联，可以在连接对话框中单击“取消”  。  
+5.  在“连接到数据库引擎”**** 对话框中，为新查询指定一个连接，再单击“连接”****。 如果不希望将连接与新查询关联，可以在连接对话框中单击“取消”****。  
   
 6.  如果需要，可在解决方案资源管理器中重命名查询。  
   
@@ -44,13 +45,13 @@ ms.locfileid: "86003303"
   
 1.  在解决方案资源管理器中，选择目标项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“添加新项”** 。  
+2.  在 **“项目”** 菜单上，单击 **“添加新项”**。  
   
-3.  在左窗格中选择“连接”  。  
+3.  在左窗格中选择“连接”****。  
   
-4.  在右窗格中选择“新建连接”  ，再单击“添加”  。  
+4.  在右窗格中选择“新建连接”****，再单击“添加”****。  
   
-5.  在“连接到数据库引擎”  对话框中，为新查询指定一个连接，再单击“连接”  。 新连接随即被添加到项目的“连接”  文件夹中。  
+5.  在“连接到数据库引擎”**** 对话框中，为新查询指定一个连接，再单击“连接”****。 新连接随即被添加到项目的“连接”**** 文件夹中。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  
