@@ -1,4 +1,5 @@
 ---
+description: updateDateTimeOffset (SQLServerResultSet)
 title: updateDateTimeOffset (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5941023335fcdf807457dddf5df38d38c7e34ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: df865957174d87b0dfb19fceebf38976187a0010
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353753"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: supportsDataDefinitionAndDataManipulationTransactions 方法 (SQLServerDatabaseMetaData)
 title: SupportsDataDefinitionAndDataManipulationTransactions 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fe91c601-9bb3-4364-9131-575a94d3a1b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fab3c3e2d735356d6298145ebe3195c4d9f0d0f4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c9a275c5ed9fed28a9bdd40fc03262870ce5bdbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354153"
 ---
 # <a name="supportsdatadefinitionanddatamanipulationtransactions-method-sqlserverdatabasemetadata"></a>supportsDataDefinitionAndDataManipulationTransactions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean supportsDataDefinitionAndDataManipulationTransactions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true  。 否则为 **false**。  
+ 如果支持，则值为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

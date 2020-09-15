@@ -1,4 +1,5 @@
 ---
+description: supportsCorrelatedSubqueries 方法 (SQLServerDatabaseMetaData)
 title: supportsCorrelatedSubqueries 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 85bb1bcc-31ae-4f6b-a103-699724bbb0aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89ab9bc4d60605c17422ebbfe2192d05ab72d0c4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b66b444df29f2f6341e61321ec008ce12244c8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354253"
 ---
 # <a name="supportscorrelatedsubqueries-method-sqlserverdatabasemetadata"></a>supportsCorrelatedSubqueries 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean supportsCorrelatedSubqueries()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true  。 否则为 **false**。  
+ 如果支持，则值为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

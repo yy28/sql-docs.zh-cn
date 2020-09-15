@@ -1,4 +1,5 @@
 ---
+description: updateLong 方法 (int, long)
 title: updateLong 方法 (int, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27e572b5019a8c1a85e3c1bac5a8f4d5e5dd962c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3192996be9b61f0fb8a8e5d47cc453f36e403c73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353353"
 ---
 # <a name="updatelong-method-int-long"></a>updateLong 方法 (int, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列索引使用 long  值更新指定的列。  
+  根据给定的列索引使用 long **** 值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +36,14 @@ public void updateLong(int index,
                        long x)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
  指示列索引的 int  。  
   
  *x*  
   
- long  值。  
+ long**** 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

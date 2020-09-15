@@ -1,4 +1,5 @@
 ---
+description: supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData)
 title: supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0ea690a65d4373ea2a287c22ae9b48d40216c76
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0ed1388fd8e3d137fbaae9d7bc8b66235a8a5fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353993"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,17 +35,17 @@ ms.locfileid: "80919423"
 public boolean supportsResultSetHoldability(int holdability)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *holdability*  
+#### <a name="parameters"></a>参数  
+ *可保持性 (holdability)*  
   
- 指示结果集可保持性的 int  ，可以为以下值之一：  
+ 指示结果集可保持性的 int****，可以为以下值之一：  
   
  ResultSet.HOLD_CURSORS_OVER_COMMIT  
   
  ResultSet.CLOSE_CURSORS_AT_COMMIT  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true  。 否则为 **false**。  
+ 如果支持，则值为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
