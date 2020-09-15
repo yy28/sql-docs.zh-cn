@@ -1,4 +1,5 @@
 ---
+description: setTrustManagerConstructorArg 方法 (SQLServerDataSource)
 title: setTrustManagerConstructorArg 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5d191be3a0b03a45c17083ddc754cdce9e54f79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e6ede59019da1870c5a1757ed6d2b082c3736e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354943"
 ---
 # <a name="settrustmanagerconstructorarg-method-sqlserverdatasource"></a>setTrustManagerConstructorArg 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "80901936"
 public void setTrustManagerConstructorArg(java.lang.String trustManagerClass)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- trustManagerClass   
+#### <a name="parameters"></a>参数  
+ *trustManagerClass*  
   
- String  ，它包含自定义 javax.net.ssl.TrustManager 的完全限定类名。
+ String****，它包含自定义 javax.net.ssl.TrustManager 的完全限定类名。
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

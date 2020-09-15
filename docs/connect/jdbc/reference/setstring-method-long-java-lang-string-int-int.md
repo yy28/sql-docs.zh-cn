@@ -1,4 +1,5 @@
 ---
+description: setString 方法 (long, java.lang.String, int, int)
 title: setString 方法 (long, java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ad0f8e51b0663c771c1ee519ac318a13264aa7e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 12b594a7cfd5133abde253123525161cc0d63273
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355193"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 方法 (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,8 +38,8 @@ public int setString(long pos,
                      int len)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- pos   
+#### <a name="parameters"></a>参数  
+ pos  
   
  开始写入 CLOB 的位置。  
   
@@ -50,7 +51,7 @@ public int setString(long pos,
   
  字符串中的偏移量，从这个位置开始读取字符。  
   
- len   
+ len  
   
  将要写入的字符数。  
   
@@ -60,7 +61,7 @@ public int setString(long pos,
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此 setString 方法是由 java.sql.Clob 接口中的 setString 方法指定的。  
   
  从指定位置开始覆盖字符数据，并可以覆盖 CLOB 的初始长度。 指定“位置+1”值将追加到字符串末尾。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
