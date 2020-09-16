@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (int, java.util.Calendar)
 title: getDate 方法 (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 826c41b4355bc939d115a2b132639f0b390ae4cb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5db80d918f8f9b4757782c0f00aab8ece29239c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436419"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +36,10 @@ public java.sql.Date getDate(int index,
                              java.util.Calendar cal)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int****。  
   
  cal   
   
@@ -53,7 +54,7 @@ public java.sql.Date getDate(int index,
 ## <a name="remarks"></a>备注  
  此 getDate 方法是由 java.sql.CallableStatement 接口中的 getDate 方法指定的。  
   
- 此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime  或 smalldatetime  数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
+ 此方法返回  datetime[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **** 或 smalldatetime**** 数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
   
 ## <a name="see-also"></a>另请参阅  
  [getDate 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

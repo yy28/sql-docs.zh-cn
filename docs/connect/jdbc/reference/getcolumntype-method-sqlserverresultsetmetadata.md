@@ -1,4 +1,5 @@
 ---
+description: getColumnType 方法 (SQLServerResultSetMetaData)
 title: getColumnType 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 959d313d8dcf2db894b1cd66052dfbb9f074ed0a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e1afcca7432eeb60edd96dbcedfbb34add2c174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436629"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>getColumnType 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "80923406"
 public int getColumnType(int column)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *column*  
   
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 int 值，此值指示 java.sql.Types 中定义的 JDBC 类型  。  
+ 一个 int 值，此值指示 java.sql.Types 中定义的 JDBC 类型****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

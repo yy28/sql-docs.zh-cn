@@ -1,4 +1,5 @@
 ---
+description: getBytes 方法 (SQLServerCallableStatement)
 title: getBytes 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b6e88cea-54b3-4d18-a9af-db54abf19f45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67b52629e0996eb5c162fbea8ef3d5920b7db19c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98c52ff2ece018e496eb851a24e51e82af4f56bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436929"
 ---
 # <a name="getbytes-method-sqlservercallablestatement"></a>getBytes 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "80921581"
 |[getBytes (int)](../../../connect/jdbc/reference/getbytes-method-int.md)|根据给定的参数索引，检索指定参数的值作为字节值数组。|  
 |[getBytes (java.lang.String)](../../../connect/jdbc/reference/getbytes-method-java-lang-string.md)|根据给定的参数名称，检索指定参数的值作为字节值数组。|  
   
-## <a name="remarks"></a>备注  
- 在 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的之前版本中，可以使用 SQLServerCallableStatement.getBytes 将字节数组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型 date、time、datetime2 或 datetimeoffset 的值相互转换     。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
+## <a name="remarks"></a>注解  
+ 在 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的之前版本中，可以使用 SQLServerCallableStatement.getBytes 将字节数组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型 date、time、datetime2 或 datetimeoffset 的值相互转换****************。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

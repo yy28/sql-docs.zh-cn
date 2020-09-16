@@ -1,4 +1,5 @@
 ---
+description: getByte 方法 (java.lang.String)
 title: getByte 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 2071c1e4-eca0-4ed4-b50f-85d3c861185d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2aaefb2191598d69d7f45cd5fe37b52202c1d22d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1eec365dfcd444d64f52da6ce2c575c9581bed7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436969"
 ---
 # <a name="getbyte-method-javalangstring"></a>getByte 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的参数名称检索指定参数的值作为 byte 值  。  
+  根据给定的参数名称检索指定参数的值作为 byte 值****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +35,13 @@ ms.locfileid: "80926305"
 public byte getByte(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- sCol   
+#### <a name="parameters"></a>参数  
+ sCol**  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
 ## <a name="return-value"></a>返回值  
- 一个 byte 值  。  
+ 一个 byte 值****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

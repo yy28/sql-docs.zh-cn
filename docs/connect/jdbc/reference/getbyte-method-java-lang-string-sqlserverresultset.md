@@ -1,4 +1,5 @@
 ---
+description: getByte 方法 (java.lang.String) (SQLServerResultSet)
 title: getByte 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 069c68ff-442d-4104-917f-3445a3ad264a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9debde0880593574534e6d651268701b019c68f3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: abbfc334796d5e0b24a9618bf6bfb08198fc8851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437019"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>getByte 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名的值作为 Java 编程语言中的 byte  。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名的值作为 Java 编程语言中的 byte****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +35,13 @@ ms.locfileid: "80926327"
 public byte getByte(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *columnName*  
   
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 byte 值  。  
+ 一个 byte 值****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

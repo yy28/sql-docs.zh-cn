@@ -1,4 +1,5 @@
 ---
+description: getByte 方法 (int) (SQLServerResultSet)
 title: getByte 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: b22ba097-6cb8-4c5d-916b-6360dd01d2c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc27b8e6a070123928f18366cf40fc58fbe72e0a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8a94b4ca24a0d00ca45837e230cc3465e8728ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437079"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>getByte 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 byte  。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 byte****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +41,7 @@ public byte getByte(int columnIndex)
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 byte 值  。  
+ 一个 byte 值****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

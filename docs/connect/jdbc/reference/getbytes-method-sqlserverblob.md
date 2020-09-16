@@ -1,4 +1,5 @@
 ---
+description: getBytes 方法 (SQLServerBlob)
 title: getBytes 方法 (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00ae9db184a8fa8818f93402551a58580a9b833b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7317e41f52548aed4b4940f2e9a91fd8a9447d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436909"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>getBytes 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +36,8 @@ public byte[] getBytes(long pos,
                        int length)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- pos   
+#### <a name="parameters"></a>参数  
+ pos  
   
  开始位置，从 1（而不是从 0）开始。  
   
@@ -45,7 +46,7 @@ public byte[] getBytes(long pos,
  要获取的数据的长度。  
   
 ## <a name="return-value"></a>返回值  
- 包含请求数据的 byte  数组。  
+ 包含请求数据的 byte**** 数组。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -53,7 +54,7 @@ public byte[] getBytes(long pos,
 ## <a name="remarks"></a>备注  
  此 getBytes 方法是由 java.sql.Blob 接口中的 getBytes 方法指定的。  
   
- 如果具有长度为 Null 或为零的 BLOB，并试图在位置 1 处获取恰好零字节，此时将返回空的 byte  数组（长度为 0 的字节数组）。  
+ 如果具有长度为 Null 或为零的 BLOB，并试图在位置 1 处获取恰好零字节，此时将返回空的 byte**** 数组（长度为 0 的字节数组）。  
   
  如果具有长度为 Null 或为零的 BLOB，并试图从位置 1 之外的其他位置获取任意长度的字节，此时将引发位置异常。  
   

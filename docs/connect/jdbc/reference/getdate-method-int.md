@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (int)
 title: getDate 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aa9f08af-df24-4c80-8298-c4007339b20a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313ae3564d79861d43ccb02e7e79d1e18da27a67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d90d3bf7ee9fedc405fba52fce426ba0201114b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436379"
 ---
 # <a name="getdate-method-int"></a>getDate 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "80927940"
 public java.sql.Date getDate(int index)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int****。  
   
 ## <a name="return-value"></a>返回值  
  Date 对象。  
@@ -48,7 +49,7 @@ public java.sql.Date getDate(int index)
 ## <a name="remarks"></a>备注  
  此 getDate 方法是由 java.sql.CallableStatement 接口中的 getDate 方法指定的。  
   
- 此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime  或 smalldatetime  数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
+ 此方法返回  datetime[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **** 或 smalldatetime**** 数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
   
 ## <a name="see-also"></a>另请参阅  
  [getDate 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

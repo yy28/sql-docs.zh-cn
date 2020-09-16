@@ -1,4 +1,5 @@
 ---
+description: getCharacterStream 方法 (long, long) (SQLServerNClob)
 title: getCharacterStream 方法 (long, long) (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,19 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 10cd57cff29c73a2b99d1489eb122eed37859768
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d66d64ff62bad45d454a535b78a01e666835126a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436799"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream 方法 (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索具有指定位置和长度且作为 Reader 对象或字符流的 NCLOB 数据。  
+  检索具有指定位置和长度且作为 Reader **** 对象或字符流的 NCLOB**** 数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,17 +31,17 @@ public java.io.Reader getCharacterStream(long pos,
                                   long length)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- pos   
+#### <a name="parameters"></a>参数  
+ pos  
   
- 指示与要检索的部分值的第一个字符之间偏移量的 long 值  。  
+ 指示与要检索的部分值的第一个字符之间偏移量的 long 值****。  
   
  *length*  
   
- 指示要检索的部分值的字符长度的 long  。  
+ 指示要检索的部分值的字符长度的 long****。  
   
 ## <a name="return-value"></a>返回值  
- 包含 NCLOB  数据的 Reader 对象。  
+ 包含 NCLOB**** 数据的 Reader 对象。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
