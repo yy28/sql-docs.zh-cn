@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a1c9281fff3c6b51a513617b522a362c9e800c07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91f0fc840d6e4f6925acde6499573ae5a4506463
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417613"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042738"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -118,7 +118,7 @@ ms.locfileid: "88417613"
 |**2549**|强制 DBCC CHECKDB 命令假设每个数据库文件位于唯一的磁盘驱动器上，但将不同物理文件视为一个逻辑文件。 DBCC CHECKDB 命令根据唯一磁盘驱动器跨所有数据库文件生成一个待读取页面内部列表。 此逻辑根据每个文件的物理文件名的驱动器号确定唯一磁盘驱动器。<br /><br />**注意：** 除非知道每个文件都基于唯一的物理磁盘，否则不要使用此跟踪标志。<br /><br />**注意：** 尽管此跟踪标志改进了以使用 PHYSICAL_ONLY 选项为目标的 DBCC CHECKDB 命令的性能，但一些用户可能还是看不到性能有任何改进。 虽然此跟踪标志可以改善磁盘 I/O 资源的使用情况，但磁盘资源的基本性能可能会限制 DBCC CHECKDB 命令的整体性能。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2634571)。<br /><br />**作用域**：仅全局| 
 |**2562**|无论数据库中有多少个索引，都以单个“批次”运行 DBCC CHECKDB 命令。 默认情况下，DBCC CHECKDB 命令会尝试通过以下方式最大限度地减少 TempDB 资源：限制使用“批次”概念生成的索引或“事实”的数量。 但此跟踪标志强制在一个批次中执行所有处理。<br /><br />使用此跟踪标志的一个效果是 TempDB 的空间需求可能会增加。 TempDB 可能会增长到 DBCC CHECKDB 命令正在处理的用户数据库的 5% 或更多。<br /><br />**注意：** 尽管此跟踪标志改进了以使用 PHYSICAL_ONLY 选项为目标的 DBCC CHECKDB 命令的性能，但一些用户可能还是看不到性能有任何改进。 虽然此跟踪标志可以改善磁盘 I/O 资源的使用情况，但磁盘资源的基本性能可能会限制 DBCC CHECKDB 命令的整体性能。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2634571)。<br /><br />**作用域**：仅全局|
 |**2566**|在未指定 `DATA_PURITY` 选项的情况下，运行 DBCC CHECKDB 命令而不检查数据纯度。<br /><br />**注意：** 默认情况下将启用列值完整性检查，并且不需要使用 DATA_PURITY 选项。 对于从 SQL Server 的早期版本升级的数据库，默认情况下不启用列值检查，直到 `DBCC CHECKDB WITH DATA_PURITY` 已在数据库中正确运行至少一次为止。 然后，DBCC CHECKDB 将默认检查列值完整性。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/945770)。<br /><br />**作用域**：仅全局|
-|**2592**|<a name="2592"></a>若安装了适用于 Windows 的调试工具，在堆栈转储上启用符号解析。 例如，使用跟踪标志 3656 需要启用跟踪标志 2592。 有关详细信息，请参阅 [Microsoft 白皮书](https://www.microsoft.com/download/details.aspx?id=26666)。<br /><br />警告：这是调试跟踪标志，不用于生产环境。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高内部版本。 <br/><br/>**作用域**：全局和会话|
+|**2592**|<a name="2592"></a>若安装了适用于 Windows 的调试工具，在堆栈转储上启用符号解析。 例如，使用跟踪标志 3656 需要启用跟踪标志 2592。 <br /><br />警告：这是调试跟踪标志，不用于生产环境。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高内部版本。 <br/><br/>**作用域**：全局和会话|
 |**3023**|启用 CHECKSUM 选项作为 BACKUP 命令的默认选项。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2656988)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，可通过设置 backup checksum default 配置选项来控制此行为。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。<br /><br />**作用域**：全局和会话|
 |**3042**|绕过默认的备份压缩预先分配算法，以便允许备份文件仅根据需要增长以达到其最终大小。 如果您需要仅分配压缩的备份所需的实际大小以便节约空间，则此跟踪标志将很有用。 使用此跟踪标志可能会导致轻微的性能损失（在备份操作期间损失可能会增加）。 有关预先分配算法的详细信息，请参阅[备份压缩 (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md)。<br /><br />**作用域**：仅全局|
 |**3051**|允许将“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份到 URL”记录到特定的错误日志文件中。 有关详细信息，请参阅 [SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。<br /><br />**作用域**：仅全局|  
@@ -130,7 +130,7 @@ ms.locfileid: "88417613"
 |3605|<a name="3605"></a>将跟踪消息重定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 例如，使用跟踪标志 205 和 8721 需要启用跟踪标志 3605。<br /><br />警告：这是调试跟踪标志，不应在生产环境中持续启用。<br /><br />**作用域**：全局或会话|  
 |**3608**|禁止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动启动和恢复除 **master** 数据库之外的任何数据库。 如果已启动要求使用 TempDB 的活动，则会恢复 model，并创建 TempDB  。 在访问数据库时将启动并恢复其他数据库。 可能无法运行某些功能，如快照隔离和读提交快照。 用于[移动系统数据库](../../relational-databases/databases/move-system-databases.md)和[移动用户数据库](../../relational-databases/databases/move-user-databases.md).<br /><br />**注意：** 请不要在正常操作中使用。<br /><br />**作用域**：仅全局|   
 |**3625**|通过使用“\*\*\*\*\*\*”屏蔽某些错误消息的参数，限制返回给不是 sysadmin 固定服务器角色成员的用户的信息量。 这可以帮助阻止披露敏感信息。<br /><br />**作用域**：仅全局|  
-|**3656**|若安装了适用于 Windows 的调试工具，在堆栈转储上启用符号解析。 有关详细信息，请参阅 [Microsoft 白皮书](https://www.microsoft.com/download/details.aspx?id=26666)。<br /><br />警告：这是调试跟踪标志，不用于生产环境。<br /><br />**注意：** 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，必须与跟踪标志 3656 一起启用跟踪标志 [2592](#2592) 才能启用符号解析。 <br/><br/>**作用域**：全局和会话|
+|**3656**|若安装了适用于 Windows 的调试工具，在堆栈转储上启用符号解析。 <br /><br />警告：这是调试跟踪标志，不用于生产环境。<br /><br />**注意：** 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，必须与跟踪标志 3656 一起启用跟踪标志 [2592](#2592) 才能启用符号解析。 <br/><br/>**作用域**：全局和会话|
 |**3924**|启用使用 SPID =-2 自动删除孤立的 DTC 事务，这对于某些第三方事务监视器来说是一个问题。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4519668)和 [Microsoft 支持文章](https://support.microsoft.com/help/4511816)。<br /><br />**作用域**：仅全局|  
 |**4136**|除非使用 OPTION(RECOMPILE)、WITH RECOMPILE 或 OPTIMIZE FOR \<value>，否则禁用参数探查。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/980653)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 PARAMETER_SNIFFING 选项。<br /><br />若要在查询级别实现相同结果，请添加 OPTIMIZE FOR UNKNOWN [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 OPTIMIZE FOR UNKNOWN 提示不会禁用参数探查机制，但会有效地绕过它以实现相同的预期结果。<br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，在查询级别完成此操作的另一种方法是添加 USE HINT 'DISABLE_PARAMETER_SNIFFING' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局或会话|  
 |**4137**|在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本 (70) 的查询优化器基数估计模型下估计筛选器的 AND 谓词以说明部分相关性而不是独立性时，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用最小选择性生成一个计划。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2658214)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请在使用 CE 70 时添加 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：** 此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 9471。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 

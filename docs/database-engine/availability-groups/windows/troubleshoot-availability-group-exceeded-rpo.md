@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882358"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042834"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>排除故障：可用性组超过了 RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882358"
   
  此外，检查 `SQL Server:Availability Replica > Flow Control Time (ms/sec)` 和 `SQL Server:Availability Replica > Flow Control/sec` 这两个性能对象也很有用。 将这两个值相乘，可得到最后一秒中等待清除流控制所花费的时间。 流控制等待时间越长，发送速率越低。  
   
- 以下指标对诊断网络延迟和吞吐量很有用。 可以使用其他 Windows 工具（如 ping.exe 和[网络监视器](https://www.microsoft.com/download/details.aspx?id=4865)）来评估延迟和网络利用率  。  
+ 以下指标对诊断网络延迟和吞吐量很有用。 可以使用其他 Windows 工具（如 ping.exe 和[网络监视器](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7)）来评估延迟和网络利用率  。  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

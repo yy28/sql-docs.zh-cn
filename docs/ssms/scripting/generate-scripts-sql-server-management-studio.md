@@ -3,7 +3,7 @@ title: 生成脚本
 description: 了解如何使用“生成和发布脚本向导”为多个对象创建 Transact-SQL 脚本，以及如何使用对象资源管理器中的“编写脚本为”菜单为单个对象或多个对象生成脚本。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123121"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901342"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ ms.locfileid: "87123121"
 
 4. 可通过选中 **F7** 或打开 **“视图”** 菜单并选择 **“对象资源管理器详细信息”** 来打开 **“对象资源管理器详细信息”** 窗格。
 
-    ![“对象资源管理器”](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![“视图”菜单](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. 左键单击要编写脚本的对象之一。
 
@@ -75,4 +75,4 @@ ms.locfileid: "87123121"
 
 7. 右键单击所选对象之一，然后选择“编写 \<object type> 脚本为”。
 
-    ![“对象资源管理器”](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![详细信息](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

@@ -1,11 +1,8 @@
 ---
 title: 管理编辑器和视图模式
 description: 了解如何选择 SQL Server Management Studio 两种模式中的其中一种：选项卡式文档模式和多文档界面模式。 同时了解拆分视图、自动换行、虚拟空间模式、显示行号、全屏模式和全部自动隐藏等功能。
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122579"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093422"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理编辑器和视图模式
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  利用编辑器，您可以通过多种方法来控制代码视图。  
-  
+
+利用编辑器，您可以通过多种方法来控制代码视图。  
+
 ## <a name="changing-the-view-mode"></a>更改视图模式  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种名为 **“选项卡式文档”** 的视图模式。通过这种视图模式，您可以同时打开多个编辑器和文档，并通过编辑器顶部的选项卡来对其进行访问。 另外，您也可以在多文档界面 (MDI) 模式下打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 环境，这种模式将不带选项卡的窗口联接起来，并允许对每个窗口执行平铺、最小化等操作。  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种名为 **“选项卡式文档”** 的视图模式。通过这种视图模式，您可以同时打开多个编辑器和文档，并通过编辑器顶部的选项卡来对其进行访问。 另外，您也可以在多文档界面 (MDI) 模式下打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 环境，这种模式将不带选项卡的窗口联接起来，并允许对每个窗口执行平铺、最小化等操作。  
   
 #### <a name="to-switch-between-view-modes"></a>切换视图模式  
   

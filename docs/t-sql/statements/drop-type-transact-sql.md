@@ -19,14 +19,14 @@ helpviewer_keywords:
 - alias data types [SQL Server], removing
 - DROP TYPE statement
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 81586edf4744031a6b7743e07e12e6a56da7fd62
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 12ad4564a7d1f72ec257872372b67b69754392ef
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496750"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541238"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  type_name  
  要删除的别名数据类型或用户定义的类型的名称。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  在满足以下任何条件的情况下，将不执行 DROP TYPE 语句：  
   
 -   数据库中存在包含别名数据类型列或用户定义的类型列的表。 通过查询 [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 或 [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) 目录视图可获得有关别名类型列或用户定义类型列的信息。  

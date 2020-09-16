@@ -31,14 +31,14 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c7f0d19062bd164c44481082ab5885f0c40572be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0bb1b0171420c8fd25756eae07304ebf8f469a01
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496954"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547561"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +65,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  指定在将消息放入队列之前要等待的时间，以秒为单位。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  会话计时器为应用程序提供了一种方式，可以在指定时间后接收与某个会话有关的消息。 如果在计时器过期前对会话调用 BEGIN CONVERSATION TIMER，可将超时设置为新值。 与会话生存期不同，会话双方的会话计时器彼此独立。 DialogTimer 消息到达本地队列时，不会影响会话的远程端****。 因此，应用程序可以将计时器消息用于任何目的。  
   
  例如，可以使用会话计时器避免应用程序过久地等待过期响应。 如果希望应用程序在 30 秒内完成对话，则可将对话的会话计时器设置为 60 秒（30 秒加 30 秒的宽限期）。 如果对话 60 秒后仍处于打开状态，则应用程序将收到一条关于该对话队列的超时消息。  
