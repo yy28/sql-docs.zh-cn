@@ -1,4 +1,5 @@
 ---
+description: getServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 title: getServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 844f4574fa7a0a45c772a3ac3eff57bb91f23c3b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ee360ae91a73d895a7820886ff664daed74344e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434549"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>getServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public int getServerPreparedStatementDiscardThreshold()
 ```  
 
 ## <a name="return-value"></a>返回值
- 一个 int  ，其中包含 serverPreparedStatementDiscardThreshold  连接属性的值。
+ 一个 int****，其中包含 serverPreparedStatementDiscardThreshold**** 连接属性的值。
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

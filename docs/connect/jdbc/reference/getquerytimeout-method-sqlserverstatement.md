@@ -1,4 +1,5 @@
 ---
+description: getQueryTimeout 方法 (SQLServerStatement)
 title: getQueryTimeout 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8dff954f-b458-4fa6-abe6-be62ff75e2b9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 03f1833cff6bb65551c4a9c02dd72cb758a555c4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: efc25cfa3b1a43f8c818e66007245853d8159e24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434909"
 ---
 # <a name="getquerytimeout-method-sqlserverstatement"></a>getQueryTimeout 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public final int getQueryTimeout()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示 JDBC 驱动程序将等待秒数的 int  ，如果没有限制，则为 0。  
+ 指示 JDBC 驱动程序将等待秒数的 int****，如果没有限制，则为 0。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,4 +1,5 @@
 ---
+description: getParameterTypeName 方法 (SQLServerParameterMetaData)
 title: getParameterTypeName 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ebe7ff0f-3cc0-408e-9503-4ca754c9c37f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b39b023bb0fc4380afd437c2ebb341c416baaa1f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2815ee0afdab00ea52a80be630ad10e80493b5ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434989"
 ---
 # <a name="getparametertypename-method-sqlserverparametermetadata"></a>getParameterTypeName 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "80904397"
 public java.lang.String getParameterTypeName(int param)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *param*  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int****。  
   
 ## <a name="return-value"></a>返回值  
- 包含类型名称的 String  。  
+ 包含类型名称的 String****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

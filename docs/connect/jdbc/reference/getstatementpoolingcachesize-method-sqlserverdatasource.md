@@ -1,4 +1,5 @@
 ---
+description: getStatementPoolingCacheSize 方法 (SQLServerDataSource)
 title: getStatementPoolingCacheSize 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -8,19 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a90d00957310c64f908816198a47e4c3ba7293b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f988abfee166191c3098570dff44b04878942821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434359"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>getStatementPoolingCacheSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回“statementPoolingCacheSize”  连接属性的值。 返回此连接的准备的语句缓存的大小。 “0”表示未启用缓存。
+  返回“statementPoolingCacheSize”**** 连接属性的值。 返回此连接的准备的语句缓存的大小。 “0”表示未启用缓存。
   
 ## <a name="syntax"></a>语法  
   
@@ -29,7 +30,7 @@ public boolean getStatementPoolingCacheSize();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回“statementPoolingCacheSize”连接属性的“int”值。  
+ 返回“statementPoolingCacheSize”**** 连接属性的“int”**** 值。  
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

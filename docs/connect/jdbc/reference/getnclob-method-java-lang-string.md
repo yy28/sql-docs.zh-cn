@@ -1,4 +1,5 @@
 ---
+description: getNClob 方法 (java.lang.String)
 title: getNClob 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2639808aab1a16b36e50c9bbb7cdf831711212d5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 031ca2e70d3b5ffb561a6f8ef67de89ab7889644
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435279"
 ---
 # <a name="getnclob-method-javalangstring"></a>getNClob 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索 JDBC NCLOB  参数作为 Java 编程语言中的 NClob 对象的值。  
+  检索 JDBC NCLOB**** 参数作为 Java 编程语言中的 NClob 对象的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,10 +30,10 @@ ms.locfileid: "80905583"
 public java.sql.NClob getNClob(java.lang.String parameterName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- parameterName   
+#### <a name="parameters"></a>参数  
+ parameterName  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
 ## <a name="return-value"></a>返回值  
  NClob 对象。  
@@ -43,7 +44,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
 ## <a name="remarks"></a>备注  
  此 getNClob 方法是由 java.sql.CallableStatement 接口中的 getNClob 方法指定的。  
   
- 此方法仅支持检索 NCHAR  、NVARCHAR  、NTEXT  和 XML  参数。 在其他数据类型参数上调用这些方法会引发异常。  
+ 此方法仅支持检索 NCHAR****、NVARCHAR****、NTEXT**** 和 XML**** 参数。 在其他数据类型参数上调用这些方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getNClob 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

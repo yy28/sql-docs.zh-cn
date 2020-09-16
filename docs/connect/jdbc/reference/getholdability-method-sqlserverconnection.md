@@ -1,4 +1,5 @@
 ---
+description: getHoldability 方法 (SQLServerConnection)
 title: getHoldability 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f7dfc9609443febe545bd3b6ac7a6cdf75e1756
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a48bff31aeae9cb2e7a71497efa1dc7eaca3e53e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435879"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public int getHoldability()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含下列可保持性级别之一的 int  值：  
+ 包含下列可保持性级别之一的 int**** 值：  
   
  HOLD_CURSORS_OVER_COMMIT  
   

@@ -1,4 +1,5 @@
 ---
+description: getMoreResults 方法 ()
 title: getMoreResults 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 220f8144045e159a18a6d538718e9e5bd13483bb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: accbf0d6789b67b8ebd3998ead58fdbb949bd602
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435379"
 ---
 # <a name="getmoreresults-method-"></a>getMoreResults 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public final boolean getMoreResults()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果返回的结果为一个结果集，则为 true  。 否则为 **false**。  
+ 如果返回的结果为一个结果集，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

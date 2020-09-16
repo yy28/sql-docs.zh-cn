@@ -1,4 +1,5 @@
 ---
+description: getStringFunctions 方法 (SQLServerDatabaseMetaData)
 title: getStringFunctions 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 915d532fc516252da38e61f0af8c818856ac5b4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434319"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索可用于此数据库的 String  函数以逗号分隔的列表。  
+  检索可用于此数据库的 String**** 函数以逗号分隔的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +36,7 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含字符串函数的字符串。  
+ 一个包含字符串**** 函数的字符串****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

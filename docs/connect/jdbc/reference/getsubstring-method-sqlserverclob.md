@@ -1,4 +1,5 @@
 ---
+description: getSubString 方法 (SQLServerClob)
 title: getSubString 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5409040a5f7bb8cf7c03923da8ff976e4ab08ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bd407745df5e07ae2265105f990aa9df2a4ec963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434309"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +36,8 @@ public java.lang.String getSubString(long pos,
                                      int length)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- pos   
+#### <a name="parameters"></a>参数  
+ pos  
   
  要提取的子字符串的第一个字符。 第一个字符的位置为 1。  
   
@@ -45,7 +46,7 @@ public java.lang.String getSubString(long pos,
  要复制的连续字符数。  
   
 ## <a name="return-value"></a>返回值  
- 指示 CLOB 中指定子字符串的 String  值。  
+ 指示 CLOB 中指定子字符串的 String**** 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,4 +1,5 @@
 ---
+description: getMaxConnections 方法 (SQLServerDatabaseMetaData)
 title: getMaxConnections 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5cd72c0f36143c8ac18d0a0422e092c40cfc2425
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 94d1d71382c8b57f8159ce363ff4a6ec00479f05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435579"
 ---
 # <a name="getmaxconnections-method-sqlserverdatabasemetadata"></a>getMaxConnections 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public int getMaxConnections()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示允许的最大并发连接数的 int  。  
+ 指示允许的最大并发连接数的 int****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

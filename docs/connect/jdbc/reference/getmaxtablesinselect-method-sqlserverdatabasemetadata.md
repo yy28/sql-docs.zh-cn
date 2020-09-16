@@ -1,4 +1,5 @@
 ---
+description: getMaxTablesInSelect 方法 (SQLServerDatabaseMetaData)
 title: getMaxTablesInSelect 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c69570a365d27728e2cbaaac729b1bd824ba096
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 270f7dfcc8c276fec790dcd2afa47e3f6394fcec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435469"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>getMaxTablesInSelect 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public int getMaxTablesInSelect()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示允许的最大表数的 int  。  
+ 指示允许的最大表数的 int****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

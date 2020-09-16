@@ -1,4 +1,5 @@
 ---
+description: getInt 方法 (java.lang.String) (SQLServerResultSet)
 title: getInt 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f27eefc74149c373555411e96304452b5756140e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3449a5e97b71bdc744790f21fc6410a51ff1329f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435849"
 ---
 # <a name="getint-method-javalangstring-sqlserverresultset"></a>getInt 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名的值作为 Java 编程语言中的 int  。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名的值作为 Java 编程语言中的 int****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +35,13 @@ ms.locfileid: "80921453"
 public int getInt(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *columnName*  
   
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- int  值。  
+ int**** 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

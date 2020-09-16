@@ -1,4 +1,5 @@
 ---
+description: getString 方法 (java.lang.String)
 title: getString 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c24af0fd26d2651e583ea254d9f3b708868dea5d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c632a6991000ff13d6f3955318a3a9008c66f187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434439"
 ---
 # <a name="getstring-method-javalangstring"></a>getString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的字符串  。  
+  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的字符串****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +35,13 @@ ms.locfileid: "80926234"
 public java.lang.String getString(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- sCol   
+#### <a name="parameters"></a>参数  
+ sCol**  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
 ## <a name="return-value"></a>返回值  
- 一个字符串值  。  
+ 一个字符串值****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

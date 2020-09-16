@@ -1,4 +1,5 @@
 ---
+description: getString 方法 (java.lang.String) (SQLServerResultSet)
 title: getString 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da5cf4ad735ee650ea87f70687b5f22575921144
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2abe464ba8c800dff256ebe2dfcec0d6e787c5dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434349"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称作为 Java 编程语言中的字符串  的值。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称作为 Java 编程语言中的字符串**** 的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +35,13 @@ ms.locfileid: "80926213"
 public java.lang.String getString(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *columnName*  
   
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个字符串值  。  
+ 一个字符串值****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -48,11 +49,11 @@ public java.lang.String getString(java.lang.String columnName)
 ## <a name="remarks"></a>备注  
  此 getString方法是由 java.sql.ResultSet 接口中的 getString 方法指定的。  
   
- SQL Server 中的所有列都可作为字符串返回。 这意味着可以返回基于数字和基于字符的所有类型的字符串表示形式，以及二进制列的十六进制字符串表示形式，例如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier  。  
+ SQL Server 中的所有列都可作为字符串返回。 这意味着可以返回基于数字和基于字符的所有类型的字符串表示形式，以及二进制列的十六进制字符串表示形式，例如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier。  
   
  位置敏感类型（如 money、smallmoney, datetime、smalldatetime、float、real、decimal 和 numeric）将返回基本类型值的规范 toString() 格式。  
   
- 用户定义类型将作为十六进制字符串值返回  。  
+ 用户定义类型将作为十六进制字符串值返回****。  
   
 ## <a name="see-also"></a>另请参阅  
  [getString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   

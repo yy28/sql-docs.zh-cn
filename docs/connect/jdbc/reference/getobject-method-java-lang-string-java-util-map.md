@@ -1,4 +1,5 @@
 ---
+description: getObject 方法 (java.lang.String, java.util.Map)
 title: getObject 方法 (java.lang.String, java.util.Map) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b8443f62768f73fb93ff0518c89327845edf2df
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 58b1857781baea98e3dca98c00a69b20284a3235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435119"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>getObject 方法 (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +39,10 @@ public java.lang.Object getObject(java.lang.String sCol,
                                   java.util.Map m)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- sCol   
+#### <a name="parameters"></a>参数  
+ sCol**  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
  *m*  
   
@@ -62,13 +63,13 @@ public java.lang.Object getObject(java.lang.String sCol,
   
  从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始：  
   
--   date 类型的值将作为 java.sql.Date 对象返回  。  
+-   date 类型的值将作为 java.sql.Date 对象返回。  
   
--   time 类型的值将作为 java.sql.Time 对象返回  。  
+-   time 类型的值将作为 java.sql.Time 对象返回。  
   
--   datetime2 类型的值将作为 java.sql.Timestamp 对象返回  。  
+-   datetime2 类型的值将作为 java.sql.Timestamp 对象返回。  
   
--   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回  。  
+-   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回。  
   
 ## <a name="see-also"></a>另请参阅  
  [getObject 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   

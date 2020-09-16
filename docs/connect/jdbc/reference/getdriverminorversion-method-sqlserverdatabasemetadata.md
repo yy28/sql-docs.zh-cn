@@ -1,4 +1,5 @@
 ---
+description: getDriverMinorVersion 方法 (SQLServerDatabaseMetaData)
 title: getDriverMinorVersion 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: adb6ae29-025e-4ab3-a6e4-133fc29fb98b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1b170c63982b6457cb5e663fc7d828e7f721c891
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6b96c2b59cfafdb71eaacf42831526b49fb7fca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436109"
 ---
 # <a name="getdriverminorversion-method-sqlserverdatabasemetadata"></a>getDriverMinorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public int getDriverMinorVersion()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示 JDBC 驱动程序次版本的 int  。  
+ 指示 JDBC 驱动程序次版本的 int****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

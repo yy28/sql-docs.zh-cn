@@ -1,4 +1,5 @@
 ---
+description: getMaxProcedureNameLength 方法 (SQLServerDatabaseMetaData)
 title: getMaxProcedureNameLength 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e1c05eb3-8465-46fd-99bc-5e8effcafee5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21cfb0df256208522a7e32881352fa000799070a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 05a3737d1d589d68bc98b8625b510a257651ff75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435539"
 ---
 # <a name="getmaxprocedurenamelength-method-sqlserverdatabasemetadata"></a>getMaxProcedureNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public int getMaxProcedureNameLength()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示允许的最大字符数的 int  。  
+ 指示允许的最大字符数的 int****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

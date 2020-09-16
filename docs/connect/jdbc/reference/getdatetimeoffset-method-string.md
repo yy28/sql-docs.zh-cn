@@ -1,4 +1,5 @@
 ---
+description: getDateTimeOffset 方法 (String)
 title: getDateTimeOffset 方法 (String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d831ff519f72fb5b68cec3c7dc359f1d54106c0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 79502c42679c0dbc7cb1d8986d1af8912f7958af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436279"
 ---
 # <a name="getdatetimeoffset-method-string"></a>getDateTimeOffset 方法 (String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,8 +32,8 @@ ms.locfileid: "67983788"
 public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- sCol   
+#### <a name="parameters"></a>参数  
+ sCol**  
   
  参数的名称。  
   

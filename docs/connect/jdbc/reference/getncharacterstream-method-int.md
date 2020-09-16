@@ -1,4 +1,5 @@
 ---
+description: getNCharacterStream 方法 (int)
 title: getNCharacterStream 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ae704f5-823c-4dfe-8c08-07b547c61a3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e5f0aac7395093a38eb50672aa954106713076be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 46487be1870adb3e5b75d925d5db4ccd59ce34c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435349"
 ---
 # <a name="getncharacterstream-method-int"></a>getNCharacterStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,10 +30,10 @@ ms.locfileid: "80905913"
 public final java.io.Reader getNCharacterStream(int parameterIndex)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- parameterIndex   
+#### <a name="parameters"></a>参数  
+ parameterIndex**  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int****。  
   
 ## <a name="return-value"></a>返回值  
  Reader 对象。  
@@ -41,7 +42,7 @@ public final java.io.Reader getNCharacterStream(int parameterIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>备注  
- 访问 NCHAR  、NVARCHAR  和 LONGNVARCHAR  参数时，应使用此方法。  
+ 访问 NCHAR****、NVARCHAR**** 和 LONGNVARCHAR**** 参数时，应使用此方法。  
   
  此 getNCharacterStream 方法是由 java.sql.CallableStatement 接口中的 getNCharacterStream 方法指定的。  
   

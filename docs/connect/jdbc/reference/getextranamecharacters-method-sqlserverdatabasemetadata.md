@@ -1,4 +1,5 @@
 ---
+description: getExtraNameCharacters 方法 (SQLServerDatabaseMetaData)
 title: getExtraNameCharacters 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 346876c1da1322535b7f9802e2e2a9b82064ab5c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7701c2fe192e5f60acf78c2e59e562c8688e6d40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436099"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>getExtraNameCharacters 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public java.lang.String getExtraNameCharacters()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含其他字符的字符串  。  
+ 包含其他字符的字符串****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

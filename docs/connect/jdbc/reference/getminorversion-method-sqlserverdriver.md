@@ -1,4 +1,5 @@
 ---
+description: getMinorVersion 方法 (SQLServerDriver)
 title: getMinorVersion 方法 (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5507000a-98b1-40b1-b8a7-16365ae80d7d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 924a9d15a544d618002acb91dd669221cc10654b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8669698ee394f75469b0b644ecc1fcbd80376c10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435429"
 ---
 # <a name="getminorversion-method-sqlserverdriver"></a>getMinorVersion 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,9 +36,9 @@ public int getMinorVersion()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含 JDBC 驱动程序次要版本号的 int  。  
+ 包含 JDBC 驱动程序次要版本号的 int****。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此 getMinorVersion 方法是由 java.sql.Driver 接口中的 getMinorVersion 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

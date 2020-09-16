@@ -1,4 +1,5 @@
 ---
+description: getRef 方法 (int)
 title: getRef 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6a3103b7a6c9119d2c3892e8bca744f0d216263
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0afbd40e226ff0f2c15c9d666b09f2c7b6873712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434889"
 ---
 # <a name="getref-method-int"></a>getRef 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "80925159"
 public java.sql.Ref getRef(int i)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *i*  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int****。  
   
 ## <a name="return-value"></a>返回值  
  Ref 对象。  
