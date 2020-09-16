@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
@@ -14,12 +14,12 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 08b2107b77acecebeb990e6a071963af964f61ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6f0b074f92d4c61c6721a56abe5dc2d44422a9f0
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885970"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901068"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 配置
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -53,6 +53,5 @@ ms.locfileid: "85885970"
   
     -   [使用 TCP IP 创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [使用命名管道创建有效的连接字符串](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
-  
+    -   [使用命名管道创建有效的连接字符串](/previous-versions/sql/sql-server-2016/ms189307(v=sql.130))  
   
