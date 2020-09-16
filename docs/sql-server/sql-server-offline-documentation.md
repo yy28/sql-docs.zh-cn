@@ -7,15 +7,14 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
-ms.reviewer: carlrab
-ms.date: 07/22/2020
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.date: 08/12/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1a933145d646c8e8a0c65151eaff7307066a223d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87237848"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550587"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>安装 SQL Server 文档以在 SSMS 中进行脱机查看
 
@@ -171,7 +170,7 @@ SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机�
 
 如需详细了解存档内容和帮助查看器，请参考下面的链接。
 
-- [SQL Server 联机文档](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 联机文档](/sql/2014-toc/)
+- [SQL Server 联机文档](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
+- [SQL Server 2014 联机文档](https://docs.microsoft.com/previous-versions/sql/2014)
 - [SQL Server 早期版本联机文档](previous-versions-sql-server.md)
-- [SQL 文档的版本控制系统](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+- [SQL 文档的版本控制系统](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

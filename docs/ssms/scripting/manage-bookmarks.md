@@ -1,29 +1,31 @@
 ---
 title: 管理书签
 description: 使用代码编辑器中的“书签”窗口可以创建指向代码中的位置的链接。 了解如何创建、删除、激活和禁用书签，以及如何使用它们在代码中导航。
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 61053e087f572e586bfd37e20a2efa6e659dabfd
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122598"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093545"
 ---
 # <a name="manage-bookmarks"></a>管理书签
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  在代码编辑器中工作时，使用 **“书签”** 窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
+
+在代码编辑器中工作时，使用 **“书签”** 窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
   
  若要创建书签并在书签中导航，请单击位于“文本编辑器”工具栏上和“书签”窗口顶部的按钮。 可以添加和删除书签、激活或禁用书签以及按文件夹组织书签。 还可以从 **“书签”** 窗口的快捷菜单中使用某些命令。 若要添加或删除书签，请将插入点放到编辑器内所需的行中，再单击 **“切换书签”** 。 若要激活某个书签，请在“书签”窗口中选中其复选框；若要禁用（但不删除）某个书签，请清除其复选框。  
   

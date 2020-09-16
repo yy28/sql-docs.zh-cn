@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 597b656c3f235ae59a22f7e85bf54dcc25fb1873
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253631"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570283"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>解决启动板服务和 SQL Server 中外部脚本执行的问题
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文提供 SQL Server 受信任的启动板服务相关问题的疑难解答指南。 启动板服务支持 R 和 Python 的外部脚本执行。 多种问题可能会阻止启动板启动，包括配置问题或更改，或缺少网络协议。  
-
-如果遇到此处未涉及的问题，可以将问题发布在 [Machine Learning Server 论坛](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)。
 
 ## <a name="determine-whether-launchpad-is-running"></a>确定启动板是否正在运行
 
@@ -240,6 +238,6 @@ EXEC sp_execute_external_script @language = N'R',
 
 [收集数据进行机器学习故障排除](data-collection-ml-troubleshooting-process.md)
 
-[升级和安装常见问题解答](upgrade-and-installation-faq-sql-server-r-services.md)
+[安装 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 
 [数据库引擎连接疑难解答](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

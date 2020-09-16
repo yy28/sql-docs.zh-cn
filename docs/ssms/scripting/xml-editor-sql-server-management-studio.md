@@ -1,11 +1,8 @@
 ---
 title: XML 编辑器 (SQL Server Management Studio)
 description: 了解如何使用 SQL Server Management Studio XML 编辑器的可视化工具来处理 XML 架构 (XSD)、ADO.NET 数据集和 XML 文档。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -17,22 +14,27 @@ helpviewer_keywords:
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236860"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093560"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
-  
- 若要显示该设计器，请向您的项目中添加数据集、XML 架构或 XML 文件，或打开下表中列出的任何类型的文件。  
-  
-> [!CAUTION]  
->  在“架构”视图中没有 **“撤消”** 命令。 请仔细规划您的任务并经常保存文件。  
+
+提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
+
+若要显示该设计器，请向您的项目中添加数据集、XML 架构或 XML 文件，或打开下表中列出的任何类型的文件。  
+
+> [!CAUTION]
+> 在“架构”视图中没有 **“撤消”** 命令。 请仔细规划您的任务并经常保存文件。  
   
  该设计器提供了以下三种视图（或模式）来处理 XML 文件、XML 架构和数据集：  
   

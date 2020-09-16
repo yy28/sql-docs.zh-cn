@@ -3,7 +3,7 @@ title: 状态栏（数据库引擎查询编辑器）
 description: 了解如何对数据库引擎查询编辑器窗口的状态栏进行颜色编码，以指示该窗口所连接到的数据库引擎实例。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
@@ -12,12 +12,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95cccb6c8f63e149de806c4c956e1371a83f3619
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 59183c647c9bb767767a536e82be9f8dfb8b7188
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243733"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480382"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
 
@@ -95,6 +95,6 @@ ms.locfileid: "87243733"
 -   填写其余连接信息，然后选择 **“连接”** 按钮。  
   
 ## <a name="see-also"></a>另请参阅  
- [查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [查询和文本编辑器 (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
   
   

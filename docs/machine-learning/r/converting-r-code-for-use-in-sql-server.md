@@ -3,21 +3,21 @@ title: 转换 R 代码使之能在 SQL 中运行
 description: 将 R 代码迁移到 SQL Server 存储过程中，以实现解决方案部署和对 SQL Server 上关系数据的访问。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009ce927481a455478e170cbe075e920d72571f3
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723880"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288294"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>转换 R 代码以在 SQL Server（数据库内）实例中执行
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文提供了有关如何修改 R 代码以使其可在 SQL Server 中运行的高级指南。 
 
@@ -121,7 +121,6 @@ ms.locfileid: "85723880"
 
 + 咨询数据库开发人员，确定通过 SQL Server 功能提高性能的方式，例如[内存优化表](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) 或 [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)（如果你拥有 Enterprise Edition 的话）。
 
-    有关详细信息，请参阅 [SQL Server Optimization Tips and Tricks for Analytics Services](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)（适用于分析服务的 SQL Server 优化提示和技巧）。
 
 ### <a name="step-3-prepare-for-deployment"></a>步骤 3. 准备部署
 
@@ -135,7 +134,7 @@ ms.locfileid: "85723880"
 
 + 如果代码相对简单，可以将它嵌入用户定义的 T-SQL 函数中，而无需修改，如此示例中所述：
 
-    + [使用 T-SQL 和 R 的特征工程](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [使用 T-SQL 和 R 的特征工程](../tutorials/r-taxi-classification-create-features.md)
 
 + 如果代码相对复杂，则使用 R 包 sqlrutils 来转换代码  。 该包旨在帮助有经验的 R 用户编写优秀的存储过程代码。 
 
@@ -165,6 +164,6 @@ ms.locfileid: "85723880"
 
 + [使用 R 和 SQL Server 为滑雪板租赁企业构建预测模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [适用于 SQL 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)演示如何通过将 R 代码包装在存储过程中来提高 R 代码的模块化程度
++ [适用于 SQL 开发人员的数据库内分析](../tutorials/r-taxi-classification-introduction.md)演示如何通过将 R 代码包装在存储过程中来提高 R 代码的模块化程度
 
 + [端到端数据科学解决方案](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)包含了对使用 R 和 T-SQL 的功能工程的比较

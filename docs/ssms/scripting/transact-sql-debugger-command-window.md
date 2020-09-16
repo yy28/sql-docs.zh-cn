@@ -3,7 +3,7 @@ title: “命令”窗口
 description: 了解如何使用 Transact-SQL 调试器的“命令”窗口来运行调试命令以及如何在要调试的代码上编辑命令。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Command Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e9a1e432de7b9bb0871ffc094f7d37cd1709aff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3465a430f9b9103088e08db045d1c42338c0224f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248053"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901427"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Transact-SQL 调试器 -“命令”窗口
 
