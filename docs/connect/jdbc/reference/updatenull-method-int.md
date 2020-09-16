@@ -1,4 +1,5 @@
 ---
+description: updateNull 方法 (int)
 title: updateNull 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b22336a1-fe53-4e00-a5ff-ede8d3f2b9f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7dad541ed1b40f786a309cf575e1fa7027291016
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 58addb9a533a5850bbae9614981c9a3fe1d569f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478354"
 ---
 # <a name="updatenull-method-int"></a>updateNull 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "80919782"
 public void updateNull(int index)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
  指示列索引的 int  。  
   

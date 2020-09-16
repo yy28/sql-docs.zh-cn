@@ -1,4 +1,5 @@
 ---
+description: 用于 SQL 机器学习 Python 和 R 教程的 Iris 演示数据
 title: 用于教程的 Iris 演示数据集
 titleSuffix: SQL machine learning
 Description: 创建一个包含 Iris 数据集的数据库和多个预测模型。 此数据集在关于 SQL 机器学习的 R 和 Python 教程中使用。
@@ -10,15 +11,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495000"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>用于 SQL 机器学习 Python 和 R 教程的 Iris 演示数据
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 在此练习中，创建一个数据库，用于存储来自 [Iris 花卉数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)的数据以及基于相同数据的模型。 Iris 数据包含在 R 和 Python 发行版中，并用于 SQL 机器学习的机器学习教程。
 

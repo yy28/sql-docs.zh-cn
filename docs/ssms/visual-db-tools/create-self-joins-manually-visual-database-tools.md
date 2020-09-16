@@ -1,4 +1,5 @@
 ---
+description: 手动创建自联接 (Visual Database Tools)
 title: 手动创建自联接
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 162f2e872d1feedd3cecdf54b766ed8e3a43365b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 483c763d2c9dcce9a927b2b3eb3dc8c7b5599d70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497177"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手动创建自联接 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -115,9 +116,9 @@ Cheryl Carson       Abraham Bennet
   
     查询和视图设计器将通过为表名添加一个顺序号来为第二个实例分配别名。 此外，查询和视图设计器会在“关系图”窗格内表或表值对象的两个实例之间创建一条联接线。  
   
-3.  右键单击联接线，再从快捷菜单中选择“属性”  。  
+3.  右键单击联接线，再从快捷菜单中选择“属性”****。  
   
-4.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的省略号 (…)   。  
+4.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的省略号 (…) 。  
   
 5.  在[“联接”对话框](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)中，根据需要更改两个主键间的比较运算符。 例如，可将运算符更改为小于 (<)。  
   

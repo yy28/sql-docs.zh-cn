@@ -1,4 +1,5 @@
 ---
+description: 更改已注册的服务器或已注册的服务器组的名称
 title: 更改已注册的服务器或服务器组的名称
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
-ms.openlocfilehash: 32f59e2db98280a7d096e0f1f7d1a90895db010b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28ed9e04486fe587ea3bd25d6659283846a6fa8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491790"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>更改已注册的服务器或已注册的服务器组的名称
 
@@ -25,23 +26,23 @@ ms.locfileid: "86001788"
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
-从菜单导航到“视图”\\“已注册的服务器”，以打开“已注册的服务器”窗格。
+从菜单导航到“视图”\\“已注册的服务器”，以打开“已注册的服务器”窗格。********
 
 ### <a name="to-change-the-name-of-a-server"></a>更改服务器的名称
 
-1. 在“已注册的服务器”中，展开“数据库引擎”后，展开“本地服务器组”。     
+1. 在“已注册的服务器”中，展开“数据库引擎”后，展开“本地服务器组”。************  
 
-2. 右键单击某服务器，选择“属性”以打开“编辑服务器注册属性”对话框窗口。  
+2. 右键单击某服务器，选择“属性”以打开“编辑服务器注册属性”对话框窗口。********
 
-3. 在“已注册的服务器名称”文本框中键入用于该服务器注册的新名称，单击“保存”。    
+3. 在“已注册的服务器名称”文本框中键入用于该服务器注册的新名称，单击“保存”。********  
 
 ### <a name="to-change-the-name-of-a-server-group"></a>更改服务器组的名称  
 
-1. 在“已注册的服务器”中，展开“数据库引擎”后，展开“本地服务器组”。     
+1. 在“已注册的服务器”中，展开“数据库引擎”后，展开“本地服务器组”。************  
 
-2. 右键单击某服务器组，选择“属性”以打开“编辑服务器组属性”对话框窗口。   
+2. 右键单击某服务器组，选择“属性”以打开“编辑服务器组属性”对话框窗口。******** 
 
-3. 在“组名称”文本框中键入该服务器组的新名称，单击“保存”。    
+3. 在“组名称”文本框中键入该服务器组的新名称，单击“保存”。********  
 
 ## <a name="see-also"></a>另请参阅
 

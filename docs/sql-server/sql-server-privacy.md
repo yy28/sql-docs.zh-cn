@@ -1,4 +1,5 @@
 ---
+description: SQL Server 隐私补充
 title: SQL Server 隐私补充 | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480680"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
 
@@ -23,15 +24,15 @@ ms.locfileid: "86916903"
 
 本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 如果在 Microsoft Azure 服务上的虚拟机中安装了 SQL Server，则会将环境信息发送到 Microsoft，以便 Microsoft 可以将 SQL Server 虚拟机资源注册到 Azure 订阅中的资源提供程序，如[此处](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)进一步说明所示。 作为注册 SQL Server 虚拟机资源的一部分，可以在虚拟机上安装 SQL Server IaaS 代理扩展，如[此处](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)进一步说明所示。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
 
-- Azure SQL 数据库
+- Azure SQL Database
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - 数据库迁移助手
-- SQL Server Migration Assistant
+- SQL Server 迁移助手
 - MS-SQL 扩展
 
-“允许的使用方案”定义  。 在本文的上下文中，Microsoft 将“允许的使用方案”定义为由 Microsoft 启动的操作或活动。
+“允许的使用方案”定义**。 在本文的上下文中，Microsoft 将“允许的使用方案”定义为由 Microsoft 启动的操作或活动。
 
 ## <a name="access-control"></a>访问控制
 
@@ -44,7 +45,7 @@ ms.locfileid: "86916903"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|场景 |访问限制 |保留期要求 |
+|方案 |访问限制 |保留期要求 |
 |---------|---------|---------|
 |这些凭据通过使用情况和诊断数据始终保留在用户计算机上。 |- |- |
 |故障转储可以包含访问控制数据。 |- |故障转储：最长 30 天。 |
@@ -63,7 +64,7 @@ ms.locfileid: "86916903"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|场景  |访问限制  |保留期要求 |
+|方案  |访问限制  |保留期要求 |
 |---------|---------|---------|
 |此数据通过使用情况和诊断数据保留在用户计算机上。 |- |- |
 |故障转储可以包含客户内容，并可以发送至 Microsoft。 |- |故障转储：最长 30 天。 |
@@ -86,7 +87,7 @@ ms.locfileid: "86916903"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|场景  |访问限制  |保留期要求|
+|方案  |访问限制  |保留期要求|
 |---------|---------|---------|
 |此数据通过使用情况和诊断数据保留在用户计算机上。 |- |- |
 |故障转储可包含 EUII，并可发送至 Microsoft。 |- |故障转储：最长 30 天 |
@@ -108,7 +109,7 @@ ms.locfileid: "86916903"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|场景  |访问限制  |保留期要求|
+|方案  |访问限制  |保留期要求|
 |---------|---------|---------| 
 |Microsoft 可以使用该数据来优化功能和/或修复当前功能中的 bug。 |仅限 Microsoft 内部使用，不允许第三方访问。 Microsoft 可向原始客户公开数据。  例如，仪表板 |最短 90 天 - 最长 3 年 |
 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |仅限 Microsoft 内部使用，不允许第三方访问。 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |
@@ -137,10 +138,10 @@ Microsoft 不检查其他使用 SQL Server 的程序设置的应用程序名称�
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|场景  |访问限制  |保留期要求|
+|方案  |访问限制  |保留期要求|
 |---------|---------|---------|
 |Microsoft 可能使用它来优化功能，并/或修复当前功能中的 bug。|仅限 Microsoft 内部使用，不允许第三方访问。 |最短 90 天 - 最长 3 年 |
-|可用于向客户提供建议。  例如，“根据产品的使用情况，建议使用功能 X，因为它性能更优良  。” |例如，Microsoft 可通过仪表板向原始客户公开该数据。 |客户数据安全日志：最短 3 年 - 最长 6 年 |
+|可用于向客户提供建议。  例如，“根据产品的使用情况，建议使用功能 X，因为它性能更优良。” |例如，Microsoft 可通过仪表板向原始客户公开该数据。 |客户数据安全日志：最短 3 年 - 最长 6 年 |
 |Microsoft 可使用该数据对未来产品进行规划。 |Microsoft 可将此信息与其他硬件和软件供应商共享，以改善其产品在 Microsoft 软件中的运行性能。 |最短 90 天 - 最长 3 年|
 |根据所发送的使用情况和诊断数据，Microsoft 可使用该数据来提供基于云的服务。 例如，显示组织中所有 SQL Server 安装的功能使用情况的客户仪表板。 |Microsoft 可通过仪表板向原始客户公开该数据。 |最短 90 天 - 最长 3 年 |
 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |仅限 Microsoft 内部使用，不允许第三方访问。 Microsoft 可向原始客户公开数据。 |用户反馈：最长 1 年 |
@@ -162,12 +163,12 @@ Microsoft 不检查其他使用 SQL Server 的程序设置的应用程序名称�
 > 所有对象元数据值在收集之前都会经过哈希处理。
 >
 
-|场景  |访问限制  |保留期要求|
+|方案  |访问限制  |保留期要求|
 |---------|---------|---------|
 |Microsoft 可能使用它来优化功能，并/或修复当前功能中的 bug。 |仅限 Microsoft 内部使用，不允许第三方访问。 |最短 90 天 - 最长 3 年|
 
 ## <a name="telemetry-controls"></a>遥测控件
 
-若要了解如何在产品中打开/关闭遥测，请参阅此处的说明 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft 。
+若要了解如何在产品中打开/关闭遥测，请参阅此处的说明 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

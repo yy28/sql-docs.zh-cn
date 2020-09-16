@@ -1,4 +1,5 @@
 ---
+description: Stretch Database
 title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -10,15 +11,15 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2338cfe80dafb68eefaba3d6302d4afc84a585c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497990"
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database 可以既透明又安全地将冷数据迁移到 Microsoft Azure 云。  
@@ -75,7 +76,7 @@ ms.locfileid: "81488338"
 ## <a name="test-drive-stretch-database"></a>试用 Stretch Database  
  **通过 AdventureWorks 示例数据库试用 Stretch Database。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。 将示例数据库还原到 SQL Server 2016 实例后，解压缩示例文件，然后从 Stretch DB 文件夹打开 Stretch DB Samples 文件。 运行此文件中的脚本来检查启用 Stretch Database 之前和之后数据使用的空间、跟踪数据迁移的进度，以及确认你是否可以继续在数据迁移期间和之后查询现有数据和插入新数据。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
  **确定适用于 Stretch Database 的数据库和表。** 下载数据迁移助手并运行评估，以标识为 Stretch Database 候选项的数据库和表。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
   
   

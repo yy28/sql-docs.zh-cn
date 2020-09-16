@@ -1,6 +1,7 @@
 ---
+description: SQL Server Python 和 R 教程适用的航空航班到达演示数据
 title: 教程适用的航空航班演示数据
-Description: 创建一个包含 R 和 Python 中的航空数据集的数据库。 本数据集用于 Microsoft SQL Server 机器学习服务的 R 和 Python 教程。
+Description: 创建一个包含 R 和 Python 中的航空数据集的数据库。 此数据集用于 SQL Server 机器学习服务的 R 和 Python 教程。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/22/2018
@@ -9,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484070"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教程适用的航空航班到达演示数据
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 在此练习中，创建一个 SQL Server 数据库，用于存储从 R 或 Python 内置航空演示数据集导入的数据。 R 和 Python 发行版提供了等效的数据，你可以使用 Management Studio 将这些数据导入到 SQL Server 数据库中。
 
@@ -31,15 +32,15 @@ ms.locfileid: "85727996"
 
 1. 启动 SQL Server Management Studio，连接到一个具有 R 或 Python 集成的数据库引擎实例。  
 
-2. 在对象资源管理器中，单击右键，点击“数据库”，并创建名为“flightdata”的新数据库   。
+2. 在对象资源管理器中，单击右键，点击“数据库”，并创建名为“flightdata”的新数据库********。
 
-3. 右键单击“flightdata”，单击“任务”和“导入平面文件”    。
+3. 右键单击“flightdata”，单击“任务”和“导入平面文件”************。
 
 4. 根据安装的语言，打开 R 或 Python 发行版中提供的 AirlineDemoData csv 文件。
 
-   对于 R，请在 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData 查找“AirlineDemoSmall.csv” 
+   对于 R，请在 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData 查找“AirlineDemoSmall.csv”****
    
-   对于 Python，请在 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data 查找“AirlineDemoSmall.csv” 
+   对于 Python，请在 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data 查找“AirlineDemoSmall.csv”****
   
 选择该文件时，会为表名称和架构填写默认值。
 
@@ -52,7 +53,7 @@ ms.locfileid: "85727996"
 
 作为验证步骤，运行查询以确认已上传数据。
 
-1. 在“对象资源管理器”中的“数据库”下，右键单击“flightdata”数据库，然后启动一个新查询  。
+1. 在“对象资源管理器”中的“数据库”下，右键单击“flightdata”数据库，然后启动一个新查询****。
 
 2. 运行一些简单的查询：
 

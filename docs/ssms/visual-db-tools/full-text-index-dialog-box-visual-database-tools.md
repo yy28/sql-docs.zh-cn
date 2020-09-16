@@ -1,4 +1,5 @@
 ---
+description: “全文索引”对话框 (Visual Database Tools)
 title: “全文本索引”对话框
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8330963e62c3185203c9b25c53785f12ec9fb8be
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497140"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>“全文索引”对话框 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,13 +38,13 @@ ms.locfileid: "86004940"
 创建新的全文索引。  
   
 **删除**  
-删除在“选定的全文检索”  列表中所选的全文检索。  
+删除在“选定的全文检索”**** 列表中所选的全文检索。  
   
 **常规类别**  
-展开此项可显示“列”  和“全文本目录名称”  。  
+展开此项可显示“列”**** 和“全文本目录名称”****。  
   
 **“列”**  
-显示一个逗号分隔列表，其中列出了可进行全文搜索的列的名称。 若要查看完整列表，请单击该属性字段左侧的省略号按钮“(…)”  。  
+显示一个逗号分隔列表，其中列出了可进行全文搜索的列的名称。 若要查看完整列表，请单击该属性字段左侧的省略号按钮“(…)”。  
   
 **全文本目录名称**  
 显示用于存储此全文索引的全文本目录的名称。 若要将索引存储在其他目录中，请单击当前目录名称，再从下拉列表中选择其他目录。  
@@ -54,7 +55,7 @@ ms.locfileid: "86004940"
 **标识类别**  
 展开此项可显示此索引的名称字段。  
   
-**名称**  
+**Name**  
 显示此全文索引的系统指定名称。  
   
 **表设计器类别**  

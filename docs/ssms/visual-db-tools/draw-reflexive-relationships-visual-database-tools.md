@@ -1,4 +1,5 @@
 ---
+description: 绘制自反关系 (Visual Database Tools)
 title: 绘制自反关系
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d87529fc1aebccecca90308475f6efeaf82f4a2f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2472266ae29470b19f93518676e75f8ff17d86ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480040"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>绘制自反关系 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,11 +34,11 @@ ms.locfileid: "86004952"
   
 2.  将该线条拖回所选的表。  
   
-3.  释放鼠标按钮。 此时，将显示“表和列”  对话框。  
+3.  释放鼠标按钮。 此时，将显示“表和列”**** 对话框。  
   
 4.  选择外键列以及要与之建立关系的主键表和列。  
   
-5.  选择“确定”  两次以创建关系。  
+5.  选择“确定”**** 两次以创建关系。  
   
 如果对表运行查询，则可使用自反关系创建自联接。 有关使用联接查询表的信息，请参阅 [使用联接进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)。  
   

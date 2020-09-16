@@ -1,4 +1,5 @@
 ---
+description: “列列表”对话框 (Visual Database Tools)
 title: “列列表”对话框
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 553a6da4bbc6527339f366d7b4b319fc21a17504
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0030204093f43951636db0f71397e75c4f3b79a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480104"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>“列列表”对话框 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 编写查询时，查看所选表值对象中的可用列的列表会非常有用。  
   
-若要访问此对话框，请在“查询设计器”  菜单的“关系图”窗格中，右键单击某表值对象的标题，再单击“属性”  。 在“属性”  窗口中，单击“列列表”  字段。 随后单击该字段右侧的省略号 (…)  。  
+若要访问此对话框，请在“查询设计器”**** 菜单的“关系图”窗格中，右键单击某表值对象的标题，再单击“属性”****。 在“属性”**** 窗口中，单击“列列表”**** 字段。 随后单击该字段右侧的省略号 (…)****。  
   
 此对话框提供了所选表值对象中的列的列表和一些基本属性，如数据类型以及这些列是否允许空值。  
   

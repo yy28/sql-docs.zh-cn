@@ -1,4 +1,5 @@
 ---
+description: 重命名数据库关系图 (Visual Database Tools)
 title: 重命名数据库关系图
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 79d11ec9e6fa2e2b740b492ad6ed5a65443a90b0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7c26ad67ba91e7cd92cbc9542d1f4aa9a4f3fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491593"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>重命名数据库关系图 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,11 +29,11 @@ ms.locfileid: "86010680"
   
 ### <a name="to-rename-a-database-diagram"></a>重命名数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”**** 文件夹。  
   
 2.  右键单击要重命名的数据库关系图。  
   
-3.  从快捷菜单中选择“重命名”  。  
+3.  从快捷菜单中选择“重命名”****。  
   
     此时，将在对象资源管理器中的关系图名称附近打开一个编辑框。  
   

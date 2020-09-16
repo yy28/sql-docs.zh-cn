@@ -1,4 +1,5 @@
 ---
+description: 将自定义报表与对象资源管理器节点属性一起使用
 title: 将自定义报表与对象资源管理器节点属性一起使用
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 608c24801a19e003751d6455f86cd11e4c053719
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 715885ea3eaaa3601c56ddf296c91cf579dd4c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497375"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86001831"
 |------------------|-------------|  
 |**ObjectName**|**字符串**|  
 |**ObjectTypeName**|**字符串**|  
-|**筛选**|**布尔值**|  
+|**Filtered**|**布尔值**|  
 |**ServerName**|**字符串**|  
 |**FontName**|**字符串**|  
 |**DatabaseName**|**字符串**|  
@@ -43,13 +44,13 @@ ms.locfileid: "86001831"
   
 2.  将此报表文件复制到您在数据库服务器上为自定义报表创建的文件夹中。  
   
-3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击对象资源管理器中的节点，指向“报表”  ，再单击“自定义报表”。 在“打开文件”  对话框中，找到自定义报表文件夹并选择此报表文件，再单击“打开”  。  
+3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击对象资源管理器中的节点，指向“报表”，再单击“自定义报表”。 在“打开文件”**** 对话框中，找到自定义报表文件夹并选择此报表文件，再单击“打开”****。  
   
-    第一次从对象资源管理器节点打开新的自定义报表时，该报表将添加到该节点的快捷菜单上“自定义报表”  下最近使用的文件列表中。 第一次打开标准报表时，该报表也将出现在“自定义报表”  下最近使用的文件列表中。 如果某个自定义报表文件已删除，则下一次选择该项时，系统将提示您从最近使用的文件列表中删除该项。  
+    第一次从对象资源管理器节点打开新的自定义报表时，该报表将添加到该节点的快捷菜单上“自定义报表”**** 下最近使用的文件列表中。 第一次打开标准报表时，该报表也将出现在“自定义报表”**** 下最近使用的文件列表中。 如果某个自定义报表文件已删除，则下一次选择该项时，系统将提示您从最近使用的文件列表中删除该项。  
   
-    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”  菜单上单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。  
+    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”**** 菜单上单击“选项”****，展开“环境”**** 文件夹，再单击“常规”****。  
   
-    2.  调整“显示最近使用列表中的文件”  的数量。  
+    2.  调整“显示最近使用列表中的文件”**** 的数量。  
   
 ## <a name="custom-report-code-sample"></a>自定义报表代码示例  
 使用以下代码创建的报表将使用与对象资源管理器节点关联的参数。  
@@ -532,5 +533,5 @@ ms.locfileid: "86001831"
 ## <a name="see-also"></a>另请参阅  
 [Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)  
 [向 Management Studio 添加自定义报表](../../ssms/object/add-a-custom-report-to-management-studio.md)  
-[启用运行自定义报告警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[启用运行自定义报表警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
   

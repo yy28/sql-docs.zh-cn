@@ -1,4 +1,5 @@
 ---
+description: updateObject 方法 (int, java.lang.Object, int)
 title: updateObject 方法 (int, java.lang.Object, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 9d33571b-4887-49d3-96df-8abda7b5a904
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e03d18176eb5c76a2d8332810cc3c7cffe34efc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1f55f80bc65ca1efd5f2d300e46f7f62db317f2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478309"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>updateObject 方法 (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列索引和小数位数使用 Object 值更新指定的列  。  
+  根据给定的列索引和小数位数使用 Object 值更新指定的列****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +37,12 @@ public void updateObject(int index,
                          int scale)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
  指示列索引的 int  。  
   
- obj   
+ *obj*  
   
  Object 值  。  
   

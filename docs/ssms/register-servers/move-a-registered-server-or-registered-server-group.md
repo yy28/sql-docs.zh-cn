@@ -1,4 +1,5 @@
 ---
+description: 移动已注册的服务器或已注册的服务器组
 title: 移动已注册的服务器或服务器组
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 95331f9861db63bed63870a373981c5309ff3e04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 386b9f506e86f294aa4fefaf6f859763443f6c04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491777"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移动已注册的服务器或已注册的服务器组
 
@@ -33,9 +34,9 @@ ms.locfileid: "86011809"
 
 ### <a name="to-move-a-registered-server-or-server-group"></a>移动注册服务器或服务器组  
 
-1. 在注册服务器中，右键单击某服务器或服务器组，再单击  “移动到”。  
+1. 在注册服务器中，右键单击某服务器或服务器组，再单击****“移动到”。  
   
-2. 在 **“移动服务器注册”** 对话框中，展开服务器组列表，单击您要显示的服务器或服务器组的节点，再单击 **“确定”** 。  
+2. 在 **“移动服务器注册”** 对话框中，展开服务器组列表，单击您要显示的服务器或服务器组的节点，再单击 **“确定”**。  
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 重新排列输出列 (Visual Database Tools)
 title: 对输出列进行重新排序
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f168b16ef5407b8ebf47e55f7062b1b7c8c7b180
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9268fb47c89732ccaf5af6460119ddc9664daf24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497096"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>重新排列输出列 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "86008876"
   
 2.  指向行选择器按钮，然后将该行拖动到新位置。  
   
-    -或-  
+    - 或 -  
   
     在 [“SQL”窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中编辑列名的顺序。  
   

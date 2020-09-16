@@ -1,4 +1,5 @@
 ---
+description: 保护文件夹
 title: 保护文件夹 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f873c02fe9cf0657edbaefd7411b6f3409ed1a0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498000"
 ---
 # <a name="secure-folders"></a>保护文件夹
   文件夹的安全性是保护报表服务器中所有内容的基础。 由于安全性在整个文件夹结构中是可继承的，因此您可以将文件夹层次结构中或大或小的不同部分指定为允许某些类型的访问。  
@@ -27,7 +28,7 @@ ms.locfileid: "65570560"
   
  安全性较低的文件夹可用来存储希望易于访问的报表。  
   
- 文件夹安全性构成了项级安全性的基础，其基点是报表服务器文件夹层次结构的根节点（即主文件夹）。 由于安全性是可继承的，因此，建议您对主文件夹设置限制相当严格的安全策略。 在主文件夹角色分配中使用“浏览者”角色，即可通过提供只读访问来做到这一点  。  
+ 文件夹安全性构成了项级安全性的基础，其基点是报表服务器文件夹层次结构的根节点（即主文件夹）。 由于安全性是可继承的，因此，建议您对主文件夹设置限制相当严格的安全策略。 在主文件夹角色分配中使用“浏览者”角色，即可通过提供只读访问来做到这一点****。  
   
 ## <a name="tasks-and-folder-access"></a>任务和文件夹访问权限  
  在为文件夹创建角色分配时，请考虑下表中列出的任务：  

@@ -1,4 +1,5 @@
 ---
+description: 在本机模式报表服务器上配置 TLS 连接
 title: 在本机模式报表服务器上配置 TLS 连接 | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 3362783a3558c2ce6d74e68d666bbf791957046a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498035"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>在本机模式报表服务器上配置 TLS 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 传输层安全性 (TLS) 旧称为“安全套接字层 (SSL)”。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留，以支持通过加密通道建立报表服务器连接。  

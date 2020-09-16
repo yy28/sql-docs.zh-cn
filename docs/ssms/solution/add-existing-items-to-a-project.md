@@ -1,4 +1,5 @@
 ---
+description: 向项目中添加现有项
 title: 向项目中添加现有项
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60939da70ed334f4fc7c020f123fff9441a27088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3744d99ede7e4f50e7fb4393d8e58cff314f4f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480105"
 ---
 # <a name="add-existing-items-to-a-project"></a>向项目中添加现有项
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86003312"
   
 1.  在解决方案资源管理器中，选择目标项目。  
   
-2.  在“项目”  菜单上，单击“添加现有项”  。  
+2.  在“项目”**** 菜单上，单击“添加现有项”****。  
   
     **Look in**  
     找到要从此列表添加到项目中的文件或文件夹。 对于 XML Web services 和 ASP.NET Web 应用程序，文件位于 Web 服务器上。  
@@ -37,16 +38,16 @@ ms.locfileid: "86003312"
     显示桌面上的文件和文件夹。  
   
     **我的项目**  
-    显示默认“我的项目”  位置中的文件和文件夹。  
+    显示默认“我的项目”**** 位置中的文件和文件夹。  
   
     **我的电脑**  
-    显示“我的电脑”  文件夹的内容。  
+    显示“我的电脑”**** 文件夹的内容。  
   
     **文件名**  
     使用此选项可以筛选所显示的文件和文件夹。 输入要用来筛选的完整或部分文件名，使用星号 (`*`) 作为通配符。  
   
     > [!NOTE]  
-    > 通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 `https://mywebsite` 可显示 mywebsite Web 位置中可用的文件，输入 \\\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件。  
+    > 通过在“文件名”**** 框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 `https://mywebsite` 可显示 mywebsite Web 位置中可用的文件，输入 \\\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件 。  
   
     **文件类型**  
     使用此选项基于文件扩展名筛选文件。 每个产品列出最常用文件类型的默认筛选器。  
@@ -62,9 +63,9 @@ ms.locfileid: "86003312"
   
         向项目中添加所选文件，并以该文件类型的默认编辑器打开文件。 该选项将打开最初选定的文件，而不将文件复制到项目文件夹中。  
   
-3.  如果添加查询文件，则“连接”对话框将提示您为查询指定连接。 如果不希望将连接关联到查询，则可以单击“连接”对话框中的“取消”  。  
+3.  如果添加查询文件，则“连接”对话框将提示您为查询指定连接。 如果不希望将连接关联到查询，则可以单击“连接”对话框中的“取消”****。  
   
-4.  该文件将添加到项目的“查询”  或“杂项文件”  文件夹中。  
+4.  该文件将添加到项目的“查询”**** 或“杂项文件”**** 文件夹中。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

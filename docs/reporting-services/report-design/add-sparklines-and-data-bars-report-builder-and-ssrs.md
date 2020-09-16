@@ -1,4 +1,5 @@
 ---
+description: 添加迷你图和数据条（报表生成器和 SSRS）
 title: 添加迷你图和数据条（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74db316bf1e8eb4d72f3419799f76e3c2742fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484955"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>添加迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是小的备用图，它包含一些额外细节，可以传递很多信息。 有关它们的详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
@@ -26,20 +27,20 @@ ms.locfileid: "77081528"
   
 2.  在您的表或矩阵中插入列。 有关详细信息，请参阅[插入或删除列（报表生成器和 SSRS）](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
-3.  在 **“插入”** 选项卡上，单击 **“迷你图”** 或 **“数据条”** ，然后单击新列中的单元。  
+3.  在 **“插入”** 选项卡上，单击 **“迷你图”** 或 **“数据条”**，然后单击新列中的单元。  
   
     > [!NOTE]  
     >  不能将迷你图放置于表的详细信息组中。 它们必须处于与组相关联的单元中。  
   
-4.  在“更改迷你图/数据条类型”  对话框中，单击所需的迷你图或数据条类型，然后单击“确定”  。  
+4.  在“更改迷你图/数据条类型”**** 对话框中，单击所需的迷你图或数据条类型，然后单击“确定”****。  
   
 5.  单击该迷你图或数据条。  
   
      将打开 **“图表数据”** 窗格。  
   
-6.  在“值”  区域中，单击“添加字段”  加号 ( **+** )，然后单击要将其值制成图表的字段。  
+6.  在“值”**** 区域中，单击“添加字段”**** 加号 (**+**)，然后单击要将其值制成图表的字段。  
   
-7.  在“类别组”  区域中，单击“添加字段”  加号 ( **+** )，然后单击要依据其值分组的字段。  
+7.  在“类别组”**** 区域中，单击“添加字段”**** 加号 (**+**)，然后单击要依据其值分组的字段。  
   
      对于迷你图和数据条，通常不向 **“序列组”** 区域添加字段，因为每行只需要一个序列。  
   

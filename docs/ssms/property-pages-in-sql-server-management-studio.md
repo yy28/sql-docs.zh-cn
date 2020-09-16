@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio 中的属性页
 title: SQL Server Management Studio 中的属性页
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c865561f66f9f40ce131e9b8dce563f77ca187aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b6e1d6d0b7f1b3910baa1a81e5fe1a682f6a9ed6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491800"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的属性页
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,5 +32,5 @@ ms.locfileid: "86001799"
 |**字母顺序**|按字母顺序列出所选对象的所有属性和属性值。|  
 |属性名称|网格中的第一列列出属性名称。|  
 |属性|网格中的第二列列出属性值。|  
-|说明窗格|说明窗格显示在属性页的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”  命令打开或关闭属性的说明。|  
+|说明窗格|说明窗格显示在属性页的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”**** 命令打开或关闭属性的说明。|  
   

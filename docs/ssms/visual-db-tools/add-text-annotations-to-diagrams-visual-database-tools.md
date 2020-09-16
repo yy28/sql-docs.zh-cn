@@ -1,4 +1,5 @@
 ---
+description: 向关系图中添加文本批注 (Visual Database Tools)
 title: 向关系图中添加文本批注
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e7b7ed1aaeb5e88532a349c8e8b0a64e1eb1f643
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 483d0a0043df5900f231943382e28740e004a96c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497250"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>向关系图中添加文本批注 (Visual Database Tools)
 
@@ -32,12 +33,12 @@ ms.locfileid: "86011585"
   
 2.  右键单击“关系图”窗口中的空白区域。  
   
-3.  在快捷菜单中单击“新建文本批注”  。  
+3.  在快捷菜单中单击“新建文本批注”****。  
   
 4.  在随后出现的文本字段中键入注释。  
   
 > [!NOTE]  
-> 若要更改字体，请右键单击该文本字段，再单击“设置文本批注字体”  。  
+> 若要更改字体，请右键单击该文本字段，再单击“设置文本批注字体”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

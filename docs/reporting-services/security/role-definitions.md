@@ -1,4 +1,5 @@
 ---
+description: 角色定义
 title: 角色定义 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 985ba6df5091c13ab4b91c7f2ba95b4c1484a584
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498050"
 ---
 # <a name="role-definitions"></a>角色定义
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，*角色定义*是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
@@ -27,7 +28,7 @@ ms.locfileid: "65570588"
  角色只有在角色分配中使用时才有效。 有关角色如何提供安全性的详细信息，请参阅 [角色分配](../../reporting-services/security/role-assignments.md)。  
   
 ## <a name="types-of-role-definitions"></a>角色定义的类型  
- 角色定义既可以是项级定义也可以是系统级定义。 “项级角色定义”  说明了与在报表服务器上存储和管理的项（如报表、文件夹和模型）相关的任务。 可以包含在项级角色定义中的任务如：管理报表、查看文件夹和管理单独的订阅。 “系统角色定义”  包含应用于整个站点的任务。 可以包含在系统角色中的任务如：查看报表服务器属性。  
+ 角色定义既可以是项级定义也可以是系统级定义。 “项级角色定义”** 说明了与在报表服务器上存储和管理的项（如报表、文件夹和模型）相关的任务。 可以包含在项级角色定义中的任务如：管理报表、查看文件夹和管理单独的订阅。 “系统角色定义” ** 包含应用于整个站点的任务。 可以包含在系统角色中的任务如：查看报表服务器属性。  
   
 ## <a name="predefined-roles"></a>预定义角色  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含与不同级别的用户交互所对应的预定义角色。 下面的列表包含可以使用的预定义角色：  

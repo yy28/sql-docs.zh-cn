@@ -1,4 +1,5 @@
 ---
+description: 在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
 title: 在“条件”窗格中组合搜索条件的约定
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 78fcb406bc6526a90f15fe2771352ac269fb8ab2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ae92bc88f3b18dcd195d857c1ccc975d116880f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491710"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -123,9 +124,9 @@ WHERE
   
 一般情况下，以下规则将决定 AND 和 OR 子句在“条件”窗格中的显示方式：  
   
--   所有用 AND 链接的条件都显示在“筛选器”  网格列中或同一个“或...”  列中。  
+-   所有用 AND 链接的条件都显示在“筛选器”**** 网格列中或同一个“或...”**** 列中。  
   
--   所有用 OR 链接的条件都显示在不同的“或...”  列中。  
+-   所有用 OR 链接的条件都显示在不同的“或...”**** 列中。  
   
 -   如果 AND 和 OR 子句组合的逻辑结果是将 AND 分布到多个 OR 子句中，则“条件”窗格将根据需要重复 AND 子句以明确地表示结果。  
   

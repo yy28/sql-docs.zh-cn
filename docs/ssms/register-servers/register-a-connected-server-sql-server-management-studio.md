@@ -1,4 +1,5 @@
 ---
+description: 注册连接的服务器 (SQL Server Management Studio)
 title: 注册连接的服务器
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,18 +16,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: ecc063b1dabf0ea1c2b440ae8848fb10418cdfda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bcac629eef24a68f66d1e7043f5cedb5ff8923e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497374"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>注册连接的服务器 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册已连接的服务器。 通过注册服务器，您可以保存经常访问的服务器的连接信息。 可以在连接前注册服务器，也可以在通过对象资源管理器进行连接时注册服务器。  可以通过从菜单导航到“视图”  \\“已注册的服务器  ，在 SSMS 中查看已注册的服务器。
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册已连接的服务器。 通过注册服务器，您可以保存经常访问的服务器的连接信息。 可以在连接前注册服务器，也可以在通过对象资源管理器进行连接时注册服务器。  可以通过从菜单导航到“视图”\\“已注册的服务器，在 SSMS 中查看已注册的服务器。
   
  **本主题内容**  
   
@@ -38,9 +39,9 @@ ms.locfileid: "86011803"
   
 #### <a name="to-register-a-connected-server"></a>注册连接的服务器  
   
-在对象资源管理器中，右键单击已经连接的服务器，然后单击“注册”  。
+在对象资源管理器中，右键单击已经连接的服务器，然后单击“注册”****。
   
-**服务器名称**  
+服务器名称  
 此字段默认为你连接到的服务器名称。  可以选择输入服务器名称或从下拉列表中选择一个。
 
 **身份验证**  

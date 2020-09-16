@@ -1,4 +1,5 @@
 ---
+description: Visual Database Tool 设计器
 title: Visual Database Tool 设计器
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 4d35ac179c26c768a3ffb7b9427b9ffeca1ad597
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 22a49dc4a6d4dbff64a0468c4caae5cadc4b16a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479947"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 设计器
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,9 +38,9 @@ Visual Database Tools 包含可用来处理数据源的多种设计工具。 您
 ## <a name="database-diagram-designer"></a>数据库关系图设计器  
 数据库关系图设计器提供了一个窗口，您可以在其中直观地创建、编辑和显示数据库中的表及关系。  
   
-若要显示数据库关系图设计器，请打开现有关系图，或右键单击对象资源管理器中的“数据库”节点并从下拉菜单上选择“新建数据库关系图”  。  
+若要显示数据库关系图设计器，请打开现有关系图，或右键单击对象资源管理器中的“数据库”节点并从下拉菜单上选择“新建数据库关系图”****。  
   
-设计器打开后，就会在主菜单上显示“数据库关系图”  菜单。 可通过此菜单访问设计器的特殊功能。  
+设计器打开后，就会在主菜单上显示“数据库关系图”**** 菜单。 可通过此菜单访问设计器的特殊功能。  
   
 > [!NOTE]  
 > 此设计器可与 Microsoft SQL Server 数据库配合使用。  
@@ -55,7 +56,7 @@ Visual Database Tools 包含可用来处理数据源的多种设计工具。 您
   
 在表设计器中，还可以通过在网格区域中右键单击来访问对话框，通过这些对话框可以创建和修改表的关系、约束、索引以及键。  
   
-若要显示表设计器，请打开一个现有表，或在对象资源管理器中右键单击“表”  节点，再从下拉菜单中选择“添加新表”  。  
+若要显示表设计器，请打开一个现有表，或在对象资源管理器中右键单击“表”**** 节点，再从下拉菜单中选择“添加新表”****。  
   
 设计器一旦打开，就会在主菜单上显示“表设计器”菜单。 可通过此菜单访问设计器的特殊功能。  
   
@@ -78,9 +79,9 @@ Visual Database Tools 包含可用来处理数据源的多种设计工具。 您
   
 视图设计器包含四个窗格：“关系图”窗格、“条件”窗格、“SQL”窗格和“结果”窗格。 有关上述各个窗格的详细信息，请参阅[查询和视图设计器工具 (Visual Database Tools)](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)。  
   
-若要显示视图设计器，请打开一个现有视图，或在对象资源管理器中右键单击“视图”  节点，再从下拉菜单中选择“添加新视图”  。  
+若要显示视图设计器，请打开一个现有视图，或在对象资源管理器中右键单击“视图”**** 节点，再从下拉菜单中选择“添加新视图”****。  
   
-打开该设计器后，就会在主菜单上显示“查询设计器”  菜单。 可通过此菜单访问设计器的特殊功能。  
+打开该设计器后，就会在主菜单上显示“查询设计器”**** 菜单。 可通过此菜单访问设计器的特殊功能。  
   
 > [!NOTE]  
 > 此设计器可与 Microsoft SQL Server 数据库配合使用。  

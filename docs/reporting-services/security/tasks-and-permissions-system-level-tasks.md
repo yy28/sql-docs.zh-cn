@@ -1,4 +1,5 @@
 ---
+description: 任务和权限 - 系统级任务
 title: 系统级任务 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f7ca906c8689c1bf8f40e79875acff5b7ab7c70
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 817c695a88cd40e761e5da807856d03658e05022
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497973"
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>任务和权限 - 系统级任务
   系统级任务是与应用于整个报表服务器站点的操作相关的权限的集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于特定项的项级任务。 有关详细信息，请参阅 [项级任务](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)。  

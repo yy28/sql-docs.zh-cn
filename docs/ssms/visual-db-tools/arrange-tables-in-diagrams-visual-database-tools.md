@@ -1,4 +1,5 @@
 ---
+description: 在关系图中排列表 (Visual Database Tools)
 title: 在关系图中排列表
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 7cb133b36d804a3d5a32906e2de735df20fb113f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eba464a7648151d24945e755c1f6432f12a699cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497260"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>在关系图中排列表 (Visual Database Tools)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85999530"
   
 1. 右键单击“数据库关系图”窗口的空白区域。  
   
-2. 在快捷菜单中，单击“排列表”  。  
+2. 在快捷菜单中，单击“排列表”****。  
   
 ## <a name="see-also"></a>另请参阅
 

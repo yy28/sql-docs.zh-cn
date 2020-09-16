@@ -1,4 +1,5 @@
 ---
+description: SQLServerClob 构造函数 (SQLServerConnection, java.lang.String)
 title: SQLServerClob 构造函数 (SQLServerConnection, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7a539ef893788be9e0200b9f412f8c3ed7652b26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7ea4bec9b1d3bc8ab297d548dfb8c94f4007d861
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478589"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob 构造函数 (SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,12 +39,12 @@ public SQLServerClob(SQLServerConnection connection,
                      java.lang.String data)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 连接   
+#### <a name="parameters"></a>参数  
+ 连接  
   
  SQLServerConnection 对象。  
   
- data   
+ *data*  
   
  CLOB 数据。  
   

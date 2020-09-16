@@ -1,4 +1,5 @@
 ---
+description: 映射多对多关系 (Visual Database Tools)
 title: 映射多对多关系
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 50c01f59a75c692e383ec368612a8850da4ba332
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5e70db23f7fb2e07855228204a8c1318c9eb0a2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479970"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "86011683"
   
 1.  在数据库关系图中，添加要在它们之间创建多对多关系的表。  
   
-2.  右键单击关系图，然后从快捷菜单中选择“新建表”  创建第三个表。 该表将成为联接表。  
+2.  右键单击关系图，然后从快捷菜单中选择“新建表”**** 创建第三个表。 该表将成为联接表。  
   
-3.  在“选择名称”  对话框中，更改系统分配的表名。 例如，`titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
+3.  在“选择名称”**** 对话框中，更改系统分配的表名。 例如，`titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
   
 4.  将其他两个表中的主键列复制到联接表中。 与任何其他表一样，您可以向此表中添加其他列。  
   

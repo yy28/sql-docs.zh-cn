@@ -1,4 +1,5 @@
 ---
+description: SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)
 title: SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cbfd4392572713e1c81fef07467842e18549e089
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80693f5720974bedc8c0d4dae13ed4bb24727980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480639"
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>ConfigurationSetting 方法 - SetExtendedProtectionSettings
   SetExtendedProtectionSettings 方法用于设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件 RSReportServer.config 中的 RSWindowsExtendedProtectionLevel 和 RSWindowsExtendedProtectionScenario 属性。  
@@ -38,7 +39,7 @@ public void SetExtendedProtectionSettings(
             out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *ExtendedProtectionLevel*  
  设置 RSRreportserver.config 文件中的 RSWindowsExtendedProtectionLevel。 必需值不区分大小写。  
   
@@ -53,7 +54,7 @@ public void SetExtendedProtectionSettings(
   
  `"Any" | "Proxy" | "Direct"`  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当 RSReportServer.config 文件中的 AuthenticationTypes 包括 RSWindowNTLM、RSWindowsNegotiate 或 RSWindowsKerberos 时，应用 RSWindowsExtendedProtectionLevel 和 RSWindowsExtendedProtectionScenario 属性。 设置这些属性将影响用户和客户端软件如何在报表服务器上进行身份验证。 建议你在将 ExtendedProtectionLevel 设置为 **Allow** 或 **Require**前阅读有关扩展保护的文档。  
   
  要设置 ExtendedProtectionLevel，用户必须是报表服务器上 BUILTIN\Administrators 组的成员。  

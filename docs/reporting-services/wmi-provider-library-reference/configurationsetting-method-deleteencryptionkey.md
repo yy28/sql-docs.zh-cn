@@ -1,4 +1,5 @@
 ---
+description: DeleteEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
 title: DeleteEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e40c53c5c46d37a996805105563b809ad278b9a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b34f0a58d8a0c65c71b353259c5445daea0c5e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497940"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>ConfigurationSetting 方法 - DeleteEncryptionKey
   从报表服务器数据库删除加密密钥。  
@@ -37,7 +38,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
     out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *InstallationID*  
  位于报表服务器数据库的密钥表中的报表服务器安装 ID。  
   

@@ -1,4 +1,5 @@
 ---
+description: 比较共享数据源和嵌入数据源 - 报表生成器和 Reporting Services (SSRS)
 title: 比较共享数据源和嵌入数据源 - 报表生成器和 Reporting Services | Microsoft Docs
 ms.date: 11/18/2019
 ms.prod: reporting-services
@@ -7,22 +8,22 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33e257659922e3e0dcf06f559838db0c58f0b18e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 25721242123d34c1cb4b826cd937df2decf02523
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484988"
 ---
 # <a name="compare-shared-and-embedded-data-sources---report-builder--reporting-services-ssrs"></a>比较共享数据源和嵌入数据源 - 报表生成器和 Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
  
-可以使用共享或嵌入数据源连接到数据。 共享数据源  的定义独立于任何报表。 可以在报表服务器或 SharePoint 站点上的多个报表中使用它。 在报表中定义嵌入数据源  。 只能在报表中使用它。 
+可以使用共享或嵌入数据源连接到数据。 共享数据源** 的定义独立于任何报表。 可以在报表服务器或 SharePoint 站点上的多个报表中使用它。 在报表中定义嵌入数据源**。 只能在报表中使用它。 
 
  如果您的数据源使用频率较高，就可以采用共享数据源。 建议尽量创建和使用共享数据源。 使用共享数据源可便于对报表和报表访问进行管理，并有助于提高报表和报表所访问数据源的访问安全性。 如果需要共享数据源，需要请求系统管理员为你创建一个。  
   
- 嵌入数据源（也称为报表特定数据源  ）是保存在报表定义中的数据连接。 只有嵌入数据源连接信息所嵌入的报表才能使用这些信息。 若要定义并管理嵌入数据源，请使用 **“数据源属性”** 对话框。  
+ 嵌入数据源（也称为报表特定数据源**）是保存在报表定义中的数据连接。 只有嵌入数据源连接信息所嵌入的报表才能使用这些信息。 若要定义并管理嵌入数据源，请使用 **“数据源属性”** 对话框。  
   
  嵌入数据源和共享数据源的区别在于创建、存储和管理它们的方式不同。  
   

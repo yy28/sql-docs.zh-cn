@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914885"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512333"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "86914885"
   
 10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http:*//server/reportserver* 或 https:*//server/reportserver*）。 这是报表服务器的虚拟目录，而不是 Web 门户的虚拟目录。  
   
-     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 <https://*servername*>、<https://*servername*/*site*> 或 <https://*servername*/*site*/*subsite*>）。  
+     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 `https://*servername*`、`https://*servername*/*site*` 或 `https://*servername*/*site*/*subsite*`）。  
   
 ## <a name="to-set-configuration-manager-properties"></a>设置配置管理器属性  
   

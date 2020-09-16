@@ -1,4 +1,5 @@
 ---
+description: 在 SQL Server 故障转移群集中承载报表服务器数据库
 title: 在 SQL Server 故障转移群集中承载报表服务器数据库 | Microsoft Docs
 ms.date: 03/30/2016
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: edef2cd21dacb5911a37a6a1f46afd17e76e57be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1bceb380b1c21f717ba6e20fd6a41c78cc393dba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492663"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集中承载报表服务器数据库
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对故障转移群集的支持，用户可以针对一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用多个磁盘。 对故障转移群集的支持仅限于报表服务器数据库；您不能将报表服务器服务作为故障转移群集的一部分运行。  

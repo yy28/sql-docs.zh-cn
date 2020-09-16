@@ -1,4 +1,5 @@
 ---
+description: 创建或编辑服务器组 (SQL Server Management Studio)
 title: 创建或编辑服务器组
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: eb39627de23f236dcd3a7241f83883b747353501
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ecf61bca3e0780aefedb989ab0d7bd3ead83a3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480139"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>创建或编辑服务器组 (SQL Server Management Studio)
 
@@ -36,16 +37,16 @@ ms.locfileid: "86001745"
 
 1. 在已注册的服务器中，单击“已注册的服务器”工具栏上的服务器类型。 如果“已注册的服务器”不可见，请在 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
 
-2. 右键单击某服务器或服务器组，指向“新建”  ，然后单击“服务器组”  。  
+2. 右键单击某服务器或服务器组，指向“新建”****，然后单击“服务器组”****。  
 
 3. 在 **“新建服务器组”** 对话框的 **“组名”** 列表框中，键入服务器组的唯一名称。 在“已注册的服务器”树中的当前位置，服务器组名必须唯一。
 
 4. 在 **“组说明”** 列表框中，选择性地键入一个描述服务器组的友好名称，例如，“Finance Servers for Latin America”。  
 
-5. 在 **“选择新服务器组的位置”** 框中，单击一个用于存放该组的位置，再单击 **“保存”** 。  
+5. 在 **“选择新服务器组的位置”** 框中，单击一个用于存放该组的位置，再单击 **“保存”**。  
 
    > [!NOTE]
-   > 注册服务器时，还可以通过单击“新建组”  并完成“新建组”  对话框，创建新服务器组。  
+   >  注册服务器时，还可以通过单击 **“新建组”** 并完成 **“新建组”** 对话框，创建新服务器组。  
 
 ## <a name="see-also"></a>另请参阅
 

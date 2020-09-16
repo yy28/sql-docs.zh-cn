@@ -1,4 +1,5 @@
 ---
+description: 创建列别名 (Visual Database Tools)
 title: 创建列别名
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: c4feb18b5f01b1e999ecec5b5b8e022230912d8f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53d94906857c8a2e8c272d99f6545ee2eadb99f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480041"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>创建列别名 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,9 +33,9 @@ ms.locfileid: "85977818"
   
 ### <a name="to-create-a-column-alias"></a>创建列别名  
   
-1.  在“条件”  窗格中，找到包含要为其创建别名的数据列的行，如果需要，还可将其标记为输出。 如果该数据列不在网格中，则将其添加到网格中。  
+1.  在“条件”**** 窗格中，找到包含要为其创建别名的数据列的行，如果需要，还可将其标记为输出。 如果该数据列不在网格中，则将其添加到网格中。  
   
-2.  在该行的“别名”  列中，输入别名。 别名必须遵循 SQL 的所有命名约定。 如果输入的别名包含空格，则查询和视图设计器将自动在其两旁放置分隔符。  
+2.  在该行的“别名”**** 列中，输入别名。 别名必须遵循 SQL 的所有命名约定。 如果输入的别名包含空格，则查询和视图设计器将自动在其两旁放置分隔符。  
   
 ## <a name="see-also"></a>另请参阅  
 [向查询中添加列 (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  

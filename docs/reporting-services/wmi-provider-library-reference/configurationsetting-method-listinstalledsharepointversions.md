@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 方法 - ListInstalledSharePointVersions
 title: ListInstalledSharePointVersions 方法 (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88bc977ae684351227017e81793cb48749b454e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3305eb8e802dbebc39960105813a58ea16ab3055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480669"
 ---
 # <a name="configurationsetting-method---listinstalledsharepointversions"></a>ConfigurationSetting 方法 - ListInstalledSharePointVersions
   返回一组标记，表示与报表服务器安装在同一台计算机上的 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 版本。  
@@ -32,7 +33,7 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
     out Int32 Length, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *VersionTokens[]*  
  [out] 一个包含表示 SharePoint 产品或技术的版本的标记的数组，该版本与安装的报表服务器兼容。  
   

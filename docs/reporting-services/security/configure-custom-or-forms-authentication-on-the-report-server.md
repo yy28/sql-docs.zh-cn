@@ -1,4 +1,5 @@
 ---
+description: 在报表服务器上配置自定义身份验证或窗体身份验证
 title: 在报表服务器上配置自定义身份验证或窗体身份验证 | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492620"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
 
@@ -35,7 +36,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
 
 1.  在文本编辑器中打开 RSReportServer.config。
 
-2.  查找 \<Authentication>  。
+2.  查找 \<**Authentication**>。
 
 3.  复制以下 XML 结构：
 
@@ -48,7 +49,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
     </Authentication>
     ```
 
-4.  将其粘贴在 \<> 的现有条目上  。
+4.  将其粘贴在 \<**Authentication**> 的现有条目上。
 
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。
 

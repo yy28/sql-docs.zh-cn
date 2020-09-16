@@ -1,4 +1,5 @@
 ---
+description: 使用筛选器函数选择要迁移的行 (Stretch Database)
 title: 使用筛选器函数选择要迁移的行
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492599"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用筛选器函数选择要迁移的行 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   如果在单独的某个表中存储了冷数据，则可以将 Stretch Database 配置为迁移整个表。 另一方面，如果表中包含热数据和冷数据，则可以指定筛选器谓词以选择要迁移的行。 筛选器谓词是一个内联表值函数。 本文介绍如何编写内联表值函数以选择要迁移的行。  
@@ -58,7 +59,7 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="return-value"></a>返回值  
  如果该函数返回非空结果，则该行符合迁移条件。 否则（也就是说，如果该函数未返回结果），该行不符合迁移条件。  
   
-### <a name="conditions"></a>条件  
+### <a name="conditions"></a>Conditions  
  &lt;*谓词*&gt; 可以包含一个条件，或使用 AND 逻辑运算符联接的多个条件。  
   
 ```  
@@ -84,7 +85,7 @@ RETURN  SELECT 1 AS is_eligible
   
 ```  
   
--   将函数参数与常量表达式进行比较。 例如，`@column1 < 1000` 。  
+-   将函数参数与常量表达式进行比较。 例如，`@column1 < 1000`。  
   
      以下示例会检查 *date* 列的值是否 &lt; 1/1/2016。  
   
@@ -138,13 +139,13 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>常量表达式  
  在筛选器函数中使用的常量可以是定义函数时可以计算的任何确定性表达式。 常量表达式可以包含以下内容。  
   
--   文字。 例如，`N'abc', 123` 。  
+-   文字。 例如，`N'abc', 123`。  
   
--   代数表达式。 例如，`123 + 456` 。  
+-   代数表达式。 例如，`123 + 456`。  
   
--   确定性函数。 例如，`SQRT(900)` 。  
+-   确定性函数。 例如，`SQRT(900)`。  
   
--   使用 CAST 或 CONVERT 的确定性转换。 例如，`CONVERT(datetime, '1/1/2016', 101)` 。  
+-   使用 CAST 或 CONVERT 的确定性转换。 例如，`CONVERT(datetime, '1/1/2016', 101)`。  
   
 ### <a name="other-expressions"></a>其他表达式  
  如果在将 BETWEEN 和 NOT BETWEEN 运算符替换为等效的 AND 和 OR 表达式后，生成的函数符合本文所述的规则，则可以使用这些 BETWEEN 和 NOT BETWEEN 运算符。  
@@ -199,7 +200,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>运行向导后添加筛选器函数  
   
-如果想要使用无法在“启用数据库延伸”向导中创建的函数  ，请退出向导，然后运行 **ALTER TABLE** 语句以指定函数。 但是，在应用函数之前，必须停止已在进行的数据迁移并取回已迁移的数据。 （有关其必要性的原因的详细信息，请参阅 [替换现有的筛选器函数](#replacePredicate)。）
+如果想要使用无法在“启用数据库延伸”向导中创建的函数****，请退出向导，然后运行 **ALTER TABLE** 语句以指定函数。 但是，在应用函数之前，必须停止已在进行的数据迁移并取回已迁移的数据。 （有关其必要性的原因的详细信息，请参阅 [替换现有的筛选器函数](#replacePredicate)。）
   
 1. 反向迁移和取回已迁移的数据。 启动此操作后将无法取消此操作。 由于出站数据传输（流出），所以也会在 Azure 上产生成本。 有关详细信息，请参阅 [Azure 定价方式](https://azure.microsoft.com/pricing/details/data-transfers/)。  
   

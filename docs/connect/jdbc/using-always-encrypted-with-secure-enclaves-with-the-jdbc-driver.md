@@ -1,4 +1,5 @@
 ---
+description: 将具有安全 Enclave 的 Always Encrypted 与 JDBC 驱动程序结合使用
 title: 将具有安全 Enclave 的 Always Encrypted 与 JDBC 驱动程序结合使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2020
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
-ms.openlocfilehash: 8933d01f8c1bb0e028927b1c0f97f064a369bb8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8035e1d5890bf51d80341f740436d586053d4e90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487918"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver"></a>将具有安全 Enclave 的 Always Encrypted 与 JDBC 驱动程序结合使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

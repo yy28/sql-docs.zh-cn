@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio 键盘快捷键
 title: SQL Server Management Studio 键盘快捷键
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -20,27 +21,27 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 14bc7634ab3b8b3ad54f8544dc694bb955bd55ce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 07d226897f2d3dd23d8f4a8a91d0ad7153df4519
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497300"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”** 。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
   
 > [!NOTE]  
->  若要仅显示标题，请单击此页顶部的“全部折叠”  。  
+>   若要仅显示标题，请单击此页顶部的 **“全部折叠”** 。  
   
 ## <a name="menu-activation-keyboard-shortcuts"></a>菜单激活键盘快捷键  
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|移到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 菜单栏|Alt|Alt|  
+|移到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 菜单栏|Alt|ALT|  
 |激活工具组件的菜单|Alt+连字符|Alt+连字符|  
 |显示上下文菜单|Shift+F10|Shift+F10|  
 |显示 **“新建文件”** 对话框以创建文件。|Ctrl+N|Ctrl+N|  
@@ -50,16 +51,16 @@ ms.locfileid: "86001612"
 |显示 **“添加新项”** 对话框，用于向当前项目添加新文件|Ctrl+Shift+A|Ctrl+Shift+A|  
 |显示 **“添加现有项”** 对话框，用于向当前项目添加现有文件|SHIFT+ALT+A|SHIFT+ALT+A|  
 |显示查询设计器|Ctrl+Shift+Q|Ctrl+Shift+Q|  
-|关闭菜单或对话框，取消操作|Esc|Esc|  
+|关闭菜单或对话框，取消操作|Esc|ESC|  
   
 ## <a name="windows-management-and-toolbar-keyboard-shortcuts"></a>窗口管理和工具栏键盘快捷键  
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |关闭当前 MDI 子窗口|Ctrl+F4|Ctrl+F4|  
-|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前文档窗口|Esc|Esc|  
-|Print|Ctrl+P|Ctrl+P|  
-|退出|Alt+F4|Alt+F4|  
+|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前文档窗口|Esc|ESC|  
+|打印|Ctrl+P|Ctrl+P|  
+|退出|Alt+F4|Alt + F4|  
 |切换全屏模式|Shift+Alt+Enter|Shift+Alt+Enter|  
 |关闭当前工具窗口|Shift+Esc|Shift+Esc|  
 |循环显示下一个 MDI 子窗口|Ctrl+F6|Ctrl+Tab|  
@@ -77,12 +78,12 @@ ms.locfileid: "86001612"
 |显示一个弹出窗口，其中列出所有打开的窗口|Ctrl+Alt+向下键|无等效项|  
 |打开一个新的查询编辑器窗口|Ctrl+O|Ctrl+O|  
 |显示对象资源管理器|F8|F8|  
-|显示已注册的服务器|Ctrl+Alt+G|Ctrl+Alt+G|  
+|显示已注册的服务器|Ctrl+Alt+G|CTRL+ALT+G|  
 |显示模板资源管理器|Ctrl+Alt+T|Ctrl+Alt+T|  
 |显示解决方案资源管理器|Ctrl+Alt+L|Ctrl+Alt+L|  
 |显示摘要窗口|F7|F7|  
 |显示属性窗口|F4|F4|  
-|显示 **“输出”** 窗口|Ctrl+Alt+O|无等效项|  
+|显示 **“输出”** 窗口|CTRL+ALT+O|无等效项|  
 |显示 **“任务列表”** 窗口|CTRL+\\，T<br /><br /> 或<br /><br /> CTRL+\\，CTRL+T|Ctrl+Alt+K|  
 |在对象资源管理器的详细信息列表视图和对象资源管理器的详细信息属性窗格之间切换。|F6|F6|  
 |控制拆分栏，拆分栏用于分隔对象资源管理器的详细信息列表视图和对象资源管理器的详细信息属性窗格，以便调整显示窗格的大小。|TAB，然后是上箭头或下箭头|TAB，然后是上箭头或下箭头|  
@@ -104,7 +105,7 @@ ms.locfileid: "86001612"
 |上移光标|向上键|向上键|  
 |下移光标|向下键|向下键|  
 |将光标移到行首|Home|Home|  
-|将光标移到行尾|END|END|  
+|将光标移到行尾|END|End|  
 |将光标移到文档开头|Ctrl+Home|Ctrl+Home|  
 |将光标移到文档末尾|Ctrl+End|Ctrl+End|  
 |将光标上移一个屏幕|Page Up|Page Up|  
@@ -129,22 +130,22 @@ ms.locfileid: "86001612"
 |将光标到行的末尾并扩展列选择范围。|Shift+Alt+END|无等效项|  
 |从光标开始向下逐行选择文本|Shift+向下键|Shift+向下键|  
 |将光标下移一行并扩展列选择范围|Shift+Ctrl+Shift+Del||  
-|将光标左移一个字符，并且扩展选择范围|Shift+向左键|无等效项|  
+|将光标左移一个字符，并且扩展选择范围|SHIFT + 向左键|无等效项|  
 |将光标左移一个字符，并且扩展列选择范围|Shift+Alt+向左键|无等效项|  
-|将光标右移一个字符，并且扩展选择范围|Shift+向右键|无等效项|  
+|将光标右移一个字符，并且扩展选择范围|SHIFT + 向右键|无等效项|  
 |将光标右移一个字符，并且扩展列选择范围|Shift+Alt+向右键|无等效项|  
 ||||  
-|从光标开始向上逐行选择文本|Shift+向上键|Shift+向上键|  
+|从光标开始向上逐行选择文本|Shift+向上键|SHIFT + 向上键|  
 |将光标上移一行，扩展选择范围|Shift+Alt+向上键|Shift+Alt+向上键|  
 |将选定范围向上扩展一页|Shift+Page Up|Shift+Page Up|  
 |将选择范围向下扩展一页|Shift+Page Down|Shift+Page Down|  
-|选择整个当前文档|CTRL+A|CTRL+A|  
+|选择整个当前文档|CTRL+A|CTRL + A|  
 |选择包含光标的字或最近的字|Ctrl+W|Ctrl+W|  
 |选择编辑器中的当前位置，返回编辑器中的上一位置|Ctrl+=|Ctrl+=|  
 |将选择范围扩展到当前窗口的顶部|Ctrl+Shift+Page Up|Ctrl+Shift+Page Up|  
 |将光标移到视图中的最后一行，扩展选择范围|Ctrl+Shift+Page Down|Ctrl+Shift+Page Down|  
 |将选定范围向右扩展一个字|Ctrl+Shift+向右键|Ctrl+Shift+向右键|  
-|将选择范围向左扩展一个字|Ctrl+Shift+向左键|Ctrl+Shift+向左键|  
+|将所选内容向左扩展一个单词|Ctrl+Shift+向左键|Ctrl+Shift+向左键|  
 |将光标右移一个字，扩展选择范围|Ctrl+Shift+Alt+向右键|Ctrl+Shift+Alt+向右键|  
 |将光标左移一个字，扩展选择范围|Ctrl+Shift+Alt+向左键|Ctrl+Shift+Alt+向左键|  
 |将光标移至下一个大括号，扩展选择范围|Ctrl+Shift+]|无等效项|  
@@ -172,8 +173,8 @@ ms.locfileid: "86001612"
 |------------|-----------------------------|---------------------------------|  
 |折叠树节点|-（位于数字键盘）|-（位于数字键盘）|  
 |展开所有树节点|*（位于数字键盘）|*（位于数字键盘）|  
-|在窗口中向上滚动树控件|Ctrl+向上键|Ctrl+向上键|  
-|在窗口中向下滚动树控件|Ctrl+向下键|Ctrl+向下键|  
+|在窗口中向上滚动树控件|Ctrl+向上键|CTRL + 向上箭头|  
+|在窗口中向下滚动树控件|Ctrl+向下键|CTRL + 向下箭头|  
   
 ## <a name="code-editor-keyboard-shortcuts"></a>代码编辑器键盘快捷键  
  并非在所有类型的代码编辑器都实现了所有快捷键。  
@@ -181,15 +182,15 @@ ms.locfileid: "86001612"
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |切换全屏显示|Shift+Alt+Enter|Shift+Alt+Enter|  
-|向上滚动一行文本|Ctrl+向上键|Ctrl+向上键|  
-|向下滚动一行文本|Ctrl+向下键|Ctrl+向下键|  
+|向上滚动一行文本|Ctrl+向上键|CTRL + 向上箭头|  
+|向下滚动一行文本|CTRL + 向下箭头|Ctrl+向下键|  
 |撤消上一个编辑操作|CTRL+Z<br /><br /> 或<br /><br /> Alt+退格键|CTRL+Z|  
 |恢复上一个撤消的操作|Ctrl+Shift+Z<br /><br /> 或<br /><br /> Ctrl+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 或<br /><br /> Ctrl+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|  
 |保存选定项|Ctrl+S|Ctrl+S|  
 |全部保存|Ctrl+Shift+S|Ctrl+Shift+S|  
 |关闭|Ctrl+F4|Ctrl+F4|  
-|Print|Ctrl+P|Ctrl+P|  
-|退出|Alt+F4|Alt+F4|  
+|打印|Ctrl+P|Ctrl+P|  
+|退出|Alt+F4|Alt + F4|  
 |在浏览器中打开当前文件|Ctrl+Shift+W|无等效项|  
 |删除当前文件中的所有文本|Ctrl+Shift+Del|Ctrl+Shift+Del|  
 |显示 **“转到行”** 对话框|Ctrl+G|Ctrl+G|  
@@ -221,15 +222,15 @@ ms.locfileid: "86001612"
 |运行 **sp_help** 系统存储过程|Alt+F1|Alt+F1|  
 |运行 **sp_who** 系统存储过程|CTRL+1|CTRL+1|  
 |运行 **sp_lock** 系统存储过程|Ctrl+2|Ctrl+2|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|CTRL+3|CTRL+3|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+4|Ctrl+4|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+5|Ctrl+5|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+6|Ctrl+6|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+8|Ctrl+8|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+9|Ctrl+9|  
-|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+0|Ctrl+0|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|CTRL+3|CTRL+3|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+4|Ctrl+4|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+5|Ctrl+5|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+6|Ctrl+6|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+8|Ctrl+8|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+9|Ctrl+9|  
+|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+0|Ctrl+0|  
   
 ## <a name="text-manipulation-in-code-editor-keyboard-shortcuts"></a>代码编辑器中的文本操作键盘快捷键  
   
@@ -274,14 +275,14 @@ ms.locfileid: "86001612"
 |------------|-----------------------------|---------------------------------|  
 |开始或继续调试|Alt+F5|Alt+F5|  
 |停止调试|Shift+F5|Shift+F5|  
-|逐语句|F11|F11|  
+|“单步执行”|F11|F11|  
 |逐过程|F10|F10|  
-|跳出|SHIFT+F11|SHIFT+F11|  
+|单步跳出|SHIFT+F11|SHIFT+F11|  
 |单步执行特定语句|Shift+Alt+F11|无等效项|  
 |设置下一语句|Ctrl+3 0|无等效项|  
 |显示下一语句|Alt+NUM|无等效项|  
 |执行 **“运行至光标处”** 命令|Ctrl+F10|Ctrl+F10|  
-|显示 **“快速监视”** 对话框|Ctrl+Alt+Q<br /><br /> 或<br /><br /> Shift+F9|Ctrl+Alt+Q|  
+|显示 **“快速监视”** 对话框|Ctrl+Alt+Q<br /><br /> 或<br /><br /> SHIFT+F9|Ctrl+Alt+Q|  
 |切换断点|F9|F9|  
 |启用断点|Ctrl+F9|无等效项|  
 |删除断点。 仅在 **“断点”** 窗口中可用|Alt+F9、D|无等效项|  
@@ -290,13 +291,13 @@ ms.locfileid: "86001612"
 |显示 **“断点”** 窗口|Ctrl+Alt+B|Ctrl+Alt+B|  
 |全部中断|Ctrl+Alt+Break|Ctrl+Alt+Break|  
 |遇到函数时断开|Ctrl+B|无等效项|  
-|显示“监视 1”  窗口|CTRL+ALT+W, 1|无等效项|  
-|显示“监视 2”  窗口|CTRL+ALT+W, 2|CTRL+ALT+W, 1|  
-|显示“监视 3”  窗口|CTRL+ALT+W, 3|CTRL+ALT+W, 3|  
+|显示“监视 1” **** 窗口|CTRL+ALT+W, 1|无等效项|  
+|显示“监视 2” **** 窗口|CTRL+ALT+W, 2|CTRL+ALT+W, 1|  
+|显示“监视 3” **** 窗口|CTRL+ALT+W, 3|CTRL+ALT+W, 3|  
 |显示 **“监视4”** 窗口|Ctrl+Alt+W，4|Ctrl+Alt+W，4|  
-|显示 **“自动变量”** 窗口|Ctrl+Alt+V，A|Ctrl+Alt+V，A|  
+|显示 **“自动变量”** 窗口|Ctrl+Alt+V，A|CTRL+ALT+V、A|  
 |显示 **“局部变量”** 窗口|Ctrl+Alt+V，L|Ctrl+Alt+V，L|  
-|显示 **“即时”** 窗口|Ctrl+Alt+I|Ctrl+Alt+I|  
+|显示 **“即时”** 窗口|Ctrl+Alt+I|CTRL+ALT+I|  
 |显示 **“调用堆栈”** 窗口|Ctrl+Alt+C|Ctrl+Alt+C|  
 |显示 **“线程”** 窗口|Ctrl+Alt+H|Ctrl+Alt+H|  
 |显示 **“并行堆栈”** 窗口。|Ctrl+Shift+D、S|无等效项|  
@@ -324,13 +325,13 @@ ms.locfileid: "86001612"
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|切换全屏模式|Shift+Alt+Enter|Shift+Alt+Enter|  
+|切换全屏显示模式|Shift+Alt+Enter|Shift+Alt+Enter|  
 |移到文档拆分窗格视图的下一个窗格|F6|F6|  
 |移到编辑器或设计器中的上一个文档|Ctrl+Shift+F6<br /><br /> Ctrl+Shift+Tab|Ctrl+Shift+F6<br /><br /> Ctrl+Shift+Tab|  
 |移到拆分窗格视图中的上一个文档窗格|Shift+F6|Shift+F6|  
 |后退，显示查看历史记录中的上一页|Alt+向左键|Alt+向左键|  
 |前进，显示查看历史记录中的下一页|Alt+向右键|Alt+向右键|  
-|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前窗口中|Esc|无等效项|  
+|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前窗口中|ESC|无等效项|  
   
 ## <a name="solution-explorer-keyboard-shortcuts"></a>解决方案资源管理器键盘快捷键  
   
@@ -387,7 +388,7 @@ ms.locfileid: "86001612"
 |剪切（删除当前选定项并将其放入剪贴板）|Ctrl+X<br /><br /> 或<br /><br /> Shift+Delete|Ctrl+X<br /><br /> 或<br /><br /> Shift+Delete|  
 |剪切所有所选行，或者剪切当前行（如果没有选定任何内容）。|Ctrl+L<br /><br /> 或<br /><br /> CTRL+SHIFT+L|无等效项|  
 |复制到剪贴板|Ctrl+C<br /><br /> 或<br /><br /> Ctrl+Insert|Ctrl+C<br /><br /> 或<br /><br /> Ctrl+Insert|  
-|在插入点从剪贴板粘贴|CTRL+V<br /><br /> 或<br /><br /> Shift+Insert|CTRL+V<br /><br /> 或<br /><br /> Shift+Insert|  
+|在插入点从剪贴板粘贴|Ctrl+V<br /><br /> 或<br /><br /> Shift+Insert|Ctrl+V<br /><br /> 或<br /><br /> Shift+Insert|  
 |从剪贴板环在插入点处粘贴某一项并且自动选择粘贴的项|Ctrl+Shift+V<br /><br /> 或<br /><br /> Ctrl+Shift+Insert|无等效项|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>日志查看器键盘快捷键  
@@ -454,10 +455,10 @@ ms.locfileid: "86001612"
 |在设计图面上以 8 为增量向左移动所选控件|向左键|无等效项|  
 |在设计图面上以 8 为增量向右移动所选控件|向右键|无等效项|  
 |在设计图面上以 8 为增量向上移动所选控件|向上键|无等效项|  
-|以 8 为增量增加所选控件的高度|Shift+向下键|无等效项|  
-|以 8 为增量减少所选控件的宽度|Shift+向左键|无等效项|  
-|以 8 为增量增加所选控件的宽度|Shift+向右键|无等效项|  
-|以 8 为增量减少所选控件的高度|Shift+向上键|无等效项|  
+|以 8 为增量增加所选控件的高度|SHIFT + 向下键|无等效项|  
+|以 8 为增量减少所选控件的宽度|SHIFT + 向左键|无等效项|  
+|以 8 为增量增加所选控件的宽度|SHIFT + 向右键|无等效项|  
+|以 8 为增量减少所选控件的高度|SHIFT + 向上键|无等效项|  
 |移到页面上的下一个控件|Tab|无等效项|  
 |移到页面上的上一个控件|Shift+Tab|无等效项|  
 |在设计图面上显示网格|Enter|无等效项|  

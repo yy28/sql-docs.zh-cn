@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 属性 - IsSharePointIntegrated
 title: IsSharePointIntegrated 属性 (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bac72cf23cfebf48f58b24bea0b50aa9033bf5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 628212c9538b3a2efea08b0fdfb5def7fe017e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497900"
 ---
 # <a name="configurationsetting-property---issharepointintegrated"></a>ConfigurationSetting 属性 - IsSharePointIntegrated
   指定报表服务器是否处于 SharePoint 集成模式。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，此属性将始终返回 **False** ，因为在 SharePoint 模式下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例为 SharePoint 共享服务，且不受 WMI 提供程序的控制。  

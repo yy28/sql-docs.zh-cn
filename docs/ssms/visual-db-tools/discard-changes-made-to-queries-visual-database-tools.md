@@ -1,4 +1,5 @@
 ---
+description: 放弃对查询所做的更改 (Visual Database Tools)
 title: 放弃对查询所做的更改
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 895bc5a3f68d36b4948d5697a901e6b4711025ec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6df4797bab17deec42e0d5657633f0d48304d80a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480019"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>放弃对查询所做的更改 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,15 +31,15 @@ ms.locfileid: "85999701"
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>放弃对查询定义所做的更改  
   
-1.  如果该查询已经在查询和视图设计器中打开，请在“文件”  菜单中，单击“关闭”  。  
+1.  如果该查询已经在查询和视图设计器中打开，请在“文件”**** 菜单中，单击“关闭”****。  
   
-2.  在“Microsoft SQL Server Management Studio”  对话框中，单击“否”  。  
+2.  在“Microsoft SQL Server Management Studio”**** 对话框中，单击“否”****。  
   
     查询定义将返回到上次保存时的状态。  
   
 ## <a name="see-also"></a>另请参阅  
 [保存查询](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[设计查询和查看操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[有关设计查询和视图的操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [执行基本的查询操作](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [使用“结果”窗格中的数据](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

@@ -2,19 +2,19 @@
 title: 应用部署扩展
 titleSuffix: SQL Server big data clusters
 description: 在 SQL Server 大数据群集上部署 Python 或 R 脚本作为应用程序。
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6698e3beee1df32f6b88fcde2c034f60a4e56f21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728866"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680592"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>如何使用 Visual Studio Code 将应用程序部署到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -155,7 +155,7 @@ azdata bdc endpoint list
 
 ![Swagger](media/vs-extension/swagger.png)
 
-有关详细信息，请参阅[在大数据群集上使用应用程序](big-data-cluster-consume-apps.md)。
+有关详细信息，请参阅[在大数据群集上使用应用程序](app-consume.md)。
 
 ### <a name="app-run"></a>应用运行
 
@@ -199,7 +199,7 @@ azdata bdc endpoint list
 
 ## <a name="next-steps"></a>后续步骤
 
-如需了解如何将部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的应用集成到自己的应用程序中，请参阅[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)获取详细信息。 也可以参考[应用部署示例](https://aka.ms/sql-app-deploy)中的其他示例来试用扩展。
+如需了解如何将部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的应用集成到自己的应用程序中，请参阅[使用大数据群集上的应用程序](app-consume.md)获取详细信息。 也可以参考[应用部署示例](https://aka.ms/sql-app-deploy)中的其他示例来试用扩展。
 
 有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
 

@@ -1,4 +1,5 @@
 ---
+description: 安全对象
 title: 安全对象项 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b55265887b8d824e5e7d90d0fb2108efcf75fdb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fd4b92dcacf94e2a0196f210050954a84c1ac3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498010"
 ---
 # <a name="securable-items"></a>安全对象
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的安全性来控制对报表服务器上存储的项的访问权限。 通常通过创建一对角色分配来向用户授予对报表服务器的访问权限：  
@@ -31,7 +32,7 @@ ms.locfileid: "65570613"
   
  您可以通过为各个项定义安全性来覆盖权限继承。 可以单独保护的项包括：  
   
--   Folders  
+-   文件夹  
   
 -   报表  
   
@@ -41,7 +42,7 @@ ms.locfileid: "65570613"
   
 -   共享数据源  
   
--   共享数据集  
+-   共享的数据集  
   
  其他构造（例如计划和订阅）不能明确地定义安全性。 计划和订阅是在报表的安全性之下运行的。  
   
@@ -50,12 +51,12 @@ ms.locfileid: "65570613"
   
 |Item|特征|  
 |----------|---------------------|  
-|Folders|文件夹的安全性应用于文件夹本身及其包含的项。 主文件夹是文件夹层次结构的根节点。 对这一文件夹设置的安全性为文件夹层次结构中的所有从属文件夹、报表、资源和共享数据源建立了初始安全设置。 有关详细信息，请参阅 [保护文件](../../reporting-services/security/secure-folders.md)。<br /><br /> “我的报表”是一种特殊用途的文件夹，通过基于专用角色的隐含角色分配来设置安全性。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。|  
+|文件夹|文件夹的安全性应用于文件夹本身及其包含的项。 主文件夹是文件夹层次结构的根节点。 对这一文件夹设置的安全性为文件夹层次结构中的所有从属文件夹、报表、资源和共享数据源建立了初始安全设置。 有关详细信息，请参阅 [保护文件](../../reporting-services/security/secure-folders.md)。<br /><br /> “我的报表”是一种特殊用途的文件夹，通过基于专用角色的隐含角色分配来设置安全性。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。|  
 |报表|您可以设置报表和链接报表的安全性，以控制用户可执行的操作的范围，如更改给定报表的属性。<br /><br /> 报表历史记录通过包含相应历史记录的报表来设置安全性。 您不能对报表历史记录中的单个快照设置安全性。<br /><br /> 有关报表安全的详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。|  
 |报表模型|您可为整个或部分报表模型指定角色分配。 因为报表模型可能非常大，您可能会需要为映射到机密数据的模型项设置安全性。|  
 |资源|您可以设置资源的安全性，以控制对资源本身及其属性的访问。<br /><br /> 只有独立的资源才能作为单独的项设置安全性。 嵌入到报表中的资源不能独立于报表之外单独设置安全性。<br /><br /> 有关资源安全的详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。|  
 |共享数据源|您可以设置共享数据源的安全性，以限制对该项及其属性页的访问。 有关详细信息，请参阅 [保护共享数据源项](../../reporting-services/security/secure-shared-data-source-items.md)。|  
-|共享数据集|您可以设置共享数据集的安全性，以控制用户可执行的操作的范围，例如查看或更改定义，或者更改给定共享数据集的属性。<br /><br /> 有关详细信息，请参阅 [保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。|  
+|共享的数据集|您可以设置共享数据集的安全性，以控制用户可执行的操作的范围，例如查看或更改定义，或者更改给定共享数据集的属性。<br /><br /> 有关详细信息，请参阅 [保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   

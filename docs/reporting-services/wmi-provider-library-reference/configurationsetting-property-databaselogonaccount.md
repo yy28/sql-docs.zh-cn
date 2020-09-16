@@ -1,4 +1,5 @@
 ---
+description: DatabaseLogonAccount 属性 (WMI MSReportServer_ConfigurationSetting)
 title: DatabaseLogonAccount 属性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 603ae515642fa524841c160cafc82c4e8ace3249
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86be7684080168a7068d7b5768b67e1f27cee2e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497910"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>ConfigurationSetting 属性 - DatabaseLogonAccount
   指定报表服务器连接到报表服务器数据库时使用的登录帐户。 只读。  
@@ -44,7 +45,7 @@ public string DatabaseLogonAccount;
 ## <a name="remarks"></a>备注  
  此属性的有效值将因 [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) 属性的值而异。  
   
- 如果 [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) 属性设置为 **2 (Service)** ，则将忽略此属性。  
+ 如果 [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) 属性设置为 **2 (Service)**，则将忽略此属性。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

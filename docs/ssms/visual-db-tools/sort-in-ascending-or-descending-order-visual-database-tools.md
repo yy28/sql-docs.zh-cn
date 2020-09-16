@@ -1,4 +1,5 @@
 ---
+description: 按升序或降序进行排序 (Visual Database Tools)
 title: 按升序或降序排序
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 947ff75c1eb3f0a20b0bc3c415645254a7c4b6c4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1826914bd042ad897dc7eb143dfd38d18104e7a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85976773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491612"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>按升序或降序进行排序 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-通过在 **ORDER BY** 子句中使用 **ASC** 或 **DESC** 关键字，可以按结果集中的一列或多列以升序或降序对查询结果进行排序。  
+ 通过在 ORDER BY 子句中使用 ASC 或 DESC 关键字，可以按结果集中的一列或多列以升序或降序对查询结果进行排序************。  
   
 > [!NOTE]  
 > 排序顺序在一定程度上由列的排序规则顺序来决定。 可以在 [“排序规则”对话框](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)中更改排序规则顺序。  
@@ -31,9 +32,9 @@ ms.locfileid: "85976773"
   
 ### <a name="to-specify-or-change-the-order-in-which-results-are-sorted"></a>指定或更改结果的排序顺序  
   
-1.  在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，单击要重新排序的列的“排序类型”  字段。  
+1.  在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，单击要重新排序的列的“排序类型”**** 字段。  
   
-2.  选择“升序”  或“降序”  以指定该列的排序顺序。  
+2.  选择“升序”**** 或“降序”**** 以指定该列的排序顺序。  
   
 请注意，在“条件”窗格中操作时，查询的 UNION 子句将随之更改以反映最近执行的操作。  
   

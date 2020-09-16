@@ -1,4 +1,5 @@
 ---
+description: supportsExtendedSQLGrammar 方法 (SQLServerDatabaseMetaData)
 title: supportsExtendedSQLGrammar 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8deb1987-c4e3-4599-8e37-0a04ec20b480
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d049336def80d1856f04ff22b1375b540f940858
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 24c8eece643ac147003d727861e77b22bbee236e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478529"
 ---
 # <a name="supportsextendedsqlgrammar-method-sqlserverdatabasemetadata"></a>supportsExtendedSQLGrammar 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean supportsExtendedSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true  。 否则为 **false**。  
+ 如果支持，则值为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
