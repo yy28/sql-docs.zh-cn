@@ -75,7 +75,7 @@
         - name: PowerShell 扩展
           href: powershell-extension.md
         - name: 托管实例扩展
-          href: azure-sql-managed-instance-extension.md
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: SandDance 扩展
           href: sanddance-extension.md
     - name: 扩展构建
