@@ -1,4 +1,5 @@
 ---
+description: setReadOnly 方法 (SQLServerConnection)
 title: setReadOnly 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6ff943c74c4366a2be2266782e3f44296a4bf49
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b883180cca7f12adbed9e1b46052acc5618555bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458449"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>setReadOnly 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,10 +38,10 @@ ms.locfileid: "80920718"
 public void setReadOnly(boolean readOnly)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- readOnly   
+#### <a name="parameters"></a>参数  
+ readOnly  
   
- 如果连接为只读，则为 true  。 否则为 **false**。  
+ 如果连接为只读，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

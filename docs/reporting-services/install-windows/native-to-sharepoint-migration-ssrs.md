@@ -1,4 +1,5 @@
 ---
+description: 本机到 SharePoint 迁移 (SSRS)
 title: 本机到 SharePoint 的迁移 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ae49e1110a1d539cbe7095f946be7fc522b80b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6eef61dd79dbbbe97326c888698b69152065ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454539"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
 
@@ -41,15 +42,15 @@ ms.locfileid: "77082625"
   
  下表概述了可以使用脚本迁移的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对象：  
   
-|Object|是否可编写脚本|注释|  
+|对象|是否可编写脚本|注释|  
 |------------|---------------------|--------------|  
 |报表|是|在迁移后，重新为数据源输入密码。|  
 |Datasources|是|在迁移后，重新将报表链接到数据源。|  
-|Models|是||  
+|模型|是||  
 |数据集|是||  
 |报表部件||在迁移后，验证或更新指向报表部件的路径。|  
 |计划|是|请参阅 ListSchedules 方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
-|Subscriptions|是|请参阅列表订阅方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 和 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 方法。|  
+|订阅|是|请参阅列表订阅方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 和 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 方法。|  
 |快照|||
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

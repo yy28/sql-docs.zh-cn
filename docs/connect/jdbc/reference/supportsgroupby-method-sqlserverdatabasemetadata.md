@@ -1,4 +1,5 @@
 ---
+description: supportsGroupBy 方法 (SQLServerDatabaseMetaData)
 title: supportsGroupBy 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6f368df5-e88a-4088-b0de-2b5ab655ebaa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c701b2df14413f012398bf0fd52f2acfefb3e6fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d7a0546e74b6be60947432275d40887686ece72a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450376"
 ---
 # <a name="supportsgroupby-method-sqlserverdatabasemetadata"></a>supportsGroupBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean supportsGroupBy()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true  。 否则为 **false**。  
+ 如果支持，则值为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

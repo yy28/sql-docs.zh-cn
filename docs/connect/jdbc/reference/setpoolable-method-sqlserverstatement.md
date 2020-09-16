@@ -1,4 +1,5 @@
 ---
+description: setPoolable 方法 (SQLServerStatement)
 title: setPoolable 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8651644bbf67f70642385b8c9b4bd2925dfce5a6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f75e1ffad80d1442689da6d32eafcaf74cb48fdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458469"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,16 +30,16 @@ ms.locfileid: "80920760"
 public void setPoolable(boolean poolable) throws SQLException  
 ```  
   
-#### <a name="parameters"></a>parameters  
- poolable   
+#### <a name="parameters"></a>参数  
+ poolable**  
   
- 如果为 true  ，则请求语句入池。 如果为 false  ，则请求语句不入池。  
+ 如果为 true****，则请求语句入池。 如果为 false****，则请求语句不入池。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>备注  
- poolable  参数中指定的值是对语句池实现的提示，用于指示应用程序是否希望语句入池。 语句池管理器决定应用程序是否使用该提示。  
+ poolable** 参数中指定的值是对语句池实现的提示，用于指示应用程序是否希望语句入池。 语句池管理器决定应用程序是否使用该提示。  
   
  语句的池值既应用于由驱动程序实现的内部语句缓存，也应用于由应用程序服务器和其他应用程序实现的外部语句缓存。  
   

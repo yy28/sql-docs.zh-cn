@@ -1,4 +1,5 @@
 ---
+description: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 title: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a29b2d8124f0714a6201d88fbdd0a61d580a5429
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca004a1eeb2e0446126673f4d500cdef092915dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458330"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "80927612"
 public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)  
 ```  
 
-#### <a name="parameters"></a>parameters  
- thresholdValue   
+#### <a name="parameters"></a>参数  
+ thresholdValue  
  
- serverPreparedStatementDiscardThreshold  连接属性的新值。  
+ serverPreparedStatementDiscardThreshold**** 连接属性的新值。  
  
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

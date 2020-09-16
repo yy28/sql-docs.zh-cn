@@ -1,4 +1,5 @@
 ---
+description: setString 方法 (long, java.lang.String) (SQLServerNClob)
 title: setString 方法 (long, java.lang.String) - NClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eae050bb80728a530accb73eb2cb22f5320e7ed9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 944277e0bf3b8a701ceb9700f4b70a71cdec8d25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450736"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString 方法 (long, java.lang.String) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定的 String  写入起始于指定位置的 NCLOB  。  
+  将指定的 String**** 写入起始于指定位置的 NCLOB****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,14 +31,14 @@ public int setString(long pos,
               java.lang.String str)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- pos   
+#### <a name="parameters"></a>参数  
+ pos  
   
- 写入 NCLOB  的起始位置；第一个位置为 1。  
+ 写入 NCLOB**** 的起始位置；第一个位置为 1。  
   
  *str*  
   
- 要写入 NCLOB  的 String。  
+ 要写入 NCLOB**** 的 String。  
   
 ## <a name="return-value"></a>返回值  
  写入的字符数。  

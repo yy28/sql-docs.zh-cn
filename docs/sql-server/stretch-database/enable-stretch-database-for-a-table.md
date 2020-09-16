@@ -1,4 +1,5 @@
 ---
+description: Enable Stretch Database for a table
 title: Enable Stretch Database for a table
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,18 +12,18 @@ ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10f267dc42c7626ad89b576b00e2b80a07dae427
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454373"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”  ，以打开“为 Stretch 启用表”  向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
+  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”****，以打开“为 Stretch 启用表”**** 向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
   
 -   如果在单独的某个表中存储了冷数据，可以迁移整个表。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "73843810"
  **启动向导**  
  1.  在 SQL Server Management Studio 的对象资源管理器中，选择要在其上启用 Stretch 的表。  
   
-2.  右键单击并选择“Stretch”  ，然后选择“启用”  ，以启动向导。  
+2.  右键单击并选择“Stretch”****，然后选择“启用”****，以启动向导。  
   
  **介绍**  
  查看向导和必备组件的用途。  
@@ -56,7 +57,7 @@ ms.locfileid: "73843810"
  ALTER TABLE 语法将在本文的后面进行介绍。  
   
  **摘要**  
- 查看你输入的值和你在该向导中选择的选项。 然后选择“完成”  以启用 Stretch。  
+ 查看你输入的值和你在该向导中选择的选项。 然后选择“完成” **** 以启用 Stretch。  
   
  **结果**  
  查看结果。  

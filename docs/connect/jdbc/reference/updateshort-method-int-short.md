@@ -1,4 +1,5 @@
 ---
+description: updateShort 方法 (int, short)
 title: updateShort 方法 (int, short) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 155b9189-cb97-4264-b42c-bbda1c7d624f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94c51ee818a7e598e774aed9c37f08f028ccd027
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2585d0c5485b3e64f051c6bffcd867f762fd7d21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450069"
 ---
 # <a name="updateshort-method-int-short"></a>updateShort 方法 (int, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列索引使用 short  值更新指定的列。  
+  根据给定的列索引使用 short**** 值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +36,14 @@ public void updateShort(int index,
                         short x)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
  指示列索引的 int  。  
   
  *x*  
   
- short  值。  
+ short**** 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

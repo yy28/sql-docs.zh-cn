@@ -1,4 +1,5 @@
 ---
+description: 使用 SQLXML 进行编程
 title: 使用 SQLXML 进行编程 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,47 +9,47 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 67766bb505750a4fbaaa1081dcf1d0441a44166e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438319"
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 进行编程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本部分介绍如何使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 方法和 SQLXML  对象在关系数据库中存储和检索 XML 文档。  
+  本部分介绍如何使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 方法和 SQLXML**** 对象在关系数据库中存储和检索 XML 文档。  
   
  本节还包含有关 SQLXML 对象类型的信息，并提供使用 SQLXML 对象的重要准则和限制的列表。  
   
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>使用 SQLXML 对象读取和写入 XML 数据  
  下面的列表介绍如何使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 方法和 SQLXML 对象来读取和写入 XML 数据：  
   
--   要创建 SQLXML 对象，请使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法。 请注意，此方法创建的是无任何数据的 SQLXML 对象。 若要将 xml  数据添加到 SQLXML 对象，请调用 SQLXML 接口中指定的以下方法之一：setResult、setCharacterStream、setBinaryStream 或 setString。  
+-   要创建 SQLXML 对象，请使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法。 请注意，此方法创建的是无任何数据的 SQLXML 对象。 若要将 xml**** 数据添加到 SQLXML 对象，请调用 SQLXML 接口中指定的以下方法之一：setResult、setCharacterStream、setBinaryStream 或 setString。  
   
 -   要检索 SQLXML 对象本身，请使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 getSQLXML 方法。  
   
--   若要从 SQLXML 对象中检索 xml  数据，请使用 SQLXML 接口中指定的以下方法之一：getSource、getCharacterStream、getBinaryStream 或 getString。  
+-   若要从 SQLXML 对象中检索 xml**** 数据，请使用 SQLXML 接口中指定的以下方法之一：getSource、getCharacterStream、getBinaryStream 或 getString。  
   
--   要更新 SQLXML 对象中的 xml 数据，请使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 方法。  
+-   要更新 SQLXML 对象中的 xml**** 数据，请使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 方法。  
   
--   要将 SQLXML 对象存储在 xml  类型的数据库表列中，请使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 setSQLXML 方法。  
+-   要将 SQLXML 对象存储在 xml**** 类型的数据库表列中，请使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 setSQLXML 方法。  
   
  [SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)中的示例代码展示了如何执行这些常见 API 任务。  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>可读写 SQLXML 对象  
  下表列出 JDBC API 提供的 setter、getter 和 updater 方法所支持的 SQLXML 对象类型。 表中的列引用以下内容：  
   
--   “方法名”列列出 JDBC API 中受支持的 getter、setter 和 updater 方法。   
+-   “方法名”列列出 JDBC API 中受支持的 getter、setter 和 updater 方法。 ****  
   
--   “Getter SQLXML 对象”列表示由 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法创建的 SQLXML 对象。   
+-   “Getter SQLXML 对象”列表示由 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法创建的 SQLXML 对象。 ****  
   
--   Setter SQLXML 对象列表示由 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。  请注意，下面的 setter 方法仅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。  
+-   Setter SQLXML 对象列表示由 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。 **** 请注意，下面的 setter 方法仅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。  
   
-|方法名称|Getter SQLXML 对象<br /><br /> （可读）|Setter SQLXML 对象<br /><br /> （可写）|  
+|方法名|Getter SQLXML 对象<br /><br /> （可读）|Setter SQLXML 对象<br /><br /> （可写）|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
 |CallableStatement.setSQLXML()|不支持|支持|  
 |CallableStatement.setObject()|不支持|支持|  
@@ -80,17 +81,17 @@ ms.locfileid: "69027774"
   
 -   要为 SQLXML 对象设置数据，应用程序必须在返回的对象中使用相应的 setter 方法和函数。  
   
--   如果基础列为 null，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 getSQLXML 方法将返回 null 数据。  
+-   如果基础列为 null****，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 getSQLXML 方法将返回 null**** 数据。  
   
 -   setter 对象可以在创建它们的连接期间内保持有效。  
   
--   不允许应用程序使用 SQLXML 接口提供的 setter 方法来设置 null  值。 应用程序可以使用 SQLXML 接口中提供的 setter 方法来设置空字符串 ("")。 要设置 null  值，应用程序应调用下列方法之一：  
+-   不允许应用程序使用 SQLXML 接口提供的 setter 方法来设置 null**** 值。 应用程序可以使用 SQLXML 接口中提供的 setter 方法来设置空字符串 ("")。 要设置 null**** 值，应用程序应调用下列方法之一：  
   
     -   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setNull 方法。  
   
     -   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setObject 方法。  
   
-    -   参数值为 null 的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setSQLXML 方法。  
+    -   参数值为 null**** 的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setSQLXML 方法。  
   
 -   处理 XML 文档时，出于性能方面的考虑，建议使用 Simple API for XML (SAX) 和 Streaming API for XML (StAX) 分析器，而不要使用文档对象模型 (DOM) 分析器。  
   

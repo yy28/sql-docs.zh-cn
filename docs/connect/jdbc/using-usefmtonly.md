@@ -1,4 +1,5 @@
 ---
+description: 通过 useFmtOnly 检索 ParameterMetaData
 title: 通过 useFmtOnly 检索 ParameterMetaData | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -14,17 +15,17 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450037"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>通过 useFmtOnly 检索 ParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  The Microsoft JDBC Driver for SQL Server 提供从服务器查询参数元数据的另一种方法，即 useFmtOnly  。 此功能是在驱动程序版本 7.4 中首次引入的，需要作为 `sp_describe_undeclared_parameters` 中已知问题的解决方法。
+  The Microsoft JDBC Driver for SQL Server 提供从服务器查询参数元数据的另一种方法，即 useFmtOnly****。 此功能是在驱动程序版本 7.4 中首次引入的，需要作为 `sp_describe_undeclared_parameters` 中已知问题的解决方法。
   
   驱动程序主要使用存储过程 `sp_describe_undeclared_parameters` 来查询参数元数据，因为在大多数情况下，这是用于检索参数元数据的推荐方法。 但是，在以下用例中，当前执行存储过程会失败：
   

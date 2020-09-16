@@ -1,4 +1,5 @@
 ---
+description: 角色定义 - 预定义角色
 title: 角色定义 - 预定义角色 | Microsoft Docs
 ms.date: 06/10/2020
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454519"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定义 - 预定义角色
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安装了预定义角色，您可以使用它们授予对报表服务器操作的访问权限。 每个预定义角色都描述了一个相关任务的集合。 可以向预定义角色分配组帐户和用户帐户，以提供对报表服务器操作的立即访问。  
@@ -133,7 +134,7 @@ ms.locfileid: "84716734"
 ### <a name="report-builder-tasks"></a>报表生成器任务  
  下表对“报表生成者”角色中所包含的任务进行了说明：  
   
-|任务|描述|  
+|任务|说明|  
 |----------|-----------------|  
 |使用报表|读取报表定义。|  
 |查看报表|运行报表和查看报表属性。|  

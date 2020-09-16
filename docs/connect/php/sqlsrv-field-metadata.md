@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76939576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449963"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-检索已准备语句的字段的元数据。 有关准备语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 请注意，无论在执行前还是执行后，都可以在任何已准备的语句上调用 sqlsrv_field_metadata  。  
+检索已准备语句的字段的元数据。 有关准备语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 请注意，无论在执行前还是执行后，都可以在任何已准备的语句上调用 sqlsrv_field_metadata****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,30 +36,30 @@ ms.locfileid: "76939576"
 sqlsrv_field_metadata( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$stmt*：寻找字段元数据的语句资源。  
   
 ## <a name="return-value"></a>返回值  
 数组的 **array** 或 **false**。 数组由结果集中的每个字段的一个数组组成。 每个子数组具有下表中所述的键。 如果在检索字段元数据时出现错误，则返回 **false** 。  
   
-|密钥|说明|  
+|键|说明|  
 |-------|---------------|  
 |名称|字段对应的列的名称。|  
 |类型|对应于 SQL 类型的数值。|  
 |大小|字符类型（char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML）的字段的字符数。 二进制类型（binary(n)、varbinary(n)、UDT）的字段的字节数。 **NULL** 用于其他 SQL Server 数据类型。|  
-|Precision|变量精度类型（real、numeric、decimal、datetime2、datetimeoffset 和 time）的精度。 **NULL** 用于其他 SQL Server 数据类型。|  
+|精度|变量精度类型（real、numeric、decimal、datetime2、datetimeoffset 和 time）的精度。 **NULL** 用于其他 SQL Server 数据类型。|  
 |缩放|变量小数位数类型（numeric、decimal、datetime2、datetimeoffset 和 time）的小数位数。 **NULL** 用于其他 SQL Server 数据类型。|  
-|Nullable|指示列可以为 null (SQLSRV_NULLABLE_YES)、不可为 null (SQLSRV_NULLABLE_NO) 还是未知列是否可以为 null (SQLSRV_NULLABLE_UNKNOWN) 的枚举值    。|  
+|Nullable|指示列可以为 null (SQLSRV_NULLABLE_YES)、不可为 null (SQLSRV_NULLABLE_NO) 还是未知列是否可以为 null (SQLSRV_NULLABLE_UNKNOWN) 的枚举值************。|  
   
 下表提供有关每个子数组的键的详细信息（有关这些类型的详细信息，请参阅 SQL Server 文档）：  
   
 |SQL Server 2008 数据类型|类型|最小/最大精度|最小/最大小数位数|大小|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
-|binary|SQL_BINARY (-2)||| 0 < n < 8000 <sup>1</sup>|  
+|binary|SQL_BINARY (-2)|||** 0 < n < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
-|char|SQL_CHAR (1)||| 0 < n < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE (91)|10/10|0/0||  
+|char|SQL_CHAR (1)|||** 0 < n < 8000 <sup>1</sup>|  
+|日期|SQL_TYPE_DATE (91)|10/10|0/0||  
 |datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
@@ -67,23 +68,23 @@ sqlsrv_field_metadata( resource $stmt)
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
 |int|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
-|nchar|SQL_WCHAR (-8)||| 0 < n < 4000 <sup>1</sup>|  
+|nchar|SQL_WCHAR (-8)|||** 0 < n < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  
 |numeric|SQL_NUMERIC (2)|1/38|0/精度值||  
-|nvarchar|SQL_WVARCHAR (-9)||| 0 < n < 4000 <sup>1</sup>|  
+|nvarchar|SQL_WVARCHAR (-9)|||** 0 < n < 4000 <sup>1</sup>|  
 |real|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
-|smallint|SQL_SMALLINT (5)|||2 字节|  
+|smallint|SQL_SMALLINT (5)|||2 个字节|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|sql_variant|SQL_SS_VARIANT (-150)|||可变|  
+|sql_variant|SQL_SS_VARIANT (-150)|||变量|  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
-|timestamp|SQL_BINARY (-2)|||8 字节|  
-|tinyint|SQL_TINYINT (-6)|||1 字节|  
-|udt|SQL_SS_UDT (-151)|||可变|  
+|timestamp|SQL_BINARY (-2)|||8 个字节|  
+|tinyint|SQL_TINYINT (-6)|||1 个字节|  
+|udt|SQL_SS_UDT (-151)|||变量|  
 |uniqueidentifier|SQL_GUID (-11)|||16|  
-|varbinary|SQL_VARBINARY (-3)||| 0 < n < 8000 <sup>1</sup>|  
-|varchar|SQL_VARCHAR (12)||| 0 < n < 8000 <sup>1</sup>|  
+|varbinary|SQL_VARBINARY (-3)|||** 0 < n < 8000 <sup>1</sup>|  
+|varchar|SQL_VARCHAR (12)|||** 0 < n < 8000 <sup>1</sup>|  
 |xml|SQL_SS_XML (-152)|||0|  
   
 (1) 零 (0) 指示允许最大大小。  

@@ -1,4 +1,5 @@
 ---
+description: 在多个列上联接表 (Visual Database Tools)
 title: 在多列上联接表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 52044ea389e964397b457e2758a312e651eae188
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f402f9d36011b457494d48e87a67aa1f5778e527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446067"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>在多个列上联接表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86008904"
   
 4.  对于两个表中的其他每个联接列对，重复第 3 步。  
   
-5.  运行查询。  
+5.  运行该查询。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用联接进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  

@@ -1,4 +1,5 @@
 ---
+description: 查询类型 (Visual Database Tools)
 title: 查询类型
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e1d35e0c8795f1671a9723074b50c424aafa087b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1e450937d71003c4cd792e7ec989b81c6295b686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445991"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查询类型 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86004141"
 [创建“更新”查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)  
 介绍如何创建更新表的查询。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
 [查询属性 (Visual Database Tools)](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 介绍在设计查询时可使用的属性。  
   

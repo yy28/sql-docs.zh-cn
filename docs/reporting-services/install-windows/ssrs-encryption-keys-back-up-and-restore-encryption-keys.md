@@ -1,4 +1,5 @@
 ---
+description: SSRS 加密密钥 - 备份和还原加密密钥
 title: 备份和还原 Reporting Services 加密密钥 | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a49c9f3fbffc127fb4f81db5d82435b2d310fcda
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454559"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密密钥 - 备份和还原加密密钥
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "86053653"
   
 1.  启动报表服务器配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  单击“加密密钥”，再选择“备份”   。  
+2.  单击“加密密钥”，再选择“备份”********。  
   
 3.  键入强密码。  
   
@@ -94,7 +95,7 @@ ms.locfileid: "86053653"
   
 1.  启动 Reporting Services 配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  在“加密密钥”页上，选择“还原”  。  
+2.  在“加密密钥”页上，选择“还原”****。  
   
 3.  选择包含备份副本的 .snk 文件。  
   

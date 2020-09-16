@@ -1,4 +1,5 @@
 ---
+description: Reporting Services 配置管理器（本机节点）
 title: Reporting Services 配置管理器（本机模式）| Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454563"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
 
@@ -70,21 +71,21 @@ ms.locfileid: "73593783"
 
     - 从 Windows“开始”屏幕上，键入 **Reporting** ，然后从搜索结果中选择 **“Reporting Services 配置管理器”** 。
 
-    - 选择“开始”  ，依次指向“所有程序”  、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“配置工具”  。
+    - 选择“开始”****，依次指向“所有程序”****、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“配置工具”****。
 
          如果要从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置报表服务器实例，请打开此版本的程序文件夹。 例如，在打开 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 服务器组件的配置工具时，应指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 而非 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。
 
-         选择“Reporting Services 配置管理器”  。
+         选择“Reporting Services 配置管理器”****。
 
-2. 此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 选择“连接”  。
+2. 此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 选择“连接”。
 
 3. 在 **“服务器名称”** 中，指定安装报表服务器实例的计算机的名称。 默认情况下，将显示本地计算机的名称，但如果要连接到安装在远程计算机上的报表服务器，则可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。
 
-4. 如果指定远程计算机，请选择“查找”以建立连接  。
+4. 如果指定远程计算机，请选择“查找”以建立连接****。
 
-5. 在“报表服务器实例”  中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
+5. 在“报表服务器实例”**** 中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
-6. 选择“连接”  。
+6. 选择“连接”。
 
 ## <a name="next-steps"></a>后续步骤
 

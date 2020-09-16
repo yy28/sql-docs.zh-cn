@@ -1,4 +1,5 @@
 ---
+description: Enable Stretch Database for a database
 title: Enable Stretch Database for a database
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,27 +12,27 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454378"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”  ，以打开“为数据库启用 Stretch”  向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
+  若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”****，以打开“为数据库启用 Stretch”**** 向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
   
- 如果你为单个表选择“任务 | Stretch | 启用”  ，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请执行本主题中的步骤，而非[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
+ 如果你为单个表选择“任务 | Stretch | 启用”****，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请执行本主题中的步骤，而非[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
   
  在数据库或表上启用 Stretch Database 需要 db_owner 权限。 对数据库启用 Stretch Database 还需要有 CONTROL DATABASE 权限。  
 
 > [!NOTE]
 > 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
  
-## <a name="before-you-get-started"></a>开始操作之前  
+## <a name="before-you-get-started"></a>准备工作  
   
 -   在为数据库配置 Stretch 之前，建议你运行 Stretch Database Advisor 以识别适合配置 Stretch 的数据库和表。 延伸数据库顾问还可识别阻碍性问题。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "73844592"
 ##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 先决条件：在服务器上启用 Stretch Database  
  必须先在本地服务器上启用 Stretch Database，然后才能在数据库或表上启用它。 此操作需要 sysadmin 或 serveradmin 权限。  
   
--   如果你拥有必要的管理权限，“为数据库启用 Stretch”  向导将会为服务器配置 Stretch。  
+-   如果你拥有必要的管理权限，“为数据库启用 Stretch”**** 向导将会为服务器配置 Stretch。  
   
 -   如果你没有必要的权限，在你运行向导之前，管理员必须通过运行 **sp_configure** 来手动启用该选项，否则便需由管理员运行该向导。  
   
@@ -87,7 +88,7 @@ GO
     ```  
     有关数据库主密钥的详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) 和[创建数据库主密钥](../../relational-databases/security/encryption/create-a-database-master-key.md)。
     
-4.  当你为数据库配置 Stretch Database 时，必须为 Stretch Database 提供凭据，以供本地 SQL Server 与远程 Azure 服务器之间进行通信使用。 您有两种选择：  
+4.  当你为数据库配置 Stretch Database 时，必须为 Stretch Database 提供凭据，以供本地 SQL Server 与远程 Azure 服务器之间进行通信使用。 有两个选项。  
   
     -   你可以提供管理员凭据。  
   
@@ -138,7 +139,7 @@ GO
   
 -   [暂停和恢复数据迁移 (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Stretch Database 的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [延伸数据库的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [备份启用了延伸的数据库](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 通过运行“启用数据库延伸向导”开始
 title: 通过运行“启用数据库延伸向导”开始
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454349"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  若要为 Stretch Database 配置数据库，请运行“启用数据库延伸向导”。  本文介绍了需要在该向导中输入的信息和做出的选择。  
@@ -43,7 +44,7 @@ ms.locfileid: "73843804"
   
 1.  在 SQL Server Management Studio 的对象资源管理器中，选择你想在其上启用 Stretch 的数据库。  
   
-2.  右键单击并选择“任务”  ，再选择“Stretch”  ，然后选择  “启用”以启动向导。  
+2.  右键单击并选择“任务”****，再选择“Stretch”****，然后选择****“启用”以启动向导。  
   
 ##  <a name="introduction"></a><a name="Intro"></a> 简介  
  查看向导和必备组件的用途。  
@@ -65,7 +66,7 @@ ms.locfileid: "73843804"
 |列|说明|  
 |------------|-----------------|  
 |（无标题）|选中此列中的复选框可为选定的表启用延伸。|  
-|**名称**|指定数据库中表的名称。|  
+|**Name**|指定数据库中表的名称。|  
 |（无标题）|此列中的符号可能代表一条警告，不会阻止你为 Stretch 启用所选表。 还有可能代表一个阻止问题，将阻止你为 Stretch 启用所选表 - 例如因为该表使用了不支持的数据类型。 将鼠标悬停于符号上可在工具提示中显示更多信息。 有关详细信息，请参阅 [Stretch Database 限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。|  
 |**已拉伸**|指示该表是否已为 Stretch 启用。|  
 |**迁移**|你可以迁移整个表（**整个表**），或在表中现有的列上指定一个筛选器。 若想要使用不同的筛选器函数来选择要迁移的行，请运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关筛选器函数的详细信息，请参阅[通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 有关如何应用函数的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。|  
@@ -73,26 +74,26 @@ ms.locfileid: "73843804"
 |**大小(KB)**|指定表的大小（以 KB 为单位）。|  
   
 ## <a name="optionally-provide-a-row-filter"></a>选择性地提供行筛选器  
- 若想要提供筛选器函数来选择要迁移的行，请在“选择表”  页执行以下操作。  
+ 若想要提供筛选器函数来选择要迁移的行，请在“选择表”**** 页执行以下操作。  
   
-1.  在  “选择你想要拉伸的表”列表中，在表的行中单击“整个表”  。 此时会打开“选择要延伸的行”  对话框。  
+1.  在****“选择你想要拉伸的表”列表中，在表的行中单击“整个表”****。 此时会打开“选择要延伸的行”**** 对话框。  
   
      ![定义基于日期的筛选器谓词](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定义基于日期的筛选器谓词")  
   
-2.  在“选择要拉伸的行”  对话框中，选择“选择行”  。  
+2.  在“选择要拉伸的行”**** 对话框中，选择“选择行”****。  
   
-3.  在“名称字段”  中，为筛选器函数提供一个名称。  
+3.  在“名称字段”**** 中，为筛选器函数提供一个名称。  
   
 4.  在 **Where** 子句中，选择表中的某列，然后选择一个运算符并提供一个值。  
   
-5.  单击“检查”  以测试函数。 如果函数从表中返回结果 - 即如果存在满足条件的待迁移的行 - 该测试会报告“成功”  。  
+5.  单击“检查”**** 以测试函数。 如果函数从表中返回结果 - 即如果存在满足条件的待迁移的行 - 该测试会报告“成功”****。  
 
 > [!NOTE] 
 > 显示筛选器查询的文本框为只读。 无法在文本框中编辑查询。
   
-6.  单击“完成”，返回到“选择表”  页。  
+6.  单击“完成”，返回到“选择表”**** 页。  
 
-仅在完成该向导时，才会在 SQL Server 中创建筛选器函数。 届时你可以返回到“选择表”  页更改或重命名该筛选器函数。
+仅在完成该向导时，才会在 SQL Server 中创建筛选器函数。 届时你可以返回到“选择表”**** 页更改或重命名该筛选器函数。
 
 ![定义筛选器谓词后的“选择表”页](../../sql-server/stretch-database/media/stretch-wizard-2b.png "定义筛选器谓词后的“选择表”页")
 
@@ -115,7 +116,7 @@ ms.locfileid: "73843804"
   
 3.  为 Stretch Database 选择要使用的 Azure 区域。
     -   如果创建一个新服务器，则该服务器将在此区域进行创建。  
-    -   如果你在所选区域中有现有的服务器，则当你选择  “现有服务器”时，向导会将其列出。
+    -   如果你在所选区域中有现有的服务器，则当你选择****“现有服务器”时，向导会将其列出。
   
      为了尽量减少延迟，请选择 SQL Server 所在的 Azure 区域。 有关区域的详细信息，请参阅 [Azure 区域](https://azure.microsoft.com/regions/)。  
   
@@ -137,9 +138,9 @@ ms.locfileid: "73843804"
   
         2.  选择身份验证方法。  
   
-            -   如果选择“SQL Server 身份验证”  ，请提供管理员登录名和密码。  
+            -   如果选择“SQL Server 身份验证”****，请提供管理员登录名和密码。  
   
-            -   选择“Active Directory 集成身份验证”  ，以使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 如果所选服务器未与 Azure Active Directory 集成，则此选项不会出现。
+            -   选择“Active Directory 集成身份验证” **** ，以使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 如果所选服务器未与 Azure Active Directory 集成，则此选项不会出现。
   
          ![选择现有的 Azure 服务器 - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-5.png "选择现有的 Azure 服务器 - Stretch Database 向导")  
   
@@ -164,7 +165,7 @@ ms.locfileid: "73843804"
  ![选择 Stretch Database 向导的“IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "选择 Stretch Database 向导的“IP 地址”页")  
   
 ##  <a name="summary"></a><a name="Summary"></a>总结  
- 查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成”  以启用 Stretch。  
+ 查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成” **** 以启用 Stretch。  
   
  ![Stretch Database 向导的“摘要”页](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 向导的“摘要”页")  
   
@@ -177,7 +178,7 @@ ms.locfileid: "73843804"
   
 ##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> 对向导进行故障排除  
  **Stretch Database 向导失败。**  
- 如果延伸数据库尚未在服务器级别启用，而你在不使用系统管理员权限的情况下运行向导来启用延伸数据库，则向导会失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
+  如果延伸数据库尚未在服务器级别启用，而你在不使用系统管理员权限的情况下运行向导来启用延伸数据库，则向导会失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
   
 ## <a name="next-steps"></a>后续步骤  
  为延伸数据库启用其他表。 监视数据迁移并管理已启用 Stretch 的数据库和表。  
@@ -188,7 +189,7 @@ ms.locfileid: "73843804"
   
 -   [暂停和恢复数据迁移 (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Stretch Database 的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [延伸数据库的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [备份启用了延伸的数据库](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   

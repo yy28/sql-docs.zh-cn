@@ -1,4 +1,5 @@
 ---
+description: Stretch Database 的管理和故障排除
 title: 管理和故障排除
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454329"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 的管理和故障排除
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   要对 Stretch Database 进行管理和故障排除，请使用本文中所述的工具和方法。  
@@ -45,7 +46,7 @@ GO
  打开目录视图 **sys.remote_data_archive_tables** ，并检查 **filter_predicate** 列的值，以标识 Stretch Database 用于选择要迁移的行的函数。 如果值为 null，则整个表符合迁移条件。 有关详细信息，请参阅 [sys.remote_data_archive_tables (Transact SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
 ###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> 检查数据迁移的状态  
- 在 SQL Server Management Studio 中选择数据库的“任务 | 延伸 | 监视”  以便在 Stretch Database 监视器中监视数据迁移。 有关详细信息，请参阅 [数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
+ 在 SQL Server Management Studio 中选择数据库的“任务 | 延伸 | 监视”**** 以便在 Stretch Database 监视器中监视数据迁移。 有关详细信息，请参阅 [数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  或者，打开动态管理视图 **sys.dm_db_rda_migration_status** 以查看有多少批数据和数据行已迁移。  
   

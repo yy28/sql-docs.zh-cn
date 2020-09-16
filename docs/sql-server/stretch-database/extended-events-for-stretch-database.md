@@ -1,4 +1,5 @@
 ---
+description: Stretch Database 扩展事件
 title: Stretch Database 扩展事件
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02fe62db4f59916f5b97624c4b4560a33738d761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454339"
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database 扩展事件
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 Stretch Database 提供了一系列扩展事件以进行故障排除。  
@@ -81,5 +82,5 @@ stretch_table_validation_error|报告用户启用延伸时表验证完成
 stretch_unprovision_table_start|报告延伸表取消设置开始  
   
 ## <a name="see-also"></a>另请参阅  
-[Stretch Database 的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+[延伸数据库的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

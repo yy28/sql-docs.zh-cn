@@ -1,4 +1,5 @@
 ---
+description: “验证警告”对话框 (Visual Database Tools)
 title: “验证警告”对话框
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3dd3f15ba7b6b42b95d8789d204bc44c2afb3f7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f8656e0d43b93c2b640d5839a0d6a2235d48749d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445988"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>“验证警告”对话框 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,11 +48,11 @@ ms.locfileid: "86002661"
 **是**  
 继续操作以生成更改脚本或将修改传输到数据库。 提交操作在以下情况仍然会失败：您没有修改数据库的权限；所做的修改会导致索引大于 900 字节；或者修改会导致生成格式不正确的计算列、默认约束或 CHECK 约束。  
   
-**是**  
+否  
 取消保存操作。  
   
 **保存文本文件**  
-显示“另存为”  对话框，可以在其中为包含警告列表的文本文件指定位置。  
+显示“另存为”**** 对话框，可以在其中为包含警告列表的文本文件指定位置。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计表 (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

@@ -1,4 +1,5 @@
 ---
+description: SQLServerException 构造函数 (java.lang.String, java.lang.String, int, java.lang.Throwable)
 title: SQLServerException 构造函数 (java.lang.String, java.lang.String, int, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -11,19 +12,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fb84d0c1216047f28ed980806129ff1e21c08bb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450430"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 构造函数 (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定 string 对象、string 对象、int 和throwable 时初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
+  在给定 string**** 对象、string**** 对象、int**** 和throwable**** 时初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
 
 ## <a name="syntax"></a>语法  
   
@@ -40,11 +41,11 @@ public SQLServerException(java.lang.String errText,
   
  包含错误文本的字符串。
   
- errState   
+ errState**  
   
  包含错误状态的字符串。
  
- errNum   
+ errNum**  
   
  一个包含异常的错误代码的 int。
  

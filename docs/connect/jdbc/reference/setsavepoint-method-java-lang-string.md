@@ -1,4 +1,5 @@
 ---
+description: setSavepoint 方法 (java.lang.String)
 title: setSavepoint 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 57ed08c322b8579b92165306397fb26312d95fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458405"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "67973089"
 public java.sql.Savepoint setSavepoint(java.lang.String sName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- sName   
+#### <a name="parameters"></a>参数  
+ sName**  
   
- 包含保存点名称的 String  值。  
+ 包含保存点名称的 String**** 值。  
   
 ## <a name="return-value"></a>返回值  
  SavePoint 对象。  
@@ -48,7 +49,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 ## <a name="remarks"></a>备注  
  此 setSavePoint 方法是由 java.sql.Connection 接口中的 setSavePoint 方法指定的。  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会自动转义 sName 参数。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会自动转义 sName** 参数。  
   
 ## <a name="see-also"></a>另请参阅  
  [setSavepoint 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   
