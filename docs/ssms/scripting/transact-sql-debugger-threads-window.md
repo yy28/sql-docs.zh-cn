@@ -3,7 +3,7 @@ title: “线程”窗口
 description: 了解“线程”窗口，该窗口显示有关正在调试的数据库引擎线程的信息。 此信息仅在调试模式下显示。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27a1b4f5673b959d378bd70122e334e3a4629bad
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bdc8d20024999e51509fdc45c054123667b94ee8
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248006"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901817"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 调试器 -“线程”窗口
 

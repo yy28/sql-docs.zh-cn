@@ -24,14 +24,14 @@ helpviewer_keywords:
 - status information [SQL Server], conversations
 - GET_TRANSMISSION_STATUS statement
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a2523504a518497a86b9d4ebcd15fed2b75ce5af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b5e691a1836ee4826ad7d2db3be5b71ccd98fa8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304483"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549002"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>返回类型  
  **nchar**  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 在下列情况下都将返回一个空字符串：上次传输尝试成功；尚未进行任何传输尝试；或 conversation_handle 不存在**。  
   
  该函数返回的信息与管理视图 sys.transmission_queue 的 last_transmission_error 列中显示的信息相同。 但是，该函数可用于查找那些当前传输队列中没有消息的会话的传输状态。  

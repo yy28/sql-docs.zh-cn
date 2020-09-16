@@ -20,14 +20,14 @@ helpviewer_keywords:
 - routes [Service Broker], removing
 - removing routes
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 20c273f77bdf3cb86a19ab154b6a8805b31ed6e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c85a6b4629e7cf6e6738a2a8313395c511e11818
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426609"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540642"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ DROP ROUTE route_name
  route_name   
  要删除的路由名称。 不能指定服务器、数据库和架构名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  存储路由的路由表是一个元数据表，可通过目录视图 sys.routes**** 来读取。 路由表只能通过 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 语句进行更新。  
   
  对于一个路由，无论是否有会话使用它，都可以删除它。 不过，如果没有到远程服务的其他路由，则这些会话的消息将保留在传输队列中，直到创建了到远程服务的路由或会话超时为止。  

@@ -1,26 +1,28 @@
 ---
 title: 打开编辑器 (SQL Server Management Studio)
 description: 了解如何在 SQL Server Management Studio 中打开数据库引擎查询、MDX、DMX 和 XML/A 编辑器。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122562"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093467"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
+
+本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
   
 ## <a name="before-you-begin"></a>开始之前  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 支持四种编辑器：用于编辑 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器、用于编辑使用相应语言的脚本的 DMX 和 MDX 编辑器、以及用于编辑 XML/A 脚本或 XML 文件的 XML/A 编辑器。 任何编辑器都还可以用于编辑文本文件。  
@@ -81,6 +83,4 @@ ms.locfileid: "87122562"
   
 -   右窗格中将出现 **“模板浏览器”** 窗口。  
   
--   双击一个模板以打开“数据库引擎查询”窗口，窗口中显示该模板的文本。 例如，若要打开 CREATE DATABASE 模板，请打开“SQL Server 模板”文件夹，再打开“数据库”文件夹，然后双击“创建数据库”。  
-  
-  
+-   双击一个模板以打开“数据库引擎查询”窗口，窗口中显示该模板的文本。 例如，若要打开 CREATE DATABASE 模板，请打开“SQL Server 模板”文件夹，再打开“数据库”文件夹，然后双击“创建数据库”。

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - QUERY_GOVERNOR_COST_LIMIT option
 - overriding connection values
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bef95342402c065b0691e7478a3fc04b26e5495d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb7b16a18832bbdea950843409b0a17153c7a05b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304277"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547446"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
   
  “查询开销”是指在特定硬件配置中完成查询所需的估计占用时间（秒）。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  仅限于在当前连接中使用 SET QUERY_GOVERNOR_COST_LIMIT，且只在当前连接期间有效。 使用 **sp_configure** 的[配置“查询调控器开销限制”服务器配置选项](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md)选项可以更改服务器范围的查询调控器开销限制值。 有关配置该选项的详细信息，请参阅 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
  SET QUERY_GOVERNOR_COST_LIMIT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
