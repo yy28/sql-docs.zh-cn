@@ -1,4 +1,5 @@
 ---
+description: othersInsertsAreVisible 方法 (SQLServerDatabaseMetaData)
 title: othersInsertsAreVisible 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ce373e9147760f1bad4f4dca495bac75669ddb4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: addf9a610270a7a2b3c6dae10c0e33dba1380552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433109"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>othersInsertsAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "80914602"
 public boolean othersInsertsAreVisible(int type)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- type   
+#### <a name="parameters"></a>参数  
+ type  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一  ：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一****：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -58,7 +59,7 @@ public boolean othersInsertsAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果插入操作可见，则为 true  。 否则为 **false**。  
+ 如果插入操作可见，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

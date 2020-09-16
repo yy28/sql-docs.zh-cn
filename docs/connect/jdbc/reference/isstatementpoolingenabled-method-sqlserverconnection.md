@@ -1,4 +1,5 @@
 ---
+description: isStatementPoolingEnabled 方法 (SQLServerConnection)
 title: isStatementPoolingEnabled 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dff9c558351dc4228eab21ac759dae6c58b4cb97
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 76c6afdec909de1edce177e05599b37b4fa8c746
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433359"
 ---
 # <a name="isstatementpoolingenabled-method-sqlserverconnection"></a>isStatementPoolingEnabled 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean isStatementPoolingEnabled()
 ```  
 
 ## <a name="return-value"></a>返回值
- 一个布尔值  ，其中包含指示是否启用语句池的标志。
+ 一个布尔值****，其中包含指示是否启用语句池的标志。
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,4 +1,5 @@
 ---
+description: isWrapperFor 方法 (SQLServerPreparedStatement)
 title: isWrapperFor 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b0e591b1-73e2-4f90-967f-5555eadfc3f1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c666a5cda962c91602d32e8b263b59229fad1e88
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 41f1855d202212d03561171a28e22d321d7547b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433309"
 ---
 # <a name="iswrapperfor-method-sqlserverpreparedstatement"></a>isWrapperFor 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "80911907"
 public boolean isWrapperFor(Class iface)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- iface   
+#### <a name="parameters"></a>参数  
+ iface**  
   
- 用于定义接口的 class  。  
+ 用于定义接口的 class****。  
   
 ## <a name="return-value"></a>返回值  
- 如果此对象实现了接口或包装了实现接口的对象，则为 true  。 否则为 **false**。  
+ 如果此对象实现了接口或包装了实现接口的对象，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

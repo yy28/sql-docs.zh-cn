@@ -1,4 +1,5 @@
 ---
+description: position 方法 (byte, long)
 title: position 方法 (byte, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 938254b8076d78ebd1ac768d130904077828aa03
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81248632dfff287d349a627dd4a82499e80d1d64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433059"
 ---
 # <a name="position-method-byte-long"></a>position 方法 (byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的 byte  数组模式和起始索引返回 BLOB 中指定模式的位置。  
+  根据给定的 byte **** 数组模式和起始索引返回 BLOB 中指定模式的位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,8 +36,8 @@ public long position(byte[] bPattern,
                      long start)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- bPattern   
+#### <a name="parameters"></a>参数  
+ bPattern**  
   
  要搜索的模式。  
   
@@ -45,7 +46,7 @@ public long position(byte[] bPattern,
  要搜索的起始索引。  
   
 ## <a name="return-value"></a>返回值  
- 指示找到模式的位置的 long  值，如果未找到，则为 -1。  
+ 指示找到模式的位置的 long **** 值，如果未找到，则为 -1。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

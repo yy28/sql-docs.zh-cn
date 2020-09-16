@@ -1,4 +1,5 @@
 ---
+description: isDefinitelyWritable 方法 (SQLServerResultSetMetaData)
 title: isDefinitelyWritable 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28b64f5cbc9de40057a9015c19eef96c21f93260
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 761a502dc01dd9ce2b3e7705338ce94f73393187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433629"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "80923595"
 public boolean isDefinitelyWritable(int column)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *column*  
   
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果列写入操作将一定成功，则为“true”  。 否则为 **false**。  
+ 如果列写入操作将一定成功，则为“true”****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,4 +1,5 @@
 ---
+description: ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 title: ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44672d73e7bd99a83dd0e74559c718d63693bc45
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfc58d525e08e2db8ecd82849dcc8db735c02490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433089"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "80914545"
 public boolean ownDeletesAreVisible(int type)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- type   
+#### <a name="parameters"></a>参数  
+ type  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一  ：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一****：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -58,7 +59,7 @@ public boolean ownDeletesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果删除操作可见，则为 true  。 否则为 **false**。  
+ 如果删除操作可见，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

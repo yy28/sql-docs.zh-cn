@@ -1,4 +1,5 @@
 ---
+description: ownUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 title: ownUpdatesAreVisible 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ce0b738d9295cf294e59d85744d57e48a8b6ecc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6ccdac435eaccec8ff075f0d8ce0cdf802c8f9b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433069"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>ownUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "80914473"
 public boolean othersUpdatesAreVisible(int type)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- type   
+#### <a name="parameters"></a>参数  
+ type  
   
  指示结果集类型的整数，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
@@ -58,7 +59,7 @@ public boolean othersUpdatesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果更新操作可见，则为 true  。 否则为 **false**。  
+ 如果更新操作可见，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,4 +1,5 @@
 ---
+description: prepareStatement 方法 (java.lang.String, int, int, int)
 title: prepareStatement 方法 (java.lang.String, int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0629ee8020c6b1be5f8273c16fe814cf05e922b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 644b5e0f1ff37ba3e955b0f74096d47df10bd01a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432919"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement 方法 (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,22 +38,22 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
                                                    int nHold)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *sql*  
   
- 包含 SQL 语句的 String  。  
+ 包含 SQL 语句的 String****。  
   
- nType   
+ nType**  
   
- 指示结果集类型的 int  。  
+ 指示结果集类型的 int****。  
   
- nConcur   
+ nConcur**  
   
- 指示结果集并发类型的 int  。  
+ 指示结果集并发类型的 int****。  
   
- nHold   
+ nHold**  
   
- 指示结果集可保持性的 int  。  
+ 指示结果集可保持性的 int****。  
   
 ## <a name="return-value"></a>返回值  
  PreparedStatement 对象。  

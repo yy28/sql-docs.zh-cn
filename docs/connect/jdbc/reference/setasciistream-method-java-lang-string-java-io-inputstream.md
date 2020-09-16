@@ -1,4 +1,5 @@
 ---
+description: setAsciiStream 方法 (java.lang.String, java.io.InputStream)
 title: 设置输入流的 setAsciiStream 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dc2caa44-9eb5-4ed8-a889-36148b50901d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b8a50e1b93ce1fead2f69dc3680bbb90d2bf3170
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2fef33d5b60bef1f26fde6711cf849d6fab7487f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432569"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream"></a>setAsciiStream 方法 (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,10 +31,10 @@ public final void setAsciiStream(java.lang.String parameterName,
                                 java.io.InputStream x)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- parameterName   
+#### <a name="parameters"></a>参数  
+ parameterName  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
  *x*  
   

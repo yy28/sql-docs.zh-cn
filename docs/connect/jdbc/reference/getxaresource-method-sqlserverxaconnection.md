@@ -1,4 +1,5 @@
 ---
+description: getXAResource 方法 (SQLServerXAConnection)
 title: getXAResource 方法 (SQLServerXAConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: beee81cbc62a1257c9f9f0fbe8c93720fa54a523
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a523a1a1b731288632c969baee1170408734a81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433699"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource 方法 (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public javax.transaction.xa.XAResource getXAResource()
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此 getXAResource 方法是由 javax.sql.XAConnection 接口中的 getXAResource 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

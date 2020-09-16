@@ -1,4 +1,5 @@
 ---
+description: isSparseColumnSet 方法 (SQLServerResultSetMetaData)
 title: isSparseColumnSet 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 788efd1f35643e3bcefd929f455b2c21677f7723
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 86fbbcdc34259e6b3d783d34ca77af57bcfba89f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433369"
 ---
 # <a name="issparsecolumnset-method-sqlserverresultsetmetadata"></a>isSparseColumnSet 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,15 +29,15 @@ ms.locfileid: "80927291"
 public boolean isSparseColumnSet(int column)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *column*  
   
  列的（从 1 开始的）索引。  
   
 ## <a name="return-value"></a>返回值  
- 如果结果集中的列为稀疏列集，则为 true  ；否则为 false  。  
+ 如果结果集中的列为稀疏列集，则为 true****；否则为 false****。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此方法不从数据库中检索信息。  
   
 ## <a name="see-also"></a>另请参阅  

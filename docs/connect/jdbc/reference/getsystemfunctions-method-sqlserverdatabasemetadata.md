@@ -1,4 +1,5 @@
 ---
+description: getSystemFunctions 方法 (SQLServerDatabaseMetaData)
 title: getSystemFunctions 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a8a914765c9a9a10cc483aecd9a6af28e6ec9f2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a15a0a39c9da932e132e6b765e1ea3daf7f6519e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434229"
 ---
 # <a name="getsystemfunctions-method-sqlserverdatabasemetadata"></a>getSystemFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public java.lang.String getSystemFunctions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含系统函数列表的 String  。  
+ 包含系统函数列表的 String****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

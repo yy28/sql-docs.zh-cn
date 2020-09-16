@@ -1,4 +1,5 @@
 ---
+description: getUDTs 方法 (SQLServerDatabaseMetaData)
 title: getUDTs 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 610218dd7b1439e5e032bfc0a8f53893f6894f32
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d7649cc14a972f364b6fd10e6d6d728f4bb2ffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433939"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,20 +41,20 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
                                   int[] types)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *catalog*  
   
  一个包含目录名称的字符串  。  
   
- schemaPattern   
+ schemaPattern  
   
  一个包含架构名称模式的字符串  。  
   
- typeNamePattern   
+ typeNamePattern**  
   
- 一个包含类型名称模式的 String  。  
+ 一个包含类型名称模式的 String****。  
   
- *types*  
+ *类型*  
   
  含有要包含的数据类型的整数数组。 Null 指示应包含所有类型。  
   

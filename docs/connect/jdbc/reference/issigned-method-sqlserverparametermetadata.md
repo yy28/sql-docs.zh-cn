@@ -1,4 +1,5 @@
 ---
+description: isSigned 方法 (SQLServerParameterMetaData)
 title: isSigned 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ad996e3572f4a77d3547ec93c0e2c13262799aba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 749f5ffca4043a6f4f5fe7341680863e39735fa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433389"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>isSigned 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "80925049"
 public boolean isSigned(int param)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *param*  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int****。  
   
 ## <a name="return-value"></a>返回值  
- 如果指定参数可以包含带符号的数字，则为 true  。 否则为 **false**。  
+ 如果指定参数可以包含带符号的数字，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

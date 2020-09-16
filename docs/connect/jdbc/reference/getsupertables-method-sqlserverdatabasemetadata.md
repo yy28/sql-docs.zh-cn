@@ -1,4 +1,5 @@
 ---
+description: getSuperTables 方法 (SQLServerDatabaseMetaData)
 title: getSuperTables 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1caaa96d303e892d9bd729181d7dba1f327b6852
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd21b5cbdee2af185fae8bd059d779dda3cc55e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434289"
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>getSuperTables 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,18 +40,18 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
                                          java.lang.String tableNamePattern)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *catalog*  
   
  一个包含目录名称的字符串  。  
   
- schemaPattern   
+ schemaPattern  
   
  一个包含架构名称模式的字符串  。  
   
  *tableNamePattern*  
   
- 一个包含表名称模式的字符串  。  
+ 一个包含表名称模式的字符串****。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  

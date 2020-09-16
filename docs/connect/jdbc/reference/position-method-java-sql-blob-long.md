@@ -1,4 +1,5 @@
 ---
+description: position 方法 (java.sql.Blob, long)
 title: position 方法 (java.sql.Blob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70fd642677405adf98cce23826775a0cab45221a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 941996adfc1fb23340da173d2c7f28393c25e17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433029"
 ---
 # <a name="position-method-javasqlblob-long"></a>position 方法 (java.sql.Blob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public long position(java.sql.Blob pattern,
                      long start)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *pattern*  
   
  要搜索的模式。  
@@ -45,7 +46,7 @@ public long position(java.sql.Blob pattern,
  要搜索的起始索引。  
   
 ## <a name="return-value"></a>返回值  
- 指示找到模式的位置的 long  值，如果未找到，则为 -1。  
+ 指示找到模式的位置的 long **** 值，如果未找到，则为 -1。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

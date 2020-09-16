@@ -1,4 +1,5 @@
 ---
+description: getXAConnection 方法 (java.lang.String, java.lang.String)
 title: getXAConnection 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e76596e52afa115a436cc7e421fc5deb06139b6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 988c8c3d7c1ba3cc09d20ae35f066d260cf543fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433749"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,14 +36,14 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
                                               java.lang.String password)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- user   
+#### <a name="parameters"></a>参数  
+ *user*  
   
- 一个包含用户名的字符串  。  
+ 一个包含用户名的字符串****。  
   
- password   
+ *password*  
   
- 一个包含密码的字符串  。  
+ 一个包含密码的字符串。  
   
 ## <a name="return-value"></a>返回值  
  XAConnection 对象。  
@@ -50,7 +51,7 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此 getXAConnection 方法是由 javax.sql.XADataSource 接口中的 getXAConnection 方法指定的。  
   
 > [!NOTE]  
