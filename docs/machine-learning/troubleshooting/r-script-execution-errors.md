@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebcedf2adc48fad6668b30d9c34d21b7557879dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253639"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569907"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server 中的常见 R 脚本错误
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文介绍了在 SQL Server 中运行 R 代码时的几个常见脚本错误。 此列表并不全面。 存在许多包，同一包的不同版本可能会有不同的错误。
-
-如果遇到此处未涵盖的脚本错误，请将其发布在 [Machine Learning Server 论坛](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)上。 该论坛支持各种 SQL 机器学习产品中使用的机器学习组件。
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>T-SQL 或存储过程中的有效脚本失败
 
@@ -100,6 +98,6 @@ remove('name1', 'name2', ...)
 
 [收集数据进行机器学习故障排除](data-collection-ml-troubleshooting-process.md)
 
-[升级和安装常见问题解答](upgrade-and-installation-faq-sql-server-r-services.md)
+[安装 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 
 [数据库引擎连接疑难解答](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
