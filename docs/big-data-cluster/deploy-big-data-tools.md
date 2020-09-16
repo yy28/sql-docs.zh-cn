@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3fe867d6f075067d949becdbcae4630f1ad019d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d0c4f21d6fcf8f90026164dded1007de4e34164
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784310"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765836"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -33,9 +33,9 @@ ms.locfileid: "85784310"
 | `kubectl`<sup>1</sup> | 是 | 用于监视基础 Kubernetes 群集的命令行工具（[详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/)）。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | 是 | 用于查询 SQL Server 的跨平台图形工具。 | [安装](https://aka.ms/getazuredatastudio) |
 | **数据虚拟化扩展** | 是 | 提供数据虚拟化向导的 Azure Data Studio 的扩展。 | [安装](../azure-data-studio/data-virtualization-extension.md) |
-| **Azure CLI**<sup>2</sup> | 针对 AKS | 用于管理 Azure 服务的新式命令行接口。 与 AKS 大数据群集部署配合使用（[详细信息](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)）。 | [安装](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure CLI**<sup>2</sup> | 针对 AKS | 用于管理 Azure 服务的新式命令行接口。 与 AKS 大数据群集部署配合使用（[详细信息](/cli/azure/?view=azure-cli-latest)）。 | [安装](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 可选 | 用于查询 SQL Server 的新式命令行接口（[详细信息](../tools/mssql-cli.md)）。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | 针对某些脚本 | 用于查询 SQL Server 的旧式命令行工具（[详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)）。 安装 SQLCMD 包前，你可能需要安装 Microsoft ODBC Driver 11 for SQL Server。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | 针对某些脚本 | 用于查询 SQL Server 的旧式命令行工具（[详细信息](../tools/sqlcmd-utility.md?view=sql-server-ver15)）。 安装 SQLCMD 包前，你可能需要安装 Microsoft ODBC Driver 11 for SQL Server。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 针对某些脚本 | 使用 URL 传输数据的命令行工具。 | [Windows](https://curl.haxx.se/windows/) \| Linux：安装 curl 包 |
 | `oc` | 是 Red Hat OpenShift 和 Azure Redhat OpenShift 部署所必需的。 |`oc` 是 Open Shift 命令行接口 (CLI)。 | [安装 CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
@@ -87,7 +87,7 @@ Azure Data Studio 专门为 SQL Server 大数据群集提供功能和特性。
 
 [获取最新的 Azure Data Studio](https://aka.ms/getazuredatastudio)。
 
-有关最新版本的详细信息，请参阅[发行说明](../big-data-cluster/release-notes-big-data-cluster.md)。
+有关最新版本的详细信息，请参阅[发行说明](./release-notes-big-data-cluster.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

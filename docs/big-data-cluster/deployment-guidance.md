@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159365"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765766"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -34,7 +34,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 
 |版本|说明|
 |---------|---------|
-|Enterprise<br/>Standard<br/>开发人员| 大数据群集版本由 SQL Server 主实例的版本确定。 在部署时会默认部署开发人员版。 可在部署后更改版本。 请参阅[配置 SQL Server 主实例](../big-data-cluster/configure-sql-server-master-instance.md)。 |
+|Enterprise<br/>Standard<br/>开发人员| 大数据群集版本由 SQL Server 主实例的版本确定。 在部署时会默认部署开发人员版。 可在部署后更改版本。 请参阅[配置 SQL Server 主实例](./configure-sql-server-master-instance.md)。 |
 
 ## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 

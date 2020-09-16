@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e46d5bd2ad1fcb300c16ce3883f7b03f493fcdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661082"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765936"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
 
@@ -46,7 +46,7 @@ ms.locfileid: "85661082"
    - 跨所有节点的 24 个或更多附加磁盘
 
    > [!TIP]
-   > Azure 基础结构提供多种 VM 容量选项，请参阅[此处](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)，了解计划要部署的区域中的选项。
+   > Azure 基础结构提供多种 VM 容量选项，请参阅[此处](/azure/virtual-machines/windows/sizes)，了解计划要部署的区域中的选项。
 
 ## <a name="create-a-resource-group"></a>创建资源组
 
@@ -110,7 +110,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 ## <a name="create-a-kubernetes-cluster"></a>创建 Kubernetes 群集
 
-1. 使用 [az aks create](https://docs.microsoft.com/cli/azure/aks) 命令在 AKS 中创建 Kubernetes 群集。 以下示例创建一个名为“kubcluster”的 Kubernetes 群集，该群集具有一个 Standard_L8s 大小的 Linux 代理节点。
+1. 使用 [az aks create](/cli/azure/aks) 命令在 AKS 中创建 Kubernetes 群集。 以下示例创建一个名为“kubcluster”的 Kubernetes 群集，该群集具有一个 Standard_L8s 大小的 Linux 代理节点。
 
    在运行该脚本之前，请将 `<version number>` 替换为在上一步中标识的版本号。
 
@@ -149,7 +149,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 
-1. 若要配置 kubectl 以连接到 Kubernetes 群集，请运行 [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) 命令。 此步骤下载凭据并配置 kubectl CLI 以使用这些凭据。
+1. 若要配置 kubectl 以连接到 Kubernetes 群集，请运行 [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) 命令。 此步骤下载凭据并配置 kubectl CLI 以使用这些凭据。
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,9 +165,9 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 如果使用上述命令创建 Azure Kubernetes 服务时遇到任何问题，请尝试以下解决方法：
 
-- 请确保已安装[最新 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。
+- 请确保已安装[最新 Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest)。
 - 使用另一个资源组和群集名称来测试上述步骤。
-- 请参阅详细的[有关 AKS 的故障排除文档](https://docs.microsoft.com/azure/aks/troubleshooting)。
+- 请参阅详细的[有关 AKS 的故障排除文档](/azure/aks/troubleshooting)。
 
 ## <a name="next-steps"></a>后续步骤
 

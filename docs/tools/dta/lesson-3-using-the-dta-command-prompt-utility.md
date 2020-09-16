@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457489"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713735"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,19 +36,19 @@ ms.locfileid: "86457489"
   
 此任务指导你如何从命令提示符下启动 **dta** 实用工具，查看其帮助，以及使用它优化工作负荷。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习[优化工作负载](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)中创建的工作负载 MyScript.sql  
   
-本教程使用 AdventureWorks2017 示例数据库。 出于安全原因，默认情况下不安装该示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。  
+本教程使用 AdventureWorks2017 示例数据库。 出于安全原因，默认情况下不安装该示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](../../samples/adventureworks-install-configure.md)。  
   
-以下任务将指导你打开命令提示符，启动 **dta** 命令提示实用工具，查看其语法帮助，并优化在 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的一个简单工作负荷 MyScript.sql。  
+以下任务将指导你打开命令提示符，启动 **dta** 命令提示实用工具，查看其语法帮助，并优化在 [优化工作负荷](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)中创建的一个简单工作负荷 MyScript.sql。  
 
 ## <a name="prerequisites"></a>先决条件 
 
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
 - 安装 [SQL Server 2017 Developer Edition。](https://www.microsoft.com/sql-server/sql-server-downloads)
-- 下载 [AdventureWorks2017 示例数据库。](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
+- 下载 [AdventureWorks2017 示例数据库。](../../samples/adventureworks-install-configure.md)
 
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+此处提供在 SSMS 中还原数据库的说明：[还原数据库。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > 本教程适用于熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
@@ -84,7 +84,7 @@ ms.locfileid: "86457489"
 
   ![结合使用 CMD 和 DTA](media/dta-tutorials/dta-cmd.png)
   
-3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 和 [查看优化报告](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)中执行的方式相同。  
+3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) 和 [查看优化报告](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)中执行的方式相同。  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>学完本教程后  
@@ -97,4 +97,3 @@ ms.locfileid: "86457489"
   
 ## <a name="see-also"></a>另请参阅  
 [数据库引擎教程](../../relational-databases/database-engine-tutorials.md)  
-    

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 42008bdc7c78a587abcc67bd9fe18e305e188960
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1930add6748d979c0a00455529ca932e8d0b43c8
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905536"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714075"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 应用程序
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -49,6 +49,5 @@ sqlagent90
  在显示版权消息后，只有在指定了 **-v** 开关时， **sqlagent90** 才会在命令提示符窗口中显示输出。 若要停止 **sqlagent90**，请在命令提示符处按 CTRL+C。 在停止 **sqlagent90**之前，请不要关闭命令提示符窗口。  
   
 ## <a name="see-also"></a>另请参阅  
- [自动执行管理任务（SQL Server 代理）](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
-  
+ [自动执行管理任务（SQL Server 代理）](../ssms/agent/automated-administration-tasks-sql-server-agent.md?view=sql-server-ver15)  
   

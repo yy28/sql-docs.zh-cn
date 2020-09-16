@@ -26,12 +26,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e9b797710617be71643cbe1a7b2c721c90fe5a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2457f180cef24b13568a6718128efa78635c3e41
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748608"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714255"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 
@@ -310,7 +310,7 @@ WHERE database_id = DB_ID();
  报告导致 **ssbdiagnose** 无法完成配置分析或无法监视会话的问题。  
   
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 环境变量  
- **ssbdiagnose** 实用工具支持 **sqlcmd** 实用工具也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 环境变量。 设置环境变量可以使用命令提示 SET 命令，也可以使用通过 **sqlcmd** 运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中的 **setvar**命令。 有关如何在 **sqlcmd** 中使用 **setvar**的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
+ **ssbdiagnose** 实用工具支持 **sqlcmd** 实用工具也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 环境变量。 设置环境变量可以使用命令提示 SET 命令，也可以使用通过 **sqlcmd** 运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中的 **setvar**命令。 有关如何在 **sqlcmd** 中使用 **setvar**的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15)。  
   
 ## <a name="permissions"></a>权限  
  在每个 **connectionoptions** 子句中，通过 **-E** 或 **-U** 指定的登录名必须是 **-S** 所指定实例中 **sysadmin**固定服务器角色的成员。  
@@ -466,5 +466,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
-  
   

@@ -2,19 +2,19 @@
 title: 下载 SQL Server PowerShell 模块
 description: 了解如何安装 SqlServer PowerShell 模块，该模块提供支持最新 SQL 功能的 cmdlet，并在 SQLPS 模块中包含 cmdlet 的更新版本。
 ms.prod: sql
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, aanelson
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: 63b91463a265585036416721d1794920e02b9d13
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 3165a56d93ba78c387be0cdd23ef0c225b31c336
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122998"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714065"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>安装 SQL Server PowerShell 模块
 

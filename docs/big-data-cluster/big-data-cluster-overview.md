@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942765"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765736"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -26,14 +26,14 @@ ms.locfileid: "86942765"
 
 使用 SQL Server 大数据群集可执行以下操作：
 
-- [部署](../big-data-cluster/deploy-get-started.md) SQL Server、Spark 和在 Kubernetes 上运行的 HDFS 容器的可缩放群集。 
+- [部署](./deploy-get-started.md) SQL Server、Spark 和在 Kubernetes 上运行的 HDFS 容器的可缩放群集。 
 - 在 Transact-SQL 或 Spark 中读取、写入和处理大数据。
 - 通过大容量大数据轻松合并和分析高价值关系数据。
 - 查询外部数据源。
 - 在由 SQL Server 管理的 HDFS 中存储大数据。
 - 通过群集查询多个外部数据源的数据。
 - 将数据用于 AI、机器学习和其他分析任务。
-- 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中[部署和运行应用程序](../big-data-cluster/concept-application-deployment.md)。
+- 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中[部署和运行应用程序](./concept-application-deployment.md)。
 - 使用 [PolyBase](../relational-databases/polybase/polybase-guide.md) 虚拟化数据。 使用外部表从外部 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 数据源查询数据。
 - 使用 Always On 可用性组技术为 SQL Server 主实例和所有数据库提供高可用性。
 

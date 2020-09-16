@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 36fde81f6317d45b2169282d99e4eef27b3467b3
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112569"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714265"
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
 
@@ -85,7 +85,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |参数 | 详细信息|
 |:-----|:-----|
-|**-h** | 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本的 32 位实例中为热添加内存元数据保留虚拟内存地址空间。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。|
+|**-h** | 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本的 32 位实例中为热添加内存元数据保留虚拟内存地址空间。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server.md?view=sql-server-ver15)。|
 |**-g** | *memory_to_reserve*<br/><br>适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 位实例的早期版本。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为位于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存池之外的内存分配保留的内存整数量 (MB)。 有关详细信息，请参阅 [SQL Server 2014“服务器内存配置选项”文档](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
 | &nbsp; | &nbsp; |
 
