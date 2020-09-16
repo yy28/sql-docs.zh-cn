@@ -1,4 +1,5 @@
 ---
+description: createSQLXML 方法 (SQLServerConnection)
 title: createSQLXML 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 533fcfc93946714d957fb7e410864f0c6d27f3ed
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 365e7f0496c8222312f56657c569833285e5ad3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437969"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>createSQLXML 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  创建不含任何数据的 SQLXML  对象。  
+  创建不含任何数据的 SQLXML**** 对象。  
   
 ## <a name="syntax"></a>语法  
   

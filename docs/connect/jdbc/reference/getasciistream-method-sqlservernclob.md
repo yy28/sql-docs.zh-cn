@@ -1,4 +1,5 @@
 ---
+description: getAsciiStream 方法 (SQLServerNClob)
 title: getAsciiStream 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,19 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ff1d47e4-572a-4169-a631-ac261f7642b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22177442dcec9fb873d4a824b73845ce6fc9bfdf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 04c7acab2316276a78697c4469643446437c76d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437379"
 ---
 # <a name="getasciistream-method-sqlservernclob"></a>getAsciiStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索由此 NClob 对象指定的 NCLOB 值作为 ASCII 流。  
+  检索由此 NClob**** 对象指定的 NCLOB**** 值作为 ASCII 流。  
   
 ## <a name="syntax"></a>语法  
   

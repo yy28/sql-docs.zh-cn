@@ -1,4 +1,5 @@
 ---
+description: deletesAreDetected 方法 (SQLServerDatabaseMetaData)
 title: deletesAreDetected 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8aeb74dd819817d743d5929cb2f1e6e74bb77339
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437909"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
 
@@ -34,10 +35,10 @@ ms.locfileid: "67955120"
 public boolean deletesAreDetected(int type)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- type   
+#### <a name="parameters"></a>参数  
+ type  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一  ：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一****：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -58,9 +59,9 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果间隙替换已删除行，则为 true  。 如果删除已删除行，则为 false  。  
+ 如果间隙替换已删除行，则为 true****。 如果删除已删除行，则为 false****。  
   
- 将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库一起使用时，此方法将为 TYPE_SS_SCROLL_KEYSET 游标返回“true”，并且将为所有其他结果集类型返回“false”   。  
+ 将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库一起使用时，此方法将为 TYPE_SS_SCROLL_KEYSET 游标返回“true”，并且将为所有其他结果集类型返回“false”********。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

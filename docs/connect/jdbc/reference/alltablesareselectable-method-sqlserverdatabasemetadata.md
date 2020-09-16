@@ -1,4 +1,5 @@
 ---
+description: allTablesAreSelectable 方法 (SQLServerDatabaseMetaData)
 title: allTablesAreSelectable 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: eb340450-45a7-49c8-84bc-1b9dd5ee842f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4fbd5a1d132bdb1e0d661e05968709ed604006d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a105ff9e5881098664dbd366624d365d6282094
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438219"
 ---
 # <a name="alltablesareselectable-method-sqlserverdatabasemetadata"></a>allTablesAreSelectable 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean allTablesAreSelectable()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果当前用户有权使用所有表，则为 true  。 否则为 **false**。  
+ 如果当前用户有权使用所有表，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

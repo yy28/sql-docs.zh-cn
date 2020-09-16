@@ -1,4 +1,5 @@
 ---
+description: getAttributes 方法 (SQLServerDatabaseMetaData)
 title: getAttributes 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29376e0c88d7563fe66b3cf2afd54db2916624f6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca2ee077821ace1f5661d7764f80a70177717300
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437359"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>getAttributes 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,22 +41,22 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
                                         java.lang.String attributeNamePattern)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *catalog*  
   
  一个包含目录名称的字符串  。  
   
- schemaPattern   
+ schemaPattern  
   
  一个包含架构名称模式的字符串  。  
   
- typeNamePattern   
+ typeNamePattern**  
   
- 一个包含类型名称模式的 String  。  
+ 一个包含类型名称模式的 String****。  
   
- attributePattern   
+ attributePattern**  
   
- 一个包含属性名称模式的 String  。  
+ 一个包含属性名称模式的 String****。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  

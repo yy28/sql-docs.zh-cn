@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 方法 (java.lang.String, int[])
 title: executeUpdate 方法 (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7b3d5b60-4285-4047-b13e-106754ca0d98
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24afa57d67f19cc9f37e5980ccd9b2179f2b0ac5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ce46b5979b1d958e6e896fc32b03e45f591be289
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437629"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,17 +36,17 @@ public final int executeUpdate(java.lang.String sql,
                                int[] columnIndexes)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *sql*  
   
- 包含 SQL 语句的 String  。  
+ 包含 SQL 语句的 String****。  
   
- columnIndexes   
+ columnIndexes**  
   
  一个整数数组，指示应可用的自动生成的键的列索引。  
   
 ## <a name="return-value"></a>返回值  
- 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0  。  
+ 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

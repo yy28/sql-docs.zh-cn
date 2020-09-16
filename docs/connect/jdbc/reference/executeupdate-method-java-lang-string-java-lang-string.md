@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 方法 (java.lang.String, java.lang.String)
 title: executeUpdate 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f99b9153b09ed268444a90dd054535c0e61ae060
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 037521938c5a28c6d40159a19151f8b84438a8e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437639"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>executeUpdate 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,17 +36,17 @@ public final int executeUpdate(java.lang.String sql,
                                java.lang.String[] columnNames)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *sql*  
   
- 包含 SQL 语句的 String  。  
+ 包含 SQL 语句的 String****。  
   
- columnNames   
+ columnNames**  
   
- 一个 String  类型的数组，指示哪些自动生成的键的列名应可用。  
+ 一个 String **** 类型的数组，指示哪些自动生成的键的列名应可用。  
   
 ## <a name="return-value"></a>返回值  
- 指示受影响行数的 int  ，如果使用 DDL 语句，则此值为 0。  
+ 指示受影响行数的 int****，如果使用 DDL 语句，则此值为 0。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

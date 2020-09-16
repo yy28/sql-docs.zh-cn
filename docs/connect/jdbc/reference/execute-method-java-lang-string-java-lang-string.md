@@ -1,4 +1,5 @@
 ---
+description: execute 方法 (java.lang.String, java.lang.String)
 title: execute 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4bbc0a0828bcc146cf2a49625e51baa77703593b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 807b1ea0a1c81c85b6b715f881858bf88c733cc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437799"
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>execute 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,17 +36,17 @@ public final boolean execute(java.lang.String sql,
                              java.lang.String[] columnNames)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *sql*  
   
- 包含 SQL 语句的 String  。  
+ 包含 SQL 语句的 String****。  
   
- columnNames   
+ columnNames**  
   
  一个字符串数组，指示哪些自动生成的键的列名应可用。  
   
 ## <a name="return-value"></a>返回值  
- 如果第一个结果为一个结果集，则为“true”  。 否则为 **false**。  
+ 如果第一个结果为一个结果集，则为“true”****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

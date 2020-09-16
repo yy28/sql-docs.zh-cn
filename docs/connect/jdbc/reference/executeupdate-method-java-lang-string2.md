@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 方法 (java.lang.String)
 title: executeUpdate 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 428127147d00885dc379752e97154e8eabad54d1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fcfb5f6bf2c8697b4463b6726b844bd883e05c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437609"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 方法 (java.lang.String)
 
@@ -32,13 +33,13 @@ ms.locfileid: "80924209"
 public final int executeUpdate(java.lang.String sql)
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 *sql*
 
-包含 SQL 语句的 String  。
+包含 SQL 语句的 String****。
 
 ## <a name="return-value"></a>返回值
-一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0  。
+一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0****。
 
 ## <a name="exceptions"></a>例外
 [SQLServerException](./sqlserverexception-class.md)

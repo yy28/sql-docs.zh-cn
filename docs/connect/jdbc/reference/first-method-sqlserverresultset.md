@@ -1,4 +1,5 @@
 ---
+description: first 方法 (SQLServerResultSet)
 title: first 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 67ed9447-7b10-4c87-98e7-f4c2e2470b3a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac09ce40ecd70b4bde4bf2a01017775a7b90863f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dff169a8e614374da3b4ffa900cfaec1f8d34a91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437559"
 ---
 # <a name="first-method-sqlserverresultset"></a>first 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean first()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果游标移到第一行，则为 true  。 否则为 **false**。  
+ 如果游标移到第一行，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
