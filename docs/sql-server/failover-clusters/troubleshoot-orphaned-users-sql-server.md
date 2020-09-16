@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e302910a5a7870ed7c57a7325e6686f42a15707
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3a7429be669aff1bcabdcd9944387fa8360bf861
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999722"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288309"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户疑难解答 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -119,8 +119,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
 > [!IMPORTANT]  
 >  任何登录名都可更改其自己的密码。 只有具有 `ALTER ANY LOGIN` 权限的登录名才能更改其他用户的登录密码。 但是，只有 **sysadmin** 角色的成员才能修改 **sysadmin** 角色成员的密码。  
-  
- 不推荐使用的过程 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) 也适用于孤立用户。 `sp_change_users_login` 不能与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]配合使用。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

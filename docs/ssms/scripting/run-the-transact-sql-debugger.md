@@ -2,7 +2,7 @@
 title: 运行 Transact-SQL 调试器
 description: 了解如何自定义 Transact-SQL 调试器，以及如何使用它调试 Transact-SQL 代码。 可以在另一台计算机上的数据库引擎实例上运行调试器。
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122810"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901963"
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
 

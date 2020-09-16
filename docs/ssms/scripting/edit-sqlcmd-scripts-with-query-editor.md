@@ -1,12 +1,9 @@
 ---
 title: 使用查询编辑器编辑 SQLCMD 脚本
 description: 当需要在同一脚本中处理 Windows 系统命令和 Transact-SQL 语句时，请使用 SQLCMD 脚本。 了解如何使用数据库引擎查询编辑器来编写和编辑 SQLCMD 脚本。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -17,17 +14,22 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122958"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093428"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查询编辑器编辑 SQLCMD 脚本
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，可以将查询作为 SQLCMD 脚本来进行编写和编辑。 当必须处理同一脚本中的 Windows 系统命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，使用的是 SQLCMD 脚本。  
+
+使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，可以将查询作为 SQLCMD 脚本来进行编写和编辑。 当必须处理同一脚本中的 Windows 系统命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，使用的是 SQLCMD 脚本。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 模式  
  若要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器编写或编辑 SQLCMD 脚本，您必须启用 SQLCMD 脚本撰写模式。 默认情况下，查询编辑器中将不启用 SQLCMD 模式。 可以通过在工具栏中单击 **“SQLCMD 模式”** 图标或从 **“查询”** 菜单中选择 **“SQLCMD 模式”** 来启用脚本撰写模式。  

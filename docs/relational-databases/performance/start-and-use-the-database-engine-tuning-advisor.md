@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1f13fc030209957910284132b42c89a52b01ff31
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480499"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042812"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "89480499"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> 创建 TRANSACT-SQL 脚本工作负荷  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中启动查询编辑器。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中启动查询编辑器。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)。  
   
 2.  在查询编辑器中键入您的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 此脚本应包含一组对想要优化的数据库执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   

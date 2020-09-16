@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485570"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076802"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 
 默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的优先级都是 7，这个优先级称为正常优先级。 此默认值为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 线程提供了足够高的优先级以获得足够的 CPU 资源，而不会对其他应用程序造成负面影响。 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 [优先级提升](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)配置选项可用于将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的线程优先级提高到 13。 此优先级称为高优先级。 此设置为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 线程提供了一个比其他大多数应用程序高的优先级。 因此，通常当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 线程准备好运行时便获得分派，而不会被其他应用程序的线程抢先。 这可以在服务器只运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例而未运行其他应用程序时提高性能。 但是，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中发生占用大量内存的操作，其他应用程序便不可能有足够高的优先级而抢先于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 线程。 
 
 如果在一台计算机上运行多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，而只为其中的某些实例打开了 priority boost 选项，那么任何以正常优先级运行的实例的性能都将受到负面影响。 而且，如果打开了优先级提升选项，服务器上的其他应用程序和组件的性能将会降低。 因此，必须在严格控制下使用此选项。
+
 
 ## <a name="hot-add-cpu"></a>热添加 CPU
 热添加 CPU 是指能够动态向运行中的系统添加 CPU。 添加 CPU 时，可以通过添加新硬件来进行物理添加，或者通过联机硬件分区进行逻辑添加，或者通过虚拟化层进行虚拟添加。 从 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持热添加 CPU。
