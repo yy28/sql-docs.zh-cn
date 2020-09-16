@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_Instance 属性
 title: MSReportServer_Instance 属性 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f33795c9b030727e448440d3585e19b2a83fc418
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468912"
 ---
 # <a name="msreportserver_instance-properties"></a>MSReportServer_Instance 属性
   MSReportServer_Instance 类为客户端提供连接到已安装的报表服务器所需的基本信息。  
   
 ## <a name="public-properties"></a>公共属性  
   
-|||  
+|属性|说明|  
 |-|-|  
 |[EditionID 属性 (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|返回报表服务器的版本类别。|  
 |[EditionName 属性 (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|返回报表服务器版本类别的可读名称。|  

@@ -1,4 +1,5 @@
 ---
+description: 在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
 title: 在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted | Microsoft Docs
 ms.date: 12/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
 manager: v-mabarw
-ms.openlocfilehash: 81119187f1f00814e5b50dc97e41a506fe94131e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7f0e4ece6031f4aba769a9b9fee04e249ef553e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466651"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80926824"
 ## <a name="applicable-to"></a>适用于
  -   Microsoft Drivers 5.2 for PHP for SQL Server
  
-## <a name="introduction"></a>介绍
+## <a name="introduction"></a>简介
 
 本文介绍了如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 [PHP Driver for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md) 来开发 PHP 应用程序。
 
@@ -158,7 +159,7 @@ $stmt->execute();
  -   使用绑定参数执行查询时，PHP 驱动程序会自动确定用户的 SQL 类型，除非用户在使用 SQLSRV 驱动程序时显式指定 SQL 类型。
  -   程序打印的所有值均为纯文本形式，因为驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
  
-注意：只有在加密是确定性加密的情况下，查询才可以对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
+注意：只有在加密是确定性的情况下，查询才能对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
 SQLSRV：
 ```
@@ -256,7 +257,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 为了减少对列主密钥存储的调用次数以解密列加密密钥 (CEK)，驱动程序在内存中缓存纯文本 CEK。 从数据库元数据收到加密 CEK (ECEK) 后，ODBC 驱动程序会先尝试查找与缓存中的加密密钥值对应的纯文本 CEK。 只有在驱动程序无法从缓存中找到对应的纯文本 CEK 时，才会调用包含 CMK 的密钥存储。
 
-注意：在 ODBC Driver for SQL Server 中，超时 2 个小时后将收回缓存中的项。 这种行为意味着，对于给定 ECEK，驱动程序在应用程序生存期内或每两小时（以较短持续时间为准）只联系密钥存储一次。
+注意：在 ODBC Driver for SQL Server 中，缓存中的项在两小时的超时过后被收回。 这种行为意味着，对于给定 ECEK，驱动程序在应用程序生存期内或每两小时（以较短持续时间为准）只联系密钥存储一次。
 
 ## <a name="working-with-column-master-key-stores"></a>使用列主密钥存储
 

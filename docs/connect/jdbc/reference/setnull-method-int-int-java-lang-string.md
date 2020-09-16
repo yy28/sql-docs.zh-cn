@@ -1,4 +1,5 @@
 ---
+description: setNull 方法 (int, int, java.lang.String)
 title: setNull 方法 (int, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3ed2cca1d150c89418a1ba20fc110e199c457c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca79b47de812ff19fc41aba38994dd73c80cbd4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458630"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>setNull 方法 (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +37,10 @@ public final void setNull(int paramIndex,
                           java.lang.String typeName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- paramIndex   
+#### <a name="parameters"></a>参数  
+ paramIndex**  
   
- 指示参数编号的 int  。  
+ 指示参数编号的 int****。  
   
  *sqlType*  
   
@@ -47,7 +48,7 @@ public final void setNull(int paramIndex,
   
  *typeName*  
   
- 一个指示要设置的参数完全限定名称的 String  。  
+ 一个指示要设置的参数完全限定名称的 String****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

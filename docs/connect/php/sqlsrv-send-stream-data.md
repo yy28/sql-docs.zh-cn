@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_send_stream_data
 title: sqlsrv_send_stream_data | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2019
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3207810e44929b392a385f481dbb52da57ae6a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5adff7f48cc08bfd75e6d46f6f8a9a5f66e7c8cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466697"
 ---
 # <a name="sqlsrv_send_stream_data"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-将数据从参数流发送至服务器。 每次调用 sqlsrv_send_stream_data  时，最多可以发送八千字节 (8K) 的数据。  
+将数据从参数流发送至服务器。 每次调用 sqlsrv_send_stream_data 时，最多可以发送八千字节 (8K) 的数据。  
   
 > [!NOTE]  
 > 默认情况下，当执行查询时，所有流数据都将发送到服务器。 如果未更改此默认行为，则无需使用 **sqlsrv_send_stream_data** 来向服务器发送流数据。 有关更改默认行为的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)的“参数”部分。  
@@ -39,7 +40,7 @@ ms.locfileid: "80927227"
 sqlsrv_send_stream_data( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$stmt*：对应于已执行语句的语句资源。  
   
 ## <a name="return-value"></a>返回值  

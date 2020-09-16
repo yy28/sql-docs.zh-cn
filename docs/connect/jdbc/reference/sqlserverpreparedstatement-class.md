@@ -1,4 +1,5 @@
 ---
+description: SQLServerPreparedStatement 类
 title: SQLServerPreparedStatement 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a1a8b95814cbd9a75dad0b9a42a474d932a88d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 75a04a0873308cc09c16b54f5d482ed54a20c0b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472124"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ public class SQLServerPreparedStatement
 ```  
   
 ## <a name="remarks"></a>备注  
- SQLServerPreparedStatement 可提供使你能够提供作为任意本机 Java 类型和许多 Java 对象类型的参数的方法。 SQLServerPreparedStatement 通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sp_prepare 存储过程来定义某个语句，然后通常使用用户提供的不同参数对每个后续运行的语句重用返回的语句句柄  。  
+ SQLServerPreparedStatement 可提供使你能够提供作为任意本机 Java 类型和许多 Java 对象类型的参数的方法。 SQLServerPreparedStatement 通过使用  sp_prepare 存储过程来定义某个语句，然后通常使用用户提供的不同参数对每个后续运行的语句重用返回的语句句柄[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ****。  
   
  SQLServerPreparedStatement 支持通过批处理（即在单个数据库往返通信中运行一组预定义语句）来改善运行时性能。  
   

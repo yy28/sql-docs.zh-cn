@@ -1,4 +1,5 @@
 ---
+description: BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
 title: BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 869967e3f8797aa9af4bf59f128730a9fc39641d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78ee3bbe67be0c5739b2759c51ceb5ac2c5bb32c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468996"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>ConfigurationSetting 方法 - BackupEncryptionKey
   备份指定报表服务器实例的加密密钥。 加密密钥会在使用密码加密后存储。  
@@ -39,7 +40,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
     out Int32 Length, out Int32 HRESULT, out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *密码*  
  用于在加密密钥返回之前对其进行加密的字符串。  
   

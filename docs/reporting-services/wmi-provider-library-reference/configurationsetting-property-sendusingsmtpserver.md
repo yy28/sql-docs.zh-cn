@@ -1,4 +1,5 @@
 ---
+description: SendUsingSMTPServer 属性 (WMI MSReportServer_ConfigurationSetting)
 title: SendUsingSMTPServer 属性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e292a91ff23e658ca31ae42401df8ea846fcc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c033d4787bfa31f61b8657ecf9e7ccf7db1e59a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472595"
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>ConfigurationSetting 属性 - SendUsingSMTPServer
   指定报表服务器的电子邮件配置中的 **SendUsing** 元素是否设置为 **true**。  

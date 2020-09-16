@@ -1,4 +1,5 @@
 ---
+description: 向关系图中添加表 (Visual Database Tools)
 title: 向关系图添加表
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: da818756c2239d460af2d18b3050e9681aff2698
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5aa8b90a1a6d3b03ec7a8c091d2f17cbb669823f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462925"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>向关系图中添加表 (Visual Database Tools)
 
@@ -30,19 +31,19 @@ ms.locfileid: "86007447"
 
 1. 确保已连接到要在其中创建表的数据库。
 
-   若要在当前关系图中创建表，请单击工具栏上的“新建表”  按钮。
+   若要在当前关系图中创建表，请单击工具栏上的“新建表”**** 按钮。
 
-   -或-  
+   - 或 -  
 
-   在关系图中右键单击，然后选择“新建表”  。
+   在关系图中右键单击，然后选择“新建表”****。
 
-2. 在“选择名称”  对话框中修改或接受系统分配的表名，然后选择“确定”  。
+2. 在“选择名称”**** 对话框中修改或接受系统分配的表名，然后选择“确定”****。
 
    此时，将在关系图中以标准视图显示一个新表。
 
 3. 在新表的第一个单元格中，键入列名。 然后按 Tab 键移动到下一个单元格。
 
-4. 在“数据类型”  下，选择列的数据类型。 每个列都必须具有名称和数据类型。
+4. 在“数据类型”**** 下，选择列的数据类型。 每个列都必须具有名称和数据类型。
 
    您可以在表设计器中设置列的其他属性。
 
@@ -55,7 +56,7 @@ ms.locfileid: "86007447"
 
 1. 确保已连接到要编辑其表的数据库。
 
-2. 在“表”  文件夹中选择表。
+2. 在“表”**** 文件夹中选择表。
 
 3. 将该表拖动到数据库关系图中。
 
@@ -68,12 +69,12 @@ ms.locfileid: "86007447"
 
 1. 在数据库关系图中，选择一个或多个具有外键约束的表。  
 
-2. 右键单击任何选定的表，再选择“添加相关表”  。  
+2. 右键单击任何选定的表，再选择“添加相关表”****。  
 
 > [!NOTE]
 > 选定表的外键约束所引用的表以及引用具有外键约束的选定表的表都将添加到关系图中。  
 
 ## <a name="see-also"></a>另请参阅
 
-[处理数据库关系图](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[使用数据库关系图](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [使用数据库关系图中的表](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)

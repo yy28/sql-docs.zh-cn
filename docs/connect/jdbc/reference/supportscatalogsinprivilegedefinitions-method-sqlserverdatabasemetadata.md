@@ -1,4 +1,5 @@
 ---
+description: supportsCatalogsInPrivilegeDefinitions 方法 (SQLServerDatabaseMetaData)
 title: supportsCatalogsInPrivilegeDefinitions 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a897c22b5e6879c67e02a72fe1b7d342662363c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 382a28e8a68a047da240cb1b5427c8ea7614bfd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462459"
 ---
 # <a name="supportscatalogsinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInPrivilegeDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean supportsCatalogsInPrivilegeDefinitions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true  。 否则为 **false**。  
+ 如果支持，则值为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

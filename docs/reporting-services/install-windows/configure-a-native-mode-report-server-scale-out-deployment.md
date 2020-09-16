@@ -1,4 +1,5 @@
 ---
+description: 配置本机模式报表服务器扩展部署
 title: 配置本机模式报表服务器扩展部署 | Microsoft Docs
 ms.date: 11/29/2018
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459997"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
 
@@ -31,7 +32,7 @@ Reporting Services 本机模式支持扩展部署模式。该模式允许运行�
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
  
-  在以下情形中使用“扩展部署”  ：  
+  在以下情形中使用“扩展部署” ** ：  
   
 -   作为对服务器群集中的多个报表服务器进行负载平衡的必备条件。 在可以对多个报表服务器进行负载平衡之前，必须首先将它们配置为共享同一报表服务器数据库。  
   
@@ -75,7 +76,7 @@ Reporting Services 本机模式支持扩展部署模式。该模式允许运行�
 
 在处理扩展部署时，用于 Reporting Services 实例的服务帐户非常重要。 部署 Reporting Services 实例时，应执行以下操作之一。
 
-**选项 1：** 应使用相同的域用户帐户为服务帐户配置所有 Reporting Services 实例。
+**选项 1：** 应使用相同的域用户帐户为服务帐户配置所有的 Reporting Services 实例。
 
 **选项 2：** 需要向每个单独的服务帐户（无论是否为域帐户）授予 SQL Server 数据库实例内的 dbadmin 权限，该数据库实例正在托管 ReportServer 目录数据库。
 
@@ -105,42 +106,42 @@ An error occurred within the report server database.  This may be due to a conne
   
 3.  将报表服务器连接到用于第一个报表服务器实例的数据库：  
   
-    1.  选择“数据库”打开“数据库”页  。  
+    1.  选择“数据库”打开“数据库”页****。  
   
-    2.  选择“更改数据库”  。  
+    2.  选择“更改数据库”****。  
   
-    3.  选择“选择现有报表服务器数据库”  。  
+    3.  选择“选择现有报表服务器数据库”****。  
   
     4.  键入承载您要使用的报表服务器数据库的 SQL Server 数据库引擎实例的服务器名称。 此服务器必须是上述说明中连接到的服务器。  
   
-    5.  选择“测试连接”，然后选择“下一步”   。  
+    5.  选择“测试连接”，然后选择“下一步”********。  
   
-    6.  在“报表服务器数据库”中，选择为第一个报表服务器创建的数据库，然后选择“下一步”   。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
+    6.  在“报表服务器数据库”中，选择为第一个报表服务器创建的数据库，然后选择“下一步”********。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
   
     7.  在“凭据”页中，选择报表服务器将用于连接到报表服务器数据库的帐户类型和凭据。 可以使用与第一个报表服务器实例相同的凭据，也可以使用其他凭据。 选择“**下一页**”。  
   
-    8.  选择“摘要”，然后选择“完成”   。  
+    8.  选择“摘要”，然后选择“完成”********。  
   
-4.  配置报表服务器“Web 服务 URL”  。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
+4.  配置报表服务器“Web 服务 URL”。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
   
-5.  配置“Web 门户 URL”  。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
+5.  配置“Web 门户 URL”****。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
   
 ## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>将第二个报表服务器实例联接到扩展部署  
   
 1.  打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到第一个报表服务器实例。 由于已将第一个报表服务器初始化为执行可逆加密操作，因此它可用于将其他报表服务器实例联接到扩展部署。  
   
-2.  单击“扩展部署”打开“扩展部署”页  。 您会看到两个条目，分别对应于连接到报表服务器数据库的两个报表服务器实例。 第一个报表服务器实例应已联接。 第二个报表服务器应在“等待联接”。 如果您在自己的部署中没有看到类似的条目，请确认您已连接到已配置和初始化为使用报表服务器数据库的第一个报表服务器。  
+2.  单击“扩展部署”打开“扩展部署”页****。 您会看到两个条目，分别对应于连接到报表服务器数据库的两个报表服务器实例。 第一个报表服务器实例应已联接。 第二个报表服务器应在“等待联接”。 如果您在自己的部署中没有看到类似的条目，请确认您已连接到已配置和初始化为使用报表服务器数据库的第一个报表服务器。  
   
      ![“扩展部署”页的局部屏幕快照](../../reporting-services/install-windows/media/scaloutscreen.gif "“扩展部署”页的局部屏幕快照")  
   
-3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”  。  
+3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”****。  
   
     > [!NOTE]  
     >  **问题：** 尝试将一个 Reporting Services 报表服务器实例联接到横向扩展部署时，可能遇到类似“拒绝访问”的错误消息。  
     >   
     >  **解决方法：** 从第一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥并将该密钥还原到第二个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。  
   
-4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“Web 门户 URL”   。  
+4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“Web 门户 URL”********。  
   
  如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [在网络负载平衡群集上配置报表服务器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
 

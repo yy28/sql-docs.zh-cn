@@ -1,4 +1,5 @@
 ---
+description: updateObject 方法 (java.lang.String, java.lang.Object, int)
 title: updateObject 方法 (java.lang.String, java.lang.Object, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b32c37a278c0498e23988edfb6c8461998540c95
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbc070f71830113875add1d4711671832ae4de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478291"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject 方法 (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列名称和小数位数使用 Object  值更新指定的列。  
+  根据给定的列名称和小数位数使用 Object**** 值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +37,12 @@ public void updateObject(java.lang.String columnName,
                          int scale)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *columnName*  
   
  一个包含列名的字符串  。  
   
- obj   
+ *obj*  
   
  Object 值  。  
   

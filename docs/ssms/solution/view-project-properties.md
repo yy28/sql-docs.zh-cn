@@ -1,4 +1,5 @@
 ---
+description: 视图项目属性
 title: 视图项目属性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49ba8730a90a14258a8fdaf94fe33bb99a47467b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 708b5ae611b05769c1fa084d8d0d554d53c73346
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468515"
 ---
 # <a name="view-project-properties"></a>视图项目属性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86000749"
   
 1.  在解决方案资源管理器中，选择一个项目。  
   
-2.  如果未打开“属性”窗口，请单击“视图”  菜单上的“属性窗口”  。  
+2.  如果未打开“属性”窗口，请单击“视图”**** 菜单上的“属性窗口”****。  
   
 3.  在“属性”窗口中查看项目的属性。  
   

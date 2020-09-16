@@ -1,4 +1,5 @@
 ---
+description: 输入搜索值的规则 (Visual Database Tools)
 title: “输入搜索值”的规则
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 469afd2894737fd0a1f6150650fce3fa08fe981c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6943034cbad433254c576d68a631d45be470b49c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462709"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>输入搜索值的规则 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "86009272"
   
 -   **引号** 不能将数字放在引号内。  
   
--   **非数字字符** 除小数点分隔符（在 Windows 控制面板的“区域设置”  对话框中定义）和负号 (-) 之外，不能包含非数字字符。 不能包含数字分组符号（如千位间的逗号）或货币符号。  
+-   **非数字字符** 除小数点分隔符（在 Windows 控制面板的“区域设置”**** 对话框中定义）和负号 (-) 之外，不能包含非数字字符。 不能包含数字分组符号（如千位间的逗号）或货币符号。  
   
 -   **小数点标记** 如果输入整数，则可以包含小数点标记，无论所搜索的值是整数还是实数。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "86009272"
   
 查询和视图设计器可以使用以下日期格式：  
   
--   **区域设置特定** 在“Windows 区域设置属性”  对话框中指定的日期格式。  
+-   **区域设置特定** 在“Windows 区域设置属性”**** 对话框中指定的日期格式。  
   
 -   **数据库特定** 数据库可以理解的任何格式。  
   

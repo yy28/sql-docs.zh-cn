@@ -1,4 +1,5 @@
 ---
+description: 使用数据库关系图中的表 (Visual Database Tools)
 title: 使用数据库关系图中的表
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 7072233d4a4d509fbb002e9951484f547396dad5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1f947afca06a3f27ae972885b20199917b14862e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459985"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>使用数据库关系图中的表 (Visual Database Tools)
 
@@ -46,7 +47,7 @@ ms.locfileid: "86002567"
   
 [绘制自反关系 (Visual Database Tools)](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 [“添加表”对话框（数据库设计器）(Visual Database Tools)](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
 

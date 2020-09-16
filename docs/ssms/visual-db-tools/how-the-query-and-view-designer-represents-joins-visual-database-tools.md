@@ -1,4 +1,5 @@
 ---
+description: 查询和视图设计器如何表示联接 (Visual Database Tools)
 title: 查询和视图设计器如何表示联接
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51c94c3d0cd6f5e86d8d6ed35e0ebf81606ecfdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462792"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查询和视图设计器如何表示联接 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-如果对表进行了联接， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 将在[“关系图”](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 窗格中以图形方式表示联接，并在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
+ 如果对表进行了联接，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将在“[关系图](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)”窗格中以图形方式表示联接，并在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
   
 ## <a name="diagram-pane"></a>“关系图”窗格  
 在“关系图”窗格中，查询和视图设计器在联接所涉及的数据列之间显示一条联接线。 查询和视图设计器为每个联接条件显示一条联接线。 例如，下图阐释两个联接的表之间的联接线：  

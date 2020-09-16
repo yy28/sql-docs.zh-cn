@@ -1,4 +1,5 @@
 ---
+description: 创建更新查询 (Visual Database Tools)
 title: 创建更新查询
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 85dbdecd8b20ff27eb74c4078fca81dcbc39d53e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f750573b4afb02cd06f3ee1a8c17008639910608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462813"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>创建更新查询 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,19 +52,19 @@ WHERE (pub_id = '0766')
   
 1.  将要更新的表添加到“关系图”窗格中。  
   
-2.  在“查询设计器”  菜单中，指向“更改类型”  ，再单击“更新”  。  
+2.  在“查询设计器”**** 菜单中，指向“更改类型”****，再单击“更新”****。  
   
     > [!NOTE]  
     > 如果启动“更新”查询时“关系图”窗格中显示有多个表，则查询和视图设计器将显示“[选择插入值的目标表](../../ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md)”对话框，以提示你输入要更新的表名。  
   
 3.  在“关系图”窗格中，单击要为其提供新值的每个列的复选框。 这些列将显示在“条件”窗格中。 列只有在添加到查询后才能更新。  
   
-4.  在“条件”窗格的“新建值”  列中，输入列的更新值。 可以输入文字值、列名或表达式。 该值必须与要更新的列的数据类型相匹配（或兼容）。  
+4.  在“条件”窗格的“新建值”**** 列中，输入列的更新值。 可以输入文字值、列名或表达式。 该值必须与要更新的列的数据类型相匹配（或兼容）。  
   
     > [!CAUTION]  
     > 查询和视图设计器无法检查值是否适合要更新的列的长度。 如果所提供的值太长，那么可能会在不提出警告的情况下截断该值。 例如，如果 `name` 列的长度为 20 个字符，但您指定的更新值为 25 个字符，那么可能会截断后 5 个字符。  
   
-5.  在“筛选器”  列中输入搜索条件，定义要更新的行。 有关详细信息，请参阅[指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
+5.  在“筛选器”**** 列中输入搜索条件，定义要更新的行。 有关详细信息，请参阅[指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
   
     如果未指定搜索条件，将更新指定表中的所有行。  
   

@@ -1,4 +1,5 @@
 ---
+description: 打印查询结果 (Visual Database Tools)
 title: 打印查询结果
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c3efdca2215b4338ef4141117c5ad19031c53bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462741"
 ---
 # <a name="print-query-results-visual-database-tools"></a>打印查询结果 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "86002669"
   
 1.  选择要打印的列或行。  
   
-2.  使用“复制”  命令将它们移动到剪贴板中。  
+2.  使用“复制”**** 命令将它们移动到剪贴板中。  
   
 3.  切换到要用于打印结果的 Windows 程序。  
   
-4.  使用“粘贴”  命令从剪贴板中取出查询结果。  
+4.  使用“粘贴”**** 命令从剪贴板中取出查询结果。  
   
 5.  设置格式，然后打印结果。  
   

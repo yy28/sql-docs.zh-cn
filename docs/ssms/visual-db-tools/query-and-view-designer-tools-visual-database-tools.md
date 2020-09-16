@@ -1,4 +1,5 @@
 ---
+description: 查询和视图设计器工具 (Visual Database Tools)
 title: 查询和视图设计器工具
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,12 +23,12 @@ ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 63418132e48a79c7a26cfc3dbc5133311207c27e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa6bb9fc624cc3451ececdcc3f1ca0a98ad8687e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468349"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>查询和视图设计器工具 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86004205"
 可以通过在任意一个窗格中进行操作来创建查询或视图：通过以下方法可以指定要显示的列，在“关系图”窗格中选择该列，在“条件”窗格中输入该列，或者在 SQL 窗格中使其成为 SQL 语句的一部分。  
   
 ## <a name="displaying-and-hiding-panes"></a>显示和隐藏窗格  
-若要隐藏窗格或显示不可见的窗格，请右键单击设计图面，指向“窗格”  ，再单击窗格的名称。 如果在查询设计器模式下打开了查询和视图设计器，则不会显示“结果”  窗格。  
+若要隐藏窗格或显示不可见的窗格，请右键单击设计图面，指向“窗格”****，再单击窗格的名称。 如果在查询设计器模式下打开了查询和视图设计器，则不会显示“结果”**** 窗格。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

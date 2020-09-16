@@ -1,4 +1,5 @@
 ---
+description: ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
 title: ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e16dbe378ddab0b04237509a9fc9865d08468bba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2637281746236b2027375e14bcea6238d6ccc66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468949"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting 方法 - ReserveURL
   为给定的应用程序添加一个 URL 预留。  
@@ -33,7 +34,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
     out string error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *应用程序*  
  为其保留相应 URL 的应用程序的名称。  
   

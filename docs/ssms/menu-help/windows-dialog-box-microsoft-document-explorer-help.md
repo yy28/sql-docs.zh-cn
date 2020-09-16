@@ -1,4 +1,5 @@
 ---
+description: Windows 对话框（Microsoft 文档资源管理器的帮助）
 title: Windows 对话框（Microsoft 文档资源管理器的帮助）
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de17d169a89f4192d0de167549218fee6c3e8fab
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dde3b50d34f269285cdd81bb4e14556d95474009
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468574"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Windows 对话框（Microsoft 文档资源管理器的帮助）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”菜单上的 **Windows** 可以显示此对话框。  
+使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”**** 菜单上的 **Windows** 可以显示此对话框。  
   
 ## <a name="options"></a>选项  
 **名称**  

@@ -1,4 +1,5 @@
 ---
+description: 复制查询 (Visual Database Tools)
 title: 复制查询
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 2788fceff82bffa7256c40222223474b469077ec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bcb5351391b863b61836455bc796a893820489a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462836"
 ---
 # <a name="copy-queries-visual-database-tools"></a>复制查询 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "86005137"
   
 ### <a name="to-copy-a-query"></a>复制查询  
   
-1.  在“视图”  菜单中，单击“解决方案资源管理器”。  
+1.  在“视图”**** 菜单中，单击“解决方案资源管理器”。  
   
-2.  在解决方案资源管理器中，右键单击要复制的查询，然后从快捷菜单中选择“打开”  。  
+2.  在解决方案资源管理器中，右键单击要复制的查询，然后从快捷菜单中选择“打开”****。  
   
 3.  在 SQL 窗格中复制所需的查询部分。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "86005137"
   
 5.  将光标定位到要添加 SQL 代码的位置。  
   
-6.  右键单击，然后在快捷菜单中单击“粘贴”  。  
+6.  右键单击，然后在快捷菜单中单击“粘贴”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [重命名查询 (Visual Database Tools)](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  

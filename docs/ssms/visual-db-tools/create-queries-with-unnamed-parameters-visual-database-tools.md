@@ -1,4 +1,5 @@
 ---
+description: 使用未命名参数创建查询 (Visual Database Tools)
 title: 使用未命名参数创建查询
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 263788197ce8beda6c25287155544b40d0edb824
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7182e87108952ddaee18a32dce54f1c980c2afe2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468387"
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>使用未命名参数创建查询 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86000052"
   
 1.  将要搜索的列或表达式添加到 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中。 如果不希望搜索列或表达式出现在查询输出中，则将其从输出列中移除。  
   
-2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”  网格列中输入一个问号 (?)。  
+2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”**** 网格列中输入一个问号 (?)。  
   
     默认情况下，查询和视图设计器将添加“=”运算符。 不过，您可以对该单元格进行编辑，以替换“>”、“<”或任何其他 SQL 比较运算符。  
   

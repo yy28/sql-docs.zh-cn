@@ -1,4 +1,5 @@
 ---
+description: 创建表别名 (Visual Database Tools)
 title: 创建表别名
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b89cec27a4c31b8165129fe4b3565ce6f448ac15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dcac7f46183579b3d96fb3a65b13f731ce114f9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462850"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>创建表别名 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +37,9 @@ ms.locfileid: "85999987"
   
 1.  将表或表值对象添加到查询中。  
   
-2.  在“关系图”  窗格中，右键单击要为其创建别名的对象，然后从快捷菜单中选择“属性”  。  
+2.  在“关系图”**** 窗格中，右键单击要为其创建别名的对象，然后从快捷菜单中选择“属性”****。  
   
-3.  在“属性”  窗口的“别名”  字段中输入别名。  
+3.  在“属性”**** 窗口的“别名”**** 字段中输入别名。  
   
 ## <a name="see-also"></a>另请参阅  
 [向查询中添加表 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  

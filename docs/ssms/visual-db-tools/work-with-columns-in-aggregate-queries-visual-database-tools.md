@@ -1,4 +1,5 @@
 ---
+description: 在聚合查询中使用列 (Visual Database Tools)
 title: 使用聚合查询中的列
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: acd777cfd536c60f1eb7e7b81e65e55f9fb6bb1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468297"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-创建聚合查询时， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  
+ 创建聚合查询时，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  
   
 ## <a name="using-group-by"></a>使用“分组依据”  
 查询和视图设计器在处理列时使用以下原则：  
@@ -37,11 +38,11 @@ ms.locfileid: "86002602"
   
 向“条件”窗格的“筛选器”列中输入搜索条件时，查询和视图设计器将遵循以下规则：  
   
--   如果没有显示网格的“分组依据”  列（因为尚未指定聚合查询），则搜索条件将放入 WHERE 子句中。  
+-   如果没有显示网格的“分组依据”**** 列（因为尚未指定聚合查询），则搜索条件将放入 WHERE 子句中。  
   
--   如果已在聚合查询中，并在“分组依据”列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
+-   如果已在聚合查询中，并在“分组依据”**** 列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
   
--   如果“分组依据”  列包含 **Where** 以外的任何值，则搜索条件将放入 HAVING 子句中。  
+-   如果“分组依据”**** 列包含 **Where** 以外的任何值，则搜索条件将放入 HAVING 子句中。  
   
 ## <a name="using-the-having-and-where-clauses"></a>使用 HAVING 和 WHERE 子句  
 以下原则描述如何在聚合查询的搜索条件中引用列。 通常，可以在搜索条件中使用列来筛选要汇总的行（WHERE 子句）或确定要在最终输出中显示的分组结果（HAVING 子句）。  

@@ -1,4 +1,5 @@
 ---
+description: 保护共享数据源项
 title: 保护共享数据源项 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf25b5dd7eac661f5ee77e2328a322601b0d3c8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472639"
 ---
 # <a name="secure-shared-data-source-items"></a>保护共享数据源项
   您可以设置共享数据源项的安全性，以允许或禁止对其进行访问。  
   
- 如果用户对共享数据源拥有最基本的访问权限（例如，通过“浏览者”角色授予的访问权限）并且还为该用户授予了查看报表本身的权限，则该用户可以查看使用该项的报表的列表  。  
+ 如果用户对共享数据源拥有最基本的访问权限（例如，通过“浏览者”角色授予的访问权限）并且还为该用户授予了查看报表本身的权限，则该用户可以查看使用该项的报表的列表****。  
   
- 拥有其他访问权限的用户（例如，通过“内容管理员”角色授予的访问权限）可以查看和设置共享数据源的属性  。  
+ 拥有其他访问权限的用户（例如，通过“内容管理员”角色授予的访问权限）可以查看和设置共享数据源的属性****。  
   
  若要设置安全性，应创建相应的角色分配，以指定对共享数据源拥有访问权限的用户帐户或组帐户。 对共享数据源项具有访问权限的用户可以更改该项的名称、说明、连接字符串或凭据信息。  
   

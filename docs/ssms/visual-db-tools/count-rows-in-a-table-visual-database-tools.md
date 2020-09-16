@@ -1,4 +1,5 @@
 ---
+description: 计算表中的行数 (Visual Database Tools)
 title: 表中的计数行
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 34a37d382d7176f1f1e602aa45a559299d7d43ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4aef31efc3b7636d56d9a4cd1ba1cf07aa22830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462848"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>计算表中的行数 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,50 +43,50 @@ ms.locfileid: "86005120"
   
 1.  确保您要汇总的表已经包含在“关系图”窗格中。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”  列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”****。 [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”**** 列。  
   
-3.  在表示表或表值对象的矩形中，选择“&#42; (所有列)”  。  
+3.  在表示表或表值对象的矩形中，选择“&#42; (所有列)”。  
   
-    查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
+    查询和视图设计器会自动在“条件”窗格的“分组依据”**** 列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  运行查询。  
+4.  运行该查询。  
   
 ### <a name="to-count-all-the-rows-that-meet-a-condition"></a>对满足条件的所有行进行计数  
   
 1.  确保您要汇总的表已经包含在“关系图”窗格中。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”  列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”****。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”**** 列。  
   
-3.  在表示表或表结构对象的矩形中，选择“&#42; (所有列)”  。  
+3.  在表示表或表结构对象的矩形中，选择“&#42; (所有列)”。  
   
-    查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
+    查询和视图设计器会自动在“条件”窗格的“分组依据”**** 列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  添加要搜索的数据列，再清除“输出”  列中的复选框。  
+4.  添加要搜索的数据列，再清除“输出”**** 列中的复选框。  
   
-    查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
+    查询和视图设计器会自动在网格的“分组依据”**** 列中填充 **Group By** 一词。  
   
-5.  将“分组依据”列中的 **Group By** 改为 **Where**。  
+5.  将“分组依据”**** 列中的 **Group By** 改为 **Where**。  
   
-6.  在要搜索的数据列的“筛选器”  列中，输入搜索条件。  
+6.  在要搜索的数据列的“筛选器”**** 列中，输入搜索条件。  
   
-7.  运行查询。  
+7.  运行该查询。  
   
 ### <a name="to-count-the-values-in-a-column"></a>对列中的值进行计数  
   
 1.  确保您要汇总的表已经包含在“关系图”窗格中。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”  列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”****。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”**** 列。  
   
 3.  将要计数的列添加到“条件”窗格中。  
   
-    查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
+    查询和视图设计器会自动在网格的“分组依据”**** 列中填充 **Group By** 一词。  
   
-4.  将“分组依据”列中的 **Group By** 改为 **Count**。  
+4.  将“分组依据”**** 列中的 **Group By** 改为 **Count**。  
   
     > [!NOTE]  
     > 若要只计算唯一值的数目，请选择 **Count Distinct**。  
   
-5.  运行查询。  
+5.  运行该查询。  
   
 ## <a name="see-also"></a>另请参阅  
 [对查询结果进行排序和分组 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

@@ -1,4 +1,5 @@
 ---
+description: 创建“生成表”查询 (Visual Database Tools)
 title: 创建“生成表”查询
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: dc2c7c425bc9f75304917ec37531a2db7cab57da
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1679eb137b6931810b79e42d9009e0682d90e0f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468419"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>创建“生成表”查询 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,17 +61,17 @@ WHERE country = 'UK'
   
 1.  将一个或多个源表添加到“关系图”窗格中。  
   
-2.  在“查询设计器”  菜单中，指向“更改类型”  ，再单击“生成表”  。  
+2.  在“查询设计器”**** 菜单中，指向“更改类型”****，再单击“生成表”****。  
   
-3.  在“生成表”  对话框中，键入目标表的名称。 查询和视图设计器不会检查该名称是否已使用，也不会检查您是否具有创建表的权限。  
+3.  在“生成表”**** 对话框中，键入目标表的名称。 查询和视图设计器不会检查该名称是否已使用，也不会检查您是否具有创建表的权限。  
   
     若要在另一个数据库中创建目标表，请指定完全限定表名，包括目标数据库的名称、所有者（如果需要）以及表名。  
   
-4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅[向查询中添加列](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制全部行，请选择“&#42; (所有列)”  。  
+4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅[向查询中添加列](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制全部行，请选择“&#42; (所有列)”。  
   
-    “查询和视图设计器”会将选择的列添加到“条件”窗格的“列”  列中。  
+    “查询和视图设计器”会将选择的列添加到“条件”窗格的“列”**** 列中。  
   
-5.  如果希望按特定顺序复制行，请指定排序顺序。 有关详细信息，请参阅“对查询结果进行排序和分组”  。  
+5.  如果希望按特定顺序复制行，请指定排序顺序。 有关详细信息，请参阅“对查询结果进行排序和分组”****。  
   
 6.  通过输入搜索条件指定要复制的行。 有关详细信息，请参阅[指定搜索条件](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
   
@@ -84,6 +85,6 @@ WHERE country = 'UK'
 在执行“生成表”查询时，不会在 [“结果窗格”](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指出已复制的行数。  
   
 ## <a name="see-also"></a>另请参阅  
-[设计查询和查看操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[有关设计查询和视图的操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [查询类型(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

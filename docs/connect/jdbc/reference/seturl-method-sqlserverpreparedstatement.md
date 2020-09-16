@@ -1,4 +1,5 @@
 ---
+description: setURL 方法 (SQLServerPreparedStatement)
 title: setURL 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d853b2f3-fb72-4d4b-8997-f4a45a9dfefc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 966ee4916f59f1863ca339965ca4e84e4bf10c9e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3afa16f1fce8699f8dd400af961dd33a58f66439
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467109"
 ---
 # <a name="seturl-method-sqlserverpreparedstatement"></a>setURL 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +36,10 @@ public final void setURL(int parameterIndex,
                          java.net.URL x)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- parameterindex   
+#### <a name="parameters"></a>参数  
+ parameterindex  
   
- 指示参数编号的 int  。  
+ 指示参数编号的 int****。  
   
  *x*  
   

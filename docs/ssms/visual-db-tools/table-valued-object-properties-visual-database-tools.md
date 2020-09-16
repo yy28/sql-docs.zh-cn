@@ -1,4 +1,5 @@
 ---
+description: 表值对象属性 (Visual Database Tools)
 title: 表值对象属性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,34 +13,34 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9e21318c245ab43b288ac4784289a62673e7e94a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2606f055597438aa852c787c45c9c489cd4e5743
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468289"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>表值对象属性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-在 **查询设计器和视图设计器**中选择表值对象时，这些属性将显示在“属性”窗口中。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”  窗口中为只读。  
+ 在“查询和视图设计器”中选择表值对象时，将在“属性”窗口中显示这些属性****。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”**** 窗口中为只读。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 > [!NOTE]  
-> 根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。  
   
 **标识类别**  
-展开此项可显示“名称”  和“TVO 类型”  属性。  
+展开此项可显示“名称”**** 和“TVO 类型”**** 属性。  
   
-**名称**  
+**Name**  
 显示所选表值对象的名称。  
   
 **TVO 类型**  
 显示表值对象的类型。 其类型可以是基表、视图、表值函数或派生表。  
   
 **查询设计器类别**  
-展开此项可显示“别名”  、“列列表”  、“全名”  和“参数列表”  属性。  
+展开此项可显示“别名”****、“列列表”****、“全名”**** 和“参数列表”**** 属性。  
   
 **Alias**  
 显示所选表值对象的别名。 若要添加或更改别名，请在字段中键入相应内容。  

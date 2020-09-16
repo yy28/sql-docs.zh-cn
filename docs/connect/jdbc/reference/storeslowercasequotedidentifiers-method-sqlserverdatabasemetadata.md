@@ -1,4 +1,5 @@
 ---
+description: storesLowerCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 title: storesLowerCaseQuotedIdentifiers 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5c3762c6ed9d5f27b95acc14681d34c9ead86acb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a29d256250d9f7380ca636c4c4c087980a8d0116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467052"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean storesLowerCaseQuotedIdentifiers()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果以小写形式存储标识符，则为 true  。 否则为 **false**。  
+ 如果以小写形式存储标识符，则为 true****。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

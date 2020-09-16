@@ -1,4 +1,5 @@
 ---
+description: 创建删除查询 (Visual Database Tools)
 title: 创建删除查询
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d5903396af4d38b97924860733a264838397b03e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 042d134a70c673052ed186aa94ca34fd4bc01faf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462867"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>创建删除查询 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以通过使用“删除”查询来删除表中的所有行。  
   
 > [!NOTE]  
-> 删除表中的所有行会清除表中的数据，但不会删除表本身。 若要从数据库中删除表，请在对象资源管理器中右键单击该表，再单击“删除”  。  
+> 删除表中的所有行会清除表中的数据，但不会删除表本身。 若要从数据库中删除表，请在对象资源管理器中右键单击该表，再单击“删除”****。  
   
 在创建“删除”查询时，“条件”窗格将发生相应变化以反映可用于删除行的选项。 因为不在“删除”查询中显示数据，所以将移除“输出”、“排序方式”和“排序顺序”列。 此外，因为无法指定要删除的单个列，所以在代表表或表值对象的矩形中，将移除列名旁边的复选框。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "86010443"
   
 1.  将要从中删除行的表添加到“关系图”窗格中。  
   
-2.  在“查询设计器”  菜单中，指向“更改类型”  ，再单击“删除”  。 **注意** 如果启动“删除”查询时，在“关系图”窗格中显示有多个表，则查询和视图设计器将显示[“删除表”对话框](../../ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md)，以提示你选择要从中删除行的表名。  
+2.  在“查询设计器”**** 菜单中，指向“更改类型”****，再单击“删除”****。 **注意** 如果启动“删除”查询时，在“关系图”窗格中显示有多个表，则查询和视图设计器将显示[“删除表”对话框](../../ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md)，以提示你选择要从中删除行的表名。  
   
 在执行“删除”查询时，不会在 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指示已删除的行数。  
   

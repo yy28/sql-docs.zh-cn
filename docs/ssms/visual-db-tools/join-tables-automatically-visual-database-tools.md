@@ -1,4 +1,5 @@
 ---
+description: 自动联接表 (Visual Database Tools)
 title: 自动联接表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a98ac8db359d4e47911ce3a2ca97b6cdd5494d90
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3efc96cafe9a7759834591473007dd3818b16e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462789"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自动联接表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-将两个或多个表添加到查询中时， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 会尝试确定它们是否相关。 如果相关，查询和视图设计器将自动在表示表或表结构对象的矩形之间添加联接线。  
+ 将两个或多个表添加到查询中时，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)会尝试确定它们是否相关。 如果相关，查询和视图设计器将自动在表示表或表结构对象的矩形之间添加联接线。  
   
 如果满足以下条件，查询和视图设计器就会将表识别为联接的表：  
   

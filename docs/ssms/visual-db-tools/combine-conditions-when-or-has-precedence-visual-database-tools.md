@@ -1,4 +1,5 @@
 ---
+description: 在 OR 优先时组合条件 (Visual Database Tools)
 title: 在 OR 优先时组合条件
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9fa5297cdd4e128d9ab800293514b3ee56045ac1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3632c27ba7c342ac77e43de682884e127240c59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462889"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 优先时组合条件 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85977981"
   
 1.  在 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的数据列。 如果希望使用通过 AND 链接的两个或多个条件搜索同一列，则对于每个要搜索的值都必须将该数据列名添加到网格中一次。  
   
-2.  创建将由 OR 链接的条件，方法是将第一个条件输入到“筛选器”  网格列中，然后将第二个（以及后续条件）输入单独的“或...”  列中。 例如，若要用 OR 链接搜索 `job_lvl` 和 `status` 列的条件，请在“筛选器”列中为 `job_lvl` 输入 `= 100`，在“或...”列中为 `status` 输入 `= 'R'`。  
+2.  创建将由 OR 链接的条件，方法是将第一个条件输入到“筛选器”**** 网格列中，然后将第二个（以及后续条件）输入单独的“或...”**** 列中。 例如，若要用 OR 链接搜索 `job_lvl` 和 `status` 列的条件，请在“筛选器”**** 列中为 `job_lvl` 输入 `= 100`，在“或...”**** 列中为 `status` 输入 `= 'R'`。  
   
     在网格中输入这些值后，就会在 SQL 窗格内的语句中生成以下 WHERE 子句：  
   
@@ -47,7 +48,7 @@ ms.locfileid: "85977981"
     WHERE (job_lvl = 100) OR (status = 'R')  
     ```  
   
-3.  通过为每个 OR 条件输入一次 AND 条件来创建 AND 条件。 将每个项放在其所对应的 OR 条件所在的同一网格列中。 例如，若要添加搜索 `hire_date` 列并应用于两个 OR 条件的 AND 条件，请在“条件”列和“或...”列中均输入 `< '1/1/91'`。  
+3.  通过为每个 OR 条件输入一次 AND 条件来创建 AND 条件。 将每个项放在其所对应的 OR 条件所在的同一网格列中。 例如，若要添加搜索 `hire_date` 列并应用于两个 OR 条件的 AND 条件，请在“条件”列和“或...”**** 列中均输入 `< '1/1/91'`。  
   
     在网格中输入这些值后，就会在 SQL 窗格内的语句中生成以下 WHERE 子句：  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85977981"
     ```  
   
     > [!TIP]  
-    > 可通过添加一次 AND 条件，再使用“编辑”  菜单中的“剪切”  和“粘贴”  命令对其他 OR 条件重复此操作来重复 AND 条件。  
+    > 可通过添加一次 AND 条件，再使用“编辑”**** 菜单中的“剪切”**** 和“粘贴”**** 命令对其他 OR 条件重复此操作来重复 AND 条件。  
   
 查询和视图设计器创建的 WHERE 子句等效于以下 WHERE 子句，后者使用括号指定 OR 优先于 AND：  
   

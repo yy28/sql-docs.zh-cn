@@ -1,4 +1,5 @@
 ---
+description: Management Studio 中的自定义报表
 title: Management Studio 中的自定义报表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 515bb92125c48f963bc6d6c2dfa0836bcb9ef14e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: def361352b3d8938ec0d263a97e3206d237ef55b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462977"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "86001985"
 ## <a name="running-a-custom-report"></a>运行自定义报表  
 可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中通过以下方式运行自定义报表：  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”  ，再左键单击“自定义报表”  。 在“打开文件”  对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”****，再左键单击“自定义报表”****。 在“打开文件”**** 对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”  ，再指向“自定义报表”  ，然后从最近打开的文件列表中选择一个自定义报表。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”****，再指向“自定义报表”****，然后从最近打开的文件列表中选择一个自定义报表。  
   
 ## <a name="limitations"></a>限制  
 在使用自定义报表时，请注意以下限制：  
@@ -75,6 +76,6 @@ ms.locfileid: "86001985"
   
 ## <a name="see-also"></a>另请参阅  
 [向 Management Studio 添加自定义报表](../../ssms/object/add-a-custom-report-to-management-studio.md)  
-[启用运行自定义报告警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[启用运行自定义报表警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [将自定义报告与对象资源管理器节点属性一起使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   
