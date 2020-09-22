@@ -19,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c34e314e08f206ebfcf34956e7b4555f91166a3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548277"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989930"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89548277"
   
  有关 AUTO_UPDATE_STATISTICS 选项的详细信息，请参阅[transact-sql&#41;和 STATISTICS &#40;ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 [Statistics](../../relational-databases/statistics/statistics.md)  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
     [ , [ @indname = ] 'statistics_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @tblname = ] 'table_or_indexed_view_name'` 要在其上显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name* 为 **nvarchar (776) **，无默认值。  
   
 `[ @flagc = ] 'stats_flag'` 将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  
@@ -69,7 +69,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|索引或统计信息的名称。|  
+|**Index Name**|**sysname**|索引或统计信息的名称。|  
 |**AUTOSTATS**|**varchar (3) **|AUTO_UPDATE_STATISTICS 选项的当前值。|  
 |**上次更新时间**|**datetime**|最近更新统计信息的日期。|  
   
