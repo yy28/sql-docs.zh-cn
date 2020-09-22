@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3478bcf1b6cef15ecb843f76cecb5b180ec7df2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548768"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990160"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -81,7 +81,7 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>另请参阅
 
  [通过弹性数据库应对爆炸性增长](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [创建和管理 SQL 数据库弹性数据库池 (预览) ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [创建和管理 SQL 数据库弹性数据库池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [dm_db_resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

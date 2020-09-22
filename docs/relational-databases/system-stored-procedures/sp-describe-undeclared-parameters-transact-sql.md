@@ -19,19 +19,19 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546142"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990118"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   返回一个结果集，其中包含有关在批处理中未声明的参数的元数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 考虑在** \@ tsql**批处理中使用但未在** \@ params**中声明的每个参数。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 如果** \@ tsql**输入批处理没有参数中声明的** \@ 参数，则**该过程返回一个空结果集。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,9 +43,9 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> 若要在 Azure Synapse Analytics 中使用此存储过程 (以前的 SQL DW) ，数据库的兼容级别需要大于10。 
+> 若要在 Azure Synapse Analytics 中使用此存储过程 (以前的 SQL DW) ，请将数据库兼容级别设置为20或更高。   若要选择退出，请将数据库兼容级别更改为10。
 
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ \@tsql = ] 'Transact-SQL\_batch'` 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *SQL_batch*可以是**nvarchar (** _n_ **) **或**nvarchar (max) **。  
   
 `[ \@params = ] N'parameters'`\@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，类似于 sp_executesql 的工作方式。 *参数*可以为**nvarchar (** _n_ **) **或**nvarchar (max) **。  
@@ -64,7 +64,7 @@ sp_describe_undeclared_parameters
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|在结果集中包含参数的序号位置。 第一个参数的位置将指定为 1。|  
-|name |**sysname 不为 NULL**|包含参数的名称。|  
+|name|**sysname 不为 NULL**|包含参数的名称。|  
 |**suggested_system_type_id**|**int NOT NULL**|包含 sys.databases 中指定的参数数据类型的 **system_type_id** 。<br /><br /> 对于 CLR 类型，即使 **system_type_name** 列返回 NULL，该列也会返回值240。|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|包含数据类型名称。 包含为参数数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义数据类型，则在此列中返回 NULL。 如果无法推断参数类型，则返回 NULL。|  
 |**suggested_max_length**|**smallint NOT NULL**|请参阅 sys.databases。 对于 **max_length** 列说明。|  
@@ -226,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      在这种情况下，E (\@ p) Col_Int + \@ p 和 TT (\@ p) 是 **Int**。为 p 选择 **int** ， \@ 因为它不生成隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
   
-2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如：  
+2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

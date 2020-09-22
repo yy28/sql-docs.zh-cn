@@ -2,7 +2,7 @@
 description: SSIS 目录
 title: SSIS 目录 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2018
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c2050734b89c8b5ae74aa40316c9b1f980705dc3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480281"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990380"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
 
@@ -450,21 +450,19 @@ ms.locfileid: "89480281"
     ```  
   
 2.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请创建非对称密钥和对应非对称密钥的登录名并将 UNSAFE 权限授予该登录名。  
-  
+
     ```  
-    Create Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey  
-           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
-  
+    Create Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey  
+           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
+
+    可以从 [SQL Server 默认兼容级别的列表](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments)中找到 `YourSQLServerDefaultCompatibilityLevel` 的值。
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 存储过程要求将 UNSAFE 权限授予该登录名，因为该登录名需要对受限制资源（如 Microsoft Win32 API）的更高访问权限。 有关 UNSAFE 代码权限的详细信息，请参阅 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
-  
+    [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 存储过程要求将 UNSAFE 权限授予该登录名，因为该登录名需要对受限制资源（如 Microsoft Win32 API）的更高访问权限。 有关 UNSAFE 代码权限的详细信息，请参阅 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
+
     ```  
-    Create Login MS_SQLEnableSystemAssemblyLoadingUser  
-           FROM Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey   
-  
-           Grant unsafe Assembly to MS_SQLEnableSystemAssemblyLoadingUser  
-  
+    Create Login ##MS_SQLEnableSystemAssemblyLoadingUser## FROM Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey   
+    Grant Unsafe Assembly to ##MS_SQLEnableSystemAssemblyLoadingUser##    
     ```  
   
 3.  在 **中使用** “还原数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框从备份中还原 SSISDB 数据库。 有关详情，请参阅以下主题：  

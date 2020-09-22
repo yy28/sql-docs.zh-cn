@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397563"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989935"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88397563"
   
  此枚举函数是在对源表启用变更数据捕获时创建的。 函数名称是派生的，并使用格式为 **cdc. fn_cdc_get_all_changes_**_capture_instance_ 其中 *capture_instance* 是为捕获实例指定的值（当源表启用变更数据捕获时）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *from_lsn*  
  LSN 值，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn* 是 ** (10) 的二进制 **。  
   
@@ -54,14 +54,14 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  LSN 值，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn* 是 ** (10) 的二进制 **。  
   
- 结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中值为 **__ $ start_lsn** 小于或等于 *from_lsn 或等于* *to_lsn* 的行。  
+ 结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中值为 **__ $ start_lsn** 大于或等于 *from_lsn* 且小于 *等于 to_lsn 的* 行。  
   
  <row_filter_option>：： = {all | 所有更新旧版本}  
  控制元数据列的内容和结果集中所返回的行的选项。  
   
  可以是下列选项之一：  
   
- all  
+ 全部  
  返回指定 LSN 范围内的所有更改。 对于由更新操作导致的更改，此选项只返回在应用更新之后包含新值的行。  
   
  all update old  
