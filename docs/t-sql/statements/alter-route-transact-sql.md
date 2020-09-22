@@ -23,12 +23,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ff8c86ef00124329600a99ef85cd471c81e25ff7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aa1bf54d0d21ea05c16dc4808c6e7ff4191236d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544259"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688219"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89544259"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 ALTER ROUTE route_name  
 WITH    
   [ SERVICE_NAME = 'service_name' [ , ] ]  
@@ -71,7 +70,7 @@ WITH
  BROKER_INSTANCE ='broker**instance'** _\__   
  指定承载目标服务的数据库。  broker_instance 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得：  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID();  
@@ -95,7 +94,7 @@ WHERE database_id = DB_ID();
   
  指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -119,7 +118,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -151,7 +150,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-changing-the-service-for-a-route"></a>A. 更改路由的服务  
  以下示例将 `ExpenseRoute` 路由修改为指向远程服务 `//Adventure-Works.com/Expenses`。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
@@ -160,7 +159,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="b-changing-the-target-database-for-a-route"></a>B. 更改路由的目标数据库  
  以下示例将 `ExpenseRoute` 路由的目标数据库更改为由唯一标识符 `D8D4D268-00A3-4C62-8F91-634B89B1E317.` 标识的数据库  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317';  
@@ -169,7 +168,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="c-changing-the-address-for-a-route"></a>C. 更改路由的地址  
  以下示例将 `ExpenseRoute` 路由的网络地址更改为 IP 地址为 `1234` 的主机上的 TCP 端口 `10.2.19.72`。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute   
    WITH   
      ADDRESS = 'TCP://10.2.19.72:1234';  
@@ -178,7 +177,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="d-changing-the-database-and-address-for-a-route"></a>D. 更改路由的数据库和地址  
  下例将 `ExpenseRoute` 路由的网络地址更改为 DNS 名称为 `1234` 的主机上的 TCP 端口 `www.Adventure-Works.com`。 它还将目标数据库更改为由唯一标识符 `D8D4D268-00A3-4C62-8F91-634B89B1E317` 标识的数据库。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317',  

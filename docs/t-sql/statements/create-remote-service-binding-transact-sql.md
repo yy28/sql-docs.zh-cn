@@ -38,12 +38,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b38d2349b2eb1982350caab9da79c6781b10d99f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3339b5c4e7b54ce26f0760b22d0f0fed1a931b5
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458719"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688437"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,6 @@ ms.locfileid: "88458719"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 CREATE REMOTE SERVICE BINDING binding_name   
    [ AUTHORIZATION owner_name ]   
    TO SERVICE 'service_name'   
@@ -102,7 +101,7 @@ CREATE REMOTE SERVICE BINDING binding_name
 ### <a name="a-creating-a-remote-service-binding"></a>A. 创建远程服务绑定  
  下面的示例为服务 `//Adventure-Works.com/services/AccountsPayable` 创建了绑定。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用 `APUser` 数据库主体所拥有的证书向远程服务验证身份，并与远程服务交换会话加密密钥。  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser ;  
@@ -111,7 +110,7 @@ CREATE REMOTE SERVICE BINDING APBinding
 ### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. 使用匿名身份验证创建远程服务绑定  
  下面的示例为服务 `//Adventure-Works.com/services/AccountsPayable` 创建了绑定。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用 `APUser` 数据库主体所拥有的证书与远程服务交换会话加密密钥。 Broker 不向远程服务进行身份验证。 在承载远程服务的数据库中，作为 guest 用户传递消息****。  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser, ANONYMOUS=ON ;  

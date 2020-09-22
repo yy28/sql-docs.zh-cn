@@ -28,12 +28,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c8b24889e99f5f0f3cdbaaad377a2d4e99f2da3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5eea276766b848033fc0fd8cd7487e7451c779ca
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549327"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688336"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +45,6 @@ ms.locfileid: "89549327"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
 WITH    
@@ -73,7 +72,7 @@ WITH
  BROKER_INSTANCE = **'** broker_instance\_identifier\__ **'**  
  指定承载目标服务的数据库。 broker_instance_identifier 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得  ：  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID()  
@@ -93,7 +92,7 @@ WHERE database_id = DB_ID()
   
  指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -145,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. 使用 DNS 名称创建 TCP/IP 路由  
  下面的示例创建一个指向服务 `//Adventure-Works.com/Expenses` 的路由。 此路由指定到此服务的消息需要通过 TCP 传输到由 DNS 名称 `1234` 标识的主机上的端口 `www.Adventure-Works.com`。 目标服务器将到达的消息传递到由唯一标识符 `D8D4D268-00A3-4C62-8F91-634B89C1E315` 标识的 Broker 实例。  
   
-```  
+```sql 
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -156,7 +155,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. 使用 NetBIOS 名称创建 TCP/IP 路由  
  下面的示例创建一个指向服务 `//Adventure-Works.com/Expenses` 的路由。 此路由指定到此服务的消息需要通过 TCP 传输到由 NetBIOS 名称 `1234` 标识的主机上的端口 `SERVER02`。 目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将到达的消息传递到由唯一标识符 `D8D4D268-00A3-4C62-8F91-634B89C1E315` 标识的数据库实例。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH   
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -167,7 +166,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>C. 使用 IP 地址创建 TCP/IP 路由  
  下面的示例创建一个指向服务 `//Adventure-Works.com/Expenses` 的路由。 此路由指定到此服务的消息通过 TCP 传输到 IP 地址为 `1234` 的主机上的端口 `192.168.10.2`。 目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将到达的消息传递到由唯一标识符 `D8D4D268-00A3-4C62-8F91-634B89C1E315` 标识的 Broker 实例。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -178,7 +177,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D. 创建到转发中介器的路由  
  下面的示例创建到服务器 `dispatch.Adventure-Works.com` 中的转发中介器的路由。 由于服务名称和 Broker 实例标识符都没有指定，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将该路由用于没有未其他路由的服务。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
@@ -187,7 +186,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="e-creating-a-route-to-a-local-service"></a>E. 创建到本地服务的路由  
  下面的示例创建到路由所在实例中的服务 `//Adventure-Works.com/LogRequests` 的路由。  
   
-```  
+```sql  
 CREATE ROUTE LogRequests  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/LogRequests',  
@@ -197,7 +196,7 @@ CREATE ROUTE LogRequests
 ### <a name="f-creating-a-route-with-a-specified-lifetime"></a>F. 创建具有指定生存期的路由  
  下面的示例创建一个指向服务 `//Adventure-Works.com/Expenses` 的路由。 路由的生存期是 `259200` 秒，即 72 小时。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -208,7 +207,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="g-creating-a-route-to-a-mirrored-database"></a>G. 创建到镜像数据库的路由  
  下面的示例创建一个指向服务 `//Adventure-Works.com/Expenses` 的路由。 该服务驻留在被镜像的数据库中。 其中一个镜像数据库位于地址 `services.Adventure-Works.com:1234`，另一个数据库位于地址 `services-mirror.Adventure-Works.com:1234`。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -220,7 +219,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>H. 创建使用服务名称进行路由的路由  
  下面的示例创建一个路由，此路由使用服务名称来确定要向其发送消息的网络地址。 请注意，指定 `'TRANSPORT'` 作为网络地址的路由比其他路由的匹配优先级低。  
   
-```  
+```sql  
 CREATE ROUTE TransportRoute  
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444619"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570530"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 服务器权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>A. 为登录名授予权限  
  以下示例将 `CONTROL SERVER` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `TerryEminhizer`。  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. 授予具有 GRANT 权限的权限  
  以下示例为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `ALTER ANY EVENT NOTIFICATION` 授予 `JanethEsteves` 权限以及为其他登录名授予该权限的权限。  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. 为服务器角色授予权限  
  以下示例创建两个名为 `ITDevAdmin` 和 `ITDevelopers` 的服务器角色。 它为用户定义的服务器角色 `ALTER ANY DATABASE` 授予 `ITDevAdmin` 权限（包括 `WITH GRANT` 选项），以便 `ITDevAdmin` 服务器角色可以重新分配 `ALTER ANY DATABASE` 权限。 然后，该示例为 `ITDevelopers` 授予权限以使用 `ALTER ANY DATABASE` 服务器角色的 `ITDevAdmin` 权限。  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

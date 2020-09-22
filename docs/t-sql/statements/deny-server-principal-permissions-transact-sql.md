@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0b3dbb2766d1e42fd1812e9eba5d92c40b324a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b58e181d5defd9ecdd7d4581fe42d0565f8830f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478904"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688627"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>拒绝服务器主体权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ GO
 ### <a name="b-denying-view-definition-permission-with-cascade"></a>B. 使用 CASCADE 拒绝 VIEW DEFINITION 权限  
  以下示例拒绝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW DEFINITION` 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `EricKurjan` 的 `RMeyyappan` 权限。 `CASCADE` 选项指示还会拒绝 `VIEW DEFINITION` 授予 `EricKurjan` 权限的主体对 `RMeyyappan` 的该权限。  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     CASCADE;  
@@ -140,7 +140,7 @@ GO
 ### <a name="c-denying-view-definition-permission-on-a-server-role"></a>C. 拒绝服务器角色的 VIEW DEFINITION 权限  
  以下示例拒绝 `VIEW DEFINITION` 和 `Sales` 服务器角色的  `Auditors` 权限。  
   
-```  
+```sql 
 USE master;  
 DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

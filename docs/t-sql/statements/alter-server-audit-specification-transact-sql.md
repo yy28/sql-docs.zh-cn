@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd2163114fb0b2ad6d21ca2ed827db160819c8ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca119bfb4b94aee36270315a29e97613f3d28ce5
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467264"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688171"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -74,7 +74,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>示例  
  下面的示例创建一个称为 `HIPAA_Audit_Specification` 的服务器审核规范。 它删除了失败登录的审核操作组，为称作 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的数据库对象访问添加了一个审核操作组。  
   
-```  
+```sql  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     DROP (FAILED_LOGIN_GROUP),  

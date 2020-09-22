@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfc897a88941c6220235616a3476dae7ea6c1e9
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496688"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570593"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 系统对象权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  下面的查询将返回有关系统对象的权限的信息：  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +81,7 @@ GO
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 授予对视图的 SELECT 权限  
  以下示例授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `Sylvester1` 权限，以选择列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的视图。 然后，本例授予查看不属于该用户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的元数据所需的其他权限。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 授予对扩展存储过程的 EXECUTE 权限  
  以下示例向 `EXECUTE` 授予了对 `xp_readmail` 的 `Sylvester1` 权限。  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

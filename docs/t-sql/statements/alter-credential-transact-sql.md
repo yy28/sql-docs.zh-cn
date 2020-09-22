@@ -21,12 +21,12 @@ ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8c251486ae982abda531bd443db95c57a1b99900
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c16003a3d265bbebc613c6a7eacd798f5c00da6d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479220"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688783"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88479220"
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -75,7 +74,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-credential"></a>A. 更改凭据的密码  
  以下示例将更改存储在名为 `Saddles` 的凭据中的密码。 该凭据包含 Windows 登录名 `RettigB` 及其密码。 使用 SECRET 子句将新密码添加到凭据。  
   
-```  
+```sql  
 ALTER CREDENTIAL Saddles WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -84,7 +83,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. 删除凭据的密码  
  以下示例将删除名为 `Frames` 的凭据中的密码。 该凭据包含 Windows 登录名 `Aboulrus8` 和密码。 因为未指定 SECRET 选项，所以执行该语句后，凭据的密码为空。  
   
-```  
+```sql  
 ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

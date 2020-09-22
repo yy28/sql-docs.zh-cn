@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6bc807fe68e1e4ba8ca1e92fe40e048a82a6307f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5635a7a0cc1d4c90ea70cf5973f0fc09b938f63
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426849"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688136"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88426849"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   
 <alter_option> ::=  
@@ -98,7 +97,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 ## <a name="examples"></a>示例  
  以下示例更改用于保护对称密钥的加密方法。 当创建对称密钥 `JanainaKey043` 时，使用证书 `Shipping04` 对该密钥进行加密。 由于密钥始终不可能在不加密的情况下进行存储，因此在本例中，首先使用密码添加加密，然后使用证书删除加密。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey043 WITH ALGORITHM = AES_256   
     ENCRYPTION BY CERTIFICATE Shipping04;  
 -- Open the key.   

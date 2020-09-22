@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6afa1d468d23738fb54ee49f5ed7221dfb4d85ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d6faa43382c948eb2ebf8524cc525a2d47bedc6
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478931"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688853"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -136,7 +136,7 @@ identifier
 ## <a name="examples"></a>示例  
  下面的示例显示了创建选择性 XML 索引的语法。 它还显示了该语法的若干变化形式，以便描述使用可选的优化提示建立索引的路径。  
   
-```  
+```sql  
 CREATE TABLE Tbl ( id INT PRIMARY KEY, xmlcol XML );  
 GO  
 CREATE SELECTIVE XML INDEX sxi_index  
@@ -151,7 +151,7 @@ FOR(
   
  下列的示例包含 WITH XMLNAMESPACES 子句。  
   
-```  
+```sql  
 CREATE SELECTIVE XML INDEX on T1(C1)  
 WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)  
 FOR ( path1 = '/myns:book/myns:author/text()' );  

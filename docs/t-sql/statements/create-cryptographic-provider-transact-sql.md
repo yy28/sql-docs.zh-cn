@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1a12f2c53409148854b806f1141bf46acad8a4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b1ae5e016d407a0aeee6c34fcc75dd71e8fa229
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467247"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688085"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88467247"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql  
 CREATE CRYPTOGRAPHIC PROVIDER provider_name   
     FROM FILE = path_of_DLL  
 ```  
@@ -73,7 +72,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="examples"></a>示例  
  下面的示例通过 .dll 文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建名为 `SecurityProvider` 的加密提供程序。 此 .dll 文件命名为 `c:\SecurityProvider\SecurityProvider_v1.dll` 并安装在服务器上。 必须首先在服务器上安装此提供程序的证书。  
   
-```  
+```sql  
 -- Install the provider  
 CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider  
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  

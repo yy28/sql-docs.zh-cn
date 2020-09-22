@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d19b40869a7b69645918edb62eb9f654d595dcc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b133edabc8501bbce30b938f2ea30a13c96efdf3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416873"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688569"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 类型权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## <a name="examples"></a>示例  
  以下示例使用 `VIEW DEFINITION` 拒绝 `CASCADE` 对用户定义类型 `PhoneNumber` 的 `KhalidR` 权限。 `PhoneNumber` 位于架构 `Telemarketing` 中。  
   
-```  
+```sql 
 DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR CASCADE;  
 GO  

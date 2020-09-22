@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c378e113e07a9d85bbeedbf585f9b58f417812f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48e25e4a2bc22d56503b3f0cc1819bb10b856e9d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426669"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688728"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -161,7 +161,7 @@ CREATE SYMMETRIC KEY key_name
 ### <a name="a-creating-a-symmetric-key"></a>A. 创建对称密钥  
  下面的示例使用 `JanainaKey09` 算法创建名为 `AES 256` 的对称密钥，然后使用证书 `Shipping04` 对新密钥进行加密。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey09   
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY CERTIFICATE Shipping04;  
@@ -171,8 +171,7 @@ GO
 ### <a name="b-creating-a-temporary-symmetric-key"></a>B. 创建临时对称密钥  
  下面的示例用通行短语 `#MarketingXXV` 创建了一个名为 `The square of the hypotenuse is equal to the sum of the squares of the sides` 的临时对称密钥。 为该密钥提供了通过字符串 `Pythagoras` 生成的 GUID，并使用证书 `Marketing25` 对该密钥进行加密。  
   
-```  
-  
+```sql 
 CREATE SYMMETRIC KEY #MarketingXXV   
 WITH ALGORITHM = AES_128,  
 KEY_SOURCE   
@@ -185,7 +184,7 @@ GO
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 使用可扩展密钥管理 (EKM) 设备创建对称密钥  
  下面的示例使用一个名为 `MySymKey` 的提供程序和一个密钥名称 `MyEKMProvider` 创建一个名为 `KeyForSensitiveData` 的对称密钥。 该示例向 `User1` 授权，并假定系统管理员已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了名为 `MyEKMProvider` 的提供程序。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY MySymKey  
 AUTHORIZATION User1  
 FROM PROVIDER EKMProvider  

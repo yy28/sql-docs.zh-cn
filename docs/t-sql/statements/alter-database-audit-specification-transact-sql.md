@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c4eef4555867208ae71b0495dfd9393c2459ca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98ac18629fc8765c314abd799364fd542e25c5da
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444936"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688753"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "88444936"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     [ FOR SERVER AUDIT audit_name ]  
@@ -53,7 +52,6 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
       <action_specification>[ ,...n ] ON [ class :: ] securable   
      BY principal [ ,...n ]   
 }  
-  
 ```  
   
 
@@ -98,7 +96,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>示例  
  下面的示例针对称为 `HIPAA_Audit_DB_Specification` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核更改称为 `SELECT` 的数据库审核规范，该规范审核 `dbo` 用户发出的 `HIPAA_Audit` 语句。  
   
-```  
+```sql  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  

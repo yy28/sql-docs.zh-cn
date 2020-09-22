@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e14ff0dce201a195fa7a064cc7df604b52b8370
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544317"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688234"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>A. 启动资源调控器  
  初次安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，资源调控器处于禁用状态。 以下示例启动资源调控器。 执行语句后，资源调控器将运行并且可使用预先定义的工作负荷组和资源池。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. 将新会话分配到默认组  
  以下示例通过从资源调控器配置删除任何现有分类器函数，将所有新会话分配到默认工作负荷组。 如果没有函数指定为分类器函数，所有新会话将分配到默认工作负荷组。 此更改仅应用于新会话。 现有会话不受影响。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -133,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. 创建和注册分类器函数  
  以下示例创建一个名为 `dbo.rgclassifier_v1` 的分类器函数。 该函数基于用户名或应用程序名称对每个新会话进行分类，并且将会话请求和查询分配到特定工作负荷组。 未映射到指定用户或应用程序名称的会话将分配到默认工作负荷组。 然后，注册分类器函数并应用配置更改。  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -178,14 +178,14 @@ GO
 ### <a name="d-resetting-statistics"></a>D. 重置统计信息  
  以下示例重置所有工作负荷组和资源池统计信息。  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. 设置 MAX_OUTSTANDING_IO_PER_VOLUME 选项  
  以下示例将 MAX_OUTSTANDING_IO_PER_VOLUME 选项设置为 20。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

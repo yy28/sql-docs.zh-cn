@@ -18,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 574a33d253fd66b2ed6117d03f889bf195627fcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21b259f692a324e163ed74b32366f6c8ec21a90f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479175"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688358"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88479175"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -70,7 +69,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. 更改数据库作用域凭据的密码  
  以下示例将更改存储在名为 `Saddles` 的数据库作用域凭据中的密码。 该数据库作用域凭据包含 Windows 登录名 `RettigB` 及其密码。 使用 SECRET 子句将新密码添加到数据库作用域凭据。  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -79,7 +78,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. 删除凭据的密码  
  以下示例将删除名为 `Frames` 的数据库作用域凭据中的密码。 该数据库作用域凭据包含 Windows 登录名 `Aboulrus8` 和一个密码。 因为未指定 SECRET 选项，所以执行该语句后，数据库作用域凭据的密码为空。  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

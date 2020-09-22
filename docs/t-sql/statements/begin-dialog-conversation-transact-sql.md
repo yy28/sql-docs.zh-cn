@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dff53a56e9acd613322be5af1de6e5f0207abd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547558"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688530"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,6 @@ ms.locfileid: "89547558"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -79,7 +78,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  *service_broker_guid* 的类型为 **nvarchar(128)**。 若要查找数据库的 *service_broker_guid*，请在数据库中运行以下查询：  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -132,7 +131,7 @@ WHERE database_id = DB_ID() ;
 ### <a name="a-beginning-a-dialog"></a>A. 启动对话  
  以下实例会启动一个对话会话，并将对话的标识符存储于 `@dialog_handle.`。`//Adventure-Works.com/ExpenseClient` 服务是对话的发起方，`//Adventure-Works.com/Expenses` 服务是对话的目标。 对话遵循约定 `//Adventure-Works.com/Expenses/ExpenseSubmission`。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -144,7 +143,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. 启动具有显式生存期的对话  
  以下实例将启动一个对话会话，并将对话的标识符存储于 `@dialog_handle`。 `//Adventure-Works.com/ExpenseClient` 服务是对话的发起方，`//Adventure-Works.com/Expenses` 服务是对话的目标。 对话遵循约定 `//Adventure-Works.com/Expenses/ExpenseSubmission`。 如果 END CONVERSATION 命令在 `60` 秒内未关闭此对话，则 Broker 将结束此对话并返回错误。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -157,7 +156,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="c-beginning-a-dialog-with-a-specific-broker-instance"></a>C. 启动具有特定 Broker 实例的对话  
  以下实例将启动一个对话会话，并将对话的标识符存储于 `@dialog_handle`。 `//Adventure-Works.com/ExpenseClient` 服务是对话的发起方，`//Adventure-Works.com/Expenses` 服务是对话的目标。 对话遵循约定 `//Adventure-Works.com/Expenses/ExpenseSubmission`。 Broker 将此对话的消息路由到由 GUID `a326e034-d4cf-4e8b-8d98-4d7e1926c904.` 标识的 Broker。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -170,7 +169,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>D. 启动一个对话，并将其关联到现有的会话组  
  以下实例将启动一个对话会话，并将对话的标识符存储于 `@dialog_handle`。 `//Adventure-Works.com/ExpenseClient` 服务是对话的发起方，`//Adventure-Works.com/Expenses` 服务是对话的目标。 对话遵循约定 `//Adventure-Works.com/Expenses/ExpenseSubmission`。 Broker 将此对话与由 `@conversation_group_id` 标识的会话组关联，而不创建新的会话组。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -186,7 +185,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. 启动一个具有显式生存期的对话，并将其关联到现有会话  
  以下实例将启动一个对话会话，并将对话的标识符存储于 `@dialog_handle`。 `//Adventure-Works.com/ExpenseClient` 服务是对话的发起方，`//Adventure-Works.com/Expenses` 服务是对话的目标。 对话遵循约定 `//Adventure-Works.com/Expenses/ExpenseSubmission`。 新对话与 `@existing_conversation_handle` 属于同一个会话组。 如果 END CONVERSATION 命令在 `600` 秒内未关闭此对话，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将结束此对话并返回错误。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -203,7 +202,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="f-beginning-a-dialog-with-optional-encryption"></a>F. 启动具有可选加密的对话  
  以下实例将启动一个对话，并将对话的标识符存储于 `@dialog_handle`。 `//Adventure-Works.com/ExpenseClient` 服务是对话的发起方，`//Adventure-Works.com/Expenses` 服务是对话的目标。 对话遵循约定 `//Adventure-Works.com/Expenses/ExpenseSubmission`。 如果加密不可用，则此示例中的会话允许消息在不加密的状态下通过网络传输。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

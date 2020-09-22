@@ -12,9 +12,6 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-- CONVERT()_TSQL
-- sql13.swb.tsqlresults.f1
-- sql13.swb.tsqlquery.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d97f6e94ce7a9eb80656aa03a42b3479506ea5f
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 858e479346231fdce6b41e402b0fd7e606a76bbd
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565629"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570609"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "87565629"
 
 ## <a name="syntax"></a>语法  
   
-```
+```sqlsyntax 
 -- CAST Syntax:  
 CAST ( expression AS data_type [ ( length ) ] )  
   
@@ -236,11 +233,11 @@ text 和 image 数据类型不支持自动进行数据类型转换 。 可以显
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅保证往返转换（也就是从原始数据类型进行转换后又返回原始数据类型的转换）在各版本间产生相同值。 以下示例显示的即是这样的往返转换：
   
 ```sql
-DECLARE @myval decimal (5, 2);  
+DECLARE @myval DECIMAL (5, 2);  
 SET @myval = 193.57;  
-SELECT CAST(CAST(@myval AS varbinary(20)) AS decimal(10,5));  
+SELECT CAST(CAST(@myval AS VARBINARY(20)) AS DECIMAL(10,5));  
 -- Or, using CONVERT  
-SELECT CONVERT(decimal(10,5), CONVERT(varbinary(20), @myval));  
+SELECT CONVERT(DECIMAL(10,5), CONVERT(VARBINARY(20), @myval));  
 ```  
   
 > [!WARNING]  
@@ -255,7 +252,7 @@ SELECT p.FirstName, p.LastName, SUBSTRING(p.Title, 1, 25) AS Title,
     CAST(e.SickLeaveHours AS char(1)) AS [Sick Leave]  
 FROM HumanResources.Employee e JOIN Person.Person p 
     ON e.BusinessEntityID = p.BusinessEntityID  
-WHERE NOT e.BusinessEntityID >5;  
+WHERE NOT e.BusinessEntityID > 5;  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -289,10 +286,10 @@ Gail        Erickson      Ms.    *
 例如，10.6496 和 -10.6496 可能会被截断或者在转换到 int 或 numeric 类型期间被舍入 ：
   
 ```sql
-SELECT  CAST(10.6496 AS int) as trunc1,
-         CAST(-10.6496 AS int) as trunc2,
-         CAST(10.6496 AS numeric) as round1,
-         CAST(-10.6496 AS numeric) as round2;
+SELECT  CAST(10.6496 AS INT) as trunc1,
+        CAST(-10.6496 AS INT) as trunc2,
+        CAST(10.6496 AS NUMERIC) as round1,
+        CAST(-10.6496 AS NUMERIC) as round2;
  ```
 查询结果显示在下表中：
  
@@ -411,7 +408,7 @@ HL Road Tire                   32.60
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT CAST(ROUND(SalesYTD/CommissionPCT, 0) AS int) AS Computed  
+SELECT CAST(ROUND(SalesYTD/CommissionPCT, 0) AS INT) AS Computed  
 FROM Sales.SalesPerson   
 WHERE CommissionPCT != 0;  
 GO  
@@ -443,7 +440,7 @@ Computed
 此示例使用 CAST 连接非字符型表达式。 它使用 AdventureWorksDW 数据库。
   
 ```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
+SELECT 'The list price is ' + CAST(ListPrice AS VARCHAR(12)) AS ListPrice  
 FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
 ```  
@@ -464,7 +461,7 @@ The list price is 364.09
 此示例使用 SELECT 列表中的 CAST 将 `Name` 列转换为 char(10) 列。 它使用 AdventureWorksDW 数据库。
   
 ```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+SELECT DISTINCT CAST(EnglishProductName AS CHAR(10)) AS Name, ListPrice  
 FROM dbo.DimProduct  
 WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
@@ -489,7 +486,7 @@ SELECT p.FirstName, p.LastName, s.SalesYTD, s.BusinessEntityID
 FROM Person.Person AS p   
 JOIN Sales.SalesPerson AS s   
     ON p.BusinessEntityID = s.BusinessEntityID  
-WHERE CAST(CAST(s.SalesYTD AS int) AS char(20)) LIKE '2%';  
+WHERE CAST(CAST(s.SalesYTD AS INT) AS char(20)) LIKE '2%';  
 GO  
 ```  
   
@@ -534,7 +531,7 @@ SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)
 ```sql
 SELECT   
    GETDATE() AS UnconvertedDateTime,  
-   CAST(GETDATE() AS nvarchar(30)) AS UsingCast,  
+   CAST(GETDATE() AS NVARCHAR(30)) AS UsingCast,  
    CONVERT(nvarchar(30), GETDATE(), 126) AS UsingConvertTo_ISO8601  ;  
 GO  
 ```  
@@ -574,7 +571,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
   
 ```sql
 --Convert the binary value 0x4E616d65 to a character value.  
-SELECT CONVERT(char(8), 0x4E616d65, 0) AS [Style 0, binary to character];  
+SELECT CONVERT(CHAR(8), 0x4E616d65, 0) AS [Style 0, binary to character];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -589,7 +586,7 @@ Name
  
 此示例显示 Style 1 可以强制截断结果。 结果集中的字符 0x 强制实施截断。  
 ```sql  
-SELECT CONVERT(char(8), 0x4E616d65, 1) AS [Style 1, binary to character];  
+SELECT CONVERT(CHAR(8), 0x4E616d65, 1) AS [Style 1, binary to character];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -604,7 +601,7 @@ Style 1, binary to character
  
 该例显示 Style 2 不截断结果，因为结果中不包括字符 0x。  
 ```sql  
-SELECT CONVERT(char(8), 0x4E616d65, 2) AS [Style 2, binary to character];  
+SELECT CONVERT(CHAR(8), 0x4E616d65, 2) AS [Style 2, binary to character];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -619,7 +616,7 @@ Style 2, binary to character
   
 将字符值“Name”转换为二进制值。  
 ```sql
-SELECT CONVERT(binary(8), 'Name', 0) AS [Style 0, character to binary];  
+SELECT CONVERT(BINARY(8), 'Name', 0) AS [Style 0, character to binary];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -633,7 +630,7 @@ Style 0, character to binary
 ```
   
 ```sql
-SELECT CONVERT(binary(4), '0x4E616D65', 1) AS [Style 1, character to binary];  
+SELECT CONVERT(BINARY(4), '0x4E616D65', 1) AS [Style 1, character to binary];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -647,7 +644,7 @@ Style 1, character to binary
 ```  
 
 ```sql
-SELECT CONVERT(binary(4), '4E616D65', 2) AS [Style 2, character to binary];  
+SELECT CONVERT(BINARY(4), '4E616D65', 2) AS [Style 2, character to binary];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -664,19 +661,19 @@ Style 2, character to binary
 此示例显示了日期、时间及日期/时间数据类型的转换。
   
 ```sql
-DECLARE @d1 date, @t1 time, @dt1 datetime;  
+DECLARE @d1 DATE, @t1 TIME, @dt1 DATETIME;  
 SET @d1 = GETDATE();  
 SET @t1 = GETDATE();  
 SET @dt1 = GETDATE();  
 SET @d1 = GETDATE();  
 -- When converting date to datetime the minutes portion becomes zero.  
-SELECT @d1 AS [date], CAST (@d1 AS datetime) AS [date as datetime];  
+SELECT @d1 AS [DATE], CAST (@d1 AS DATETIME) AS [date as datetime];  
 -- When converting time to datetime the date portion becomes zero   
 -- which converts to January 1, 1900.  
-SELECT @t1 AS [time], CAST (@t1 AS datetime) AS [time as datetime];  
+SELECT @t1 AS [TIME], CAST (@t1 AS DATETIME) AS [time as datetime];  
 -- When converting datetime to date or time non-applicable portion is dropped.  
-SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date], 
-   CAST (@dt1 AS time) AS [datetime as time];  
+SELECT @dt1 AS [DATETIME], CAST (@dt1 AS DATE) AS [datetime as date], 
+   CAST (@dt1 AS TIME) AS [datetime as time];  
 ```  
 
 ### <a name="j-using-convert-with-datetime-data-in-different-formats"></a>J. 使用 CONVERT 处理不同格式的 datetime 数据  
@@ -684,48 +681,48 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 
 |格式编号|示例查询|示例结果|
 |--------|------------------------------------|------------------|
-|0|`SELECT CONVERT(nvarchar, GETDATE(), 0)`|Aug 23 2019  1:39PM|
-|1|`SELECT CONVERT(nvarchar, GETDATE(), 1)`|08/23/19|
-|2|`SELECT CONVERT(nvarchar, GETDATE(), 2)`|19.08.23|
-|3|`SELECT CONVERT(nvarchar, GETDATE(), 3)`|23/08/19|
-|4|`SELECT CONVERT(nvarchar, GETDATE(), 4)`|23.08.19|
-|5|`SELECT CONVERT(nvarchar, GETDATE(), 5)`|23-08-19|
-|6|`SELECT CONVERT(nvarchar, GETDATE(), 6)`|23 Aug 19|
-|7|`SELECT CONVERT(nvarchar, GETDATE(), 7)`|Aug 23, 19|
-|8、24 或 108|`SELECT CONVERT(nvarchar, GETDATE(), 8)`|13:39:17|
-|9 或 109|`SELECT CONVERT(nvarchar, GETDATE(), 9)`|Aug 23 2019  1:39:17:090PM|
-|10|`SELECT CONVERT(nvarchar, GETDATE(), 10)`|08-23-19|
-|11|`SELECT CONVERT(nvarchar, GETDATE(), 11)`|19/08/23|
-|12|`SELECT CONVERT(nvarchar, GETDATE(), 12)`|190823|
-|13 或 113|`SELECT CONVERT(nvarchar, GETDATE(), 13)`|23 Aug 2019 13:39:17:090|
-|14 或 114|`SELECT CONVERT(nvarchar, GETDATE(), 14)`|13:39:17:090|
-|20 或 120|`SELECT CONVERT(nvarchar, GETDATE(), 20)`|2019-08-23 13:39:17|
-|21、25 或 121|`SELECT CONVERT(nvarchar, GETDATE(), 21)`|2019-08-23 13:39:17.090|
-|22|`SELECT CONVERT(nvarchar, GETDATE(), 22)`|08/23/19  1:39:17 PM|
-|23|`SELECT CONVERT(nvarchar, GETDATE(), 23)`|2019-08-23|
-|101|`SELECT CONVERT(nvarchar, GETDATE(), 101)`|08/23/2019|
-|102|`SELECT CONVERT(nvarchar, GETDATE(), 102)`|2019.08.23|
-|103|`SELECT CONVERT(nvarchar, GETDATE(), 103)`|23/08/2019|
-|104|`SELECT CONVERT(nvarchar, GETDATE(), 104)`|23.08.2019|
-|105|`SELECT CONVERT(nvarchar, GETDATE(), 105)`|23-08-2019|
-|106|`SELECT CONVERT(nvarchar, GETDATE(), 106)`|23 Aug 2019|
-|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|Aug 23, 2019|
-|110|`SELECT CONVERT(nvarchar, GETDATE(), 110)`|08-23-2019|
-|111|`SELECT CONVERT(nvarchar, GETDATE(), 111)`|2019/08/23|
-|112|`SELECT CONVERT(nvarchar, GETDATE(), 112)`|20190823|
-|113|`SELECT CONVERT(nvarchar, GETDATE(), 113)`|23 Aug 2019 13:39:17.090|
-|120|`SELECT CONVERT(nvarchar, GETDATE(), 120)`|2019-08-23 13:39:17|
-|121|`SELECT CONVERT(nvarchar, GETDATE(), 121)`|2019-08-23 13:39:17.090|
-|126|`SELECT CONVERT(nvarchar, GETDATE(), 126)`|2019-08-23T13:39:17.090|
-|127|`SELECT CONVERT(nvarchar, GETDATE(), 127)`|2019-08-23T13:39:17.090|
-|130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
-|131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
+|0|`SELECT CONVERT(NVARCHAR, GETDATE(), 0)`|Aug 23 2019  1:39PM|
+|1|`SELECT CONVERT(NVARCHAR, GETDATE(), 1)`|08/23/19|
+|2|`SELECT CONVERT(NVARCHAR, GETDATE(), 2)`|19.08.23|
+|3|`SELECT CONVERT(NVARCHAR, GETDATE(), 3)`|23/08/19|
+|4|`SELECT CONVERT(NVARCHAR, GETDATE(), 4)`|23.08.19|
+|5|`SELECT CONVERT(NVARCHAR, GETDATE(), 5)`|23-08-19|
+|6|`SELECT CONVERT(NVARCHAR, GETDATE(), 6)`|23 Aug 19|
+|7|`SELECT CONVERT(NVARCHAR, GETDATE(), 7)`|Aug 23, 19|
+|8、24 或 108|`SELECT CONVERT(NVARCHAR, GETDATE(), 8)`|13:39:17|
+|9 或 109|`SELECT CONVERT(NVARCHAR, GETDATE(), 9)`|Aug 23 2019  1:39:17:090PM|
+|10|`SELECT CONVERT(NVARCHAR, GETDATE(), 10)`|08-23-19|
+|11|`SELECT CONVERT(NVARCHAR, GETDATE(), 11)`|19/08/23|
+|12|`SELECT CONVERT(NVARCHAR, GETDATE(), 12)`|190823|
+|13 或 113|`SELECT CONVERT(NVARCHAR, GETDATE(), 13)`|23 Aug 2019 13:39:17:090|
+|14 或 114|`SELECT CONVERT(NVARCHAR, GETDATE(), 14)`|13:39:17:090|
+|20 或 120|`SELECT CONVERT(NVARCHAR, GETDATE(), 20)`|2019-08-23 13:39:17|
+|21、25 或 121|`SELECT CONVERT(NVARCHAR, GETDATE(), 21)`|2019-08-23 13:39:17.090|
+|22|`SELECT CONVERT(NVARCHAR, GETDATE(), 22)`|08/23/19  1:39:17 PM|
+|23|`SELECT CONVERT(NVARCHAR, GETDATE(), 23)`|2019-08-23|
+|101|`SELECT CONVERT(NVARCHAR, GETDATE(), 101)`|08/23/2019|
+|102|`SELECT CONVERT(NVARCHAR, GETDATE(), 102)`|2019.08.23|
+|103|`SELECT CONVERT(NVARCHAR, GETDATE(), 103)`|23/08/2019|
+|104|`SELECT CONVERT(NVARCHAR, GETDATE(), 104)`|23.08.2019|
+|105|`SELECT CONVERT(NVARCHAR, GETDATE(), 105)`|23-08-2019|
+|106|`SELECT CONVERT(NVARCHAR, GETDATE(), 106)`|23 Aug 2019|
+|107|`SELECT CONVERT(NVARCHAR, GETDATE(), 107)`|Aug 23, 2019|
+|110|`SELECT CONVERT(NVARCHAR, GETDATE(), 110)`|08-23-2019|
+|111|`SELECT CONVERT(NVARCHAR, GETDATE(), 111)`|2019/08/23|
+|112|`SELECT CONVERT(NVARCHAR, GETDATE(), 112)`|20190823|
+|113|`SELECT CONVERT(NVARCHAR, GETDATE(), 113)`|23 Aug 2019 13:39:17.090|
+|120|`SELECT CONVERT(NVARCHAR, GETDATE(), 120)`|2019-08-23 13:39:17|
+|121|`SELECT CONVERT(NVARCHAR, GETDATE(), 121)`|2019-08-23 13:39:17.090|
+|126|`SELECT CONVERT(NVARCHAR, GETDATE(), 126)`|2019-08-23T13:39:17.090|
+|127|`SELECT CONVERT(NVARCHAR, GETDATE(), 127)`|2019-08-23T13:39:17.090|
+|130|`SELECT CONVERT(NVARCHAR, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
+|131|`SELECT CONVERT(NVARCHAR, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
 ### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. 允许的转换中数据类型优先级的影响  
 以下示例定义一个类型为 VARCHAR 的变量，将整数值赋给该变量，然后选择该变量与字符串的串联。
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.' AS Result
 ```
@@ -743,7 +740,7 @@ int 值 1 已转换为 VARCHAR。
 此示例显示了一个类似的查询，但它使用的是 int 变量：
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.' AS Result
 ```
@@ -760,7 +757,7 @@ Conversion failed when converting the varchar value ' is not a string.' to data 
 如果我们提供可转换的字符串，则该语句将成功，如以下示例中所示：
 
 ```SQL
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```
@@ -783,7 +780,7 @@ WHERE CAST(ListPrice AS int) LIKE '3%';
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
 FROM dbo.DimProduct  
-WHERE CONVERT(int, ListPrice) LIKE '3%';  
+WHERE CONVERT(INT, ListPrice) LIKE '3%';  
 ```  
   
 ### <a name="m-using-cast-with-arithmetic-operators"></a>M. 将 CAST 与算术运算符结合使用  
@@ -815,7 +812,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  
 FROM dbo.DimProduct  
-WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
+WHERE CAST(CAST(ListPrice AS INT) AS CHAR(20)) LIKE '2%';  
 ```  
   
 ### <a name="o-using-cast-and-convert-with-datetime-data"></a>O. 对 datetime 数据使用 CAST 和 CONVERT  
@@ -824,8 +821,8 @@ WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';
 ```sql
 SELECT TOP(1)  
    SYSDATETIME() AS UnconvertedDateTime,  
-   CAST(SYSDATETIME() AS nvarchar(30)) AS UsingCast,  
-   CONVERT(nvarchar(30), SYSDATETIME(), 126) AS UsingConvertTo_ISO8601  
+   CAST(SYSDATETIME() AS NVARCHAR(30)) AS UsingCast,  
+   CONVERT(NVARCHAR(30), SYSDATETIME(), 126) AS UsingConvertTo_ISO8601  
 FROM dbo.DimCustomer;  
 ```  
   
@@ -842,8 +839,8 @@ UnconvertedDateTime     UsingCast                     UsingConvertTo_ISO8601
 ```sql
 SELECT TOP(1)   
    '2010-07-25T13:50:38.544' AS UnconvertedText,  
-CAST('2010-07-25T13:50:38.544' AS datetime) AS UsingCast,  
-   CONVERT(datetime, '2010-07-25T13:50:38.544', 126) AS UsingConvertFrom_ISO8601  
+CAST('2010-07-25T13:50:38.544' AS DATETIME) AS UsingCast,  
+   CONVERT(DATETIME, '2010-07-25T13:50:38.544', 126) AS UsingConvertFrom_ISO8601  
 FROM dbo.DimCustomer;  
 ```  
   

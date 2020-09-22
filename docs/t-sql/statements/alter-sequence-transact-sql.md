@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919b355458d7a3b975906f5bc6f5cb72322fdc2a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544223"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688172"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "89544223"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -93,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>权限  
  要求对序列拥有 ALTER 权限或对架构拥有 ALTER 权限 。 若要授予针对序列的 ALTER 权限，请按以下格式使用 ALTER ON OBJECT 对象 ：  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -108,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>A. 更改序列  
  下面的示例使用 int 数据类型（范围为 100 到 200 之间）创建一个名为 Test 的架构和一个名为 TestSeq 的序列。 序列以 125 开始，每次生成数字时递增 25。 因为该序列配置为可循环，所以，当值超过最大值 200 时，序列将从最小值 100 重新开始。  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -126,7 +125,7 @@ GO
   
  下面的示例更改 TestSeq 序列，使范围介于 50 到 200 之间。 序列以 100 重新开始编号系列，每次生成数字时递增 50。  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -143,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>B. 重新开始序列  
  以下示例将创建一个名为 CountBy1 的序列。 该序列使用默认值。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  若要生成序列值，所有者随后应执行下列语句：  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  返回的值 -9,223,372,036,854,775,808 是 bigint 数据类型的最小值。 所有者认识到他原来希望序列从 1 开始，但创建序列时没有指定 START WITH 子句。 若要更正此错误，所有者应执行下面的语句。  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  然后，所有者再次执行下列语句以生成序列号。  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -169,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  CountBy1 序列是使用默认值 NO CYCLE 创建的，因此，在生成数字 9,223,372,036,854,775,807 后，它将停止运行。 对序列对象的后续调用将返回错误 11728。 下面的语句将序列对象更改为循环，并将缓存设置为 20。  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  现在，当序列对象达到 9,223,372,036,854,775,807 时，它将循环，循环后的下一个编号将为此数据类型的最小值，即 -9,223,372,036,854,775,808。  

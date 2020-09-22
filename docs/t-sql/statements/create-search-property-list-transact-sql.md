@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf08875b244a3184f8992efcb0c991ef36a73dc3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549301"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688873"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89549301"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 CREATE SEARCH PROPERTY LIST new_list_name  
    [ FROM [ database_name. ] source_list_name ]  
    [ AUTHORIZATION owner_name ]  
@@ -104,7 +104,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  有关将多个预定义的知名搜索属性添加到此搜索属性列表的示例，请参阅 [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)。 在向列表中添加搜索属性后，数据库管理员将需要使用另一个带有 START FULL POPULATION 子句的 ALTER FULLTEXT INDEX 语句。  
   
-```  
+```sql 
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
 GO  
 USE AdventureWorks2012;  
@@ -117,14 +117,13 @@ GO
 ### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. 基于现有属性列表创建属性列表  
  以下示例基于示例 A 创建的列表 `JobCandidateProperties`（它与 `DocumentPropertyList` 数据库中的全文检索关联）创建一个新的搜索属性列表 `AdventureWorks2012`。 然后，该示例使用 ALTER FULLTEXT INDEX 语句将新属性列表与 `HumanResources.JobCandidate` 数据库中 `AdventureWorks2012` 表的全文检索关联。 此 ALTER FULLTEXT INDEX 语句启动完全填充，这是 SET SEARCH PROPERTY LIST 子句的默认行为。  
   
-```  
+```sql  
 CREATE SEARCH PROPERTY LIST JobCandidateProperties 
 FROM AdventureWorks2012.DocumentPropertyList;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
    SET SEARCH PROPERTY LIST JobCandidateProperties;  
-GO  
-  
+GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
