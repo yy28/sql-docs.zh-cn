@@ -5,16 +5,16 @@ description: 了解如何将 SQL Server 大数据群集升级到新版本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764071"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392166"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -36,8 +36,16 @@ ms.locfileid: "85764071"
 
 本部分介绍如何将 SQL Server BDC 从支持的版本（从 SQL Server 2019 GDR1 开始）升级到新的支持版本。
 
+1. 验证是否没有活动的 Livy 会话。
+
+   请确保没有活动的 Livy 会话或批处理作业正在 Azure Data Studio 中运行。 若要确认这一点，一种简单的方法是通过 `curl` 命令或浏览器来请求这些 URL：
+
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
+
 1. 备份 SQL Server 主实例。
-2. 备份 HDFS。
+
+1. 备份 HDFS。
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
@@ -49,7 +57,7 @@ ms.locfileid: "85764071"
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. 更新 `azdata`。
+1. 更新 `azdata`。
 
    按照说明安装 `azdata`。 
    - [Windows Installer](deploy-install-azdata-installer.md)
@@ -66,10 +74,10 @@ ms.locfileid: "85764071"
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   例如，以下脚本使用 `2019-CU4-ubuntu-16.04` 图像标记：
+   例如，以下脚本使用 `2019-CU6-ubuntu-16.04` 图像标记：
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU6-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -93,13 +101,13 @@ ms.locfileid: "85764071"
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-若要增加升级的超时时间，请在进行升级时使用 --controller-timeout 和 --component-timeout 参数指定较高的值   。 此选项仅自 SQL Server 2019 CU2 版本起开始提供。 例如：
+若要增加升级的超时时间，请在进行升级时使用 --controller-timeout 和 --component-timeout 参数指定较高的值 。 此选项仅自 SQL Server 2019 CU2 版本起开始提供。 例如：
 
    ```bash
-   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU6-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
---controller-timeout 指定等待控制器或控制器 db 完成升级所需的分钟数  。
---component-timeout 指定升级的每个后续阶段必须完成的时间量  。
+--controller-timeout 指定等待控制器或控制器 db 完成升级所需的分钟数。
+--component-timeout 指定升级的每个后续阶段必须完成的时间量。
 
 若要增加低于 SQL Server 2019 CU2 版本的版本升级的超时时间值，请编辑升级配置映射。 编辑升级配置映射：
 
@@ -111,7 +119,7 @@ ms.locfileid: "85764071"
 
 编辑以下字段：
 
-   controllerUpgradeTimeoutInMinutes  指定等待控制器或控制器 db 完成升级所需的分钟数。 默认值为 5。 至少更新为 20。
+   controllerUpgradeTimeoutInMinutes**** 指定等待控制器或控制器 db 完成升级所需的分钟数。 默认值为 5。 至少更新为 20。
    **totalUpgradeTimeoutInMinutes**：指定控制器和控制器 db 完成升级所需的总时间（控制器 + 控制器 db 升级）。默认值为 10。 至少更新为 40。
    **componentUpgradeTimeoutInMinutes**：指定升级的每个后续阶段必须完成的时间量。 默认值为 30。 更新为 45。
 
@@ -123,7 +131,7 @@ ms.locfileid: "85764071"
 
 ### <a name="backup-and-delete-the-old-cluster"></a>备份和删除旧群集
 
-在 SQL Server 2019 GDR1 版本之前，不会对部署的大数据群集进行就地升级。 升级到新版本的唯一方法是手动删除并重新创建群集。 每个版本都有唯一的 `azdata` 版本，该版本与以前的版本不兼容。 此外，如果在部署了不同旧版本的群集上下载了新的容器映像，则最新映像可能与群集上的旧映像不兼容。 当在容器设置的部署配置文件中使用 `latest` 映像标记时，将拉取较新的映像。 默认情况下，每个版本都具有与 SQl Server 发行版本相对应的特定映像标记。 若要升级到最新版本，请使用以下步骤：
+在 SQL Server 2019 GDR1 版本之前，不会对部署的大数据群集进行就地升级。 升级到新版本的唯一方法是手动删除并重新创建群集。 每个版本都有唯一的 `azdata` 版本，该版本与以前的版本不兼容。 此外，如果在部署了不同旧版本的群集上下载了新的容器映像，则最新映像可能与群集上的旧映像不兼容。 当在容器设置的部署配置文件中使用 `latest` 映像标记时，将拉取较新的映像。 默认情况下，每个版本都具有与 SQL Server 发行版本相对应的特定映像标记。 若要升级到最新版本，请使用以下步骤：
 
 1. 在删除旧群集之前，备份 SQL Server 主实例和 HDFS 上的数据。 对于 SQL Server 主实例，可以使用 [SQL Server 备份和还原](data-ingestion-restore-database.md)。 对于 HDFS，[可以使用 `curl` 复制数据](data-ingestion-curl.md)。
 

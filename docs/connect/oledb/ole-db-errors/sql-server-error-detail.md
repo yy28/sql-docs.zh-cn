@@ -1,6 +1,6 @@
 ---
-title: SQL Server 错误详细信息 | Microsoft Docs
-description: SQL Server 错误详细信息
+title: SQL Server 错误详细信息（OLE DB 驱动程序）
+description: 了解 OLE DB Driver for SQL Server 特定于提供程序的错误接口 ISQLServerErrorInfo，该接口会返回 SQL Server 错误的详细信息。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - IErrorInfo interface
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6488a8f266a9d72f4f7522a2428a9a38c2027f42
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f532b124fa23a65a71480b4bcb1bf31272a3081e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998292"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862218"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 定义了特定于访问接口的错误接口 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
+  OLE DB Driver for SQL Server 定义了特定于访问接口的错误接口 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
   
  可以用两种方式访问 ISQLServerErrorInfo 接口  。  
   

@@ -46,14 +46,14 @@ helpviewer_keywords:
 - maximum number of bytes per row
 - data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511259"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027308"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -239,11 +239,13 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
-        , RETENTION_PERIOD = {
-                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                  | MONTH | MONTHS | YEAR | YEARS }
-                          }) ]
+    [ DATA_DELETION =  {OFF | ON }  
+          [(    
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                      | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]
+     ]
 }
   
 <table_stretch_options> ::=
@@ -801,8 +803,12 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoV
 
 - 指定 `PAUSED` 可暂停或推迟数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
 
-DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
-            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+[ DATA_DELETION =  {OFF | ON }  
+          [(  
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]  
+     ]  
 **适用于：** 仅限 Azure SQL Edge
 
 允许基于保留策略清除数据库内各表中的旧数据或过期数据。 有关详细信息，请参阅[启用和禁用数据保留](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)。 若要启用数据保留，必须指定以下参数。 

@@ -1,7 +1,7 @@
 ---
 title: 配置部署
 titleSuffix: SQL Server big data clusters
-description: 了解如何使用配置文件自定义大数据群集部署。
+description: 了解如何使用 azdata 管理工具中内置的配置文件自定义大数据群集部署。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728023"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860574"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
@@ -307,58 +307,67 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 
 ## <a name="configure-storage"></a><a id="storage"></a> 配置存储
 
-还可以更改用于每个池的存储类和特征。 以下示例将自定义存储类分配给存储池和数据池，并将用于存储数据的永久性卷声明的大小更新为 HDFS（存储池）500 Gb，数据池 100 Gb。 
+还可以更改用于每个池的存储类和特征。 以下示例将自定义存储类分配给存储池和数据池，并将用于存储数据的永久性卷声明的大小更新为 HDFS（存储池）500 Gb，master 和数据池 100 Gb。 
 
 > [!TIP]
 > 有关存储配置的详细信息，请参阅 [Kubernetes 上 SQL Server 大数据群集的数据暂留](concept-data-persistence.md)。
 
-首先创建一个 patch.json 文件，如下所示，除了类型和副本之外，还包括新的存储部分   
+首先创建一个 patch.json 文件（如下所示）来调整存储设置
 
 ```json
 {
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "500Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.data-0.spec",
-      "value": {
-        "type": "Data",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "100Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    }
-  ]
+        "patch": [
+                {
+                        "op": "add",
+                        "path": "spec.resources.storage-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "500Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+        {
+                        "op": "add",
+                        "path": "spec.resources.master.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+                {
+                        "op": "add",
+                        "path": "spec.resources.data-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                }
+        ]
 }
+
 ```
 
 然后，可以使用 `azdata bdc config patch` 命令更新 `bdc.json` 配置文件。
@@ -666,7 +675,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 > [!IMPORTANT]
 > 建议的最佳做法是按照[本文](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)中的说明在 Kubernetes 集群中的每个主机上手动更新 `max_map_count` 设置。
 
-## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>打开/关闭 pod 和节点指标集合
+## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>打开/关闭 pod 和节点指标集合
 
 SQL Server 2019 CU5 启用两个功能开关来控制 pod 和节点指标的集合。 如果使用不同的解决方案来监视 Kubernetes 基础架构，可以通过在 control.json 部署配置文件中将 allowNodeMetricsCollection 和 allowPodMetricsCollection 设置为 false，来关闭 pod 和主机节点的内置指标集合   。 对于 OpenShift 环境，这些设置在内置部署配置文件中默认设置为 false，因为收集 pod 和节点指标需要特权功能。
 运行此命令，以使用 azdata CLI 在自定义配置文件中更新这些设置的值：

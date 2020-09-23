@@ -1,8 +1,8 @@
 ---
 title: 使用集成身份验证
-descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
+description: Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 支持使用 Kerberos 集成身份验证的连接。
 ms.custom: ''
-ms.date: 01/20/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,24 +13,26 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629617"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288204"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持使用 Kerberos 集成身份验证的连接。 它支持 MIT Kerberos 密钥发行中心 (KDC)，并且可以与通用安全服务应用程序编程接口 (GSSAPI) 和 Kerberos v5 库一起使用。
-  
+
+从 17.6 版开始，尽管存在系统库的限制，该驱动程序还支持使用联合帐户对 Azure Active Directory 进行集成身份验证。 有关详细信息，请参阅[使用 Azure Active Directory](../using-azure-active-directory.md)。
+
 ## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>使用集成身份验证从 ODBC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 可以启用 Kerberos 集成身份验证，方法是在 SQLDriverConnect 或 SQLConnect 的连接字符串中指定 Trusted_Connection=yes    。 例如：  
 
 ```
-Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
 使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes  。

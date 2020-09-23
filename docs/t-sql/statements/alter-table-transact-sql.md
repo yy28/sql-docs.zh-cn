@@ -58,15 +58,15 @@ helpviewer_keywords:
 - data retention policy
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5fa8a9f667ff94d05dbfd67e4115b599042f57
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 701b4240ccf6dedd79ce9de7baf22b3ae295baab
+ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511269"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013690"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -175,18 +175,12 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | DATA_DELETION =
-                  {
-                     OFF 
-                  | ON
-                      ( FILTER_COLUMN = column_name
-                         , RETENTION_PERIOD =
-                          {
-                           INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                            | MONTH | MONTHS | YEAR | YEARS }
-                          }
-                        )
-                  }  
+            | DATA_DELETION =  OFF | ON  
+                      [(    
+                         [ FILTER_COLUMN = column_name ],   
+                         [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }}]    
+                      )]
           )
 
     | REBUILD
@@ -806,8 +800,12 @@ HISTORY_RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \|
 
 指定时态表中历史数据的有限保留期或无限保留期。 如果省略，则假定为无限期保留。
 
-SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
-            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }  ) 适用范围：仅限 Azure SQL Edge
+SET (DATA_DELETION =  OFF | ON  
+            [( [ FILTER_COLUMN = column_name ],    
+                [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
+            )]    
+          )   
+**适用于：** 仅限 Azure SQL Edge
 
 允许基于保留策略清除数据库内各表中的旧数据或过期数据。 有关详细信息，请参阅[启用和禁用数据保留](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)。 若要启用数据保留，必须指定以下参数。 
 
@@ -820,7 +818,7 @@ SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,
   - DateTimeOffset
 
 - RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
-  指定表的保留期策略。 保留期指定为正整数值和日期部分单位的组合。 
+指定表的保留期策略。 保留期指定为正整数值和日期部分单位的组合。 
 
 SET ( LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } )  
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。

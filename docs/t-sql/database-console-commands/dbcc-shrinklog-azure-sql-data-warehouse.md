@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dcf3a2f48eab092cf12d229685aa05f9e5e42f69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bae2ef1468110ba89d77d5f7a6360aecb324abd0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479775"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076694"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG（并行数据仓库）
 
@@ -41,7 +41,7 @@ DBCC SHRINKLOG
 SIZE = { target_size [MB \| GB \| TB]} \| DEFAULT 。  
 target_size 是 DBCC SHRINKLOG 完成后所有计算节点上所需的事务日志大小  。 它必须是大于 0 的整数。  
 日志大小的单位为兆字节 (MB)、千兆字节 (GB) 或兆兆字节 (TB)。 它是所有计算节点上事务日志的组合大小。  
-默认情况下，DBCC SHRINKLOG 可将事务日志减小到数据库的元数据中存储的日志大小。 元数据中的日志大小是由 [CREATE DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)或 [ALTER DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)中的 LOG_SIZE 参数确定的。 已指定 `SIZE=DEFAULT` 或省略 `SIZE` 子句时，DBCC SHRINKLOG 可将事务日志大小减小到默认大小。
+默认情况下，DBCC SHRINKLOG 可将事务日志减小到数据库的元数据中存储的日志大小。 元数据中的日志大小是由 [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 或 [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 中的 LOG_SIZE 参数确定的。 已指定 `SIZE=DEFAULT` 或省略 `SIZE` 子句时，DBCC SHRINKLOG 可将事务日志大小减小到默认大小。
   
 WITH NO_INFOMSGS  
 DBCC SHRINKLOG 结果中不显示信息性消息。  

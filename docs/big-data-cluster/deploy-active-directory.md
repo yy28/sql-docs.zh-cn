@@ -5,16 +5,16 @@ description: 了解如何在 Active Directory 域中升级 SQL Server 大数据�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243068"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076651"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -31,9 +31,16 @@ ms.locfileid: "87243068"
 
 要在 Active Directory 中自动创建所有必需对象，BDC 需要在部署过程中使用 AD 帐户。 此帐户需要具有在提供的 OU 中创建用户、组和计算机帐户的权限。
 
-以下步骤假设已有一个 Active Directory 域控制器。 如果没有域控制器，以下[指南](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)包含可提供帮助的步骤。
+>[!IMPORTANT]
+>这些帐户的密码可能会过期，具体取决于域控制器中设置的密码过期策略。 默认的过期策略为 42 天。 没有任何机制可以轮换 BDC 中所有帐户的凭据，因此一到过期时间，群集将变为不可操作。 若要解决此问题，请在域控制器中将 BDC 服务帐户的过期策略更新为“密码永不过期”。 此操作可在过期时间之前或之后完成。 在后一种情况下，Active Directory 将重新激活过期的密码。
+>
+>下图显示了在“Active Directory 用户和计算机”中设置此属性的位置。
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="设置密码过期策略":::
 
 有关 AD 帐户和组的列表，请参阅[自动生成的 Active Directory 对象](active-directory-objects.md)。
+
+以下步骤假设已有一个 Active Directory 域控制器。 如果没有域控制器，以下[指南](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)包含可提供帮助的步骤。
 
 ## <a name="create-ad-objects"></a>创建 AD 对象
 
@@ -180,6 +187,9 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 
 - `security.activeDirectory.realm` 可选参数：大多数情况下，领域等同于域名。 对于领域不同于域名的情况，请使用此参数定义领域名称（例如 `CONTOSO.LOCAL`）。 为此参数提供的值应为完全限定的值。
 
+  > [!IMPORTANT]
+  > 此时，BDC 不支持 Active Directory 域名与 Active Directory 域的 NETBIOS 名称不同的配置。
+
 - `security.activeDirectory.domainDnsName`：将用于群集的 DNS 域的名称（例如 `contoso.local`）。
 
 - `security.activeDirectory.clusterAdmins`：此参数采用一个 AD 组。 AD 组范围必须为通用或全局。 此组的成员将具有 bdcAdmin 群集角色，该角色将在群集中为他们授予管理员权限。 这意味着他们[在 SQL Server 中具有 `sysadmin` 权限](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles)、[在 HDFS 中具有 `superuser` 权限](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User)、连接到控制器时具有管理员权限。
@@ -192,6 +202,9 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 此列表中的 AD 组映射到 bdcUser 大数据群集角色，需要对其授予对 SQL Server 的访问权限（请参阅 [SQL Server 权限](../relational-databases/security/permissions-hierarchy-database-engine.md)）或者对 HDFS 的访问权限（请参阅 [HDFS 权限指南](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)）。 当连接到控制器终结点时，这些用户只能使用 azdata bdc endpoint list 命令列出群集中的可用终结点。
 
 有关如何更新 AD 组的这个设置的详细信息，请参阅[管理 Active Directory 模式下的大数据群集访问](manage-user-access.md)。
+
+  >[!TIP]
+  >若要在 Azure Data Studio 中连接到 SQL Server 主机时启用 HDFS 浏览体验，必须向具有 bdcUser 角色的用户授予 VIEW SERVER STATE 权限，因为 Azure Data Studio 使用 sys.dm_cluster_endpoints DMV 将所需的 Knox 网关终结点连接到 HDFS。
 
   >[!IMPORTANT]
   >部署开始之前，请在 AD 中创建这些组。 如果这些 AD 组中的任何一个范围为本地域，则部署失败。
@@ -263,7 +276,7 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
   >[!NOTE]
   >Active Directory 要求帐户名称限制在 20 个字符以内。 BDC 群集需要使用 8 个字符来区分 Pod 和 StatefulSets。 这使得帐户前缀有 12 个字符的限制
 
-[检查 AD 组范围](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以确定它是否为 DomainLocal。
+[检查 AD 组范围](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以确定它是否为 DomainLocal。
 
 如果尚未初始化部署配置文件，则可以运行此命令来获取配置的副本。 下面的示例使用 `kubeadm-prod` 配置文件，这同样适用于 `openshift-prod`。
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - 在 SQL Server 2019 CU5 版本以前，每个域 (Active Directory) 只能有一个 BDC。 从 CU5 版本开始，每个域可以有多个 BDC。
 
-- 无法将安全配置中指定的任何 AD 组的作用域设置为 DomainLocal。 可以按照[这些说明](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)来查看 AD 组的作用域。
+- 无法将安全配置中指定的任何 AD 组的作用域设置为 DomainLocal。 可以按照[这些说明](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)来查看 AD 组的作用域。
 
 - 可用于登录到 BDC 的 AD 帐户可以来自为 BDC 配置的同一域。 不支持启用来自其他受信任域的登录。
 

@@ -1,21 +1,21 @@
 ---
-title: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略 | Microsoft Docs
-description: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略
-ms.date: 05/25/2020
+title: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略
+description: 了解用于 OLE DB Driver for SQL Server 的支持策略，以及可以与每个驱动程序版本配合使用的操作系统和 SQL 数据库版本。
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007039"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860643"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的支持策略
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,26 +28,26 @@ ms.locfileid: "86007039"
 
 OLE DB Driver for SQL Server 已通过测试，并支持与以下版本的 SQL Server 建立连接。
 
-| 驱动程序版本 | Azure SQL 数据库 | Azure SQL DW | Azure SQL 托管实例 | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
-|----|-|-|-|-|-|-|-|-|
-|18.4|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.3|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.2|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.1|Y|Y|Y| |Y|Y|Y|Y|
-|18.0|Y|Y|Y| |Y|Y|Y|Y|
+| 数据库版本&nbsp;&#8594;<br />&#8595; 驱动程序版本 | Azure SQL Database | Azure Synapse Analytics | Azure SQL 托管实例 | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
+|----|---|---|---|---|---|---|---|---|
+|18.4|是|是|是|是|是|是|是|是|
+|18.3|是|是|是|是|是|是|是|是|
+|18.2|是|是|是|是|是|是|是|是|
+|18.1|是|是|是|   |是|是|是|是|
+|18.0|是|是|是|   |是|是|是|是|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="supported-operating-system-versions"></a>支持的操作系统版本  
 
 下表列出了 OLE DB Driver for SQL Server 支持的操作系统。  
 
-| 驱动程序版本 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
-|----|-|-|-|-|-|-|
-|18.4|Y|Y|Y|Y|Y|Y|
-|18.3|Y|Y|Y|Y|Y|Y|
-|18.2|Y|Y|Y|Y|Y|Y|
-|18.1| |Y|Y|Y|Y|Y|
-|18.0| |Y|Y|Y|Y|Y|
+| 操作系统&nbsp;&#8594;<br />&#8595; 驱动程序版本 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
+|----|---|---|---|---|---|---|
+|18.4|是|是|是|是|是|是|
+|18.3|是|是|是|是|是|是|
+|18.2|是|是|是|是|是|是|
+|18.1|   |是|是|是|是|是|
+|18.0|   |是|是|是|是|是|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> 在带有 [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061) 的 Windows Server 2012 上受支持。  

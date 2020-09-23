@@ -26,20 +26,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1898259aef928b749396d0560965aea1d2816624
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246616"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076762"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> 有关 SQL Server 2014 及更低版本的信息，请参阅 [sqlcmd 实用工具](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014)。
+> 有关 SQL Server 2014 及更低版本的信息，请参阅 [sqlcmd 实用工具](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true)。
 >
 > 有关在 Linux 上使用 sqlcmd 的信息，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
@@ -54,25 +54,25 @@ ms.locfileid: "87246616"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>下载最新版本的 sqlcmd 实用工具
 
-**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+[![下载 sqlcmd for x64](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)
+<br>[![下载 sqlcmd for x86](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)
 
 命令行工具为公开发行版 (GA)，但与 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的安装程序包一起发布。
 
 **版本信息**
 
-版本号：15.0 <br>
-生成号：15.0.1300.359<br>
-发行日期：2019 年 3 月 13 日
+版本号：15.0.2<br>
+生成号：15.0.2000.5<br>
+发行日期：2020 年 9 月 11 日
 
 新版本的 SQLCMD 支持 Azure AD 身份验证，包括对 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
 新 BCP 支持 Azure AD 身份验证，包括对 SQL 数据库和 SQL 数据仓库的多重身份验证 (MFA) 支持。
 
 **系统要求** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008 - 2019。
 
-此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
+此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql)。
  
-若要查看 SQLCMD 版本，请执行 `sqlcmd -?` 命令，并确认使用的是版本 15.0.1300.359 或更高版本。
+若要查看 SQLCMD 版本，请执行 `sqlcmd -?` 命令，并确认使用的是版本 15.0.2000.5 或更高版本。
 
 > [!NOTE]
 > 需要版本 13.1 或更高版本才支持 Always Encrypted (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
@@ -89,8 +89,8 @@ sqlcmd 暂不要求在命令行选项和值之间使用空格。 不过，在今
 
  其他主题： 
 
-- [启动 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [使用 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [启动 sqlcmd 实用工具](../ssms/scripting/sqlcmd-start-the-utility.md)
+- [使用 sqlcmd 实用工具](../ssms/scripting/sqlcmd-use-the-utility.md)
   
 ## <a name="syntax"></a>语法
 
@@ -169,11 +169,11 @@ sqlcmd
 将列加密设置设为 `Enabled`。 有关详细信息，请参阅 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)。 仅支持存储在 Windows 证书存储中的主密钥。 -g 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。
 
 **-G**  
-当连接到 SQL 数据库或 SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 **sqlcmd** 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 不支持同时使用 -A 选项和 -G 选项。
+当连接到 SQL 数据库或 SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 **sqlcmd** 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](/azure/azure-sql/database/authentication-aad-overview)。 不支持同时使用 -A 选项和 -G 选项。
 
 > [!IMPORTANT]
 > `-G` 选项仅适用于 Azure SQL 数据库和 Azure 数据仓库。
-> Linux 或 macOS 目前不支持 AAD 集成和交互式身份验证。
+> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) 版本 17.6.1 或更高版本以及正确配置的 Kerberos 环境。
 
 - **Azure Active Directory 用户名和密码：** 
 
@@ -211,7 +211,7 @@ sqlcmd
 
     使用面向 Azure SQL 数据库和 SQL 数据仓库的 Azure AD 交互式身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅 [Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
 
-   Azure AD 交互式身份验证需要 sqlcmd [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 或更高版本，以及 [ODBC 版本 17.2 或更高版本](https://www.microsoft.com/download/details.aspx?id=56567)。  
+   Azure AD 交互式身份验证需要 sqlcmd [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 或更高版本，以及 [ODBC 版本 17.2 或更高版本](https://aka.ms/downloadmsodbcsql)。  
 
    若要启用交互式身份验证，请仅为 -G 选项提供用户名 (-U)，而不提供密码。
 
@@ -235,7 +235,7 @@ sqlcmd
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   如果来宾用户存在于特定的 Azure AD 中，并且属于 SQL DB 中存在的具有执行 sqlcmd 命令的数据库权限的组，则使用其来宾用户别名（例如， *keith0@adventureworks.com* ）。
+   如果来宾用户存在于特定的 Azure AD 中，并且属于 SQL 数据库中存在的具有执行 sqlcmd 命令的数据库权限的组，则使用其来宾用户别名（例如，keith0@adventureworks.com）。
 
   >[!IMPORTANT]
   >将 `-G` 和 `-U` 选项与 SQLCMD 结合使用时，存在以下已知问题：将 `-U` 选项放在 `-G` 选项前面可能会导致身份验证失败。 始终先使用 `-G` 选项，再后跟 `-U` 选项。
@@ -251,7 +251,7 @@ sqlcmd 会话。
  连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 -M multisubnet_failover  
- 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果 -M 未指定，-M 处于关闭状态。 有关[侦听程序、客户端连接、应用程序故障转移](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 Always On 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 和[活动次要副本：可读次要副本（Always On 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)的详细信息。
+ 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果 -M 未指定，-M 处于关闭状态。 有关[侦听程序、客户端连接、应用程序故障转移](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 Always On 可用性组 (SQL Server)](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（Always On 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)的详细信息。
   
  **-N**  
  此开关供客户端用于请求加密连接。  
@@ -612,7 +612,7 @@ sqlcmd 会话。
 |**GO** [*count*]|**:List**|  
 |[ **:** ] **RESET**|**:Error**|  
 |[ **:** ] **ED**|**:Out**|  
-|[ **:** ] **!!**|**:Perftrace**|  
+|[**:**] **!!**|**:Perftrace**|  
 |[ **:** ] **QUIT**|**:Connect**|  
 |[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
@@ -928,9 +928,5 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 - [使用查询编辑器编辑 SQLCMD 脚本](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
 - [管理作业步骤](~/ssms/agent/manage-job-steps.md)   
 - [创建 CmdExec 作业步骤](~/ssms/agent/create-a-cmdexec-job-step.md)  
-
-## <a name="feedback"></a>反馈
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 客户端工具论坛](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -1,6 +1,6 @@
 ---
-title: 使用大型 CLR UDT (OLE DB) | Microsoft Docs
-description: 使用大型 CLR UDT (OLE DB)
+title: 使用大型 CLR UDT（OLE DB 驱动程序）
+description: 通过此示例了解如何从 OLE DB Driver for SQL Server 的结果集中提取包含大型用户定义类型的行。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ed3fd1d54b0b505d3ec6486a8d4cff7dee6449fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dda2e8221c825ee9ca5aad3d14eba14c6d7315f2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007222"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862312"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "86007222"
   此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息，请参阅[大型 CLR 用户定义类型 (OLE DB)](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。  
   
 ## <a name="example"></a>示例  
- 此示例包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 该表中的一个列将属于该程序集中定义的一个类型。默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  
+ 此示例包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 表中的列将为程序集中定义的类型。 默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  
   
  将第一个 （C#） 代码列表编译为 DLL。  然后，将该 DLL 复制到 C 驱动器的根目录。  
   
  执行第二个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以将该程序集添加到 master 数据库。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第三个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第三个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  执行第四个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以从 master 数据库删除该程序集。  
   

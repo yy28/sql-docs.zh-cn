@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP 发行说明
 description: 本页介绍了每个版本 Microsoft Drivers for PHP for SQL Server 的变更内容。
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 09/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2dc190e617ce9a9ffc3c45a623cb82a78411046
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 90b9a9174f849ac8ec8cb0c1c9674395d5b38325
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633853"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027268"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 发行说明
 
@@ -51,7 +51,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 版本号：5.8.1
 - 发布日期：2020 年 4 月 15 日
 
-## <a name="whats-new-in-581"></a>5\.8.1 中的新变化
+### <a name="whats-new-in-581"></a>5\.8.1 中的新变化
 
 | 新建项 | 详细信息 |
 | :------- | :------ |
@@ -70,7 +70,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 版本号：5.8.0
 - 发布日期：2020 年 1 月 31 日
 
-## <a name="whats-new-in-58"></a>5\.8 中的新增功能
+### <a name="whats-new-in-58"></a>5\.8 中的新增功能
 
 | 新建项 | 详细信息 |
 | :------- | :------ |
@@ -102,7 +102,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 版本号：5.6.1
 - 发布日期：2019 年 3 月 19 日
 
-## <a name="whats-new-in-561"></a>5\.6.1 中的新增功能
+### <a name="whats-new-in-561"></a>5\.6.1 中的新增功能
 
 | 新建项 | 详细信息 |
 | :------- | :------ |
@@ -121,7 +121,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 版本号：5.6.0
 - 发布日期：2019 年 2 月 21 日
 
-## <a name="whats-new-in-56"></a>5\.6 中的新增功能
+### <a name="whats-new-in-56"></a>5\.6 中的新增功能
 
 | 新建项 | 详细信息 |
 | :------- | :------ |
@@ -148,7 +148,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 版本号：5.3.0
 - 发布日期：2018 年 7 月 20 日
 
-## <a name="whats-new-in-53"></a>5\.3 中的新增功能
+### <a name="whats-new-in-53"></a>5\.3 中的新增功能
 
 - 支持所有平台上的 Microsoft ODBC 驱动程序 17.2
 - 支持 macOS High Sierra（需要 ODBC 驱动程序 17 及更高版本）
@@ -166,7 +166,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 版本号：5.2.0
 - 发布日期：2018 年 3月 23 日
 
-## <a name="whats-new-in-52"></a>5\.2 中的新增功能
+### <a name="whats-new-in-52"></a>5\.2 中的新增功能
 
 - 在 Windows 上支持 PHP 7.2.1 和更高版本，在其他平台上支持 7.2.0 和更高版本
 - 支持 Microsoft ODBC 驱动程序 17
@@ -191,7 +191,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 版本号：4.3.0
 - 发布日期：2017 年 7 月 6 日
 
-## <a name="whats-new-in-43"></a>4\.3 中的新增功能
+### <a name="whats-new-in-43"></a>4\.3 中的新增功能
 
 - 对 PHP 7.1 的支持
 - 支持 macOS Sierra 和 macOS El Capitan
@@ -206,14 +206,14 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="40"></a>4.0
 
 ![下载](../../ssms/media/download-icon.png) [下载 Windows 程序包](https://go.microsoft.com/fwlink/?linkid=2120448)  
-[GitHub 版本标记（Linux 和 macOS 包均在此处提供）](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+[GitHub 版本标记](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
 ### <a name="version-information"></a>版本信息
 
 - 版本号：4.0
 - 发布日期：2016 年 7 月 1 日
 
-## <a name="whats-new-in-40"></a>4\.0 中的新增功能
+### <a name="whats-new-in-40"></a>4\.0 中的新增功能
 
 - 对 PHP 7.0 的支持  
 - 完整的 64 位支持
@@ -222,14 +222,14 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="32"></a>3.2
 
 ![下载](../../ssms/media/download-icon.png) [下载 Windows 程序包](https://go.microsoft.com/fwlink/?linkid=2120449)  
-[GitHub 版本标记（Linux 和 macOS 包均在此处提供）](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+[GitHub 版本标记](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
 
 ### <a name="version-information"></a>版本信息
 
 - 版本号：3.2
 - 发布日期：2015 年 3 月 9 日
 
-## <a name="whats-new-in-32"></a>3\.2 中的新增功能
+### <a name="whats-new-in-32"></a>3\.2 中的新增功能
 
 - 对 PHP 5.6 的支持  
 - 包括以前的 PHP 版本 5.5 和 5.4 的最新更新  
@@ -237,19 +237,24 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## <a name="31"></a>3.1
 
-[GitHub 版本标记（Linux 和 macOS 包均在此处提供）](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+![下载](../../ssms/media/download-icon.png) [下载 Windows 程序包](https://go.microsoft.com/fwlink/?linkid=2143027)  
+[GitHub 版本标记](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
 
 ### <a name="version-information"></a>版本信息
 
 - 版本号：3.1
 - 发布日期：2014 年 12 月 12 日
 
-## <a name="whats-new-in-31"></a>3\.1 中的新增功能
+### <a name="whats-new-in-31"></a>3\.1 中的新增功能
 
 - 对 PHP 5.5 的支持  
 - 需要 Microsoft ODBC Driver 11 for SQL Server。 以前的版本要求 SQL Native Client。  
 
-## <a name="whats-new-in-30"></a>3\.0 中的新增功能  
+## <a name="30"></a>3.0
+
+![下载](../../ssms/media/download-icon.png) [下载 Windows 程序包](https://go.microsoft.com/fwlink/?linkid=2143026)  
+
+### <a name="whats-new-in-30"></a>3\.0 中的新增功能  
 
 - 对 PHP 5.4 的支持。  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3 不支持 PHP 5.2。  
 - 添加了 AttachDBFileName 连接选项。 有关详细信息，请参阅 [Connection Options](connection-options.md)。  
@@ -259,7 +264,9 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 对客户端游标的支持（将结果集缓存到内存）。 有关详细信息，请参阅[游标类型（SQLSRV 驱动程序）](cursor-types-sqlsrv-driver.md)和[游标类型（PDO_SQLSRV 驱动程序）](cursor-types-pdo-sqlsrv-driver.md)。
 - 添加了 PDO::ATTR_EMULATE_PREPARES 属性。 有关详细信息，请参阅 [PDO::prepare](pdo-prepare.md)。  
 
-## <a name="whats-new-in-20"></a>2\.0 中的新增功能
+## <a name="20"></a>2.0
+
+### <a name="whats-new-in-20"></a>2\.0 中的新增功能
 
 在版本 2.0 中，添加了对 PDO_SQLSRV 驱动程序的支持。 有关详细信息，请参阅 [PDO_SQLSRV 驱动程序参考](pdo-sqlsrv-driver-reference.md)。  
 

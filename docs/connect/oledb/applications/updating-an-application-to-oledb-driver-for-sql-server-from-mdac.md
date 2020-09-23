@@ -1,6 +1,6 @@
 ---
-title: 将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序 | Microsoft Docs
-description: 将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序
+title: 将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序
+description: 了解旧的 OLE DB Provider for SQL Server 与新的 OLE DB Driver for SQL Server 之间的变化，以及更新到新驱动器的须知事项。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, vs. MDAC
 - data access [OLE DB Driver for SQL Server], vs. MDAC
 - OLE DB Driver for SQL Server, updating applications
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 94e7db522cca98bf04cdb46ced06eb469e2cd1a6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b531dbde34faab6995a3e4765156ccaa71f4324e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007023"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860660"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

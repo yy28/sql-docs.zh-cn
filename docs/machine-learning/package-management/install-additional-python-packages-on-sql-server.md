@@ -3,26 +3,27 @@ title: 使用 sqlmlutils 安装 Python 包
 description: 了解如何使用 Python pip 在 SQL Server 机器学习服务的实例上安装新的 Python 包。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/29/2020
+ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: fda7421a3a7004c4d7c14fcc098d56a0c7a264e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a387e10afc9210fd90248fb0240e3b77c37b2afd
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242352"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042520"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)实例以及[大数据群集](../../big-data-cluster/machine-learning-services.md)。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库内运行的 Python 脚本。
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)实例。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库内运行的 Python 脚本。
 ::: moniker-end
@@ -50,7 +51,7 @@ ms.locfileid: "87242352"
 
 + Python 包库位于 SQL Server 实例的“程序文件”文件夹中，默认情况下，在此文件夹中安装需要管理员权限。 有关详细信息，请参阅[包库位置](../package-management/python-package-information.md#default-python-library-location)。
 
-+ 根据每个实例进行包安装。 如果有多个机器学习服务实例，则必须将包添加到每个实例中。
++ 包安装特定于在向 sqlmlutil 提供的连接信息中指定的 SQL 实例、数据库和用户。 若要在多个 SQL 实例或数据库中使用此包，或供不同的用户使用，则需要分别为它们安装此包。 在以下情况下例外：`dbo` 的成员安装了此包，此包是公共的，并且是与所有用户共享的。 如果用户安装了较新版本的公共包，则不会影响此公共包，但该用户将有权访问较新的版本。
 
 + 在添加包之前，请考虑该包是否适合 SQL Server 环境。
 
@@ -98,7 +99,7 @@ pip install sqlmlutils
 
 ## <a name="add-a-python-package-on-sql-server"></a>在 SQL Server 上添加 Python 包
 
-使用 sqlmlutils 可以将 Python 包添加到 SQL 实例。 然后，可以在 SQL 实例中运行的 Python 代码中使用这些包。
+使用 sqlmlutils 可以将 Python 包添加到 SQL 实例。 然后，可以在 SQL 实例中运行的 Python 代码中使用这些包。 sqlmlutils 使用 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 安装此包及其各个依赖项。
 
 在下面的示例中，将向 SQL Server 添加 [text-tools](https://pypi.org/project/text-tools/) 包。
 

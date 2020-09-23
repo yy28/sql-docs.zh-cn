@@ -2,7 +2,7 @@
 title: 使用 ODBC 进行连接
 description: 了解如何使用 Microsoft ODBC Driver for SQL Server 建立从 Linux 或 macOS 到数据库的连接。
 ms.custom: ''
-ms.date: 05/11/2020
+ms.date: 09/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
+ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152049"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90009333"
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 
@@ -66,6 +66,8 @@ Server = tcp:localhost,1433
 可以选择将 DSN 信息添加到模板文件并执行以下命令，以将其添加到 `~/.odbc.ini`：
  - **odbcinst -i -s -f** _template_file_  
 
+有关 ini 文件和 `odbcinst` 的完整文档，请参阅 [unixODBC 文档](http://www.unixodbc.org/odbcinst.html)。 有关 `odbc.ini` 文件中特定于 ODBC Driver for SQL Server 的条目，请参阅 [DSN 和连接字符串关键字和属性](../dsn-connection-string-attribute.md)，以了解 Linux 和 macOS 中支持的关键字和属性。
+
 可以使用 `isql` 测试连接来验证驱动程序是否正在运行，也可以使用以下命令：
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
@@ -87,7 +89,7 @@ Server = tcp:localhost,1433
 默认情况下，加密的连接会始终验证服务器的证书。 但是，如果你连接到具有自签名证书的服务器，还要添加 `TrustServerCertificate` 选项，以绕过针对受信任的证书颁发机构列表的证书检查：  
 
 ```
-Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
+Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
 TLS 使用 OpenSSL 库。 下表显示了 OpenSSL 的受支持的最低版本和每个平台的默认证书信任存储位置：
@@ -97,13 +99,13 @@ TLS 使用 OpenSSL 库。 下表显示了 OpenSSL 的受支持的最低版本和
 |Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71|1.0.1|/etc/ssl/certs|
-|OS X 10.11、macOS 10.12、10.13、10.14|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11、macOS 10.12-10.15|1.0.2|/usr/local/etc/openssl/certs|
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
 |SUSE Linux Enterprise 11、12|1.0.1|/etc/ssl/certs|
-|Ubuntu 18.10、19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.10、19.04、19.10、20.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04、16.10、17.10|1.0.2|/etc/ssl/certs|
 |Ubuntu 14.04|1.0.1|/etc/ssl/certs|

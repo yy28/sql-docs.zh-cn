@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS)
-description: 介绍什么是 SQL Server Management Studio (SSMS) 及其功能。
+description: 了解有关 SQL Server Management Studio (SSMS) 以及 SMMS 可以执行的操作的详细信息，包括如何管理 Analysis Services 解决方案。
 ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001597"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480422"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什么是 SQL Server Management Studio (SSMS)？
 
@@ -43,7 +43,7 @@ ms.locfileid: "86001597"
 |如何使用“模板资源管理器”生成和管理用于加快查询和脚本开发速度的样板文本文件  。|[模板资源管理器](../ssms/template/template-explorer.md)|  
 |如何使用不推荐使用的“解决方案资源管理器”  生成用于管理诸如脚本和查询等管理项的项目。|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|  
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中包含的可视化设计工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器](scripting/query-and-text-editors-sql-server-management-studio.md)
+|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>适用于商业智能的 SQL Server Management Studio
 

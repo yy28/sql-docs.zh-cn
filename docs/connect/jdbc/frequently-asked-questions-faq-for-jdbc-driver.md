@@ -2,7 +2,7 @@
 title: JDBC 驱动程序常见问题解答 (FAQ)
 description: 本页是关于 Microsoft JDBC Driver for SQL Server 的常见问题解答。
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728318"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042418"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -36,6 +36,15 @@ JDBC 驱动程序属于开放源代码，可以在 [GitHub](https://github.com/m
 Microsoft JDBC Driver 的 GitHub 存储库提供的 JDBC 驱动程序文件是 JDBC 驱动程序的核心，并获得存储库中列出的开放源代码许可证的许可。 [Microsoft 下载页](download-microsoft-jdbc-driver-for-sql-server.md)中的驱动程序包包括用于进行 Windows 集成身份验证和通过 JDBC 驱动程序启用 XA 事务的其他库。 这些其他库获得可下载包随附的许可证的许可。
 
 **升级驱动程序时，我应该知道什么？**  
+Microsoft JDBC Driver 8.4 支持 JDBC 4.2 和 4.3（部分）规范，并且安装包中包含以下三个 JAR 类库：
+
+| JAR                        | JDBC 规范            | 添加版本 |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.4.1.jre14.jar | JDBC 4.3（部分）和 4.2 | JDK 14.0    |
+| mssql-jdbc-8.4.1.jre11.jar | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
+| mssql-jdbc-8.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 8.2 支持 JDBC 4.2 和 4.3（部分）规范，并且安装包中包含以下三个 JAR 类库：
 
 | JAR                        | JDBC 规范            | 添加版本 |
@@ -155,7 +164,7 @@ JDBC 驱动程序 6.0、6.2、6.4 和 7.0 是可再发行的。 查看许可协�
 这些驱动程序版本已不再受到支持，因此不能下载。 我们在不断改善 Java 连接支持。 因此，强烈建议使用最新版 Microsoft JDBC Driver。
 
 **我使用的是 JRE 1.4。哪个驱动程序与 JRE 1.4 兼容？**  
-对于使用 SAP 产品且需要 JRE 1.4 支持的客户，可以联系 [SAPService Marketplace](https://service.sap.com/) 获取 Microsoft JDBC 1.2 驱动程序。
+对于使用 SAP 产品且需要 JRE 1.4 支持的客户，可以联系 [SAP Service Marketplace](https://service.sap.com/) 获取 Microsoft JDBC 1.2 驱动程序。
 
 **驱动程序能否使用 FIPS 验证算法进行通信？**  
 Microsoft JDBC 驱动程序不包含任何加密算法。 如果客户使用美国联邦信息处理标准 (FIPS) 认为可接受的操作系统、应用程序和 JVM 算法，并将驱动程序配置为使用这些算法，那么驱动程序仅使用指定的算法进行通信。

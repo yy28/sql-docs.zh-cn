@@ -1,6 +1,6 @@
 ---
 title: IRowsetFastLoad::Commit（OLE DB 驱动程序）| Microsoft Docs
-description: IRowsetFastLoad::Commit (OLE DB)
+description: 了解 IRowsetFastLoad::Commit 方法如何标记一批插入的行的末尾，并将它们写入 OLE DB Driver for SQL Server 中的 SQL Server 表。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Commit method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c932947a77d2170dd1e92c47c19f5ff3959cba9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8e0248c160b80203a09f4712d697d1896732033e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244441"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860696"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,61 +1,65 @@
 ---
-title: 数据库引擎查询编辑器
+title: SSMS 查询编辑器
+description: SQL Server Management Studio (SSMS) 查询编辑器
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
+- sql23.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], editor
+- SQL Server Management Studio [SQL Server], Database Engine Query Editor
+- SQL Server Management Studio [SQL Server], templates
+- SQL Server Management Studio [SQL Server], query editor
+- Query Editor [SQL Server Management Studio]
 - Query Editor [Database Engine]
+- Query Editor [Database Engine], Features
+- Query Editor [Database Engine], Toolbar
+- Query Editor [SQL Server Management Studio], full screen mode
+- Query Editor [Database Engine], templates
+- Query Editor [SQL Server Management Studio], about Query Editor
 - Transact-SQL Editor See Query Editor [Database Engine]
 - Database Engine Query Editor See Query Editor [Database Engine]
-- Query Editor [Database Engine], Toolbar
+- Code Editor [SQL Server Management Studio], about Query Editor
 - editors [SQL Server Management Studio], Database Engine Query Editor
-- Query Editor [Database Engine], Features
-- SQL Server Management Studio [SQL Server], Database Engine Query Editor
+- full screen mode [SQL Server Management Studio]
+- writing scripts
+- modifying scripts
+- writing queries
+- scripts [SQL Server], SQL Server Management Studio
+- queries [SQL Server], SQL Server Management Studio
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: seo-lt-2019
-ms.date: 03/03/2020
-ms.openlocfilehash: 9e90e4596c3d78f48b8ecc4a5af4741ea1f5949d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.custom: seo-lt-2019, contperfq1
+ms.date: 08/28/2020
+ms.openlocfilehash: 50542a1a86adcd2149a7170240796b4f6a511879
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123038"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288265"
 ---
-# <a name="ssms-query-editor"></a>SSMS 查询编辑器
+# <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) 查询编辑器
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-数据库引擎查询编辑器是在 SQL Server Management Studio (SSMS) 中实现的四个编辑器之一。
+本文介绍 SQL Server Management Studio (SSMS) 查询编辑器的特性和功能。
 
-使用查询编辑器创建和运行包含 Transact-SQL 语句的脚本。 此编辑器还支持包含 **sqlcmd** 命令的正在运行的脚本。
+> [!Note]
+> 如果要了解如何使用 Transact-SQL (T-SQL) F1 帮助，请查看 [Transact-SQL F1 帮助](#transact-sql-f1-help)部分。
+>
+> 如果要了解可以通过编辑器执行的任务，请访问[编辑器任务](#editor-tasks)部分。
 
-对于在查询编辑器中实现的功能以及使用此编辑器可以执行的主要任务的说明，请参阅[查询和文本编辑器](../scripting/query-and-text-editors-sql-server-management-studio.md)
+SSMS 中的编辑器共享典型体系结构。 文本编辑器可实现基本功能，而且可用作文本文件的基本编辑器。 其他编辑器（或查询编辑器）可通过加入语言服务（用于定义 SQL Server 支持的其中一种语言的语法），对此基本功能进行扩展。 查询编辑器还可以对编辑器功能（如 IntelliSense 和调试）实现不同级别的支持。 查询编辑器包括用于生成包含 T-SQL 和 XQuery 语句的脚本的数据库引擎查询编辑器，用于 MDX 语言的 MDX 编辑器，用于 DMX 语言的 DMX 编辑器和用于 XML for Analysis 语言的 XML/A 编辑器。
+可以使用查询编辑器创建和运行包含 Transact-SQL 语句的脚本。
 
 ![新建查询](media/database-engine-query-editor-sql-server-management-studio/new-query.png)
-
-## <a name="transact-sql-f1-help"></a>Transact-SQL F1 帮助
-
-查询编辑器支持在你选中 F1 时将你链接到特定 Transact-SQL 语句的参考主题。 为此，突出显示 Transact-SQL 语句的名称，然后选择 F1。 接着，帮助搜索引擎将搜索具有与突出显示的字符串匹配的 F1 帮助属性的主题。
-
-如果帮助搜索引擎找不到具有与突出显示的字符串完全匹配的 F1 帮助关键字的主题，则无法显示该主题。 在这种情况下，有两种方法可以找到所需的帮助：
-
-- 将您突出显示的编辑器字符串复制并粘贴到 SQL Server 联机丛书的搜索选项卡中，并执行搜索。
-
-- 仅突出显示 Transact-SQL 语句中可能与应用于主题的 F 帮助关键字匹配的部分，然后再次选择 F1。 搜索引擎要求突出显示的字符串与分配给主题的 F1 帮助关键字之间完全匹配。 如果突出显示的字符串包含对于您的环境是唯一的元素（如列或参数名称），则搜索引擎不会获得匹配项。 要突出显示的字符串的示例包括：
-
-  - Transact-SQL 语句的名称，如 SELECT、CREATE DATABASE 或 BEGIN TRANSACTION。
-
-  - 内置函数的名称，如 SERVERPROPERTY 或 @@VERSION。
-
-  - 系统存储过程表或视图的名称，如 sys.data_spaces 或 sp_tableoption。
 
 ## <a name="sql-editor-toolbar"></a>SQL 编辑器工具栏
 
@@ -83,7 +87,7 @@ ms.locfileid: "87123038"
 
 ### <a name="execute-using-the-editor-toolbar"></a>使用编辑器工具栏执行
 
-执行所选的代码，如果没有选择任何代码，则执行查询编辑器中的全部代码。
+执行所选的代码，如果没有选择任何代码，则执行所有查询编辑器代码。
 
 还可以通过选中 F5 或从[上下文菜单](#execute-using-the-context-menu)“执行”  查询。
 
@@ -95,13 +99,13 @@ ms.locfileid: "87123038"
 
 ### <a name="parse-using-the-editor-toolbar"></a>使用编辑器工具栏进行分析
 
-检查所选代码的语法。 如果没有选择任何代码，则检查查询编辑器窗口中全部代码的语法。
+检查所选代码的语法。 如果没有选择任何代码，则检查“查询编辑器”窗口中全部代码的语法。
 
 还可以通过选中 Ctrl + F5 在查询编辑器中检查代码。
 
 ### <a name="display-estimated-execution-plan-using-the-editor-toolbar"></a>使用编辑器工具栏显示估计的执行计划
 
-从查询处理器中请求查询执行计划而不实际执行查询，并在“执行计划”  窗口中显示该计划。 此计划使用索引统计值作为查询执行的各个部分预期返回的行数估计值。 实际使用的查询计划可能与估计的执行计划不同。 如果返回的行数与估计值有明显差距，并且查询处理器更改了执行计划以提高其效率，就会发生这种情况。
+从查询处理器中请求查询执行计划而不执行查询，并在“执行计划”窗口中显示该计划。 此计划使用索引统计信息来估计查询执行的各个部分预期返回的行数。 实际使用的查询计划可能与估计的执行计划不同。 如果返回的行数与估计值有差距，并且查询处理器更改了执行计划以提高其效率，就会发生这种情况。
 
 还可以通过选中 Ctrl + L 或从[上下文菜单](#display-estimated-execution-plan-using-the-context-menu)显示估计的执行计划。
 
@@ -113,13 +117,13 @@ ms.locfileid: "87123038"
 
 ### <a name="intellisense-enabled-using-the-editor-toolbar"></a>使用编辑器工具栏启用 IntelliSense
 
-指定 IntelliSense 功能在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中是否可用。 默认情况下设置此选项。
+指定 [IntelliSense](../scripting/configure-intellisense-sql-server-management-studio.md) 功能在数据库引擎查询编辑器中是否可用。 默认情况下设置此选项。
 
 还可以通过选中 Ctrl + B 然后按 Ctrl I，或从[上下文菜单](#intellisense-enabled-using-the-context-menu)中选择“IntelliSense 已启用”  。
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>使用编辑器工具栏包括实际执行计划
 
-执行查询，返回查询结果和用于查询的执行计划。 这些内容在 **“执行计划”** 窗口中显示为图形查询计划。
+执行查询，返回查询结果和使用查询的执行计划。 这些查询在“执行计划”窗口中显示为图形查询计划。
 
 还可以通过选中 Ctrl + M 或从[上下文菜单](#include-actual-execution-plan-using-the-context-menu)选择“包括实际执行计划”  。
 
@@ -143,13 +147,13 @@ ms.locfileid: "87123038"
 
 ### <a name="results-to-grid-using-the-editor-toolbar"></a>使用编辑器工具栏将结果显示为网格
 
-在“结果”  窗口中以一个或多个网格的形式返回查询结果。 此选项在默认情况下通常启用。
+在“结果”  窗口中以一个或多个网格的形式返回查询结果。 默认情况下该选项处于启用状态。
 
 还可以通过选中 Ctrl + D 或从[上下文菜单](#results-using-the-context-menu)返回将结果显示为文本。
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>使用编辑器工具栏将结果显示为文件
 
-在执行查询时，“保存结果”  对话框将会打开。 在 **“保存于”** 中，选择要将文件保存到的文件夹。 在“文件名”  中键入文件的名称，然后选择“保存”  将查询结果保存为具有 .rpt 扩展名的“报表”  文件。 对于高级选项，请单击“保存”  按钮上的向下箭头，再选择“编码保存”  。
+在执行查询时，“保存结果”  对话框将会打开。 在 **“保存于”** 中，选择要将文件保存到的文件夹。 在“文件名”中键入文件的名称，然后选择“保存”将查询结果保存为具有 .rpt 扩展名的“报表”文件。 对于高级选项，请选择“保存”按钮上的向下箭头，再选择“通过编码保存”。
 
 还可以通过选中 Ctrl + Shift + F 或从[上下文菜单](#results-using-the-context-menu)返回将结果显示为文本。
 
@@ -179,13 +183,13 @@ ms.locfileid: "87123038"
 
 ## <a name="context-menu"></a>上下文菜单
 
-可以通过在查询编辑器的任意位置右键单击来访问上下文菜单  。 上下文菜单中的选项类似于 SQL 编辑器工具栏。 在上下文菜单中，可以看到诸如“连接”  和“执行”  的相同选项，但也可以看到列出的其他选项，例如“插入代码片段”  和“外侧代码”  。
+可以通过在查询编辑器的任意位置右键单击来访问上下文菜单  。 上下文菜单中的选项类似于 SQL 编辑器工具栏。 在上下文菜单中，可以看到诸如“连接”和“执行”的相同选项，但也可以看到列出的其他选项，例如“插入代码片段”和“外侧代码”。
 
-![上下文菜单选项](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
+![选项](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
 ### <a name="insert-snippet-using-the-context-menu"></a>使用上下文菜单插入代码片段
 
-Transact-SQL 代码片段是一个模板，可将其作为在查询编辑器中编写新 Transact-SQL 语句的起点。
+[T-SQL 代码片段](../scripting/add-transact-sql-snippets.md)是一个模板，可将其作为在查询编辑器中编写新 Transact-SQL 语句的起点。
 
 ### <a name="surround-with-using-the-context-menu"></a>使用上下文菜单的外侧代码
 
@@ -193,7 +197,7 @@ Transact-SQL 代码片段是一个模板，可将其作为在查询编辑器中�
 
 ### <a name="connection-using-the-context-menu"></a>使用上下文菜单的“连接”
 
-![上下文菜单选项](media/database-engine-query-editor-sql-server-management-studio/context-menu-connections.png)
+![连接](media/database-engine-query-editor-sql-server-management-studio/context-menu-connections.png)
 
 与 SSMS 中的工具栏选项相比，上下文菜单中的“连接”  选项更多。
 
@@ -215,11 +219,11 @@ Transact-SQL 代码片段是一个模板，可将其作为在查询编辑器中�
 
 ### <a name="display-estimated-execution-plan-using-the-context-menu"></a>使用上下文菜单显示估计的执行计划
 
-从查询处理器中请求查询执行计划而不实际执行查询，并在“执行计划”  窗口中显示该计划。 此计划使用索引统计值作为查询执行的各个部分预期返回的行数估计值。 实际使用的查询计划可能与估计的执行计划不同。 如果返回的行数与估计值有明显差距，并且查询处理器更改了执行计划以提高其效率，就会发生这种情况。
+从查询处理器中请求查询执行计划而不实际执行查询，并在“执行计划”  窗口中显示该计划。 此计划使用索引统计信息来估计查询执行的各个部分预期返回的行数。 实际使用的查询计划可能与估计的执行计划不同。 如果返回的行数与估计值有差距，并且查询处理器更改了执行计划以提高其效率，就会发生这种情况
 
 ### <a name="intellisense-enabled-using-the-context-menu"></a>使用上下文菜单启用 IntelliSense
 
-指定 IntelliSense 功能在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中是否可用。 默认情况下设置此选项。
+指定 IntelliSense 功能在数据库引擎查询编辑器中是否可用。 默认情况下设置此选项。
 
 ### <a name="trace-query-in-sql-server-profiler-using-the-context-menu"></a>使用上下文菜单在 SQL Server Profiler 中进行跟踪查询
 
@@ -235,7 +239,7 @@ Microsoft 数据库引擎优化顾问 (DTA) 分析数据库并对优化查询性
 
 ### <a name="include-actual-execution-plan-using-the-context-menu"></a>使用上下文菜单包括实际执行计划
 
-执行查询，返回查询结果和用于查询的执行计划。 这些内容在 **“执行计划”** 窗口中显示为图形查询计划。
+执行查询，返回查询结果和使用查询的执行计划。 这些查询在“执行计划”窗口中显示为图形查询计划。
 
 ### <a name="include-live-query-statistics-using-the-context-menu"></a>使用上下文菜单包括实时查询统计信息
 
@@ -255,7 +259,7 @@ Microsoft 数据库引擎优化顾问 (DTA) 分析数据库并对优化查询性
 
 - **结果显示为网格** - 在“结果”  窗口中将查询结果返回为一个或多个网格。
 
-- **结果显示为文件** - 在执行查询时，  “保存结果”对话框将会打开。 在 **“保存于”** 中，选择要将文件保存到的文件夹。 在“文件名”  中键入文件的名称，然后选择“保存”  将查询结果保存为具有 .rpt 扩展名的“报表”  文件。 对于高级选项，请单击“保存”  按钮上的向下箭头，再选择“编码保存”  。
+- **结果显示为文件** - 在执行查询时，  “保存结果”对话框将会打开。 在 **“保存于”** 中，选择要将文件保存到的文件夹。 在“文件名”中键入文件的名称，然后选择“保存”将查询结果保存为具有 .rpt 扩展名的“报表”文件。 对于高级选项，请选择“保存”按钮上的向下箭头，再选择“通过编码保存”。
 
 ### <a name="properties-window-using-the-context-menu"></a>使用上下文菜单的“属性”窗口
 
@@ -267,8 +271,43 @@ Microsoft 数据库引擎优化顾问 (DTA) 分析数据库并对优化查询性
 
 打开“查询选项”  对话框。 此对话框用于配置查询执行和查询结果的默认选项。
 
+## <a name="transact-sql-f1-help"></a>Transact-SQL F1 帮助
+
+查询编辑器支持在你选中 F1 时将你链接到特定 Transact-SQL 语句的参考主题。 为此，突出显示 Transact-SQL 语句的名称，然后选择 F1。 接着，帮助搜索引擎将搜索具有与突出显示的字符串匹配的 F1 帮助属性的主题。
+
+如果帮助搜索引擎找不到具有与突出显示的字符串完全匹配的 F1 帮助关键字的主题，则无法显示该主题。 在这种情况下，有两种方法可以找到所需的帮助：
+
+- 将您突出显示的编辑器字符串复制并粘贴到 SQL Server 联机丛书的搜索选项卡中，并执行搜索。
+
+- 仅突出显示 Transact-SQL 语句中可能与应用于主题的 F 帮助关键字匹配的部分，然后再次选择 F1。 搜索引擎要求突出显示的字符串与分配给主题的 F1 帮助关键字之间完全匹配。 如果突出显示的字符串包含对于您的环境是唯一的元素（如列或参数名称），则搜索引擎不会获得匹配项。 要突出显示的字符串的示例包括：
+
+  - Transact-SQL 语句的名称，如 SELECT、CREATE DATABASE 或 BEGIN TRANSACTION。
+
+  - 内置函数的名称，如 SERVERPROPERTY 或 @@VERSION。
+
+  - 系统存储过程表或视图的名称，如 sys.data_spaces 或 sp_tableoption。
+
+## <a name="editor-tasks"></a>编辑器任务
+
+| 任务说明 | 主题 |
+|------------------|-------|
+| 介绍可以在 SSMS 中打开编辑器的各种方法。| [打开编辑器](../scripting/open-an-editor-sql-server-management-studio.md) |
+| 配置各种编辑器的选项，如行编号和 IntelliSense 选项。 | [配置编辑器](../scripting/configure-editors-sql-server-management-studio.md) |
+| 如何管理视图模式，如自动换行功能、拆分窗口或选项卡。| [管理编辑器和视图模式](../scripting/manage-the-editor-and-view-mode.md) |
+| 设置格式设置选项，如隐藏文本或缩进。 | [管理代码格式](../scripting/manage-code-formatting.md) |
+| 通过如“渐进式搜索”或“转至”功能在编辑器窗口中导航文本内容。 | [代码和文本定位](../scripting/navigate-code-and-text.md) |
+| 设置各类语法的颜色编码选项，以便更容易读取复杂语句。 | [查询编辑器中的颜色编码](../scripting/color-coding-in-query-editors.md) |
+| 将文本从脚本的一个位置中拖出，然后放入一个新位置。| [拖放文本](../scripting/drag-and-drop-text.md) |
+| 如何设置书签，以便更容易地查找重要代码片段。 | [管理书签](../scripting/manage-bookmarks.md) |
+| 如何打印窗口或网格中的脚本或结果。| [打印代码和结果](../scripting/print-code-and-results.md) |
+| 查看和使用 MDX 查询编辑器的基本功能。 | [创建 Analysis Services 脚本](https://docs.microsoft.com/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
+| 查看和使用 DMX 查询编辑器的基本功能。 | [创建 DMX 查询](https://docs.microsoft.com/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| 查看和使用 XML/A 编辑器的基本功能。 | [XML 编辑器](../scripting/xml-editor-sql-server-management-studio.md) |
+| 如何使用数据库引擎查询编辑器中的 sqlcmd 功能。| [编辑 SQLCMD 脚本](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
+| 如何使用数据库引擎查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。| [T-SQL 代码片段](../scripting/add-transact-sql-snippets.md) |
+| 如何使用 Transact\-SQL 调试器逐句运行代码，并查看诸如变量和参数中的值之类的调试信息。| [T-SQL 调试程序](../scripting/transact-sql-debugger.md) |
+
 ## <a name="see-also"></a>另请参阅
 
 - [自定义菜单和快捷键](../customize-menus-and-shortcut-keys.md)
-
 - [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

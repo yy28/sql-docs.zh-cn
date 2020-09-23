@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 44c4cfb05af24d91b392dab78b20d464b9c0384b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6aff6f8a35a28b76ad3bbfb92079bbaa9659cd7b
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897775"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569947"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门：在 SUSE Linux Enterprise Server 上安装 SQL Server 并创建数据库
 
@@ -87,6 +87,12 @@ ms.locfileid: "85897775"
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
+   若要确保你的系统上安装了 Microsoft 包签名密钥，请使用以下命令导入它： 
+   
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
    
 3. 运行以下命令以安装 SQL Server：
@@ -190,7 +196,7 @@ ms.locfileid: "85897775"
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. 为方便起见，向 PATH 环境变量添加 `/opt/mssql-tools/bin/` 。 这样可以在不指定完整路径的情况下运行这些工具。 运行以下命令以修改登录会话和交互式/非登录会话的路径  ：
+1. 为方便起见，向 PATH 环境变量添加 `/opt/mssql-tools/bin/`。 这样可以在不指定完整路径的情况下运行这些工具。 运行以下命令以修改登录会话和交互式/非登录会话的路径：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

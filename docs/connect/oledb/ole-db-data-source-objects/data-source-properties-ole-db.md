@@ -1,6 +1,6 @@
 ---
 title: 数据源属性（OLE DB 驱动程序）| Microsoft Docs
-description: 数据源属性 (OLE DB)
+description: 了解 OLE DB Driver for SQL Server 如何实现数据源属性，其中包括包含其他数据源属性的特定于提供程序的属性集。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - data source properties [OLE DB]
 - OLE DB data source properties [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f9eb49b87333c30cef03426b1fc3d7567274a167
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 281e5b04b76317a24c15fce962e88ebbe3de3b02
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976204"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862378"
 ---
 # <a name="data-source-properties-ole-db"></a>数据源属性 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -3,7 +3,7 @@ title: “生成和发布脚本向导”
 description: 了解如何使用“生成和发布脚本向导”创建脚本，以在数据库实例之间传输数据库。 实例可以是 SQL Server 数据库引擎或 Azure SQL 数据库的实例。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e6b5619628bd9974a2b690fc9c8472543d3ca12
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122613"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901369"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
 
@@ -128,7 +128,7 @@ ms.locfileid: "87122613"
 
 **将脚本保存到特定位置** - 将一个或多个 Transact-SQL 脚本文件保存到指定位置。
 
-![保存](media/generate-and-publish-scripts-wizard/save.png)
+![另存为笔记本](media/generate-and-publish-scripts-wizard/save.png)
 
 - [另存为笔记本](../../azure-data-studio/notebooks-guidance.md)  - 将脚本保存到一个或多个 .sql 文件。 选择浏览按钮 (…  ) 可以指定文件的名称和位置。
 
@@ -222,7 +222,7 @@ ms.locfileid: "87122613"
 
 ### <a name="summary-page"></a><a name="Summary"></a> 摘要页
 
-![总结](media/generate-and-publish-scripts-wizard/summary.png)
+![GS 摘要](media/generate-and-publish-scripts-wizard/summary.png)
 
 此页汇总了您在此向导中所选的选项。 若要更改选项，请选择“上一步”  。 若要开始生成保存或发布的脚本，请选择“下一步”  。
 

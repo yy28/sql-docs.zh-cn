@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003958"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195123"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT for VS 2017
+
+发布时间：&nbsp; 2020 年 8 月 31 日  
+生成号：&nbsp; 14.0.16222.0  
+SSDT for Visual Studio 2017。 
+
+### <a name="whats-new"></a>新增功能
+
+| 新项 | 详细信息 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 修复了连接到 SQL Server Analysis Services (SSAS) 数据源时“预览”按钮在 OLE DB 源上不起作用的问题。 |
+| Integration Services (SSIS) | 修复了在删除关联路径之前删除数据流组件的输入或输出可能会引发 COMException 错误的问题。 |
+| Integration Services (SSIS) | 修复了 SSAS 处理任务无法连接到 Power BI 工作区并刷新其模型的问题。 |
+| Integration Services (SSIS) | 修复了在使用 x64 运行时和面向 SQL Server 2017 时，Visual Studio 在调试脚本任务/组件时挂起的问题。 |
+| Integration Services (SSIS) | 修复了在某些环境中选择 MySQL 驱动程序时导入/导出向导崩溃的问题。 |
+| Integration Services (SSIS) | 修复了一些与辅助功能和高 DPI 相关的问题。 |
+| Integration Services (SSIS) | 允许用户在打开包时跳过验证，从而提高性能。 有关详细信息，请参阅[在 SSDT 中加速打开 SSIS 包](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099)。 |
+| Integration Services (SSIS) | 当目标服务器版本不为 SQL Server 2017 时，阻止部署到 Azure-SSIS。 |
+
+### <a name="known-issues"></a>已知问题
+
+| 已知问题 | 详细信息 |
+| :---------- | :------ |
+| 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 | 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。 |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持 OData v4。 | &nbsp; |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持使用 ODBC 连接到 Oracle。 | &nbsp; |
+| 未本地化 Power Query 源。 | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5,&nbsp; SSDT for VS 2017
 
@@ -624,7 +653,7 @@ SSDT for Visual Studio 2017。
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，SSDT&nbsp;for VS 2015
 
 生成号：  14.0.61707.300&nbsp;  
-SSDT for Visual Studio 2015。
+SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -640,7 +669,7 @@ SSDT for Visual Studio 2015。
 
 **AS 项目**
 - 为增强提交 DAX 测量更改和其他模型编辑时的体验进行了显著的性能修复。
-- 修复了使用 1400-兼容级别表格模型的 Analysis Services 项目中的 PowerQuery 集成的大量相关问题。
+- 修复了使用 1400-兼容级别表格模型的 Analysis Services 项目中有关 Power Query 集成的一些问题。
 - 修复了在 VS2017 多维度项目中“设计聚合”设计器可能无法加载的问题。
 - 修复了在 Analysis Services 多维度 DSV 图中拖动项可能导致 VS 2017 崩溃的问题。
 - 修复了 AS 项目中“部署”对话框没有始终处于 Visual Studio 前台的问题。
@@ -671,7 +700,7 @@ SSDT for Visual Studio 2015。
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10，SSDT&nbsp;for VS 2015
 
 生成号：  14.0.61705.170&nbsp;  
-SSDT for Visual Studio 2015。
+SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
 **AS 项目：**
@@ -978,7 +1007,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 发布时间：  2016&nbsp;年 6 月 30 日  
 生成号：  14.0.60629.0&nbsp;  
-适用于 SQL Server 2016。
+适用于 SQL Server 2016。 
 
 **新增功能**  
 - **Always Encrypted 支持：** 对于包含 Always Encrypted 列的数据库，此发行版通过核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
@@ -989,7 +1018,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 **更新和修复**
 * **数据库工具：**
     * 从现在起，SSDT 永远不会在数据库中禁用透明数据加密 (TDE)。 以前，由于项目数据库设置中的默认加密选项已禁用，因此会关闭加密。 使用此修复程序可以启用加密，但发布期间永远不会禁用加密。 
-    * 增大了初始连接期间的重试计数和 Azure SQL DB 连接的复原能力。
+    * 增大了初始连接期间的重试计数和 Azure SQL 数据库连接的复原能力。
     * 如果默认文件组不是 PRIMARY，导入/发布到 Azure V12 将会失败。 现在，在发布时将忽略此设置。
     * 修复了以下问题：导出包含带引号标识符对象的数据库时，在某些情况下导出验证可能会失败。
     * 修复了以下问题：创建 Hekaton 表时错误地添加 TEXTIMAGE_ON 选项，这是不允许的。

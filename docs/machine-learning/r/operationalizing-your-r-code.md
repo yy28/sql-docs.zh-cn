@@ -3,21 +3,21 @@ title: 在存储过程中部署 R 代码
 description: 在 SQL Server 存储过程中嵌入 R 语言代码，使其可以供任何有权访问 SQL Server 数据库的客户端应用程序可用。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/15/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242314"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288259"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用存储过程操作 R 代码
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 在 SQL Server 机器学习服务中使用 R 和 Python 功能时，将解决方案移动到生产环境的最常见方法是在存储过程中嵌入代码。 本文总结了 SQL 开发人员在使用 SQL Server 操作 R 代码时要考虑的要点。
 
@@ -28,14 +28,13 @@ ms.locfileid: "87242314"
 + [在 SQL Server 中创建并运行简单的 R 脚本](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-有关使用存储过程将 R 代码部署到生产环境中的更全面的示例，请参阅[教程：适用于 SQL 开发者的 R 数据分析](../../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)中找到
+有关使用存储过程将 R 代码部署到生产环境中的更全面的示例，请参阅[教程：适用于 SQL 开发者的 R 数据分析](../../machine-learning/tutorials/r-taxi-classification-introduction.md)中找到
 
-## <a name="guidelines-for-optimizing-r-code-for-sql"></a>针对 SQl 优化 R 代码的准则
+## <a name="guidelines-for-optimizing-r-code-for-sql"></a>针对 SQL 优化 R 代码的准则
 
 如果事先在 R 或 Python 代码中进行了一些优化，那么在 SQL 中转换 R 代码会更容易。 这些优化包括避免导致问题的数据类型、避免不必要的数据转换，以及将 R 代码重写为一个易于参数化的函数调用。 有关详细信息，请参阅：
 
 + [R 库和数据类型](r-libraries-and-data-types.md)
-+ [转换 R 代码以在 R Services 中使用](converting-r-code-for-use-in-sql-server.md)
 + [使用 sqlrutils 帮助程序函数](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>将 R 和 Python 与应用程序集成
@@ -52,11 +51,6 @@ ms.locfileid: "87242314"
 
 + [SQL Server 中 R 的端到端数据科学演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-有关如何在应用程序中集成评分的示例，请参阅以下解决方案模板：
-
-+ [零售预测](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/README.md)
-+ [欺诈检测](https://github.com/Microsoft/r-server-fraud-detection)
-+ [客户聚类分析](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## <a name="boost-performance-and-scale"></a>提高性能和缩放性
 
@@ -64,22 +58,8 @@ ms.locfileid: "87242314"
 
 如果你的 R 解决方案使用复杂的聚合或涉及大型数据集，则可以利用 SQL Server 的高效内存中聚合和列存储索引，然后让 R 代码处理统计计算和评分。
 
-有关如何在 SQL Server 机器学习中提高性能的详细信息，请参阅：
-
-+ [SQL Server R Services 性能优化](../../machine-learning/r/sql-server-r-services-performance-tuning.md)
-+ [性能优化提示和技巧](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
-
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>为其他平台或计算上下文调整 R 代码
 
-在 SQL Server 安装程序中使用[独立服务器选项](../install/sql-machine-learning-standalone-windows-install.md)或安装非 SQL 品牌的产品 Microsoft Machine Learning Server（以前称为“Microsoft R Server”）时，针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据运行的同一 R 代码可用于其他数据源，例如用于 HDFS 的 Spark  ：
+在 SQL Server 安装程序中使用[独立服务器选项](../install/sql-machine-learning-standalone-windows-install.md)或安装非 SQL 品牌的产品 Microsoft Machine Learning Server（以前称为“Microsoft R Server”）时，针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据运行的同一 R 代码可用于其他数据源，例如用于 HDFS 的 Spark****：
 
 + [Machine Learning Server 文档](https://docs.microsoft.com/r-server/)
-
-+ [浏览 R 到 RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
-
-+ [写入分块算法](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
-
-+ [在 R 中利用大数据进行计算](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
-
-+ [开发自己的并行算法](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
-

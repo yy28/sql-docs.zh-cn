@@ -2,7 +2,7 @@
 title: JDBC Driver 发行说明
 description: 本文列出了 Microsoft JDBC Driver for SQL Server 的各个发行版。 对于每个发行版本，将对所做的更改进行命名和说明。
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,90 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793290"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062306"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 发行说明
 
 本文列出了 Microsoft JDBC Driver for SQL Server  的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
+
+## <a name="84"></a><a id="84"></a> 8.4
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)  
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)  
+
+版本号：8.4.1  
+发布日期：2020 年 8 月 27 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
+
+### <a name="compliance"></a>合规性
+
+| 符合性更改 | 详细信息 |
+| :---------------- | :------ |
+| 下载 JDBC Driver 8.4 的最新更新。 | &bull; &nbsp; [GitHub, 8.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 8.4 包中的 jar。<br/><br/>例如，8.4 包中的 mssql-jdbc-8.4.1.jre14.jar 文件应与 Java 14 配合使用。 |
+| 与 Java 开发工具包 (JDK) 版本 14.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.4 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 14.0 兼容。 |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>版本
+
+版本号：8.4.1  
+发布日期：2020 年 8 月 27 日  
+已解决的问题：  
+
+- 修复了 `SQLServerConnectionPoolProxy` 与 `delayLoadingLobs` 不兼容的问题
+- 修复了 `delayLoadingLobs` 的潜在 `NullPointerException` 问题
+- 修复了使用 Windows 证书存储时解密列加密密钥的问题
+
+版本号：8.4.0  
+发布日期：2020 年 7 月 31 日  
+
+### <a name="support-for-jdk-14"></a>支持 JDK 14
+
+除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.4 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 14.0 兼容。
+
+### <a name="added-support-for-authentication-to-azure-key-vault-using-managed-identity"></a>添加了对使用托管标识向 Azure Key Vault 进行身份验证的支持
+
+| 添加身份验证类型 | 详细信息 |
+| :---------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server 现支持使用托管标识向 Azure Key Vault 进行身份验证。 | 请参阅[通过 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="extended-support-for-bulk-copy-for-azure-data-warehouse"></a>Azure 数据仓库的大容量复制扩展支持
+
+| Azure 数据仓库的大容量复制更改 | 详细信息 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 添加新的连接属性 `sendTemporalDataTypesAsStringForBulkCopy`。 默认情况下，此布尔属性为 TRUE。 | 请参阅[通过 JDBC 驱动程序使用大容量复制](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-sql-dns-caching"></a>添加了对 Azure SQL DNS 缓存的支持
+
+| DNS 缓存 | 详细信息 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server 现支持针对 Azure SQL Server 的 DNS 缓存。 | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### <a name="added-backwards-compatibility-for-streaming-lob-objects"></a>为流式处理 LOB 对象添加了向后兼容性
+
+| LOB 流式处理 | 详细信息 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server 添加了新的连接属性 `delayLoadingLobs`。 | 将 `delayLoadingLobs` 设置为 FALSE 将导致从 ResultSet 检索到的所有 LOB 对象不会进行流式处理。 这意味着，驱动程序会一次将整个 LOB 对象加载到内存中，这类似于版本 6.4 版本前驱动程序的运作方式。 |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-client-certificate-authentication-for-loopback-scenarios"></a>添加了对环回方案的客户端证书身份验证的支持
+
+| 客户端证书身份验证 | 详细信息 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server 为环回方案添加了称为“客户端证书身份验证”的新身份验证方法。 | 请参阅[环回方案的客户端证书身份验证](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
+
+## <a name="previous-releases"></a>以前的版本
 
 ## <a name="82"></a><a id="82"></a> 8.2
 
@@ -41,6 +115,23 @@ ms.locfileid: "85793290"
 | 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 8.2 包中的 jar。<br/><br/>例如，8.2 包中的 mssql-jdbc-8.2.2.jre11.jar 文件应与 Java 11 配合使用。 |
 | 与 Java 开发工具包 (JDK) 版本 13.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 13.0 兼容。 |
 | &nbsp; | &nbsp; |
+
+### <a name="releases"></a>版本
+
+版本号：8.2.2  
+发布日期：2020 年 3 月 24 日  
+已解决的问题：  
+
+- 添加了用于配置受信任的 Azure Key Vault 终结点列表的选项
+
+版本号：8.2.1  
+发布日期：2020 年 2 月 26 日  
+已解决的问题：  
+
+- 修复了使用 `SQLServerResultSet.getObject()` 检索 `java.time.LocalTime` 或 `java.time.LocalDate` 类型的数据时可能出现的 `NullPointerException` 问题
+
+版本号：8.2.0  
+发布日期：2020 年 1 月 31 日  
 
 ### <a name="support-for-jdk-13"></a>支持 JDK 13
 
@@ -79,8 +170,6 @@ ms.locfileid: "85793290"
 | 运用 Java 8 来使用具有安全 Enclave 的 Always Encrypted 时。 | 用户必须将 BouncyCastle 提供程序作为依赖项，或者映射/加载支持 RSASSA-PSS 签名算法的安全提供程序。 |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>以前的版本
-
 ## <a name="a-id74-741"></a><a id="74"> 7.4.1
 
 [![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 7.4.1 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122712)   
@@ -101,6 +190,17 @@ ms.locfileid: "85793290"
 | 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 7.4 包中的 jar。<br/><br/>例如，7.4 包中的 mssql-jdbc-7.4.1.jre11.jar 文件应与 Java 11 配合使用。 |
 | 与 Java 开发工具包 (JDK) 版本 12.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 7.4 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 12.0 兼容。 |
 | &nbsp; | &nbsp; |
+
+### <a name="releases"></a>版本
+
+版本号：7.4.1  
+发布日期：2019 年 8 月 2 日  
+已解决的问题：  
+
+- 从 `SQLServerDataTable` 和 `SQLServerDataColumn` 恢复了新的 `hashCode()` 和 `equals()` API 实现，因为 API 更改中断了向后兼容性
+
+版本号：7.4.0  
+发布日期：2019 年 7 月 31 日  
 
 ### <a name="support-for-jdk-12"></a>支持 JDK 12
 
@@ -160,18 +260,28 @@ ms.locfileid: "85793290"
 | 除 Java 开发工具包 (JDK) 版本 1.8 外，还与 JDK 11.0 兼容。 | 除 Java 开发工具包 (JDK) 版本 1.8 外，Microsoft JDBC Driver 7.2 for SQL Server 现在还与 JDK 11.0 兼容。 |
 | &nbsp; | &nbsp; |
 
-> [!NOTE]
-> 于 2019 年 1 月 31 日发布的 JDBC 7.2 Release To Web (RTW) 驱动程序中发现了 SQL 语句分析方面的问题。 所做的更改已回滚，并且新的 jar（版本 7.2.1）已于 2019 年 2 月 11 日发布。
->
-> 对驱动程序进行了另一个更新来解决 ActivityID 未正确清除的问题。 新的 jar（版本 7.2.2）已于 2019 年 4 月 16 日发布。
->
-> 我们建议更新项目以使用 7.2.2 版本 jar。 有关详细信息，请查看 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 和 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2) 的发行说明。
+### <a name="releases"></a>版本
 
-### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Active Directory 托管服务标识  (MSI) 身份验证
+版本号：7.2.2  
+发布日期：2019 年 4 月 16 日  
+已解决的问题：  
+
+- 修复了无法正确清除 ActivityID 的问题
+
+版本号：7.2.1  
+发布日期：2019 年 2 月 11 日  
+已解决的问题：  
+
+- 修复了某些参数化查询的分析问题
+
+版本号：7.2.0  
+发布日期：2019 年 1 月 31 日  
+
+### <a name="active-directory-_managed-identity_-msi-authentication"></a>Azure Active Directory 托管标识 (MSI) 身份验证
 
 | MSI 更改 | 详细信息 |
 | :--------- | :------ |
-| 支持 Active Directory 托管服务标识 (MSI) 身份验证模式。 | 此身份验证模式适用于支持“标识”功能的 Azure 资源。<br/><br/>两种类型的托管系统标识 (MSI) 均受驱动程序支持，可获取用于建立安全连接的 accessToken  。 |
+| 支持 Active Directory 托管标识 (MSI) 身份验证模式。 | 此身份验证模式适用于支持“标识”功能的 Azure 资源。<br/><br/>两种类型的托管标识 (MSI) 均受驱动程序支持，可获取用于建立安全连接的 accessToken。 |
 | 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -363,6 +473,23 @@ JDBC 驱动程序已将“用于 Java 的 Microsoft Azure Active Directory 身�
 对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40a)  
 
 Microsoft JDBC Driver 6.2 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 Java 版本兼容性命名 6.2 包中的 jar。 例如，建议将 6.2 包中的 mssql-jdbc-6.2.2.jre8.jar 文件与 Java 8 配合使用。
+
+### <a name="releases"></a>版本
+
+版本号：6.2.2  
+发布日期：2017 年 10 月 3 日  
+已解决的问题：  
+
+- 已将 ADAL4J 依赖项更新到版本 1.2.0，并将 Azure Key Vault 依赖项更新到版本 1.0.0
+
+版本号：6.2.1  
+发布日期：2017 年 7 月 14 日  
+已解决的问题：  
+
+- 修正了使用 `preparedStatement` 运行没有参数的查询时的问题
+
+版本号：6.2.0  
+发布日期：2017 年 6 月 30 日  
 
 > [!NOTE]  
 > 在 2017 年 6 月 29 日发布的 JDBC 6.2 RTW 中发现了元数据缓存改进方面的问题。 改进已回滚，并且新的 jar（版本 6.2.1）已于 2017 年 7 月 17 日发布。

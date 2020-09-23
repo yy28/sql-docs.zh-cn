@@ -3,27 +3,27 @@ title: 创建资源池
 description: 了解如何在 SQL Server 机器学习服务中创建和使用资源池来管理 Python 和 R 工作负载。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5679a02542777e2302dcefc98274957b2f837445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08f2c66fec80ce27e3e7a9ffca7a00194ff3b81b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902326"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283758"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>为 SQL Server 机器学习服务创建资源池
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 了解如何在 SQL Server 机器学习服务中创建和使用资源池来管理 Python 和 R 工作负载。 
 
 此过程包括多个步骤：
 
-1. 查看所有现有资源池的状态。 了解哪些服务在使用现有资源，这一点至关重要。
+1. 查看所有现有资源池的状态。 务必要了解哪些服务在使用现有资源。
 2. 修改服务器资源池。
 3. 为外部进程创建新资源池。
 4. 创建分类函数来标识外部脚本请求。
@@ -45,7 +45,7 @@ ms.locfileid: "85902326"
     |-|-|-|-|-|-|-|-|-|
     |2|default|0|100|0|100|100|0|0|
 
-2.  检查分配到默认**外部**资源池的资源。
+2.  检查分配到默认外部资源池的资源。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
@@ -57,7 +57,7 @@ ms.locfileid: "85902326"
     |-|-|-|-|-|-|
     |2|default|100|20|0|2|
  
-3.  使用这些服务器默认设置时，外部运行时可能无法获得足够的资源来完成大多数任务。 若要改变这种局面，必须按如下所述修改服务器资源用量：
+3.  使用这些服务器默认设置时，外部运行时可能无法获得足够的资源来完成大多数任务。 若要改善资源，必须按如下所述修改服务器资源用量：
   
     -   减少数据库引擎可以使用的最大计算机内存。
   
@@ -71,7 +71,7 @@ ms.locfileid: "85902326"
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  同样，请运行以下语句，将外部进程的内存用量限制为计算机资源总量的 **40%** 。
+2. 请运行以下语句，将外部进程的内存用量限制为计算机资源总量的 40%。
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);
@@ -88,11 +88,11 @@ ms.locfileid: "85902326"
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>创建用户定义的外部资源池
   
-1.  对资源调控器配置所做的任何更改将在整个服务器上实施，会影响使用服务器默认池的工作负荷，以及使用外部池的工作负荷。
+1.  对 Resource Governor 配置的所有更改将在整个服务器上强制执行。 这些更改会影响使用服务器默认池的工作负载，以及使用外部池的工作负载。
   
-     因此，若要更细致地控制哪些工作负荷优先获得资源，可以新建用户定义的外部资源池。 此外，应定义一个分类函数并将其分配给外部资源池。 “EXTERNAL”是新的关键字  。
+     若要更细致地控制哪些工作负载优先获得资源，可以新建用户定义的外部资源池。 定义一个分类函数并将其分配给外部资源池。 “EXTERNAL”是新的关键字****。
   
-     首先，新建*用户定义的外部资源池*。 在以下示例中，池命名为 **ds_ep**。
+     创建新的用户定义的外部资源池。 在以下示例中，池命名为 **ds_ep**。
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -105,14 +105,15 @@ ms.locfileid: "85902326"
     ```
   
      每当请求无法分类，或者发生其他任何分类失败时，请求将分配到默认组。
-  
-     有关详细信息，请参阅[资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)和 [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)。
+
+ 
+有关详细信息，请参阅[资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)和 [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)。
   
 ## <a name="create-a-classification-function-for-machine-learning"></a>为机器学习创建分类函数
   
-分类函数检查传入的任务，并确定任务是否可以使用当前资源池来运行。 不符合分类函数条件的任务将分配回到服务器的默认资源池。
+分类函数检查传入的任务。 它确定任务是否可以使用当前资源池来运行。 不符合分类函数条件的任务将分配回到服务器的默认资源池。
   
-1. 首先，指定资源调控器应使用分类器函数来确定资源池。 可将“null”指定为分类器函数的占位符  。
+1. 首先，指定资源调控器应使用分类器函数来确定资源池。 可将“null”指定为分类器函数的占位符****。
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);
@@ -149,7 +150,7 @@ ms.locfileid: "85902326"
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>验证新资源池和相关性
 
-若要验证是否已进行更改，应检查与这些实例资源池关联的每个工作负载组的服务器内存和 CPU 配置：
+检查每个工作负载组的服务器内存配置和 CPU。 查看以下内容，验证是否已进行实例资源更改：
 
 + [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器的默认池
 + 外部进程的默认资源池
@@ -161,12 +162,12 @@ ms.locfileid: "85902326"
     SELECT * FROM sys.resource_governor_workload_groups;
     ```
 
-    示例结果 
+    **示例结果**
 
     |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|内部|中型|25|0|0|0|0|1|2|
-    |2|default|中型|25|0|0|0|0|2|2|
+    |2|默认值|中型|25|0|0|0|0|2|2|
     |256|ds_wg|中型|25|0|0|0|0|2|256|
   
 2.  使用新的目录视图 [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 查看所有外部资源池。
@@ -175,11 +176,11 @@ ms.locfileid: "85902326"
     SELECT * FROM sys.resource_governor_external_resource_pools;
     ```
 
-    示例结果 
+    **示例结果**
     
     |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|版本|
     |-|-|-|-|-|-|
-    |2|default|100|20|0|2|
+    |2|默认值|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      有关详细信息，请参阅[资源调控器目录视图 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)。
@@ -190,7 +191,7 @@ ms.locfileid: "85902326"
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
     ```
   
-     在本例中，由于池是使用 AUTO 相关性创建的，因此未显示任何信息。 有关详细信息，请参阅 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)。
+     由于池是使用 AUTO 相关性创建的，因此不会显示任何信息。 有关详细信息，请参阅 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

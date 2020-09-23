@@ -1,53 +1,46 @@
 ---
-title: 升级 Python 和 R 组件
-description: 使用 sqlbindr.exe 绑定到 Machine Learning Server，以升级 SQL Server 机器学习服务或 SQL Server R Services 中的 Python 和 R。
+title: 升级 Python 和 R 运行时（绑定）
+description: 使用 sqlbindr.exe 绑定到 Machine Learning Server，以升级 SQL Server 机器学习服务或 SQL Server R Services 中的 Python 和 R 运行时。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/03/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
+ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900077"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90009373"
 ---
-# <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习（Python 和 R）组件
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+# <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>使用 SQL Server 机器学习服务中的绑定升级 Python 和 R 运行时
+[!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-SQL Server 中的 Python 和 R 集成包括开放源代码包和 Microsoft 专有包。
-                                                                               
-标准 SQL Server 服务：
-                                                                               
-- 根据 SQL Server 发布周期来更新包。
-- 缺陷修复应用于当前版本的现有包。
-- 无主版本升级。
+本文介绍如何使用称为“绑定”的 am 安装过程来升级 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 机器学习服务](../sql-server-machine-learning-services.md)中的 R 或 Python 运行时。
 
-可以通过绑定  到 Microsoft Machine Learning Server  来获取[更高版本的 Python 和 R](#version-map)。 版本同时适用于 SQL Server 机器学习服务（数据库内）和 SQL Server R Services（数据库内）。
+> [!IMPORTANT]
+> 本文介绍了一种用于升级 R 和 Python 运行时的旧方法，称为“绑定”。 如果已安装 **SQL Server 2016 Services Pack (SP) 2 的累积更新 (CU) 14 或更高版本**或 **SQL Server 2017 的累积更新 (CU) 22 或更高版本**，请改为参阅如何[将默认 R 或 Python 语言运行时更改为更高版本](change-default-language-runtime-version.md)。
 
-如果你的工作领域与数据相关（如数据科学家），最好能够获取更高版本的包。
+可以通过绑定到 Microsoft Machine Learning Server 来获取[更高版本的 Python 和 R](#version-map)。 版本同时适用于 SQL Server 机器学习服务（数据库内）和 SQL Server R Services（数据库内）。
 
 ## <a name="what-is-binding"></a>什么是绑定？
 
 绑定是一个安装过程，它将 R_SERVICES 和 PYTHON_SERVICES 文件夹中的内容替换为 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) 中较新的可执行文件、库和工具。
 
-服务模式随附的已上传组件已更改。
-
-服务更新与[新式生命周期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)中的 [Microsoft R Server 和 Machine Learning Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)保持一致。
+服务模式随附的已上传组件已更改。 服务更新与[新式生命周期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)中的 [Microsoft R Server 和 Machine Learning Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)保持一致。
 
 除了组件版本和服务更新之外，绑定不会改变安装的基础：
 
 - Python 和 R 集成仍是数据库引擎实例的一部分。
 - 授权不变（没有与绑定相关的额外费用）。
-- SQL Server 支持策略仍适用于数据库引擎。 
+- SQL Server 支持策略仍适用于数据库引擎。
 
 本文的其余部分将介绍绑定机制以及它如何用于 SQL Server 的每个版本。
 
 > [!NOTE]
-> 绑定只适用于绑定到 SQL Server 实例的（数据库内）实例。 在这种情况下，（独立）安装不一定需要绑定。
+> 绑定只适用于绑定到 SQL Server 实例的数据库内实例。 在这种情况下，独立安装不一定需要绑定。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **SQL Server 2016 绑定注意事项**
@@ -55,7 +48,7 @@ SQL Server 中的 Python 和 R 集成包括开放源代码包和 Microsoft 专�
 对于 SQL Server 2016 R Services 客户，绑定提供：
 
 - 更新后的 R 包。
-- 不属于原始安装的新包 ([MicrosoftML](https://  docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
+- 不属于原始安装的新包 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
 - 预先训练的机器学习[模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)，用于情绪分析和图像检测。
 
 每次 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) 有新的主要和次要发布时，都会进一步刷新所有绑定。
@@ -83,17 +76,17 @@ R 上的 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 [**SQL Server 2017 机器学习服务**](../install/sql-machine-learning-services-windows-install.md)
 
-组件 |初始版本 | Machine Learning Server 9.3 | | | |
-----------|----------------|---------|-|-|-|-|
-R 上的 Microsoft R Open (MRO) | R 3.3.3 | R 3.4.3 | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
-Python 3.5 上的 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[预定型模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
+组件 |初始版本 | Machine Learning Server 9.3 |
+----------|----------------|---------|
+R 上的 Microsoft R Open (MRO) | R 3.3.3 | R 3.4.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 |
+Python 3.5 上的 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3|
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[预定型模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3|
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>组件升级的工作原理

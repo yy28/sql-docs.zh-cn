@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::Abort（OLE DB 驱动程序）| Microsoft Docs
-description: ISSAsynchStatus::Abort (OLE DB)
+description: 了解 ISSAsynchStatus::Abort 方法如何取消 OLE DB Driver for SQL Server 中的异步执行操作。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Abort method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e3c6e3ba45774362834c8a8391f5658670e01434
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbbef11ae17029500a6910e5b28c121f6312dce2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862207"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
- 已处理取消异步操作的请求。 这并不保证操作本身已取消。 若要确定操作是否已取消，使用者应当调用 [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)，并检查是否有 DB_E_CANCELED；但是，它可能不会正好在下一次调用中返回。  
+ 已处理取消异步操作的请求。 这并不保证操作本身已取消。 若要确定操作是否已取消，使用者应当调用 [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)，并检查是否有 DB_E_CANCELED；但是，它可能不会在下一次调用中返回。  
   
  DB_E_CANTCANCEL  
  异步操作无法取消。  
@@ -64,18 +64,18 @@ HRESULT Abort(
  hChapter  参数不是 DB_NULL_HCHAPTER，或 eOperation  不是 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- 已对尚未调用或尚未完成 IDBInitialize::Initialize 的数据源对象调用 ISSAsynchStatus::Abort   。  
+ 已对尚未调用或尚未完成 `IDBInitialize::Initialize` 的数据源对象调用 `ISSAsynchStatus::Abort`。  
   
- 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消   。数据源对象仍未初始化。  
+ 已对调用了 `IDBInitialize::Initialize` 但在初始化之前已取消或已超时的数据源对象调用 `ISSAsynchStatus::Abort`。数据源对象仍未初始化。  
   
- 已对以前调用了 ITransaction::Commit 或 ITransaction::Abort 并在提交或中止后处于僵停状态的行集调用 ISSAsynchStatus::Abort    。  
+ 已对以前调用了 `ITransaction::Commit` 或 `ITransaction::Abort` 并在提交或中止后处于僵停状态的行集调用 `ISSAsynchStatus::Abort`。  
   
- 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort  。 该行集处于僵停状态。  
+ 已对在初始化阶段异步取消的行集调用 `ISSAsynchStatus::Abort`。 该行集处于僵停状态。  
   
 ## <a name="remarks"></a>备注  
- 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED  。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
+ 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 `IUnknown` 方法以外的所有方法都返回 E_UNEXPECTED。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
   
- 如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK   。 这并不意味着操作已完成或取消。  
+ 如果调用 `ISSAsynchStatus::Abort` 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK。 此值并不意味着操作已完成或取消。  
   
 ## <a name="see-also"></a>另请参阅  
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)  

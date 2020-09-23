@@ -3,17 +3,17 @@ title: Linux 上的 SQL Server 2017 的发行说明
 description: 本文包含 Linux 上运行的 SQL Server 2017 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/01/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 4c66ddc41fab7366d6419e1906a5bff2ce1b2d12
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
+ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042370"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013670"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的发行说明
 
@@ -22,7 +22,7 @@ ms.locfileid: "89042370"
 以下发行说明适用于 Linux 上运行的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]。 本文按各版本分为不同的部分。 GA 版本提供了详细的支持，并列出了已知的问题。 每个累积更新 (CU) 或常规分发版本 (GDR) 都有指向介绍 CU 更改的支持文章的链接，还有指向 Linux 包下载的链接。
 
 > [!TIP]
-> 这些发行说明专门用于 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 版本。 有关新 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的详细信息，请参阅 [Linux 上的 SQL Server 2019 预览版的发行说明](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)。
+> 这些发行说明专门用于 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 版本。 有关新 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的详细信息，请参阅 [Linux 上的 SQL Server 2019 预览版的发行说明](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)。
 
 ## <a name="supported-platforms"></a>支持的平台
 
@@ -46,6 +46,7 @@ ms.locfileid: "89042370"
 
 | 发布               | 版本       | 发布日期 |
 |-----------------------|---------------|--------------|
+| [CU22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
 | [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
@@ -82,6 +83,27 @@ ms.locfileid: "89042370"
 - [安装全文搜索包](sql-server-linux-setup-full-text-search.md)
 - [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu22-september-2020"></a><a id="CU22"></a> CU22（2020 年 9 月）
+
+这是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累积更新 22 (CU22) 版本。 此发行版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本为 14.0.3356.20。 若要了解此发行版中的修补程序和改进，请参阅 <https://support.microsoft.com/help/4577467>。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+
+> [!NOTE]
+> 自 CU20 起，SQL Server 2017 现已开始支持 Ubuntu 18.04 和 RHEL 8。
+>
+> Ubuntu 的脱机包安装链接指向 Ubuntu 18.04 包，不适用于 Ubuntu 18.04 的 SSIS 包除外。 若要查找 Ubuntu 16.04 包，请参阅下载路径 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>。
+>
+> Red Hat 的脱机包安装链接指向 RHEL 8 包，不适用于 RHEL 8 的 SSIS 包除外。 若要查找 RHEL 7 包，请参阅下载路径 <https://packages.microsoft.com/rhel/7/mssql-server-2017/>。
+
+| 程序包 | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 14.0.3356.20-23 | [引擎 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 包 | 14.0.3356.20-23 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm) | 
+| Ubuntu 18.04 Debian 包 | 14.0.3356.20-23 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3356.20-23_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3356.20-23_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3356.20-23_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21（2020 年 7 月）
 

@@ -1,6 +1,6 @@
 ---
 title: 命令语法（OLE DB 驱动程序）| Microsoft Docs
-description: 命令语法和存储过程
+description: 了解 OLE DB Driver for SQL Server 识别的命令语法，以及如何运行 SQL Server 存储过程。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - commands [OLE DB]
 - OLE DB Driver for SQL Server, stored procedures
 - stored procedures [OLE DB], command syntax
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 06516c7ac352ced53ba56241d8845aafaf236139
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 604afa24a9daff22e74138f363b8bb66bccbdab3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942750"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862447"
 ---
 # <a name="command-syntax"></a>命令语法
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49bf5ae8b9ab88859bedaf114242b1dcf64bb641
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: ed931eb7a77026e4902f5591def3496eb30851bf
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732176"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569937"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 帮助和反馈
 
@@ -29,23 +29,11 @@ ms.locfileid: "83732176"
 
 ## <a name="ask-community-for-help"></a>向社区寻求帮助
 
-如果有兴趣参与充满活力的 SQL Server 社区并寻求帮助，有多种方式可供你选择！
+如果有兴趣参与充满活力的 SQL Server 社区并寻求帮助，有多种方式可供选择。
 
+### <a name="microsoft-q--a"></a>Microsoft 问答
 
-### <a name="msdn-forums"></a>MSDN 论坛
-
-有许多 MSDN 论坛可帮助你解决 SQL Server 问题。 
-- [SQL Server 数据库引擎](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc)
-- [安装和升级](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [高可用性和灾难恢复](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
-- [SQL Server 工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [安全性](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
-- [复制](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
-- [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
-- [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Reporting Services (SSRS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreportingservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server 数据仓库](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
+还可以通过在 [Microsoft 问答](https://docs.microsoft.com/answers/products/sql-server)上搜索和发布问题来获得帮助。
 
 ### <a name="communities"></a>社区
 
@@ -56,13 +44,13 @@ ms.locfileid: "83732176"
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [在 Twitter 上通过 #sqlhelp 哈希标记从社区获取帮助](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
-## <a name="feedback"></a>反馈
+## <a name="feedback-suggestions"></a>反馈建议
 
 可以针对以下内容提交改进建议，以及提交 bug：
 
-- SQL Server 反馈  ：[https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
+- SQL Server 反馈：[https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
 - **SQL Server 大数据群集反馈**：[SQL Server 大数据群集反馈](https://aka.ms/sql-server-bdc-feedback)
-- Azure Data Studio 问题  ：[Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
+- Azure Data Studio 问题：[Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
 ###  <a name="sql-server-documentation"></a>SQL Server 文档
@@ -71,7 +59,7 @@ ms.locfileid: "83732176"
 
 ![Git Issue 内容反馈](media/sql-server-get-help/git-issues.png)
 
-如果还有其他要分享的内容，例如，一条创意、建议、反馈或任何内容！ — 可以通过访问 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) 并选择“新问题”  来建立常规 Git 问题。 
+如果还有其他要分享的内容，例如，一条创意、建议、反馈或任何内容！ — 可以通过访问 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) 并选择“新问题”来建立常规 Git 问题。 
 
 ![新建 Git Issue](media/sql-server-get-help/new-git-issue.png)
 
@@ -92,7 +80,7 @@ ms.locfileid: "83732176"
 以下 SQL Server 博客提供有关 SQL Server 的最新信息： 
 
 - [SQL Server 博客](https://cloudblogs.microsoft.com/sqlserver/)
-- [SQL Repl 讲座](https://blogs.msdn.microsoft.com/repltalk/)
+- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger 团队](https://blogs.msdn.microsoft.com/sql_server_team/)
 - [SQL 支持团队](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 

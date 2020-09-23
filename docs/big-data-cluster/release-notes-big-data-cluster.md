@@ -5,16 +5,16 @@ description: 本文介绍 SQL Server 大数据群集的最新更新和已知问�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 212c80adf64c9991aaf80cb422ded8fcbd1266ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772906"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392167"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -47,7 +47,7 @@ ms.locfileid: "85772906"
 
 |版本|说明|
 |---------|---------|
-|Enterprise<br/>Standard<br/>开发人员| 大数据群集版本由 SQL Server 主实例的版本确定。 在部署时会默认部署开发人员版。 可在部署后更改版本。 请参阅[配置 SQL Server 主实例](../big-data-cluster/configure-sql-server-master-instance.md)。 |
+|Enterprise<br/>Standard<br/>开发人员| 大数据群集版本由 SQL Server 主实例的版本确定。 在部署时会默认部署开发人员版。 可在部署后更改版本。 请参阅[配置 SQL Server 主实例](./configure-sql-server-master-instance.md)。 |
 
 ## <a name="tools"></a>工具
 
@@ -64,6 +64,7 @@ ms.locfileid: "85772906"
 
 | 发布          | BDC 版本    | `azdata` 版本| 发布日期 |
 |------------------|----------------|-----------------|--------------|
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020 年 3 月 31 日   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
@@ -71,9 +72,31 @@ ms.locfileid: "85772906"
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
+> [!NOTE]
+> 没有适用于 CU7 的 SQL Server 2019 大数据群集更新。
+
 ## <a name="how-to-install-updates"></a>如何安装更新
 
 若要安装更新，请参阅[如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6（2020 年 7 月）
+
+SQL Server 2019 的累积更新 6 (CU6) 版本。
+
+|包版本 | 映像标记 |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+此版本包含少许修补程序和增强功能。 以下文章包括与这些更新相关的信息：
+
+- [在 Active Directory 模式下管理大数据群集](manage-user-access.md)
+- [在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md)
+- [部署高可用性 SQL Server 大数据群集](deployment-high-availability.md)
+- [配置 SQL Server 大数据群集](configure-cluster.md)
+- [在大数据群集中配置 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md)
+- [SQL Server 主实例配置属性。](reference-config-master-instance.md)
+- [Apache Spark 和 Apache Hadoop (HDFS) 配置属性](reference-config-spark-hadoop.md)
+- [Kubernetes RBAC 模型及对用户和服务帐户管理 BDC 的影响](kubernetes-rbac.md)
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5（2020 年 6 月）
 
@@ -89,7 +112,7 @@ SQL Server 2019 的累积更新 5 (CU5) 版本。
 - 更新了 BDC 部署安全模型，因此，不再需要作为 BDC 的一部分部署的特权容器。 对于使用 SQL Server 2019 CU5 的所有新部署，容器除了是非特权容器之外，还默认以非根用户身份运行。 
 - 添加了对针对 Active Directory 域部署多个大数据群集的支持。
 - `azdata` CLI 具有其自己的语义版本，独立于服务器。 删除了客户端与 azdata 的服务器版本之间的任何依赖项。 建议为客户端和服务器使用最新版本，确保从最新的增强功能和修补程序中获益。
-- 引入了两个新的存储过程 sp_data_source_objects 和 sp_data_source_columns，以支持某些外部数据源的自检。 客户可通过 T-SQL 直接使用它们来发现架构，以及查看哪些表可进行虚拟化。 我们在 Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/data-virtualization-extension.md)的外部表向导中利用这些更改，这允许你通过 SQL Server、Oracle、MongoDB 和 Teradata 创建外部表。
+- 引入了两个新的存储过程 sp_data_source_objects 和 sp_data_source_table_columns，以支持某些外部数据源的自检。 客户可通过 T-SQL 直接使用它们来发现架构，以及查看哪些表可进行虚拟化。 我们在 Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/data-virtualization-extension.md)的外部表向导中利用这些更改，这允许你通过 SQL Server、Oracle、MongoDB 和 Teradata 创建外部表。
 - 添加了对在 Grafana 中执行的持久性自定义的支持。 在 CU5 之前，客户可以注意到，在 Grafana 配置中进行的任何编辑都会在 `metricsui` pod（托管 Grafana 仪表板）重启时丢失。 此问题已得到修复，现已保留所有配置。 
 - 修复了与用于使用 Telegraf（在 `metricsdc` pod 中托管）收集 pod 和节点指标的 API 相关的安全问题。 此更改的结果是，Telegraf 现在需要服务帐户、群集角色和群集绑定，才能具有收集 pod 和节点指标所需的权限。 有关更多详细信息，请参阅[收集 pod 和节点指标所需的群集角色](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)。
 - 添加了两个功能开关来控制 pod 和节点指标的收集。 如果你使用不同的解决方案来监视 Kubernetes 基础结构，则可以通过在 control.json 部署配置文件中将 allowNodeMetricsCollection 和 allowPodMetricsCollection 设置为 false，以关闭 pod 和主机节点的内置指标收集 。 对于 OpenShift 环境，这些设置在内置部署配置文件中默认设置为 false，因为收集 pod 和节点指标需要特权功能。
@@ -144,6 +167,28 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>已知问题
+
+### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>应用累积更新前清空 Livy 作业
+
+- **受影响的版本**：通过当前累积更新
+
+- **问题及其对客户的影响**：在升级过程中，sparkhead 返回 404 错误。
+
+- **解决方法**：升级 BDC 之前，请确保没有活动的 Livy 会话或批处理作业。 按照[从支持的版本升级](deployment-upgrade.md#upgrade-from-supported-release)中的说明进行操作，以避免这种情况。 
+
+   如果在升级过程中 Livy 返回 404 错误，请在两个 sparkhead 节点上重新启动 Livy 服务器。 例如：
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>大数据群集生成的服务帐户密码过期
+
+- **受影响的版本**：与 Active Directory 集成的所有大数据群集部署（不考虑版本）
+
+- **问题及其对客户的影响**：在大数据群集部署过程中，工作流将生成一组[服务帐户](active-directory-objects.md)。根据域控制器中设置的密码过期策略，这些帐户的密码可能会过期（默认值为 42 天）。 目前，没有任何机制可以轮换 BDC 中所有帐户的凭据，因此一到过期时间，群集将变为不可操作。
+
+- **解决方法**：在域控制器中将 BDC 服务帐户的过期策略更新为“密码永不过期”。 有关这些帐户的完整列表，请参阅[自动生成的 Active Directory 对象](active-directory-objects.md)。 此操作可在过期时间之前或之后完成。 在后一种情况下，Active Directory 将重新激活过期的密码。
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>通过网关终结点访问服务所用的凭据
 

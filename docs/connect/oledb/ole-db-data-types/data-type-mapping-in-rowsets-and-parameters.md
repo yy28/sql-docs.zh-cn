@@ -1,6 +1,6 @@
 ---
 title: 行集和参数中的数据类型映射（OLE DB 驱动程序）| Microsoft Docs
-description: 行集和参数中的数据类型映射
+description: 了解 OLE DB Driver for SQL Server 如何使用 OLE DB 定义的数据类型以参数值的形式表示行集中的 SQL Server 数据。
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSPROP_ALLOWNATIVEVARIANT property
 - GetParameterInfo function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 373bb0165c663232342b690711d5f56e18544211
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbe23a1e1edce96997968bf40075b2fc3b13db49
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244910"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861601"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: 适用于 SQL Server 的 OLE DB 驱动程序的系统要求
-description: 列出 OLE DB Driver for SQL Server 的系统需求。
+description: 了解在 OLE DB Driver for SQL Server 中使用 SQL Server 的数据访问功能（如 MARS）所需的软件必备项。
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], system requirements
 - OLE DB Driver for SQL Server, system requirements
 - MSOLEDBSQL, system requirements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9c9bbda0480d4d1e85da3962392fe14a241e4840
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393015"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861808"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的系统要求
 

@@ -26,31 +26,31 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 583bed1efb0f19b1924fe007be7a6f49c2587a52
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367783"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076595"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 删除计划高速缓存中的所有元素，通过指定计划句柄或 SQL 句柄从计划高速缓存中删除特定计划，或者删除与指定资源池相关联的所有高速缓存条目。
 
->[!NOTE]
->DBCC FREEPROCCACHE 不清除本机编译的存储过程的执行统计信息。 过程高速缓存不包含有关本机编译的存储过程的信息。 从过程执行中收集的任何执行统计信息都将显示在执行统计信息 DMV 中：[sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 和 [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)。  
+> [!NOTE]
+> DBCC FREEPROCCACHE 不清除本机编译的存储过程的执行统计信息。 过程高速缓存不包含有关本机编译的存储过程的信息。 从过程执行中收集的任何执行统计信息都将显示在执行统计信息 DMV 中：[sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 和 [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
-SQL Server 语法：
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的语法：
 
 ```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Azure SQL 数据仓库和并行数据仓库语法：
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的语法：
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 

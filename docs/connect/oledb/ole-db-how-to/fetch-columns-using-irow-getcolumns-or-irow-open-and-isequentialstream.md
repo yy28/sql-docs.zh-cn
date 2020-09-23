@@ -1,6 +1,6 @@
 ---
 title: 使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列 | Microsoft Docs
-description: 使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
+description: 了解如何使用 OLE DB Driver for SQL Server 中的 ISequentialStream 接口绑定或检索大型数据。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Open method
 - ISequentialStream interface, samples
 - GetColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 099c2ded895cae98a63d1c6e74688a2b26fb171f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eeaebe20dd27eb24edc1d23060d7a64fec8f0916
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003626"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860599"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
+# <a name="fetch-columns-by-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

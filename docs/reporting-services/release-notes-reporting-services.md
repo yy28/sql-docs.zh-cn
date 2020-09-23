@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 2017 及更高版本的发行说明 | Microsoft Docs
 description: 详细了解 SQL Server Reporting Services (SSRS) 版本 2017 及更高版本的更改。
-ms.date: 04/28/2020
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247506"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282387"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 及更高版本的发行说明
 
@@ -53,12 +53,39 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
+## <a name="15075454810-20200831"></a>15.0.7545.4810，2020/08/31 
+
+| 修复的问题 | 详细信息 |
+| :---------- | :------ |
+| 安全更新  | &nbsp; |
+| 受约束的注释附件支持不再允许 PDF 文档  | &nbsp; |
+| 修复了当导出在名称中包含句点的报表时的文件名截断问题  | &nbsp; |
+| 修复了与订阅相关的问题，以及导致无效日期格式错误的 zh-TW 区域性问题  | &nbsp; |
+| 修复了某些报表中访问参数选项导致不定旋转的问题  | &nbsp; |
+| 修复了与报表名称中的单引号相关的问题  | &nbsp; |
+| 修复了 URL 访问中导致 FindString 找不到匹配项的问题  | &nbsp; |
+| 修复了用于 PDF 导出的替换文本不能正确编码多字节字符的问题  | &nbsp; |
+| 修复了线性元素下空图像的外观不满足需求的问题  | &nbsp; |
+| 修复了 Web Edition 中自定义身份验证的错误不支持错误  | &nbsp; |
+| 修复了屏幕阅读器读取 Tablix 中的额外行和列的问题  | &nbsp; |
+| 修正了在缩放到整个页面时为匹配大小而导致图像截断的问题  | &nbsp; |
+| 命令行升级不再需要 EULA 标志  | &nbsp; |
+
 ## <a name="150724337714-20191101"></a>15.0.7243.37714, 2019/11/01
 
 初始版本。
 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+## <a name="1406001669-20200831"></a>14.0.600.1669，2020/08/31 
+
+| 修复的问题 | 详细信息 |
+| :---------- | :------ |
+| 安全更新  | &nbsp; |
+| 受约束的注释附件支持不再允许 PDF 文档  | &nbsp; |
+| 修复了当导出在名称中包含句点的报表时的文件名截断问题  | &nbsp; |
+| 修复了与订阅相关的问题，以及导致无效日期格式错误的 zh-TW 区域性问题  | &nbsp; |
 
 ## <a name="1406001572-20200406"></a>14.0.600.1572（2020 年 4 月 6 日） 
 

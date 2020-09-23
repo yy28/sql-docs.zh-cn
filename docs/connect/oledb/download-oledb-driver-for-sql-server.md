@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 000d7c39221f54459783fc9117a35a880fb02c92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb1d1cff13865981f30495ac406495593a778180
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006985"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076772"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 
@@ -21,6 +21,8 @@ ms.locfileid: "86006985"
 OLE DB Driver for SQL Server 是独立的数据访问应用程序编程接口 (API)，用于 OLE DB。 Windows 上提供了 OLE DB Driver for SQL Server，并在一个动态链接库 (DLL) 中提供了 SQL OLE DB 驱动程序。
 
 ## <a name="download"></a>下载
+
+适用于 Microsoft OLE DB Driver for SQL Server 的可再发行安装程序安装客户端组件，在运行时利用 SQL Server 的新功能需要这些组件。 从版本 18.3 开始，安装程序还包括并安装了 Microsoft Active Directory 身份验证库 (ADAL.dll)。
 
 适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18.4 是最新正式发行版 (GA)。 如果安装了适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18 的早期版本，安装 18.4 版会使其升级到 18.4 版。
 

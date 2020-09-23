@@ -2,7 +2,7 @@
 title: ODBC 驱动程序中识别驱动程序的连接池
 description: 了解 Windows 上的 Microsoft ODBC Driver for SQL Server 中识别驱动程序的连接池的增强功能。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922077"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288074"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中识别驱动程序的连接池
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82922077"
   
 -   如果以下任何连接关键字在你的连接字符串和已入池的连接字符串之间有所不同，则不使用已入池的连接。  
   
-    |关键字|ODBC 驱动程序 13|ODBC 驱动程序 11|
+    |关键字|ODBC 驱动程序 17/13|ODBC 驱动程序 11|
     |-|-|-|
     |`Address`|是|是|
     |`AnsiNPW`|是|是|
@@ -68,7 +68,7 @@ ms.locfileid: "82922077"
     
 - 如果以下任何连接属性在你的连接字符串和已入池的连接字符串之间有所不同，则不使用已入池的连接。  
   
-    |Attribute|ODBC 驱动程序 13|ODBC 驱动程序 11|  
+    |Attribute|ODBC 驱动程序 17/13|ODBC 驱动程序 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|是|是|
     |`SQL_ATTR_PACKET_SIZE`|是|是|
@@ -94,7 +94,7 @@ ms.locfileid: "82922077"
   
      在驱动程序管理器尝试将你的连接与池中的连接进行匹配时，不会考虑这些连接关键字。 （即使更改其中一个参数，仍可重复使用现有连接。 驱动程序将根据需要重置这些选项。）无需进行额外的网络调用，即可在客户端中重置这些属性。  
   
-    |关键字|ODBC 驱动程序 13|ODBC 驱动程序 11|  
+    |关键字|ODBC 驱动程序 17/13|ODBC 驱动程序 11|  
     |-|-|-|  
     |`AutoTranslate`|是|是|
     |`Description`|是|是|
@@ -108,7 +108,7 @@ ms.locfileid: "82922077"
   
      如果更改以下连接属性之一，仍可重复使用现有连接。  该驱动程序将根据需要重置该值。 无需进行额外的网络调用，该驱动程序即可在客户端中重置这些属性。  
   
-    |Attribute|ODBC 驱动程序 13|ODBC 驱动程序 11|  
+    |Attribute|ODBC 驱动程序 17/13|ODBC 驱动程序 11|  
     |-|-|-|  
     |所有语句属性|是|是|
     |`SQL_ATTR_AUTOCOMMIT`|是|是|

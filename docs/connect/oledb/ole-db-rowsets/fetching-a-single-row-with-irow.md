@@ -1,6 +1,6 @@
 ---
 title: 使用 IRow 提取单行（OLE DB 驱动程序）| Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 的 IRow 接口提取单行
+description: IRow 允许直接访问单行对象的列。 OLE DB Driver for SQL Server 中的 IRow 接口得以简化，以提高性能。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - rowsets [OLE DB], fetching
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fba517134c69914914da95daacafdf634de7b15c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a305692bb544d9a9bbb0572cbd93449781aaabe9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244239"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862474"
 ---
 # <a name="fetching-a-single-row-with-irow-ole-db-driver"></a>使用 IRow 提取单行（OLE DB 驱动程序）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

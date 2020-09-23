@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eafc98ea91b60ec21396e1b25eca2684e24f5cfc
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861364"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076822"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
@@ -228,15 +227,33 @@ GO
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
 
+### <a name="configuring-and-using-memory-optimized-tempdb-metadata"></a>配置和使用内存优化 tempdb 元数据
+
 要选择加入此新功能，请使用以下脚本：
 
 ```sql
-ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 ```
 
 此配置更改需要重新启动服务才能生效。
 
-此实现有一些限制：
+可使用以下 T-SQL 命令验证 `tempdb` 是否经过内存优化：
+
+```sql
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
+```
+
+如果启用内存优化的 `tempdb` 元数据后，服务器因任何原因未能启动，则可以通过 -f 启动选项以[最小配置](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)启动 SQL Server 实例，从而绕过该功能。 然后，你可以禁用该功能，并在正常模式下重启 SQL Server。
+
+若要防止服务器可能出现内存不足的情况，可以将 `tempdb` 绑定到[资源池](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)。 这是通过 [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) 命令（而不是将资源池绑定到数据库时通常遵循的步骤）完成的。
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+```
+
+此更改还需要重新启动才能生效，即使已启用内存优化 tempdb 元数据也是如此。
+
+### <a name="memory-optimized-tempdb-limitations"></a>内存优化 tempdb 限制
 
 - 该功能的打开和关闭不是动态的。 由于需要对 `tempdb` 结构进行内部更改，因此需要重新启动才能启用或禁用该功能。
 
@@ -249,12 +266,15 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
   示例：
     
   ```sql
-  BEGIN TRAN
+  BEGIN TRAN;
+  
   SELECT *
-  FROM tempdb.sys.tables  -----> Creates a user in-memory OLTP transaction on tempdb
+  FROM tempdb.sys.tables;  -----> Creates a user in-memory OLTP transaction in tempdb
+  
   INSERT INTO <user database>.<schema>.<mem-optimized table>
-  VALUES (1)  ----> Tries to create user in-memory OLTP transaction but will fail
-   COMMIT TRAN
+  VALUES (1); ----> Tries to create a user in-memory OLTP transaction in the user database but will fail
+  
+  COMMIT TRAN;
   ```
     
 - 针对内存优化表的查询不支持锁定和隔离提示，因此针对内存优化 `tempdb` 目录视图的查询将不会遵循锁定和隔离提示。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的其他系统目录视图一样，针对系统视图的所有事务都将处于 `READ COMMITTED`（或在本例中为 `READ COMMITTED SNAPSHOT`）隔离。
@@ -265,14 +285,6 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 
 > [!NOTE] 
 > 仅当引用 `tempdb` 系统视图时，这些限制才适用。 如果需要，可以在用户数据库中访问内存优化表时，在同一个事务中创建一个临时表。
-
-可使用以下 T-SQL 命令验证 `tempdb` 是否经过内存优化：
-
-```
-SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
-```
-
-如果启用内存优化的 `tempdb` 元数据后，服务器因任何原因未能启动，则可以通过 -f 启动选项以[最小配置](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)启动 SQL Server 实例，从而绕过该功能。 然后，你可以禁用该功能，并在正常模式下重启 SQL Server。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量计划
 确定 `tempdb` 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生产环境中的适当大小取决于多种因素。 如前文所述，这些因素包括现有工作负荷以及使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 建议你通过在 SQL Server 测试环境中执行下列任务来分析现有的工作负荷：

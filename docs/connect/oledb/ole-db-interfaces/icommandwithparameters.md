@@ -1,6 +1,6 @@
 ---
 title: ICommandWithParameters（OLE DB 驱动程序）| Microsoft Docs
-description: ICommandWithParameters 接口
+description: 了解改进功能如何允许 ICommandWithParameters::GetParameterInfo 获取关于 OLE DB Driver for SQL Server 预期结果的更准确描述。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: afb49ad0dd1d1bf6275fb093b42c97e34cb7d670
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 21f3643737d1d6682133a252d52a072f73e81dfb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244483"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861370"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

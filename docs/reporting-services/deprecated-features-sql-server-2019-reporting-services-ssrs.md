@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 Reporting Services 中弃用的功能 | Microsoft Docs
-description: 本文介绍 SQL Server Reporting Services 下一版本中将弃用的功能。
-ms.date: 11/21/2019
+description: 本文介绍了下一版 SQL Server Reporting Services 中将弃用的 SQL Server 2019 Reporting Services 功能。
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaa7edebe99a7c444fe1bfa23971317517399ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3e48ab45f34e583dbbeca883a64d04dc965b018
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320271"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283812"
 ---
 # <a name="deprecated-features-in-sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services 中弃用的功能
 
@@ -42,6 +42,7 @@ SQL Server Reporting Services 支持 SQL Server 下一版本中的以下功能�
 | 报表服务器 | 移动报表和移动报表发布服务器 | Power BI 报表服务器中的 Power BI 报表提供移动功能。 |
 | 报表服务器 | XLS 和 DOC 呈现格式 | XLSX 和 DOCX 格式可用且受支持。 |
 | 报表服务器 | Atom 数据馈送 | oData 源支持适用于 SSRS 和 Power BI 报表服务器中的共享数据集。 |
+| 报表服务器 | 固定到 Power BI | Power BI 服务中现在直接提供分页报表支持。  |
 
 ## <a name="see-also"></a>另请参阅
 

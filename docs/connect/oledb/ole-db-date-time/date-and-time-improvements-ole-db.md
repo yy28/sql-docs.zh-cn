@@ -1,6 +1,6 @@
 ---
 title: 日期和时间改进 (OLE DB) | Microsoft Docs
-description: 日期和时间改进 (OLE DB)
+description: 这些文章介绍了 OLE DB Driver for SQL Server 如何支持新的日期和时间数据类型。 请参阅概述和示例。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9d3d00493790eed66865d8c3cd393a71b7246776
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd0f564a68f0b296008907f8620cd870c0e5ca7d
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004469"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862031"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和时间改进 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "86004469"
  提供有关支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 日期和时间数据类型的 OLE DB ( OLE DB Driver for SQL Server) 类型的信息。  
   
  [元数据 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
- 包含有关 DBBINDING 结构、ICommandWithParameters::GetParameterInfo  、ICommandWithParameters::SetParameterInfo  、IColumnsRowset::GetColumnsRowset  和 IColumnsInfo::GetColumnInfo  的信息。 还提供了有关 OLE DB 架构行集更新的信息。  
+ 包含有关 DBBINDING 结构、ICommandWithParameters::GetParameterInfo****、ICommandWithParameters::SetParameterInfo****、IColumnsRowset::GetColumnsRowset**** 和 IColumnsInfo::GetColumnInfo**** 的信息。 还提供了有关 OLE DB 架构行集更新的信息。  
   
  [绑定和转换 (OLE DB)](../../oledb/ole-db-date-time/conversions-ole-db.md)  
  说明在服务器和客户端之间现有和新数据类型的转换规则。  
@@ -46,7 +46,7 @@ ms.locfileid: "86004469"
  说明支持日期/时间增强功能的 OLE DB API。  
   
  [IRowsetFind 的可比性](../../oledb/ole-db-date-time/comparability-for-irowsetfind.md)  
- 说明日期/时间类型和 IRowsetFind  。  
+ 说明日期/时间类型和 IRowsetFind****。  
  
   
 ## <a name="see-also"></a>另请参阅  

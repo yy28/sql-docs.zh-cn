@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360693"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076668"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 引用（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "88360693"
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-再如，以下标签指示仅适用于 Azure SQL 数据仓库和并行数据仓库的主题。
+再如，以下标签指示仅适用于 Azure Synapse Analytics 和并行数据仓库的主题。
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 在某些情况下，某个产品或服务使用了主题，但并非所有参数都受到支持。 在此情况下，将其他 **适用于** 部分插入到该主题正文中相应的参数说明中。  
  
-## <a name="get-help-from-the-msdn-forum"></a>通过 MSDN 论坛获得帮助  
-有关联机帮助的信息，请参阅 [MSDN Transact-SQL 论坛](https://social.msdn.microsoft.com/Forums/home)。  
+## <a name="get-help-from-microsoft-q--a"></a>从 Microsoft 问答获取帮助  
+有关联机帮助的信息，请参阅 [Microsoft 问答 Transact-SQL 论坛](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html)。  
  
 ## <a name="see-other-language-references"></a>查看其他语言参考
 SQL 文档包括包括如下其他语言参考：

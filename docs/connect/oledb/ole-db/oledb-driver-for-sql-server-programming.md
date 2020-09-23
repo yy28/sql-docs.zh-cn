@@ -1,6 +1,6 @@
 ---
-title: OLE DB Driver for SQL Server 编程 | Microsoft Docs
-description: 适用于 SQL Server 的 OLE DB 驱动程序编程
+title: 适用于 SQL Server 的 OLE DB 驱动程序编程
+description: 了解如何使用 OLE DB Driver for SQL Server 对应用程序进行编程，此驱动程序实现了 OLE DB API，以便应用程序能够连接到数据库。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB
 - OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server, OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: db35ada2ace8a5fedad05b56ce9784b51c239523
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4e72dc1e1ea82df68d3dc766e460e7a433d78a43
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012858"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861826"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>适用于 SQL Server 的 OLE DB 驱动程序编程
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

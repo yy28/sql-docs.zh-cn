@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e467fb50ae2b2c76deea885990b160745c691eb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723968"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042511"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装新的 R 包
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 R 包安装到 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)的实例以及[大数据群集](../../big-data-cluster/machine-learning-services.md)上。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库中运行的 R 脚本。
@@ -38,6 +38,8 @@ ms.locfileid: "85723968"
 - 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
 
 ### <a name="other-considerations"></a>其他注意事项
+
+- 包安装特定于在向 sqlmlutil 提供的连接信息中指定的 SQL 实例、数据库和用户。 若要在多个 SQL 实例或数据库中使用此包，或供不同的用户使用，则需要分别为它们安装此包。 在以下情况下例外：`dbo` 的成员安装了此包，此包是公共的，并且是与所有用户共享的。 如果用户安装了较新版本的公共包，则不会影响此公共包，但该用户将有权访问较新的版本。
 
 - 在 SQL Server 中运行的 R 脚本只能使用在默认实例库中安装的包。 SQL Server 无法从外部库加载包，即使该库位于同一台计算机上也是如此。 这包括与其他 Microsoft 产品一起安装的 R 库。
 

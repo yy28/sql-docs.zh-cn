@@ -2,7 +2,7 @@
 title: 通过 JDBC 驱动程序使用大容量复制
 description: 借助 SQLServerBulkCopy 类，可以使用 Java 编写数据加载解决方案，与标准 JDBC API 相比，这样做的性能优势显著。
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245006"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042210"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  大容量复制操作可以作为独立操作或作为多步事务的一部分执行。 后面这个选项使你能够在同一事务中执行多个大容量复制操作，以及执行其他数据库操作（例如插入、更新和删除），同时仍能够提交或回滚整个事务。  
   
  默认情况下，大容量复制操作作为独立的操作执行。 大容量复制操作以非事务方式执行，不可以对其进行回滚。 如果在发生错误时需要回滚全部或部分大容量复制，可以使用 `SQLServerBulkCopy` 托管的事务，或者在现有事务内执行大容量复制操作。  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>Azure 数据仓库的大容量复制扩展
+
+驱动程序版本 v8.4.1 添加了新的连接属性 `sendTemporalDataTypesAsStringForBulkCopy`。 默认情况下，此布尔属性为 `true`。
+
+将此连接属性设置为 `false` 时，将发送 DATE、DATETIME、DATIMETIME2、DATETIMEOFFSET、SMALLDATETIME 和 TIME 数据类型作为其各自的类型，而不是以 String 的形式发送它们。
+
+将时态数据类型作为其各自的类型发送时，用户可以将数据发送到 Azure Synapse Analytics (SQL DW) 的这些列，这在之前是不可能的，因为驱动程序将数据转换为 String。 将字符串数据发送到时态列适用于 SQL Server，因为 SQL Server 会为我们执行隐式转换，但与 Azure Synapse Analytics (SQL DW) 不同。
+
+此外，即使不将此连接字符串设置为“false”，在 v8.4.1 及更高版本中，MONEY 和 SMALLMONEY 数据类型也将作为 MONEY / SMALLMONEY 数据类型发送，而不是 DECIMAL，这同样允许将这些数据类型大容量复制到 Azure Synapse Analytics (SQL DW) 中。
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Azure 数据仓库的大容量复制扩展支持限制
+
+目前有两个限制：
+
+1. 将此连接属性设置为 `false` 时，驱动程序将仅接受每个时态数据类型的默认字符串文字格式，例如：
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. 将此连接属性设置为 `false` 时，为大容量复制指定的列类型必须遵循[此处](../../connect/jdbc/using-basic-data-types.md)的数据类型映射图。 例如，以前的用户可以指定 `java.sql.Types.TIMESTAMP` 将数据大容量复制到 `DATE` 列，但启用此功能后，它们必须指定 `java.sql.Types.DATE` 来执行相同操作。
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>执行非事务大容量复制操作
 
@@ -649,6 +679,15 @@ public class BulkCopyCSV {
 }
 ```  
 
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>在 CSV 文件中将分隔符作为数据进行大容量复制
+
+驱动程序版本 8.4.1 添加了新 API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`。 如果设置为 true 时，则以下规则适用：
+
+- 每个字段可能括在或可能不括在双引号中。
+- 如果字段没有用双引号括起来，则双引号可能不会出现在字段中。
+- 包含双引号的字段和分隔符应括在双引号中。
+- 如果用双引号将字段括起来，则字段内出现的双引号必须通过在其前面添加另一个双引号进行转义。
+
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>大容量复制 Always Encrypted 列  
 
 从 Microsoft JDBC Driver 6.0 for SQL Server 开始，Always Encrypted 列支持大容量复制。  
@@ -710,7 +749,7 @@ Microsoft SQL Server 包含名为“bcp”的受欢迎的命令提示符实用�
   
  Getter 和 setter 存在以下选项：  
   
-| 选项 | 描述 | 默认 |
+| 选项 | 说明 | 默认 |
 | ------ | ----------- | ------- |
 | `boolean CheckConstraints` | 在插入数据的同时检查约束。 | False - 不会检查约束 |
 | `boolean FireTriggers` | 使服务器对插入数据库的行触发插入触发器。 | False - 不会触发触发器 |

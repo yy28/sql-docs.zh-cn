@@ -13,18 +13,18 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86278997"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480529"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下载 SQL Server Data Tools (SSDT) for Visual Studio
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表  。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。
+SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。
 
 ## <a name="ssdt-for-visual-studio-2019"></a>SSDT for Visual Studio 2019
 
@@ -79,10 +79,10 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017（独立安装程序）
 
-:::image type="icon" source="media/download.png" border="false"::: **[“下载 SSDT for Visual Studio 2017 (15.9.5)”](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: [“下载 SSDT for Visual Studio 2017 (15.9.6)”](https://go.microsoft.com/fwlink/?linkid=2139376)
 
 > [!IMPORTANT]
-> * 安装 SSDT for Visual Studio 2017 (15.9.5) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例。 
+> * 安装 SSDT for Visual Studio 2017 (15.9.6) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例。 
 > * 删除了收件箱组件 Power Query Source for SQL Server 2017。 目前，我们已宣布将 Power Query Source for SQL Server 2017 和 2019 作为现成组件推出（可以从[此处](https://www.microsoft.com/download/details.aspx?id=100619)下载）。
 > * 若要使用 Oracle 和 Teradata 连接器设计定目标到低于 SQL 2019 的旧版 SQL Server 的包，除了 [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) 和 [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) 之外，还需要安装相应版本的 Microsoft Connector for Oracle by Attunity 和 Microsoft Connector for Teradata by Attunity。
 >    * [版本 5.0 Microsoft Connector for Oracle by Attunity 和 Microsoft Connector for Teradata by Attunity（定目标到 SQL Server 2017）](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 此版本的 SSDT for VS 2017 可安装以下语言  ：
 
-* [简体中文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [繁体中文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [法语](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [德语](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [意大利语](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [日语](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [俄语](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [西班牙语](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [简体中文](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [繁体中文](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [法语](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [德语](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [意大利语](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [日语](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [俄语](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [西班牙语](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>注意事项和限制
 
@@ -166,7 +166,7 @@ SSDT for Visual Studio 2015 和 2017 都使用 DacFx 17.4.1：[下载数据层�
 
 * [SSDT MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT 团队博客](https://blogs.msdn.com/b/ssdt/)
+* [SSDT 团队博客](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [DACFx API 参考](https://msdn.microsoft.com/library/dn645454.aspx)
 

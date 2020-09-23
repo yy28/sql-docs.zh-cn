@@ -2,7 +2,7 @@
 title: 对 JDBC 驱动程序使用 Always Encrypted
 description: 了解如何在 Java 应用程序中结合使用 Always Encrypted 和 JDBC Driver for SQL Server 来加密服务器上的敏感数据。
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279614"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570322"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 
@@ -98,6 +98,9 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 ```
 当这些凭据出现在连接属性中时，JDBC 驱动程序会自动实例化 SQLServerColumnEncryptionAzureKeyVaultProvider  对象。
 
+> [!IMPORTANT]
+> 从 v8.4.1 开始，keyVaultProviderClientId 和 keyVaultProviderClientKey 连接属性已弃用。 建议用户改用 keyStoreAuthentication、KeyStorePrincipalId 和 KeyStoreSecret。
+
 #### <a name="jdbc-driver-version-prior-to-741"></a>7\.4.1 之前的 JDBC 驱动程序版本
 
 本节涉及 7.4.1 之前的 JDBC 驱动程序。
@@ -126,6 +129,42 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-library-for-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > 有关如何在 Maven 项目中包含这些依赖项的示例，请参阅[通过 Apache Maven 下载 ADAL4J 和 AKV 依赖项](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
+
+### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>将 Azure Key Vault 身份验证与托管标识配合使用
+
+从 JDBC Driver 8.4.1 开始，驱动程序支持使用托管标识对 Azure Key Vaults 进行身份验证。
+
+如果应用程序托管在 Azure 中，则用户可以使用[托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)对 Azure Key Vault 进行身份验证，从而无需在代码中提供和公开任何凭据。 
+
+#### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>具有托管标识的 Key Vault 身份验证的连接属性
+
+对于 JDBC Driver 8.4.1 和更高版本，驱动程序引入了以下连接属性：
+
+| ConnectionProperty    | 可能的值配对 1 | 可能的值配对 2 | 可能的值配对 3 |
+| ---|---|---|----|
+| keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
+| keyStorePrincipalId   | \<Azure AD Application Client ID\>    | \<Azure AD Application object ID\>（可选）| 不适用 |
+| keyStoreSecret        | \<Azure AD Application Client Secret\>|不适用|\<secret/password for the Java Key Store\> |
+
+下面的示例演示如何在连接字符串中使用连接属性。
+
+#### <a name="use-managed-identity-to-authenticate-to-akv"></a>使用托管标识对 AKV 进行身份验证
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
+```
+#### <a name="use-managed-identity-and-the-principal-id-to-authenticate-to-akv"></a>使用托管标识和主体 ID 对 AKV 进行身份验证
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
+```
+#### <a name="use-clientid-and-clientsecret-to-authentication-to-akv"></a>使用 clientId 和 clientSecret 对 AKV 进行身份验证
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+```
+建议用户使用这些连接属性来指定用于密钥存储的身份验证类型，而不是使用 `SQLServerColumnEncryptionAzureKeyVaultProvider`。
+
+请注意，以前添加的连接属性 `keyVaultProviderClientId` 和 `keyVaultProviderClientKey` 已弃用，将替换为上述连接属性。
+
+有关如何配置托管标识的信息，请参阅[使用 Azure 门户在 VM 上配置 Azure 资源托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)。
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证书存储区中存储列主密钥。 使用 SQL Server Management Studio (SSMS) Always Encrypted 向导或其他支持的工具，在数据库中创建列主密钥和列加密密钥定义。 同一向导可用于在 Windows 证书存储中生成自签名证书，该证书可用作 Always Encrypted 数据的列主密钥。 有关列主密钥和列加密密钥 T-SQL 语法的详细信息，请分别参阅 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 和 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。

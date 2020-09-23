@@ -13,16 +13,18 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: df08f0434247f3235d9316c064e669d6bf453d1f
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511256"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614615"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
-
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
+> [!NOTE]
+> 下面显示的示例使用 docker.exe，但其中的大多数命令也使用 Podman。 它提供与 Docker 容器引擎类似的 CLI。 可以在[此处](http://docs.podman.io/en/latest)详细了解 Podman。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -99,7 +101,7 @@ any changes to one section should be duplicated in the other-->
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -112,7 +114,7 @@ any changes to one section should be duplicated in the other-->
    
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -121,7 +123,7 @@ any changes to one section should be duplicated in the other-->
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -140,6 +142,7 @@ any changes to one section should be duplicated in the other-->
    | -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
+   | -h sql1 | 用于显式设置容器主机名，如果不指定它，则默认为容器 ID，该 ID 是随机生成的系统 GUID。 |
    | **-d** | 在后台运行容器（守护程序） |
    | **mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
@@ -170,7 +173,7 @@ any changes to one section should be duplicated in the other-->
 
 4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口  。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting) 。
 
-`-h`（主机名）参数也非常有用，但为了简单起见，本教程中不使用它。 这会将容器的内部名称更改为一个自定义值。 也就是以下 Transact-SQL 查询中返回的名称：
+如上所述的 `-h`（主机名）参数将容器的内部名称更改为自定义值。 也就是以下 Transact-SQL 查询中返回的名称：
 
 ```sql
 SELECT @@SERVERNAME,
@@ -231,7 +234,7 @@ SELECT @@SERVERNAME,
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -239,7 +242,7 @@ SELECT @@SERVERNAME,
    ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -247,7 +250,7 @@ SELECT @@SERVERNAME,
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -265,6 +268,7 @@ SELECT @@SERVERNAME,
    | -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
+   | -h sql1 | 用于显式设置容器主机名，如果不指定它，则默认为容器 ID，该 ID 是随机生成的系统 GUID。 |
    | **mcr.microsoft.com/mssql/server:2019-latest** | SQL Server 2019 Ubuntu Linux 容器映像。 |
 
 3. 要查看 Docker 容器，请使用 `docker ps` 命令。
@@ -293,7 +297,7 @@ SELECT @@SERVERNAME,
 
 4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口  。 如果 SQL Server 容器的“状态”列显示“已退出”，请参阅 [SQL Server Docker 容器故障排除](sql-server-linux-docker-container-troubleshooting.md) 。
 
-`-h`（主机名）参数也非常有用，但为了简单起见，本教程中不使用它。 这会将容器的内部名称更改为一个自定义值。 也就是以下 Transact-SQL 查询中返回的名称：
+如上所述的 `-h`（主机名）参数将容器的内部名称更改为自定义值。 这会将容器的内部名称更改为一个自定义值。 也就是以下 Transact-SQL 查询中返回的名称：
 
 ```sql
 SELECT @@SERVERNAME,

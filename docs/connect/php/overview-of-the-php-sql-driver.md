@@ -1,5 +1,6 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 概述 | Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 概述
+description: 了解用于 Microsoft SQLSRV Drivers for PHP for SQL Server 和 PDO_SQSRV Drivers for PHP for SQL Server 的概述，以及如何在 PHP 应用程序中使用这些驱动程序来访问数据库。
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c8f5cbf011165b41b353a37d8973031f55c2db6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 556d13a5b29a53b323b41bc9b697d7ad934ca143
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922817"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042778"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 概述
 
@@ -35,7 +36,7 @@ ms.locfileid: "80922817"
 |[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)|在运行本文档中的代码示例时，提供可能有用的信息。|  
 | &nbsp; | &nbsp; |
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV 驱动程序参考](../../connect/php/pdo-sqlsrv-driver-reference.md)  
@@ -43,8 +44,6 @@ ms.locfileid: "80922817"
 
 ## <a name="see-also"></a>另请参阅
 
-[开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-
-[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)
+[开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)  
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)  
+[示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)  

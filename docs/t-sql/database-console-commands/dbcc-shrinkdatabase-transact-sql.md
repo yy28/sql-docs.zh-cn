@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 48181379c0ad20f5e9d8dc1ac8a9dd304fbc5e81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479809"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076613"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -75,14 +75,14 @@ _target\_percent_
 数据库收缩后的数据库文件中所需的剩余可用空间百分比。  
   
 NOTRUNCATE  
-将分配的页面从文件的末尾移动到文件前面的未分配页面。 此操作会压缩文件中的数据。 _target\_percent_ 是可选的。 Azure SQL 数据仓库不支持此选项。 
+将分配的页面从文件的末尾移动到文件前面的未分配页面。 此操作会压缩文件中的数据。 _target\_percent_ 是可选的。 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 不支持此选项。 
   
 文件末尾的可用空间不会返回给操作系统，并且文件的物理大小也不会更改。 因此，指定 NOTRUNCATE 时，数据库似乎不会收缩。  
   
 NOTRUNCATE 只适用于数据文件。 NOTRUNCATE 不影响日志文件。  
   
 TRUNCATEONLY  
-将文件末尾的所有可用空间释放给操作系统。 不移动文件内的任何页面。 数据文件仅收缩到最后指定的盘区。 如果使用 TRUNCATEONLY 指定，则会忽略 _target\_percent_。 Azure SQL 数据仓库不支持此选项。
+将文件末尾的所有可用空间释放给操作系统。 不移动文件内的任何页面。 数据文件仅收缩到最后指定的盘区。 如果使用 TRUNCATEONLY 指定，则会忽略 _target\_percent_。 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 不支持此选项。
   
 TRUNCATEONLY 将影响日志文件。 若要仅截断数据文件，请使用 DBCC SHRINKFILE。  
   

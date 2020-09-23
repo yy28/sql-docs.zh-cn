@@ -2,10 +2,9 @@
 title: 查询存储最佳做法 | Microsoft Docs
 description: 了解将 SQL Server 查询存储与工作负载结合使用的最佳做法，例如使用最新的 SQL Server Management Studio 和 Query Performance Insight。
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970078"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042810"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
@@ -421,7 +420,7 @@ WHERE is_forced_plan = 1;
 
 如果重命名数据库，计划强制就会失败，导致在执行所有后续的查询时都需要重新编译。
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> 在任务关键型服务器中使用查询存储
 
 全局跟踪标志 7745 和 7752 可用于使用查询存储来提高数据库的可用性。 有关更多信息，请参见[跟踪标记](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
@@ -432,7 +431,10 @@ WHERE is_forced_plan = 1;
 > 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，此行为由引擎控制，跟踪标志 7752 不再有效。
 
 > [!IMPORTANT]
-> 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的实时工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。
+> 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的实时工作负载见解使用查询存储，请尽快安装 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) 中的性能可伸缩性改进。 如果没有这些改进，则当数据库处于繁重的工作负载下时，可能会发生旋转锁争用，并且服务器性能可能会变慢。 特别是，你可能会发现 `QUERY_STORE_ASYNC_PERSIST` 旋转锁或 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 旋转锁上出现繁重的争用情况。 应用此改进后，查询存储将不再导致旋转锁争用。
+
+> [!IMPORTANT]
+> 如果仅对 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的实时工作负载见解使用查询存储，请尽快安装 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 中的性能可伸缩性改进。 如果没有此改进，则当数据库处于繁重的即席工作负载下时，查询存储可能会占用大量内存，并且服务器性能可能会变慢。 应用此改进后，查询存储会对其各个组件可使用的内存量施加内部限制，并且可以自动将操作模式更改为只读，直到有足够的内存返回到 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]。 请注意，不会记录查询存储内部内存限制，因为它们随时可能更改。  
 
 ## <a name="see-also"></a>另请参阅
 

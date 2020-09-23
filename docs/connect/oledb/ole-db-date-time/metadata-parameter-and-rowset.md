@@ -1,6 +1,6 @@
 ---
 title: 参数和行集元数据（OLE DB 驱动程序）
-description: 参数和行集元数据
+description: 了解与 OLE DB Driver for SQL Server 日期和时间增强功能相关的 DBBINDING 类型和类型成员。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a3356134c542cf90c194924a8fbfc44b357c7123
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5f48366cc887d2c06c3f230cf6bf8f84d767b798
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244884"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862027"
 ---
 # <a name="metadata---parameter-and-rowset"></a>元数据 - 参数和行集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: 返回代码（OLE DB 驱动程序）
-description: 返回代码
+description: 了解 OLE DB Driver for SQL Server 成员函数的返回代码，以及如何获得更多关于成功之外的结果的信息。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - S_OK
 - FAILED macro
 - errors [OLE DB], return codes
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2c87c3ebe7580fdde67417049c1b889dcd2bee42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244780"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862245"
 ---
 # <a name="return-codes"></a>返回代码
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -2,7 +2,7 @@
 description: 常量 (Transact-SQL)
 title: 常量 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422931"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027278"
 ---
 # <a name="constants-transact-sql"></a>常量 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422931"
 常量，也称为文字值或标量值，是表示一个特定数据值的符号。 常量的格式取决于它所表示的值的数据类型。
   
 ## <a name="character-string-constants"></a>字符串常量
-字符串常量括在单引号内并包含字母数字字符（a-z、A-Z 和 0-9）以及特殊字符，如感叹号 (!)、at 符 (@) 和数字号 (#)。 将为字符串常量分配当前数据库的默认排序规则，除非使用 COLLATE 子句为其指定了排序规则。 用户键入的字符串通过计算机的代码页计算，如有必要，将被转换为数据库的默认代码页。
+字符串常量括在单引号内并包含字母数字字符（a-z、A-Z 和 0-9）以及特殊字符，如感叹号 (!)、at 符 (@) 和数字号 (#)。 为字符串常量分配当前数据库的默认排序规则。 如果使用了 COLLATE 子句，则在转换为由 COLLATE 子句指定的排序规则之前仍会转换为数据库默认代码页。 用户键入的字符串通过计算机的代码页计算，如有必要，将被转换为数据库的默认代码页。
+
+> [!NOTE]
+> 使用 COLLATE 子句指定[启用了 UTF8 的排序规则](../../relational-databases/collations/collation-and-unicode-support.md#utf8)时，在转换为由 COLLATE 子句指定的排序规则之前仍会转换为数据库默认代码页。 不会直接转换为指定的启用了 Unicode 的排序规则。 有关详细信息，请参阅 [Unicode 字符串](#unicode-strings)。
   
-如果已为某个连接将 QUOTED_IDENTIFIER 选项设置成 OFF，则字符串也可以使用双引号括起来，但 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口和 ODBC 驱动程序将自动使用 SET QUOTED_IDENTIFIER ON。 我们建议使用单引号。
+如果已为某个连接将 QUOTED_IDENTIFIER 选项设置成 OFF，则字符串也可以使用双引号括起来，但 Microsoft [OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) 将自动使用 `SET QUOTED_IDENTIFIER ON`。 我们建议使用单引号。
   
 如果单引号中的字符串包含一个嵌入的引号，可以使用两个单引号表示嵌入的单引号。 对于嵌入在双引号中的字符串则没有必要这样做。
   
@@ -64,18 +67,23 @@ ms.locfileid: "88422931"
   
 空字符串用中间没有任何字符的两个单引号表示。 在 6.x 兼容模式中，空字符串被看作是一个空格。
   
-字符串常量支持增强的排序规则。
+字符串常量支持增强的[排序规则](../../relational-databases/collations/collation-and-unicode-support.md)。
   
 > [!NOTE]  
->  大于 8000 字节的字符常量为 varchar(max) 类型的数据****。  
+> 大于 8000 字节的字符常量为 varchar(max) 类型的数据****。  
   
 ## <a name="unicode-strings"></a>Unicode 字符串
-Unicode 字符串的格式与普通字符串相似，但它前面有一个 N 标识符（N 代表 SQL-92 标准中的区域语言）。 N 前缀必须是大写字母。 例如，'Michél' 是字符常量，而 N'Michél' 是 Unicode 常量。 Unicode 常量被解释为 Unicode 数据，并且不使用代码页进行计算。 Unicode 常量有排序规则。 该排序规则主要用于控制比较和如何区分大小写。 为 Unicode 常量分配当前数据库的默认排序规则，除非使用 COLLATE 子句为其指定了排序规则。 对于字符数据，存储 Unicode 数据时每个字符使用 2 个字节，而不是每个字符 1 个字节。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
+Unicode 字符串的格式与普通字符串相似，但它前面有一个 N 标识符（N 代表 SQL-92 标准中的区域语言）。 
+
+> [!IMPORTANT]  
+> N 前缀必须是大写字母。 
+
+例如，`'Michél'` 是字符常量，而 `N'Michél'` 是 Unicode 常量。 Unicode 常量被解释为 Unicode 数据，并且不使用代码页进行计算。 Unicode 常量有排序规则。 该排序规则主要用于控制比较和如何区分大小写。 为 Unicode 常量分配当前数据库的默认排序规则。 如果使用了 COLLATE 子句，则在转换为由 COLLATE 子句指定的排序规则之前仍会转换为数据库默认排序规则。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。
   
 Unicode 字符串常量支持增强的排序规则。
   
 > [!NOTE]  
->  大于 8000 字节的 Unicode 常量为 nvarchar(max) 类型的数据****。  
+> 大于 8000 字节的 Unicode 常量为 nvarchar(max) 类型的数据****。  
   
 ## <a name="binary-constants"></a>二进制常量
 二进制常量具有前辍 `0x` 并且是十六进制数字字符串。 这些常量不使用引号括起。
@@ -200,11 +208,12 @@ uniqueidentifier 常量是表示 GUID 的字符串****。 可以使用字符或�
 ```
   
 ## <a name="enhanced-collations"></a>增强的排序规则  
-SQL Server 所支持的字符和 Unicode 字符串常量也支持增强的排序规则。 有关详细信息，请参阅 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 子句。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 所支持的字符和 Unicode 字符串常量也支持增强的排序规则。 有关详细信息，请参阅 [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md) 子句。
   
 ## <a name="see-also"></a>另请参阅
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
 [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)  
+[排序规则优先级](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

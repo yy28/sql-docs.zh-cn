@@ -3,25 +3,25 @@ title: 使用 Resource Governor 进行管理
 description: 了解如何使用 Resource Governor 管理 SQL Server 机器学习服务中 Python 和 R 工作负载的 CPU、物理 IO 和内存资源分配。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881974"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283548"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用 Resource Governor 管理 Python 和 R 工作负载
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 了解如何使用 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 管理 SQL Server 机器学习服务中 Python 和 R 工作负载的 CPU、物理 IO 和内存资源分配。
 
-Python 和 R 中的机器学习算法通常需要大量计算。 根据工作负载优先级，你可能需要增加或减少可用于机器学习服务的资源。
+Python 和 R 中的机器学习算法需要大量计算。 根据工作负载优先级，你可能需要增加或减少可用于机器学习服务的资源。
 
 有关详细常规信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。
 
@@ -34,9 +34,9 @@ Python 和 R 中的机器学习算法通常需要大量计算。 根据工作负
 
 ## <a name="manage-resources-with-resource-governor"></a>使用 Resource Governor 管理资源
  
-默认情况下，外部进程最多可使用本地服务器上总主机内存的 20%。 可借助利用了所有对外部进程可用的容量的 R 和 Python 进程，修改默认资源池以在服务器范围内进行更改。
+默认情况下，外部进程最多可使用本地服务器上总主机内存的 20%。 可借助使用了所有对外部进程可用的容量的 R 和 Python 进程，修改默认资源池以在服务器范围内进行更改。
 
-另外，还可以使用关联工作负荷组和分类器创建自定义外部资源池，以确定对源自特定程序、主机或所提供的其他条件的请求的资源分配  。 外部资源池是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中引入的一种资源池，可帮助管理数据库引擎外部的 R 和 Python 进程。
+另外，还可以使用关联工作负载组和分类器创建自定义外部资源池，以确定对源自特定程序、主机或所提供的其他条件的请求的资源分配。 外部资源池是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中引入的一种资源池，可帮助管理数据库引擎外部的 R 和 Python 进程。
 
 1. [启用资源调控](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor)（默认情况下处于关闭状态）。
 

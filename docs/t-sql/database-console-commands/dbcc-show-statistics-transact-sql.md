@@ -34,25 +34,32 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bff0a596c457ee5ce24b665be3897f86e625b3b0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459894"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076712"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-DBCC SHOW_STATISTICS 显示表或索引视图的当前查询优化统计信息。 查询优化器使用统计信息估计查询结果中的基数或行数，这样，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以使用基数估计在查询计划中选择索引查找运算符而不是索引扫描运算符，从而通过避免消耗大量资源的索引扫描来提高查询性能。
+DBCC SHOW_STATISTICS 显示表或索引视图的当前查询优化统计信息。 查询优化器使用统计信息来估计基数或查询结果中的行数，以便创建高质量的查询计划。 例如，查询优化器可以使用基数估计在查询计划中选择索引查找运算符而不是索引扫描运算符，从而通过避免消耗大量资源的索引扫描来提高查询性能。
   
-查询优化器将表或索引视图的统计信息存储在统计信息对象中。 对于表，统计信息对象是根据索引或表列的列表创建的。 统计信息对象包含一个带有统计信息的相关元数据的标题、一个带有统计信息对象第一个键列中的值的分布的直方图，以及一个用于度量各列之间的相关性的密度矢量。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用统计信息对象中的任何数据计算基数估计。
+查询优化器将表或索引视图的统计信息存储在统计信息对象中。 对于表，统计信息对象是根据索引或表列的列表创建的。 统计信息对象包含一个带有统计信息的相关元数据的标题、一个带有统计信息对象第一个键列中的值的分布的直方图，以及一个用于度量各列之间的相关性的密度矢量。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用统计信息对象中的任何数据计算基数估计。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)和[基数估计 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)。
   
 DBCC SHOW_STATISTICS 根据统计信息对象中存储的数据显示标题、直方图和密度向量。 使用以下语法，您可以指定表或索引视图以及目标索引名称、统计信息名称或列名。 本主题说明如何显示统计信息以及如何理解显示的结果。
-  
-有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。
-  
+
+> [!IMPORTANT]
+> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 开始，[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 动态管理视图可用于以编程方式检索包含在统计信息对象中的标头信息，以获取非增量统计信息。
+
+> [!IMPORTANT]
+> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 开始，[sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) 动态管理视图可用于以编程方式检索包含在统计信息对象中的标头信息，以获取增量统计信息。
+
+> [!IMPORTANT]
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 开始，[sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 动态管理视图可用于以编程方式检索包含在统计信息对象中的直方图信息。
+
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法
@@ -67,10 +74,10 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
-    [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
+    [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]
 ```
 
@@ -99,7 +106,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 
 下表对指定 STAT_HEADER 时结果集中所返回的列进行了说明。
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |名称|统计信息对象的名称。|  
 |Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函数是另一种检索此信息的方法。 有关详细信息，请参阅此页中的[备注](#Remarks)部分。|  
@@ -162,15 +169,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |(CustomerId, ItemId, Price)|具有与 CustomerId、ItemId 和 Price 匹配的值的行|  
   
 ## <a name="restrictions"></a>限制  
- DBCC SHOW_STATISTICS 不提供空间索引或 xVelocity 内存优化的列存储索引的统计信息。  
+ DBCC SHOW_STATISTICS 不提供空间索引或内存优化的列存储索引的统计信息。  
   
 ## <a name="permissions-for-ssnoversion-and-sssds"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的权限  
-为了查看统计信息对象，用户必须对表具有 SELECT 权限。
+为了查看统计信息对象，用户必须对表具有 `SELECT` 权限。
 请注意，SELECT 权限必须满足以下要求才能运行此命令：
 -   用户必须对统计对象中的所有列具有权限  
 -   用户必须对筛选条件（如果存在）中的所有列具有权限  
 -   表中不能有行级别安全策略。
--   如果使用动态数据掩码规则屏蔽了 statistics 对象中的任何列，除 SELECT 权限外，该用户还必须具有 UNMASK 权限
+-   如果使用动态数据掩码规则屏蔽了统计信息对象中的任何列，除 `SELECT` 权限外，该用户还必须具有 `UNMASK` 权限。
 
 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前的版本中，用户必须是表所有者，或者是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。
 
@@ -178,10 +185,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  > 若要将行为更改回 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前的行为，请使用跟踪标志 9485。
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的权限  
-DBCC SHOW_STATISTICS 需要对表具有 SELECT 权限或具有下列某种角色中的成员身份：
--   sysadmin 固定服务器角色  
--   db_owner 固定数据库角色  
--   db_ddladmin 固定数据库角色  
+DBCC SHOW_STATISTICS 需要表中的 `SELECT` 权限或 `sysadmin` 固定服务器角色的成员身份、`db_owner` 固定数据库角色的成员身份或 `db_ddladmin` 固定数据库角色的成员身份。  
   
 ## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制与局限  
 DBCC SHOW_STATISTICS 显示控制节点级别的 Shell 数据库中存储的统计信息。 它不显示由计算节点上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建的统计信息。
@@ -234,3 +238,4 @@ GO
 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)   

@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPControl（OLE DB 驱动程序）| Microsoft Docs
-description: IBCPSession::BCPControl (OLE DB)
+description: 了解 IBCPSession::BCPControl 如何设置 OLE DB Driver for SQL Server 中的大批量复制操作的选项。
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPControl method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6da5247b073b787a610c026f32e7a4ea2d3623d6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4529bd4535b64702272796d72a8183fd1cf4438c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244629"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861996"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ HRESULT BCPControl(
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口。  
+ 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用此函数前，未调用 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

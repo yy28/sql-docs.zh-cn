@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: 52fdb12c425f8d6e3faf9fb0f0ee3ce1a1c76195
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942300"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076812"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -31,17 +31,18 @@ ms.locfileid: "88942300"
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
-Azure SQL 数据仓库的语法：
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 的语法：
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
-[;]  
+[ ; ]  
 ```  
-Azure 并行数据仓库语法：
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的语法：
   
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
-[;]  
+[ ; ]  
 ```  
 
 ## <a name="arguments"></a>参数  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564657"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027288"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 

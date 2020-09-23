@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901004"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042795"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 
@@ -264,7 +264,7 @@ ms.locfileid: "88901004"
 
 ### <a name="windows-privileges-and-rights"></a><a name="Windows"></a> Windows 特权和权限
 
-为启动服务分配的帐户需要对于服务的 **启动、停止和暂停权限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将自动分配此权限。 首先，安装远程服务器管理工具 (RSAT)。 请参阅 [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/download/details.aspx?id=7887)（Windows 7 的远程服务器管理工具）。
+为启动服务分配的帐户需要对于服务的 **启动、停止和暂停权限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将自动分配此权限。 首先，安装远程服务器管理工具 (RSAT)。 请参阅 [Windows 10 的远程服务器管理工具](https://www.microsoft.com/download/details.aspx?id=45520)。
 
 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用的 Per-service SID 或本地 Windows 组请求的权限。
 
