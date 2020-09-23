@@ -1,4 +1,5 @@
 ---
+description: Set Up the Job History Log
 title: Set Up the Job History Log
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b5468149f1b54757a69f48a6f766ea786330c01e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 108bc94e441241de4ceca6ef83559de2f287538d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418023"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志。  
   
@@ -45,15 +46,15 @@ ms.locfileid: "85644066"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”  ，然后单击“属性”  。  
+2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
   
 3.  在 **“SQL Server 代理属性”** 对话框中，选择 **“历史记录”** 页。  
   
 4.  从以下选项中选择：  
   
-    1.  选中 **“限制作业历史记录日志的大小”** ，然后键入作业历史记录日志的最大行数和每个作业的最大行数。  
+    1.  选中 **“限制作业历史记录日志的大小”**，然后键入作业历史记录日志的最大行数和每个作业的最大行数。  
   
-    2.  选中 **“自动删除代理历史记录”** ，然后指定时间段。这样，早于此时间段的历史记录将从日志中清除。  
+    2.  选中 **“自动删除代理历史记录”**，然后指定时间段。这样，早于此时间段的历史记录将从日志中清除。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行作业](../../ssms/agent/implement-jobs.md)  

@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_prepare | Microsoft Docs
+title: sqlsrv_prepare
+description: Microsoft SQLSRV Driver for PHP for SQL Server 中 sqlsrv_prepare 函数的 API 参考。
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9e82a25d3386de2f86d7e43fe5bde13eb25c6416
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286541"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435120"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,12 +37,12 @@ ms.locfileid: "79286541"
 sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$conn*：与创建的语句相关联的连接资源。  
   
-$tsql：对应于已创建语句的 Transact-SQL 表达式  。  
+$tsql：对应于已创建语句的 Transact-SQL 表达式**。  
   
-$params [可选]：对应于参数化查询中参数的值的阵列   。 该阵列的每个元素可以是以下项之一：
+*$params* [可选]：对应于参数化查询中参数的值的阵列  。 该阵列的每个元素可以是以下项之一：
   
 -   文字值。  
   
@@ -61,36 +62,36 @@ $params [可选]：对应于参数化查询中参数的值的阵列   。 该阵
     |元素|说明|  
     |-----------|---------------|  
     |*$value*|文字值或对 PHP 变量的引用。|  
-    |*$direction*[可选]|用于指示参数方向的以下 **SQLSRV_PARAM_\*** 常量之一：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 默认值为 SQLSRV_PARAM_IN  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型。|  
-    |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型。|  
+    |*$direction*[可选]|用于指示参数方向的以下 SQLSRV_PARAM_\* 常量之一  ：SQLSRV_PARAM_IN、SQLSRV_PARAM_OUT、SQLSRV_PARAM_INOUT    。 默认值为 SQLSRV_PARAM_IN  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型  。|  
+    |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型  。|  
   
-*$options* [可选]：关联阵列，用于设置<a name="properties">查询属性</a>。 下表列出了受支持的键和相应值：
+*$options* [可选]：设置<a name="properties">查询属性</a>的关联阵列。 下表列出了受支持的键和相应值：
 
-|密钥|支持的值|说明|  
+|键|支持的值|说明|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|正整数|配置保留客户端游标的结果集的缓冲区大小。<br /><br />默认值为 10240 KB。 有关详细信息，请参阅[指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|
-|DecimalPlaces|介于 0 和 4 之间（含 0 和 4）的整数|指定设置提取的 Money 值格式时的小数位数。<br /><br />将忽略任何负整数或大于 4 的值。<br /><br />仅当 FormatDecimals 为 true  时，此选项才可用。|
+|DecimalPlaces|介于 0 和 4 之间（含 0 和 4）的整数|指定设置提取的 Money 值格式时的小数位数。<br /><br />将忽略任何负整数或大于 4 的值。<br /><br />仅当 FormatDecimals 为 true 时，此选项才可用。|
 |FormatDecimals|**true** 或 **false**<br /><br />默认值是 **false**秒。|指定是否在合适时向十进制字符串添加前导零，并启用用于设置 Money 类型格式的 `DecimalPlaces` 选项。<br /><br />有关详细信息，请参阅[设置十进制字符串和 Money 值格式（SQLSRV 驱动程序）](../../connect/php/formatting-decimals-sqlsrv-driver.md)。|
 |QueryTimeout|正整数|设置查询超时（以秒为单位）。 默认情况下，驱动程序无限期等待结果。|  
-|ReturnDatesAsStrings|**true** 或 **false**<br /><br />默认值是 **false**秒。|将语句配置为以字符串的形式检索日期和时间类型 (true  )。 有关详细信息，请参阅[如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
+|ReturnDatesAsStrings|**true** 或 **false**<br /><br />默认值是 **false**秒。|将语句配置为以字符串的形式检索日期和时间类型 (true****)。 有关详细信息，请参阅[如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
 |可滚动|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|有关这些值的详细信息，请参阅 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|  
-|SendStreamParamsAtExec|**true** 或 **false**<br /><br />默认值为 **true**。|将驱动程序配置为在执行时发送所有流数据 (true)，或配置为在区块中发送流数据 (false)   。 默认情况下，该值设置为 **true**。 有关详细信息，请参阅 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
+|SendStreamParamsAtExec|**true** 或 **false**<br /><br />默认值为 **true**。|将驱动程序配置为在执行时发送所有流数据 (true)，或配置为在区块中发送流数据 (false) 。 默认情况下，该值设置为 **true**。 有关详细信息，请参阅 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
   
 ## <a name="return-value"></a>返回值  
 语句资源。 如果无法创建语句资源，将返回 **false** 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 当你准备一个将变量用作参数的语句时，这些变量将绑定到该语句。 这意味着，如果更新变量的值，下次执行该语句时，它将使用更新的参数值运行。  
   
-sqlsrv_prepare 和 sqlsrv_execute 的组合将语句准备和语句执行分成了两个函数调用，并且可用来执行参数化查询   。 如果要对每次执行使用不同的参数值来多次执行语句，该函数是理想之选。  
+sqlsrv_prepare 和 sqlsrv_execute 的组合将语句准备和语句执行分成了两个函数调用，并且可用来执行参数化查询 。 如果要对每次执行使用不同的参数值来多次执行语句，该函数是理想之选。  
   
 有关写入和读取大量信息的备用策略，请参阅 [SQL 语句的批处理](../../odbc/reference/develop-app/batches-of-sql-statements.md) 和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+有关详细信息，请参阅[操作说明：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
-以下示例将准备和执行语句。 语句执行后（请参阅 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)），将更新 AdventureWorks 数据库的 Sales.SalesOrderDetail 表格中的字段  。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例将准备和执行语句。 语句执行后（请参阅 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)），将更新 AdventureWorks 数据库的 Sales.SalesOrderDetail 表格中的字段**。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  

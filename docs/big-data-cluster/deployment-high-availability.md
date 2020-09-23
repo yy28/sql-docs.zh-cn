@@ -5,16 +5,16 @@ description: 了解如何部署高可用性 SQL Server 大数据群集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279456"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790264"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 大数据群集
 
@@ -133,6 +133,9 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 > [!IMPORTANT]
 > 为连接 SQL Server 实例而公开的终结点仅支持 SQL 身份验证，即使在启用了 Active Directory 的群集中也是如此。 默认情况下，在大数据群集部署过程中，将禁用 `sa` 登录名，并根据在部署时为 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 环境变量提供的值预配新的 `sysadmin` 登录名。
+
+> [!IMPORTANT]
+> 包含的可用性组 DDL 在 BDC 中以独占方式进行自我托管。 不支持尝试删除包含的可用性或数据库镜像端点的任何操作（外部用户），这些操作可能会导致 BDC 的状态无法恢复。
 
 下面的示例演示如何公开此终结点，然后将通过还原工作流创建的数据库添加到可用性组。 当希望使用 `sp_configure` 更改服务器配置时，可以参考与 SQL Server 主实例建立连接的类似说明。
 

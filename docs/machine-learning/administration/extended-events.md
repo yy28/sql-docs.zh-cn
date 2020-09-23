@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110171"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860029"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 Python 和 R 脚本
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 了解如何使用扩展事件来监视和疑难解答与 SQL Server 机器学习服务、SQL Server Launchpad 以及 Python 或 R 作业外部脚本有关的操作。
 
@@ -53,8 +53,8 @@ AND p.name = 'SQLSatellite';
 |satellite_abort_connection|中止连接记录||  
 |satellite_abort_received|通过卫星连接接收中止消息时触发。||  
 |satellite_abort_sent|通过卫星连接发送中止消息时触发。||  
-|satellite_authentication_completion|对基于 TCP 或 Namedpipe 的连接的身份验证完成时触发。||  
-|satellite_authorization_completion|对基于 TCP 或 Namedpipe 的连接的授权完成时触发。||  
+|satellite_authentication_completion|对基于 TCP 或命名管道的连接的身份验证完成时触发。||  
+|satellite_authorization_completion|对基于 TCP 或命名管道的连接的授权完成时触发。||  
 |satellite_cleanup|卫星调用清理时触发。|仅从外部进程触发。 请参阅有关从外部进程收集事件的说明。|  
 |satellite_data_chunk_sent|卫星连接完成发送单个数据区块时触发。|发送区块时，此事件报告发送的行数、列数、所用的 SNI 数据包数目以及所用时间（以毫秒为单位）。 这些信息可帮助你了解传递不同类型的数据时花费了多长时间，以及使用了多少个数据包。|  
 |satellite_data_receive_completion|通过卫星连接接收查询所需的所有数据时触发。|仅从外部进程触发。 请参阅有关从外部进程收集事件的说明。|  
@@ -102,7 +102,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
      
     **R：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 
-    **Python：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`。
+    **Python：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`。
 
 此配置文件的名称必须与可执行文件相同，并使用“[名称].xevents.xml”的格式。 换而言之，这些文件的名称如下所示：
 
@@ -112,7 +112,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
 配置文件自身具有以下格式：
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

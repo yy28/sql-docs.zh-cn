@@ -1,7 +1,8 @@
 ---
-title: 默认 SQL Server 数据类型 | Microsoft Docs
+title: 默认 SQL Server 数据类型
+description: 本主题列出了使用 Microsoft SQLSRV Driver for PHP for SQL Server 时，基于 PHP 数据类型的所有默认 SQL Server 数据类型
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a5f60111e8a98e3f187e4db39eec06ab35e38195
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928019"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680772"
 ---
 # <a name="default-sql-server-data-types"></a>默认 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80928019"
 |PHP 数据类型|SQLSRV 驱动程序中的默认 SQL Server 类型|PDO_SQLSRV 驱动程序中的默认 SQL Server 类型|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |Null|varchar(1)|不支持|  
-|Boolean|bit|bit|  
+|布尔|bit|bit|  
 |Integer|int|int|  
 |Float|float(24)|不支持|  
 |字符串（长度小于 8000 个字节）|varchar(<string length>)|varchar(<string length>)|  
@@ -36,8 +37,8 @@ ms.locfileid: "80928019"
 |资源|不支持。|不支持。|  
 |流（编码：不是二进制）|varchar(max)|varchar(max)|  
 |流（编码：二进制）|varbinary|varbinary|  
-|Array|不支持。|不支持。|  
-|Object|不支持。|不支持。|  
+|数组|不支持。|不支持。|  
+|对象|不支持。|不支持。|  
 |DateTime (1)|datetime|不支持。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923397"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864258"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -262,7 +262,7 @@ ms.locfileid: "86923397"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
-|对 Azure SQL 数据库托管实例数据库的支持| 在托管实例上承载 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]。 请参阅[[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]安装和配置](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)。|
+|支持 Azure SQL 托管实例数据库| 在 Azure SQL 托管实例上托管 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]。 请参阅[[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]安装和配置](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)。|
 |新 HTML 控件| HTML 控件替换了所有以前的 Silverlight 组件。 已删除 Silverlight 依赖项。|
 | &nbsp; | &nbsp; |
 

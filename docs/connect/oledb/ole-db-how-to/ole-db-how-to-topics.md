@@ -1,6 +1,6 @@
 ---
-title: OLE DB 操作指南主题 |Microsoft Docs
-description: OLE DB 操作指南主题
+title: 操作指南主题（OLE DB 驱动程序）
+description: 使用这些操作指南文章来了解 OLE DB Driver for SQL Server 如何连接到服务器、如何运行命令，以及如何处理结果。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca01ad2797e0f39c1195416c21a1bb030f6d0576
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015625"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860323"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 操作指南主题
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,7 +1,7 @@
 ---
 title: SQL Server 语言扩展中有哪些新增功能？
 titleSuffix: ''
-description: 了解 SQL Server 语言扩展的新增功能。
+description: 了解 SQL Server 语言扩展的新增功能，这些功能扩大、扩展并深化了外部语言与数据平台之间的集成。
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b52daf4ad0e789dc1508b5903cc95a92c39e0929
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4a38bba48d9accd16a3e8ca68bd3136c3419e5ad
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921046"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173509"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 语言扩展中有哪些新增功能？
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 随着我们继续扩大、扩展和深化外部语言与数据平台之间的集成，每个版本的 SQL Server 中都将添加[语言扩展](language-extensions-overview.md)功能。 
 

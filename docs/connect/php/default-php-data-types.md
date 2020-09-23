@@ -1,7 +1,8 @@
 ---
-title: 默认 PHP 数据类型 | Microsoft Docs
+title: 默认 PHP 数据类型
+description: 本主题列出了使用 Microsoft SQLSRV Driver for PHP for SQL Server 时，所有默认 PHP 数据类型及其相应的 SQL Server 数据类型
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928031"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680785"
 ---
 # <a name="default-php-data-types"></a>默认 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80928031"
   
 本主题的其余部分讨论使用 SQLSRV 驱动程序的默认数据类型。  
   
-下表列出了 SQL Server 数据类型（从服务器检索的数据类型）、默认 PHP 数据类型（数据转换到的数据类型）以及流和字符串的默认编码。 有关如何在从服务器检索数据时指定数据类型的详细信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+下表列出了 SQL Server 数据类型（从服务器检索的数据类型）、默认 PHP 数据类型（数据转换到的数据类型）以及流和字符串的默认编码。 有关如何在从服务器检索数据时指定数据类型的详细信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 |SQL Server 类型|默认 PHP 类型|默认编码|  
 |-------------------|--------------------|--------------------|  
@@ -37,14 +38,14 @@ ms.locfileid: "80928031"
 |binary|Stream<sup>2</sup>|Binary<sup>3</sup>|  
 |bit|Integer|8 位字符<sup>1</sup>|  
 |char|String|8 位字符<sup>1</sup>|  
-|date<sup>4</sup>|Datetime|不适用|  
-|datetime<sup>4</sup>|Datetime|不适用|  
-|datetime2<sup>4</sup>|Datetime|不适用|  
-|datetimeoffset<sup>4</sup>|Datetime|不适用|  
+|date<sup>4</sup>|datetime|不适用|  
+|datetime<sup>4</sup>|datetime|不适用|  
+|datetime2<sup>4</sup>|datetime|不适用|  
+|datetimeoffset<sup>4</sup>|datetime|不适用|  
 |Decimal|String|8 位字符<sup>1</sup>|  
 |FLOAT|Float|8 位字符<sup>1</sup>|  
-|geography|Stream|Binary<sup>3</sup>|  
-|geometry|Stream|Binary<sup>3</sup>|  
+|geography|STREAM|Binary<sup>3</sup>|  
+|geometry|STREAM|Binary<sup>3</sup>|  
 |image<sup>5</sup>|Stream<sup>2</sup>|Binary<sup>3</sup>|  
 |int|Integer|8 位字符<sup>1</sup>|  
 |money|String|8 位字符<sup>1</sup>|  
@@ -54,12 +55,12 @@ ms.locfileid: "80928031"
 |nvarchar(MAX)|Stream<sup>2</sup>|8 位字符<sup>1</sup>|  
 |ntext<sup>6</sup>|Stream<sup>2</sup>|8 位字符<sup>1</sup>|  
 |real|Float|8 位字符<sup>1</sup>|  
-|smalldatetime|Datetime|8 位字符<sup>1</sup>|  
+|smalldatetime|datetime|8 位字符<sup>1</sup>|  
 |smallint|Integer|8 位字符<sup>1</sup>|  
 |smallmoney|String|8 位字符<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|8 位字符<sup>1</sup>|  
 |text<sup>8</sup>|Stream<sup>2</sup>|8 位字符<sup>1</sup>|  
-|time<sup>4</sup>|Datetime|不适用|  
+|time<sup>4</sup>|datetime|不适用|  
 |timestamp|String|8 位字符<sup>1</sup>|  
 |tinyint|Integer|8 位字符<sup>1</sup>|  
 |UDT|Stream<sup>2</sup>|Binary<sup>3</sup>|  
@@ -73,11 +74,11 @@ ms.locfileid: "80928031"
 
 1.  数据以在系统上设置的 Windows 区域设置的代码页中指定的 8 位字符的形式返回。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。  
   
-2.  如果 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 或 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 用于检索具有默认 PHP 类型 Stream 的字符串的数据，该数据将返回为具有与流相同的编码的字符串。 例如，如果 SQL Server 二进制类型使用 sqlsrv_fetch_array进行检索，默认返回类型将是二进制字符串  。  
+2.  如果 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 或 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 用于检索具有默认 PHP 类型 Stream 的字符串的数据，该数据将返回为具有与流相同的编码的字符串。 例如，如果 SQL Server 二进制类型使用 sqlsrv_fetch_array进行检索，默认返回类型将是二进制字符串****。  
   
 3.  数据以原始字节流的形式从服务器返回，无需执行编码或转换。  
 
-4.  日期和时间类型可以字符串的形式检索。 有关详细信息，请参阅[操作说明：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。  
+4.  日期和时间类型可以字符串的形式检索。 有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。  
 
 5.  这是映射到 varbinary(max) 类型的旧类型。
 

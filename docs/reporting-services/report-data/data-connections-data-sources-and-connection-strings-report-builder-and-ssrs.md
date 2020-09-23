@@ -8,12 +8,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4b544e7220d82d8368aec2a44c861e44b1e96398
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812292"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988440"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>创建数据连接字符串 - 报表生成器和 SSRS
 
@@ -34,7 +34,7 @@ ms.locfileid: "85812292"
 |---------------------|-----------------|---------------------|  
 |本地服务器上的 SQL Server 数据库|`data source="(local)";initial catalog=AdventureWorks`|将数据源类型设置为 **Microsoft SQL Server**。 有关详细信息，请参阅 [SQL Server 连接类型 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。|  
 |SQL Server 实例<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|将数据源类型设置为 **Microsoft SQL Server**。|  
-|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|将数据源类型设置为“Microsoft Azure SQL 数据库”。 有关详细信息，请参阅 [SQL Azure 连接类型 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。|  
+|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|将数据源类型设置为“Microsoft Azure SQL 数据库”。 有关详细信息，请参阅 [Azure SQL 连接类型 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 并行数据仓库|`HOST=<IP address>;database= AdventureWorks; port=<port>`|将数据源类型设置为 **Microsoft SQL Server Parallel Data Warehouse**。 有关详细信息，请参阅 [SQL Server 并行数据仓库连接类型 (SSRS)](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本地服务器上的 Analysis Services 数据库|`data source=localhost;initial catalog=Adventure Works DW`|将数据源类型设置为 **Microsoft SQL Server Analysis Services**。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或[针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
 |具有 Sales 透视的 Analysis Services 表格模型数据库|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|将数据源类型设置为 **Microsoft SQL Server Analysis Services**。 在 cube= 设置中指定透视名称。 有关详细信息，请参阅 [透视表（SSAS 表格）](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)。|  

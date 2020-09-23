@@ -4,28 +4,29 @@ titleSuffix: ''
 description: 了解如何在 Windows 上安装 SQL Server 2016 R Services。 可以使用 R Services 在数据库中执行 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af1d1c36971e3c6e47a97874bca26d55694d4491
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487650"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 了解如何在 Windows 上安装 SQL Server 2016 R Services。 可以使用 R Services 在数据库中执行 R 脚本。
 
 > [!NOTE]
 > 在 SQL Server 2017 及更高版本中，R 与 Python 一起随附在[机器学习服务](../sql-server-machine-learning-services.md)中。 如果你想获取 R 并具有 SQL Server 2017 或更高版本，请参阅[安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)以添加该功能。
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## <a name="pre-install-checklist"></a>安装前清单
 
@@ -188,7 +189,10 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 1. 继续执行向导，接受 R 分发的许可条款。
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> SQL Server 2016 SP2 的累积更新 (CU) 14 和更高版本包含 R 运行时的更新版本。 有关详细信息，请参阅[更改默认语言运行时版本](change-default-language-runtime-version.md)。
+
+<a name="bkmk_FollowUp"></a>
 
 ## <a name="additional-configuration"></a>其他配置
 
@@ -212,7 +216,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 * [将 SQLRUserGroup 添加为数据库用户](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> 并非所有列出的更改都是必需的，也可能不需要任何更改。 要求取决于安全架构、SQL Server 的安装位置，以及期望用户以何种方式连接到数据库和运行外部脚本。 有关其他疑难解答提示，请访问此处：[升级和安装常见问题解答](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> 并非所有列出的更改都是必需的，也可能不需要任何更改。 要求取决于安全架构、SQL Server 的安装位置，以及期望用户以何种方式连接到数据库和运行外部脚本。 可在此处找到其他安装指南：[安装 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 
 ## <a name="suggested-optimizations"></a>建议的优化
 

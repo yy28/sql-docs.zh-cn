@@ -2,7 +2,7 @@
 title: 部署 JDBC 驱动程序
 description: 了解如何对应用程序重新分发和部署 Microsoft JDBC Driver for SQL Server 以及所需的文件。
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 08365944acd071f21b3b4fadf950c23b65c6cfe5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728355"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565415"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
 
@@ -51,7 +51,7 @@ ms.locfileid: "81728355"
 
 ## <a name="legalities-of-driver-redistribution"></a>驱动程序重新分发的合法性
 
-JDBC 驱动程序版本 6.0、6.2、6.4、7.0、7.2、7.4 和 8.2 是可再发行版本。 查看许可协议中的“可分发代码”子句  。
+JDBC 驱动程序版本 6.0、6.2、6.4、7.0、7.2、7.4、8.2 和 8.4 是可再发行版本。 查看许可协议中的“可分发代码”子句  。
 
 JDBC 驱动程序版本 4.x 是旧的过时版本。 对 4.x 的支持已在 2018 年之前过期。
 

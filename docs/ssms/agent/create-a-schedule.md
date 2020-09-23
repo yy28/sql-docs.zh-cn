@@ -1,4 +1,5 @@
 ---
+description: Create a Schedule
 title: Create a Schedule
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2a5efc91a9cad0b0cf1172c3686ed4b74ce97269
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 886e22e27b42b4d0ae5edd108a831f87b7047239
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492193"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建 [!INCLUDE[tsql](../../includes/tsql-md.md)]代理作业的计划。  
   
@@ -54,21 +55,21 @@ ms.locfileid: "85755232"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，右键单击 **“作业”** ，然后单击 **“管理计划”** 。  
+2.  展开 **“SQL Server 代理”**，右键单击 **“作业”**，然后单击 **“管理计划”**。  
   
-3.  在 **“管理计划”** 对话框中，单击 **“新建”** 。  
+3.  在 **“管理计划”** 对话框中，单击 **“新建”**。  
   
 4.  在 **“名称”** 框中，键入新计划的名称。  
   
 5.  如果不希望计划在创建后立即生效，请清除 **“启用”** 复选框。  
   
-6.  对于 **“计划类型”** ，请选择下列操作之一：  
+6.  对于 **“计划类型”**，请选择下列操作之一：  
   
-    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”** 。  
+    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”**。  
   
-    -   如果希望反复运行计划，请单击 **“重复执行”** 。 若要设置重复执行的计划，请完成对话框上的 **“频率”** 、 **“每天频率”** 和 **“持续时间”** 组。  
+    -   如果希望反复运行计划，请单击 **“重复执行”**。 若要设置重复执行的计划，请完成对话框上的 **“频率”**、 **“每天频率”** 和 **“持续时间”** 组。  
   
-    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置 **“执行一次”** 计划，请完成对话框上的 **“执行一次”** 组。  
+    -   如果希望仅运行一次计划，请单击 **“执行一次”**。 若要设置 **“执行一次”** 计划，请完成对话框上的 **“执行一次”** 组。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
@@ -78,7 +79,7 @@ ms.locfileid: "85755232"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- creates a schedule named RunOnce.   

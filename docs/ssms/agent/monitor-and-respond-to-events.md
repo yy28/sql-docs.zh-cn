@@ -1,4 +1,5 @@
 ---
+description: 监视事件和响应事件
 title: 监视事件和响应事件
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,18 +23,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1a7ca692b7720906ead843b4579d7d023a4797e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ffa92061bf4d3fca9214a9875a8bac41ec1c4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463084"
 ---
 # <a name="monitor-and-respond-to-events"></a>监视事件和响应事件
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可监视并自动响应*事件*，例如来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的消息、特定性能条件以及 Windows Management Instrumentation (WMI) 事件。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85715735"
 介绍了为管理员创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可用于在作业失败或成功时用来发送通知的别名。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>关于监视事件和响应事件  
-对事件的自动响应称为“警报”  。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+对事件的自动响应称为“警报”**。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理只响应定义了警报的事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来监视事件的方法取决于事件的类型。  
   

@@ -1,7 +1,8 @@
 ---
-title: PDO::exec | Microsoft Docs
+title: PDO::exec
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDO::exec 函数的 API 参考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6f46342631124114f70d50c2980fbd703f9b25b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 989d1f6346f26292326c5b49e1675492cd4ee8de
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919342"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646157"
 ---
 # <a name="pdoexec"></a>PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "80919342"
 int PDO::exec ($statement)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$statement*：包含要执行的 SQL 语句的字符串。  
   
 ## <a name="return-value"></a>返回值  
 报告受影响行数的整数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 如果 *$statement* 包含多个 SQL 语句，则仅为最后一个语句报告受影响行的计数。  
   
 PDO::exec 不为 SELECT 语句返回结果。  

@@ -1,4 +1,5 @@
 ---
+description: 向操作员分配警报
 title: 向操作员分配警报
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,21 +19,21 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a822722ba79be09094fe4162d6686e0798ada7a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 605496e5d5993e791b347bc343649d738703f029
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320083"
 ---
 # <a name="assign-alerts-to-an-operator"></a>向操作员分配警报
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中向操作员分配 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理警报，以便他们可以接收有关作业的通知。  
+本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中向操作员分配 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报，以便他们可以接收有关作业的通知。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -46,7 +47,7 @@ ms.locfileid: "85727018"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 只有 **sysadmin** 固定服务器角色的成员才能向操作员分配警报。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -55,15 +56,15 @@ ms.locfileid: "85727018"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要向其分配警报的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要为其分配警报的操作员，再选择“属性”  ，然后选择“通知”  页。  
+4.  右键单击要为其分配警报的操作员，再选择“属性”****，然后选择“通知”**** 页。  
   
-5.  在“_operator\_name_ 属性”  对话框的“选择页”  下，选择“通知”  。  
+5.  在“_operator\_name_ 属性”**** 对话框的“选择页”**** 下，选择“通知”****。  
   
-6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”  、“寻呼程序”  或“Net send”  。  
+6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”****、“寻呼程序”**** 或“Net send”****。  
   
 7.  完成后，单击 **“确定”** 。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "85727018"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  

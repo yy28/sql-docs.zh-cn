@@ -1,5 +1,6 @@
 ---
-title: 通过 JDBC 驱动程序使用语句 | Microsoft Docs
+title: 通过 JDBC 驱动程序使用语句
+description: 了解如何使用 Microsoft JDBC Driver for SQL Server 执行 SQL 语句和存储过程来执行数据库操作。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b94782d6e36f6ef6fb2997ceb195bf9ecdb1e947
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: de6f5340375a3a9a5c39e2405943729b997e9198
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923957"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435296"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用语句
 

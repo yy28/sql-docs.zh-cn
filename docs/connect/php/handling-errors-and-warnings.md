@@ -1,7 +1,8 @@
 ---
-title: 处理错误和警告 | Microsoft Docs
+title: 处理错误和警告
+description: 本主题介绍如何在使用 Microsoft SQLSRV Driver for PHP for SQL Server 时处理错误和警告
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 464daee0f6c6bbb18b63b7a7cc9fab9cad827fdb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 28aba75d57c8bec09478266f2231900cd53197cf
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916593"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680712"
 ---
 # <a name="handling-errors-and-warnings"></a>处理错误和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "80916593"
 |[如何：使用 SQLSRV 驱动程序配置错误和警告处理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|演示如何为处理错误和警告更改配置设置。|  
 |[如何：使用 SQLSRV 驱动程序处理错误和警告](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|演示如何分别处理错误和警告。|  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  

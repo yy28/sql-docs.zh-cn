@@ -1,4 +1,5 @@
 ---
+description: 升级报表 (SSRS)
 title: 升级报表 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1454c579739c892cc3d0c03211283589ba3e6b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446019"
 ---
 # <a name="upgrade-reports-ssrs"></a>升级报表 (SSRS)
 
@@ -125,9 +126,9 @@ ms.locfileid: "77082280"
   
 -   **是** 选择 **“是”** 将转换报表中所有可以转换的 CRI。 无法升级 CRI 中不受支持的功能，也不能从报表定义文件中删除它们。 查看报表时，可能看到 CRI 在报表中的显示方式存在差异。  
   
--   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”** 。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
+-   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”**。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
   
- 在这两种情况下，报表都会升级为新的报表定义格式，且原始报表的备份副本会另存为 *报表名称> \< Backup.rdl*`-`。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
+ 在这两种情况下，报表都将升级为采用新的报表定义格式，并且原始报表的备份副本会另存为 *\<Report Name>* `-` Backup.rdl。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
   
  如果不保存报表，则原始报表将保持不变。 但是，不能在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 SQL Server 2016 版本中或者在使用较新报表定义格式的报表创作环境中编辑该报表。 对于报表的原始版本，通过使用 Web 门户将它上载到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器，可以继续运行它。 有关详细信息，请参阅 [Web 门户](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   

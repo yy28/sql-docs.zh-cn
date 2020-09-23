@@ -1,4 +1,5 @@
 ---
+description: Create a Transact-SQL Job Step
 title: Create a Transact-SQL Job Step
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,20 +16,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73cb2231cc863e8ff4f521d5e3cc5b5a23b300b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d1c6d72dc524bae8b1a315b0a9f75ee8118211f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468702"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建用于执行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 脚本的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业步骤。  
+本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建用于执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤。  
   
 这些作业步骤脚本可以调用存储过程和扩展存储过程。 一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含多个批处理和嵌入的 GO 命令。 有关创建作业的详细信息，请参阅 [创建作业](../../ssms/agent/create-jobs.md)。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "85749099"
   
 4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
-5.  在“类型”  列表中，单击“Transact-SQL 脚本 (TSQL)”  。  
+5.  在“类型”**** 列表中，单击“Transact-SQL 脚本 (TSQL)”****。  
   
 6.  在 **“命令”** 框中，键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批命令，或者单击 **“打开”** ，选择一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文件用作命令。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "85749099"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- creates a job step that uses Transact-SQL  

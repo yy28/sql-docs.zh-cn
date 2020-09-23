@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindParam | Microsoft Docs
+title: PDOStatement::bindParam
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDOStatement::bindParam 函数的 API 参考。
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 245cdc56e47c87bc5c31435e1967ecb74a8c05bc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918770"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646607"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,21 +31,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>参数  
-$parameter  ：（混合）参数标识符。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。  
+$parameter：（混合）参数标识符**。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。  
   
-&$variable  ：要绑定到 SQL 语句参数的 PHP 变量的（混合）名称。  
+&$variable：要绑定到 SQL 语句参数的 PHP 变量的（混合）名称**。  
   
-$data_type  ：可选（整数）PDO::PARAM_* 常量。 默认值为 PDO::PARAM_STR。  
+$datatype：可选（整数）PDO::PARAM_* 常量**。 默认值为 PDO::PARAM_STR。  
   
-$length  ：数据类型的可选（整数）长度。 当在 $data_type 中使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 时，可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 来指示默认大小  。  
+$length：数据类型的可选（整数）长度**。 当在 $data_type 中使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 时，可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 来指示默认大小**。  
   
-$driver_options  ：可选（混合）驱动程序专用选项。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
+$driver_options：可选（混合）驱动程序专用选项。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>备注  
-在将 null 数据绑定到 varbinary、binary 或 varbinary(max) 类型的服务器列时，应使用 $driver_options 指定二进制编码 (PDO::SQLSRV_ENCODING_BINARY)  。 有关编码常量的详细信息，请参阅[常量](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
+## <a name="remarks"></a>注解  
+在将 null 数据绑定到 varbinary、binary 或 varbinary(max) 类型的服务器列时，应使用 $driver_options 指定二进制编码 (PDO::SQLSRV_ENCODING_BINARY)**。 有关编码常量的详细信息，请参阅[常量](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
 

@@ -1,6 +1,6 @@
 ---
 title: 向 SQL Server 表中添加列（OLE DB 驱动程序）|Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 向 SQL Server 表添加列
+description: 了解 ITableDefinition::AddColumn 方法如何允许使用者向 OLE DB Driver for SQL Server 的 SQL Server 表中添加列。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AddColumn function
 - OLE DB Driver for SQL Server, columns
 - adding columns
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ce22cc49060451e7d47a1f9452f1c10a134ae610
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4366011d2f417dc7c35383a4460bfe5871065940
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943113"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859807"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>向 SQL Server 表添加列
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

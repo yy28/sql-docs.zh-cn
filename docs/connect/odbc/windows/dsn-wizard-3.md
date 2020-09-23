@@ -1,4 +1,5 @@
 ---
+description: 数据源向导屏幕 3 (ODBC Driver for SQL Server)
 title: 数据源向导屏幕 3 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1775d89587522e1ad1036d2f0c514c9439b9403b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48b65f57ac4a47a372ff82db4bc92f5ee631ea36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462192"
 ---
 # <a name="data-source-wizard-screen-3"></a>数据源向导屏幕 3
 
@@ -25,19 +26,19 @@ ms.locfileid: "80927913"
 
 ### <a name="change-the-default-database-to"></a>更改默认数据库为
 
-指定使用该数据源建立的任何连接的默认数据库的名称。 清除此框后，连接将使用在服务器上为登录 ID 定义的默认数据库。 选择此框后，在框中命名的数据库将覆盖为登录 ID 定义的默认数据库。 如果“附加数据库文件名”  框中包含主文件的名称，则主文件描述的数据库便附加为使用“更改默认数据库为”  框中指定的数据库名称的数据库。
+指定使用该数据源建立的任何连接的默认数据库的名称。 清除此框后，连接将使用在服务器上为登录 ID 定义的默认数据库。 选择此框后，在框中命名的数据库将覆盖为登录 ID 定义的默认数据库。 如果“附加数据库文件名”**** 框中包含主文件的名称，则主文件描述的数据库便附加为使用“更改默认数据库为”**** 框中指定的数据库名称的数据库。
 
 使用登录 ID 的默认数据库比在 ODBC 数据源中指定默认数据库更有效。
 
 ### <a name="mirror-server"></a>镜像服务器
 
-指定要镜像的数据库的故障转移伙伴的名称。 如果数据库名称未显示在“更改默认数据库为”  框中，或该名称显示为默认数据库，则“镜像服务器”  将灰显。
+指定要镜像的数据库的故障转移伙伴的名称。 如果数据库名称未显示在“更改默认数据库为”**** 框中，或该名称显示为默认数据库，则“镜像服务器”**** 将灰显。
 
 您还可以指定镜像服务器的服务器主体名称 (SPN)。 镜像服务器的 SPN 用于在客户端和服务器之间相互进行身份验证。
 
 ### <a name="attach-database-filename"></a>附加数据库文件名
 
-指定可附加数据库的主文件的名称。 该数据库作为数据源的默认数据库附加和使用。 指定主文件的完整路径和文件名。 在“更改默认数据库为”  框中指定的数据库名称将用作附加数据库的名称。
+指定可附加数据库的主文件的名称。 该数据库作为数据源的默认数据库附加和使用。 指定主文件的完整路径和文件名。 在“更改默认数据库为”**** 框中指定的数据库名称将用作附加数据库的名称。
 
 ### <a name="use-ansi-quoted-identifiers"></a>使用 ANSI 引用的标识符
 
@@ -59,7 +60,7 @@ WHERE "LastName" = 'O''Brien'
 
 在 ANSI_WARNINGS 设置为开启时，SQL Server 会对违反 ANSI 规则但并不违反 Transact-SQL 规则的情况发出警告消息。 此类错误的示例为执行 INSERT 或 UPDATE 语句时数据截断，或在执行聚合函数时遇到 Null 值。 
 
-在 ANSI_PADDING 设置为开启时，将不自动剪裁 varchar  值的尾随空格和 varbinary  值的尾随零。
+在 ANSI_PADDING 设置为开启时，将不自动剪裁 varchar**** 值的尾随空格和 varbinary**** 值的尾随零。
 
 ### <a name="application-intent"></a>应用程序意向
 
@@ -67,11 +68,11 @@ WHERE "LastName" = 'O''Brien'
 
 ### <a name="multi-subnet-failover"></a>多子网故障转移。
 
-如果应用程序连接到不同子网上的高可用性、灾难恢复可用性组 (AG)（AlwaysOn 可用性组），那么启用多子网故障转移  将配置适用于 SQL Server 的 ODBC 驱动程序，以便更快地检测和连接到（当前）活动服务器。
+如果应用程序连接到不同子网上的高可用性、灾难恢复可用性组 (AG)（AlwaysOn 可用性组），那么启用多子网故障转移**** 将配置适用于 SQL Server 的 ODBC 驱动程序，以便更快地检测和连接到（当前）活动服务器。
 
 ### <a name="transparent-network-ip-resolution"></a>透明网络 IP 解析。
 
-将多子网故障转移  的行为更改为，在故障转移期间更快地重新连接。 有关详细信息，请参阅[使用透明网络 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)。
+将多子网故障转移**** 的行为更改为，在故障转移期间更快地重新连接。 有关详细信息，请参阅[使用透明网络 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)。
 
 ### <a name="column-encryption"></a>列加密。
 
@@ -81,11 +82,11 @@ WHERE "LastName" = 'O''Brien'
 
 连接到 SQL Server 2012 或更高版本时，使用旧 SET FMTONLY 元数据发现方法。 仅当使用 [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 不支持的查询（如包含临时表的查询）时才启用。 
 
-### <a name="next"></a>Next
+### <a name="next"></a>下一步
 
 前进到向导的下一个屏幕。
 
-### <a name="back"></a>后退
+### <a name="back"></a>返回
 
 返回到向导的上一个屏幕。
 

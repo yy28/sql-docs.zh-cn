@@ -1,7 +1,8 @@
 ---
-title: PDO::lastInsertId | Microsoft Docs
+title: PDO::lastInsertId
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDO::lastInsertId 函数的 API 参考。
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d63244d93ab8fcbf2cbc6957dc3ddfcef435bb27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919161"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646727"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,15 +30,15 @@ ms.locfileid: "80919161"
 string PDO::lastInsertId ([ $name = NULL ] );  
 ```  
   
-#### <a name="parameters"></a>parameters  
-$name：允许指定序列名称的可选字符串  。 
+#### <a name="parameters"></a>参数  
+$name：允许指定序列名称的可选字符串**。 
   
 ## <a name="return-value"></a>返回值  
 如果未提供序列名称，则为最近添加的行的标识符的字符串。
 如果提供了序列名称，则为最近添加的序列的标识符的字符串。
 如果方法调用失败，则返回空字符串。
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
 在版本 2.0 和 4.3 之间，可选参数是表名称，返回值是最近添加到提供的表中的行的 ID。
 从 5.0 开始，可选参数被视为序列名称，返回值是为提供的序列名称最近添加的序列。

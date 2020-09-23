@@ -1,4 +1,5 @@
 ---
+description: 删除作业类别
 title: 删除作业类别
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,20 +18,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 445f3818a1b59004cea558f8631aba85a3f1e8d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0b4c43a4585bee8569436451dd3ed3ac30a8ed3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85690972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463213"
 ---
 # <a name="delete-a-job-category"></a>删除作业类别
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍了如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业类别。  
+本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业类别。  
   
 作业类别有助于您组织作业，从而更容易筛选和分组。 例如，可以将所有数据库备份作业组织到“数据库维护”类别中。  
   
@@ -48,17 +49,17 @@ ms.locfileid: "85690972"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开您想要在其中删除作业类别的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”** 。  
+3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别  _server\_name_”对话框中，选择要删除的作业类别。  
+4.  在“管理作业类别 _server\_name_”对话框中，选择要删除的作业类别。  
   
 5.  单击 **“删除”** 。  
   
-6.  在 **“作业类别”** 对话框中，单击 **“是”** 。  
+6.  在 **“作业类别”** 对话框中，单击 **“是”**。  
   
-7.  关闭“管理作业类别  _server\_name_”对话框。  
+7.  关闭“管理作业类别 _server\_name_”对话框。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
@@ -68,7 +69,7 @@ ms.locfileid: "85690972"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- deletes the job category named AdminJobs.  

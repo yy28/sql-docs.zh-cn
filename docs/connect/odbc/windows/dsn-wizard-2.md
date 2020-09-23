@@ -1,21 +1,22 @@
 ---
+description: 数据源向导屏幕 2 (ODBC Driver for SQL Server)
 title: 数据源向导屏幕 2 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70152570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462206"
 ---
 # <a name="data-source-wizard-screen-2"></a>数据源向导屏幕 2
 
@@ -43,23 +44,27 @@ ms.locfileid: "70152570"
 
 ### <a name="with-active-directory-interactive-authentication"></a>使用 Active Directory 交互式身份验证
 
-指定驱动程序通过提供登录 ID 使用 Azure Active Directory 交互模式向 SQL Server 进行身份验证。 这将触发“Azure 身份验证提示”对话框。
+指定驱动程序通过提供登录 ID 使用 Azure Active Directory 交互模式向 SQL Server 进行身份验证。 此选项将触发“Azure 身份验证提示”对话框。
+
+### <a name="with-managed-identity-authentication"></a>使用托管标识身份验证
+
+指定驱动程序使用托管标识向 SQL Server 进行身份验证。
 
 ### <a name="login-id"></a>登录 ID
 
-如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”  或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”  或“使用用户输入的登录 ID 进行 Active Directory 交互身份验证”  ，则指定驱动程序连接到 SQL Server 时使用的登录 ID。 这仅适用于为确定服务器默认设置建立的连接；不适用于创建数据源之后使用该数据源建立的后续连接。
+如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”**** 或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”**** 或“使用用户输入的登录 ID 进行 Active Directory 交互身份验证”****，则指定驱动程序连接到 SQL Server 时使用的登录 ID。 如果选择“使用托管标识身份验证”，请指定托管标识的对象 ID 或保留为空以使用默认标识。 此字段仅适用于为确定服务器默认设置建立的连接；除非使用托管身份验证，否则它不适用于创建数据源之后使用该数据源建立的后续连接。
 
 ### <a name="password"></a>密码
 
-如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”  或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”  ，则指定驱动程序连接到 SQL Server 时使用的密码。 这仅适用于为确定服务器默认设置建立的连接；不适用于使用新数据源建立的后续连接。
+如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”**** 或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”****，则指定驱动程序连接到 SQL Server 时使用的密码。 此字段仅适用于为确定服务器默认设置建立的连接；不适用于使用新数据源建立的后续连接。
 
-如果选择“使用集成 Windows 身份验证”或“使用 Active Directory 集成身份验证”，则禁用“登录 ID”和“密码”。
+如果选择“使用集成 Windows 身份验证”**** 或“使用 Active Directory 集成身份验证”****，则禁用“登录 ID”**** 和“密码”****。
 
-### <a name="next"></a>Next
+### <a name="next"></a>下一步
 
 前进到向导的下一个屏幕。
 
-### <a name="back"></a>后退
+### <a name="back"></a>返回
 
 返回到向导的上一个屏幕。
 

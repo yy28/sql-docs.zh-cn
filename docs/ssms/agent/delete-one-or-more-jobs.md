@@ -1,4 +1,5 @@
 ---
+description: 删除一个或多个作业
 title: 删除一个或多个作业
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,20 +18,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7f007261b5c0efbf03507ac810531bb34e24c75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4b9302f1c03f1cff9c3499847047b911b81353e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85690877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371593"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题说明如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业。  
+本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -43,21 +44,21 @@ ms.locfileid: "85690877"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  依次展开“SQL Server 代理”  和“作业”  ，右键单击要删除的作业，再单击“删除”  。  
+2.  依次展开“SQL Server 代理”**** 和“作业”****，右键单击要删除的作业，再单击“删除”****。  
   
-3.  在“删除对象”  对话框中，确认选择了要删除的作业。  
+3.  在“删除对象”**** 对话框中，确认选择了要删除的作业。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
 #### <a name="to-delete-multiple-jobs"></a>删除多个作业  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** 。  
+2.  展开 **“SQL Server 代理”**。  
   
-3.  右键单击“作业活动监视器”  ，然后单击“查看作业活动”  。  
+3.  右键单击“作业活动监视器”****，然后单击“查看作业活动”****。  
   
-4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”  。  
+4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”****。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
@@ -67,7 +68,7 @@ ms.locfileid: "85690877"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE msdb ;  

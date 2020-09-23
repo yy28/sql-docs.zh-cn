@@ -1,7 +1,8 @@
 ---
+description: 使用空间数据类型
 title: 使用空间数据类型 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83f64df45036091985ccb6e26b86907882939313
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487957"
 ---
 # <a name="using-spatial-datatypes"></a>使用空间数据类型
 
@@ -25,7 +26,7 @@ ms.locfileid: "80916793"
 
 ## <a name="creating-a-geometry--geography-object"></a>创建 geometry / geography 对象
 
-创建 Geometry / Geography 对象的主要方法有两种：从熟知文本 (WKT) 或熟知二进制 (WKB) 进行转换。
+创建 Geometry / Geography 对象的主要方法有两种：从熟知文本 (WKT) 或内部 SQL Server 格式 (CLR) 进行转换。
 
 ### <a name="creating-from-wkt"></a>从 WKT 创建
 
@@ -37,14 +38,14 @@ Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 
 这将创建具有 Spatial Reference System Identifier (SRID) 0 的 LINESTRING Geometry 对象和具有 SRID 4326 的 Geography 对象。
 
-### <a name="creating-from-wkb"></a>从 WKB 创建
+### <a name="creating-from-clr"></a>从 CLR 创建
 
 ```java
-byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
-byte[] geogWKB = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geomCLR = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geogCLR = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
 
-Geometry geomWKT = Geometry.deserialize(geomWKB);
-Geography geogWKT = Geography.deserialize(geogWKB);
+Geometry geomWKT = Geometry.deserialize(geomCLR);
+Geography geogWKT = Geography.deserialize(geogCLR);
 ```
 
 这将创建一个 Geometry 和 Geography 对象，该对象与以前从 WKT 创建的对象相同。
@@ -67,7 +68,7 @@ pstmt.setGeometry(1, geomWKT);
 pstmt.execute();
 ```
 
-使用 Geography 列和 setGeography()  方法可以对 Geography 对应项执行相同的操作。
+使用 Geography 列和 setGeography()**** 方法可以对 Geography 对应项执行相同的操作。
 
 要读取 Geometry / Geography 列，请执行以下操作：
 
@@ -79,11 +80,11 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 }
 ```
 
-使用 Geography 列和 getGeography()  方法可以对 Geography 对应项执行相同的操作。
+使用 Geography 列和 getGeography()**** 方法可以对 Geography 对应项执行相同的操作。
 
 ## <a name="newly-introduced-apis"></a>新引入的 API
 
-以下是在此新增功能中引入的新公共 API，它们位于类 SQLServerPreparedStatement  、SQLServerResultSet  、Geometry  和 Geography  中。
+以下是在此新增功能中引入的新公共 API，它们位于类 SQLServerPreparedStatement****、SQLServerResultSet****、Geometry**** 和 Geography**** 中。
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
@@ -101,17 +102,17 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |Geography getGeography(int colunIndex)| 返回此 ResultSet 对象的当前行中指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geography 对象。
 |Geography getGeography(String columnName)| 返回此 ResultSet 对象的当前行中指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geography 对象。
 
-### <a name="geometry"></a>Geometry
+### <a name="geometry"></a>几何结构
 
 |方法|说明|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geometry 实例的构造函数，增加了该实例传递的任何 Z（标高）和 M（度量）值。
-|Geometry STGeomFromWKB(byte[] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geometry 实例的构造函数。
-|Geometries deserialize(byte[] wkb)| 空间数据的内部 SQL Server 格式的 Geometry 实例的构造函数。
+|Geometry STGeomFromWKB(byte[] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geometry 实例的构造函数。 注意：此方法目前使用内部 SQL Server 格式 (CLR) 来创建 Geometry 实例，这是驱动程序中的一个已知问题，计划将其更改为接受 WKB 数据。 对于已经使用此方法的现有用户，请考虑切换为 deserialize(byte)。
+|Geometries deserialize(byte[] clr)| 空间数据的内部 SQL Server 格式的 Geometry 实例的构造函数。
 |Geometry parse(String wkt)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geometry 实例的构造函数。 空间引用标识符默认为 0。
 |Geometry point(double x, double y, int SRID)| Geometry 实例的构造函数，表示来自其 X 和 Y 值的 Point 实例以及空间引用标识符。
 |String STAsText()| 返回 Geometry 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。
-|byte[] STAsBinary()| 返回 Geometry 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
+|byte[] STAsBinary()| 返回 Geometry 实例的内部 SQL Server 格式 (CLR) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
 |byte[] serialize()| 返回表示 Geometry 类型的内部 SQL Server 格式的字节。
 |boolean hasM()| 如果对象包含 M（度量）值，则返回。
 |boolean hasZ()| 如果对象包含 Z（标高）值，则返回。
@@ -131,12 +132,12 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |方法|说明|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geography 实例的构造函数，增加了该实例传递的任何 Z（标高）和 M（度量）值。
-|Geography STGeomFromWKB(byte[] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geography 实例的构造函数。
-|Geography deserialize(byte[] wkb)| 空间数据的内部 SQL Server 格式的 Geography 实例的构造函数。
+|Geography STGeomFromWKB(byte[] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geography 实例的构造函数。 注意：此方法目前使用内部 SQL Server 格式 (CLR) 来创建 Geometry 实例，但在将来将改为接受 WKB 数据，因为此方法 (STGeomFromWKB) 的对应 SQL Server 使用 WKB。 对于已经使用此方法的现有用户，请考虑切换为 deserialize(byte)。
+|Geography deserialize(byte[] clr)| 空间数据的内部 SQL Server 格式的 Geography 实例的构造函数。
 |Geography parse(String wkt)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geography 实例的构造函数。 空间引用标识符默认为 0。
 |Geography point(double lon, double lat, int SRID)| 地理实例的构造函数，它表示来自其经纬度的点实例和空间引用标识符。
 |String STAsText()| 返回 Geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。
-|byte[] STAsBinary())| 返回 Geography 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
+|byte[] STAsBinary())| 返回 Geography 实例的内部 SQL Server 格式 (CLR) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
 |byte[] serialize()| 返回表示 Geography 类型的内部 SQL Server 格式的字节。
 |boolean hasM()| 如果对象包含 M（度量）值，则返回。
 |boolean hasZ()| 如果对象包含 Z（标高）值，则返回。
@@ -153,7 +154,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ## <a name="limitations-of-spatial-datatypes"></a>空间数据类型的限制
 
-1. 从 SQL Server 2012 及更高版本开始，仅支持空间子数据类型 CircularString  、CompoundCurve  、CurvePolygon  和 FullGlobe  。
+1. 从 SQL Server 2012 及更高版本开始，仅支持空间子数据类型 CircularString****、CompoundCurve****、CurvePolygon**** 和 FullGlobe****。
 
 2. Always Encrypted 不能与空间数据类型一起使用。
 

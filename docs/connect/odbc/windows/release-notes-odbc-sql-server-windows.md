@@ -2,7 +2,7 @@
 title: Windows 上的 ODBC Driver for SQL Server 发行说明
 description: 本发行说明文章介绍了 Windows 上每个发行版 Microsoft ODBC Driver for SQL Server 的变更内容。
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728454"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898820"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 发行说明
 
@@ -43,13 +43,34 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="176"></a>17.6
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+版本号：17.6.1.1  
+发布日期：2020 年 7 月 31 日
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| 新增功能 | 详细信息 |
+| :------- | :------ |
+| 预定义语句的元数据缓存 | 请参阅[使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| SQL_COPT_SS_AUTOBEGINTXN 连接属性用于控制自动 BEGIN TRANSACTION 是在 ROLLBACK 后还是 COMMIT 之后发生 | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
+| bug 修复。 | [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>以前的版本
+
 ## <a name="1752"></a>17.5.2
 
 ![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120137)  
 ![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 版本号：17.5.2.1  
-发布日期：2019 年 3 月 6 日
+发布日期：2020 年 3 月 6 日
 
 如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
 对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -64,8 +85,6 @@ GeneMi (and CraigG).  2019/03/30.
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>以前的版本
-
 通过单击以下部分中的下载链接，下载 ODBC Driver 的早期版本：
 
 ## <a name="175"></a>17.5
@@ -74,7 +93,7 @@ GeneMi (and CraigG).  2019/03/30.
 ![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 版本号：17.5.1.1  
-发布日期：2019 年 1 月 31 日
+发布日期：2020 年 1 月 31 日
 
 如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
 对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
@@ -147,7 +166,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
-| Azure Active Directory 托管服务标识（系统和用户分配）身份验证模式。 | 请参阅[结合使用 Azure Active Directory 和 ODBC Driver](../using-azure-active-directory.md)。 |
+| Azure Active Directory 托管标识（系统和用户分配）身份验证模式。 | 请参阅[结合使用 Azure Active Directory 和 ODBC Driver](../using-azure-active-directory.md)。 |
 | 能够针对 Always Encrypted 列流式传输输入参数。 | 请参阅[使用 Always Encrypted 时的 ODBC 驱动程序限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)。 |
 | XA 分布式事务。 | [使用 XA 事务](../use-xa-with-dtc.md)。 |
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |

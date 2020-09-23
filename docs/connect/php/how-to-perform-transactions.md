@@ -1,7 +1,8 @@
 ---
-title: 如何：执行事务 | Microsoft Docs
+title: 如何：执行事务
+description: 本主题说明并演示了如何使用 Microsoft Drivers for PHP for SQL Server 执行事务
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3945b20d7aaf3b6de778aaa3dee83f028be06a23
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c5a04b2a68c47b85ce89512f4ae772fb6c9408b9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916124"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680632"
 ---
 # <a name="how-to-perform-transactions"></a>如何：执行事务
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,18 +43,18 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 此主题的其余部分介绍并演示了如何使用 SQLSRV 驱动程序执行事务。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 如下概述执行事务的步骤：  
   
 1.  使用 **sqlsrv_begin_transaction**开始事务。  
   
 2.  检查每次查询（事务的一部分）是成功还是失败。  
   
-3.  在适当情况下，使用 **sqlsrv_commit**开始事务。 否则，使用 **sqlsrv_rollback**开始事务。 在调用 sqlsrv_commit 或 sqlsrv_rollback 后，驱动程序将返回到自动提交模式   。  
+3.  在适当情况下，使用 **sqlsrv_commit**开始事务。 否则，使用 **sqlsrv_rollback**开始事务。 在调用 sqlsrv_commit 或 sqlsrv_rollback 后，驱动程序将返回到自动提交模式********。  
   
     默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
   
-    如果未使用 sqlsrv_commit 提交显式事务，在关闭脚本的连接或终止后，将回退显式事务  。  
+    如果未使用 sqlsrv_commit 提交显式事务，在关闭脚本的连接或终止后，将回退显式事务****。  
   
     不要使用嵌入式 Transact-SQL 来执行事务。 例如，不要以 Transact-SQL 查询的方式执行包含“BEGIN TRANSACTION”的语句来开始某一事务。 使用嵌入式 Transact-SQL 执行事务时，无法保证出现预期的事务行为。  
   
@@ -150,7 +151,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>注释  
-为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，我们建议应检查对 sqlsrv  函数的任何调用是否存在错误并进行相应处理。
+为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，我们建议应检查对 sqlsrv**** 函数的任何调用是否存在错误并进行相应处理。
   
 ## <a name="see-also"></a>另请参阅  
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

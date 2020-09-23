@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c1f270bb3f26cada3944979ee32019737dcb13e3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547999"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392073"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -26,7 +26,7 @@ ms.locfileid: "84547999"
 ## <a name="viewing-log-information"></a>查看日志信息  
  该日志为 ASCII 文本文件。 可以使用任何文本编辑器查看该文件。 报表服务器 HTTP 日志文件等同于 IIS 中的 W3C 扩展日志文件，并且使用与其类似的字段，因此可以使用现有的 IIS 日志文件查看器来读取报表服务器 HTTP 日志文件。 下表提供有关 HTTP 日志文件的其他信息：  
   
-|||  
+|日志文件信息|说明|  
 |-|-|  
 |文件名|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
 |文件位置|该文件位于 \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles 中。|  
@@ -55,7 +55,7 @@ ms.locfileid: "84547999"
 ## <a name="log-file-fields"></a>日志文件字段  
  下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 **HTTPTraceSwitches** 配置设置来指定要包括哪些字段。 如果您不指定 **HTTPTraceSwitches** ，则“默认” 列会指定日志文件是否自动包含某个字段。  
   
-|字段|描述|默认|  
+|字段|说明|默认|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|此值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
 |HTTPTraceSwitches|此值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  

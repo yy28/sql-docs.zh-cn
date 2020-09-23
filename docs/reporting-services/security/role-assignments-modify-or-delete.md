@@ -1,4 +1,5 @@
 ---
+description: 修改或删除角色分配（SSRS Web 门户）
 title: 修改或删除角色分配（SSRS Web 门户）| Microsoft Docs
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: defe3952f9fd3c5c4eb4453c2071820cb44a3fb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480649"
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色分配 - 修改或删除
 
@@ -27,7 +28,7 @@ ms.locfileid: "65570649"
 
 根据您的目标，其他方法可能会更合适。 例如自定义或创建新的角色定义，或者在 Active Directory 中修改组帐户的成员身份。  
 
-例如，假定有一组需要管理内容的用户，但他们不应具有与“内容管理员”关联的所有权限。 可以创建一个名为“部门内容管理员”的新角色定义。 它可以包含内容管理员中的所有任务，除了设置各项安全策略  。
+例如，假定有一组需要管理内容的用户，但他们不应具有与“内容管理员”关联的所有权限。 可以创建一个名为“部门内容管理员”的新角色定义。 它可以包含内容管理员中的所有任务，除了设置各项安全策略****。
 
 同样，如果你是系统或网络管理员，在 Web 门户中管理 Active Directory 组帐户可能比管理角色分配更容易。 通过为组帐户创建单个角色分配，可以减少管理角色分配的开销。 然后，当用户不再需要访问报表时，可以修改组成员身份。
   
@@ -37,13 +38,13 @@ ms.locfileid: "65570649"
   
 1. 访问[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)。
 
-2. 选择“站点设置”   > “安全性”  。 将按帐户名列出当前为服务器或扩展部署定义的所有系统级角色分配。
+2. 选择“站点设置” > “安全性”。 将按帐户名列出当前为服务器或扩展部署定义的所有系统级角色分配。
 
 3. 查找要修改或删除的角色分配。
 
-4. 若要为特定用户或组添加或删除角色，请选择“编辑”  。
+4. 若要为特定用户或组添加或删除角色，请选择“编辑”****。
 
-5. 若要删除角色分配，请选择该用户或组名旁边的复选框，然后选择“删除”  。
+5. 若要删除角色分配，请选择该用户或组名旁边的复选框，然后选择“删除”****。
 
 ### <a name="to-modify-or-delete-an-item-role-assignment"></a>修改或删除项角色分配
 
@@ -51,13 +52,13 @@ ms.locfileid: "65570649"
 
 2. 悬停在该项之上，然后选择下拉箭头。
 
-3. 在下拉菜单中，选择“安全性”  。
+3. 在下拉菜单中，选择“安全性”****。
 
 4. 查找要修改或删除的角色分配。
 
-5. 若要为特定用户或组添加或删除角色，请选择“编辑”  。
+5. 若要为特定用户或组添加或删除角色，请选择“编辑”****。
 
-6. 若要删除角色分配，请选择该用户或组名旁边的复选框，然后选择“删除”  。
+6. 若要删除角色分配，请选择该用户或组名旁边的复选框，然后选择“删除”****。
 
 ## <a name="see-also"></a>另请参阅
 

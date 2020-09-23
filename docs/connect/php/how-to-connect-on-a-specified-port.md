@@ -1,5 +1,6 @@
 ---
-title: 如何：在指定端口上连接 | Microsoft Docs
+title: 如何：在指定端口上连接
+description: 了解如何使用用于 SQL Server 的 PHP 的 Microsoft SQLSRV 和 PDO_SQLSRV 驱动程序连接到特定端口上配置的数据库。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916493"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435232"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>如何：在指定端口上连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,14 +29,14 @@ ms.locfileid: "80916493"
   
 1.  对服务器配置为接受连接的端口进行验证。 若要了解如何将服务器配置为接受指定端口上的连接，请参阅[如何：配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
-2.  将所需端口添加到 sqlsrv_connect 函数的 [$serverName](../../connect/php/sqlsrv-connect.md) 参数  。 用逗号分隔服务器名称和端口。 例如，以下代码行使用 SQLSRV 驱动程序来演示如何在端口 1521 上连接到名为 *myServer* 的服务器：  
+2.  将所需端口添加到 sqlsrv_connect 函数的 [$serverName](../../connect/php/sqlsrv-connect.md) 参数。 用逗号分隔服务器名称和端口。 例如，以下代码行使用 SQLSRV 驱动程序来演示如何在端口 1521 上连接到名为 *myServer* 的服务器：  
   
     ```  
     $serverName = "myServer, 1521";  
     sqlsrv_connect( $serverName );  
     ```  
   
-    以下代码行使用 PDO_SQLSRV 驱动程序来演示如何在端口 1521 上连接到名为 myServer 的服务器  ：  
+    以下代码行使用 PDO_SQLSRV 驱动程序来演示如何在端口 1521 上连接到名为 myServer 的服务器：  
   
     ```  
     $serverName = "(local), 1521";  

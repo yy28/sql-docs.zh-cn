@@ -1,5 +1,6 @@
 ---
-title: 结合使用语句和存储过程 | Microsoft Docs
+title: 结合使用语句和存储过程
+description: 了解如何使用 Microsoft JDBC Driver for SQL Server 执行存储过程，以及如何使用输入和输出参数在其中传入和传出数据。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4848a2b3ecf11699894cb7a8acdcbde39786e53
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025866"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411001"
 ---
 # <a name="using-statements-with-stored-procedures"></a>结合使用语句和存储过程
 

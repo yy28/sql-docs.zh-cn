@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487214"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396830"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 错误
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|类别|值|  
 |-|-|  
 |产品名称|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件 ID|rsProcessingError|  
@@ -71,7 +71,7 @@ ms.locfileid: "81487214"
   
 -   如果在报表服务器上查看报表，并且以报表服务器上的本地管理员身份运行，则可以通过右键单击页并选择“查看源”来查看调用堆栈  。 调用堆栈中提供了详细信息。  
   
--   如果以本地管理员身份在报表服务器上运行，请在日志文件中搜索 `ReportProcessingException`。 日志项包含详细信息。 报表服务器日志文件通常位于 \<drive>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__datetimestamp.log   。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+-   如果以本地管理员身份在报表服务器上运行，请在日志文件中搜索 `ReportProcessingException`。 日志项包含详细信息。 报表服务器日志文件通常位于 \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__datetimestamp.log。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>无法加载表达式宿主程序集。  
  自定义程序集必须设置了强名称签名和 AllowPartiallyTrustedCallers 属性。 有关详细信息，请参阅 [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) 和 [Understanding Security Policies](../../reporting-services/extensions/secure-development/understanding-security-policies.md)。  
@@ -97,11 +97,11 @@ ms.locfileid: "81487214"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>无法比较筛选器的数据类型  
  在筛选器公式中，定义筛选内容的筛选器表达式和筛选器值必须为相同数据类型才能进行比较。 如果出现以下错误之一，请修改字段表达式或筛选器值以使数据类型匹配：  
   
--   无法为 \<report item name> 执行 \<report item type> 的处理   。 无法比较 \<type> 和 \<type> 类型的数据   。 请检查 \<report item name> 返回的数据类型  。  
+-   无法对 \<report item name> 执行 \<report item type> 处理。 无法比较 \<type> 和 \<type> 类型的数据。 请检查 \<report item name> 返回的数据类型。  
   
--   无法计算 \<property name>  。  
+-   无法计算 \<property name>。  
   
--   无法计算 \<property name>  。 它引用了一个数据集字段，该字段包含一个错误：\<error string>  。  
+-   无法计算 \<property name>。 它引用了一个数据集字段，该字段包含一个错误：\<error string>。  
   
  有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "81487214"
   
  也可以将特定作用域的名称传递给聚合函数。 作用域可以引用数据集和数据区域的名称，也可以引用位于数据层次结构中较高位置的作用域的名称。 这适用于以下消息：  
   
--   \<report item type>“\<report item name>”具有无效的作用域“\<scope name>”    。 该作用域必须是当前作用域或包含在当前作用域内。  
+-   \<report item type>“\<report item name>”具有无效的作用域“\<scope name>”。 该作用域必须是当前作用域或包含在当前作用域内。  
   
--   \<report item type>“\<report item name>”的 \<property name> 表达式包含的作用域参数对聚合函数无效    。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
+-   \<report item type>“\<report item name>”的 \<property name> 表达式包含的作用域参数对聚合函数无效。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
   
  对于计算运行总计的聚合函数（**Previous**、 **RunningValue**或 **RowNumber**），可以将作用域参数指定为行组名称或列组名称，但不能同时指定二者。 这适用于以下错误消息：  
   
--   \<report item type>“\<report item name>”的数据单元中所用的 Previous、RunningValue 或 RowNumber 聚合函数同时引用了 \<report item type> 的行和列中的分组作用域       。 \<report item type> 内的所有 Previous、RunningValue 和 RowNumber 聚合函数的作用域参数均可引用数据行分组或数据列分组，但不能同时引用这二者     。  
+-   \<report item type>“\<report item name>”的数据单元中所用的 Previous、RunningValue 或 RowNumber 聚合函数同时引用了 \<report item type> 的行和列中的分组作用域。 \<report item type> 内的所有 Previous、RunningValue 和 RowNumber 聚合函数的作用域参数均可引用数据行分组或数据列分组，但不能同时引用这二者。  
   
  有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   

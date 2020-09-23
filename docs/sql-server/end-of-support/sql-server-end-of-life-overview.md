@@ -1,20 +1,20 @@
 ---
 title: 终止支持选项
 description: 了解已达到支持结束时间的 SQL Server 产品的不同选项，如 SQL Server 2005、SQL Server 2008 和 SQL Server 2008 R2。
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112103"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200294"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 终止支持选项 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "87112103"
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 支持的版本和版本升级：
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ ms.locfileid: "87112103"
 
 - **成本**：单一数据库可能经济高效，因为硬件、软件和维护成本已减轻，并且可以按秒或小时的使用情况付费。 
 - **灵活性**：如果开发人员工作效率和解决方案快速上市时间至关重要，或者需要提供外部访问权限，则单一数据库特别适用于云设计的应用程序。  
-- **常见功能**：提供最常用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，但不及 Azure SQL 数据库托管实例那么多。  
+- **常见功能**：提供最常用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，但不及 SQL 托管实例那么多。  
 - **快速部署**：可以快速部署单一数据库。 
 - **可伸缩性**：可以根据业务需要快速轻松地扩展和缩减，从而提供额外的节省成本优势。 
 - **可用性**：服务成本包括存储和高可用性，同时保证 99.995% 的可用性。  
@@ -177,7 +177,7 @@ ms.locfileid: "87112103"
 ### <a name="considerations"></a>注意事项
 
 - **有限的迁移选项**：一次只能迁移一个数据库，而不是整个实例。   
-- **功能限制**：尽管可以使用最常用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，但单一数据库的功能集并不像 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 那样完整。 
+- **功能限制**：尽管可以使用最常用的 Azure SQL 数据库功能，但单一数据库的功能集并不像 Azure SQL 托管实例或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 那样完整。 
 - **Transact-SQL 差异**：单一数据库与本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间存在一些 [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) 差异。 
 - **大小限制**：单一数据库的最大数据库大小为 100 TB，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大数据库大小为 524 PB。 
 - **维护时间**：虽然几乎是透明的，但无法保证准确的维护时间。 
@@ -197,9 +197,9 @@ ms.locfileid: "87112103"
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [数据库迁移服务](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="sql-managed-instance"></a>SQL 托管实例
 
-如果想要充分利用减轻维护和成本负担，但发现 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库的功能集过于限制，则可以迁移到 [Azure SQL 数据库托管实例](/azure/sql-database/sql-database-managed-instance)。 托管实例与本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非常相似，无需担心硬件故障或修补问题。 “托管实例”是系统和用户数据库的集合，附带一组共享资源，这些资源可直接迁移，并且可用于大多数到云的迁移。 对于需要使用最新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 稳定功能，并且在进行极少量更改的情况下迁移到云中的新应用程序或现有本地应用程序，这是最佳选项。 
+如果想要充分利用减轻维护和成本负担，但发现 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库的功能集过于限制，则可以迁移到 [SQL 托管实例](/azure/sql-database/sql-database-managed-instance)。 托管实例与本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非常相似，无需担心硬件故障或修补问题。 托管实例是系统和用户数据库的集合，附带一组共享资源，这些资源可直接迁移，并且可用于大多数到云的迁移。 对于需要使用最新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 稳定功能，并且在进行极少量更改的情况下迁移到云中的新应用程序或现有本地应用程序，这是最佳选项。 
 
 ### <a name="benefits"></a>优点
 
@@ -225,10 +225,10 @@ ms.locfileid: "87112103"
 
 ### <a name="resources"></a>资源
 
-[Azure SQL 数据库托管实例概述](/azure/sql-database/sql-database-managed-instance)       
+[SQL 托管实例概述](/azure/sql-database/sql-database-managed-instance)       
 [选择 Azure SQL 选项](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL 数据库功能比较](/azure/sql-database/sql-database-features)       
-[将 SQL Server 迁移到托管实例](/azure/sql-database/sql-database-managed-instance-migrate)       
+[将 SQL Server 迁移到 Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance-migrate)       
 [更广泛的迁移过程](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 工具：

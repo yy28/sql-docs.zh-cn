@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244048"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988516"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 数据库的连接模块
+# <a name="connection-modules-for-microsoft-sql-database"></a>Microsoft SQL 数据库的连接模块
 
 本文提供了连接模块或驱动程序  的下载链接，客户端程序可以使用这些链接与 [Microsoft SQL Server](../relational-databases/database-features.md) 及其在云中的孪生平台 [Azure SQL 数据库](/azure/sql-database/)进行交互。 驱动程序适用于多种编程语言，在以下操作系统上运行：
 

@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_client_info | Microsoft Docs
+title: sqlsrv_client_info
+description: Microsoft SQLSRV Driver for PHP for SQL Server 中 sqlsrv_client_info 函数的 API 参考。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d17d3a49a241ee1ff042fceb3602b1d84f2cca9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5d1ebcbe7a022d438e1e7e10c42098127496c1f7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920112"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411183"
 ---
 # <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "80920112"
 sqlsrv_client_info( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$conn*：连接客户端时所依据的连接资源。  
   
 ## <a name="return-value"></a>返回值  
@@ -43,7 +44,7 @@ sqlsrv_client_info( resource $conn)
   
 **对于适用于 SQL Server 版本 3.2 和 3.1 的 PHP**：  
   
-|密钥|说明|  
+|键|说明|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
@@ -52,7 +53,7 @@ sqlsrv_client_info( resource $conn)
   
 **对于适用于 SQL Server 版本 3.0 和 2.0 的 PHP**：  
   
-|密钥|说明|  
+|键|说明|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL（[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 2.0）|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  

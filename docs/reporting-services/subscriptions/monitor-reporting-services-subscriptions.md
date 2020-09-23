@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742036"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396076"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+    :::column-end:::
+:::row-end:::
+
  **本文内容：**  
   
 -   [本机模式用户界面](#bkmk_native_mode)  
@@ -48,16 +55,16 @@ ms.locfileid: "80742036"
 |------------|-----------------|  
 |新订阅|在您首次创建订阅时显示。|  
 |非活动|在无法处理订阅时显示。 有关详细信息，请参阅本文稍后将介绍的“管理非活动订阅”部分。|  
-|已完成：已处理 \<number> 个，共 \<number> 个；\<number> 个错误    。|显示数据驱动订阅执行的状态；此消息来自计划和传递处理器。|  
-|已处理 \<number> 个 |计划和传递处理器成功传递或不再试图传递的通知数。 当数据驱动传递完成后，已处理通知数应等于已生成通知的总数。|  
-|总计 \<number> 个 |最后一次传递订阅生成的通知总数。|  
-|\<number> 个错误 |计划和传递处理器无法传递或不再试图传递的通知数。|  
+|已完成: 已处理 \<*number*> 个(共 \<*number*> 个)；\<*number*> 个错误。|显示数据驱动订阅执行的状态；此消息来自计划和传递处理器。|  
+|已处理 \<*number*> 个|计划和传递处理器成功传递或不再试图传递的通知数。 当数据驱动传递完成后，已处理通知数应等于已生成通知的总数。|  
+|共 \<*number*> 个|最后一次传递订阅生成的通知总数。|  
+|\<*number*> 个错误|计划和传递处理器无法传递或不再试图传递的通知数。|  
 |无法发送邮件：传输无法连接到服务器。|表示报表服务器未连接到邮件服务器；此消息来自电子邮件传递扩展插件。|  
-|文件 \<filename> 已写入 \<path>  。|表示已成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
+|文件 \<*filename*> 已写入到 \<path> 中。|表示已成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
 |写入文件时出现未知错误。|表示未能成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
 |连接到目标文件夹 \<path> 时出错。 请验证目标文件夹或文件共享是否存在。|表示无法找到指定的文件夹；此消息来自文件共享传递扩展插件。|  
-|文件 \<filename> 无法写入 \<path>。 请重试。|表示无法用新版本更新文件；此消息来自文件共享传递扩展插件。|  
-|写入文件 \<filename> 时出错：\<message>|表示未能成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
+|无法将文件 \<filename> 写入到 \<path> 中。 请重试。|表示无法用新版本更新文件；此消息来自文件共享传递扩展插件。|  
+|写入文件 \<filename> 时出错: \<message>|表示未能成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
 |\<custom status messages>|与传递成功和失败有关的状态消息，由传递扩展插件提供。 如果使用的是第三方传递扩展插件或自定义传递扩展插件，可能出现其他状态消息。|  
   
  报表服务器管理员还可以监视当前处理的标准订阅。 但不能监视数据驱动订阅。 有关详细信息，请参阅 [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。  
@@ -95,9 +102,8 @@ ms.locfileid: "80742036"
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 日志文件  
  订阅相关信息被写入 SharePoint ULS 日志。 有关为 ULS 日志配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 事件的详细信息，请参阅[为 SharePoint 跟踪日志 (ULS) 开启 Reporting Services 事件](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)。  以下是一个与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅相关的 ULS 日志条目的示例。  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Date|进程|区域|类别|级别|Correlation|消息|  
+|-|-|-|-|-|-|-|  
 |5/21/2019 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|(empty)|**发送邮件时出错。** 异常：System.Net.Mail.SmtpException:邮箱不可用。 服务器响应为：5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> 使用 PowerShell 监视订阅  

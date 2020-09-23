@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247196"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396474"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  
@@ -35,7 +35,7 @@ ms.locfileid: "87247196"
   
  下表对报表工具栏的常用功能进行了说明： 每个功能都由您访问该功能时所使用的控件标识。  
   
-|图标或控件||目标|  
+|图标或控件|名称|说明|  
 |------------------------------|-|--------|  
 |![页面导航控件](../reporting-services/media/htmlviewer-pagenav.gif "页面导航控件")|**页面导航控件**|打开报表的第一页或最后一页，逐页浏览报表，以及打开报表中的特定页面。 若要查看特定页面，请键入相应的页码，再按 Enter。|  
 |![页面显示控件](../reporting-services/media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了按比例更改外，还可以选择“页宽”，以使报表页的水平宽度适应浏览器窗口大小，或选择“整页”，以使报表的垂直高度适应浏览器窗口大小********。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  

@@ -1,6 +1,6 @@
 ---
 title: 用于在 JDBC 中执行批量插入的大容量复制 API
-description: Microsoft JDBC Driver for SQL Server 支持使用大容量复制 API 对 Azure 数据仓库执行批量插入操作。
+description: Microsoft JDBC Driver for SQL Server 支持使用大容量复制对 Azure 数据仓库执行批量插入操作，以便更快地将数据加载到数据库中。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633985"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943016"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>将大容量复制 API 用于批量插入操作
 
@@ -71,7 +71,7 @@ SQLServerConnection.getUseBulkCopyForBatchInsert()  用于检索 useBulkCopyForB
 
 ## <a name="example"></a>示例
 
-下面的示例代码展示了在两种方案（常规和大容量复制 API）中对包含上千行的 Azure DW 执行批量插入操作的用例。
+下面的示例代码展示了在两种方案（常规与大容量复制 API）中对包含一千行的 Azure Synapse Analytics (SQL DW) 执行批量插入操作的用例。
 
 ```java
     public static void main(String[] args) throws Exception

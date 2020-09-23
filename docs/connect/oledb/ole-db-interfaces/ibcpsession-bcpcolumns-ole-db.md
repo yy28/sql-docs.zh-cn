@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPColumns（OLE DB 驱动程序）| Microsoft Docs
-description: IBCPSession::BCPColumns (OLE DB)
+description: 了解 BCPSession::BCPColumns 方法如何设置要绑定到 OLE DB Driver for SQL Server 中的 SQL Server 表列的字段数。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba6126113fef947aa1253ff5ac4b9291ec2f6924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2eb8456d75a1dd04be2c547db957edf2e01bcaca
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244680"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860218"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口。  
+ 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法  。 在为某一大容量复制操作多次调用此方法时，也会发生这一意外调用。  

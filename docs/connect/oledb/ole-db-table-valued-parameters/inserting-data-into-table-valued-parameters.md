@@ -1,6 +1,6 @@
 ---
 title: 向表值参数中插入数据（OLE DB 驱动程序）| Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 将数据插入表值参数
+description: OLE DB Driver for SQL Server 支持两种供使用者为表值参数行指定数据的模型：推送模型和请求模型。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5317574a09194b2a926bed88de7edf7db913df6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244152"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859909"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

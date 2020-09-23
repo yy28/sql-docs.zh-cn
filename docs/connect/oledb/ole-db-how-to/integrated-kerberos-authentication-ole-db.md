@@ -1,6 +1,6 @@
 ---
 title: 集成的 Kerberos 身份验证（OLE DB 驱动程序）| Microsoft Docs
-description: 集成的 Kerberos 身份验证 (OLE DB)
+description: 通过此示例了解如何使用 OLE DB Driver for SQL Server 中的 OLE DB 获得 Kerberos 相互身份验证。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 1fc52cf1cd0ca2b4e7b04e998f7e8f278cc522e3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d14c3b3b6bd872a529bbe20ab41d650120f406ab
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244737"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860533"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

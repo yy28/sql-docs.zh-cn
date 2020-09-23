@@ -1,5 +1,6 @@
 ---
-title: SQLServerConnection 类 | Microsoft Docs
+title: SQLServerConnection 类
+description: 详细了解 JDBC Driver for SQL Server 中的 SQLServerConnection 类的公共 API。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6248e126806b15592bbc3d6c458045ca7d9db042
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6827b79b4d1cc7b3f66db3c53c338614ec49fc3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920680"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411473"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表示连接到 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的 JDBC 连接。  
+  表示连接至 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的 JDBC 连接。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   

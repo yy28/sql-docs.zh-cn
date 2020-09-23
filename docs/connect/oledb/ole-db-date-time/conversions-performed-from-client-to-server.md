@@ -1,6 +1,6 @@
 ---
 title: 在客户端和服务器之间执行的转换 | Microsoft Docs
-description: 在客户端和服务器之间执行的转换
+description: 了解在使用 OLE DB Driver for SQL Server 编写的客户端应用程序与 SQL Server 之间执行的日期/时间转换。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5a43604c485c2baf7bb5b4430303db7fedd9bd8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244871"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860226"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "87244871"
 |15|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 datetime 转换语义  。 秒舍入为最接近的 1/300 秒。|  
 |16|嵌入 SSVARIANT 客户端结构的指定类型值的转换行为与未嵌入 SSVARIANT 客户端结构的相同类型和相同值的行为相同。|  
   
-|类型|长度（以字符为单位）|缩放|  
-|-|-|-|  
+| 类型 | 长度（以字符为单位） | 缩放 |  
+| ---- | ----------------- | ----- |  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

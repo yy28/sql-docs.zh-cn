@@ -1,4 +1,5 @@
 ---
+description: 编辑运算符
 title: 编辑运算符
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 898a40aa7d9b3dea74b09bd0865946a374675bbc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ba7f994f20256e17212c0f198e3b8ba1802a22b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371943"
 ---
 # <a name="edit-an-operator"></a>编辑运算符
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对操作员能否接收通知进行编辑，并编辑他们的电子邮件地址、寻呼地址和 net send 地址。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85749039"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 只有 **sysadmin** 固定服务器角色的成员才能编辑操作员。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -52,13 +53,13 @@ ms.locfileid: "85749039"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要编辑的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要编辑的操作员，然后选择“属性”  。  
+4.  右键单击要编辑的操作员，然后选择“属性”****。  
   
-    有关“_operator\_name_ 属性”  对话框包含的可用选项的详细信息，请参阅：  
+    有关“_operator\_name_ 属性”对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性 - 新建操作员（“常规”页）](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85749039"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- updates the operator status to enabled, and sets the days   

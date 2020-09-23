@@ -1,4 +1,5 @@
 ---
+description: Clear the Job History Log
 title: Clear the Job History Log
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,20 +18,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b2958df9c99f0314ce5650a512b5dcc57ee3988f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3dc08c74c7b7daf5bf6b1f012181aeaabeb49d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468789"
 ---
-# <a name="clear-the-job-history-log"></a>Clear the Job History Log
+# <a name="clear-the-job-history-log"></a>清除作业历史记录日志
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题说明如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业历史记录日志中的内容。  
+本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志中的内容。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -43,15 +44,15 @@ ms.locfileid: "85749139"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，再展开 **“作业”** 。  
+2.  展开 **“SQL Server 代理”**，再展开 **“作业”**。  
   
-3.  右键单击某个作业，再单击 **“查看历史记录”** 。  
+3.  右键单击某个作业，再单击 **“查看历史记录”**。  
   
 4.  在 **“日志文件查看器”** 中，选择要清除其历史记录的作业，再执行下列操作：  
   
-    -   单击 **“删除”** ，再单击 **“删除历史记录”** 对话框中的 **“删除所有历史记录”** 。 可以删除所有作业历史记录，或者仅删除早于指定日期的历史记录。 若要删除所有作业历史记录，请单击 **“删除所有历史记录”** 。 如果只删除较早的作业历史记录日志，请单击 **“删除以下时间之前的历史记录”** ，然后指定日期。  
+    -   单击 **“删除”**，再单击 **“删除历史记录”** 对话框中的 **“删除所有历史记录”** 。 可以删除所有作业历史记录，或者仅删除早于指定日期的历史记录。 若要删除所有作业历史记录，请单击 **“删除所有历史记录”**。 如果只删除较早的作业历史记录日志，请单击 **“删除以下时间之前的历史记录”**，然后指定日期。  
   
-    -   单击 **“作业状态”** （如果要清除多服务器作业的历史记录日志）。 单击 **“作业”** ，单击某个作业名，再单击 **“查看远程作业历史记录”** 。  
+    -   单击 **“作业状态”** （如果要清除多服务器作业的历史记录日志）。 单击 **“作业”**，单击某个作业名，再单击 **“查看远程作业历史记录”**。  
   
 5.  单击 **“删除”** 。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "85749139"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- example removes the history for a job named NightlyBackups.  

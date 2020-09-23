@@ -1,22 +1,22 @@
 ---
-title: 如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型 | Microsoft Docs
+title: 如何：使用 PDO_SQLSRV 驱动程序以 PHP Datetime 对象形式检索日期和时间类型
+description: 本主题介绍在使用 Microsoft PDO_SQLSRV Driver for PHP for SQL Server 时，如何将日期和时间类型作为 PHP DateTime 对象进行检索
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as datetime objects
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 507dc2a228419fb695d10a437681229ec6586f11
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264568"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680752"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68264568"
 
 ### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>以 DateTime 对象形式检索日期和时间类型
 
-使用 PDO_SQLSRV 时，日期和时间类型（smalldatetime  、datetime  、date  、time  、datetime2  和 datetimeoffset  ）默认情况下作为字符串返回。 PDO::ATTR_STRINGIFY_FETCHES 和 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性都不起作用。 若要将日期和时间类型作为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象进行检索，请将连接或语句属性 `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` 设置为 true  （默认情况下为 false  ）。
+使用 PDO_SQLSRV 时，日期和时间类型（smalldatetime****、datetime****、date****、time****、datetime2**** 和 datetimeoffset****）默认情况下作为字符串返回。 PDO::ATTR_STRINGIFY_FETCHES 和 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性都不起作用。 若要将日期和时间类型作为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象进行检索，请将连接或语句属性 `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` 设置为 true****（默认情况下为 false****）。
 
 > [!NOTE]
 > 此连接或语句属性仅适用于日期和时间类型的常规获取，因为无法将 DateTime 对象指定为输出参数。

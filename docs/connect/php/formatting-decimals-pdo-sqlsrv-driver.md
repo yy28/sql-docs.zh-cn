@@ -1,22 +1,22 @@
 ---
-title: 设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）| Microsoft Docs
+title: 格式化十进制字符串和货币值（PDO_SQLSRV 驱动程序）
+description: 了解如何在使用 PDO_SQLSRV 驱动程序时使用 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 SQLSRV_ATTR_DECIMAL_PLACES 属性来格式化十进制字符串或货币值
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265154"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680652"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68265154"
 ## <a name="configure-number-of-decimal-places"></a>配置小数位数
 打开 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 后，另一个连接或语句属性 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 允许用户在显示 money 和 smallmoney 数据时配置小数位数。 它接受 [0, 4] 范围内的整数值，在显示时可能会出现舍入。 但是，基础 money 数据保持不变。
 
-语句属性始终重写相应的连接设置。 请注意，`PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项仅  影响 money 数据，并且 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 必须设置为 true。 否则，无论 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 如何设置，都会关闭格式设置。
+语句属性始终重写相应的连接设置。 请注意，`PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项仅**** 影响 money 数据，并且 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 必须设置为 true。 否则，无论 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 如何设置，都会关闭格式设置。
 
 > [!NOTE]
 > 由于 money 或 smallmoney 字段的数值范围为 4，因此，将 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 设置为任何负数或大于 4 的任何值都将被忽略。 不建议使用任何格式化的 money 数据作为任何计算的输入。

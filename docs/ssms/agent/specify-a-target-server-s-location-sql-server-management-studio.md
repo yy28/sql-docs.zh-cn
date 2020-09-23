@@ -1,4 +1,5 @@
 ---
+description: 指定目标服务器的位置
 title: 指定目标服务器位置
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 94183790d56f26a000e47b747ebae43187adac28
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 774dfce7c59249a34e1d175ae038ef31af821053
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418033"
 ---
 # <a name="specify-a-target-server39s-location"></a>指定目标服务器的位置
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍了如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的多服务器管理配置中指定目标服务器的位置。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85729738"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -45,11 +46,11 @@ ms.locfileid: "85729738"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要指定目标服务器的位置的 master 服务器。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后选择“管理目标服务器”  。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后选择“管理目标服务器”****。  
   
-3.  右键单击某一目标服务器，再选择“属性”  。  
+3.  右键单击某一目标服务器，再选择“属性”****。  
   
-4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”** 。  
+4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”**。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85729738"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE msdb ;  

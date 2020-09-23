@@ -1,6 +1,7 @@
 ---
+description: 获取完整内存转储
 title: 获取用于排查 SSMS 故障的完整内存转储
-Description: 收集完整内存转储来排查 SSMS 无响应或故障问题
+Description: 从 SQL Server Management Studio (SSMS) 中捕获诊断信息，以便可以对崩溃或无响应系统进行故障排除。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,12 +12,12 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 749562d3a4326c8db2d38e06dcc265b08b7cea68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314454"
 ---
 # <a name="get-full-memory-dump"></a>获取完整内存转储
 

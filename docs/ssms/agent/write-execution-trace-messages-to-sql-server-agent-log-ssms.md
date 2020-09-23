@@ -1,4 +1,5 @@
 ---
+description: 将执行跟踪消息写入到 SQL Server 代理错误日志中
 title: 将执行跟踪消息写入到 SQL Server 代理错误日志中
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,20 +18,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1853834259fc54e70e70178b7065ac0db7556ae6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 811721d4f3f26e65b149033ae500b7159f888cd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480223"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>将执行跟踪消息写入到 SQL Server 代理错误日志中
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代理配置为在其错误日志中包含执行跟踪消息。  
+本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为在其错误日志中包含执行跟踪消息。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85759723"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
@@ -60,9 +61,9 @@ ms.locfileid: "85759723"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要将执行跟踪消息写入到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
+2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
   
-3.  在“SQL Server 代理属性 - server\_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框。  
+3.  在“SQL Server 代理属性 - server\_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框****************__。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   

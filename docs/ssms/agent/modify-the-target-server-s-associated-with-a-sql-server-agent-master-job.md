@@ -1,4 +1,5 @@
 ---
+description: 修改与 SQL Server 代理主作业关联的目标服务器
 title: 修改与代理主作业关联的目标服务器
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,19 +12,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7012166e0415f0b1e1171723f71ebd60e3eb46f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3507ddef287a9f543b56ecb2e18c5a252260ccb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418133"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>修改与 SQL Server 代理主作业关联的目标服务器
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改与 SQL Server 代理主作业关联的目标服务器。  
 
@@ -34,7 +35,7 @@ ms.locfileid: "85715773"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -43,13 +44,13 @@ ms.locfileid: "85715773"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要修改目标服务器的作业所在的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要修改目标服务器的作业，然后选择“属性”  。  
+4.  右键单击要修改目标服务器的作业，然后选择“属性”****。  
   
-5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“目标”     。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“目标”页）](../../ssms/agent/job-properties-new-job-targets-page.md)。  
+5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“目标” 。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“目标”页）](../../ssms/agent/job-properties-new-job-targets-page.md)。  
   
 6.  完成后，单击 **“确定”** 。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85715773"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- removes the server SEATTLE2 from processing the Weekly Sales Backupsjob   
@@ -83,7 +84,7 @@ ms.locfileid: "85715773"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- assigns the multiserver job Weekly Sales Backups to the server SEATTLE2   

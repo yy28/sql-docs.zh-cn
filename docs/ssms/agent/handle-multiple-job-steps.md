@@ -1,4 +1,5 @@
 ---
+description: 处理多个作业步骤
 title: 处理多个作业步骤
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,20 +18,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc739b6c37ce91b0c6d1010f2c3d1f06a60cec6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27c19395f8962cd994ea82e0d52ede9a0131fb16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492140"
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”  。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
+如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
   
 ![SQL Server 代理作业步骤的流控制](../../ssms/agent/media/dbflow01.gif "SQL Server 代理作业步骤的流控制")  
   

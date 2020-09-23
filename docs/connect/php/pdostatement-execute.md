@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::execute | Microsoft Docs
+title: PDOStatement::execute
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDOStatement::execute 函数的 API 参考。
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 31e7465b2fca0d76f569afb83e3a7d8501fd6036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 71b9592a35fcc28b302c7aadb1ca5de0c75c3d6c
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936048"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645118"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "67936048"
 bool PDOStatement::execute ([ $input ] );  
 ```  
   
-#### <a name="parameters"></a>parameters  
-$input：（可选）包含参数标记的值的关联阵列  。  
+#### <a name="parameters"></a>参数  
+$input：（可选）包含参数标记的值的关联阵列。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 使用 PDOStatement::execute 执行的语句必须先通过 [PDO::prepare](../../connect/php/pdo-prepare.md)准备就绪。 请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) 获取有关如何指定直接或已准备的语句执行的信息。  
   
 输入参数数组的所有值将会视为 PDO::PARAM_STR 值。  

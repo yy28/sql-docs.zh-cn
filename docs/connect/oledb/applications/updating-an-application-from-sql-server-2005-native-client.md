@@ -1,6 +1,6 @@
 ---
 title: 从 SQL Server 2005 Native Client 更新应用程序 | Microsoft Docs
-description: 从 SQL Server 2005 Native Client 更新应用程序
+description: 了解自 SQL Server 2005 (9.x) 中的 SQL Server Native Client 以来在 OLE DB Driver for SQL Server 中的重大更改。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e2bf701b09740174cce2bf0df118ff0bb2609502
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 40b101c189832a91dd06d1bba58b17c341d11130
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245026"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860042"
 ---
 # <a name="updating-applications-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

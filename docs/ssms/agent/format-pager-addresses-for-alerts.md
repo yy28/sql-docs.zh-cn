@@ -1,4 +1,5 @@
 ---
+description: Format Pager Addresses for Alerts
 title: Format Pager Addresses for Alerts
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,25 +19,25 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e7150f11485a9cd32bfaa940675e24ee513d960
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c75d7eaf25941969ddbf9e9d9dfc2cb683c1360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492192"
 ---
-# <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
+# <a name="format-pager-addresses-for-alerts"></a>设置警报寻呼地址的格式
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题说明了如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 代理警报的寻呼地址的格式。  
+本主题说明了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中设置 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的寻呼地址的格式。  
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 默认情况下，只有 **sysadmin** 固定服务器角色的成员才能查看有关警报的信息。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -45,15 +46,15 @@ ms.locfileid: "85715803"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要发送到寻呼程序的警报的服务器。  
   
-2.  右键单击“SQL Server 代理”  ，然后选择“属性”   
+2.  右键单击“SQL Server 代理”，然后选择“属性”  
   
-3.  在 **“选择页”** 下，选择 **“警报系统”** 。  
+3.  在 **“选择页”** 下，选择 **“警报系统”**。  
   
-4.  在“寻呼电子邮件的地址格式”字段的“收件人行”和“抄送行”框中，输入寻呼地址的前缀或后缀。 发送通知时，将插入操作员的实际寻呼地址。  
+4.  在“寻呼电子邮件的地址格式”**** 字段的“收件人行”**** 和“抄送行”**** 框中，输入寻呼地址的前缀或后缀。 发送通知时，将插入操作员的实际寻呼地址。  
   
 5.  在 **“主题”** 框中，输入主题行的前缀或后缀。  
   
-6.  选择“在通知页中包含电子邮件的正文部分”  复选框，以便在寻呼消息中包含完整电子邮件（与仅包含主题行相对）。  
+6.  选择“在通知页中包含电子邮件的正文部分”**** 复选框，以便在寻呼消息中包含完整电子邮件（与仅包含主题行相对）。  
   
 7.  完成后，单击 **“确定”** 。  
   

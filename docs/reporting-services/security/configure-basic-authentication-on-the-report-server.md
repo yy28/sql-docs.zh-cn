@@ -1,4 +1,5 @@
 ---
+description: 在报表服务器上配置基本身份验证
 title: 在报表服务器上配置基本身份验证 | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492637"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  
@@ -36,9 +37,9 @@ ms.locfileid: "81625866"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-     该文件位于 \<>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  。  
+     该文件位于 \<drive>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
   
-2.  查找 \<Authentication>  。  
+2.  查找 \<**Authentication**>。  
   
 3.  复制以下最能满足您需要的一个 XML 结构。 第一个 XML 结构提供了用于指定所有元素的占位符，将在下一部分对这些元素进行介绍：  
   
@@ -63,13 +64,13 @@ ms.locfileid: "81625866"
           </AuthenticationTypes>  
     ```  
   
-4.  将其粘贴在 \<> 的现有条目上  。  
+4.  将其粘贴在 \<**Authentication**> 的现有条目上。  
   
      如果使用的是多个身份验证类型，则只能添加 **RSWindowsBasic** 元素，而不能删除 **RSWindowsNegotiate**、 **RSWindowsNTLM**或 **RSWindowsKerberos**的条目。  
   
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。  
   
-5.  使用对环境有效的值替换 \<Realm> 或 \<DefaultDomain> 的空值   。  
+5.  使用对环境有效的值替换 \<**Realm**> 或 \<**DefaultDomain**> 的空值。  
   
 6.  保存文件。  
   

@@ -1,7 +1,7 @@
 ---
 title: 运行 Spark 作业：Azure Toolkit for IntelliJ
 titleSuffix: SQL Server Big Data Clusters
-description: 在 Azure Toolkit for IntelliJ 中的 SQL Server 大数据群集上提交 Spark 作业。
+description: 了解如何通过提交一个本地 Jar 或 Py 文件在 Azure Toolkit for IntelliJ 中的 SQL Server 大数据群集上提交 Spark 作业。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef3a0d73535061ef2c9f2ce32556a0a86202d70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726734"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778536"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>在 IntelliJ 的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作业
 
@@ -28,7 +28,7 @@ ms.locfileid: "85726734"
 - SQL Server 大数据群集。
 - Oracle Java 开发工具包。 可以从 [Oracle 网站](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)安装该工具包。
 - IntelliJ IDEA。 可以从 [JetBrains 网站](https://www.jetbrains.com/idea/download/)进行安装。
-- Azure Toolkit for IntelliJ 扩展。 要获取安装说明，请参阅[安装 Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)。
+- Azure Toolkit for IntelliJ 扩展。 要获取安装说明，请参阅[安装 Azure Toolkit for IntelliJ](/azure/azure-toolkit-for-intellij-installation)。
 
 ## <a name="link-sql-server-big-data-cluster"></a>链接 SQL Server 大数据群集
 1. 打开 IntelliJ IDEA 工具。
@@ -118,7 +118,7 @@ ms.locfileid: "85726734"
       ![“Spark 提交”对话框 jar 文件的含义](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > 若要上传引用的 JAR 和引用的文件，请参阅：[如何将资源上传到群集](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > 若要上传引用的 JAR 和引用的文件，请参阅：[如何将资源上传到群集](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
                          
     * **上传路径**：可以指示 Jar 或 Scala 项目资源提交的存储位置。 支持多种存储类型：“使用 Spark 交互式会话上传”  和“使用 WebHDFS 上传” 
     

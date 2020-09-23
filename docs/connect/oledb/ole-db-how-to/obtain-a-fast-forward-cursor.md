@@ -1,6 +1,6 @@
 ---
 title: 获取 FAST_FORWARD 游标（OLE DB 驱动程序）
-description: 使用 OLE DB Driver for SQL Server 获取 FAST_FORWARD 游标
+description: 了解如何结合使用 OLE DB Driver for SQL Server 和此示例，通过设置行集属性来获取 FAST_FORWARD 游标。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 99da93c2c0e80cbea19944d0005c7978de417748
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a6b5aec6440a666413a06e1c7307a6d8c83aaaac
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244735"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860337"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>获取 FAST_FORWARD 游标
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

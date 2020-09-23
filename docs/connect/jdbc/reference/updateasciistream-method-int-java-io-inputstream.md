@@ -1,5 +1,6 @@
 ---
-title: updateAsciiStream 方法 (java.io.InputStream) | Microsoft Docs
+description: updateAsciiStream 方法 (int, java.io.InputStream)
+title: updateAsciiStream 方法 (int, java.io.InputStream)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1dcc3d4f-ae30-45c0-afad-a531358807af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0af2eb44fe90daeb5ae49f145a45181144e4758
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c72fe46e637a37f33b9d9f89219eb71c4fb6b60a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462369"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream"></a>updateAsciiStream 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +48,7 @@ public void updateAsciiStream(int columnIndex,
   
  此方法将 InputStream 对象中的 ASCII 字符（字节）传递给可转换的字符列，即 Unicode 的 ASCII 范围 [0x00 - 0x7F] 以及 874、932、936、949、950 和 1250-1258 代码页。 此方法执行到目标排序规则页的转换。 尝试更新不可转换的目标列将引发异常。 对于二进制列，会传递原始字节。  
   
- 将此方法应用于 image  、text  和 ntext  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可能会影响性能。  
+ 将此方法应用于 image****、text**** 和 ntext****[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可能会影响性能。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateAsciiStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

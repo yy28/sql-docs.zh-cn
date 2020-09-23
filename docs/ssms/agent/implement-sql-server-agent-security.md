@@ -1,4 +1,5 @@
 ---
+description: 实现 SQL Server 代理安全性
 title: 实现 SQL Server 代理安全性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 663647c1113d4b3f8a017707e278daf5befadba8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b55dcfbdc7172e545c93e9878a18ee5826eb43f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468653"
 ---
 # <a name="implement-sql-server-agent-security"></a>实现 SQL Server 代理安全性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使数据库管理员能够在一个安全上下文中运行每个作业步骤，这个安全上下文只具有执行该作业步骤所需的权限，这是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理决定的。 若要为某个特定的作业步骤设置权限，可以创建一个具有所需权限的代理，然后将该代理分配给该作业步骤。 一个代理可以指定给多个作业步骤。 对于需要相同权限的作业步骤，可以使用同一个代理。  
   

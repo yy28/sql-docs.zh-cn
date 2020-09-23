@@ -1,4 +1,5 @@
 ---
+description: 创建用户定义事件
 title: 创建用户定义事件
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -24,23 +25,23 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b58484e51f099715d8cb5abd1a9b461cd667474f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fdd45d02833b478b83b3a674c078cb7975a24436
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371413"
 ---
 # <a name="create-a-user-defined-event"></a>创建用户定义事件
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 如果需要监视非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 预定义的事件，可以创建用户定义事件。 还可以为每个用户定义事件指定严重级别。  
   
 > [!NOTE]  
-> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 时，请为每个用户定义事件消息选择“写入 Windows 应用程序事件日志”  选项，以确保记录该消息。 默认情况下，出现严重级别低于 19 的用户定义消息时，不会将其发送到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 应用程序日志。 因此严重级别低于 19 的用户定义消息不会触发 SQL Server 代理警报。  
+> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 时，请为每个用户定义事件消息选择“写入 Windows 应用程序事件日志”**** 选项，以确保记录该消息。 默认情况下，出现严重级别低于 19 的用户定义消息时，不会将其发送到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 应用程序日志。 因此严重级别低于 19 的用户定义消息不会触发 SQL Server 代理警报。  
   
 用户定义事件必须具有唯一的消息号。 用户定义事件的消息号必须大于 50,000。 可以使用多种语言来定义事件的消息。 但是，在添加其他语言的错误消息之前， **En-US** 错误消息必须已经存在。  
   

@@ -1,4 +1,5 @@
 ---
+description: 数据源向导屏幕 4 (ODBC Driver for SQL Server)
 title: 数据源向导屏幕 4 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6d1f72323f3db7db1f0f9c0084ef3da9de034490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462179"
 ---
 # <a name="data-source-wizard-screen-4"></a>数据源向导屏幕 4
 
@@ -33,7 +34,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="trust-server-certificate"></a>信任服务器证书
 
-仅当启用“对数据使用强加密”  时，此选项才适用。 选中后，将不会验证服务器的证书是否有服务器的正确主机名，以及是否由受信任的证书颁发机构颁发。 
+仅当启用“对数据使用强加密”**** 时，此选项才适用。 选中后，将不会验证服务器的证书是否有服务器的正确主机名，以及是否由受信任的证书颁发机构颁发。 
 
 ### <a name="perform-translation-for-character-data"></a>执行字符数据翻译
 
@@ -47,7 +48,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>将长时间运行的查询保存到日志文件
 
-指定驱动程序记录任何时间超出“长查询时间”  值的查询。 长时间运行的查询将记录到指定文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”  ，在现有文件目录中导航选择一个日志文件。
+指定驱动程序记录任何时间超出“长查询时间”**** 值的查询。 长时间运行的查询将记录到指定文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”****，在现有文件目录中导航选择一个日志文件。
 
 ### <a name="long-query-time-milliseconds"></a>长查询时间(毫秒)
 
@@ -55,7 +56,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>将 ODBC 驱动程序统计信息记录到日志文件
 
-指定记录的统计信息。 统计信息将记录到指定的文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”  ，在现有文件目录中导航选择一个日志文件。
+指定记录的统计信息。 统计信息将记录到指定的文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”，在现有文件目录中导航选择一个日志文件。
 
 统计信息日志是一个制表符分隔文件，可以在 Microsoft Excel 或支持制表符分隔文件的任何其他应用程序中进行分析。
 
@@ -65,15 +66,15 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="connect-retry-interval-seconds"></a>连接重试时间间隔(秒)
 
-指定每次连接重试尝试之间的秒数。 有关此操作和“连接重试计数”选项的详细信息，请参阅 [Windows ODBC 驱动程序中的连接弹性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
+指定每次连接重试尝试之间的秒数。 有关此操作和“连接重试计数”选项的详细信息，请参阅 [Windows ODBC 驱动程序中的连接弹性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)****。
 
-### <a name="back"></a>后退
+### <a name="back"></a>返回
 
 单击此按钮可返回到向导的上一页。
 
 ### <a name="finish"></a>完成
 
-如果此屏幕上指定的信息为全部信息，则可以单击“完成”  。 DSN 是使用在向导的此屏幕和其他屏幕上指定的所有属性创建的，你将有机会测试新创建的 DSN。
+如果此屏幕上指定的信息为全部信息，则可以单击“完成”****。 DSN 是使用在向导的此屏幕和其他屏幕上指定的所有属性创建的，你将有机会测试新创建的 DSN。
 
 ## <a name="next-steps"></a>后续步骤
 

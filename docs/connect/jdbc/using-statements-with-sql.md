@@ -1,5 +1,6 @@
 ---
-title: 使用 SQL 语句 | Microsoft Docs
+title: 使用 SQL 语句
+description: 大致了解如何将不同类型的 SQL 语句与 Microsoft JDBC Driver for SQL Server 一起使用。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17e6253d0ff1f4fa9a26d97772fb9f7ff2890221
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 49ab0f6367353847bdf3a9e0a7aff13975b4d711
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923978"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435287"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 语句
 

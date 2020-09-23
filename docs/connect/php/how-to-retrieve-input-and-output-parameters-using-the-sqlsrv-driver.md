@@ -1,7 +1,8 @@
 ---
-title: 操作说明：使用 SQLSRV 驱动程序检索 I/O 参数 | Microsoft Docs
+title: 如何：使用 SQLSRV 驱动程序检索输入/输出参数
+description: 本主题介绍如何使用存储过程和 Microsoft SQLSRV Driver for PHP for SQL Server 检索输入和输出参数
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916073"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680682"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输入和输出参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916073"
 本主题演示如何使用 SQLSRV 驱动程序调用其中一个参数已定义为输入/输出参数的存储过程，以及如何检索结果。 在检索输出参数或输入/输出参数时，必须在可以访问返回的参数值前使用存储过程返回的所有结果。  
   
 > [!NOTE]  
-> 已初始化或更新为 **null**、 **DateTime**的变量或流类型无法用作输出参数。  
+>  无法将已初始化或更新为 **null**、 **DateTime**或流类型的变量用作输出参数。  
   
 ## <a name="example-1"></a>示例 1
 下面的示例将调用一个从指定员工的可用休假小时数减去已用休假小时数的存储过程。 表示已用休假小时数的变量 *$vacationHrs*将作为输入参数传递给该存储过程。 在更新可用休假小时数之后，该存储过程将使用同一参数返回剩余的休假小时数。  
@@ -32,7 +33,7 @@ ms.locfileid: "80916073"
 > [!NOTE]  
 > 将 *$vacationHrs* 初始化为 4 可将返回的 PHPTYPE 设置为整数。 若要确保数据类型的完整性，应先初始化输入/输出参数并随后调用存储过程，或者应指定所需的 PHPTYPE。 有关指定 PHPTYPE 的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-因为该存储过程返回两个结果，所以在执行该存储过程之后必须调用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)，使输出参数的值可用。 调用 sqlsrv_next_result 后，$vacationHrs 将包含存储过程返回的输出参数的值   。  
+因为该存储过程返回两个结果，所以在执行该存储过程之后必须调用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)，使输出参数的值可用。 调用 sqlsrv_next_result 后，$vacationHrs 将包含存储过程返回的输出参数的值******。  
   
 > [!NOTE]  
 > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  

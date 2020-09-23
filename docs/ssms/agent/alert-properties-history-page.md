@@ -1,4 +1,5 @@
 ---
+description: 警报属性（“历史记录”页）
 title: 警报属性（“历史记录”页）
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,31 +14,31 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 78504c87d25e0287cafb2930c6a44d140228992f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b318730bd1e45059e447e14c4b90b054d73709a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372433"
 ---
 # <a name="alert-properties-history-page"></a>警报属性（“历史记录”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 
 使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的历史记录。  
 
 ## <a name="options"></a>选项  
 **上次警报的日期**  
-显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”  。  
+显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”****。  
   
 **上次响应的日期**  
-显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”  。  
+显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”****。  
   
-**发生次数**  
+**出现次数**  
 自从创建警报后或从上次重置计数后，该事件发生的总次数。  
   
 **重置计数**  

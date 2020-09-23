@@ -1,6 +1,6 @@
 ---
 title: 行集（OLE DB 驱动程序）
-description: 适用于 SQL Server 的 OLE DB 驱动程序中的行集
+description: 了解支持使用者在 OLE DB Driver for SQL Server 的会话中创建行集的接口。 有关详细信息，请参阅本节中的文章。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB rowsets
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7cb9a52e9b7b1cd5ec243db15f666a5b5ef9c4a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55100932092abeb81da7fa1c156ccb5a61fc193c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244166"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859949"
 ---
 # <a name="rowsets"></a>行集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

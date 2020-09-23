@@ -1,7 +1,8 @@
 ---
-title: PDO::__construct | Microsoft Docs
+title: PDO::__construct
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDO::__construct 函数的 API 参考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a6a96099a3e0e478fa08dc2aff3af73a0e14f99
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919410"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646218"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +31,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### <a name="parameters"></a>参数  
-*$dsn*：包含前缀名（始终是 `sqlsrv`）、冒号和 Server 关键字的字符串。 例如，`"sqlsrv:server=(local)"` 。 你可以选择指定其他连接关键字。 有关 Server 关键字和其他连接关键字的介绍，请参阅 [Connection Options](../../connect/php/connection-options.md) 。 因为整个 *$dsn* 包含在引号中，所以每个连接关键字不应单独引用。  
+*$dsn*：包含前缀名（始终是 `sqlsrv`）、冒号和 Server 关键字的字符串。 例如，`"sqlsrv:server=(local)"`。 你可以选择指定其他连接关键字。 有关 Server 关键字和其他连接关键字的介绍，请参阅 [Connection Options](../../connect/php/connection-options.md) 。 因为整个 *$dsn* 包含在引号中，所以每个连接关键字不应单独引用。  
   
 *$username*：可选。 包含用户名的字符串。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定登录 ID。 若要使用 Windows 身份验证进行连接，请指定 `""`。  
   
@@ -44,7 +45,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ## <a name="exceptions"></a>例外  
 PDOException  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 你可以通过将实例设置为 NULL 来关闭连接对象。  
   
 连接后，PDO::errorCode 将显示 01000 而非 00000。  

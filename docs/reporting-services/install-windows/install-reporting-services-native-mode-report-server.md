@@ -1,4 +1,5 @@
 ---
+description: 安装 Reporting Services 2016 本机模式报表服务器
 title: 安装 Reporting Services 2016 本机模式报表服务器 | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498077"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
 
@@ -75,7 +76,7 @@ ms.locfileid: "81486834"
 
 - 用于运行安装程序的用户帐户必须是本地 Administrators 组成员，而且拥有针对承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例创建数据库的权限。
 
-- 安装程序必须能够使用默认值来保留用于访问报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 这些值包括端口 80、强通配符和虚拟目录名（格式为 ReportServer_\<instance_name>  和 Reports_\<instance_name>  。
+- 安装程序必须能够使用默认值来保留用于访问报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 这些值包括端口 80、强通配符和虚拟目录名（格式为 ReportServer_\<***instance_name***> 和 Reports_\<***instance_name***>）。
 
 - 安装程序必须能够使用默认值来创建报表服务器数据库。 这些值包括 **ReportServer** 和 **ReportServerTempDB**。 如果存在以前安装的现有数据库，安装程序则因无法将报表服务器配置为本机模式的默认配置而被阻止。 必须重命名、移动或删除这类数据库以取消阻止安装程序。
 
@@ -93,7 +94,7 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 |前缀|默认的前缀为 HTTP。 如果你以前安装过传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）证书，安装程序会尝试创建使用 HTTP 前缀的 URL 预留。|
 |主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|
 |端口|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|
-|虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<instance_name>（对于报表服务器 Web 服务）和 Reports_\<instance_name>（对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）   。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|
+|虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<*instance_name*>（适用于报表服务器 Web 服务）和 Reports_\<*instance_name*>（适用于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|
 
 完整的 URL 字符串示例如下所示：
 

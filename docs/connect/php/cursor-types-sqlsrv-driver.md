@@ -1,5 +1,6 @@
 ---
-title: 游标类型（SQLSRV 驱动程序）| Microsoft Docs
+title: 游标类型（SQLSRV 驱动程序）
+description: 了解如何使用游标类型创建一个结果集，你可以使用 Microsoft Drivers for PHP for SQL Server 以任何顺序访问该结果集。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763795618eb90fe24db313b801bc01af3cd6737b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e72381eed4aa89ccd9656d3eabadb22bccd357d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928032"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411463"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>游标类型（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,31 +26,31 @@ ms.locfileid: "80928032"
 ## <a name="cursor-types"></a>游标类型  
 使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 创建结果集时，可以指定游标的类型。 默认情况下使用只进游标，使用它可以从结果集的第一行开始一次移动一行，直到到达结果集的末尾。  
   
-可以使用可滚动游标创建结果集，这样可以采用任意顺序访问结果集中的任意行。 下表列出了可以传递给 sqlsrv_query 或 sqlsrv_prepare 中的 Scrollable  选项的值。  
+可以使用可滚动游标创建结果集，这样可以采用任意顺序访问结果集中的任意行。 下表列出了可以传递给 sqlsrv_query 或 sqlsrv_prepare 中的 Scrollable **** 选项的值。  
   
 |选项|说明|  
 |----------|---------------|  
-|SQLSRV_CURSOR_FORWARD|使用此游标可以从结果集的第一行开始一次移动一行，直到到达结果集的末尾。<br /><br />这是默认的游标类型。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 返回使用此游标类型创建的结果集的错误。<br /><br />forward  是 SQLSRV_CURSOR_FORWARD 的缩写形式。|  
-|SQLSRV_CURSOR_STATIC|使用此游标可以采用任意顺序访问行，但不会反映数据库中的更改。<br /><br />static  是 SQLSRV_CURSOR_STATIC 的缩写形式。|  
-|SQLSRV_CURSOR_DYNAMIC|使用此游标可以采用任意顺序访问行，并且会反映出数据库中的更改。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 返回使用此游标类型创建的结果集的错误。<br /><br />dynamic  是 SQLSRV_CURSOR_DYNAMIC 的缩写形式。|  
-|SQLSRV_CURSOR_KEYSET|使用此游标可以采用任意顺序访问行。 然而，如果从表中删除某一行，键集游标不会更新行计数（将返回不含任何值的已删除行）。<br /><br />keyset  是 SQLSRV_CURSOR_KEYSET 的缩写形式。|  
-|SQLSRV_CURSOR_CLIENT_BUFFERED|使用此游标可以采用任意顺序访问行。 创建客户端游标查询。<br /><br />buffered  是 SQLSRV_CURSOR_CLIENT_BUFFERED 的缩写形式。|  
+|SQLSRV_CURSOR_FORWARD|使用此游标可以从结果集的第一行开始一次移动一行，直到到达结果集的末尾。<br /><br />这是默认的游标类型。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 返回使用此游标类型创建的结果集的错误。<br /><br />forward**** 是 SQLSRV_CURSOR_FORWARD 的缩写形式。|  
+|SQLSRV_CURSOR_STATIC|使用此游标可以采用任意顺序访问行，但不会反映数据库中的更改。<br /><br />static**** 是 SQLSRV_CURSOR_STATIC 的缩写形式。|  
+|SQLSRV_CURSOR_DYNAMIC|使用此游标可以采用任意顺序访问行，并且会反映出数据库中的更改。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 返回使用此游标类型创建的结果集的错误。<br /><br />dynamic**** 是 SQLSRV_CURSOR_DYNAMIC 的缩写形式。|  
+|SQLSRV_CURSOR_KEYSET|使用此游标可以采用任意顺序访问行。 然而，如果从表中删除某一行，键集游标不会更新行计数（将返回不含任何值的已删除行）。<br /><br />keyset**** 是 SQLSRV_CURSOR_KEYSET 的缩写形式。|  
+|SQLSRV_CURSOR_CLIENT_BUFFERED|使用此游标可以采用任意顺序访问行。 创建客户端游标查询。<br /><br />buffered**** 是 SQLSRV_CURSOR_CLIENT_BUFFERED 的缩写形式。|  
   
-如果查询生成多个结果集，则 Scrollable  选项适用于所有结果集。  
+如果查询生成多个结果集，则 Scrollable**** 选项适用于所有结果集。  
   
 ## <a name="selecting-rows-in-a-result-set"></a>在结果集中选择行  
 创建结果集后，可以使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)、[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 或 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 来指定某一行。  
   
-下表介绍了可以在 row  参数中指定的值。  
+下表介绍了可以在 row** 参数中指定的值。  
   
 |参数|说明|  
 |-------------|---------------|  
-|SQLSRV_SCROLL_NEXT|指定下一行。 如果未为可滚动结果集指定 row  参数，则此值为默认值。|  
+|SQLSRV_SCROLL_NEXT|指定下一行。 如果未为可滚动结果集指定 row** 参数，则此值为默认值。|  
 |SQLSRV_SCROLL_PRIOR|指定当前行之前的行。|  
 |SQLSRV_SCROLL_FIRST|指定结果集中的第一行。|  
 |SQLSRV_SCROLL_LAST|指定结果集中的最后一行。|  
-|SQLSRV_SCROLL_ABSOLUTE|指定使用 offset  参数指定的行。|  
-|SQLSRV_SCROLL_RELATIVE|指定从当前行使用 offset  参数指定的行。|  
+|SQLSRV_SCROLL_ABSOLUTE|指定使用 offset** 参数指定的行。|  
+|SQLSRV_SCROLL_RELATIVE|指定从当前行使用 offset** 参数指定的行。|  
   
 ## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>服务器端游标和 SQLSRV 驱动程序  
 下面的示例显示了各种游标的效果。 在示例的第 33 行，你会看到指定不同游标的三个查询语句中的第一个。  其中有两个查询语句被注释掉。 每次运行该程序时，使用不同的游标类型来查看第 47 行上数据库更新的效果。  

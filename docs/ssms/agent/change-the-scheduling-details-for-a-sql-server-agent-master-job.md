@@ -1,4 +1,5 @@
 ---
+description: Change the Scheduling Details for a SQL Server Agent Master Job
 title: 更改主作业的计划详细信息
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,19 +12,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 558cd702feaedc6a91fb4c07792b89061079245c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3a76eb7ec3ef8b0daa11771d75938b6b65694423
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371763"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改作业定义计划的详细信息。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "85749162"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -43,13 +44,13 @@ ms.locfileid: "85749162"
   
 1. 在 **“对象资源管理器”** 中，单击加号以展开包含要编辑其计划的作业的服务器。  
   
-2. 单击加号以展开 **“SQL Server 代理”** 。  
+2. 单击加号以展开 **“SQL Server 代理”**。  
   
 3. 单击加号以便展开 **“作业”** 文件夹。  
   
-4. 右键单击要编辑其计划的作业，然后选择“属性”  。  
+4. 右键单击要编辑其计划的作业，然后选择“属性”****。  
   
-5. 在“作业属性 – _job\_name_”对话框中的“选择页”下，选择“计划”。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
+5. 在“作业属性 – _job\_name_”对话框中的“选择页”下，选择“计划”************。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
   
 6. 完成后，单击 **“确定”** 。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85749162"
   
 2. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- changes the enabled status of the NightlyJobs schedule to 0

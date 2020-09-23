@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922197"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899530"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6，2020 年 7 月
+
+| 新建项 | 详细信息 |
+| :------- | :------ |
+| 支持新分发。 | Ubuntu 20.04 |
+| 联合身份验证支持 | 请参阅[使用 Azure Active Directory](../using-azure-active-directory.md)。 |
+| 预定义语句的元数据缓存 | 请参阅[使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| SQL_COPT_SS_AUTOBEGINTXN 连接属性用于控制自动 BEGIN TRANSACTION 是在 ROLLBACK 后还是 COMMIT 之后发生 | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
+| bug 修复。 | [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2，2020 年 4 月（仅限 Alpine Linux）
 
@@ -91,7 +103,7 @@ GeneMi.  2019/04/03.
 | 新建项 | 详细信息 |
 | :------- | :------ |
 | 支持新分发。 | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Azure Active Directory 托管服务标识（系统和用户分配）身份验证模式。 | 请参阅[结合使用 Azure Active Directory 和 ODBC Driver](../using-azure-active-directory.md)。 |
+| Azure Active Directory 托管标识（系统和用户分配）身份验证模式。 | 请参阅[结合使用 Azure Active Directory 和 ODBC Driver](../using-azure-active-directory.md)。 |
 | 能够针对 Always Encrypted 列流式传输输入参数。 | 有关详细信息，请参阅[使用 Always Encrypted 时的 ODBC 驱动程序限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)。 |
 | XA 分布式事务。 | 请参阅[使用 XA 事务](../use-xa-with-dtc.md)。<br/><br/>XA 是扩展体系结构 (eXtended Architecture) 的词首字母缩略词，它是执行访问多个服务器端数据存储系统的全局事务的标准  。 |
 | &nbsp; | &nbsp; |

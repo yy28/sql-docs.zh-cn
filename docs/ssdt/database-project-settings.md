@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518847"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934108"
 ---
 # <a name="database-project-settings"></a>数据库项目设置
 
@@ -87,7 +87,7 @@ ms.locfileid: "85518847"
 |字段|默认值|说明|  
 |---------|-----------------|---------------|  
 |目标平台|Microsoft SQL Server 2012|指定针对此数据库项目使用的 SQL Server 版本。|  
-|对常见对象启用扩展 Transact\-SQL 验证。|创建新项目时不启用。<br /><br />从连接到 SQL Azure 的 SQL Server 对象资源管理器创建项目时、将 SQL Azure 数据库导入该项目时，或将项目的目标平台更改为 SQL Azure 时启用。|启用此选项时，将报告项目中发现的 SQL Server 编译器验证失败的错误。 如果将目标平台更改为 SQL Azure，则会启用扩展验证。 如果您更改目标平台，则不会取消选中该选项。<br /><br />可以为其他版本的 SQL Server 启用此选项，但验证将限制为 Microsoft SQL Server 2012 部分包含数据库和 SQL Azure。 并非所有 Transact\-SQL 语法都受到所有 SQL Server 版本的支持。<br /><br />有关详细信息，请参阅本主题中稍后的[扩展的 Transact-SQL 验证](#bkmk_evf)|  
+|对常见对象启用扩展 Transact\-SQL 验证。|创建新项目时不启用。<br /><br />当你从连接到 SQL Azure 的 SQL Server 对象资源管理器创建项目、将 Azure SQL 数据库导入到项目中或将项目的“目标平台”更改为“SQL Azure”时启用。|启用此选项时，将报告项目中发现的 SQL Server 编译器验证失败的错误。 如果将目标平台更改为 SQL Azure，则会启用扩展验证。 如果您更改目标平台，则不会取消选中该选项。<br /><br />可以为其他版本的 SQL Server 启用此选项，但验证将限制为 Microsoft SQL Server 2012 部分包含数据库和 SQL Azure。 并非所有 Transact\-SQL 语法都受到所有 SQL Server 版本的支持。<br /><br />有关详细信息，请参阅本主题中稍后的[扩展的 Transact-SQL 验证](#bkmk_evf)|  
 |输出类型|||  
 |数据层应用程序包（.dacpac 文件）|启用并且锁定。 在生成一个数据库项目时，该数据库项目的生成输出始终生成一个 .dacpac 包。|如果正在使用具有“创建其他下级 .dacpac 文件 (v2.0)”选项的 SQL Server 数据工具 (SSDT) 版本，且希望包与 SQL Server Management Studio 或 SQL Azure 管理门户兼容，则选中该选项。 可以从 (SSDT) 直接部署 .dacpac 包，但在发布 SQL Server 数据工具时只能通过 SQL Server Management Studio 部署 2.0 版本的 .dacpac 文件。|  
 |创建脚本（.sql 文件）||指定完整 .sql CREATE 脚本是否为项目中的所有对象生成，以及当项目生成时该脚本是否位于 bin\debug 文件夹中。 您可以使用 **“项目发布”** 命令或 SQL Compare 实用工具创建增量更新脚本。|  
@@ -132,7 +132,7 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 -   SQL Azure 元数据排序规则（编译器服务使用 SQL Server 2012 部分包含的数据库元数据排序规则 - Latin1_General_100_CI_AS_KS_WS_SC）  
   
 ### <a name="enablingdisabling-extended-verification"></a>启用/禁用扩验证  
-在直接从 SQL Azure 数据库创建的项目中，或目标平台设置为 SQL Azure 的项目中，扩展的 Transact-SQL 验证会默认启用。 在为 SQL Azure 数据库或以 SQL Server 2012 为目标的应用程序范围的数据库开发时，推荐使用扩展验证。 有关应用程序范围的数据库的详细信息，请参阅 [部分包含的数据库](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
+在直接从 Azure SQL 数据库创建的数据库项目中，或在“目标平台”设置为“SQL Azure”的项目中，扩展的 Transact-SQL 验证是默认启用的。 在为 SQL Azure 数据库或以 SQL Server 2012 为目标的应用程序范围的数据库开发时，推荐使用扩展验证。 有关应用程序范围的数据库的详细信息，请参阅 [部分包含的数据库](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
   
 在为 SQL Server 2008/R2 开发应用程序范围的数据库以实现与 Microsoft SQL Server 2012 和 SQL Azure 兼容时，也可以使用扩展验证功能。  
   
@@ -151,7 +151,7 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
   
 2.  在“属性”中，将“扩展 T-SQL 验证”属性更改为 False。  
   
-![文件属性](../ssdt/media/ssdt-evf.gif "文件属性")  
+    ![文件属性](../ssdt/media/ssdt-evf.gif "文件属性")  
   
 ### <a name="special-considerations-for-collations"></a>排序规则的特殊注意事项  
 有关部分包含的数据库中排序规则的详细信息，请参阅 [包含的数据库排序规则](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)。  

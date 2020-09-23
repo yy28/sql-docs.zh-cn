@@ -1,4 +1,5 @@
 ---
+description: Force a Target Server to Poll the Master Server
 title: Force a Target Server to Poll the Master Server
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e0dc40d29ed0efd8dd6ce95172c63a1e1a853b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a9d79c6004caf15108307c34fa77052e54e95acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468660"
 ---
-# <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
+# <a name="force-a-target-server-to-poll-the-master-server"></a>强制目标服务器轮询主服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题说明如何强制目标服务器轮询主服务器。 目标服务器必须是主服务器上的已注册服务器。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "85715815"
   
 -   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要强制目标服务器轮询主服务器，请使用：** [SQL Server Management Studio](#SSMS)  
+-   **若要强制目标服务器轮询主服务器，使用：** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85715815"
   
 1.  在 **对象资源管理器**中，展开主服务器。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“管理目标服务器”  。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“管理目标服务器”****。  
   
-3.  单击目标服务器，再单击 **“强制轮询”** 。  
+3.  单击目标服务器，再单击 **“强制轮询”**。  
   

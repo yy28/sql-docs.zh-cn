@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (java.lang.String) 参数
 title: getDate 方法 (java.lang.String) 参数 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 435e6eaf5e6078fc2d61a359d6e8a40323e59b67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9ec829f3f4f5717b0a493c69f6b5c4733a2fc1fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436339"
 ---
 # <a name="getdate-method-javalangstring"></a>getDate 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,10 +35,10 @@ ms.locfileid: "80922710"
 public java.sql.Date getDate(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- sCol   
+#### <a name="parameters"></a>参数  
+ sCol**  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串****。  
   
 ## <a name="return-value"></a>返回值  
  Date 对象。  
@@ -48,7 +49,7 @@ public java.sql.Date getDate(java.lang.String sCol)
 ## <a name="remarks"></a>备注  
  此 getDate 方法是由 java.sql.CallableStatement 接口中的 getDate 方法指定的。  
   
- 此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime  或 smalldatetime  数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
+ 此方法返回  datetime[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **** 或 smalldatetime**** 数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
   
 ## <a name="see-also"></a>另请参阅  
  [getDate 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

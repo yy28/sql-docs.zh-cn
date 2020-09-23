@@ -1,6 +1,6 @@
 ---
-title: 更新 SQL Server 游标中的数据 | Microsoft Docs
-description: 更新 SQL Server 游标中的数据
+title: 更新游标中的数据（OLE DB 驱动程序）
+description: 了解 OLE DB Driver for SQL Server 使用者如何使用 SQL Server 游标处理可修改行集中的请求。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - immediate update mode [OLE DB]
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7a1a476c9e8588cb5dc14ce7f24b335c0b433b68
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eae7b9119803615a2d18fe4710ff1eda2b91ac5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999617"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859928"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 游标中的数据
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  当通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标提取和更新数据时，适用于 SQL Server 的 OLE DB 驱动程序使用者应用程序同样面临适用于任何其他客户端应用程序的注意事项和约束。  
+  当通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标提取和更新数据时，OLE DB Driver for SQL Server 使用者应用程序同样面临适用于任何其他客户端应用程序的注意事项和约束。  
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标中的行才参与并发数据访问控制。 当使用者请求可修改的行集时，并发控制是通过 DBPROP_LOCKMODE 控制的。 若要修改并发访问控制的级别，使用者应在打开该行集之前设置 DBPROP_LOCKMODE 属性。  
   

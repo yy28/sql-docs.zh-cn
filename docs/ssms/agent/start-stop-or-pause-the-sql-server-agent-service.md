@@ -1,4 +1,5 @@
 ---
+description: 启动、停止或暂停 SQL Server 代理服务
 title: 启动、停止或暂停服务
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3aa4067cc1b398a07a46ea74ed0fa7fafe9a5832
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad47f1f4560af97deda75f6e68b10be92e8d1a77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463049"
 ---
-# <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
+# <a name="start-stop-or-pause-the-sql-server-agent-service"></a>启动、停止或暂停 SQL Server 代理服务
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动、停止或重新启动 SQL Server 代理服务。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85755090"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
@@ -62,11 +63,11 @@ ms.locfileid: "85755090"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要管理 SQL Server 代理服务的服务器。  
   
-2.  右键单击“SQL Server 代理”  ，然后选择“启动”  、“停止”  或“重启”  。  
+2.  右键单击“SQL Server 代理”****，然后选择“启动”****、“停止”**** 或“重启”****。  
   
-3.  在 **“用户帐户控制”** 对话框中，请单击 **“是”** 。  
+3.  在“用户帐户控制”对话框中，单击“是”。  
   
-4.  系统提示是否要执行该操作时，请单击 **“是”** 。  
+4.  系统提示是否要执行该操作时，请单击 **“是”**。  
   
 有关详细信息，请参阅：  
   

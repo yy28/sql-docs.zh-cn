@@ -1,4 +1,5 @@
 ---
+description: 查看或修改作业
 title: 查看或修改作业
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 674f27ad2534f6cabb44402ee675aad844a5e26c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c8484cd44d40d37967b6948f667dbb78a9fe7653
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497470"
 ---
 # <a name="view-or-modify-jobs"></a>查看或修改作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 您可以查看任何已创建的作业。 运行完一个作业后，还可以查看它的历史记录。 查看作业历史记录使您可以查看作业何时运行、整个作业的状态以及作业中每步作业的状态。 在作业成功完成后，您可以查看该作业过去是否曾失败，还可以查看作业每次运行时创建的输出内容。 **sysadmin** 固定服务器角色的成员可以查看或修改所有人的作业。  
   
@@ -67,9 +68,9 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |-|-|  
 |说明如何查看 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|[View a Job](../../ssms/agent/view-a-job.md)|  
 |说明如何查看 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志。|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
-|说明如何删除 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志的内容。|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  
-|说明如何设置 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志的大小限制。|[Resize the Job History Log](../../ssms/agent/resize-the-job-history-log.md)|  
-|说明如何更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的属性。|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
+|说明如何删除 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志的内容。|[清除作业历史记录日志](../../ssms/agent/clear-the-job-history-log.md)|  
+|说明如何设置 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志的大小限制。|[调整作业历史记录日志的大小](../../ssms/agent/resize-the-job-history-log.md)|  
+|说明如何更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的属性。|[修改作业](../../ssms/agent/modify-a-job.md)|  
   
 ## <a name="see-also"></a>另请参阅  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  

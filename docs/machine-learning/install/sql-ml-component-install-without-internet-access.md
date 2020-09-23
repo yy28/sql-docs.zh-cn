@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487640"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在无 Internet 访问的情况下在计算机上安装 SQL Server 机器学习 R 和 Python
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 默认情况下，安装程序会连接到 Microsoft 下载站点以获取在 SQL Server 上进行机器学习所需的组件和更新的组件。 如果防火墙约束阻止安装程序访问这些站点，你可以使用连接到 Internet 的设备下载文件、将文件传输到脱机服务器，然后进行安装设置。
 
@@ -215,4 +215,4 @@ SQL Server R Services 的初始脱机安装需要与联机安装相同的配置�
 
 ## <a name="next-steps"></a>后续步骤
 
-有关任何不熟悉的消息和日志条目的帮助，请参阅[升级和安装常见问题解答 - 机器学习服务](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)。
+若要使用机器学习服务在数据库中执行 Python 和 R 脚本，请参阅[安装 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。

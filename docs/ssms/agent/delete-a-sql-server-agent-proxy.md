@@ -1,4 +1,5 @@
 ---
+description: Delete a SQL Server Agent Proxy
 title: Delete a SQL Server Agent Proxy
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b86e66f097c9027d76bac9346cdde863579916a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e1915ad526a064f6c32acc8653d76c7af2d6efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320043"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中删除 [!INCLUDE[tsql](../../includes/tsql-md.md)]代理的代理帐户。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "85720159"
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制和局限  
   
--   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户时，请确保该代理未引用任何活动的作业步骤。 若要检查是否有引用该代理的作业步骤，请右键单击该代理，选择“属性”  ，然后在“_proxy\_name_ 代理帐户属性”  对话框中选择“引用”  页。 如果删除某个代理，在 **“删除对象”** 对话框中会出现一个用于重新分配使用该代理的所有作业步骤的选项。  
+-   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户时，请确保该代理未引用任何活动的作业步骤。 若要检查是否有引用该代理的作业步骤，请右键单击该代理，选择“属性”，然后在“_proxy\_name_ 代理帐户属性”对话框中选择“引用”页。 如果删除某个代理，在 **“删除对象”** 对话框中会出现一个用于重新分配使用该代理的所有作业步骤的选项。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。 凭据中指定的用户必须对正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机具有“以批处理作业登录”权限。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85720159"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 只有 **sysadmin** 固定服务器角色的成员才能创建、修改或删除代理帐户。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -53,17 +54,17 @@ ms.locfileid: "85720159"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要删除的代理帐户的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以便展开 **“代理”** 文件夹。  
   
-4.  单击加号以展开包含要删除的代理帐户的子系统（例如，“ActiveX 脚本”  ）。  
+4.  单击加号以展开包含要删除的代理帐户的子系统（例如，“ActiveX 脚本”****）。  
   
-5.  右键单击要删除的代理帐户，然后选择“删除”  。  
+5.  右键单击要删除的代理帐户，然后选择“删除”****。  
   
 6.  在 **“删除对象”** 对话框中，确认选择了正确的代理帐户。 选中 **“重新分配给”** 复选框以向其他帐户重新分配引用此代理帐户的作业步骤。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -73,7 +74,7 @@ ms.locfileid: "85720159"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- deletes the proxy "Catalog application proxy"  

@@ -2,7 +2,7 @@
 title: 系统要求、安装和驱动程序文件 | Microsoft Docs
 description: 本文介绍了 Microsoft ODBC Driver for SQL Server 的系统要求。
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2b56528a369d58238a545afc20b35787003b6b1
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2f0ce55639f5d6835c50744114a48d510d41c887
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484446"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930348"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系统要求、安装和驱动程序文件
 
@@ -28,17 +28,18 @@ ms.locfileid: "81484446"
 
 兼容性表示在驱动程序发布时，已测试驱动程序与现有 SQL 版本的兼容性。 SQL Server 版本通常尝试保持与现有客户端驱动程序的后向兼容性。 但是，旧的客户端驱动程序可能无法使用 SQL Server 版本中的新功能。
 
-|驱动程序版本|Azure SQL Database|Azure SQL DW|Azure SQL 托管实例|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
-|-|-|-|-|-|-|-|-|-|-|-|-|
-|17.5|Y|Y|Y|Y|Y|Y|Y|Y| | | |
-|17.4|Y|Y|Y|Y|Y|Y|Y|Y| | | |
-|17.3|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y| |
-|17.2|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
-|17.1|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
-|17.0|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
-|13.1| | | | |Y|Y|Y|Y|Y|Y| |
-|13  | | | | | |Y|Y|Y|Y|Y| |
-|11  | | | | | | |Y|Y|Y|Y|Y|
+|数据库版本&nbsp;&#8594;<br />&#8595; 驱动程序版本|Azure SQL Database|Azure Synapse Analytics|Azure SQL 托管实例|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|----|---|---|---|---|---|---|---|---|---|---|---|
+|17.6|是|是|是|是|是|是|是|是|   |   |   |
+|17.5|是|是|是|是|是|是|是|是|   |   |   |
+|17.4|是|是|是|是|是|是|是|是|   |   |   |
+|17.3|是|是|是|是|是|是|是|是|是|是|   |
+|17.2|是|是|是|   |是|是|是|是|是|是|   |
+|17.1|是|是|是|   |是|是|是|是|是|是|   |
+|17.0|是|是|是|   |是|是|是|是|是|是|   |
+|13.1|   |   |   |   |是|是|是|是|是|是|   |
+|13  |   |   |   |   |   |是|是|是|是|是|   |
+|11  |   |   |   |   |   |   |是|是|是|是|是|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>连接字符串详细信息
@@ -49,17 +50,18 @@ ms.locfileid: "81484446"
 
 下表显示了 Windows 操作系统版本的驱动程序版本支持：
 
-|驱动程序版本|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
-|-|-|-|-|-|-|-|-|-|-|
-|17.5|Y|Y|Y|Y| |Y|Y| | |
-|17.4|Y|Y|Y|Y|Y|Y|Y|Y| |
-|17.3|Y|Y|Y|Y|Y|Y|Y|Y| |
-|17.2| |Y|Y|Y|Y|Y|Y|Y| |
-|17.1| |Y|Y|Y|Y|Y|Y|Y| |
-|17.0| |Y|Y|Y|Y|Y|Y|Y| |
-|13.1| |Y|Y|Y|Y|Y|Y|Y| |
-|13  | | | |Y|Y| |Y|Y| |
-|11  | | | |Y|Y| | |Y|Y|
+|操作系统&nbsp;&#8594;<br />&#8595; 驱动程序版本|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
+|----|---|---|---|---|---|---|---|---|---|
+|17.6|是|是|是|是|   |是|是|   |   |
+|17.5|是|是|是|是|   |是|是|   |   |
+|17.4|是|是|是|是|是|是|是|是|   |
+|17.3|是|是|是|是|是|是|是|是|   |
+|17.2|   |是|是|是|是|是|是|是|   |
+|17.1|   |是|是|是|是|是|是|是|   |
+|17.0|   |是|是|是|是|是|是|是|   |
+|13.1|   |是|是|是|是|是|是|是|   |
+|13  |   |   |   |是|是|   |是|是|   |
+|11  |   |   |   |是|是|   |   |是|是|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="installing-microsoft-odbc-driver-for-sql-server"></a>安装 Microsoft ODBC Driver for SQL Server

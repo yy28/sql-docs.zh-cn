@@ -1,4 +1,5 @@
 ---
+description: Upgrade and Migrate Reporting Services
 title: 升级和迁移 Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446072"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -114,7 +115,7 @@ ms.locfileid: "82719523"
   
 3.  如果升级可以继续，则安装程序将提示您继续升级过程。  
   
-4.  安装程序为 SQL Server Reporting Services 程序文件创建新的文件夹。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的程序文件夹包括 MSRS13.\<实例名称>  。  
+4.  安装程序为 SQL Server Reporting Services 程序文件创建新的文件夹。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的程序文件夹包括 MSRS13.\<*instance name*>。  
   
 5.  安装程序将添加 SQL Server Reporting Services 报表服务器程序文件、配置工具和作为报表服务器功能一部分的命令行实用工具。  
   

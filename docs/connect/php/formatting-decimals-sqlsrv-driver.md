@@ -1,22 +1,22 @@
 ---
-title: 设置十进制字符串和 Money 值格式（SQLSRV 驱动程序）| Microsoft Docs
+title: 格式化十进制字符串和货币值（SQLSRV 驱动程序）
+description: 了解如何在使用 Microsoft SQLSRV Driver for PHP for SQL Server 时使用 FormatDecimals 和 DecimalPlaces 选项来格式化十进制字符串或货币值。
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265137"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680722"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>设置十进制字符串和 Money 值格式（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68265137"
 ## <a name="configure-number-of-decimal-places"></a>配置小数位数
 打开 `FormatDecimals` 后，另一个选项 `DecimalPlaces` 允许用户在显示 money 和 smallmoney 数据时配置小数位数。 它接受 [0, 4] 范围内的整数值，在显示时可能会出现舍入。 但是，基础 money 数据保持不变。
 
-这两个选项都可以设置为连接或语句级别，并且语句设置始终会重写相应的连接设置。 请注意，`DecimalPlaces` 选项仅  影响 money 数据，并且 `FormatDecimals` 必须设置为 true 才能使 `DecimalPlaces` 生效。 否则，无论 `DecimalPlaces` 如何设置，都会关闭格式设置。
+这两个选项都可以设置为连接或语句级别，并且语句设置始终会重写相应的连接设置。 请注意，`DecimalPlaces` 选项仅**** 影响 money 数据，并且 `FormatDecimals` 必须设置为 true 才能使 `DecimalPlaces` 生效。 否则，无论 `DecimalPlaces` 如何设置，都会关闭格式设置。
 
 > [!NOTE]
 > 由于 money 或 smallmoney 字段的数值范围为 4，因此将 `DecimalPlaces` 值设置为负数或大于 4 的任何值都将被忽略。 不建议使用任何格式化的 money 数据作为任何计算的输入。

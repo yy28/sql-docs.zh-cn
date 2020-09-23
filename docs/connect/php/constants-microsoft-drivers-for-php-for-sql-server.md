@@ -1,5 +1,6 @@
 ---
-title: 常量 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: 常量 (Microsoft Drivers for PHP for SQL Server)
+description: 了解在 Microsoft SQLSRV 和 PDO_SQLSRV Drivers for PHP for SQL Server 中定义的常量。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928081"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435250"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常量 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +57,7 @@ PDO::SQLSRV_ATTR_ENCODING 属性可传递给 [PDOStatement::setAttribute](../../
 |PDO::SQLSRV_ENCODING_UTF8|数据采用 UTF-8 编码。 这是默认编码。|  
 |PDO::SQLSRV_ENCODING_DEFAULT|使用 PDO::SQLSRV_ENCODING_SYSTEM（如果在连接过程中已指定）。<br /><br />使用连接的编码（如果已在准备语句中指定）。|  
   
-### <a name="query-timeout"></a>查询超时值  
+### <a name="query-timeout"></a>查询超时  
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性是任一非负整数，表示超时时间（以秒为单位）。 零 (0) 是默认值，表示无超时。  
   
 可以使用 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)、[PDO::setAttribute](../../connect/php/pdo-setattribute.md) 和 [PDO::prepare](../../connect/php/pdo-prepare.md) 指定 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性。  
@@ -67,11 +68,11 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性是任一非负整数，表示超时时间�
 ### <a name="handling-numeric-fetches"></a>处理数值提取
 可以使用 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性处理数值 SQL 类型（bit、integer、smallint、tinyint、float 和 real）列中的数值提取。 当 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 设置为 true，整数列的结果将表示为 int，而 SQL 浮点数和实数则表示为 float。 可以使用 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 设置此属性。 
 
-可以通过 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性修改默认的十进制格式设置行为。 这些属性的行为与 SQLSRV 端的相应选项相同（FormatDecimals  和 DecimalPlaces  ），只是输出参数不支持格式设置。 可以在连接或语句级别使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 设置这些属性，但任何语句属性将重写相应的连接属性。 如需了解更多详情，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
+可以通过 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性修改默认的十进制格式设置行为。 这些属性的行为与 SQLSRV 端的相应选项相同（FormatDecimals**** 和 DecimalPlaces****），只是输出参数不支持格式设置。 可以在连接或语句级别使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 设置这些属性，但任何语句属性将重写相应的连接属性。 如需了解更多详情，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
 
 ### <a name="handling-date-and-time-fetches"></a>处理日期和时间提取
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 如果保留 false，默认行为是将它们作为字符串返回。 可以在连接或语句级别使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 设置此属性，但语句属性将重写相应的连接属性。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 如果保留 false，默认行为是将它们作为字符串返回。 可以在连接或语句级别使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 设置此属性，但语句属性将重写相应的连接属性。 有关详细信息，请参阅[操作说明：使用 PDO_SQLSRV 驱动程序检索日期和时间类型作为 PHP Datetime 对象](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驱动程序常量  
 以下部分将列出由 SQLSRV 驱动程序使用的常量。  
@@ -106,7 +107,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php
 |SQLSRV_LOG_SYSTEM_INIT (1)|对初始化活动启用日志记录。|  
 |SQLSRV_LOG_SYSTEM_OFF (0)|禁用日志记录。|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|对语句活动启用日志记录。|  
-|SQLSRV_LOG_SYSTEM_UTIL (8)|对错误函数活动（例如 handle_error 和 handle_warning）启用日志记录   。|  
+|SQLSRV_LOG_SYSTEM_UTIL (8)|对错误函数活动（例如 handle_error 和 handle_warning）启用日志记录 。|  
   
 下表列出了可用作 **LogSeverity** 设置的值的常量：  
   
@@ -141,12 +142,12 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php
 |SQLSRV 常量|PHP 数据类型|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Integer|  
-|SQLSRV_PHPTYPE_DATETIME|Datetime|  
+|SQLSRV_PHPTYPE_DATETIME|datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|Stream|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
-1. SQLSRV_PHPTYPE_STREAM 和 SQLSRV_PHPTYPE_STRING 接受用于指定流编码的参数   。 下表包含作为可接受参数的 SQLSRV 常量以及对相应编码的说明。  
+1. SQLSRV_PHPTYPE_STREAM 和 SQLSRV_PHPTYPE_STRING 接受用于指定流编码的参数********。 下表包含作为可接受参数的 SQLSRV 常量以及对相应编码的说明。  
   
 |SQLSRV 常量|说明|  
 |-------------------|---------------|  
@@ -155,7 +156,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php
 |“UTF-8”|数据以 UTF-8 编码的形式返回。 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 1.1 中添加了此常量。 有关 UTF-8 支持的详细信息，请参阅[如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|  
   
 > [!NOTE]  
-> 使用 SQLSRV_PHPTYPE_STREAM 或 SQLSRV_PHPTYPE_STRING 时，必须指定编码   。 如果未提供参数，将返回错误。  
+> 使用 SQLSRV_PHPTYPE_STREAM 或 SQLSRV_PHPTYPE_STRING 时，必须指定编码********。 如果未提供参数，将返回错误。  
   
 有关这些常量的详细信息，请参阅 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)， [如何：使用 SQLSRV 驱动程序以流的形式检索字符数据](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
   
@@ -223,7 +224,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php
 |SQLSRV_SQLTYPE_CHAR、<br /><br />SQLSRV_SQLTYPE_VARCHAR|charCount|1 - 8000|  
 |SQLSRV_SQLTYPE_NCHAR、<br /><br />SQLSRV_SQLTYPE_NVARCHAR|charCount|1 - 4000|  
 |SQLSRV_SQLTYPE_BINARY、<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1 - 8000|  
-|SQLSRV_SQLTYPE_DECIMAL、<br /><br />SQLSRV_SQLTYPE_NUMERIC|精度|1 - 38|  
+|SQLSRV_SQLTYPE_DECIMAL、<br /><br />SQLSRV_SQLTYPE_NUMERIC|精准率|1 - 38|  
 |SQLSRV_SQLTYPE_DECIMAL、<br /><br />SQLSRV_SQLTYPE_NUMERIC|scale|1 - precision|  
   
 ### <a name="transaction-isolation-level-constants"></a>事务隔离级别常量  

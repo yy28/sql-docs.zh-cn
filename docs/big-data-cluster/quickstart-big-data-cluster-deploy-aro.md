@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160155"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472333"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>使用 python 脚本在 Azure Red Hat OpenShift (ARO) 上部署 SQL Server 大数据群集
 
@@ -24,6 +24,10 @@ ms.locfileid: "86160155"
 
 > [!TIP]
 > ARO 只是为大数据群集托管 Kubernetes 的一种选择。 若要了解其他部署选项以及如何自定义部署选项，请参阅[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)。
+
+
+> [!WARNING]
+> 使用内置存储类“managed premium”创建的持久卷包含回收策略“删除”。 因此，如果你删除 SQL Server 大数据群集，永久性卷声明和永久性卷都会遭删除。 应通过结合使用 azure-disk 预配程序和“保留”回收策略，创建自定义存储类，如[存储概念](/azure/aks/concepts-storage/#storage-classes)所述。 下面的脚本使用的是 managed-premium 存储类。 有关更多详细信息，请参阅[数据暂留](concept-data-persistence.md)主题。
 
 此处使用的默认大数据群集部署包括一个 SQL Master 实例、一个计算池实例、两个数据池实例和两个存储池实例。 通过 ARO 默认存储类使用 Kubernetes 永久性卷来保存数据。 本教程中使用的默认配置适用于开发/测试环境。
 

@@ -2,7 +2,7 @@
 title: JDBC 驱动程序概述 | Microsoft Docs
 description: Microsoft JDBC Driver for SQL Server 是与类型 4 Java Database Connectivity (JDBC) 4.2 兼容的驱动程序，可提供对 SQL 数据库的数据访问。
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529331"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943568"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 驱动程序概述
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server 是类型 4 Java Database Connectivity (JDBC) 4.2 合规性驱动程序，该驱动程序提供对 SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 和 Azure SQL Database 的可靠数据访问。  
+Microsoft JDBC Driver for SQL Server 是与类型 4 Java Database Connectivity (JDBC) 4.2 兼容的驱动程序，可提供对 SQL Server 和 Azure SQL 数据库的可靠数据访问。  
 
 ## <a name="redistribution"></a>重新分发
 
-JDBC 驱动程序版本 6.0、6.2、6.4 和 7.0 是可再发行版本。 查看许可协议中的“可分发代码”子句  。
+JDBC 驱动程序版本 6.0 及更高版本是可再发行版本。 查看许可协议中的“可分发代码”子句  。
 
-JDBC 驱动程序版本 4.x 是旧的过时版本。 对 4.x 的支持已在 2018 年之前过期。
+JDBC 驱动程序版本 4.x 是过时版本。 对 4.x 的支持已在 2018 年之前过期。
 
 ## <a name="in-this-section"></a>在本节中  
 

@@ -1,6 +1,6 @@
 ---
 title: 运行存储过程 (OLE DB) | Microsoft Docs
-description: 运行存储过程 (OLE DB)
+description: 了解对数据源调用存储过程的优点，以及 OLE DB Driver for SQL Server 为返回数据而提供的机制。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [OLE DB], executing
 - OLE DB, stored procedures
 - OLE DB Driver for SQL Server, stored procedures
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 47b47bade745c8113423678a818a513f962d1cb0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 244a5719285589b182b14e5214fd0b27050db2a0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012748"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858838"
 ---
 # <a name="stored-procedures---running"></a>存储过程 - 运行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

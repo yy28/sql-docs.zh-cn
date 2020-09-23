@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 61b3e618b413ddb1a8b52f7fb377148b282fcb66
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528979"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878414"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和连接字符串关键字和属性
 
@@ -97,6 +97,7 @@ ms.locfileid: "81528979"
 | | [SQL_ATTR_TXN_ISOLATION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TXN_ISOLATION) | LMW |
 | | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sql_copt_ss_access_token) | LMW |
 | | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| W |
+| | [SQL_COPT_SS_AUTOBEGINTXN](dsn-connection-string-attribute.md#sql_copt_ss_autobegintxn)| LMW |
 | | [SQL_COPT_SS_BCP](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbcp) | LMW |
 | | [SQL_COPT_SS_BROWSE_CACHE_DATA](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) | LMW |
 | | [SQL_COPT_SS_BROWSE_CONNECT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseconnect) | LMW |
@@ -137,6 +138,15 @@ ms.locfileid: "81528979"
 | SQL_AO_OFF | （默认值）不执行转换。 |
 | SQL_AO_ON | 执行转换。 |
 
+### <a name="sql_copt_ss_autobegintxn"></a>SQL_COPT_SS_AUTOBEGINTXN
+
+版本 17.6+ 自动提交关闭时，控制在回滚或提交后自动开始事务。
+
+| 属性值 | 说明 |
+|-|-|
+| SQL_AUTOBEGINTXN_ON | （默认值）在回滚或提交后自动开始事务。 |
+| SQL_AUTOBEGINTXN_OFF | 在回滚或提交后不自动开始事务。 |
+
 ### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 控制 SQL Server 回退连接的使用。 此属性不再受支持。
@@ -161,7 +171,7 @@ ms.locfileid: "81528979"
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 集成身份验证。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 密码身份验证。|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 交互式身份验证。|
-|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 托管服务标识身份验证。 对于用户分配的标识，UID 设置为用户标识的对象 ID。 |
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 托管标识身份验证。 对于用户分配的标识，UID 设置为用户标识的对象 ID。 |
 | |SQL_AU_RESET|取消设置。 替代任何 DSN 或连接字符串设置。|
 
 > [!NOTE]

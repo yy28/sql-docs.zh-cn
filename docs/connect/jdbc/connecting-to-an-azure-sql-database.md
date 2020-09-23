@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 52821d92728e5d54f98e6d977e7829dd13ed5bf0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632523"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988595"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 
@@ -24,9 +24,9 @@ ms.locfileid: "81632523"
 
 本文介绍了在使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时遇到的问题。 若要详细了解如何连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，请参阅：  
   
-- [SQL Azure 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [如何：使用 JDBC 连接到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [如何：使用 JDBC 连接到 Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [使用 Azure Active Directory 身份验证连接](connecting-using-azure-active-directory-authentication.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81632523"
 
 - TCP 层出现空闲，在此情形下，任意数量的网络设备都可以删除连接。  
 
-- SQL Azure 网关出现空闲，在此情形下，可能会发生 TCP keepalive 消息（使连接从 TCP 的角度看不再空闲），但在 30 分钟内没有活动的查询  。 在这种情况下，网关将确定 TDS 连接处于空闲状态已有 30 分钟，因此将中止连接。  
+- Azure SQL 网关出现空闲，在此情形下，可能会发生 TCP keepalive 消息（使连接从 TCP 的角度看不再空闲），但在 30 分钟内没有活动的查询。 在这种情况下，网关将确定 TDS 连接处于空闲状态已有 30 分钟，因此将中止连接。  
   
 为了避免网络组件删除空闲连接，应在加载驱动程序的操作系统上设置以下注册表设置（或非 Windows 的等效设置）：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81632523"
 ```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
-REM Workaround for JDBC keep alive on SQL Azure  
+REM Workaround for JDBC keep alive on Azure SQL  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveTime /t REG_DWORD /d 30000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveInterval /t REG_DWORD /d 1000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v TcpMaxDataRetransmissions /t REG_DWORD /d 10 >> keepalive.txt  

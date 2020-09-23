@@ -1,4 +1,5 @@
 ---
+description: Disable or Reactivate an Alert
 title: Disable or Reactivate an Alert
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,25 +22,25 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a6e72bee93cad2036cf76e44390c2c8af654a4c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c36dc10e2576d1d766df32426cece3ebdcf57b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85690647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371603"
 ---
-# <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
+# <a name="disable-or-reactivate-an-alert"></a>禁用或重新激活警报
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍了如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中禁用或重新激活 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理警报。  
+本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中禁用或重新激活 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报。  
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 默认情况下， **sysadmin** 固定服务器角色的成员可以编辑警报中的信息。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -48,13 +49,13 @@ ms.locfileid: "85690647"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要禁用或重新激活的警报的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要启用的警报，然后选择“启用”  。若要禁用某一警报，请右键单击要禁用的警报，然后选择“禁用”  。  
+4.  右键单击要启用的警报，然后选择“启用”****。若要禁用某一警报，请右键单击要禁用的警报，然后选择“禁用”****。  
   
-5.  **“禁用警报”** 或 **“启用警报”** 对话框将显示该进程的状态。  完成后，单击“关闭”。  
+5.  **“禁用警报”** 或 **“启用警报”** 对话框将显示该进程的状态。 完成后，单击“关闭”。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85690647"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- changes the enabled setting of Test Alert to 0  

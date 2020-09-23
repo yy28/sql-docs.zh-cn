@@ -1,7 +1,8 @@
 ---
-title: PDO::quote | Microsoft Docs
+title: PDO::quote
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDO::quote 函数的 API 参考。
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db661eea0ea4b3b46e3a73f7e1f4609267bbae41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919063"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645531"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,10 +30,10 @@ ms.locfileid: "80919063"
 string PDO::quote( $string[, $parameter_type ] )  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 $*string*：要用引号括起来的字符串。  
   
-$parameter_type：指示数据类型的可选（整数）符号  。  默认值为 PDO::PARAM_STR。  
+$parameter_type：指示数据类型的可选（整数）符号**。  默认值为 PDO::PARAM_STR。  
 
 PHP 7.2 中引入了新的 PDO 常量，以添加对[绑定 Unicode 和非 Unicode 字符串](https://wiki.php.net/rfc/extended-string-types-for-pdo)的支持。 Unicode 字符串可以括在引号中，并使用 N 作为前缀（即 N'string' 而不是 'string'）。
 
@@ -45,7 +46,7 @@ PHP 7.2 中引入了新的 PDO 常量，以添加对[绑定 Unicode 和非 Unico
 ## <a name="return-value"></a>返回值  
 可传递到 SQL 语句的用引号括起来的字符串，或 False（如果失败）。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

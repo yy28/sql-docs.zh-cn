@@ -1,4 +1,5 @@
 ---
+description: Create an ActiveX Script Job Step
 title: Create an ActiveX Script Job Step
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,20 +15,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 82c4e1ba1216ec476e9c88349533095ed7f458fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1d602a87258cd126d217353e94c0c600870e5a61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418223"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [SQL Server 中的 Azure SQL ManagSQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建和定义用于执行 ActiveX 脚本的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业步骤。  
+本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建和定义用于执行 ActiveX 脚本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤。  
 
 **重要说明** [!INCLUDEssNoteDepFutureAvoid]
   
@@ -65,7 +66,7 @@ ms.locfileid: "85749072"
   
 4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
-5.  在 **“类型”** 列表中，单击 **“ActiveX 脚本”** 。  
+5.  在 **“类型”** 列表中，单击 **“ActiveX 脚本”**。  
   
 6.  在 **“运行身份”** 列表中，选择该作业将要使用的代理帐户和凭据。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "85749072"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- create an ActiveX Script job step written in VBScript that creates a restore point  

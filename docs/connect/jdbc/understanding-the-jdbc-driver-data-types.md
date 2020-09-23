@@ -1,5 +1,6 @@
 ---
-title: 了解 JDBC 驱动程序数据类型 | Microsoft Docs
+title: 了解 JDBC 驱动程序数据类型
+description: 了解 JDBC 数据类型以及 Microsoft JDBC Driver for SQL Server 如何将这些类型转换为数据库类型。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48090db2e671fdfb1fb076645b06c9315b32bdd5
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920276"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410910"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC 驱动程序数据类型
 
@@ -37,7 +38,7 @@ JDBC 类型系统负责调解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 | [了解数据类型区别](../../connect/jdbc/understanding-data-type-differences.md)                                                 | 描述不同 JDBC 驱动程序数据类型之间的差异。                                                                                                                                                                                                    |
 | [了解数据类型转换](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | 描述当使用 getter 和 setter 方法时如何处理数据类型转换。                                                                                                                                                                                  |
 | [区域字符集支持](../../connect/jdbc/national-character-set-support.md)                                                           | 介绍对区域字符集类型的支持。                                                                                                                                                                                                          |
-| [支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)                                                                                 | 介绍 SQLXML 接口。 此外还说明了如何使用 SQLXML Java 数据类型在关系数据库中读取和写入 XML 数据  。                                                                                                             |
+| [支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)                                                                                 | 介绍 SQLXML 接口。 此外还说明了如何使用 SQLXML Java 数据类型在关系数据库中读取和写入 XML 数据****。                                                                                                             |
 | [包装器和接口](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | 论述具有允许应用程序服务器创建类代理的 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法和常量的接口，还论述对 `java.sql.Wrapper` 接口的支持。 |
   
 ## <a name="see-also"></a>另请参阅

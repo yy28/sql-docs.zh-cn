@@ -1,6 +1,6 @@
 ---
-title: 添加、删除节点故障转移群集
-description: 本文介绍如何在现有 SQL Server 故障转移群集实例中添加或删除节点。
+title: 添加、删除节点故障转移群集实例
+description: 本文介绍如何在现有 SQL Server Always On 故障转移群集实例中添加或删除节点。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
@@ -18,35 +18,37 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9ae9ae1f58bf615362e16ebffef8926437c99a9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9162dba1861193bba542feb51bc4c793c2c7d011
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900503"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435571"
 ---
-# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 故障转移群集中添加或删除节点（安装程序）
+# <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>在故障转移群集实例中添加或删除节点（安装程序）
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  使用此过程可以管理现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点。  
+
+ 使用此过程可以管理现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点。  
   
- 若要更新或删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须是一名本地管理员，且具有作为服务登录到故障转移群集的所有节点的权限。 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
+ 若要更新或删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI，你必须是本地管理员，且具有作为服务登录到基础 Windows Server 故障转移群集 (WSFC) 的所有节点的权限。 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
   
- 若要向现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点，则必须在要添加至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。 不要在活动节点上运行安装程序。  
+ 若要向现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 添加节点，则必须在要添加至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。 不要在活动节点上运行安装程序。  
   
- 若要从现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除一个节点，必须在要从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例中删除的节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
+ 若要从现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 删除节点，则必须在要从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例删除的节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
   
  若要查看添加或删除节点的过程步骤，请选择下列操作之一：  
   
--   [向现有 SQL Server 故障转移群集中添加节点](#Add)  
+-   [向现有 Always On 故障转移群集实例添加节点](#Add)  
   
--   [从现有 SQL Server 故障转移群集中删除节点](#Remove)  
+-   [从现有 Always On 故障转移群集实例删除节点](#Remove)  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装位置的操作系统驱动器号在添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的所有节点上必须匹配。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装位置的操作系统驱动器号在添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的所有节点上必须匹配。  
   
 ##  <a name="add-node"></a><a name="Add"></a> 添加节点  
   
-#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>向现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中添加节点  
+#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster-instance"></a>向现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例添加节点  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
@@ -66,7 +68,7 @@ ms.locfileid: "85900503"
   
 8.  在“群集节点配置”页上，使用下拉框指定要在此安装操作期间修改的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的名称。  
   
-9. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。 对于故障转移群集安装，将基于为活动节点提供的设置，在此页上预填充帐户名和启动类型信息。 必须为每个帐户提供密码。 有关详细信息，请参阅 [服务器配置 - 服务帐户](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+9. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。 对于故障转移群集实例安装，将基于为活动节点提供的设置，在此页上预填充帐户名和启动类型信息。 必须为每个帐户提供密码。 有关详细信息，请参阅 [服务器配置 - 服务帐户](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
      **安全说明** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -86,7 +88,7 @@ ms.locfileid: "85900503"
   
 ##  <a name="remove-node"></a><a name="Remove"></a> 删除节点  
   
-#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>从现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点  
+#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster-instance"></a>从现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例中删除节点  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   

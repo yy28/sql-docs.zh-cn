@@ -1,4 +1,5 @@
 ---
+description: 运算符
 title: 运算符
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -24,18 +25,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9727e0ac0270b32fe4df943e6ab91d2748cc7994
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319013"
 ---
 # <a name="operators"></a>运算符
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
   

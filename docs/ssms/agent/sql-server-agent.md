@@ -1,4 +1,5 @@
 ---
+description: SQL Server 代理
 title: SQL Server 代理
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,21 +15,21 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9914ebe147344b24352b97d018166601077a8895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec94ebc0b62194a8b6201ccd9a7a2c6cfe8c3ba8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418013"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”**。  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server 代理的好处 
 
@@ -39,7 +40,7 @@ ms.locfileid: "85755111"
 > [!NOTE]  
 > 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 代理服务处于禁用状态，除非用户明确选择自动启动该服务。  
   
-## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server 代理的组件  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server Agent Components  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  
   
 ### <a name="jobs"></a>作业  
@@ -56,7 +57,7 @@ ms.locfileid: "85755111"
   
 -   通过执行 sp_start_job 存储过程。  
   
-作业中的每个操作都是一个“作业步骤”  。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
+作业中的每个操作都是一个“作业步骤” **。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
   
 所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "85755111"
 有关详细信息，请参阅 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
 ### <a name="alerts"></a>警报  
-“警报”  是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
+“警报” ** 是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
   
 警报可以响应下列任一条件：  
   
@@ -93,7 +94,7 @@ ms.locfileid: "85755111"
 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
   
 ### <a name="operators"></a>运算符  
-“操作员”  定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员不涉及安全信息，因此不会定义安全主体。  
+“操作员” ** 定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员不涉及安全信息，因此不会定义安全主体。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以通过下列一种或多种方式通知操作员有警报出现：  
   
@@ -111,7 +112,7 @@ ms.locfileid: "85755111"
   
 若要使用电子邮件或寻呼程序向操作员发送通知，必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为使用数据库邮件。 有关详细信息，请参阅[数据库邮件](../../relational-databases/database-mail/database-mail.md)。  
   
-可以将操作员定义为一组个人的别名。 这样，该组的所有成员就可以同时收到通知。 有关详细信息，请参阅 [运算符](../../ssms/agent/operators.md)。  
+可以将操作员定义为一组个人的别名。 这样，该组的所有成员就可以同时收到通知。 有关详细信息，请参阅[运算符](../../ssms/agent/operators.md)。  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server 代理管理的安全性  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在 **msdb**数据库中使用了 **SQLAgentUserRole**、 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 固定数据库角色，用于控制非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin **固定服务器角色成员的用户对** 代理的访问。 除了这些固定数据库角色之外，子系统和代理还有助于数据库管理员确保每个作业步骤运行时都具有执行其任务所需的最低权限。  

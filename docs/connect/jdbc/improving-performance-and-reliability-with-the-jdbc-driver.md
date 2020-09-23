@@ -2,7 +2,7 @@
 title: 通过 JDBC 驱动程序提升性能和可靠性
 description: 了解多种技术，以便在使用 Microsoft JDBC Driver for SQL Server 时用于提高应用程序性能和可靠性。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728474"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565375"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>通过 JDBC 驱动程序提升性能和可靠性
 
@@ -37,6 +37,7 @@ ms.locfileid: "81728474"
 |[稀疏列](../../connect/jdbc/sparse-columns.md)|介绍 JDBC 驱动程序对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稀疏列的支持。|  
 |[JDBC 驱动程序的预处理语句元数据缓存](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|讨论用预定义语句查询提高性能的方法。|
 |[将大容量复制 API 用于批量插入操作](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|介绍如何为批处理插入操作启用大容量复制 API 以及这样做的优点。|
+|[不以 Unicode 格式发送 String 参数](../../connect/jdbc/setting-the-connection-properties.md)|在使用 CHAR、VARCHAR 和 LONGVARCHAR 数据时，用户可以将连接属性 sendStringParametersAsUnicode 设置为 `false`，以获得最佳性能提升。|
 
 ## <a name="see-also"></a>另请参阅
 

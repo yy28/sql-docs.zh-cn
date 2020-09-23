@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-ms.openlocfilehash: 0a9b93190f0240c917c6331ae69d1e8461cb7ea2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243756"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180040"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -84,14 +84,15 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | 解决了 SSMS 中的三个常见挂起源的问题。 |
 | 常规 SSMS | 修复了数个与 SSMS 连接对话框忘记条目（服务器/用户/密码）相关的问题。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40256401)和 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40015519)。 |
 | 常规 SSMS |   修复了“统计信息属性”对话框中选中“更新这些列的统计信息”复选框并选择“确定”后无反应的问题。 统计信息未更新，并且尝试为操作编写脚本时产生消息：没有要进行脚本编写的操作。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/37799992)。 |
+| 常规 SSMS | 解决了与 [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455) 相关的问题。 | 
 | 导入/导出数据层应用程序 | 修复了导入 bacpac 文件时 SSMS 引发错误的问题。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40229137)。 |
 | Integration Services | 修复了使用 SSMS 18.4 或更早版本在 Azure SQL 托管实例中执行 SSIS 包时客户无法编辑 SQL 代理作业步骤的 bug。 |
 | Integration Services |  修复了用于在 SQL 代理作业步骤中为本地 SQL Server 执行 SSIS 包的“执行选项”选项卡中缺少“使用 32 位运行时”选项的 bug。 |
 | Intellisense/编辑器 | 修复了选择“文件”->“新建”->“数据库引擎查询”时可能弹出错误对话框的问题。 |
-| “对象资源管理器” | 修复了在对象资源管理器中右键单击表或索引节点时 SQL Azure 数据库不可使用属性窗口的问题。 |
+| “对象资源管理器” | 修复了在对象资源管理器中右键单击表或索引节点时 Azure SQL 数据库“属性”窗口无法使用的问题。 |
 | “对象资源管理器” | 解决了当控制平面中断影响 sys.database_service_objectives 时 SSMS 无法在 Azure 中展开 master 数据库的数据库节点这一问题。 |
 | 报表 | 修复了 Linux 上已损坏的几个标准报表 </br></br> 示例：内存消耗报表失败，出现类似于“"/var/opt/mssql/log/log_116.trc\log.trc" 无效...”的错误。 |
-| SMO/脚本编写 | 更新了逻辑以创建新的 SQL Azure 数据库，将 Gen5_2 用作默认 SLO。 |
+| SMO/脚本编写 | 更新了逻辑以在 Azure SQL 数据库中创建新的数据库，将 Gen5_2 用作默认 SLO。 |
 | Xevent UI | 修复了长时间未解决的问题（在 SSMS 18.0 中引入）：“保存为 XEL 文件...”引发错误。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/37695592)。 |
 
 #### <a name="known-issues-186"></a>已知问题 (18.6)
@@ -102,6 +103,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | “新建服务器审核规范”对话框可能会导致 SSMS 发生故障，并显示访问冲突错误。 | 空值 |
 | 常规 SSMS | 应将使用 SMO 的 SSMS 扩展重新编译为面向新的特定于 SSMS 的 SMO v161 包。 可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 找到预览版本 </br></br> 针对以前 160 个版本的 Microsoft.SqlServer.SqlManagementObjects 包编译的扩展仍起作用。 | 空值 |
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值|
+| Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“计算机\HKEY_CLASSES_ROOT\AppID 与计算机\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下找到与 Integration Services 相关的注册表位置，在这些配置单元中将名为“LocalService”的注册表项重命名为“LocalService_A”，以获取尝试连接的 Integration Services 指定版本 | 空值|
 
 
 可参考 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server)了解其他已知问题，并向产品团队提供反馈。
@@ -144,6 +146,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 ### <a name="known-issues-1851"></a>已知问题 18.5.1
 
 | 新建项 | 详细信息 | 解决方法 | |----------|---------||-----------| | 常规 SSMS | 关系图设计器存在一个已知 bug，导致现有关系图损坏。 例如，使用 SSMS 17.9.1 创建关系图设计，然后使用 SSMS 18.x 更新/保存它，再尝试使用 17.9.1 打开它。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/37992649)，了解更多详细信息。 | N/A | | 常规 SSMS |“新建服务器审核规范”对话框可能会导致 SSMS 发生故障，并显示访问冲突错误。 | N/A || | SMO/脚本编写 | 需要将使用 SMO 的 SSMS 扩展重新编译为面向新的 SMO v160。 | N/A | | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：| 删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 |
+
 
 ### <a name="185"></a>18.5
 
@@ -227,7 +230,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SMO/脚本 | 删除了显式 sqlvariant 强制转换（SqlOnDemand 的非法 T-SQL 语法），这修复了 SqlOnDemand 的脚本。 |
 | SMO/脚本 | 修复了以下问题：跳过 SQL Azure 索引上的 FILLFACTOR。 |
 | SMO/脚本 | 修复了与为外部对象编写脚本相关的问题。 |
-| SMO/脚本 | 修复了以下问题：“生成脚本”  不允许针对 SQL DB 选择扩展属性的脚本选项。 同时，还修复了此类扩展属性的脚本。 |
+| SMO/脚本 | 修复了以下问题：“生成脚本”不允许针对 SQL 数据库选择扩展属性的脚本选项。 同时，还修复了此类扩展属性的脚本。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 规则中的帮助链接不正确。 |
 | XEvent UI | 修复了以下问题：将鼠标悬停在网格中的项之上即选中这些项。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/38262124)和 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)。 |
 
@@ -316,10 +319,10 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Intellisense/编辑器 | 更新了对最近添加到 SQL Server 2019 中的功能（例如，“ALTER SERVER CONFIGURATION”  ）的支持。 |
 | Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将 Azure-SSIS Integration Runtime 上的 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
 | SMO/脚本 | 添加了对 Azure SQL DW 唯一约束的支持脚本的支持。 |
-| SMO/脚本 | 数据分类 </br> 添加了对 SQL 版本 10 (SQL 2008) 及更高版本的支持。 </br> - 为 SQL 版本 15 (SQL 2019) 和更高版本以及 Azure SQL DB 添加了新的敏感度属性“rank”。 |
+| SMO/脚本 | 数据分类 </br> 添加了对 SQL 版本 10 (SQL 2008) 及更高版本的支持。 </br> - 为 SQL 版本 15 (SQL 2019) 和更高版本以及 Azure SQL 数据库添加了新的敏感度属性“rank”。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 向规则集格式添加了版本控制。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了新的检查。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 Azure SQL 数据库托管实例的支持。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 Azure SQL 托管实例的支持。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 的默认视图，将结果作为表格显示。 |
 
 #### <a name="bug-fixes-in-1831"></a>18.3.1 中的 bug 修复
@@ -342,7 +345,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Integration Services | 修复了 Azure 数据工厂管道中由 Azure 启用的实用工具 `DTExec` 导致的问题，以使用正确参数类型。 （18.3.1 明确了这一点） |
 | SMO/脚本 | 修复了使用 **SMO.Server.SetDefaultInitFields(true)** 时导致 SMO 在提取属性时引发错误的问题。|
 | 查询存储 UI | 修复了在“跟踪查询”视图中选择“执行计数”指标时 Y 轴无法缩放的问题   。 |
-| 漏洞评估 | 禁用了 Azure SQL DB 的清除和批准基线。|
+| 漏洞评估 | 禁用了 Azure SQL 数据库的清除和批准基线。|
 
 #### <a name="known-issues-1831"></a>已知问题 (18.3.1)
 
@@ -407,7 +410,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SMO/脚本 | 修复了尝试对包含几千个表的数据库运行“生成脚本”导致进度对话框似乎卡滞的问题  。 |
 | SMO/脚本 | 修复了 SQL 2019 中编写外部表的脚本不起作用的问题  。 |
 | SMO/脚本 | 修复了 SQL 2019 中编写外部数据源的脚本不起作用的问题  。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/34295080)，了解更多详细信息。 |
-| SMO/脚本 | 修复了面向 Azure SQL DB 时，未编写列扩展属性脚本的问题。** 有关更多详细信息，请参阅 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)。 |
+| SMO/脚本 | 修复了面向 Azure SQL 数据库时，未编写列*扩展属性*脚本的问题。 有关更多详细信息，请参阅 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)。 |
 | SMO/脚本 | 最后一页插入：SMO - 添加属性“Index.IsOptimizedForSequentialKey”  |
 |**SSMS 安装程序**| **缓解了 SSMS 安装程序错误地阻止安装 SSMS 报告不匹配语言的问题。在某些异常情况下（例如中止的安装程序或错误地卸载以前的 SSMS 版本），这可能是一个问题。请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/37483594/)，了解更多详细信息。** |
 | XEvent 探查器 | 修复了关闭查看器时出现的故障。 |
@@ -440,7 +443,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | :-------| :------|
 | 数据库关系图 | [SSMS 中再现数据库关系图](https://feedback.azure.com/forums/908035/suggestions/37507828)。
 | SSBDIAGNOSE.EXE |SQL Server 诊断（命令行工具）已添加回 SSMS 包。|
-| Integration Services (SSIS) | 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划...  右键单击 Azure 中 SSIS 目录中的 SSIS 包时会显示菜单项，“在 Azure 中安排执行 SSIS 包”菜单项，位于“工具”菜单项下的“迁移到 Migrate”菜单项下，以及右键单击 Azure SQL 数据库托管实例中的 SQL Server 代理下的作业文件夹时显示的“在 Azure 中安排执行 SSIS”    。|
+| Integration Services (SSIS) | 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划...  菜单项（右键单击 Azure 中 SSIS 目录中的 SSIS 包时会显示）、“在 Azure 中安排执行 SSIS 包”菜单项（位于“工具”菜单项下的“迁移到 Azure”菜单项下）以及“在 Azure 中安排执行 SSIS”（右键单击 Azure SQL 托管实例中的 SQL Server 代理下的作业文件夹时显示）。|
 
 #### <a name="bug-fixes-in-181"></a>18.1 中的 bug 修复
 
@@ -542,7 +545,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |Azure Data Studio 集成|添加了启动/下载 Azure Data Studio 的菜单项。|
 |Azure Data Studio 集成|向对象资源管理器添加了“启动 Azure Data Studio”菜单项。|
 |Azure Data Studio 集成|右键单击 OE 中的数据库节点时，将向用户显示上下文菜单，以在 Azure Data Studio 中运行查询或创建新笔记本。|
-|Azure SQL 支持| SLO/Edition/MaxSize 数据库属性现在接受自定义名称，方便支持 Azure SQL 数据库的未来版本。|
+|Azure SQL 支持| SLO/Edition/MaxSize 数据库属性现在接受自定义名称，从而更容易支持 Azure SQL 数据库的未来版本。|
 |Azure SQL 支持| 添加了对 vCore SKU（常规用途和业务关键）的支持：Gen4_24 和所有 Gen5。|
 |Azure SQL 托管实例|连接到 Azure SQL 托管实例时，在 SMO 和 SSMS 中添加了新的“AAD 登录”作为新登录类型。|
 |AlwaysOn|在 SSMS Always On 仪表板中重新处理 RTO（估计恢复时间）和 RPO（估计的数据丢失）。 请参阅 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) 中更新后的文档。|
@@ -558,7 +561,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |平面文件导入向导|添加了用于通知用户导入可能已导致列重命名的逻辑。|
 |Integration Services (SSIS)|添加了支持，使客户能够在 Azure 政府云中的 Azure-SSIS IR 上安排 SSIS 包。|
 |Integration Services (SSIS)|通过 SSMS 使用 Azure SQL 托管实例的 SQL 代理时，可以在 SSIS 代理作业步骤中配置参数和连接管理器。|
-|Integration Services (SSIS)|连接到 Azure SQL DB/托管实例时，可以使用“default”作为初始数据库与它进行连接  。|
+|Integration Services (SSIS)|连接到 Azure SQL 数据库/Azure SQL 托管实例时，可以使用“default”作为初始数据库与它进行连接。|
 |Integration Services (SSIS)|在“Integration Services 目录”节点下添加了“在 Azure 数据工厂中尝试 SSIS”的新条目项，此条目项可用于启动“Integration Runtime 创建向导”并快速创建“Azure-SSIS Integration Runtime”  。
 |Integration Services (SSIS)|在目录创建向导中添加了“创建 SSIS IR”按钮，该按钮可用于启动“Integration Runtime 创建向导”并快速创建“Azure-SSIS Integration Runtime”  。|
 |Integration Services (SSIS)|ISDeploymentWizard 现支持命令行模式下的 SQL 身份验证、Azure Active Directory 集成身份验证和 Azure Active Directory 密码身份验证。|
@@ -585,7 +588,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |SMO|同时在 SMO 和 SSMS 中为“边缘约束”添加了级联删除。|
 |SMO|添加了对数据分类“读写”权限的支持。|
 |漏洞评估| 在 Azure SQL DW 上启用了漏洞评估任务菜单。|
-|漏洞评估|更改了在 Azure SQL 托管实例服务器上运行的漏洞评估规则集，以便“漏洞评估”扫描结果与 Azure SQL DB 中的保持一致。|
+|漏洞评估|更改了在 Azure SQL 托管实例上运行的漏洞评估规则集，以便“漏洞评估”扫描结果与 Azure SQL DB 中的保持一致。|
 |漏洞评估| “漏洞评估”现在支持 Azure SQL DW。|
 |漏洞评估|添加了新的导出功能，以将漏洞评估扫描结果导出为 Excel。|
 |XEvent 查看器|XEvent 查看器：启用了显示计划窗口以获取更多 XEvent。|
@@ -596,7 +599,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | :-------| :------|
 |故障与冻结|修复了与 GDI 对象相关的常见 SSMS 故障源。|
 |故障与冻结|修复了选择"脚本作为创建/更新/删除"（已删除 SMO 对象的不必要提取）时挂起和性能不佳的一个常见源。|
-|故障与冻结|修复了在启用 ADAL 跟踪期间使用 MFA 连接到 Azure SQL DB 时系统停止响应的问题。|
+|故障与冻结|修复了在启用 ADAL 跟踪期间使用 MFA 连接到 Azure SQL 数据库时系统停止响应的问题。|
 |故障与冻结|修复了从活动监视器中调用时实时查询统计信息中系统停止响应（或感知到的挂起）的问题（在使用 SQL Server 身份验证但未设置“持久性安全信息”时显示的问题）。|
 |故障与冻结|修复了在对象资源管理器中选择“报表”时系统停止响应的问题，可能表现为高延迟连接或资源的临时不可访问性。|
 |故障与冻结|修复了尝试使用中央管理服务器和 Azure SQL Server 时 SSMS 中出现的故障。 有关详细信息，请参阅[使用中央管理服务器时 SMSS 17.5 应用程序出现错误和故障](https://feedback.azure.com/forums/908035/suggestions/33374884)。|
@@ -619,25 +622,25 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |Azure SQL - 常规支持|修复了阻止用户显示 Azure 订阅（如果存在超出 50 个）的常用 Azure UI 控件中的问题。 此外，排序已更改为按名称而不是按订阅 ID。 例如，尝试从 URL 还原备份时，用户可能会遇到此情况。|
 |Azure SQL - 常规支持|修复了在常用 Azure UI 控件中枚举订阅时可能会引发“索引已超出范围”的问题。 必须为非负数且小于集合大小。” 错误的订阅时常用 Azure UI 控件中的问题。 例如，尝试从 URL 还原备份时，用户可能会遇到此情况。|
 |Azure SQL - 常规支持|解决了服务级别目标被硬编码使得 SSMS 难以支持更新版 Azure SQL SLO 的问题。 现在，用户可以登录 Azure 并允许 SSMS 检索所有适用的 SLO 数据（版本和最大大小）|
-|Azure SQL DB 托管实例支持|改进/优化了对托管实例的支持：已禁用 UI 中不支持的选项和用于处理 URL 审核目标的“查看审核日志”选项的修复。|
-|Azure SQL DB 托管实例支持|“生成和发布脚本”向导脚本不支持的 CREATE DATABASE 子句。|
-|Azure SQL DB 托管实例支持|为托管实例启用了实时查询统计信息。|
-|Azure SQL DB 托管实例支持|数据库属性 -> 文件错误编写了 ALTER DB ADD FILE 脚本。|
-|Azure SQL DB 托管实例支持|修复了即使选择某些其他计划类型时仍选择 ONIDLE 计划的 SQL 代理计划程序的回归。|
-|Azure SQL DB 托管实例支持|调整 MAXTRANSFERRATE、MAXBLOCKSIZE 以在 Azure 存储上进行备份。|
-|Azure SQL DB 托管实例支持|在还原操作之前编写结尾日志备份的问题（这在 CL 上不受支持）。|
-|Azure SQL DB 托管实例支持|创建数据库向导未正确编写 CREATE DATABASE 语句。|
-|Azure SQL DB 托管实例支持|连接到托管实例时，对 SSMS 中的 SSIS 包进行特殊处理。|
-|Azure SQL DB 托管实例支持|修复了连接到托管实例时尝试使用“活动监视器”显示错误的问题。|
-|Azure SQL DB 托管实例支持|改进了对 AAD 登录（SSMS 资源管理器中）的支持。|
-|Azure SQL DB 托管实例支持|改进了 SMO 文件组对象的脚本编写。|
-|Azure SQL DB 托管实例支持|改进了凭据的 UI。|
-|Azure SQL DB 托管实例支持|添加了对逻辑复制的支持。|
-|Azure SQL DB 托管实例支持|修复了导致右键单击数据库并选择“导入数据层应用程序”失败的问题。|
-|Azure SQL DB 托管实例支持|修复了导致右键单击“TempDB”会显示错误的问题。|
-|Azure SQL DB 托管实例支持|修复了对 SMO 中的 ALTER DB ADD FILE 语句编写脚本导致生成的 T-SQL 脚本为空的问题。|
-|Azure SQL DB 托管实例支持|改进了托管实例服务器特定属性（硬件生成、服务层、使用和保留的存储）的显示。|
-|Azure SQL DB 托管实例支持|修复了编写数据库脚本（“脚本作为创建...”）没有编写额外文件组和文件脚本的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799)。 |
+|Azure SQL 托管实例支持|改进/优化了对托管实例的支持：已禁用 UI 中不支持的选项和用于处理 URL 审核目标的“查看审核日志”选项的修复。|
+|Azure SQL 托管实例支持|“生成和发布脚本”向导脚本不支持的 CREATE DATABASE 子句。|
+|Azure SQL 托管实例支持|为托管实例启用了实时查询统计信息。|
+|Azure SQL 托管实例支持|数据库属性 -> 文件错误编写了 ALTER DB ADD FILE 脚本。|
+|Azure SQL 托管实例支持|修复了即使选择某些其他计划类型时仍选择 ONIDLE 计划的 SQL 代理计划程序的回归。|
+|Azure SQL 托管实例支持|调整 MAXTRANSFERRATE、MAXBLOCKSIZE 以在 Azure 存储上进行备份。|
+|Azure SQL 托管实例支持|在还原操作之前编写结尾日志备份的问题（这在 CL 上不受支持）。|
+|Azure SQL 托管实例支持|创建数据库向导未正确编写 CREATE DATABASE 语句。|
+|Azure SQL 托管实例支持|连接到托管实例时，对 SSMS 中的 SSIS 包进行特殊处理。|
+|Azure SQL 托管实例支持|修复了连接到托管实例时尝试使用“活动监视器”显示错误的问题。|
+|Azure SQL 托管实例支持|改进了对 AAD 登录（SSMS 资源管理器中）的支持。|
+|Azure SQL 托管实例支持|改进了 SMO 文件组对象的脚本编写。|
+|Azure SQL 托管实例支持|改进了凭据的 UI。|
+|Azure SQL 托管实例支持|添加了对逻辑复制的支持。|
+|Azure SQL 托管实例支持|修复了导致右键单击数据库并选择“导入数据层应用程序”失败的问题。|
+|Azure SQL 托管实例支持|修复了导致右键单击“TempDB”会显示错误的问题。|
+|Azure SQL 托管实例支持|修复了对 SMO 中的 ALTER DB ADD FILE 语句编写脚本导致生成的 T-SQL 脚本为空的问题。|
+|Azure SQL 托管实例支持|改进了托管实例服务器特定属性（硬件生成、服务层、使用和保留的存储）的显示。|
+|Azure SQL 托管实例支持|修复了编写数据库脚本（“脚本作为创建...”）没有编写额外文件组和文件脚本的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799)。 |
 |备份/还原/附加/分离数据库|修复了 .mdf 文件的物理文件名与原始文件名不匹配时用户无法附加数据库的问题。|
 |备份/还原/附加/分离数据库|修复了 SSMS 可能找不到有效的还原计划或可能找到的还原计划并非最优的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752)。 |
 |备份/还原/附加/分离数据库|修复了“附加数据库”向导不显示已重命名的辅助文件的问题。 现在，会显示文件并添加了相关注释（例如“找不到”）。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434)。 |

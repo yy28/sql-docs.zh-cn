@@ -1,4 +1,5 @@
 ---
+description: Send SQL Server Agent Error Messages
 title: Send SQL Server Agent Error Messages
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,20 +17,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e1340c049f3a31e3dd7c2c50e84ae40136b1a66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd205affcfc0d72bb1ecd21b89822f00dafbb135
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492046"
 ---
-# <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
+# <a name="send-sql-server-agent-error-messages"></a>发送 SQL Server 代理错误消息
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍如何配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中通过 net send 的方式来发送其错误消息。  
+本主题介绍如何配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中通过 net send 的方式来发送其错误消息。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -41,7 +42,7 @@ ms.locfileid: "85644657"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
@@ -60,9 +61,9 @@ ms.locfileid: "85644657"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要通过 net send 从其发送错误消息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
+2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
   
-3.  在“SQL Server 代理属性 - server\_name”对话框中的“错误日志”下（位于“常规”页上），在“Net send 收件人”框中键入要向其发送错误消息的用户名或计算机名称。  
+3.  在“SQL Server 代理属性 - server\_name”对话框中的“错误日志”下（位于“常规”页上），在“Net send 收件人”框中键入要向其发送错误消息的用户名或计算机名称   。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   

@@ -1,4 +1,5 @@
 ---
+description: Schedule a Job
 title: Schedule a Job
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4c7b5d10e497cb87c2ac90b5d009a074c97b1597
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0b22064c44505d321f4dfb7484c99335c4b676
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418083"
 ---
-# <a name="schedule-a-job"></a>Schedule a Job
+# <a name="schedule-a-job"></a>安排作业计划
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。  
   
@@ -53,39 +54,39 @@ ms.locfileid: "85644733"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”  ，展开“作业”  ，右键单击要计划的作业，并单击“属性”  。  
+2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要计划的作业，并单击“属性”****。  
   
-3.  选择 **“计划”** 页，再单击 **“新建”** 。  
+3.  选择 **“计划”** 页，再单击 **“新建”**。  
   
 4.  在 **“名称”** 框中，键入新计划的名称。  
   
 5.  如果不希望计划在创建后立即生效，则清除 **“启用”** 复选框。  
   
-6.  对于 **“计划类型”** ，请选择下列操作之一：  
+6.  对于 **“计划类型”**，请选择下列操作之一：  
   
     -   单击 **“SQL Server 代理启动时自动启动”** ，在启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务时启动作业。  
   
     -   单击 **“CPU 空闲时启动”** ，在 CPU 达到空闲条件时启动作业。  
   
-    -   如果希望反复运行计划，则单击 **“重复执行”** 。 若要设置重复执行的计划，请完成对话框上的 **“频率”** 、 **“每天频率”** 和 **“持续时间”** 组。  
+    -   如果希望反复运行计划，则单击 **“重复执行”** 。 若要设置重复执行的计划，请完成对话框上的 **“频率”**、 **“每天频率”** 和 **“持续时间”** 组。  
   
-    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置“执行一次”  计划，请完成对话框上的“执行一次”  组。  
+    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置“执行一次”**** 计划，请完成对话框上的“执行一次”**** 组。  
   
 #### <a name="to-attach-a-schedule-to-a-job"></a>将计划附加到作业中  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”  ，展开“作业”  ，右键单击要计划的作业，然后单击“属性”  。  
+2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要计划的作业，然后单击“属性”****。  
   
-3.  选择 **“计划”** 页，再单击 **“选取”** 。  
+3.  选择 **“计划”** 页，再单击 **“选取”**。  
   
-4.  选择要附加的计划，然后单击 **“确定”** 。  
+4.  选择要附加的计划，然后单击 **“确定”**。  
   
-5.  在“作业属性”  对话框中，双击附加的计划。  
+5.  在“作业属性”**** 对话框中，双击附加的计划。  
   
-6.  验证是否正确设置了 **“开始日期”** 。 如果该选项的设置不正确，则将日期设置为要让计划启动的日期，然后单击 **“确定”** 。  
+6.  验证是否正确设置了 **“开始日期”** 。 如果该选项的设置不正确，则将日期设置为要让计划启动的日期，然后单击 **“确定”**。  
   
-7.  在 **“作业属性”** 对话框中，单击 **“确定”** 。  
+7.  在 **“作业属性”** 对话框中，单击 **“确定”**。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
@@ -95,7 +96,7 @@ ms.locfileid: "85644733"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE msdb ;  

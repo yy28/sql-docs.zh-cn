@@ -1,7 +1,7 @@
 ---
 title: 什么是应用程序部署？
 titleSuffix: SQL Server Big Data Clusters
-description: 本文介绍 SQL Server 2019 大数据群集上的应用程序部署。
+description: 了解应用程序部署如何提供用于在 SQL Server 2019 大数据群集上创建、管理和运行应用程序的接口。
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215446"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765326"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什么是大数据群集上的应用程序部署？
 
@@ -57,7 +57,7 @@ output: #output parameter the app expects and the type
 
 SQL Server 2019 CU5 支持在 Red Hat OpenShift 上部署大数据群集，并且支持 BDC 的更新安全模型，因此不再需要特权容器。 对于使用 SQL Server 2019 CU5 的所有新部署，容器除了是非特权容器之外，还默认以非根用户身份运行。
 
-在 CU5 版本中，使用[应用部署](concept-application-deployment.md)接口部署的应用程序的安装步骤仍将以根用户身份运行。 这是必需的，因为在安装期间会安装应用程序将使用的其他包。 作为应用程序的一部分部署的其他用户代码将以低特权用户身份运行。 
+在 CU5 版本中，使用[应用部署]()接口部署的应用程序的安装步骤仍将以根用户身份运行。 这是必需的，因为在安装期间会安装应用程序将使用的其他包。 作为应用程序的一部分部署的其他用户代码将以低特权用户身份运行。 
 
 此外，CAP_AUDIT_WRITE 功能是允许使用 cron 作业计划 SSIS 应用程序所必需的一项可选功能。 当应用程序的 yaml 规范文件指定计划时，应用程序将通过 cron 作业触发，而这需要其他功能。  或者，可以通过 Web 服务调用使用 azdata app run 按需触发应用程序，而这不需要 CAP_AUDIT_WRITE 功能。 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>如何使用应用程序部署
 
 应用程序部署的两个主要接口如下： 
-- [命令行接口 `azdata`](big-data-cluster-create-apps.md)
+- [命令行接口 `azdata`](app-create.md)
 - [Visual Studio Code 和 Azure Data Studio 扩展](app-deployment-extension.md)
 
-还可以使用 RESTful Web 服务执行应用程序。 有关详细信息，请参阅[在大数据群集上使用应用程序](big-data-cluster-consume-apps.md)。
+还可以使用 RESTful Web 服务执行应用程序。 有关详细信息，请参阅[在大数据群集上使用应用程序](app-consume.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
 若要了解有关如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上创建和运行应用程序的详细信息，请参阅以下内容：
 
-- [使用 azdate 部署应用程序](big-data-cluster-create-apps.md)
+- [使用 azdate 部署应用程序](app-create.md)
 - [使用应用部署扩展部署应用程序](app-deployment-extension.md)
-- [在大数据群集上使用应用程序](big-data-cluster-consume-apps.md)
+- [在大数据群集上使用应用程序](app-consume.md)
 
 若要了解有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅以下概述：
 

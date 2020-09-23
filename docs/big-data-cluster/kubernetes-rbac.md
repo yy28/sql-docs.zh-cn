@@ -5,20 +5,20 @@ description: 本文介绍 SQL Server 大数据群集如何将 RBAC 与 Kubernete
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d2e3f379402f16f32020f9cd34103919f13a30c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 79ea97a0824d7213f0758d75f8b552372bba51c2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552972"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87879046"
 ---
-# <a name="kubernetes-rbac-model--impact-on-users-managing-bdc"></a>Kubernetes RBAC 模型及对用户管理 BDC 的影响
+# <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Kubernetes RBAC 模型及对用户和服务帐户管理 BDC 的影响
 
-以下部分介绍了用户管理大数据群集所需的权限。
+本文介绍了有关用户管理大数据群集的权限要求，以及关于从大数据群集中访问默认服务帐户和 Kubernetes 的语义。
 
 > [!NOTE]
 > 有关 Kubernetes RBAC 模型的其他资源，请参阅[使用 RBAC 授权 - Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) 及[使用 RBAC 定义和应用权限 - OpenShift](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html)。
@@ -47,39 +47,43 @@ BDC 使用服务帐户（例如 `sa-mssql-controller` 或 `master`）来协调�
 
 从 SQL Server 2019 CU5 开始，Telegraf 需要具有群集级别角色权限的服务帐户来收集 Pod 和节点指标。 部署（或者升级现有部署）期间，尝试创建必要的服务帐户和群集角色，但如果部署群集或执行升级的用户没有足够的权限，部署或升级将在出现警告的情况下继续进行并获得成功。 这种情况下，不会收集 Pod 和节点指标。 部署群集的用户必须要求群集管理员创建角色和服务帐户（部署或升级之前或之后）。 创建后，BDC 将使用它们。 
 
-下面的脚本演示如何创建所需项目：
+以下步骤说明如何创建所需项目：
 
-```console
-export CLUSTER_NAME=mssql-cluster
-kubectl create -f - <<EOF
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-rules:
-- apiGroups:
-  - '*'
-  resources:
-  - pods
-  - nodes/stats
-  verbs:
-  - get
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: ${CLUSTER_NAME}:crb-mssql-metricsdc-reader
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-subjects:
-- kind: ServiceAccount
-  name: sa-mssql-metricsdc-reader
-  namespace: ${CLUSTER_NAME}
-EOF
-```
+1. 使用以下内容创建 metrics-role.yaml 文件。 务必要将占位符 <clusterName> 替换为大数据群集的名称。
+
+   ```yaml
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRole
+   metadata:
+     name: <clusterName>:cr-mssql-metricsdc-reader
+   rules:
+   - apiGroups:
+     - '*'
+     resources:
+     - pods
+     - nodes/stats
+     verbs:
+     - get
+   ---
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRoleBinding
+   metadata:
+     name: <clusterName>:crb-mssql-metricsdc-reader
+   roleRef:
+     apiGroup: rbac.authorization.k8s.io
+     kind: ClusterRole
+     name: <clusterName>:cr-mssql-metricsdc-reader
+   subjects:
+   - kind: ServiceAccount
+     name: sa-mssql-metricsdc-reader
+     namespace: <clusterName>
+   ```
+
+2. 创建群集角色和群集角色绑定：
+
+   ```bash
+   kubectl create -f metrics-role.yaml
+   ```
 
 服务帐户、群集角色和群集角色绑定可以在 BDC 部署之前或之后创建。 Kubernetes 自动更新 Telegraf 服务帐户的权限。 如果这些帐户和角色创建为 Pod 部署，将在收集的 Pod 和节点指标中看到几分钟的延迟。
 
@@ -97,3 +101,12 @@ EOF
 ```
 
 如果这些设置设为 `false`，则 BDC 部署工作流不会尝试为 Telegraf 创建服务帐户、群集角色和绑定。
+
+## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>BDC Pod 中的默认服务帐户使用情况
+
+为了获得更严格的安全模型，SQL Server 2019 CU5 禁用了 BDC Pod 中默认 Kubernetes 服务帐户的默认凭据装入。 这适用于 CU5 或更高版本中的新部署和升级的部署。
+Pod 中的凭据令牌可用于访问 Kubernetes API 服务器，权限级别取决于 Kubernetes 授权策略设置。 如果有需要恢复到以前的 CU5 行为的特定用例，我们将在 CU6 中引入新的功能切换，以便仅在部署时启用自动装入。 为此，可以使用 control.json 配置部署文件，并将 automountServiceAccountToken 设置为 true。 运行此命令，以使用 `azdata` CLI 在 control.json 自定义配置文件中更新此设置： 
+
+``` bash
+azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"
+```

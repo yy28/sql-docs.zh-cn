@@ -1,6 +1,6 @@
 ---
 title: 为 OLE DB 表值参数更改的架构行集 | Microsoft Docs
-description: 为 OLE DB 表值参数更改的架构行集
+description: 了解为了支持 OLE DB Driver for SQL Server 中的表值参数而更改或添加的架构行集。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - schema rowsets [OLE DB]
 - table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 3140a882c29a0cc319f85a861d3f341370f1a93a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e44c2d4aa3b7cd490c3b59ca00d0d044e8ce8b30
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008717"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860056"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>为 OLE DB 表值参数更改的架构行集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

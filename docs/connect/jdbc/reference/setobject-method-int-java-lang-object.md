@@ -1,4 +1,5 @@
 ---
+description: setObject 方法 (int, java.lang.Object)
 title: setObject 方法 (int, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77e5b4c13d6ff298f1a12127dffba8be2bda8c5b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4889cde1e7c50cb9aeb40d05468c035b99772a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458556"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject 方法 (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,12 +36,12 @@ public final void setObject(int index,
                             java.lang.Object obj)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- 索引   
+#### <a name="parameters"></a>参数  
+ *index*  
   
- 指示参数编号的 int  。  
+ 指示参数编号的 int****。  
   
- obj   
+ *obj*  
   
  一个对象。  
   
@@ -52,7 +53,7 @@ public final void setObject(int index,
   
  在调用此 setObject 方法前，应用程序可能会使用以下方法之一设置指定的参数：  
   
--   SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的 set\<类型> 方法  
+-   SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的 set\<Type> 方法  
   
 -   SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的 setNull 方法。  
   
@@ -62,7 +63,7 @@ public final void setObject(int index,
   
  如果 obj 值为 NULL 且无法确定该参数的类型信息，此 setObject 方法则会将指定的参数转换为 CHAR 后再将其发送到数据库。  
   
- 自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 驱动程序 3.0 起，此方法的行为由 sendTimeAsDatetime  连接属性（[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)）和 [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改。  
+ 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始，此方法的行为由 sendTimeAsDatetime**** 连接属性（[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)）和 [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改。  
   
  有关详细信息，请参阅[配置将 java.sql.Time 值发送到服务器的方式](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   

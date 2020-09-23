@@ -1,4 +1,5 @@
 ---
+description: 指定防故障操作员
 title: 指定防故障操作员
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,20 +17,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f91a6c3548c944d3b2bcf075f2189a5fe4112df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0be299ee081043e03a55a3cd0fa7a5a0aaf2c2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371403"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定防故障操作员
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-防故障操作员是在无法联系到指定的操作员时接收警报的用户。 本主题介绍如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中设置防故障操作员以接收 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代理警报通知。  
+防故障操作员是在无法联系到指定的操作员时接收警报的用户。 本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中设置防故障操作员以接收 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报通知。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -43,24 +44,24 @@ ms.locfileid: "85724501"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 只有 **sysadmin** 固定服务器角色的成员才能指定防故障操作员。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-designate-a-fail-safe-operator"></a>指定防故障操作员  
   
-1.  在“对象资源管理器”  中，单击加号以展开服务器，该服务器包含要指定为防故障操作员的 SQL Server 代理操作员。  
+1.  在“对象资源管理器”**** 中，单击加号以展开服务器，该服务器包含要指定为防故障操作员的 SQL Server 代理操作员。  
   
-2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
+2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
   
-3.  在“SQL Server 代理属性 - server\_name”对话框的“选择页”下，选择“警报系统”。  
+3.  在“SQL Server 代理属性 - server\_name”对话框的“选择页”下，选择“警报系统”************__。  
   
-4.  在“防故障操作员”  下，选中“启用防故障操作员”  。  
+4.  在“防故障操作员”**** 下，选中“启用防故障操作员”****。  
   
-5.  在“操作员”  列表中，选择想要执行防故障的操作员。  
+5.  在“操作员”**** 列表中，选择想要执行防故障的操作员。  
   
-6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”  、“寻呼程序”  或“Net send”  。  
+6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”****、“寻呼程序”**** 或“Net send”****。  
   
 7.  完成后，单击 **“确定”** 。  
   

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 485bb37dee0c118cf313bd7b3740b56c41e20c90
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914803"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713775"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
@@ -34,11 +34,11 @@ ms.locfileid: "86914803"
 > 不支持针对 Analysis Services 工作负载的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。
 
 > [!NOTE]
-> 尝试从 SQL Server Profiler 连接到 SQL Azure 数据库时，会错误地引发误导性错误消息，如下所示：
+> 尝试从 SQL Server Profiler 连接到 Azure SQL 数据库时，会错误地引发误导性错误消息，如下所示：
 >
 > - 若要对 SQL Server 运行跟踪，你必须是 sysadmin 固定服务器角色的成员或拥有 ALTER TRACE 权限。
 >
-> 该消息应说明了 SQL Server Profiler 不支持 SQL Azure 数据库实例。
+> 该消息应说明了 SQL Server Profiler 不支持 Azure SQL 数据库。
 
 ## <a name="where-is-the-profiler"></a>在哪里可以启动探查器？
 
@@ -164,7 +164,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 |介绍如何重播至光标处。|[重播至光标处 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
 |介绍了如何重播 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|[重播 Transact-SQL 脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |说明如何创建跟踪模板。|[创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
-|说明如何修改跟踪模板。|[修改跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
+|说明如何修改跟踪模板。|[修改跟踪模板 (SQL Server Profiler)](./modify-trace-templates.md?view=sql-server-ver15)|  
 |说明如何设置全局跟踪选项。|[设置全局跟踪选项 (SQL Server Profiler)](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |说明如何在跟踪时查找值或数据列。|[在跟踪时查找值或数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |说明如何从正在运行的跟踪派生模板。|[从正在运行的跟踪中派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
@@ -173,7 +173,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 |说明如何导出跟踪模板。|[导出跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |说明如何导入跟踪模板。|[导入跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |说明如何从跟踪提取脚本。|[从跟踪提取脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|说明如何将跟踪与 Windows 性能日志数据关联。|[将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|说明如何将跟踪与 Windows 性能日志数据关联。|[将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)|  
 |说明如何组织跟踪中显示的列。|[组织跟踪中显示的列 (SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |介绍了如何启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。|[启动 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |说明如何保存跟踪和跟踪模板。|[保存跟踪和跟踪模板](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  

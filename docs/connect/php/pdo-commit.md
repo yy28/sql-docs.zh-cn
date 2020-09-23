@@ -1,7 +1,8 @@
 ---
-title: PDO::commit | Microsoft Docs
+title: PDO::commit
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDO::commit 函数的 API 参考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a0db4a00-9700-4f49-ab16-6522dd1101d3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a8fa31a8459d401a97cd025d0e07515737532538
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 94e42cb5fccba7d69025de85b0247f7a4c065c03
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919388"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646187"
 ---
 # <a name="pdocommit"></a>PDO::commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ bool PDO::commit();
 ## <a name="return-value"></a>返回值  
 如果方法调用成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 PDO::commit 不受 PDO::ATTR_AUTOCOMMIT 的值影响（也不影响该值）。  
   
 有关使用 PDO::commit 的示例，请参阅 [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) 。  

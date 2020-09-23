@@ -1,7 +1,6 @@
 ---
+description: Configure a User to Create and Manage SQL Server Agent Jobs
 title: Configure a User to Create and Manage SQL Server Agent Jobs
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,26 +14,29 @@ ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b266b6baa81ab9786b33641355baae5cdd0b81f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d1d75a6ff5dbdce3d3201abc9db6ce85a8e602a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497810"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍如何对用户进行配置以创建或执行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
-  
--   **开始之前：** [安全性](#Security)  
-  
--   **若要配置用户以创建和管理 SQL Server 代理作业，请使用：** [SQL Server Management Studio](#SSMS)  
-  
+
+- **开始之前：** [安全性](#Security)  
+ 
+- **若要配置用户以创建和管理 SQL Server 代理作业，请使用：**  [SQL Server Management Studio](#SSMS)  
+
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
@@ -42,7 +44,7 @@ ms.locfileid: "85749131"
   
 默认情况下，这些数据库角色的成员可以创建各自的作业步骤，这些作业步骤不执行其他作业步骤。 如果这些非管理用户要运行那些执行其他作业步骤类型（例如， [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包）的作业，它们需要对代理帐户具有访问权限。 sysadmin 固定服务器角色的所有成员都有创建、修改和删除代理帐户的权限。 有关与这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色相关的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
@@ -50,9 +52,9 @@ ms.locfileid: "85749131"
   
 1.  在 **对象资源管理器**中，展开某个服务器。  
   
-2.  展开 **“安全性”** ，然后展开 **“登录名”** 。  
+2.  展开 **“安全性”**，然后展开 **“登录名”**。  
   
-3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”  。  
+3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”****。  
   
 4.  在 **“登录属性”** 对话框的 **“用户映射”** 页上，选择包含 **msdb**的行。  
   
@@ -62,16 +64,21 @@ ms.locfileid: "85749131"
   
 1.  在 **对象资源管理器**中，展开某个服务器。  
   
-2.  展开 **“SQL Server 代理”** 。  
+2.  展开 **“SQL Server 代理”**。  
   
-3.  右键单击“代理”  ，再选择“新建代理”  。  
+3.  右键单击“代理”****，再选择“新建代理”****。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页上，指定新代理的代理名称、凭据名称和说明。 请注意，在创建 SQL Server 代理的代理帐户之前，必须先创建一个凭据。 有关创建凭据的详细信息，请参阅[如何：创建凭据](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)和 [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)。  
   
-5.  检查此代理的相应子系统。  
+5.  检查此代理的相应子系统。
+    1. [操作系统 (CmdExec)](create-a-cmdexec-job-step.md)
+    1. [SQL Server Analysis Services 查询](create-an-analysis-services-job-step.md#to-create-an-analysis-services-query-job-step)
+    1. [SQL Server Analysis Services 命令](create-an-analysis-services-job-step.md#to-create-an-analysis-services-command-job-step-1)
+    1. [SQL Server Integration Services 包](../../integration-services/packages/run-integration-services-ssis-packages.md)
+    1. [PowerShell](../../powershell/run-windows-powershell-steps-in-sql-server-agent.md)
   
 6.  在 **“主体”** 页上，添加或删除登录名或角色，以授予或删除对代理帐户的访问权限。  
-  
-## <a name="see-also"></a>另请参阅  
-[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
-  
+
+## <a name="see-also"></a>另请参阅
+- [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
+

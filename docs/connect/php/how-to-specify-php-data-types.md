@@ -1,7 +1,8 @@
 ---
-title: 如何：指定 PHP 数据类型 | Microsoft Docs
+title: 如何：指定 PHP 数据类型
+description: 了解如何在使用 Microsoft Drivers for PHP for SQL Server 检索数据时指定 PHP 数据类型
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8453b2cd2db36ed2c69b8ada941bcde0050a0759
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9a47fd479449a8725c2e8a86d960ef020d1ee1ba
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915793"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680672"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "80915793"
     有关用于指定 PHP 数据类型的常量的信息，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 PHPTYPE 部分。  
   
 ## <a name="example"></a>示例  
-以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中，  ReviewDate 字段以字符串形式进行检索，Comments  字段以流形式进行检索。 通过使用 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
+以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中，ReviewDate 字段以字符串形式进行检索，Comments 字段以流形式进行检索。 通过使用 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
@@ -97,9 +98,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-在该示例中，以字符串形式检索第二个字段 (ReviewDate  ) 会保留精确到毫秒的 SQL Server DATETIME 数据类型。 默认情况下，将 SQL Server DATETIME 数据类型作为 PHP DateTime 对象进行检索，但无法精确到毫秒。  
+在该示例中，以字符串形式检索第二个字段 (ReviewDate) 会保留精确到毫秒的 SQL Server DATETIME 数据类型。 默认情况下，将 SQL Server DATETIME 数据类型作为 PHP DateTime 对象进行检索，但无法精确到毫秒。  
   
-出于演示目的，以流形式检索第四个字段 (Comments  )。 默认情况下，将 SQL Server 数据类型 nvarchar(3850) 作为字符串进行检索，大多数情况下都可接受此方式。  
+出于演示目的，以流形式检索第四个字段 (Comments)。 默认情况下，将 SQL Server 数据类型 nvarchar(3850) 作为字符串进行检索，大多数情况下都可接受此方式。  
   
 > [!NOTE]  
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 函数提供了在执行查询之前获取字段信息（包括类型信息）的方法。  

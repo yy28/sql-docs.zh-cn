@@ -1,5 +1,6 @@
 ---
-title: PDO::prepare | Microsoft Docs
+title: PDO::prepare
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDO::prepare 函数的 API 参考。
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941206"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435204"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,28 +29,28 @@ ms.locfileid: "76941206"
 PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
-#### <a name="parameters"></a>parameters
-$*statement*：包含 SQL 语句的字符串。
+#### <a name="parameters"></a>参数
+$*语句*：包含 SQL 语句的字符串。
 
-key_pair：包含属性名称和值的数组  。 有关详细信息，请参阅“备注”部分。
+*key_pair*：包含属性名称和值的数组。 有关详细信息，请参阅备注部分。
 
 ## <a name="return-value"></a>返回值
 如果成功，则返回 PDOStatement 对象。 如果失败，则返回 PDOException 对象或 False，具体取决于 `PDO::ATTR_ERRMODE` 的值。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 在执行已准备的语句之前不会对其进行评估。
 
-下表列出可能的 key_pair 值  。
+下表列出可能的 key_pair 值。
 
-|密钥|说明|
+|键|说明|
 |-------|---------------|
-|PDO::ATTR_CURSOR|指定游标行为。 默认值为 `PDO::CURSOR_FWDONLY`，一个不可滚动的前向游标。 `PDO::CURSOR_SCROLL` 是可滚动的游标。<br /><br />例如，`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )` 。<br /><br />如果设置为 `PDO::CURSOR_SCROLL`，则可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 设置可滚动游标的类型，如下所述。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|
+|PDO::ATTR_CURSOR|指定游标行为。 默认值为 `PDO::CURSOR_FWDONLY`，一个不可滚动的前向游标。 `PDO::CURSOR_SCROLL` 是可滚动的游标。<br /><br />例如，`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果设置为 `PDO::CURSOR_SCROLL`，则可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 设置可滚动游标的类型，如下所述。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|
 |PDO::ATTR_EMULATE_PREPARES|默认情况下，此属性为 false，可通过此 `PDO::ATTR_EMULATE_PREPARES => true` 更改。 有关详细信息和示例，请参阅[模拟准备](#emulate-prepare)。|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|指定可滚动游标的类型。 仅在 `PDO::ATTR_CURSOR` 设置为 `PDO::CURSOR_SCROLL` 时有效。 有关此属性可采用的值，请参阅下文。|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|指定设置提取的 Money 值格式时的小数位数。 仅当 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 true 时此选项才起作用。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 True，则指定直接查询执行。 False 表示已准备的语句执行。 有关 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8（默认值）<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 有关详细信息，请参阅[操作说明：使用 PDO_SQLSRV 驱动程序检索日期和时间类型作为 PHP Datetime 对象](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|处理具有数值 SQL 类型的列中的数值提取。 有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|指定是否在合适时向十进制字符串添加前导零。 如已设置，此选项将启用用于设置 Money 类型格式的 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
@@ -155,7 +156,7 @@ $statement = $pdo->prepare(
 $statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
 ```
 
-**选项 2**
+**方法 2**
 ```
 $statement = $pdo->prepare(
   'SELECT *

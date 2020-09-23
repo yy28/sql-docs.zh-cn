@@ -1,6 +1,6 @@
 ---
 title: 创建 RxSqlServerData 对象
-description: RevoScaleR 教程 2：如何在 SQL Server 中使用 R 语言创建数据对象。
+description: 了解如何将 RevoScaleR 函数与 SQL Server 结合使用。 本课程将继续介绍如何创建数据库：添加表和加载数据。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728608"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178804"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>使用 RxSqlServerData 创建 SQL Server 数据对象（SQL Server 和 RevoScaleR 教程）
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 2 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-本课程将继续介绍如何创建数据库：添加表和加载数据。 如果 DBA 在[教程 2](deepdive-work-with-sql-server-data-using-r.md) 中创建了数据库和登录名，则可以使用 R IDE（如 RStudio）或内置工具（如 Rgui  ）来添加表。
+本课程将继续介绍如何创建数据库：添加表和加载数据。 如果 DBA 在[教程 2](deepdive-work-with-sql-server-data-using-r.md) 中创建了数据库和登录名，则可以使用 R IDE（如 RStudio）或内置工具（如 Rgui****）来添加表。
 
-在 R 中，连接到 SQL Server 并使用 RevoScaleR  函数执行以下任务：
+在 R 中，连接到 SQL Server 并使用 RevoScaleR**** 函数执行以下任务：
 
 > [!div class="checklist"]
 > * 创建用于定型数据和预测的表
@@ -81,13 +81,13 @@ ms.locfileid: "85728608"
 
 使用相同的步骤，通过相同的过程创建保存评分数据的表。
 
-1. 创建一个新的 R 变量 sqlScoreTable  ，以存储用于计分的表的名称。
+1. 创建一个新的 R 变量 sqlScoreTable**，以存储用于计分的表的名称。
   
     ```R
     sqlScoreTable <- "ccFraudScoreSmall"
     ```
   
-2. 将该变量作为参数提供给 RxSqlServerData  函数，以定义第二个数据源对象 sqlScoreDS  。
+2. 将该变量作为参数提供给 RxSqlServerData**** 函数，以定义第二个数据源对象 sqlScoreDS**。
   
     ```R
     sqlScoreDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -120,7 +120,7 @@ ms.locfileid: "85728608"
     
     无论从何处运行代码，此特别调用都可以从正确的库中获取示例。 例如，尝试在 SQL Server 和开发计算机上运行该函数，查看路径有何不同。
   
-2. 定义一个变量来存储新数据，并使用 RxTextData  函数指定文本数据源。
+2. 定义一个变量来存储新数据，并使用 RxTextData**** 函数指定文本数据源。
   
     ```R
     inTextData <- RxTextData(file = ccFraudCsv,      colClasses = c(
@@ -131,7 +131,7 @@ ms.locfileid: "85728608"
         "fraudRisk" = "integer"))
     ```
   
-    参数 colClasses  十分重要。 可使用它指示要将分配给从文本文件加载的每列数据的数据类型。 在此示例中，所有列都作为文本进行处理，除了命名列（它们作为整数进行处理）。
+    参数 colClasses** 十分重要。 可使用它指示要将分配给从文本文件加载的每列数据的数据类型。 在此示例中，所有列都作为文本进行处理，除了命名列（它们作为整数进行处理）。
   
 3. 此时，你可能要暂停片刻，并在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中查看数据库。 刷新数据库中表的列表。
   
@@ -145,9 +145,9 @@ ms.locfileid: "85728608"
     
     假设连接字符串没有问题，短暂暂停之后，应看到类似下面这些的结果：
   
-    *写入的总行数：10000，总时间：0.466* *读取的行数：10000，处理的总行数：10000，总区块时间：0.577 秒*
+    写入的总行数：10000，总时间：0.466*读取的行数：10000，已处理的总行数：10000，区块总时间：0.577 秒* **
   
-5. 刷新表的列表。 若要验证是否每个变量都具有正确的数据类型并且已成功导入，还可以右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的表并选择“选择前 1000 行”  。
+5. 刷新表的列表。 若要验证是否每个变量都具有正确的数据类型并且已成功导入，还可以右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的表并选择“选择前 1000 行”****。
 
 ### <a name="load-data-into-the-scoring-table"></a>将数据加载到评分表中
 
@@ -159,7 +159,7 @@ ms.locfileid: "85728608"
     ccScoreCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudScoreSmall.csv")
     ```
   
-2. 使用 RxTextData  函数获取数据并将其保存在变量 inTextData  中。
+2. 使用 RxTextData**** 函数获取数据并将其保存在变量 inTextData** 中。
   
     ```R
     inTextData <- RxTextData(file = ccScoreCsv,      colClasses = c(
@@ -169,15 +169,15 @@ ms.locfileid: "85728608"
         "numIntlTrans" = "integer", "creditLine" = "integer"))
     ```
   
-3.  调用 rxDataStep  函数以使用新架构和数据覆盖当前表。
+3.  调用 rxDataStep**** 函数以使用新架构和数据覆盖当前表。
   
     ```R
     rxDataStep(inData = inTextData, sqlScoreDS, overwrite = TRUE)
     ```
   
-    - inData  参数定义要使用的数据源。
+    - inData** 参数定义要使用的数据源。
   
-    - outFile  参数指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中要用于保存数据的表。
+    - outFile** 参数指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中要用于保存数据的表。
   
     - 如果该表已存在并且未使用 *overwrite* 选项，则结果会在无截断的情况下插入。
   

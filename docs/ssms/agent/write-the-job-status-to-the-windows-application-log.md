@@ -1,4 +1,5 @@
 ---
+description: Write the Job Status to the Windows Application Log
 title: Write the Job Status to the Windows Application Log
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,21 +18,21 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 69d3f7c21fc34a5a3401dce62620089e046de868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d39cf428afb510573271279eff19a61a471d0c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480189"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍了如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理以便将作业状态写入 Windows 应用程序事件日志。  
+本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以便将作业状态写入 Windows 应用程序事件日志。  
   
 作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
   
@@ -52,17 +53,17 @@ ms.locfileid: "85759740"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，展开 **“作业”** ，右键单击要编辑的作业，再单击 **“属性”** 。  
+2.  展开 **“SQL Server 代理”**，展开 **“作业”**，右键单击要编辑的作业，再单击 **“属性”**。  
   
 3.  选择 **“通知”** 页。  
   
-4.  请检查 **“写入 Windows 应用程序事件日志”** ，然后执行下列操作之一：  
+4.  请检查 **“写入 Windows 应用程序事件日志”**，然后执行下列操作之一：  
   
-    -   单击“当作业成功时”  ，以在作业成功完成时记录作业状态。  
+    -   单击“当作业成功时”****，以在作业成功完成时记录作业状态。  
   
-    -   单击“当作业失败时”  ，以在作业未成功完成时记录作业状态。  
+    -   单击“当作业失败时”****，以在作业未成功完成时记录作业状态。  
   
-    -   单击“当作业完成时”  ，以便无论完成状态如何，都记录作业状态。  
+    -   单击“当作业完成时”****，以便无论完成状态如何，都记录作业状态。  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
 **将作业状态写入 Windows 应用程序日志**  

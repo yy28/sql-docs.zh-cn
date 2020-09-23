@@ -1,4 +1,5 @@
 ---
+description: 操作员属性 - 新建操作员（“常规”页）
 title: 新建操作员属性（“常规”页）
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f59aa6f41d1de3dc8bf4fa2aa0451af7ab76f34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2ecbd048c1aaca2ac5bfd9d3f025d2e4588d822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492110"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>操作员属性 - 新建操作员（“常规”页）
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此页可查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员的常规属性。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "85715690"
 **名称**  
 更改操作员的名称。  
   
-**已启用**  
+**Enabled**  
 启用操作员。 在未启用时，不会向操作员发送通知。  
   
 **电子邮件名称**  

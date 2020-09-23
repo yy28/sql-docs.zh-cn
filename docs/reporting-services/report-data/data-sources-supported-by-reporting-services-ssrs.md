@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458949"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988433"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -157,7 +157,7 @@ ms.locfileid: "86458949"
   
  如果您在图形模式下使用该查询设计器，则会分析查询并可能将其重写。 基于文本的查询设计器也可用于编写查询。 如果希望控制用于查询的精确 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，请使用基于文本的查询设计器。   
   
- 从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、SQL 数据仓库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检索数据的方式类似，但存在一些仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的要求。 有关详细信息，请参阅 [SQL Azure 连接类型 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。  
+ 从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、SQL 数据仓库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检索数据的方式类似，但存在一些仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的要求。 有关详细信息，请参阅 [Azure SQL 连接类型 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。  
   
  [返回数据源表](#DataSourcesTable)  
   

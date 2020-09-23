@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e585b0314b6306bdff84b07f2d12514ee015936
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900545"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862948"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什么是 SQL Server 的外延安全更新程序？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -281,17 +281,17 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 
 **如果 SQL Server 2008 和 2008 R2 客户想要自带许可 (BYOL)，是否必须有软件保障？**
 
-是，客户必须有软件保障，才能利用 Azure 虚拟机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BYOL 计划作为许可移动性计划的一部分。 对于没有软件保障的客户，建议客户迁移到 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 环境的 Azure SQL 数据库托管实例。 客户还可以迁移到即用即付 Azure 虚拟机。 按核心许可 SQL 的软件保障客户也可以使用 Azure 混合权益 (AHB) 迁移到 Azure。
+是，客户必须有软件保障，才能利用 Azure 虚拟机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BYOL 计划作为许可移动性计划的一部分。 对于没有软件保障的客户，建议客户迁移到 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 环境的 Azure SQL 托管实例。 客户还可以迁移到即用即付 Azure 虚拟机。 按核心许可 SQL 的软件保障客户也可以使用 Azure 混合权益 (AHB) 迁移到 Azure。
 
-Azure SQL 数据库托管实例是 Azure 中几乎与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地完全兼容的一项服务。 托管实例提供内置的高可用性/灾难恢复功能，以及智能性能功能和动态缩放功能。 托管实例还提供无需手动安全修补和升级的无版本体验。 若要详细了解 BYOL 计划，请参阅 Azure 定价指南页。
+Azure SQL 托管实例是 Azure 中几乎与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地完全兼容的一项服务。 托管实例提供内置的高可用性/灾难恢复功能，以及智能性能功能和动态缩放功能。 托管实例还提供无需手动安全修补和升级的无版本体验。 若要详细了解 BYOL 计划，请参阅 Azure 定价指南页。
 
 **客户可以使用什么方法在 Azure 中运行 SQL Server？**
 
-客户可以将旧的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境迁移到 Azure SQL 数据库托管实例（完全托管的数据平台服务 (PaaS)，它提供“无版本”选项来消除终止支持日期方面的顾虑），也可以迁移到 Azure 虚拟机来获得安全更新程序。 迁移的数据库会继续与旧系统兼容。 有关详细信息，请参阅[兼容性认证](../../database-engine/install-windows/compatibility-certification.md)。
+客户可以将旧的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境迁移到 Azure SQL 托管实例（完全托管的数据平台服务 (PaaS)，它提供“无版本”选项来消除终止支持日期方面的顾虑），也可以迁移到 Azure 虚拟机来获得安全更新程序。 迁移的数据库会继续与旧系统兼容。 有关详细信息，请参阅[兼容性认证](../../database-engine/install-windows/compatibility-certification.md)。
 
 在终止支持日期 2019 年 7 月 9 日之后的三年内，外延安全更新程序将提供给 Azure 虚拟机中的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]。 对于要从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 升级的客户，支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有后续版本。 对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，客户必须使用受支持的最新 Service Pack。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，建议客户使用最新累积更新。 请注意，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，将不提供 Service Pack，而只提供累积更新和常规分发版本 (GDR)。
 
-Azure SQL 数据库托管实例是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中实例范围内部署选项，它提供最广泛的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎兼容性和本机虚拟网络 (VNET) 支持，因此你可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库迁移到托管实例，而无需更改应用。 它将丰富的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外围应用与完全托管智能服务的运营和财务优势相结合。 利用新的 Azure 数据库迁移服务，将 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 迁移到 Azure SQL 数据库托管实例，几乎不需要更改应用程序代码。
+Azure SQL 托管实例是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中实例范围内部署选项，它提供最广泛的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎兼容性和本机虚拟网络 (VNET) 支持，因此你可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库迁移到托管实例，而无需更改应用。 它将丰富的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外围应用与完全托管智能服务的运营和财务优势相结合。 利用新的 Azure 数据库迁移服务，将 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 迁移到 Azure SQL 托管实例，几乎不需要更改应用程序代码。
 
 **客户能否对 SQL Server 2008 和 2008 R2 版本利用 Azure 混合权益？**
 

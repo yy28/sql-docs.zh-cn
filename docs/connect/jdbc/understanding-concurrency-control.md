@@ -1,5 +1,6 @@
 ---
-title: 了解并发控制 | Microsoft Docs
+title: 了解并发控制
+description: 了解并发控制，以及如何在使用 JDBC Driver for SQL Server 开发多用户应用程序时保持数据库完整性。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 520abf20b52f15458ac36d7a2e617a04970eb66a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925333"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435301"
 ---
 # <a name="understanding-concurrency-control"></a>了解并发控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "80925333"
 > [!NOTE]  
 >  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并发的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“管理并发数据访问”。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  JDBC 驱动程序支持以下并发类型：  
   
 |并发类型|特征|行锁|说明|  

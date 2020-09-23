@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::errorInfo | Microsoft Docs
+title: PDOStatement::errorInfo
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDOStatement::errorInfo 函数的 API 参考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d525a3331ccc2e855113460519323142a3c01902
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e05d43caec418257bb107dcb40aa918e406538f
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907922"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645208"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +41,7 @@ array PDOStatement::errorInfo();
   
 如果没有错误或如果未设置 SQLSTATE，特定于驱动程序的字段将为 NULL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

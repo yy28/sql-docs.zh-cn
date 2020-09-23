@@ -1,5 +1,6 @@
 ---
-title: 如何：以流的形式发送数据 | Microsoft Docs
+title: 如何：以流的形式发送数据
+description: 了解如何使用 Microsoft SQLSRV Drivers for PHP for SQL Server 和 PDO_SQLSRV Drivers for PHP for SQL Server 通过流将大型对象发送到数据库。
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915943"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411432"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>如何：以流的形式发送数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80915943"
 第三个示例演示如何使用 PDO_SQLSRV 驱动程序将流数据发送到服务器。  
   
 ## <a name="example-sending-stream-data-at-execution"></a>示例：在执行时发送流数据
-以下示例向 AdventureWorks 数据库的 *Production.ProductReview* 表中插入一行。 客户意见 ($comments) 通过 PHP [fopen](https://php.net/manual/en/function.fopen.php) 函数以流的形式打开，随后在查询执行几批流式传输到服务器  。  
+以下示例向 AdventureWorks 数据库的 *Production.ProductReview* 表中插入一行。 客户意见 ($comments) 通过 PHP [fopen](https://php.net/manual/en/function.fopen.php) 函数以流的形式打开，随后在查询执行几批流式传输到服务器**。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 所有输出都写入控制台。  
   
@@ -80,7 +81,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example-sending-stream-data-using-sqlsrv_send_stream_data"></a>示例：使用 sqlsrv_send_stream_data 发送流数据
-下一个示例与上述示例相同，但禁用了在执行时发送所有流数据的默认行为。 该示例使用 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 将流数据发送到服务器。 每次调用 sqlsrv_send_stream_data 时，最多可以发送八千字节 (8kB) 的数据  。 该脚本将对 **sqlsrv_send_stream_data** 发出的调用数进行计数并将该计数显示到控制台。  
+下一个示例与上述示例相同，但禁用了在执行时发送所有流数据的默认行为。 该示例使用 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 将流数据发送到服务器。 每次调用 sqlsrv_send_stream_data 时，最多可以发送八千字节 (8kB) 的数据****。 该脚本将对 **sqlsrv_send_stream_data** 发出的调用数进行计数并将该计数显示到控制台。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 所有输出都写入控制台。  
   

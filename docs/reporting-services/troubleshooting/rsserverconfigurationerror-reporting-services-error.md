@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487206"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395185"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 错误
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|类别|值|  
 |-|-|  
 |产品名称|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件 ID|rsServerConfiguration|  
@@ -46,7 +46,7 @@ ms.locfileid: "81487206"
 ## <a name="user-action"></a>用户操作  
  如果该错误在您手动编辑配置文件后开始出现，请删除所做的更改并输入以前的值，或者如果您有备份，请还原先前的版本。  
   
- 若要查看 rsServerConfiguration 错误附带的其他错误消息信息，请查看位于以下目录的报表服务器跟踪日志文件：\Microsoft SQL Server\MSRS12.\<instancename\Reporting Services\LogFiles  。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+ 若要查阅 rsServerConfiguration 错误随附的其他错误消息信息，请查阅位于以下目录的报表服务器跟踪日志文件：\Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
 ## <a name="internal-only"></a>仅内部  
   

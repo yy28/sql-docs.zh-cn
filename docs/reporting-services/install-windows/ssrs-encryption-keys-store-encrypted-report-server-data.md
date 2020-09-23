@@ -1,4 +1,5 @@
 ---
+description: 存储加密的报表服务器数据 (Configuration Manager)
 title: 存储加密的报表服务器数据 (Configuration Manager) | Microsoft Docs
 ms.date: 10/24/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94161a531c922642fa1c4cf34dc4a683073b957d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70ca863145814a8d0e4e2e07903a69352af2b812
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446057"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥 - 存储加密的报表服务器数据
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将加密值存储在报表服务器数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  

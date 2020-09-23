@@ -1,5 +1,6 @@
 ---
-title: JDBC 驱动程序的预处理语句元数据缓存 | Microsoft Docs
+title: JDBC 驱动程序的预处理语句元数据缓存
+description: 了解 JDBC Driver for SQL Server 如何缓存预定义的语句，以通过最大程度地减少对数据库的调用来提高性能，以及如何控制数据库的行为。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8918be02b5dbb0e6decf49bc315b0ebd8c83e369
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67b35e04ede8608d222c8fc31d89bfd01b093ba7
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923770"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435391"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 驱动程序的预处理语句元数据缓存
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,10 +29,10 @@ ms.locfileid: "80923770"
 > [!NOTE]  
 >  用户可以通过以下方法更改默认值：setServerPreparedStatementDiscardThreshold(int value)
 
-6\.1.6 预览版中引入的另一个更改是在此之前，驱动程序将始终调用 sp_prepexec。 现在，在第一次执行预定义语句时，驱动程序将调用 sp_executesql，对于其他情况，则执行 sp_prepexec 并为其分配一个句柄。 [此处](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching)提供了更多详细信息。
+6.1.6 预览版中引入的另一个更改是在此之前，驱动程序将始终调用 sp_prepexec。 现在，在第一次执行预定义语句时，驱动程序将调用 sp_executesql，对于其他情况，则执行 sp_prepexec 并为其分配一个句柄。 [此处](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching)提供了更多详细信息。
 
 > [!NOTE]  
->  通过使用以下方法将 enablePrepareOnFirstPreparedStatementCall 设置为 true  ，用户可以将默认行为更改为先前版本的“始终调用 sp_prepexec”：setEnablePrepareOnFirstPreparedStatementCall(boolean value)
+>  通过使用以下方法将 enablePrepareOnFirstPreparedStatementCall 设置为 true****，用户可以将默认行为更改为先前版本的“始终调用 sp_prepexec”：setEnablePrepareOnFirstPreparedStatementCall(boolean value)
 
 ### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>此更改引入了新 API 列表，用于对预定义语句进行 unprepare 批处理
 
@@ -55,9 +56,9 @@ ms.locfileid: "80923770"
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|此设置控制在执行调用以清除服务器上未完成的句柄之前，每个连接可以有多少个未完成的预定义语句放弃操作 (sp_unprepare) 处于未处理状态。 如果设置 <= 1，则在预定义语句关闭时将立即执行 unprepare 操作。 如果设置为 {@literal >} 1，则会对这些调用进行批处理，以避免过于频繁地调用 sp_unprepare 的开销|
 |int getServerPreparedStatementDiscardThreshold()|此设置控制在执行调用以清除服务器上未完成的句柄之前，每个连接可以有多少个未完成的预定义语句放弃操作 (sp_unprepare) 处于未处理状态。 如果设置 <= 1，则在预定义语句关闭时将立即执行 unprepare 操作。 如果设置为 {@literal >} 1，则会对这些调用进行批处理，以避免过于频繁地调用 sp_unprepare 的开销。|
 
-## <a name="prepared-statement-metatada-caching"></a>预定义语句元数据缓存
+## <a name="prepared-statement-metadata-caching"></a>预定义语句元数据缓存
 从 6.3.0 预览版开始，Microsoft JDBC driver for SQL Server 将支持预定义语句缓存。 在 v6.3.0 预览版之前，如果某个用户执行已预定义并存储在缓存中的查询，那么再次调用相同的查询将不会导致预定义工作。 现在，驱动程序会在缓存中查找查询并查找句柄，然后通过 sp_execute 来执行查询。
-默认情况下，预定义语句元数据缓存处于“禁用”  状态。 若要启用它，需要对连接对象调用以下方法：
+默认情况下，预定义语句元数据缓存处于“禁用”**** 状态。 若要启用它，需要对连接对象调用以下方法：
 
 `setStatementPoolingCacheSize(int value)   //value is the desired cache size (any value bigger than 0)`
 `setDisableStatementPooling(boolean value) //false allows the caching to take place`
@@ -75,7 +76,7 @@ ms.locfileid: "80923770"
 |boolean getDisableStatementPooling()|如果禁用了语句池，则返回 true。|
 |void setStatementPoolingCacheSize(int value)|指定此连接的预定义语句缓存的大小。 如果值小于 1，则表示没有缓存。|
 |int getStatementPoolingCacheSize()|返回此连接的准备的语句缓存的大小。 如果值小于 1，则表示没有缓存。|
-|int getStatementHandleCacheEntryCount()|返回当前已入池的预定义语句句柄的数目。|
+|int getStatementHandleCacheEntryCount()|返回准备的共用语句句柄的当前数目。|
 |boolean isPreparedStatementCachingEnabled()|是否为此连接启用语句池。|
 
  **SQLServerDataSource**

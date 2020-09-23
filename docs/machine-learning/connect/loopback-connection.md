@@ -1,26 +1,26 @@
 ---
-title: SQL 环回连接
+title: Pyrhon 和 R 中的 SQL 环回连接
 description: 了解如何使用环回连接通过 ODBC 连接回 SQL Server，以从基于 sp_execute_external_script 执行的 Python 或 R 脚本读取或写入数据。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/21/2019
+ms.date: 08/20/2020
 ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482568"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714135"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>从 Python 或 R 脚本到 SQL Server 的环回连接
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-了解如何使用环回连接通过 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 连接回 SQL Server，以从基于 `sp_execute_external_script` 执行的 Python 或 R 脚本读取或写入数据。 当无法使用 `sp_execute_external_script` 的 InputDataSet 和 OutputDataSet 参数时，可以使用此选项 。
+了解如何结合使用环回连接与[机器学习服务](../sql-server-machine-learning-services.md)通过 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 连接回 SQL Server，以从基于 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行的 Python 或 R 脚本读取或写入数据。 当无法使用 `sp_execute_external_script` 的 InputDataSet 和 OutputDataSet 参数时，可以使用此选项 。
 
 ## <a name="connection-string"></a>连接字符串
 

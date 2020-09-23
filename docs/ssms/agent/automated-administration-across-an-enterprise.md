@@ -1,4 +1,5 @@
 ---
+description: 企业范围的自动化管理
 title: 企业范围的自动化管理
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,20 +22,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17356ab4630dfb981fd359caa48a22dac51f6c94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468833"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”  。 使用多服务器管理可以执行下列操作：  
+跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”**。 使用多服务器管理可以执行下列操作：  
   
 -   管理两台或多台服务器。  
   

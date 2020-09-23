@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::bindValue | Microsoft Docs
+title: PDOStatement::bindValue
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDOStatement::bindValue 函数的 API 参考。
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ebb895ac26aaff16ef4fb0d51a56243a9401e4d1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993120"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645358"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,17 +30,17 @@ ms.locfileid: "67993120"
 bool PDOStatement::bindValue($parameter, $value[, $data_type]);  
 ```  
   
-#### <a name="parameters"></a>parameters  
-$parameter：（混合）参数标识符  。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。
+#### <a name="parameters"></a>参数  
+$parameter：（混合）参数标识符**。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。
   
-$value：要绑定到参数的（混合）值  。  
+$value：要绑定到参数的（混合）值**。  
   
-$data_type：由 PDO::PARAM_* 常量表示的可选（整数）数据类型  。 默认值为 PDO::PARAM_STR。  
+$data_type：由 PDO::PARAM_* 常量表示的可选（整数）数据类型**。 默认值为 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   

@@ -1,4 +1,5 @@
 ---
+description: Create an Analysis Services Job Step
 title: Create an Analysis Services Job Step
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 248b1280810c90820d2b3446f776b8548414b15e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46851bbf69369e1fe1764bef8a0f7993d4dcd873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418153"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [SQL Server 中的 Azure SQL ManagSQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建和定义通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象执行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services 命令和查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业步骤。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85786795"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
   
 -   若要运行使用 Analysis Services 子系统的作业步骤，用户必须是 **sysadmin** 固定服务器角色的成员或有权访问为使用该子系统而定义的有效代理帐户。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户或代理必须是 Analysis Services 管理员或有效的 Windows 域帐户。  
   
@@ -69,11 +70,11 @@ ms.locfileid: "85786795"
   
 2.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅 [创建作业](../../ssms/agent/create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”** 。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”**。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”** 。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”**。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”** 。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”**。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 命令子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "85786795"
   
 4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”** 。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”**。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 查询子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -111,7 +112,7 @@ ms.locfileid: "85786795"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Creates a job step that uses XMLA to create a relational data source that
@@ -154,7 +155,7 @@ ms.locfileid: "85786795"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Creates a job step that uses MDX to return data  

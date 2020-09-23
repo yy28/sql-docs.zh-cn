@@ -1,6 +1,6 @@
 ---
 title: R 教程：部署模型
-description: 该教程介绍如何在 SQL Server 上为数据库内分析部署 R 模型。
+description: 了解如何通过从存储过程中调用经过定型的模型在生产环境中部署 R 模型。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781781"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179740"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型并在 SQL Server 中使用它（演练）
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在本课程中，了解如何通过从存储过程中调用经过定型的模型在生产环境中部署 R 模型。 可以通过 R 或支持 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的任何应用程序编程语言（如 C#、Java、Python 等）调用存储过程，并使用模型对新的观测值进行预测。
 
@@ -228,6 +228,6 @@ ms.locfileid: "85781781"
 你可能还想了解以下其他示例和资源：
 
 + [数据科学方案和解决方案模板](data-science-scenarios-and-solution-templates.md)
-+ [数据库内高级分析](sqldev-in-database-r-for-sql-developers.md)
++ [数据库内高级分析](r-taxi-classification-introduction.md)
 + [Machine Learning Server 操作指南](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Machine Learning Server 其他资源](https://docs.microsoft.com//machine-learning-server/resources-more)

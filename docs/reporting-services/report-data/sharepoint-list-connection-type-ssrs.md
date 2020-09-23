@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455649"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396686"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
 
@@ -40,7 +40,7 @@ ms.locfileid: "86455649"
   
  **表 1**  
   
-||受支持的凭据|经典模式 Windows 身份验证|*声明身份验证|  
+|检索类型|受支持的凭据|经典模式 Windows 身份验证|*声明身份验证|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
 ||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|是|否|  
@@ -51,7 +51,7 @@ ms.locfileid: "86455649"
   
  **表 2**  
   
-||受支持的凭据|经典模式 Windows 身份验证|*声明身份验证|  
+|检索类型|受支持的凭据|经典模式 Windows 身份验证|*声明身份验证|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
 ||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|否|否|  

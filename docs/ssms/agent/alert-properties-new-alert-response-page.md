@@ -1,4 +1,5 @@
 ---
+description: 警报属性 - 新建警报（“响应”页）
 title: 警报属性 - 新建警报（“响应”页）
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,36 +14,36 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3266ae4e031088a0db6155d5ee20e792b6d9365c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: faf7aaabf1fbd8bdaf4c181288a8c38068d249f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418443"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>警报属性 - 新建警报（“响应”页）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此页可以指定要运行的某项作业，并可获取为响应 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报而接收相关通知的操作员列表。  
 
 ## <a name="options"></a>选项  
 **执行作业**  
-启用“作业列表”  、“新建作业”  和“查看作业”  选项。  
+启用“作业列表”****、“新建作业”**** 和“查看作业”**** 选项。  
   
 **新建作业**  
-打开“新建作业”  对话框。 此按钮在“执行作业”  处于未选中状态时不可用。  
+打开“新建作业”**** 对话框。 此按钮在“执行作业”**** 处于未选中状态时不可用。  
   
 **查看作业**  
-查看或修改所选作业。 此选项在“执行作业”  处于未选中状态时不可用。  
+查看或修改所选作业。 此选项在“执行作业”**** 处于未选中状态时不可用。  
   
 **通知操作员**  
 启用可用来添加、删除或更改操作员的控件。  
   
 **操作员列表**  
-列出在发生警报时要获得通知的操作员。 若要指定通知方法，请选中显示在操作员姓名后面的“电子邮件”  、“寻呼程序”  或“Net send”  复选框。此选项在“通知操作员”  处于未选中状态时不可用。  
+列出在发生警报时要获得通知的操作员。 若要指定通知方法，请选中显示在操作员姓名后面的“电子邮件”****、“寻呼程序”**** 或“Net send”**** 复选框。此选项在“通知操作员”**** 处于未选中状态时不可用。  
   
 **电子邮件**  
 使用电子邮件通知操作员。  
@@ -54,15 +55,15 @@ ms.locfileid: "85749223"
 使用 **net send** 通知操作员。  
   
 **新建操作员**  
-显示可用于创建新操作员的“新建操作员”  对话框。  
+显示可用于创建新操作员的“新建操作员”**** 对话框。  
   
 **查看操作员**  
-显示当前所选操作员的“属性”  对话框。 可以在“操作员属性”对话框上查看和修改操作员属性  。  
+显示当前所选操作员的“属性”**** 对话框。 可以在“操作员属性”对话框上查看和修改操作员属性****。  
   
 ## <a name="see-also"></a>另请参阅  
 [警报](../../ssms/agent/alerts.md)  
 [Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
 [警报](../../ssms/agent/alerts.md)  
-[Edit an Alert](../../ssms/agent/edit-an-alert.md)  
+[编辑警报](../../ssms/agent/edit-an-alert.md)  
 [Delete an Alert](../../ssms/agent/delete-an-alert.md)  
   

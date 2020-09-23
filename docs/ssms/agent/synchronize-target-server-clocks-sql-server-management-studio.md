@@ -1,4 +1,5 @@
 ---
+description: 同步目标服务器的时钟
 title: 同步目标服务器的时钟
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,19 +18,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fcd6b2b2fd1bca52ea2107df405621fa2eb95fb3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c0804658359c1272bfe4acb025fbded3ae2adc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463017"
 ---
 # <a name="synchronize-target-server-clocks"></a>同步目标服务器的时钟
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍了如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使目标服务器时钟与主服务器时钟同步。 同步这些系统时钟可以为实现您的作业计划提供支持。  
 
@@ -37,7 +38,7 @@ ms.locfileid: "85755072"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -46,11 +47,11 @@ ms.locfileid: "85755072"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要使目标服务器时钟与主服务器时钟同步的服务器。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后选择“管理目标服务器”  。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后选择“管理目标服务器”****。  
   
-3.  在 **“管理目标服务器”** 对话框中，单击 **“发布指令”** 。  
+3.  在 **“管理目标服务器”** 对话框中，单击 **“发布指令”**。  
   
-4.  在 **“指令类型”** 列表中，选择 **“同步时钟”** 。  
+4.  在 **“指令类型”** 列表中，选择 **“同步时钟”**。  
   
 5.  在 **“收件人”** 下，执行以下操作之一：  
   
@@ -68,7 +69,7 @@ ms.locfileid: "85755072"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE msdb ;  

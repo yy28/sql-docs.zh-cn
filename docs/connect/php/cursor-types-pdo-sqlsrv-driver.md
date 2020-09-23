@@ -1,21 +1,22 @@
 ---
-title: 游标类型（PDO_SQLSRV 驱动程序） | Microsoft Docs
+title: 游标类型（PDO_SQLSRV 驱动程序）
+description: 了解各种服务器端和客户端游标，以及用户在使用 Microsoft PDO_SQLSRV Driver for PHP for SQL Server 时如何指定游标类型。
 ms.custom: ''
-ms.date: 05/03/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c62c2a35123e77f5366dd5348fd51b3c50c85605
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7660f71ba8a288840210734b85ac551a0770fc81
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993691"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680582"
 ---
 # <a name="cursor-types-pdo_sqlsrv-driver"></a>游标类型（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

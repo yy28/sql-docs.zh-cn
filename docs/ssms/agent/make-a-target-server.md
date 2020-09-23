@@ -1,4 +1,5 @@
 ---
+description: 设置目标服务器
 title: 设置目标服务器
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,18 +21,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 07d1b987dc5f033f200770d5e1c5b6f5f73c23e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d419d2ba35e4991dd7ff69f3a5adbb6240a07a81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418123"
 ---
 # <a name="make-a-target-server"></a>设置目标服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理对象 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中生成目标服务器。  
   
@@ -54,16 +55,16 @@ ms.locfileid: "85749010"
   
     若要解决此错误，请确保目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 默认情况下授予 **sysadmin** 固定服务器角色的成员执行此过程的权限。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-make-a-target-server"></a>生成目标服务器  
   
-1.  在“对象资源管理器”  中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开该实例。  
+1.  在“对象资源管理器”中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后单击“使其成为目标服务器”  。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后单击“使其成为目标服务器”****。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
   
 3.  从 **“选择主服务器”** 页中，选择此目标服务器将从中接收作业的主服务器。  
   
@@ -86,7 +87,7 @@ ms.locfileid: "85749010"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
   
     ```sql
     USE msdb ;  

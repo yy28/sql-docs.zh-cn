@@ -1,6 +1,6 @@
 ---
 title: 从类文件创建 Java jar 文件
-description: 了解如何从类文件创建 Java jar 文件
+description: 使用 SQL Server 语言扩展执行 Java 代码时，将类文件打包到 jar 文件中。
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a105dde9046167257a86705f678466872785b4be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c324fca6893af35cafe6e9f65eccd0e8a0e478f9
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735086"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180277"
 ---
 # <a name="create-a-java-jar-file-from-class-files"></a>从类文件创建 Java jar 文件
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 使用 [SQL Server 语言扩展](../language-extensions-overview.md)执行 Java 代码时，了解如何将类文件打包到 jar 文件中。 建议将文件打包。
 

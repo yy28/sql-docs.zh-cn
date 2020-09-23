@@ -1,4 +1,5 @@
 ---
+description: 警报属性 - 新建警报（“常规”页）
 title: 警报属性 - 新建警报（“常规”页）
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90141295bbb68d6401bb8fade13776ef4dc65def
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ed13dc3f03a82adb3cfb85a9ecabce6742a4071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418403"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警报属性 - 新建警报（“常规”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的常规属性。  
 
@@ -36,7 +37,7 @@ ms.locfileid: "85749245"
 **启用**  
 启用警报。 如果未启用警报，则警报中指定的操作将不会发生。  
   
-类型   
+**类型**  
 选择警报的类型：  
   
 -   **SQL Server 事件警报** ，该警报用于响应 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 事件日志中的消息。  
@@ -47,7 +48,7 @@ ms.locfileid: "85749245"
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server 事件警报选项  
 **数据库名称**  
-为该事件指定一个数据库，或者指定“所有数据库”  ，这样不管在哪一个数据库中发生该事件，都会对消息作出响应。  
+为该事件指定一个数据库，或者指定“所有数据库”****，这样不管在哪一个数据库中发生该事件，都会对消息作出响应。  
   
 **错误号**  
 指定此事件将用于响应错误，并指定错误号。  

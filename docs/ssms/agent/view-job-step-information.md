@@ -1,4 +1,5 @@
 ---
+description: View Job Step Information
 title: View Job Step Information
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2dc60fb5ef44ff4b94cf8326e97d552f34c3b1c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d439de6bdf2ff7a9fccfc266a81cb540a28e419a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497474"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题说明如何在“作业步骤属性”对话框中查看作业步骤的详细信息。 它还包括有关查看作业步骤输出的信息。  
   
@@ -48,20 +49,20 @@ ms.locfileid: "85729718"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 您只能查看自己拥有的那些作业，除非您是 **sysadmin** 固定服务器角色的成员。 此角色的成员可以查看所有作业和作业步骤的详细信息。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-view-job-step-information"></a>查看作业步骤信息  
   
-1.  在“对象资源管理器”  中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开该实例。  
+1.  在“对象资源管理器”中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开此实例。  
   
-2.  依次展开“SQL Server 代理”  和“作业”  ，右键单击包含要查看的作业步骤的作业，再单击“属性”  。  
+2.  依次展开“SQL Server 代理”**** 和“作业”****，右键单击包含要查看的作业步骤的作业，再单击“属性”****。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页。  
   
-4.  单击要查看的作业步骤，再单击 **“编辑”** 。  
+4.  单击要查看的作业步骤，再单击 **“编辑”**。  
   
 5.  在 **“作业步骤属性”** 对话框的 **“常规”** 页上，可以查看作业步骤的类型和用途。  
   

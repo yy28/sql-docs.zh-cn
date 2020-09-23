@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742086"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396106"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>禁用或暂停报表和订阅处理  
 可采用多种方法禁用或暂停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和订阅处理。 本主题中的方法从禁用订阅到中断数据源连接，无所不包。 并非所有方法都支持这两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式。 下表总结了方法以及支持的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式：  
   
 ##  <a name="in-this-article"></a><a name="bkmk_top"></a> 本文内容  
   
-||支持的服务器模式|  
+|方法|支持的服务器模式|  
 |-|---------------------------|  
 |[启用和禁用订阅](#bkmk_disable_subscription)|本机模式|  
 |[暂停共享计划](#bkmk_pause_schedule)|本机模式和 SharePoint 模式|  

@@ -1,7 +1,7 @@
 ---
 title: 管理：Azure Data Studio 笔记本
 titleSuffix: SQL Server Big Data Clusters
-description: 使用 Azure Data Studio 中的笔记本管理大数据群集和排除其故障。
+description: 使用 Azure Data Studio 中的笔记本管理 SQL Server 大数据群集和排除其故障。
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660396"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778526"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 笔记本管理 SQL Server 大数据群集
 
@@ -23,7 +23,7 @@ ms.locfileid: "85660396"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为包含笔记本的 Azure Data Studio 提供扩展。 笔记本提供可在 Azure Data Studio 中用于管理 SQL Server 2019 大数据群集的文档和代码。
 
-[笔记本](../azure-data-studio/notebooks-guidance.md)最初作为开放源代码项目实现，现已并入 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download)。 可以在文本单元格中使用 markdown 作为文本，并使用其中一个可用核心在代码单元格中编写代码。
+[笔记本](../azure-data-studio/notebooks-guidance.md)最初作为开放源代码项目实现，现已并入 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)。 可以在文本单元格中使用 markdown 作为文本，并使用其中一个可用核心在代码单元格中编写代码。
 
 可以使用笔记本为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 部署大数据群集。
 

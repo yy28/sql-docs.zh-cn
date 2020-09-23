@@ -1,6 +1,6 @@
 ---
-title: SQL Azure 连接类型 | Microsoft Docs
-description: SQL Azure 连接数据扩展插件支持多值参数、服务器聚合，以及与连接字符串分开管理的凭据。
+title: Azure SQL 连接类型 | Microsoft Docs
+description: Azure SQL 连接数据扩展插件支持多值参数、服务器聚合，以及与连接字符串分开管理的凭据。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,14 +9,14 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081761"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988468"
 ---
-# <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
+# <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 连接类型 (SSRS)
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 是基于云的、构建在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术之上的托管关系数据库。 若要在报表中包括来自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的数据，您必须有一个基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]并从中检索数据。  
   

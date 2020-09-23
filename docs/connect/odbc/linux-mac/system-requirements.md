@@ -2,7 +2,7 @@
 title: 系统要求（SQL Server ODBC 驱动程序）
 description: 本文列出了 Linux 和 macOS 操作系统上的 SQL Server ODBC 驱动程序的系统要求。
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 74b7bf1680dd956dfca85917939ad24a3559d7de
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391743"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934456"
 ---
 # <a name="system-requirements-linux-and-macos"></a>系统要求（Linux 和 macOS）
 
@@ -36,28 +36,28 @@ Linux 和 macOS 驱动程序 SQL 版本兼容性与 [Windows 驱动程序 SQL �
 
 以下操作系统的 x64 体系结构支持 Linux 和 macOS 驱动程序的版本 17、13.1 和 13：
 
-|支持的操作系统     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|--|
-|Apple OS X 10.11 (El Capitan)  | |Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.12 (Sierra)     | |Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.13 (High Sierra)|Y|Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.14 (Mojave)     |Y|Y|Y| | | | | |
-|Apple macOS 10.15 (Catalina)   |Y| | | | | | | |
-|Alpine Linux 3.11              |Y| | | | | | | |
-|Debian Linux 8                 | |Y|Y|Y|Y|Y|Y|Y|
-|Debian Linux 9                 |Y|Y|Y|Y|Y|Y|Y|Y|
-|Debian Linux 10                |Y|Y| | | | | | |
-|Oracle Linux 8                 |Y| | | | | | | |
-|RedHat Enterprise Linux 6      |Y|Y|Y|Y|Y|Y|Y|Y|
-|RedHat Enterprise Linux 7      |Y|Y|Y|Y|Y|Y|Y|Y|
-|RedHat Enterprise Linux 8      |Y|Y| | | | | | |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|Y|Y|Y|Y|Y|Y|Y|Y|
-|SUSE Linux Enterprise Server 12|Y|Y|Y|Y|Y|Y|Y|Y|
-|SUSE Linux Enterprise Server 15|Y|Y|Y| | | | | |
-|Ubuntu Linux 14.04             | |Y|Y|Y|Y|Y|Y|Y|
-|Ubuntu Linux 16.04             |Y|Y|Y|Y|Y|Y|Y|Y|
-|Ubuntu Linux 18.04             |Y|Y|Y|Y| | | | |
-|Ubuntu Linux 19.10             |Y| | | | | | | |
+|驱动程序版本&nbsp;&#8594;<br />&#8595; 操作系统     |17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|---|
+|Apple OS X 10.11 (El Capitan)  |    |    |是 |是 |是 |是 |是 |是 |是|
+|Apple macOS 10.12 (Sierra)     |    |    |是 |是 |是 |是 |是 |是 |是|
+|Apple macOS 10.13 (High Sierra)|是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Apple macOS 10.14 (Mojave)     |是 |是 |是 |是 |    |    |    |    |   |
+|Apple macOS 10.15 (Catalina)   |是 |是 |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |是 |是 |    |    |    |    |    |    |   |
+|Debian Linux 8                 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Debian Linux 9                 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Debian Linux 10                |是 |是 |是 |    |    |    |    |    |   |
+|Oracle Linux 8                 |是 |是 |    |    |    |    |    |    |   |
+|RedHat Enterprise Linux 6      |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|RedHat Enterprise Linux 7      |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|RedHat Enterprise Linux 8      |是 |是 |是 |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|是 |是 |是 |是 |是 |是 |是 |是 |是|
+|SUSE Linux Enterprise Server 12|是 |是 |是 |是 |是 |是 |是 |是 |是|
+|SUSE Linux Enterprise Server 15|是 |是 |是 |是 |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |是 |是 |是 |是 |是 |是 |是|
+|Ubuntu Linux 16.04             |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Ubuntu Linux 18.04             |是 |是 |是 |是 |是 |    |    |    |   |
+|Ubuntu Linux 20.04             |是 |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17 仅支持 SUSE Linux Enterprise Server 11 SP4
 

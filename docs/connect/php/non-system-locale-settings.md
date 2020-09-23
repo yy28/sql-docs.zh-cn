@@ -1,22 +1,22 @@
 ---
-title: 非系统区域设置 | Microsoft Docs
+title: 非系统区域设置
+description: 了解 Linux 和 macOS 中不同的区域设置如何影响 Microsoft Drivers for PHP for SQL Server
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - locale, linux, macOS, system
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: bd60bff3ab9ee19b1a1d2435e69651ea054689e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 303037729164d4165fc106529a901b58d4d049f4
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76913320"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680522"
 ---
 # <a name="non-system-locale-settings"></a>非系统区域设置
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv.SetLocaleInfo = <option>
 pdo_sqlsrv.set_locale_info = <option>
 ```  
   
-选项  可以是下列值之一：  
+选项**** 可以是下列值之一：  
   
 |选项|行为说明|
 |---------|---------------|
@@ -69,6 +69,6 @@ pdo_sqlsrv.set_locale_info = <option>
 对于选项 2，仅当 php 脚本中的所需区域设置与 `LC_ALL` 变量不同时，才指示该区域设置。
 
 > [!NOTE]
-> 如果在 php.ini 中未定义任何内容，则当前默认设置将基于 `LC_ALL` 重写所有其他区域设置，这些设置将被弃用  。 在不久的将来，默认设置将忽略系统区域设置。 因此，如果用户想要保留当前行为，他们将需要相应地修改 php.ini 文件。
+> 如果在 php.ini 中未定义任何内容，则当前默认设置将基于 `LC_ALL` 重写所有其他区域设置，这些设置将被弃用****。 在不久的将来，默认设置将忽略系统区域设置。 因此，如果用户想要保留当前行为，他们将需要相应地修改 php.ini 文件。
 
 如果同时启用 sqlsrv 和 pdo_sqlsrv 驱动程序，则不建议为这两个驱动程序设置不同的选项。

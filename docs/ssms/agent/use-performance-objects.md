@@ -1,4 +1,5 @@
 ---
+description: 使用性能对象
 title: 使用性能对象
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d86b710c38fb02a14e2b1baf4f6cf50a2d992e32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372390ed9f6c893c1762ca635e5aa9b5f3e3c9ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480239"
 ---
 # <a name="use-performance-objects"></a>使用性能对象
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理包括用于监视服务执行情况的性能对象和计数器。 这些性能对象使您可以使用性能监视器（一个 Windows 工具）来识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在后台的运行情况。 例如，您可以通过识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务当前运行的活动作业数量来找出那些锁定的作业。  
   
@@ -42,8 +43,8 @@ ms.locfileid: "85755028"
   
 |实例类型|对象名称|  
 |-----------------|---------------|  
-|默认|**SQLAgent：** 对象  ：计数器 |  
-|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：** 对象  ：计数器 |  
+|默认|**SQLAgent：** 对象__：计数器__|  
+|名为|**SQLAgent$**<br /> **&#42;instance_name&#42; ：** 对象__：计数器__|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的下列性能对象。  
   

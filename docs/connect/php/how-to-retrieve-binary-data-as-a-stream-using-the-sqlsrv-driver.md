@@ -1,7 +1,8 @@
 ---
-title: 如何：使用 SQLSRV 驱动程序以流的形式检索二进制数据 | Microsoft Docs
+title: 操作指南：使用 SQLSRV 驱动程序以流的形式检索二进制数据
+description: 本主题介绍了如何在使用 Microsoft SQLSRV Driver for PHP for SQL Server 时以流的形式检索二进制数据
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f77439f2369d7fbf4e27603bcbf8c8a2f8d8399
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d509eaf083cf7a16e83506ecf54d99daa8883a62
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993486"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680622"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以流的形式检索二进制数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67993486"
 ## <a name="example"></a>示例  
 以下示例从 AdventureWorks 数据库的 *Production.ProductPhoto* 表中检索二进制数据（在本例中为图像）。 图像以流的形式检索，并显示在浏览器中。  
   
-通过使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) （其中返回类型指定为二进制流）来完成以流的形式检索图像数据操作。 返回类型通过使用常量 SQLSRV_PHPTYPE_STREAM 指定  。 有关 sqlsrv 常量的信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
+通过使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) （其中返回类型指定为二进制流）来完成以流的形式检索图像数据操作。 返回类型通过使用常量 SQLSRV_PHPTYPE_STREAM 指定。 有关 sqlsrv 常量的信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)****。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   
@@ -87,7 +88,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-在示例中指定返回类型演示了如何以二进制流的形式指定 PHP 返回类型。 从技术上说，这在示例中不需要，因为 LargePhoto 字段具有 SQL Server 类型 varbinary(max)，因此默认返回为二进制流  。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 若要了解如何指定 PHP 返回类型，请参阅[操作说明：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+在示例中指定返回类型演示了如何以二进制流的形式指定 PHP 返回类型。 从技术上说，这在示例中不需要，因为 LargePhoto 字段具有 SQL Server 类型 varbinary(max)，因此默认返回为二进制流**。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 有关如何指定 PHP 返回类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)

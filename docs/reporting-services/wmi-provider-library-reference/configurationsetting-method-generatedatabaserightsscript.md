@@ -1,4 +1,5 @@
 ---
+description: GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)
 title: GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423261"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
   生成一个 SQL 脚本，用来向用户授予运行报表服务器所需的报表服务器数据库和其他数据库的权限。 调用者需要能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器并能够执行该脚本。  
@@ -39,7 +40,7 @@ public void GenerateDatabaseRightsScript(string UserName, string DatabaseName, b
 out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *UserName*  
  通过此脚本授予权限时作为授予对象的用户的用户名或 Windows 安全标识符 (SID)。  
   

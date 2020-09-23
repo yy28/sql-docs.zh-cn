@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 SQLSRV 驱动程序检索输出参数 | Microsoft Docs
+title: 如何：使用 SQLSRV 驱动程序检索输出参数
+description: 了解如何通过用于 SQL Server 的 PHP 的 Microsoft SQLSRV 驱动程序使用和检索存储过程的输出参数。
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916013"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410953"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输出参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916013"
 本主题演示如何调用一个参数已在其中定义为输出参数的存储过程。 在检索输出参数或输入/输出参数时，必须在可以访问返回的参数值前使用存储过程返回的所有结果。  
   
 > [!NOTE]  
-> 已初始化或更新为 **null**、 **DateTime**的变量或流类型无法用作输出参数。  
+>  无法将已初始化或更新为 **null**、 **DateTime**或流类型的变量用作输出参数。  
   
 在流类型（例如 SQLSRV_SQLTYPE_VARCHAR('max')）用作输出参数时，将会发生数据截断。 不支持将流类型用作输出参数。 对于非流类型，数据截断会在未指定输出参数长度或输出参数的指定长度不够大时发生。  
   

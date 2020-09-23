@@ -1,4 +1,5 @@
 ---
+description: 并行安装 Reporting Services 和 Internet Information Services
 title: 并行安装 Reporting Services 和 Internet Information Services | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e32958f17e4cdb57b37fcf4a85ad54a11b48821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472679"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>并行安装 Reporting Services 和 Internet Information Services
 

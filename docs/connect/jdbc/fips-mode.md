@@ -1,4 +1,5 @@
 ---
+description: JDBC 中的 FIPS 模式
 title: JDBC 中的 FIPS 模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 9a8e6af7e191576ec4fe056c048a4f4a4b7901c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81293377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438389"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 
@@ -84,7 +85,7 @@ private Certificate getCertificate(String pathName)
 
 #### <a name="properties"></a>属性 
 
-|properties|类型|默认|说明|说明|
+|属性|类型|默认|说明|说明|
 |---|---|---|---|---|
 |encrypt|布尔 [“true / false”]|“false”|对于启用了 FIPS 的 JVM，加密属性应为 true ||
 |TrustServerCertificate|布尔 [“true / false”]|“false”|对于 FIPS，用户需要验证证书链，因此用户应将“false”值用于此属性  。 ||

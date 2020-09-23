@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: 本教程系列由四个部分组成。在第四部分中，你将通过 SQL 机器学习将 Python 模型部署到数据库中，以预测雪橇租赁次数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 08/06/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 030a172d35800becce17f804f67973368581fc05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730488"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173402"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习部署线性回归模型
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本教程系列由四个部分组成。在第四部分中，你将使用机器学习服务或大数据群集将在 Python 中开发的线性回归模型部署到 SQL Server 数据库中。
@@ -50,12 +50,12 @@ ms.locfileid: "85730488"
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>创建生成模型的存储过程
 
-现在，通过使用开发的 Python 脚本来创建存储过程 generate_rental_py_model，此存储过程会使用 scikit-learn 中的 LinearRegression 来定型和生成线性回归模型。
+现在，使用你开发的 Python 脚本来创建存储过程 generate_rental_py_model，此存储过程使用 scikit-learn 中的 LinearRegression 来训练和生成线性回归模型。
 
 在 Azure Data Studio 中运行以下 T-SQL 语句，从而创建存储过程来定型模型。
 
 ```sql
--- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
+-- Stored procedure that trains and generates a Python model using the rental_data and a linear regression algorithm
 DROP PROCEDURE IF EXISTS generate_rental_py_model;
 go
 CREATE PROCEDURE generate_rental_py_model (@trained_model varbinary(max) OUTPUT)

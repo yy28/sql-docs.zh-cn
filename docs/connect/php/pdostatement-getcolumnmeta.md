@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::getColumnMeta | Microsoft Docs
+title: PDOStatement::getColumnMeta
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDOStatement::getColumnMeta 函数的 API 参考。
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76918803"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645072"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "76918803"
 array PDOStatement::getColumnMeta ( $column );  
 ```  
   
-#### <a name="parameters"></a>parameters  
- $conn：（整数）要检索其元数据的列的从零开始的数。  
+#### <a name="parameters"></a>参数  
+**$conn：（整数）要检索其元数据的列的从零开始的数。  
   
 ## <a name="return-value"></a>返回值  
 包含列的元数据的关联阵列（键和值）。 有关数组中的字段的说明，请参阅“备注”部分。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 下表介绍 getColumnMeta 返回的数组中的字段。  
   
 |名称|VALUES|  
@@ -46,7 +47,7 @@ array PDOStatement::getColumnMeta ( $column );
 |name|指定数据库中的列的名称。|  
 |表|指定包含数据库中的列的表格名称。 始终为空白。|  
 |len|指定列长度。|  
-|精度|指定此列的数值精度。|  
+|精准率|指定此列的数值精度。|  
 |pdo_type|指定此列的类型，由 PDO::PARAM_* 常量表示。 Always PDO::PARAM_STR (2)。|  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  

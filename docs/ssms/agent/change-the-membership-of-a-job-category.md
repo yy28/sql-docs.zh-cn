@@ -1,4 +1,5 @@
 ---
+description: Change the Membership of a Job Category
 title: Change the Membership of a Job Category
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a4e9c34de355a5e09dd2b0b299807d15cecffb38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4cd7d25853bc81b8b70e443d5a75e1aca572e84a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372453"
 ---
-# <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
+# <a name="change-the-membership-of-a-job-category"></a>更改作业类别的成员身份
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象更改作业类别的成员身份。  
   
@@ -44,17 +45,17 @@ ms.locfileid: "85749176"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开您想要在其中编辑作业类别的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”** 。  
+3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别”  _server_name_ 对话框中，选择要编辑的作业类别，然后单击“查看作业”  。  
+4.  在“管理作业类别” ****_server_name_ 对话框中，选择要编辑的作业类别，然后单击“查看作业” ****。  
   
 5.  选中 **“显示所有作业”** 复选框。  
   
 6.  若要向类别中添加作业，请在主网格中选中与作业对应的 **“选择”** 列中的复选框。 若要从类别中删除作业，请清除该框。 完成后，单击 **“确定”** 。  
   
-7.  关闭“管理作业类别”  _server_name_ 对话框。  
+7.  关闭“管理作业类别” _server_name_ 对话框。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85749176"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- adding a new job category to the "NightlyBackups" job  

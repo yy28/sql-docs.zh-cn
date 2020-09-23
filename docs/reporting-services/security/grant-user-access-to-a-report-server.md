@@ -1,4 +1,5 @@
 ---
+description: 授予用户对报表服务器的访问权限
 title: 授予用户对报表服务器的访问权限 | Microsoft Docs
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373883"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>授予用户对报表服务器的访问权限
 
@@ -53,20 +54,20 @@ ms.locfileid: "65619613"
 
 1. 启动 [Web 门户](../web-portal-ssrs-native-mode.md)。
 
-2. 选择右上角的“齿轮”图标，然后从下拉菜单中选择“网站设置”   。
+2. 选择右上角的“齿轮”图标，然后从下拉菜单中选择“网站设置”********。
 
     ![报表服务器 Web 门户齿轮图标和下拉菜单](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-3. 选择“安全性”。 
+3. 选择“安全”。
 
-4. 选择“添加组或用户”  。
+4. 选择“添加组或用户”****。
 
-5. 在“组或用户”  中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。
+5. 在组或用户中，按以下格式输入 Windows 域用户或组帐户：\<domain>\\<account\>。
 
     > [!NOTE]
     > 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。
 
-6. 选择一个系统角色，然后选择“确定”  。
+6. 选择一个系统角色，然后选择“确定”****。
 
     角色是可累积的，因此如果同时选择了“系统管理员”和“系统用户”，则用户或组可以执行这两种角色的任务。
 
@@ -74,22 +75,22 @@ ms.locfileid: "65619613"
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>向项角色添加用户或组
 
-1. 启动“Web 门户”  并找出要为其添加用户或组的报表项。
+1. 启动“Web 门户”**** 并找出要为其添加用户或组的报表项。
 
-2. 选择项上的“...”  （省略号）。
+2. 选择项上的“...”****（省略号）。
 
-3. 在下拉菜单中，选择“管理”  。
+3. 在下拉菜单中，选择“管理”。
 
-4. 选择“安全性”。 
+4. 选择“安全”。
 
-5. 选择“添加组或用户”  。
+5. 选择“添加组或用户”****。
 
     > [!NOTE]
-    > 如果某项当前从父项继承安全性，则在工具栏中选择“自定义安全性”  可以更改安全设置。 然后选择“添加组或用户”  。
+    > 如果某项当前从父项继承安全性，则在工具栏中选择“自定义安全性”**** 可以更改安全设置。 然后选择“添加组或用户”****。
 
-6. 在“组或用户”  中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。
+6. 在组或用户中，按以下格式输入 Windows 域用户或组帐户：\<domain>\\<account\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。
 
-7. 选择一个或多个角色定义（说明用户或组应如何访问该项），再选择“确定”  。
+7. 选择一个或多个角色定义（说明用户或组应如何访问该项），再选择“确定”****。
 
 8. 重复上述步骤，为其他用户或组创建分配。
 

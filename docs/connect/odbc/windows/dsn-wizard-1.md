@@ -1,4 +1,5 @@
 ---
+description: 数据源向导屏幕 1 (ODBC Driver for SQL Server)
 title: 数据源向导屏幕 1 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28c89bd90a8182a8fd8114de4a9e2ec9da4e9464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78009925b5d62e8a314d0a3fdc27c29acaee5c5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462221"
 ---
 # <a name="data-source-wizard-screen-1"></a>数据源向导屏幕 1
 
@@ -43,11 +44,11 @@ ODBC 应用程序请求与数据源连接时使用的数据源名称。 例如�
 
 ### <a name="finish"></a>完成
 
-如果此屏幕上指定的信息为连接到 SQL Server 所需的全部信息，则可以单击“完成”。  对于在向导的其他屏幕上指定的所有属性都使用默认值。
+如果此屏幕上指定的信息为连接到 SQL Server 所需的全部信息，则可以单击“完成”。 **** 对于在向导的其他屏幕上指定的所有属性都使用默认值。
 
-### <a name="next"></a>Next
+### <a name="next"></a>下一步
 
-若要前进到向导的下一个屏幕，请单击“下一步”  。
+若要前进到向导的下一个屏幕，请单击“下一步”****。
 
 ## <a name="next-steps"></a>后续步骤
 

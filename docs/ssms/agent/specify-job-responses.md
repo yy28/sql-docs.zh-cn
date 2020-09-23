@@ -1,4 +1,5 @@
 ---
+description: 指定作业响应
 title: 指定作业响应
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 643c58adfed622b6a5d57e6056dcea316b6cf5ec
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 642243221d1f65e8adc05e252c2638f25dfc46d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418003"
 ---
 # <a name="specify-job-responses"></a>指定作业响应
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 作业响应指定完成作业后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务将执行的操作。 作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
   
@@ -47,8 +48,8 @@ ms.locfileid: "87243728"
   
 |说明|主题|  
 |-|-|  
-|描述如何向操作员通知作业状态。|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
-|介绍如何将作业状态写入 Windows 应用程序日志。|[将作业状态写入 Windows 应用程序日志](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
+|描述如何向操作员通知作业状态。|[向操作员通知作业状态](../../ssms/agent/notify-an-operator-of-job-status.md)|  
+|介绍如何将作业状态写入 Windows 应用程序日志。|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
 ## <a name="see-also"></a>另请参阅  
 [监视事件和响应事件](../../ssms/agent/monitor-and-respond-to-events.md)  

@@ -1,6 +1,6 @@
 ---
 title: 将 MSDeploy 用于 dbSqlPackage 提供程序
-description: 了解过时的 MSDeploy 提供程序 DbSqlPackage。 查看参数、示例，以及备用 SQL Server 和 SQL Azure 数据库发布工具。
+description: 了解过时的 MSDeploy 提供程序 DbSqlPackage。 查看参数、示例，以及备用 SQL Server 和 Azure SQL 数据库发布工具。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899742"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934082"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>将 MSDeploy 用于 dbSqlPackage 提供程序
 
-DbSqlPackage 是一个 MSDeploy 提供程序，可使你与 SQL Server/SQL Azure 数据库交互。 DbSqlPackage 支持以下操作：  
+DbSqlPackage 是一个 MSDeploy 提供程序，可使你与 SQL Server/Azure SQL 数据库交互。 DbSqlPackage 支持以下操作：  
   
--   **提取**：从活动的 SQL Server 或 SQL Azure 数据库创建数据库快照 (.dacpac) 文件。  
+-   **提取**：从活动的 SQL Server 或 Azure SQL 数据库创建数据库快照 (.dacpac) 文件。  
   
 -   **发布**：增量更新数据库架构以便匹配源 .dacpac 文件的架构。  
   
@@ -57,7 +57,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**空值**|input 是有效的 SQL Server 或 SQL Azure 连接字符串，或磁盘上的 .dacpac 文件的路径。<br /><br />**** 注意：使用连接字符串作为输入源时，支持的唯一连接字符串属性是 ** InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate 和 ConnectionTimeout**。|  
   
-如果输入源是到实时 SQL Server/SQL Azure 数据库的连接字符串，**** dbSqlPackage 将从实时 SQL Server/SQL Azure 数据库提取 .dacpac 文件形式的数据库快照。  
+如果输入源是到 SQL Server/Azure SQL 数据库的连接字符串，dbSqlPackage 将从 SQL Server/Azure SQL 数据库提取 .dacpac 文件形式的数据库快照。  
   
 源参数包括：  
   

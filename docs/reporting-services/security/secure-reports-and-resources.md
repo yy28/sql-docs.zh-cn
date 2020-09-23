@@ -1,4 +1,5 @@
 ---
+description: 保护报表和资源
 title: 保护报表和资源 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454489"
 ---
 # <a name="secure-reports-and-resources"></a>保护报表和资源
-  您可以设置各个报表和资源的安全性，以控制用户对这些项的访问权限。 默认情况下，只有是“管理员”内置组的成员的用户，才能运行报表、查看资源、修改属性以及删除项  。 所有其他用户必须具有为其创建的角色分配才能访问报表或资源。  
+  您可以设置各个报表和资源的安全性，以控制用户对这些项的访问权限。 默认情况下，只有是“管理员”内置组的成员的用户，才能运行报表、查看资源、修改属性以及删除项****。 所有其他用户必须具有为其创建的角色分配才能访问报表或资源。  
   
 ## <a name="role-based-access-to-reports-and-resources"></a>对报表和资源的基于角色的访问  
  若要授予报表和资源的访问权限，则可以允许用户从父文件夹继承现有的角色分配，也可以针对项本身创建新的角色分配。  
@@ -51,7 +52,7 @@ ms.locfileid: "65570625"
   
 2.  报表将发布到报表服务器，或可能通过这样一种方式提供：可从 Web 页的 URL 控制报表参数值。  
   
-3.  攻击者创建一个链接，该链接指向用于指定参数值（格式为“javascript:\<此处为恶意脚本>”）的 Web 页或报表服务器，并将此链接发送到引诱攻击中的其他人。  
+3.  攻击者创建一个链接，该链接指向用于指定参数值（格式为“javascript:\<malicious script here>”）的 Web 页或报表服务器，并将此链接发送到引诱攻击中的其他人。  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>减少已发布报表或文档中的超链接脚本注入攻击  
  报表可以在报表项或报表项一部分的 Action 属性的值中包含嵌入的超链接。 在处理报表时，可将超链接绑定到从外部数据源检索的数据。 如果恶意用户修改基础数据，则超链接可能受到脚本攻击危害。 如果用户单击已发布或导出的报表中的链接，则可能会运行恶意脚本。  

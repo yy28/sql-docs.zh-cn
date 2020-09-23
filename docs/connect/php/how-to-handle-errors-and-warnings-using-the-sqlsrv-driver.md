@@ -1,7 +1,8 @@
 ---
-title: 如何：使用 SQLSRV 驱动程序处理错误和警告 | Microsoft Docs
+title: 如何：使用 SQLSRV 驱动程序处理错误和警告
+description: 了解如何使用 Microsoft SQLSRV Driver for PHP for SQL Server 处理错误和警告
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb3ef454e23ad181bfee856a5b09d01b20632e9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916251"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680642"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序处理错误和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 sqlsrv 函数的调用将返回 false   。 本主题演示如何关闭此默认行为以及如何分别处理警告与错误。  
+默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 sqlsrv 函数的调用将返回 false********。 本主题演示如何关闭此默认行为以及如何分别处理警告与错误。  
   
 > [!NOTE]  
 > 有一些例外情况，即将警告视为错误的默认行为。 对应于 SQLSTATE 值 01000、01001、01003 和 01S02 的警告决不会被视为错误。  
   
 ## <a name="example"></a>示例  
-以下代码示例使用两个用户定义的函数（即 DisplayErrors  和 DisplayWarnings  ）来处理错误和警告。 该示例演示如何通过执行以下操作分别处理警告和错误：  
+以下代码示例使用两个用户定义的函数（即 DisplayErrors**** 和 DisplayWarnings****）来处理错误和警告。 该示例演示如何通过执行以下操作分别处理警告和错误：  
   
 1.  关闭将警告视为错误的默认行为。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "80916251"
   
 4.  显示每个员工的剩余休假小时数。  
   
-在首次调用 sqlsrv  函数 ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)) 过程中，警告将被视为错误。 因为警告添加到了错误集合中，因此不需要分别检查警告和错误。 但是，在后续调用 **sqlsrv** 函数过程中，不会将警告视为错误，因此必须准确地检查警告和错误。  
+在首次调用 sqlsrv**** 函数 ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)) 过程中，警告将被视为错误。 因为警告添加到了错误集合中，因此不需要分别检查警告和错误。 但是，在后续调用 **sqlsrv** 函数过程中，不会将警告视为错误，因此必须准确地检查警告和错误。  
   
 另请注意，该示例代码在每次调用 **sqlsrv** 函数之后检查错误。 这是建议做法。  
   

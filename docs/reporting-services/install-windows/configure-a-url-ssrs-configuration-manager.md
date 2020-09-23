@@ -1,4 +1,5 @@
 ---
+description: 配置 URL（SSRS 配置管理器）
 title: 配置 URL (Configuration Manager) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427089"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL  。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
@@ -68,7 +69,7 @@ ms.locfileid: "81487166"
   
     -   **::1** 是 IPv6 格式的环回地址。  
   
-    -   此列表中还显示特定 IP 地址。 IP 地址可以采用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 32 位 IPv4 地址。 IPv6 地址为 128 位，包含八个由冒号分隔的 4 字节字段：\<前缀>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   此列表中还显示特定 IP 地址。 IP 地址可以采用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 32 位 IPv4 地址。 IPv6 地址为 128 位，包含八个由冒号分隔的 4 字节字段：\<prefix>:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn  
   
          如果有多个网络适配器，或者如果网络同时支持 IPv4 和 IPv6 地址，则会看到多个 IP 地址。 如果只选择一个 IP 地址，则会将应用程序限制为只能访问该 IP 地址（以及域名服务器映射到该地址的任何主机名）。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。 如果选择此值，则通常是因为你要配置多个还指定显式 IP 地址或主机名的 URL 预留（例如，一个针对用于 Intranet 连接的网络适配器，另一个用于 Extranet 连接）。  
   

@@ -1,6 +1,6 @@
 ---
 title: R 教程：在 SQL 中开发模型
-description: 本教程介绍如何为数据库内分析创建端到端 R 解决方案。
+description: 了解如何基于 SQL Server 2016 或 SQL Server 2017 中的 R 功能支持，生成用于预测建模的端到端解决方案。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781792"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179741"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教程：面向 R 数据科学家的 SQL 开发
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 本教程主要面向数据科学家，介绍如何基于 SQL Server 2016 或 SQL Server 2017 中的 R 功能支持，生成用于预测建模的端到端解决方案。 本教程使用 SQL Server 上的 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 数据库。 
 

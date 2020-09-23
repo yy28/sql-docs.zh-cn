@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 创建 R 模型
-description: RevoScaleR 教程 7：如何在 SQL Server 上使用 R 语言生成模型。
+description: 了解如何创建线性回归模型来分析在上一教程中所丰富的数据。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 50d145e1191779e3c1af4788c406856dd16b8e82
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c37608146b0ebf75cd0042f12ffc004f1273960
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728598"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178814"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>创建 R 模型（SQL Server 和 RevoScaleR 教程）
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 7 个教程。
 

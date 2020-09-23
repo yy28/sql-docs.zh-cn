@@ -1,5 +1,6 @@
 ---
-title: 使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型 | Microsoft Docs
+title: 使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型
+description: 了解如何使用 SQLSRV Driver for PHP for SQL Server 以字符串的形式检索日期和时间类型。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b8cd038579c471891e6e9ae0d81075b22016f6d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916125"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410958"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-将 SQLSRV 驱动程序用于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 时，可以通过在连接字符串中或在语句级别指定以下选项，以字符串的形式检索日期和时间类型（smalldatetime  、datetime  、date  、time  、datetime2  和 datetimeoffset  ）：
+将 SQLSRV 驱动程序用于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 时，可以通过在连接字符串中或在语句级别指定以下选项，以字符串的形式检索日期和时间类型（smalldatetime****、datetime****、date****、time****、datetime2**** 和 datetimeoffset****）：
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-默认值是 false  ，这意味着 smalldatetime  、datetime  、date  、time  、datetime2  和 datetimeoffset  类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别设置此选项，则它将替代连接级别设置。
+默认值是 false****，这意味着 smalldatetime****、datetime****、date****、time****、datetime2**** 和 datetimeoffset**** 类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别设置此选项，则它将替代连接级别设置。
 
 默认情况下，PDO_SQLSRV 驱动程序以字符串的形式返回日期和时间类型。 若要以 PHP DateTime 对象形式进行检索，请参阅[如何：使用 PDO_SQLSRV 以 PHP Datetime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 

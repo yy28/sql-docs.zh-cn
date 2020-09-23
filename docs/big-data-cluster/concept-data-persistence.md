@@ -1,7 +1,7 @@
 ---
 title: Kubernetes 上的数据暂留
 titleSuffix: SQL Server big data clusters
-description: 了解数据暂留如何在 SQL Server 2019 大数据群集中运行。
+description: 了解永久性卷如何提供插件模型，来用于 Kubernetes 中的存储。 还可了解数据暂留如何在 SQL Server 2019 大数据群集中运行。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661080"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765686"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>使用 Kubernetes 上的 SQL Server 大数据群集进行数据暂留
 
@@ -28,7 +28,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 
 在规划大数据群集的存储配置时，需要考虑以下几个重要方面：
 
-- 为了实现成功的大数据群集部署，请确保你拥有所需数量的可用永久性卷。 若要在 Azure Kubernetes 服务 (AKS) 群集上部署，且使用的是内置存储类（`default` 或 `managed-premium`），那么此类支持对永久性卷进行动态预配。 因此，无需预先创建永久性卷，但必须确保 AKS 群集中可用的工作器节点可以附加与部署所需的永久性卷数量相同的磁盘。 根据为工作器节点指定的 [VM 大小](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)，每个节点可以附加一定数量的磁盘。 对于默认大小的群集（无高可用性），至少必须有 24 个磁盘。 若要启用高可用性或纵向扩展任何池，请确保每个附加副本至少有两个永久性卷，无论要纵向扩展的资源是什么。
+- 为了实现成功的大数据群集部署，请确保你拥有所需数量的可用永久性卷。 若要在 Azure Kubernetes 服务 (AKS) 群集上部署，且使用的是内置存储类（`default` 或 `managed-premium`），那么此类支持对永久性卷进行动态预配。 因此，无需预先创建永久性卷，但必须确保 AKS 群集中可用的工作器节点可以附加与部署所需的永久性卷数量相同的磁盘。 根据为工作器节点指定的 [VM 大小](/azure/virtual-machines/linux/sizes)，每个节点可以附加一定数量的磁盘。 对于默认大小的群集（无高可用性），至少必须有 24 个磁盘。 若要启用高可用性或纵向扩展任何池，请确保每个附加副本至少有两个永久性卷，无论要纵向扩展的资源是什么。
 
 - 如果在配置中提供的存储类的存储预配程序不支持动态预配，必须预先创建永久性卷。 例如，`local-storage` 预配程序不启用动态预配。 若要了解如何在使用 `kubeadm` 部署的 Kubernetes 群集中继续操作，请参阅此[示例脚本](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)。
 
@@ -71,7 +71,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
     }
 ```
 
-大数据群集部署使用永久性存储来存储各种组件的数据、元数据和日志。 你可以自定义作为部署的一部分创建的持久卷声明的大小。 根据最佳做法，建议结合使用存储类和 Retain  [回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
+大数据群集部署使用永久性存储来存储各种组件的数据、元数据和日志。 你可以自定义作为部署的一部分创建的持久卷声明的大小。 根据最佳做法，建议结合使用存储类和 Retain ** [回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
 
 > [!WARNING]
 > 在没有持久存储的情况下运行时可在测试环境中运行，但可能导致群集无法正常运行。 在 Pod 重启后，群集元数据和/或用户数据就会永久丢失。 建议不要在此配置下运行。
@@ -83,7 +83,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 AKS 随附[两个内置存储类](/azure/aks/azure-disks-dynamic-pv/)（`default` 和 `managed-premium`），以及这两个类的动态预配程序。 可以指定这两个类中的一个，也可以创建你自己的存储类，从而部署已启用永久性存储的大数据群集。 默认情况下，用于AKS 的内置群集配置文件 `aks-dev-test` 随附使用 `default` 存储类的永久性存储配置。
 
 > [!WARNING]
-> 使用内置存储类 `default` 和 `managed-premium` 创建的持久卷包含回收策略“删除”  。 因此，如果你删除 SQL Server 大数据群集，永久性卷声明和永久性卷都会遭删除。 可通过结合使用 `azure-disk` 预配程序和 `Retain` 回收策略，创建自定义存储类，如[存储概念](/azure/aks/concepts-storage/#storage-classes)所述。
+> 使用内置存储类 `default` 和 `managed-premium` 创建的持久卷包含回收策略“删除”**。 因此，如果你删除 SQL Server 大数据群集，永久性卷声明和永久性卷都会遭删除。 可通过结合使用 `azure-disk` 预配程序和 `Retain` 回收策略，创建自定义存储类，如[存储概念](/azure/aks/concepts-storage/#storage-classes)所述。
 
 ## <a name="storage-classes-for-kubeadm-clusters"></a>`kubeadm` 群集的存储类 
 

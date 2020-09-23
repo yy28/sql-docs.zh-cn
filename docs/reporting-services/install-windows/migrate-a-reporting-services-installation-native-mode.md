@@ -1,4 +1,5 @@
 ---
+description: 迁移 Reporting Services 安装（本机模式）
 title: 迁移 Reporting Services 安装（本机模式）| Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -6,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454573"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
 

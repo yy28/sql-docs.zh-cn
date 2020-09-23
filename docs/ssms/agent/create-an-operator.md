@@ -1,4 +1,5 @@
 ---
+description: 创建操作员
 title: 创建操作员
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,20 +19,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c56a6a41971fb7751266c192be2d671526262418
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2210590414b45113077ac331beef0f89cbf25424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418173"
 ---
 # <a name="create-an-operator"></a>创建操作员
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍了如何通过使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中对用户进行配置以接收有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业的通知。  
+本主题介绍了如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中对用户进行配置以接收有关 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的通知。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
@@ -45,7 +46,7 @@ ms.locfileid: "85786780"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 只有 **sysadmin** 固定服务器角色的成员才能创建操作员。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
@@ -54,16 +55,16 @@ ms.locfileid: "85786780"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要创建 SQL Server 代理操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“操作员”  文件夹，然后选择“新建操作员”  。  
+3.  右键单击“操作员”**** 文件夹，然后选择“新建操作员”****。  
   
     在 **“新建操作员”** 对话框的 **“常规”** 页上提供以下选项：  
   
-    **名称**  
+    **Name**  
     更改操作员的名称。  
   
-    **已启用**  
+    **Enabled**  
     启用操作员。 在未启用时，不会向操作员发送通知。  
   
     **电子邮件名称**  
@@ -110,7 +111,7 @@ ms.locfileid: "85786780"
     **Net send**  
     使用 **net send**通知此操作员。  
   
-4.  在完成了新操作员的创建后，单击 **“确定”** 。  
+4.  在完成了新操作员的创建后，单击 **“确定”**。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -120,7 +121,7 @@ ms.locfileid: "85786780"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- sets up the operator information for user 'danwi.'

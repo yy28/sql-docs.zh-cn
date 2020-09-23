@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting 类
 title: MSReportServer_ConfigurationSetting 类 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454424"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting 类
   表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。  
@@ -38,11 +39,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## <a name="thread-safety"></a>线程安全  
+## <a name="thread-safety"></a>线程安全性  
  此类型的任何公共静态（**中的** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
   
 ## <a name="example"></a>示例  
- 若要运行下面的代码，请添加服务器名称来取代每个 \<servername  >。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 *MSReportServer_ConfigurationSetting* 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
+ 若要运行下面的代码，请添加你的服务器名称来取代每个 \<*servername*>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 *MSReportServer_ConfigurationSetting* 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
   
 ```vb  
 Imports System  

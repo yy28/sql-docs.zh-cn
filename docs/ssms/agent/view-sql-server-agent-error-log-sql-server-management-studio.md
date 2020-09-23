@@ -1,4 +1,5 @@
 ---
+description: 查看 SQL Server 代理错误日志
 title: 查看 SQL Server 代理错误日志
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,19 +18,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a709a4b3d0fae266d871301128039a15d97b45b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17388dbf612600bd95642d0d961a73edcb06245f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88318063"
 ---
 # <a name="view-sql-server-agent-error-log"></a>查看 SQL Server 代理错误日志
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主题介绍如何使用  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代理错误日志。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85759753"
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>权限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
@@ -61,13 +62,13 @@ ms.locfileid: "85759753"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要查看的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“错误日志”** 文件夹。  
   
-4.  右键单击要查看的错误日志，并选择“查看代理日志”  。  
+4.  右键单击要查看的错误日志，并选择“查看代理日志”****。  
   
-    “日志文件查看器 - server_name”对话框中提供以下选项   ：  
+    “日志文件查看器 - server_name”对话框中提供以下选项****__：  
   
     **加载日志**  
     打开一个对话框，您可以在其中指定要加载的日志文件。  
@@ -79,7 +80,7 @@ ms.locfileid: "85759753"
     刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
     **筛选器**  
-    打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接”  、“日期”  或其他“常规”  筛选条件。  
+    打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接” 、“日期” 或其他“常规”  筛选条件。  
   
     **搜索**  
     在日志文件中搜索特定文本。 不支持在搜索中使用通配符。  
@@ -88,13 +89,13 @@ ms.locfileid: "85759753"
     停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
   
     **日志文件摘要**  
-    此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，将看到以下文本：基于以下条件筛选日志项：  <filter criteria>。  
+    此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，将看到以下文本：基于以下条件筛选日志项：<filter criteria>。  
   
     **所选行详细信息**  
     选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
   
     **实例**  
-    发生事件的实例的名称。 这显示为：计算机名称\\实例名称。  
+    发生事件的实例的名称。 这显示为：计算机名称\\实例名称 。  
   
     **Date**  
     显示事件的日期。  
@@ -111,5 +112,5 @@ ms.locfileid: "85759753"
     **日志源**  
     显示在其中捕获事件的源日志的说明。  
   
-5.   完成后，单击“关闭”。  
+5.  完成后，单击“关闭”。  
   

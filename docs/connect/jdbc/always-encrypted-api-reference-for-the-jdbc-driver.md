@@ -1,4 +1,5 @@
 ---
+description: JDBC 驱动程序的 Always Encrypted API 参考
 title: JDBC 驱动程序的 Always Encrypted API 参考 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f6ac184e3a514bab20802d3513691eb4b3295af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75681698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438509"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 驱动程序的 Always Encrypted API 参考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,10 +56,10 @@ ms.locfileid: "75681698"
 |----------|-----------------|  
 |`public void setColumnEncryptionSetting(String columnEncryptionSetting)`|为数据源对象启用/禁用始终加密功能。<br /><br /> 默认值为“禁用”。|  
 |`public String getColumnEncryptionSetting()`|检索数据源对象的始终加密功能设置。|
-|`public void setKeyStoreAuthentication(String keyStoreAuthentication)`|设置标识密钥存储的名称。 唯一支持的值是，用于标识 Java 密钥存储库的 JavaKeyStorePassword  。<br/><br/>默认值为 NULL。|
+|`public void setKeyStoreAuthentication(String keyStoreAuthentication)`|设置标识密钥存储的名称。 唯一支持的值是，用于标识 Java 密钥存储库的 JavaKeyStorePassword****。<br/><br/>默认值为 NULL。|
 |`public String getKeyStoreAuthentication()`|获取数据源对象的 keyStoreAuthentication 设置值。|
-|`public void setKeyStoreSecret(String keyStoreSecret)`|设置 Java 密钥存储库的密码。 密钥存储库的密码和密钥必须相同。 请注意，必须使用 JavaKeyStorePassword 设置 keyStoreAuthentication  。|
-|`public void setKeyStoreLocation(String keyStoreLocation)`|设置包含 Java 密钥存储库的文件名的位置。 请注意，必须使用 JavaKeyStorePassword 设置 keyStoreAuthentication  。|
+|`public void setKeyStoreSecret(String keyStoreSecret)`|设置 Java 密钥存储库的密码。 密钥存储库的密码和密钥必须相同。 请注意，必须使用 JavaKeyStorePassword 设置 keyStoreAuthentication****。|
+|`public void setKeyStoreLocation(String keyStoreLocation)`|设置包含 Java 密钥存储库的文件名的位置。 请注意，必须使用 JavaKeyStorePassword 设置 keyStoreAuthentication****。|
 |`public String getKeyStoreLocation()`|检索 Java 密钥存储库的 keyStoreLocation。|
   
  **SQLServerColumnEncryptionJavaKeyStoreProvider 类**  
@@ -75,8 +76,8 @@ ms.locfileid: "75681698"
   
 |名称|说明|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|解密列加密密钥的指定加密值。 预期使用带有指定密钥路径的证书并使用指定算法加密该加密值。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。）|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|使用带有指定密钥路径的证书并使用指定算法加密列加密密钥。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。）|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|对列加密密钥的指定加密值进行解密。 加密值应使用具有指定密钥路径的证书和指定的算法进行加密。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。）|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|使用具有指定密钥路径的证书和使用指定的算法对列加密密钥进行加密。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。）|  
 |`public void setName (String name)`|设置此密钥存储库提供程序的名称。|
 |`public String getName ()`|获取此密钥存储库提供程序的名称。|
   
@@ -127,7 +128,7 @@ ms.locfileid: "75681698"
 |`public abstract void setName(String name)`|设置此密钥存储库提供程序的名称。|
 |`public abstract String getName()`|获取此密钥存储库提供程序的名称。|  
   
- SQLServerPreparedStatement  类中的新方法或重载方法  
+ SQLServerPreparedStatement**** 类中的新方法或重载方法  
   
 |名称|说明|  
 |----------|-----------------|  
@@ -135,7 +136,7 @@ ms.locfileid: "75681698"
 |`public void setMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setSmallMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setUniqueIdentifier(int parameterIndex, String guid)`<br /><br /> `public void setDateTime(int parameterIndex, java.sql.Timestamp x)`<br /><br /> `public void setSmallDateTime(int parameterIndex, java.sql.Timestamp x)`|添加这些方法是为了支持对 money、smallmoney、uniqueidentifier、datetime 和 smalldatetime 数据类型使用 Always Encrypted。 <br/><br/>请注意，现有 `setTimestamp()` 方法用于将参数值发送到加密列 datetime2。 对于加密列 datetime 和 smalldatetime，请分别使用新方法 `setDateTime()` 和 `setSmallDateTime()`。|  
 |`public final void setBigDecimal(int parameterIndex, BigDecimal x, int precision, int scale, boolean forceEncrypt)`<br /><br /> `public final void setMoney(int parameterIndex, BigDecimal x, boolean forceEncrypt)`<br /><br /> `public final void setSmallMoney(int parameterIndex, BigDecimal x, boolean forceEncrypt)`<br /><br /> `public final void setBoolean(int parameterIndex, boolean x, boolean forceEncrypt)`<br /><br /> `public final void setByte(int parameterIndex, byte x, boolean forceEncrypt)`<br /><br /> `public final void setBytes(int parameterIndex, byte x[], boolean forceEncrypt)`<br /><br /> `public final void setUniqueIdentifier(int parameterIndex, String guid, boolean forceEncrypt)`<br /><br /> `public final void setDouble(int parameterIndex, double x, boolean forceEncrypt)`<br /><br /> `public final void setFloat(int parameterIndex, float x, boolean forceEncrypt)`<br /><br /> `public final void setInt(int parameterIndex, int value, boolean forceEncrypt)`<br /><br /> `public final void setLong(int parameterIndex, long x, boolean forceEncrypt)`<br /><br /> `public final setObject(int parameterIndex, Object x, int targetSqlType, Integer precision, int scale, boolean forceEncrypt)`<br /><br /> `public final void setObject(int parameterIndex, Object x, SQLType targetSqlType, Integer precision, Integer scale, boolean forceEncrypt)`<br /><br /> `public final void setShort(int parameterIndex, short x, boolean forceEncrypt)`<br /><br /> `public final void setString(int parameterIndex, String str, boolean forceEncrypt)`<br /><br /> `public final void setNString(int parameterIndex, String value, boolean forceEncrypt)`<br /><br /> `public final void setTime(int parameterIndex, java.sql.Time x, int scale, boolean forceEncrypt)`<br /><br /> `public final void setTimestamp(int parameterIndex, java.sql.Timestamp x, int scale, boolean forceEncrypt)`<br /><br /> `public final void setDateTimeOffset(int parameterIndex, microsoft.sql.DateTimeOffset x, int scale, boolean forceEncrypt)`<br /><br /> `public final void setDateTime(int parameterIndex, java.sql.Timestamp x, boolean forceEncrypt)`<br /><br /> `public final void setSmallDateTime(int parameterIndex, java.sql.Timestamp x, boolean forceEncrypt)`<br /><br /> `public final void setDate(int parameterIndex, java.sql.Date x, java.util.Calendar cal, boolean forceEncrypt)`<br /><br /> `public final void setTime(int parameterIndex, java.sql.Time x, java.util.Calendar cal, boolean forceEncrypt)`<br /><br /> `public final void setTimestamp(int parameterIndex, java.sql.Timestamp x, java.util.Calendar cal, boolean forceEncrypt)`|将指定参数设置为给定的 Java 值。<br /><br /> 如果布尔 forceEncrypt 设置为 true，那么只有当标记列已加密且连接或语句已启用 Always Encrypted 时，才会设置查询参数。<br /><br /> 如果布尔 forceEncrypt 设置为 false，那么驱动程序不会强制对参数进行加密。|  
   
- SQLServerCallableStatement  类中的新方法或重载方法  
+ SQLServerCallableStatement**** 类中的新方法或重载方法  
   
 |名称|说明|  
 |----------|-----------------|  
@@ -144,7 +145,7 @@ ms.locfileid: "75681698"
 |`public void setObject(String parameterName, Object o, int n, int m, boolean forceEncrypt)`<br /><br /> `public void setObject(String parameterName, Object obj, SQLType jdbcType, int scale, boolean forceEncrypt)`<br /><br /> `public void setDate(String parameterName, java.sql.Date x, Calendar c, boolean forceEncrypt)`<br /><br /> `public void setTime(String parameterName, java.sql.Time t, int scale, boolean forceEncrypt)`<br /><br /> `public void setTime(String parameterName, java.sql.Time x, Calendar c, boolean forceEncrypt)`<br /><br /> `public void setDateTime(String parameterName, java.sql.Timestamp x, boolean forceEncrypt)`<br /><br /> `public void setDateTimeOffset(String parameterName, microsoft.sql.DateTimeOffset t, int scale, boolean forceEncrypt)`<br /><br /> `public void setSmallDateTime(String parameterName, java.sql.Timestamp x, boolean forceEncrypt)`<br /><br /> `public void setTimestamp(String parameterName, java.sql.Timestamp t, int scale, boolean forceEncrypt)`<br /><br /> `public void setTimestamp(String parameterName, java.sql.Timestamp x, boolean forceEncrypt)`<br /><br /> `public void setUniqueIdentifier(String parameterName, String guid, boolean forceEncrypt)`<br /><br /> `public void setBytes(String parameterName, byte[] b, boolean forceEncrypt)`<br /><br /> `public void setByte(String parameterName, byte b, boolean forceEncrypt)`<br /><br /> `public void setString(String parameterName, String s, boolean forceEncrypt)`<br /><br /> `public final void setNString(String parameterName, String value, boolean forceEncrypt)<br /><br /> public void setMoney(String parameterName, BigDecimal bd, boolean forceEncrypt)`<br /><br /> `public void setSmallMoney(String parameterName, BigDecimal bd, boolean forceEncrypt)`<br /><br /> `public void setBigDecimal(String parameterName, BigDecimal bd, int precision, int scale, boolean forceEncrypt)`<br /><br /> `public void setDouble(String parameterName, double d, boolean forceEncrypt)`<br /><br /> `public void setFloat(String parameterName, float f, boolean forceEncrypt)`<br /><br /> `public void setInt(String parameterName, int i, boolean forceEncrypt)`<br /><br /> `public void setLong(String parameterName, long l, boolean forceEncrypt)`<br /><br /> `public void setShort(String parameterName, short s, boolean forceEncrypt)`<br /><br /> `public void setBoolean(String parameterNames, boolean b, boolean forceEncrypt)`<br/><br/>`public void setTimeStamp(String sCol, java.sql.Timestamp x, Calendar c, Boolean forceEncrypt)`|将指定参数设置为给定的 Java 值。<br /><br /> 如果布尔 forceEncrypt 设置为 true，那么只有当标记列已加密且连接或语句已启用 Always Encrypted 时，才会设置查询参数。<br /><br /> 如果布尔 forceEncrypt 设置为 false，那么驱动程序不会强制对参数进行加密。|
  
 
- SQLServerResultSet  类中的新方法或重载方法  
+ SQLServerResultSet**** 类中的新方法或重载方法  
   
 |名称|说明|  
 |----------|-----------------|  
@@ -152,16 +153,16 @@ ms.locfileid: "75681698"
 |`public void updateBoolean(int index, boolean x, boolean forceEncrypt)`  <br/><br/>  `public void updateByte(int index, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(int index, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(int index, int x, boolean forceEncrypt)`   <br/><br/>  `public void updateLong(int index, long x, boolean forceEncrypt)`  <br/><br/> `public void updateFloat(int index, float x, boolean forceEncrypt)`   <br/><br/> `public void updateDouble(int index, double x, boolean forceEncrypt)`   <br/><br/> `public void updateMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateSmallMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateBigDecimal(int index, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateString(int columnIndex, String stringValue, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(int columnIndex, String nString, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(String columnLabel, String nString, boolean forceEncrypt)`  <br/><br/> `public void updateBytes(int index, byte x[], boolean forceEncrypt)   <br/><br/>  public void updateDate(int index, java.sql.Date x, boolean forceEncrypt)`  <br/><br/> `public void updateTime(int index, java.sql.Time x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateTimestamp(int index, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/> `public void updateDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateSmallDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateUniqueIdentifier(int index, String x, boolean forceEncrypt)`    <br/><br/>  `public void updateObject(int index, Object x, int precision, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateObject(int index, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateBoolean(String columnName, boolean x, boolean forceEncrypt)`    <br/><br/>  `public void updateByte(String columnName, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(String columnName, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(String columnName, int x, boolean forceEncrypt)`   <br/><br/>   `public void updateLong(String columnName, long x, boolean forceEncrypt)` <br/><br/>  `public void updateFloat(String columnName, float x, boolean forceEncrypt)`  <br/><br/>  `public void updateDouble(String columnName, double x, boolean forceEncrypt)  <br/><br/> public void updateBigDecimal(String columnName, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateBigDecimal(String columnName, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateString(String columnName, String x, boolean forceEncrypt)`   <br/><br/>  `public void updateBytes(String columnName, byte x[], boolean forceEncrypt)`  <br/><br/> `public void updateDate(String columnName, java.sql.Date x, boolean forceEncrypt)`   <br/><br/>  `public void updateTime(String columnName, java.sql.Time x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateTimestamp(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateUniqueIdentifier(String columnName, String x, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object x, int precision, int scale, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`|将指定列更新为给定 Java 值。<br/><br/>如果布尔 forceEncrypt 设置为 true，那么只有当列已加密且连接或语句已启用 Always Encrypted 时，才会设置此列。<br/><br/>如果布尔 forceEncrypt 设置为 false，那么驱动程序不会强制对参数进行加密。|
 
   
-microsoft.sql.Types  类中的新类型
+microsoft.sql.Types**** 类中的新类型
 
 |名称|说明|  
 |----------|-----------------|  
-|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|使用 `setObject()/updateObject()` API 方法将参数值发送到加密列 datetime、smalldatetime、money、smallmoney、uniqueidentifier 时，将这些类型用作目标 SQL 类型。|  
+|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|使用 `setObject()/updateObject()` API 方法将参数值发送到加密**** 列 datetime、smalldatetime、money、smallmoney、uniqueidentifier 时，将这些类型用作目标 SQL 类型。|  
   
   
  **SQLServerStatementColumnEncryptionSetting Enum**  
   
- 指定如何在对加密列执行读取和写入操作时发送和接收数据。 使用非加密列时，绕过 Always Encrypted 驱动程序的处理可能会降低性能影响，视具体查询而定。 请注意，这些设置既不能用于绕过加密，也不能用于获取对纯文本数据的访问权限。  
+ 指定读取和写入加密列时将如何发送及接收数据。 根据特定的查询，正当使用非加密列时跳过 Always Encrypted 驱动程序的处理可能会降低性能影响。 请注意，这些设置既不能用于绕过加密，也不能用于获取对纯文本数据的访问权限。  
   
  **语法**  
   
@@ -173,10 +174,10 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
 |名称|说明|  
 |----------|-----------------|  
-|UseConnectionSetting|指定命令应默认为连接字符串中的 Always Encrypted 设置。|  
+|UseConnectionSetting|指定该命令应默认为连接字符串中的 Always Encrypted 设置。|  
 |已启用|为查询启用 Always Encrypted。|  
-|ResultSetOnly|指定驱动程序中的 Always Encrypted 例程只能处理命令的结果。 请在命令没有需要加密的参数时使用此值。|  
-|已禁用|为查询禁用 Always Encrypted。|  
+|ResultSetOnly|指定驱动程序中 Always Encrypted 例程应只能处理命令的结果。 当命令不具有需要加密的任何参数时使用此值。|  
+|已禁用|对查询禁用 Always Encrypted。|  
   
  AE 的语句级别设置已添加到 SQLServerConnection 类和 SQLServerConnectionPoolProxy 类中。 这些类中的以下方法使用新设置进行重载。  
   

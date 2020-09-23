@@ -1,4 +1,5 @@
 ---
+description: 设置为 java.io.Reader 对象的 setNCharacterStream 方法 - long
 title: 设置为 java.io.Reader 对象的 setNCharacterStream 方法 - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e954735a06c1ad52112c43ec09e4de9722caa3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d5baf0107e4c641782d2808e0fc62be9e1dbc3e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431669"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,10 +32,10 @@ public final void setNCharacterStream(int parameterIndex,
                                                                 long length)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- parameterIndex   
+#### <a name="parameters"></a>参数  
+ parameterIndex**  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int****。  
   
  *value*  
   
@@ -42,7 +43,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  *length*  
   
- 指示参数值中字符数的 long  。  
+ 指示参数值中字符数的 long****。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,11 +51,11 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="remarks"></a>备注  
  此 setNCharacterStream 方法是由 java.sql.PreparedStatement 接口中的 setNCharacterStream 方法指定的。  
   
- 此方法应用于 NCHAR  、NVARCHAR  、NTEXT  和 XML  数据类型。  
+ 此方法应用于 NCHAR****、NVARCHAR****、NTEXT**** 和 XML**** 数据类型。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常**。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度**。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setNCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

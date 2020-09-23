@@ -1,4 +1,5 @@
 ---
+description: 管理作业步骤
 title: 管理作业步骤
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480295"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 作业步骤是作业对数据库或服务器执行的操作。 每个作业必须至少有一个作业步骤。 作业步骤可以为：  
   
@@ -81,7 +82,7 @@ ms.locfileid: "87247389"
   
 -   命令成功完成时返回的进程退出代码。  
   
--   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是程序名称以及程序参数，例如：C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"   
+-   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是该程序的名称和用于该程序的参数，例如： **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > 如果系统路径或执行作业步骤的用户的路径指定的目录中不包含此可执行程序，则必须提供可执行程序的完整路径。  
@@ -162,7 +163,7 @@ Set oServer = nothing
   
 -   标识要运行作业步骤的数据库 OLAP 服务器。  
   
--   键入要执行的语句。 对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Execute  方法，此语句必须为 XML。 对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Discover  方法，此语句可能不包含完整的 SOAP 信封或 XML。 注意：虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。  
+-   键入要执行的语句。 对于  Execute[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **** 方法，此语句必须为 XML。 对于  Discover[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **** 方法，此语句可能不包含完整的 SOAP 信封或 XML。 注意：虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。  
   
 ### <a name="analysis-services-query-job-steps"></a>Analysis Services 查询作业步骤  
 创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] 查询作业步骤时，必须：  
@@ -196,7 +197,7 @@ Set oServer = nothing
   
 -   添加或修改命令行选项。  
   
-请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录** 作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”  选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
+请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录** 作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”**** 选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
   
 有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的作业步骤的详细信息，请参阅 [包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   
@@ -211,7 +212,7 @@ Set oServer = nothing
 |介绍如何创建 ActiveX 脚本作业步骤。|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
 |介绍如何创建和定义用于执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令和查询的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤。|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
 |介绍在作业执行期间失败时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应执行什么操作。|[Set Job Step Success or Failure Flow](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
-|说明如何在“作业步骤属性”对话框中查看作业步骤的详细信息。|[查看作业步骤信息](../../ssms/agent/view-job-step-information.md)|  
+|说明如何在“作业步骤属性”对话框中查看作业步骤的详细信息。|[View Job Step Information](../../ssms/agent/view-job-step-information.md)|  
 |说明如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志。|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>另请参阅  

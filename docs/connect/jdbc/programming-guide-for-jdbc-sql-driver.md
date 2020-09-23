@@ -1,5 +1,6 @@
 ---
-title: JDBC SQL 驱动程序编程指南 | Microsoft Docs
+title: JDBC SQL 驱动程序编程指南
+description: 开始使用 Microsoft JDBC Driver for SQL Server，并了解使用 Java 编程数据库应用程序的基础知识。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb39448beac608280fc7bbaadc2def6679d30a64
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 14b2ec02fa4da96ea8b01a102d2c353ac4a4121c
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923740"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435381"
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>JDBC SQL 驱动程序编程指南
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

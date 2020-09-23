@@ -1,7 +1,8 @@
 ---
-title: 如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型 | Microsoft Docs
+title: 如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型
+description: 了解如何在使用 SQLSRV Driver for PHP 时，在预定义语句或直接查询中使用可选的 $params 数组指定 SQL Server 数据类型
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce7e541486412d6c309fdbf1a9fe6d155e38f5a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0720c14429aa4088d906a2063feeb34057065682
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922880"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680565"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "80922880"
   
 3.  构建要在准备或执行查询时使用的 *$params* 数组。 请注意，在指定 SQL Server 数据类型时， *$params* 数组的每个元素必须也是一个数组。  
   
-4.  通过将相应的 SQLSRV_SQLTYPE_&#42;  常量用作 $params  数组的每个子数组中的第四个参数，指定所需的 SQL Server 数据类型。 有关 SQLSRV_SQLTYPE_&#42;  常量的完整列表，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 SQLTYPE 部分。 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
+4.  通过将相应的 SQLSRV_SQLTYPE_&#42;**** 常量用作 $params** 数组的每个子数组中的第四个参数，指定所需的 SQL Server 数据类型。 有关 SQLSRV_SQLTYPE_&#42;**** 常量的完整列表，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 SQLTYPE 部分。 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
   
     ```  
     $employeeId = 5;  
@@ -54,7 +55,7 @@ ms.locfileid: "80922880"
     ```  
   
 ## <a name="example"></a>示例  
-以下示例将数据插入 AdventureWorks 数据库的 HumanResources.EmployeePayHistory 表中  。 为 *$changeDate*、 *$rate*和 *$payFrequency* 参数指定 SQL Server 类型。 将默认 SQL Server 类型用于 *$employeeId* 参数。 若要验证数据是否已成功插入，请检索和显示相同的数据。  
+以下示例将数据插入 AdventureWorks 数据库的 HumanResources.EmployeePayHistory 表中。 为 *$changeDate*、 *$rate*和 *$payFrequency* 参数指定 SQL Server 类型。 将默认 SQL Server 类型用于 *$employeeId* 参数。 若要验证数据是否已成功插入，请检索和显示相同的数据。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   

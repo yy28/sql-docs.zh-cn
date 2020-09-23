@@ -1,6 +1,6 @@
 ---
 title: 从 SQL Server 表中删除列（OLE DB 驱动程序）
-description: 使用 OLE DB Driver for SQL Server 从 SQL Server 表中删除列
+description: OLE DB Driver for SQL Server 公开 ITableDefinition::DropColumn 函数，通过该函数使用者可从 SQL Server 表中删除列。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - removing columns
 - DropColumn function
 - OLE DB Driver for SQL Server, columns
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7467d30e8cb13badbea21eff9804710ff4361259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0672669e6d724e7dfcb5338c76694473f078da10
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244108"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859465"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>从 SQL Server 表中删除列
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

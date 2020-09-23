@@ -1,4 +1,5 @@
 ---
+description: 作业步骤属性 - 新建作业步骤（“常规”页）
 title: 新建作业步骤属性（“常规”页）
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,33 +14,33 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44b333c1865046f779581265fb49186810f8944c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c16c9895eb6fdcec859a20651f9912b78ee9946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497555"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作业步骤属性 - 新建作业步骤（“常规”页）
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性或定义新的作业步骤。  
   
-若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”  ，单击“新建作业”  ，选择“步骤”  页，再单击“新建”  。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”  ，选择“步骤”  页，再依次单击“新建”  、“插入”  或“编辑”  。  
+若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”****，单击“新建作业”****，选择“步骤”**** 页，再单击“新建”****。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”****，选择“步骤”**** 页，再依次单击“新建”****、“插入”**** 或“编辑”****。  
   
 ## <a name="options"></a>选项  
 **步骤名称**  
 设置作业步骤的名称。  
   
-类型   
+**类型**  
 设置作业步骤使用的子系统。 显示的用于定义作业步骤的选项会根据所选子系统的不同而变化。  
   
 **运行身份**  
-为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”  。  
+为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”****。  
   
 **Database**  
 设置在其中运行作业步骤的数据库。 此选项并不适用于所有作业步骤类型。  
@@ -54,13 +55,13 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 将所选文本复制到剪贴板。  
   
 **粘贴**  
 粘贴剪贴板的内容。  
   
-**分析**  
+**Parse**  
 检查命令的语法。  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 脚本作业步骤的选项  
@@ -83,7 +84,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -99,7 +100,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -112,7 +113,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择脚本文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -122,7 +123,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -132,7 +133,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -145,7 +146,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -155,7 +156,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -165,7 +166,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -181,7 +182,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -200,7 +201,7 @@ ms.locfileid: "85731399"
 **全选**  
 选择命令文本。  
   
-**Copy**  
+**复制**  
 复制选定的文本。  
   
 **粘贴**  
@@ -212,7 +213,7 @@ ms.locfileid: "85731399"
 指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) 包的位置以及使用的身份验证方法。 选择此选项卡后，可以使用以下选项。  
   
 **包源**  
-指定 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的存储位置。 选择以下之一：  
+指定 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的存储位置。 选择以下选项之一：  
   
 -   **SQL Server**  
   
@@ -221,13 +222,13 @@ ms.locfileid: "85731399"
 -   **SSIS 包存储区**  
   
 **Server**  
-键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”指定了 **SQL Server** 或“SSIS 包存储区”时，此选项才可用。  
+键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”**** 指定了 **SQL Server** 或“SSIS 包存储区”**** 时，此选项才可用。  
   
 **Use Windows Authentication**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
   
 **Use SQL Server Authentication**  
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”  和“密码”  。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”**** 和“密码”****。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
@@ -236,7 +237,7 @@ ms.locfileid: "85731399"
 键入包的位置。  
   
 > [!IMPORTANT]  
-> 对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包，请单击“配置”  选项卡，在“包密码”  对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业将失败。  
+> 对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包，请单击“配置”**** 选项卡，在“包密码”**** 对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业将失败。  
   
 ### <a name="configurations-tab"></a>“配置”选项卡  
 为 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包指定配置选项。 选择此选项卡后，以下选项可用：  

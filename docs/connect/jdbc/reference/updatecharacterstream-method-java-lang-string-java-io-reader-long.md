@@ -1,5 +1,6 @@
 ---
-title: updateCharacterStream 方法 (java.io.Reader, long) | Microsoft Docs
+description: updateCharacterStream 方法 (java.lang.String, java.io.Reader, long)
+title: updateCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df135975be0fb9da5092cf049f9a8612f97c07aa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3553de88b391799ff9d5bb348c705ec6426b877
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457989"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-long"></a>updateCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,12 +32,12 @@ public void updateCharacterStream(java.lang.String columnLabel,
                                   long length)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- columnLabel   
+#### <a name="parameters"></a>参数  
+ columnLabel**  
   
- 一个包含列标签的字符串  。  
+ 一个包含列标签的字符串。  
   
- reader   
+ reader  
   
  Reader 对象。  
   
@@ -52,9 +53,9 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  此方法将来自 Reader 对象的 Unicode 字符传递给所选文本和二进制列。 这包括所有文本列与 binary、varbinary、varbinary(max)、image 和 XML 列，但不包括 UDT 列。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常**。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateCharacterStream 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度**。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateCharacterStream 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateCharacterStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
