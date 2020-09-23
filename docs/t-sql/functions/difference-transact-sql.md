@@ -21,12 +21,12 @@ ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b11654f4fe05491dbbe2add54ba4539de45e24cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db662ad2feeb4b41f56c549f9ff8e1f8c1c94752
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459789"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114808"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ DIFFERENCE ( character_expression , character_expression )
 ## <a name="examples"></a>示例  
 本示例的第一部分比较两个非常相似的字符串的 `SOUNDEX` 值。 对于 Latin1_General 排序规则，`DIFFERENCE` 返回的值为 `4`。 示例的第二部分比较两个差异较大的字符串的 `SOUNDEX` 值，对于 Latin1_General 排序规则，`DIFFERENCE` 返回的值为 `0`。  
   
-```  
+```sql  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
 SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
 GO  

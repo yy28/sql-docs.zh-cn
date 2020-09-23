@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ae2f5e45d9de660c8c03bd3b71a9e18864df5aa8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765506"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114410"
 ---
 # <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
@@ -24,7 +24,7 @@ Azure Data Studio 利用 IntelliSense、代码片段、源代码管理集成和�
 
 可通过一个提供软件修改和使用权限的源代码 EULA 来获取 GitHub 上 Azure Data Studio 的源代码及其数据提供程序，但不能在云服务中重新分发或托管该源代码。 有关详细信息，请参阅 [Azure Data Studio 常见问题解答](faq.md)。
 
-[下载并安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
+[下载并安装 Azure Data Studio](./download-azure-data-studio.md)
 
 ## <a name="sql-code-editor-with-intellisense"></a>带有 IntelliSense 的 SQL 代码编辑器
 
@@ -53,7 +53,7 @@ Azure Data Studio 还提供用于创建自定义 SQL 代码片段的功能。 �
 通过扩展基本安装的功能来增强 Azure Data Studio 体验。 Azure Data Studio 为数据管理活动提供扩展点，并支持扩展创作。
 
 若要了解 Azure Data Studio 中的扩展性，请参阅[扩展性](extensibility.md)。
-若要了解如何创作扩展，请参阅[扩展创作](extension-authoring.md)。
+若要了解如何创作扩展，请参阅[扩展创作](extensions/extension-authoring.md)。
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>与 SQL Server Management Studio (SSMS) 的功能比较
 
@@ -165,7 +165,7 @@ Azure Data Studio 还提供用于创建自定义 SQL 代码片段的功能。 �
 
 ## <a name="next-steps"></a>后续步骤
 
-- [下载并安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
+- [下载并安装 Azure Data Studio](./download-azure-data-studio.md)
 - [连接并查询 SQL Server](quickstart-sql-server.md)
 - [连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
 

@@ -23,12 +23,12 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24f2ee56f66a6f72efe67e04f7c421b74d392e8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16532428288ad69146a80aa028640f4ea20bbc7e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306722"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114746"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88306722"
   
 ### <a name="a-finding-a-row-by-using-a-simple-equality"></a>A. 使用简单等式查找行  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -63,7 +63,7 @@ WHERE LastName = 'Smith' ;
   
 ### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 查找包含作为字符串一部分的值的行  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -73,7 +73,7 @@ WHERE LastName LIKE ('%Smi%');
   
 ### <a name="c-finding-rows-by-using-a-comparison-operator"></a>C. 使用比较运算符查找行  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -83,7 +83,7 @@ WHERE EmployeeKey  <= 500;
   
 ### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>D. 查找满足三个条件当中的任何一个条件的行  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -93,7 +93,7 @@ WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;
   
 ### <a name="e-finding-rows-that-must-meet-several-conditions"></a>E. 查找必须满足若干个条件的行  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -103,7 +103,7 @@ WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
   
 ### <a name="f-finding-rows-that-are-in-a-list-of-values"></a>F. 查找位于值列表中的行  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -113,7 +113,7 @@ WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');
   
 ### <a name="g-finding-rows-that-have-a-value-between-two-values"></a>G. 查找含有两个值之间的一个值的行  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 519f0cb9e198e86705d412af20d9d939365ee834
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbe67c81d106641d56e9ab2deb0bbad246c70b60
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356163"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91113069"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 数据内部绑定关系数据
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "88356163"
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>示例：使用 sql:variable() 的跨域查询  
  本示例显示 sql:variable() 如何使应用程序能够将某个查询进行参数化。 使用 SQL 变量 @isbn 来传入 ISBN。 通过将常量替换为 sql:variable()，可以使用该查询来搜索任何 ISBN，而不仅仅是 ISBN 为 0-7356-1588-2 的图书。  
   
-```  
-DECLARE @isbn varchar(20)  
+```sql
+DECLARE @isbn VARCHAR(20)  
 SET     @isbn = '0-7356-1588-2'  
 SELECT  xCol  
 FROM    T  

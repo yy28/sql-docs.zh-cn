@@ -1,20 +1,20 @@
 ---
 title: 用户和工作区设置
 description: 了解如何根据自己的喜好使用各项设置来自定义 Azure Data Studio 的编辑器、用户界面和功能行为。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746157"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114517"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改用户和工作区设置
 
@@ -55,7 +55,6 @@ Azure Data Studio 提供两种不同的设置范围：
 默认情况下，Azure Data Studio 会在退出时记住未保存的文件更改。 这与 Visual Studio Code 中的热退出功能一样。
 
 默认情况下，热退出处于关闭状态。 通过编辑 `files.hotExit` 设置启用热退出。 有关详细信息，请参阅[热退出（在 Visual Studio Code 文档中）](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
-
 
 ## <a name="tab-color"></a>选项卡颜色
 

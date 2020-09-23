@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec94c40f39d2fe0dedfeef6d0b1edd37f40af5c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d921cdb5e8550942ade08f0e68d0337864d2e38
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366473"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114854"
 ---
 # <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88366473"
 此示例显示了返回当前日期和时间之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 活动。 此示例将其中一个值转换为 `float` 数据类型。 这样就避免了计算以微秒为单位的值时的算术溢出问题。
   
 ```sql
-SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   
+SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS FLOAT) AS 'CPU microseconds',   
    GETDATE() AS 'As of' ;  
 ```  
   
