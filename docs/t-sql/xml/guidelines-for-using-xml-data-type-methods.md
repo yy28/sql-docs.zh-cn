@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355963"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112312"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 数据类型方法的使用准则
 
@@ -33,7 +33,7 @@ ms.locfileid: "88355963"
 xml 数据类型方法不能用于 PRINT 语句，如下面的示例所示。 xml 数据类型方法视为子查询来处理，而 PRINT 语句中不允许使用子查询。 因此，下面的示例将返回一个错误：
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -41,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 一种解决方案是先将 value() 方法的结果分配给一个 xml 类型的变量，然后在查询中指定该变量。
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -77,8 +77,8 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 在此示例中，nodes() 方法为每个 `<book>` 元素生成一个单独的行。 对 `<book>` 节点进行计算的 value() 方法提取 `@genre` 值，并且是单一属性。
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 XML 架构用于对类型化的 XML 进行类型检查。 如果将某个节点指定为 XML 架构中单一的节点，则编译器将使用该信息，并且不会发生任何错误。 否则，需要使用一个用来选择单个节点的序号。 具体而言，使用 descendant-or-self 轴 (//) 轴（例如在 `/book//title` 中）会丢失 `<title>` 元素的单一性基数推理，即使 XML 架构指定其如此。 因此，应将其重写为 `(/book//title)[1]`。
@@ -90,22 +90,22 @@ XML 架构用于对类型化的 XML 进行类型检查。 如果将某个节点�
 下面对非类型化 XML 列的查询导致发生静态的编译错误。这是因为 value() 希望将一个单一节点作为第一个参数，而编译器无法确定在运行时是否将仅有一个 `<last-name>` 节点：
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 可以考虑下面的解决办法：
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 但是，该解决办法不解决错误，因为在每个 XML 实例中可能会有多个 `<author>` 节点。 采用下面的重写代码可以解决问题：
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 此查询返回每个 XML 实例中第一个 `<last-name>` 元素的值。
