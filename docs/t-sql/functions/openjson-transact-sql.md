@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: dcfdfec2bb179d6182df1306ffc5b46dbd86bf59
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: 93113a42ca267f9d5c241636dfbf49aa8e75ae90
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942310"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117068"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -75,7 +75,7 @@ with_clause 包含 **OPENJSON** 要返回的列及其类型的列表。 默认�
 OPENJSON 循环访问 JSON 表达式中的数组的元素或对象的属性，并为每个元素或属性返回一行。 下面的示例返回作为 jsonExpression 提供的对象的每个属性：  
 
 ```sql
-DECLARE @json NVarChar(2048) = N'{
+DECLARE @json NVARCHAR(2048) = N'{
    "String_value": "John",
    "DoublePrecisionFloatingPoint_value": 45,
    "DoublePrecisionFloatingPoint_value": 2.3456,
@@ -204,11 +204,11 @@ DECLARE @json NVARCHAR(MAX) = N'[
 SELECT *
 FROM OPENJSON ( @json )  
 WITH (   
-              Number   varchar(200)   '$.Order.Number',  
-              Date     datetime       '$.Order.Date',  
-              Customer varchar(200)   '$.AccountNumber',  
-              Quantity int            '$.Item.Quantity',  
-              [Order]  nvarchar(MAX)  AS JSON  
+              Number   VARCHAR(200)   '$.Order.Number',  
+              Date     DATETIME       '$.Order.Date',  
+              Customer VARCHAR(200)   '$.AccountNumber',  
+              Quantity INT            '$.Item.Quantity',  
+              [Order]  NVARCHAR(MAX)  AS JSON  
  )
 ```  
   
@@ -326,7 +326,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ```sql  
 SELECT SalesOrderID, OrderDate, value AS Reason  
 FROM Sales.SalesOrderHeader  
-     CROSS APPLY OPENJSON (SalesReasons) WITH (value nvarchar(100) '$')
+     CROSS APPLY OPENJSON (SalesReasons) WITH (value NVARCHAR(100) '$')
 ```  
   
 在此示例中，`$` 路径引用数组中的每个元素。 如果要显式强制转换返回值，则可以使用此类型的查询。  
@@ -339,7 +339,7 @@ FROM Sales.SalesOrderHeader
 SELECT store.title, location.street, location.lat, location.long  
 FROM store  
 CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')   
-     WITH (street varchar(500) ,  postcode  varchar(500) '$.postcode' ,  
+     WITH (street VARCHAR(500) ,  postcode VARCHAR(500) '$.postcode' ,  
      lon int '$.geo.longitude', lat int '$.geo.latitude')  
      AS location
 ```  
@@ -369,10 +369,10 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
-        firstName nvarchar(50), lastName nvarchar(50),   
-        isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50))
+  WITH (id INT,  
+        firstName NVARCHAR(50), lastName NVARCHAR(50),   
+        isAlive BIT, age INT,  
+        dateOfBirth DATETIME, spouse NVARCHAR(50))
 ```  
 
 ### <a name="example-6---simple-example-with-json-content"></a>示例 6 - 使用 JSON 内容的简单示例
