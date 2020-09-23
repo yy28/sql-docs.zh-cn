@@ -22,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93981415431e8f42e653f5538ca8dd164f482ba2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459149"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116300"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. 将 OPTION 子句与 GROUP BY 子句一起使用  
  以下示例说明了如何将 `OPTION` 子句与 `GROUP BY` 子句一起使用。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. 在 OPTION 子句中包含标签的 SELECT 语句  
  以下示例显示在 OPTION 子句中包含标签的简单 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 语句。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT * FROM FactResellerSales  
@@ -101,7 +101,7 @@ SELECT * FROM FactResellerSales
 ### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. 在 OPTION 子句中包含查询提示的 SELECT 语句  
  以下示例显示了在 OPTION 子句中使用 HASH JOIN 查询提示的 SELECT 语句。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -113,7 +113,7 @@ OPTION (HASH JOIN);
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. 在 OPTION 子句中包含标签和多个查询提示的 SELECT 语句  
  以下示例是包含标签和多个查询提示的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT语句。 查询在计算节点上运行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 决定的最优策略，应用哈希联接或合并联接。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -125,7 +125,7 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
 ### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. 查询视图时使用查询提示  
  以下示例创建名为 CustomerView 的视图，然后在引用视图和表的查询中使用 HASH JOIN 查询提示。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView  
@@ -137,14 +137,13 @@ INNER JOIN dbo.FactInternetSales b
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
   
-DROP VIEW CustomerView;  
-  
+DROP VIEW CustomerView;
 ```  
   
 ### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. 包含子查询和查询提示的查询  
  以下示例显示包含子查询和查询提示的查询。 查询提示将全局应用。 不允许将查询提示追加到子查询语句。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView AS  
@@ -160,7 +159,7 @@ OPTION (HASH JOIN);
 ### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. 强制联接顺序与查询中的顺序相匹配  
  以下示例使用 FORCE ORDER 提示强制查询计划使用查询指定的联接顺序。 这将提高某些（而不是所有）查询的性能。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- Obtain partition numbers, boundary values, boundary value types, and rows per boundary  
@@ -181,7 +180,7 @@ OPTION ( FORCE ORDER )
 ### <a name="h-using-externalpushdown"></a>H. 使用 EXTERNALPUSHDOWN  
  以下示例强制将 WHERE 子句下推到外部 Hadoop 表上的 MapReduce 作业。  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 1000000  
 OPTION (FORCE EXTERNALPUSHDOWN);  
@@ -189,7 +188,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);
   
  以下示例阻止将 WHERE 子句下推到外部 Hadoop 表上的 MapReduce 作业。 所有行都返回到应用 WHERE 子句的 PDW。  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 10  
 OPTION (DISABLE EXTERNALPUSHDOWN);  

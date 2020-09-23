@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368553"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115039"
 ---
 # <a name="data-type-conversion-database-engine"></a>数据类型转换（数据库引擎）
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 例如，以下脚本定义一个类型为 `varchar` 的变量，将 `int` 类型值赋给该变量，然后选择该变量与字符串的串联。
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ SELECT @string + ' is a string.'
 下面的示例演示改为使用 `int` 变量的类似脚本：
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ SELECT @notastring + ' is not a string.'
 为了计算表达式 `@notastring + ' is not a string.'`，SQL Server 先遵循数据类型优先级的规则来完成隐式转换，然后才能计算表达式的结果。 由于 `int` 的优先级高于 `varchar`，因此 SQL Server 会尝试将字符串转换为整数，但是会失败，因为此字符串无法转换为整数。 如果表达式提供可以转换的字符串，则该语句会成功，如以下示例所示：
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02eaf8552bdbd25788d5a436230b58e3d14d6f9e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417273"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116666"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "88417273"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name  
    [ OVER (<over_order_by_clause>) ]  
 ```  
@@ -174,7 +173,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
  以下示例在名为 `CountBy1` 的架构中使用名为 `Test` 的序列。 将执行以下语句以创建 `Test.CountBy1` 序列。 示例 C 和 E 使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，因此，将在该数据库中创建 `CountBy1` 序列。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
   
@@ -190,7 +189,7 @@ GO
 ### <a name="a-using-a-sequence-in-a-select-statement"></a>A. 在 SELECT 语句中使用序列  
  以下示例创建一个名为 `CountBy1` 的序列，每次使用该序列时将增加 1。  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1 AS FirstUse;  
 SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;  
 ```  
@@ -208,10 +207,10 @@ SecondUse
 ### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>B. 将变量设置为下一个序列值  
  以下示例介绍了三种将变量设置为下一个序列号值的方法。  
   
-```  
-DECLARE @myvar1 bigint = NEXT VALUE FOR Test.CountBy1  
-DECLARE @myvar2 bigint ;  
-DECLARE @myvar3 bigint ;  
+```sql  
+DECLARE @myvar1 BIGINT = NEXT VALUE FOR Test.CountBy1  
+DECLARE @myvar2 BIGINT ;  
+DECLARE @myvar3 BIGINT ;  
 SET @myvar2 = NEXT VALUE FOR Test.CountBy1 ;  
 SELECT @myvar3 = NEXT VALUE FOR Test.CountBy1 ;  
 SELECT @myvar1 AS myvar1, @myvar2 AS myvar2, @myvar3 AS myvar3 ;  
@@ -220,7 +219,7 @@ GO
   
 ### <a name="c-using-a-sequence-with-a-ranking-window-function"></a>C. 将序列与排名窗口函数一起使用  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
   
@@ -233,16 +232,16 @@ GO
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. 在默认约束定义中使用 NEXT VALUE FOR 函数  
  支持在默认约束定义中使用 **NEXT VALUE FOR** 函数。 有关在 **CREATE TABLE** 语句中使用 **NEXT VALUE FOR** 的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)中的示例 C。 以下示例使用 `ALTER TABLE` 将序列作为默认值添加到当前表中。  
   
-```  
+```sql
 CREATE TABLE Test.MyTable  
 (  
-    IDColumn nvarchar(25) PRIMARY KEY,  
-    name varchar(25) NOT NULL  
+    IDColumn NVARCHAR(25) PRIMARY KEY,  
+    name VARCHAR(25) NOT NULL  
 ) ;  
 GO  
   
 CREATE SEQUENCE Test.CounterSeq  
-    AS int  
+    AS INT  
     START WITH 1  
     INCREMENT BY 1 ;  
 GO  
@@ -265,10 +264,10 @@ GO
 ### <a name="e-using-the-next-value-for-function-in-an-insert-statement"></a>E. 在 INSERT 语句中使用 NEXT VALUE FOR 函数  
  以下示例创建一个名为 `TestTable` 的表，然后使用 `NEXT VALUE FOR` 函数插入一行。  
   
-```  
+```sql  
 CREATE TABLE Test.TestTable  
-     (CounterColumn int PRIMARY KEY,  
-    Name nvarchar(25) NOT NULL) ;   
+     (CounterColumn INT PRIMARY KEY,  
+    Name NVARCHAR(25) NOT NULL) ;   
 GO  
   
 INSERT Test.TestTable (CounterColumn,Name)  
@@ -277,13 +276,12 @@ GO
   
 SELECT * FROM Test.TestTable;   
 GO  
-  
 ```  
   
 ### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. 将 NEXT VALUE FOR 函数与 SELECT … 一起使用INTO  
  以下示例使用 `SELECT ... INTO` 语句创建一个名为 `Production.NewLocation` 的表，然后使用 `NEXT VALUE FOR` 函数为每一行编号。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;   
 GO  
   
@@ -299,7 +297,7 @@ GO
 ### <a name="f-granting-permission-to-execute-next-value-for"></a>F. 授予执行 NEXT VALUE FOR 的权限  
  以下示例为名为 `AdventureWorks\Larry` 的用户授予 **UPDATE** 权限以使用 `Test.CounterSeq` 序列执行 `NEXT VALUE FOR`。  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   

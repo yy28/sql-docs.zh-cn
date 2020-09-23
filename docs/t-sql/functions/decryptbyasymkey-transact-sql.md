@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1c19a02d6cd965181f9ea94338e0669a3ec45df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e68ad7dbd0e0998fdffee08abde97446352990c4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422781"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115510"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88422781"
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
-  
+```syntaxsql  
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
@@ -69,8 +68,8 @@ varbinary（最大大小为 8,000 个字节）。
 ## <a name="examples"></a>示例  
 此示例对最初使用非对称密钥 `JanainaAsymKey02` 加密的已加密文本进行解密。 `AdventureWorks2012.ProtectedData04` 存储此非对称密钥。 该示例使用非对称密钥 `JanainaAsymKey02` 对返回的数据进行解密。 该示例使用密码 `pGFD4bb925DGvbd2439587y` 对此非对称密钥进行解密。 该示例将返回的纯文本转换为类型 nvarchar****。  
   
-```  
-SELECT CONVERT(nvarchar(max),  
+```sql
+SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   

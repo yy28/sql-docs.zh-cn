@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147738"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116585"
 ---
 # <a name="statistics"></a>统计信息
 
@@ -61,7 +61,7 @@ ms.locfileid: "88147738"
 
 下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。
   
-![直方图](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "直方图") 
+![直方图](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "直方图") 
   
 对于以上每个直方图步骤：
 -   粗线表示上限值 (range_high_key) 和上限值的出现次数 (equal_rows)  

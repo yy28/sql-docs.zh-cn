@@ -38,12 +38,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d42e04e6701d086784290e6c2ba7d6d9540961e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc6a1454ba11630128d8ab1ffbb316c6a37ff32f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467574"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115880"
 ---
 # <a name="search-condition-transact-sql"></a>搜索条件 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -211,7 +211,7 @@ ms.locfileid: "88467574"
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. 在 WHERE 中使用 LIKE 和 ESCAPE 语法  
  下面的示例将搜索以下行，其中的 `LargePhotoFileName` 列包含字符 `green_`；由于 _ 是通配符，因此使用了 `ESCAPE` 选项。 如果不指定 `ESCAPE` 选项，则查询搜索到的任何说明值中将包含后跟一个非 _ 字符的 `green` 一词。  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -222,7 +222,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. 对 Unicode 数据使用 WHERE 和 LIKE 语法  
  下面的示例将使用 `WHERE` 子句检索美国 (`US`) 以外且所在城市的名称以 `Pa` 开头的所有公司的邮件地址。  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -237,7 +237,7 @@ AND City LIKE N'Pa%' ;
 ### <a name="c-using-where-with-like"></a>C. 将 WHERE 与 LIKE 一起使用  
  下面的示例将搜索以下行，其中的 `LastName` 列包含字符 `and`。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -248,7 +248,7 @@ WHERE LastName LIKE '%and%';
 ### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D. 对 Unicode 数据使用 WHERE 和 LIKE 语法  
  下面的示例使用 `WHERE` 子句对 `LastName` 列执行 Unicode 搜索。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

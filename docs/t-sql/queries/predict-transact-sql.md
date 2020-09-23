@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: be453944791a479e12f6723c1ad6f5abded12204
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459089"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116279"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -174,7 +174,7 @@ Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -182,11 +182,11 @@ FROM PREDICT(MODEL = @model,
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -217,11 +217,11 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 一个常见的预测用例是生成输入数据的评分，然后将预测值插入到表中。 下面的示例假定，应用程序调用操作会使用存储过程将包含预测值的行插入到表中：
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
 INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
-FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
 
 - `PREDICT` 的结果存储在名为 PredictionResults 的表中。 

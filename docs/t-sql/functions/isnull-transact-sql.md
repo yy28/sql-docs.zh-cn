@@ -23,12 +23,12 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bd4a53a70eced1c59c8b33d973fab451451d294
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67d21c6d51a90015fe78833d572ff4740d64bd81
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422691"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116036"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL) 
 
@@ -67,7 +67,7 @@ ISNULL ( check_expression , replacement_value )
 ### <a name="a-using-isnull-with-avg"></a>A. 将 ISNULL 与 AVG 一起使用  
  以下示例查找所有产品的重量平均值。 它用值 `50` 替换 `Weight` 表的 `Product` 列中的所有 NULL 项。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT AVG(ISNULL(Weight, 50))  
@@ -87,7 +87,7 @@ GO
 ### <a name="b-using-isnull"></a>B. 使用 ISNULL  
  以下示例选择 `AdventureWorks2012` 中所有特价产品的说明、折扣百分比、最小量和最大量。 如果某个特殊特价产品的最大量为 NULL，则结果集中显示的 `MaxQty` 为 `0.00`。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description, DiscountPct, MinQty, ISNULL(MaxQty, 0.00) AS 'Max Quantity'  
@@ -121,7 +121,7 @@ GO
 ### <a name="c-testing-for-null-in-a-where-clause"></a>C. 测试 WHERE 子句中的 NULL  
  请勿使用 ISNULL 查找 NULL 值。 而应使用 IS NULL。 下面的示例查找 weight 列中存在 `NULL` 的所有产品。 请注意 `IS` 和 `NULL` 之间的空格。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight  
@@ -135,7 +135,7 @@ GO
 ### <a name="d-using-isnull-with-avg"></a>D. 将 ISNULL 与 AVG 一起使用  
  以下示例查找示例表中所有产品的重量平均值。 它用值 `50` 替换 `Weight` 表的 `Product` 列中的所有 NULL 项。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT AVG(ISNULL(Weight, 50))  
@@ -152,7 +152,7 @@ FROM dbo.DimProduct;
 ### <a name="e-using-isnull"></a>E. 使用 ISNULL  
  以下示例使用 ISNULL 测试列 `MinPaymentAmount` 中的 NULL 值，并显示这些行的值 `0.00`。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ResellerName,   
@@ -176,7 +176,7 @@ ORDER BY ResellerName;
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. 使用 IS NULL 在 WHERE 子句中测试 NULL  
  下面的示例查找 `NULL` 列中存在 `Weight` 的所有产品。 请注意 `IS` 和 `NULL` 之间的空格。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName, Weight  

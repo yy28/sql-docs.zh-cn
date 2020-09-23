@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e6ef80c95e7ff6fb2751a86d10ea707b2a1033d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d48004bfe0dd40545941bf23a41b91c49485233b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422711"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115179"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,7 @@ ms.locfileid: "88422711"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 IS_OBJECTSIGNED (   
 'OBJECT', @object_id, @class, @thumbprint  
   )   
@@ -82,7 +81,7 @@ IS_OBJECTSIGNED (
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. 显示数据库的扩展属性  
  下面的示例测试 master 数据库中的 spt_fallback_db 表是否由架构签名证书进行签名****。  
   
-```  
+```sql  
 USE master;  
 -- Declare a variable to hold a thumbprint and an object name  
 DECLARE @thumbprint varbinary(20), @objectname sysname;  

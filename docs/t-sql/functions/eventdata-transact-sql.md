@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32cfa9a876d13a1c8827649c3fe8ad145b4cb8da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e37bcd2decf37bffa96a726e4b964cc05bcaffa0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459761"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115532"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,7 +89,7 @@ EVENTDATA 返回数据类型为 xml**** 的值。 默认情况下，所有事件
 > [!NOTE]  
 >  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“以网格显示结果”**** 来查询 `<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”****。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TRIGGER safety   
@@ -104,7 +104,7 @@ AS
 ;  
 GO  
 --Test the trigger.  
-CREATE TABLE NewTable (Column1 int);  
+CREATE TABLE NewTable (Column1 INT);  
 GO  
 --Drop the trigger.  
 DROP TRIGGER safety  
@@ -118,10 +118,10 @@ GO
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. 创建事件数据在 DDL 触发器中的日志表  
 此示例创建用于存储有关所有数据库级事件的信息的表，并在表中填充 DDL 触发器。 对 `EVENTDATA` 生成的 XML 数据使用 XQuery 可捕获事件类型和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE ddl_log (PostTime datetime, DB_User nvarchar(100), Event nvarchar(100), TSQL nvarchar(2000));  
+CREATE TABLE ddl_log (PostTime DATETIME, DB_User NVARCHAR(100), Event NVARCHAR(100), TSQL NVARCHAR(2000));  
 GO  
 CREATE TRIGGER log   
 ON DATABASE   
@@ -133,12 +133,12 @@ INSERT ddl_log
    (PostTime, DB_User, Event, TSQL)   
    VALUES   
    (GETDATE(),   
-   CONVERT(nvarchar(100), CURRENT_USER),   
-   @data.value('(/EVENT_INSTANCE/EventType)[1]', 'nvarchar(100)'),   
-   @data.value('(/EVENT_INSTANCE/TSQLCommand)[1]', 'nvarchar(2000)') ) ;  
+   CONVERT(NVARCHAR(100), CURRENT_USER),   
+   @data.value('(/EVENT_INSTANCE/EventType)[1]', 'NVARCHAR(100)'),   
+   @data.value('(/EVENT_INSTANCE/TSQLCommand)[1]', 'NVARCHAR(2000)') ) ;  
 GO  
 --Test the trigger.  
-CREATE TABLE TestTable (a int);  
+CREATE TABLE TestTable (a INT);  
 DROP TABLE TestTable ;  
 GO  
 SELECT * FROM ddl_log ;  

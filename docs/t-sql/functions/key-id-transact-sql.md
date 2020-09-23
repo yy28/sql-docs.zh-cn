@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0570217612782af00b29f307ee9dd2dacc34ed46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35499f8b6ab0b95b59798fad463819b2f9c8ac72
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364123"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115150"
 ---
 # <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88364123"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 Key_ID ( 'Key_Name' )  
 ```  
   
@@ -62,14 +61,14 @@ Key_ID ( 'Key_Name' )
 ### <a name="a-returning-the-id-of-a-symmetric-key"></a>A. 返回对称密钥的 ID  
  以下示例返回名为 `ABerglundKey1` 的对称密钥的 ID。  
   
-```  
+```sql  
 SELECT KEY_ID('ABerglundKey1');  
 ```  
   
 ### <a name="b-returning-the-id-of-a-temporary-symmetric-key"></a>B. 返回临时对称密钥的 ID  
  以下示例返回临时对称密钥的 ID。 请注意，`#` 附加到密钥名称前。  
   
-```  
+```sql  
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   

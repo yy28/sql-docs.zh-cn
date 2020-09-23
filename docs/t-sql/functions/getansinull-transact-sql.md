@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cbf0f888ba02a2e523fccadf473c675186086159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31cf25c3800d4fe35e0ef914db85eb82f58fe85c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417353"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116712"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88417353"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 GETANSINULL ( [ 'database' ] )  
 ```  
   
@@ -65,7 +64,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="examples"></a>示例  
  以下示例将返回 `AdventureWorks2012` 数据库的默认为空性。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT GETANSINULL('AdventureWorks2012')  

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479768"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115583"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "88479768"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 DBCC SHRINKFILE   
 (  
     { file_name | file_id }   
@@ -158,7 +157,7 @@ FROM sys.database_files;
 
 在[基于行版本控制的隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)下运行的事务可能会阻止收缩操作。 例如，如果在执行 DBCC SHRINK DATABASE 操作时，正在基于行版本控制的隔离级别下运行大型删除操作，那么收缩操作会等到删除操作完成，然后才会继续。 出现这种阻塞时，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 操作会将信息性消息（对于 SHRINKDATABASE 为 5202，对于 SHRINKFILE 为 5203）打印输出到 SQL Server 错误日志。 在第一个小时内，此消息每五分钟记录一次，之后每一小时记录一次。 例如，如果错误日志包含以下错误消息，则会发生以下错误：
   
-```sql
+```
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  

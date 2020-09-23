@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417343"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115227"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "88417343"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
@@ -110,7 +109,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
 ```  
   
@@ -118,20 +117,20 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
 ```  
   
 ### <a name="c-do-i-have-any-permissions-in-the-current-database"></a>C. 我在当前数据库中具有任何权限吗？  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
 ### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D. 数据库主体 Pd 在当前数据库中具有任何权限吗？  
  假定调用方对主体 `Pd` 有 IMPERSONATE 权限。  
   
-```  
+```sql  
 EXECUTE AS user = 'Pd'  
 GO  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
@@ -143,7 +142,7 @@ GO
 ### <a name="e-can-i-create-procedures-and-tables-in-schema-s"></a>E. 我可以在架构 S 中创建过程和表吗？  
  以下示例需要在 `ALTER` 中具有 `S` 权限，在数据库中具有 `CREATE PROCEDURE` 权限，表的情况与此类似。  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')  
     & HAS_PERMS_BY_NAME('S', 'SCHEMA', 'ALTER') AS _can_create_procs,  
     HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE TABLE') &  
@@ -152,7 +151,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')
   
 ### <a name="f-which-tables-do-i-have-select-permission-on"></a>F. 我对哪些表具有 SELECT 权限？  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME  
 (QUOTENAME(SCHEMA_NAME(schema_id)) + '.' + QUOTENAME(name),   
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
@@ -161,20 +160,20 @@ SELECT HAS_PERMS_BY_NAME
 ### <a name="g-do-i-have-insert-permission-on-the-salesperson-table-in-adventureworks2012"></a>G. 我对 AdventureWorks2012 中的 SalesPerson 表有 INSERT 权限吗？  
  以下示例假定 `AdventureWorks2012` 为我的当前数据库上下文，并使用由两部分组成的名称。  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
 ```  
   
  以下示例对我的当前数据库上下文未做任何假定，并使用由三部分组成的名称。  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   
 ### <a name="h-which-columns-of-table-t-do-i-have-select-permission-on"></a>H. 我对 T 表的哪些列有 SELECT 权限？  
   
-```  
+```sql  
 SELECT name AS column_name,   
     HAS_PERMS_BY_NAME('T', 'OBJECT', 'SELECT', name, 'COLUMN')   
     AS can_select   

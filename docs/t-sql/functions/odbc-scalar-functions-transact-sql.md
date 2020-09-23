@@ -53,12 +53,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6cc9b1df996d063a79f19982185950e52c4b059
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445682"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116621"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "88445682"
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. 在存储过程中使用 ODBC 函数  
  下例在存储过程中使用了 ODBC 函数：  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -120,7 +120,7 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
 ### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>B. 在用户定义函数中使用 ODBC 函数  
  下例在用户定义函数中使用了 ODBC 函数：  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -141,8 +141,8 @@ SELECT dbo.ODBCudf('Returns the length.');
 ### <a name="c-using-an-odbc-functions-in-select-statements"></a>C. 在 SELECT 语句中使用 ODBC 函数  
  下面的 SELECT 语句使用了 ODBC 函数：  
   
-```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+```sql 
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. 在存储过程中使用 ODBC 函数  
  下例在存储过程中使用了 ODBC 函数：  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -195,7 +195,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 ### <a name="e-using-an-odbc-function-in-a-user-defined-function"></a>E. 在用户定义函数中使用 ODBC 函数  
  下例在用户定义函数中使用了 ODBC 函数：  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -210,13 +210,12 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length in bits.');  
 --Returns 432  
-  
 ```  
   
 ### <a name="f-using-an-odbc-functions-in-select-statements"></a>F. 在 SELECT 语句中使用 ODBC 函数  
  下面的 SELECT 语句使用了 ODBC 函数：  
   
-```  
+```sql  
 DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  

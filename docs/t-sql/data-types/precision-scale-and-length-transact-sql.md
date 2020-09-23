@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4f48de11f648d48a3d727514718b8bdd6304ad57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39542dd45b9d3aaec1eca6e0fd507f73fe7326a9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422880"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116949"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>精度、小数位数和长度 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20
 
 下面的表达式返回结果 `0.000001` 以适合 `decimal(38,6)`：
 ```sql
-select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+SELECT CAST(0.0000009000 AS DECIMAL(30,10)) * CAST(1.0000000000 AS DECIMAL(30,10)) [decimal(38, 6)]
 ```
 在这种情况下，精度为 61，小数位数为 20。
 小数位数大于 6，整数部分 (`precision-scale = 41`) 大于 32。 这是乘法规则中的情况 (3)，结果类型是 `decimal(38,6)`。

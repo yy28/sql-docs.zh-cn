@@ -32,12 +32,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b918faac1cad445956b85459f72557fde0c13116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 898fd741dfdcb2a4ababb855a33eaee856a2dd4e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422721"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115461"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 
@@ -89,7 +89,7 @@ ISDATE ( expression )
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. 使用 ISDATE 测试是否为有效的 datetime 表达式  
  下面的示例说明如何使用 `ISDATE` 测试某一字符串是否是有效的 datetime。  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     PRINT 'VALID'  
 ELSE  
@@ -99,7 +99,7 @@ ELSE
 ### <a name="b-showing-the-effects-of-the-set-dateformat-and-set-language-settings-on-return-values"></a>B. 显示 SET DATEFORMAT 和 SET LANGUAGE 设置对返回值的影响  
  下面的语句显示了作为 `SET DATEFORMAT` 和 `SET LANGUAGE` 设置的结果返回的值。  
   
-```  
+```sql  
 /* Use these sessions settings. */  
 SET LANGUAGE us_english;  
 SET DATEFORMAT mdy;  
@@ -149,7 +149,7 @@ SET DATEFORMAT mdy;
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. 使用 ISDATE 测试是否为有效的 datetime 表达式  
  下面的示例说明如何使用 `ISDATE` 测试某一字符串是否是有效的 datetime。  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     SELECT 'VALID';  
 ELSE  

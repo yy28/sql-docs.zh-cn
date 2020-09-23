@@ -25,12 +25,12 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3386f37e4888ee8b0734d60d87359314a7bc9325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5909334c6a31279760ebb8a91d3b4f7f1841accb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459653"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115170"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  默认情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]假定 object_id 在当前数据库的上下文中**。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果**。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象名称。 因此，会返回不正确的信息。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_NAME(object_id)  
@@ -82,7 +82,7 @@ GO
   
  您可以通过指定数据库 ID 在其他数据库的上下文中解析对象名。 以下示例在 `master` 函数中指定 `OBJECT_SCHEMA_NAME` 数据库的数据库 ID，并返回正确的结果。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
@@ -95,7 +95,7 @@ GO
 ### <a name="a-using-object_name-in-a-where-clause"></a>A. 在 WHERE 子句中使用 OBJECT_NAME  
  以下示例将返回来自对象的 `sys.objects` 目录视图的列，该对象是通过 `OBJECT_NAME` 在 `WHERE` 语句的 `SELECT` 子句中指定的。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyID INT;  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-returning-the-object-schema-name-and-object-name"></a>B. 返回对象架构名称和对象名称  
  以下示例返回所有缓存查询计划（为非临时语句或预定义语句）的对象架构名称、对象名称和 SQL 文本。  
   
-```  
+```sql  
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -124,7 +124,7 @@ GO
 ### <a name="c-returning-three-part-object-names"></a>C. 返回由三部分组成的对象名称  
  以下示例返回所有数据库中所有对象的数据库名称、架构名称和对象名称，同时返回 `sys.dm_db_index_operational_stats` 动态管理视图中的其他所有列。  
   
-```  
+```sql  
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -140,7 +140,7 @@ GO
 ### <a name="d-using-object_name-in-a-where-clause"></a>D. 在 WHERE 子句中使用 OBJECT_NAME  
  以下示例将返回来自对象的 `sys.objects` 目录视图的列，该对象是通过 `OBJECT_NAME` 在 `WHERE` 语句的 `SELECT` 子句中指定的。 （对象编号（在下面的示例中为 274100017）各不相同。  若要测试此示例，请通过在数据库中执行 `SELECT name, object_id FROM sys.objects;` 来查看有效的对象编号。）  
   
-```  
+```sql  
 SELECT name, object_id, type_desc  
 FROM sys.objects  
 WHERE name = OBJECT_NAME(274100017);  

@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076613"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115591"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -152,7 +152,7 @@ DBCC SHRINKDATABASE 尝试立即将每个物理日志文件收缩到其目标大
 ## <a name="troubleshooting"></a>疑难解答  
 收缩操作可能会被在[基于行版本控制的隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)下运行的事务阻止。 例如，在执行 DBCC SHRINK DATABASE 操作时，正在基于行版本控制的隔离级别下运行大型删除操作。 当这种情况发生时，收缩操作会等到删除操作完成后再收缩文件。 收缩操作在等待时，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 操作会打印输出信息性消息（对于 SHRINKDATABASE 为 5202，对于 SHRINKFILE 为 5203）。 此消息在第一个小时内每五分钟打印到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志一次，然后在后续每个小时打印一次。 例如，如果错误日志包含以下错误消息：  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -186,7 +186,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. 缩小 Azure Synapse Analytics 数据库
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 

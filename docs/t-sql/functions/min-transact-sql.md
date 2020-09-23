@@ -21,12 +21,12 @@ ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0223be182fc7e29466f0a8a676cea6dc94eb915b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15924f5116261de308a9288935396d24d54b8aa8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364093"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115108"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88364093"
   
 ## <a name="syntax"></a>语法  
   
-```sql  
-  
+```syntaxsql  
 -- Aggregation Function Syntax  
 MIN ( [ ALL | DISTINCT ] expression )  
   
@@ -78,7 +77,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ### <a name="a-simple-example"></a>A. 简单示例  
  以下示例返回最低（最小）税率。 该示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库  
   
-```  
+```sql  
 SELECT MIN(TaxRate)  
 FROM Sales.SalesTaxRate;  
 GO  
@@ -97,7 +96,7 @@ GO
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
  以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Department` 表中的每个部门提供聚合值。  
   
-```  
+```sql  
 SELECT DISTINCT Name  
        , MIN(Rate) OVER (PARTITION BY edh.DepartmentID) AS MinSalary  
        , MAX(Rate) OVER (PARTITION BY edh.DepartmentID) AS MaxSalary  
@@ -142,7 +141,7 @@ Tool Design                   8.62                  29.8462               23.505
 ### <a name="c-using-min"></a>C. 使用 MIN  
  以下示例使用 MIN 聚合函数返回指定一组销售订单中最便宜（最小值）产品的价格。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice)  
@@ -160,7 +159,7 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
 ### <a name="d-using-min-with-over"></a>D. 通过 OVER 使用 MIN  
  以下示例使用 MIN OVER() 分析函数返回每个销售订单中最便宜（最小值）产品的价格。 结果集根据 `SalesOrderID` 列进行分区。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice) OVER(PARTITION BY SalesOrderNumber) AS LeastExpensiveProduct,  

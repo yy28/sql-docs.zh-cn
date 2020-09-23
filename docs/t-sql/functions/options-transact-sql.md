@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12e2d3418a021a3ffee5db530d35f0fc8522dec1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aba9b19dd9788eef4f322db198dd7f8f3789a8c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417223"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115875"
 ---
 # <a name="x40x40options-transact-sql"></a>@@OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88417223"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 @@OPTIONS  
 ```  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88417223"
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. 更改如何影响行为的演示  
  下面的示例演示采用 CONCAT_NULL_YIELDS_NULL 选项的两个不同设置的连结行为的区别****。  
   
-```  
+```sql  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
 SET CONCAT_NULL_YIELDS_NULL OFF;  
 SELECT 'abc' + NULL AS ResultWhen_OFF, @@OPTIONS AS OptionsValueWhen_OFF;  
@@ -71,7 +71,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ### <a name="b-testing-a-client-nocount-setting"></a>B. 测试客户端 NOCOUNT 设置  
  以下示例设置 `NOCOUNT``ON` 并测试 `@@OPTIONS` 的值。 `NOCOUNT``ON` 选项可防止将会话中每一个语句的有关受影响行数的消息发送回请求的客户端。 `@@OPTIONS` 的值设置为 `512` (0x0200)。 这表示 NOCOUNT 选项。 下面的示例测试客户端是否启用了 NOCOUNT 选项。 例如，它可以帮助跟踪客户端的性能差异。  
   
-```  
+```sql  
 SET NOCOUNT ON  
 IF @@OPTIONS & 512 > 0   
 RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)  

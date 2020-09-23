@@ -22,12 +22,12 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35d727c113b3417aaebcc21b7f512438f6d6f706
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5193c024a12af667e1765abc24a4ffb8961edbc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417263"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115984"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ### <a name="a-dividing-rows-into-groups"></a>A. 将行分为组  
  下面的示例根据员工的年初至今销售额将行分到四个员工组中。 由于总行数不能被组数整除，因此前两个组将包含四行，而其余各组包含三行。  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT p.FirstName, p.LastName  
@@ -111,10 +111,10 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. 使用 PARTITION BY 划分结果集  
  以下示例将 `PARTITION BY` 参数添加到示例 A 中的代码。首先按 `PostalCode` 将行分区，然后在每个 `PostalCode` 内将行分成四个组。 该示例还声明一个变量 `@NTILE_Var` 并使用该变量指定 integer_expression 参数的值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NTILE_Var int = 4;  
+DECLARE @NTILE_Var INT = 4;  
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
@@ -158,7 +158,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 ### <a name="c-dividing-rows-into-groups"></a>C. 将行分为组  
  以下示例使用 NTILE 函数根据其 2003 年的分配销售配额将一组销售人员划分为四个组。 由于总行数不能被组数整除，因此第一个组将包含五行，其余每组包含四行。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
@@ -198,7 +198,7 @@ Tsoflias          4          867,000.00
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. 使用 PARTITION BY 划分结果集  
  以下示例将 PARTITION BY 参数添加到示例 A 中的代码。首先按 `SalesTerritoryCountry` 将行分区，然后在每个 `SalesTerritoryCountry` 内将行分成两个组。 请注意，OVER 子句中的 ORDER BY 对 NTILE 进行排序，SELECT 中的 ORDER BY 则对结果集进行排序。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  

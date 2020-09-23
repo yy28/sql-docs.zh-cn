@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6368b5a1e030a8abd5bc1512a653d5f05631ccda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbfb3932f86f7fc120ed9d2c2693848e769d2aa3
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459733"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116067"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "88459733"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  
   
@@ -69,7 +68,7 @@ varbinary（最大大小为 8000 个字节）。
 ## <a name="examples"></a>示例  
 此示例将以称为 `@cleartext` 的证书对在 `JanainaCert02` 中存储的纯文本进行加密。 经过加密的数据将插入表 `ProtectedData04` 中。  
   
-```  
+```sql  
 INSERT INTO [AdventureWorks2012].[ProtectedData04]   
     VALUES ( N'Data encrypted by certificate ''Shipping04''',  
     EncryptByCert(Cert_ID('JanainaCert02'), @cleartext) );  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459889"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116151"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "88459889"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -156,7 +155,7 @@ DBCC CHECKFILEGROUP 返回以下结果集（值可能有所不同）：
 -   在指定了 ESTIMATEONLY 或 NO_INFOMSGS 时除外。  
 -   如果未指定数据库，则无论是否指定了任何选项（NOINDEX 除外），都默认为当前数据库。  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -174,12 +173,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 如果指定了 NO_INFOMSGS，则 DBCC CHECKFILEGROUP 返回：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  如果指定了 ESTIMATEONLY，则 DBCC CHECKFILEGROUP 返回（值可能有所不同）：  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -202,8 +201,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. 检查数据库中的 PRIMARY 文件组  
 下面的示例将检查当前数据库的主文件组。
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -211,7 +209,7 @@ GO
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 检查不含非聚集索引的 AdventureWorks PRIMARY 文件组  
 下面的示例通过指定主文件组的标识号并指定 `NOINDEX`，对 `AdventureWorks2012` 数据库主文件组（不包括非聚集索引）进行检查。
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -221,7 +219,7 @@ GO
 ### <a name="c-checking-the-primary-filegroup-with-options"></a>C. 检查带有选项的 PRIMARY 文件组  
 下面的示例将检查 `master` 数据库主文件组并指定选项 `ESTIMATEONLY`。
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  

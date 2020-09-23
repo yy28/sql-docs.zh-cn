@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0b5e147a87e6559d1d3bd2782d46bf09a783297a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a80a6bdaa75d01f63f22244f93225a9b32ba93d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417553"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115558"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88417553"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 DBCC USEROPTIONS  
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -52,8 +52,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>结果集  
 DBCC USEROPTIONS 返回 SET 选项的名称列和该选项的值列（值和项可能会变化）：
 
-```sql
-
+```
 Set Option                   Value`  
 ---------------------------- ---------------------------`  
 textsize                     64512 
@@ -73,7 +72,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 当数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON 并且事务隔离级别设置为 'read committed' 时，DBCC USEROPTIONS 会报告 'read committed snapshot' 的隔离级别。 实际的隔离级别是已提交读。
   
 ## <a name="permissions"></a>权限  
