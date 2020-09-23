@@ -6,12 +6,12 @@ metadata:
   title: Microsoft SQL 文档 | Microsoft Docs
   description: 了解如何使用 SQL Server 和 Azure SQL 管理你的本地和云端数据库需求。 (快速链接：https://aka.ms/sqldocs)
   ms.topic: hub-page
-  ms.openlocfilehash: 5d7a6ef891d85b55c75af35e26712765f662e9c2
-  ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
+  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 08/06/2020
-  ms.locfileid: "87864538"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90916414"
 highlightedContent:
   items:
   - title: 试用 SQL Server 2019
@@ -90,6 +90,9 @@ conceptualContent:
       itemType: whats-new
     - text: SQL Server 机器学习服务
       url: machine-learning/index.yml
+      itemType: whats-new
+    - text: 已启用 SQL Server 的 Azure Arc（预览）
+      url: sql-server/azure-arc/overview.md
       itemType: whats-new
   - title: 安装
     links:

@@ -34,8 +34,14 @@
   items:
     - name: 扩展
       items:
-        - name: 扩展
+        - name: 扩展概述
           href: extensions.md
+        - name: Azure Arc 扩展
+          href: extensions/azure-arc-extension.md
+        - name: 数据虚拟化扩展
+          href: data-virtualization-extension.md
+        - name: Kusto 扩展
+          href: extensions/kusto-extension.md
         - name: 机器学习扩展
           items:
             - name: 机器学习扩展概述
@@ -46,10 +52,16 @@
               href: machine-learning-extension-predictions.md
             - name: 导入和查看模型
               href: machine-learning-extension-import-view-models.md
+        - name: 托管实例扩展
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL 扩展
           href: postgres-extension.md
-        - name: 数据虚拟化扩展
-          href: data-virtualization-extension.md
+        - name: PowerShell 扩展
+          href: powershell-extension.md
+        - name: SandDance 扩展
+          href: sanddance-extension.md
+        - name: 架构比较扩展
+          href: schema-compare-extension.md
         - name: SQL 数据库项目扩展
           items:
             - name: SQL 数据库项目扩展概述
@@ -70,14 +82,6 @@
           href: sql-server-import-extension.md
         - name: SQL Server Profiler
           href: sql-server-profiler-extension.md
-        - name: 架构比较扩展
-          href: schema-compare-extension.md
-        - name: PowerShell 扩展
-          href: powershell-extension.md
-        - name: 托管实例扩展
-          href: extensions/azure-sql-managed-instance-extension.md
-        - name: SandDance 扩展
-          href: sanddance-extension.md
     - name: 扩展构建
       items:
         - name: 扩展性概述
@@ -114,8 +118,14 @@
           href: notebooks-tutorial-sql-kernel.md
         - name: 使用 Python 内核
           href: notebooks-tutorial-python-kernel.md
+        - name: 使用 Kusto 内核
+          href: notebooks/notebooks-kusto-kernel.md
         - name: Kqlmagic 扩展
           href: notebooks-kqlmagic.md
+    - name: 部署
+      items:
+        - name: 部署 Azure SQL Edge
+          href: deploy-azure-sql-edge.md
     - name: 仪表板和见解小组件
       href: insight-widgets.md
     - name: 代码片段

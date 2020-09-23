@@ -10124,6 +10124,18 @@
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: Azure VM 上的 SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: 已启用 Azure Arc 的 SQL Server（预览）
+  items:
+    - name: 概述
+      href: sql-server/azure-arc/overview.md
+    - name: 连接
+      href: sql-server/azure-arc/connect.md
+    - name: 大规模连接
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: 评估
+      href: sql-server/azure-arc/assess.md
+    - name: 配置高级数据安全
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: 资源
   items:
     - name: 脱机 SQL Server 文档
