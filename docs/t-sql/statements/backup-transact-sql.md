@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480853"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024566"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1209,7 +1209,7 @@ DIFFERENTIAL 指定执行用户数据库的差异备份。 如果省略，默认
 
 要求具有 **BACKUP DATABASE** 权限，或者在 **db_backupoperator** 固定数据库角色中具有成员身份。 添加到 **db_backupoperator** 固定数据库角色的普通用户无法备份 master 数据库。 仅 **sa**、构造管理员或 **sysadmin** 固定服务器角色的成员可备份 master 数据库。
 
-需要有权访问、创建和写入备份目录的 Windows 帐户。 还必须将 Windows 帐户名称和密码存储在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 若要将这些网络凭据添加到 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，可使用 [sp_pdw_add_network_credentials - SQL 数据仓库](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)存储过程。
+需要有权访问、创建和写入备份目录的 Windows 帐户。 还必须将 Windows 帐户名称和密码存储在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 若要将这些网络凭据添加到 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，可使用 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 存储过程。
 
 有关如何管理 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中凭据的详细信息，请参阅[安全](#Security)部分。
 
@@ -1222,14 +1222,14 @@ BACKUP DATABASE 错误会在以下情况中发生：
 - 数据库不存在。
 - 网络共享上已存在目标目录。
 - 目标网络共享不可用。
-- 目标网络共享没有用于备份的足够空间。 BACKUP DATABASE 命令在启动备份前不会确认是否存在足够的磁盘空间，因而可能在运行 BACKUP DATABASE 时生成磁盘空间不足错误。 磁盘空间不足时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 会回滚 BACKUP DATABASE 命令。 若要缩小数据库的大小，可运行 [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
+- 目标网络共享没有用于备份的足够空间。 BACKUP DATABASE 命令在启动备份前不会确认是否存在足够的磁盘空间，因而可能在运行 BACKUP DATABASE 时生成磁盘空间不足错误。 磁盘空间不足时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 会回滚 BACKUP DATABASE 命令。 若要缩小数据库的大小，可运行 [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - 尝试在事务中启动备份。
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>一般备注
 
-执行数据库备份前，请使用 [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 缩小数据库的大小。
+执行数据库备份前，请使用 [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 缩小数据库的大小。 
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 备份会以多个文件的集合的形式存储在相同目录中。
 
@@ -1288,9 +1288,9 @@ BACKUP DATABASE 错误会在以下情况中发生：
 > [!IMPORTANT]
 > 若要降低数据的安全风险，建议指定一个 Windows 帐户专门用于执行备份和还原操作。 仅允许此帐户访问备份位置，不要授予对其他位置的访问权限。
 
-需要通过运行 [sp_pdw_add_network_credentials - SQL 数据仓库](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)存储过程，在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中存储用户名和密码。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 使用 Windows 凭据管理器在控制节点和计算节点上存储及加密用户名和密码。 不使用 BACKUP DATABASE 命令备份凭据。
+需要通过运行 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 存储过程，在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中存储用户名和密码。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 使用 Windows 凭据管理器在控制节点和计算节点上存储及加密用户名和密码。 不使用 BACKUP DATABASE 命令备份凭据。
 
-若要从 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 删除网络凭据，可使用 [sp_pdw_remove_network_credentials - SQL 数据仓库](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
+若要从 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 删除网络凭据，可使用 [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
 
 若要列出 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中存储的所有网络凭据，可使用 [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 动态管理视图。
 

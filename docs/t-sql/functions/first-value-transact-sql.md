@@ -2,7 +2,7 @@
 description: FIRST_VALUE (Transact-SQL)
 title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/10/2016
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,25 +20,25 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87c0804ba925600aabe2ac0487befd8cf5bf9363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db390dda473d997343de46f9b37a4ab4865ca347
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445779"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90915031"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中有序值集中的第一个值。  
+  返回有序值集中的第一个值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-FIRST_VALUE ( [scalar_expression ] )   
-    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
+FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
+    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
   
 ```  
   
@@ -47,6 +47,14 @@ FIRST_VALUE ( [scalar_expression ] )
 ## <a name="arguments"></a>参数
  *scalar_expression*  
  是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他任意表达式**。 不允许使用其他分析函数。  
+
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **适用对象**：Azure SQL Edge
+
+ IGNORE NULLS - 计算分区上的最后一个值时，忽略数据集中的 null 值。     
+ RESPECT NULLS - 计算分区上的最后一个值时，考虑数据集中的 null 值。     
+ 
+  有关详细信息，请参阅[输入缺失值](/azure/azure-sql-edge/imputing-missing-values/)。
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 rows_range_clause 通过指定起点和终点，限制分区中的行数  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
@@ -126,5 +134,5 @@ Accounts Receivable Specialist      Walton                    62            Poe
   
 ## <a name="see-also"></a>另请参阅  
  [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
-  
+ [Last_Value &#40;Transact-SQL&#41;](last-value-transact-sql.md)  
+

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3ca3a5640a6de6f985cb90449a1f3ba22a42ddd
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: d5e7210ca7ae9e4777c11b7c774b90572d2832b0
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076683"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570656"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server 机器学习服务的累积更新的 CAB 下载
 
@@ -91,7 +91,12 @@ CAB 文件按时间倒序列出。 下载 CAB 文件并将其传输到目标计�
 
 |发布  |组件 | 下载链接  | 解决的问题 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/en-us/help/4541283/)** |  |  |  |
+|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
+| | Microsoft R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136731)  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/help/4541283/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | 修复了执行 R 脚本的 `sp_execute_external_script` 显示警告消息的 bug |
 | | Microsoft R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | 未对前一版本进行更改。 |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | 未对前一版本进行更改。 |

@@ -1,31 +1,33 @@
 ---
 title: azdata bdc 参考
 titleSuffix: SQL Server big data clusters
-description: 使用本参考文章来了解 azdata 工具中的 SQL 命令，特别是许多的 bdc 命令。
+description: azdata bdc 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee94bc76f1a59940a753eec6944ccdab8bfc943
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: f3b7d4bd76e1b988fa9481fad18c4573c5b6a13b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733499"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914729"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+适用于 `azdata`
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 
 ## <a name="commands"></a>命令
-| 命令 | 描述 |
+
+|命令|描述|
 | --- | --- |
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令允许用户通过创建和管理会话、语句及批处理来与 Spark 系统交互。
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模块提供用于访问 HDFS 文件系统的命令。
 [azdata bdc create](#azdata-bdc-create) | 创建大数据群集。
 [azdata bdc delete](#azdata-bdc-delete) | 删除大数据群集。
 [azdata bdc upgrade](#azdata-bdc-upgrade) | 更新部署在 SQL Server 大数据群集各个容器中的映像。
@@ -39,7 +41,6 @@ ms.locfileid: "89733499"
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 服务命令。
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | 网关服务命令。
 [azdata bdc app](reference-azdata-bdc-app.md) | 应用服务命令。
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模块提供用于访问 HDFS 文件系统的命令。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 创建 SQL Server 大数据群集 - 系统中需要 Kubernetes 配置及以下环境变量 ['AZDATA_USERNAME', 'AZDATA_PASSWORD']。
 ```bash
@@ -73,7 +74,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 大数据群集名称，用于 kubernetes 命名空间。
 #### `--config-profile -c`
-大数据群集配置文件，用于部署群集：['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+大数据群集配置文件，用于部署群集：['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
 是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://aka.ms/eula-azdata-en 查看 azdata 的许可条款。
 #### `--node-label -l`
@@ -174,4 +175,7 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](../install/deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata](..\install\deploy-install-azdata.md)。
+

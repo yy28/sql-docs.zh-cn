@@ -5,22 +5,22 @@ description: 了解如何部署高可用性 SQL Server 大数据群集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790264"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990011"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 大数据群集
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-由于 SQL Server 大数据群集是作为容器化应用程序位于 Kubernetes 上，并且使用有状态集和持久存储等功能，因此，此基础结构具有内置的运行状况监视、故障检测和故障转移机制，群集组件可利用这些机制来维护服务运行状况。 为了提高可靠性，还可以将 SQL Server 主实例或 HDFS 名称节点和 Spark 共享服务配置为在高可用性配置中与其他副本一起部署。 监视、故障检测和自动故障转移由大数据群集管理服务（即控制服务）进行管理。 无需用户干预即可提供此服务：从设置可用性组、配置数据库镜像终结点到将数据库添加到可用性组或故障转移和升级协调等等。 
+由于 SQL Server 大数据群集是作为容器化应用程序位于 Kubernetes 上，并且使用有状态集和持久存储等功能，因此，此基础结构具有内置的运行状况监视、故障检测和故障转移机制，群集组件可利用这些机制来维护服务运行状况。 为了提高可靠性，还可以将 SQL Server 主实例和/或 HDFS 名称节点和 Spark 共享服务配置为在高可用性配置中与其他副本一起部署。 监视、故障检测和自动故障转移由大数据群集管理服务（即控制服务）进行管理。 无需用户干预即可提供此服务：从设置可用性组、配置数据库镜像终结点到将数据库添加到可用性组或故障转移和升级协调等等。 
 
 下图表示在 SQL Server 大数据群集中部署可用性组的方式：
 
@@ -32,7 +32,7 @@ ms.locfileid: "87790264"
 - 所有数据库都将自动添加到可用性组，包括所有用户和系统数据库（如 `master` 和 `msdb`）。 此功能提供跨可用性组副本的单系统视图。 其他模型数据库（`model_replicatedmaster` 和 `model_msdb`）用于设定系统数据库复制部分的种子。 如果直接连接到实例，除了这些数据库，还将看到 `containedag_master` 和 `containedag_msdb` 数据库。 `containedag` 数据库表示可用性组中的 `master` 和 `msdb`。
 
   > [!IMPORTANT]
-  > 使用 SQL Server 2019 CU1 版本时，只有通过 CREATE DATABASE 语句创建的数据库才会自动添加到可用性组中。 因其他工作流（如附加数据库）而在实例上创建的数据库尚未添加到可用性组，大数据群集管理员必须手动执行此操作。 有关说明，请参阅[连接到 SQL Server 实例](#instance-connect)部分。 在低于 SQL Server 2019 CU2 的版本中，因还原语句而创建的数据库具有相同行为，必须手动将数据库添加到包含的可用性组。
+  > 因工作流（如附加数据库）而在实例上创建的数据库未自动添加到可用性组，大数据群集管理员必须手动执行此操作。 有关如何启用 SQL Server 实例主数据库的临时终结点的说明，请参阅[连接到 SQL Server 实例](#instance-connect)部分。 在低于 SQL Server 2019 CU2 的版本中，因还原语句而创建的数据库具有相同行为，必须手动将数据库添加到包含的可用性组。
   >
 - Polybase 配置数据库不包括在可用性组中，因为它们包括特定于每个副本的实例级元数据。
 - 系统会自动预配外部终结点，以便与可用性组中的数据库建立连接。 此终结点 `master-svc-external` 扮演可用性组侦听器的角色。
@@ -201,13 +201,17 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a name="known-limitations"></a>已知的限制
 
-大数据群集中 SQL Server 主实例的可用性组的已知问题和限制：
+关于包含的适于大数据群集中 SQL Server 主实例的可用性组，下面是已知问题和限制：
 
-- 在低于 SQL Server 2019 CU2 的版本中，除 `CREATE DATABASE` 和 `RESTORE DATABASE`（如 `CREATE DATABASE FROM SNAPSHOT`）之外，因工作流而创建的数据库不会自动添加到可用性组。 [连接到实例 ](#instance-connect)，并手动将数据库添加到可用性组。
+- 部署大数据群集时，必须创建高可用性配置。 部署后，无法通过可用性组启用高可用性配置。 目前，只有启用的配置才适用于同步提交副本。
+
+> [!WARNING]
+> 将同步模式更新为仲裁提交中的任何副本的异步提交将导致配置无效，无法实现高可用性。 在此配置中运行涉及数据丢失风险，因为如果失败事件影响主副本，不会触发自动故障转移，并且用户必须接受在发出手动故障转移时数据丢失的风险。
+
 - 要从另一台服务器上创建的备份中成功还原启用了 TDE 的数据库，必须确保在 SQL Server 主实例以及所包含的 AG 主实例上都还原了[所需的证书](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。 有关如何备份和还原证书的示例，请参阅[此处](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)。
 - 某些操作（如通过 `sp_configure` 运行服务器配置设置）需要连接到 SQL Server 实例 `master` 数据库，而不是可用性组 `master`。 不能使用相应的主要终结点。 按照[说明](#instance-connect)公开终结点，然后连接到 SQL Server 实例并运行 `sp_configure`。 当手动公开终结点以连接到 SQL Server 实例 `master` 数据库时，只能使用 SQL 身份验证。
-- 部署大数据群集时，必须创建高可用性配置。 部署后，无法通过可用性组启用高可用性配置。
-- 虽然包含的 msdb 数据库包含在可用性组中，并且 SQL 代理作业在其中进行复制，但不会按计划触发作业。 解决方法是[连接到每个 SQL Server 实例](#instance-connect)，并在实例 msdb 中创建作业。 自 SQL Server 2019 CU2 起，只支持在主实例的每个副本中创建的作业。
+- 虽然包含的 msdb 数据库包含在可用性组中，并且 SQL 代理作业在其中进行复制，但作业只会按计划在主副本上运行。
+- 在低于 SQL Server 2019 CU2 的版本中，除 `CREATE DATABASE` 和 `RESTORE DATABASE`（如 `CREATE DATABASE FROM SNAPSHOT`）之外，因工作流而创建的数据库不会自动添加到可用性组。 [连接到实例 ](#instance-connect)，并手动将数据库添加到可用性组。
 
 ## <a name="next-steps"></a>后续步骤
 

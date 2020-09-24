@@ -38,18 +38,18 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a63931e71983b0ae5bba99fb13081cc75c93b2cd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444828"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024526"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-本文说明如何在 Azure SQL 数据仓库中使用 CREATE MATERIALIZED VIEW AS SELECT T-SQL 语句开发解决方案。 本文还会提供代码示例。
+本文说明如何在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中使用 CREATE MATERIALIZED VIEW AS SELECT T-SQL 语句开发解决方案。 本文还会提供代码示例。
 
 具体化视图会保留从视图定义查询返回的数据，并在基础表中的数据更改时自动更新。   它提高了复杂查询（通常是使用联接和聚合的查询）的性能，同时提供了简单的维护操作。   由于具体化视图具有执行计划自动匹配功能，因此无需在查询中引用它，优化器即会考虑将此视图作为替换项。  通过使用这一功能，数据工程师可以将具体化视图作为改进查询响应时间的机制来实现，而不必再更改查询。  
   
@@ -131,7 +131,7 @@ Azure 数据仓库中的具体化视图与 SQL Server 中的索引视图相似�
 |由用户在具体化视图定义的 SELECT 列表中指定 STDEV(a)，其中“a”是表达式。|SUM(a), COUNT_BIG(a), SUM(square(a))|通过具体化视图创建自动添加。  不需要任何用户操作。 |
 | | | |
 
-创建后，SQL Server Management Studio 中的 Azure SQL 数据仓库实例的视图文件夹将显示具体化实体。
+创建后，SQL Server Management Studio 中的 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 实例的视图文件夹将显示具体化实体。
 
 用户可以运行 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) 和 [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) 来确定具体化视图占用的空间。  
 
@@ -156,6 +156,6 @@ SQL Server Management Studio 中的 EXPLAIN 计划和图形估计执行计划可
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[Azure SQL 数据仓库支持的系统视图](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[Azure SQL 数据仓库支持的 T-SQL 语句](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中支持的系统视图](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中支持的 T-SQL 语句](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

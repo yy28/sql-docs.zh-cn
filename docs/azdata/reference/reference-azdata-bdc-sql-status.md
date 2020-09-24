@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: azdata bdc sql status 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f042e737f51a1e02f6c61f9c5a236c034d1275d0
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 70cdacef1949842157e0c6679565aaf3837f3566
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733494"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914556"
 ---
 # <a name="azdata-bdc-sql-status"></a>azdata bdc sql status
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+适用于 `azdata`
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 
 ## <a name="commands"></a>命令
-| 命令 | 描述 |
+
+|命令|描述|
 | --- | --- |
 [azdata bdc sql status show](#azdata-bdc-sql-status-show) | Sql-server 服务状态。
 ## <a name="azdata-bdc-sql-status-show"></a>azdata bdc sql status show
@@ -64,4 +65,7 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](../install/deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata](..\install\deploy-install-azdata.md)。
+

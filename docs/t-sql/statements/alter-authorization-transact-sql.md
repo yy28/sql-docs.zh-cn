@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688277"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024386"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -81,7 +81,7 @@ ALTER AUTHORIZATION
 
     
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 ALTER AUTHORIZATION ON    
     [ <class_type> :: ] <entity_name>     
@@ -129,7 +129,7 @@ ALTER AUTHORIZATION ON
     
 |类|Products|    
 |-|-|    
-|OBJECT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|OBJECT|**适用范围**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
 |ASSEMBLY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |ASYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |AVAILABILITY GROUP |适用范围：SQL Server 2012 和更高版本。|
@@ -143,7 +143,7 @@ ALTER AUTHORIZATION ON
 |REMOTE SERVICE BINDING|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |ROUTE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|SCHEMA|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|SCHEMA|**适用范围**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
 |SEARCH PROPERTY LIST|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |SERVER ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |SERVICE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
@@ -216,7 +216,7 @@ ALTER AUTHORIZATION ON
 -   存在于 Azure AD 中的托管用户（而不是组）或应用程序。    
 
 > [!NOTE]  
-> 如果新所有者是 Azure Active Directory 用户，则在新所有者将成为新 DBO 的数据库中，该新所有者不能在其中作为用户而存在。 执行用于将数据库所有权更改到新用户的 ALTER AUTHORIZATION 语句前，必须首先从数据库中删除此类 Azure AD 用户。 有关使用 SQL 数据库配置 Azure Active Directory 用户的详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。   
+> 如果新所有者是 Azure Active Directory 用户，则在新所有者将成为新 DBO 的数据库中，该新所有者不能在其中作为用户而存在。 执行用于将数据库所有权更改到新用户的 ALTER AUTHORIZATION 语句前，必须首先从数据库中删除此类 Azure AD 用户。 有关使用 SQL 数据库配置 Azure Active Directory 用户的详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。   
   
 **对执行 ALTER AUTHORIZATION 语句的人员的要求：**  
 必须连接到目标数据库才能更改数据库的所有者。  

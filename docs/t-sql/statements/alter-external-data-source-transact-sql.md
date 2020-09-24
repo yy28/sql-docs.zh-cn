@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d90bacf17953eee4874343fadf2e9daf97a8664
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: a47daa3926f8b6718a459aab203b0e902bf7dafd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688414"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024476"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
-  修改用于创建外部表的外部数据源。 外部数据源可以是适用于 SQL SERVER 的 Hadoop 和 Azure blob 存储 (WASBS) 或适用于 Azure SQL 数据仓库的 Azure blob 存储 (WASBS) 或 Azure Data Lake Storage (ABFSS/ADL)。 
+  修改用于创建外部表的外部数据源。 外部数据源可以是适用于 SQL SERVER 的 Hadoop 和 Azure blob 存储 (WASBS) 或适用于 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 的 Azure blob 存储 (WASBS) 或 Azure Data Lake Storage (ABFSS/ADL)。 
 
 ## <a name="syntax"></a>语法  
 
@@ -52,7 +52,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure SQL Data Warehouse
+-- Applies to: Azure Synapse Analytics
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']
@@ -64,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION =“<prefix>://<path>[:<port>]”：提供外部数据源的连接协议、路径和端口。 若要了解有效的位置选项，请参阅 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport)。
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>'（不适用于 Azure SQL 数据仓库）指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>'（不适用于 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]） 指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。
 
  CREDENTIAL = Credential_Name 指定命名凭据。 请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
@@ -102,7 +102,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
     ;
 ```
 
- 以下示例将凭证更改为新位置。 此示例是为 Azure SQL 数据仓库创建的外部数据源。 
+ 以下示例将凭证更改为新位置。 此示例是为 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 创建的外部数据源。 
 
 ```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET

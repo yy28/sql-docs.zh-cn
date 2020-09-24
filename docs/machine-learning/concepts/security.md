@@ -1,6 +1,6 @@
 ---
-title: 扩展性的安全性概述
-description: SQL Server 机器学习服务中扩展性框架的安全性概述。 登录名和用户帐户、SQL Server Launchpad 服务、工作人员帐户、运行多个脚本和文件权限的安全性。
+title: 安全的扩展性体系结构
+description: 本文介绍 SQL Server 机器学习服务中扩展性框架的安全体系结构。 内容包括登录名和用户帐户、SQL Server Launchpad 服务、工作人员帐户、运行多个脚本和文件权限的安全性。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,24 +8,26 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179846"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989832"
 ---
-# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中扩展性框架的安全性概述
+# <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中扩展性框架的安全体系结构
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-本文介绍用于将 SQL Server 数据库引擎和相关组件与 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中的扩展性框架集成的整体安全体系结构。 它检查安全对象、服务、进程标识和权限。 有关 SQL Server 中扩展性的主要概念和组件的详细信息，请参阅 [SQL Server 机器学习服务中的扩展性体系结构](extensibility-framework.md)。
+本文介绍用于将 SQL Server 数据库引擎和相关组件与 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中的扩展性框架集成的安全体系结构。 它检查安全对象、服务、进程标识和权限。 本文所述的要点包括 Launchpad、SQLRUserGroup 和工作人员帐户的用途、外部脚本的进程隔离，以及如何将用户标识映射到工作人员帐户。
+
+有关 SQL Server 中扩展性的主要概念和组件的详细信息，请参阅 [SQL Server 机器学习服务中的扩展性体系结构](extensibility-framework.md)。
 
 ## <a name="securables-for-external-script"></a>外部脚本的安全对象
 
-将用 R、Python 或外部语言（例如 Java 或 .NET）编写的外部脚本作为输入参数提交给为此目的而创建的[系统存储过程](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，或者将其包装在自行定义的存储过程中。 或者，你可以预先定型模型，并将其以二进制格式存储在数据库表中，并可在 T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数中调用。
+外部脚本作为输入参数提交给为此目的而创建的[系统存储过程](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，或者将其包装在自行定义的存储过程中。 可以用 R、Python 或外部语言（例如 Java 或 .NET）编写此脚本。 或者，你可以预先定型模型，并将其以二进制格式存储在数据库表中，并可在 T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数中调用。
 
 由于脚本是通过现有的数据库架构对象、存储过程和表提供的，因此没有适用于 SQL Server 机器学习服务的新[安全对象](../../relational-databases/security/securables.md)。
 
@@ -35,7 +37,7 @@ ms.locfileid: "88179846"
 
 ## <a name="permissions"></a>权限
 
-SQL Server 的数据库登录名和角色的数据安全模型扩展到外部脚本。 需要 SQL Server 登录名或 Windows 用户帐户才能运行使用 SQL Server 数据的外部脚本，或以 SQL Server 作为计算上下文运行的外部脚本。 具有执行临时查询权限的数据库用户可以从外部脚本访问相同的数据。
+SQL Server 的数据库登录名和角色的数据安全模型扩展到外部脚本。 需要 SQL Server 登录名或 Windows 用户帐户才能运行使用 SQL Server 数据的外部脚本，或以 SQL Server 作为计算上下文运行的外部脚本。 具有执行查询权限的数据库用户可以从外部脚本访问相同的数据。
 
 登录名或用户帐户标识安全主体，该主体可能需要多个级别的访问权限，具体取决于外部脚本需求  ：
 
@@ -78,7 +80,7 @@ SQL Server 的数据库登录名和角色的数据安全模型扩展到外部脚
 扩展性框架向 SQL Server 安装中的[服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)添加一个新的 NT 服务：[SQL Server Launchpad (MSSSQLSERVER)](extensibility-framework.md#launchpad)  。
 
 数据库引擎使用 SQL Server Launchpad 服务将外部脚本会话实例化为单独的进程  。 
-该进程在低权限帐户下运行；与 SQL Server、Launchpad 本身以及执行存储过程或主机查询的用户标识不同。 在单独的进程中以低权限帐户运行脚本是 SQL Server 中外部脚本的安全和隔离模型的基础。
+该进程在低权限帐户下运行； 与 SQL Server、Launchpad 本身以及执行存储过程或主机查询的用户标识不同。 在单独的进程中以低权限帐户运行脚本是 SQL Server 中外部脚本的安全和隔离模型的基础。
 
 SQL Server 还将调用用户的标识映射到用于启动附属进程的低权限工作人员帐户。 在某些情况下，脚本或代码回调到 SQL Server 以获取数据和操作时，SQL Server 能够无缝地管理标识传输。 如果发出调用的用户具有足够的权限，则包含 SELECT 语句或调用函数以及其他编程对象的脚本通常都会成功。
 
@@ -127,13 +129,13 @@ SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且
 
 + 用户帐户池的大小是静态的，默认值为 20，即支持 20 个并发会话。 可同时启动的外部运行时会话数量受此用户帐户池大小的限制。 
 
-+ 池中的工作人员帐户名称的格式为 SQLInstanceNamenn  。 例如，在默认实例上，SQLRUserGroup 包含名为 MSSQLSERVER01、MSSQLSERVER02…直至 MSSQLSERVER20 的帐户  。
++ 池中的工作人员帐户名称的格式为 SQLInstanceNamenn  。 例如，在默认实例上，SQLRUserGroup 包含名为 MSSQLSERVER01、MSSQLSERVER02…直至 MSSQLSERVER20 的帐户。
 
 并行化任务不会使用其他帐户。 例如，如果用户运行使用并行处理的评分任务，则会针对所有线程重复使用相同的工作人员帐户。 如果要大量使用机器学习，可以增加用于运行外部脚本的帐户数量。 有关详细信息，请参阅[在 SQL Server 机器学习服务中扩展外部脚本的并发执行](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md)。
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>向 SQLRUserGroup 授予的权限
 
-默认情况下，SQLRUserGroup 的成员对 SQL Server Binn、R_SERVICES 和 PYTHON_SERVICES 目录中的文件具有读取和执行权限，可以访问使用 SQL Server 安装的 R 和 Python 分发中的可执行文件、库和内置数据集     。 
+默认情况下，SQLRUserGroup 的成员对 SQL Server Binn、R_SERVICES 和 PYTHON_SERVICES 目录中的文件具有读取和执行权限   。 这包括对使用 SQL Server 安装的 R 和 Python 发行版中的可执行文件、库和内置数据集的访问权限。 
 
 若要保护 SQL Server 上的敏感资源，可以选择定义拒绝访问 SQLRUserGroup 的访问控制列表 (ACL)  。 相反，除了 SQL Server 本身之外，还可以授予访问主计算机上本地数据资源的权限。 
 

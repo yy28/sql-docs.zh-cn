@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247070"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989900"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|请注意，聚合不支持 Hash Match 运算符。 因此，本机编译存储过程中的所有聚合都使用 Stream Aggregate 运算符，即使解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中针对同一查询计划使用 Hash Match 运算符也是如此。|  
   
 ## <a name="column-statistics-and-joins"></a>列统计信息和联接  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在索引键列值中维护统计信息，以帮助估计特定操作的开销，如索引扫描和索引查找。 （如果显式创建非索引键列，或者查询优化器在对于带谓词的查询提供的响应中创建非索引键列，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也会对这些列创建统计信息。）开销估计的主要度量是一个运算符处理的行数。 请注意，对于基于磁盘的表，某一特定运算符处理的页数对于开销估计非常重要。 但是，由于页数对于内存优化表并不重要（始终为零），因此本次讨论重点在于行数。 从计划中的索引查找和扫描运算符开始估计，然后扩展到包含其他运算符，如联接运算符。 对联接运算符要处理的行数的估计基于对基础索引、搜索和扫描运算符的估计。 对于内存优化表的解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问，您可以通过实际执行计划查看计划中运算符的估计行数和实际行计数之差。  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在索引键列值中维护统计信息，以帮助估计特定操作的开销，如索引扫描和索引查找。 （如果显式创建非索引键列，或者查询优化器在对于带谓词的查询提供的响应中创建非索引键列，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也会对这些列创建统计信息。）开销估计的主要度量是一个运算符处理的行数。 请注意，对于基于磁盘的表，某一特定运算符处理的页数对于开销估计非常重要。 但是，由于页数对于内存优化表并不重要（始终为零），因此本次讨论重点在于行数。 从计划中的索引查找和扫描运算符开始估计，然后扩展到包含其他运算符，如联接运算符。 对联接运算符要处理的行数的估计基于对基础索引、搜索和扫描运算符的估计。 对于内存优化表的解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问，您可以通过实际执行计划查看计划中运算符的估计行数和实际行计数之差。  
   
- 对于图 1 中的示例，  
+对于图 1 中的示例，  
   
--   对 Customer 的聚集索引扫描的估计行数为 91，实际为 91。  
+- 对 Customer 的聚集索引扫描的估计行数为 91，实际为 91。  
+- 对 CustomerID 的非聚集索引扫描的估计行数为 830，实际为 830。  
+- Merge Join 运算符的估计值为 815，实际为 830。  
   
--   对 CustomerID 的非聚集索引扫描的估计行数为 830，实际为 830。  
+索引扫描的估计值非常准确。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护基于磁盘的表的行计数。 整个表和索引扫描的估计值始终很准确。 联接的估计值也相当准确。  
   
--   Merge Join 运算符的估计值为 815，实际为 830。  
+如果这些估计值更改，不同备选计划的开销考虑也会发生更改。 例如，如果联接的一端的估计行计数为 1 或几行，则使用嵌套循环联接开销较小。 请考虑下列查询：  
   
- 索引扫描的估计值非常准确。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护基于磁盘的表的行计数。 整个表和索引扫描的估计值始终很准确。 联接的估计值也相当准确。  
-  
- 如果这些估计值更改，不同备选计划的开销考虑也会发生更改。 例如，如果联接的一端的估计行计数为 1 或几行，则使用嵌套循环联接开销较小。  
-  
- 下面是查询计划：  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- 删除 Customer 表中一行外的所有行后：  
+删除 `Customer` 表中的所有行后，将生成以下查询计划：  
   
- ![列统计信息和联接。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "列统计信息和联接。")  
+![列统计信息和联接。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "列统计信息和联接。")  
   
- 关于此查询计划：  
+关于此查询计划：  
   
--   用 Nested Loops 物理联接运算符替换了 Hash Match。  
-  
--   用索引查找替换了对 IX_CustomerID 的全文检索扫描。 这样只需扫描 5 行，而全文检索扫描需要扫描 830 行。  
+- 用 Nested Loops 物理联接运算符替换了 Hash Match。  
+- 用索引查找替换了对 IX_CustomerID 的全文检索扫描。 这样只需扫描 5 行，而全文检索扫描需要扫描 830 行。  
   
 ## <a name="see-also"></a>另请参阅  
  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

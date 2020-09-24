@@ -1,7 +1,7 @@
 ---
 description: 使用 PowerShell 运行 SSIS 包
 title: 使用 PowerShell 运行 SSIS 包 | Microsoft Docs
-ms.date: 05/21/2018
+ms.date: 09/17/2020
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a876164579679802c5dc0335d01dd5ec8839e95b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422171"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989920"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 运行 SSIS 包
 
@@ -33,7 +33,7 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 
 -   Windows 上的 SQL Server。
 
--   Azure SQL 数据库。 有关在 Azure 中部署和运行包的详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+-   Azure 数据工厂 (ADF) 中的 SSIS 集成运行时 (IR)，其中 SSIS 目录 (SSISDB) 由 Azure SQL 托管实例 (MI) 承载。 有关在 Azure 中部署和运行包的详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 无法使用此快速入门中的信息在 Linux 上运行 SSIS 包。 有关在 Linux 上运行包的详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../linux/sql-server-linux-migrate-ssis.md)。
 

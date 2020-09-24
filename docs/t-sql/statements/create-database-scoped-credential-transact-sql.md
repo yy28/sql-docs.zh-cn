@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f2f72300982473696132d327881a2f2b867dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426829"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024365"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 credential_name 指定正在创建的数据库范围凭据的名称。 credential_name 不能以数字符号 (#) 开头。 系统凭据以 ## 开头。
 
-IDENTITY ='identityname' 指定从服务器外部进行连接时要使用的帐户名称 _\__ 。 要使用共享密钥从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。 若要将数据加载到 SQL DW，任何有效的值均可用于标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
+IDENTITY ='identityname' 指定从服务器外部进行连接时要使用的帐户名称 _\__ 。 要使用共享密钥从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。 若要将数据加载到 SQL DW，任何有效的值均可用于标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos（Windows Active Directory 或 MIT KDC）时，请勿在 IDENTITY 参数中使用域名。 它应只是帐户名称。
 
 > [!NOTE]
 > 如果为 Azure Blob 存储中的容器启用了匿名访问，则不需要 WITH IDENTITY。 有关查询 Azure Blob 存储的示例，请参阅[从 Azure Blob 存储上存储的文件导入表](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)。
@@ -121,7 +121,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. 为到 Azure Data Lake Store 的 PolyBase 连接创建数据库范围凭据
 
-以下示例创建的数据库范围凭据可用于创建可以由 SQL 数据仓库中的 PolyBase 使用的[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+以下示例创建的数据库范围凭据可用于创建可以由 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的 PolyBase 使用的[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 Azure Data Lake Store 使用 Azure Active Directory 应用程序进行服务到服务身份验证。
 请先[创建 AAD 应用程序](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)，并记录 client_id、OAuth_2.0_Token_EndPoint 和密钥，然后再尝试创建数据库范围凭据。

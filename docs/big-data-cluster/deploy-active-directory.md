@@ -5,16 +5,16 @@ description: 了解如何在 Active Directory 域中升级 SQL Server 大数据�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076651"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687713"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -24,12 +24,31 @@ ms.locfileid: "90076651"
 
 >[!Note]
 >在 SQL Server 2019 CU5 版本之前，对大数据群集进行了限制，以便只能针对 Active Directory 域部署一个群集。 此限制已在 CU5 版本中删除，若要了解新功能的详细信息，请参阅[概念：在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deployment-background.md)。 本文中的示例进行了调整以适应两种部署用例。
+>
 
 ## <a name="background"></a>背景
 
-要启用 Active Directory (AD) 身份验证，BDC 会自动创建群集中各种服务所需的用户、组、计算机帐户和服务主体名称 (SPN)。 要提供对这些帐户的某些控制并允许范围权限，请在部署期间选择一个组织单位 (OU)，其中将创建所有与 BDC 相关的 AD 对象。 在群集部署之前创建此 OU。
+要启用 Active Directory (AD) 身份验证，BDC 会自动创建群集中各种服务所需的用户、组、计算机帐户和服务主体名称 (SPN)。 要提供对这些帐户的某些控制并允许范围内权限，我们建议在群集部署之前创建一个组织单位 (OU)。 将在部署期间创建所有与 BDC 相关的 AD 对象。 
 
-要在 Active Directory 中自动创建所有必需对象，BDC 需要在部署过程中使用 AD 帐户。 此帐户需要具有在提供的 OU 中创建用户、组和计算机帐户的权限。
+## <a name="pre-requisites"></a>先决条件
+
+### <a name="organizational-unit-ou"></a>组织单位 (OU)
+组织单位 (OU) 是 Active Directory 中放置用户、组，甚至其他组织单位的细分。 大图组织单位可用于镜像组织的功能或业务结构。 本文将创建一个名为 `bdc` 的 OU 作为示例。 
+
+>[!NOTE]
+>组织单位 (OU) 表示管理边界，并使客户能够控制数据管理员的授权范围。 
+
+
+可以按照 [OU 设计原则](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts)来决定使用组织中的 OU 的最佳结构。 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>BDC 域服务帐户的 AD 帐户
+
+为了能够自动在 Active Directory 中创建所有必需对象，BDC 需要具有在提供的组织单位 (OU) 内创建用户、组和计算机帐户的特定权限的 AD 帐户。 本文将介绍如何配置此 AD 帐户的权限。 我们使用名为 `bdcDSA` 的 AD 帐户作为本文中的示例。
+
+### <a name="auto-generated-active-directory-objects"></a>自动生成的 Active Directory 对象
+BDC 部署会自动生成帐户名和组名。 每个帐户都代表 BDC 中的一个服务，并将在使用 BDC 群集的整个生存期内通过 BDC 进行管理。 这些帐户拥有每个服务所需的服务主体名称 (SPN)。  有关所管理的 AD 自动生成的帐户、组和服务的完整列表，请参阅[自动生成的 Active Directory 对象](active-directory-objects.md)。
+
+
 
 >[!IMPORTANT]
 >这些帐户的密码可能会过期，具体取决于域控制器中设置的密码过期策略。 默认的过期策略为 42 天。 没有任何机制可以轮换 BDC 中所有帐户的凭据，因此一到过期时间，群集将变为不可操作。 若要解决此问题，请在域控制器中将 BDC 服务帐户的过期策略更新为“密码永不过期”。 此操作可在过期时间之前或之后完成。 在后一种情况下，Active Directory 将重新激活过期的密码。
@@ -38,16 +57,16 @@ ms.locfileid: "90076651"
 >
 >:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="设置密码过期策略":::
 
-有关 AD 帐户和组的列表，请参阅[自动生成的 Active Directory 对象](active-directory-objects.md)。
 
 以下步骤假设已有一个 Active Directory 域控制器。 如果没有域控制器，以下[指南](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)包含可提供帮助的步骤。
+
 
 ## <a name="create-ad-objects"></a>创建 AD 对象
 
 在部署具有 AD 集成的 BDC 之前，请执行以下操作：
 
-1. 创建一个将在其中存储所有 BDC AD 对象的组织单位 (OU)。 还可以选择在部署时选择现有 OU。
-1. 为 BDC 创建 AD 帐户或使用现有帐户，并向此 BDC AD 帐户提供正确的权限。
+1. 创建一个将在其中存储所有与 BDC 相关的 AD 对象的组织单位 (OU)。 还可以选择在部署时选择现有 OU。
+1. 为 BDC 创建 AD 帐户或使用现有帐户，并在提供的组织单位 (OU) 中向此 BDC AD 帐户提供正确的权限。
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>为 BDC 域服务帐户在 AD 中创建用户
 

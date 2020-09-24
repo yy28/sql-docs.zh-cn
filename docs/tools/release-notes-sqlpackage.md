@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353094"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989430"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>18.6 sqlpackage
+
+|平台|下载|发布日期|版本|构建
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2143544)|2020 年 9 月 18 日|18.6|15.0.4897.1|
+|macOS .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143659)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
+|Linux .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143497)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
+|Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
+
+### <a name="features"></a>功能
+| Feature | 详细信息 |
+| :------ | :------ |
+| 平台 | 已将 sqlpackage .NET Core 版本更新为 .NET Core 3.1 |
+| Always Encrypted | 添加了对 SQL Server 2019 的安全 enclave 导入和导出的支持 |
+| 部署 | 添加了支持，以在从 Azure SQL 数据库导出时忽略已启用变更数据捕获的表 |
+| 部署 | 添加了对 Azure SQL 数据库中 OPTIMIZE_FOR_SEQUENTIAL_KEY 索引选项的支持 |
+| 部署 | 添加了对 Azure SQL 数据仓库的标识列的支持 | 
+| 帮助 | 在帮助 (?) 中输出 sqlpackage 版本，并支持 version 参数 | 
+
+### <a name="fixes"></a>修复项
+| Feature | 详细信息 |
+| :------ | :------ | 
+| 部署 | 修复了以非 sysadmin 用户身份将 Azure SQL 数据库托管实例作为目标时生成的错误部署脚本  | 
+| 部署 | 修复了在运行脚本操作时加载部署的问题 | 
+| 帮助 | 当运行时间超过 1 天时，输出 sqlpackage 中的正确运行时间 | 
+| 部署 | 修复了在 .NET Core 中部署时的 dacpac 注册问题 | 
+| 部署 | 修复了在 .NET Core 中处理 accessToken (at) 参数时的 sqlpackage 问题 | 
+| 部署 | 允许将存储过程中的 ALTER TABLE 语句作为非顶级语句 | 
+| 部署 | 修复了在具体化视图中验证 Azure SQL 数据仓库时不区分大小写的问题 | 
+
+### <a name="known-issues"></a>已知问题
+| Feature | 详细信息 |
+| :------ | :------ |
+| 部署 | 目前尚不支持 Azure SQL 数据仓库工作负荷管理功能（工作负荷组和工作负荷分类器） | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -59,7 +94,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 |Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2128143)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
 
 ### <a name="features"></a>功能
-| 功能 | 详细信息 |
+| Feature | 详细信息 |
 | :------ | :------ |
 | 部署 | 现在 SQL Server 2008 及更高版本、Azure SQL 数据库和 Azure SQL 数据仓库支持数据敏感度分类 |
 | 部署 | 针对表约束添加 Azure SQL 数据仓库支持 |
@@ -111,7 +146,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="known-issues"></a>已知问题 
 
-| 功能 | 详细信息 |
+| Feature | 详细信息 |
 | :------ | :------ |
 | 部署 |  在 18.4.1 中引入了一个退行性问题，导致“对象引用未设置为对象的实例”。 作为具有外部登录名的用户部署 dacpac 或导入 bacpac 时出错。 使用 sqlpackag 18.4 可暂时避开此问题，将在下一个 sqlpackag 版本中进行修复。 | 
 | &nbsp; | &nbsp; |
@@ -127,19 +162,19 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="features"></a>功能
 
-| 功能 | 详细信息 |
+| Feature | 详细信息 |
 | :------ | :------ |
 | 部署 | 添加对部署到 Azure SQL 数据仓库 (GA) 的支持。 | 
 | 平台 | 适用于 macOS、Linux 和 Windows 的 sqlpackage .NET Core GA。 | 
 | 安全性 | 删除 SHA1 代码签名。 |
 | 部署 | 添加对新 Azure 数据库版本的支持：GeneralPurpose、BusinessCritical、超大规模 |
-| 部署 | 添加对 AAD 用户和组的托管实例支持。 |
+| 部署 | 添加对 Azure Active Directory 用户和组的托管实例支持。 |
 | 部署 | 支持 .NET Core 上的 sqlpackage 的 /AccessToken 参数。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题 
 
-| 功能 | 详细信息 |
+| Feature | 详细信息 |
 | :------ | :------ |
 | ScriptDom |  ScriptDom 分析回归在 18.3.1 中引入，其中“重命名”被错误地视为顶级令牌，导致分析失败。 此问题将在下一个 sqlpackage 版本中修复。 | 
 | &nbsp; | &nbsp; |

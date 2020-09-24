@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b38d226ca660befe7a04c1c014fe41eedf22146
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: bbb0773d4c89b7b9879b0ff250e9ffaf6e465654
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688465"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024349"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -232,8 +232,8 @@ OPTION ( HASH JOIN );
  - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
  - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)
  - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
- - [CREATE TABLE（Azure SQL 数据仓库、并行数据仓库）](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)
- - [CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+ - [CREATE TABLE（Azure Synapse Analytics 和并行数据仓库）](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)
+ - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
  - [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)
  - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
 

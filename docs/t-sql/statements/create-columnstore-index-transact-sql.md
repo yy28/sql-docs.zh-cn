@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb9080044b0ded77b023d6700be4bba7fd260b2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549418"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024376"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -301,7 +301,7 @@ filegroup_name
 ##  <a name="general-remarks"></a><a name="GenRemarks"></a> 一般备注  
 可以为临时表创建列存储索引。 在删除表或结束会话时，也将删除索引。  
 
-可以在 Azure SQL 数据仓库支持的任何数据类型的列（字符串列除外）上创建有序的聚集列存储索引。  
+可以在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 支持的任何数据类型的列（字符串列除外）上创建有序的聚集列存储索引。  
  
 ## <a name="filtered-indexes"></a>筛选索引  
 筛选索引是一种经过优化的非聚集索引，适用于从表中选择少数行的查询。 筛选索引使用筛选谓词对表中的部分数据进行索引。 设计良好的筛选索引可以提高查询性能，降低存储成本和维护成本。  

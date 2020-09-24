@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE AS SELECT（Azure SQL 数据仓库）
-title: CREATE TABLE AS SELECT（Azure SQL 数据仓库）| Microsoft Docs
+description: CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)
+title: CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fb060b4a5f42cdc526bbb2a3737fd728c9ac3b71
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688676"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990150"
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
+# <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) 是提供最重要的 T-SQL 功能之一。 它是一个完全并行化的操作，基于 SELECT 语句的输出创建新表。 CTAS 是创建表副本最便捷的方法。   
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT (CTAS) 是提供最重要的 T-SQL 功能之一。 它是
 -   查询或导入外部数据。  
 
 > [!NOTE]  
-> 由于 CTAS 增加了创建表的功能，因此本主题尽量不重复 CREATE TABLE 主题。 而是描述 CTAS 和 CREATE TABLE 语句之间的差异。 有关 CREATE TABLE 的详细信息，请参阅 [CREATE TABLE（Azure SQL 数据仓库）](https://msdn.microsoft.com/library/mt203953/)语句。 
+> 由于 CTAS 增加了创建表的功能，因此本主题尽量不重复 CREATE TABLE 主题。 而是描述 CTAS 和 CREATE TABLE 语句之间的差异。 有关 CREATE TABLE 的详细信息，请参阅 [CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) 语句。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::= 
     {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+        CLUSTERED COLUMNSTORE INDEX --default for Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
@@ -138,7 +138,7 @@ CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限。
 
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 
-可以在 Azure SQL 数据仓库支持的任何数据类型的列（字符串列除外）上创建有序的聚集列存储索引。  
+可以在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 支持的任何数据类型的列（字符串列除外）上创建有序的聚集列存储索引。  
 
 [SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md) 对 CTAS 没有影响。 要实现类似的行为，请使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
  
@@ -167,7 +167,7 @@ CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限。
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. 使用 CTAS 复制表 
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 `CTAS` 最常见的用途之一就是创建表副本，使你可以更改 DDL。 例如，如果最初将表创建为 `ROUND_ROBIN`，现在希望将其更改为分布在列上的表，则可以使用 `CTAS` 更改分布列。 `CTAS` 还可用于更改分区、索引或列类型。
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. 使用 CTAS 更改列属性 
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 本示例使用 CTAS 更改 DimCustomer2 表中多个列的数据类型、为 Null 性和排序规则。  
   
@@ -300,13 +300,13 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. 使用 CTAS 更改表的分布方法
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 此简单示例介绍如何改变表的分布方法。 为显示执行此操作的机制，它将哈希分布式表更改为轮循机制表，然后将轮循机制表更改回哈希分布式表。 最终的表与原始表相匹配。 
 
 大多数情况下，无需将哈希分布式表更改为轮循机制表。 更常见的情况是，可能需要将轮循机制表更改为哈希分布式表。 例如，可能最初将新表加载为轮循机制表，然后将其移到哈希分布式表以提高联接性能。
 
-本示例使用 AdventureWorksDW 示例数据库。 若要加载 SQL 数据仓库版本，请参阅[将示例数据加载到 SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
+本示例使用 AdventureWorksDW 示例数据库。 若要加载 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 版本，请参阅[将示例数据加载到 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
  
 ```sql
 -- DimSalesTerritory is hash-distributed.
@@ -350,7 +350,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. 使用 CTAS 将表转换为复制表  
-适用对象：Azure SQL 数据仓库和并行数据仓库 
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 此示例适用于将轮循机制表或哈希分布式表转换为复制表。 此特殊示例采用先前进一步改变分布类型的方法。  由于 DimSalesTerritory 是一个维度，而且可能是较小的表，因此可以选择重新创建该表作为复制表，从而避免在联接到其他表时数据发生移动。 
 
@@ -374,7 +374,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. 使用 CTAS 创建列数较少的表
-适用对象：Azure SQL 数据仓库和并行数据仓库 
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 以下示例创建一个名为 `myTable (c, ln)` 的轮循机制分布式表。 新表仅包含两列。 它使用 SELECT 语句中的列别名作为列名。  
   
@@ -396,7 +396,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. 在 CREATE TABLE AS SELECT (CTAS) 中使用查询提示  
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 此查询显示在 CTAS 语句中使用查询联接提示的基本语法。 提交查询后，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 在为每个单独的分布生成查询计划时应用哈希联接策略。 有关哈希联接查询提示的详细信息，请参阅 [OPTION 子句 (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md).  
   
@@ -419,7 +419,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. 使用 CTAS 从 Azure Blob 存储导入数据  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 若要从外部表导入数据，只需使用 CREATE TABLE AS SELECT 从外部表进行选择。 从外部表选择数据到 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的语法与从常规表中选择数据的语法相同。  
   
@@ -440,7 +440,7 @@ WITH (
 ;  
   
 --Use CREATE TABLE AS SELECT to import the Azure blob storage data into a new   
---SQL Data Warehouse table called ClickStreamData  
+--Synapse Analytics table called ClickStreamData  
 CREATE TABLE ClickStreamData   
 WITH  
   (  
@@ -501,7 +501,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. 使用 CTAS 而不是 SELECT..INTO  
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 SQL Server 代码通常借助 SELECT..INTO 来使用 SELECT 语句的结果填充表。 这是 SQL Server SELECT..INTO 语句的一个例子。
 
@@ -511,7 +511,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-SQL 数据仓库和并行数据仓库不支持此语法。 本示例显示如何将之前的 SELECT..INTO 语句重写为 CTAS 语句。 你可以选择 CTAS 语法中描述的任何 DISTRIBUTION 选项。 本示例使用 ROUND_ROBIN 分布方法。
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和并行数据仓库不支持此语法。 本示例显示如何将之前的 SELECT..INTO 语句重写为 CTAS 语句。 你可以选择 CTAS 语法中描述的任何 DISTRIBUTION 选项。 本示例使用 ROUND_ROBIN 分布方法。
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -528,7 +528,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隐式联接替换 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 可能会发现更新很复杂，它使用 ANSI 联接语法将两个以上的表联接在一起，以执行 UPDATE 或 DELETE 操作。
 
@@ -572,7 +572,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-由于 SQL 数据仓库不支持 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接，因此需要稍作更改才能使用此 SQL Server 代码。
+由于 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 不支持 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接，因此需要稍作更改才能使用此 SQL Server 代码。
 
 可以将 `CTAS` 和隐式联接结合使用来替换此代码：
 
@@ -611,9 +611,9 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. 使用 CTAS 指定要保留的数据而不是使用 DELETE 语句中 FROM 子句的 ANSI 联接  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-有时，删除数据的最佳方法是使用 `CTAS`。 只需选择希望保留的数据，而不是删除数据。 这尤其适用于使用 ansi 联接语法的 `DELETE` 语句，因为 SQL 数据仓库不支持 `DELETE` 语句中 `FROM` 子句中的 ANSI 联接。
+有时，删除数据的最佳方法是使用 `CTAS`。 只需选择希望保留的数据，而不是删除数据。 这尤其适用于使用 ansi 联接语法的 `DELETE` 语句，因为 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 不支持 `DELETE` 语句中 `FROM` 子句中的 ANSI 联接。
 
 转换后的 DELETE 语句示例如下：
 
@@ -639,7 +639,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. 使用 CTAS 简化 merge 语句  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 使用 `CTAS` 可以替换（至少部分替换）Merge 语句。 可以将 `INSERT` 和 `UPDATE` 合并为一个语句。 在第二个语句中需要关闭任何已删除的记录。
 
@@ -678,9 +678,9 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 显式声明数据类型和输出是否可为 null  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-将 SQL Server 代码迁移到 SQL 数据仓库时，可能会遇到这种类型的编码模式：
+将 SQL Server 代码迁移到 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 时，可能会遇到这种类型的编码模式：
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455
@@ -844,7 +844,7 @@ OPTION (MAXDOP 1);
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE (Transact-SQL)](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

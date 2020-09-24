@@ -4,16 +4,16 @@ description: 本文提供运行 Linux 上的 SQL Server 的性能最佳做法和
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/14/2017
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887833"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989910"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的性能最佳做法和配置指南
 
@@ -85,7 +85,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>虚拟地址空间的内核设置
 
-vm.max_map_count  的默认设置 (65536) 对 SQL Server 安装来说可能不够高。 将此值（上限）更改为 256 K。
+vm.max_map_count  的默认设置 (65536) 对 SQL Server 安装来说可能不够高。 出于此原因，请在 SQL Server 部署中，将 vm.max_map_count 值更改为 262144，并参阅[使用优化的 mssql 配置文件的建议 Linux 设置](#proposed-linux-settings-using-a-tuned-mssql-profile)部分，了解如何进一步优化这些内核参数。 vm.max_map_count 的最大值为 2147483647。
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -112,7 +112,7 @@ vm.dirty_ratio = 80
 vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
-# For , use
+# For multi-instance SQL deployments, use
 # vm.transparent_hugepages=madvice
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
@@ -126,7 +126,7 @@ kernel.sched_min_granularity_ns = 15000000
 kernel.sched_wakeup_granularity_ns = 2000000
 ```
 
-若要启用此优化的配置文件，请将这些定义保存在 /usr/lib/tuned/mssql 文件夹下的 tuned.conf 文件中  ，并使用以下命令启用配置文件
+若要启用此优化的配置文件，请将这些定义保存在 /usr/lib/tuned/mssql 文件夹下的 tuned.conf 文件中，并使用以下命令启用配置文件
 
 ```bash
 chmod +x /usr/lib/tuned/mssql/tuned.conf
@@ -145,19 +145,19 @@ tuned-adm list
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>在文件系统上禁用 SQL Server 数据和日志文件的上次访问日期/时间
 
-对用于存储 SQL Server 数据和日志文件的任何文件系统使用 noatime  属性。 有关如何设置此属性的说明，请参阅 Linux 文档。
+对用于存储 SQL Server 数据和日志文件的任何文件系统使用 noatime**** 属性。 有关如何设置此属性的说明，请参阅 Linux 文档。
 
 ### <a name="leave-transparent-huge-pages-thp-enabled"></a>启用透明大页 (THP)
 
 大多数 Linux 安装应在默认情况下启用此选项。 建议将此配置选项设置为启用，以获得最一致的性能体验。 但是，如果在具有多个实例的 SQL Server 部署中发生大量内存分页活动，或者在服务器上与其他内存需求较高的应用程序一起执行 SQL Server 的情况下，建议在执行以下命令后测试应用程序的性能 
 
 ```bash
-echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 或者使用以下命令行修改 mssql 优化后的配置文件
 
 ```bash
-vm.transparent_hugepages=madvice
+vm.transparent_hugepages=madvise
 ```
 并在修改后使 mssql 配置文件处于活动状态
 ```bash

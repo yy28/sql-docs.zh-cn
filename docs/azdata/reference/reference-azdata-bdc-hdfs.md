@@ -1,31 +1,31 @@
 ---
 title: azdata bdc hdfs 参考
 titleSuffix: SQL Server big data clusters
-description: 使用本参考文章来了解 azdata 工具中的 SQL 命令，特别是 bdc hdfs 命令。
+description: azdata bdc hdfs 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17cac3a31309402d01442b598785908cbf345bba
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 4cc99df7ada4ff4e0aced35c4cbcf4c39e8ca5c5
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733512"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914814"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+适用于 `azdata`
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 
 ## <a name="commands"></a>命令
-| 命令 | 描述 |
+
+|命令|说明|
 | --- | --- |
-[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | HDFS 服务状态命令。
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | HDFS shell 是用于 HDFS 文件系统的简单交互式命令 shell。
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | 列出给定文件或目录的状态。
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | 确定文件或目录是否存在。  如果存在，则返回 True；否则返回 False。
@@ -39,6 +39,7 @@ ms.locfileid: "89733512"
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | 更改指定文件的所有者或组。
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | 在本地计算机和 HDFS 间复制文件或目录。
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | 在 HDFS 中管理远程存储的装载。
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | HDFS 服务状态命令。
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 HDFS shell 是用于 HDFS 文件系统的简单交互式命令 shell。
 ```bash
@@ -69,7 +70,7 @@ azdata bdc hdfs ls --path -p
 ### <a name="examples"></a>示例
 列出状态
 ```bash
-azdata bdc hdfs ls --path tmp/
+azdata bdc hdfs ls --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--path -p`
@@ -94,7 +95,7 @@ azdata bdc hdfs exists --path -p
 ### <a name="examples"></a>示例
 检查文件或目录是否存在。
 ```bash
-azdata bdc hdfs exists --path tmp/
+azdata bdc hdfs exists --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--path -p`
@@ -119,7 +120,7 @@ azdata bdc hdfs mkdir --path -p
 ### <a name="examples"></a>示例
 创建目录。
 ```bash
-azdata bdc hdfs mkdir --path tmp/
+azdata bdc hdfs mkdir --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--path -p`
@@ -144,7 +145,7 @@ azdata bdc hdfs mv --source-path -s
 ### <a name="examples"></a>示例
 移动文件或目录。
 ```bash
-azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
+azdata bdc hdfs mv --source-path "tmp/" --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--source-path -s`
@@ -229,7 +230,7 @@ azdata bdc hdfs rm --path -p
 ### <a name="examples"></a>示例
 删除文件或目录。
 ```bash
-azdata bdc hdfs rm --path tmp/
+azdata bdc hdfs rm --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--path -p`
@@ -254,7 +255,7 @@ azdata bdc hdfs rmr --path -p
 ### <a name="examples"></a>示例
 递归删除目录。
 ```bash
-azdata bdc hdfs rmr --path tmp/
+azdata bdc hdfs rmr --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--path -p`
@@ -358,4 +359,7 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](../install/deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata](..\install\deploy-install-azdata.md)。
+

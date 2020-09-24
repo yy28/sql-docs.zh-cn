@@ -4,17 +4,17 @@ titleSuffix: ''
 description: 了解如何通过运行 SQL Server 安装向导在 Windows 上安装 SQL Server 的语言扩展功能。
 author: dphansen
 ms.author: davidph
-ms.date: 11/06/2019
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173553"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989848"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安装 SQL Server 语言扩展
 
@@ -150,8 +150,11 @@ ms.locfileid: "88173553"
 2. 授予 AppContainer 权限
 
     ```cmd
-    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+    
+    > [!NOTE]
+    > 上述命令向计算机 SID S-1-15-2-1 授予权限，这等同于英语版本的 Windows 上的所有应用程序包。 此外，也可以在英语版本的 Windows 上使用 `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T`。
     
 ## <a name="enable-script-execution"></a>启用脚本执行
 
@@ -162,7 +165,7 @@ ms.locfileid: "88173553"
     > 
     > 还可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
   
-2. 连接到已安装语言扩展的实例，单击“新建查询”以打开查询窗口，并运行以下命令  ：
+2. 连接到已安装语言扩展的实例，单击“新建查询”以打开查询窗口，并运行以下命令****：
 
     ```sql
     sp_configure
@@ -185,7 +188,7 @@ ms.locfileid: "88173553"
 
 重启 SQL Server 服务也会自动重启相关的 SQL Server Launchpad 服务。
 
-可以使用右键单击 SSMS 中实例的“重启”命令、使用“控制面板”中的“服务”面板，或者使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)来重启服务   。
+可以使用右键单击 SSMS 中实例的“重启”命令、使用“控制面板”中的“服务”面板，或者使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)来重启服务 。
 
 <a name="register_external_language"></a>
 
@@ -215,9 +218,9 @@ GO
     EXEC sp_configure  'external scripts enabled'
     ```
 
-    run_value 现已设置为 1  。
+    run_value 现已设置为 1****。
     
-2. 打开“服务”面板或 SQL Server 配置管理器，并验证“SQL Server Launchpad”是否正在运行   。 应有一项服务适用于已安装语言扩展的每个数据库引擎实例。 有关该服务的详细信息，请参阅[扩展性框架](../concepts/extensibility-framework.md)。 
+2. 打开“服务”面板或 SQL Server 配置管理器，并验证“SQL Server Launchpad”是否正在运行 。 应有一项服务适用于已安装语言扩展的每个数据库引擎实例。 有关该服务的详细信息，请参阅[扩展性框架](../concepts/extensibility-framework.md)。 
    
 ## <a name="additional-configuration"></a>其他配置
 

@@ -2,7 +2,7 @@
 description: CREATE TABLE (Transact-SQL)
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 09/04/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 1f7e6cc805953007bb83eb5a50db5a39aea9e37b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027308"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024576"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -62,13 +62,13 @@ ms.locfileid: "90027308"
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建新表。
 
 > [!NOTE]
-> 关于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 语法，请请参阅 [CREATE TABLE（Azure SQL 数据仓库）](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)。
+> 有关 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 语法，请参阅 [CREATE TABLE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)。
 
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="simple-syntax"></a>简单语法
 
-```
+```syntaxsql
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -78,7 +78,7 @@ CREATE TABLE
 
 ## <a name="full-syntax"></a>完整语法
 
-```
+```syntaxsql
 -- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -239,12 +239,12 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION =  {OFF | ON }  
-          [(    
-              [ FILTER_COLUMN = column_name ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                      | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]
+    [ DATA_DELETION = ON  
+          {( 
+             FILTER_COLUMN = column_name,   
+             RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }
+        )}  
      ]
 }
   
@@ -803,13 +803,9 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoV
 
 - 指定 `PAUSED` 可暂停或推迟数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
 
-[ DATA_DELETION =  {OFF | ON }  
-          [(  
-              [ FILTER_COLUMN = column_name ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]  
-     ]  
-**适用于：** 仅限 Azure SQL Edge
+[DATA_DELETION = ON  
+    {( FILTER_COLUMN = column_name,   
+           RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } )}] 适用范围 **：** 仅限 Azure SQL Edge
 
 允许基于保留策略清除数据库内各表中的旧数据或过期数据。 有关详细信息，请参阅[启用和禁用数据保留](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)。 若要启用数据保留，必须指定以下参数。 
 

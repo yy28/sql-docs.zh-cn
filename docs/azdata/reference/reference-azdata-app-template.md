@@ -1,29 +1,30 @@
 ---
 title: azdata app template 参考
 titleSuffix: SQL Server big data clusters
-description: 使用本参考文章来了解 azdata 工具中的 SQL 命令，特别是应用模板命令。
+description: azdata app template 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 37371ec8d909115aedf1eb745a78fec7af427cc4
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 334d3a6c1c0553342d27319ab4761dfe704844dc
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733538"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914695"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+适用于 `azdata`
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 
 ## <a name="commands"></a>命令
-| 命令 | 描述 |
+
+|命令|描述|
 | --- | --- |
 [azdata app template list](#azdata-app-template-list) | 提取支持的模板。
 [azdata app template pull](#azdata-app-template-pull) | 下载支持的模板。
@@ -99,4 +100,7 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](../install/deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata](..\install\deploy-install-azdata.md)。
+

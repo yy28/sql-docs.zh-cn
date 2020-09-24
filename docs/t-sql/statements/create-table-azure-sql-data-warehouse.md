@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE（Azure SQL 数据仓库）
-title: CREATE TABLE（Azure SQL 数据仓库）| Microsoft Docs
+description: CREATE TABLE (Azure Synapse Analytics)
+title: CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.service: sql-data-warehouse
@@ -12,23 +12,23 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: df8d395f6d799f817a02943e59f98a29ac79aa29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467219"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989810"
 ---
-# <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
+# <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中创建新表。  
 
-若要了解表以及如何使用它们，请参阅 [SQL 数据仓库中的表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)。
+若要了解表以及如何使用它们，请参阅 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)。
 
 > [!NOTE]
->  本文中有关 SQL 数据仓库的讨论同时适用于 SQL 数据仓库以及并行数据仓库，除非另有说明。
+>  除非另有说明，否则本文中有关 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 的讨论适用于 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
 
  ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -59,14 +59,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::=
     {
-       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+       CLUSTERED COLUMNSTORE INDEX --default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
-      | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
+      | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
@@ -90,11 +90,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | smallint  
     | tinyint  
     | bit  
-    | nvarchar [ ( n | max ) ]  -- max applies only to SQL Data Warehouse 
+    | nvarchar [ ( n | max ) ]  -- max applies only to Azure Synapse Analytics 
     | nchar [ ( n ) ]  
-    | varchar [ ( n | max )  ] -- max applies only to SQL Data Warehouse  
+    | varchar [ ( n | max )  ] -- max applies only to Azure Synapse Analytics  
     | char [ ( n ) ]  
-    | varbinary [ ( n | max ) ] -- max applies only to SQL Data Warehouse  
+    | varbinary [ ( n | max ) ] -- max applies only to Azure Synapse Analytics  
     | binary [ ( n ) ]  
     | uniqueidentifier  
 ```  
@@ -109,7 +109,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  表的架构。 可选择指定架构  。 如果是空白，将使用默认架构。  
   
  *table_name*  
- 新表的名称。 若要创建本地临时表，请在表名前加上 #。  有关临时表的说明和指南，请参阅 [Azure SQL 数据仓库中的临时表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
+ 新表的名称。 若要创建本地临时表，请在表名前加上 #。  有关临时表的说明和指南，请参阅 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的临时表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
 
  column_name  
  表列的名称。
@@ -132,7 +132,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-structure-options"></a><a name="TableOptions"></a> 表结构选项
 
-有关选择表类型的指南，请参阅[为 Azure SQL 数据仓库中的表编制索引](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)。
+有关选择表类型的指南，请参阅[为 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表编制索引](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)。
   
  `CLUSTERED COLUMNSTORE INDEX` 
  
@@ -147,7 +147,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> 表分发选项
 
-若要了解如何选择最佳分发方法并使用分布式表，请参阅[在 Azure SQL 数据仓库中分发表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
+若要了解如何选择最佳分发方法并使用分布式表，请参阅[在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中分发表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
 `DISTRIBUTION = HASH` (distribution_column_name  )：通过哈希处理 distribution_column_name  中存储的值，将每行都分配到一个分发。 算法是确定性的。也就是说，它总是将相同的值哈希到相同的分发。  应将分发列定义为 NOT NULL，因为所有包含 NULL 值的行都分配到相同的分发。
 
@@ -156,7 +156,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 `DISTRIBUTION = REPLICATE`：将表的一个副本存储在每个 Compute 节点上。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，表存储在每个 Compute 节点上的分发数据库上。 对于 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，表存储在跨 Compute 节点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件组中。 这是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的默认行为。
   
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 表分区选项
-有关使用表分区的指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
+有关使用表分区的指南，请参阅[对 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 创建一个或多个表分区。 这些分区是水平表切片，可便于向行的子集应用操作，无论表是作为堆、聚集索引还是聚集列存储索引进行存储。 与分发列不同，表分区不确定存储每行的分发。 表分区决定行如何分组并存储在每个分发中。  
@@ -172,9 +172,9 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option"></a>有序聚集列存储索引选项 
 
-聚集列存储索引 (CCI) 是用于在 Azure SQL 数据仓库中创建表的默认索引。  在将 CCI 中的数据在压缩到列存储段之前，不会对其进行排序。  使用 ORDER 创建 CCI 时，先对数据进行排序，然后再将其添加到索引段中，这样可以提高查询性能。 有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)。  
+聚集列存储索引 (CCI) 是用于在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中创建表的默认索引。  在将 CCI 中的数据在压缩到列存储段之前，不会对其进行排序。  使用 ORDER 创建 CCI 时，先对数据进行排序，然后再将其添加到索引段中，这样可以提高查询性能。 有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)。  
 
-可以在 Azure SQL 数据仓库支持的任何数据类型的列（字符串列除外）上创建有序的 CCI。  
+可以在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 支持的任何数据类型的列（字符串列除外）上创建有序的 CCI。  
 
 由于表中的列按顺序排列，用户可以在 sys.index_columns 中查询 column_store_order_ordinal 列   。  
 
@@ -182,7 +182,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="data-type"></a><a name="DataTypes"></a> 数据类型
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支持最常用的数据类型。 以下是支持的数据类型及其详细信息和存储字节的列表。 要更好地理解数据类型以及如何使用它们，请参阅 [SQL 数据仓库中表的数据类型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支持最常用的数据类型。 以下是支持的数据类型及其详细信息和存储字节的列表。 要更好地理解数据类型以及如何使用它们，请参阅 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中表的数据类型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
 有关数据类型转换的表，请参阅 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的“隐式转换”部分。
 
@@ -306,14 +306,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="GeneralRemarks"></a>  
 ## <a name="general-remarks"></a>一般备注  
  
-有关最小和最大限制，请参阅 [SQL 数据仓库容量限制](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)。 
+有关最小和最大限制，请参阅 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 容量限制](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)。 
  
 ### <a name="determining-the-number-of-table-partitions"></a>确定表分区的数目
 每个用户定义表划分为多个较小的表，这些表存储在称为“分发”的不同位置上。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用 60 个分发。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，分发的数目取决于 Compute 节点的数目。
  
 每个分发包含所有的表分区。 例如，如果有 60 个分发和 4 个表分区，再加上一个空分区，则会有 300 个分区 (5 x 60= 300)。 如果表是群集列存储索引，每个分区就有一个列存储索引。也就是说，将拥有 300 个列存储索引。
 
-我们建议使用更少的表分区，确保每个列存储索引具有足够的行以充分利用列存储索引的优势。 有关详细信息，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和[为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
+我们建议使用更少的表分区，确保每个列存储索引具有足够的行以充分利用列存储索引的优势。 有关详细信息，请参阅[对 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] ](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
 ### <a name="rowstore-table-heap-or-clustered-index"></a>行存储表（堆或聚集索引）
 
@@ -327,7 +327,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 有关详细信息，请参阅以下文章：
 - [列存储索引版本的功能摘要](https://msdn.microsoft.com/library/dn934994/)
-- [为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
+- [为 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
@@ -593,7 +593,7 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>另请参阅
  
-[CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
 [sys.index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 

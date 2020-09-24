@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728488"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989816"
 ---
 # <a name="backup-encryption"></a>备份加密
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,14 @@ ms.locfileid: "85728488"
 > 备份证书或非对称密钥很重要，并且最好备份到与用于加密的备份文件不同的位置。 没有证书或非对称密钥，你将无法还原备份，从而使备份文件无法使用。  
   
  **还原加密的备份：** SQL Server 还原不需要在还原期间指定任何加密参数。 但要求在要还原到的实例上有用于加密备份文件的证书或非对称密钥。 执行还原的用户帐户必须对证书或密钥具有 **VIEW DEFINITION** 权限。 如果将加密的备份还原到其他实例，则必须确保该实例上有证书。  
-  
- 如果从经过 TDE 加密的数据库还原备份，则要还原到的实例上应有 TDE 证书。  
+将加密数据库还原到新位置的顺序是：
+
+1. 旧数据库中的 [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
+1. 新位置 master 数据库中的 [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
+1. [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)，将导出的证书从旧数据库备份到新服务器上的某个位置
+1. [将数据库还原到新位置 (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ 如果从经过 TDE 加密的数据库还原备份，则要还原到的实例上应有 TDE 证书。 有关详细信息，请参阅 [将受 TDE 保护的数据库移到其他 SQL Server](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 优势  
   

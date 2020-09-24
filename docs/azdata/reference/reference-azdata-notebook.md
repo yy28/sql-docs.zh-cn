@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: azdata notebook 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a5b30abf0fc8df71a3d791e0bd3927ccbe1e81b1
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: dc3021cfe40259fdbcff7fab00ef6a7e80e4a2ad
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89733681"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914421"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+适用于 `azdata`
 
-以下文章提供了 `azdata` 工具中 `notebook` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 
 ## <a name="commands"></a>命令
-| 命令 | 描述 |
+
+|命令|描述|
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | 查看笔记本。  用于在首次出现单元执行错误时停止的选项。
 [azdata notebook run](#azdata-notebook-run) | 运行笔记本。  首次出现错误时停止执行。
@@ -111,4 +112,7 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](../install/deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata](..\install\deploy-install-azdata.md)。
+

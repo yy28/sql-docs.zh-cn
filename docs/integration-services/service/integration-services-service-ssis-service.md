@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487700"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990385"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
 
@@ -368,16 +368,14 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 6.  重新启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。  
   
-### <a name="connecting-by-using-a-local-account"></a>使用本地帐户连接  
- 如果您是在客户端计算机上使用本地 Windows 帐户工作，则只有远程计算机上存在与客户端计算机上的本地帐户的帐户名和密码相同并且具有相应权限的本地帐户时，才可以连接到远程计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。  
+### <a name="connecting-by-using-a-local-account"></a>使用本地帐户连接
+
+如果您是在客户端计算机上使用本地 Windows 帐户工作，则只有远程计算机上存在与客户端计算机上的本地帐户的帐户名和密码相同并且具有相应权限的本地帐户时，才可以连接到远程计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。  
   
-### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>默认情况下，SSIS 服务不支持委派  
-默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不支持委派凭据，或有时称为双跃点的功能。 在此方案中，你在客户端计算机上工作， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在第二台计算机上运行和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在第三台计算机上运行。 首先， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 成功地将你的凭据从客户端计算机传递到第二台计算机上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务正在这台计算机上运行。 但是， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不能将你的凭据从第二台计算机委派到正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的第三台计算机上。
+### <a name="ssis-windows-service-doesnt-support-delegation"></a>SSIS Windows 服务不支持委派
 
-可通过将“信任此用户对任何服务的委派(仅 Kerberos)”**** 的权限授予 SQL Server 服务帐户（它将 Integration Services 服务 (ISServerExec.exe) 作为子进程启动），从而启用凭据委派。 在授予此权限之前，请考虑它是否符合组织的安全要求。
+SSIS 不支持委派凭据，有时也称为双跃点。 在这种情况下，你在客户端计算机上工作，SSIS 安装在第二台计算机上，而 SQL Server 安装在第三台计算机上。 虽然 SSMS 可成功地将你的凭据从客户端计算机传递到第二台计算机（SSIS 在其上运行），但是 SSIS 不能将凭据从第二台计算机委派到第三台计算机（SQL Server 在其上运行）。
 
-有关详细信息，请参阅 [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)（获取跨域 Kerberos 和委派使用 SSIS 包）。
- 
 ## <a name="configure-the-firewall"></a>配置防火墙
   
  Windows 防火墙系统可帮助防止通过网络连接对计算机资源进行未经授权的访问。 若要通过此防火墙访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，您必须将该防火墙配置为允许访问。  

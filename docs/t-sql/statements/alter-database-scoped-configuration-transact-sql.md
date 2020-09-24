@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: 在单个数据库级别启用多个数据库配置设置。
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537082"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565082"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 要在实例级别设置此选项，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 > [!NOTE]
-> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，服务器级别的“最大并行度”配置始终设为 0。 可以为每个数据库配置 MAXDOP，如当前文章中所述。 有关最佳配置 MAXDOP 的建议，请参阅[其他资源](#additional-resources)部分。
+> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，新的单一数据库和弹性池数据库的 MAXDOP 数据库范围的配置默认设置为 8。 可以为每个数据库配置 MAXDOP，如当前文章中所述。 有关最佳配置 MAXDOP 的建议，请参阅[其他资源](#additional-resources)部分。
 
 > [!TIP]
 > 要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。    

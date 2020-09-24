@@ -3,31 +3,29 @@ title: 升级 Python 和 R 运行时（绑定）
 description: 使用 sqlbindr.exe 绑定到 Machine Learning Server，以升级 SQL Server 机器学习服务或 SQL Server R Services 中的 Python 和 R 运行时。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009373"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990110"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>使用 SQL Server 机器学习服务中的绑定升级 Python 和 R 运行时
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-本文介绍如何使用称为“绑定”的 am 安装过程来升级 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 机器学习服务](../sql-server-machine-learning-services.md)中的 R 或 Python 运行时。
+本文介绍如何使用称为“绑定”的 am 安装过程来升级 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 机器学习服务](../sql-server-machine-learning-services.md)中的 R 或 Python 运行时。 可以通过绑定  到 Microsoft Machine Learning Server  来获取[更高版本的 Python 和 R](#version-map)。
 
 > [!IMPORTANT]
 > 本文介绍了一种用于升级 R 和 Python 运行时的旧方法，称为“绑定”。 如果已安装 **SQL Server 2016 Services Pack (SP) 2 的累积更新 (CU) 14 或更高版本**或 **SQL Server 2017 的累积更新 (CU) 22 或更高版本**，请改为参阅如何[将默认 R 或 Python 语言运行时更改为更高版本](change-default-language-runtime-version.md)。
 
-可以通过绑定到 Microsoft Machine Learning Server 来获取[更高版本的 Python 和 R](#version-map)。 版本同时适用于 SQL Server 机器学习服务（数据库内）和 SQL Server R Services（数据库内）。
-
 ## <a name="what-is-binding"></a>什么是绑定？
 
-绑定是一个安装过程，它将 R_SERVICES 和 PYTHON_SERVICES 文件夹中的内容替换为 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) 中较新的可执行文件、库和工具。
+绑定是一个安装过程，它将 R_SERVICES 和 PYTHON_SERVICES 文件夹中的内容替换为 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server) 中较新的可执行文件、库和工具。
 
 服务模式随附的已上传组件已更改。 服务更新与[新式生命周期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)中的 [Microsoft R Server 和 Machine Learning Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)保持一致。
 

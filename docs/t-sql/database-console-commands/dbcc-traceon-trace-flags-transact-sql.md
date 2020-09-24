@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 91f0fc840d6e4f6925acde6499573ae5a4506463
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 826960263f60a1b9d76e2eb7fb738111613678fc
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042738"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565052"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -171,23 +171,29 @@ ms.locfileid: "90042738"
 |**8744**|为[嵌套循环](../../relational-databases/performance/joins.md#nested_loops)运算符禁用预提取。<br /><br />警告：当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行包含嵌套循环运算符的计划时，错误地使用此跟踪标志可能会导致额外的物理读取。<br /><br />**作用域**：全局和会话|
 |**9024**|将全局日志池内存对象转换为 NUMA 节点分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2809338)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 开始，此行为由引擎控制，跟踪标志 9024 不再有效。<br /><br />**作用域**：仅全局|
 |**9347**|禁用 Sort 运算符的批处理模式。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了新的批处理模式 Sort 运算符，可以提高许多分析查询的性能。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3172787)。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
+|**9348**|允许使用查询优化器基数估计来确定是否应启动聚集列存储索引的 BULK INSERT。 如果估计要插入的行数小于 102,400，则 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会使用 BULK INSERT。 如果估计的行数大于 102,400，则启动 BULK INSERT。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2998301)。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**9349**|禁用 Top N Sort 运算符的批处理模式。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了新的批处理模式 top sort 运算符，可以提高许多分析查询的性能。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
+|**9358**|禁用 Sort 运算符的批处理模式。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3171555)。<br /><br />**注意：** 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，默认启用此行为，并且此跟踪标志无效。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**9389**|为批处理模式运算符启用额外动态内存授予。 如果查询未获取所需的所有内存，则会将数据溢出到 TempDB，从而导致额外的 I/O 并可能影响查询性能。 如果启用动态内存授予跟踪标志，批处理模式运算符可能会要求提供更多内存，如果有更多内存可用，则会避免溢出到 TempDB。 有关详细信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query)中的“min memory per query 的影响”部分。<br /><br />**作用域**：全局或会话| 
 |**9398**|禁用[自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)运算符，在扫描第一个输入后可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，如 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中引入的那样。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4099126)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
+|**9410**|为使用哈希聚合运算符和溢出的查询启用非默认修复。 启用此跟踪标志将增加不同哈希操作的可用内存。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3167159)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**9453**|禁用批处理模式执行。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4016902)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**9471**|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本的查询优化器基数估计模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用最小选择性为单表筛选器生成一个计划。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：** 此跟踪标志不适用于 CE 版本 70。 请改用跟踪标志 4137。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 
 |**9476**|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本的查询优化器基数估计模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用简单包含假设而非默认的基本包含假设来生成计划。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3189675)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 
 |**9481**|允许将查询优化器基数估计模型设置为 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本，而不考虑数据库兼容性级别。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/kb/2801413)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 LEGACY_CARDINALITY_ESTIMATION 选项。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|  
-|**9485**|对 DBCC SHOW_STATISTICS 禁用 SELECT 权限。<br /><br />**作用域**：仅全局|
+|**9485**|对 DBCC SHOW_STATISTICS 禁用 SELECT 权限。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2683304)。<br /><br />**作用域**：仅全局|
 |**9488**|<a name="9488"></a>当使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本的查询优化器基数估计模型时，将表值函数的固定估计值设置为默认值 1（对应于 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更早版本的查询优化器基数估计模型下的默认值）。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**9495**|在 INSERT...SELECT 操作的插入过程中禁用并行，它适用于用户表和临时表。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/kb/3180087)<br /><br />**作用域**：全局或会话| 
 |**9567**|对自动种子设定过程中的 Always On 可用性组启用数据流压缩。 在自动种子设定过程中，压缩可大幅缩短传输时间，并且将增加处理器上的负载。 有关详细信息，请参阅[自动初始化 Always On 可用性组](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[调整可用性组的压缩](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**作用域**：全局或会话|
 |**9571**|禁用可用性组自动设定种子到默认数据库路径。 有关详细信息，请参阅[磁盘布局](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)。<br /><br />**作用域**：全局或会话| 
+|**9576**|在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 中引入的可用性组故障转移，禁用增强的错误集合。 有关详细信息，请参阅 [SQL Server 可用性组 - 增强的数据库级故障转移](https://docs.microsoft.com/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)。<br /><br />**作用域：** 仅全局| 
 |**9591**|在 Always On 可用性组中禁用日志块压缩。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，日志块压缩是用于同步副本和异步副本的默认行为。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，压缩仅用于异步副本。 <br /><br />**作用域**：全局或会话|
 |**9592**|对同步可用性组启用日志流压缩。 默认情况下，对同步可用性组禁用此功能，因为压缩会增加延迟。 有关详细信息，请参阅 [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)（调整可用性组的压缩）。<br /><br />**作用域**：全局或会话| 
 |**9929**|将每个内存中检查点文件都缩减为 1 MB。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3147012)。<br /><br />**作用域**：仅全局|  
 |**9939**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，允许在引用内存优化表或表变量的 DML 操作中并行计划和并行扫描内存优化表和表变量，前提是它们不是 DML 操作的目标。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4013877)。<br /><br />**注意：** 如果还显式启用了跟踪标志 4199，则不需要使用跟踪标志 9939。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|   
+|**9944**|当数据库具有大量内存优化表或内存优化表类型，并且可以观察到 PREMPTIVE_OS_FINDFILE 或 PREEMPTIVE_OS_CREATEDIRECTORY 等待类型阻塞时，为数据库恢复时间缓慢启用非默认修复。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4090789)和此 [Microsoft 支持文章](https://support.microsoft.com/kb/4052338)。<br /><br />**作用域**：仅全局|  
 |**10204**|在列存储索引重组期间禁用合并/重新压缩。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，当重组列存储索引时，会有一个新功能将所有小型压缩行组自动合并为较大的压缩行组，并重新压缩具有大量已删除行的所有行组。<br /><br />**注意：** 跟踪标志 10204 不适用于对内存优化表创建的列存储索引。<br /><br />**作用域**：全局或会话|   
+|**10207**|允许聚合列存储索引 (CCI) 扫描跳过损坏的段或元数据，从而允许从已损坏的 CCI 中检索数据。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3067257)。<br /><br />**作用域**：全局或会话| 
 |**10316**|允许对[内部内存优化暂存时态表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)创建除默认索引之外的附加索引。 如果有特定的查询模式，其中包含未被默认索引覆盖的列，则可以考虑添加附加索引。<br /><br />**注意：** 内存优化表的经系统版本控制的时态表旨在提供较高的事务吞吐量。 请注意，创建附加索引可能会为更新或删除当前表中的行的 DML 操作带来开销。 如果使用附加索引，应力求在时态查询的性能和额外的 DML 开销之间找到适当的平衡点。<br /><br />**作用域**：全局或会话|
 |**11023**|对于未将采样率显式指定为 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句一部分的所有后续统计信息更新，禁止使用上一个持续采样率。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4039284)。<br /><br />**作用域**：仅全局|    
 |**11024**|当任何分区的修改计数超过本地[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)时，允许触发统计信息的自动更新。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4041811)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：仅全局| 

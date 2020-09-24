@@ -2,7 +2,7 @@
 title: tempdb 数据库 | Microsoft Docs
 description: 本主题提供有关在 SQL Server 和 Azure SQL 数据库中配置和使用 tempdb 数据库的详细信息。
 ms.custom: P360
-ms.date: 04/17/2020
+ms.date: 09/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076822"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024339"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
@@ -115,6 +115,8 @@ ms.locfileid: "90076822"
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>基于 DTU 的服务层的 tempdb 大小
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |服务级别目标|最大 `tempdb` 数据文件大小 (GB)|`tempdb` 数据文件数|最大 `tempdb` 数据大小 (GB)|
 |---|---:|---:|---:|
 |基本|13.9|1|13.9|
@@ -133,10 +135,16 @@ ms.locfileid: "90076822"
 |P6|13.9|12|166.7|
 |P11|13.9|12|166.7|
 |P15|13.9|12|166.7|
-|高级弹性数据库池（所有 DTU 配置）|13.9|12|166.7|
-|标准弹性数据库池 (S0-S2)|13.9|12|166.7|
-|标准弹性数据库池（S3 及更高版本） |32|12|384|
-|基本弹性数据库池（所有 DTU 配置）|13.9|12|166.7|
+|基本弹性池（所有 DTU 配置）|13.9|12|166.7|
+|标准弹性池 (50 eDTU)|13.9|12|166.7|
+|标准弹性池 (100 eDTU)|32|1|32|
+|标准弹性池 (200 eDTU)|32|2|64|
+|标准弹性池 (300 eDTU)|32|3|96|
+|标准弹性池 (400 eDTU)|32|3|96|
+|标准弹性池 (800 eDTU)|32|6|192|
+|标准弹性池 (1200 eDTU)|32|10|320|
+|标准弹性池 (1600-3000 eDTU)|32|12|384|
+|高级弹性池（所有 DTU 配置）|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>基于 vCore 的服务层的 tempdb 大小

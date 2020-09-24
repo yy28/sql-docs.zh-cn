@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462059"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990405"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>第 1-7 课：添加和配置 OLE DB 目标
 
@@ -43,20 +43,22 @@ ms.locfileid: "88462059"
 6.  在“OLE DB 目标编辑器”对话框中，确保已在“OLE DB 连接管理器”框中选中 localhost.AdventureWorksDW2012************。  
   
 7.  在“表或视图的名称”框中，输入或选择 [dbo].[FactCurrencyRate]********。  
+ 
+8.  如果当前存在 NewFactCurrencyRate 表，请立即将其删除。 下一步将创建该表。
+ 
+9.  选择“新建”按钮以创建新表****。  将脚本中的表名从“示例 OLE DB 目标”更改为 NewFactCurrencyRate********。  选择“确定” 。  
+ 
+10. 选择“确定”后，该对话框关闭，“表或视图的名称”自动更改为 NewFactCurrencyRate************。  
   
-8.  选择“新建”按钮以创建新表****。  将脚本中的表名从“示例 OLE DB 目标”更改为 NewFactCurrencyRate********。  选择“确定” 。  
+11. 选择“映射”****。  
   
-9. 选择“确定”后，该对话框关闭，“表或视图的名称”自动更改为 NewFactCurrencyRate************。  
+12. 验证 **AverageRate**、 **CurrencyKey**、 **EndOfDayRate**以及 **DateKey** 输入列是否已正确映射到目标列。 如果映射了同名列，则说明映射正确。  
   
-10. 选择“映射”****。  
+13. 选择“确定” 。  
   
-11. 验证 **AverageRate**、 **CurrencyKey**、 **EndOfDayRate**以及 **DateKey** 输入列是否已正确映射到目标列。 如果映射了同名列，则说明映射正确。  
+14. 右键单击“Sample OLE DB Destination”目标，再选择“属性”********。  
   
-12. 选择“确定” 。  
-  
-13. 右键单击“Sample OLE DB Destination”目标，再选择“属性”********。  
-  
-14. 在“属性”窗口中，确认“LocaleID”属性已设置为“英语(美国)”，且“DefaultCodePage”属性已设置为“1252”********************。  
+15. 在“属性”窗口中，确认“LocaleID”属性已设置为“英语(美国)”，且“DefaultCodePage”属性已设置为“1252”********************。  
   
 ## <a name="go-to-next-task"></a>转到下一个任务
 [步骤 8：为第 1 课包添加批注并设置格式](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

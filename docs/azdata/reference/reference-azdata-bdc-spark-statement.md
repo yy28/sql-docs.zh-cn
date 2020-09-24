@@ -1,29 +1,30 @@
 ---
 title: azdata bdc spark statement 参考
 titleSuffix: SQL Server big data clusters
-description: 使用本参考文章来了解 azdata 工具中的 SQL 命令，特别是 bdc spark statement 命令。
+description: azdata bdc spark statement 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e279e6d6477e0ecc913072a39657da8ac1e54823
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 4b5257d6e99600e28605fc02dfac2df2910d28b7
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733516"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914783"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+适用于 `azdata`
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 
 ## <a name="commands"></a>命令
-| 命令 | 描述 |
+
+|命令|描述|
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | 列出给定 Spark 会话中的所有语句。
 [azdata bdc spark statement create](#azdata-bdc-spark-statement-create) | 在给定的会话中创建新的 Spark 语句。
@@ -138,4 +139,7 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](../install/deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata](..\install\deploy-install-azdata.md)。
+

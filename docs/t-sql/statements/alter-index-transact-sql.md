@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce5edfba05262da83060030aa00117a81e730e24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544340"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024486"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -149,7 +149,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -663,7 +663,7 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
 
 > [!IMPORTANT]
-> 对于具有有序聚合列存储索引的 Azure SQL 数据仓库表，`ALTER INDEX REORGANIZE` 不会对数据重新排序。 要对数据重新排序，可使用 `ALTER INDEX REBUILD`。
+> 对于具有有序聚合列存储索引的 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 表，`ALTER INDEX REORGANIZE` 不会对数据重新排序。 要对数据重新排序，可使用 `ALTER INDEX REBUILD`。
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> 禁用索引  
 禁用索引可防止用户访问该索引，对于聚集索引，还可防止用户访问基础表数据。 索引定义保留在系统目录中。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用聚集索引将阻止对数据的访问，但在删除或重新生成索引之前，数据在 B 树中一直保持未维护的状态。 若要查看已启用索引或已禁用的索引的状态，请查询 **sys.indexes** 目录视图中的 **is_disabled** 列。  

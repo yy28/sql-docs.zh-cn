@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: df52bae9824dabc0a3c40ac9f301f2429c54e930
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688833"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990187"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -145,7 +145,7 @@ CREATE USER user_name
 > 在创建后，Azure SQL 托管实例功能的 Azure AD 管理员已更改。 有关详细信息，请参阅[适用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -344,7 +344,7 @@ GO
   
  对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用包含的数据库用户时，使用数据库级别防火墙规则（而不服务器级别防火墙规则）配置访问权限。 有关详细信息，请参阅 [sp_set_database_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)。
  
-对于 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]的包含数据库用户，SSMS 可以支持多重身份验证。 有关详细信息，请参阅 [SQL 数据库和 SQL 数据仓库针对 Azure AD MFA 的 SSMS 支持](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
+对于 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]的包含数据库用户，SSMS 可以支持多重身份验证。 有关详细信息，请参阅 [SQL 数据库和 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 针对 Azure AD MFA 的 SSMS 支持](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
   
 ### <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY USER 权限。  

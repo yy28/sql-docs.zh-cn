@@ -1,7 +1,7 @@
 ---
 title: 使用 Windows Installer 安装 azdata
-titleSuffix: SQL Server big data clusters
-description: 了解如何使用此安装程序安装 azdata 工具来安装和管理 SQL Server 大数据群集。
+titleSuffix: ''
+description: 了解如何通过安装程序安装 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 60d3b60f98a93cb6b724cd569fb2871adec3f1ce
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: a33e43386c44ec2ab60166ef57a502fc592c8d73
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733546"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914955"
 ---
 # <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>使用 Windows Installer 安装 `azdata` 以管理 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-本文介绍如何在 Windows 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在 Windows 安装可用之前，需要使用 `pip` 安装 `azdata`。
+本文介绍如何在 Windows 上安装 `azdata`。 在 Windows 安装可用之前，需要使用 `pip` 安装 `azdata`。
 
 >对于 Linux (Ubuntu)，请参阅[使用安装程序安装 `azdata`](./deploy-install-azdata-linux-package.md)。
 
@@ -70,3 +70,5 @@ ms.locfileid: "89733546"
 ## <a name="next-steps"></a>后续步骤
 
 有关大数据群集的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]？](../../big-data-cluster/big-data-cluster-overview.md)
+
+将 azdata 用于[已启用 Azure Arc 的数据服务](/azure/azure-arc/data/)

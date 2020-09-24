@@ -2,7 +2,7 @@
 title: 日志记录活动
 description: 了解如何在使用 Microsoft Drivers for PHP for SQL Server 时配置日志记录选项的不同组合
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680542"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024505"
 ---
 # <a name="logging-activity"></a>日志记录活动
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-默认情况下，不会记录 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 生成的错误和警告。 本主题讨论如何配置日志记录活动。  
+默认情况下，不会将 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 生成的错误和警告记录到 PHP 系统日志。 本主题讨论如何配置驱动程序日志记录活动。 有关如何配置非特定于驱动程序的 PHP 错误处理设置的详细信息，请参阅 [PHP 文档](https://www.php.net/manual/en/errorfunc.configuration.php)。  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>使用 PDO_SQLSRV 驱动程序的日志记录活动  
-可用于 PDO_SQLSRV 驱动程序的唯一配置是 php.ini 文件中的 pdo_sqlsrv.log_severity 条目。  
+特定于 PDO_SQLSRV 驱动程序的唯一可用配置是 php.ini 文件中的 pdo_sqlsrv.log_severity 条目。  
   
 在 php.ini 文件末尾添加以下内容：  
   
@@ -53,7 +53,7 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
 若要启用日志记录，你可以使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函数，或者也可以修改 php.ini 文件。 你可以针对初始化、连接、语句或错误函数记录活动。 你还可以指定是记录错误、警告、通知还是同时记录这三者。  
   
 > [!NOTE]  
-> 可以在 php.ini 文件中配置日志文件的位置。  
+> 可以在 php.ini 文件中配置日志文件的位置。 有关更多详细信息，请参阅 [PHP 文档](https://www.php.net/manual/en/errorfunc.configuration.php)。  
   
 ### <a name="turning-logging-on"></a>启用日志记录  
 还可以通过使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函数为 LogSubsystems**** 设置指定一个值来启用日志记录。 例如，以下代码行配置驱动程序以针对连接记录活动：  

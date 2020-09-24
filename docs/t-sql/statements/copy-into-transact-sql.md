@@ -1,7 +1,7 @@
 ---
 title: COPY INTO (Transact-SQL)（预览版）
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: 在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: 在 Azure Synapse Analytics 中使用 COPY 语句从外部存储帐户加载数据。
 ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
@@ -18,18 +18,18 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901573"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024554"
 ---
-# <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
+# <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-本文介绍如何在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。 COPY 语句为 SQL 数据仓库中的高吞吐量数据引入提供了最大的灵活性。 使用 COPY 可以实现以下功能：
+本文介绍如何在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中使用 COPY 语句从外部存储帐户加载数据。 COPY 语句为 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的高吞吐量数据引入提供了最大的灵活性。 使用 COPY 可以实现以下功能：
 
 - 权限较低的用户在加载时，不需要对数据仓库有严格的控制权限
 - 执行单个 T-SQL 语句，不需要创建任何其他数据库对象
@@ -40,9 +40,6 @@ ms.locfileid: "88901573"
 - 为 CSV 文件指定自定义行终止符
 - 对 CSV 文件使用 SQL Server 日期格式
 - 在存储位置路径中指定通配符和多个文件
-
-> [!NOTE]  
-> COPY 语句目前提供公共预览版。
 
 请访问以下文档，了解使用 COPY 语句的综合示例和快速入门：
 
@@ -274,7 +271,7 @@ IDENTITY_INSERT 指定是否将导入数据文件中的标识值用于标识列�
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 Azure SQL 数据仓库中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 权限。
+需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 权限。
 
 ## <a name="examples"></a>示例  
 
@@ -398,7 +395,7 @@ WITH (
 ## <a name="faq"></a>常见问题解答
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>与 PolyBase 相比，COPY 命令的性能如何？
-COPY 命令将具有更好的性能，具体取决于工作负载。 为了在公共预览期间获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。 在预览期间与我们的团队共享你的性能结果！ sqldwcopypreview@service.microsoft.com
+COPY 命令将具有更好的性能，具体取决于工作负载。 为了获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>加载 CSV 文件时，COPY 命令的文件拆分指导是什么？
 下表概述了文件数量指导。 一旦达到推荐的文件数量，便能获得更大的文件，性能也就越高。 对于简单的文件拆分体验，请参阅以下[文档](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)。 
@@ -446,4 +443,4 @@ COPY 语句或 PolyBase（包括在管道中使用时）不支持使用托管标
 
 ## <a name="see-also"></a>另请参阅  
 
- [SQL 数据仓库的加载概述](/azure/sql-data-warehouse/design-elt-data-loading)
+ [使用 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 加载概述](/azure/sql-data-warehouse/design-elt-data-loading)

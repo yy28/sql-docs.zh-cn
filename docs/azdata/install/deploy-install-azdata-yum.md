@@ -1,7 +1,7 @@
 ---
 title: 使用 yum 安装 azdata
-titleSuffix: SQL Server big data clusters
-description: 了解如何安装 azdata 工具以使用 yum 安装和管理大数据群集。
+titleSuffix: ''
+description: 了解如何通过 yum 安装 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f343d4d6b46c581d0f633aa2c7eb79ef9b5c536c
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: eae81ccee65899335b161b3a32fbb260d0a8517a
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733665"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914901"
 ---
 # <a name="install-azdata-with-yum"></a>使用 yum 安装 `azdata`
 
@@ -41,13 +41,13 @@ ms.locfileid: "89733665"
    对于 RHEL 7 客户端运行：
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
   
    对于 RHEL 8 客户端运行：
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
 1. 使用 `yum install` 命令安装
@@ -88,3 +88,5 @@ sudo yum update azdata-cli
 ## <a name="next-steps"></a>后续步骤
 
 有关大数据群集的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]？](../../big-data-cluster/big-data-cluster-overview.md)。
+
+将 azdata 用于[已启用 Azure Arc 的数据服务](/azure/azure-arc/data/)
