@@ -20,19 +20,19 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db390dda473d997343de46f9b37a4ab4865ca347
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 3b4d115487f15c8af7083b9006cf2724d6b81011
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90915031"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114840"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回有序值集中的第一个值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,7 +70,7 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 ### <a name="a-using-first_value-over-a-query-result-set"></a>A. 对查询结果集使用 FIRST_VALUE  
  以下示例使用 FIRST_VALUE 返回给定产品类别中价格最低廉的产品的名称。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, ListPrice,   
@@ -102,7 +102,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 ### <a name="b-using-first_value-over-partitions"></a>B. 对分区使用 FIRST_VALUE  
  以下示例使用 FIRST_VALUE 返回与同职务的其他员工相比，其休假小时数最少的员工。 PARTITION BY 子句按职务对员工分区，而 FIRST_VALUE 函数独立应用于每个分区。 在 OVER 子句中指定的 ORDER BY 子句确定对每个分区中的行应用 FIRST_VALUE 函数的逻辑顺序。 ROWS UNBOUNDED PRECEDING 子句将窗口的起点指定为每个分区的第一行。  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT JobTitle, LastName, VacationHours,   

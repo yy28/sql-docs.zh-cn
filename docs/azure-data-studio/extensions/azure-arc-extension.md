@@ -1,20 +1,20 @@
 ---
 title: Azure Arc 扩展（预览版）
 description: 了解如何安装和使用 Azure Arc 扩展来试用 Azure Arc 数据服务。
-ms.custom: seodec18
-ms.date: 09/22/2020
-ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 53adb48f8ee83213fe99eee1148173d20c6276c7
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.reviewer: maghan, sstein
+ms.custom: ''
+ms.date: 09/22/2020
+ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942310"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111738"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>适用于 Azure Data Studio 的 Azure Arc 扩展（预览版）
 

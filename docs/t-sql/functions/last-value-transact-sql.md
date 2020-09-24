@@ -20,24 +20,24 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 288b8213bba3623895c8c600f9b398c6e4f608b2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: afff4f59dace8695e8b209acb2201a8cddd86069
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90915041"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116083"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   返回有序值集中的最后一个值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
-  
+
+```syntaxsql 
 LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
@@ -72,7 +72,7 @@ LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 ### <a name="a-using-last_value-over-partitions"></a>A. 对分区使用 LAST_VALUE  
  下面的示例给定每个部门中给定薪金（比率）的最后一个雇员的雇佣日期。 PARTITION BY 子句按部门对员工分区，而 LAST_VALUE 函数独立应用于每个分区。 在 OVER 子句中指定的 ORDER BY 子句确定对每个分区中的行应用 LAST_VALUE 函数的逻辑顺序。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate, HireDate,   
@@ -82,8 +82,7 @@ INNER JOIN HumanResources.EmployeePayHistory AS eph
     ON eph.BusinessEntityID = edh.BusinessEntityID  
 INNER JOIN HumanResources.Employee AS e  
     ON e.BusinessEntityID = edh.BusinessEntityID  
-WHERE Department IN (N'Information Services',N'Document Control');  
-  
+WHERE Department IN (N'Information Services',N'Document Control');   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -115,7 +114,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
  如下所示，对于要在 DifferenceFromLastQuarter 列中返回的非零值，子句“RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING”在此示例中是必需的。 默认范围为“RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”。 在此示例中，使用默认范围（或不包括范围，导致使用默认范围）将导致在 DifferenceFromLastQuarter 列中返回零。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 SELECT BusinessEntityID, DATEPART(QUARTER,QuotaDate)AS Quarter, YEAR(QuotaDate) AS SalesYear,   
     SalesQuota AS QuotaThisQuarter,   
