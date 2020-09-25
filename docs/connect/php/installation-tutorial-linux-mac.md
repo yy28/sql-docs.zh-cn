@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 和 macOS 上安装 Drivers for PHP
 description: 这些说明介绍了如何在 Linux 或 macOS 上安装 Microsoft Drivers for PHP for SQL Server。
-ms.date: 04/15/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8d256e7cabf26b280988afe08d8e795466141688
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807020"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115540"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安装教程
 以下说明假定环境是干净的，展示了如何在 Ubuntu 16.04、18.04 和 20.04、RedHat 7 和 8、Debian 8、9 和 10、Suse 12 和 15、Alpine 3.11 以及 macOS 10.13、10.14 和 10.15 上安装 PHP 7.x、Microsoft ODBC 驱动程序、Apache Web 服务器和 Microsoft Drivers for PHP for SQL Server。 这些说明建议使用 PECL 安装驱动程序，但也可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页下载预生成的二进制文件，并按照[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的说明安装它们。 有关扩展加载以及为什么不将扩展添加到 php.ini 的说明，请参阅[加载驱动程序](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)部分。
@@ -23,6 +23,8 @@ ms.locfileid: "88807020"
 这些说明默认使用 `pecl install` 安装 PHP 7.4。 你可能需要先运行 `pecl channel-update pecl.php.net`。 注意，一些受支持的 Linux 发行版默认为 PHP 7.1 或更早版本，而 SQL Server 的 PHP 驱动程序的最新版本不支持这些版本，请参阅每一节开头的说明，以安装 PHP 7.2 或 7.3。
 
 还包括有关在 Ubuntu 上安装 PHP FastCGI 进程管理器 (PHP-FPM) 的说明。 如果使用的是 nginx Web 服务器而不是 Apache，则需要此服务。
+
+尽管这些说明包含用于安装 SQLSRV 和 PDO_SQLSRV 驱动程序的命令，但可以独立安装和运行驱动程序。 熟悉自定义配置的用户可以调整这些说明，使其特定于 SQLSRV 或 PDO_SQLSRV。 这两个驱动程序具有相同的依赖项，但以下各项除外。
 
 ## <a name="contents-of-this-page"></a>此页的内容
 
@@ -50,7 +52,7 @@ apt-get install php7.4 php7.4-dev php7.4-xml -y --allow-unauthenticated
 按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Ubuntu 的 ODBC 驱动程序。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
-```
+```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
@@ -63,7 +65,7 @@ sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
 如果系统中只有一个 PHP 版本，则可以将最后一个步骤简化为 `phpenmod sqlsrv pdo_sqlsrv`。
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
-```
+```bash
 sudo su
 apt-get install libapache2-mod-php7.4 apache2
 a2dismod mpm_event
@@ -72,7 +74,7 @@ a2enmod php7.4
 exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
-```
+```bash
 sudo service apache2 restart
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
@@ -90,14 +92,14 @@ apt-get update
 apt-get install php7.4 php7.4-dev php7.4-xml php7.4-fpm -y --allow-unauthenticated
 ```
 通过运行验证 PHP-FPM 服务的状态
-```
+```bash
 systemctl status php7.4-fpm
 ```
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
 按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Ubuntu 的 ODBC 驱动程序。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
-```
+```bash
 sudo pecl config-set php_ini /etc/php/7.4/fpm/php.ini
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
@@ -110,16 +112,16 @@ sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
 如果系统中只有一个 PHP 版本，则可以将最后一个步骤简化为 `phpenmod sqlsrv pdo_sqlsrv`。
 
 验证 `sqlsrv.ini` 和 `pdo_sqlsrv.ini` 是否位于 `/etc/php/7.4/fpm/conf.d/`：
-```
+```bash
 ls /etc/php/7.4/fpm/conf.d/*sqlsrv.ini
 ```
 重新启动 PHP-FPM 服务：
-```
+```bash
 sudo systemctl restart php7.4-fpm
 ```
 
 ### <a name="step-4-install-and-configure-nginx"></a>步骤 4. 安装并配置 nginx
-```
+```bash
 sudo apt-get update
 sudo apt-get install nginx
 sudo systemctl status nginx
@@ -139,7 +141,7 @@ location ~ \.php$ {
 }
 ```
 ### <a name="step-5-restart-nginx-and-test-the-sample-script"></a>步骤 5。 重启 nginx 并测试示例脚本
-```
+```bash
 sudo systemctl restart nginx.service
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
@@ -151,7 +153,7 @@ sudo systemctl restart nginx.service
 若要在 Red Hat 7 上安装 PHP，请运行以下命令：
 > [!NOTE]
 > 若要安装 PHP 7.2 或 7.3，请在以下命令中分别用 remi- php72 或 remi-php73 替换 remi-php74。
-```
+```bash
 sudo su
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
@@ -159,13 +161,14 @@ subscription-manager repos --enable=rhel-7-server-optional-rpms
 yum install yum-utils
 yum-config-manager --enable remi-php74
 yum update
+# Note: The php-pdo package is required only for the PDO_SQLSRV driver
 yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ```
 
 若要在 Red Hat 8 上安装 PHP，请运行以下命令：
 > [!NOTE]
 > 若要安装 PHP 7.2 或7.3，请在以下命令中分别用 remi-7.2 或 remi-7.3 替换 remi-7.4。
-```
+```bash
 sudo su
 dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
@@ -174,6 +177,7 @@ dnf module reset php
 dnf module install php:remi-7.4
 subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
 dnf update
+# Note: The php-pdo package is required only for the PDO_SQLSRV driver
 dnf install php-pdo php-pear php-devel
 ```
 
@@ -181,7 +185,7 @@ dnf install php-pdo php-pear php-devel
 按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Red Hat 7 或 8 的 ODBC 驱动程序。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
-```
+```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
@@ -191,19 +195,19 @@ exit
 ```
 
 也可以从 Remi 存储库进行安装：
-```
+```bash
 sudo yum install php-sqlsrv
 ```
 ### <a name="step-4-install-apache"></a>步骤 4. 安装 Apache
-```
+```bash
 sudo yum install httpd
 ```
 默认安装 SELinux，并在强制模式下运行。 若要允许 Apache SELinux 通过连接到数据库，请运行以下命令：
-```
+```bash
 sudo setsebool -P httpd_can_network_connect_db 1
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
-```
+```bash
 sudo apachectl restart
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
@@ -214,7 +218,7 @@ sudo apachectl restart
 > 若要安装 PHP 7.2 或 7.3，请使用以下命令将 7.4 替换为 7.2 或 7.3。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
-```
+```bash
 sudo su
 apt-get install curl apt-transport-https
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
@@ -226,7 +230,7 @@ apt-get install -y php7.4 php7.4-dev php7.4-xml php7.4-intl
 按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Debian 的 ODBC 驱动程序。 
 
 可能还需要生成正确的区域设置，以使 PHP 输出在浏览器中正确显示。 例如，对于 en_US UTF-8 区域设置，运行以下命令：
-```
+```bash
 sudo su
 sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
@@ -234,7 +238,7 @@ locale-gen
 可能需要将 `/usr/sbin` 添加到 `$PATH` 中，因为 `locale-gen` 可执行文件位于该位置。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
-```
+```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
@@ -247,7 +251,7 @@ sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
 如果系统中只有一个 PHP 版本，则可以将最后一个步骤简化为 `phpenmod sqlsrv pdo_sqlsrv`。 与 `locale-gen` 一样，`phpenmod` 位于 `/usr/sbin` 中，因此可能需要将此目录添加到 `$PATH`。
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
-```
+```bash
 sudo su
 apt-get install libapache2-mod-php7.4 apache2
 a2dismod mpm_event
@@ -255,7 +259,7 @@ a2enmod mpm_prefork
 a2enmod php7.4
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
-```
+```bash
 sudo service apache2 restart
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
@@ -270,7 +274,7 @@ sudo service apache2 restart
 > 若要安装 PHP 7.3，用以下 URL 替换下面的存储库 URL：`https://download.opensuse.org/repositories/devel:/languages:/php:/php73/<SuseVersion>/devel:languages:php:php73.repo`。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
-```
+```bash
 sudo su
 zypper -n ar -f https://download.opensuse.org/repositories/devel:languages:php/<SuseVersion>/devel:languages:php.repo
 zypper --gpg-auto-import-keys refresh
@@ -283,7 +287,7 @@ zypper -n install php7 php7-devel php7-openssl
 > [!NOTE]
 > 如果收到错误消息 `Connection to 'pecl.php.net:443' failed: Unable to find the socket transport "ssl"`，请编辑 /usr/bin/pecl 中的 pecl 脚本并删除最后一行的 `-n` 开关。 此开关可防止 PECL 在调用 PHP 时加载 ini 文件，从而防止加载 OpenSSL 扩展。
 
-```
+```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
@@ -292,7 +296,7 @@ echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" |
 exit
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
-```
+```bash
 sudo su
 zypper install apache2 apache2-mod_php7
 a2enmod php7
@@ -301,7 +305,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php7/apache2/php.ini
 exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
-```
+```bash
 sudo systemctl restart apache2
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
@@ -317,16 +321,17 @@ sudo systemctl restart apache2
 http://<mirror>/alpine/edge/community
 ```
 然后运行：
-```
+```bash
 sudo su
 apk update
+# Note: The php7-pdo package is required only for the PDO_SQLSRV driver
 apk add php7 php7-dev php7-pear php7-pdo php7-openssl autoconf make g++
 ```
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
 按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Alpine 的 ODBC 驱动程序。 
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
-```
+```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
@@ -335,11 +340,11 @@ echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" |
 ```
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
-```
+```bash
 sudo apk add php7-apache2 apache2
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
-```
+```bash
 sudo rc-service apache2 restart
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
@@ -348,7 +353,7 @@ sudo rc-service apache2 restart
 ## <a name="installing-the-drivers-on-macos-high-sierra-mojave-and-catalina"></a>在 macOS High Sierra、Mojave 和 Catalina 上安装驱动程序
 
 如果还没有安装 brew，请按照以下步骤安装：
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -357,13 +362,13 @@ sudo rc-service apache2 restart
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
 
-```
+```bash
 brew tap
 brew tap homebrew/core
 brew install php@7.4
 ```
 PHP 现应在路径中 - 运行 `php -v` 以验证正在运行正确版本的 PHP。 如果 PHP 不在路径中或版本不正确，则运行以下命令：
-```
+```bash
 brew link --force --overwrite php@7.4
 ```
 
@@ -371,30 +376,30 @@ brew link --force --overwrite php@7.4
 按照[“Linux 安装”一文](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)中的说明安装适用于 macOS 的 ODBC 驱动程序。 
 
 此外，可能需要安装 GNU make 工具：
-```
+```bash
 brew install autoconf automake libtool
 ```
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
-```
+```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
-```
+```bash
 brew install apache2
 ```
 若要查找用于 Apache 安装的 Apache 配置文件 `httpd.conf`，请运行 
-```
+```bash
 /usr/local/bin/apachectl -V | grep SERVER_CONFIG_FILE
 ``` 
 以下命令将所需的配置追加到 `httpd.conf`。 请确保用上一个命令返回的路径替换 `/usr/local/etc/httpd/httpd.conf`：
-```
+```bash
 echo "LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
-```
+```bash
 sudo apachectl restart
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。

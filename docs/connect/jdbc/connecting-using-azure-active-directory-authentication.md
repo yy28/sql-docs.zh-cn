@@ -2,7 +2,7 @@
 title: 使用 Azure Active Directory 身份验证进行连接
 description: 了解如何开发结合使用 Azure Active Directory 身份验证功能与 Microsoft JDBC Driver for SQL Server 的 Java 应用程序。
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899020"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117130"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
@@ -33,7 +33,7 @@ Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验�
     * **ActiveDirectoryIntegrated**
         * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryIntegrated` 可用于使用集成身份验证连接到 Azure SQL 数据库/数据仓库。 必须将本地 Active Directory 联合身份验证服务 (ADFS) 与云中的 Azure Active Directory 联合，才能使用此身份验证模式。 设置后，连接方法有两种，一种是将本机库“mssql-jdbc_auth-\<version>-\<arch>.dll”添加到 Windows OS 上的应用程序类路径，另一种是设置用于提供跨平台身份验证支持的 Kerberos 票证。 登录域加入计算机后，可以访问 Azure SQL 数据库/SQL 数据仓库，而不会看到系统提示输入凭据。
     * **ActiveDirectoryPassword**
-        * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryPassword` 可用于使用 Azure AD 主体名称和密码连接到 Azure SQL 数据库/数据仓库。
+        * 自驱动程序版本 v6.0 起受支持，`authentication=ActiveDirectoryPassword` 可用于使用 Azure AD 用户名和密码连接到 Azure SQL 数据库/Data Warehouse。
     * **SqlPassword**
         * 借助 `authentication=SqlPassword`，可以使用 userName/user 和 password 属性连接到 SQL Server。
     * **NotSpecified**
@@ -113,7 +113,7 @@ You have successfully logged on as: <your Managed Identity username>
 > [!NOTE]
 >  如果使用的是旧版驱动程序，请查看这一[链接](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)，以了解使用此身份验证模式所必需的相应依赖项。 
 
-下面的示例展示了如何使用 `authentication=ActiveDirectoryIntegrated` 模式。 在与 Azure Active Directory 联合的域加入计算机上运行此示例。 数据库中必须有包含的数据库用户，此用户表示你的 Azure AD 主体或你所属的一个组，且必须拥有 CONNECT 权限。 
+下面的示例展示了如何使用 `authentication=ActiveDirectoryIntegrated` 模式。 在与 Azure Active Directory 联合的域加入计算机上运行此示例。 数据库中必须有包含的数据库用户，此用户表示你的 Azure AD 用户或你所属的一个组，且必须拥有 CONNECT 权限。 
 
 在生成并运行此示例前，先在运行此示例的客户端计算机上下载 [azure-activedirectory-library-for-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)及其依赖项，并将它们添加到 Java 生成路径中
 

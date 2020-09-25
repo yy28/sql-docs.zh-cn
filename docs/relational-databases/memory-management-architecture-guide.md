@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243685"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116225"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 
@@ -62,7 +74,7 @@ ms.locfileid: "87243685"
 |“锁定内存页”操作系统 (OS) 权限（允许锁定物理内存，防止 OS 对锁定的内存进行分页。）<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 和 Developer 版本：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程使用 AWE 机制所需。 通过 AWE 机制分配的内存不能出页。 <br> 授予此权限但未启用 AWE 不会对服务器产生影响。 | 仅在必要时使用，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32 位版本不可用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]作为开头。  
-<sup>2</sup> /3gb 是一个操作系统启动参数。 有关详细信息，请访问 MSDN 库。  
+<sup>2</sup> /3gb 是一个操作系统启动参数。  
 <sup>3</sup> WOW64 (Windows on Windows 64) 是 32 位 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位操作系统上运行的一种模式。  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 最大支持 128 GB。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 支持操作系统最大值。  
 <sup>5</sup> 请注意，sp_configure awe enabled 选项存在于 64 位 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上，但将被忽略。    
@@ -121,7 +133,7 @@ ms.locfileid: "87243685"
 |-------|-------|-------|
 |单页分配|否|否，合并到“任意大小”页分配|
 |多页分配|是|否，合并到“任意大小”页分配|
-|CLR 分配|是|“是”|
+|CLR 分配|是|是|
 |线程堆栈内存|是|是|
 |从 Windows 直接分配|是|是|
 
@@ -314,11 +326,24 @@ min memory per query 配置选项设定将为执行查询分配的最小内存�
 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中引入的“校验和保护”提供了更强大的数据完整性检查。 此方法将对写入每一页中的数据进行校验和计算并将其值存储在页头中。 每次从磁盘读取存储了校验和的页时，数据库引擎将重新计算页中数据的校验和。如果新的校验和不同于已存储的校验和，则引发错误 824。 校验和保护比残缺页保护能捕获到更多的错误，因为它受到页中每个字节的影响，但它对资源的消耗较多。 启用校验和后，当缓冲区管理器从磁盘读取页时均可以检测到因电源故障以及硬件或固件故障导致的错误。 有关设置校验和的信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify)。
 
 > [!IMPORTANT]
-> 在用户数据库或系统数据库升级到 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或更高版本后，将保留 [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) 值（NONE 或 TORN_PAGE_DETECTION）。 建议您使用 CHECKSUM。
+> 在用户数据库或系统数据库升级到 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或更高版本后，将保留 [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) 值（NONE 或 TORN_PAGE_DETECTION）。 强烈建议使用 CHECKSUM。
 > TORN_PAGE_DETECTION 可能使用较少资源，但提供的 CHECKSUM 保护最少。
 
 ## <a name="understanding-non-uniform-memory-access"></a>了解非一致性内存访问
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  能识别非一致性内存访问 (NUMA)，无需特殊配置便可在 NUMA 硬件上顺利地执行。 随着处理器时钟速度的提高和处理器数量的增加，使用这种额外处理能力所需的内存滞后时间越来越难以减少。 为了避开这一问题，硬件供应商提供了大型的 L3 缓存，但这只是一种有限的解决方案。 NUMA 体系结构为此问题提供了可缩放的解决方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已设计为利用基于 NUMA 的计算机而无需更改任何应用程序。 有关详细信息，请参阅[操作说明：将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
+
+## <a name="dynamic-partition-of-memory-objects"></a>内存对象的动态分区
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的堆分配器称为内存对象，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可通过它们从堆中分配内存。 可以使用 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 跟踪它们。 CMemThread 是一个线程安全内存对象类型，它允许从多个线程并发分配内存。 为实现正确的跟踪，CMemThread 对象依赖于同步构造（互斥体），以确保同一时间只有一个线程更新重要信息。 
+
+> [!NOTE]
+> 在整个 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 代码库中，CMemThread 对象类型用于许多不同的分配，并可按节点或 CPU 进行全局分区。   
+
+但是，如果很多线程以高度并发的方式从同一内存对象进行分配，则使用互斥体可能会导致争用。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有分区内存对象 (PMO) 的概念，每个分区由单个 CMemThread 对象表示。 内存对象的分区是静态定义的，创建后不可更改。 由于内存分配模式因硬件和内存使用情况等方面迥然相异，因此不可能提前设定出完美的分区模式。 在绝大多数情况下，使用单个分区就足够了，但在某些情况下，这可能会导致争用，只能通过高度分区的内存对象阻止这种争用。 对每个内存对象进行分区是不理想的，因为分区增多可能导致其他方面的效率低下并增加内存碎片。
+
+> [!NOTE]
+> 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]之前，可以使用跟踪标志 8048 将基于节点的 PMO 强制变为基于 CPU 的 PMO。 从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，此行为是动态的，由引擎控制。
+
+从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以动态检测特定 CMemThread 对象上的争用，并将对象提升为基于每个节点或每个 CPU 的实现。 升级后，PMO 会保持升级状态，直到重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中 CMEMTHREAD 等待数过多可指示 CMemThread 争用，可通过观察以下 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 列来发现它：*contention_factor* *partition_type* *exclusive_allocations_count* 和 *waiting_tasks_count*。
 
 ## <a name="see-also"></a>另请参阅
 [“服务器内存”服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

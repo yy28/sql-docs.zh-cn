@@ -2,7 +2,7 @@
 title: 线程和任务体系结构指南 | Microsoft Docs
 description: 了解 SQL Server 中的线程和任务体系结构，包括任务计划、热添加 CPU 以及使用超过 64 个 CPU 的计算机的最佳做法。
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076802"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114591"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ ms.locfileid: "90076802"
 计划程序（又称为 SOS 计划程序）管理需要处理时间来代表任务执行工作的工作线程。 每个计划程序映射单个处理器 (CPU)。 线程可以在计划程序内活动的时间称为 OS 量程，最长为 4 毫秒。 量程时间到期后，线程将其时间转让给需要访问 CPU 资源的其他线程，并更改自己的状态。 用于将 CPU 资源访问最大化的线程之间的协作称为“协作计划”（又称为非抢先计划）。 反之，线程状态更改会传播到与该线程关联的任务，并会传播到与相应任务关联的请求。 有关线程状态的详细信息，请参阅 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 有关计划程序的详细信息，请参阅 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
 
 总之，请求可能会生成一个或多个任务来执行工作单元 。 每个任务都分配给负责完成任务的“工作线程”。 必须对每个工作线程进行计划（置于计划程序上）以主动执行任务。 
+
+> [!NOTE]
+> 请参考以下方案：   
+> -  辅助进程 1 是一项长时间运行的任务，例如对基于内存的表使用预读的读取查询。 辅助进程 1 会发现其所需的数据页已在缓冲池中，因此不必暂停以等待 I/O 操作，而可以在暂停之前使用其整个量程。   
+> -  辅助进程 2 执行不足 1 毫秒的短时间运行任务，因此需要在其完整量程用尽之前暂停。     
+>
+> 在这种情况下，直到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，辅助进程 1 都可以通过拥有更多的总量程时间来独占计划程序。   
+> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，协作式计划包括大缺口优先 (LDF) 计划。 使用 LDF 计划时，会监视量程使用模式，不会让一个工作线程独占计划程序。 在同样的情况下，在为辅助进程 1 分配更多量程之前，允许辅助进程 2 使用重复的量程，从而阻止辅助进程 1 以不友好的模式独占计划程序。
 
 ### <a name="scheduling-parallel-tasks"></a>计划并行任务
 假设使用 MaxDOP 8 配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并且跨 NUMA 节点 0 和 1 为 24 个 CPU（计划程序）配置了 CPU 关联。 计划程序 0 到 11 属于 NUMA 节点 0，计划程序 12 到 23 属于 NUMA 节点 1。 应用程序向 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 发送以下查询（请求）：
@@ -228,8 +244,8 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 > [!NOTE]
 > 针对 Analysis Services 工作负荷的 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 尚未弃用，我们将继续提供支持。
 
-### <a name="setting-the-number-of-tempdb-data-files"></a>设置 TempDB 数据文件的数目
-文件数取决于计算机上的（逻辑）处理器数。 一般而言，如果逻辑处理器数目小于或等于 8，则使用的数据文件数与逻辑处理器数相同。 如果逻辑处理器数目大于 8，则使用 8 个数据文件，如果仍然存在争用，则以 4 的倍数增加数据文件的数量，直到争用减少到可接受的级别或对工作负荷/代码进行更改。 另外，请注意其他 TempDB 建议，可从[在 SQL Server 中优化 TempDB 性能](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)查看它们。 
+### <a name="setting-the-number-of-tempdb-data-files"></a>设置 tempdb 数据文件的数目
+文件数取决于计算机上的（逻辑）处理器数。 一般而言，如果逻辑处理器数目小于或等于 8，则使用的数据文件数与逻辑处理器数相同。 如果逻辑处理器数目大于 8，则使用 8 个数据文件，如果仍然存在争用，则以 4 的倍数增加数据文件的数量，直到争用减少到可接受的级别或对工作负荷/代码进行更改。 另外，请注意其他 tempdb 建议，可从[在 SQL Server 中优化 tempdb 性能](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)查看它们。 
 
 但是，通过仔细考虑 tempdb 的并发需要，可以减少数据库管理开销。 例如，如果一个系统具有 64 个 CPU 并且通常只有 32 个查询使用 tempdb，则将 tempdb 文件的数目增加到 64 将不会提高性能。
 
