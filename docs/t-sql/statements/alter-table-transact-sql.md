@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: df75737944bb7d21bf4a3f8884688915eca52827
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024429"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227406"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1110,7 +1110,7 @@ ALTER TABLE 权限适用于 ALTER TABLE SWITCH 语句涉及的两个表。 已�
 
 如果已将 ALTER TABLE 语句中的任何列定义为使用公共语言运行时 (CLR) 用户定义类型或别名数据类型，必须对类型拥有 REFERENCES 权限。
 
-添加更新表中的行的列要求对该表具有 UPDATE 权限。 例如，在表不为空时，添加有默认值的 NOT NULL 列，或添加标识列。
+添加或更改可更新表中的行的列要求对该表具有 UPDATE 权限。 例如，在表不为空时，添加有默认值的 NOT NULL 列，或添加标识列。
 
 ## <a name="examples"></a><a name="Example_Top"></a> 示例
 

@@ -1,8 +1,8 @@
 ---
 title: 子查询
-description: Azure SQL 数据仓库和并行数据仓库中的子查询
+description: Azure Synapse Analytics 和并行数据仓库中的子查询
 ms.custom: seo-lt-2019
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +12,14 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 946a36987b72f145af5e9c34eecaed9e8853033c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b60dc6b14b6161849a0e50b3de149946427568f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115424"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227428"
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查询（Azure SQL 数据仓库、并行数据仓库）
+# <a name="subqueries-azure-synapse-analytics-parallel-data-warehouse"></a>子查询（Azure Synapse Analytics 和并行数据仓库）
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   本主题提供在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中使用子查询的示例。  
@@ -30,7 +30,7 @@ ms.locfileid: "91115424"
   
 -   [基础知识](#Basics)  
   
--   [示例：SQL 数据仓库和并行数据仓库](#Examples)  
+-   [示例：Azure Synapse Analytics 和并行数据仓库](#Examples)  
   
 ##  <a name="basics"></a><a name="Basics"></a> 基础知识  
  子查询  

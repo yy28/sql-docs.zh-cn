@@ -22,12 +22,12 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f19c8184168b2fd553062d1a888aa619ee164483
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3588c21ff18120c390c6ecb4484d02bc7f83dbb9
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307230"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227480"
 ---
 # <a name="transactions-transact-sql"></a>事务 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88307230"
  只能应用于多个活动结果集 (MARS)，在 MARS 会话中启动的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 显式或隐式事务变为批处理级事务。 当批处理完成时没有提交或回滚的批处理级事务自动由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行回滚。  
 
 > [!NOTE] 
-> 有关与数据仓库产品相关的特殊注意事项，请参阅[事务（SQL 数据仓库）](transactions-sql-data-warehouse.md)。   
+> 有关与数据仓库产品相关的特殊注意事项，请参阅[事务 (Azure Synapse Analytics)](transactions-sql-data-warehouse.md)。   
 
 ## <a name="in-this-section"></a>本节内容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下事务语句：  

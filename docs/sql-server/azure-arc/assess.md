@@ -8,18 +8,18 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145356"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227320"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>为启用了 Azure Arc 的 SQL Server 实例配置按需 SQL 评估
 
 可以按照以下步骤为 SQL Server 实例启用 SQL 评估。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备知识
 
 * SQL Server 实例已连接到 Azure Arc。按照以下说明[将 SQL Server 实例载入已启用 Arc 的 SQL Server](connect.md)。
 
@@ -37,7 +37,7 @@ ms.locfileid: "91145356"
 
    ![SQL 评估选择](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. 在数据收集计算机上指定工作目录。 在收集和分析期间，数据临时存储在该文件夹下。 如果该文件夹不存在，将自动创建它。
+1. 在数据收集计算机上指定工作目录。 默认情况下，将使用 `C:\sql_assessment\work_dir`。 在收集和分析期间，数据临时存储在该文件夹下。 如果该文件夹不存在，将自动创建它。
 
 1. 单击“下载配置脚本”并将下载的脚本复制到目标计算机。
 

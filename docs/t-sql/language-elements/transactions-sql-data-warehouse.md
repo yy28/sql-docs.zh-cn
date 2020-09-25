@@ -1,6 +1,6 @@
 ---
-description: 事务（SQL 数据仓库）
-title: 事务（SQL 数据仓库）| Microsoft Docs
+title: 事务 (Azure Synapse Analytics)
+description: 事务由一组全部提交或全部回滚的一个或多个数据库语句组成。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688347"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227460"
 ---
-# <a name="transactions-sql-data-warehouse"></a>事务（SQL 数据仓库）
+# <a name="transactions-azure-synapse-analytics"></a>事务 (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   事务由一组全部提交或全部回滚的一个或多个数据库语句组成。 每个事务都是原子级的、一致的、孤立的和持久的 (ACID)。 如果事务成功，其中的所有语句都将提交。 如果事务失败，则组中至少有一个语句失败，然后整个组都将回滚。  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能在发出一个 COMMIT 语句之后回滚事务，因为数据修改已经成为数据库的一个永久部分。  
   
- 不能在显式事务内使用 [CREATE DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)和 [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
+ 不能在显式事务内使用 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 和 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 没有事务共享机制。 这意味着，在任何给定时间点，只能有一个会话处理系统中的任何事务。  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. 回滚事务  
  以下示例显示了回滚事务的效果。  在此示例中，ROLLBACK 语句将回滚 INSERT 语句，但已创建的表仍会存在。  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

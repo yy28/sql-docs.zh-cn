@@ -31,12 +31,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 717398446aaaa7e6283c6f967bda53bc6e31b1cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7c01e9612661d80294cb92e0348428e469b5b2f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361463"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226938"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
+--Applies to Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
@@ -148,7 +148,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用显式事务
-适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库****
+**适用对象：** SQL Server（从 2008 版开始）、Azure SQL 数据库、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、并行数据仓库
 
 本示例使用 AdventureWorks。 
 
@@ -160,7 +160,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. 回滚事务
-适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库****
+**适用对象：** SQL Server（从 2008 版开始）、Azure SQL 数据库、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、并行数据仓库
 
 以下示例显示了回滚事务的效果。 在此示例中，ROLLBACK 语句将回滚 INSERT 语句，但已创建的表仍会存在。
 

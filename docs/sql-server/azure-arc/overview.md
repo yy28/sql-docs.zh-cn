@@ -8,12 +8,13 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942448"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210573"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>已启用 Azure Arc 的 SQL Server（预览）
 
@@ -25,7 +26,7 @@ ms.locfileid: "90942448"
 
 已启用 Azure Arc 的 SQL Server 的公共预览版支持一组解决方案，这些解决方案需要安装 Microsoft Monitoring Agent (MMA) 服务器扩展并将其连接到 Azure Log Analytics 工作区进行数据收集和报告。 这些解决方案包括使用 Azure 安全中心和 Azure Sentinel 的高级数据安全，以及使用按需 SQL 评估功能的 SQL 环境运行状况检查。
 
-下图说明了使用虚拟化环境的已启用 Azure Arc 的 SQL Server 的体系结构。
+下图说明了已启用 Azure Arc 的 SQL Server 的体系结构。
 
 ![公共预览版体系结构](media/overview/pubic-preview-architecture.png)
 

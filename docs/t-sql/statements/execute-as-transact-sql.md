@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547683"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227309"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547683"
  指定要模拟的执行上下文是一个登录名。 模拟范围处于服务器级别。  
   
 > [!NOTE]  
->  此选项在包含的数据库、SQL 数据库或 SQL 数据仓库中不可用。  
+>  此选项在包含的数据库、SQL 数据库或 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中不可用。  
   
  USER  
  指定要模拟的上下文是当前数据库中的用户。 模拟范围只限于当前数据库。 对数据库用户的上下文切换不会继承该用户的服务器级别权限。  
@@ -96,7 +96,7 @@ ms.locfileid: "89547683"
  当在模块内部使用时，指定模块内部的语句在模块调用方的上下文中执行。
 当在模块外部使用时，语句没有任何操作。
  > [!NOTE]  
->  此选项在 SQL 数据仓库中不可用。  
+>  此选项在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中不可用。  
   
 ## <a name="remarks"></a>备注  
  执行上下文中的更改在下列操作之一发生之前一直有效：  
@@ -146,7 +146,7 @@ ms.locfileid: "89547683"
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. 使用 EXECUTE AS 和 REVERT 切换上下文  
  以下示例使用多个主体创建上下文执行堆栈。 然后使用 `REVERT` 语句将执行上下文重置为上一个调用方。 将多次执行 `REVERT` 语句以向上移动堆栈，直到将执行上下文设置为原始调用方为止。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
  下面的示例将会话的执行上下文设置为指定的用户，并指定 WITH NO REVERT COOKIE = @varbinary_variable 子句。 `REVERT` 语句必须指定传递给 `@cookie` 语句中的 `EXECUTE AS` 变量的值，否则，无法成功将上下文恢复为该调用方。 若要执行此示例，必须存在示例 A 中所创建的 `login1` 登录名和 `user1` 用户。  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

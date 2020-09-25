@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471154"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210622"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471154"
   
  **本主题内容**  
   
--   **开始之前：**  
+   - **开始之前：**  
   
      [限制和局限](#Restrictions)  
   
      [先决条件](#Prerequisites)  
   
--   **过程：**  
+   - **过程：**  
   
      [重新生成系统数据库](#RebuildProcedure)  
   
      [resource 数据库重新生成](#Resource)  
   
-     [创建新的 msdb 数据库](#CreateMSDB)  
+     [创建新的 msdb 数据库](#CreateMSDB) 
+
+     [重新生成 tempdb 数据库](#RebuildTempdb)  
   
--   **跟进：**  
+   - **跟进：**  
   
      [解决重新生成错误](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471154"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  在重新生成系统数据库之前执行下列任务，以确保可以将系统数据库还原至它们的当前设置。  
   
-1.  记录所有服务器范围的配置值。  
+1. 记录所有服务器范围的配置值。  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  记录所有应用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和当前排序规则的修补程序。 重新生成系统数据库后必须重新应用这些修补程序。  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471154"
   
 3.  记录系统数据库的所有数据文件和日志文件的当前位置。 重新生成系统数据库会将所有系统数据库安装到其原位置。 如果已将系统数据库数据文件或日志文件移动到其他位置，则必须再次移动这些文件。  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471154"
 6.  在 **“准备修复”** 页上，单击 **“修复”** 。 “完成”页指示修复操作已完成。  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 创建新的 msdb 数据库  
+
  如果 **msdb** 数据库损坏并且您没有 **msdb** 数据库的备份，则可以通过使用 **instmsdb** 脚本创建新的 **msdb** 。  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471154"
 9. 重新创建在 **msdb** 数据库中存储的用户内容，例如作业、警报等。  
   
 10. 备份 **msdb** 数据库。  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> 重新生成 Tempdb 数据库  
+
+如果 tempdb 数据库损坏，并且数据库引擎无法启动，则可以重新生成 tempdb，而无需重新生成所有系统数据库 。
+  
+1. 重命名当前的 Tempdb.mdf 和 Templog.ldf 文件（如果未缺失）。 
+1. 使用以下命令从命令提示符处启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   对于默认实例名称，请使用“MSSQLSERVER”，对于命名实例，请使用“MSSQL$<instance_name>”。 跟踪标志 4022 会禁用启动存储过程的执行。 -MSQLCMD 仅允许 [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) 连接到服务器（请参阅[其他启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options)）
+
+   > [!Note] 
+   > 确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动后命令提示符窗口保持打开状态。 关闭命令提示符窗口将终止该过程。
+
+1. 使用 sqlcmd 连接到服务器，然后使用以下存储过程重置 tempdb 数据库的状态。
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. 通过在命令提示符窗口中按 CTRL+C 来关闭服务器
+
+1. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 这会创建一组新的 tempdb 数据库文件，同时恢复 tempdb 数据库。
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> 解决重新生成错误  
  语法和其他运行时错误会显示在命令提示符窗口中。 检查 Setup 语句中是否存在以下语法错误：  

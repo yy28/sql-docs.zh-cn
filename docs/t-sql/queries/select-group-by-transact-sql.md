@@ -33,12 +33,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdb2964f3881f5f31c451860d4330c05c3c346a0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 9368fcb80240ddf1520ef1ac0f4d145d20d10ab2
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115841"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226918"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GROUP BY
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse 
+-- Syntax for Azure Synapse Analytics 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -288,11 +288,11 @@ GROUP BY ALL：
 - 对于具有 FILESTREAM 属性的列，GROUP BY ALL 将失败。
   
 ### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 DISTRIBUTED_AGG 查询提示强制大规模并行处理 (MPP) 系统以在执行聚合之前重新分发特定列上的表。 GROUP BY 子句中只有一列可以拥有 DISTRIBUTED_AGG 查询提示。 查询完成后，重新分发的表被删除。 不会更改原始表格。  
 
-注意：提供 DISTRIBUTED_AGG 查询提示的目的是为了实现与早期并行数据仓库版本后向兼容性，对大多数查询而言，并不会提高其性能。 默认情况下，MPP 已根据需要重新分发数据以提高聚合的性能。 
+注意：提供 DISTRIBUTED_AGG 查询提示的目的是为了实现与早期 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 版本的后向兼容性，对大多数查询而言，并不会提高其性能。 默认情况下，MPP 已根据需要重新分发数据以提高聚合的性能。 
   
 ## <a name="general-remarks"></a>一般备注
 
@@ -315,7 +315,7 @@ NULL 值：
   
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-适用对象：SQL Server（从 2008 版开始）和 Azure SQL 数据仓库
+适用对象：SQL Server（从 2008 版开始）和 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
 ### <a name="maximum-capacity"></a>最大容量
 
@@ -416,7 +416,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>示例：SQL 数据仓库和并行数据仓库  
+## <a name="examples-azure-synapse-analytics-and-parallel-data-warehouse"></a>示例：Azure Synapse Analytics 和并行数据仓库  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 子句的基本用法  
  下面的示例查找每天所有销售的总金额。 返回每天包含所有销售额的总金额。  

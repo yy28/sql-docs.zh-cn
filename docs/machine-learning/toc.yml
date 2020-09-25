@@ -35,6 +35,12 @@
       href: ../machine-learning/install/sql-ml-component-commandline-install.md
     - name: 安装预先定型的模型
       href: ../machine-learning/install/sql-pretrained-models-install.md
+    - name: 安装自定义运行时
+      items:
+        - name: 安装 Python 自定义运行时
+          href: ../machine-learning/install/custom-runtime-python.md
+        - name: 安装 R 自定义运行时
+          href: ../machine-learning/install/custom-runtime-r.md
     - name: 更改默认 Python 和 R 运行时
       href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: 通过绑定升级 Python 和 R 运行时

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942280"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226957"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>创建并运行 Kusto (KQL) 笔记本（预览）
 
@@ -38,7 +38,7 @@ ms.locfileid: "90942280"
 
 1. 在 Azure Data Studio 中，连接到 Azure 数据资源管理器群集。
 
-2. 导航到“连接”窗格，在“服务器”窗口中右键单击 Kusto 数据库，然后选择“新建笔记本” 。
+2. 导航到“连接”窗格，在“服务器”窗口中右键单击 Kusto 数据库，然后选择“新建笔记本” 。 还可以转到“文件” > “新建笔记本” 。
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="打开笔记本":::
 
@@ -103,6 +103,12 @@ ms.locfileid: "90942280"
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="保存结果":::
+
+## <a name="limitations-and-considerations"></a>限制和注意事项
+
+- 在运行 Kusto 查询前，必须为 Azure 数据资源管理器群集选择数据库。
+- 如果让 Azure 数据资源管理器群集保持空闲状态的时间太长，则会断开连接。
+    - 解决方法：断开与群集的连接，然后重新连接。
 
 ## <a name="next-steps"></a>后续步骤
 

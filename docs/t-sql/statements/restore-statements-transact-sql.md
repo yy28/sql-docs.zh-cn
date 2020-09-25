@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478646"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227271"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 
@@ -65,10 +65,10 @@ ms.locfileid: "88478646"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 数据库<br />托管实例](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -737,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         _\*SQL 数据库<br />托管实例 \*_ 
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -956,8 +956,8 @@ RESTORE HEADERONLY 结果会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 需要有权访问和读取备份目录的 Windows 帐户。 还必须将 Windows 帐户名称和密码存储在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。
 
 - 若要验证凭据是否已存在，请使用 [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。
-- 若要添加或更新凭据，请使用 [sp_pdw_add_network_credentials - SQL 数据仓库](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。
-- 若要从[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中删除凭据，请使用 [sp_pdw_remove_network_credentials - SQL 数据仓库](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
+- 若要添加或更新凭据，请使用 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。
+- 若要从 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中删除凭据，请使用 [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
 
 ## <a name="error-handling"></a>错误处理
 
@@ -980,13 +980,13 @@ RESTORE DATABASE 命令会在以下情况下导致错误：
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>还原到计算节点数更大的设备
 
-在将数据库从较小设备还原到较大设备之后运行 [DBCC SHRINKLOG（Azure SQL 数据仓库）](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)，因为重新分发会增加事务日志。
+在将数据库从较小设备还原到较大设备之后运行 [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)，因为重新分发会增加事务日志。
 
 将备份还原到计算节点数更大的设备会与计算节点数成比例地增加分配的数据库大小。
 
 例如，将 60 GB 数据库从 2 节点设备（每个节点 30 GB）还原到 6 节点设备时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]会在 6 节点设备上创建 180 GB 数据库（6 个节点，每个节点 30 GB）。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]最初将数据库还原到 2 个节点以匹配源配置，然后将数据重新分发到所有 6 个节点。
 
-重新分发之后，与较小源设备上的每个计算节点相比，每个计算节点都会包含较少的实际数据和较多的可用空间。 使用附加空间可将更多数据添加到数据库。 如果还原的数据库大小大于所需大小，则可以使用 [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) 收缩数据库文件大小。
+重新分发之后，与较小源设备上的每个计算节点相比，每个计算节点都会包含较少的实际数据和较多的可用空间。 使用附加空间可将更多数据添加到数据库。 如果还原的数据库大小大于所需大小，则可以使用 [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) 收缩数据库文件大小。
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
@@ -1038,6 +1038,6 @@ RESTORE HEADERONLY
 可以使用标头信息检查备份的内容，或者在尝试还原备份之前确保目标还原设备与源备份设备兼容。
 
 ## <a name="see-also"></a>另请参阅
-[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end

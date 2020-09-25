@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549001"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227294"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. 使用 MERGE 对图形数据库中的目标边缘表执行 INSERT 或 UPDATE 操作
 
 在此示例中，创建节点表 `Person` 和 `City` 以及边缘表 `livesIn`。 如果 `Person` 和 `City` 之间尚不存在 `livesIn` 边缘，则对边缘使用 MERGE 语句，并插入新行。 如果已有边缘，只需更新 `livesIn` 边缘上的 StreetAddress 属性。
+
+> [!NOTE]
+> 以下示例适用范围：SQL Server（从 2019 版开始）。
 
 ```sql
 -- CREATE node and edge tables

@@ -26,12 +26,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 575cff8e61661fc9fccb973b7ab83f455c2ec074
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422441"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227201"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ SELECT [ ALL | DISTINCT ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
 SELECT <select_criteria>  
@@ -191,7 +191,7 @@ SELECT <select_criteria>
 > 例如，假设视图中具有聚集索引，该视图排除了一些表行，并且视图的 SELECT 列列表使用可将数据类型从 varchar 更改为 integer 的 CONVERT 。 在此情况下，CONVERT 可能会先于 WHERE 语句执行。 这种情况确实少见。 如果需要解决此问题，通常可通过某种方法修改视图来避免出现顺序不同的情况。 
 
 ## <a name="permissions"></a>权限  
- 选择数据要求对表或视图具有 **SELECT** 权限，该权限可从更高级别的权限继承，例如针对架构的 **SELECT** 权限或针对表的 **CONTROL** 权限。 或者要求具有 db_datareader 或 db_owner 固定数据库角色或 sysadmin 固定服务器角色的成员身份  。 使用 SELECTINTO 创建新表既要求 CREATETABLE 权限，还要求拥有新表的架构上的 ALTERSCHEMA 权限  。  
+ 选择数据要求对表或视图具有 **SELECT** 权限，该权限可从更高级别的权限继承，例如针对架构的 **SELECT** 权限或针对表的 **CONTROL** 权限。 或者要求具有 db_datareader 或 db_owner 固定数据库角色或 sysadmin 固定服务器角色的成员身份  。 使用 SELECT INTO 创建新表既要求 CREATE TABLE 权限，还要求拥有新表的架构上的 ALTER SCHEMA 权限  。  
   
 ## <a name="examples"></a>示例：   
 下面的示例使用 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库。

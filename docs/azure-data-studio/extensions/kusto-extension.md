@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eed9e8681ac8b4d0b9bbbe8c8e4f7d7104900bd1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111653"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226822"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 的 Kusto (KQL) 扩展（预览版）
 
@@ -125,6 +125,12 @@ StormEvents
 [SandDance 扩展](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension)和 Azure Data Studio 中的 Kusto (KQL) 扩展结合使用时会带来丰富的交互式可视化效果。 从 KQL 查询结果集中，选择“可视化工具”按钮，启动 [SandDance](https://sanddance.js.org/)。
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 可视化效果":::
+
+## <a name="limitations-and-considerations"></a>限制和注意事项
+
+- 在运行 Kusto 查询前，必须为 Azure 数据资源管理器群集选择数据库。
+- 如果让 Azure 数据资源管理器群集保持空闲状态的时间太长，则会断开连接。
+    - 解决方法：断开与群集的连接，然后重新连接。
 
 ## <a name="next-steps"></a>后续步骤
 

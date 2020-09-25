@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380880"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227045"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
 
@@ -119,7 +119,7 @@ GO
 加密和解密操作由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安排在后台线程中执行。 若要查看这些操作的状态，可以使用本文后面部分显示的表中的目录视图和动态管理视图。
 
 > [!CAUTION]
-> 启用了 TDE 的备份数据库文件也使用数据库加密密钥进行加密。 因此，在还原这些备份时，用于保护数据库加密密钥的证书必须是可用的。 因此，除了备份数据库之外，一定要注意维护好服务器证书的备份。 如果证书不再可用，就会造成数据丢失。
+> 启用了 TDE 的数据库备份库文件也使用数据库加密密钥进行加密。 因此，在还原这些备份时，用于保护数据库加密密钥的证书必须是可用的。 因此，除了备份数据库之外，一定要注意维护好服务器证书的备份。 如果证书不再可用，就会造成数据丢失。
 >
 > 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。
 

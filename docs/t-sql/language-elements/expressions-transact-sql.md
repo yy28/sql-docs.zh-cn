@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6e54c2e820794e3346842d748c4bc0c7384b9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361163"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227212"
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88361163"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Expression in a SELECT statement  
 <expression> ::=   
@@ -132,7 +132,7 @@ GO
   
  结果集中的每个行的表达式 `1+2` 的计算结果都为 `3`。 虽然表达式 `ProductID` 在结果集的每一行中产生一个唯一值，但每一行只有一个 `ProductID` 值。  
  
-- Azure SQL 数据仓库为每个线程分配固定的最大内存量，因此，任何线程都无法占用所有内存。  其中一些内存用于存储查询的表达式。  如果查询包含太多表达式，并且其所需内存超出内部限制，则引擎不会执行该查询。  若要避免发生此问题，用户可以将查询更改为多个查询，使每个查询包含较少的表达式。 例如，在 WHERE 子句中有一个具有许多表达式的查询： 
+- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 为每个线程分配固定的最大内存量，因此，任何线程都无法占用所有内存。  其中一些内存用于存储查询的表达式。  如果查询包含太多表达式，并且其所需内存超出内部限制，则引擎不会执行该查询。  若要避免发生此问题，用户可以将查询更改为多个查询，使每个查询包含较少的表达式。 例如，在 WHERE 子句中有一个具有许多表达式的查询： 
 
 ```sql
 DELETE FROM dbo.MyTable 

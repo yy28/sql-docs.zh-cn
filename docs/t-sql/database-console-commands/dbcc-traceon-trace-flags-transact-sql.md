@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 826960263f60a1b9d76e2eb7fb738111613678fc
-ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
+ms.openlocfilehash: 99dd26d2eec49212ae1603cc2acb8e7464dfbd2b
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90565052"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210602"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -132,6 +132,7 @@ ms.locfileid: "90565052"
 |**3625**|通过使用“\*\*\*\*\*\*”屏蔽某些错误消息的参数，限制返回给不是 sysadmin 固定服务器角色成员的用户的信息量。 这可以帮助阻止披露敏感信息。<br /><br />**作用域**：仅全局|  
 |**3656**|若安装了适用于 Windows 的调试工具，在堆栈转储上启用符号解析。 <br /><br />警告：这是调试跟踪标志，不用于生产环境。<br /><br />**注意：** 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，必须与跟踪标志 3656 一起启用跟踪标志 [2592](#2592) 才能启用符号解析。 <br/><br/>**作用域**：全局和会话|
 |**3924**|启用使用 SPID =-2 自动删除孤立的 DTC 事务，这对于某些第三方事务监视器来说是一个问题。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4519668)和 [Microsoft 支持文章](https://support.microsoft.com/help/4511816)。<br /><br />**作用域**：仅全局|  
+|**4022**|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时禁用存储过程的自动执行功能。 有关自动执行启动存储过程的详细信息，请参阅 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) <br /><br />**作用域**：仅全局|  
 |**4136**|除非使用 OPTION(RECOMPILE)、WITH RECOMPILE 或 OPTIMIZE FOR \<value>，否则禁用参数探查。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/980653)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 PARAMETER_SNIFFING 选项。<br /><br />若要在查询级别实现相同结果，请添加 OPTIMIZE FOR UNKNOWN [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 OPTIMIZE FOR UNKNOWN 提示不会禁用参数探查机制，但会有效地绕过它以实现相同的预期结果。<br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，在查询级别完成此操作的另一种方法是添加 USE HINT 'DISABLE_PARAMETER_SNIFFING' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局或会话|  
 |**4137**|在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本 (70) 的查询优化器基数估计模型下估计筛选器的 AND 谓词以说明部分相关性而不是独立性时，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用最小选择性生成一个计划。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2658214)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请在使用 CE 70 时添加 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：** 此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 9471。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 
 |**4138**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成一个计划，该计划不对包含 TOP、OPTION (FAST N)、IN 或 EXISTS 关键字的查询使用行目标调整。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2667211)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'DISABLE_OPTIMIZER_ROWGOAL' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 
@@ -165,7 +166,7 @@ ms.locfileid: "90565052"
 |**8048**|将 NUMA 分区内存对象转换为 CPU 分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2809338)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为是动态的，由引擎控制。<br /><br />**作用域**：仅全局|  
 |**8075**|在 64 位 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 上收到内存页分配错误时，减少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 片段。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3074434)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8075 不再有效。<br /><br />**作用域**：仅全局|
 |**8079**|允许 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 询问硬件布局，并在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft-NUMA。 自动 Soft-NUMA 行为可识别超线程（HT/逻辑处理器）。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。<br /><br />**作用域**：仅全局| 
-|**8099**|为运行 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的高端系统（为许多并发用户提供服务）启用旋转锁争用修补。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 及更高内部版本。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4538688)。<br /><br />**作用域**：仅全局| 
+|**8099**|为运行 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的高端系统（为许多并发用户提供服务）启用旋转锁争用修补。<br /><br />**注意：** 此跟踪标志仅用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 和 CU3。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 开始，默认情况下便会启用此行为。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4538688)。<br /><br />**作用域**：仅全局| 
 |**8207**|允许事务复制和 CDC 的 singleton 更新。 对订阅服务器的更新可以作为 DELETE 和 INSERT 对复制。 这可能不符合业务规则的要求，如激发 UPDATE 触发器。 使用跟踪标志 8207 时，对只影响一行的唯一列的更新（单一实例更新）将作为 UPDATE 而非作为 DELETE 或 INSERT 对进行复制。 如果该更新影响具有唯一约束的列或影响多个行，则仍将该更新作为 DELETE 或 INSERT 对进行复制。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/302341)。<br /><br />**作用域**：仅全局|
 |**8721**|在执行自动更新统计信息时向错误日志提交报告。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/195565)。<br /><br />**注意：** 此跟踪标志需要启用跟踪标志 [3605](#3605)。<br /><br />**作用域**：仅全局|
 |**8744**|为[嵌套循环](../../relational-databases/performance/joins.md#nested_loops)运算符禁用预提取。<br /><br />警告：当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行包含嵌套循环运算符的计划时，错误地使用此跟踪标志可能会导致额外的物理读取。<br /><br />**作用域**：全局和会话|

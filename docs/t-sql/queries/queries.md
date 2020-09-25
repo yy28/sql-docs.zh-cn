@@ -14,18 +14,18 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921d626eaacb0cdfd6f14988cd41e39efc35339b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41b99ede74cb7e8213fb50e95f1a9160b4d947af
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459121"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226889"
 ---
 # <a name="queries"></a>查询
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  数据操作语言 (DML) 是用于检索和使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL 数据库中的数据的词汇。 大部分也可在 SQL 数据仓库和 PDW 中使用（请查看各语句了解详细信息）。 使用这些语句可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库添加、修改、查询或删除数据。  
+  数据操作语言 (DML) 是用于检索和使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL 数据库中的数据的词汇。 大部分也可在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中使用（请查看各语句了解详细信息）。 使用这些语句可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库添加、修改、查询或删除数据。  
   
 ## <a name="in-this-section"></a>本节内容  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 DML 语句。  
