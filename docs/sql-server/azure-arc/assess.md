@@ -8,18 +8,18 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942461"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145356"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>为启用了 Azure Arc 的 SQL Server 实例配置按需 SQL 评估
 
 可以按照以下步骤为 SQL Server 实例启用 SQL 评估。
 
-## <a name="prerequisites"></a>必备知识
+## <a name="prerequisites"></a>先决条件
 
 * SQL Server 实例已连接到 Azure Arc。按照以下说明[将 SQL Server 实例载入已启用 Arc 的 SQL Server](connect.md)。
 
@@ -76,3 +76,5 @@ Microsoft Monitoring Agent 每 15 分钟扫描一次工作文件夹，查找 new
 ## <a name="next-steps"></a>后续步骤
 
 查看[服务中心按需评估先决条件](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)处的 SQL Server 文档，以了解详细信息。
+
+若要获得对按需 SQL 评估的全面支持，需要一个顶级或统一支持订阅。 有关详细信息，请参阅 [Azure 顶级支持](https://azure.microsoft.com/support/plans/premier)。
