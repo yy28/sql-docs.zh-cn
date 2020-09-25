@@ -22,15 +22,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b43c386f803c1d9fea8a1e7645d1764ece3a7eef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3021389a5223cd45ef7fb2b0b2dba72c51ba7235
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493030"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226858"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule（Azure SQL 数据库）
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   创建或更新的数据库级防火墙规则 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 可以为 **master** 数据库和上的用户数据库配置数据库防火墙规则 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 使用包含的数据库用户时，数据库防火墙规则特别有用。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   

@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550555"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227115"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -94,8 +94,8 @@ ms.locfileid: "89550555"
 |**log_reuse_wait_desc**|**nvarchar(60)**|日志空间的重复使用正在等待最后一个检查点的描述。|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION 为 ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION 为 OFF|  
 |**is_cdc_enabled**|**bit**|1 = 对数据库启用变更数据捕获。 有关详细信息，请参阅 [sys.databases&#41;sp_cdc_enable_db &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
-|**is_encrypted**|**bit**|指示是否对数据库进行加密 (反映使用子句) 上次设置的状态 `ALTER DATABASE SET ENCRYPTION` 。 可以是以下其中一个值：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，将 `is_encrypted` 显示值0。 您可以使用 [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图来查看加密过程的状态。|  
-|**is_honor_broker_priority_on**|**bit**|指示数据库是否采用会话优先级 (反映上次使用子句) 设置的状态 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 。 可以是以下其中一个值：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库的 broker 优先级为 off。|  
+|**is_encrypted**|**bit**|指示是否对数据库进行加密 (反映使用子句) 上次设置的状态 `ALTER DATABASE SET ENCRYPTION` 。 可以是以下值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，将 `is_encrypted` 显示值0。 您可以使用 [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图来查看加密过程的状态。|  
+|**is_honor_broker_priority_on**|**bit**|指示数据库是否采用会话优先级 (反映上次使用子句) 设置的状态 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 。 可以是以下值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库的 broker 优先级为 off。|  
 |**replica_id**|**uniqueidentifier**|数据库参与的可用性组（如果有）的本地 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性副本的唯一标识符。<br /> NULL = 数据库不是可用性组中的可用性副本的一部分。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|数据库参与到 Always On 可用性组（如果有）内的数据库的唯一标识符。 对于主副本上的此数据库以及已将数据库联接到可用性组的每个辅助副本， **group_database_id**都是相同的。<br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。<br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|映射到此数据库的资源池的 ID。 此资源池控制对该数据库中的内存优化表可用的总内存。<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -115,7 +115,7 @@ ms.locfileid: "89550555"
 |**is_federation_member**|**bit**|指示该数据库是否为联合的成员。<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|指示是否延伸数据库。<br /> 0 = 数据库未启用延伸。<br /> 1 = 数据库已启用延伸。<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]<br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
 |**is_mixed_page_allocation_on**|**bit**|指示数据库中的表和索引是否可以从混合区分配初始页。<br /> 0 = 数据库中的表和索引始终从统一区分配初始页面。<br /> 1 = 数据库中的表和索引可以分配混合区中的初始页面。<br /> 有关详细信息，请参阅 `SET MIXED_PAGE_ALLOCATION` [ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)的选项。<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
-|**is_temporal_retention_enabled**|**bit**|指示是否启用时态保留策略清理任务。<br /><br />1 = 启用时态保留<br />0 = 禁用时态保留<br />适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_temporal_history_retention_enabled**|**bit**|指示是否启用时态保留策略清理任务。<br /><br />1 = 启用时态保留<br />0 = 禁用时态保留<br />适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**physical_database_name**|**nvarchar(128)**|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则为数据库的物理名称。 对于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ，为服务器上的数据库提供通用 id。 <br />适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|

@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 810a61f438f88420829bb9656b328b2d93c7ef7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445364"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227213"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -138,7 +138,7 @@ SELECT 语句通常需要使用 FROM 子句。 当没有列出表列以及列出
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
   
@@ -151,7 +151,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
  
 <joined_table> ::=   
 {  
@@ -270,12 +270,12 @@ FROM { <table_source> [ ,...n ] }
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于生成随机数的常量整数表达式。 repeat_seed 是 bigint。 如果未指定 repeat_seed，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将随机分配值。 对于特定的 repeat_seed 值，如果尚未对表应用任何更改，抽样结果始终相同。 repeat_seed 表达式的值必须是大于零的整数。  
   
 ### <a name="tablesample-clause"></a>Tablesample 子句
-**适用于：** SQL 数据仓库
+**适用于：** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
  指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。 
 
  PERCENT  
- 指定应该从表中检索表行的 sample_number 百分比。 指定 PERCENT 时，SQL 数据仓库返回指定的百分比的近似值。 指定 PERCENT 时，sample_number 表达式的结果必须是 0 到 100 之间的值。  
+ 指定应该从表中检索表行的 sample_number 百分比。 指定 PERCENT 时，[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 返回指定的百分比的近似值。 指定 PERCENT 时，sample_number 表达式的结果必须是 0 到 100 之间的值。  
 
 
 ### <a name="joined-table"></a>联接的表 

@@ -15,12 +15,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 28ff4d6b3a7758acbc752b50bcff9f53637c8e82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fda398df7a9b06cf50419e899c9b0c9975855478
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496379"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226367"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT_SET_CACHING (Transact-SQL) 
 
@@ -28,7 +28,7 @@ ms.locfileid: "88496379"
 
 控制当前客户端会话的结果集缓存行为。  
 
-适用于 Azure SQL 数据仓库  
+适用于 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ WHERE request_id = 'QID58286'
 ## <a name="see-also"></a>另请参阅
 
 - [通过结果集缓存进行性能优化](/azure/sql-data-warehouse/performance-tuning-result-set-caching)
-- [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)
-- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)
+- [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest&preserve-view=true)
+- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&preserve-view=true)
 - [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)
 - [DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)
