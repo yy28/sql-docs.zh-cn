@@ -3,18 +3,18 @@ title: 发行说明
 description: 本文提供了从 2017 年 11 月至今的 Azure Data Studio 版本的发行说明。 对于许多汇总问题，提供了指向其他详细信息的链接。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: overview
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 09/22/2020
-ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989980"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364190"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 

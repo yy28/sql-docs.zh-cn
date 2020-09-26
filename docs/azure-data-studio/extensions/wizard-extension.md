@@ -3,24 +3,24 @@ title: 创建向导扩展
 description: 本教程演示如何创建向导扩展以将自定义功能添加到 Azure Data Studio。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 1ae3fe6606c926fedf7ff8c60a729c17d70b96be
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288139"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364054"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>创建 Azure Data Studio 向导扩展
 
 本教程演示如何创建新的 Azure Data Studio 向导扩展。 该扩展提供了一个向导，用于与 Azure Data Studio 中的用户进行交互。
 
-在本教程中，你将学习如何执行以下操作：
+本文介绍如何执行以下操作：
 > [!div class="checklist"]
 > - 安装扩展生成器
 > - 创建扩展

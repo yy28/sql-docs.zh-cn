@@ -2,7 +2,7 @@
 description: sys.column_store_segments (Transact-SQL)
 title: sys. column_store_segments (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/15/2018
+ms.date: 09/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e1bcb9bc00d8f8a4da1f511246fd3aedd2e366e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3957a13e4d3e7f5eff32b0417e65d33a573e5510
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537434"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364144"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "89537434"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|指示分区 ID。 在数据库中是唯一的。|  
-|**hobt_id**|**bigint**|具有此 columnstore 索引的表的堆或 B 树 (hobt) 的 ID。|  
+|**hobt_id**|**bigint**|具有此列存储索引的表的堆或B 树索引 (HoBT) 的 ID。|  
 |column_id|**int**|列存储列的 ID。|  
 |**segment_id**|**int**|行组的 ID。 为实现向后兼容性，即使这是行组 ID，列名仍将继续 segment_id 调用。 使用 <segment_id> 可以唯一地标识段 \<hobt_id, partition_id, column_id> 。|  
 |**version**|**int**|列段格式的版本。|  
-|**encoding_type**|**int**|用于该段的编码类型：<br /><br /> 1 = 不包含字典的 VALUE_BASED 非字符串/二进制文件 (与4相比有一些内部变体) <br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。|  
+|**encoding_type**|**int**|用于该段的编码类型：<br /><br /> 1 = 不含字典的 VALUE_BASED 非字符串/二进制文件 (类似于4，具有一些内部变体) <br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 有关详细信息，请参阅[备注](#remarks)部分。|  
 |**row_count**|**int**|行组中的行数。|  
 |**has_nulls**|**int**|1 如果列段具有 Null 值。|  
-|**base_id**|**bigint**|如果正在使用编码类型1，则为基值 id。  如果未使用编码类型1，则 base_id 设置为-1。|  
-|**magnitude**|**float**|如果正在使用编码类型1，则为数量级。  如果未使用编码类型1，则数量级设置为-1。|  
+|**base_id**|**bigint**|如果正在使用编码类型1，则为基值 ID。 如果未使用编码类型1，则 base_id 设置为-1。|  
+|**magnitude**|**float**|如果正在使用编码类型1，则为数量级。 如果未使用编码类型1，则数量级设置为-1。|  
 |**primary_dictionary_id**|**int**|值0表示全局字典。 值-1 指示没有为此列创建全局字典。|  
 |**secondary_dictionary_id**|**int**|如果为非零值，则指向当前段中此列的本地字典 (即行组) 。 值-1 指示此段没有本地字典。|  
 |**min_data_id**|**bigint**|列段中的最小数据 ID。|  
@@ -51,8 +51,17 @@ ms.locfileid: "89537434"
 |**null_value**|**bigint**|用于表示 Null 的值。|  
 |**on_disk_size**|**bigint**|段大小（字节）。|  
   
-## <a name="remarks"></a>备注  
- 以下查询返回有关列存储索引各段的信息。  
+## <a name="remarks"></a>注解  
+的列存储段编码类型由选择，其 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 目标是通过分析分段数据来实现最低的存储成本。 如果数据大多不同，则 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用基于值的编码。 如果数据主要不是唯一的，则 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用基于哈希的编码。 基于字符串和基于值的编码之间的选择与要存储的数据的类型有关，无论字符串数据还是二进制数据。 如果可能，所有编码都利用位打包和长度为长度的编码。
+ 
+## <a name="permissions"></a>权限  
+ 所有列都要求至少 `VIEW DEFINITION` 对表具有权限。 以下各列将返回 null，除非用户也具有 `SELECT` 权限： `has_nulls` 、 `base_id` 、、、 `magnitude` `min_data_id` `max_data_id` 和 `null_value` 。  
+  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+
+## <a name="examples"></a>示例
+
+### <a name="the-following-query-returns-information-about-segments-of-a-columnstore-index"></a>以下查询返回有关列存储索引各段的信息。  
   
 ```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
@@ -66,12 +75,7 @@ WHERE i.type = 5 OR i.type = 6
 GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;  
 GO  
 ```  
-  
-## <a name="permissions"></a>权限  
- 所有列都要求至少对表具有 **VIEW DEFINITION** 权限。 以下各列将返回 null，除非用户也具有 **SELECT** 权限： has_nulls、base_id、数量级、min_data_id、max_data_id 和 null_value。  
-  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
-  
+
 ## <a name="see-also"></a>另请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
@@ -82,5 +86,4 @@ GO
  [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
-  
-
+ 

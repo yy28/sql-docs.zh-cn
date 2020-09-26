@@ -102,8 +102,6 @@
           href: extensions/wizard-extension.md
     - name: 集成终端（PowerShell、Bash）
       href: integrated-terminal.md
-    - name: 键盘快捷方式
-      href: keyboard-shortcuts.md
     - name: 服务器组
       href: server-groups.md
     - name: 源代码管理
@@ -132,14 +130,14 @@
       href: code-snippets.md
     - name: 资源管理器 Azure SQL 资源
       href: azure-resource-explorer.md
+    - name: 键盘快捷方式
+      href: keyboard-shortcuts.md
     - name: 使用情况数据收集
       href: usage-data-collection.md
-    - name: 工作区和用户设置
-      href: settings.md
     - name: Windows 身份验证 (Kerberos)
       href: enable-kerberos.md
-    - name: 使用情况数据收集
-      href: usage-data-collection.md
+    - name: 工作区和用户设置
+      href: settings.md
 - name: 参考
   items:
     - name: SQL 工具
