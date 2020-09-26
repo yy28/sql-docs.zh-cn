@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48192af5515f4a570908870fcdcc1af58b153032
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a3f9e498ea8d3f81d05be782d7c15ecdfb87e38
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547469"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379732"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
   
  若要列出数据库中的所有序列对象，请执行以下语句。  
   
-```  
+```sql  
 SELECT sch.name + '.' + seq.name AS [Sequence schema and name]   
     FROM sys.sequences AS seq  
     JOIN sys.schemas AS sch  
@@ -83,7 +83,7 @@ GO
 ## <a name="examples"></a>示例  
  以下示例从当前数据库中删除一个名为 `CountBy1` 的序列对象。  
   
-```  
+```sql  
 DROP SEQUENCE CountBy1 ;  
 GO  
 ```  

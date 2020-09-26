@@ -20,12 +20,12 @@ ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36917cc26189938e06f36d41559b2339344217c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bafff2cafe25587ae65c519bfc2e1896b34117d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445599"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379985"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88445599"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 ROUND ( numeric_expression , length [ ,function ] )  
 ```  
   
@@ -87,7 +86,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 ### <a name="a-using-round-and-estimates"></a>A. 使用 ROUND 和估计值  
  以下示例显示了两个表达式，阐释使用了 `ROUND` 后，最后一位数将始终为估计值。  
   
-```  
+```sql  
 SELECT ROUND(123.9994, 3), ROUND(123.9995, 3);  
 GO  
 ```  
@@ -116,7 +115,7 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ### <a name="c-using-round-to-truncate"></a>C. 使用 ROUND 截断  
  以下示例使用了两个 `SELECT` 语句，用于阐释舍入和截断之间的区别。 第一个语句舍入结果。 第二个语句截断结果。  
   
-```  
+```sql  
 SELECT ROUND(150.75, 0);  
 GO  
 SELECT ROUND(150.75, 0, 1);  

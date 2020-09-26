@@ -24,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b5c75b95d32905e6cd2fa7ff30cb0440cca0dd9
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4de45bdd147626832f932f5bd619c3a89860d68a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688813"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379402"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "90688813"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 SESSION_USER  
 ```  
   
@@ -59,7 +59,7 @@ SESSION_USER
 ### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. 使用 SESSION_USER 返回当前会话的用户名  
  以下示例将变量声明为 `nchar`，然后将当前值 `SESSION_USER` 分配给该变量，再与文本说明一起打印此变量。  
   
-```  
+```sql  
 DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
@@ -78,7 +78,7 @@ This session's current user is: Surya
 ### <a name="b-using-session_user-with-default-constraints"></a>B. 与 DEFAULT 约束一起使用 SESSION_USER  
  以下示例创建一个表，该表使用 `SESSION_USER` 作为记录发货回执者的名字的 `DEFAULT` 约束。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE deliveries3  
@@ -95,7 +95,7 @@ GO
   
  添加到表中的记录将以当前用户的用户名为戳记。 在此示例中，`Wanida`、`Sylvester` 和 `Alejandro` 将验证发货的回执。 这可以通过使用 `EXECUTE AS` 来切换用户上下文进行模拟。  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida'  
 INSERT deliveries3 (cust_id)  
 VALUES (7510);  
@@ -117,7 +117,7 @@ GO
   
  下面的查询从 `deliveries3` 表中选择所有信息。  
   
-```  
+```sql
 SELECT order_id AS 'Order #', cust_id AS 'Customer #',   
    delivery_date AS 'When Delivered', received_shipment   
    AS 'Received By'  
@@ -145,7 +145,7 @@ Order #   Customer #  When Delivered       Received By
 ### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C：使用 SESSION_USER 返回当前会话的用户名  
  以下示例返回当前会话的会话用户。  
   
-```  
+```sql
 SELECT SESSION_USER;  
 ```  
   

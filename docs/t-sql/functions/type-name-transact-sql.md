@@ -23,12 +23,12 @@ ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: def376308310d249dfe65f0a66d38095e67733eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ddc348ba8ee7ccf9d37d9133272b48730965fb1
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459488"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379458"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459488"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 TYPE_NAME ( type_id )   
 ```  
   
@@ -67,7 +67,7 @@ TYPE_NAME ( type_id )
 ## <a name="examples"></a>示例  
  以下示例针对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `Vendor` 表中的每列返回对象名称、列名以及类型名称。  
   
-```  
+```sql
 SELECT o.name AS obj_name, c.name AS col_name,  
        TYPE_NAME(c.user_type_id) AS type_name  
 FROM sys.objects AS o   
@@ -97,14 +97,14 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例返回具有 `1` ID 的数据类型的 `TYPE ID`。  
   
-```  
+```sql
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
  有关类型列表，请查询 sys.types。  
   
-```  
+```sql
 SELECT * FROM sys.types;  
 GO  
 ```  

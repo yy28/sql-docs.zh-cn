@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f2a75cf3da8220e861d8320b2454683c3b65a1f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362243"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380592"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88362243"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
@@ -72,7 +71,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ### <a name="a-testing-for-data-with-a-valid-signature"></a>A. 测试具有有效签名的数据  
  如果所选数据在使用 `WillisKey74` 非对称密钥进行签名后未曾更改，则以下示例返回 1。 如果数据已被篡改，则该示例返回 0。  
   
-```  
+```sql
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
@@ -85,7 +84,7 @@ RETURN;
 ### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. 返回包含带有有效签名数据的结果集  
  如果 `SignedData04` 所包含的数据在使用 `WillisKey74` 非对称密钥进行签名后未曾更改，则以下示例返回 SignedData04 中的行。 该示例调用 `AsymKey_ID` 函数从数据库中获取非对称密钥 ID。  
   
-```  
+```sql
 SELECT Data   
 FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  

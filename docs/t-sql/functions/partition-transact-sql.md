@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 241eb35a882350a982177da3bcc94f4154f25e6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459589"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380772"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88459589"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
@@ -65,10 +64,10 @@ ms.locfileid: "88459589"
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. 获得一组分区列值的分区号  
  以下示例将创建一个将表或索引划分为四个分区的分区函数 `RangePF1`。 $PARTITION 用于确定将表示 `10` 的分区列的值 `RangePF1` 置于表的第 1 分区。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PARTITION FUNCTION RangePF1 ( int )  
+CREATE PARTITION FUNCTION RangePF1 ( INT )  
 AS RANGE FOR VALUES (10, 100, 1000) ;  
 GO  
 SELECT $PARTITION.RangePF1 (10) ;  
@@ -80,7 +79,7 @@ GO
   
  若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT $PARTITION.TransactionRangePF1(TransactionDate) AS Partition,   
@@ -96,7 +95,7 @@ GO
 > [!NOTE]  
 >  若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)。  
   
-```  
+```sql  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  

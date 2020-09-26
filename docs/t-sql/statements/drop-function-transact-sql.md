@@ -23,12 +23,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 946a35d9de23ecd267b3db1a754d1487943b7d6f
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: fb975b9fcceedc74f49b951e7ec2a8b947880047
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990071"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380402"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +81,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ### <a name="a-dropping-a-function"></a>A. 删除函数  
  以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 `Sales` 架构中删除 `fn_SalesByStore` 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
   
-```  
+```sql  
 DROP FUNCTION Sales.fn_SalesByStore;  
 ```  
   

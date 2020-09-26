@@ -26,12 +26,12 @@ ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc684b2a344594632fe02eb9e1ecfd6bcd45fa70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0faa42d322baee3a2bdd36d09c08508b038c6fe7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308853"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379812"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88308853"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Aggregate Function Syntax    
 SUM ( [ ALL | DISTINCT ] expression )  
 
@@ -86,7 +86,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-sum-to-return-summary-data"></a>A. 使用 SUM 返回汇总数据  
  下面示例显示了使用 SUM 函数返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中汇总数据的过程。  
   
-```  
+```sql
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
 FROM Production.Product  
 WHERE Color IS NOT NULL   
@@ -112,14 +112,14 @@ White           19.00                 6.7926
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
  以下示例将 SUM 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着将基于年度销售额为每个地区计算 SUM 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的累积销售总额，然后在计算中包括表示 2006 年销售额的第三行。  
   
-```  
+```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -150,13 +150,13 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  在这个例子中，OVER 子句未包含 PARTITION BY。 这意味着该函数将应用于查询所返回的所有行。 在 OVER 子句中指定的 ORDER BY 子句将确定应用 SUM 函数的逻辑顺序。 该查询将按年为在 WHERE 子句中指定的所有销售区域返回销售额的累计合计。 在 SELECT 语句中指定的 ORDER BY 子句将确定显示查询行的顺序。  
   
-```  
+```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -186,7 +186,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ### <a name="c-a-simple-sum-example"></a>C. 一个简单的 SUM 示例  
  以下示例返回 2003 年销售的每件产品的总数。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductKey, SUM(SalesAmount) AS TotalPerProduct  
@@ -212,7 +212,7 @@ ProductKey  TotalPerProduct
 ### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 计算多列的组合计  
  以下示例针对 `ListPrice` 表中列出的每种颜色计算 `StandardCost` 与 `Product` 的和。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT Color, SUM(ListPrice)AS TotalList,   

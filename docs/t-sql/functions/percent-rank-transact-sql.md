@@ -20,12 +20,12 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36f8d4e87ad6e3b92f71ae45dab6e7020c9d8c72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40422b7ea89dd6a62ea3f59f3d08d8eb48107a98
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363043"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380779"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,10 +34,9 @@ ms.locfileid: "88363043"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 PERCENT_RANK( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
-  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -57,7 +56,7 @@ PERCENT_RANK( )
 ## <a name="examples"></a>示例  
  下面的示例使用 CUME_DIST 函数计算给定部门内每个雇员的薪金百分比。 CUME_DIST 函数返回的值表示薪金低于或等于同一个部门中当前雇员的雇员百分比。 PERCENT_RANK 函数将雇员的薪金在部门内的排名计算为一个百分比。 指定 PARTITION BY 子句来按部门对结果集中的行进行分区。 OVER 子句中的 ORDER BY 子句对每个分区中的行进行排序。 SELECT 语句中的 ORDER BY 子句对整个结果集中的行进行排序。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate,   

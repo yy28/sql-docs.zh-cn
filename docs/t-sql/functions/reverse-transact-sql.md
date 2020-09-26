@@ -21,12 +21,12 @@ ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c19d7f874b17009d28ce3c41a1fb468454cd1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c30468f62758e0483b339baf436a788c2cdcabf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422641"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380631"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88422641"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 REVERSE ( string_expression )  
 ```  
   
@@ -59,7 +59,7 @@ REVERSE ( string_expression )
 ## <a name="examples"></a>示例  
  以下示例返回字符被反转的所有联系人的名字。 此示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
   
-```  
+```sql  
 SELECT FirstName, REVERSE(FirstName) AS Reverse  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -82,8 +82,8 @@ Terri          irreT
   
  以下示例反转变量中的字符。  
   
-```  
-DECLARE @myvar varchar(10);  
+```sql
+DECLARE @myvar VARCHAR(10);  
 SET @myvar = 'sdrawkcaB';  
 SELECT REVERSE(@myvar) AS Reversed ;  
 GO  
@@ -91,7 +91,7 @@ GO
   
  以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果********。  
   
-```  
+```sql
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
@@ -99,7 +99,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例返回所有数据库的名称，以及字符被反转的名称。  
   
-```  
+```sql
 SELECT name, REVERSE(name) FROM sys.databases;  
 GO  
 ```  

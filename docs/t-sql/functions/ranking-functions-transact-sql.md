@@ -19,12 +19,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b21cca9750aeb85ae75f0b0ad8699262d7b696cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf854b2edac064596bcce2ff417a6151f8bb170c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309143"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380643"
 ---
 # <a name="ranking-functions-transact-sql"></a>排名函数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88309143"
 ## <a name="examples"></a>示例  
  以下示例显示了用在同一查询中的四个排名函数。 有关函数特定的示例，请参阅每个排名函数。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
