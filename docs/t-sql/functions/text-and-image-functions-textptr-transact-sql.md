@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422591"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380502"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>文本与图像函数 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422591"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
  以下示例将使用 `TEXTPTR` 函数来查找与 `pubs` 数据库的 `pub_info` 表中的 `New Moon Books` 关联的 image 列 `logo`****。 文本指针放在局部变量 `@ptrval.` 中。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>B. 将 TEXTPTR 用于行内文本  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须在以下示例所示的事务中使用行内文本指针。  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>C. 返回文本数据  
  以下示例将从 `pub_id` 表中选择 `pr_info` 列和 `pub_info` 列的 16 字节文本指针。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  以下示例显示如何在不使用 TEXTPTR 的情况下，返回文本的前 `8000` 个字节。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>D. 返回特定文本数据  
  以下示例将查找与 `pubs` 数据库的 `pub_info` 表中的 `pub_id``0736` 关联的 `text` 列 (`pr_info`)。 该例首先声明了一个局部变量 `@val`。 然后，将文本指针（长二进制字符串）置于 `@val` 中，并将其作为参数提供给 `READTEXT` 语句。 结果将返回从第五个字节（偏移量为 4）开始的 10 个字节。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  

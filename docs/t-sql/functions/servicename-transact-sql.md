@@ -21,12 +21,12 @@ ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0754a042a02730ad58015d74b3bfdd34c1dc33fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f78b9b0a946d4140c9404ecfa4bdaac350ad2e2c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467919"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380262"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88467919"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 @@SERVICENAME  
 ```  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88467919"
 ## <a name="examples"></a>示例  
  下面的示例显示了使用 `@@SERVICENAME`。  
   
-```  
+```sql  
 SELECT @@SERVICENAME AS 'Service Name';  
 ```  
   

@@ -25,12 +25,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e14a1a07537ee9ec99d2eb54de4ec636621cce80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d798e00eccd5252c5142c0e6e19ac842b02d500d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467791"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379808"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="examples"></a>示例  
  以下示例从第一个字符串 `abcdef` 的第 `2` 个位置 (`b`) 开始删除三个字符，然后在删除位置插入第二个字符串，从而创建并返回一个字符串。  
   
-```  
+```sql  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
 GO  
 ```  

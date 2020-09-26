@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111853"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379792"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "87111853"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -78,7 +78,7 @@ SUBSTRING ( expression ,start , length )
 ### <a name="a-using-substring-with-a-character-string"></a>A. 对字符串使用 SUBSTRING  
  以下示例说明如何仅返回字符串的一部分。 从 `sys.databases` 表中，此查询返回第一列中的系统数据库名称、第二列中的数据库的第一个字母和最后一列中的第三和第四个字符。  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -98,7 +98,7 @@ WHERE database_id < 5;
   
  以下示例说明如何显示字符串常量 `abcdef` 中的第二个、第三个和第四个字符。  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -119,7 +119,7 @@ bcd
   
  以下示例说明如何返回 `pubs` 数据库的 `pub_info` 表内每个 text 和 image 数据列的前 10 个字符   。 text 数据返回为 varchar，而 image 数据返回为 varbinary     。  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -139,7 +139,7 @@ WHERE pub_id = '1756';
   
  以下示例说明 SUBSTRING 对 text 和 ntext 数据的影响   。 首先，该示例在 `pubs` 数据库内创建一个名为 `npub_info` 的新表。 接着，该示例使用 `pr_info` 列的前 80 个字符在 `npub_info` 表中创建 `pub_info.pr_info` 列，然后将添加 `ü` 为第一个字符。 最后，`INNER JOIN` 检索所有出版商标识号以及 text 和 ntext 出版商信息列的`SUBSTRING`  。  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -149,7 +149,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -184,7 +184,7 @@ ORDER BY pr.pub_id ASC;
 ### <a name="c-using-substring-with-a-character-string"></a>C. 对字符串使用 SUBSTRING  
  以下示例说明如何仅返回字符串的一部分。 该查询在一列中返回 `dbo.DimEmployee` 表中的姓氏，在另一列中只返回名字首字母。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -205,7 +205,7 @@ Barreto de Mattos    P
   
  以下示例显示如何返回字符串常量 `abcdef` 的第二个、第三个和第四个字符。  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

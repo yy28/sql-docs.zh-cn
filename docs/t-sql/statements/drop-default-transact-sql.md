@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8d8b67ecc262269e1aa322735ac152329bc36b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539851"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380039"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ### <a name="a-dropping-a-default"></a>A. 删除默认值  
  如果默认值没有绑定到列或别名数据类型，只需使用 DROP DEFAULT 即可将其删除。 以下示例删除用户创建的名为 `datedflt` 的默认值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
@@ -81,7 +81,7 @@ GO
   
  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以使用以下语法。  
   
-```  
+```sql  
 DROP DEFAULT IF EXISTS datedflt;  
 GO  
 ```  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. 删除绑定到列的默认值  
  以下示例取消与 `EmergencyContactPhone` 表的 `Contact` 列关联的默认值的绑定，然后删除名为 `phonedflt` 的默认值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
    BEGIN   

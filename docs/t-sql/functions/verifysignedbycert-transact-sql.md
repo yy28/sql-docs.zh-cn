@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362053"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380547"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88362053"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -73,7 +72,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. 验证已签名的数据尚未被篡改  
  以下示例测试 `Signed_Data` 中的信息是否自使用名为 `Shipping04` 的证书对其进行签名之后发生了更改。 签名存储在 `DataSignature` 中。 证书 `Shipping04` 将传递给 `Cert_ID`，后者则返回数据库中证书的 ID。 如果 `VerifySignedByCert` 返回 1，则表示签名正确。 如果 `VerifySignedByCert` 返回 0，则 `Signed_Data` 中的数据不是用于生成 `DataSignature` 的数据。 在这种情况下，要么 `Signed_Data` 自签名以来发生了更改，要么 `Signed_Data` 使用不同的证书进行了签名。  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -84,7 +83,7 @@ GO
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. 仅返回包含有效签名的记录  
  此查询仅返回自使用证书 `Shipping04` 签名以来尚未更改的记录。  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   

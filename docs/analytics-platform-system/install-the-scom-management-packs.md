@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 666eb33667f9badc2c09e4f7afa872622bedb67f
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: d44e90493c905764eaceea86b5cc3c3311091726
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480301"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379409"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安装 SQL Server Operations Manager (SCOM) 用于分析平台系统的管理包
 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>开始之前  
-**必备条件**  
+**先决条件**  
   
 必须安装并运行 System Center Operations Manager。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、System Center Operations Manager 2012 或 System Center Operations Manager 2012 Service Pack 1。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "89480301"
   
 对于设备管理，请下载 [SQL Server 设备基本管理包](/previous-versions/system-center/packs/gg602398(v=technet.10))。  
   
-对于不带 AP 的较早版本的版本，请下载[适用于 Microsoft SQL Server 2012 并行数据仓库设备的 System Center 监视包](https://docs.microsoft.com/sql/analytics-platform-system/download-and-apply-microsoft-updates?view=aps-pdw-2016-au7)。  
+对于不带 AP 的较早版本的版本，请下载[适用于 Microsoft SQL Server 2012 并行数据仓库设备的 System Center 监视包](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7)。  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -51,7 +51,7 @@ ms.locfileid: "89480301"
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击“关闭” 。  
+5.  单击 **“关闭”** 。  
   
     ![单击 "关闭"](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "89480301"
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击“关闭” 。  
+5.  单击 **“关闭”** 。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
@@ -79,4 +79,4 @@ ms.locfileid: "89480301"
 安装管理包后，请继续执行下一步： [导入用于 PDW 的 SCOM 管理包 &#40;分析平台系统&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 <!-- MISSING LINKS ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->

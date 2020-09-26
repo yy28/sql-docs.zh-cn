@@ -21,12 +21,12 @@ ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb6db4504d3861c036547778ce6c8c9e16995990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b529dc24269b7e2b57f68ec22e81beed31d7dc03
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479584"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379842"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88479584"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 -- Aggregate Function Syntax   
 STDEVP ( [ ALL | DISTINCT ] expression )  
   
@@ -74,7 +73,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-stdevp"></a>A：使用 STDEVP  
  以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的总体标准偏差。  
   
-```  
+```sql  
 SELECT STDEVP(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -85,7 +84,7 @@ GO
 ### <a name="b-using-stdevp"></a>B：使用 STDEVP  
  下面的示例返回表 `dbo.FactSalesQuota` 中的销售配额值的 `STDEVP`。 第一列中包含所有非重复值的标准差，第二列中包含所有值（包括任何重复值）的标准差。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEVP(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEVP(SalesAmountQuota) AS All_Values  
@@ -104,7 +103,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-stdevp-with-over"></a>C. 通过 OVER 使用 STDEVP  
  下面的示例返回日历年中每季度的销售配额值的 `STDEVP`。 注意，`ORDER BY` 子句中的 `OVER` 对 `STDEVP` 进行排序，`ORDER BY` 语句的 `SELECT` 对结果集进行排序。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

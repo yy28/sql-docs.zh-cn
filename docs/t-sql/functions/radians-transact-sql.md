@@ -19,12 +19,12 @@ ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a85032d93f1326bacca6727c1923c70e6824eff7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c372955137f2a7aa1e99814aef2dbd0284d15a95
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309863"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380679"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ RADIANS ( numeric_expression )
 ### <a name="a-using-radians-to-show-00"></a>A. 使用 RADIANS 显示 0.0  
  以下示例返回结果 `0.0`，因为用于转换为弧度的数值表达式对于 `RADIANS` 函数太小。  
   
-```  
+```sql  
 SELECT RADIANS(1e-307)  
 GO  
 ```  
@@ -69,7 +69,7 @@ GO
 ### <a name="b-using-radians-to-return-the-equivalent-angle-of-a-float-expression"></a>B. 使用 RADIANS 返回浮点表达式的等价角度。  
  以下示例执行 `float` 表达式并返回指定角度的 `RADIANS`。  
   
-```  
+```sql  
 -- First value is -45.01.  
 DECLARE @angle FLOAT  
 SET @angle = -45.01  
