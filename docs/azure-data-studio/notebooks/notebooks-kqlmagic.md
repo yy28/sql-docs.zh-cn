@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: f927f2259c96b0b42e184d0f4b0ee7e49cd5df01
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136633"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226967"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio 中的 Kqlmagic
 
@@ -107,6 +107,10 @@ Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](./notebooks-guid
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
+
+    > [!Note]
+    > 如果使用自己的 ADX 群集，则必须在连接字符串中包含区域，如下所示：   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
    使用设备登录进行身份验证。 从输出中复制代码，然后选择“身份验证”，这会打开需要在其中粘贴代码的浏览器。 成功进行身份验证后，可以返回到 Azure Data Studio 以继续执行脚本的其余部分。
 

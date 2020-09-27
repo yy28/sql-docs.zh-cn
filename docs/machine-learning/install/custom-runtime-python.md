@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e945d07f357055904fe31bb54746e94e69a7d46
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136672"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227261"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>为 SQL Server 安装 Python 自定义运行时
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -117,7 +117,7 @@ python.exe -m pip install pandas
 2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    
+
 >[!NOTE]
 >The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
@@ -134,7 +134,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-python-language-extension"></a>下载 Python 语言扩展
 
-下载包含 Python 语言扩展的 zip 文件 [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952)。
+下载[包含用于 Windows 的 Python 语言扩展的 zip 文件](https://github.com/microsoft/sql-server-language-extensions/releases)。 建议在生产环境中使用发行版。 在开发或测试中使用调试版本，因为它提供了详细的日志记录信息，可用于调查任何错误。
 
 ## <a name="register-external-language"></a>注册外部语言
 
@@ -280,7 +280,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-language-extension"></a><a name="download-python-linux"></a> 下载 Python 语言扩展
 
-下载包含 Python 语言扩展的 zip 文件 [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793)。
+下载[包含用于 Linux 的 Python 语言扩展的 zip 文件](https://github.com/microsoft/sql-server-language-extensions/releases)。 建议在生产环境中使用发行版。 在开发或测试中使用调试版本，因为它提供了详细的日志记录信息，可用于调查任何错误。
 
 ## <a name="register-external-language"></a>注册外部语言
 
