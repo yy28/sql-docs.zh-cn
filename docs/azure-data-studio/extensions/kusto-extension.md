@@ -9,18 +9,20 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 52f8bb103aad960750a74be1a4e35b0d1d5be5d7
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364064"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379612"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 的 Kusto (KQL) 扩展（预览版）
 
 使用 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 扩展，你可以连接到 [Azure 数据资源管理器](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)群集并进行查询。
 
-用户现在可以使用 Kusto 内核连同 IntelliSense 一起，连接并浏览其 Azure 数据资源管理器群集、编写并运行 KQL 查询，以及创作笔记本。 通过在 Azure Data Studio 中启用本机 Kusto (KQL) 体验版，数据工程师、数据科学家和数据分析师可以根据存储在 Azure 数据资源管理器中的大量数据快速观察趋势和异常情况。
+用户可以使用包含 IntelliSense 的 [Kusto 内核](../notebooks/notebooks-kusto-kernel.md)，编写并运行 KQL 查询，以及创作笔记本。
+
+通过在 Azure Data Studio 中启用本机 Kusto (KQL) 体验版，数据工程师、数据科学家和数据分析师可以根据存储在 Azure 数据资源管理器中的大量数据快速观察趋势和异常情况。
 
 此扩展当前处于预览状态。
 
@@ -126,16 +128,23 @@ StormEvents
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 可视化效果":::
 
-## <a name="limitations-and-considerations"></a>限制和注意事项
+## <a name="known-issues"></a>已知问题
 
-- 在运行 Kusto 查询前，必须为 Azure 数据资源管理器群集选择数据库。
-- 如果让 Azure 数据资源管理器群集保持空闲状态的时间太长，则会断开连接。
-    - 解决方法：断开与群集的连接，然后重新连接。
+| 详细信息 | 解决方法 |
+|---------|------------|
+| [Kusto 连接 Viewlet 在重载之后无法正常工作](https://github.com/microsoft/azuredatastudio/issues/12475)。 | 空值 |
+| [无法自动重新连接](https://github.com/microsoft/azuredatastudio/issues/11830)。 | 断开连接，然后重新连接到 Azure 数据资源管理器群集。 |
+| [刷新 Kusto 群集似乎未正确地重新连接](https://github.com/microsoft/azuredatastudio/issues/11824)。 | 断开连接，然后重新连接到 Azure 数据资源管理器群集。 |
+| [连接到群集后应显示群集仪表板，而不是数据库](https://github.com/microsoft/azuredatastudio/issues/12549) | 空值 |
+| 对于 Azure 数据群集数据库中的每个表，仅有一个选项“选择前 1000 个”的选项，而不是“取 10 个”选项 。 | 空值 |
+
+你可以提交[功能请求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)，向产品团队提供反馈。  
+你可以提交 [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)，向产品团队提供反馈。
 
 ## <a name="next-steps"></a>后续步骤
 
 - [创建并运行 Kusto 笔记本](../notebooks/notebooks-kusto-kernel.md)
-- [Azure Data Studio 中的 Kqlmagic 笔记本](../notebooks-kqlmagic.md)
+- [Azure Data Studio 中的 Kqlmagic 笔记本](../notebooks/notebooks-kqlmagic.md)
 - [SQL 到 Kusto 备份单](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [什么是 Azure 数据资源管理器？](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [使用 SandDance 可视化效果](https://sanddance.js.org/)

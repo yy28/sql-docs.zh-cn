@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465545"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364224"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置和更改数据库排序规则。 如果未指定排序规则，则使用服务器排序规则。  
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 设置和更改数据库排序规则。 如果未指定排序规则，则使用服务器排序规则。  
   
 > [!IMPORTANT]
-> 在 Azure SQL 数据库中未明确禁止更改数据库排序规则。 但是，更改数据库排序规则将要求对数据库和其他用户或后台进程（例如正在进行备份的后台进程）的排他锁能够保留数据库锁并防止排序规则发生更改。 不支持对 Azure SQL 数据库执行 `ALTER DATABASE COLLATE` 语句。
+> 不支持对 Azure SQL 数据库执行 `ALTER DATABASE COLLATE` 语句。
 
  **本主题内容**  
   
