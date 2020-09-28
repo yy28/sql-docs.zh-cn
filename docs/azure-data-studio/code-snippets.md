@@ -3,18 +3,18 @@ title: 创建可重用代码片段
 description: 了解如何创建和使用 Azure Data Studio SQL 代码片段，以便轻松创建数据库和数据库对象。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 95b0385178a5e2bd25f8b64be5f910d4f885e34b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: aa1826539a6b9d2a5f649159e566d3ceda8d624d
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746087"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364124"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>创建和使用代码片段，以便在 Azure Data Studio 中快速创建 Transact-SQL (T-SQL) 脚本
 
@@ -30,42 +30,40 @@ Azure Data Studio 提供几个 T-SQL 片段，以帮助快速生成正确的语�
 
    ![代码段](media/code-snippets/sql-snippets.png)
 
-1. 选择要使用的片段，生成 T-SQL 脚本。 例如，选择 sqlCreateTable：
+2. 选择要使用的片段，生成 T-SQL 脚本。 例如，选择 sqlCreateTable：
 
    ![创建表片段](media/code-snippets/create-table.png)
 
-1. 使用特定值更新突出显示的字段。 例如，将 TableName 和 Schema 替换为数据库的值 ：
+3. 使用特定值更新突出显示的字段。 例如，将 TableName 和 Schema 替换为数据库的值 ：
 
-   ![替换模板字段](media/code-snippets/table-from-snippet.png)
+   ![代码片段中的表](media/code-snippets/table-from-snippet.png)
 
    如果要更改的字段不再突出显示（在编辑器周围移动光标时会出现这种情况），请右键单击要更改的字，然后选择“更改所有匹配项”：
 
-   ![替换模板字段](media/code-snippets/change-all.png)
+   ![全部更改](media/code-snippets/change-all.png)
 
-1. 更新或添加所选片段所需的任何其他 T-SQL。 例如，更新 Column1、Column2，并添加更多列 。
+4. 更新或添加所选片段所需的任何其他 T-SQL。 例如，更新 Column1、Column2，并添加更多列 。
 
-
- 
-## <a name="creating-sql-code-snippets"></a>创建 SQL 代码片段 
+## <a name="creating-sql-code-snippets"></a>创建 SQL 代码片段
 
 可以定义自己的片段。 打开需要编辑的 SQL 片段文件：
 
 1. 请打开“命令面板”(Shift+Ctrl+P)，并键入 snip，然后选择“先决条件: 打开用户片段”：
 
-   ![替换模板字段](media/code-snippets/user-snippets.png)
+   ![用户代码片段](media/code-snippets/user-snippets.png)
 
-1. 选择 SQL：
+2. 选择 SQL：
 
    > [!NOTE]
    > Azure Data Studio 从 Visual Studio Code 继承其代码片段功能，本文专门介绍了如何使用 SQL 片段。 有关详细信息，请参阅 Visual Studio Code 文档中的[创建自己的片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)。 
 
-   ![替换模板字段](media/code-snippets/select-sql.png)
+   ![选择 SQL](media/code-snippets/select-sql.png)
 
-1. 将以下代码粘贴到 sql.json：
+3. 将以下代码粘贴到 sql.json：
 
-   ```sql
-   {
-   "Select top 5": {
+    ```sql
+    {
+     "Select top 5": {
     "prefix": "sqlSelectTop5",
     "body": "SELECT TOP 5 * FROM ${1:TableName}",
     "description": "User-defined snippet example 1"
@@ -81,25 +79,26 @@ Azure Data Studio 提供几个 T-SQL 片段，以帮助快速生成正确的语�
     "-- Create the table in the specified schema",
     "CREATE TABLE $2.$1",
     "(",
-    "   $1Id INT NOT NULL PRIMARY KEY, -- primary key column",
-    "   Column1 [NVARCHAR](50) NOT NULL,",
-    "   Column2 [NVARCHAR](50) NOT NULL",
-    "   -- specify more columns here",
+    "$1Id INT NOT NULL PRIMARY KEY, -- primary key column",
+    "Column1 [NVARCHAR](50) NOT NULL,",
+    "Column2 [NVARCHAR](50) NOT NULL",
+    "-- specify more columns here",
     ");",
     "GO"
     ],
-   "description": "User-defined snippet example 2"
-   }
-   }
-   ```
+       "description": "User-defined snippet example 2"
+       }
+       }
+       ```
 
-1. 保存 sql json 文件。
-1. 单击 Ctrl+N，打开新的查询编辑器窗口。
-2. 键入 sql，将看到刚刚添加的两个用户片段：sqlCreateTable2 和 sqlSelectTop5 。
+4. Save the sql.json file.
 
-选择其中一个新片段，并测试运行!
+5. Open a new query editor window by clicking **Ctrl+N**.
 
+6. Type **sql**, and you see the two user snippets you just added; *sqlCreateTable2* and *sqlSelectTop5*.
 
-## <a name="additional-resources"></a>其他资源
+Select one of the new snippets and give it a test run!
 
-有关 SQL 编辑器的信息，请参阅[代码编辑器教程](tutorial-sql-editor.md)。
+## Next steps
+
+For information about the SQL editor, see [Code editor tutorial](tutorial-sql-editor.md).

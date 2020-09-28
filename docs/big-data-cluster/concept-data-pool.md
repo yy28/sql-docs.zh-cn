@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d9eaba636c2567d60dfc62ce37080717e9c32e9
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b486d0fbb8e0f2c8595251de386bb9f133ac73cf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680562"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379622"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集中的数据池？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中“SQL Server 数据池”的角色  。 以下部分介绍了 SQL 数据池的体系结构和功能。
+本文介绍 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中“SQL Server 数据池”的角色  。 以下部分介绍了 SQL 数据池的体系结构、功能和使用情况。
 
 这个 5 分钟的视频介绍了数据池，并说明了如何从数据池查询数据：
 
@@ -28,13 +28,15 @@ ms.locfileid: "88680562"
 
 ## <a name="data-pool-architecture"></a>数据池体系结构
 
-数据池包含一个或多个 SQL Server 数据池实例。 SQL 数据池实例为群集提供持久的 SQL Server 存储。 数据池用于引入来自 SQL 查询或 Spark 作业的数据。 为了改善跨大型数据集的性能，数据池中的数据将分布到跨成员 SQL 数据池实例的分片中。
-
-## <a name="scale-out-data-marts"></a>横向扩展数据市场
-
-数据池支持创建横向扩展数据市场，其中将来自多个源的外部数据引入到数据池中。 由于数据分布在数据池实例上，因此对特选数据进行并行查询更有效。
+数据池包含一个或多个 SQL Server 数据池实例，这些实例为群集提供永久的 SQL Server 存储。 它允许在外部数据源中对缓存数据执行性能查询并分担作业。 使用 T-SQL 查询或 Spark 作业将数据引入到数据池中。 为了提高大型数据集的性能，将引入的数据分布到分片中，并存储在池中的所有 SQL Server 实例中。 支持的分发方法为轮循机制并已进行复制。 为了优化读取访问，在每个数据池实例中的每个表上创建了聚集列存储索引。 数据池用作 SQL 大数据群集的横向扩展数据市场。
 
 ![横向扩展数据市场](media/concept-data-pool/data-virtualization-improvements.png)
+
+从 SQL Server 主实例可以管理对数据池中 SQL server 实例的访问。 创建了数据池的外部数据源以及用于存储数据缓存的 PolyBase 外部表。 在后台，控制器使用与外部表匹配的表在数据池中创建一个数据库。 SQL Server 主实例中的工作流是透明的；控制器会将特定外部表请求重定向到数据池中的 SQL Server 实例，该实例可以通过计算池、执行查询并返回结果集。 数据池中的数据只能引入或查询，不能修改。 因此，任何数据刷新都需要删除表，然后再重新创建表和重新填充数据。 
+
+## <a name="data-pool-scenarios"></a>数据池应用场景
+
+ 报告是一个常见的数据池应用场景。 例如，可以将加入多个 PolyBase 数据源且用于每周报告的复杂查询放入数据池。 缓存数据提供了本地快速计算，无需返回原始数据集。 同样，需要定期刷新的面板数据可能会缓存到数据池中，以便优化报告。 机器学习重复探索还可以从数据池中的数据集缓存中获益。
 
 ## <a name="next-steps"></a>后续步骤
 

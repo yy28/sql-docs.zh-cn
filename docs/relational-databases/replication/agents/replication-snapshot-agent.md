@@ -17,12 +17,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 52cba9eb53b02e416e0274608f6437ee483c26b3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fd89016895d2e106e6c9ff9dcab4873824c7515
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107513"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364234"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -181,6 +181,9 @@ snapshot [ -?]
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值是处理器数量的两倍。  
+ 
+ > [!NOTE]
+ > 如果复制的对象具有筛选器，则快照代理将为该项目仅生成一个 BCP 文件，而不是生成多个 BCP 文件。 
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  是否将无关删除操作发送到订阅服务器。 无关删除操作是针对不属于订阅服务器分区的行发送到订阅服务器的 DELETE 命令。 无关删除操作不会影响数据的完整性或收敛，但它们会导致不必要的网络通信。 **MaxNetworkOptimization** 的默认值是 **0**。 将 **MaxNetworkOptimization** 设置为 **1** 可将不相关的删除操作发生的机会减至最小，从而减少网络通信，并最大程度地优化网络。 如果存在多个级别的联接筛选器和复杂子集筛选器，则将此参数设置为 **1** 还会增加元数据的存储并导致发布服务器性能下降。 您应仔细评估您的复制拓扑，仅当无关删除操作导致的网络通信高到无法接受时才应将 **MaxNetworkOptimization** 设置为 **1** 。  
@@ -236,7 +239,7 @@ snapshot [ -?]
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时所用的登录名。  
   
  **-PublisherPassword**  _publisher_password_  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时使用的密码。 。  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时使用的密码。 .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  

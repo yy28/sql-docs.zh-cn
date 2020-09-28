@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL)（预览版）
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: 在 Azure Synapse Analytics 中使用 COPY 语句从外部存储帐户加载数据。
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024554"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380832"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -136,13 +136,19 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* 指定访问外部存储帐户的身份验证机制。 身份验证方法包括：
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Azure blob 存储**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS（blob 终结点）/MSI（dfs 终结点）/服务主体/密钥/AAD | SAS（blob 终结点）/MSI（dfs 终结点）/服务主体/密钥/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure blob 存储**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
+1：必须在内部位置路径使用 blob 终结点 ( **.blob**.core.windows.net)。
 
-使用 AAD 或公共存储帐户进行身份验证时，无需指定 CREDENTIAL。 
+2：必须在外部位置路径使用 dfs 终结点 ( **.dfs**.core.windows.net)。
+
+> [!NOTE]  
+>
+> - 使用 AAD 或公共存储帐户进行身份验证时，无需指定 CREDENTIAL。 
+>  - 如果存储帐户与 VNet 相关联，则必须使用 MSI（托管标识）进行身份验证。
 
 - 使用共享访问签名 (SAS) 进行身份验证
   

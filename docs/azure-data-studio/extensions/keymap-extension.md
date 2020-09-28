@@ -3,24 +3,24 @@ title: 创建键映射扩展
 description: 本教程演示如何创建键映射扩展以将自定义功能添加到 Azure Data Studio。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111660"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364074"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>创建 Azure Data Studio 键映射扩展
 
 本教程演示如何创建新的 Azure Data Studio 扩展。 此扩展在 Azure Data Studio 中创建常见的 SSMS 键绑定。
 
-在本教程中，你将学习如何执行以下操作：
+本文介绍如何执行以下操作：
 > [!div class="checklist"]
 > - 创建一个扩展项目
 > - 安装扩展生成器
@@ -41,7 +41,7 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 
 ## <a name="install-the-extension-generator"></a>安装扩展生成器
 
-为了简化创建扩展的过程，已使用 Yeoman 构建了一个[扩展生成器](https://code.visualstudio.com/docs/extensions/yocode)。 要安装它，请从命令提示符处运行以下命令：
+为了简化创建扩展的过程，已使用 Yeoman 构建了一个[扩展生成器](https://code.visualstudio.com/docs/extensions/yocode)。 要安装它，请在命令提示符中运行以下代码：
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -85,7 +85,7 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 
 **步骤 2：向扩展添加快捷方式**
 
-若要向扩展添加快捷方式，请打开 package.json 文件（在扩展中），并将 `contributes` 部分替换为以下内容**：
+若要向扩展添加快捷方式，请打开 package.json 文件（在扩展中），并将 `contributes` 部分替换为以下代码：
 
 ```json
 "contributes": {
@@ -158,7 +158,7 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>将扩展发布到市场
 
-Azure Data Studio 扩展市场尚未完全实现，但当前需要在某处托管扩展 VSIX（例如，GitHub 发布页面），然后提交 PR，请求使用扩展信息更新此 [JSON 文件](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)。
+Azure Data Studio 扩展市场正在构建中，但当前需要在某个位置（例如 GitHub 发布页面）托管扩展 VSIX，然后提交 PR，请求使用扩展信息更新此 [JSON 文件](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -174,7 +174,7 @@ Azure Data Studio 扩展市场尚未完全实现，但当前需要在某处托�
 
 希望本教程能为你提供灵感，构建自己的 Azure Data Studio 扩展。 我们提供仪表板见解支持（针对 SQL Server 运行的很棒的图表）、一些特定于 SQL 的 API，以及从 Visual Studio Code 继承的大量现有扩展点。
 
-如果有想法但不确定如何着手，请在团队 [azuredatastudio](https://twitter.com/azuredatastudio) 处提出问题或发送推文。
+如果有想法但不确定如何着手，请提出问题或在推特上 @[azuredatastudio](https://twitter.com/azuredatastudio)。
 
 可持续参考 [Visual Studio Code 扩展指南](https://code.visualstudio.com/docs/extensions/overview)，因为它涵盖了所有现有 API 和模式。
 

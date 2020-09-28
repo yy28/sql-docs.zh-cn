@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226957"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379592"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>创建并运行 Kusto (KQL) 笔记本（预览）
 
-本文介绍如何使用连接到 Azure 数据资源管理器群集的 [Kusto (KQL) 扩展](../extensions/kusto-extension.md)创建并运行 [Azure Data Studio 笔记本](../notebooks-guidance.md)
+本文介绍如何使用连接到 Azure 数据资源管理器群集的 [Kusto (KQL) 扩展](../extensions/kusto-extension.md)创建并运行 [Azure Data Studio 笔记本](./notebooks-guidance.md)
 
 使用 Kusto (KQL) 扩展，你可以更改 Kusto 的内核选项。
 
@@ -104,11 +104,14 @@ ms.locfileid: "91226957"
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="保存结果":::
 
-## <a name="limitations-and-considerations"></a>限制和注意事项
+## <a name="known-issues"></a>已知问题
 
-- 在运行 Kusto 查询前，必须为 Azure 数据资源管理器群集选择数据库。
-- 如果让 Azure 数据资源管理器群集保持空闲状态的时间太长，则会断开连接。
-    - 解决方法：断开与群集的连接，然后重新连接。
+| 详细信息 | 解决方法 |
+|---------|------------|
+| [查询结果仅显示列标题](https://github.com/microsoft/azuredatastudio/issues/12565)。 | 空值 |
+
+你可以提交[功能请求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)，向产品团队提供反馈。  
+你可以提交 [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)，向产品团队提供反馈。
 
 ## <a name="next-steps"></a>后续步骤
 

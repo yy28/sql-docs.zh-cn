@@ -3,18 +3,18 @@ title: 用户和工作区设置
 description: 了解如何根据自己的喜好使用各项设置来自定义 Azure Data Studio 的编辑器、用户界面和功能行为。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06e9efa72ef82d8335db4b7ec6b8941c95501790
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114517"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364178"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改用户和工作区设置
 
@@ -22,8 +22,8 @@ ms.locfileid: "91114517"
 
 Azure Data Studio 提供两种不同的设置范围：
 
-* **用户** 这些设置全局适用于打开的任何 Azure Data Studio 实例。
-* **工作区** 工作区设置是特定于计算机上文件夹的设置，且仅当在资源管理器侧栏中打开文件夹时可用。 此范围中定义的设置会替代用户范围。
+* **用户** - 这些设置全局适用于打开的任何 Azure Data Studio 实例。
+* **工作区** -“工作区”设置是特定于计算机上文件夹的设置，且仅当在资源管理器边栏中打开文件夹时可用。 此范围中定义的设置会替代用户范围。
 
 ## <a name="creating-user-and-workspace-settings"></a>创建用户和工作区设置
 
@@ -37,7 +37,7 @@ Azure Data Studio 提供两种不同的设置范围：
 
 保存经过修改的 `settings.json` 文件后，Azure Data Studio 会重新加载对设置的更改。
 
-> [!NOTE] 
+> [!NOTE]
 > 工作区设置对于在团队中共享项目特定设置非常有用。
 
 ## <a name="settings-file-locations"></a>设置文件位置
@@ -52,7 +52,7 @@ Azure Data Studio 提供两种不同的设置范围：
 
 ## <a name="hot-exit"></a>热退出
 
-默认情况下，Azure Data Studio 会在退出时记住未保存的文件更改。 这与 Visual Studio Code 中的热退出功能一样。
+默认情况下，Azure Data Studio 会在退出时记住未保存的文件更改。 在 Visual Studio Code 中，这与热退出功能一样。
 
 默认情况下，热退出处于关闭状态。 通过编辑 `files.hotExit` 设置启用热退出。 有关详细信息，请参阅[热退出（在 Visual Studio Code 文档中）](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 
