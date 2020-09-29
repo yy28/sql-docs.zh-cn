@@ -4,22 +4,34 @@ description: 了解有关每个版本的 DB2 (DB2ToSQL) SQL Server 迁移助手 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862474"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498227"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>DB2 (DB2ToSQL 的 SSMA 中的新增功能) 
 
 本文列出了每个版本中的 DB2 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+除了多项改进以确保为残障人士提供更好的可访问性之外，8.14 的 SSMA for DB2 的 v 版升级需要项目升级，因为它现在将完整的源/目标服务器版本存储在项目元数据中。
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+用于 DB2 的 SSMA 的8.13 版本包含以下更改：
+
+* 支持筛选的唯一索引
+* 转换过程和函数调用时，请考虑隐式类型强制转换
+* 改进源连接字符串的日志记录，以帮助解决连接问题
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -33,7 +45,7 @@ ms.locfileid: "87862474"
 用于 DB2 的 SSMA 的8.11 版本包含以下更改：
 
 * 支持 DB2 for i (7.1 及更高版本) 
-* 转换 `SQLSTATE` 和`SQLCODE`
+* 转换 `SQLSTATE` 和 `SQLCODE`
 * 函数内带副作用的运算符的转换错误消息
 * 使用 MSAL.NET 库进行交互式 Azure Active Directory 身份验证
 
@@ -76,7 +88,7 @@ SSMA for DB2 的 v4.0 版本包括全新的 DB2 语法分析器，以及图形�
 * 分析语句支持 `ASSOCIATE RESULT SET` 。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v86"></a>SSMA v 8。6
 
@@ -93,7 +105,7 @@ SSMA for DB2 的 v4.0 版本包括全新的 DB2 语法分析器，以及图形�
 * 转换语句的能力 `LEAVE` 。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v85"></a>SSMA 8。5
 
@@ -105,7 +117,7 @@ SSMA for DB2 的 v4.0 版本包括全新的 DB2 语法分析器，以及图形�
 * 修复了与对象名称开头处空格相关的错误。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
@@ -152,11 +164,11 @@ SSMA for DB2 的 "7.4 版" 版本得到了增强，可提供旨在提高质量�
 
 SSMA for DB2 的 v2.0 版本得到了增强，可提供旨在提高质量和转换指标的目标修补程序。 此版本还提供以下新增功能：
 
-* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
+* 支持作为目标的 **AZURE SQL 托管实例** 。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
   ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
-* 转换后**修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
+* 转换后 **修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
 * 初步的数据库/架构选择。
 
@@ -184,7 +196,7 @@ SSMA for DB2 的 v2.0 版本得到了增强，可提供旨在提高质量和转�
 
 适用于 DB2 的 SSMA 的版本7.8 版本包含以下更改：
 
-* 更改*项目设置*中突出显示的类型映射。
+* 更改 *项目设置*中突出显示的类型映射。
 * 允许用户禁用遥测数据。
 
 ## <a name="ssma-v77"></a>SSMA v4。0
@@ -206,7 +218,7 @@ SSMA for DB2 的版本7.5 版本增强了几项改进，以确保为残障人士
 
 用于 DB2 的 SSMA 的7.4 版本包含以下更改：
 
-* 在源和目标中的架构对象发现期间，现在可以使用 "**查询超时**" 选项。
+* 在源和目标中的架构对象发现期间，现在可以使用 " **查询超时** " 选项。
 
   ![query timeout 选项](../media/query-timeout_red.png)
 
@@ -227,8 +239,8 @@ SSMA for DB2 的版本7.5 版本增强了几项改进，以确保为残障人士
       ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
   * 可供 SSMA 使用的库，用于执行自定义转换。
     * 你现在可以构造代码，该代码可以处理 SSMA 之前未处理的自定义语法转换和转换。
-      * 此博客文章中提供了有关如何构造自定义转换器的说明，[扩展了 SQL Server 迁移助手的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      * 下载此[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)中用于转换的示例项目。
+      * 此博客文章中提供了有关如何构造自定义转换器的说明， [扩展了 SQL Server 迁移助手的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
+      * 下载此 [博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)中用于转换的示例项目。
 
 ## <a name="ssma-v72"></a>SSMA 7。2
 

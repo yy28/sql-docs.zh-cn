@@ -4,22 +4,34 @@ description: 了解针对每个版本的 Access (AccessToSQL) SQL Server 迁移�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863757"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497913"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 的新增功能
 
 本文列出了每个版本中的访问更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+除了多项改进以确保为残障人士提供更好的可访问性之外，8.14 的 SSMA for Access 需要进行项目升级，因为它现在将完整的源/目标服务器版本存储在项目的元数据中。
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+用于访问的 SSMA 的8.13 版本包含以下更改：
+
+* 修复 `ORDER BY` 与子句的转换 `UNION`
+* 支持筛选的唯一索引
+* 转换过程和函数调用时，请考虑隐式类型强制转换
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -60,7 +72,7 @@ ms.locfileid: "87863757"
 用于访问的 SSMA 的8.7 版本已改进了 `IIF` 查询中函数的转换，以及图形用户界面中的小修复和性能改进。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v86"></a>SSMA v 8。6
 
@@ -71,7 +83,7 @@ ms.locfileid: "87863757"
 ![省略扩展属性设置](../access/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v85"></a>SSMA 8。5
 
@@ -80,7 +92,7 @@ ms.locfileid: "87863757"
 此外，SSMA for Access 现在支持 )  (、等多个标准函数的转换。 `ISNULL` `IIF`
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
@@ -114,11 +126,11 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
 
 使用旨在提高质量和转换指标的目标修补程序，增强了 SSMA for Access 的8.0 版本。 此版本还提供以下新增功能：
 
-* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
+* 支持作为目标的 **AZURE SQL 托管实例** 。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
   ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
-* 转换后**修补顾问**。 [在此处](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)了解详细信息。
+* 转换后 **修补顾问**。 [在此处](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)了解详细信息。
 
 * 初步的数据库/架构选择。
 
@@ -164,7 +176,7 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
 
 用于访问的 SSMA 的7.4 版本包含以下更改：
 
-* 在源和目标中的架构对象发现期间，现在可以使用 "**查询超时**" 选项。
+* 在源和目标中的架构对象发现期间，现在可以使用 " **查询超时** " 选项。
 
   ![query timeout 选项](../media/query-timeout_red.png)
 
@@ -185,7 +197,7 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
         ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
   * 可供 SSMA 使用的库，用于执行自定义转换。
     * 你现在可以构造代码，该代码可以处理 SSMA 之前未处理的自定义语法转换和转换。
-      * 博客文章中提供了有关如何构造自定义转换器以及用于转换的示例项目的说明，该博客文章[扩展了 SQL Server 迁移助手的转换功能](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Extending-SQL-Server-Migration-Assistant-s-conversion/ba-p/1004181)。
+      * 博客文章中提供了有关如何构造自定义转换器以及用于转换的示例项目的说明，该博客文章 [扩展了 SQL Server 迁移助手的转换功能](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Extending-SQL-Server-Migration-Assistant-s-conversion/ba-p/1004181)。
 
 ## <a name="ssma-v72"></a>SSMA 7。2
 
@@ -299,8 +311,8 @@ Access 的 SSMA 2007 版本包含以下更改：
 
 * 添加了新的数据库迁移向导，可引导您完成从访问到的单个数据库的整个步骤 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
 * 添加了新的 "转换"、"加载" 和 "迁移" 命令，用于转换 Access 数据库、将转换后的对象加载到中 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ，并 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 在一个步骤中将数据迁移到全部。
-* 改进的查询迁移。 查询迁移现在会将更多的选择查询转换为视图。 有关详细信息，请参阅[转换 Access 数据库对象](converting-access-database-objects-accesstosql.md)。
-* 添加了在 " [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **表**" 选项卡上编辑表和索引属性的功能。
+* 改进的查询迁移。 查询迁移现在会将更多的选择查询转换为视图。 有关详细信息，请参阅 [转换 Access 数据库对象](converting-access-database-objects-accesstosql.md)。
+* 添加了在 " [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **表** " 选项卡上编辑表和索引属性的功能。
 * 添加了新的全局设置：
   * 您可以选择在编辑器窗口中显示行号。
   * 您可以将 SSMA 配置为提示替换重复的对象，或者在架构转换期间始终或从不替换重复的对象。

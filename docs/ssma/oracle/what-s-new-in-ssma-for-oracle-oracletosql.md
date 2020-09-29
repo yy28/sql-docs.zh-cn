@@ -4,22 +4,39 @@ description: 了解针对每个版本的 Oracle (OracleToSQL) SQL Server 迁移�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862398"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497966"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle (OracleToSQL 的 SSMA 中的新增功能) 
 
 本文列出了每个版本的 Oracle 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+除了多项改进以确保为残障人士提供更好的辅助功能，8.14 的 SSMA for Oracle 的 v 版包含以下更改：
+
+* 将完整的源/目标服务器版本存储到项目元数据中 (需要项目升级) 
+* 尽可能使用 DBA 数据字典进行对象发现
+* 解决了多个分析程序问题 (`PIVOT` / `UNPIVOT` 、 `MERGE` 备选报价) 
+* 修复 `INSERTING` / `DELETING` / `UPDATING` 触发器中特殊函数的转换
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+用于 Oracle 的 SSMA 的8.13 版本包含以下更改：
+
+* 修复 `SQLCODE` `SQLERRM` 本地过程中和特殊函数的转换
+* 转换过程和函数调用时，请考虑隐式类型强制转换
+* 改进源连接字符串的日志记录，以帮助解决连接问题
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -78,7 +95,7 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 此外，SSMA for Oracle 现在允许基于 "高级对象选择" 对话框中的有效性状态筛选对象。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v86"></a>SSMA v 8。6
 
@@ -91,7 +108,7 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 此外，SSMA for Oracle 现在提供改进的 `XMLTABLE` 子句分析。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v85"></a>SSMA 8。5
 
@@ -109,7 +126,7 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 * 适用于 .NET 的 Oracle 数据提供程序到版本19.5.0 的更新。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
@@ -159,7 +176,7 @@ SSMA for Oracle 的 v 8.3 版本通过旨在改进质量和转换指标的目标
 
 SSMA for Oracle 的 v2.0 版本通过旨在改进质量和转换指标的目标修补程序进行了增强。 此版本还提供以下新增功能：
 
-* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
+* 支持作为目标的 **AZURE SQL 托管实例** 。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
   ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
@@ -170,7 +187,7 @@ SSMA for Oracle 的 v2.0 版本通过旨在改进质量和转换指标的目标�
 
   面向 Azure SQL 托管实例时，某些功能（包括测试人员和服务器端数据迁移）不受支持。 在[此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)阅读详细信息。
 
-* 转换后**修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
+* 转换后 **修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
 * 初步的数据库/架构选择。
 
@@ -206,8 +223,8 @@ SSMA for Oracle 的7.4 版版本包含以下更改：
 * 支持：
   * 子句的行表达式 `IN` 。
   * 隐式类型转换。
-  * `UID`Azure SQL 数据库的转换。
-* 更改**项目设置**中突出显示的类型映射。
+  * `UID` Azure SQL 数据库的转换。
+* 更改 **项目设置**中突出显示的类型映射。
 * 允许用户禁用遥测数据。
 
 ## <a name="ssma-v77"></a>SSMA v4。0
@@ -244,7 +261,7 @@ SSMA for Oracle 的7.4 版包含以下更改：
 
   ![数据仓库的数据分布](../media/data-distribution_red.png)
 
-* 在源和目标中的架构对象发现期间，现在可以使用 "**查询超时**" 选项。
+* 在源和目标中的架构对象发现期间，现在可以使用 " **查询超时** " 选项。
 
   ![query timeout 选项](../media/query-timeout_red.png)
 
@@ -265,8 +282,8 @@ SSMA for Oracle 的7.3 版包含以下更改：
       ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
   * 可供 SSMA 使用的库，用于执行自定义转换。
     * 你现在可以构造代码，该代码可以处理 SSMA 之前未处理的自定义语法转换和转换。
-      * 此博客文章中提供了有关如何构造自定义转换器的说明，[扩展了 SQL Server 迁移助手的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      * 下载此[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)中用于转换的示例项目。
+      * 此博客文章中提供了有关如何构造自定义转换器的说明， [扩展了 SQL Server 迁移助手的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
+      * 下载此 [博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)中用于转换的示例项目。
 
 ## <a name="ssma-v72"></a>SSMA 7。2
 
@@ -403,10 +420,10 @@ SSMA for Oracle 的2008年6月发行版包含以下更改：
   * 修改集合和记录转换后，就是通过每个字段的单独变量释放的简单事例中的记录转换。
   * 改进了记录和集合实现。
   * 添加了窗口化聚合函数。
-  * `ROLLUP`/`CUBE`添加了子句。
+  * `ROLLUP`/`CUBE` 添加了子句。
   * 改进 `NEXTVAL` / `CURVAL` 。
   * 添加了列分组 in `SET` 子句、分组集和分组 ID。
-  * `MERGE`已添加语句。
+  * `MERGE` 已添加语句。
   * 添加了新的日期时间类型以及将记录和集合转换为添加的 CLR 数据类型。
 * 添加了测试人员的新功能。 现在可以使用测试人员将表测试为对象，可以更改测试用例中多个可测试对象的调用顺序，用户可以使用记录和集合来测试过程和函数作为参数和返回值，并且添加了依赖项分析器以仅检查已使用的表。
   

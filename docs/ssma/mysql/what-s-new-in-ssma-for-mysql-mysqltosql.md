@@ -4,22 +4,33 @@ description: 了解每个版本的 SQL Server 迁移助手 (SSMA) for MySQL (MyS
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 75a82f8f87997dfa028a5e0b1ee7bae73c3913e6
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863463"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497883"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 
 本文列出了每个版本中的 MySQL 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+除了多项改进以确保为残障人士提供更好的辅助功能，8.14 版本的 SSMA for MySQL 还需要项目升级，因为它现在将完整的源/目标服务器版本存储在项目元数据中。
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+SSMA for MySQL 的8.13 版本包含以下更改：
+
+* 转换过程和函数调用时，请考虑隐式类型强制转换
+* 改进源连接字符串的日志记录，以帮助解决连接问题
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -58,7 +69,7 @@ SSMA for MySQL 的 v4.0 版本在图形用户界面中提供了细微的修复�
 此外，SSMA for MySQL 现在提供 `LIMIT` 面向 AZURE SQL 时的转换 for 子句。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v86"></a>SSMA v 8。6
 
@@ -69,14 +80,14 @@ SSMA for MySQL 的 v4.0 版本在图形用户界面中提供了细微的修复�
 ![省略扩展属性设置](../mysql/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v85"></a>SSMA 8。5
 
 通过对 SQL server 中的 JSON 功能 Azure Active Directory authentication 和 basic 支持以及旨在提高可用性和性能的目标修补程序集，增强了的 SSMA for MySQL 的版本8.5。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从 [此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
@@ -114,11 +125,11 @@ SSMA for MySQL 的7.4 版是通过旨在提高质量和转换指标的目标修�
 
 SSMA for MySQL 的 v2.0 版本增强了旨在提高质量和转换指标的目标修补程序。 此版本还提供以下新增功能：
 
-* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
+* 支持作为目标的 **AZURE SQL 托管实例** 。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
   ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
-* 转换后**修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
+* 转换后 **修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
 * 初步的数据库/架构选择。
 
@@ -170,7 +181,7 @@ SSMA for MySQL 的 v2.0 版本已经得到了增强，可确保为残障人士�
 
 SSMA for MySQL 的7.4 版包含以下更改：
 
-* 在源和目标中的架构对象发现期间，现在可以使用 "**查询超时**" 选项。
+* 在源和目标中的架构对象发现期间，现在可以使用 " **查询超时** " 选项。
 
     ![query timeout 选项](../media/query-timeout_red.png)
 * 根据客户的反馈，改进了质量和转换指标。
@@ -190,8 +201,8 @@ SSMA for MySQL 的7.3 版包含以下更改：
       ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
   * 可供 SSMA 使用的库，用于执行自定义转换。
     * 你现在可以构造代码，该代码可以处理 SSMA 之前未处理的自定义语法转换和转换。
-      * 此博客文章中提供了有关如何构造自定义转换器的说明，[扩展了 SQL Server 迁移助手的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      * 下载此[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)中用于转换的示例项目。
+      * 此博客文章中提供了有关如何构造自定义转换器的说明， [扩展了 SQL Server 迁移助手的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
+      * 下载此 [博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)中用于转换的示例项目。
 
 ## <a name="ssma-v72"></a>SSMA 7。2
 
