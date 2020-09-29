@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ec65fe175cf3723bcab9e00811915f15c4075c2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b0f54982dba94080bc6d0ac19ed5148624770bfe
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544808"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412799"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89544808"
 |**securable_class_desc**|**nvarchar(120)**|映射到要审核的 class_type 的安全对象。 如果 class_type 不映射到安全对象，则为 NULL。 可以与 sys.dm_audit_actions 中的 class_desc 相关。|  
   
 ## <a name="permissions"></a>权限  
- 主体必须具有 **SELECT** 权限。 默认情况下，此权限授予 Public。  
+此视图对公共可见。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10bf743f0c09ab423dfef16da30730d80017896e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 897d83dcf6c85606ac513d9075cca9ebc316a6cf
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544843"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412801"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89544843"
 |**containing_group_name**|**nvarchar(120)**|包含指定操作的审核组的名称。 如果名称中的值为组，则为 NULL。|  
   
 ## <a name="permissions"></a>权限  
- 主体必须具有 **SELECT** 权限。 默认情况下，此权限授予 Public。  
+此视图对公共可见。
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
