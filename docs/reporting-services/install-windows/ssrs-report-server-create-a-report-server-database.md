@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/16/2019
-ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 9/2/2020
+ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253309"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603383"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>创建报表服务器数据库，SSRS 配置管理器  
 
@@ -84,8 +84,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
 
 若要在远程计算机上创建报表服务器数据库，请将连接配置为使用域用户帐户或具有网络访问权限的服务帐户。 如果使用远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请考虑报表服务器应使用哪些凭据来连接实例。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS Configuration Manager）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   

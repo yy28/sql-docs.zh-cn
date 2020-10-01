@@ -4378,11 +4378,7 @@
         - name: 使用情况和诊断数据收集
           items:
             - name: SQL Server 隐私补充
-              items:
-                - name: SQL Server 2017 及更低版本
-                  href: sql-server/sql-server-privacy.md
-                - name: SQL Server 2019
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: 配置 SQL Server 使用情况和诊断数据
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: 配置工具使用情况和诊断数据
