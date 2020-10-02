@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23137d46453189bb5a04c2860ab79c0c66e8d78f
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497718"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603461"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -83,8 +83,7 @@ SQL Server Management Studio 18.6：
 
 本文仅适用于最新版本的 SSMS。 若要下载 SSMS 的早期版本，请访问 [SSMS 的早期版本](../ssms/release-notes-ssms.md#previous-ssms-releases)。
 
-> [!NOTE]
-> 自 2021 年 12 月起，18.6 版之前的 SSMS 版本将不能再使用 MFA 通过 Azure Active Directory 进行身份验证。 若要继续将 MFA 与 Azure Active Directory 身份验证结合使用，请安装或更新到 SSMS 18.6 或更高版本。
+[!INCLUDE[ssms-connect-azure-ad](../includes/ssms-connect-azure-ad.md)]
 
 ## <a name="unattended-install"></a>无人参与安装
 
