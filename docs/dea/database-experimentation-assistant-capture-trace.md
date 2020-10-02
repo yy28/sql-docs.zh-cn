@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951532"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636097"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中捕获跟踪
 
@@ -29,11 +29,11 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 ## <a name="configure-a-trace-capture"></a>配置跟踪捕获
 
-1. 在 DEA 的左侧导航栏上，选择 "照相机" 图标，然后在 "**所有捕获**" 页上选择 "**新建捕获**"。
+1. 在 DEA 的左侧导航栏上，选择 "照相机" 图标，然后在 " **所有捕获** " 页上选择 " **新建捕获**"。
 
     ![在 DEA 中创建捕获](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-2. 在 "**新建捕获**" 页上的 "**捕获详细信息**" 下，输入或选择以下信息：
+2. 在 " **新建捕获** " 页上的 " **捕获详细信息**" 下，输入或选择以下信息：
 
     - **捕获名称**：输入捕获的跟踪文件的名称。
     - **Format**：指定捕获 (Trace 或 XEvents) 的格式。
@@ -45,28 +45,28 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 3. 通过选择 **"是，我已手动创建备份 ...** " 来验证是否已执行备份 .。。 复选框。
 
-4. 在 "**捕获详细信息**" 下，输入或选择以下信息：
+4. 在 " **捕获详细信息**" 下，输入或选择以下信息：
 
     - **服务器类型**：指定 SQL Server (**SqlServer**、 **AzureSqlDb**、 **AzureSqlManagedInstance**) 的类型。
     - **服务器名称**：指定 SQL Server 的服务器名称或 IP 地址。
     - **身份验证类型**：对于身份验证类型，请选择 " **Windows**"。
     - **数据库名称**：输入要在其上启动数据库跟踪的数据库的名称。 如果未指定数据库，则会在服务器上的所有数据库中捕获跟踪。
 
-5. 根据你的方案，选中或取消选中 "**加密连接**" 和 "**信任服务器证书**" 复选框。
+5. 根据你的方案，选中或取消选中 " **加密连接** " 和 " **信任服务器证书** " 复选框。
 
     ![新建捕获页面](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 
 ## <a name="start-the-trace-capture"></a>启动跟踪捕获
 
-1. 输入或选择所需的信息后，请选择 "**启动**" 以启动跟踪捕获。
+1. 输入或选择所需的信息后，请选择 " **启动** " 以启动跟踪捕获。
 
-    如果输入的信息有效，则跟踪捕获过程将开始。 否则，包含无效项的文本框将以红色突出显示。 如果遇到错误，请更正任何必要的条目，然后选择 "重新**启动**"。
+    如果输入的信息有效，则跟踪捕获过程将开始。 否则，包含无效项的文本框将以红色突出显示。 如果遇到错误，请更正任何必要的条目，然后选择 "重新 **启动** "。
 
-    跟踪捕获运行时，在 "**捕获详细信息**" 下，将显示跟踪捕获进程的状态和进度。
+    跟踪捕获运行时，在 " **捕获详细信息**" 下，将显示跟踪捕获进程的状态和进度。
 
     ![监视捕获进度](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-2. 跟踪捕获运行完毕后，新的跟踪 () 文件将保存在初始配置过程中特定的**捕获位置**。
+2. 跟踪捕获运行完毕后，新的跟踪 () 文件将保存在初始配置过程中特定的 **捕获位置** 。
 
     ![已完成跟踪捕获](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
 
@@ -125,7 +125,7 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 **问：我是否可以收集 XEvents 而不是跟踪，能否重播 XEvents？**
 
-是的。 DEA 支持 XEvents。 下载最新版本的 DEA 并试用。
+是。 DEA 支持 XEvents。 下载最新版本的 DEA 并试用。
 
 ## <a name="troubleshoot-trace-captures"></a>跟踪捕获疑难解答
 
@@ -133,7 +133,7 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 - 运行 SQL Server 的计算机的名称有效。 若要确认，请尝试通过使用 SQL Server Management Studio (SSMS) 连接到运行 SQL Server 的计算机。
 - 防火墙配置不会阻止与运行 SQL Server 的计算机的连接。
-- 用户具有[重播常见问题解答](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)中列出的权限。
+- 用户具有 [重播常见问题解答](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)中列出的权限。
 - 跟踪名称不遵循标准翻转约定 (捕获 \_ 1) 。 改为尝试跟踪名称（如 Capture \_ 1a 或 Capture1）。
 
 下面是你可能会看到的一些可能的错误以及解决这些错误的解决方案：
@@ -145,8 +145,8 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 |当前正在目标服务器上运行的 DEA 跟踪。|目标服务器上已运行活动跟踪。 当服务器范围内的跟踪已在运行时，无法启动新跟踪。|  
 |无法打开请求的数据库来捕获跟踪。 此错误可能是由数据库名称不正确引起的。|指定的数据库不存在，或当前用户无法访问该数据库。 使用正确的数据库名称。|  
 
-如果看到标记为 " *Sql 错误代码*" 的任何其他错误，请参阅[数据库引擎错误](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors)以了解详细说明。
+如果看到标记为 " *Sql 错误代码*" 的任何其他错误，请参阅 [数据库引擎错误](../relational-databases/errors-events/database-engine-events-and-errors.md) 以了解详细说明。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- 若要了解如何在重播捕获的跟踪之前配置 SQL Server 中的 Distributed Replay 工具，请参阅[为数据库实验助手配置 Distributed Replay](database-experimentation-assistant-configure-replay.md)。
+- 若要了解如何在重播捕获的跟踪之前配置 SQL Server 中的 Distributed Replay 工具，请参阅 [为数据库实验助手配置 Distributed Replay](database-experimentation-assistant-configure-replay.md)。

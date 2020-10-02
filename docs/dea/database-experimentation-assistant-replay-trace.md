@@ -12,33 +12,33 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 8df03adc67cb4ae97e099ad31d4af42c34a8533c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951222"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636167"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中重播跟踪
 
 在数据库实验助手 (DEA) 中，可以针对升级后的测试环境重播捕获的跟踪文件。 例如，请考虑在 SQL Server 2008 R2 上运行的生产工作负荷。 工作负荷的跟踪文件必须重播两次：一次是在生产环境中运行的同一版本的 SQL Server，并在具有升级目标 SQL Server 版本的环境上第二次运行，如 SQL Server 2016。
 
 > [!NOTE]
-> 重播跟踪要求您手动将虚拟机或物理计算机设置为运行 Distributed Replay 跟踪。 有关详细信息，请参阅[Configure Distributed Replay for 数据库实验助手](database-experimentation-assistant-configure-replay.md)。
+> 重播跟踪要求您手动将虚拟机或物理计算机设置为运行 Distributed Replay 跟踪。 有关详细信息，请参阅 [Configure Distributed Replay for 数据库实验助手](database-experimentation-assistant-configure-replay.md)。
 >
 
 ## <a name="configure-a-trace-replay-for-target-1"></a>为目标1配置跟踪重播
 
 首先，您需要对表示您的现有生产环境的目标1执行跟踪重播。
 
-1. 在 DEA 的左侧导航栏上，选择箭头图标，然后在 "**所有重播**" 页上，选择 "**新重播**"。
+1. 在 DEA 的左侧导航栏上，选择箭头图标，然后在 " **所有重播** " 页上，选择 " **新重播**"。
 
     ![在 DEA 中创建重播](./media/database-experimentation-assistant-replay-trace/dea-create-replay.png)
 
     > [!NOTE]
     > Distributed Replay 控制器计算机要求使用远程连接的用户帐户的权限。
 
-2. 在 "**新重播**" 页上的 "**重放详细信息**" 下，输入或选择以下信息：
+2. 在 " **新重播** " 页上的 " **重放详细信息**" 下，输入或选择以下信息：
 
     - **重播名称**：输入跟踪重播的名称。
     - **源跟踪格式**：指定源跟踪文件 (Trace 或 XEvents) 的格式。
@@ -50,7 +50,7 @@ ms.locfileid: "87951222"
         > [!NOTE]
         > 对于 Azure SQL 数据库或 Azure SQL 托管实例，需要提供 Azure blob 存储帐户的 SAS URI。
 
-3. 通过选择 **"是，手动还原数据库 () "** 复选框，验证是否已将数据库还原 () 。
+3. 通过选择 **"是，手动还原数据库 () " ** 复选框，验证是否已将数据库还原 () 。
 
 4. 在 " **SQL Server 连接详细信息**" 下，输入或选择以下信息：
 
@@ -59,15 +59,15 @@ ms.locfileid: "87951222"
     - **身份验证类型**：对于身份验证类型，请选择 " **Windows**"。
     - **数据库名称**：输入要在其上启动服务器端跟踪的数据库的名称。 如果未指定数据库，则会在服务器上的所有数据库中捕获跟踪。
 
-5. 根据你的方案，选中或取消选中 "**加密连接**" 和 "**信任服务器证书**" 复选框。
+5. 根据你的方案，选中或取消选中 " **加密连接** " 和 " **信任服务器证书** " 复选框。
 
     ![新建重播页](./media/database-experimentation-assistant-replay-trace/dea-new-replay.png)
 
 ## <a name="start-the-trace-replay-on-target-1"></a>在目标1上启动跟踪重播
 
-- 输入或选择所需的信息后，请选择 "**启动**" 以启动跟踪重播。
+- 输入或选择所需的信息后，请选择 " **启动** " 以启动跟踪重播。
 
-  如果输入的信息有效，Distributed Replay 过程将启动。 否则，具有错误信息的文本框将突出显示为红色。 请确保输入的值正确，然后选择 "**启动**"。
+  如果输入的信息有效，Distributed Replay 过程将启动。 否则，具有错误信息的文本框将突出显示为红色。 请确保输入的值正确，然后选择 " **启动**"。
 
   ![针对目标1的重播进度](./media/database-experimentation-assistant-replay-trace/dea-run-replay-target1.png)
 
@@ -98,7 +98,7 @@ ms.locfileid: "87951222"
 
 **问：我是否可以并行启动多个重播？**
 
-是，但不是在**控制器和客户端**中选择的一组计算机。 控制器和客户端将处于繁忙状态。 在**控制器和客户端**下设置一组单独的计算机，以开始并行重播。
+是，但不是在 **控制器和客户端**中选择的一组计算机。 控制器和客户端将处于繁忙状态。 在 **控制器和客户端** 下设置一组单独的计算机，以开始并行重播。
 
 **问：重播通常需要多长时间才能完成？**
 
@@ -114,7 +114,7 @@ SQL Server 是有状态的关系数据库管理系统。 若要正确运行 A/B 
 
 **问：重播页上的 "通过%" 是什么意思？**
 
-**Pass%** 表示只传递了百分比的查询。 您可以诊断是否应出现错误数。 这些错误可能是预期的，也可能是由于数据库丢失了其完整性导致的错误。 如果 "**传递%** " 的值不是预期的值，则可以停止跟踪，并在 SQL 事件探查器中查看跟踪文件，以查看哪些查询未成功。
+**Pass%** 表示只传递了百分比的查询。 您可以诊断是否应出现错误数。 这些错误可能是预期的，也可能是由于数据库丢失了其完整性导致的错误。 如果 " **传递%** " 的值不是预期的值，则可以停止跟踪，并在 SQL 事件探查器中查看跟踪文件，以查看哪些查询未成功。
 
 **问：如何查看在重播期间收集的跟踪事件？**
 
@@ -122,7 +122,7 @@ SQL Server 是有状态的关系数据库管理系统。 若要正确运行 A/B 
 
 **问：重播期间 DEA 收集哪些跟踪事件？**
 
-DEA 捕获包含与性能相关的信息的跟踪事件。 捕获配置位于 StartReplayCaptureTrace 脚本中。 这些事件是 SQL Server [sp_trace_setevent (transact-sql) 参考文档](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)中列出的跟踪事件的典型事件。
+DEA 捕获包含与性能相关的信息的跟踪事件。 捕获配置位于 StartReplayCaptureTrace 脚本中。 这些事件是 SQL Server [sp_trace_setevent (transact-sql) 参考文档](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)中列出的跟踪事件的典型事件。
 
 ## <a name="troubleshoot-trace-replay"></a>跟踪重播疑难解答
 
@@ -139,13 +139,13 @@ DEA 捕获包含与性能相关的信息的跟踪事件。 捕获配置位于 St
 
 - 验证 Distributed Replay 控制器服务是否正在控制器计算机上运行。 若要验证，请使用 Distributed Replay 管理工具 (运行命令 `dreplay.exe status -f 1`) "。
 - 如果远程启动重播：
-  - 确认运行 DEA 的计算机可以成功地 ping 控制器。 根据**配置重播环境**页面上的说明，确认防火墙设置允许连接。 有关详细信息，请参阅文章[SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017)。
+  - 确认运行 DEA 的计算机可以成功地 ping 控制器。 根据 **配置重播环境** 页面上的说明，确认防火墙设置允许连接。 有关详细信息，请参阅文章 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017)。
   - 请确保 Distributed Replay 控制器的用户可以使用 DCOM 远程启动和远程激活。
   - 请确保 Distributed Replay 控制器的用户可以使用 DCOM 远程访问用户权限。
 
 **问：跟踪文件路径在我的计算机上存在。为什么 Distributed Replay 控制器找不到它？**
 
-Distributed Replay 只能访问本地磁盘资源。 必须先将源跟踪文件复制到 Distributed Replay 控制器计算机，然后才能开始重播。 此外，还必须提供 DEA**新重播**页上的路径。
+Distributed Replay 只能访问本地磁盘资源。 必须先将源跟踪文件复制到 Distributed Replay 控制器计算机，然后才能开始重播。 此外，还必须提供 DEA **新重播** 页上的路径。
 
 UNC 路径与 Distributed Replay 不兼容。 Distributed Replay 路径必须是第一个源跟踪文件（包括扩展名）的本地路径和绝对路径。
 
@@ -159,10 +159,10 @@ UNC 路径与 Distributed Replay 不兼容。 Distributed Replay 路径必须是
 
 **问：我在尝试使用 SQL Server 2017 Distributed Replay 控制器来预处理跟踪文件时看到 "出现意外错误！"。为什么?**
 
-此问题在 SQL Server 2017 的 RTM 版本中已知。 有关详细信息，请参阅[使用 DReplay 功能重播捕获的跟踪 SQL Server 2017 中的意外错误](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a)。  
+此问题在 SQL Server 2017 的 RTM 版本中已知。 有关详细信息，请参阅 [使用 DReplay 功能重播捕获的跟踪 SQL Server 2017 中的意外错误](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a)。  
   
-此问题已在 2017 SQL Server 的最新累积更新1中解决。 下载[SQL Server 2017 的累积更新 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)的最新版本。
+此问题已在 2017 SQL Server 的最新累积更新1中解决。 下载 [SQL Server 2017 的累积更新 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)的最新版本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- 若要创建分析报表来帮助获取有关建议更改的信息，请参阅[创建报表](database-experimentation-assistant-create-report.md)。
+- 若要创建分析报表来帮助获取有关建议更改的信息，请参阅 [创建报表](database-experimentation-assistant-create-report.md)。
