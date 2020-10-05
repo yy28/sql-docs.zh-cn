@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84c8c977615fdc99da45a255e5306d4066b13406
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fba16dc701ab402084633a7adbdceb4cea273b8d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982298"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91720719"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 执行请求并创建 ADO 记录集以在 ADO 2.1 中使用。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,11 +70,11 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  一个包含参数定义的安全数组的变体。 如果在*lExecuteOptions*中指定了*GetInfo*选项，则此参数用于返回从 OLE DB 提供程序获取的参数定义。 否则，此参数可能为空。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  *HandlerString*参数可以为 null。 在这种情况下，会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 MSDFMAP.dll 会将参数解释为使用 sample.ini 检查连接和查询字符串的方向。  
   
 > [!NOTE]
 >  **Execute21**方法是[ (RDS) 的 Execute 方法](./execute-method-rds.md)的版本。 如果需要使用 **Execute** 方法与 ADO 2.1 进行通信，则可以改为调用 **Execute21** 方法。 ADO 2.5 和更高版本中 **执行** 方法的功能是为 ADO 2.1 中的同一方法提供的功能的超集。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)

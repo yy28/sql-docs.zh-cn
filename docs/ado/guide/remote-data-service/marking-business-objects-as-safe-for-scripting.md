@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cbbfaba540f5349fb7cc0291b8259eeda5b0d68
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978048"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721499"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>将业务对象标记为“可安全编写脚本”
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  若要帮助确保安全的 Internet 环境，需要标记使用 RDS 实例化的任何业务对象 [。空间](../../reference/rds-api/dataspace-object-rds.md) 对象的 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法为 "安全编写脚本"。 你需要确保在系统注册表的 "许可证" 区域中将它们标记为这样，然后才能在 DCOM 中使用它们。  
   

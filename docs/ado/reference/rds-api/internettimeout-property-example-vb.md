@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86e70a70b2a543f3ef1e2628acb2930dc75451cb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3c4ab5e939c9979f281f1b50f392778cc8b216a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982048"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721972"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 属性示例 (VB)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  此示例演示 [InternetTimeout](./internettimeout-property-rds.md) 属性，该属性存在于 [DataControl](./datacontrol-object-rds.md) 和 " [空间](./dataspace-object-rds.md) " 对象上。 此示例使用 **DataControl** 对象并将超时设置为20秒。  
   

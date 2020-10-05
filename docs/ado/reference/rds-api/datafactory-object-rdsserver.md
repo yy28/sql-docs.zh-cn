@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d35cda245b2f3ff01dffc04f79ca2922e05f348f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1e31d39f0820a485d4954d789fe2dfb398d8490b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982418"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91720978"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 对象 (RDSServer)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  此默认服务器端业务对象实现为客户端应用程序提供对指定数据源的读/写数据访问的方法。  
   

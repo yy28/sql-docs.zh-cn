@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 25f4837fb73f15c8626a0b2a558f38badb1f36ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977388"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721288"
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个节标头由方括号 (**[]**) ，其中包含类型和参数。 四种节类型由文本字符串 **connect**、 **sql**、 **userlist**或 **日志**指示。 参数是文本字符串、默认值、用户指定的标识符或没有任何内容。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  因此，每个部分都标记有以下节标头之一：  
   
@@ -45,7 +45,7 @@ identifier
 |组成部分|说明|  
 |----------|-----------------|  
 |**connect**|修改连接字符串的文本字符串。|  
-|**transact-sql**|用于修改命令字符串的文字字符串。|  
+|**sql**|用于修改命令字符串的文字字符串。|  
 |**userlist**|用于修改特定用户的访问权限的文字字符串。|  
 |**logs**|指定记录操作错误的日志文件的文本字符串。|  
 |**default**|如果未指定或找不到标识符，则使用文本字符串。|  

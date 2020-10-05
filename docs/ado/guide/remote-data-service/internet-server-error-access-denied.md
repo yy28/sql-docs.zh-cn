@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5902892fa850808afe69e0795c485ce5e46a604
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9cf9b2010fdbb20522c774d4c54ce2773cf817c5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978058"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721558"
 ---
 # <a name="internet-server-error-access-denied"></a>Internet 服务器错误：拒绝访问
 如果收到此错误，则通常意味着 Microsoft Internet Information Services (IIS) 返回以下状态：  
@@ -28,7 +28,7 @@ ms.locfileid: "88978058"
  请确保 IIS 访问的目录具有适当的权限。 RDS 可以与在以下三种密码身份验证模式之一中运行的 IIS Web 服务器进行通信：匿名、基本或 NT 质询/响应 (称为 Windows 2000) 中的集成 Windows 身份验证。 此外，如果 Web 服务器是 Windows NT/Windows 2000 计算机，则它必须具有对数据源计算机的权限。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [RDS 基础知识](./rds-fundamentals.md)

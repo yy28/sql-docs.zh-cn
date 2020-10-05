@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5608c03744ff632adb4b5e8b9f4da32797bfe8ea
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cee86b2d579a02d9e6cbcc06bfa5d95714f1ecd9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982208"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722308"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 属性 (RDS)
 指示异步提取的类型。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="setting-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
@@ -39,10 +39,10 @@ ms.locfileid: "88982208"
 > [!NOTE]
 >  每个使用这些常量的客户端可执行文件都必须为其提供声明。 你可以从文件 Adcvbs 中剪切并粘贴所需的常量声明，该文件位于 RDS 库的默认安装文件夹中。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  在 Web 应用程序中，你通常会希望使用 **adcFetchAsync** (默认值) ，因为它提供更好的性能。 在已编译的客户端应用程序中，通常需要使用 **adcFetchBackground**。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  

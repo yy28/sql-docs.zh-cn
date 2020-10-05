@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e5f168cc552f900f9a4de6e53245b7897e28f52
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8f8815ce6d607de39861f56bdcecca6c37e9dcc6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982078"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722157"
 ---
 # <a name="handler-property-example-vc"></a>Handler 属性示例 (VC++)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  此示例演示了 [RDS DataControl](./datacontrol-object-rds.md) 对象 [处理程序](./handler-property-rds.md) 属性。 有关详细信息，请参阅 [DataFactory 自定义](../../guide/remote-data-service/datafactory-customization.md) 。 )  (  
   

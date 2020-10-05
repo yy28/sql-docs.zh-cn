@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982518"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721198"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空的、断开连接的 [记录集](../ado-api/recordset-object-ado.md)。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  特性的一个 **变量** 数组，用于定义创建的 **记录集中** 的每一列。 每个列定义都包含一个包含四个必需属性和一个可选属性的数组。  
   
-|特性|说明|  
+|属性|说明|  
 |---------------|-----------------|  
 |名称|列标题的名称。|  
 |类型|数据类型的整数。|  
@@ -57,7 +57,7 @@ object.CreateRecordset(ColumnInfos)
   
  然后，将列数组集分组到一个数组中，该数组定义 **记录集**。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  服务器端业务对象可以使用非 OLE DB 的数据访问接口中的数据（例如包含股票行情的操作系统文件）来填充生成的 **记录集** 。  
   
  下表列出了**CreateRecordset**方法支持的[DataTypeEnum](../ado-api/datatypeenum.md)值。 列出的数字是用于定义字段的引用编号。  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  对于某些可变数据类型，可以将类型强制转换为替换列中所述的类型。 在创建并填充 **记录集** 之前，你将看不到替换项。 如果需要，可以检查实际数据类型。  
   
-|长度|返回的常量|Number|替换|  
+|长度|常数|Number|替换|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  
@@ -99,7 +99,7 @@ object.CreateRecordset(ColumnInfos)
 |变量|**adVarBinary**|204||  
 |变量|**adLongVarBinary**|205|204|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

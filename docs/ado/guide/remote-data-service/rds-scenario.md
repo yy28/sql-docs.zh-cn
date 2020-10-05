@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4492a80690c99d1e5b7003763faf77effdeebec
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6c9b7563b940cd4340b7f07238fe50af56cf66e6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977878"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721408"
 ---
 # <a name="rds-scenario"></a>RDS 方案
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  通讯簿应用程序是一种方案，演示了如何使用远程数据服务 (RDS) 来构建一个简单的数据感知 Web 应用程序，即联机企业通讯簿。 此方案对于想要了解如何将数据感知 ActiveX 控件与 RDS 一起使用的 Microsoft Visual Basic Scripting Edition (VBScript) 和 COM 程序员非常有用，并为想要生成以数据为中心的 Web 应用程序的更有经验的软件开发人员提供。  
   

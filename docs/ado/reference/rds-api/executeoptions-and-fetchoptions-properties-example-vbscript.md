@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3730b5f9fbadb36db449033d8d0c9167c3a035c9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0bb4b99b268397ff34d6e4c1a022407379dc1409
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982268"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722342"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  下面的代码演示如何在设计时设置 [ExecuteOptions](./executeoptions-property-rds.md) 和 [FetchOptions](./fetchoptions-property-rds.md) 属性。 如果未设置 **ExecuteOptions** ，则默认为 **adcExecSync**。 此设置指示当 **RDS。刷新** 方法被调用，它将在当前调用线程上执行（即，同步）。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **ExecuteOptionsDesignVBS**。  
   

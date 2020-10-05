@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0781d75d20254582a3a887cf92a54c8e32848289
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 70f91e85010abb784291c3c9eca52b9a74ed6286
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977828"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721388"
 ---
 # <a name="rds-tutorial"></a>RDS 教程
 本教程说明如何使用 RDS 编程模型来查询和更新数据源。 首先，它描述了完成此任务所需的步骤。 然后，Microsoft®中将重复教程，Visual Basic Scripting Edition (采用 ADO for Windows Foundation 类 (ADO/WFC) # A3。  
@@ -30,7 +30,7 @@ ms.locfileid: "88977828"
 -   如果您不确定特定的 RDS 功能，并且您知道另一种语言，则可以通过查找以其他语言表示的同一功能来解决您的问题。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="how-the-tutorial-is-presented"></a>如何显示教程  
  本教程基于 RDS 编程模型。 它单独讨论编程模型的每个步骤。 此外，它还说明了包含 Visual Basic 代码片段的每个步骤。  
