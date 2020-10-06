@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a47daa3926f8b6718a459aab203b0e902bf7dafd
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 8a17a153aedecac36acb02946e726d07a50e4c60
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024476"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529449"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -101,7 +101,6 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
 ```
-
  以下示例将凭证更改为新位置。 此示例是为 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 创建的外部数据源。 
 
 ```sql  

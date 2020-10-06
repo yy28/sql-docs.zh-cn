@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 03dc120975d50edb743911b3c9973b94a15b3ceb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1e2b53af6fd42d77e2169862074ac61c63dc5042
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485322"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498006"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>撤消服务器主体权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "86485322"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -119,7 +118,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. 撤消登录名的 IMPERSONATE 权限  
  以下示例从通过 Windows 用户 `AdvWorks\YoonM` 创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名中撤消对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `WanidaBenshoof` 的 `IMPERSONATE` 权限。  
   
-```  
+```sql  
 USE master;  
 REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];  
 GO  
@@ -128,7 +127,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. 使用 CASCADE 撤消 VIEW DEFINITION 权限  
  以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW DEFINITION` 中撤消对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `EricKurjan` 的 `RMeyyappan` 权限。 `CASCADE` 选项指示还会从 `VIEW DEFINITION` 授予 `EricKurjan` 权限的主体中撤消对 `RMeyyappan` 的该权限。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON LOGIN::EricKurjan FROM RMeyyappan   
     CASCADE;  
@@ -138,7 +137,7 @@ GO
 ### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>C. 撤消服务器角色的 VIEW DEFINITION 权限  
  以下示例撤消 `VIEW DEFINITION` 和 `Sales` 服务器角色的  `Auditors` 权限。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

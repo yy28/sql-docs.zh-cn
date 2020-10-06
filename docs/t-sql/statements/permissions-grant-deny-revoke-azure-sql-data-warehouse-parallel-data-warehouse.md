@@ -15,12 +15,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7704b286c89942ccb7b6345789514b11a9ec3765
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 113b8dfd288eccff391f9c72df3647955770b916
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227149"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498061"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure Synapse Analytics 和并行数据仓库）
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -269,55 +269,55 @@ REVOKE
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. 为登录名授予服务器级权限  
  以下两个语句为登录名授予服务器级权限。  
   
-```  
+```sql  
 GRANT CONTROL SERVER TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. 为登录名授予服务器级权限  
  以下示例为服务器主体（另一登录名）授予对某一登录名的服务器级权限。  
   
-```  
+```sql  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. 为用户授予数据库级权限  
  以下示例为数据库主体（另一用户）授予对某一用户的数据库级权限。  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. 授予、拒绝授予和撤消架构权限  
  以下 GRANT 语句授予 Yuen 从 dbo 架构的任何表或视图中选择数据的能力。  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  以下 DENY 语句阻止 Yuen 从 dbo 架构的任何表或视图中选择数据。 即使 Yuen 以某种其他方式（例如，通过角色成员身份）获得权限，他也无法读取数据。  
   
-```  
+```sql  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  以下 REVOKE 语句会删除 DENY 权限 。 现在，Yuen 的显式权限为中性。 Yuen 可以通过其他隐式权限（如角色成员身份）从任何表中选择数据。  
   
-```  
+```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
 ### <a name="e-demonstrating-the-optional-object-clause"></a>E. 演示可选的 OBJECT:: 子句  
  OBJECT 是权限语句的默认类，因此以下两个语句相同。 OBJECT:: 子句为可选项。  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   

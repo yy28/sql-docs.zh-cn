@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1d9b69cc55ab617eb3a4c5b4ed2ebb27726f35b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784138"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669770"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,6 +97,5 @@ ms.locfileid: "85784138"
 7.  在 **“名称”** 对话框中，输入此规则的名称和说明，再单击 **“完成”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何：配置防火墙设置（Azure SQL 数据库）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
-  
+ [如何：配置防火墙设置（Azure SQL 数据库）](/azure/azure-sql/database/firewall-configure)  
   

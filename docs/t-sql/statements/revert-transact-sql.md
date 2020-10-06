@@ -24,12 +24,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ac73076f7528b8c7fcb329540211cce9eee891e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8ae0325029d458df85c3250e96002a075945f88
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496660"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498037"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -40,8 +40,7 @@ ms.locfileid: "88496660"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 REVERT  
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
@@ -55,7 +54,7 @@ REVERT
 ## <a name="remarks"></a>注解  
  可以在诸如存储过程或用户定义函数这样的模块中指定 REVERT，也可将它指定为独立语句。 在模块内部指定时，REVERT 只适用于在模块中定义的 EXECUTE AS 语句。 例如，以下存储过程发出后跟 `EXECUTE AS` 语句的 `REVERT` 语句。  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_myproc   
   WITH EXECUTE AS CALLER  
 AS   
@@ -69,7 +68,7 @@ GO
   
  假定在运行存储过程的会话中，会话的执行上下文显式更改为 `login1`，如下例所示。  
   
-```  
+```sql 
   -- Sets the execution context of the session to 'login1'.  
 EXECUTE AS LOGIN = 'login1';  
 GO  
@@ -93,7 +92,7 @@ EXECUTE dbo.usp_myproc;
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. 使用 EXECUTE AS 和 REVERT 切换上下文  
  以下示例通过使用多个主体创建上下文执行堆栈。 然后使用 REVERT 语句将执行上下文重置为上一个调用方。 将多次执行 REVERT 语句以向上移动堆栈，直到将执行上下文设置为原始调用方为止。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create two temporary principals.  
@@ -137,8 +136,8 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
  下面的示例将会话的执行上下文设置为指定的用户，并指定 WITH NO REVERT COOKIE = @varbinary_variable 子句。 `REVERT` 语句必须指定传递给 `@cookie` 语句中的 `EXECUTE AS` 变量的值，否则，无法成功将上下文恢复为该调用方。 若要执行此示例，必须存在示例 A 中所创建的 `login1` 登录名和 `user1` 用户。  
   
-```  
-DECLARE @cookie varbinary(100);  
+```sql 
+DECLARE @cookie VARBINARY(100);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie somewhere safe in your application.  
 -- Verify the context switch.  
@@ -147,7 +146,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(100);  
+DECLARE @cookie VARBINARY(100);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

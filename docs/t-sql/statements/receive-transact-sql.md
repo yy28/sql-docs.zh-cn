@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b79e3a75f0b3590bcc0485a4d24b2a001bd8390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548958"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498185"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89548958"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -183,14 +182,14 @@ ms.locfileid: "89548958"
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. 接收会话组中所有消息的所有列  
  下面的示例接收 `ExpenseQueue` 队列中下一个可用会话组的所有可用消息。 该语句将消息作为结果集返回。  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. 接收用于会话组中所有消息的指定列  
  下面的示例接收 `ExpenseQueue` 队列中下一个可用会话组的所有可用消息。 该语句将消息作为包含 `conversation_handle`、`message_type_name` 和 `message_body` 列的结果集返回。  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -198,14 +197,14 @@ FROM ExpenseQueue ;
 ### <a name="c-receiving-the-first-available-message-in-the-queue"></a>C. 接收队列中的第一条可用消息  
  下面的示例将 `ExpenseQueue` 队列中的第一条可用消息作为结果集接收。  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. 接收指定会话的所有消息  
  下面的示例将 `ExpenseQueue` 队列中指定会话的所有可用消息作为结果集接收。  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -218,7 +217,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>E. 接收指定会话组的消息  
  下面的示例将 `ExpenseQueue` 队列中指定会话组的所有可用消息作为结果集接收。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -232,7 +231,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="f-receiving-into-a-table-variable"></a>F. 接收到表变量  
  下面的示例将 `ExpenseQueue` 队列中指定会话组的所有可用消息接收到表变量。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -264,7 +263,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. 接收消息并无限期等待  
  下面的示例将接收 `ExpenseQueue` 队列中下一个可用会话组的所有可用消息。 该语句将等到至少有一条消息变为可用为止，然后返回一个包含所有消息列的结果集。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -273,7 +272,7 @@ WAITFOR (
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. 接收消息并等待指定的间隔  
  下面的示例将接收 `ExpenseQueue` 队列中下一个可用会话组的所有可用消息。 该语句将等待 60 秒或直到至少有一条消息变为可用为止，以二者中最先发生的为准。 如果至少有一条消息可用，则该语句将返回一个包含所有消息列的结果集。 否则，该语句将返回一个空结果集。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -283,7 +282,7 @@ TIMEOUT 60000 ;
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>I. 接收消息，修改列的类型  
  下面的示例将接收 `ExpenseQueue` 队列中下一个可用会话组的所有可用消息。 当消息类型声明该消息包含一个 XML 文档时，该语句便将消息正文转换为 XML。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -297,7 +296,7 @@ TIMEOUT 60000 ;
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. 接收消息，从消息正文中提取数据，检索会话状态  
  下面的示例将接收 `ExpenseQueue` 队列中下一个可用会话组的下一条可用消息。 当消息的类型为 `//Adventure-Works.com/Expenses/SubmitExpense` 时，该语句将从消息正文中提取雇员 ID 和一个项列表。 该语句还会从 `ConversationState` 表中检索会话的状态。  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8f7b4ad559ccafbfd9ac43304a9f1ad6da73b6bd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227309"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497908"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -146,6 +146,7 @@ ms.locfileid: "91227309"
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. 使用 EXECUTE AS 和 REVERT 切换上下文  
  以下示例使用多个主体创建上下文执行堆栈。 然后使用 `REVERT` 语句将执行上下文重置为上一个调用方。 将多次执行 `REVERT` 语句以向上移动堆栈，直到将执行上下文设置为原始调用方为止。  
   
+
 ```sql
 USE AdventureWorks2012;  
 GO  
@@ -190,8 +191,9 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
  下面的示例将会话的执行上下文设置为指定的用户，并指定 WITH NO REVERT COOKIE = @varbinary_variable 子句。 `REVERT` 语句必须指定传递给 `@cookie` 语句中的 `EXECUTE AS` 变量的值，否则，无法成功将上下文恢复为该调用方。 若要执行此示例，必须存在示例 A 中所创建的 `login1` 登录名和 `user1` 用户。  
   
-```sql
-DECLARE @cookie varbinary(8000);  
+
+```sql 
+DECLARE @cookie VARBINARY(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  
 -- Verify the context switch.  
@@ -200,7 +202,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(8000);  
+DECLARE @cookie VARBINARY(8000);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

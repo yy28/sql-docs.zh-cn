@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5bdcb114316ea124200e7974f2ffd5675adbe052
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9f3bf6cabb705c194036bb123ed9f9e463777f94
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485335"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498053"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE 可用性组权限 (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "86485335"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  
     { FROM | TO } < server_principal >  [ ,...n ]  
@@ -111,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 撤消对可用性组的 VIEW DEFINITION 权限  
  以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW DEFINITION` 撤消对可用性组 `MyAg` 的 `ZArifin` 权限。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -120,7 +119,7 @@ GO
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. 使用 CASCADE 撤消 TAKE OWNERSHIP 权限  
  以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `TAKE OWNERSHIP` 以及 `MyAg` 授予对 MyAg 的 TAKE OWNERSHIP 权限的所有主体撤消对可用性组 `PKomosinski` 的 `PKomosinski` 权限。  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     CASCADE;  
@@ -130,7 +129,7 @@ GO
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. 撤消以前授予的 WITH GRANT OPTION 子句  
  如果使用 WITH GRANT OPTION 授予了权限，则使用 REVOKE GRANT OPTION FOR … 删除 WITH GRANT OPTION。 以下示例授予权限，然后删除权限的 WITH GRANT 部分。  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  

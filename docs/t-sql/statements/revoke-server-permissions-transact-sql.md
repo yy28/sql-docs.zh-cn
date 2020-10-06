@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ea48c8b1c996e34fc9753bb277aec39e556b2d69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d48cd6ffc31af5594c54416458c92984c8bb69b2
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496540"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498118"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 服务器权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88496540"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     { TO | FROM } <grantee_principal> [ ,...n ]  
         [ CASCADE ]  
@@ -151,7 +150,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. 从登录名中撤消权限  
  以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW SERVER STATE` 中撤消 `WanidaBenshoof` 权限。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW SERVER STATE FROM WanidaBenshoof;  
 GO  
@@ -160,7 +159,7 @@ GO
 ### <a name="b-revoking-the-with-grant-option"></a>B. 撤消 WITH GRANT 选项  
  以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `CONNECT SQL` 中撤消授予 `JanethEsteves` 的权限。  
   
-```  
+```sql  
 USE master;  
 REVOKE GRANT OPTION FOR CONNECT SQL FROM JanethEsteves;  
 GO  

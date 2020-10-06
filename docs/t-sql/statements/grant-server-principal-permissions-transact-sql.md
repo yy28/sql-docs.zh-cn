@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e60093d5a81d01a88daac53593b2be721652df42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 76dd1d69fe66b5165bdf3cad21c3d5b513c6bbe5
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472194"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498238"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>通过 GRANT 语句授予服务器主体权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88472194"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -115,7 +114,7 @@ GRANT permission [ ,...n ] }
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. 授予对登录名的 IMPERSONATE 权限  
  以下示例授予通过 Windows 用户 `AdvWorks\YoonM` 创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `WanidaBenshoof` 的 `IMPERSONATE` 权限。  
   
-```  
+```sql  
 USE master;  
 GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];  
 GO  
@@ -124,7 +123,7 @@ GO
 ### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. 使用 GRANT OPTION 授予 VIEW DEFINITION 权限  
  以下示例使用 `VIEW DEFINITION` 授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `EricKurjan` 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `RMeyyappan` 的 `GRANT OPTION`。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     WITH GRANT OPTION;  
@@ -134,7 +133,7 @@ GO
 ### <a name="c-granting-view-definition-permission-on-a-server-role"></a>C. 授予服务器角色的 VIEW DEFINITION 权限  
  以下示例向 `VIEW DEFINITION` 服务器角色授予对 `Sales` 服务器角色的  `Auditors` 权限。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

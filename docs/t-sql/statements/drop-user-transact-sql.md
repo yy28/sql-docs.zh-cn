@@ -24,12 +24,12 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ee43b1b294ad76e432ffd72aac750128ff3f0a7
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 9f5afe06027e489fb7b9971edd1fcc81853e4f93
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990076"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498258"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,44 +40,43 @@ ms.locfileid: "90990076"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP USER [ IF EXISTS ] user_name  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP USER user_name  
-```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## <a name="arguments"></a>参数
- IF EXISTS  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)、[!INCLUDE[sssds](../../includes/sssds-md.md)]）。  
+## Arguments
+ *IF EXISTS*  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- 有条件地删除用户（仅当其已存在时）。  
+ Conditionally drops the user only if it already exists.  
   
- user_name  
- 指定在此数据库中用于识别该用户的名称。  
+ *user_name*  
+ Specifies the name by which the user is identified inside this database.  
   
-## <a name="remarks"></a>注解  
- 不能从数据库中删除拥有安全对象的用户。 必须先删除或转移安全对象的所有权，才能删除拥有这些安全对象的数据库用户。  
+## Remarks  
+ Users that own securables cannot be dropped from the database. Before dropping a database user that owns securables, you must first drop or transfer ownership of those securables.  
   
- 不能删除 guest 用户，但可在除 master 或 tempdb 之外的任何数据库中执行 REVOKE CONNECT FROM GUEST 来撤消它的 CONNECT 权限，从而禁用 guest 用户。  
+ The guest user cannot be dropped, but guest user can be disabled by revoking its CONNECT permission by executing REVOKE CONNECT FROM GUEST within any database other than master or tempdb.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>权限  
- 需要对数据库具有 ALTER ANY USER 权限。  
+## Permissions  
+ Requires ALTER ANY USER permission on the database.  
   
-## <a name="examples"></a>示例  
- 以下示例将从 `AbolrousHazem` 数据库中删除数据库用户 `AdventureWorks2012`。  
+## Examples  
+ The following example removes database user `AbolrousHazem` from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 DROP USER AbolrousHazem;  
 GO  
 ```  

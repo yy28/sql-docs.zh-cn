@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c25b8f0395694bdb85cddbb5ec1bf0abf86c9d4
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ddfdccc63f826fb634edb4fcb2d75c0fa188ecfb
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483589"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498178"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT 可用性组权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. 授予对可用性组的 VIEW DEFINITION 权限  
  以下示例将对可用性组 `VIEW DEFINITION` 的 `MyAg` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `ZArifin`。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -113,7 +113,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. 使用 GRANT OPTION 授予 TAKE OWNERSHIP 权限  
  以下示例使用 `TAKE OWNERSHIP`，将对可用性组 `MyAg` 的 `PKomosinski` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `GRANT OPTION`。  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  
@@ -123,7 +123,7 @@ GO
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. 授予对可用性组的 CONTROL 权限  
  以下示例将对可用性组 `CONTROL` 的 `MyAg` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `PKomosinski`。 CONTROL 允许登录名完全控制可用性组，即使它们不是可用性组的所有者。 若要更改所有权，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski;  
 GO  

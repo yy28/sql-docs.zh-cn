@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5cca0b54c983fe7a4ef122a45070e53d2143a05e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb6f1d2db5a2a390f75a4215dce490625fcc699
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697983"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669499"
 ---
 # <a name="configure-client-protocols"></a>配置客户端协议
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85697983"
   
 -   通过创建别名，将单个客户端应用程序配置为使用不同的网络协议。 有关详细信息，请参阅[创建或删除供客户端使用的服务器别名（SQL Server 配置管理器）](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
--   有些客户端应用程序（例如 sqlcmd.exe）可以在连接字符串中指定协议。 有关详细信息，请参阅[使用 sqlcmd 连接到数据库引擎](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)。  
+-   有些客户端应用程序（例如 sqlcmd.exe）可以在连接字符串中指定协议。 有关详细信息，请参阅[使用 sqlcmd 连接到数据库引擎](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md)。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   
@@ -68,5 +68,4 @@ ms.locfileid: "85697983"
   
 ## <a name="see-also"></a>另请参阅  
  [配置“远程登录超时值”服务器配置选项](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
-  
   
