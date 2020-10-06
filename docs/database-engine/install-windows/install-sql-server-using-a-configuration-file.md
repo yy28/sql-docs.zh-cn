@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110211"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670300"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用配置文件安装 SQL Server
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. 取消安装并且不要真正完成安装，以便生成 INI 文件。 
   
     > [!NOTE]  
-    >  安装程序基础结构将写出已运行操作的所有适当参数，但不包括密码等敏感信息。 /IAcceptSQLServerLicenseTerms 参数也不写出到配置文件，它要求修改配置文件或在命令提示符下提供一个值。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 另外，对于通常不通过命令提示符提供值的布尔参数，值将包括在内。 
+    >  安装程序基础结构将写出已运行操作的所有适当参数，但不包括密码等敏感信息。 /IAcceptSQLServerLicenseTerms 参数也不写出到配置文件，它要求修改配置文件或在命令提示符下提供一个值。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)。 另外，对于通常不通过命令提示符提供值的布尔参数，值将包括在内。 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>使用配置文件安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server 故障转移群集安装](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [升级 SQL Server 故障转移群集实例](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

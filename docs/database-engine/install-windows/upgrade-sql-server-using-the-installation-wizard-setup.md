@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900201"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670232"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安装向导升级 SQL Server（安装程序）
 
@@ -46,7 +46,7 @@ ms.locfileid: "85900201"
 您必须以管理员身份运行安装程序。 如果从远程共享位置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用对该远程共享位置具有读取和执行权限的域帐户且是本地管理员。  
   
 > [!WARNING]  
->  请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 有关如何在升级操作完成后向 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的已升级实例中添加功能的详细信息，请参阅[向 SQL Server 的实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
+>  请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 有关如何在升级操作完成后向 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的已升级实例中添加功能的详细信息，请参阅[向 SQL Server 的实例添加功能（安装程序）](./add-features-to-an-instance-of-sql-server-setup.md)。  
   
  如果正在升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，请查看 [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) ，然后根据环境执行以下任务：  
   
@@ -120,7 +120,7 @@ ms.locfileid: "85900201"
   
      为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”** 。  
   
-15. 在“全文搜索升级选项”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+15. 在“全文搜索升级选项”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](./install-sql-server.md)。  
   
 16. 如果所有规则均通过验证，则“功能规则”窗口将自动前进。  
   
@@ -143,6 +143,5 @@ ms.locfileid: "85900201"
   
 ## <a name="see-also"></a>另请参阅  
  [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [向后兼容性_已删除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [向后兼容性_已删除](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

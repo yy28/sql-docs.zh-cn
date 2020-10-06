@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472379"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671060"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>使用 PowerShell Desired State Configuration 安装 SQL Server
 
@@ -44,7 +44,7 @@ ms.locfileid: "87472379"
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>安装 SqlServerDsc DSC 资源
 
-可使用 [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet 从 [PowerShell 库](https://www.powershellgallery.com/)下载 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 资源。 
+可使用 [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet 从 [PowerShell 库](https://www.powershellgallery.com/)下载 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 资源。 
 
 > [!NOTE]
 > 安装模块时，需确保“以管理员身份”运行 PowerShell  。
@@ -71,7 +71,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### <a name="configuration"></a>配置
 
-创建配置函数，将调用该函数生成[托管对象格式 (MOF)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-) 文档：
+创建配置函数，将调用该函数生成[托管对象格式 (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-) 文档：
 
 ```PowerShell
 Configuration SQLInstall
@@ -180,7 +180,7 @@ Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 
 ### <a name="dsc"></a>DSC
 
-[Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet 可以确定服务器的当前状态是否符合所需状态。 在此情况下，状态为 SQL Server 安装。 Test-DscConfiguration 的结果应为“True”   ：
+[Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet 可以确定服务器的当前状态是否符合所需状态。 在此情况下，状态为 SQL Server 安装。 Test-DscConfiguration 的结果应为“True”   ：
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

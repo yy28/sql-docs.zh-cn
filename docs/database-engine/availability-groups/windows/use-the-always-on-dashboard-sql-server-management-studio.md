@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902357"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670380"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性组仪表板 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ ms.locfileid: "85902357"
 
 SQL 代理运行数据收集，且必须在主要副本和至少一个次要副本上启用。 右键单击 SQL Server Management Studio“对象资源管理器”中的“可用性组”>“报表”>“标准报表”来查看报表  。  
 
-有关详细信息，请参阅 [Always On 可用性组延迟报表](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/)。
+有关详细信息，请参阅 [Always On 可用性组延迟报表](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports)。
 
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -340,5 +340,4 @@ SQL 代理运行数据收集，且必须在主要副本和至少一个次要副�
 ## <a name="see-also"></a>另请参阅  
  [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [监视可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

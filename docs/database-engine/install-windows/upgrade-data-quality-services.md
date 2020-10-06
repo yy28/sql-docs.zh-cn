@@ -11,12 +11,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7ee0e76644b21493debd81c1b9b420e1a08a335c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900249"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670350"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
 
@@ -27,7 +27,7 @@ ms.locfileid: "85900249"
 > [!IMPORTANT]
 >  -   您必须先备份 DQS 数据库，然后才能升级 DQS，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   通过使用当前或早期版本的 Data Quality Client 或 Integration Services 中的 [DQS 清除转换](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，可以连接到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 执行数据质量任务。  
-> -   升级 Data Quality Services 和 Master Data Services 后，用于 Excel 的 Master Data Services 加载项的任何早期版本都将不再适用。 你可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 此处 [下载用于 Excel 的](https://go.microsoft.com/fwlink/?LinkID=506665)版本 Master Data Services 外接程序。  
+> -   升级 Data Quality Services 和 Master Data Services 后，用于 Excel 的 Master Data Services 加载项的任何早期版本都将不再适用。 你可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 此处 [下载用于 Excel 的](../../master-data-services/master-data-services-installation-and-configuration.md)版本 Master Data Services 外接程序。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
@@ -101,5 +101,4 @@ ms.locfileid: "85900249"
  [安装 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [删除 Data Quality Server 对象](../../sql-server/install/remove-data-quality-server-objects.md)   
  [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

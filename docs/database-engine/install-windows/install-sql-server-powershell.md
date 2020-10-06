@@ -11,12 +11,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ad18b9f946bbf7fb8817f84a2bb06274edc8753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1de1d21208319773552d315714306abe3530f871
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883527"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670414"
 ---
 # <a name="install-sql-server-powershell"></a>安装 SQL Server PowerShell
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,10 +35,9 @@ ms.locfileid: "85883527"
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持从对象资源管理器树启动 Windows PowerShell 会话。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持 Windows PowerShell 作业步骤。  
   
-Windows Server 2012 及更高版本和 Windows 8 及更高版本已安装和配置了 PowerShell。 有关安装 Windows PowerShell 的信息，请参阅[安装 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell)。  
+Windows Server 2012 及更高版本和 Windows 8 及更高版本已安装和配置了 PowerShell。 有关安装 Windows PowerShell 的信息，请参阅[安装 Windows PowerShell](/powershell/scripting/install/installing-windows-powershell)。  
 
 有关详细信息，请参阅：   
 
-- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
-  
+- [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900299"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670194"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>支持的版本和版本升级 (SQL Server 2019)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900299"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 仅适用于 64 位平台。 不支持跨平台升级。 不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 32 位实例升级到本机 64 位。 但是，如果数据库未在复制过程中发布，则可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 32 位实例中备份或分离数据库，然后再将它们还原或附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例（64 位）。 必须在 master、msdb 和 model 系统数据库中重新创建任何登录名和其他用户对象。  
   
-- 不能在升级现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的过程中添加新功能。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例升级到 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 之后，您可以使用 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 安装程序添加功能。 有关详细信息，请参阅[向 SQL Server 的实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
+- 不能在升级现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的过程中添加新功能。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例升级到 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 之后，您可以使用 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 安装程序添加功能。 有关详细信息，请参阅[向 SQL Server 的实例添加功能（安装程序）](./add-features-to-an-instance-of-sql-server-setup.md)。  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>从早期版本升级到 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -100,7 +100,7 @@ ms.locfileid: "85900299"
 
 以下提示和工具可帮助你计划和实施迁移。
 
-- 迁移工具：支持通过[数据迁移助手 (DMA) ](https://aka.ms/dma)进行迁移。
+- 迁移工具：支持通过[数据迁移助手 (DMA) ](../../dma/dma-overview.md)进行迁移。
 - 备份和还原：SQL Server 2008 或 SQL Server 2008 R2 上执行的备份可以还原到 SQL Server 2019。
 - 日志传送：如果主实例运行 SQL Server 2008 SP3 或更高版本，或者 SQL Server 2008 R2 SP2 或更高版本，并且辅助实例运行 SQL Server 2019，则支持日志传送。 
 
@@ -149,4 +149,4 @@ ms.locfileid: "85900299"
 
  [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

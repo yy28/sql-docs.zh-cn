@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394213"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719769"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查找转换完全缓存模式 - 缓存连接管理器
 
@@ -28,7 +28,7 @@ ms.locfileid: "88394213"
   可以将查找转换配置为使用完全缓存模式和缓存连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
   
 > [!NOTE]  
->  缓存连接管理器不支持二进制大型对象 (BLOB) 数据类型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果引用数据集包含 BLOB 数据类型，则运行包时该组件将失败。 可以使用 **“缓存连接管理器编辑器”** 修改列数据类型。 有关详细信息，请参阅 [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+>  缓存连接管理器不支持二进制大型对象 (BLOB) 数据类型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果引用数据集包含 BLOB 数据类型，则运行包时该组件将失败。 可以使用 **“缓存连接管理器编辑器”** 修改列数据类型。 有关详细信息，请参阅 [Cache Connection Manager Editor](./cache-connection-manager.md)。  
   
  查找转换通过将所连接数据源输入列中的数据和引用数据集中的列进行联接来执行查找。 有关详细信息，请参阅 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88394213"
   
 -   [序列容器](../../integration-services/control-flow/sequence-container.md)  
   
- 有关演示如何使用缓存连接管理器在完全缓存模式下实现查找转换的视频，请参阅 [如何在完全缓存模式下实现查找转换（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 有关演示如何使用缓存连接管理器在完全缓存模式下实现查找转换的视频，请参阅 [如何在完全缓存模式下实现查找转换（SQL Server 视频）](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>在完全缓存模式下使用缓存连接管理器和数据流中的数据源在单个包中实现查找转换  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88394213"
      对于非索引列，索引位置是 0。 对于索引列，索引位置是连续的正数。  
   
     > [!NOTE]  
-    >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。 有关详细信息，请参阅 [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。 有关详细信息，请参阅 [Cache Connection Manager Editor](./cache-connection-manager.md)。  
   
 6.  若要将缓存保存到文件，请在 **“缓存连接管理器编辑器”** 中的 **“常规”** 选项卡上，设置以下选项来配置缓存连接管理器：  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88394213"
     > [!NOTE]  
     >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../../integration-services/security/security-overview-integration-services.md#files)。  
   
-7.  根据需要配置缓存转换。 有关详细信息，请参阅[缓存转换编辑器（“连接管理器”页）](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)和[缓存转换编辑器（“映射”页）](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
+7.  根据需要配置缓存转换。 有关详细信息，请参阅[缓存转换编辑器（“连接管理器”页）](../data-flow/transformations/cache-transform.md)和[缓存转换编辑器（“映射”页）](../data-flow/transformations/cache-transform.md)。  
   
 8.  在第二个数据流中，添加一个查找转换，然后执行以下任务来配置转换：  
   
@@ -127,7 +127,7 @@ ms.locfileid: "88394213"
   
     8.  在 **“可用查找列”** 列表中，选择列。 在 **“查找操作”** 列表中，指定查找列中的值是替换输入列中的值还是写入到新列。  
   
-    9. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+    9. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../data-flow/transformations/lookup-transformation.md)。  
   
     10. 单击 **“确定”** 保存对查找转换的更改。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "88394213"
      对于非索引列，索引位置是 0。 对于索引列，索引位置是连续的正数。  
   
     > [!NOTE]  
-    >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。 有关详细信息，请参阅 [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。 有关详细信息，请参阅 [Cache Connection Manager Editor](./cache-connection-manager.md)。  
   
-7.  根据需要配置缓存转换。 有关详细信息，请参阅[缓存转换编辑器（“连接管理器”页）](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)和[缓存转换编辑器（“映射”页）](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
+7.  根据需要配置缓存转换。 有关详细信息，请参阅[缓存转换编辑器（“连接管理器”页）](../data-flow/transformations/cache-transform.md)和[缓存转换编辑器（“映射”页）](../data-flow/transformations/cache-transform.md)。  
   
 8.  执行下列操作之一以填充第二个包中使用的缓存连接管理器：  
   
@@ -213,7 +213,7 @@ ms.locfileid: "88394213"
   
     8.  在 **“可用查找列”** 列表中，选择列。 在 **“查找操作”** 列表中，指定查找列中的值是替换输入列中的值还是写入到新列。  
   
-    9. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+    9. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../data-flow/transformations/lookup-transformation.md)。  
   
     10. 单击 **“确定”** 保存对查找转换的更改。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "88394213"
      对于非索引列，索引位置是 0。 对于索引列，索引位置是连续的正数。  
   
     > [!NOTE]  
-    >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。 有关详细信息，请参阅 [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。 有关详细信息，请参阅 [Cache Connection Manager Editor](./cache-connection-manager.md)。  
   
 7.  在 **“控制流”** 选项卡上，向包添加一个数据流任务，然后向数据流添加一个查找转换。  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88394213"
   
     8.  在 **“可用查找列”** 列表中，选择列。 在 **“查找操作”** 列表中，指定查找列中的值是替换输入列中的值还是写入到新列。  
   
-    9. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+    9. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../data-flow/transformations/lookup-transformation.md)。  
   
     10. 单击 **“确定”** 保存对查找转换的更改。  
   
@@ -288,5 +288,4 @@ ms.locfileid: "88394213"
  [在完全缓存模式下使用 OLE DB 连接管理器实现查找转换](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [在不缓存模式或部分缓存模式下实现查找](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

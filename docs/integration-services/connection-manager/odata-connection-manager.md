@@ -14,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496090"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719660"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
 
@@ -55,7 +55,7 @@ ms.locfileid: "88496090"
 要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项****。 也不可使用任何为多重身份验证配置的选项。 当前不支持新式身份验证。 
   
 ### <a name="specifying-and-securing-credentials"></a>指定和保护凭据  
- 如果 OData 服务需要基本身份验证，则可以在 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定用户名和密码。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
+ 如果 OData 服务需要基本身份验证，则可以在 [OData Connection Manager Editor]()中指定用户名和密码。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
   
  有几种方法来参数化用户名和密码值或将其存储在包外。 例如，可以使用参数，或者在从 SQL Server Management Studio 运行包时直接设置连接管理器属性。  
   
@@ -92,4 +92,4 @@ ms.locfileid: "88496090"
 要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项****。 也不可使用任何为多重身份验证配置的选项。
 
  **测试连接**  
- 单击此按钮可测试与 OData 源的连接。  
+ 单击此按钮可测试与 OData 源的连接。

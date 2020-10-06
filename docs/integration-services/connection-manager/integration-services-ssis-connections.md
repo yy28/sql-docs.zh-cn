@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c80f16b6698b3190b3a32ebd48738a0be3eed6f
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480921"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91720722"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
 
@@ -142,7 +142,7 @@ ms.locfileid: "89480921"
   
  在运行时，系统将使用正确的版本，即使在设计时指定了 32 位版本的提供程序也没有关系。 即使包运行在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，也可以运行 64 位版本的提供程序。  
   
-  两种版本的提供程序都有相同的 ID。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时是否使用可用的 64 位版本的提供程序，需要设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 Run64BitRuntime 属性。 如果将 Run64BitRuntime 属性设置为 **true**，运行时将发现并使用该 64 位提供程序；如果 Run64BitRuntime 为 **false**，则运行时将发现并使用 32 位提供程序。 有关可以对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目进行设置的属性的详细信息，请参阅 [Integration Services (SSIS) 与 Studio 环境](https://msdn.microsoft.com/library/ms140028.aspx)。   
+  两种版本的提供程序都有相同的 ID。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时是否使用可用的 64 位版本的提供程序，需要设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 Run64BitRuntime 属性。 如果将 Run64BitRuntime 属性设置为 **true**，运行时将发现并使用该 64 位提供程序；如果 Run64BitRuntime 为 **false**，则运行时将发现并使用 32 位提供程序。 有关可以对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目进行设置的属性的详细信息，请参阅 [Integration Services (SSIS) 与 Studio 环境](../integration-services-ssis-development-and-management-tools.md)。   
 
 ## <a name="add-a-connection-manager"></a>添加连接管理器
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 创建包时添加连接管理器  
@@ -171,23 +171,23 @@ ms.locfileid: "89480921"
   
     |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
-    |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](./ole-db-connection-manager.md)|  
+    |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](./ado-net-connection-manager.md)|  
     |[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 连接管理器编辑器](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)|[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 连接管理器编辑器](./excel-connection-manager.md)|  
+    |[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)|[文件连接管理器编辑器](./file-connection-manager.md)|  
     |[多文件连接管理器](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[“添加文件连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)|[平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
-    |[多平面文件连接管理器](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[多平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [多平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [多平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [多平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
-    |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)|[平面文件连接管理器编辑器（“常规”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“列”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“高级”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“预览”页）](./flat-file-connection-manager.md)|  
+    |[多平面文件连接管理器](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[多平面文件连接管理器编辑器（“常规”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“列”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“高级”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“预览”页）](./multiple-flat-files-connection-manager.md)|  
+    |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](./ftp-connection-manager.md)|  
+    |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](./http-connection-manager.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](./http-connection-manager.md)|  
+    |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](./msmq-connection-manager.md)|  
+    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](./odbc-connection-manager.md)|  
+    |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](./ole-db-connection-manager.md)|  
+    |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](./smo-connection-manager.md)|  
+    |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](./smtp-connection-manager.md)|  
+    |[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 连接管理器编辑器（“连接”页）](./sql-server-compact-edition-connection-manager.md)<br /><br /> [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](./sql-server-compact-edition-connection-manager.md)|  
+    |[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 连接管理器编辑器](./wmi-connection-manager.md)|  
   
      **“连接管理器”** 区域列出已添加的连接管理器。  
   
@@ -207,23 +207,23 @@ ms.locfileid: "89480921"
   
     |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
-    |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](./ole-db-connection-manager.md)|  
+    |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](./ado-net-connection-manager.md)|  
     |[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 连接管理器编辑器](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)|[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 连接管理器编辑器](./excel-connection-manager.md)|  
+    |[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)|[文件连接管理器编辑器](./file-connection-manager.md)|  
     |[多文件连接管理器](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[“添加文件连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)|[平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
-    |[多平面文件连接管理器](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[多平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [多平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [多平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [多平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
-    |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)|[平面文件连接管理器编辑器（“常规”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“列”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“高级”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“预览”页）](./flat-file-connection-manager.md)|  
+    |[多平面文件连接管理器](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[多平面文件连接管理器编辑器（“常规”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“列”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“高级”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“预览”页）](./multiple-flat-files-connection-manager.md)|  
+    |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](./ftp-connection-manager.md)|  
+    |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](./http-connection-manager.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](./http-connection-manager.md)|  
+    |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](./msmq-connection-manager.md)|  
+    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](./odbc-connection-manager.md)|  
+    |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](./ole-db-connection-manager.md)|  
+    |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](./smo-connection-manager.md)|  
+    |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](./smtp-connection-manager.md)|  
+    |[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 连接管理器编辑器（“连接”页）](./sql-server-compact-edition-connection-manager.md)<br /><br /> [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](./sql-server-compact-edition-connection-manager.md)|  
+    |[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 连接管理器编辑器](./wmi-connection-manager.md)|  
   
      您添加的连接管理器将显示在 **“解决方案资源管理器”** 中的 **“连接管理器”** 节点下。 它还将显示在项目中所有包的 **“SSIS 设计器”** 窗口的 **“连接管理器”** 选项卡中。 此选项卡中的连接管理器名称具有 **(project)** 前缀，以便将此项目级别的连接管理器与包级别的连接管理器区别开来。  
   
@@ -248,7 +248,7 @@ ms.locfileid: "89480921"
   
 1.  在“连接管理器”  区域中，右键单击要为其创建参数的连接管理器，然后单击“参数化”  。  
   
-2.  在 **“参数化”** 对话框中配置参数设置。 有关详细信息，请参阅 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
+2.  在 **“参数化”** 对话框中配置参数设置。 有关详细信息，请参阅 [Parameterize Dialog Box](../integration-services-ssis-package-and-project-parameters.md)。  
 
 ## <a name="delete-a-connection-manager"></a>删除连接管理器 
 ###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> 从包中删除连接管理器  
@@ -316,36 +316,35 @@ ms.locfileid: "89480921"
   
     |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
-    |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](./ole-db-connection-manager.md)|  
+    |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](./ado-net-connection-manager.md)|  
     |[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 连接管理器编辑器](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)|[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 连接管理器编辑器](./excel-connection-manager.md)|  
+    |[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)|[文件连接管理器编辑器](./file-connection-manager.md)|  
     |[多文件连接管理器](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[“添加文件连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)|[平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
-    |[多平面文件连接管理器](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[多平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [多平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [多平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [多平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
-    |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)|[平面文件连接管理器编辑器（“常规”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“列”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“高级”页）](./flat-file-connection-manager.md)<br /><br /> [平面文件连接管理器编辑器（“预览”页）](./flat-file-connection-manager.md)|  
+    |[多平面文件连接管理器](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[多平面文件连接管理器编辑器（“常规”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“列”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“高级”页）](./multiple-flat-files-connection-manager.md)<br /><br /> [多平面文件连接管理器编辑器（“预览”页）](./multiple-flat-files-connection-manager.md)|  
+    |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](./ftp-connection-manager.md)|  
+    |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](./http-connection-manager.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](./http-connection-manager.md)|  
+    |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](./msmq-connection-manager.md)|  
+    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](./odbc-connection-manager.md)|  
+    |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](./ole-db-connection-manager.md)|  
+    |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](./smo-connection-manager.md)|  
+    |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](./smtp-connection-manager.md)|  
+    |[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 连接管理器编辑器（“连接”页）](./sql-server-compact-edition-connection-manager.md)<br /><br /> [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](./sql-server-compact-edition-connection-manager.md)|  
+    |[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 连接管理器编辑器](./wmi-connection-manager.md)|  
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
 ## <a name="related-content"></a>相关内容  
   
--   technet.microsoft.com 上的视频 [利用 Microsoft Attunity Connector for Oracle 来增强包性能](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
+-   technet.microsoft.com 上的视频 [利用 Microsoft Attunity Connector for Oracle 来增强包性能](/previous-versions/dn912438(v=msdn.10))  
   
 -   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 连接](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
   
 -   blogs.msdn.com 上的博客文章 [从 SSIS 连接到 MySQL](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400)。  
   
--   msdn.microsoft.com 上的技术文章 [在 SQL Server Integration Services 中提取和加载 SharePoint 数据](https://go.microsoft.com/fwlink/?LinkId=247826)。  
+-   msdn.microsoft.com 上的技术文章 [在 SQL Server Integration Services 中提取和加载 SharePoint 数据](/previous-versions/sql/sql-server-2012/hh368261(v=msdn.10))。  
   
 -   support.microsoft.com 上的技术文章 [在 SSIS 中使用 Oracle 连接管理器时收到“DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER”错误消息](https://go.microsoft.com/fwlink/?LinkId=233696)。  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4be5f264e790bb84142cbed1460e937a40c41663
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883264"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670480"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
 
@@ -34,15 +34,15 @@ ms.locfileid: "85883264"
   
 有关远程配置和管理 Server Core 安装的详细信息，请参阅以下文章：  
   
-- [安装服务器核心](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [安装服务器核心](/windows-server/get-started/getting-started-with-server-core)  
   
-- [通过 Sconfig.cmd 配置 Windows Server 2016 的服务器核心安装](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [通过 Sconfig.cmd 配置 Windows Server 2016 的服务器核心安装](/windows-server/get-started/sconfig-on-ws2016)  
   
-- [在服务器核心服务器 Windows Server 2012 R2 上安装服务器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [在服务器核心服务器 Windows Server 2012 R2 上安装服务器角色和功能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))
   
-- [管理 Server Core 安装：概述](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [管理 Server Core 安装：概述](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441255(v=ws.10))  
   
-- [管理 Server Core 安装](https://go.microsoft.com/fwlink/?LinkId=245963)
+- [管理 Server Core 安装](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441258(v=ws.10))
   
 ##  <a name="install-ssnoversion-updates"></a><a name="BKMK_InstallSQLUpdates"></a> 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新  
 本节提供有关在 Windows Server Core 计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的信息。 我们建议客户及时评估和安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便确保系统是最新的并且具有最近的安全更新。 有关在 Windows 服务器核心计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 的详细信息，请参阅[在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "85883264"
 - [在已安装 SQL Server 后为其安装更新](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyInstall)  
   
 ###  <a name="installing-updates-for-ssnoversion-during-a-new-installation"></a><a name="bkmk_NewInstall"></a> 在全新安装期间为 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装更新  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序在 Server Core 操作系统上仅支持命令提示符安装。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序在 Server Core 操作系统上仅支持命令提示符安装。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将最新的产品更新集成到主产品安装中，以便可以同时安装主产品及其适用的更新。  
   
@@ -230,6 +230,5 @@ $Tcp
   
 ## <a name="see-also"></a>另请参阅  
  [在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [安装操作指南文章](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [安装操作指南文章](/previous-versions/sql/)  
   

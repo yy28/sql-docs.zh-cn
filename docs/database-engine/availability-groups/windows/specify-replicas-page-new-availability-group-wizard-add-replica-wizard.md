@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898097"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671090"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85898097"
  **服务器实例**  
  显示将承载可用性副本的服务器实例的名称。  
   
- 如果“可用性副本”网格未列出计划用于托管次要副本的服务器实例，请单击“添加副本”按钮 。 如果在混合 IT 环境中配置可用性组（请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)），则可单击“添加 Azure 副本”按钮以在 Azure 中创建具有次要副本的虚拟机。  
+ 如果“可用性副本”网格未列出计划用于托管次要副本的服务器实例，请单击“添加副本”按钮 。 如果在混合 IT 环境中配置可用性组（请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](/previous-versions/azure/jj870962(v=azure.100))），则可单击“添加 Azure 副本”按钮以在 Azure 中创建具有次要副本的虚拟机。  
   
  **初始角色**  
  指示新副本将执行的初始角色：主要或辅助密钥 。  
@@ -67,7 +67,7 @@ ms.locfileid: "85898097"
  单击此选项可将辅助副本添加到可用性组。  
   
  **添加 Azure 副本**  
- 单击此项以创建在可用性组中运行辅助副本的 Azure 虚拟机。 此选项仅适用于包含本地副本的混合 IT 中的可用性组。 有关详细信息，请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
+ 单击此项以创建在可用性组中运行辅助副本的 Azure 虚拟机。 此选项仅适用于包含本地副本的混合 IT 中的可用性组。 有关详细信息，请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](/previous-versions/azure/jj870962(v=azure.100))。  
   
  **删除副本**  
  单击可从可用性组中删除选择的辅助副本。  
@@ -213,5 +213,4 @@ ms.locfileid: "85898097"
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

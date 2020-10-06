@@ -20,12 +20,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ce257e0e40af3d3ba207d4709c5e67f5bfbb619
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0426ae38b00a939ff852af21b3a3b376b4c236f3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900321"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671017"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重命名承载 SQL Server 独立实例的计算机
 
@@ -111,9 +111,8 @@ ms.locfileid: "85900321"
   
  **链接服务器配置** - 链接服务器配置将受到计算机重命名操作的影响。 使用 **sp_addlinkedserver** 或 **sp_setnetname** 更新计算机名称的引用。 有关详细信息，请参阅 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 或 [sp_setnetname (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)。  
   
- **客户端别名** - 采用命名管道的客户端别名将受到计算机重命名操作的影响。 例如，如果创建了指向 SRVR1 的别名“PROD_SRVR”，而且该别名采用 Named Pipes 协议，则相应的管道名称将类似于 `\\SRVR1\pipe\sql\query`。 计算机重命名后，named pipe 的路径将不再有效。 有关 Named Pipes 的详细信息，请参阅 [使用 Named Pipes 创建有效的连接字符串](https://go.microsoft.com/fwlink/?LinkId=111063)。  
+ **客户端别名** - 采用命名管道的客户端别名将受到计算机重命名操作的影响。 例如，如果创建了指向 SRVR1 的别名“PROD_SRVR”，而且该别名采用 Named Pipes 协议，则相应的管道名称将类似于 `\\SRVR1\pipe\sql\query`。 计算机重命名后，named pipe 的路径将不再有效。 有关 Named Pipes 的详细信息，请参阅 [使用 Named Pipes 创建有效的连接字符串](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100))。  
   
 ## <a name="see-also"></a>另请参阅  
  [安装 SQL Server](../../database-engine/install-windows/install-sql-server.md)  
-  
   

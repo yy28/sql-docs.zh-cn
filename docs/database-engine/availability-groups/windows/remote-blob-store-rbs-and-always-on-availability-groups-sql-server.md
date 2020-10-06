@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 06ab28f03fb3852aa732c48aebc8c28ba6abbb41
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: c92038a8ce32a5e5796af83d26a1b0983c439663
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480712"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670108"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>使用远程 Blob 存储 (RBS) 和 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,11 @@ ms.locfileid: "89480712"
   
 -   [维护远程 BLOB 存储](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) （位于 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 联机丛书）  
   
--   [运行 RBS Maintainer](https://docs.microsoft.com/archive/blogs/sqlrbs/running-rbs-maintainer) （博客）  
+-   [运行 RBS Maintainer](/archive/blogs/sqlrbs/running-rbs-maintainer) （博客）  
   
--   [使用 FILESTREAM 提供程序配置 BLOB 存储 (RBS) (SharePoint 2010)](https://docs.microsoft.com/archive/blogs/mvpawardprogram/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010) （博客）  
+-   [使用 FILESTREAM 提供程序配置 BLOB 存储 (RBS) (SharePoint 2010)](/archive/blogs/mvpawardprogram/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010) （博客）  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [远程 Blob 存储区 (RBS) (SQL Server)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
-  
   

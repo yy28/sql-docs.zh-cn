@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d5463ac163271cf14f5b52167559bc8f3f53d805
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772572"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671110"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>默认 SQL Server 网络协议配置
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85772572"
 > 如果该实例正在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 故障转移群集上运行，它将在安装 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的过程中监听为 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 选择的每个 IP 地址的那些端口。
  
 >[!NOTE]
-> 使用命令提示符安装 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 时，可以使用 `TCPENABLED` 和 `NPENABLED` 参数指定要启用的协议。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。
+> 使用命令提示符安装 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 时，可以使用 `TCPENABLED` 和 `NPENABLED` 参数指定要启用的协议。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../install-windows/install-sql-server-from-the-command-prompt.md)。
 
 ## <a name="creating-a-connection-string"></a>创建连接字符串
 
@@ -72,7 +72,4 @@ ms.locfileid: "85772572"
 
 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
-[外围应用配置器](../../relational-databases/security/surface-area-configuration.md)  
-
-
-
+[外围应用配置器](../../relational-databases/security/surface-area-configuration.md)

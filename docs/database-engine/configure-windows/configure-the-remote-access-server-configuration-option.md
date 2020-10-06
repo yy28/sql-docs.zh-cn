@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62ed4ee20e7a17b291b09f895f7a558b91584ee9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785801"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670290"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>配置远程访问服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "85785801"
   
 -   [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
--   [连接到已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)  
+-   [连接到已注册的服务器 (SQL Server Management Studio)](../../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md)  
   
 -   [从 SQL Server Management Studio 连接到任何 SQL Server 组件](../../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
   
--   [使用 sqlcmd 连接到数据库引擎](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
+-   [使用 sqlcmd 连接到数据库引擎](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md)  
   
 -   [如何排除连接到 SQL Server 数据库引擎时的故障](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
  程序员可能对以下主题感兴趣：  
   
--   [如何：在 ASP.NET 2.0 中使用 SQL 身份验证连接到 SQL Server](https://msdn.microsoft.com/library/ff648340.aspx)  
+-   [如何：在 ASP.NET 2.0 中使用 SQL 身份验证连接到 SQL Server](/previous-versions/msp-n-p/ff648340(v=pandp.10))  
   
 -   [连接到 SQL Server 实例](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [如何：创建到 SQL Server 数据库的连接](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [如何：创建到 SQL Server 数据库的连接](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))  
   
  **本主题的正文从此处开始。**  
   
@@ -118,5 +118,4 @@ GO
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

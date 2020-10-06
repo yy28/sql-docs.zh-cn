@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027288"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670960"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 
@@ -74,7 +74,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 > 若要在故障转移群集中使用加密，必须在故障转移群集的所有节点上安装带有虚拟服务器的完全限定 DNS 名称的服务器证书。 例如，如果你有一个双节点群集，节点名称分别为 ***test1.\*\<your company>\*.com*** 和 ***test2.\*\<your company>\*.com***并且又拥有名为 ***virtsql*** 的虚拟服务器，你需要在两个节点上为 ***virtsql.\*\<your company>\*.com*** 安装证书。 可设置“SQL Server 网络配置”的“virtsql 的协议”属性框上的“ForceEncryption”选项，将其值设置为“是”   。
 
 > [!NOTE]
-> 在 Azure VM 上创建从 Azure 搜索索引器到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密连接时，请参阅 [在 Azure VM 上配置从 Azure 搜索索引器到 SQL Server 的连接](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)。 
+> 在 Azure VM 上创建从 Azure 搜索索引器到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密连接时，请参阅 [在 Azure VM 上配置从 Azure 搜索索引器到 SQL Server 的连接](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)。 
 
 ## <a name="certificate-requirements"></a>证书要求
 
@@ -126,7 +126,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 
 > [!IMPORTANT]
 > 对于生产环境，建议从证书颁发机构获取可信证书。    
-> 在测试中，也可以使用自签名证书。 若要创建自签名证书，请参阅 [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) 或 [certreq 命令](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1)。
+> 在测试中，也可以使用自签名证书。 若要创建自签名证书，请参阅 [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) 或 [certreq 命令](/windows-server/administration/windows-commands/certreq_1)。
   
 ## <a name="install-across-multiple-servers"></a>跨多个服务器安装
 
@@ -187,4 +187,4 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 
 + [针对 Microsoft SQL Server 的 TLS 1.2 支持](https://support.microsoft.com/kb/3135244)     
 + [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

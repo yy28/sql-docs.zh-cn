@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496222"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670740"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>取消显示恢复模式错误服务器配置选项
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-SQL Server [恢复模型](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)控制事务日志维护。 完整恢复模式可确保不会因数据文件丢失或损坏而丢失任何工作，并且支持恢复到备份保留策略内的任意时间点。 完整恢复模式是默认的，并且 SQL 托管实例仅支持恢复模式。 尝试在 SQL 托管实例中更改恢复模式将返回错误消息。
+SQL Server [恢复模型](../../relational-databases/backup-restore/recovery-models-sql-server.md)控制事务日志维护。 完整恢复模式可确保不会因数据文件丢失或损坏而丢失任何工作，并且支持恢复到备份保留策略内的任意时间点。 完整恢复模式是默认的，并且 SQL 托管实例仅支持恢复模式。 尝试在 SQL 托管实例中更改恢复模式将返回错误消息。
 
 使用“取消显示恢复模式错误”高级配置选项即可指定 SQL 托管实例上执行的用于更改数据库恢复模式的命令仅返回错误还是仅返回警告。 在 SQL 托管实例上将此选项设置为 1 (ON) 时，执行命令 ALTER DATABASE SET RECOVERY 将不会更改数据库的恢复模式，尽管如此，该命令不会返回错误，而是返回警告消息。 在 SQL 托管实例上将此选项设置为 0 (OFF) 时，执行命令 ALTER DATABASE SET RECOVERY 将返回错误消息。
 

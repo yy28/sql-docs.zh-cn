@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c7936a8f83bf110592e142f0ff7d033233592c64
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: bdeaca276e64ec436b3ee39cc97439bbdc25aa98
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863370"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719308"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
 
@@ -36,7 +36,7 @@ OLE DB 连接管理器使包能够用 OLE DB 访问接口连接到数据源。 �
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供程序不支持用于多子网故障转移群集的新连接字符串关键字 (MultiSubnetFailover=True)。 有关详细信息，请参阅 [SQL Server 发行说明](https://go.microsoft.com/fwlink/?LinkId=247824)。    
 > 
 > [!NOTE]
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007，则数据源需要不同于早期版本 Excel 或 Access 的数据访问接口。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) 和 [连接到 Access 数据库](../../integration-services/connection-manager/connect-to-an-access-database.md)。    
+>  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007，则数据源需要不同于早期版本 Excel 或 Access 的数据访问接口。 有关详细信息，请参阅 [连接到 Excel 工作簿](../load-data-to-from-excel-with-ssis.md) 和 [连接到 Access 数据库](./integration-services-ssis-connections.md)。    
     
 有若干 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务和数据流组件使用 OLE DB 连接管理器。 例如，OLE DB 源和 OLE DB 目标使用此连接管理器来提取和加载数据。 执行 SQL 任务可以使用此连接管理器来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以运行查询。    
     
@@ -60,16 +60,16 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
  可以记录 OLE DB 连接管理器对外部数据访问接口所做的调用。 然后可以对 OLE DB 连接管理器与外部数据源的连接进行故障排除。 若要记录 OLE DB 连接管理器对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择“诊断”  事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。    
     
 ## <a name="configure-the-ole-db-connection-manager"></a>配置 OLE DB 连接管理器    
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)。 有关以编程方式配置连接管理器的信息，请参阅开发人员指南中针对 **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** 类的文档。    
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [配置 OLE DB 连接管理器]()。 有关以编程方式配置连接管理器的信息，请参阅开发人员指南中针对 **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** 类的文档。    
     
 ### <a name="configure-ole-db-connection-manager"></a>配置 OLE DB 连接管理器
 
 可以使用“配置 OLE DB 连接管理器”  对话框添加与数据源的连接。 此连接可以是新连接，也可以是现有连接的副本。  
   
 > [!NOTE]  
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
+>  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../load-data-to-from-excel-with-ssis.md)。  
 >   
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007，则数据源需要一个不同于早期版本 Access 的 OLE DB 访问接口。 有关详细信息，请参阅 [连接到 Access 数据库](../../integration-services/connection-manager/connect-to-an-access-database.md)。  
+>  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007，则数据源需要一个不同于早期版本 Access 的 OLE DB 访问接口。 有关详细信息，请参阅 [连接到 Access 数据库](./integration-services-ssis-connections.md)。  
   
  若要了解有关 OLE DB 连接管理器的详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
@@ -87,22 +87,22 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
  选择一个数据连接，然后通过选择“删除”  来删除该连接。  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 资源身份验证的托管标识
-在 [Azure 数据工厂中的 Azure-SSIS 集成运行时](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上运行 SSIS 包时，可以使用与数据工厂关联的[托管标识](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)进行 Azure SQL 数据库或托管实例身份验证。 指定的工厂可以使用此标识访问数据库数据或从/向数据库复制数据。
+在 [Azure 数据工厂中的 Azure-SSIS 集成运行时](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上运行 SSIS 包时，可以使用与数据工厂关联的[托管标识](/azure/data-factory/connector-azure-sql-database#managed-identity)进行 Azure SQL 数据库或托管实例身份验证。 指定的工厂可以使用此标识访问数据库数据或从/向数据库复制数据。
 
 > [!NOTE]
->  使用 Azure Active Directory (Azure AD) 身份验证（包括托管标识身份验证）连接到 Azure SQL 数据库或托管实例时，可能遇到与包执行失败或意外行为变更有关的问题。 有关详细信息，请参阅 [Azure AD 功能和限制](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)。
+>  使用 Azure Active Directory (Azure AD) 身份验证（包括托管标识身份验证）连接到 Azure SQL 数据库或托管实例时，可能遇到与包执行失败或意外行为变更有关的问题。 有关详细信息，请参阅 [Azure AD 功能和限制](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)。
 
 要对 Azure SQL 数据库使用托管身份验证，请按照以下步骤配置数据库：
 
-1. 在 Azure 门户上为 Azure SQL Server [预配 Azure Active Directory 管理员](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)（如果尚未执行该操作）。 Azure AD 管理员可以是 Azure AD 用户或 Azure AD 组。 如果为具有托管标识的组授予管理员角色，请跳过步骤 2 和 3。 管理员将拥有对数据库的完全访问权限。
+1. 在 Azure 门户上为 Azure SQL Server [预配 Azure Active Directory 管理员](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)（如果尚未执行该操作）。 Azure AD 管理员可以是 Azure AD 用户或 Azure AD 组。 如果为具有托管标识的组授予管理员角色，请跳过步骤 2 和 3。 管理员将拥有对数据库的完全访问权限。
 
-1. 为数据工厂托管标识[创建包含的数据库用户](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 使用 SSMS 等工具连接到要从/向其复制数据的数据库，其 Azure Azure 标识至少具有 ALTER ANY USER 权限。 运行以下 T-SQL： 
+1. 为数据工厂托管标识[创建包含的数据库用户](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 使用 SSMS 等工具连接到要从/向其复制数据的数据库，其 Azure Azure 标识至少具有 ALTER ANY USER 权限。 运行以下 T-SQL： 
     
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 授予数据工厂托管标识所需的权限，就像通常为 SQL 用户和其他用户所做的那样。 有关相应角色，请参阅[数据库级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 运行以下代码。 有关更多选项，请参阅[本文档](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)。
+1. 授予数据工厂托管标识所需的权限，就像通常为 SQL 用户和其他用户所做的那样。 有关相应角色，请参阅[数据库级别角色](../../relational-databases/security/authentication-access/database-level-roles.md)。 运行以下代码。 有关更多选项，请参阅[本文档](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)。
 
     ```sql
     EXEC sp_addrolemember [role name], [your data factory name];
@@ -110,21 +110,21 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
 
 要对 Azure SQL 托管实例使用托管身份验证，请按照以下步骤配置数据库：
     
-1. 在 Azure 门户上为托管实例[预配 Azure Active Directory 管理员](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)（如果尚未执行该操作）。 Azure AD 管理员可以是 Azure AD 用户或 Azure AD 组。 如果为具有托管标识的组授予管理员角色，请跳过步骤 2-4。 管理员将拥有对数据库的完全访问权限。
+1. 在 Azure 门户上为托管实例[预配 Azure Active Directory 管理员](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)（如果尚未执行该操作）。 Azure AD 管理员可以是 Azure AD 用户或 Azure AD 组。 如果为具有托管标识的组授予管理员角色，请跳过步骤 2-4。 管理员将拥有对数据库的完全访问权限。
 
-1. 为数据工厂托管标识[创建登录名](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current)。 在 SQL Server Management Studio (SSMS) 中，使用 SQL Server 帐户 sysadmin  连接到托管实例。 在 master  数据库中，运行以下 T-SQL：
+1. 为数据工厂托管标识[创建登录名](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current)。 在 SQL Server Management Studio (SSMS) 中，使用 SQL Server 帐户 sysadmin  连接到托管实例。 在 master  数据库中，运行以下 T-SQL：
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 为数据工厂托管标识[创建包含的数据库用户](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 连接到要从/向其复制数据的数据库，运行以下 T-SQL： 
+1. 为数据工厂托管标识[创建包含的数据库用户](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 连接到要从/向其复制数据的数据库，运行以下 T-SQL： 
   
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 授予数据工厂托管标识所需的权限，就像通常为 SQL 用户和其他用户所做的那样。 运行以下代码。 有关更多选项，请参阅[本文档](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current)。
+1. 授予数据工厂托管标识所需的权限，就像通常为 SQL 用户和其他用户所做的那样。 运行以下代码。 有关更多选项，请参阅[本文档](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current)。
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
@@ -136,7 +136,7 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
     > [!NOTE]
     >  下拉列表中的其他提供程序可能不支持托管标识身份验证。
     
-- **在运行时进行配置。** 通过 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) 或 [Azure 数据工厂执行 SSIS 包活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)运行包时，找到 OLE DB 连接管理器的连接管理器属性 **ConnectionString**。 将连接属性 `Provider` 更新为 `MSOLEDBSQL`（即 Microsoft OLE DB Driver for SQL Server）。
+- **在运行时进行配置。** 通过 [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) 或 [Azure 数据工厂执行 SSIS 包活动](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)运行包时，找到 OLE DB 连接管理器的连接管理器属性 **ConnectionString**。 将连接属性 `Provider` 更新为 `MSOLEDBSQL`（即 Microsoft OLE DB Driver for SQL Server）。
     ```vb
     Data Source=serverName;Initial Catalog=databaseName;Provider=MSOLEDBSQL;...
     ```
@@ -152,7 +152,7 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
     >  在 Azure-SSIS 集成运行时中，当使用托管标识身份验证来建立数据库连接时，OLE DB 连接管理器上预配的所有其他身份验证方法（例如，集成安全性和密码）将被重写。
 
 > [!NOTE]
->  要在现有包上配置托管标识身份验证，首选方法是至少使用[最新 SSIS 设计器](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)重新生成一次 SSIS 项目。 将该 SSIS 项目重新部署到 Azure SSIS 集成运行时，这样新的连接管理器属性 `ConnectUsingManagedIdentity` 才会自动添加到 SSIS 项目中的所有 OLE DB 连接管理器。 另一种方法是，直接在运行时结合使用属性重写和属性路径 **\Package.Connections[{连接管理器名称}].Properties[ConnectUsingManagedIdentity]** 。
+>  要在现有包上配置托管标识身份验证，首选方法是至少使用[最新 SSIS 设计器](../../ssdt/download-sql-server-data-tools-ssdt.md)重新生成一次 SSIS 项目。 将该 SSIS 项目重新部署到 Azure SSIS 集成运行时，这样新的连接管理器属性 `ConnectUsingManagedIdentity` 才会自动添加到 SSIS 项目中的所有 OLE DB 连接管理器。 另一种方法是，直接在运行时结合使用属性重写和属性路径 **\Package.Connections[{连接管理器名称}].Properties[ConnectUsingManagedIdentity]** 。
 
 ## <a name="see-also"></a>另请参阅    
  [OLE DB 源](../../integration-services/data-flow/ole-db-source.md)     
@@ -160,4 +160,3 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
  [执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md)     
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
     
-  

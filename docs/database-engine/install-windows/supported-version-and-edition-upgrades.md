@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f3f80b726b155f94851326660d47da5cbac1018
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 784e005a9a7851c6e088255d8ff8b9e671796367
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900279"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670990"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2016"></a>支持的版本和版本升级 (SQL Server 2016)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900279"
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 仅适用于 64 位平台。 不支持跨平台升级。 不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 32 位实例升级到本机 64 位。 但是，如果数据库未在复制过程中发布，则可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 32 位实例中备份或分离数据库，然后再将它们还原或附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例（64 位）。 必须在 master、msdb 和 model 系统数据库中重新创建任何登录名和其他用户对象。  
   
--   不能在升级现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的过程中添加新功能。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例升级到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 之后，您可以使用 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 安装程序添加功能。 有关详细信息，请参阅[向 SQL Server 2016 的实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
+-   不能在升级现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的过程中添加新功能。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例升级到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 之后，您可以使用 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 安装程序添加功能。 有关详细信息，请参阅[向 SQL Server 2016 的实例添加功能（安装程序）](./add-features-to-an-instance-of-sql-server-setup.md)。  
  
 -   在 WOW 模式下不支持故障转移群集。  
   
@@ -174,8 +174,7 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
   
 ## <a name="see-also"></a>另请参阅  
 
-[SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)     
 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
 [升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)    
-  
   

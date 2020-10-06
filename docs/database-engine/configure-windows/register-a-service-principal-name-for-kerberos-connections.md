@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/12/2020
-ms.openlocfilehash: 242b87166035c8ffc0e01272b5910f85a66620e7
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 27e19a66912c220e8c407c4182c3241906af5ea5
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200688"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670326"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
 
@@ -68,7 +68,7 @@ Windows 身份验证是向 SQL Server 验证用户身份的首选方法。 使�
 > [!NOTE]  
 >  将 Windows 域配置为在低于 Windows Server 2008 R2 Windows Server 2008 R2 功能级别的级别上运行时，托管服务帐户将不具有注册 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务的 SPN 所需的权限。 如果需要进行 Kerberos 身份验证，域管理员应手动在托管服务帐户上注册 SQL Server SPN。
 
-有关其他信息，请参阅 [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)（如何使用 SQL Server 2008 实现 Kerberos 约束委派）  
+有关其他信息，请参阅 [How to Implement Kerberos Constrained Delegation with SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))（如何使用 SQL Server 2008 实现 Kerberos 约束委派）  
 
 ##  <a name="spn-formats"></a><a name="Formats"></a> SPN 格式
 
@@ -190,4 +190,4 @@ WHERE session_id = @@SPID;
 - [客户端连接中的服务主体名称 (SPN) (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [客户端连接中的服务主体名称 (SPN) (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [管理 Reporting Services 环境中的 Kerberos 身份验证问题](https://technet.microsoft.com/library/ff679930.aspx)
+- [管理 Reporting Services 环境中的 Kerberos 身份验证问题](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

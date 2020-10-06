@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: ceca51cf35e1a2e061d841336f0ab7a91b97dc9a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988637"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670727"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时的问题
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -193,7 +193,7 @@ SQL Server 的默认实例不需要 SQL Server Browser 服务。
    - 启动 SQL Server Browser 服务。 请参阅有关如何[在 SQL Server 配置管理器中启动浏览器](#startbrowser)的说明。
    - SQL Server Browser 服务被防火墙阻止。 请在防火墙中打开 UDP 端口 1434。 返回到[在防火墙中打开端口](#open-a-port-in-the-firewall)部分。 请确保打开的是 UDP 端口，而不是 TCP 端口。
    - UDP 端口 1434 信息被路由器阻止。 UDP 通信（用户数据报协议）未设计为可通过路由器。 这可以防止网络被低优先级流量占满。 你也许可以将路由器配置为转发 UDP 流量，或者可以决定在连接时始终提供端口号。
-   - 如果客户端计算机正在使用 Windows 7 或 Windows Server 2008（或更新的操作系统），UDP 流量可能会被客户端操作系统删除，因为来自服务器的响应会从所查询 IP 地址以外的 IP 地址返回。 这是一项安全功能，目的是阻止“宽松源映射”。 有关详细信息，请参阅联机丛书主题[故障排除：超时时间已到](https://msdn.microsoft.com/library/ms190181.aspx)的“多个服务器 IP 地址”一节。 这篇文章来自 SQL Server 2008 R2，但大体内容仍然适用。 你也许可以将客户端配置为使用正确的 IP 地址，或者可以决定在连接时始终提供端口号。
+   - 如果客户端计算机正在使用 Windows 7 或 Windows Server 2008（或更新的操作系统），UDP 流量可能会被客户端操作系统删除，因为来自服务器的响应会从所查询 IP 地址以外的 IP 地址返回。 这是一项安全功能，目的是阻止“宽松源映射”。 有关详细信息，请参阅联机丛书主题[故障排除：超时时间已到](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105))的“多个服务器 IP 地址”一节。 这篇文章来自 SQL Server 2008 R2，但大体内容仍然适用。 你也许可以将客户端配置为使用正确的 IP 地址，或者可以决定在连接时始终提供端口号。
 
 3. 可以使用 IP 地址（或 IP 地址和实例名称，如果是命名实例的话）进行连接后，立即尝试使用计算机名称（或计算机名称和实例名称，如果是命名实例的话）进行连接。 将 `tcp:` 放在计算机名称的前面，以强制建立 TCP/IP 连接。 例如，对于名为 `ACCNT27`的计算机上的默认实例，请使用 `tcp:ACCNT27` ；对于该计算机上名为 `PAYROLL`的命名实例，请使用 `tcp:ACCNT27\PAYROLL` 。如果可以使用 IP 地址进行连接，但不能使用计算机名称进行连接，则表明存在名称解析问题。 返回到“测试 TCP/IP 连接”部分的第 4 节。
 

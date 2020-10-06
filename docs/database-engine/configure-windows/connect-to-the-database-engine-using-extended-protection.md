@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772633"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670275"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772633"
 ### <a name="operating-system-support"></a>操作系统支持  
  以下链接提供有关 Windows 如何支持 **扩展保护**的详细信息：  
   
--   [具有扩展保护的集成 Windows 身份验证](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [具有扩展保护的集成 Windows 身份验证](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Microsoft 安全建议 (973811)，针对验证的扩展保护](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772633"
 ## <a name="configuring-other-sql-server-components"></a>配置其他 SQL Server 组件  
  有关如何配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的详细信息，请参阅 [Reporting Services 针对身份验证的扩展保护](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)。  
   
- 当通过 HTTP 连接或 HTTPS 连接使用 IIS 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以利用 IIS 提供的扩展保护。 有关配置 IIS 使用扩展保护的详细信息，请参阅 [Configure Extended Protection in IIS 7.5（在 IIS 7.5 中配置扩展保护）](https://go.microsoft.com/fwlink/?LinkId=181105)。  
+ 当通过 HTTP 连接或 HTTPS 连接使用 IIS 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以利用 IIS 提供的扩展保护。 有关配置 IIS 使用扩展保护的详细信息，请参阅 [Configure Extended Protection in IIS 7.5（在 IIS 7.5 中配置扩展保护）](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10))。  
   
 ## <a name="see-also"></a>另请参阅  
  [服务器网络配置](../../database-engine/configure-windows/server-network-configuration.md)   
  [客户端网络配置](../../database-engine/configure-windows/client-network-configuration.md)   
- [针对验证的扩展保护概述](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [具有扩展保护的集成 Windows 身份验证](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [针对验证的扩展保护概述](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [具有扩展保护的集成 Windows 身份验证](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

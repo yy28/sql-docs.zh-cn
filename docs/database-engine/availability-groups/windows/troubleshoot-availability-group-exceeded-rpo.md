@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 11492d2488fabdc4128844bca60c3ecbfac58ad6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042834"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670680"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>排除故障：可用性组超过了 RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "90042834"
  只要在日志文件上强化了日志块，就可以防止数据丢失。 因此，将日志文件与数据文件隔离十分重要。 如果日志文件和数据文件映射到同一个硬盘，则在数据文件上进行大量读取的报告工作负荷将使用日志强化操作所需的相同 I/O 资源。 缓慢的日志强化可能会导致对主要副本的确认减慢，而这又可能导致流控制激活过多、流控制等待时间较长。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
- 如果已验证了网络不存在高延迟或低吞吐量，则应调查次要副本的 I/O 争用。 [SQL Server：最小化磁盘 I/O](https://technet.microsoft.com/magazine/jj643251.aspx) 中的查询对于识别争用很有帮助。 为方便起见，下面列出了该文章中的例子。  
+ 如果已验证了网络不存在高延迟或低吞吐量，则应调查次要副本的 I/O 争用。 [SQL Server：最小化磁盘 I/O](/previous-versions/technet-magazine/jj643251(v=msdn.10)) 中的查询对于识别争用很有帮助。 为方便起见，下面列出了该文章中的例子。  
   
  以下脚本可用于查看在 SQL Server 的实例上运行的每个可用性数据库的每个数据和日志文件的读取和写入数量。 按平均 I/O 停滞时间（以毫秒为单位）进行排序。 请注意，这些数字是自上次启动服务器实例起的累积数。 因此，经过一段时间后，应取得两次度量之间的差值。  
   
@@ -127,6 +127,5 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  如果确定了 I/O 瓶颈，并且将日志文件和数据文件放在同一硬盘上，首先需要将数据文件和日志文件放在不同的磁盘上。 此最佳做法可防止报告工作负荷干扰从主要副本到日志缓冲区的日志传输路径，以及其强化辅助副本上事务的功能。  
   
 ## <a name="next-steps"></a>后续步骤  
- [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363027"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670750"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
 
@@ -342,7 +342,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> 使用服务控制器类
 
-可以使用 ServiceController 类来控制 SQL Server 服务或其他任何 Windows 服务。 有关如何做到这一点的示例，请参阅 [ServiceController 类](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)。
+可以使用 ServiceController 类来控制 SQL Server 服务或其他任何 Windows 服务。 有关如何做到这一点的示例，请参阅 [ServiceController 类](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)。
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>在 Linux 上管理 SQL Server 服务
 
@@ -366,7 +366,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 
 ## <a name="next-steps"></a>后续步骤
 
-- [SQL Server 安装文档概述](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)
+- [SQL Server 安装文档概述](../install-windows/install-sql-server.md)
 - [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)
 - [以最小配置启动 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)

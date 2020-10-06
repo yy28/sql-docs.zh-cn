@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772593"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670710"
 ---
 # <a name="database-engine-instances-sql-server"></a>数据库引擎实例 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772593"
 |介绍如何管理与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例关联的服务。 这包括启动和停止服务或者配置启动选项之类的操作。|[管理数据库引擎服务](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |介绍如何执行服务器网络配置任务，例如启用协议、修改协议使用的端口或管道、配置加密、配置 SQL Server Browser 服务、在网络中显示或隐藏 SQL Server 数据库引擎以及注册服务器主体名称。|[服务器网络配置](../../database-engine/configure-windows/server-network-configuration.md)|  
 |介绍如何执行客户端网络配置任务，例如配置客户端协议以及创建或删除服务器别名。|[客户端网络配置](../../database-engine/configure-windows/client-network-configuration.md)|  
-|介绍可用于设计、调试和运行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 脚本之类的脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编辑器。 介绍如何对 Windows PowerShell 脚本进行编码以便使用 SQL Server 组件。|[数据库引擎脚本](../../relational-databases/scripting/database-engine-scripting.md)|  
+|介绍可用于设计、调试和运行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 脚本之类的脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编辑器。 介绍如何对 Windows PowerShell 脚本进行编码以便使用 SQL Server 组件。|[数据库引擎脚本](../../ssms/scripting/database-engine-scripting.md)|  
 |介绍如何使用维护计划以便为实例指定常见管理任务的工作流。 工作流包含诸如备份数据库和更新统计信息以提高性能之类的任务。|[维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |介绍如何使用资源调控器来通过指定应用程序请求可使用的 CPU 和内存量的限制来管理资源使用和工作负荷。|[资源调控器](../../relational-databases/resource-governor/resource-governor.md)|  
 |介绍数据库应用程序如何使用数据库邮件从 [!INCLUDE[ssDE](../../includes/ssde-md.md)]发送电子邮件。|[数据库邮件](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772593"
   
 ## <a name="see-also"></a>另请参阅  
  [sqlservr 应用程序](../../tools/sqlservr-application.md)   
- [数据库功能](../../relational-databases/database-features.md)   
- [数据库引擎跨实例功能](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [数据库功能](../../relational-databases/databases/databases.md)   
+ [数据库引擎跨实例功能](../../relational-databases/databases/databases.md)  
   

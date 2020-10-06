@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 804cf6d89a67441228caead33cbc8969db530d6c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500928"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671050"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ SQL Server 2017 支持用于可用性组中数据库的分布式事务。 包括
 
 有关详细信息，请参阅：
 
-- [DTC 管理指南](https://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC 开发人员指南](https://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC 程序员参考](https://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC 管理指南](/previous-versions/windows/desktop/ms681291(v=vs.85))
+- [DTC 开发人员指南](/previous-versions/windows/desktop/ms679938(v=vs.85))
+- [DTC 程序员参考](/previous-versions/windows/desktop/ms686108(v=vs.85))
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 及以前版本：支持同一个 SQL Server 实例中的跨数据库事务  
 
@@ -93,5 +93,4 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
   
 ## <a name="next-steps"></a>后续步骤  
  [Always On 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

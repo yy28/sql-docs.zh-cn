@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631413"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670839"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631413"
  此节介绍异步数据库镜像的工作原理，何时适合使用高性能模式以及在主体服务器发生故障时如何响应。  
   
 > [!NOTE]  
->  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)中的“高可用性 (AlwaysOn)”。
+>  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)中的“高可用性 (AlwaysOn)”。
   
  将事务安全设置为 OFF 时，数据库镜像会话便会异步运行。 异步操作仅支持一种操作模式，即高性能模式。 此模式可增强性能，但要牺牲高可用性。 高性能模式仅使用主体服务器和镜像服务器。 镜像服务器上出现的问题不会影响主体服务器。 在丢失主体服务器的情况下，镜像数据库将标记为 DISCONNECTED，但仍可以作为备用数据库。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631413"
  高性能模式在灾难恢复方案中非常有用，在这种方案中，主体服务器和镜像服务器之间的距离非常大，并且您不希望小错误影响主体服务器。  
   
 > [!NOTE]  
->  日志传送可以作为数据库镜像的补充，最好用其替代异步数据库镜像。 有关日志传送优点的信息，请参阅[高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。 有关配合使用日志传送和数据库镜像的信息，请参阅[数据库镜像和日志传送 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)。  
+>  日志传送可以作为数据库镜像的补充，最好用其替代异步数据库镜像。 有关日志传送优点的信息，请参阅[高可用性解决方案 (SQL Server)](../sql-server-business-continuity-dr.md)。 有关配合使用日志传送和数据库镜像的信息，请参阅[数据库镜像和日志传送 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)。  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> 见证服务器对高性能模式的影响  
  如果使用 Transact-SQL 配置高性能模式，则当 SAFETY 属性设置为 OFF 时，我们极力建议也将 WITNESS 属性设置为 OFF。 见证服务器可以与高性能模式共存，但是见证服务器没有优点并可导致风险。  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>另请参阅  
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

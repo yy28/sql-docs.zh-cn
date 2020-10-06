@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd4acadbf94f45c1b155d10a70a376ea11c326e4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244068"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670493"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "87244068"
 >  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些文章已超出本文的范围，但这里有一些链接：
 >   - [Azure 虚拟机上 SQL Server 的概述](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/) 
->   - [选择 Azure 中的 SQL Server 选项](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
+>   - [选择 Azure 中的 SQL Server 选项](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)。  
   
 ## <a name="upgrade-in-place"></a>就地升级  
  使用此方法时，SQL Server 安装程序会通过将现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位替换为新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 位来升级现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，然后升级每个系统和用户数据库。  就地升级方法是最简单的，需要一定的停机时间，如果需要进行回退的话，则会花费更长时间进行回退操作，且并非所有方案都支持这一方法。 有关支持和不支持就地升级方法的方案详细信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。  
@@ -81,7 +81,7 @@ ms.locfileid: "87244068"
  迁移用户数据库之后，可使用多种方法中的一种将新用户指向到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如重命名服务器、使用 DNS 条目、修改连接字符串）。  与就地升级相比，新的安装方法可以降低风险和停机时间，并可有助于同时完成操作系统的升级和升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
->  如果已有到位的高可用性 (HA) 解决方案或其他的多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例环境，请转到 [滚动升级](#rolling-upgrade)。 如果没有到位的高可用性解决方案，则可以考虑临时配置 [数据库镜像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 以进一步最小化停机时间从而简化此升级，或者利用这个机会配置 [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510260.aspx) 作为永久的 HA 解决方案。  
+>  如果已有到位的高可用性 (HA) 解决方案或其他的多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例环境，请转到 [滚动升级](#rolling-upgrade)。 如果没有到位的高可用性解决方案，则可以考虑临时配置 [数据库镜像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 以进一步最小化停机时间从而简化此升级，或者利用这个机会配置 [AlwaysOn 可用性组](../availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md) 作为永久的 HA 解决方案。  
   
  例如，可以使用这种方法来升级：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "87244068"
 -   由于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本不支持 x86 安装，请安装 x86 的 SQL Server。   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到新硬件和/或操作系统新版本。    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结合服务器合并。   
--   由于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本不支持就地升级 SQL Server 2005，请使用 SQL Server 2005。 有关详细信息，请参阅[是否正在从 SQL Server 2005 进行升级](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)。
+-   由于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本不支持就地升级 SQL Server 2005，请使用 SQL Server 2005。 有关详细信息，请参阅[是否正在从 SQL Server 2005 进行升级](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)。
 
   
 新的安装升级所需的步骤根据你是否在使用连接存储或 SAN 存储而存在少许差异。  
@@ -114,4 +114,4 @@ ms.locfileid: "87244068"
   
 ## <a name="next-steps"></a>后续步骤
  [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)

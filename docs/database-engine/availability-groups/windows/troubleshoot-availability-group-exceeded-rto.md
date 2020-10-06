@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 391215275c97dba05fb7a3df0692a5a48e9fe58a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888021"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670665"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>疑难解答：可用性组超过了 RTO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +64,5 @@ from sys.dm_hadr_database_replica_states
  如果重做线程确实滞后，需要调查次要副本性能降低的根本原因。 如果存在与报告工作负荷的 I/O 争用，可以使用 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) 来控制报告工作负荷所用的 CPU 周期，以在某种程度上间接控制采用的 I/O 周期。 例如，如果报告工作负荷要使用 10% 的 CPU，但工作负荷受到 I/O 限制，可以使用 Resource Governor 将 CPU 资源使用量限制为中止读取工作负荷的 5%，这可最大程度降低对 I/O 的影响。  
   
 ## <a name="next-steps"></a>后续步骤  
- [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

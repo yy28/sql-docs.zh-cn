@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93fa8a3fa6346a9e93f8caae43aecc0ba49bb763
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900343"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671030"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>计划并测试数据库引擎升级计划
 
@@ -29,7 +29,7 @@ ms.locfileid: "85900343"
 
 - [SQL Server 2017 发行说明](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 数据库引擎的后向兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)文章。  
+- [SQL Server 数据库引擎的后向兼容性](../discontinued-database-engine-functionality-in-sql-server.md)文章。  
   
 ## <a name="pre-upgrade-planning-checklist"></a>升级前规划清单  
  升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下清单和相关文章。 这些文章适用于所有升级（无论使用何种升级方法），有助于确定最合适的升级方法：滚动升级、新安装升级或就地升级。 例如，如果从 SQL Server 2005 或从 SQL Server 的 32 位版本升级操作系统，可能无法执行就地升级或滚动升级。 有关决策树的信息，请参阅 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "85900343"
     > [!NOTE]  
     >  在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 时，请在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
--   后向兼容性：查看 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 数据库引擎后向兼容性文章，了解 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 和要从其开始升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间的行为变化。 请参阅 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
+-   后向兼容性：查看 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 数据库引擎后向兼容性文章，了解 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 和要从其开始升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间的行为变化。 请参阅 [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md)。  
   
 -   数据迁移助手：运行数据迁移助手，以帮助诊断可能会阻止升级过程或由于重大更改而需要修改现有脚本或应用程序的问题。
     可在[此处](https://aka.ms/get-dma)下载数据迁移助手。  
@@ -98,4 +98,4 @@ ms.locfileid: "85900343"
 [升级数据库引擎](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>其他资源 
-[数据库迁移指南](https://aka.ms/datamigration)  
+[数据库迁移指南](https://aka.ms/datamigration)

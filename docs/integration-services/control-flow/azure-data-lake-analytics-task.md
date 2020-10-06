@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913893"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719192"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 任务
 
@@ -59,8 +59,8 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
 |SourceType|动态选项|  
 |-----------|-----------------|  
 |SourceType = DirectInput|直接在选项框中键入要提交的 U-SQL 查询，或选择浏览按钮 (...) 以在“输入 U-SQL 查询”  对话框中键入 U-SQL 查询。|  
-|SourceType = FileConnection|选择现有文件连接管理器，或选择“<新建连接...>”  以新建文件连接。 若要了解相关信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
-|SourceType = 变量|选择现有变量，或选择“\<**New variable...**>”以创建新变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)和[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
+|SourceType = FileConnection|选择现有文件连接管理器，或选择“<新建连接...>”  以新建文件连接。 若要了解相关信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)。|  
+|SourceType = 变量|选择现有变量，或选择“\<**New variable...**>”以创建新变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)和[添加变量](../integration-services-ssis-variables.md)。|
 | &nbsp; | &nbsp; |
 
 
@@ -137,4 +137,3 @@ OUTPUT @rs1
 - [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store 文件系统任务](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store 连接管理器](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-
