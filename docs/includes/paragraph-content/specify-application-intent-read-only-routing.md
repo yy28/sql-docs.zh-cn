@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
-ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
-ms.translationtype: MT
+ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721293"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726749"
 ---
 ## <a name="specifying-application-intent"></a>指定应用程序意向
 
@@ -31,9 +31,9 @@ ms.locfileid: "83721293"
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
     - 数据库可允许或禁止目标 Always On 数据库上的读取工作负载。 此选择是通过使用 PRIMARY_ROLE  和 SECONDARY_ROLE  Transact-SQL 语句的 ALLOW_CONNECTIONS  子句来控制的。
 
-- [异地复制](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
+- [异地复制](/azure/sql-database/sql-database-geo-replication-overview)
 
-- [读取横向扩展](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+- [读取横向扩展](/azure/sql-database/sql-database-read-scale-out)
 
 如果这些特殊目标都不可用，则从常规数据库读取。
 
@@ -54,5 +54,4 @@ ApplicationIntent  关键字可启用只读路由  。
 
 使用只读路由的多个连接可能不会全部连接到相同的只读副本。 对数据库同步进行更改或对服务器的路由配置进行更改可能导致客户端连接到不同的只读副本。 可以确保所有只读请求都连接到相同的只读副本。 通过不  向 Server  连接字符串关键字传递可用性组侦听程序，确保连接到相同的只读副本。 而是指定只读实例的名称。
 
-只读路由可能比连接到主路由需要更长的时间。 等待时间较长是因为只读路由首先会连接到主副本，然后查找最合适的可读辅助副本。 由于需要执行多个步骤，因此应将登录超时增加到至少30秒。
-
+只读路由可能比连接到主路由需要更长的时间。 等待时间较长是因为只读路由首先会连接到主副本，然后查找最合适的可读辅助副本。 由于需要执行多个步骤，应将登录超时提高到至少 30 秒。
