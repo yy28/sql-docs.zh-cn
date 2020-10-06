@@ -2,7 +2,7 @@
 
 每个人在部署 SQL Server 时都需执行一项常见任务，即确保所有任务关键型 SQL Server 实例以及其中的数据库在业务和最终用户需要时（无论是朝九晚五还是全天候）可用。 其目标是尽量减少或杜绝中断，保持业务正常运行。 此概念也称为业务连续性。
 
-SQL Server 2017 在现有功能基础上引入了许多新功能或增强功能，其中部分功能用于提高可用性。 SQL Server 2017 的最大变化在于在 Linux 发行版上增加了对 SQL Server 的支持。 有关 SQL Server 2017 中新功能的完整列表，请参阅主题 [SQL Server 的新增功能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017)。
+SQL Server 2017 在现有功能基础上引入了许多新功能或增强功能，其中部分功能用于提高可用性。 SQL Server 2017 的最大变化在于在 Linux 发行版上增加了对 SQL Server 的支持。 有关 SQL Server 2017 中新功能的完整列表，请参阅主题 [SQL Server 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)。
 
 本文重点介绍 SQL Server 2017 中的可用性方案以及 SQL Server 2017 中新增和增强的可用性功能。 这些方案包括能跨 Windows Server 和 Linux 上的 SQL Server 部署的混合方案，以及可增加数据库可读副本数量的方案。 虽然本文并未介绍 SQL Server 外的可用性选项（例如由虚拟化提供的可用性选项），但文中讨论的所有内容都适用于来宾虚拟机中的 SQL Server 安装，无论该虚拟机是位于公有云中还是由本地虚拟机监控程序服务器托管。
 
@@ -15,7 +15,7 @@ SQL Server 2017 在现有功能基础上引入了许多新功能或增强功能�
 * 迁移和升级
 * 扩大一个或多个数据库的可读副本
 
-每节内容都会介绍可用于该特定情况的相关功能。 [SQL Server 复制](https://docs.microsoft.com/sql/relational-databases/replication/sql-server-replication)功能未涵盖在内。 虽然未正式指定为“AlwaysOn”下的可用性功能，但在某些情况下，它常用于使数据冗余。 在未来版本中，Linux 上的 SQL Server 将添加复制功能。
+每节内容都会介绍可用于该特定情况的相关功能。 [SQL Server 复制](../relational-databases/replication/sql-server-replication.md)功能未涵盖在内。 虽然未正式指定为“AlwaysOn”下的可用性功能，但在某些情况下，它常用于使数据冗余。 在未来版本中，Linux 上的 SQL Server 将添加复制功能。
 
 > [!IMPORTANT] 
 > SQL Server 可用性功能不能替换对经过充分测试的可靠备份和还原策略的需求，后者是所有可用性解决方案最基本的构建基块。
@@ -144,7 +144,7 @@ FCI 未出现数据丢失，但因为有一个数据副本，所以基础共享�
 
 ![可用性组](media/sql-server-ha-story/image6.png)
  
-可用性组（群集类型为“无”的可用性组除外）要求所有副本都属于同一基础群集（无论是 WSFC 还是 Pacemaker）。 这意味着在上图中，WSFC 延伸到两个不同的数据中心，增加了复杂性。 无论使用什么平台（Windows Server 或 Linux）。 跨距离延伸群集会增加复杂性。 SQL Server 2016 中引入了分布式可用性组，它允许可用性组跨越在不同的群集上配置的可用性组。 这降低了节点必须全部位于同一个群集中这一要求，使配置灾难恢复更加容易。 有关分布式可用性组的详细信息，请参阅[分布式可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups)。
+可用性组（群集类型为“无”的可用性组除外）要求所有副本都属于同一基础群集（无论是 WSFC 还是 Pacemaker）。 这意味着在上图中，WSFC 延伸到两个不同的数据中心，增加了复杂性。 无论使用什么平台（Windows Server 或 Linux）。 跨距离延伸群集会增加复杂性。 SQL Server 2016 中引入了分布式可用性组，它允许可用性组跨越在不同的群集上配置的可用性组。 这降低了节点必须全部位于同一个群集中这一要求，使配置灾难恢复更加容易。 有关分布式可用性组的详细信息，请参阅[分布式可用性组](../database-engine/availability-groups/windows/distributed-availability-groups.md)。
 
 ![分布式可用性组](media/sql-server-ha-story/image11.png)
  
@@ -180,12 +180,12 @@ FCI 可用于灾难恢复。 与一般可用性组一样，基础群集机制也
 
 可用性组在正在完成修补时手动将主要副本故障转移到次要副本，从而最大限度地缩短基础 OS 修补期间的停机时间。 从操作系统的角度来看，在 Windows Server 上执行此操作更为常见，因为该基础 OS 的维护可能经常（但非始终）需要重启。 修补 Linux 有时也需要重启，但并不频繁。 
 
-[修补参与可用性组的 SQL Server 实例](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)也可以尽量减少停机时间，具体取决于可用性组体系结构的复杂程度。 若要修补参与可用性组的服务器，需先修补次要副本。 正确数量的副本修补完成后，将主要副本手动故障转移到另一个节点，进行升级。 此时还可升级任何剩余的次要副本。 
+[修补参与可用性组的 SQL Server 实例](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)也可以尽量减少停机时间，具体取决于可用性组体系结构的复杂程度。 若要修补参与可用性组的服务器，需先修补次要副本。 正确数量的副本修补完成后，将主要副本手动故障转移到另一个节点，进行升级。 此时还可升级任何剩余的次要副本。 
 
 ### <a name="always-on-failover-cluster-instances"></a>AlwaysOn 故障转移群集实例
 
 FCI 自身无法为传统的迁移或升级提供帮助；必须为 FCI 中的数据库以及参与其中的所有其他对象配置可用性组或日志传送。 然而，需要修补基础 Windows Server 时，Windows Server 中的 FCI 仍然是常用选项。 可启动手动故障转移，这意味着会出现短暂的中断，而不是使实例在整个 Windows Server 修补期间完全不可用。
-FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 SQL Server 故障转移群集实例](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)。
+FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 SQL Server 故障转移群集实例](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)。
 
 ### <a name="log-shipping"></a>日志传送
 
@@ -197,7 +197,7 @@ FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 
 
 还可通过另外两种方法部署 Linux 上的 SQL Server：容器和使用 Azure（或其他公有云提供程序）。 无论如何部署 SQL Server，一般都需要本文中介绍的可用性。 若要使 SQL Server 具有高可用性，使用这两种方法时需留意一些特别的注意事项。
 
-[使用 Docker 的容器](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)是部署 SQL Server 的新方法，适用于 Windows Server 或 Linux。 容器是可供运行的 SQL Server 的完整映像。 但是，目前没有对群集的本机支持，因此也没有对高可用性或灾难恢复的本机支持。 目前，借助容器使 SQL Server 数据库可用的可选方法是日志传送以及备份和还原。 虽然可以配置群集类型为“无”的可用性组，但如前所述，并不将此视为真正的可用性配置。 Microsoft 正在寻找使用容器启用可用性组或 FCI 的方法。 
+[使用 Docker 的容器](../linux/quickstart-install-connect-docker.md)是部署 SQL Server 的新方法，适用于 Windows Server 或 Linux。 容器是可供运行的 SQL Server 的完整映像。 但是，目前没有对群集的本机支持，因此也没有对高可用性或灾难恢复的本机支持。 目前，借助容器使 SQL Server 数据库可用的可选方法是日志传送以及备份和还原。 虽然可以配置群集类型为“无”的可用性组，但如前所述，并不将此视为真正的可用性配置。 Microsoft 正在寻找使用容器启用可用性组或 FCI 的方法。 
 
 如果现在使用容器，若容器丢失，可再次部署并附加到之前所用的共享存储（具体取决于容器平台）。 这种机制中的某些内容由容器业务流程协调程序提供。 虽然这确实提供了一些复原能力，但是会出现与数据库恢复相关的停机时间，而且并不像使用可用性组或 FCI 那样真正的高度可用。 
 
@@ -226,7 +226,7 @@ FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 
 
 ## <a name="read-scale"></a><a name = "ReadScaleOut"></a>读取缩放
 
-自在 SQL Server 2012 中引入次要副本后，它们已用于只读查询。 可用性组可实现两种方式：允许直接访问次要副本以及[配置只读路由](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)，后者需要使用侦听器。  SQL Server 2016 引入了通过使用轮循机制算法的侦听器负载均衡只读连接的功能，允许只读请求分布在所有可读副本中。 
+自在 SQL Server 2012 中引入次要副本后，它们已用于只读查询。 可用性组可实现两种方式：允许直接访问次要副本以及[配置只读路由](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)，后者需要使用侦听器。  SQL Server 2016 引入了通过使用轮循机制算法的侦听器负载均衡只读连接的功能，允许只读请求分布在所有可读副本中。 
 
 > [!NOTE]
 > 可读次要副本仅是 Enterprise 版本中的功能，承载可读副本的每个实例都需要 SQL Server 许可证。

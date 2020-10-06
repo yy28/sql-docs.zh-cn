@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 193280bb5e7f702336bf31fde363db08f437cc9b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113335"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727923"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>为 Always On 可用性组配置侦听程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -196,11 +196,11 @@ ms.locfileid: "91113335"
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>故障排除  
   
@@ -306,21 +306,21 @@ Start-Clustergroup yourListenerGroupName
   
         3.  向 WSFC 可用性组资源添加一个依赖项。  
   
-         有关故障转移群集管理器的对话框和选项卡的信息，请参阅[用户界面：故障转移群集管理器管理单元](https://technet.microsoft.com/library/cc772502.aspx)。  
+         有关故障转移群集管理器的对话框和选项卡的信息，请参阅[用户界面：故障转移群集管理器管理单元](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11))。  
   
     -   **将 Windows PowerShell 用于故障转移群集：**  
   
         1.  使用 [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) 创建网络名称和 IP 地址资源。  
   
-        2.  使用 [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) 启动网络名称资源。  
+        2.  使用 [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) 启动网络名称资源。  
   
-        3.  使用 [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) 设置网络名称与现有 SQL Server 可用性组资源之间的依赖关系。  
+        3.  使用 [Add-ClusterResourceDependency](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461014(v=technet.10)) 设置网络名称与现有 SQL Server 可用性组资源之间的依赖关系。  
   
-         有关将 Windows PowerShell 用于故障转移群集的信息，请参阅 [服务器管理器命令概述](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)。  
+         有关将 Windows PowerShell 用于故障转移群集的信息，请参阅 [服务器管理器命令概述](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11)#BKMK_wps)。  
   
 2.  在新的侦听器上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 侦听。 在创建其他侦听器之后，可连接到承载可用性组主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，并使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 修改侦听器端口。  
   
- 有关详细信息，请参阅 [如何为相同的可用性组创建多个侦听程序](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) （SQL Server AlwaysOn 团队博客）。  
+ 有关详细信息，请参阅 [如何为相同的可用性组创建多个侦听程序](/archive/blogs/sqlalwayson/how-to-create-multiple-listeners-for-same-availability-group-goden-yao) （SQL Server AlwaysOn 团队博客）。  
   
  
   
@@ -329,4 +329,3 @@ Start-Clustergroup yourListenerGroupName
 现在你已经创建了侦听器，请将应用程序配置为[连接到侦听器](listeners-client-connectivity-application-failover.md)。 还可以查看各种[可用性组监视策略](monitoring-of-availability-groups-sql-server.md)，以确保可用性组正常运行。
 
 还可以[查看侦听器的属性](view-availability-group-listener-properties-sql-server.md)，或了解如何[删除侦听器](remove-an-availability-group-listener-sql-server.md)（如有必要）。 
-  

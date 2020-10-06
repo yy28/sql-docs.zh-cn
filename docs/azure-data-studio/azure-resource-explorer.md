@@ -9,19 +9,19 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364157"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725228"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 资源浏览器浏览和管理 Azure SQL 资源
 
 在本文档中，将了解如何通过 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] 中的 Azure 资源浏览器浏览和管理 Azure SQL Server、Azure SQL 数据库以及 Azure SQL 托管实例资源。
 
 >[!NOTE]
->SQL Server 2019 支持 Azure 资源浏览器。 之后，可通过[扩展管理器](extensions.md)或通过“文件” > “从 VSIX 包安装包”安装扩展。
+>SQL Server 2019 支持 Azure 资源浏览器。 之后，可通过[扩展管理器](./extensions/add-extensions.md)或通过“文件” > “从 VSIX 包安装包”安装扩展。
 
 ## <a name="connect-to-azure"></a>连接到 Azure
 

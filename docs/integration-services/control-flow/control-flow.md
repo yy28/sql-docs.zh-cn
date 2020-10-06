@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457565"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724527"
 ---
 # <a name="control-flow"></a>控制流
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457565"
   
 -   添加连接管理器。  
   
-     多个任务需要连接到数据源，因此必须将任务需要的连接管理器添加到包。 根据所使用的枚举器类型，Foreach 循环容器可能也需要连接管理器。 可以在逐项构造控制流时或开始构造控制流前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+     多个任务需要连接到数据源，因此必须将任务需要的连接管理器添加到包。 根据所使用的枚举器类型，Foreach 循环容器可能也需要连接管理器。 可以在逐项构造控制流时或开始构造控制流前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](../connection-manager/integration-services-ssis-connections.md)。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器也包含多个设计时功能，这些功能可用于管理设计图面以及使控制流自文档化。  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457565"
   
 -   [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [对组件分组或取消分组](../../integration-services/group-or-ungroup-components.md)  
-  
   

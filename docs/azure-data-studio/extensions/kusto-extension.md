@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379612"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725186"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 的 Kusto (KQL) 扩展（预览版）
 
-使用 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 扩展，你可以连接到 [Azure 数据资源管理器](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)群集并进行查询。
+使用 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 扩展，你可以连接到 [Azure 数据资源管理器](/azure/data-explorer/data-explorer-overview)群集并进行查询。
 
 用户可以使用包含 IntelliSense 的 [Kusto 内核](../notebooks/notebooks-kusto-kernel.md)，编写并运行 KQL 查询，以及创作笔记本。
 
@@ -33,7 +33,7 @@ ms.locfileid: "91379612"
 还需要以下先决条件：
 
 - [已安装 Azure Data Studio](../download-azure-data-studio.md)。
-- [Azure 数据资源管理器群集和数据库](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)。
+- [Azure 数据资源管理器群集和数据库](/azure/data-explorer/create-cluster-database-portal)。
 
 ## <a name="install-the-kusto-kql-extension"></a>安装 Kusto (KQL) 扩展
 
@@ -55,7 +55,7 @@ ms.locfileid: "91379612"
 
 在 [Azure 门户](https://ms.portal.azure.com/#home)中找到 Azure 数据资源管理器群集，然后找到该群集的 URI。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Kusto 扩展":::
 
 不过，你可以立即开始使用 help.kusto.windows.net 群集。
 
@@ -82,7 +82,7 @@ ms.locfileid: "91379612"
     7. 对于“名称(可选)”，请留空。
         1. 可以使用此字段为服务器指定别名。
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="连接详细信息":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Kusto 扩展":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>如何在 Azure Data Studio 中查询 Azure 数据资源管理器数据库
 
@@ -104,7 +104,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-有关编写 KQL 查询的详细信息，请访问[编写 Azure 数据资源管理器查询](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
+有关编写 KQL 查询的详细信息，请访问[编写 Azure 数据资源管理器查询](/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## <a name="view-extension-settings"></a>查看扩展设置
 
@@ -120,13 +120,13 @@ StormEvents
 
 扩展设置如下所示：
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto (KQL) 扩展设置":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto 扩展":::
 
 ## <a name="sanddance-visualization"></a>SandDance 可视化效果
 
-[SandDance 扩展](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension)和 Azure Data Studio 中的 Kusto (KQL) 扩展结合使用时会带来丰富的交互式可视化效果。 从 KQL 查询结果集中，选择“可视化工具”按钮，启动 [SandDance](https://sanddance.js.org/)。
+[SandDance 扩展](../sanddance-extension.md)和 Azure Data Studio 中的 Kusto (KQL) 扩展结合使用时会带来丰富的交互式可视化效果。 从 KQL 查询结果集中，选择“可视化工具”按钮，启动 [SandDance](https://sanddance.js.org/)。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 可视化效果":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto 扩展":::
 
 ## <a name="known-issues"></a>已知问题
 
@@ -145,6 +145,6 @@ StormEvents
 
 - [创建并运行 Kusto 笔记本](../notebooks/notebooks-kusto-kernel.md)
 - [Azure Data Studio 中的 Kqlmagic 笔记本](../notebooks/notebooks-kqlmagic.md)
-- [SQL 到 Kusto 备份单](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [什么是 Azure 数据资源管理器？](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [SQL 到 Kusto 备份单](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [什么是 Azure 数据资源管理器？](/azure/data-explorer/data-explorer-overview)
 - [使用 SandDance 可视化效果](https://sanddance.js.org/)

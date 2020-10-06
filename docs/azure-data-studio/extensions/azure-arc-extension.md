@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3bcdd76cf143c94dc1e200a21972d00419f26b96
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111738"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725208"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>适用于 Azure Data Studio 的 Azure Arc 扩展（预览版）
 
-[Azure Arc 扩展（预览版）](https://aka.ms/azurearcdata-docs)是用于创建和管理 Azure Arc 数据服务资源的扩展。
+[Azure Arc 扩展（预览版）](/azure/azure-arc/data/)是用于创建和管理 Azure Arc 数据服务资源的扩展。
 
 **关键操作包括：**
 - 创建资源
@@ -61,4 +61,4 @@ ms.locfileid: "91111738"
 这些仪表板将提供有关资源的额外信息，包括在 Azure 门户中打开的选项。
 
 ## <a name="next-steps"></a>后续步骤
-若要详细了解 Azure Arc 数据服务，请[查看文档](https://aka.ms/azurearcdata-docs)。
+若要详细了解 Azure Arc 数据服务，请[查看文档](/azure/azure-arc/data/)。

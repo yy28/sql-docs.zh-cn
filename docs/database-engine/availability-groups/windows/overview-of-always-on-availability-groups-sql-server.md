@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480249"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727820"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>什么是 Always On 可用性组？
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "89480249"
   
     -   **自动故障转移** （无数据丢失）  
   
-         自动故障转移是为了响应导致已同步的辅助副本转换为主角色（同时确保数据受到保护）的故障而执行的。 如果以前的主副本变为可用，则它将转换为辅助角色。 自动故障转移要求主副本和目标辅助副本都在同步提交模式下运行，并且故障转移模式设置为“自动”。 此外，次要副本必须已同步并具有 WSFC 仲裁，且满足由可用性组的 [灵活故障转移策略](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)指定的条件。  
+         自动故障转移是为了响应导致已同步的辅助副本转换为主角色（同时确保数据受到保护）的故障而执行的。 如果以前的主副本变为可用，则它将转换为辅助角色。 自动故障转移要求主副本和目标辅助副本都在同步提交模式下运行，并且故障转移模式设置为“自动”。 此外，次要副本必须已同步并具有 WSFC 仲裁，且满足由可用性组的 [灵活故障转移策略](./configure-flexible-automatic-failover-policy.md)指定的条件。  
   
         > [!IMPORTANT]  
         >  SQL Server 故障转移群集实例 (FCI) 不支持通过可用性组来自动进行故障转移，因此，只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
@@ -156,11 +156,11 @@ ms.locfileid: "89480249"
   
 -   **博客：**  
   
-     [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server 工程师博客](/archive/blogs/psssql/)  
   
 -   **视频：**  
   
@@ -170,9 +170,9 @@ ms.locfileid: "89480249"
   
 -   **白皮书：**  
   
-     [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server 客户咨询团队白皮书](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ ms.locfileid: "89480249"
  [活动次要副本：次要副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

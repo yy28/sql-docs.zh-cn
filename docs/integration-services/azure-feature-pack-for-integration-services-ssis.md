@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe5c1f52cb17b721efb1d3083a0679040d858343
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: e1a3bcdf7a5ade98e659b376e7ad3845e64875c3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942320"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727585"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -130,7 +130,7 @@ Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>在 Azure-SSIS Integration Runtime 上设置 Zulu 的 OpenJDK
 
-这应该通过 Azure-SSIS Integration Runtime 的[自定义设置界面](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)完成。
+这应该通过 Azure-SSIS Integration Runtime 的[自定义设置界面](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)完成。
 假设使用 `zulu8.33.0.1-jdk8.0.192-win_x64.zip`。
 可以按以下方式组织 blob 容器：
 

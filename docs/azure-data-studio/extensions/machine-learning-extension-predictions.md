@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: ad98cd8d9cdeb282a13ff35c278fd1c2a26df2b4
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136669"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725153"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>使用 Azure Data Studio 的机器学习扩展（预览版）进行预测
 
@@ -55,7 +55,7 @@ Azure Data Studio 将使用 [PREDICT](../../t-sql/queries/predict-transact-sql.m
 - [Azure Data Studio 中的机器学习扩展](machine-learning-extension.md)
 - [管理数据库中的包](machine-learning-extension-manage-packages.md)
 - [导入或查看模型](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio 中的笔记本](../notebooks-guidance.md)
+- [Azure Data Studio 中的笔记本](../notebooks/notebooks-guidance.md)
 - [SQL 机器学习文档](../../machine-learning/index.yml)
 - [Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [在 SQL Edge（预览版）中将机器学习和 AI 与 ONNX 结合使用](/azure/azure-sql-edge/onnx-overview)

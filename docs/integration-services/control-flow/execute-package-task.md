@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457525"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725920"
 ---
 # <a name="execute-package-task"></a>执行包任务
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457525"
  默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **True**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将属性设置为 **True**，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>扩展事务  
- 父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)。  
+ 父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](../integration-services-transactions.md)。  
   
 ## <a name="propagating-logging-details"></a>传播日志记录详细信息  
  执行包任务运行的子包可能配置为使用日志记录，也可能没有配置为使用日志记录，但子包将始终将日志详细信息转发给父包。 如果执行包任务配置为使用日志记录，则任务将记录来自子包的日志详细信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "88457525"
   
 -   **参数**  
   
-     您可以配置执行包任务以将父包变量或参数（或项目参数）映射到子包参数。 项目必须使用项目部署模型，并且子包必须包含在父包所在的同一项目中。 有关详细信息，请参阅 [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)。  
+     您可以配置执行包任务以将父包变量或参数（或项目参数）映射到子包参数。 项目必须使用项目部署模型，并且子包必须包含在父包所在的同一项目中。 有关详细信息，请参阅 [Execute Package Task Editor]()。  
   
     > [!NOTE]  
     >  如果子包参数不敏感且映射到敏感的父参数，则子包将无法运行。  
@@ -118,7 +118,7 @@ ms.locfileid: "88457525"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>以编程方式配置执行包任务  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
@@ -224,5 +224,4 @@ ms.locfileid: "88457525"
   
  **删除**  
  单击此选项可删除参数或变量与子包参数之间的映射。  
-  
   

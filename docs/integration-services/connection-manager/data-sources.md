@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477971"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728054"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据源
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477971"
   
 > **注意：** 只能将数据源添加到配置为使用包部署模型的项目。 如果将项目配置为使用项目部署模型，您使用在项目级别创建的连接管理器来共享连接，而不使用数据源。  
 >   
->  有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关将项目转换为项目部署模型的详细信息，请参阅 [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx)。  
+>  有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关将项目转换为项目部署模型的详细信息，请参阅 [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用数据源的好处如下：  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477971"
  数据源对象表示对数据源的简单连接，通过它可以访问它所引用的数据存储区中的对象。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks 示例数据库的数据源对象包括来自该数据库的所有 60 个表。  
   
  在数据源和引用它的连接管理器之间没有依赖关系。 即使数据源不再是项目的一部分，包仍然有效，因为有关该数据源的信息（例如其连接类型和连接字符串）已包括在包定义中。  
-  
   

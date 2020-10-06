@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c10980b60d41f107ff0104eedd5b51aa40cd6a6e
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eed9c3c7644345da76cda9882844e553691b9683
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480643"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727863"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "89480643"
  **可用性组的故障转移策略设置应用于所有副本，无论它位于独立实例还是 FCI 实例中。  
   
 > [!NOTE]  
->  有关不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 FCI 内的**节点数**和 **Always On 可用性组**的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473))。  
+>  有关不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 FCI 内的**节点数**和 **Always On 可用性组**的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473))。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 上承载可用性副本的注意事项  
   
@@ -107,23 +107,23 @@ ms.locfileid: "89480643"
 -   不要使用故障转移群集管理器将可用性组移到不同节点或者故障转移可用性组。  故障转移群集管理器不知道可用性副本的同步状态，因此，这样做可能会导致延长停机时间。 必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
 
   >[!WARNING]
-  > 使用故障转移群集管理器将托管可用性组的故障转移群集实例  移动到已  在托管同一个可用性组副本的节点，可能会导致可用性组副本丢失，使其无法在目标节点上重新联机。 故障转移群集的单个节点不能托管同一个可用性组的多个副本。 有关如何发生这种情况以及如何恢复的详细信息，请参阅博客[在可用性组中意外删除副本](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)。 
+  > 使用故障转移群集管理器将托管可用性组的故障转移群集实例  移动到已  在托管同一个可用性组副本的节点，可能会导致可用性组副本丢失，使其无法在目标节点上重新联机。 故障转移群集的单个节点不能托管同一个可用性组的多个副本。 有关如何发生这种情况以及如何恢复的详细信息，请参阅博客[在可用性组中意外删除副本](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group)。 
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   
-     [将 SQL Server 的 Windows 故障转移群集（可用性组或 FCI）配置为有限安全](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
+     [将 SQL Server 的 Windows 故障转移群集（可用性组或 FCI）配置为有限安全](/archive/blogs/sqlalwayson/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server 工程师博客](/archive/blogs/psssql/)  
   
 -   **白皮书：**  
   
-     [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
-     [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -134,5 +134,4 @@ ms.locfileid: "89480643"
  [启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [监视可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724598"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>卸载对 AlwaysOn 可用性组的次要副本的只读工作负荷
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "85882997"
   
 -   基于磁盘的表的只读工作负荷使用行版本控制来消除辅助数据库上的阻塞争用。 对辅助数据库运行的所有查询都自动映射到快照隔离事务级别，即使在显式设置了其他事务隔离级别时也是如此。 此外，所有锁定提示都将被忽略。 这消除了读取器/编写器的争用。  
   
--   基于持久的内存优化表的只读工作负荷访问数据的方式与主数据库中的访问方式相同，使用具有相同事务隔离级别限制的本机存储过程或 SQL 互操作性（请参阅 [数据库引擎中的隔离级别](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)）。 对主副本运行的报表工作负荷或只读查询可以直接用于辅助副本，无需任何更改。 同样，对辅助副本运行的报表工作负荷或只读查询也可以直接用于主副本，无需任何更改。  与基于磁盘的表相似，对辅助数据库运行的所有查询都自动映射到快照隔离事务级别，即使在显式设置了其他事务隔离级别时也是如此。  
+-   基于持久的内存优化表的只读工作负荷访问数据的方式与主数据库中的访问方式相同，使用具有相同事务隔离级别限制的本机存储过程或 SQL 互操作性（请参阅 [数据库引擎中的隔离级别](/previous-versions/sql/sql-server-2008-r2/ms189122(v=sql.105))）。 对主副本运行的报表工作负荷或只读查询可以直接用于辅助副本，无需任何更改。 同样，对辅助副本运行的报表工作负荷或只读查询也可以直接用于主副本，无需任何更改。  与基于磁盘的表相似，对辅助数据库运行的所有查询都自动映射到快照隔离事务级别，即使在显式设置了其他事务隔离级别时也是如此。  
   
 -   对于辅助副本上的基于磁盘的表和内存优化表类型，都可以对表变量执行 DML 操作。  
   
@@ -240,12 +240,11 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [统计信息](../../../relational-databases/statistics/statistics.md)  
-  
   

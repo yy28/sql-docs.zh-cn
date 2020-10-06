@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478050"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724278"
 ---
 # <a name="advanced-editor"></a>高级编辑器
 
@@ -47,11 +47,11 @@ ms.locfileid: "88478050"
   
  所显示的属性因组件而异。 有关可能在 **“高级编辑器”** 中显示的属性的详细信息，请参阅下列主题：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [转换自定义属性](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [路径属性](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [路径属性](./data-flow/integration-services-paths.md)  
   
  有关您所编辑的特定组件的详细信息，请参阅 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象和概念文档的“数据流元素”部分中的组件说明。  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88478050"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../integration-services/integration-services-error-and-message-reference.md)  
-  
   

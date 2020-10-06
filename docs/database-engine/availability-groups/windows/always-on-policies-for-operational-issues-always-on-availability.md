@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b621eca278c73b357b8d7c91c63dfc23a6147fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: de57f7518136cecca09041e0ce93971aeebe9fd9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115831"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724537"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>对 Always On 可用性组的操作问题的基于策略的管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "91115831"
   
  用户定义策略可以使用任何可用的 PBM 方面，包括那些由 AlwaysOn 预定义策略使用的方面（请参阅本主题前面的 [预定义策略和问题](#Always OnPBM)）。 服务器 Facet 提供下列用于监视 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况的属性：（IsHadrEnabled 和 HadrManagerStatus）   。 服务器 Facet 还提供下列用于监视 WSFC 群集配置的策略：ClusterQuorumType 和 ClusterQuorumState   。  
   
- 有关详细信息，请参阅 [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) （SQL Server AlwaysOn 团队博客）。  
+ 有关详细信息，请参阅 [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) （SQL Server AlwaysOn 团队博客）。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
@@ -106,16 +106,15 @@ ms.locfileid: "91115831"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   [AlwaysOn 运行状况模型第 1 部分 - 运行状况模型体系结构](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
+-   [AlwaysOn 运行状况模型第 1 部分 - 运行状况模型体系结构](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
--   [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
+-   [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [管理可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [监视可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

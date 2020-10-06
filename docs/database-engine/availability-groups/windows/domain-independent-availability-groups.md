@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0bcf32babdb30c59a43305edffd3f1718354ac0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116232"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727888"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>创建域独立可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-AlwaysOn 可用性组 (AG) 需要一个基础 Windows Server 故障转移群集 (WSFC)。 通过 Windows Server 2012 R2 部署 WSFC 始终要求加入 WSFC（也称为节点）的服务器都联接到相同域。 有关 Active Directory 域服务 (AD DS) 的详细信息，请参阅[此处](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)。
+AlwaysOn 可用性组 (AG) 需要一个基础 Windows Server 故障转移群集 (WSFC)。 通过 Windows Server 2012 R2 部署 WSFC 始终要求加入 WSFC（也称为节点）的服务器都联接到相同域。 有关 Active Directory 域服务 (AD DS) 的详细信息，请参阅[此处](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10))。
 
 与之前通过数据库镜像 (DBM) 配置部署的内容相比，AD DS 和 WSFC 依赖项更加复杂，因为可使用证书跨多个数据中心部署 DBM，而无需任何此类依赖项。  跨越多个数据中心的传统可用性组要求所有服务器必须加入相同 Active Directory 域 - 加入不同的域，甚至加入受信任的域均不起作用。 所有服务器必须都是相同 WSFC 的节点。 下图显示了这一配置。 SQL Server 2016 也具有分布式可用性组，它们也可以不同方式实现此目标。
 
 
 ![跨越两个数据中心的 WSFC 连接到相同域][1]
 
-Windows Server 2012 R2 引入了[与 Active Directory 分离的群集](https://technet.microsoft.com/library/dn265970.aspx)，它是 Windows Server 故障转移群集的一种特殊形式，可与可用性组一起使用。 这种类型的 WSFC 仍要求节点以域加入到相同的 Active Directory 域，但在这种情况下，WSFC 使用 DNS，而不使用域。 由于仍涉及域，因此与 Active Directory 分离的群集仍无法提供与域完全无关的体验。
+Windows Server 2012 R2 引入了[与 Active Directory 分离的群集](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11))，它是 Windows Server 故障转移群集的一种特殊形式，可与可用性组一起使用。 这种类型的 WSFC 仍要求节点以域加入到相同的 Active Directory 域，但在这种情况下，WSFC 使用 DNS，而不使用域。 由于仍涉及域，因此与 Active Directory 分离的群集仍无法提供与域完全无关的体验。
 
 Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的新的 Windows Server 故障转移群集 - 工作组集群。 工作组群集允许 SQL Server 2016 基于无需 AD DS 的 WSFC 部署可用性组。 SQL Server 要求使用证书以获得终结点安全性，就像数据库镜像方案需要证书一样。  此类型的可用性组称为域独立可用性组。 使用基础工作组群集部署可用性组可以支持构成 WSFC 的节点的以下组合：
 - 没有任何节点加入到域。
@@ -47,7 +47,7 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 ![标准版 AG 的高级视图][3]
 
 部署域独立可用性组具有一些已知的注意事项：
-- 可与仲裁配合使用的唯一见证服务器类型是磁盘和[云](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness)，这是 Windows Server 2016 中的新增功能。 磁盘可能会出现问题，因为可用性组很有可能不会使用共享磁盘。
+- 可与仲裁配合使用的唯一见证服务器类型是磁盘和[云](/windows-server/failover-clustering/deploy-cloud-witness)，这是 Windows Server 2016 中的新增功能。 磁盘可能会出现问题，因为可用性组很有可能不会使用共享磁盘。
 - 虽然只能使用 PowerShell 创建 WSFC 的基础工作组群集变体，但之后可以使用故障转移群集管理器进行管理。
 - 如果需要 Kerberos，则必须部署附加到 Active Directory 域的标准 WSFC，可能无需域独立可用性组。
 - 在可以配置侦听器时，必须先在 DNS 中注册侦听器然后才能使用。 如上所述，没有任何 Kerberos 支持侦听器。
@@ -80,7 +80,7 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 当前，完全使用 SQL Server Management Studio 无法实现创建域独立可用性组。 尽管创建域独立可用性组与创建常规可用性组基本相同，但某些方面（如创建证书）只有使用 Transact-SQL 才能实现。 以下示例假定具有两个副本的可用性组配置：一个主要副本和一个次要副本。 
 
 1. [使用此链接中的说明](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)部署工作组群集，该群集由将加入可用性组的所有服务器组成。 确保在配置工作组群集之前已配置常见 DNS 后缀。
-2. 在将加入可用性组的每个实例上[启用 AlwaysOn 可用性组功能](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)。 这需要重新启动每个 SQL Server 实例。
+2. 在将加入可用性组的每个实例上[启用 AlwaysOn 可用性组功能](./enable-and-disable-always-on-availability-groups-sql-server.md)。 这需要重新启动每个 SQL Server 实例。
 3. 将托管主要副本的每个实例都需要数据库主密钥。 如果主密钥不存在，运行以下命令：
 
    ```sql
@@ -172,4 +172,4 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

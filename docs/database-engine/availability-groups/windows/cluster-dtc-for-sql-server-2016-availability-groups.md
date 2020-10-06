@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b4c7725de6d0381f80a5cc90beaf54d7101fa82
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 1b5232854920083c685e426e0ca55eeb9a065c70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115637"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726495"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何为 AlwaysOn 可用性组群集 DTC 服务
 
@@ -36,7 +36,7 @@ ms.locfileid: "91115637"
 |任务|参考|  
 |-----------------|----------|  
 |共享存储驱动器。|[配置共享存储驱动器](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)。 请考虑使用驱动器盘符 **M**。|
-|唯一的 DTC 网络名称资源。  将该名称注册为 Active Directory 中的群集计算机对象。<br /><br />确保以下任一条件成立：<br /><br />• 创建 DTC 网络名称资源的用户对此 DTC 网络名称资源要驻留的 OU 或容器具有创建计算机对象的权限。<br /><br />• 如果用户不具有创建计算机对象的权限，让域管理员为 DTC 网络名称资源预安排群集计算机对象。|[在 Active Directory 域服务中预安排群集计算机对象](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
+|唯一的 DTC 网络名称资源。  将该名称注册为 Active Directory 中的群集计算机对象。<br /><br />确保以下任一条件成立：<br /><br />• 创建 DTC 网络名称资源的用户对此 DTC 网络名称资源要驻留的 OU 或容器具有创建计算机对象的权限。<br /><br />• 如果用户不具有创建计算机对象的权限，让域管理员为 DTC 网络名称资源预安排群集计算机对象。|[在 Active Directory 域服务中预安排群集计算机对象](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11))|
 |有效的可用静态 IP 地址及其相应的子网掩码。||
 
 ## <a name="cluster-the-dtc-resource"></a>群集 DTC 资源
@@ -47,7 +47,7 @@ ms.locfileid: "91115637"
 
 |任务|参考|  
 |-----------------|----------|  
-|为群集 DTC 资源安全启用网络访问权限。|[Enable Network Access Securely for MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)（为 MS DTC 安全启用网络访问权限）|
+|为群集 DTC 资源安全启用网络访问权限。|[Enable Network Access Securely for MS DTC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))（为 MS DTC 安全启用网络访问权限）|
 |停止并禁用本地 DTC 服务。|[配置服务启动方式](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |为可用性组中的每个实例循环 SQL Server 服务。  根据需要故障转移可用性组。|[执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
@@ -60,13 +60,13 @@ ms.locfileid: "91115637"
 ### <a name="resources"></a>RESOURCES
 
 
-[有关在可用性组上测试 DTC 的详细信息：](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
+[有关在可用性组上测试 DTC 的详细信息：](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups)
 
 [监视 AlwaysOn 可用性组系统视图](monitor-availability-groups-transact-sql.md)
 
 [逐步创建可用性组](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)（可用性组中的 SQL Server 2016 DTC 支持） 
+[SQL Server 2016 DTC Support in Availability Groups](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups)（可用性组中的 SQL Server 2016 DTC 支持） 
 
 [外部链接：通过 Windows Server 2008 R2 为 SQL Server 的群集实例配置 DTC](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

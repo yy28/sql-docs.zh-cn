@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb42ea05e69b9c806b0a0306b91e9c333bdd631
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431029"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725946"
 ---
 # <a name="data-flow-task"></a>数据流任务
 
@@ -108,7 +108,7 @@ ms.locfileid: "88431029"
   
  有关如何在 **“属性”** 窗口中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>数据流任务的编程配置  
  有关以编程方式向包中添加数据流任务并设置数据流属性的详细信息，请单击下列主题：  
@@ -116,9 +116,8 @@ ms.locfileid: "88431029"
 -   [以编程方式添加数据流任务](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>相关内容  
- technet.microsoft.com 上的视频 [平衡的数据分发服务器](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
-  
+ technet.microsoft.com 上的视频 [平衡的数据分发服务器](/previous-versions/dn912438(v=msdn.10))。  
   

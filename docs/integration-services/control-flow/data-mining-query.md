@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3e798ca968230aa0a554189076281a886bff3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457532"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727613"
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
 
@@ -68,7 +68,6 @@ ms.locfileid: "88457532"
  指定应用于该列的条件表达式或用户表达式。 可以将列从包含挖掘模型的表和输入列中拖动到单元。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘查询工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+ [数据挖掘查询工具](/analysis-services/data-mining/data-mining-query-tools)   
  [数据挖掘扩展插件 (DMX) 语句引用](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

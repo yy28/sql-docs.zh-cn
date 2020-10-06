@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dac452cc825cef7099cd2f0f27c7d2045f6811ff
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894501"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727917"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](https://docs.microsoft.com/sql/sql-server/)进行了补充。
+分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](../../../sql-server/index.yml)进行了补充。
 
 > [!NOTE]
 > “DAG”不是 Distributed Availability Group（分布式可用性组）  的正式缩写，因为此缩写已用于 Exchange Database Availability Group（数据库可用性组）功能。 此 Exchange 功能与 SQL Server 可用性组或分布式可用性组无关。
@@ -89,7 +89,7 @@ SQL Server 2017 或更高版本中的分布式可用性组可以混合同一分�
 
 如果两个 WSFC 群集加入同一域（不受信任的域），创建分布式可用性组时无需执行任何特殊操作。 对于未加入同一域的可用性组和 WSFC 群集，通过证书启用分布式可用性组，方法类似于为独立于域的可用性组创建可用性组。 若要查看如何配置分布式可用性组的证书，请遵循[创建独立于域的可用性组](domain-independent-availability-groups.md)下的步骤 3-13。
 
-对于分布式可用性组，每个基础可用性组中的主要副本必须具有彼此的证书。 如果已有未使用证书的终结点，请使用 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) 重新配置这些终结点，以反映证书的使用。
+对于分布式可用性组，每个基础可用性组中的主要副本必须具有彼此的证书。 如果已有未使用证书的终结点，请使用 [ALTER ENDPOINT](../../../t-sql/statements/alter-endpoint-transact-sql.md) 重新配置这些终结点，以反映证书的使用。
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>分布式可用性组使用方案
 
@@ -156,7 +156,7 @@ SQL Server 2017 或更高版本中的分布式可用性组可以混合同一分�
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>初始化分布式可用性组中的次要可用性组
 
-分布式可用性组将[自动种子设定](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)设计为用于初始化第二个可用性组上主要副本的主要方法。 如果执行以下操作，将可在第二个可用性组的主要副本上进行完整的数据库还原：
+分布式可用性组将[自动种子设定](./automatically-initialize-always-on-availability-group.md)设计为用于初始化第二个可用性组上主要副本的主要方法。 如果执行以下操作，将可在第二个可用性组的主要副本上进行完整的数据库还原：
 
 1. 通过 WITH NORECOVERY 还原数据库备份。
 2. 如有必要，通过 WITH NORECOVERY 还原适当的事务日志备份。
@@ -167,7 +167,7 @@ SQL Server 2017 或更高版本中的分布式可用性组可以混合同一分�
 
 * 第二个可用性组的主要副本上的 `sys.dm_hadr_automatic_seeding` 中所示的输出将显示 `current_state` 失败，原因是“种子设定检查消息超时”。
 
-* 第二个可用性组的主要副本上的当前 SQL Server 日志将显示种子设定已生效，且 [LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) 已同步。
+* 第二个可用性组的主要副本上的当前 SQL Server 日志将显示种子设定已生效，且 [LSN](../../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 已同步。
 
 * 第一个可用性组的主要副本上的 `sys.dm_hadr_automatic_seeding` 中所示的输出将显示 COMPLETED 的 current_state。 
 

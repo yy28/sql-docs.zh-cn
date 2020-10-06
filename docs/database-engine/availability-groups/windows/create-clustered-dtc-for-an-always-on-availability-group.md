@@ -11,12 +11,12 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae4b8d87e475e4a2008f597ec754cef0eaf8a013
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0915b57e7bd73ab4991ae14c222669fd309f7d6a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115094"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726394"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC 资源
 
@@ -26,7 +26,7 @@ ms.locfileid: "91115094"
 
 本演练将按照[为 SQL Server 可用性组群集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的要求，创建群集 DTC 资源和 SQL Server 可用性组。
 
-本演练使用 PowerShell 和 Transact-SQL (T-SQL) 脚本。  许多 T-SQL 脚本要求启用 **SQLCMD 模式** 。  有关 **SQLCMD 模式**的详细信息，请参阅 [在查询编辑器中启用 SQLCMD 脚本撰写](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  必须导入 PowerShell 模块 **FailoverClusters** 。  有关导入 PowerShell 模块的详细信息，请参阅 [导入 PowerShell 模块](/powershell/scripting/developer/module/importing-a-powershell-module)。  本演练基于以下条件：
+本演练使用 PowerShell 和 Transact-SQL (T-SQL) 脚本。  许多 T-SQL 脚本要求启用 **SQLCMD 模式** 。  有关 **SQLCMD 模式**的详细信息，请参阅 [在查询编辑器中启用 SQLCMD 脚本撰写](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  必须导入 PowerShell 模块 **FailoverClusters** 。  有关导入 PowerShell 模块的详细信息，请参阅 [导入 PowerShell 模块](/powershell/scripting/developer/module/importing-a-powershell-module)。  本演练基于以下条件：
 - 已满足[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) 中的所有要求。  
 - 域为 `contoso.lab`。
 - 用户在将要创建 DTC 网络名称资源的 OU 中具有“创建计算机对象”权限。

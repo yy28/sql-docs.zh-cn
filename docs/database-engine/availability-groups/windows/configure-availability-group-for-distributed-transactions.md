@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfa584b5b6debf497438dc7b50f513e5da1b6d4e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 797885368b0aa8abfd2d367d4dbaf9b1b6942b41
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114030"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726457"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -193,16 +193,16 @@ following the guideline for Troubleshooting DTC Transactions.
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-有关解决未决事务的详细信息，请参阅[手动解决事务](https://technet.microsoft.com/library/cc754134.aspx)。
+有关解决未决事务的详细信息，请参阅[手动解决事务](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754134(v=ws.10))。
 
 ## <a name="next-steps"></a>后续步骤  
 
-[分布式事务](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[分布式事务](/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [事务 - AlwaysOn 可用性组和数据库镜像](transactions-always-on-availability-and-database-mirroring.md)  
 
-[支持 XA 事务](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[支持 XA 事务](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10))
 
-[工作原理：会话/SPID (-2) 的 DTC 事务](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[工作原理：会话/SPID (-2) 的 DTC 事务](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions)

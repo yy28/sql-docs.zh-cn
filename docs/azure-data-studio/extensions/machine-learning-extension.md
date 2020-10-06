@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136668"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725142"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio 的机器学习扩展（预览版）
 
@@ -24,7 +24,7 @@ ms.locfileid: "91136668"
 
 需要在运行 Azure Data Studio 的计算机上安装以下必备组件。
 
-- [Python 3](https://www.python.org/downloads/)。 安装 Python 后，需要在[扩展设置](#settings)下指定 Python 安装的本地路径。 如果在 Azure Data Studio 中使用了 [Python 内核笔记本](../notebooks-tutorial-python-kernel.md)，则扩展将默认使用笔记本中的路径。
+- [Python 3](https://www.python.org/downloads/)。 安装 Python 后，需要在[扩展设置](#settings)下指定 Python 安装的本地路径。 如果在 Azure Data Studio 中使用了 [Python 内核笔记本](../notebooks/notebooks-python-kernel.md)，则扩展将默认使用笔记本中的路径。
 
 - 适用于 Windows、macOS 或 Linux 的 [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
@@ -87,7 +87,7 @@ Requirement already satisfied: jupyter
 
 1. 确保“机器学习: 启用 Python”已启用。 默认情况下，此设置处于启用状态。
 
-1. 在“机器学习: Python 路径”下提供预先存在的 Python 安装的路径。 这可以是 Python 可执行文件的完整路径，也可以是该可执行文件所在的文件夹。 如果在 Azure Data Studio 中使用了 [Python 内核笔记本](../notebooks-tutorial-python-kernel.md)，则扩展将默认使用笔记本中的路径。
+1. 在“机器学习: Python 路径”下提供预先存在的 Python 安装的路径。 这可以是 Python 可执行文件的完整路径，也可以是该可执行文件所在的文件夹。 如果在 Azure Data Studio 中使用了 [Python 内核笔记本](../notebooks/notebooks-python-kernel.md)，则扩展将默认使用笔记本中的路径。
 
 ### <a name="enable-r"></a>启用 R
 
@@ -114,6 +114,6 @@ Requirement already satisfied: jupyter
 - [管理数据库中的包](machine-learning-extension-manage-packages.md)
 - [作出预测](machine-learning-extension-predictions.md)
 - [导入或查看模型](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio 中的笔记本](../notebooks-guidance.md)
+- [Azure Data Studio 中的笔记本](../notebooks/notebooks-guidance.md)
 - [SQL 机器学习文档](../../machine-learning/index.yml)
 - [在 SQL Edge 中将机器学习和 AI 与 ONNX 结合使用（预览版）](/azure/azure-sql-edge/onnx-overview)

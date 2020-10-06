@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 286a3e31caad83c421865626eee28d9f7d3f91f1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115708"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726578"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性组：互操作性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ ms.locfileid: "91115708"
 
 - **博客：**
 
-  [迁移指南：从之前群集和镜像部署迁移到 SQL Server 2012 故障转移群集和可用性组](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
-  [SQL Server Always On 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [CSS SQL Server 工程师博客](https://docs.microsoft.com/archive/blogs/psssql/)
+  [迁移指南：从之前群集和镜像部署迁移到 SQL Server 2012 故障转移群集和可用性组](/archive/blogs/sqlalwayson/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments)
+  [SQL Server Always On 团队博客：SQL Server AlwaysOn 团队官方博客](/archive/blogs/sqlalwayson/)
+  [CSS SQL Server 工程师博客](/archive/blogs/psssql/)
 
 - **白皮书：**
 
-  [迁移指南：从结合数据库镜像和日志传送的先前部署迁移到 Always On 可用性组](https://msdn.microsoft.com/library/jj635217)
-  [Microsoft SQL Server Always On 解决方案高可用性和灾难恢复指南](https://go.microsoft.com/fwlink/?LinkId=227600)
-  [Microsoft SQL Server 2012 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)
+  [迁移指南：从结合数据库镜像和日志传送的先前部署迁移到 Always On 可用性组](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
+  [Microsoft SQL Server Always On 解决方案高可用性和灾难恢复指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+  [Microsoft SQL Server 2012 白皮书](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
   [SQL Server 客户咨询团队白皮书](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>另请参阅

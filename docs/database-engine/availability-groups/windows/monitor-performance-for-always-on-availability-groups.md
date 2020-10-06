@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362666"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727849"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87362666"
 > [!IMPORTANT]  
 >  如果可用性组包含多个可用性数据库，则具有最高 Tfailover 的可用性数据库会成为 RTO 符合性的限制值。  
   
- 故障检测时间（即 Tdetection）是系统检测到故障所用的时间。 此时间取决于群集级别设置，而不是各个可用性副本。 根据配置的自动故障转移条件，可触发故障转移，作为对关键 SQL Server 内部错误（如孤立的自旋锁）的即时反应。 在这种情况下，检测速度可能与 [ sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 错误报告发送到 WSFC 群集的速度相同（默认间隔为运行状况检查超时的 1/3）。 也可能因超时而触发故障转移，例如群集运行状况检查超时已过期（默认为 30 秒）或资源 DLL 和 SQL Server 实例之间的租约已过期（默认为 20 秒）。 在这种情况下，检测时间与超时间隔一样长。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 &#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx)。  
+ 故障检测时间（即 Tdetection）是系统检测到故障所用的时间。 此时间取决于群集级别设置，而不是各个可用性副本。 根据配置的自动故障转移条件，可触发故障转移，作为对关键 SQL Server 内部错误（如孤立的自旋锁）的即时反应。 在这种情况下，检测速度可能与 [ sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 错误报告发送到 WSFC 群集的速度相同（默认间隔为运行状况检查超时的 1/3）。 也可能因超时而触发故障转移，例如群集运行状况检查超时已过期（默认为 30 秒）或资源 DLL 和 SQL Server 实例之间的租约已过期（默认为 20 秒）。 在这种情况下，检测时间与超时间隔一样长。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014)。  
   
  如果准备进行故障转移，次要副本唯一需要做的是让重做赶上日志的末尾。 重做时间（即 Tredo）使用以下公式进行计算：  
   
@@ -310,7 +310,7 @@ ms.locfileid: "87362666"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>监视 RTO 和 RPO  
- 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2:Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）。  
+ 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2:Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）。  
   
  [估计故障转移时间 (RTO)](#estimating-failover-time-rto) 和[估计可能的数据丢失 (RPO)](#estimating-potential-data-loss-rpo) 中的故障转移时间和可能的数据丢失计算的元素，可方便地用作策略管理方面数据库副本状态中的性能指标（请参阅[查看 SQL Server 对象上基于策略的管理方面](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)）  。 可以按计划监视这两个指标，并在指标分别超过 RTO 和 RPO 时发出警报。  
   
@@ -454,4 +454,4 @@ ms.locfileid: "87362666"
 |hadr_worker_pool_task|`alwayson`|调试|主|  
 |hadr_dump_primary_progress|`alwayson`|调试|主|  
 |hadr_dump_log_progress|`alwayson`|调试|主|  
-|hadr_undo_of_redo_log_scan|`alwayson`|分析|辅助副本|  
+|hadr_undo_of_redo_log_scan|`alwayson`|分析|辅助副本|

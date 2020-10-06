@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: dd2fffbce8d2db5bb5bafbcb49b1f37ea48873c7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990380"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726041"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
 
@@ -40,7 +40,7 @@ ms.locfileid: "90990380"
   
  要维护 **SSISDB** 数据库，建议您应用管理用户数据库的标准企业策略。 有关创建维护计划的信息，请参阅 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)。  
   
- **SSISDB** 目录和 **SSISDB** 数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)。  
+ **SSISDB** 目录和 **SSISDB** 数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)。  
   
  有关如何查看操作数据的详细信息，请参阅 [监视运行包和其他操作](../../integration-services/performance/monitor-running-packages-and-other-operations.md)。  
   
@@ -416,7 +416,7 @@ ms.locfileid: "90990380"
   
     ```  
   
-3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅[操作说明：备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅[操作说明：备份数据库 (SQL Server Management Studio)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
 4.  通过执行以下操作，生成 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 脚本。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)。  
   
@@ -440,7 +440,7 @@ ms.locfileid: "90990380"
   
 ### <a name="to-restore-the-ssis-database"></a>还原 SSIS 数据库  
   
-1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请通过运行 `sp_configure` 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [clr enabled 选项](https://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请通过运行 `sp_configure` 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
   
     ```  
     use master   
@@ -456,7 +456,7 @@ ms.locfileid: "90990380"
            FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
 
-    可以从 [SQL Server 默认兼容级别的列表](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments)中找到 `YourSQLServerDefaultCompatibilityLevel` 的值。
+    可以从 [SQL Server 默认兼容级别的列表](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=sql-server-ver15#arguments)中找到 `YourSQLServerDefaultCompatibilityLevel` 的值。
   
     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 存储过程要求将 UNSAFE 权限授予该登录名，因为该登录名需要对受限制资源（如 Microsoft Win32 API）的更高访问权限。 有关 UNSAFE 代码权限的详细信息，请参阅 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
 
@@ -679,4 +679,4 @@ SSISDB 不支持约束委派。 在双跃点环境中，如果为约束委派设
   
 -   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)。  
   
--   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
+-   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。

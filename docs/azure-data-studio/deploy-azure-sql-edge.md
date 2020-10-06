@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364114"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725218"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>通过 Azure Data Studio 部署 Azure SQL Edge（预览版）
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) 是已优化的关系数据库引擎，更适合 IoT 和 Azure IoT Edge 部署。 它提供为 IoT 应用程序和解决方案创建高性能数据存储和处理层的功能。 本文演示如何通过 Azure Data Studio 部署 Azure SQL Edge 实例，以及部署向导支持的部署方案。  
+[Azure SQL Edge](/azure/azure-sql-edge/overview) 是已优化的关系数据库引擎，更适合 IoT 和 Azure IoT Edge 部署。 它提供为 IoT 应用程序和解决方案创建高性能数据存储和处理层的功能。 本文演示如何通过 Azure Data Studio 部署 Azure SQL Edge 实例，以及部署向导支持的部署方案。  
 
 可通过 Azure Data Studio 中的部署向导实现以下方案：
 
@@ -76,11 +76,11 @@ Azure SQL Edge 部署向导可创建多项 Azure 资源，以允许部署连接�
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Azure IoT 中心的多个设备
 
-如果你已有 IoT 中心和已连接的设备，可以根据资源组、IoT 中心名称和用于选择设备的[目标条件](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition)将 Azure SQL Edge 部署到设备。
+如果你已有 IoT 中心和已连接的设备，可以根据资源组、IoT 中心名称和用于选择设备的[目标条件](/azure/iot-edge/module-deployment-monitoring#target-condition)将 Azure SQL Edge 部署到设备。
 使用部署向导期间提供的 IP 地址，可在笔记本底部生成快速连接链接。
 
 在该过程中，可以选择将 dacpac 文件压缩到文件夹中，并将其部署到新的 Azure SQL Edge 实例。  如果提供了 dacpac 文件，则会在同一资源组中创建 Azure Blob 存储帐户。
 
 ## <a name="next-steps"></a>后续步骤
 
-- [详细了解 Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [详细了解 Azure SQL Edge](/azure/azure-sql-edge/)

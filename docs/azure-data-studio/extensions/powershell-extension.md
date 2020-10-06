@@ -9,12 +9,12 @@ ms.author: aanelson
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 04/19/2019
-ms.openlocfilehash: 522f6c862f4c136afb0c7794d90ed83c83169d0c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ede862fe5bbfe975e7c8694782960ced974122b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123067"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725132"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 编辑器支持
 
@@ -62,8 +62,8 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 PowerShell Core 是 [GitHub](https://github.com/powershell/powershell) 上的开放源代码项目。
 有关在 MacOS 或 Linux 平台上安装 PowerShell Core 的详细信息，请参阅以下文章：
 
-- [在 Linux 上安装 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux)
-- [在 macOS 上安装 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos)
+- [在 Linux 上安装 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [在 macOS 上安装 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-macos)
 
 ## <a name="example-scripts"></a>示例脚本
 

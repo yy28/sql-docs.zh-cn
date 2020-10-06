@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5940e7b45288913bbda4930c267f1f806ed4937d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da836cc7f53f4a4d83aae28ea2a41ec646ca3bd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477970"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728063"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
 
@@ -40,12 +40,11 @@ ms.locfileid: "88477970"
   
 3.  从下拉列表中选择“管理证书存储位置”**** 和“管理证书存储名称”****。  
   
-4.  输入“管理证书指纹”或单击“浏览…”，从所选存储中选择一个证书********。 必须将证书作为订阅的管理证书上载。 为此，请在以下 Azure 门户页上单击“上传”****（请参阅这篇 [MSDN 帖子](https://msdn.microsoft.com/library/azure/gg551722.aspx)以了解详细信息）。  
+4.  输入“管理证书指纹”或单击“浏览…”，从所选存储中选择一个证书********。 必须将证书作为订阅的管理证书上载。 为此，请在以下 Azure 门户页上单击“上传”****（请参阅这篇 [MSDN 帖子](/previous-versions/azure/gg551722(v=azure.100))以了解详细信息）。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  单击“测试连接”  以测试连接。  
   
 6.  单击 **“确定”** 关闭对话框。  
-  
   

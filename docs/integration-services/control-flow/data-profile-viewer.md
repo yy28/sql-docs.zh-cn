@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2ee5f6f01a098c2e8a67b09e915a947010d5758
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19b96ce10fc5579e86fde10b4c3331b0da060050
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484610"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724958"
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
 
@@ -69,7 +69,7 @@ ms.locfileid: "88484610"
 >   
 >  如果从并非最近创建的输出文件中深化，则明细查询所返回的行集可能会与计算原始输出时所使用的行集不同。  
   
- 有关数据配置文件查看器的用户界面的详细信息，请参阅 [Data Profile Viewer F1 Help](../../integration-services/control-flow/data-profile-viewer-f1-help.md)。  
+ 有关数据配置文件查看器的用户界面的详细信息，请参阅 [Data Profile Viewer F1 Help]()。  
   
 ## <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
   可以使用数据配置文件查看器查看数据事件探查任务的输出。  
@@ -246,4 +246,3 @@ ms.locfileid: "88484610"
   
  **Count**  
  显示指定的列具有第一列中显示的值的行数。  
-  

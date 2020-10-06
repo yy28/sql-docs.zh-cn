@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350063"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728093"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流中添加或删除任务或容器
 
@@ -100,9 +100,9 @@ ms.locfileid: "88350063"
   
 4.  在“控制流”选项卡的设计图面上，右键单击任务或容器，然后单击“编辑”以打开相应的任务或容器编辑器********。  
   
-     有关如何配置 For 循环容器的信息，请参阅[配置 For 循环容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
+     有关如何配置 For 循环容器的信息，请参阅[配置 For 循环容器](./for-loop-container.md)。  
   
-     有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+     有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](./foreach-loop-container.md)。  
   
     > [!NOTE]  
     >  序列容器没有自定义编辑器。  
@@ -119,5 +119,4 @@ ms.locfileid: "88350063"
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

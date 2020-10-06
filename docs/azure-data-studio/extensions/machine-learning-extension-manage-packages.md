@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: c965bc4bd9c6b235d192db58c82fac41f4f8b532
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2977f25e09d3d634d479abd8371d010206edea90
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136676"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725164"
 ---
 # <a name="manage-packages-in-database-with-machine-learning-extension-for-azure-data-studio-preview"></a>使用 Azure Data Studio 的机器学习扩展（预览版）来管理数据库中的包
 
@@ -122,5 +122,5 @@ ms.locfileid: "91136676"
 - [Azure Data Studio 中的机器学习扩展](machine-learning-extension.md)
 - [作出预测](machine-learning-extension-predictions.md)
 - [导入或查看模型](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio 中的笔记本](../notebooks-guidance.md)
+- [Azure Data Studio 中的笔记本](../notebooks/notebooks-guidance.md)
 - [SQL 机器学习文档](../../machine-learning/index.yml)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349983"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727570"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
 
@@ -75,7 +75,7 @@ ms.locfileid: "88349983"
   
  有关在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击以下主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>以编程方式配置 Analysis Services 处理任务  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
@@ -123,7 +123,7 @@ ms.locfileid: "88349983"
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
 |**类型**|列出指定对象的类型。|  
-|**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[处理多维模型 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[处理多维模型 (Analysis Services)](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**设置**|列出指定对象的处理设置。|  
   
  **添加**  
@@ -135,7 +135,7 @@ ms.locfileid: "88349983"
  **影响分析**  
  对所选对象进行影响分析。  
   
- **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **批设置摘要**  
  
@@ -150,4 +150,4 @@ ms.locfileid: "88349983"
  **更改设置**  
  更改处理选项以及对维度键中错误的处理方式。  
   
- **相关主题：** [“更改设置”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **相关主题：** [“更改设置”对话框（Analysis Services - 多维数据）](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

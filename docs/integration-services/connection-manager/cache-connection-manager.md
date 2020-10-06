@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477927"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725338"
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
 
@@ -32,7 +32,7 @@ ms.locfileid: "88477927"
  “缓存转换”转换可以将数据流中已连接数据源的数据写入缓存连接管理器。 包中的查找转换会对数据执行查找。  
   
 > [!NOTE]  
->  缓存连接管理器不支持二进制大型对象 (BLOB) 数据类型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果引用数据集包含 BLOB 数据类型，则运行包时该组件将失败。 可以使用 **“缓存连接管理器编辑器”** 修改列数据类型。 有关详细信息，请参阅 [Cache Connection Manager Editor](cache-connection-manager-editor.md)。  
+>  缓存连接管理器不支持二进制大型对象 (BLOB) 数据类型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果引用数据集包含 BLOB 数据类型，则运行包时该组件将失败。 可以使用 **“缓存连接管理器编辑器”** 修改列数据类型。 有关详细信息，请参阅 [Cache Connection Manager Editor]()。  
   
 > [!NOTE]  
 >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../../integration-services/security/security-overview-integration-services.md#files)。  
@@ -133,5 +133,4 @@ ms.locfileid: "88477927"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [在完全缓存模式下使用缓存连接管理器实现查找转换](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
-  
   

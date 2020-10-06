@@ -166,6 +166,4 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 >[!IMPORTANT]
 >对于 SQL Server 2017 版本，数据库镜像终结点支持的唯一身份验证方法是 `CERTIFICATE`。 未来的版本中将启用 `WINDOWS` 选项。
 
-有关详细信息，请参阅 [数据库镜像端点 (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx)。
-
-
+有关详细信息，请参阅 [数据库镜像端点 (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。

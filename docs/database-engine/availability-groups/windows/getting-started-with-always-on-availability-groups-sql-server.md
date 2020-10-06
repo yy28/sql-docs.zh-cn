@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9466f9434ff06d22b7dcabc1d42da6d1bae76014
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0a180d924a4033b45bdcfe60746110bc560aa470
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115062"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727853"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>AlwaysOn 可用性组入门
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91115062"
   
 |任务|链接|  
 |----------|----------|  
-|修改可用性组的 [灵活的故障转移策略](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) ，以便控制导致自动故障转移的条件。 此策略仅适用于可进行自动故障转移的情况。|[配置可用性组的灵活的故障转移策略](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
+|修改可用性组的 [灵活的故障转移策略](./configure-flexible-automatic-failover-policy.md) ，以便控制导致自动故障转移的条件。 此策略仅适用于可进行自动故障转移的情况。|[配置可用性组的灵活的故障转移策略](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
 |执行计划的手动故障转移或强制的手动故障转移（可能有数据丢失），通常称作“强制故障转移”。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)概念。|[执行计划的手动故障转移](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [执行强制的手动故障转移](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |使用一组预定义策略，以便查看某一可用性组及其副本和数据库的运行状况。|[使用基于策略的管理查看可用性组的运行状况](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [使用 Always On 组面板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |添加或删除辅助副本。|[添加辅助副本](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [删除辅助副本](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -90,9 +90,9 @@ ms.locfileid: "91115062"
   
 -   **视频 - 深入了解 Always On：**  [Microsoft SQL Server Code 命名为“Denali”的 Always On 系列，第二部分：使用 Always On 生成任务关键型高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮书：** [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **白皮书：** [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   **博客：** [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
+-   **博客：** [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -102,5 +102,4 @@ ms.locfileid: "91115062"
  [监视可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组的 Transact-SQL 语句概述 (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19eb6e3c43ce404770d641bc33bf663ad12a4b61
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 5708feb796315c2904b1ba0a178eb5589e6bb3a7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115821"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724525"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>使用组策略评估 AlwaysOn 可用性组的运行状况
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,6 +33,5 @@ ms.locfileid: "91115821"
 3.  要查看所有可用性组系统策略，请单击“选择页”窗格中的“策略选择”   。  
   
 ## <a name="next-steps"></a>后续步骤  
- [Always On 运行状况模型，第 2 部分：扩展运行状况模型](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)。   
-  
+ [Always On 运行状况模型，第 2 部分：扩展运行状况模型](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)。   
   

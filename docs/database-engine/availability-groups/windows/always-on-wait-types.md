@@ -10,18 +10,18 @@ ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50886885852fd9ffe2d759be779989cb221cf76f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2a04953b5881362dbae6a83ea874dc9ed0207a7a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115801"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724523"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>标识与可用性组关联的等待
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   排除 Always On 可用性组延迟问题时，可在动态管理视图 (DMV) 中使用特定于可用性组的等待类型 [sys.dm_os_wait_stats (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 监视累积统计信息。  
   
- 有关使用等待统计信息的常规信息，请参阅 [SQL Server 2005 等待和队列](https://technet.microsoft.com/library/cc966413.aspx)。 该文档针对 SQL Server 2005 编写，但其信息适用于更高版本的 SQL Server。  
+ 有关使用等待统计信息的常规信息，请参阅 [SQL Server 2005 等待和队列](/previous-versions/sql/sql-server-2005/administrator/cc966413(v=technet.10))。 该文档针对 SQL Server 2005 编写，但其信息适用于更高版本的 SQL Server。  
   
 ## <a name="query-for-availability-groups-wait-types"></a>针对可用性组等待类型的查询  
  使用下面的 T-SQL 查询检索可用性组等待类型的所有等待统计信息：  
@@ -53,5 +53,4 @@ ORDER BY map_key ASC
   
 ## <a name="next-steps"></a>后续步骤  
  [等待的类型](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
-  
   

@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111748"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725198"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>用于 Azure Data Studio 的 Azure SQL 托管实例仪表板（预览）
 
@@ -28,7 +28,7 @@ Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio
 
 ## <a name="install"></a>安装
 
-可以安装此扩展的正式版本。 按照 [Azure Data Studio 文档](../extensions.md)中的步骤进行操作。
+可以安装此扩展的正式版本。 按照 [Azure Data Studio 文档](./add-extensions.md)中的步骤进行操作。
 在“扩展”窗格中，搜索“托管实例”并在此处安装它。 安装之后，会自动向你通知未来的任何扩展更新。
 
 安装扩展后，会在 Azure Data Studio 中看到“托管实例”  选项卡。 在此处可以找到特定于托管实例的信息。
@@ -50,7 +50,7 @@ Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio
 
 在“托管实例”  选项卡中选择第二个窗格时，会获得建议和警报，以帮助优化托管实例。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="托管实例建议":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="托管实例属性":::
 
 可能会看到以下一些建议：
 
@@ -67,7 +67,7 @@ Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio
 
 “托管实例”  选项卡中的第三个窗格显示托管实例中的数据库副本状态。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="托管实例副本":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="托管实例属性":::
 
 在常规用途服务层级上，每个数据库都有单个（主要）副本。 在业务关键层级实例上，每个数据库都有一个主要副本和三个次要副本（其中一个用于只读工作负载）。 在“副本”  窗格上，可以监视同步过程，并验证是否所有次要副本都与主要副本同步。
 
@@ -75,7 +75,7 @@ Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio
 
 “托管实例”  的第四个窗格显示最新的相关 SQL 错误日志条目。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="托管实例日志条目":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="托管实例属性":::
 
 虽然托管实例会生成大量日志条目，但是大多数日志条目是内部/系统信息。 此外，一些日志条目显示物理数据库名称（`GUID` 值），而不是实际逻辑数据库名称。
 

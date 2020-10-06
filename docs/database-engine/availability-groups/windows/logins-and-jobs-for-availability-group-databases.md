@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 35ea24eb9d4f5007bf45602cceca97811ef282fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 57af8645045039923fa59bacbc232bca8e435c91
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116957"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726358"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>在 AlwaysOn 可用性组中管理使用数据库的作业的登录名
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "91116957"
 > [!NOTE]  
 >  这个问题会影响不同计算机上的 Windows 本地帐户。 但是，这个问题不会在域帐户上发生，因为 SID 在每台计算机上都是相同的。  
   
- 有关详细信息，请参阅 [与数据库镜像和日志传送有关的孤立用户](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) （数据库引擎博客）。  
+ 有关详细信息，请参阅 [与数据库镜像和日志传送有关的孤立用户](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) （数据库引擎博客）。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
@@ -70,5 +70,4 @@ ms.locfileid: "91116957"
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [包含的数据库](../../../relational-databases/databases/contained-databases.md)   
  [创建作业](../../../ssms/agent/create-jobs.md)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116943"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727851"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>连接到 Always On 可用性组侦听器 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ SELECT @@SERVERNAME
  
 -   至少一个次要副本设置为只读访问，并且每个只读次要副本和主要副本都[配置为支持只读路由](configure-read-only-routing-for-an-availability-group-sql-server.md)。 
 
--   连接字符串引用可用性组中涉及的数据库。 替代方法是连接中使用的登录帐户将该数据库配置为其默认数据库。 有关详细信息，请参阅[此有关如何使用算法处理只读路由的文章](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)。
+-   连接字符串引用可用性组中涉及的数据库。 替代方法是连接中使用的登录帐户将该数据库配置为其默认数据库。 有关详细信息，请参阅[此有关如何使用算法处理只读路由的文章](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。
 
 -   连接字符串引用某一可用性组侦听器，并且将传入连接的应用程序意向设置为只读（例如，使用 ODBC 或 OLEDB 连接字符串或连接特性或属性中的 **Application Intent=ReadOnly** 关键字）。 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 成功连接到侦听器后，请考虑将[只读工作负荷](overview-of-always-on-availability-groups-sql-server.md)和[备份](configure-backup-on-availability-replicas-sql-server.md)转移到次要副本以提高性能。 还可以查看各种[可用性组监视策略](monitoring-of-availability-groups-sql-server.md)，以确保可用性组正常运行。 
 
-有关可用性组的详细信息，请参阅 [AlwaysOn 可用性组 &#40;SQL Server&#41; 概述](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 
+有关可用性组的详细信息，请参阅 [AlwaysOn 可用性组 &#40;SQL Server&#41; 概述](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。

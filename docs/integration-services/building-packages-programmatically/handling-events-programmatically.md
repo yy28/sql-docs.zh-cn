@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 35b458354433d923a6c028badae4e6f9fb02acf5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b2198303d8eda4e6215ad241e7484d7dbef2636
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352053"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725310"
 ---
 # <a name="handling-events-programmatically"></a>以编程方式处理事件
 
@@ -254,6 +254,5 @@ End Module
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 事件处理程序](../../integration-services/integration-services-ssis-event-handlers.md)   
- [在包中添加事件处理程序](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [在包中添加事件处理程序](../integration-services-ssis-event-handlers.md)  
   

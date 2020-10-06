@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc6be0059b1e49c5db9cf2ced79e66c6b523b5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 633dd8288a9168422d0e5187caa1265615911a8a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478209"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726676"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 连接管理器
 
@@ -31,7 +31,7 @@ ms.locfileid: "88478209"
   
  任务（如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务）和目标（如数据挖掘模型定型目标）都使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器。  
   
- 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅[多维模型数据库 (SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)。  
+ 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅[多维模型数据库 (SSAS)](/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)。  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Analysis Services 连接管理器的配置  
  将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建在运行时作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接进行解析的连接管理器，同时还会设置该连接管理器的属性，并将该连接管理器添加到包的 Connections 集合****。 该连接管理器的 **ConnectionManagerType** 属性设置为 **MSOLAP100**。  
@@ -45,7 +45,7 @@ ms.locfileid: "88478209"
 -   如果要连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，则应指定身份验证模式。  
 
 > [!NOTE]    
->  如果在 Azure 数据工厂 (ADF) 中使用 SSIS 并希望连接到 Azure Analysis Services (AAS) 实例，则不能使用已启用多重身份验证 (MFA) 的帐户，而必须使用不需要任何交互性/MFA 的账户或服务主体。 如要使用后者，请参阅[此处](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)创建一个并为其分配服务器管理员角色，然后选择“使用指定用户名和密码”以登录到连接管理器中的服务器，最后输入 `User name: app:YourApplicationID` 和 `Password: YourAuthorizationKey`****。
+>  如果在 Azure 数据工厂 (ADF) 中使用 SSIS 并希望连接到 Azure Analysis Services (AAS) 实例，则不能使用已启用多重身份验证 (MFA) 的帐户，而必须使用不需要任何交互性/MFA 的账户或服务主体。 如要使用后者，请参阅[此处](/azure/analysis-services/analysis-services-service-principal)创建一个并为其分配服务器管理员角色，然后选择“使用指定用户名和密码”以登录到连接管理器中的服务器，最后输入 `User name: app:YourApplicationID` 和 `Password: YourAuthorizationKey`****。
   
 -   指示是否在运行时保留从连接管理器中创建的连接。  
   
@@ -56,5 +56,4 @@ ms.locfileid: "88478209"
 -   [“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
-  
   

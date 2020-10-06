@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eba08dc813e869a6ce412dd185757d6b533407a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496131"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724972"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
 
@@ -35,7 +35,7 @@ ms.locfileid: "88496131"
   
 -   一组由 SQL Server CDC 机制生成并且与在非 Oracle 的常规 SQL Server CDC 中使用的完全相同的一组更改表和更改访问函数。  
   
- `cdc` 架构最初只能由 **dbowner** 固定数据库角色的成员访问。 对更改表和更改函数的访问权限由与 SQL Server CDC 相同的安全模式确定。 有关安全模式的详细信息，请参阅 [安全模式](https://go.microsoft.com/fwlink/?LinkId=231151)。  
+ `cdc` 架构最初只能由 **dbowner** 固定数据库角色的成员访问。 对更改表和更改函数的访问权限由与 SQL Server CDC 相同的安全模式确定。 有关安全模式的详细信息，请参阅 [安全模式](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))。  
   
 ## <a name="creating-the-cdc-database"></a>创建 CDC 数据库  
  在大多数情况下，CDC 数据库是使用 CDC 设计器控制台创建的，但也可以使用通过 CDC 设计器控制台生成的 CDC 部署脚本创建 CDC 数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员可根据需要更改数据库设置（对于用于存储、安全性或可用性之类的项）。  
@@ -55,11 +55,11 @@ ms.locfileid: "88496131"
  镜像表是空的；在其中不存储任何数据。 它们用于启用 Oracle CDC 实例使用的标准 SQL Server CDC 基础结构。 为了防止数据插入或更新到镜像表中，对于 PUBLIC 将拒绝所有 UPDATE、DELETE 和 INSERT 操作。 这将确保不能修改镜像表。  
   
 ## <a name="access-to-change-data"></a>访问更改数据  
- 由于用于获取对与某一捕获实例相关联的更改数据库的访问权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，必须向用户授予对关联镜像表的所有捕获列的 `select` 访问权限（对原始 Oracle 表的访问权限不提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中更改表的访问权限）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式的信息，请参阅 [安全模式](https://go.microsoft.com/fwlink/?LinkId=231151)。  
+ 由于用于获取对与某一捕获实例相关联的更改数据库的访问权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，必须向用户授予对关联镜像表的所有捕获列的 `select` 访问权限（对原始 Oracle 表的访问权限不提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中更改表的访问权限）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式的信息，请参阅 [安全模式](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))。  
   
  此外，如果在创建捕获实例时指定了访问控制角色，调用者还必须是指定访问控制角色的成员。 所有数据库用户可通过 PUBLIC 角色访问用于访问元数据的其他常规变更数据捕获功能，但返回的元数据访问通常是使用基础源表的选择访问权限以及任何定义的访问控制角色成员身份控制的。  
   
- 可通过调用在创建捕获实例时 SQL Server CDC 组件生成的特殊的基于表的函数，读取更改数据。 有关此函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
+ 可通过调用在创建捕获实例时 SQL Server CDC 组件生成的特殊的基于表的函数，读取更改数据。 有关此函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)。  
   
  通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC 源组件访问 CDC 数据受到相同规则的约束。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88496131"
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
- 捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如，`fn_cdc_get_all_changes_HR_EMPLOYEES` 。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
+ 捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如，`fn_cdc_get_all_changes_HR_EMPLOYEES` 。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)。  
   
 ###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 表由 SQL Server CDC 组件生成。 它在 Oracle CDC 情况下的用法与其常规用法不同。  
@@ -192,5 +192,4 @@ ms.locfileid: "88496131"
   
 ## <a name="see-also"></a>另请参阅  
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
   

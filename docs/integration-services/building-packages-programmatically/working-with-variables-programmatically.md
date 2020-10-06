@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394993"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725108"
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
 
@@ -41,15 +41,15 @@ ms.locfileid: "88394993"
   
 -   在运行时填充 Transact-SQL 语句的参数值。  
   
--   控制 Foreach 循环流。 有关详细信息，请参阅[将枚举添加到控制流](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)。  
+-   控制 Foreach 循环流。 有关详细信息，请参阅[将枚举添加到控制流](../control-flow/foreach-loop-container.md)。  
   
--   通过在表达式中使用优先约束对其进行控制。 优先约束可在约束定义中包含变量。 有关详细信息，请参阅 [将表达式添加到优先约束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+-   通过在表达式中使用优先约束对其进行控制。 优先约束可在约束定义中包含变量。 有关详细信息，请参阅 [将表达式添加到优先约束](../control-flow/precedence-constraints.md)。  
   
--   控制 For 循环容器的条件重复。 有关详细信息，请参阅[将迭代添加到控制流](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)。  
+-   控制 For 循环容器的条件重复。 有关详细信息，请参阅[将迭代添加到控制流](../control-flow/for-loop-container.md)。  
   
 -   生成包含变量值的表达式。  
   
--   可以为所有容器类型创建自定义变量，这些容器类型包括：包、Foreach 循环**** 容器、For 循环**** 容器、Sequence**** 容器、TaskHost 和事件处理程序。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   可以为所有容器类型创建自定义变量，这些容器类型包括：包、Foreach 循环**** 容器、For 循环**** 容器、Sequence**** 容器、TaskHost 和事件处理程序。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../integration-services-ssis-variables.md)。  
   
 ## <a name="scope"></a>范围  
  每个容器都有自己的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合。 创建新变量时，新变量的作用域在其父容器的作用域内。 由于包容器位于容器层次结构的顶部，所以包作用域内的变量所起作用类似于全局变量，并且这些变量对包中的所有容器都可见。 容器的变量集合还可由容器的子容器通过 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合进行访问，方法是使用集合中的变量名称或变量的索引。  
@@ -231,10 +231,9 @@ End Module
  表达式必须是使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 表达式语法的有效表达式。 除了表达式语法提供的运算符和函数，变量表达式中还可以使用文字，但表达式不能引用其他变量或列。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
- 如果配置文件中包含自定义变量，则该变量可在运行时更新。 这意味着，当包运行时，配置文件中的新值会替换包中的原始变量值。 将包部署到需要不同变量值的多个服务器时，此替换技术将会很有用。 例如，变量可指定 Foreach 循环**** 容器重复其工作流的次数、列出引发错误时接收事件处理程序发送的电子邮件的收件人、或者更改包失败前可能发生的错误的数量。 对于每种环境，这些变量都以编程方式在配置文件中动态提供。 因此，配置文件中只允许读/写变量。 有关详细信息，请参阅 [创建包配置](../../integration-services/packages/create-package-configurations.md)。  
+ 如果配置文件中包含自定义变量，则该变量可在运行时更新。 这意味着，当包运行时，配置文件中的新值会替换包中的原始变量值。 将包部署到需要不同变量值的多个服务器时，此替换技术将会很有用。 例如，变量可指定 Foreach 循环**** 容器重复其工作流的次数、列出引发错误时接收事件处理程序发送的电子邮件的收件人、或者更改包失败前可能发生的错误的数量。 对于每种环境，这些变量都以编程方式在配置文件中动态提供。 因此，配置文件中只允许读/写变量。 有关详细信息，请参阅 [创建包配置](../packages/legacy-package-deployment-ssis.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
- [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [在包中使用变量](../integration-services-ssis-variables.md)  
   
