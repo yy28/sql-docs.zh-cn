@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454789"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753699"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>备注  
  全文谓词和函数作用于 FROM 谓词所示的单个表。 若要对多个表进行搜索，请在 FROM 子句中使用联接表，以搜索由两个或更多个表的乘积构成的结果集。  
   
- 返回的表中有一个名为 **key** 的列，其中包含全文键值。 每个全文索引表都有一个列，其值保证是唯一的， **键** 列中返回的值是与 contains 搜索条件中指定的选择条件匹配的行的全文键值。 从 OBJECTPROPERTYEX 函数获取的 **TableFulltextKeyColumn** 属性提供此唯一键列的标识。 若要获取与全文索引的全文键关联的列的 ID，请使用 **sys. fulltext_indexes**。 有关详细信息，请参阅 [sys.databases&#41;fulltext_indexes &#40;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+ 返回的表中有一个名为 **key** 的列，其中包含全文键值。 每个全文索引表都有一个列，其值保证是唯一的， **键** 列中返回的值是与 contains 搜索条件中指定的选择条件匹配的行的全文键值。 从 OBJECTPROPERTYEX 函数获取的 **TableFulltextKeyColumn** 属性提供此唯一键列的标识。 若要获取与全文索引的全文键关联的列的 ID，请使用 **sys.fulltext_indexes**。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.fulltext_indexes ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  若要从原始表中获得所需要的行，请指定与 CONTAINSTABLE 行的联接。 使用 CONTAINSTABLE 的 SELECT 语句的 FROM 子句的典型形式为：  
   
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [限制搜索结果排名](../../relational-databases/search/limit-search-results-with-rank.md)   
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
- [创建全文搜索查询 (Visual Database Tools)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [创建全文搜索查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
-  
   

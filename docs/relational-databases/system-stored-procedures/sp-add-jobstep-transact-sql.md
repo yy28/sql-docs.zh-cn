@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: bb8a754ee5e477f0bccce286f8f93193136276e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e4b24e5fcab13083c06f53868f462c3b45cc497
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464729"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753797"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -32,7 +32,7 @@ ms.locfileid: "88464729"
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> 在 [AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大多数（但不是所有） SQL Server 代理作业类型都受支持。 有关详细信息，请参阅 [AZURE sql 托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 。
+> 在 [AZURE SQL 托管实例](/azure/sql-database/sql-database-managed-instance)上，大多数（但不是所有） SQL Server 代理作业类型都受支持。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>语法
 
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用来执行*命令*的子系统。 *子系统* 为 **nvarchar (40) **，可以是以下值之一。
 
-|Value|说明|
+|值|说明|
 |-----------|-----------------|
 |'**ActiveScripting**'|活动脚本<br /><br /> **\*\* 重要说明 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|操作系统命令或可执行程序|
@@ -100,7 +100,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 有关这些令牌并更新作业步骤以使用新令牌语法的详细信息，请参阅 [在作业步骤中使用令牌](../../ssms/agent/use-tokens-in-job-steps.md)。
 
 > [!IMPORTANT]
-> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **DBN**、 **SVR**、 **a-ERR**、 **严重性**、 **a-MSG**和 **WMI (**_属性_**) **。 请注意，在此版本中，对标记的使用扩展至所有警报。
+> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI（属性）     。 请注意，在此版本中，对标记的使用扩展至所有警报。
 >
 > 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，并在“警报系统”**** 页上选择“为警报的所有作业响应替换标记”**** 以启用这些标记。
 
@@ -110,7 +110,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @on_success_action = ] success_action` 步骤成功时要执行的操作。 *success_action* 为 **tinyint**，可以是下列值之一。
   
-|Value|说明（操作）|  
+|值|说明（操作）|  
 |-----------|----------------------------|  
 |**1** （默认值）|成功后退出|  
 |**2**|失败后退出|  
@@ -121,7 +121,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @on_fail_action = ] fail_action` 步骤失败时要执行的操作。 *fail_action* 为 **tinyint**，可以是下列值之一。
 
-|Value|说明（操作）|  
+|值|说明（操作）|  
 |-----------|----------------------------|  
 |**1**|成功后退出|  
 |**2** （默认值）|失败后退出|  
@@ -146,7 +146,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @flags = ] flags` 控制行为的选项。 *flags* 为 **int**，可以是下列值之一。  
 
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|覆盖输出文件|  
 |**2**|追加到输出文件|  
@@ -180,7 +180,7 @@ SQL Server Management Studio 为管理作业提供了一种图形化的简便方
 
 ## <a name="permissions"></a>权限
 
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：
 
 - **SQLAgentUserRole**
 

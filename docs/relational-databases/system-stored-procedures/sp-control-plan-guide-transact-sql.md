@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 596ebe11f6fb455993add8c80da83e2c1f1ffca9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a66806fa3c4865da7486a7ada3c46a9691be6d7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539041"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753897"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  禁用一个已禁用的计划指南或启用一个已启用的计划指南将不起作用，且运行时没有错误。  
   
- 并非在的每个版本中都提供计划指南 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不过，您可以在的任何版本中，用 DROP 或 DROP ALL 选项执行 **sp_control_plan_guide** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 并非在的每个版本中都提供计划指南 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。 不过，您可以在的任何版本中，用 DROP 或 DROP ALL 选项执行 **sp_control_plan_guide** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>权限  
  若要在类型为 object 的计划指南 (创建指定** @type 为 = '** object ) **'** 的计划指南的**sp_control_plan_guide** ，则需要对该计划指南引用的对象具有 ALTER 权限。 其他所有计划指南都需要 ALTER DATABASE 权限。  
@@ -140,5 +140,4 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides (Transact-SQL)](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [计划指南](../../relational-databases/performance/plan-guides.md)  
-  
   

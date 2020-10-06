@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3d909da06b0f8cf4520d92a9ba8cb8652a6b2a5a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546244"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753882"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,7 +47,7 @@ sp_polybase_leave_group;
 ## <a name="remarks"></a>备注  
  只能从组中删除计算节点。  
   
- 运行存储过程后，重新启动计算机上的 PolyBase 引擎和 PolyBase 数据移动服务。 验证在头节点上运行以下 DMV： **sys. dm_exec_compute_nodes**。  
+ 运行存储过程后，重新启动计算机上的 PolyBase 引擎和 PolyBase 数据移动服务。 若要验证是否在头节点上运行以下 DMV： **sys.dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>示例  
  该示例从 PolyBase 组中删除当前计算机。  
@@ -57,7 +57,6 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [PolyBase 入门](../polybase/polybase-guide.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

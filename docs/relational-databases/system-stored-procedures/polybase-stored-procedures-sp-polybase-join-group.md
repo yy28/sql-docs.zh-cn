@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53db2ff3554c095832a6fa21accb061f2575c3d6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fe56373e9f80ce88c647458444655bea60ac431c
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548376"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753879"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +57,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  需要 CONTROL SERVER 权限。  
   
 ## <a name="remarks"></a>备注  
- 运行存储过程后，关闭 PolyBase 引擎，然后在计算机上重新启动 PolyBase 数据移动服务。 验证在头节点上运行以下 DMV： **sys. dm_exec_compute_nodes**。  
+ 运行存储过程后，关闭 PolyBase 引擎，然后在计算机上重新启动 PolyBase 数据移动服务。 若要验证是否在头节点上运行以下 DMV： **sys.dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>示例  
  该示例将当前计算机作为计算节点加入 PolyBase 组。  头节点的名称为 **HST01** ，头节点上 SQL Server 实例的名称为 **MSSQLSERVER**。  
@@ -67,7 +67,6 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [PolyBase 入门](../polybase/polybase-guide.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

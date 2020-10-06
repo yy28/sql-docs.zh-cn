@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46f76ceeba699f614e19b494785c42591ab5299a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549974"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753812"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89549974"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 在 [AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支持所有 SQL Server 代理功能。 有关详细信息，请参阅 [AZURE sql 托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 。
+  > [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>语法  
   
@@ -72,7 +72,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每周|  
 |**16**|每月一次|  
 |**32**|每月，相对于 *frequency_interval。*|  
@@ -108,10 +108,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |值|说明（单位）|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
  *frequency_relative_interval* 指示间隔的发生次数。 例如，如果 *frequency_relative_interval* 设置为 **2**， *frequency_type* 设置为 **32**， *frequency_interval* 设置为 **3**，则计划作业将在每月的第二个星期二发生。  
   
@@ -141,7 +141,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  作业计划现在可以独立于作业进行管理。 若要将计划添加到作业，请使用 **sp_add_schedule** 创建计划，并 **sp_attach_schedule** 将计划附加到作业。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -173,5 +173,4 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

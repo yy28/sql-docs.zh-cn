@@ -1,6 +1,6 @@
 ---
 description: sys.fn_get_audit_file (Transact-SQL)
-title: sys. fn_get_audit_file (Transact-sql) |Microsoft Docs
+title: sys.fn_get_audit_file (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321793"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753734"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返回的表  
  下表描述此函数可返回的审核文件内容。  
   
-| 列名称 | 类型 | 描述 |  
+| 列名称 | 类型 | 说明 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
 | additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  模块名称将被解析为对无效的 xml 字符（如、、、）进行转义 `'\<'` `'>'` `'/'` `'_x'` 。 它们将被转义为 `_xHHHH\_` 。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
@@ -95,7 +95,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | 发生审核的可审核实体的类型。 不可为 null。 |  
 | client_ip | **nvarchar(128)** | **适用**于： Azure SQL 数据库 + SQL Server 从2017开始 () <br /><br />  客户端应用程序的源 IP |  
 | connection_id | GUID | **适用**于： Azure SQL 数据库和 SQL 托管实例<br /><br /> 服务器中的连接的 ID |
-| data_sensitivity_information | nvarchar(4000) | **适用**于：仅适用于 Azure SQL 数据库<br /><br /> 受审核查询根据数据库中分类的列返回的信息类型和敏感度标签。 详细了解 [Azure SQL 数据库数据发现和分类](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| data_sensitivity_information | nvarchar(4000) | **适用**于：仅适用于 Azure SQL 数据库<br /><br /> 受审核查询根据数据库中分类的列返回的信息类型和敏感度标签。 详细了解 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | 发生此操作的数据库上下文。 可以为 Null。 对于在服务器级别发生的审核，返回 NULL。 |  
 | database_principal_id | **int** |在其中执行操作的数据库用户上下文 ID。 不可为 null。 如果此不适用，则返回0。 例如，如果是服务器操作，则返回 0。|
 | database_principal_name | **sysname** | 当前用户。 可以为 Null。 如果不可用，则返回 NULL。 |  
@@ -177,10 +177,10 @@ fn_get_audit_file ( file_pattern,
 
 有关如何创建审核的完整示例，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。
 
-有关设置 Azure SQL 数据库审核的信息，请参阅 [SQL 数据库审核入门](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)。
+有关设置 Azure SQL 数据库审核的信息，请参阅 [SQL 数据库审核入门](/azure/sql-database/sql-database-auditing)。
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
@@ -200,5 +200,4 @@ fn_get_audit_file ( file_pattern,
  [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [创建服务器审核和服务器审核规范](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

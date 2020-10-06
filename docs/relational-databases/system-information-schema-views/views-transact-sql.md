@@ -20,12 +20,12 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1ee6ebd84d20b15d104bb7ecde412e5725deef9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0a5656cac26865f58549e6531e371970b8afe205
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536820"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753539"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,9 +44,8 @@ ms.locfileid: "89536820"
 |**IS_UPDATABLE**|**varchar (** 2 **) **|指定视图是否可更新。 始终返回 NO。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Transact-sql&#41;的系统视图 &#40;](../../t-sql/language-reference.md)   
  [&#40;Transact-sql&#41;的信息架构视图 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.views (Transact-SQL)](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
-  
   

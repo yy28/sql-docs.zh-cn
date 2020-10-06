@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481677"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753704"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  将指定的作业、警报或操作员类别添加到服务器中。 有关替代方法，请参阅 [使用 SQL Server Management Studio 创建作业类别](/sql/ssms/agent/create-a-job-category)。
+  将指定的作业、警报或操作员类别添加到服务器中。 有关替代方法，请参阅 [使用 SQL Server Management Studio 创建作业类别](../../ssms/agent/create-a-job-category.md)。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > 在 [AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支持所有 SQL Server 代理功能。 有关详细信息，请参阅 [AZURE sql 托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 。
+ > [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ sp_add_category
 ## <a name="arguments"></a>参数  
 `[ @class = ] 'class'` 要添加的类别的类。 *类* 是 **varchar (8) ** ，其默认值为 JOB，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |JOB|添加作业类别。|  
 |ALERT|添加警报类别。|  
@@ -56,7 +56,7 @@ sp_add_category
   
 `[ @type = ] 'type'` 要添加的类别的类型。 *类型* 为 **varchar (12) **，默认值为 **LOCAL**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |LOCAL|本地作业类别。|  
 |多服务器|多服务器作业类别。|  
@@ -97,5 +97,4 @@ GO
  [dbo.sys作业 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

@@ -18,17 +18,17 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 06909fec18be239f1f416c074fa444a14705f0ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6a14687e8210133e2a80c0f678aebe7c9b31194
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486329"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753810"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a> (Azure SQL 数据库的防火墙规则存储过程) 
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  此部分包含以下用于设置或删除防火墙规则的存储过程。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 防火墙规则可以与和一起 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 使用 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 。 有关详细信息，请参阅 [配置 AZURE SQL 数据库防火墙规则-概述](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)。
+  此部分包含以下用于设置或删除防火墙规则的存储过程。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 防火墙规则可以与和一起 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 使用 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 。 有关详细信息，请参阅 [配置 AZURE SQL 数据库防火墙规则-概述](/azure/azure-sql/database/firewall-configure)。
 
 :::row:::
     :::column:::
@@ -50,6 +50,3 @@ ms.locfileid: "88486329"
 &nbsp;
   
 对于 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，请使用窗口防火墙规则。 有关详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。   
-  
-
-

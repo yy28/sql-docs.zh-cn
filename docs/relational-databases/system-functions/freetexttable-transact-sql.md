@@ -23,12 +23,12 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76829bf7e49fe198dd6d1dd022aaad5a6a5e1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474646"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753766"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -172,13 +172,12 @@ GO
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
- [创建全文搜索查询 (Visual Database Tools)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [创建全文搜索查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
- [行集函数 &#40;Transact-sql&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [行集函数 &#40;Transact-sql&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [precompute rank 服务器配置选项](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
-  
   

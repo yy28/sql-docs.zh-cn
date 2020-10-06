@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_user_db_resource_governance (Transact-sql) '
-title: sys. dm_user_db_resource_governance (Transact-sql) |Microsoft Docs
+description: 'sys.dm_user_db_resource_governance (Transact-sql) '
+title: sys.dm_user_db_resource_governance (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498249"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753720"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-sql) 
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-sql) 
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "88498249"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|int|数据库的 ID，在 Azure SQL 数据库服务器中是唯一的。|
+|database_id|int|数据库的 ID，在 Azure SQL 数据库服务器中是唯一的。|
 |**logical_database_guid**|uniqueidentifier|用户数据库的逻辑 GUID，用于保持用户数据库的使用。  重命名数据库或更改其服务级别目标将不会更改此值。|
 |**physical_database_guid**|uniqueidentifier|用户数据库的物理 GUID，该 GUID 贯穿用户数据库的物理实例。 更改数据库服务级别目标将导致此值更改。|
 |server_name|nvarchar|逻辑服务器名称。|
@@ -44,23 +44,23 @@ ms.locfileid: "88498249"
 |**slo_name**|nvarchar|服务级别目标，包括硬件生成。|
 |**dtu_limit**|int|VCore) 的数据库的 DTU 限制 (NULL。|
 |**cpu_limit**|int| (DTU 数据库) 的数据库 vCore 限制为 NULL。|
-|**min_cpu**|tinyint|用户工作负荷资源池的 MIN_CPU_PERCENT 值。 请参阅 [资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**max_cpu**|tinyint|用户工作负荷资源池的 MAX_CPU_PERCENT 值。 请参阅 [资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**cap_cpu**|tinyint|用户工作负荷资源池的 CAP_CPU_PERCENT 值。 请参阅 [资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**min_cpu**|tinyint|用户工作负荷资源池的 MIN_CPU_PERCENT 值。 请参阅 [资源池概念](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)。|
+|**max_cpu**|tinyint|用户工作负荷资源池的 MAX_CPU_PERCENT 值。 请参阅 [资源池概念](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)。|
+|**cap_cpu**|tinyint|用户工作负荷资源池的 CAP_CPU_PERCENT 值。 请参阅 [资源池概念](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)。|
 |**min_cores**|smallint|仅限内部使用。|
-|**max_dop**|smallint|用户工作负荷组的 MAX_DOP 值。 请参阅 [创建工作负荷组](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
-|**min_memory**|int|用户工作负荷资源池的 MIN_MEMORY_PERCENT 值。 请参阅 [资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**max_memory**|int|用户工作负荷资源池的 MAX_MEMORY_PERCENT 值。 请参阅 [资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**max_dop**|smallint|用户工作负荷组的 MAX_DOP 值。 请参阅 [创建工作负荷组](../../t-sql/statements/create-workload-group-transact-sql.md)。|
+|**min_memory**|int|用户工作负荷资源池的 MIN_MEMORY_PERCENT 值。 请参阅 [资源池概念](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)。|
+|**max_memory**|int|用户工作负荷资源池的 MAX_MEMORY_PERCENT 值。 请参阅 [资源池概念](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)。|
 |**max_sessions**|int|用户工作负荷组中允许的最大会话数。|
-|**max_memory_grant**|int|用户工作负荷组的 REQUEST_MAX_MEMORY_GRANT_PERCENT 值。 请参阅 [创建工作负荷组](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
+|**max_memory_grant**|int|用户工作负荷组的 REQUEST_MAX_MEMORY_GRANT_PERCENT 值。 请参阅 [创建工作负荷组](../../t-sql/statements/create-workload-group-transact-sql.md)。|
 |**max_db_memory**|int|仅限内部使用。|
 |**govern_background_io**|bit|仅限内部使用。|
-|**min_db_max_size_in_mb**|bigint|数据文件的最小 max_size 值（以 MB 为单位）。 请参阅 [database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
-|**max_db_max_size_in_mb**|bigint|数据文件的最大 max_size 值（以 MB 为单位）。 请参阅 [database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
-|**default_db_max_size_in_mb**|bigint|数据文件的默认 max_size 值（以 MB 为单位）。 请参阅 [database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
-|**db_file_growth_in_mb**|bigint|数据文件的默认增长增量（以 MB 为单位）。 请参阅 [database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
-|**initial_db_file_size_in_mb**|bigint|新数据文件的默认大小，以 MB 为单位。 请参阅 [database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
-|**log_size_in_mb**|bigint|新日志文件的默认大小，以 MB 为单位。 请参阅 [database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
+|**min_db_max_size_in_mb**|bigint|数据文件的最小 max_size 值（以 MB 为单位）。 请参阅 [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)。|
+|**max_db_max_size_in_mb**|bigint|数据文件的最大 max_size 值（以 MB 为单位）。 请参阅 [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)。|
+|**default_db_max_size_in_mb**|bigint|数据文件的默认 max_size 值（以 MB 为单位）。 请参阅 [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)。|
+|**db_file_growth_in_mb**|bigint|数据文件的默认增长增量（以 MB 为单位）。 请参阅 [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)。|
+|**initial_db_file_size_in_mb**|bigint|新数据文件的默认大小，以 MB 为单位。 请参阅 [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)。|
+|**log_size_in_mb**|bigint|新日志文件的默认大小，以 MB 为单位。 请参阅 [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)。|
 |**instance_cap_cpu**|int|仅限内部使用。|
 |**instance_max_log_rate**|bigint|SQL Server 实例的日志生成速率限制（以字节/秒为单位）。 适用于由实例生成的所有日志，包括 `tempdb` 和其他系统数据库。 在弹性池中，适用于池中所有数据库生成的日志。|
 |**instance_max_worker_threads**|int|SQL Server 实例的工作线程限制。|
@@ -97,7 +97,7 @@ ms.locfileid: "88498249"
 
 ## <a name="remarks"></a>备注
 
-有关 Azure SQL 数据库中资源调控的说明，请参阅 [SQL 数据库资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)。
+有关 Azure SQL 数据库中资源调控的说明，请参阅 [SQL 数据库资源限制](/azure/sql-database/sql-database-resource-limits-database-server)。
 
 > [!IMPORTANT]
 > 此 DMV 返回的大多数数据都适用于内部使用，随时可能更改。
@@ -118,11 +118,11 @@ ORDER BY database_name;
 
 ## <a name="see-also"></a>另请参阅
 
-- [资源调控器](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
-- [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
-- [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
-- [sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) ](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
-- [sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
-- [事务日志速率调控](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [单一数据库 DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
-- [单一数据库 vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
+- [资源调控器](../resource-governor/resource-governor.md)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](./sys-dm-resource-governor-resource-pools-transact-sql.md)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](./sys-dm-resource-governor-workload-groups-transact-sql.md)
+- [sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) ](./sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
+- [sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）](./sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md)
+- [事务日志速率调控](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [单一数据库 DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+- [单一数据库 vCore 资源限制](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

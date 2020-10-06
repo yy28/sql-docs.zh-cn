@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3255e54b961effa6581875a332dc6651b7e1dce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee456f7be6d59ded32a67908d69bf59028e931c6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541984"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753830"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,12 +64,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每周|  
 |**16**|每月一次|  
 |**32**|每月，相对于 *freq_interval*|  
 |**64**|SQL 代理服务启动时运行|  
-|**128**|当计算机处于空闲状态时运行 (在 [AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 中不受支持)  |  
+|**128**|当计算机处于空闲状态时运行 (在 [AZURE SQL 托管实例](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 中不受支持)  |  
   
 `[ @freq_interval = ] freq_interval` 作业的执行日期。 *freq_interval* 的值为 **int**，默认值为 **1**，并且取决于 *freq_type*的值。  
   
@@ -99,10 +99,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |值|说明（单位）|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor` 作业的计划执行之间的周数或月数。 仅当*freq_type*为**8**、 **16**或**32**时才使用*freq_recurrence_factor* 。 *freq_recurrence_factor* 的值为 **int**，默认值为 **0**。  
   
@@ -136,7 +136,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -201,5 +201,4 @@ GO
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   
