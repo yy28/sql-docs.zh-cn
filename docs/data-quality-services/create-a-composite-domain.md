@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449889"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728023"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
 
@@ -70,7 +70,7 @@ ms.locfileid: "88449889"
   
 6.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。  
   
-7.  单击“确定”。  
+7.  单击“确定”  。  
   
 ##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a> 设置复合域属性  
   
@@ -90,7 +90,7 @@ ms.locfileid: "88449889"
   
 5.  如果您为分析方法选择了 **“分隔符”** ，还可以选择 **“基于知识的分析”**。 有关详细信息，请参阅 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   
-6.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+6.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))中所述。  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> 跟进：在创建复合域后  
  在创建复合域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
@@ -103,5 +103,4 @@ ms.locfileid: "88449889"
  当复合域由字符串域组成或复合域由不同类型域（int、date、time 等）混合组成时，可以使用基于知识的分析。 如果数据源由不同类型的数据组成，则首先应针对非字符串数据类型进行分析，然后按上面所述基于域知识对剩余数据进行分析。  
   
  当您使用基于知识的分析时，如果源数据中的值少于复合域中的域，则 DQS 将在缺失的域中放入 Null。 如果源数据中的值多于复合域中的域，则 DQS 将向其中一列添加额外的数据。 如果两个或多个域包含相同的值，数据源将被分析为第一个匹配的域。  
-  
   
