@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19dfe6f81293234d3615d0c3acaae83c50febc1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4350cb9aad6e2ef1d9381cffb6e05b13d09c43c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978268"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724778"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件 Connect 部分
 处理程序的默认行为是拒绝所有连接。 " **连接** " 部分指定该行为的例外情况。 例如，如果所有 **连接** 部分都不存在或为空，则默认情况下无法建立连接。  
@@ -31,7 +31,7 @@ ms.locfileid: "88978268"
 -   替换客户端连接字符串的新连接字符串。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>语法  
  默认访问项的格式为：  
@@ -52,7 +52,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 |组成部分|说明|  
 |----------|-----------------|  

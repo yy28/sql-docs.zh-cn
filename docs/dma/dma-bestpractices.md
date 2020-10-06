@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 440d6d12ed639d158ad0309209b60daa56e08322
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472363"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727778"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>运行数据迁移助手的最佳做法
 本文提供了有关安装、评估和迁移的一些最佳实践信息。
@@ -29,7 +29,7 @@ ms.locfileid: "87472363"
 
 ## <a name="assessment"></a>评估
 - 在非高峰时间对生产数据库运行评估。
-- 单独执行**兼容性问题**和**新功能建议**评估，以减少评估持续时间。
+- 单独执行 **兼容性问题** 和 **新功能建议** 评估，以减少评估持续时间。
 
 ## <a name="migration"></a>迁移
 - 在非高峰时间迁移服务器。
@@ -40,6 +40,6 @@ ms.locfileid: "87472363"
 
 - 连接到源服务器和目标服务器时，启用加密连接。 使用 TLS 加密会提高在数据迁移助手和 SQL Server 实例之间跨网络传输的数据的安全性，这在迁移 SQL 登录名时尤为有用。 如果不使用 TLS 加密并且网络遭到攻击者的攻击，则迁移的 SQL 登录名可能会由攻击者动态截获和/或修改。
 
-    但是，如果所有访问都具有某项安全 Intranet 配置，则可能不需要使用加密。 启用加密会降低性能，因为加密和解密数据包需要额外的开销。 有关详细信息，请参阅 [加密连接 SQL Server](https://go.microsoft.com/fwlink/?linkid=832513)。
+    但是，如果所有访问都具有某项安全 Intranet 配置，则可能不需要使用加密。 启用加密会降低性能，因为加密和解密数据包需要额外的开销。 有关详细信息，请参阅 [加密连接 SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))。
     
 - 在迁移数据之前，检查源数据库和目标数据库上的不受信任的约束。 迁移后，请再次分析目标数据库，以确定是否有任何约束在数据移动过程中不受信任。 根据需要修复不受信任的约束。 使约束不受信任可能会导致执行计划不佳，并且可能会影响性能。

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e956a86333479320fe18114705148bad77ea0440
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5387745648b4aafa1db9964a8b82d8aa403e8473
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982668"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722508"
 ---
 # <a name="connect-property-rds"></a>Connect 属性 (RDS)
 指示运行查询和更新操作的数据库名称。  
@@ -27,7 +27,7 @@ ms.locfileid: "88982668"
  您可以在设计时在 RDS 中设置 **Connect** 属性 [。DataControl](./datacontrol-object-rds.md) 对象的对象标记，或在运行时，在脚本代码 (例如，VBScript) 。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ Run time: DataControl.Connect = "ConnectionString"
  *DataControl*  
  表示 RDS 的对象变量 **。DataControl** 对象。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  

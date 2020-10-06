@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466519"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727658"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>选择 "从 &lt; 模型" &gt; 。DMX)  (情况
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 可选。 一个返回标量值的表达式。  
+ 可选。 返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
  如果对挖掘模型和挖掘结构都启用了钻取功能，那么作为具有模型和结构钻取权限的角色成员的用户，可以访问没有包括在挖掘模型中的挖掘结构列。 因此，为了保护敏感数据或个人信息，应构造数据源视图来屏蔽个人信息，并且仅在必要时才对挖掘结构授予 **AllowDrillthrough** 权限。  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  使用**WHERE**子句中的[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函数仅返回与架构行集的 NODE_UNIQUE_NAME 列指定的节点关联的事例。  
   
 ## <a name="examples"></a>示例  
- 下面的示例基于挖掘结构目标邮件，该邮件基于 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库及其关联的挖掘模型。 有关详细信息，请参阅 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例基于挖掘结构目标邮件，该邮件基于 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库及其关联的挖掘模型。 有关详细信息，请参阅 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>示例 1：钻取到模型事例和结构列  
  以下示例返回用于测试目标邮件模型的所有事例的列。 如果建立模型所依据的挖掘结构不存在维持测试数据集，此查询将返回 0 个事例。 可以使用表达式列表仅返回需要的列。  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  若要返回结构列，必须对挖掘模型和挖掘结构都启用钻取权限。  
   
 > [!NOTE]  
->  并非所有挖掘模型类型都支持钻取功能。 有关支持钻取的模型的信息，请参阅 [钻取查询 &#40;数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)。  
+>  并非所有挖掘模型类型都支持钻取功能。 有关支持钻取的模型的信息，请参阅 [钻取查询 &#40;数据挖掘&#41;](/analysis-services/data-mining/drillthrough-queries-data-mining)。  
   
 ## <a name="see-also"></a>另请参阅  
  [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

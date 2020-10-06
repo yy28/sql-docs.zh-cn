@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353553"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726184"
 ---
 # <a name="functions-dmx"></a>函数 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +49,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>存储过程  
  可以使用公共语言运行时编程语言来创建可以扩展 DMX 功能的存储过程。 例如，回归树挖掘模型返回描述回归公式的系数，如 A、B 等，但模型不返回等式，如 + Bx = y。 但是，可以编写一个存储过程，使用数据挖掘模型对象来导航内容架构，并将回归公式作为输出结果返回。 因此，DMX 语句可以在查询结果中返回一组回归公式。  
   
- **有关详细信息，请查看**[多维模型程序集管理](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **有关详细信息，请查看**[多维模型程序集管理](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;DMX&#41; 的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

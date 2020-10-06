@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 11795005d0a2a7cf97a515278a30a586ff640ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0bc9e4ffe7da1f81bbd246e9cbfa7398bfec50e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352273"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726139"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTestCase()
  通过查看 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 和 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 属性的值，可以确定是否已对特定的挖掘结构创建测试集。  
   
 > [!NOTE]  
->  如果要使用则 istrainingcase 或则 istestcase 函数返回有关特定模型中事例的详细信息，则必须对该模型启用钻取功能。 有关详细信息，请参阅 [对挖掘模型启用钻取](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)。  
+>  如果要使用则 istrainingcase 或则 istestcase 函数返回有关特定模型中事例的详细信息，则必须对该模型启用钻取功能。 有关详细信息，请参阅 [对挖掘模型启用钻取](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)。  
   
  若要返回定型数据集中的事例，请使用函数 [则 istrainingcase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `Targeted Mailing` 在 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构。 查询将返回该结构中所有用于测试的事例。  
+ 下面的示例使用 `Targeted Mailing` 在 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))中创建的挖掘结构。 查询将返回该结构中所有用于测试的事例。  
   
 ```  
 SELECT *  
@@ -54,7 +54,6 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>另请参阅  
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [数据挖掘查询](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
- [定型数据集和测试数据集](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
-  
+ [数据挖掘查询](/analysis-services/data-mining/data-mining-queries)   
+ [定型数据集和测试数据集](/analysis-services/data-mining/training-and-testing-data-sets)  
   

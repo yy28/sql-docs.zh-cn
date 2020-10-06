@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496271"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727638"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>选择 "从 &lt; 模型" &gt; 。内容 (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -44,7 +44,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  可选。 一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 可选。 一个返回标量值的表达式。  
+ 可选。 返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
  **SELECT FROM** _\<model>_ **。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用中的 " **选择" \<model> 。** 返回模型的 NODE_RULE 列中的值的内容语句。  
@@ -52,9 +52,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  下表列出了挖掘模型内容中包含的列。  
   
 > [!NOTE]  
->  算法可能会为了正确表示内容而对列做出不同的解释。 有关每种算法的挖掘模型内容的说明，以及有关如何解释和查询每种模型类型的挖掘模型内容的提示，请参阅 [挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
+>  算法可能会为了正确表示内容而对列做出不同的解释。 有关每种算法的挖掘模型内容的说明，以及有关如何解释和查询每种模型类型的挖掘模型内容的提示，请参阅 [挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
   
-|CONTENT 行集列|描述|  
+|CONTENT 行集列|说明|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|目录名称。 如果提供程序不支持目录，则为 NULL。|  
 |MODEL_SCHEMA|未限定的架构名称。 如果提供程序不支持架构，则为 NULL。|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  预期的结果：  
   
- 由于该模型是一个决策树模型，所以模型父节点的后代中包含一个边际统计信息节点、一个表示可预测属性的节点以及多个包含输入属性和值的节点。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)。  
+ 由于该模型是一个决策树模型，所以模型父节点的后代中包含一个边际统计信息节点、一个表示可预测属性的节点以及多个包含输入属性和值的节点。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)。  
   
 ## <a name="using-the-flattened-keyword"></a>使用 FLATTENED 关键字  
  挖掘模型内容常常将模型的相关重要信息包含在嵌套表列中。 您可以使用 FLATTENED 关键字，从嵌套表列中检索数据，而无需使用支持分层行集的提供程序。  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

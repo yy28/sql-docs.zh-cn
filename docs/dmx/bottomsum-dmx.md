@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a80c42971199d6acf57e802994feced63b7899f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 551fde90989093ab601cfa6100b6c6e208fac9e6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431139"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727739"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88431139"
 BottomSum(<table expression>, <rank expression>, <sum>)  
 ```  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  返回表的表达式，如 \<table column reference> ，或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
@@ -38,7 +38,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  **BottomSum**函数以升序顺序返回最底层的行。 排名基于每行的参数的计算值 \<rank expression> ，因此，值的总和 \<rank expression> 至少是参数所指定的给定总数 \<sum> 。 当仍满足指定的 sum 值时， **BottomSum**将返回尽可能少数量的元素。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个针对使用 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)生成的关联模型的预测查询。  
+ 下面的示例创建一个针对使用 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))生成的关联模型的预测查询。  
   
  若要了解 BottomSum 的工作原理，最好先执行只返回嵌套表的预测查询。  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  在本示例中，作为输入而提供的值包含一个单引号；因此，必须通过在该值前面加一个单引号来进行转义。 如果不熟悉有关插入转义符的语法，则您可以使用预测查询生成器创建查询。 从下拉列表中选择值时，会为您插入所需的转义符。 有关详细信息，请参阅 [在数据挖掘设计器中创建单独查询](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
+>  在本示例中，作为输入而提供的值包含一个单引号；因此，必须通过在该值前面加一个单引号来进行转义。 如果不熟悉有关插入转义符的语法，则您可以使用预测查询生成器创建查询。 从下拉列表中选择值时，会为您插入所需的转义符。 有关详细信息，请参阅 [在数据挖掘设计器中创建单独查询](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
   
  示例结果：  
   
@@ -102,5 +102,4 @@ NATURAL PREDICTION JOIN
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
-  
   

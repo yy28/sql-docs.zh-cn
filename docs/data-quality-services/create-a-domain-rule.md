@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bfb2db2c6ec11fa765d3554aef3daf853a305fa6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480392"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725408"
 ---
 # <a name="create-a-domain-rule"></a>创建域规则
 
@@ -98,7 +98,7 @@ ms.locfileid: "89480392"
   
 2.  单击 **“放弃所有更改”** 可取消对域规则进行的所有更改，并且还原为以前应用的规则，具有在规则的上次应用不再适用后任何更改产生的结果。 域中每个规则的有效性将按照以前应用的规则而非放弃的更改进行更新。  
   
-3.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+3.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))中所述。  
   
 ##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> 跟进：在创建域规则后  
  在创建域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
@@ -131,7 +131,6 @@ ms.locfileid: "89480392"
 |值不匹配模式|只有与操作数中的字符、数字和特殊字符的模式不匹配的值才有效。|示例操作数：A1（值不得与以下模式匹配：“任何” ** 一个字符后跟“任何” ** 一个数字。）<br /><br /> 有效值：AB1、A、A:5<br /><br /> 无效值：B7、c9|  
 |值包含模式|只有包含操作数中的字符、数字和特殊字符的模式的值才有效。|示例操作数：AA-12（值包含以下模式：“任何” ** 两个字符后加一个连字符 (-)，后面再跟“任何” ** 两个数字）。<br /><br /> 有效值：AAA-01、ab-975<br /><br /> 无效值：A7、AA-6、C-45、aa;98|  
 |值不包含模式|只有不包含操作数中字符模式的值才有效。|示例操作数：AB-12（值不得包含以下模式：“任何” ** 两个字符后加一个连字符 (-)，后面再跟“任何” ** 两个数字）。<br /><br /> 有效值：A7、AA-6、C-45、aa;98<br /><br /> 无效值：AAA-01、ab-975|  
-|值匹配正则表达式|只有等于操作数中正则表达式的值才被认为有效。<br /><br /> 不包含针对正则表达式的“^”定位点或“$”定位点，因为 DQS 自动将这些定位点添加到包含“值等于”正则表达式的子句。  (或者，你可以用括号将包含 "^" 和 "$" 的正则表达式括起来。 ) 有关正则表达式的详细信息，请参阅 [正则表达式语言元素](https://go.microsoft.com/fwlink/?LinkId=225561)。|示例操作数：[1-5]+（每个字符必须是从 1 到 5 并且出现一次或多次的数字）<br /><br /> 有效值：123、12345、14352<br /><br /> 无效值：456、ABC|  
+|值匹配正则表达式|只有等于操作数中正则表达式的值才被认为有效。<br /><br /> 不包含针对正则表达式的“^”定位点或“$”定位点，因为 DQS 自动将这些定位点添加到包含“值等于”正则表达式的子句。  (或者，你可以用括号将包含 "^" 和 "$" 的正则表达式括起来。 ) 有关正则表达式的详细信息，请参阅 [正则表达式语言元素](/dotnet/standard/base-types/regular-expression-language-quick-reference)。|示例操作数：[1-5]+（每个字符必须是从 1 到 5 并且出现一次或多次的数字）<br /><br /> 有效值：123、12345、14352<br /><br /> 无效值：456、ABC|  
 |值不匹配正则表达式|只有不匹配操作数中正则表达式的值才被认为有效。|示例操作数：[1-5]+（字符串不得是仅限从 1 到 5 的数字）<br /><br /> 有效值：456、ABC<br /><br /> 无效值：123、123456、14352|  
-  
   

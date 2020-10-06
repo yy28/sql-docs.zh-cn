@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352913"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726158"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  处理指定的数据挖掘对象。 有关处理挖掘模型和挖掘结构的详细信息，请参阅 [处理数据挖掘&#41;&#40;要求和注意事项 ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)。  
+  处理指定的数据挖掘对象。 有关处理挖掘模型和挖掘结构的详细信息，请参阅 [处理数据挖掘&#41;&#40;要求和注意事项 ](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)。  
   
  如果指定了挖掘结构，则该语句将处理挖掘结构及其关联的所有挖掘模型。 如果指定了挖掘模型，则该语句将只处理挖掘模型。  
   
@@ -35,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  模型标识符。  
   
- *structure*  
+ *构造*  
  结构标识符。  
   
  *映射的模型列*  
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  通过使用第二种语法形式，将插入到 *\<object>* 。COLUMN_VALUES，可以将数据直接插入模型列中，而无需定型模型。 该方法以一种简练、有序的方式向模型提供列数据，在处理包含层次结构或有序列的数据集时，该方法很有用。  
   
- 如果对挖掘模型或挖掘结构使用 **INSERT INTO** ，并保留 \<mapped model columns> 和 \<source data query> 自变量，则该语句的行为类似于 **ProcessDefault**，并使用已经存在的绑定。 如果绑定不存在，则语句将返回错误。 有关 **ProcessDefault**的详细信息，请参阅 [Analysis Services&#41;&#40;处理选项和设置 ](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下例说明了该语法：  
+ 如果对挖掘模型或挖掘结构使用 **INSERT INTO** ，并保留 \<mapped model columns> 和 \<source data query> 自变量，则该语句的行为类似于 **ProcessDefault**，并使用已经存在的绑定。 如果绑定不存在，则语句将返回错误。 有关 **ProcessDefault**的详细信息，请参阅 [Analysis Services&#41;&#40;处理选项和设置 ](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下例说明了该语法：  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  下表说明了不同形式的语句在不同对象状态下返回的结果。  
   
-|语句|对象状态|结果|  
+|Statement|对象状态|结果|  
 |---------------|----------------------|------------|  
 |插入挖掘模型*\<model>*|处理挖掘结构。|处理挖掘模型。|  
 ||未处理挖掘结构。|处理挖掘模型和挖掘结构。|  
@@ -124,5 +124,4 @@ AS [Models]
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

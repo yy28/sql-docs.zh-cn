@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62d638b6b6028ffa861460e07f2283cb7380e129
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500855"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726101"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;源数据查询 &gt; -OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,9 +36,9 @@ OPENQUERY(<named datasource>, <query syntax>)
  一个返回行集的查询语法。  
   
 ## <a name="remarks"></a>备注  
- **OPENQUERY** 通过支持数据源权限提供了一种更安全的访问外部数据的方法。 由于连接字符串存储在数据源中，因此管理员可以使用数据源的属性来管理对数据的访问。 有关数据源的详细信息，请参阅 [支持的数据源 &#40;SSAS-多维&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)。  
+ **OPENQUERY** 通过支持数据源权限提供了一种更安全的访问外部数据的方法。 由于连接字符串存储在数据源中，因此管理员可以使用数据源的属性来管理对数据的访问。 有关数据源的详细信息，请参阅 [支持的数据源 &#40;SSAS-多维&#41;](/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)。  
   
- 可以通过查询 **MDSCHEMA_INPUT_DATASOURCES** 架构行集来获取服务器上可用的数据源的列表。 有关使用 **MDSCHEMA_INPUT_DATASOURCES**的详细信息，请参阅 [MDSCHEMA_INPUT_DATASOURCES 行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))。  
+ 可以通过查询 **MDSCHEMA_INPUT_DATASOURCES** 架构行集来获取服务器上可用的数据源的列表。 有关使用 **MDSCHEMA_INPUT_DATASOURCES**的详细信息，请参阅 [MDSCHEMA_INPUT_DATASOURCES 行集](/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))。  
   
  还可以通过使用下面的 DMX 查询来返回当前 Analysis Services 数据库中的数据源的列表：  
   
@@ -55,5 +55,4 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
  [&#60;源数据查询&#62;](../dmx/source-data-query.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

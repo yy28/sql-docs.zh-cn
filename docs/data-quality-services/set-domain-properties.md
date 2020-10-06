@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466621"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726601"
 ---
 # <a name="set-domain-properties"></a>设置域属性
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466621"
   
 2.  在按照 [Create a Domain](../data-quality-services/create-a-domain.md)中所述创建一个新域后设置其属性。  
   
-3.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+3.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))中所述。  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> 跟进：设置域属性后  
  在设置域属性后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
@@ -90,5 +90,4 @@ ms.locfileid: "88466621"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> 禁用语法错误算法  
  如果数据类型为 **String**，则选择此选项可指定在清理期间在域中 DQS 将不会标识语法错误。 在为该域标识语法错误无关紧要时选中此复选框。 例如，标识语法错误可能对于序列号无意义。 此控制仅可用于字符串数据类型。 DQS 不会检查非字符串数据类型是否有语法错误。  
-  
   

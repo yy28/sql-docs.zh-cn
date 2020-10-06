@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04bfd39b8b1d94ec02f12ee599bfb0a21652b15c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4601399a2476b71f789b497fd022c60030def5e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431159"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727728"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  **BottomPercent**函数以升序顺序返回最底层的行。 排名基于每行的参数的计算值 \<rank expression> ，因此，值的总和 \<rank expression> 至少是参数所指定的给定百分比 \<percent> 。 当仍满足指定的百分比值时， **BottomPercent**将返回尽可能少数量的元素。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个针对您在 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中生成的关联模型的预测查询。  
+ 下面的示例创建一个针对您在 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))中生成的关联模型的预测查询。  
   
  若要了解 BottomPercent 的工作原理，最好先执行只返回嵌套表的预测查询。  
   
@@ -58,7 +58,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  在本示例中，作为输入而提供的值包含一个单引号；因此，必须通过在该值前面加一个单引号来进行转义。 如果不熟悉有关插入转义符的语法，则您可以使用预测查询生成器创建查询。 从下拉列表中选择值时，会为您插入所需的转义符。 有关详细信息，请参阅 [在数据挖掘设计器中创建单独查询](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
+>  在本示例中，作为输入而提供的值包含一个单引号；因此，必须通过在该值前面加一个单引号来进行转义。 如果不熟悉有关插入转义符的语法，则您可以使用预测查询生成器创建查询。 从下拉列表中选择值时，会为您插入所需的转义符。 有关详细信息，请参阅 [在数据挖掘设计器中创建单独查询](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
   
  示例结果：  
   
@@ -116,5 +116,4 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27b6cf791b3b980000662f2073280d53f24aeaa1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cdf8a894341343fee7576daed45c75a46857b909
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981428"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724294"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset 属性 (RDS)
 指示从自定义业务对象返回的 **记录集** 对象。  
@@ -27,7 +27,7 @@ ms.locfileid: "88981428"
  **适用于：** [DATACONTROL 对象 (RDS) ](./datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ Recordset = DataControl.Recordset
  *Recordset*  
  表示 **Recordset** 对象的对象变量。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  可以将 **SourceRecordset** 属性设置为从自定义业务对象返回的 [记录集](../ado-api/recordset-object-ado.md) 。  
   
  通过这些属性，应用程序可以通过自定义进程来处理绑定过程。 它们将接收包装在 **记录集中** 的行集，以便可以直接与 **记录集**交互，执行设置属性或循环访问 **记录集**等操作。  
@@ -53,7 +53,7 @@ Recordset = DataControl.Recordset
   
  **SourceRecordset** 是一个只写属性，与 " **记录集** " 属性相反，后者是一个只读属性。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另请参阅  

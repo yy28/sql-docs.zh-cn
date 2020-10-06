@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 399cc88598173e7406b326c83ea9a098b879c59e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487878"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725343"
 ---
 # <a name="create-a-domain"></a>创建域
 
@@ -88,11 +88,10 @@ ms.locfileid: "88487878"
   
 8.  如果数据类型为 **String**，则选择 **“禁用语法错误算法”** 可填充域而不会检查字符串值是否存在语法错误。  
   
-9. 单击“确定”。  
+9. 单击“确定”  。  
   
-10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))中所述。  
   
 ##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> 跟进：创建域后  
  在创建域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
-  
   

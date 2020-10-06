@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431179"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727808"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +37,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>参数  
- *structure*  
+ *构造*  
  要向其中添加挖掘模型的挖掘结构的名称。  
   
  *model*  
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  由提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
->  可以使用 [DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅 [数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  可以使用 [DMSCHEMA_MINING_SERVICES 行集](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅 [数据挖掘属性](/analysis-services/server-properties/data-mining-properties)。  
   
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>列名和别名  
- 在列定义列表中使用的列名必须是该列在挖掘结构中使用的名称。 不过，您可以选择定义一个别名来表示挖掘模型中的结构列。 也可以为同一个结构列创建多个列定义，并为该列的每个副本分配一个不同的别名和预测用途。 如果您不定义别名，则默认情况下将使用结构列名。 有关详细信息，请参阅为 [模型列创建别名](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column)。  
+ 在列定义列表中使用的列名必须是该列在挖掘结构中使用的名称。 不过，您可以选择定义一个别名来表示挖掘模型中的结构列。 也可以为同一个结构列创建多个列定义，并为该列的每个副本分配一个不同的别名和预测用途。 如果您不定义别名，则默认情况下将使用结构列名。 有关详细信息，请参阅为 [模型列创建别名](/analysis-services/data-mining/create-an-alias-for-a-model-column)。  
   
  对于嵌套表列，可以指定嵌套表的名称，将数据类型指定为 " **表**"，然后提供要包括在模型中的嵌套列的列表（括在括号中）。  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |子句|说明|  
 |-|-|  
-|**准确**|该列可以由模型预测，并且它的值可用作输入以预测其他可预测列的值。|  
+|**PREDICT**|该列可以由模型预测，并且它的值可用作输入以预测其他可预测列的值。|  
 |**PREDICT_ONLY**|此列可以由模型预测，但其值不可用于输入事例来预测其他可预测列的值。|  
   
 ## <a name="filter-criteria-expressions"></a>筛选条件表达式  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  筛选条件表达式是简化的 DMX 谓词，与 WHERE 子句相似。 筛选表达式仅限于使用基本数学运算符、标量和列名的公式。 但 EXISTS 运算符是个例外，如果为子查询至少返回一行，则它的计算结果为 true。 可以通过使用常用逻辑运算符 AND、OR 和 NOT 来组合谓词。  
   
- 有关挖掘模型使用的筛选器的详细信息，请参阅 [&#40;Analysis Services 数据挖掘&#41;的挖掘模型的筛选器 ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
+ 有关挖掘模型使用的筛选器的详细信息，请参阅 [&#40;Analysis Services 数据挖掘&#41;的挖掘模型的筛选器 ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
 > [!NOTE]  
 >  筛选器中的列必须是挖掘结构列。 不能对模型列或别名列创建筛选器。  
   
- 有关 DMX 运算符和语法的详细信息，请参阅 [挖掘模型列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+ 有关 DMX 运算符和语法的详细信息，请参阅 [挖掘模型列](/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="parameter-definition-list"></a>参数定义列表  
- 可以通过向参数列表中添加算法参数来调整模型的性能和功能。 可使用的参数取决于您在 USING 子句中指定的算法。 有关与每种算法关联的参数的列表，请参阅 [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
+ 可以通过向参数列表中添加算法参数来调整模型的性能和功能。 可使用的参数取决于您在 USING 子句中指定的算法。 有关与每种算法关联的参数的列表，请参阅 [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
  参数列表语法如下：  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

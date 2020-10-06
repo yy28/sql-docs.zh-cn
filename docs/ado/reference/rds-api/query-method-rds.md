@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16220bf51fceb83cf22abb2779ad8a5804af4326
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d65da0531e9387e94f4d22c734821779c53b9639
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981848"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724435"
 ---
 # <a name="query-method-rds"></a>Query 方法 (RDS)
 使用有效的 SQL 查询字符串返回 [记录集](../ado-api/recordset-object-ado.md)。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,10 +47,10 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *查询*  
  一个包含 SQL 查询的 **字符串** 。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  查询应使用数据库服务器的 SQL 语言。 如果执行的查询出现错误，则返回结果状态。 **查询**方法不对**查询**字符串执行任何语法检查。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)  
   
 ## <a name="see-also"></a>另请参阅  

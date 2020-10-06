@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 29d8da0efeb42d554353fa25395b3058e82e3dbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfc837238d20e58b04b66ae4ea998e60ee80247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487850"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725365"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
 
@@ -100,9 +100,8 @@ ms.locfileid: "88487850"
   
 6.  单击 **“应用更改”** 可将基于字词的关系应用于域。  
   
-7.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+7.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))中所述。  
   
 ##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> 跟进：在创建基于字词的关系后  
  在创建基于字词的关系后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
-  
   

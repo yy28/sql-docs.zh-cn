@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a9477acb504bf68edf6c5b9caec72b0d8e8feed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 220f4a8abfe37a12a7f0699b9aec8a634691cabe
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978118"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723218"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>允许 DCOM 在 DLL 上运行
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  以下步骤概述了如何通过组件服务使业务对象 .dll 同时使用 DCOM 和 Microsoft Internet Information Services (HTTP) 。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "88978118"
   
 2.  将业务对象安装到包中。  
   
-     - 或 -  
+     \- 或 -  
   
      将 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 对象导入到包中。  
   

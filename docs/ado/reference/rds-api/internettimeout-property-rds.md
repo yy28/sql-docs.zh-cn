@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f69b6909630f2930939bc7757c9a4d9d1f1dd943
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 43ab46eefcb897511a2990655362ecb10527be19
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981978"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724498"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 属性 (RDS)
 指示请求超时前等待的毫秒数。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **长整型** 值，该值表示请求超时前等待的毫秒数。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此属性仅适用于通过 HTTP 或 HTTPS 协议发送的请求。  
   
  三层环境中的请求可能需要几分钟的时间来执行。 使用此属性为长时间运行的请求指定额外的时间。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::
@@ -48,4 +48,4 @@ ms.locfileid: "88981978"
 
 ## <a name="see-also"></a>另请参阅  
  [InternetTimeout 属性示例 (VB) ](./internettimeout-property-example-vb.md)   
- [InternetTimeout 属性示例 (VC++)](./internettimeout-property-example-vc.md)   
+ [InternetTimeout 属性示例 (VC++)](./internettimeout-property-example-vc.md)

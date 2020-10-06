@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1954d4d732e239c4506f92ca3a5411201717e09a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6967254559dda05fcedd1224a8b8769b08f10ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466561"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724627"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 默认知识库
 
@@ -49,9 +49,8 @@ ms.locfileid: "88466561"
   
 -   使用默认知识库创建新知识库。 要从现有知识库创建知识库，请参阅 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md)。  
   
--   在 [Integration Services 中的 DQS 清理组件](https://go.microsoft.com/fwlink/?LinkId=238830) 和 [Master Data Services Excel 外接程序](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)中使用它。  
+-   在 [Integration Services 中的 DQS 清理组件](/previous-versions/sql/sql-server-2012/ee677619(v=sql.110)) 和 [Master Data Services Excel 外接程序](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)中使用它。  
   
 ## <a name="see-also"></a>另请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
-  
   

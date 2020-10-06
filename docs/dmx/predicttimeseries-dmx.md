@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b85cc4197b0ffafef7a83566e4041a7d290548
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422260"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727668"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   第三个示例显示如何使用 EXTEND_MODEL_CASES 参数用最新数据更新挖掘模型。  
   
- 若要了解有关使用时序模型的详细信息，请参阅数据挖掘教程 [第2课： &#40;中级数据挖掘教程&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 和 [时序预测 DMX 教程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 若要了解有关使用时序模型的详细信息，请参阅数据挖掘教程 [第2课： &#40;中级数据挖掘教程&#41;](/previous-versions/sql/sql-server-2016/ms169846(v=sql.130)) 和 [时序预测 DMX 教程](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130))。  
   
 > [!NOTE]  
 >  您可能会从模型中获取不同的结果；下面提供的示例结果仅用于说明结果格式。  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>示例 2：添加新数据和使用 REPLACE_MODEL_CASES  
  假定您发现某一特定地区的数据不正确，并且您希望使用模型中的模式，但是又想调整预测，以便与新数据匹配。 或者您可能发现另一地区的趋势更可靠，并且希望向不同地区中的数据应用最可靠的模型。  
   
- 在这些方案中，您可以使用 REPLACE_MODEL_CASES 参数，并指定一组新的数据以用作历史数据。 这样，预测将基于指定模型中的模式，但将从新数据点末尾继续平滑地进行。 有关此方案的完整演练，请参阅 [高级时序预测 &#40;中级数据挖掘教程&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。  
+ 在这些方案中，您可以使用 REPLACE_MODEL_CASES 参数，并指定一组新的数据以用作历史数据。 这样，预测将基于指定模型中的模式，但将从新数据点末尾继续平滑地进行。 有关此方案的完整演练，请参阅 [高级时序预测 &#40;中级数据挖掘教程&#41;](/previous-versions/sql/sql-server-2016/cc879290(v=sql.130))。  
   
  以下 PREDICTION JOIN 查询说明替换数据和进行新预测的语法。 对于替换数据，本示例检索 Amount 和 Quantity 列的值，并将每个值乘以 2：  
   
@@ -254,7 +254,6 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [时序模型查询示例](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
+ [时序模型查询示例](/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict (DMX)](../dmx/predict-dmx.md)  
-  
   

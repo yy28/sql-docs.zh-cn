@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 3a061ede945ed8eda5264c2ef210bca5ac1d70e9
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988494"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727768"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>确定本地数据库的正确的 Azure SQL 数据库/托管实例 SKU
 
@@ -40,10 +40,10 @@ ms.locfileid: "87988494"
 
 ## <a name="prerequisites"></a>先决条件
 
-- 下载并安装最新版本的[DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
-- 确保你的计算机具有[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更高版本，以便运行所有脚本。 有关如何找出计算机上安装的 PowerShell 版本的信息，请参阅[下载并安装 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
-- 确保计算机上已安装 Azure Powershell 模块。 有关详细信息，请参阅[安装 Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
-- 验证要收集性能计数器所需的 PowerShell 文件**SkuRecommendationDataCollectionScript.ps1**是否安装在 DMA 文件夹中。
+- 下载并安装最新版本的 [DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
+- 确保你的计算机具有 [PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 或更高版本，以便运行所有脚本。 有关如何找出计算机上安装的 PowerShell 版本的信息，请参阅 [下载并安装 Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
+- 确保计算机上已安装 Azure Powershell 模块。 有关详细信息，请参阅 [安装 Azure PowerShell 模块](/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
+- 验证要收集性能计数器所需的 PowerShell 文件 **SkuRecommendationDataCollectionScript.ps1**是否安装在 DMA 文件夹中。
 - 确保你要在其上执行此过程的计算机对承载数据库的计算机具有管理员权限。
 
 ## <a name="collect-performance-counters"></a>收集性能计数器
@@ -96,7 +96,7 @@ ms.locfileid: "87988494"
   - **/SkuRecommendationPreventPriceRefresh**：如果设置为 True，则防止发生价格刷新，并假定默认价格。 如果在脱机模式下运行，则使用。 如果不使用此参数，则必须指定以下参数以获取基于指定区域的最新价格。
 - 获取最新价格
   - **/SkuRecommendationCurrencyCode**：显示价格的货币 (例如 "USD" ) 。
-  - **/SkuRecommendationOfferName**：提议名称 (例如，"Bc-op-nt-azr-ms-azr-0003p" ) 。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细](https://azure.microsoft.com/support/legal/offer-details/)信息页。
+  - **/SkuRecommendationOfferName**：提议名称 (例如，"Bc-op-nt-azr-ms-azr-0003p" ) 。 有关详细信息，请参阅 [Microsoft Azure 产品/服务详细](https://azure.microsoft.com/support/legal/offer-details/) 信息页。
     - **/SkuRecommendationRegionName**：区域名称 (例如，"WestUS" ) 。
     - **/SkuRecommendationSubscriptionId**：订阅 ID。
     - **/AzureAuthenticationTenantId**：身份验证租户。
@@ -111,7 +111,7 @@ ms.locfileid: "87988494"
         - **AzureAuthenticationToken**：设置为证书标记。
 
 > [!NOTE]
-> 若要获取 ClientId 和 TenantId 以便进行交互式身份验证，需要配置新的 AAD 应用程序。 有关身份验证和获取这些凭据的详细信息，请[参阅 Microsoft Azure 计费 Api 代码示例： RATECARD api](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)中的**步骤1：配置 AAD 租户中的本机客户端应用程序中**的说明。
+> 若要获取 ClientId 和 TenantId 以便进行交互式身份验证，需要配置新的 AAD 应用程序。 有关身份验证和获取这些凭据的详细信息，请 [参阅 Microsoft Azure 计费 Api 代码示例： RATECARD api](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)中的 **步骤1：配置 AAD 租户中的本机客户端应用程序中**的说明。
 
 最后，有一个可选参数，可用于指定要获取其建议的数据库： 
 
@@ -184,7 +184,7 @@ ms.locfileid: "87988494"
 - **ExclusionReasons** -如果建议使用层，则此值为空。 对于不推荐的每个层，我们提供未选择它的原因。
 - **AppliedRules** -所应用规则的简短表示法。
 
-最终建议的层 (例如， **MetricType**) 和值 (即， **MetricValue**) -发现**ISTIERRECOMMENDED**列的值为 TRUE，表示查询在 Azure 中运行所需的最低 SKU，这与本地数据库相似。 对于 Azure SQL 托管实例，DMA 目前支持最常用的8vcore 到 40vcore Sku 的建议。 例如，如果建议的最低 SKU 为标准层的 S4，则选择 "S3" 或以下将导致查询超时或执行失败。
+最终建议的层 (例如， **MetricType**) 和值 (即， **MetricValue**) -发现 **ISTIERRECOMMENDED** 列的值为 TRUE，表示查询在 Azure 中运行所需的最低 SKU，这与本地数据库相似。 对于 Azure SQL 托管实例，DMA 目前支持最常用的8vcore 到 40vcore Sku 的建议。 例如，如果建议的最低 SKU 为标准层的 S4，则选择 "S3" 或以下将导致查询超时或执行失败。
 
 HTML 文件以图形格式包含这些信息。 它提供了一个用户友好的方法，用于查看最终建议并预配过程的下一部分。 有关 HTML 输出的详细信息，请在以下部分中进行。
 
@@ -202,15 +202,15 @@ HTML 文件以图形格式包含这些信息。 它提供了一个用户友好�
 
 1. 打开 HTML 文件，并输入以下信息：
     - **订阅 id** -要预配数据库的 Azure 订阅的订阅 id。
-    - **资源组**-要将数据库部署到的资源组。 输入存在的资源组。
-    - **区域**-在其中预配数据库的区域。 请确保订阅支持选择区域。
-    - **服务器名称**-要将数据库部署到的 Azure SQL 数据库服务器。 如果输入的服务器名称不存在，则将创建该服务器名称。
-    - **管理员用户名**-服务器管理员用户名。
-    - **管理员密码**-服务器管理员密码。 密码长度必须至少为八个字符，且长度不能超过128个字符。 密码必须含以下字符类别中的三类 – 英文大写字母、英文小写字母、数字(0-9)及非字母数字字符（!、$、#、% 等）。 密码不能包含用户名中的全部或部分 (3 + 连续字母) 。
+    - **资源组** -要将数据库部署到的资源组。 输入存在的资源组。
+    - **区域** -在其中预配数据库的区域。 请确保订阅支持选择区域。
+    - **服务器名称** -要将数据库部署到的 Azure SQL 数据库服务器。 如果输入的服务器名称不存在，则将创建该服务器名称。
+    - **管理员用户名** -服务器管理员用户名。
+    - **管理员密码** -服务器管理员密码。 密码长度必须至少为八个字符，且长度不能超过128个字符。 密码必须含以下字符类别中的三类 – 英文大写字母、英文小写字母、数字(0-9)及非字母数字字符（!、$、#、% 等）。 密码不能包含用户名中的全部或部分 (3 + 连续字母) 。
 
 2. 查看每个数据库的建议，并根据需要修改定价层、计算级别和最大数据大小。 请确保取消选择当前不想预配的任何数据库。
 
-3. 选择 "**生成设置脚本**"，保存脚本，然后在 PowerShell 中执行它。
+3. 选择 " **生成设置脚本**"，保存脚本，然后在 PowerShell 中执行它。
 
     此过程应创建您在 HTML 页中选择的所有数据库。
 
@@ -220,13 +220,13 @@ HTML 文件以图形格式包含这些信息。 它提供了一个用户友好�
 
 1. 打开 HTML 文件，并输入以下信息：
     - **订阅 id** -要预配数据库的 Azure 订阅的订阅 id。
-    - **资源组**-要将数据库部署到的资源组。 输入存在的资源组。
-    - **区域**-在其中预配数据库的区域。 请确保订阅支持选择区域。
-    - **实例名称**–要将数据库迁移到的 Azure SQL 托管实例的实例。 实例名称只能包含小写字母、数字和 "-"，但不能以 "-" 开头或结尾，也不能超过63个字符。
-    - **实例管理员用户名**–实例管理员用户名。 请确保登录名满足以下要求-它是 SQL 标识符，不是典型的系统名称 (如 admin、administrator、sa、root、dbmanager、loginmanager 等 ) 或内置数据库用户或角色 (如 dbo、guest、) public 等。 请确保名称中不包含空格、Unicode 字符或非字母字符，并且不以数字或符号开头。 
-    - **实例管理员密码**-实例管理员密码。 密码长度必须至少为16个字符，且长度不能超过128个字符。 密码必须含以下字符类别中的三类 – 英文大写字母、英文小写字母、数字(0-9)及非字母数字字符（!、$、#、% 等）。 密码不能包含用户名中的全部或部分 (3 + 连续字母) 。
-    - **Vnet 名称**–应在其下预配托管实例的 vnet 名称。 输入现有的 VNet 名称。
-    - **子网名称**–应在其下预配托管实例的子网名称。 输入现有子网名称。
+    - **资源组** -要将数据库部署到的资源组。 输入存在的资源组。
+    - **区域** -在其中预配数据库的区域。 请确保订阅支持选择区域。
+    - **实例名称** –要将数据库迁移到的 Azure SQL 托管实例的实例。 实例名称只能包含小写字母、数字和 "-"，但不能以 "-" 开头或结尾，也不能超过63个字符。
+    - **实例管理员用户名** –实例管理员用户名。 请确保登录名满足以下要求-它是 SQL 标识符，不是典型的系统名称 (如 admin、administrator、sa、root、dbmanager、loginmanager 等 ) 或内置数据库用户或角色 (如 dbo、guest、) public 等。 请确保名称中不包含空格、Unicode 字符或非字母字符，并且不以数字或符号开头。 
+    - **实例管理员密码** -实例管理员密码。 密码长度必须至少为16个字符，且长度不能超过128个字符。 密码必须含以下字符类别中的三类 – 英文大写字母、英文小写字母、数字(0-9)及非字母数字字符（!、$、#、% 等）。 密码不能包含用户名中的全部或部分 (3 + 连续字母) 。
+    - **Vnet 名称** –应在其下预配托管实例的 vnet 名称。 输入现有的 VNet 名称。
+    - **子网名称** –应在其下预配托管实例的子网名称。 输入现有子网名称。
 
 2. 查看每个实例的建议，并根据需要修改定价层、计算级别和最大数据大小。 尽管建议当前限制为8vcore 到 40vcore Sku，但仍有必要提供64vcore 和 80vcore Sku 的选项。 请确保取消选择当前不想预配的任何实例。
 
@@ -237,4 +237,4 @@ HTML 文件以图形格式包含这些信息。 它提供了一个用户友好�
 
 ## <a name="next-step"></a>后续步骤
 
-- 有关从 CLI 运行 DMA 的命令的完整列表，请参阅[从命令行运行数据迁移助手](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017)一文。
+- 有关从 CLI 运行 DMA 的命令的完整列表，请参阅 [从命令行运行数据迁移助手](./dma-commandline.md?view=sql-server-2017)一文。

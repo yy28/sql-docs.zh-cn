@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9dbceb416cea3e64200708639a771989f900be3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500753"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726098"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;源数据查询&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -54,6 +54,5 @@ ms.locfileid: "88500753"
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
- [嵌套表 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
-  
+ [嵌套表 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   

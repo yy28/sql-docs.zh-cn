@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979608"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724928"
 ---
 # <a name="shape-commands-in-general"></a>常用 Shape 命令
 数据定形定义了整形 **记录集**的列、列所表示的实体之间的关系，以及使用数据填充 **记录集** 的方式。  
@@ -28,7 +28,7 @@ ms.locfileid: "88979608"
   
 |列类型|说明|  
 |-----------------|-----------------|  
-|data|查询命令返回给数据访问接口、表或之前形状**记录集**的**记录集**的字段。|  
+|数据|查询命令返回给数据访问接口、表或之前形状**记录集**的**记录集**的字段。|  
 |段|对另一 **记录集**的引用，称为 *章节*。 通过章节列可以定义 *父子关系，* 其中的 *父* 项是包含章列的 **记录集** ，而 *子级* 是本章表示的 **记录集** 。|  
 |aggregate|通过对子**记录集**的所有行的所有行或列执行*聚合函数*来派生列的值。  (参见以下主题中的聚合函数： [聚合函数、CALC 函数和 NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。 ) |  
 |计算表达式|列的值是通过对 **记录集**的同一行中的列计算 Visual Basic for Applications 表达式来派生的。 表达式是 CALC 函数的参数。  (参见以下主题中的计算表达式： [聚合函数、CALC 函数以及 NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) 和 [Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)。 ) |  
@@ -46,7 +46,7 @@ ms.locfileid: "88979608"
   
  您可以通过编程方式或通过适当的视觉对象访问形状**记录集**的**记录**集组件。  
   
- Microsoft 提供了一种工具，该工具生成形状命令 (查看 Visual Basic 6 文档中的 [数据环境设计器](https://go.microsoft.com/fwlink/?LinkId=5689)) ，另一个显示分层游标 (参阅 Visual Basic 6 文档) 中的 "使用 Microsoft 分层 Flexgrid 控件"。  
+ Microsoft 提供了一种工具，该工具生成形状命令 (查看 Visual Basic 6 文档中的 [数据环境设计器](/previous-versions/visualstudio/aa445793(v=vs.60))) ，另一个显示分层游标 (参阅 Visual Basic 6 文档) 中的 "使用 Microsoft 分层 Flexgrid 控件"。  
   
  有关导航分层 **记录集**的信息，请参阅 [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf85cb8b432dcc6bf72208c12b934291bc72b049
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450014"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724631"
 ---
 # <a name="change-domain-values"></a>更改域值
 
@@ -101,7 +101,7 @@ ms.locfileid: "88450014"
   
 11. **删除所选域值**：若要从域中删除一个或多个现有值，请在“值”表中选择值，然后单击 **“删除所选域值”** 图标。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
   
-12. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+12. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))中所述。  
   
 ##  <a name="follow-up-after-changing-domain-values"></a><a name="FollowUp"></a> 跟进：更改域值后  
  在更改域值后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
@@ -136,5 +136,4 @@ ms.locfileid: "88450014"
   
 ##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> 如何处理 Null 等效项  
  **“域值”** 选项卡中的每个值表都包含一个 DQS_NULL 值。 在值表中，数据源中的 Null 将显示为 SQL_NULL。 您可以将一个或多个 null 等效值设置为 DQS_NULL 的同义词。 这样，所有 Null 和 Null 等效值都将处理为 DQS_NULL。  
-  
   

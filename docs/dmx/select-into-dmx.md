@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7bc85d20ab3c1c087b6352d16777b2bb7d7dcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 062e95b2030b3f4e3004fa1409f26fe82e38e05d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500854"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726107"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ FROM <existing model>
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *expression*  
- 计算结果为定型数据的有效筛选条件的表达式。 有关可用作筛选器的表达式的详细信息，请参阅 [Analysis Services 数据挖掘&#41;&#40;挖掘模型的筛选器 ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
+ 计算结果为定型数据的有效筛选条件的表达式。 有关可用作筛选器的表达式的详细信息，请参阅 [Analysis Services 数据挖掘&#41;&#40;挖掘模型的筛选器 ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
  *现有模型*  
  要复制的现有模型的名称。  
@@ -54,7 +54,7 @@ FROM <existing model>
  **WITH 钻取**子句对新挖掘模型启用钻取功能。 只有在创建模型时，才能启用钻取功能。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>示例 1：更改模型参数  
- 下面的示例基于 `TM_Clustering` 您在 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的现有挖掘模型创建新的挖掘模型。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
+ 下面的示例基于 `TM_Clustering` 您在 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))中创建的现有挖掘模型创建新的挖掘模型。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -78,5 +78,4 @@ FROM [TM Clustering]
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39de22745bae445745959142fef3ecb2fed19dfd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2872340341c6b576a11d52a0b867fdbcd04389b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977578"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723009"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>步骤 1：指定服务器程序（RDS 教程）
 在最常见的情况下，使用 [RDS。空间](../../reference/rds-api/dataspace-object-rds.md) 对象 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法，用于指定默认服务器程序、 [RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md)或您自己的自定义服务器程序 (业务对象) 。 服务器程序在服务器上实例化，并返回对服务器程序或 *代理*的引用。  
@@ -34,7 +34,7 @@ Sub RDSTutorial1()
 ```  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [步骤2：调用服务器程序 (RDS 教程) ](./step-2-invoke-the-server-program-rds-tutorial.md)   

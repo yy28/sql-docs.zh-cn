@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 849ef40c124cfe611f72c6ad5f258d678c24c963
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e46994321b73166095acbb0891f5434a6fc86a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977598"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723036"
 ---
 # <a name="solutions-for-remote-data-access"></a>远程数据访问的解决方案
 ## <a name="the-issue"></a>问题  
  使用 ADO，你的应用程序可以直接访问和修改数据源， (有时称为两层系统) 。 例如，如果连接到包含数据的数据源，则这是双层系统中的直接连接。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  但是，你可能希望通过诸如 Microsoft® Internet Information Services (IIS) ，间接访问数据源。 这种安排有时称为三层系统。 IIS 是一个客户端/服务器系统，它为本地应用程序或客户端应用程序通过 Internet 或 intranet 调用远程或服务器程序提供了一种有效的方式。 服务器程序可获得对数据源的访问权限，还可以选择处理获得的数据。  
   

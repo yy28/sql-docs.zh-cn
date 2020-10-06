@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 35ca44da3c63d8de38a342cbf1f63bceb1916e15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f1523cde32af2c4a01b7b2838cb0293797afcdb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462115"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724618"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
 
@@ -23,7 +23,7 @@ ms.locfileid: "88462115"
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含以下两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 。  
   
-|DQS 组件|描述|  
+|DQS 组件|说明|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 在 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 数据库引擎的基础上安装，包括三个数据库：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 是一个独立的应用程序，使你可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，并提供一个高度直观的图形用户界面来执行数据质量操作以及与 DQS 相关的其他管理任务。|  
@@ -66,7 +66,7 @@ ms.locfileid: "88462115"
 ##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a> Data Quality Services 安装任务  
  您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装程序安装 DQS 组件。 运行 SQL Server 安装程序时，必须完成一系列的安装向导页面，以根据您的要求选择适当的选项。 下表仅列出了安装向导页面中供选择的选项将对 DQS 安装产生影响的那些页面：  
   
-|页面|操作|  
+|页|操作|  
 |----------|------------|  
 |特征选择|选择：<br /><br /> **“数据库引擎服务”** 下的 **“Data Quality Services”** 以安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。 <br />如果你选中 **“数据库引擎服务”** 复选框，SQL Server 安装程序会将安装程序文件 DQSInstaller.exe 复制到你的计算机上的 SQL Server 实例目录下。 在完成 SQL Server 安装程序以 *完成*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，您必须运行此文件。 此外，您必须执行一些附加步骤来配置 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然后才能使用它。 有关详细信息，请参阅 [安装后任务](#PostInstallationTasks)。<br /><br /> **“数据质量客户端”** 以安装 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。<br /><br />  (推荐的) **管理工具-完整** 的 **管理工具-基本** 安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 它为您提供一个图形用户界面来管理您的 SQL Server 实例，并将帮助您执行在下一部分中列出的其他安装后任务。|  
 |数据库引擎配置|单击 **“添加当前用户”** 以便将您的用户 Windows 帐户添加到 sysadmin 固定服务器角色。 若要能在稍后运行 DQSInstaller.exe 文件以完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，则必须执行此操作。|  
@@ -115,7 +115,7 @@ ms.locfileid: "88462115"
                     [访问 DQS 操作的数据](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [视频：安装和配置 DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [视频：安装和配置 DQS](/previous-versions/dn912438(v=msdn.10))   
  [.NET Framework 更新后升级 SQLCLR 程序集](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [使用 DQSInstaller.exe导出和导入 DQS 知识库 ](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -124,5 +124,4 @@ ms.locfileid: "88462115"
  [卸载 SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
  [解决 DQS 中的安装和配置问题](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
-  
   

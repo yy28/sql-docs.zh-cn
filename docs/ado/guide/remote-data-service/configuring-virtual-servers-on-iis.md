@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53d22155f8e7af894419a28ddf01bf3fe80e34f3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b8e1899e6393f1dc7ae4d9b2080d349bbedf1d41
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978278"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724788"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>在 IIS 上配置虚拟服务器
 在 Internet Information Services 4.0 中创建虚拟服务器时，需要执行以下两个额外步骤，以便将虚拟服务器配置为使用 RDS：  
@@ -28,7 +28,7 @@ ms.locfileid: "88978278"
 2.  将 msadcs.dll 移到 *vroot*\msadc，其中 *vroot* 是你的虚拟服务器的主目录。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [RDS 基础知识](./rds-fundamentals.md)

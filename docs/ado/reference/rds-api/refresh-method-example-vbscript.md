@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ab5056926fcda98ef0f60449eb5b19d75105e35
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e8d73b1c0a07ea127e0d4bad880b82c08ca24a5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981358"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724281"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  下面的示例演示如何设置 RDS 的必需参数 [。](./datacontrol-object-rds.md) 在运行时 DataControl。 使用[Refresh](../ado-api/refresh-method-ado.md)方法检索[记录集](../ado-api/recordset-object-ado.md)的方式由[ExecuteOptions](./executeoptions-property-rds.md)和[FetchOptions](./fetchoptions-property-rds.md)属性的设置确定。 若要测试此示例，请将以下代码剪切并粘贴到普通的 ASP 文档中，然后将其命名为 **RefreshVBS**。 使用 " **查找** " 找到文件 Adovbs，并将其放入计划使用的目录中。 ASP 脚本将标识您的服务器。  
   

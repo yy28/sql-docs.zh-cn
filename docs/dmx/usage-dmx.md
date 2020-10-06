@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394853"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726038"
 ---
 # <a name="usage-dmx"></a>用法 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88394853"
   
  指定为 **预测** 类型的列用作输入列和输出列。 指定为 **PredictOnly** 的列仅用作输出列。 具体的算法可能会以不同的方式处理预测列。  
   
- 有关支持的列使用类型的详细信息 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅 [挖掘模型列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+ 有关支持的列使用类型的详细信息 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅 [挖掘模型列](/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [&#40;DMX&#41; 的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-reference.md)   
  [&#40;DMX&#41; 语法元素的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394853"
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

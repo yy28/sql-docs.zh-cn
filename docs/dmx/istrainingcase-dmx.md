@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb68d0aaa0d19fb903154b8d5c4d4135b57883e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352333"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726140"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTrainingCase()
  通过查看 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 和 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 属性的值，可以确定是否已将特定数据挖掘结构中的数据分区为测试集和定型集。  
   
 > [!NOTE]  
->  如果要使用则 istrainingcase 或则 istestcase 函数返回有关模型中事例的详细信息，则必须对该模型启用钻取功能。 有关详细信息，请参阅 [对挖掘模型启用钻取](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)。  
+>  如果要使用则 istrainingcase 或则 istestcase 函数返回有关模型中事例的详细信息，则必须对该模型启用钻取功能。 有关详细信息，请参阅 [对挖掘模型启用钻取](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)。  
   
  若要返回测试数据集中的事例，请使用函数 [则 istestcase &#40;DMX&#41;](../dmx/istestcase-dmx.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中的目标邮件方案中的聚类分析数据挖掘模型。 查询仅返回用于定型挖掘模型的那些事例。 而且，定型事例仅限于 40 岁以下的客户。  
+ 下面的示例使用 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))中的目标邮件方案中的聚类分析数据挖掘模型。 查询仅返回用于定型挖掘模型的那些事例。 而且，定型事例仅限于 40 岁以下的客户。  
   
 ```  
 SELECT *  
@@ -54,8 +54,7 @@ AND [Age] <40
  有关如何查询数据挖掘中使用的事例的其他示例，请参阅 [SELECT FROM &#60;model&#62;。&#40;DMX&#41;的事例 ](../dmx/select-from-model-cases-dmx.md) ，并 [从 &#60;结构&#62; 中进行选择。事例](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [定型和测试数据集](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
+ [定型和测试数据集](/analysis-services/data-mining/training-and-testing-data-sets)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [数据挖掘查询](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
-  
+ [数据挖掘查询](/analysis-services/data-mining/data-mining-queries)  
   

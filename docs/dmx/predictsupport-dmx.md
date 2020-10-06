@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cea4913bf3668c89fb0c1c66632359a372f3d54b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 180375f77251adaab9a8d30462267b043ed6e946
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422251"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727674"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88422251"
 PredictSupport(<scalar column reference>, [<predicted state>])  
 ```  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
@@ -40,7 +40,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  若要返回对缺少状态的支持，请将设置 \<predicted state> 为 NULL。  
   
 > [!NOTE]  
->  支持值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何为任何特定模型类型计算支持的详细信息，请参阅挖掘模型内容中的单个算法类型 [&#40;Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
+>  支持值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何为任何特定模型类型计算支持的详细信息，请参阅挖掘模型内容中的单个算法类型 [&#40;Analysis Services-数据挖掘&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
   
 ## <a name="examples"></a>示例  
  以下示例根据 TM Decision Tree 挖掘模型，使用单独查询预测某个人是否购买自行车，并且还确定对该预测的支持。  
@@ -63,5 +63,4 @@ NATURAL PREDICTION JOIN
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

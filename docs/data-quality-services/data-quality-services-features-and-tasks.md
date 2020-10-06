@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68ac5a3101426d159b75035b6203ff4f8b8f6cda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a9eb5f94809fd2a9472df520d1c5559e28dfdf3b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462154"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725353"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能和任务
 
@@ -23,7 +23,7 @@ ms.locfileid: "88462154"
 
   查找任何人（数据管理人员、Data Quality Services 管理员或 SQL Server 管理员）为准备和执行数据质量项目所需的信息。  
   
- ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小文件文件夹图标")**设计和实现数据质量解决方案**  
+ ![小文件文件夹图标](/analysis-services/analysis-services/media/filefolder-small.png "小文件文件夹图标")**设计和实现数据质量解决方案**  
  [数据质量客户端应用程序](../data-quality-services/data-quality-client-application.md)  
   
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
@@ -38,9 +38,8 @@ ms.locfileid: "88462154"
   
  [DQS 中的数据事件探查和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小文件文件夹图标")**管理 Data Quality Services**  
+ ![小文件文件夹图标](/analysis-services/analysis-services/media/filefolder-small.png "小文件文件夹图标")**管理 Data Quality Services**  
  [dqs 管理](../data-quality-services/dqs-administration.md)  
   
  [DQS 安全性](../data-quality-services/dqs-security.md)  
-  
   

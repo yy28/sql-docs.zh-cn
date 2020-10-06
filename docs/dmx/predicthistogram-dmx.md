@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ecc213e023483245fb8b40a55de749c23ae16a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbeaa08cd118e032465f8456c0d7d7e111562f88
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426159"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727681"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88426159"
 PredictHistogram(<scalar column reference> | <cluster column reference>)  
 ```  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  一个标量列引用或群集列引用。 除 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法外，可以与所有算法类型一起使用。  
   
 ## <a name="return-type"></a>返回类型  
@@ -92,9 +92,8 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

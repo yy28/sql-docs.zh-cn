@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd20a9ca7a25e1e00613ea5c87baa9eda41accc8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466712"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726606"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -38,7 +38,7 @@ ms.locfileid: "88466712"
   
  市场和 DQS 之间的无缝集成简化了与从 DQS 中发现、浏览和获取数据质量项目的信息相关的步骤。 从 DQS 中使用数据，并通过使用一种创新方法将 DQS、市场和引用数据服务提供程序结合起来，帮助 DQS 用户获得高数据质量。  
   
- 若要在 DQS 中使用来自市场的引用数据执行清理活动，必须具有市场帐户密钥。 创建市场帐户密钥是免费的，仅当您订阅付费数据集时才需要付费。 订阅和使用免费数据集都不需要付费。 有关创建 Marketplace 帐户密钥的详细信息，请参阅 [创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) 。  
+ 若要在 DQS 中使用来自市场的引用数据执行清理活动，必须具有市场帐户密钥。 创建市场帐户密钥是免费的，仅当您订阅付费数据集时才需要付费。 订阅和使用免费数据集都不需要付费。 有关创建 Marketplace 帐户密钥的详细信息，请参阅 [创建帐户](/previous-versions/azure/ff717655(v=azure.100)) (https://go.microsoft.com/fwlink/?LinkId=212936) 。  
   
  此外，还可以从 DQS 中执行以下市场活动：  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88466712"
 |介绍如何配置 DQS 以使用来自 市场或直接第三方联机数据提供程序的引用数据服务。|[将 DQS 配置为使用引用数据](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |介绍如何将知识库中的域/复合域映射到引用数据服务。|[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |介绍如何使用引用数据服务清理数据。|[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-  
   

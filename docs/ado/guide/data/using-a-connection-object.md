@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979118"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724858"
 ---
 # <a name="using-a-connection-object"></a>使用连接对象
 在打开 **连接** 对象之前，必须定义有关数据源和连接类型的某些信息。 此信息中的大部分信息由**connection**对象上[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的*connectionstring*参数或**连接**对象的[connectionstring 属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)保存。 连接字符串包含由分号分隔的参数/值对列表，其值括在单引号内。 例如：  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  你还可以在连接字符串中指定 ODBC 数据源名称 (DSN) 或 (UDL) 文件的数据链接。 有关 Dsn 的详细信息，请参阅 ODBC 程序员参考中的 [管理数据源](../../../odbc/admin/managing-data-sources.md) 。 有关 Udl 的详细信息，请参阅 OLE DB 程序员参考中的 [数据链接 API 概述](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) 。  
+>  你还可以在连接字符串中指定 ODBC 数据源名称 (DSN) 或 (UDL) 文件的数据链接。 有关 Dsn 的详细信息，请参阅 ODBC 程序员参考中的 [管理数据源](../../../odbc/admin/managing-data-sources.md) 。 有关 Udl 的详细信息，请参阅 OLE DB 程序员参考中的 [数据链接 API 概述](/previous-versions/windows/desktop/ms718102(v=vs.85)) 。  
   
  通常，通过调用 **连接. Open** 方法并使用适当的 *连接字符串* 作为参数，建立连接。 以下 Visual Basic 代码片段显示了一个示例：  
   

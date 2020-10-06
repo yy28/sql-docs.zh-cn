@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b20f19032a298805c8958d269adffd8a9600a58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ea7b94d092565827bbd0086f7f4d122ce219fac
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449943"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725411"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
 
@@ -33,7 +33,7 @@ ms.locfileid: "88449943"
 ## <a name="before-you-begin"></a>开始之前  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
- 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅 [创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) 。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
+ 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅 [创建帐户](/previous-versions/azure/ff717655(v=azure.100)) (https://go.microsoft.com/fwlink/?LinkId=212936) 。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -84,5 +84,4 @@ ms.locfileid: "88449943"
   
 ##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a> 跟进：在将 DQS 配置为使用引用数据后  
  现在您必须将所需的知识库域映射到您刚配置的数据提供程序所提供的引用数据。 若要执行此操作，请参阅[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414023"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726268"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>参数  
- *structure*  
+ *构造*  
  结构的唯一名称。  
   
  *列定义列表*  
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>备注  
  通过指定列的列表可以定义挖掘结构；如果需要，还可以指定列之间的层次结构关系，然后再根据需要将挖掘结构分为定型数据集和测试数据集。  
   
- 可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先设置数据库属性 AllowSessionMiningModels。 有关详细信息，请参阅 [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+ 可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先设置数据库属性 AllowSessionMiningModels。 有关详细信息，请参阅 [Data Mining Properties](/analysis-services/server-properties/data-mining-properties)。  
   
 ## <a name="column-definition-list"></a>列定义列表  
  定义挖掘结构时，在列定义列表中包括每个列的下列信息：  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  有关可用于定义结构列的数据类型、内容类型、列分布和建模标志的列表，请参阅下列主题：  
   
--   [数据类型（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [数据类型（数据挖掘）](/analysis-services/data-mining/data-types-data-mining)  
   
--   [内容类型（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [内容类型（数据挖掘）](/analysis-services/data-mining/content-types-data-mining)  
   
--   [列分布（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [列分布（数据挖掘）](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [建模标志（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [建模标志（数据挖掘）](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  可以为一个列定义多个建模标志值。 但是，一个列只能有一个内容类型和数据类型。  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  
   
 ## <a name="holdout-parameters"></a>维持参数  
- 指定维持参数时，结构数据分区也将随即创建。 为维持指定的数据量用于测试，其余数据用于定型。 默认情况下，如果使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建挖掘结构，则创建的维持分区包含 30% 的测试数据和 70% 的定型数据。 有关详细信息，请参阅 [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)。  
+ 指定维持参数时，结构数据分区也将随即创建。 为维持指定的数据量用于测试，其余数据用于定型。 默认情况下，如果使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建挖掘结构，则创建的维持分区包含 30% 的测试数据和 70% 的定型数据。 有关详细信息，请参阅 [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets)。  
   
  如果使用数据挖掘扩展插件 (DMX) 创建挖掘结构，则必须手动指定要创建维持分区。  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

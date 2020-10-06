@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988504"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727756"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 
@@ -83,7 +83,7 @@ ms.locfileid: "87988504"
   - 行为更改：报告的架构对象可能会继续工作，但它们可能会表现出不同的行为，例如性能下降。
   - 信息问题：这些对象不会影响迁移，但可能已从功能 SQL Server 版本中弃用。
 
-完成评估后，使用我们的[Azure 数据库迁移服务](https://azure.microsoft.com/services/database-migration/) (DMS) ，将 SQL Server 数据库迁移到 SQL 托管实例。  DM 同时支持[脱机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (一次性) 和[联机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (最短的停机时间) 将数据库迁移到 SQL 托管实例。
+完成评估后，使用我们的 [Azure 数据库迁移服务](https://azure.microsoft.com/services/database-migration/) (DMS) ，将 SQL Server 数据库迁移到 SQL 托管实例。  DM 同时支持 [脱机](/azure/dms/tutorial-sql-server-to-managed-instance) (一次性) 和 [联机](/azure/dms/tutorial-sql-server-managed-instance-online) (最短的停机时间) 将数据库迁移到 SQL 托管实例。
 
 ## <a name="data-migration-assistant-v40"></a>数据迁移助手 v4。0
 
@@ -92,7 +92,7 @@ ms.locfileid: "87988504"
 > [!NOTE]
 > 此功能当前仅通过命令行界面 (CLI) 提供。
 
-有关更多详细信息，请参阅文章[为本地数据库标识正确的 AZURE SQL 数据库 SKU](dma-sku-recommend-sql-db.md)。
+有关更多详细信息，请参阅文章 [为本地数据库标识正确的 AZURE SQL 数据库 SKU](dma-sku-recommend-sql-db.md)。
 
 ## <a name="data-migration-assistant-v36"></a>数据迁移助手3。6
 
@@ -106,7 +106,7 @@ ms.locfileid: "87988504"
 
 数据迁移助手对受列出的问题影响的对象执行自动架构转换，并在继续进行架构转换之前提示用户进行确认。 用户可以查看建议的代码更改，然后接受或拒绝任何给定数据库对象的所有转换。
 
-数据迁移助手使用 Microsoft 程序合成 (PROSE) 技术建议代码修补程序。 了解有关[PROSE](https://microsoft.github.io/prose/)的详细信息。
+数据迁移助手使用 Microsoft 程序合成 (PROSE) 技术建议代码修补程序。 了解有关 [PROSE](https://microsoft.github.io/prose/)的详细信息。
 
 ## <a name="data-migration-assistant-v35"></a>数据迁移助手3。5
 
@@ -141,7 +141,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 
 ### <a name="migrating-windows-logins"></a>迁移 Windows 登录名
 
-在 Linux 上 SQL Server 2017 正式支持 Active Directory (AD) 登录名的迁移时，它需要其他配置才能成功运行。 有关在 Linux 上的 SQL Server 2017 上设置 Active Directory 登录名的详细信息，请参阅文章[Active Directory 身份验证 Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) 。 执行所需的配置后，安装完成，你可以像平常一样迁移 Active Directory 登录名。 标准的 SQL 身份验证按预期方式工作，无需进行任何其他设置。
+在 Linux 上 SQL Server 2017 正式支持 Active Directory (AD) 登录名的迁移时，它需要其他配置才能成功运行。 有关在 Linux 上的 SQL Server 2017 上设置 Active Directory 登录名的详细信息，请参阅文章 [Active Directory 身份验证 Linux 上的 SQL Server](../linux/sql-server-linux-active-directory-authentication.md) 。 执行所需的配置后，安装完成，你可以像平常一样迁移 Active Directory 登录名。 标准的 SQL 身份验证按预期方式工作，无需进行任何其他设置。
 
 ## <a name="data-migration-assistant-v32"></a>数据迁移助手3。2
 
@@ -168,9 +168,9 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 
 数据迁移助手的2.1 版包含以下添加内容：
 
-- 用于在无人参与模式下运行评估的命令行支持，有助于大规模运行评估。 有关更多详细信息，请参阅文章[从命令行运行数据迁移助手](dma-commandline.md)。
+- 用于在无人参与模式下运行评估的命令行支持，有助于大规模运行评估。 有关更多详细信息，请参阅文章 [从命令行运行数据迁移助手](dma-commandline.md)。
 - 用户启动和关闭 DMA 时的性能改进。
-- 能够配置 SQL 连接超时。有关更多详细信息，请参阅文章[数据迁移助手的配置设置](dma-configurationsettings.md)。
+- 能够配置 SQL 连接超时。有关更多详细信息，请参阅文章 [数据迁移助手的配置设置](dma-configurationsettings.md)。
 
 ## <a name="data-migration-assistant-v20"></a>数据迁移助手 v2。0
 
@@ -181,15 +181,15 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 数据迁移助手的1.0 版是初始版本，它提供了：
 
 - 发现可能影响升级到 SQL Server 本地版本的问题。 任何发现都被描述为兼容性问题，并分为以下几个方面：
-  - 重大变化
+  - 中断性变更
   - 行为更改
-  - 弃用的功能
+  - 已弃用的功能
 - 发现目标 SQL Server 平台中的新功能，数据库在升级后可从中受益。 任何发现均被描述为功能建议，并分为以下几个方面：
   - 性能
   - 安全性
   - 存储
 - 执行评估的新式用户体验。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据迁移助手概述](../dma/dma-overview.md)

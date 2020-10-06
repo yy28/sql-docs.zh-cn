@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 64c18c32cde0c29c120c8cb1b2d976bd983c774a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885994"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727788"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>为数据迁移助手配置设置
 
-您可以通过在 cmd.exe .config 文件中设置配置值来微调数据迁移助手的某些行为。 本文介绍关键配置值。
+您可以通过在 dma.exe.config 文件中设置配置值来微调数据迁移助手的某些行为。 本文介绍关键配置值。
 
-你可以在计算机上的以下文件夹中找到数据迁移助手桌面应用程序和命令行实用工具的 cmd.exe .config 文件。
+你可以在计算机上的以下文件夹中找到数据迁移助手桌面应用程序和命令行实用工具的 dma.exe.config 文件。
 
 - 桌面应用程序
 
-  % ProgramFiles% \\ Microsoft 数据迁移助手 \\
+  % ProgramFiles% \\ Microsoft 数据迁移助手 \\dma.exe.config
 
 - 命令行实用工具
 
-  % ProgramFiles% \\ Microsoft 数据迁移助手 \\ dmacmd 
+  % ProgramFiles% \\ Microsoft 数据迁移助手 \\dmacmd.exe.config 
 
 请确保在进行任何修改之前保存原始配置文件的副本。 进行更改后，重新启动数据迁移助手，以使新的配置值生效。
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>要并行评估的数据库数
 
-数据迁移助手并行评估多个数据库。 在评估期间数据迁移助手提取数据层应用程序（dacpac）以了解数据库架构。如果在同一台服务器上并行评估了多个数据库，则此操作可能会超时。 
+数据迁移助手并行评估多个数据库。 在评估期间数据迁移助手 (dacpac) 提取数据层应用程序以了解数据库架构。如果在同一台服务器上并行评估了多个数据库，则此操作可能会超时。 
 
 从数据迁移助手 v2.0 开始，可以通过设置 parallelDatabases 配置值进行控制。 默认值为 8。
 
@@ -79,22 +79,22 @@ ms.locfileid: "82885994"
 
 ## <a name="dacfx-settings"></a>DacFX 设置
 
-在评估期间，数据迁移助手提取数据层应用程序（dacpac）以了解数据库架构。 对于极大型数据库，或如果服务器负载过大，此操作可能会失败并出现超时。 从数据迁移 v1.0 开始，可以修改以下配置值以避免错误。 
+在评估过程中，数据迁移助手 (dacpac) 提取数据层应用程序以了解数据库架构。 对于极大型数据库，或如果服务器负载过大，此操作可能会失败并出现超时。 从数据迁移 v1.0 开始，可以修改以下配置值以避免错误。 
 
 > [!NOTE]
 > 默认情况下，将对整个 &lt; dacfx &gt; 条目进行注释。 删除注释，然后根据需要修改值。
 
 - commandTimeout
 
-   此参数设置 IDbCommand 属性，以*秒为单位*。（默认值 = 60）
+   此参数设置 IDbCommand 属性，以 *秒为单位*。 (默认值 = 60) 
 
 - databaseLockTimeout
 
-   此参数等效于[设置锁定 \_ 超时超时 \_ 期限](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒为单位）*。（默认值 = 5000）
+   此参数等效于 [设置锁定 \_ 超时超时 \_ 期限](../t-sql/statements/set-lock-timeout-transact-sql.md) （以 *毫秒为单位）*。 (默认值 = 5000) 
 
 - maxDataReaderDegreeOfParallelism
 
-  此参数设置要使用的 SQL 连接池连接的数量。（默认值 = 8）
+  此参数设置要使用的 SQL 连接池连接的数量。 (默认值 = 8) 
 
 ```
 <advisorGroup>
@@ -111,7 +111,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database：建议阈值
 
-利用[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)，你可以将热和冷事务数据从 Microsoft SQL Server 2016 动态拉伸到 Azure。 Stretch Database 以包含大量冷数据的事务数据库为目标。 Stretch Database 建议：在存储功能建议下，首先识别它认为将从此功能中受益的表，然后标识为启用此功能所需进行的更改。
+利用 [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md)，你可以将热和冷事务数据从 Microsoft SQL Server 2016 动态拉伸到 Azure。 Stretch Database 以包含大量冷数据的事务数据库为目标。 Stretch Database 建议：在存储功能建议下，首先识别它认为将从此功能中受益的表，然后标识为启用此功能所需进行的更改。
 
 从数据迁移助手 v2.0 开始，你可以使用 recommendedNumberOfRows 配置值控制表的此阈值，以便符合 Stretch Database 功能。 默认值为100000行。 如果要分析更小的表的拉伸功能，请相应地减小值。
 
@@ -130,7 +130,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="sql-connection-timeout"></a>SQL 连接超时
 
-可以通过将连接超时值设置为指定的秒数，在运行评估或迁移时控制源和目标实例的[SQL 连接](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx)超时。 默认值为 15 秒。
+可以通过将连接超时值设置为指定的秒数，在运行评估或迁移时控制源和目标实例的 [SQL 连接](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) 超时。 默认值为 15 秒。
 
 ```
 <appSettings>

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a698523cee195e4688d4471baf75358e0df7d77
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1e99fd3242e0070cabb69cb67ceb7e60f44f5b88
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982708"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722628"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
  若要测试此示例，请 \<Body> \</Body> 在普通 HTML 文档中的和标记之间剪切并粘贴此代码，并将其命名为 **CancelUpdateVBS**。 ASP 脚本将标识您的 internet 服务器。 你将需要编辑服务器的名称，以反映你自己的设置。 只需将连接字符串中的值从 MyServer 更改为 SQL Server 安装的名称即可。  
   

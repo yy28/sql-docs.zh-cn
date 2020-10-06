@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec9540ae9d2b8317cbd49b947345e811b70896a7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462107"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724656"
 ---
 # <a name="manage-dqs-databases"></a>管理 DQS 数据库
 
@@ -42,7 +42,7 @@ ms.locfileid: "88462107"
 -   DQS 数据库的默认恢复模式设置为“简单” ****。 在“简单”恢复模式下，会尽量少地记录事务日志，而且在完成事务后会自动截断日志以释放事务日志（.ldf 文件）中的空间。 有关简单恢复模式的详细信息，请参阅[完整数据库备份 (SQL Server)](../relational-databases/backup-restore/full-database-backups-sql-server.md)。  
   
 > [!IMPORTANT]
->  -   在“简单”恢复模式中，日志记录长时间处于活动状态时（例如，占用时间很长的事务），日志截断可能被延迟，因此可能填满事务日志。 此外，日志截断并不减小物理日志文件（.ldf 文件）的大小。 若要减少物理日志文件的大小，需要收缩日志文件。 有关如何解决涉及事务日志的问题的信息，请参阅[事务日志 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 或 [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446) 上的 Microsoft 技术支持文章。  
+>  -   在“简单”恢复模式中，日志记录长时间处于活动状态时（例如，占用时间很长的事务），日志截断可能被延迟，因此可能填满事务日志。 此外，日志截断并不减小物理日志文件（.ldf 文件）的大小。 若要减少物理日志文件的大小，需要收缩日志文件。 有关如何解决涉及事务日志的问题的信息，请参阅[事务日志 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 或 [https://go.microsoft.com/fwlink/?LinkId=237446](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) 上的 Microsoft 技术支持文章。  
 > -   必须定期执行 DQS 数据库的完整或差异备份，同时备份事务日志以执行时间点数据恢复。 有关详细信息，请参阅[完整数据库备份 (SQL Server)](../relational-databases/backup-restore/full-database-backups-sql-server.md) 和 [备份事务日志 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。  
   
 ##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> 分离/附加 DQS 数据库  
@@ -59,5 +59,4 @@ ms.locfileid: "88462107"
   
 ## <a name="see-also"></a>另请参阅  
  [dqs 管理](../data-quality-services/dqs-administration.md)  
-  
   

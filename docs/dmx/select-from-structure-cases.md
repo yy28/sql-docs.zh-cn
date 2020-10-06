@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf8afcdf84c5d33e91971c58dff5c1f93c68fd08
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500903"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726124"
 ---
 # <a name="select-from-ltstructuregtcases"></a>选择 "源 &lt; 结构" &gt; 。这
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,14 +47,14 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  该表达式可以包括列标识符、用户定义函数和 VBA 函数。  
   
- *structure*  
+ *构造*  
  结构的名称。  
   
  *条件表达式*  
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 可选。 一个返回标量值的表达式。  
+ 可选。 返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
  如果对模型和结构都启用了钻取功能，则拥有挖掘结构和模型钻取权限的角色的任何成员都可以使用下面的语法返回模型中未包括的结构列。  
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  因此，为了保护敏感数据或个人信息，应构造数据源视图来屏蔽个人信息，并且仅在需要时才授予对挖掘结构或挖掘模型的 **AllowDrillthrough** 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例基于挖掘结构，目标邮件基于 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 数据库和关联的挖掘模型。 有关详细信息，请参阅 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例基于挖掘结构，目标邮件基于 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 数据库和关联的挖掘模型。 有关详细信息，请参阅 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>示例 1：钻取到结构事例  
  下面的示例返回挖掘结构“目标邮件”中 500 名年龄最大的客户的列表。 查询返回挖掘模型中的所有列，但将行限制为购买过自行车的客户，并且按年龄进行排序。 您还可以编辑表达式列表以便仅返回需要的列。  
@@ -94,5 +94,4 @@ WHERE IsTestCase();
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

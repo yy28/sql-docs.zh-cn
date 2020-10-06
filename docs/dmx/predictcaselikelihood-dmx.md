@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a08ec4809b281205386abad429afe339e0dbb1d1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426119"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727690"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +35,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  NONNORMALIZED  
  返回值包含事例的原始概率，即事例属性概率的乘积。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型。  
   
 ## <a name="return-type"></a>返回类型  
@@ -81,9 +81,8 @@ NATURAL PREDICTION JOIN
  上述结果的差异演示了规范化的效果。 **CaseLikelihood**的原始值表明事例的概率大约为 20%;但是，当您规范化结果时，这种情况的可能性很小。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

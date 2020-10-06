@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: caefcdc2e081c0e8d0e7bee329d4dc5d4d5cfa22
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413263"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727648"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>选择不同于 &lt; 模型 &gt; (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 可选。 一个返回标量值的表达式。  
+ 可选。 返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
  **SELECT DISTINCT FROM**语句仅适用于单个列或具有一组相关列。 该子句不可用于一组不相关的列。  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |连续|列中各值的中点。|  
   
 ## <a name="discrete-column-example"></a>离散列示例  
- 下面的代码示例基于 `[TM Decision Tree]` 您在 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的模型。 查询返回离散列 `Gender` 中存在的唯一值。  
+ 下面的代码示例基于 `[TM Decision Tree]` 您在 [数据挖掘基础教程](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))中创建的模型。 查询返回离散列 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，将列的内容类型 `Yearly Income` 从 **连续** 更改为 **离散**化。  
   
 > [!NOTE]  
->  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息，请参阅 [更改挖掘模型中列的离散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  
+>  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息，请参阅 [更改挖掘模型中列的离散](/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -138,5 +138,4 @@ FROM [TM Decision Tree]
  [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

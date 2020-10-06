@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aef6ed4b98241b07e84aa11ed6408c600d6ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9deb3afaa6d0a4bc90281c2cc3998365eccb9838
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414193"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726214"
 ---
 # <a name="distributions-dmx"></a>分布 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "88414193"
  **等**  
  连续列的值构成平坦曲线，曲线上的所有值都具有相同概率。  
   
- 有关 [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据挖掘算法的详细信息，请参阅 [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。 第三方算法提供程序可能支持其他分布类型。 若要确定算法支持的分发类型，请使用 **SUPPORTED_DISTRIBUTION_FLAGS** 架构行集。  
+ 有关 [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据挖掘算法的详细信息，请参阅 [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。 第三方算法提供程序可能支持其他分布类型。 若要确定算法支持的分发类型，请使用 **SUPPORTED_DISTRIBUTION_FLAGS** 架构行集。  
   
- 有关分发类型的详细信息，请参阅 [列分布 &#40;数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)。  
+ 有关分发类型的详细信息，请参阅 [列分布 &#40;数据挖掘&#41;](/analysis-services/data-mining/column-distributions-data-mining)。  
   
 ## <a name="see-also"></a>另请参阅  
- [内容类型 &#40;数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
+ [内容类型 &#40;数据挖掘&#41;](/analysis-services/data-mining/content-types-data-mining)   
  [&#40;DMX&#41; 的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-reference.md)   
  [&#40;DMX&#41; 语法元素的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -47,5 +47,4 @@ ms.locfileid: "88414193"
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

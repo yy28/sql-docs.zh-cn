@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e421b128faa5a7d90ec658a7c42e246110d921fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977338"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722718"
 ---
 # <a name="writing-your-own-customized-handler"></a>编写自己的自定义处理程序
 如果您是需要默认 RDS 支持的 IIS 服务器管理员，但对用户请求和访问权限有更多控制，则您可能需要编写自己的处理程序。  
@@ -27,7 +27,7 @@ ms.locfileid: "88977338"
  MSDFMAP。处理程序实现了 **IDataFactoryHandler** 接口。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 接口  
  此接口包含两种方法， **dl.getrecordset** 和 **重新连接**。 这两种方法都需要将 [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) 属性设置为 **adUseClient**。  
@@ -37,7 +37,7 @@ ms.locfileid: "88977338"
 ## <a name="getrecordset-method"></a>Dl.getrecordset 方法  
  此方法查询数据源，并使用提供的参数创建新的 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象。 **记录集**必须用**adLockBatchOptimistic**打开，并且不能异步打开。  
   
-### <a name="arguments"></a>自变量  
+### <a name="arguments"></a>参数  
  ***conn***  连接字符串。  
   
  ***args***  处理程序的参数。  
@@ -49,7 +49,7 @@ ms.locfileid: "88977338"
 ## <a name="reconnect-method"></a>重新连接方法  
  此方法更新数据源。 它将创建一个新的 [连接](../../reference/ado-api/connection-object-ado.md) 对象并附加给定的 **记录集**。  
   
-### <a name="arguments"></a>自变量  
+### <a name="arguments"></a>参数  
  ***conn***  连接字符串。  
   
  ***args***  处理程序的参数。  

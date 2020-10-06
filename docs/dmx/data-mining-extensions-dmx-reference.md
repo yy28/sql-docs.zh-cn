@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414083"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726248"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>数据挖掘扩展插件 (DMX) 参考
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414083"
   
  该规范以数据挖掘模型虚拟对象的形式定义数据挖掘的基础。 数据挖掘模型对象将封装所有有关特定挖掘模型的已知内容。 数据挖掘模型对象的结构与 SQL 表类似，包含用于说明模型的列、数据类型和元信息。 该结构允许您使用 DMX 语言（一种 SQL 扩展语言）来创建和处理模型。  
   
- **有关详细信息，请执行以下操作：** [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
+ **有关详细信息，请执行以下操作：** [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> DMX 语句  
  可以使用 DMX 语句创建、处理、删除、复制、浏览和预测数据挖掘模型。 DMX 中有两种类型的语句：数据定义语句和数据操作语句。 可以使用每种类型的语句执行各种不同的任务。  
@@ -109,5 +109,4 @@ ms.locfileid: "88414083"
  [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
-  
   
