@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8c086e5d9cc08af95b027e4ea986845861005a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2acd26b8fb88fa6cf51c6b8715eee9cdfca8ad49
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544868"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834301"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>与执行有关的动态管理视图和函数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,11 +117,9 @@ ms.locfileid: "89544868"
 :::row-end:::
 
 > [!NOTE]  
->  为提供信息，标识了 **sys.databases dm_exec_query_transformation_stats** 动态管理视图。 不支持。 不保证以后的兼容性。  
+>  标识 **sys.dm_exec_query_transformation_stats** 动态管理视图仅用于提供信息。 不支持。 不保证以后的兼容性。  
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;的系统视图 &#40;](../../t-sql/language-reference.md)  
   
-  
-

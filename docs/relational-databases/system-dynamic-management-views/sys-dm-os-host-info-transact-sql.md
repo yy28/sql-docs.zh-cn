@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_os_host_info (Transact-sql) '
-title: sys. dm_os_host_info (Transact-sql) |Microsoft Docs
+description: 'sys.dm_os_host_info (Transact-sql) '
+title: sys.dm_os_host_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97d313e91fdd719a7ff33728bf3183980f564910
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e2c6e374061a847e168421b30971469ff60e4348
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550222"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834082"
 ---
-# <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-sql) 
+# <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-sql) 
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 返回一个显示操作系统版本信息的行。  
@@ -38,11 +38,11 @@ ms.locfileid: "89550222"
 |**host_distribution** |**nvarchar(256)** |操作系统的说明。 |
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统版本（版本号） 有关值和说明的列表，请参阅 [操作系统版本 (Windows) ](/windows/desktop/SysInfo/operating-system-version)。 <br> 对于 Linux，返回一个空字符串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 操作系统的 Service Pack 级别。 <br> 对于 Linux，返回一个空字符串。 |  
-|**host_sku**|**int**|Windows 单品 (SKU) ID。 有关 SKU Id 和说明的列表，请参阅 [GetProductInfo 函数](https://msdn.microsoft.com/library/ms724358.aspx)。 可以为 Null。 <br> 对于 Linux，返回 NULL。 |  
-|**os_language_version**|**int**|操作系统的 Windows 区域设置标识符 (LCID)。 有关 LCID 值和说明的列表，请参阅 [Microsoft 分配的区域设置 id](https://go.microsoft.com/fwlink/?LinkId=208080)。 不能为 null。|  
+|**host_sku**|**int**|Windows 单品 (SKU) ID。 有关 SKU Id 和说明的列表，请参阅 [GetProductInfo 函数](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo)。 可以为 Null。 <br> 对于 Linux，返回 NULL。 |  
+|**os_language_version**|**int**|操作系统的 Windows 区域设置标识符 (LCID)。 有关 LCID 值和说明的列表，请参阅 [Microsoft 分配的区域设置 id](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。 不能为 null。|  
 
-## <a name="remarks"></a>备注  
-此视图类似于 [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，添加了用于区分 Windows 和 Linux 的列。
+## <a name="remarks"></a>注解  
+此视图类似于 [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，添加了用于区分 Windows 和 Linux 的列。
   
 ## <a name="security"></a>安全性  
   
@@ -54,7 +54,7 @@ ms.locfileid: "89550222"
 
   
 ## <a name="examples"></a>示例  
- 下面的示例返回 **sys.databases dm_os_host_info** 视图中的所有列。  
+ 下面的示例返回 **sys.dm_os_host_info** 视图中的所有列。  
   
 ```  
 SELECT host_platform, host_distribution, host_release, 
@@ -78,5 +78,3 @@ FROM sys.dm_os_host_info;
 ## <a name="see-also"></a>另请参阅  
  [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
- 
-

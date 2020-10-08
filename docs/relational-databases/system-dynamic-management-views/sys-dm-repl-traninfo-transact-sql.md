@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_traninfo (Transact-SQL)
-title: sys. dm_repl_traninfo (Transact-sql) |Microsoft Docs
+title: sys.dm_repl_traninfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6369fc0d1ee2c0b70cb3e6e13fd201fd718236dc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542090"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834570"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89542090"
 |**begin_lsn**|**nvarchar (64) **|事务的开始日志记录的日志序列号 (LSN)。|  
 |**commit_lsn**|**nvarchar (64) **|事务的提交日志记录的 LSN。|  
 |**dbid**|**smallint**|数据库 ID。|  
-|**行**|**int**|事务中复制的命令的 ID。|  
+|**rows**|**int**|事务中复制的命令的 ID。|  
 |**xdesid**|**nvarchar (64) **|事务 ID。|  
 |**artcache_table_address**|**varbinary(8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
 |服务器|**nvarchar (514) **|服务器名称。|  
@@ -63,21 +63,19 @@ ms.locfileid: "89542090"
 |**max_cmds_in_tran**|**int**|日志读取器代理指定的逻辑事务中的最大命令数。|  
 |**begin_time**|**datetime**|事务的开始时间。|  
 |**commit_time**|**datetime**|提交事务的时间。|  
-|**session_id**|**int**|变更数据捕获日志扫描会话的 ID。 此列映射到[dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)中的**session_id**列。|  
-|**session_phase**|**int**|指示出错时会话所处阶段的数字。 此列映射到[dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)中的**phase_number**列。|  
+|**session_id**|**int**|变更数据捕获日志扫描会话的 ID。 此列映射到[sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)中的**session_id**列。|  
+|**session_phase**|**int**|指示出错时会话所处阶段的数字。 此列映射到[sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)中的**phase_number**列。|  
 |**is_known_cdc_tran**|**bit**|指示变更数据捕获所跟踪的事务。<br /><br /> 0 = 事务复制事务。<br /><br /> 1 = 变更数据捕获事务。|  
 |**error_count**|**int**|遇到的错误数。|  
   
 ## <a name="permissions"></a>权限  
  要求对发布数据库或启用了变更数据捕获的数据库拥有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  仅为项目缓存中当前加载的复制数据库对象或启用了变更数据捕获的表返回信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与复制相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [与变更数据捕获相关的动态管理视图 (Transact-SQL)](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [与变更数据捕获相关的动态管理视图 (Transact-SQL)](./system-dynamic-management-views.md)  
   
-  
-

@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_resource_waits (Transact-sql) '
-title: sys. dm_pdw_resource_waits (Transact-sql) |Microsoft Docs
+description: 'sys.dm_pdw_resource_waits (Transact-sql) '
+title: sys.dm_pdw_resource_waits (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/26/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf3b21433a4eb19be526487e9df03a8df7bce276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8ab07f9c8b990b7d002de070ece8717fb90b97a
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474673"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834112"
 ---
-# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-sql) 
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   显示中所有资源类型的等待信息 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
@@ -28,9 +28,9 @@ ms.locfileid: "88474673"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|请求在等待列表中的位置。|从0开始的序号。 所有等待条目都不是唯一的。|  
-|session_id|**nvarchar(32)**|发生等待状态的会话的 ID。|请参阅 dm_pdw_exec_sessions sys.databases 中的 session_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
-|type|**nvarchar(255)**|此项表示的等待类型。|可能的值：<br /><br /> 连接<br /><br /> 并发查询并发<br /><br /> 分布式查询并发<br /><br /> DMS 并发<br /><br /> 备份并发|  
-|object_type|**nvarchar(255)**|受等待影响的对象的类型。|可能的值：<br /><br /> **对象**<br /><br /> **数据**<br /><br /> **主板**<br /><br /> **模式**<br /><br /> **程序**|  
+|session_id|**nvarchar(32)**|发生等待状态的会话的 ID。|请参阅 [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
+|类型|**nvarchar(255)**|此项表示的等待类型。|可能的值：<br /><br /> 连接<br /><br /> 并发查询并发<br /><br /> 分布式查询并发<br /><br /> DMS 并发<br /><br /> 备份并发|  
+|object_type|**nvarchar(255)**|受等待影响的对象的类型。|可能的值：<br /><br /> **对象**<br /><br /> **数据**<br /><br /> **主板**<br /><br /> **SCHEMA**<br /><br /> **程序**|  
 |object_name|**nvarchar (386) **|受等待影响的指定对象的名称或 GUID。|表和视图显示有由三部分组成的名称。<br /><br /> 索引和统计信息显示为由四部分组成的名称。<br /><br /> "名称"、"主体" 和 "数据库" 是字符串名称。|  
 |request_id|**nvarchar(32)**|发生等待状态的请求的 ID。|请求的 QID 标识符。<br /><br /> 加载请求的 GUID 标识符。|  
 |request_time|**datetime**|请求锁或资源的时间。||  
@@ -41,7 +41,7 @@ ms.locfileid: "88474673"
 |resource_class|**nvarchar (20) **|内部 |请参阅下面的[监视资源等待](#monitor-resource-waits)|  
   
 ## <a name="monitor-resource-waits"></a>监视资源等待 
-引入 [工作负荷组](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)后，并发槽将不再适用。  使用以下查询和 `resources_requested` 列了解执行请求所需的资源。
+引入 [工作负荷组](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)后，并发槽将不再适用。  使用以下查询和 `resources_requested` 列了解执行请求所需的资源。
 
 ```sql
 select rw.wait_id
@@ -62,5 +62,4 @@ select rw.wait_id
 
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-  
   

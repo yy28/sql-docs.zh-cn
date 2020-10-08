@@ -21,19 +21,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f06228aaec7abb9d9eb7de6237be696319cd661f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550318"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834276"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   为当前参与异地复制连续复制关系 (V11) 的每个用户数据库返回一行。 如果对给定主数据库发起多个连续复制关系，则每个活动辅助数据库在此表中都占有一行。  
   
-如果你使用的是 SQL 数据库 V12，则应使用 [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (，因为 *dm_continuous_copy_status* 仅适用于 V11) 。
+如果你使用的是 SQL 数据库 V12，则应使用 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (，因为 *sys.dm_continuous_copy_status* 仅适用于 V11) 。
 
   
 |列名|数据类型|说明|  
@@ -52,15 +52,14 @@ ms.locfileid: "89550318"
 ## <a name="permissions"></a>权限  
  若要检索数据，需要 **db_owner** 数据库角色的成员身份。 Dbo 用户、 **dbmanager** 数据库角色的成员以及 sa 登录名也可以查询此视图。  
   
-## <a name="remarks"></a>备注  
- **Sys. dm_continuous_copy_status**视图在**资源**数据库中创建，并在所有数据库（包括逻辑 master）中可见。 但是，在主数据库中查询此视图将返回空集合。  
+## <a name="remarks"></a>注解  
+ **Sys.dm_continuous_copy_status**视图在**资源**数据库中创建，并在所有数据库（包括逻辑 master）中可见。 但是，在主数据库中查询此视图将返回空集合。  
   
- 如果在数据库中终止了连续复制关系，则 **sys.databases dm_continuous_copy_status** 视图中该数据库的行将会消失。  
+ 如果在数据库中终止了连续复制关系，则 **sys.dm_continuous_copy_status** 视图中该数据库的行将会消失。  
   
- 与 **sys. dm_database_copies** 视图一样， **dm_continuous_copy_status sys.databases** 可以反映连续复制关系的状态，其中，数据库是主数据库或活动辅助数据库。 与 **sys. dm_database_copies**不同， **sys.databases dm_continuous_copy_status** 包含多个列，这些列提供有关操作和性能的详细信息。 这些列包括 **last_replication**和 **replication_lag_sec**。  
+ 与 " **sys.dm_database_copies** " 视图一样， **sys.dm_continuous_copy_status** 反映连续复制关系的状态，其中该数据库是主数据库或活动辅助数据库。 与 **sys.dm_database_copies**不同， **sys.dm_continuous_copy_status** 包含多个列，这些列提供有关操作和性能的详细信息。 这些列包括 **last_replication**和 **replication_lag_sec**。  
   
 ## <a name="see-also"></a>另请参阅  
- [dm_database_copies &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [活动异地复制存储过程 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
-  
+ [Azure SQL Database &#40;sys.dm_database_copies&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [活动异地复制存储过程 &#40;Transact-sql&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

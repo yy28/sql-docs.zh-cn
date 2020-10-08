@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_compute_nodes (Transact-SQL)
-title: sys. dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f92655d1b489ddaf35ec8085d68a2059781ecb48
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 85a63b9df2e4d1bbb7a0f4c9096ae8ff192315eb
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542144"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834158"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 
@@ -46,8 +46,7 @@ ms.locfileid: "89542144"
 |address|**nvarchar(32)**|此节点的 IP 地址。|IP 地址范围|  
   
 ## <a name="see-also"></a>另请参阅  
- [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [通过动态管理视图进行 PolyBase 故障排除](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

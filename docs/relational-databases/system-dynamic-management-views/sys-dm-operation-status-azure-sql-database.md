@@ -1,6 +1,6 @@
 ---
 description: sys.dm_operation_status
-title: sys. dm_operation_status |Microsoft Docs
+title: sys.dm_operation_status |Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 201d7b1c0a15299817edfc663a0176f98ad72156
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531768"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834156"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -46,7 +46,7 @@ ms.locfileid: "89531768"
 |percent_complete|**int**|操作已完成的百分比。 值不是连续的，且下面列出了有效值。 Not NULL。<br/><br/>0 = 操作未启动<br/>50 = 正在进行的操作<br/>100 = 操作完成|  
 |error_code|**int**|指示在操作失败过程中发生的错误的代码。 如果值为 0，则指示操作已成功完成。|  
 |error_desc|**nvarchar(2048)**|在操作失败过程中发生的错误的说明。|  
-|error_severity|**int**|在操作失败过程中发生的错误的严重性级别。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](https://go.microsoft.com/fwlink/?LinkId=251052)。|  
+|error_severity|**int**|在操作失败过程中发生的错误的严重性级别。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](../errors-events/database-engine-error-severities.md)。|  
 |error_state|**int**|留待将来使用。 不保证以后的兼容性。|  
 |start_time|**datetime**|开始操作的时间戳。|  
 |last_modify_time|**datetime**|上次修改长时间运行的操作的记录的时间戳。 在成功完成操作的情况下，此字段显示操作完成的时间戳。|  
@@ -54,7 +54,7 @@ ms.locfileid: "89531768"
 ## <a name="permissions"></a>权限  
  此视图仅在 **master** 数据库中适用于服务器级主体登录名。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要使用此视图，您必须连接到 **master** 数据库。 使用 `sys.dm_operation_status` 服务器的 **master** 数据库中的视图 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 跟踪对执行的以下操作的状态 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ：  
   
 -   创建数据库  
@@ -75,9 +75,9 @@ ms.locfileid: "89531768"
   
 -   删除数据库  
 
-此视图中的信息保留大约1小时。 请使用 " [Azure 活动日志](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) " 查看最近90天内的操作的详细信息。 对于超过90天的保留期，请考虑将 [活动日志条目发送](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 到 Log Analytics 工作区。
+此视图中的信息保留大约1小时。 请使用 " [Azure 活动日志](/azure/azure-monitor/platform/activity-log) " 查看最近90天内的操作的详细信息。 对于超过90天的保留期，请考虑将 [活动日志条目发送](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 到 Log Analytics 工作区。
 
-## <a name="example"></a>示例  
+## <a name="example"></a>示例：  
  显示与数据库 "mydb" 关联的最近异地复制操作。  
   
 ```  
@@ -88,8 +88,7 @@ SELECT * FROM sys.dm_operation_status
   
 ## <a name="see-also"></a>另请参阅  
  [异地复制动态管理视图和函数 &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [dm_geo_replication_link_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [geo_replication_links &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)  
-  
+ [Azure SQL Database &#40;sys.dm_geo_replication_link_status&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [Azure SQL Database &#40;sys.geo_replication_links&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-transact-sql.md)  
   

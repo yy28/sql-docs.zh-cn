@@ -1,6 +1,6 @@
 ---
-description: 查询通知-sys. dm_qn_subscriptions
-title: sys. dm_qn_subscriptions (Transact-sql) |Microsoft Docs
+description: 查询通知-sys.dm_qn_subscriptions
+title: sys.dm_qn_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542364"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834472"
 ---
-# <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys. dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关服务器中的活动查询通知订阅的信息。 可以使用此视图检查服务器或指定数据库中的活动订阅，或者检查指定服务器主体。  
@@ -43,12 +43,12 @@ ms.locfileid: "89542364"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|开|类型|  
+|源|目标|开|类型|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|database_id|多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|object_id|多对一|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  状态代码为 0 指示未确定的状态。  
   
  下面的状态代码指示由于更改而激发了订阅：  
@@ -133,7 +133,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与查询通知相关的动态管理视图 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [与查询通知相关的动态管理视图 &#40;Transact-sql&#41;](./system-dynamic-management-views.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
-  
   

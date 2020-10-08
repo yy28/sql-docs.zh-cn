@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) '
-title: sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
+description: 'sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) '
+title: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481783"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834318"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) 
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) 
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -104,7 +104,7 @@ ms.locfileid: "88481783"
 
 此视图需要 VIEW SERVER STATE 权限。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 用户可以使用此动态管理视图来监视用户工作负荷池的近乎实时的资源消耗以及 Azure SQL 数据库实例的系统内部池。
 
@@ -119,7 +119,7 @@ ms.locfileid: "88481783"
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-下面的示例返回与 sys. elastic_pool_resource_stats 类似的信息，而无需连接到逻辑主节点
+下面的示例返回 sys.elastic_pool_resource_stats 的类似信息，而无需连接到逻辑主节点
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -135,6 +135,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>另请参阅
 
-- [翻译日志率治理](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [弹性池 DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [弹性池 vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [翻译日志率治理](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [弹性池 DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [弹性池 vCore 资源限制](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

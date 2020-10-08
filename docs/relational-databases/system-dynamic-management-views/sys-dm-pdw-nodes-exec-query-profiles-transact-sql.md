@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_nodes_exec_query_profiles （Transact-sql） |Microsoft Docs
+title: sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) |Microsoft Docs
 description: 动态管理视图，可用于在执行查询时监视实时数据仓库查询进度。
 ms.custom: ''
 ms.date: 10/14/2019
@@ -13,14 +13,14 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cd4f8ad0ae52876015df815089733f49a37d2f35
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394342"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834328"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles （Transact-sql）
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 在执行查询时监视实时数据仓库查询进度。   
@@ -34,7 +34,7 @@ ms.locfileid: "87394342"
 |session_id|**smallint**|标识运行此查询的会话。 引用 dm_exec_sessions.session_id。|  
 |request_id|**int**|确定目标请求。 引用 dm_exec_sessions.request_id。|  
 |sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 引用 dm_exec_query_stats.sql_handle。|  
-|plan_handle|**varbinary(64)**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 引用 dm_exec_query_stats plan_handle。|  
+|plan_handle|**varbinary(64)**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 引用 dm_exec_query_stats. plan_handle。|  
 |physical_operator_name|**nvarchar(256)**|物理运算符名称。|  
 |node_id|**int**|标识查询树中的运算符节点。|  
 |thread_id|**int**|区分属于同一个查询运算符节点的线程（针对并行查询）。|  
@@ -50,8 +50,8 @@ ms.locfileid: "87394342"
 |first_row_time|**bigint**|打开第一行时的时间戳（毫秒）。|  
 |last_row_time|**bigint**|打开最后一行时的时间戳（毫秒）。|  
 |close_time|**bigint**|关闭时的时间戳（毫秒）。|  
-|elapsed_time_ms|**bigint**|到目前为止，目标节点的操作所用的总运行时间（毫秒）。|  
-|cpu_time_ms|**bigint**|到目前为止，目标节点的操作使用的总 CPU 时间（毫秒）。|  
+|elapsed_time_ms|**bigint**|到目前为止，目标节点的操作所用的总运行时间 (（以毫秒为单位）) 。|  
+|cpu_time_ms|**bigint**|到目前为止，目标节点的操作使用的总 CPU 时间 (（以毫秒为单位）) 。|  
 |database_id|**smallint**|包含要对其进行读写的对象的数据库的 ID。|  
 |object_id|**int**|要对其进行读写的对象的标识符。 引用 sys.objects.object_id。|  
 |index_id|**int**|打开其行级的索引（如果有）。|  
@@ -68,15 +68,15 @@ ms.locfileid: "87394342"
 |actual_read_row_count|**bigint**|应用驻留谓词之前由运算符读取的行数。| 
 |estimated_read_row_count|**bigint**|**适用于：** 从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 开始。 <br/>在应用残留谓词之前估计要由运算符读取的行数。|  
   
-## <a name="remarks"></a>备注  
-[Dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)应用相同的备注。  
+## <a name="remarks"></a>注解  
+[Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15)适用的相同备注。  
 
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
  ## <a name="next-steps"></a>后续步骤
- 有关更多开发技巧，请参阅 [SQL 数据仓库开发概述](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。
+ 有关更多开发技巧，请参阅 [SQL 数据仓库开发概述](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。
