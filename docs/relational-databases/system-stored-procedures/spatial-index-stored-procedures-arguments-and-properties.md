@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a56a267fb7f10da12f0679c74f26b72a205fbf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541459"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809723"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程-参数和属性
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -301,7 +301,7 @@ ms.locfileid: "89541459"
 ## <a name="permissions"></a>权限  
  用户必须是 **公共** 角色的成员。 需要服务器和对象的 READ ACCESS 权限。 这适用于所有空间索引存储过程。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  包含 NULL 值的属性未包含在返回集中。  
   
 ## <a name="examples"></a>示例  
@@ -318,10 +318,9 @@ ms.locfileid: "89541459"
 ## <a name="requirements"></a>要求  
   
 ## <a name="see-also"></a>另请参阅  
- [空间索引存储过程 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [空间索引存储过程 &#40;Transact-sql&#41;]()   
  [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基础知识](../../xquery/xquery-basics.md)   
  [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

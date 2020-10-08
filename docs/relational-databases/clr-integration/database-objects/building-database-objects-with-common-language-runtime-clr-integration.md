@@ -1,6 +1,6 @@
 ---
-title: 公共语言运行时（CLR）生成数据库对象
-description: 使用与 .NET Framework 公共语言运行时（CLR）的 SQL Server 集成来生成数据库对象。
+title: 公共语言运行时 (CLR) 生成数据库对象
+description: 使用与 CLR) .NET Framework 公共语言运行 (时的集成 SQL Server 生成数据库对象。
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a891da3459e82bbb8c218fd68693840f141da93f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885910"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810824"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85885910"
  [.NET Framework 中的 SQL Server 数据类型](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型及其 .NET Framework 等效项的概览。  
   
- [CLR 集成自定义属性的概览](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [CLR 集成自定义属性的概览](./clr-integration-custom-attributes-for-clr-routines.md)  
  提供有关 CLR 集成自定义属性的信息。  
   
  [CLR 用户定义函数](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
@@ -66,13 +66,12 @@ ms.locfileid: "85885910"
  [CLR 用户定义类型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  说明如何实现和使用 CLR 用户定义类型。  
   
- [CLR 存储过程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [CLR 存储过程](/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
  说明如何实现和使用 CLR 存储过程。  
   
- [CLR 触发器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [CLR 触发器](/dotnet/framework/data/adonet/sql/clr-triggers)  
  说明如何实现和使用 CLR 触发器。  
   
 ## <a name="see-also"></a>另请参阅  
  [公共语言运行时 &#40;CLR&#41; 集成概述](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
-  
   

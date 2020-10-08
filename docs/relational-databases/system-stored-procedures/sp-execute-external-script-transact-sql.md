@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447181"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810183"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 外部脚本使用的输入参数的值列表。  
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 > [!IMPORTANT]
 > 查询树由 SQL 机器学习控制，用户无法对查询执行任意操作。
@@ -165,14 +165,14 @@ sp_execute_external_script
 
 ### <a name="monitor-script-execution"></a>监视脚本执行
 
-使用 [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [dm_external_script_execution_stats sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)监视脚本执行。
+使用 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)监视脚本执行。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>分区建模的参数
 
 您可以设置两个附加参数，这些参数对分区数据启用建模，其中分区基于您提供的一个或多个列，这些列将数据集中的一个或多个列自然分段到仅在脚本执行过程中创建和使用的逻辑分区。 包含年龄、性别、地理区域、日期或时间的重复值的列是几个可用于分区数据集的示例。
 
-这两个参数 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns**中，第二个参数用于对结果集进行排序。 参数作为输入传递给， `sp_execute_external_script` 并为每个分区执行一次外部脚本。 有关详细信息和示例，请参阅 [教程：创建基于分区的模型](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition)。
+这两个参数 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns**中，第二个参数用于对结果集进行排序。 参数作为输入传递给， `sp_execute_external_script` 并为每个分区执行一次外部脚本。 有关详细信息和示例，请参阅 [教程：创建基于分区的模型](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)。
 
 可以通过指定并行执行脚本 `@parallel=1` 。 如果输入查询可并行化，则应将参数设置为 `@parallel=1` 的一部分 `sp_execute_external_script` 。 默认情况下，查询优化器在超过 `@parallel=1` 256 行的表下运行，但如果想要显式处理此操作，则此脚本会将参数作为演示。
 
@@ -322,7 +322,7 @@ GO
 
 要进行评分，还可以使用本机 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [SQL 机器学习](../../machine-learning/index.yml)
 + [SQL Server 语言扩展](../../language-extensions/language-extensions-overview.md)。 
@@ -334,4 +334,4 @@ GO
 + [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server，外部脚本对象](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

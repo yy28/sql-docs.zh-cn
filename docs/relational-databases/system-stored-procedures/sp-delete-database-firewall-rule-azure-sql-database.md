@@ -19,12 +19,12 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 191ad1687b5be623616821dbde338495304d70a6
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: f4a3a7a16ed2f222a7d179cbae17b6bdfb2982f5
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379747"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810319"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -46,7 +46,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 ## <a name="permissions"></a>权限  
  只有由设置过程创建的服务器级别主体登录名或分配为管理员的 Azure Active Directory 主体才能删除数据库级防火墙规则。  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>示例：  
  下面的示例删除名为的数据库级防火墙设置 `Example DB Setting 1` 。
   
 ```  
@@ -56,12 +56,9 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Azure SQL Database 防火墙](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [如何： (Azure SQL 数据库配置防火墙设置) ](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Azure SQL Database 防火墙](/azure/azure-sql/database/firewall-configure)   
+ [如何： (Azure SQL 数据库配置防火墙设置) ](/azure/azure-sql/database/firewall-configure)   
  [Azure SQL Database &#40;sp_set_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [Azure SQL Database &#40;sp_set_database_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
- [database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [Azure SQL Database &#40;sys.database_firewall_rules&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
-  
-
-

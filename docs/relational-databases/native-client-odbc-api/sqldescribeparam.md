@@ -15,12 +15,12 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ea15c94c0fa4231be4d34c486c4aaf139f083fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20463fcf61f5d9842f4e5a84814970c57d4712f3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428299"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809265"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428299"
   
  从 "允许 SQLDescribeParam" 开始，数据库引擎中的改进 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可获取预期结果的更准确说明。 更准确的结果可能与早期版本的 SQLDescribeParam 返回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关详细信息，请参阅[元数据发现](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
- 此外 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ， *ParameterSizePtr* 现在还返回一个值，该值与 [ODBC 规范](https://go.microsoft.com/fwlink/?LinkId=207044)中定义的相应参数标记的列或表达式的大小的定义一致。 在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr* 可以是类型的 **SQL_DESC_OCTET_LENGTH** 的相应值，也可以是为某一类型提供给 SQLBindParameter 的不相关的列大小值，应忽略该值 (**SQL_INTEGER**，例如) 。  
+ 此外 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ， *ParameterSizePtr* 现在还返回一个值，该值与 [ODBC 规范](../../odbc/reference/appendixes/column-size.md)中定义的相应参数标记的列或表达式的大小的定义一致。 在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr* 可以是类型的 **SQL_DESC_OCTET_LENGTH** 的相应值，也可以是为某一类型提供给 SQLBindParameter 的不相关的列大小值，应忽略该值 (**SQL_INTEGER**，例如) 。  
   
  在以下情况下，驱动程序不支持调用 SQLDescribeParam：  
   
@@ -76,7 +76,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>SQLDescribeParam 对日期和时间增强功能的支持  
  日期/时间类型返回以下值：  
   
-| Attribute | *DataTypePtr* | *ParameterSizePtr* | *DecimalDigitsPtr* |  
+| 属性 | *DataTypePtr* | *ParameterSizePtr* | *DecimalDigitsPtr* |  
 | --------- | ------------- | ------------------ | ------------------ |  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
@@ -91,7 +91,6 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  **SQLDescribeParam** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLDescribeParam 函数](https://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam 函数](../../odbc/reference/syntax/sqldescribeparam-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

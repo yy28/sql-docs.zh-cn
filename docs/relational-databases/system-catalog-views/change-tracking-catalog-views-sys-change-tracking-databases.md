@@ -1,6 +1,6 @@
 ---
-description: 更改跟踪目录视图-sys. change_tracking_databases
-title: sys. change_tracking_databases (Transact-sql) |Microsoft Docs
+description: 更改跟踪目录视图-sys.change_tracking_databases
+title: sys.change_tracking_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 653588e0fca8593305e70634029a54832264e8b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 05421e215b41fcf0f1be93b189873c3f0d2aa51c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545139"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810363"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>更改跟踪目录视图-sys. change_tracking_databases
+# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>更改跟踪目录视图-sys.change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   为每个启用更改跟踪的数据库返回一行。  
@@ -46,7 +46,6 @@ ms.locfileid: "89545139"
  对 sys.change_tracking_databases 进行的权限检查与对 sys.databases 所做的权限检查相同。 如果 sys.change_tracking_databases 的调用方不是数据库的所有者，查看相应行所需的最低权限为 ALTER ANY DATABASE 或 VIEW ANY DATABASE 服务器级权限，或者是 master 数据库或当前数据库中的 CREATE DATABASE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [更改跟踪目录视图 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [更改跟踪目录视图 &#40;Transact-sql&#41;](./catalog-views-transact-sql.md)   
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

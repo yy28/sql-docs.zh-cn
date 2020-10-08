@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543433"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810243"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]对单个远程 AZURE SQL 数据库或在水平分区方案中用作分片的一组数据库执行语句。  
   
- 存储过程是弹性查询功能的一部分。  请参阅 [AZURE SQL 数据库弹性数据库查询概述](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) 和 [适用于分片的弹性数据库查询 (水平分区) ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)。  
+ 存储过程是弹性查询功能的一部分。  请参阅 [AZURE SQL 数据库弹性数据库查询概述](/azure/azure-sql/database/elastic-query-overview) 和 [适用于分片的弹性数据库查询 (水平分区) ](/azure/azure-sql/database/elastic-query-horizontal-partitioning)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +73,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>权限  
  需要 `ALTER ANY EXTERNAL DATA SOURCE` 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  `sp_execute_remote` 必须按照上述语法部分中所述，按特定顺序输入参数。 如果这些参数的输入顺序不正确，则会显示一条错误消息。  
   
  `sp_execute_remote` 与执行的行为相同， [&#40;transact-sql&#41;](../../t-sql/language-elements/execute-transact-sql.md) 与批处理和名称的范围有关。 在执行 sp_execute_remote 语句之前，不会编译 sp_execute_remote * \@ stmt*参数中的 transact-sql 语句或批处理。  
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

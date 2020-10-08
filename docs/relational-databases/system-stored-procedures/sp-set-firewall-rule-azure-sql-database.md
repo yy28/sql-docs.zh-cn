@@ -20,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 372aad3acb06910c3c905a12486a6ece4adbd6ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed1df2288067d30f9443736b914b7560c0c6a784
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493040"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810469"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -45,13 +45,13 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>参数  
  下表说明了中支持的参数和选项 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
-|名称|数据类型|描述|  
+|名称|Datatype|说明|  
 |----------|--------------|-----------------|  
 |[ @name =] "name"|**NVARCHAR (128) **|用来描述和区分服务器级防火墙设置的名称。|  
 |[ @start_ip_address =] "start_ip_address"|**VARCHAR (50) **|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
 |[ @end_ip_address =] "end_ip_address"|**VARCHAR (50) **|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和 *start_ip_address* 字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  服务器级防火墙设置的名称必须是唯一的。 如果为存储过程提供的设置的名称在防火墙设置表中已经存在，则将更新开始和结束 IP 地址。 否则，将创建新的服务器级防火墙设置。  
   
  若添加的服务器级防火墙设置的起始和结束 IP 地址均为 `0.0.0.0`，此时支持从 Azure 访问你的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 为 *name* 参数提供一个值，该值有助于记住服务器级防火墙设置的用途。  
@@ -82,6 +82,6 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Azure SQL Database 防火墙](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [如何： (Azure SQL 数据库配置防火墙设置) ](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)
+ [Azure SQL Database 防火墙](/azure/azure-sql/database/firewall-configure)   
+ [如何： (Azure SQL 数据库配置防火墙设置) ](/azure/azure-sql/database/firewall-configure)   
+ [Azure SQL Database &#40;sys.firewall_rules&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_spinlock_stats (Transact-SQL)
-title: sys. dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042748"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810103"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -51,11 +51,11 @@ ms.locfileid: "90042748"
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。    
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  
- sys. dm_os_spinlock_stats 可用于标识旋转锁争用的源。 在某些情况下，您可能能够解决或减少旋转锁的争用情况。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
+ sys.dm_os_spinlock_stats 可用于标识旋转锁争用源。 在某些情况下，您可能能够解决或减少旋转锁的争用情况。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
   
- 你可以使用重置 dm_os_spinlock_stats sys.databases 的内容，如下所示 `DBCC SQLPERF` ：  
+ 您可以使用重置 sys.dm_os_spinlock_stats 的内容， `DBCC SQLPERF` 如下所示：  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -413,6 +413,7 @@ GO
 
  [何时旋转锁 SQL Server 中 CPU 使用率的重要驱动程序？](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [诊断和解决 SQL Server 上的旋转锁争用](../diagnose-resolve-spinlock-contention.md)
   
   
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536669"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810158"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89536669"
   
 ||  
 |-|  
-|**适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通过 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)) SQL Server (。|  
+|**适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通过 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)) SQL Server (。|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>返回代码值  
  当使用 RPC 时，如果已定位的删除或更新操作的缓冲区数为0，则将返回 (失败的 *行计数* 为0的已完成消息) 或 1 (获取缓冲区中每一行的成功) 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="optype-parameter"></a>optype 参数  
  除了 SETPOSITION 和 UPDATE、DELETE、REFRESH 或 LOCK 的组合以外，对于 UPDATE 或 DELETE， *optype* 值是相互排斥的。  
@@ -178,5 +178,4 @@ sp_cursor  cursor, optype, rownum, table
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9a0f2326951609a22dfe5647f8eceb7af28c581
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6d8ea39fd9ccc48f96c838367d5f859226098d1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547983"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809833"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,14 +67,13 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_helpmergeconflictrows** 用于合并复制。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员、 **db_owner** 固定数据库角色的成员和分发数据库中的 **replmonitor** 角色才能执行 **sp_helpmergeconflictrows**。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看 &#40;复制 Transact-sql 编程的合并发布的冲突信息&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [查看 &#40;复制 Transact-sql 编程的合并发布的冲突信息&#41;](../replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
-  
   

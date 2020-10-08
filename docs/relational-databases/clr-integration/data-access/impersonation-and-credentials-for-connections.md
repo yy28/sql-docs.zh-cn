@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0561c224a8569c2db13ab71e18d24b4a53282656
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a6487b61d9c21ee86acad28413fb8a0439731b33
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896355"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810823"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>模拟和连接凭据
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "85896355"
   
  默认情况下，连出至 Windows 的 SQL Server 进程会获得 SQL Server Windows 服务帐户的安全上下文。 但可以将 CLR 函数映射到代理标识上，以便其出站连接具有的安全上下文不同于 Windows 服务帐户的安全上下文。  
   
- 在某些情况下，你可能想要使用**SqlContext WindowsIdentity**属性模拟调用方，而不是作为服务帐户运行。 **WindowsIdentity**实例表示调用调用代码的客户端的标识，仅当客户端使用 Windows 身份验证时才可用。 获取**WindowsIdentity**实例后，可以调用**模拟**来更改该线程的安全令牌，然后代表客户端打开 ADO.NET 连接。  
+ 在某些情况下，你可能想要使用 **SqlContext WindowsIdentity** 属性模拟调用方，而不是作为服务帐户运行。 **WindowsIdentity**实例表示调用调用代码的客户端的标识，仅当客户端使用 Windows 身份验证时才可用。 获取 **WindowsIdentity** 实例后，可以调用 **模拟** 来更改该线程的安全令牌，然后代表客户端打开 ADO.NET 连接。  
   
  调用 SQLContext 后，无法访问本地数据并且无法访问系统数据。 若要再次访问数据，必须调用 WindowsImpersonationContext。  
   
- 下面的示例演示如何使用**SqlContext. WindowsIdentity**属性模拟调用方。  
+ 下面的示例演示如何使用 **SqlContext. WindowsIdentity** 属性模拟调用方。  
   
  Visual C#  
   
@@ -72,11 +72,10 @@ catch
 ```  
   
 > [!NOTE]  
->  有关模拟中行为更改的信息，请参阅[SQL Server 2016 中数据库引擎功能的重大更改](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  有关模拟中行为更改的信息，请参阅 [SQL Server 2016 中数据库引擎功能的重大更改](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
- 另外，如果获得了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 标识实例，则默认情况下不能将该实例传播到其他计算机；默认情况下 Windows 安全基础结构会限制这种传播。 然而，存在一种称为“委托”的机制，通过该机制可在多个可信任的计算机之间启用 Windows 标识传播。 你可以在 TechNet 文章 "[Kerberos 协议转换和约束委派](https://go.microsoft.com/fwlink/?LinkId=50419)" 中了解有关委派的详细信息。  
+ 另外，如果获得了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 标识实例，则默认情况下不能将该实例传播到其他计算机；默认情况下 Windows 安全基础结构会限制这种传播。 然而，存在一种称为“委托”的机制，通过该机制可在多个可信任的计算机之间启用 Windows 标识传播。 你可以在 TechNet 文章 "[Kerberos 协议转换和约束委派](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))" 中了解有关委派的详细信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [SqlContext 对象](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
-  
   

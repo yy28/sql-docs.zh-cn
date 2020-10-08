@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: sys. server_principals (Transact-sql) |Microsoft Docs
+title: sys.server_principals (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377293"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809333"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,8 +37,9 @@ ms.locfileid: "88377293"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|主体的名称。 在服务器中是唯一的。|  
 |principal_id|**int**|主体的 ID 号。 在服务器中是唯一的。|  
-|**sid**|**varbinary (85) **|主体的 SID（安全标识符）。 如果是 Windows 主体，则它与 Windows SID 匹配。|  
-|type|**char (1) **|主体类型：<br /><br /> S = SQL 登录名<br /><br /> U = Windows 登录名<br /><br /> G = Windows 组<br /><br /> R = 服务器角色<br /><br /> C = 映射到证书的登录名<br /><br /> K = 映射到非对称密钥的登录名|  
+|**sid**|**varbinary(85)**|主体的 SID（安全标识符）。 如果是 Windows 主体，则它与 Windows SID 匹配。|  
+|**type**|**char(1)**|主体类型：<br /><br /> S = SQL 登录名<br /><br /> U = Windows 登录名<br /><br /> G = Windows 组<br /><br /> R = 服务器角色<br /><br /> C = 映射到证书的登录名<br /><br /> E = 来自 Azure Active Directory 的外部登录<br /><br /> X = Azure Active Directory 组或应用程序中的外部组
+<br /><br /> K = 映射到非对称密钥的登录名|  
 |**type_desc**|**nvarchar(60)**|主体类型的说明：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 禁用登录名。|  
 |create_date|**datetime**|主体的创建时间。|  
@@ -58,7 +59,7 @@ ms.locfileid: "88377293"
  以下查询将列出明确对服务器主体授予或拒绝的权限。  
   
 > [!IMPORTANT]  
->  固定服务器角色 (非公共) 的权限不会出现在 sys. server_permissions 中。 因此，服务器主体可能具有此处未列出的其他权限。  
+>  固定服务器角色)  (以外的权限不会出现在 sys.server_permissions 中。 因此，服务器主体可能具有此处未列出的其他权限。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

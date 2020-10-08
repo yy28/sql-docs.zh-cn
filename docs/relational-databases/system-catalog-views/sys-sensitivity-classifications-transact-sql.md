@@ -1,6 +1,6 @@
 ---
 description: sys.sensitivity_classifications (Transact-SQL)
-title: sys. sensitivity_classifications (Transact-sql) |Microsoft Docs
+title: sys.sensitivity_classifications (Transact-sql) |Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475293"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809343"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "88475293"
 |-----------------|---------------|-----------------|  
 |**class**|**int**|标识存在分类的项的类。 将始终具有值 1 (表示列) |  
 |**class_desc**|**varchar (16) **|存在分类的项的类的说明。 始终具有值 *OBJECT_OR_COLUMN*|  
-|**major_id**|**int**|表示包含已分类列的表的 ID，该 ID 与 all_objects 相对应。 object_id|  
-|**minor_id**|**int**|表示存在分类的列的 ID，与 sys. all_columns 相对应 column_id|   
+|**major_id**|**int**|表示包含已分类列的表的 ID，与 sys. _objects. object_id 相对应。|  
+|**minor_id**|**int**|表示存在分类的列的 ID，与 sys. _columns. column_id 相对应。|   
 |**label**|**sysname**|为敏感度分类分配的用户可读)  (标签|  
 |**label_id**|**sysname**|与标签关联的 ID，可由信息保护系统（如 Azure 信息保护 (AIP）使用) |  
 |**information_type**|**sysname**|为敏感度分类分配了用户可读)  (信息类型|  
@@ -50,7 +50,7 @@ ms.locfileid: "88475293"
 |**rank_desc**|**sysname**|排名的文本表示形式：  <br><br>无、低、中、高、严重|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 
 - 此视图提供数据库的分类状态的可见性。 它可用于管理数据库分类以及生成报告。
 - 目前仅支持对数据库列进行分类。
@@ -87,4 +87,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[SQL 信息保护入门](https://aka.ms/sqlip)
+[SQL 信息保护入门](/azure/azure-sql/database/data-discovery-and-classification-overview)

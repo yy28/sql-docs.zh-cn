@@ -15,12 +15,12 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b321928d3e898edfcbae041391a85152d69e058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21e32d4e0091738c95ed995318e4a1904c81d127
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665980"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809288"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 编程概念
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85665980"
  [运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  介绍从所提供的 SQLXML 示例创建工作示例的要求。  
   
- [&#40;SQLXML 4.0&#41;的客户端和服务器端格式设置](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的客户端和服务器端格式设置 ](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  提供有关客户端和服务器端格式设置的信息以及二者的比较，包括用于构造 XML 文档的 FOR XML 命令。  
   
  [SQLXML 4.0 中的带批注的 XSD 架构](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -63,10 +63,10 @@ ms.locfileid: "85665980"
  [SQLXML 4.0 数据访问组件](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  提供 SQLXMLOLEDB 访问接口的说明，并提供指向其他 SQLXML 4.0 数据访问组件的链接。  
   
- [SQLXML 4.0 .NET Framework 支持](https://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [SQLXML 4.0 .NET Framework 支持](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  介绍 SQLXML 4.0 对 .NET Framework 的支持。  
   
- [&#40;SQLXML 4.0&#41;缓存模板、XSL 和架构](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;缓存模板、XSL 和架构 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  介绍在 SQLXML 中提供的用于提高性能的缓存功能。  
   
  [SQLXML 4.0 安全注意事项](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
@@ -77,5 +77,4 @@ ms.locfileid: "85665980"
   
 ## <a name="see-also"></a>另请参阅  
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
-  
   

@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: fd7e49443d6166b8a7da809b0b2e96fd2ddb927f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670055"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810747"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  哈希索引类型接受完全匹配或范围搜索，但模式匹配搜索不使用该索引。  
   
- **sp_statistics** 等效于 ODBC 中的 **SQLStatistics** 。 返回的结果按 **NON_UNIQUE**、 **类型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**和 **SEQ_IN_INDEX**进行排序。 有关详细信息，请参阅 [ODBC API 参考](https://go.microsoft.com/fwlink/?LinkId=68323)。  
+ **sp_statistics** 等效于 ODBC 中的 **SQLStatistics** 。 返回的结果按 **NON_UNIQUE**、 **类型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**和 **SEQ_IN_INDEX**进行排序。 有关详细信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-reference.md)。  
   
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
@@ -113,5 +113,3 @@ EXEC sp_statistics DimEmployee;
  [&#40;Transact-sql&#41;的目录存储过程 ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-

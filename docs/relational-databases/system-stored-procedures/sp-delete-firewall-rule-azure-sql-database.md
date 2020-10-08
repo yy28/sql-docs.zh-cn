@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f1af7d5fa3395be32840266656ffc4fccd3d3414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b88db4894b7d24599ccade131fdf2de7fd82d9b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474361"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810302"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule（Azure SQL 数据库）
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -52,7 +52,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="permissions"></a>权限  
  只有由设置过程创建的服务器级主体登录名才可以删除服务器级防火墙规则。 用户必须连接到 master 数据库才能执行 sp_delete_firewall_rule。  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>示例：  
  以下示例将删除名为“Example setting 1”的服务器级防火墙设置。 在虚拟 master 数据库中执行语句。  
   
 ```   
@@ -60,11 +60,8 @@ EXEC sp_delete_firewall_rule N'Example setting 1';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Azure SQL Database 防火墙](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [如何： (Azure SQL 数据库配置防火墙设置) ](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Azure SQL Database 防火墙](/azure/azure-sql/database/firewall-configure)   
+ [如何： (Azure SQL 数据库配置防火墙设置) ](/azure/azure-sql/database/firewall-configure)   
  [Azure SQL Database &#40;sp_set_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
+ [Azure SQL Database &#40;sys.firewall_rules&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   
-  
-
-

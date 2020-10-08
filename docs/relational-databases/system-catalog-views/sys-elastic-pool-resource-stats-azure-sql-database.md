@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990160"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809855"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "90990160"
 |**max_session_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|  
 |**elastic_pool_dtu_limit**|**int**|在该时间间隔内该弹性池的当前最大弹性池 DTU 设置。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|在该时间间隔内该弹性池的当前最大弹性池存储限制设置（以兆字节为单位）。|
-|**avg_allocated_storage_percent**|**decimal (5，2) **|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅 [SQL 数据库中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal (5，2) **|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅 [SQL 数据库中的文件空间管理](/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
- 此视图存在于 SQL 数据库服务器的 master 数据库中。 您必须连接到 master 数据库才能查询 **sys.databases elastic_pool_resource_stats**。  
+ 此视图存在于 SQL 数据库服务器的 master 数据库中。 您必须连接到 master 数据库才能查询 **sys.elastic_pool_resource_stats**。  
   
 ## <a name="permissions"></a>权限
 
@@ -80,9 +80,8 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>另请参阅
 
- [通过弹性数据库应对爆炸性增长](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [创建和管理 SQL 数据库弹性数据库池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [dm_db_resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
-  
+ [通过弹性数据库应对爆炸性增长](/azure/azure-sql/database/elastic-pool-overview)   
+ [创建和管理 SQL 数据库弹性数据库池](/azure/azure-sql/database/elastic-pool-overview)   
+ [Azure SQL Database &#40;sys.resource_stats&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [Azure SQL Database &#40;sys.dm_db_resource_stats&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

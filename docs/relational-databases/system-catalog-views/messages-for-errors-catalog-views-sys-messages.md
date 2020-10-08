@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12f6c532c03330f5e56446bcc6d5e22dcb9a3b71
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 30cfb208d709f19743216369b23e6b7bef9dfc38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539743"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810393"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>（错误）消息目录视图 - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,8 @@ ms.locfileid: "89539743"
 ## <a name="see-also"></a>另请参阅  
  [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [消息 &#40;&#41; 目录视图的错误 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
- [异常消息框编程](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
+ [消息 &#40;&#41; 目录视图的错误 &#40;Transact-sql&#41;]()   
+ [异常消息框编程](/previous-versions/sql/sql-server-2016/ms166343(v=sql.130))   
  [错误消息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [数据库引擎错事件和错误](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
-description: 'sys. sp_cleanup_temporal_history (Transact-sql) '
-title: sys. sp_cleanup_temporal_history |Microsoft Docs
+description: 'sys.sp_cleanup_temporal_history (Transact-sql) '
+title: sys.sp_cleanup_temporal_history |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.service: sql-database
@@ -10,14 +10,14 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3b47fd6b0ee5a06ae1ce585f583a699a530e350b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545781"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809143"
 ---
-# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-sql) 
+# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-sql) 
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
@@ -45,7 +45,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 返回已删除的行数的输出参数。 如果历史记录表中包含聚集列存储索引，则此参数将始终返回0。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 此存储过程只能与指定了有限保留期的临时表一起使用。
 仅当需要立即清除历史记录表中的所有过期行时，才使用此存储过程。 您应该知道，它会对数据库日志和 i/o 子系统产生重大影响，因为它会删除同一事务中所有符合条件的行。
@@ -66,4 +66,4 @@ select @rowcnt
 
 ## <a name="next-steps"></a>后续步骤
 
-[时态表保留策略](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[时态表保留策略](/azure/sql-database/sql-database-temporal-tables-retention-policy)

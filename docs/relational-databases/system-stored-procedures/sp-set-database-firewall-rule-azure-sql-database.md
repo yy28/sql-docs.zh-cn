@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3021389a5223cd45ef7fb2b0b2dba72c51ba7235
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 0b6f9130a4250bdb6f9c250bacbcaaa3943eeef3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226858"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810493"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -56,7 +56,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 > [!NOTE]  
 >  如果此字段和 *start_ip_address* 字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  数据库的数据库级防火墙设置的名称必须是唯一的。 如果为存储过程提供的数据库级防火墙设置的名称在数据库级防火墙设置表中已经存在，则将更新开始和结束 IP 地址。 否则，将创建新的数据库级防火墙设置。  
   
  如果添加的数据库级防火墙设置的起始和结束 IP 地址等于 `0.0.0.0` ，则可以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 从任何 Azure 资源中启用对服务器中数据库的访问。 为 *name* 参数提供一个值，以帮助你记住防火墙设置的用途。  
@@ -85,10 +85,9 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Azure SQL Database 防火墙](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [如何： (Azure SQL 数据库配置防火墙设置) ](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Azure SQL Database 防火墙](/azure/azure-sql/database/firewall-configure)   
+ [如何： (Azure SQL 数据库配置防火墙设置) ](/azure/azure-sql/database/firewall-configure)   
  [Azure SQL Database &#40;sp_set_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [Azure SQL Database &#40;sp_delete_database_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
-  
+ [Azure SQL Database &#40;sys.database_firewall_rules&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   

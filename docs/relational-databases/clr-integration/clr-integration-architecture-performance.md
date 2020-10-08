@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1d72f658cf957a9dfb78eae4186cdd35d6e9849
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727629"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809556"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 集成体系结构 - 性能
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  本主题讨论一些可提高 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时（CLR）集成性能的设计选择。  
+  本主题讨论一些可提高 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时 (CLR) 集成性能的设计选择。  
   
 ## <a name="the-compilation-process"></a>编译过程  
  在编译 SQL 表达式时，如果遇到对托管例程的引用，则生成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中间语言 (MSIL) 存根。 该存根包含的代码用于将例程参数从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封送到 CLR、调用函数并返回结果。 该“粘附”代码基于参数类型和参数方向（向内、向外或引用）。  
@@ -36,7 +36,7 @@ ms.locfileid: "85727629"
  编译过程生成的函数指针可以在运行时通过本机代码调用。 对于标量值用户定义函数，可基于每行调用此函数。 为最大程度地降低在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之间转换的成本，包含任何托管调用的语句都具有一个标识目标应用程序域的启动步骤。 该标识步骤减少每行的转换成本。  
   
 ## <a name="performance-considerations"></a>性能注意事项  
- 以下内容概述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中特定于 CLR 集成的性能注意事项。 MSDN 网站上的 "[使用 CLR 集成 SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" 中可找到更详细的信息。 有关托管代码性能的常规信息，请参阅 MSDN 网站上的 "[改进 .Net 应用程序的性能和可伸缩性](https://go.microsoft.com/fwlink/?LinkId=50333)"。  
+ 以下内容概述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中特定于 CLR 集成的性能注意事项。 MSDN 网站上的 "[使用 CLR 集成 SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/ms345136(v=sql.90))" 中可找到更详细的信息。 有关托管代码性能的常规信息，请参阅 MSDN 网站上的 "[改进 .Net 应用程序的性能和可伸缩性](/previous-versions/msp-n-p/ff649152(v=pandp.10))"。  
   
 ### <a name="user-defined-functions"></a>用户定义函数  
  相较于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数，CLR 函数可以从更快的调用路径中受益。 此外，同 [!INCLUDE[tsql](../../includes/tsql-md.md)] 相比，托管代码在过程代码、计算和字符串操作方面具有决定性性能优势。 需要大量计算且不执行数据访问的 CLR 函数采用托管代码编写的效果更好。 但是与 CLR 集成相比，[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的确可以更有效地执行数据访问。  
@@ -47,16 +47,16 @@ ms.locfileid: "85727629"
 ### <a name="streaming-table-valued-functions"></a>流式表值函数  
  应用程序通常需要返回一个表作为调用函数的结果。 示例包括从文件读取表格格式数据作为导入操作的一部分，并将逗号分隔值转换为关系表示形式。 通常，您可以通过在调用方使用结果表之前具体化和填充此结果表来实现此目的。 CLR 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的集成引入了一种名为流式表值函数 (STVF) 的新扩展性机制。 托管 STVF 的性能优于可比扩展存储过程实现的性能。  
   
- Stvf 是返回**IEnumerable**接口的托管函数。 **IEnumerable**包含用于导航 STVF 返回的结果集的方法。 调用 STVF 时，返回的**IEnumerable**直接连接到查询计划。 查询计划在需要提取行时调用**IEnumerable**方法。 使用此迭代模型，结果在第一行生成之后即可使用，而不需要等到整个表填充完。 还可以极大地减少调用该函数而占用的内存。  
+ Stvf 是返回 **IEnumerable** 接口的托管函数。 **IEnumerable** 包含用于导航 STVF 返回的结果集的方法。 调用 STVF 时，返回的 **IEnumerable** 直接连接到查询计划。 查询计划在需要提取行时调用 **IEnumerable** 方法。 使用此迭代模型，结果在第一行生成之后即可使用，而不需要等到整个表填充完。 还可以极大地减少调用该函数而占用的内存。  
   
 ### <a name="arrays-vs-cursors"></a>数组与游标  
  当 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标必须遍历更容易表示为数组的数据时，使用托管代码可以显著提高性能。  
   
 ### <a name="string-data"></a>字符串数据  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符数据（如**varchar**）的类型可以是 SqlString 或 SqlChars。 SqlString 变量将整个值的实例创建到内存中。 SqlChars 变量提供可用于获得更好性能和可扩展性的流式接口，而无需将整个值的实例创建到内存中。 这对于大型对象 (LOB) 数据尤为重要。 此外，可以通过**CreateReader （）** 返回的流接口访问服务器 XML 数据。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符数据（如 **varchar**）的类型可以是 SqlString 或 SqlChars。 SqlString 变量将整个值的实例创建到内存中。 SqlChars 变量提供可用于获得更好性能和可扩展性的流式接口，而无需将整个值的实例创建到内存中。 这对于大型对象 (LOB) 数据尤为重要。 此外，可以通过 **CreateReader ( # B1 **返回的流接口访问服务器 XML 数据。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 与扩展存储过程  
- 允许托管过程向客户端回发结果集的 Microsoft.SqlServer.Server 应用程序编程接口 (API) 的性能优于扩展存储过程使用的开放式数据服务 (ODS) API。 此外，System.web Api 还支持中引入的**xml**、 **varchar （max）**、 **nvarchar （max）** 和**varbinary （MAX**）等数据类型， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 而 ODS api 尚未进行扩展以支持新的数据类型。  
+ 允许托管过程向客户端回发结果集的 Microsoft.SqlServer.Server 应用程序编程接口 (API) 的性能优于扩展存储过程使用的开放式数据服务 (ODS) API。 此外，System.web Api 还支持中引入的数据类型，例如 **xml**、 **varchar (max) **、 **nvarchar (max) **和 **Varbinary (max) **， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 而 ODS api 尚未进行扩展以支持新数据类型。  
   
  通过托管代码，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对内存、线程和同步等资源的使用。 这是因为公开这些资源的托管 API 是针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源管理器实现的。 相反，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法查看或控制扩展存储过程的资源使用情况。 例如，如果扩展存储过程占用过多 CPU 或内存资源，则无法通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测或控制此种情况。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用托管代码检测到给定线程已有很长一段时间未生成结果，并强制该任务生成以便安排其他工作。 因此，使用托管代码可以提高可扩展性，并改善系统资源使用情况。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85727629"
 >  建议您不要开发新的扩展存储过程，因为已不推荐使用此功能。  
   
 ### <a name="native-serialization-for-user-defined-types"></a>用户定义类型的本机序列化  
- 用户定义类型 (UDT) 是作为标量类型系统的扩展性机制设计的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实现称为**format**的 udt 的序列化格式。 在编译期间，检查该类型的结构以便生成针对该特定类型定义自定义的 MSIL。  
+ 用户定义类型 (UDT) 是作为标量类型系统的扩展性机制设计的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实现称为 **format**的 udt 的序列化格式。 在编译期间，检查该类型的结构以便生成针对该特定类型定义自定义的 MSIL。  
   
  本机序列化是针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实现。 用户定义序列化调用由类型作者定义的方法来执行序列化。 **格式。** 应尽可能使用本机序列化，以获得最佳性能。  
   
@@ -80,5 +80,4 @@ ms.locfileid: "85727629"
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
-  
   

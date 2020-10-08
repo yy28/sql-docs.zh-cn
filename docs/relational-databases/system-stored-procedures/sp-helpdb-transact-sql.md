@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 371326efa5bf207f0a0e3febbad0260865e1299b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b1b2055f810be69949f72dd97364ccfb47bfa22f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538729"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809156"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nchar(128)**|逻辑文件名。|  
+|**name**|**nchar(128)**|逻辑文件名。|  
 |**fileid**|**smallint**|文件 ID。|  
 |**filename**|**nchar (260) **|操作系统文件名（物理文件名称）。|  
 |**文件**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
@@ -70,7 +70,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**年**|**nvarchar (18) **|文件的增量。 此值指示每次需要新空间时添加到文件中的空间量。|  
 |**使用情况**|**varchar (9) **|文件用法。 对于数据文件，该值为 **"仅数据"** ; 对于日志文件，该值为 **"仅记录"**。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  结果集中的 " **状态** " 列报告了数据库中的哪些选项已设置为 ON。 " **状态** " 列不报告所有数据库选项。 若要查看当前数据库选项设置的完整列表，请使用 **sys.databases** 目录视图。  
   
 ## <a name="permissions"></a>权限  
@@ -98,11 +98,10 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

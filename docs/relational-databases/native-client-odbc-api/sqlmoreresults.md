@@ -15,12 +15,12 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75674ea7f628c89ff183158cf2defb4ccdfe6f2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd979ea2b0ae43b8e97df2ad6acf692ba9f24a3a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482626"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810961"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -164,7 +164,6 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLMoreResults 函数](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults 函数](../../odbc/reference/syntax/sqlmoreresults-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b74fa91b13b3b7f432a4b647f063a91a76e8c56a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d875178db938e92aa60e3396cee2242d6a54e3f7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535224"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810207"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>权限  
  用户必须是 **公共** 角色的成员。 需要服务器和对象的 READ ACCESS 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  SSMS 空间选项卡显示结果的图形表示形式。 您可以针对空间窗口查询结果，以获取近似的结果项数。 表中的对象可能涵盖多个单元，因此单元之和可能大于实际对象数。  
   
  可能会向结果集中添加一个附加行，用于保存在范围框之外或与范围框边界接触的对象数。 该行的 **cellid** 为0，该行的 **单元格** 包含表示边界框的 **LineString** 。 此行表示在范围框之外的整个空间。  
@@ -148,6 +148,5 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  `GO`  
   
 ## <a name="see-also"></a>另请参阅  
- [空间索引存储过程 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
-  
+ [空间索引存储过程 &#40;Transact-sql&#41;](./spatial-index-stored-procedures-arguments-and-properties.md)  
   

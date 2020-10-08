@@ -1,5 +1,5 @@
 ---
-title: 程序集（数据库引擎） |Microsoft Docs
+title: 程序集 (数据库引擎) |Microsoft Docs
 description: SQL Server 实例可以承载部署函数、过程、触发器、用户定义聚合和使用 CLR 语言编写的类型的程序集。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 399c1dca1657c95edd70dcec0ba26619f6001180
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3a507f250dcecf62560284916d543ca2f6d53c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727681"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810230"
 ---
 # <a name="assemblies-database-engine"></a>程序集（数据库引擎）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本节中的主题旨在帮助您了解、设计和实现程序集。  
   
- 程序集是用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 部署函数、存储过程、触发器、用户定义聚合和用户定义类型（以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时（CLR）托管的一种托管代码语言，而不是在中）的 DLL 文件 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
+ 程序集是的实例中使用的 DLL 文件，用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 部署函数、存储过程、触发器、用户定义聚合和用户定义的类型，这些类型由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 而不是中的托管代码语言之一来编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的程序集对象引用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时中创建的托管应用程序模块（.dll 文件）。 程序集包含类元数据和托管代码。 将程序集上载到 SQL Server 实例是创建以下任何一个数据库对象的第一步：  
   
--   CLR 函数。 有关详细信息，请参阅[创建 CLR 函数](../../relational-databases/user-defined-functions/create-clr-functions.md)。  
+-   CLR 函数。 有关详细信息，请参阅 [创建 CLR 函数](../../relational-databases/user-defined-functions/create-clr-functions.md)。  
   
--   CLR 存储过程。 有关详细信息，请参阅[CLR 存储过程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)。  
+-   CLR 存储过程。 有关详细信息，请参阅 [CLR 存储过程](/dotnet/framework/data/adonet/sql/clr-stored-procedures)。  
   
--   CLR 触发器。 有关详细信息，请参阅[创建 CLR 触发器](../../relational-databases/triggers/create-clr-triggers.md)。  
+-   CLR 触发器。 有关详细信息，请参阅 [创建 CLR 触发器](../../relational-databases/triggers/create-clr-triggers.md)。  
   
--   用户定义聚合函数。 有关详细信息，请参阅[创建用户定义聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)。  
+-   用户定义聚合函数。 有关详细信息，请参阅 [创建用户定义聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)。  
   
 -   用户定义类型。 有关详细信息，请参阅[使用用户定义类型](../../relational-databases/native-client/features/using-user-defined-types.md)。  
   
@@ -59,5 +59,4 @@ ms.locfileid: "85727681"
   
 ## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

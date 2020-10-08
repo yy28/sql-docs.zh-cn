@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f59aee58735b3b38cf8de3a47461cad1c59f6b81
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497952"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91808403"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,7 +99,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供在查询存储中监视性能和解决问题所需的所有必要的视图和过程。
 
-在中 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ，可以使用查询存储系统视图查找计划选择回归。 从开始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ， [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会检测并显示潜在的计划选择回归，并显示应在 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中应用 dm_db_tuning_recommendations 的建议操作。 DMV 显示了有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可以执行以修复问题的语句。
+在中 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ，可以使用查询存储系统视图查找计划选择回归。 从开始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ，将 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测并显示潜在的计划选择回归和建议的操作，这些操作应在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中应用。 DMV 显示了有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可以执行以修复问题的语句。
 
 | 类型 | description | datetime | score | 详细信息 | ... |
 | --- | --- | --- | --- | --- | --- |
@@ -111,7 +111,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 说明，其中包含的信息 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 认为此计划更改是潜在的性能回归。
  - 检测到潜在回归时的日期时间。
  - 此建议的分数。
- - 详细信息，如检测到的计划的 ID、回归计划的 id、应强制解决该问题的计划的 id、 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可能应用来修复问题的脚本等。详细信息以 [JSON 格式](../../relational-databases/json/index.md)存储。
+ - 详细信息，如检测到的计划的 ID、回归计划的 id、应强制解决该问题的计划的 id、 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可能应用来修复问题的脚本等。详细信息以 [JSON 格式](../json/json-data-sql-server.md)存储。
 
 使用以下查询来获取一个脚本，该脚本可修复问题和有关估计收益的其他信息：
 
@@ -178,19 +178,19 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 ### <a name="alternative---manual-index-management"></a>备选-手动索引管理
 
-如果没有自动索引管理，用户或 DBA 需要手动查询 [sys.databases dm_db_missing_index_details &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 查看或使用中的 "性能仪表板" 报表 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查找可能会提高性能的索引，使用此视图中提供的详细信息创建索引，并手动监视查询的性能。 为了找到应删除的索引，用户应监视索引的操作使用情况统计信息，以查找很少使用的索引。
+如果没有自动索引管理，用户或 DBA 需要手动查询 [sys.dm_db_missing_index_details &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 查看或使用中的 "性能仪表板" 报表 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查找可能会提高性能的索引，使用此视图中提供的详细信息创建索引，并手动监视查询的性能。 为了找到应删除的索引，用户应监视索引的操作使用情况统计信息，以查找很少使用的索引。
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 简化了此过程。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析工作负荷，识别可以使用新索引更快执行的查询，并识别未使用或重复的索引。 有关如何识别应更改索引的详细信息，请参阅[在 Azure 门户中查找索引建议](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)。
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 简化了此过程。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析工作负荷，识别可以使用新索引更快执行的查询，并识别未使用或重复的索引。 有关如何识别应更改索引的详细信息，请参阅[在 Azure 门户中查找索引建议](/azure/sql-database/sql-database-advisor-portal)。
 
 ## <a name="see-also"></a>另请参阅  
  [将数据库集 AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys. database_automatic_tuning_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys. dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys. dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys. database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON 函数](../../relational-databases/json/index.md)    
+ [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [JSON 函数](../json/json-data-sql-server.md)    
  [执行计划](../../relational-databases/performance/execution-plans.md)    
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     

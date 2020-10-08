@@ -1,6 +1,6 @@
 ---
-description: 'server_resource_stats (Azure SQL 数据库) '
-title: server_resource_stats (Azure SQL 数据库) |Microsoft Docs
+description: 'Azure SQL Database (sys.server_resource_stats) '
+title: Azure SQL Database (sys.server_resource_stats) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542486"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809313"
 ---
-# <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL 数据库) 
+# <a name="sysserver_resource_stats-azure-sql-database"></a>Azure SQL Database (sys.server_resource_stats) 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 返回 Azure SQL 托管实例的 CPU 使用情况、IO 和存储数据。 在五分钟间隔内收集并聚合数据。 其中有一行用于显示每隔 15 秒报告的信息。 返回的数据包括 CPU 使用率、存储大小、IO 利用率和 SKU。 历史数据保留大约 14 天。
 
-根据与数据库关联的 Azure SQL 托管实例版本， **sys.databases server_resource_stats** 视图具有不同的定义。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。
+**Sys.server_resource_stats**视图的定义不同，具体取决于与数据库关联的 Azure SQL 托管实例的版本。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。
  
   
  下表介绍 v12 服务器中可用的列：  
@@ -54,13 +54,13 @@ ms.locfileid: "89542486"
 
  
 > [!TIP]  
->  有关这些限制和服务层的详细信息，请参阅主题 [托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)。  
+>  有关这些限制和服务层的详细信息，请参阅主题 [托管实例的服务层](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)。  
     
 ## <a name="permissions"></a>权限  
  此视图可用于具有连接到 **master** 数据库的权限的所有用户角色。  
   
-## <a name="remarks"></a>备注  
- **Sys. server_resource_stats**返回的数据表示为在列) 名称中使用的字节数或兆字节数 (中所述的总大小，而不是 avg_cpu，这表示为运行的服务层/性能级别所允许的最大限制的百分比。  
+## <a name="remarks"></a>注解  
+ **Sys.server_resource_stats**返回的数据表示为使用的字节数或兆字节数 (中所述的总大小，) 除了 avg_cpu，这表示为运行的服务层/性能级别所允许的最大限制的百分比。  
  
 ## <a name="examples"></a>示例  
  以下示例返回与上周相比平均参与至少 80% 的计算使用率的所有数据库。  
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>另请参阅  
- [托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [托管实例的服务层](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

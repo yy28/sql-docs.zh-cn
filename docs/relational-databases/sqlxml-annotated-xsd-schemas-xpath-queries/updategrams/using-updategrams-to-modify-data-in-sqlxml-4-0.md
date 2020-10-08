@@ -26,16 +26,16 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c043425e8db0ce36776e8fec938e3b083d230c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa45ac2a57ff4f59dc3f3367dc2c66f638f2516b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733651"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811061"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>使用 Updategram 修改 SQLXML 4.0 中的数据
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 UPDATEGRAM 或 OPENXML 函数，可以从现有的 XML 文档中修改（插入、更新或删除）数据库 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  
+  您可以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 UPDATEGRAM 或 OPENXML 函数，从现有的 XML 文档中修改) 中的数据库 (插入、更新或删除 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  
   
  本节提供有关 updategram 的信息及其使用示例。  
   
@@ -64,10 +64,9 @@ ms.locfileid: "85733651"
  [处理 Updategram 中的数据库并发问题 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  说明为处理 updategram 中的并发问题可能采取的不同层级的保护并且提供有关示例。  
   
- [SQLXML 4.0 &#40;Updategram 示例应用程序&#41;](https://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
+ [SQLXML 4.0 &#40;Updategram 示例应用程序&#41;]()  
  提供使用 updategram 的示例应用程序。  
   
- [XML Updategram &#40;SQLXML 4.0&#41;的准则和限制](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
+ [XML Updategram &#40;SQLXML 4.0&#41;的准则和限制 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  列出使用 updategram 时应注意的一些事项。  
-  
   
