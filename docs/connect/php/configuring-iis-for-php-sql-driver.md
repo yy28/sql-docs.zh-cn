@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3033e557ea1e70402a6647cc36558cba26bd10b5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7ab31be628d4c93f0e4331e3d63d47c4924a6fa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728398"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726871"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>为 Microsoft Drivers for PHP for SQL Server 配置 IIS
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,16 +28,16 @@ ms.locfileid: "81728398"
 ## <a name="tutorials"></a>教程  
 以下链接指向有关为 PHP 设置 FastCGI 以及在 IIS 6.0 和 IIS 7.0PHP 上托管 PHP 应用程序的教程：  
   
--   [FastCGI 与 PHP](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
--   [使用 FastCGI 在 IIS 7.0 上托管 PHP 应用程序](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
--   [使用 FastCGI 在 IIS 6.0 上托管 PHP 应用程序](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
--   [为 IIS 6.0 配置 FastCGI 扩展](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
+-   [FastCGI 与 PHP](/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
+-   [使用 FastCGI 在 IIS 7.0 上托管 PHP 应用程序](/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
+-   [使用 FastCGI 在 IIS 6.0 上托管 PHP 应用程序](/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
+-   [为 IIS 6.0 配置 FastCGI 扩展](/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>视频演示文稿  
 以下链接指向有关为 PHP 设置 FastCGI 和使用 IIS 7.0 功能托管 PHP 应用程序的视频演示文稿：  
   
--   [为 PHP 设置 FastCGI](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [在 Microsoft Internet Information Services 7 上与 PHP 合作](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [为 PHP 设置 FastCGI](/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
+-   [在 Microsoft Internet Information Services 7 上与 PHP 合作](/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## <a name="support-resources"></a>支持资源  
 以下论坛提供对 IIS 上的 FastCGI 的社区支持：  
@@ -53,4 +53,3 @@ ms.locfileid: "81728398"
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-  

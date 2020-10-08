@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570322"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727502"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 
@@ -134,7 +134,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 从 JDBC Driver 8.4.1 开始，驱动程序支持使用托管标识对 Azure Key Vaults 进行身份验证。
 
-如果应用程序托管在 Azure 中，则用户可以使用[托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)对 Azure Key Vault 进行身份验证，从而无需在代码中提供和公开任何凭据。 
+如果应用程序托管在 Azure 中，则用户可以使用[托管标识](/azure/active-directory/managed-identities-azure-resources/overview)对 Azure Key Vault 进行身份验证，从而无需在代码中提供和公开任何凭据。 
 
 #### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>具有托管标识的 Key Vault 身份验证的连接属性
 
@@ -164,7 +164,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 请注意，以前添加的连接属性 `keyVaultProviderClientId` 和 `keyVaultProviderClientKey` 已弃用，将替换为上述连接属性。
 
-有关如何配置托管标识的信息，请参阅[使用 Azure 门户在 VM 上配置 Azure 资源托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)。
+有关如何配置托管标识的信息，请参阅[使用 Azure 门户在 VM 上配置 Azure 资源托管标识](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)。
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证书存储区中存储列主密钥。 使用 SQL Server Management Studio (SSMS) Always Encrypted 向导或其他支持的工具，在数据库中创建列主密钥和列加密密钥定义。 同一向导可用于在 Windows 证书存储中生成自签名证书，该证书可用作 Always Encrypted 数据的列主密钥。 有关列主密钥和列加密密钥 T-SQL 语法的详细信息，请分别参阅 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 和 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。

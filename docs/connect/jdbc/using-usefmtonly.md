@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450037"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727458"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>通过 useFmtOnly 检索 ParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  该功能仅支持 `SELECT/INSERT/UPDATE/DELETE` 查询。 查询应以 4 个支持的关键字之一或[公用表表达式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)开头，后跟一个支持的查询。 不支持使用公用表表达式中的参数。
+>  该功能仅支持 `SELECT/INSERT/UPDATE/DELETE` 查询。 查询应以 4 个支持的关键字之一或[公用表表达式](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017)开头，后跟一个支持的查询。 不支持使用公用表表达式中的参数。
 
 ## <a name="known-issues"></a>已知问题
   此功能当前存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 这些问题可能会在以后对该功能的更新中得到解决，现已在下面列出，并提供了解决方法建议。
@@ -139,7 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

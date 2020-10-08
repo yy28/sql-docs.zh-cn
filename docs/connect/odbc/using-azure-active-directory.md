@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c71c9a458d285cdf33bd785e1bec74a6f33d5820
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6925b2b79629fbcbe84f6577e2617e9b45ea82c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288189"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727378"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>结合使用 Azure Active Directory 和 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89288189"
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(未设置)|请参阅上述 `Authentication` 关键字说明。 提供 `SQL_AU_NONE` 是为了显式重写 DSN 和/或连接字符串中设置的 `Authentication` 值，而如果设置了属性，`SQL_AU_RESET` 将取消设置，以便优先使用 DSN 或连接字符串值。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|指向 `ACCESSTOKEN` 或 NULL 的指针|Null|如果不是 null，则指定要使用的 AzureAD 访问令牌。 指定访问令牌并同时指定 `UID`、`PWD`、`Trusted_Connection` 或 `Authentication` 连接字符串关键字或其等效属性将发生错误。 <br> **注意：** ODBC 驱动程序版本 13.1 仅在 Windows  上支持此功能。|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|（请见说明）|控制连接的加密。 `SQL_EN_OFF` 和 `SQL_EN_ON` 分别禁用和启用加密。 如果 `Authentication` 设置的预属性值不是“无”  或设置了 `SQL_COPT_SS_ACCESS_TOKEN`，并且在 DSN 或连接字符串中未指定 `Encrypt`，则默认值为 `SQL_EN_ON`。 否则默认值为 `SQL_EN_OFF`。 如果连接属性 `SQL_COPT_SS_AUTHENTICATION` 没有设置为“无”  ，则在 DSN 或连接字符串中未指定 `Encrypt` 的情况下，将 `SQL_COPT_SS_ENCRYPT` 显式设置为所需的值。 此属性的有效值控制[是否将加密用于连接。](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|（请见说明）|控制连接的加密。 `SQL_EN_OFF` 和 `SQL_EN_ON` 分别禁用和启用加密。 如果 `Authentication` 设置的预属性值不是“无”  或设置了 `SQL_COPT_SS_ACCESS_TOKEN`，并且在 DSN 或连接字符串中未指定 `Encrypt`，则默认值为 `SQL_EN_ON`。 否则默认值为 `SQL_EN_OFF`。 如果连接属性 `SQL_COPT_SS_AUTHENTICATION` 没有设置为“无”  ，则在 DSN 或连接字符串中未指定 `Encrypt` 的情况下，将 `SQL_COPT_SS_ENCRYPT` 显式设置为所需的值。 此属性的有效值控制[是否将加密用于连接。](../../relational-databases/native-client/features/using-encryption-without-validation.md)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Azure Active Directory 不支持，因为无法通过 ODBC 连接来完成对 Azure AD 主体的密码更改。 <br><br>在 SQL Server 2005 中引入了 SQL Server 身份验证密码过期功能。 添加了 `SQL_COPT_SS_OLDPWD` 属性，以允许客户端同时为连接提供旧密码和新密码。 设置此属性时，访问接口对于第一次连接或后续连接将不使用连接池，因为连接字符串将包含现在已更改的“旧密码”。|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|已弃用  ；改为将 `SQL_COPT_SS_AUTHENTICATION` 设置为 `SQL_AU_AD_INTEGRATED`。 <br><br>强制将 Windows 身份验证（Linux 和 macOS 上的 Kerberos）用于服务器登录的访问验证。 使用 Windows 身份验证时，驱动程序忽略作为 `SQLConnect`、`SQLDriverConnect` 或 `SQLBrowseConnect` 处理的一部分提供的用户标识符和密码值。|
 
@@ -135,7 +135,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-`ACCESSTOKEN` 是长度可变的结构，它由 4 个字节的长度  组成，后跟构成访问令牌的不透明数据的长度  字节。 由于 SQL Server 处理访问令牌的方式，通过 [OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 响应获得的令牌必须进行扩展，以便每个字节后面都有一个 0 填充字节，类似于只包含 ASCII 字符的 UCS-2 字符串；但是，令牌是一个不透明的值，并且指定的长度（以字节为单位）不能包含任何 null 终止符。 由于相当多的长度和格式限制，此身份验证方法仅以编程方式通过 `SQL_COPT_SS_ACCESS_TOKEN` 连接属性提供；没有相应的 DSN 或连接字符串关键字。 连接字符串不能包含 `UID`、`PWD`、`Authentication` 或 `Trusted_Connection` 关键字。
+`ACCESSTOKEN` 是长度可变的结构，它由 4 个字节的长度  组成，后跟构成访问令牌的不透明数据的长度  字节。 由于 SQL Server 处理访问令牌的方式，通过 [OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 响应获得的令牌必须进行扩展，以便每个字节后面都有一个 0 填充字节，类似于只包含 ASCII 字符的 UCS-2 字符串；但是，令牌是一个不透明的值，并且指定的长度（以字节为单位）不能包含任何 null 终止符。 由于相当多的长度和格式限制，此身份验证方法仅以编程方式通过 `SQL_COPT_SS_ACCESS_TOKEN` 连接属性提供；没有相应的 DSN 或连接字符串关键字。 连接字符串不能包含 `UID`、`PWD`、`Authentication` 或 `Trusted_Connection` 关键字。
 
 > [!NOTE]
 > ODBC 驱动程序版本 13.1 仅在 Windows  上支持此身份验证。

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011916"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726905"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序发行说明
 
@@ -49,8 +49,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 已修复 bug | 详细信息 |
 | :-------- | :------ |
-| 修复了 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) 接口中的各种 bug | 数个影响多字节代码页的 bug 导致接口在读取操作期间过早报告流结束。|
-| 修复了 [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 接口中的内存泄漏 | 修复了启用 `SSPROP_IRowsetFastLoad` 属性时 [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 接口中的内存泄漏。 |
+| 修复了 [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 接口中的各种 bug | 数个影响多字节代码页的 bug 导致接口在读取操作期间过早报告流结束。|
+| 修复了 [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 接口中的内存泄漏 | 修复了启用 `SSPROP_IRowsetFastLoad` 属性时 [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 接口中的内存泄漏。 |
 | 修复了涉及 `sql_variant` 数据类型和非 ASCII 字符串的方案中的 bug。 | 执行某些涉及 `sql_variant` 数据类型和非 ASCII 字符串的方案可能导致数据损坏。 有关详细信息，请参阅：[已知问题](ole-db-data-types/ssvariant-structure.md#known-issues)。 |
 | 修复了 [UDL 配置对话框](help-topics/data-link-pages.md)中“测试连接”按钮的问题 | [UDL 配置对话框](help-topics/data-link-pages.md)中的“测试连接”按钮现在遵循“全部”选项卡中设置的初始化属性 。 |
 | 修复了 `SSPROP_INIT_PACKETSIZE` 属性默认值处理 | 修复了将 `SSPROP_INIT_PACKETSIZE` 属性设置为 `0` 默认值时出现的意外错误。 有关此属性的详细信息，请参阅[初始化和授权属性](ole-db-data-source-objects/initialization-and-authorization-properties.md)。 |
@@ -82,7 +82,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 已修复 bug | 详细信息 |
 | :-------- | :------ |
-| 修复了 [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) 中的删除索引逻辑。 | 当索引所有者的架构 ID 和用户 ID 不相等时，旧版 OLE DB 驱动程序无法删除主键索引。 |
+| 修复了 [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)) 中的删除索引逻辑。 | 当索引所有者的架构 ID 和用户 ID 不相等时，旧版 OLE DB 驱动程序无法删除主键索引。 |
 | &nbsp; | &nbsp; |
 
 通过单击以下部分中的下载链接，下载 OLE DB Driver 的早期版本：
@@ -120,7 +120,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 已修复 bug | 详细信息 |
 | :-------- | :------ |
-| 已修复多线程单元 (MTA) 中的非交互式 Azure Active Directory 身份验证。 | OLE DB 驱动程序 18.2.1 错误地尝试更改之前初始化为多线程的单元 (MTA) 上的 COM 并发模型。 因此，在调用 [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522) 接口前，在对 [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) 或 [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) 发出一个以上的后续调用的应用程序中，使用任何 Azure Active Directory 身份验证模式时，该驱动程序都会连接失败。 |
+| 已修复多线程单元 (MTA) 中的非交互式 Azure Active Directory 身份验证。 | OLE DB 驱动程序 18.2.1 错误地尝试更改之前初始化为多线程的单元 (MTA) 上的 COM 并发模型。 因此，在调用 [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 接口前，在对 [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) 或 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) 发出一个以上的后续调用的应用程序中，使用任何 Azure Active Directory 身份验证模式时，该驱动程序都会连接失败。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

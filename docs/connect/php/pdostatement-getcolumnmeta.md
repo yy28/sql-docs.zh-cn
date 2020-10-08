@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 58b6882fe4f0fce4ddf948121cb6ad35e5828fd7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645072"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726738"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +72,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>敏感度数据分类元数据
 
-从版本 5.8.0 开始，用户可以使用新的语句属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 通过 `PDOStatement::getColumnMeta`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)。
+从版本 5.8.0 开始，用户可以使用新的语句属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 通过 `PDOStatement::getColumnMeta`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4)。
 
 请注意，默认情况下 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 属性为 `false`，但当设置为 `true` 时，将使用敏感度数据分类元数据（如果存在）填充上述数组字段 `flags`。 
 
@@ -136,4 +136,3 @@ for ($i = 0; $i < $numCol; $i++) {
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

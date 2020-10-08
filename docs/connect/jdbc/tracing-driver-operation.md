@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393125"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727535"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393125"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持使用跟踪（或日志记录）协助解决在应用程序中使用 JDBC 驱动程序时出现的问题。 若要启用跟踪，JDBC 驱动程序需要使用 java.util.logging 中的日志记录 API，java.util.logging 可提供用于创建 Logger 和 LogRecord 对象的类集。  
   
 > [!NOTE]  
->  对于 JDBC 驱动程序中包含的本地组件 (sqljdbc_xa.dll)，可通过内置诊断 (BID) 框架启用跟踪。 有关 BID 的信息，请参阅 [SQL Server 中的数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=70042)。  
+>  对于 JDBC 驱动程序中包含的本地组件 (sqljdbc_xa.dll)，可通过内置诊断 (BID) 框架启用跟踪。 有关 BID 的信息，请参阅 [SQL Server 中的数据访问跟踪](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))。  
   
  开发应用程序时，可对 Logger 对象进行调用，它会转而创建 LogRecord 对象（这些对象随后会传递给 Handler 对象进行处理）。 Logger 和 Handler 对象都会使用日志记录级别和日志记录筛选器（可选）来规定要处理的 LogRecord。 完成日志记录操作后，Handler 对象可选择使用 Formatter 对象发布日志信息。  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>另请参阅  
  [诊断 JDBC 驱动程序问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

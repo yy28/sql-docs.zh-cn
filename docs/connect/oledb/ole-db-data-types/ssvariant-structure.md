@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 701476b8e1cea1f84d7fdbf970a345311d686cfd
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b6cef1fb9b92df92cba00ea9e9aa8c9591e887a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860064"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727214"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 结构
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860064"
 
   SSVARIANT 是在 msoledbsql.h 中定义的，  ，它对应于 OLE DB Driver for SQL Server 中的 DBTYPE_SQLVARIANT 值。  
   
- SSVARIANT  是一个分类化的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型  。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示器](https://go.microsoft.com/fwlink/?LinkId=122171)。  
+ SSVARIANT  是一个分类化的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型  。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示器](/previous-versions/windows/desktop/ms711251(v=vs.85))。  
   
 ## <a name="remarks"></a>备注  
  如果 DataTypeCompat==80，几个 SSVARIANT 子类型都将成为字符串  。 例如，以下 vt 值将在 SSVARIANT 中显示为 VT_SS_WVARSTRING  ：  
@@ -87,7 +87,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 - 客户端计算机代码页与数据库排序规则代码页不匹配。
 - 要插入的客户端缓冲区包含客户端代码页中编码的非 ASCII 窄字符串字符。
 - 以下任一条件成立：
-  - `DBPARAMBINDINFO` 结构中描述与 `sql_variant` 列对应的参数的 `pwszDataSourceType` 字段设置为 `L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"` 或 `L"sql_variant"`。 有关详细信息，请参阅：[ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
+  - `DBPARAMBINDINFO` 结构中描述与 `sql_variant` 列对应的参数的 `pwszDataSourceType` 字段设置为 `L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"` 或 `L"sql_variant"`。 有关详细信息，请参阅：[ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)).
 
     *or*
   - 准备了用于插入的参数化 SQL 查询。
@@ -153,5 +153,4 @@ UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <Fi
 
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (OLE DB)](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
   

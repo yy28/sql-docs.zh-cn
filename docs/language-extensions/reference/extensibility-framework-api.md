@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180490"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765769"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>适用于 SQL Server 的 Extensibility Framework API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -541,7 +541,7 @@ CounterValues
 
 ## <a name="installexternallibrary"></a>InstallExternalLibrary
 
-安装库。 该函数是可选的，不需要实现。 默认实现是将库的内容（请参阅 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)）复制到位于正确位置的文件。 文件名为库名称。
+安装库。 该函数是可选的，不需要实现。 默认实现是将库的内容（请参阅 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)）复制到位于正确位置的文件。 文件名为库名称。
 
 ### <a name="syntax"></a>语法
 
@@ -571,7 +571,7 @@ LibraryNameLength
 \[输入\] 库名称的长度。
 
 LibraryFile   
-\[输入\] 库文件的路径（作为字符串），该库文件包含由 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 指定的二进制内容。
+\[输入\] 库文件的路径（作为字符串），该库文件包含由 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 指定的二进制内容。
 
 LibraryFileLength   
 \[输入\] LibraryFile 字符串的长度。
@@ -637,4 +637,4 @@ LibraryErrorLength
 
 ## <a name="next-steps"></a>后续步骤
 
-- [适用于 SQL Server 的Microsoft Java Extensibility SDK](../how-to/extensibility-sdk-java-sql-server.md) 
+- [适用于 SQL Server 的Microsoft Java Extensibility SDK](../how-to/extensibility-sdk-java-sql-server.md)

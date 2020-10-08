@@ -15,12 +15,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00bf7bad226fc793c17a80a0e10e86c970aae195
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3676f8daad2e597510323577a67f37c9a901f2b0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862135"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726910"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>适用于 SQL Server 的 OLE DB 驱动程序 (OLE DB) 界面
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88862135"
   
  此适用于 SQL Server 的 OLE DB 驱动程序编程参考未记录所有 OLE DB 接口和方法，该参考仅记录了当使用适用于 SQL Server 的 OLE DB 驱动程序时表现访问接口特定行为的接口和方法。  
   
- 有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232)（OLE DB 程序员参考）。  
+ 有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](/previous-versions/windows/desktop/ms713643(v=vs.85))（OLE DB 程序员参考）。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -39,5 +39,4 @@ ms.locfileid: "88862135"
   
 ## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

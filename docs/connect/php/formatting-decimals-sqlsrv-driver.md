@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680722"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726814"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>设置十进制字符串和 Money 值格式（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-为了保持准确性，[十进制或数字类型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)始终以精确精度和数值范围的字符串形式提取。 如果任何值小于 1，则缺少前导零。 money 和 smallmoney 字段也是如此，因为这些字段是固定数值范围等于 4 的十进制字段。
+为了保持准确性，[十进制或数字类型](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)始终以精确精度和数值范围的字符串形式提取。 如果任何值小于 1，则缺少前导零。 money 和 smallmoney 字段也是如此，因为这些字段是固定数值范围等于 4 的十进制字段。
 
 ## <a name="add-leading-zeroes-if-missing"></a>添加前导零（如果缺少）
 从版本 5.6.0 开始，将选项 `FormatDecimals` 添加到 sqlsrv 连接和语句级别，这允许用户设置十进制字符串格式。 此选项需要一个布尔值（true 或 false），并且仅影响提取结果中的十进制值或数值的格式设置。 换言之，`FormatDecimals` 选项不会对其他操作（如插入或更新）产生影响。

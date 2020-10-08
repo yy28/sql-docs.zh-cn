@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393145"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727491"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 身份验证连接到 SQL Server
 
@@ -35,11 +35,11 @@ ms.locfileid: "86393145"
 
 除了 domain**** 以外，其他属性都是必需的；使用 NTLM**** authenticationScheme 属性时，如果缺少任何必需属性，驱动程序都会抛出错误。 
 
-若要详细了解连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 若要详细了解 Microsoft NTLM 身份验证协议，请参阅 [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm)。
+若要详细了解连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 若要详细了解 Microsoft NTLM 身份验证协议，请参阅 [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm)。
 
 ## <a name="remarks"></a>备注
 
-请参阅[网络安全：LAN Manager 身份验证级别](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)，了解控制 NTLM 身份验证行为的 SQL Server 设置。 
+请参阅[网络安全：LAN Manager 身份验证级别](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)，了解控制 NTLM 身份验证行为的 SQL Server 设置。 
 
 ## <a name="logging"></a>日志记录
 
@@ -79,7 +79,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 有关服务主体名称 (SPN) 的详细信息，请参阅：
 
-- [客户端连接中的服务主体名称 (SPN) 支持](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [客户端连接中的服务主体名称 (SPN) 支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
 
 > [!NOTE]  
 > serverSpn 连接属性仅受 Microsoft JDBC Driver 4.2 及更高版本支持。

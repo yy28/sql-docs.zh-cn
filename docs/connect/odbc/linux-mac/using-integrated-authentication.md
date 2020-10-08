@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288204"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727408"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -128,7 +128,7 @@ forwardable = yes
 
 如果 Kerberos 身份验证失败，则 Linux 或 macOS 上的 ODBC 驱动程序不使用 NTLM 身份验证。  
 
-若要详细了解如何使用 Active Directory 验证 Linux 或 macOS 计算机，请参阅[使用 Active Directory 验证 Linux 客户端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)。 有关配置 Kerberos 的详细信息，请参阅 [MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+若要详细了解如何使用 Active Directory 验证 Linux 或 macOS 计算机，请参阅[使用 Active Directory 验证 Linux 客户端](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048)。 有关配置 Kerberos 的详细信息，请参阅 [MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另请参阅  
 [编程指南](programming-guidelines.md)

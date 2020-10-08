@@ -17,19 +17,19 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f532b124fa23a65a71480b4bcb1bf31272a3081e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 265919d6117298ee1501aa4773a944e7e13f95d2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862218"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727141"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 定义了特定于访问接口的错误接口 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
+  OLE DB Driver for SQL Server 定义了特定于访问接口的错误接口 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
   
  可以用两种方式访问 ISQLServerErrorInfo 接口  。  
   
@@ -61,5 +61,4 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 ## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR (Transact-SQL)](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

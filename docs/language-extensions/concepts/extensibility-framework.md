@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180304"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765695"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 语言扩展中的扩展性体系结构
 
@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | 用于 Java 的 JavaLauncher.dll | Java 扩展 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在 SQLRUserGroup 下运行，后者将 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 用于执行隔离。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在 SQLRUserGroup 下运行，后者将 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) 用于执行隔离。
 
 为每个已添加了 SQL Server 机器语言扩展的数据库引擎实例创建单独的 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务。 每个数据库引擎实例都有一个 Launchpad 服务，因此如果有多个具有外部脚本支持的实例，则每个实例都有一个 Launchpad 服务。 数据库引擎实例会绑定到为它创建的 Launchpad 服务。 存储过程或 T-SQL 中对外部脚本的所有调用都会导致 SQL Server 服务调用为同一实例创建的 Launchpad 服务。
 
@@ -86,7 +86,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
 + **其他协议**
 
-  可能需要在“区块”中工作或将数据传输回远程客户端的进程还可以使用 [XDF 文件格式](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)。 实际数据传输通过编码的 blob 进行。
+  可能需要在“区块”中工作或将数据传输回远程客户端的进程还可以使用 [XDF 文件格式](/machine-learning-server/r/concept-what-is-xdf)。 实际数据传输通过编码的 blob 进行。
 
 ## <a name="next-steps"></a>后续步骤
 

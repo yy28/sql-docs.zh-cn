@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPInit method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da825601ea16f31f891e751a419c1689e1ccacb1
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ca582b4a82937ec8be12f191d49a39f715358eb2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861945"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726955"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ HRESULT BCPInit(
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误，若要获取详细信息，请使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 接口。  
+ 出现访问接口特定的错误，若要获取详细信息，请使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 接口。  
   
  E_OUTOFMEMORY  
  内存不足错误。  
@@ -93,5 +93,4 @@ HRESULT BCPInit(
 ## <a name="see-also"></a>另请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

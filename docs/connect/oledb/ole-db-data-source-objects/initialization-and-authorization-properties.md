@@ -16,12 +16,12 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 702b6058e09a49528f96184d8591a0b6c97b3f86
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 2eac0da805a1d5e75ddb1c358bd54b0195f0bf0d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862079"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727223"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授权属性
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88862079"
 |属性 ID|说明|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 说明:用于对 Azure Active Directory 进行身份验证的访问令牌。 <br/><br/>**注意：** 如果指定此属性的同时还指定 `UID`、`PWD`、`Trusted_Connection` 或 `Authentication` 连接字符串关键字或其相应属性/关键字，则会出现错误。|
-|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 说明:指定使用的 SQL 或 Active Directory 身份验证。 有效值是：<br/><ul><li>`(not set)`设置用户帐户 ：身份验证模式由其他关键字确定。</li><li>`(empty string)`设置用户帐户 ：取消设置以前设置的身份验证模式。</li><li>`ActiveDirectoryPassword:`使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`ActiveDirectoryIntegrated:` 使用 Azure Active Directory 标识进行集成身份验证。</li><br/>**注意：** `ActiveDirectoryIntegrated` 关键字还可用于对 SQL Server 进行 Windows 身份验证。 它将替换 `Integrated Security`（或 `Trusted_Connection`）身份验证关键字。 建议  使用 `Integrated Security`（或 `Trusted_Connection`）关键字或其相应属性的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `ActiveDirectoryIntegrated` 以启用新的加密和证书验证行为。<br/><br/><li>`ActiveDirectoryInteractive:` 使用 Azure Active Directory 标识进行交互式身份验证。 此方法支持 Azure 多重身份验证 (MFA)。 </li><li>`ActiveDirectoryMSI:` [托管标识 (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 身份验证。 对于用户分配的标识，用户 ID 应设置为用户标识的对象 ID。</li><li>`SqlPassword:` 使用用户 ID 和密码的身份验证。</li><br/>**注意：** 建议  使用 `SQL Server` 身份验证的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `SqlPassword` 以启用[新的加密和证书验证行为](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。</ul>|
+|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 说明:指定使用的 SQL 或 Active Directory 身份验证。 有效值是：<br/><ul><li>`(not set)`设置用户帐户 ：身份验证模式由其他关键字确定。</li><li>`(empty string)`设置用户帐户 ：取消设置以前设置的身份验证模式。</li><li>`ActiveDirectoryPassword:`使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`ActiveDirectoryIntegrated:` 使用 Azure Active Directory 标识进行集成身份验证。</li><br/>**注意：** `ActiveDirectoryIntegrated` 关键字还可用于对 SQL Server 进行 Windows 身份验证。 它将替换 `Integrated Security`（或 `Trusted_Connection`）身份验证关键字。 建议  使用 `Integrated Security`（或 `Trusted_Connection`）关键字或其相应属性的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `ActiveDirectoryIntegrated` 以启用新的加密和证书验证行为。<br/><br/><li>`ActiveDirectoryInteractive:` 使用 Azure Active Directory 标识进行交互式身份验证。 此方法支持 Azure 多重身份验证 (MFA)。 </li><li>`ActiveDirectoryMSI:` [托管标识 (MSI)](/azure/active-directory/managed-identities-azure-resources/overview) 身份验证。 对于用户分配的标识，用户 ID 应设置为用户标识的对象 ID。</li><li>`SqlPassword:` 使用用户 ID 和密码的身份验证。</li><br/>**注意：** 建议  使用 `SQL Server` 身份验证的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `SqlPassword` 以启用[新的加密和证书验证行为](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。</ul>|
 |SSPROP_AUTH_OLD_PASSWORD|键入：VT_BSTR<br /><br /> R/W：写入<br /><br /> 默认值：VT_EMPTY<br /><br /> 说明:当前密码或已过期的密码。 有关详细信息，请参阅[以编程方式更改密码](../../oledb/features/changing-passwords-programmatically.md)。|  
 |SSPROP_INIT_APPNAME|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 说明:客户端应用程序名称。|  
 |SSPROP_INIT_AUTOTRANSLATE|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明:OEM/ANSI 字符转换。<br /><br /> VARIANT_TRUE：OLE DB Driver for SQL Server 通过 Unicode 转换来转换在客户端和服务器之间发送的 ANSI 字符串，从而将客户端和服务器的代码页之间匹配的扩展字符中的问题数降至最少：<br /><br /> 对于发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]char、varchar 或 text 变量、参数或列实例的客户端 DBTYPE_STR 数据，它们先使用客户端 ANSI 代码页 (ACP) 从字符转换到 Unicode，再使用服务器的 ACP 从 Unicode 转换到字符    。<br /><br /> 对于发送到客户端 DBTYPE_STR 变量的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] char、varchar 或 text 数据，它们使用服务器 ACP 从字符转换为 Unicode，再使用客户端 ACP 从 Unicode 转换为字符    。<br /><br /> 这些转换由 OLE DB Driver for SQL Server 在客户端上执行。 这要求客户端上有在服务器上使用的同一 ACP。<br /><br /> 这些设置对于为下面这些传输而发生的转换无效：<br /><br /> 发送到服务器上的 char、varchar 或 text 的 Unicode DBTYPE_WSTR 客户端数据    。<br /><br /> 发送到客户端上的 Unicode DBTYPE_WSTR 变量的 char、varchar 或 text 服务器数据    。<br /><br /> 发送到服务器上的 Unicode nchar、nvarchar 或 ntext 的 ANSI DBTYPE_STR 客户端数据    。<br /><br /> 发送到客户端上的 ANSI DBTYPE_STR 变量的 Unicode char、varchar 或 text 服务器数据    。<br /><br /> VARIANT_FALSE：OLE DB Driver for SQL Server 不执行字符转换。<br /><br /> 对于发送到服务器上的 char、varchar 或 text 变量、参数或列的客户端 ANSI 字符 DBTYPE_STR 数据，适用于 SQL Server 的 OLE DB 驱动程序不进行转换    。 对于从服务器发送到客户端上的 DBTYPE_STR 变量的 char、varchar 或 text 数据，不执行转换    。<br /><br /> 如果客户端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例正在使用不同的 ACP，可能会错误地解释扩展字符。|  
@@ -97,5 +97,4 @@ Server=MyServer;UID=MyUserName;
   
 ## <a name="see-also"></a>另请参阅  
  [数据源对象 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
-  
   

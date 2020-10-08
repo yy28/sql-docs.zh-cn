@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147578"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727248"
 ---
 # <a name="sql-server-login-dialog-box"></a>SQL Server 登录对话框
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "88147578"
 > [!NOTE]  
 > SQL Server 登录对话框提示行为由 `DBPROP_INIT_PROMPT` 初始化属性控制。 有关详细信息，请参阅：
 > - [初始化和授权属性](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [OLE DB 程序员指南](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [OLE DB 程序员指南](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![SQL Server 登录对话框屏幕截图](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>选项
 |选项|说明|
 |---   |---        |
-|服务器|网络上的 SQL Server 实例的名称。 从列表中选择一个服务器\实例名，或在“服务器”  框中键入服务器\实例名。 或者，可以在客户端计算机上使用“SQL Server 配置管理器”  创建服务器别名，并在“服务器”  框中键入该名称。 <br/><br/>当使用与 SQL Server 相同的计算机时可以输入“(local)”。 即使正在运行非联网版的 SQL Server，也可以连接到 SQL Server 的本地实例。<br/><br/>有关不同网络类型的服务器名称的详细信息，请参阅 [SQL Server 安装](https://go.microsoft.com/fwlink/?linkid=2067541)。|
+|服务器|网络上的 SQL Server 实例的名称。 从列表中选择一个服务器\实例名，或在“服务器”  框中键入服务器\实例名。 或者，可以在客户端计算机上使用“SQL Server 配置管理器”  创建服务器别名，并在“服务器”  框中键入该名称。 <br/><br/>当使用与 SQL Server 相同的计算机时可以输入“(local)”。 即使正在运行非联网版的 SQL Server，也可以连接到 SQL Server 的本地实例。<br/><br/>有关不同网络类型的服务器名称的详细信息，请参阅 [SQL Server 安装](../../../database-engine/install-windows/install-sql-server.md)。|
 |身份验证模式|可以从下拉列表选择以下身份验证选项：<br/><ul><li>`Windows Authentication:` 使用当前登录用户的 Windows 帐户凭据对 SQL Server 进行身份验证。</li><li>`SQL Server Authentication:` 使用登录 ID 和密码进行身份验证。</li><li>`Active Directory - Integrated:` 使用 Azure Active Directory 标识进行集成身份验证。 此模式还可用于对 SQL Server 进行 Windows 身份验证。</li><li>`Active Directory - Password:` 使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`Active Directory - Universal with MFA support:` 使用 Azure Active Directory 标识进行交互式身份验证。 此模式支持 Azure 多重身份验证 (MFA)。</li></ul>|
 |服务器 SPN|如果您使用受信任连接，则可为服务器指定服务主体名称 (SPN)。|
 |登录 ID|指定用于连接的登录 ID。 仅当 `Authentication Mode` 设置为 `SQL Server Authentication`、`Active Directory - Password` 或 `Active Directory - Universal with MFA support` 时，才启用“登录 ID”文本框。|

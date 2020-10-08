@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288179"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727384"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer
 > [!NOTE]
 > 在 Linux 和 macOS 上，必须有 OpenSSL 版本 1.0.1 或更高版本，才能使用具有安全 Enclave 的 Always Encrypted。
 
-自版本 17.4 起，驱动程序支持具有安全 Enclave 的 Always Encrypted。 若要启用在连接到 SQL Server 2019 或更高版本时使用 enclave，请将 `ColumnEncryption` DSN、连接字符串或连接属性设置为 enclave 类型名称、证明协议和关联的证明数据（用逗号分隔）。 在版本 17.4 中，只支持[基于虚拟化的安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave 类型和[主机保护者服务](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)证明协议（由 `VBS-HGS` 表示）；若要使用它，请指定认证服务器的 URL，例如：
+自版本 17.4 起，驱动程序支持具有安全 Enclave 的 Always Encrypted。 若要启用在连接到 SQL Server 2019 或更高版本时使用 enclave，请将 `ColumnEncryption` DSN、连接字符串或连接属性设置为 enclave 类型名称、证明协议和关联的证明数据（用逗号分隔）。 在版本 17.4 中，只支持[基于虚拟化的安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave 类型和[主机保护者服务](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)证明协议（由 `VBS-HGS` 表示）；若要使用它，请指定认证服务器的 URL，例如：
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -383,7 +383,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="using-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供程序
 
-Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密钥（尤其是当应用程序在 Azure 中托管时）。 适用于 Linux、macOS 和 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Azure 密钥保管库的内置列主密钥存储提供程序。 有关为 Azure 密钥保管库设置 Always Encrypted 的详细信息，请参阅 [Azure 密钥保管库 - 分步说明](/archive/blogs/kv/azure-key-vault-step-by-step)、[密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)以及[在 Azure 密钥保管库中创建列主密钥](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
+Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密钥（尤其是当应用程序在 Azure 中托管时）。 适用于 Linux、macOS 和 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Azure 密钥保管库的内置列主密钥存储提供程序。 有关为 Azure 密钥保管库设置 Always Encrypted 的详细信息，请参阅 [Azure 密钥保管库 - 分步说明](/archive/blogs/kv/azure-key-vault-step-by-step)、[密钥保管库入门](/azure/key-vault/general/overview)以及[在 Azure 密钥保管库中创建列主密钥](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
 
 > [!NOTE]
 > ODBC 驱动程序仅支持对 Azure Active Directory 直接进行 AKV 身份验证。 如果对 AKV 使用的是 Azure Active Directory 身份验证，并且 Active Directory 配置要求针对 Active Directory 联合服务终结点进行身份验证，则身份验证可能会失败。
@@ -395,7 +395,7 @@ Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密�
 
 - 客户端 ID/机密 - 使用此方法时，凭据是应用程序客户端 ID 及应用程序机密。
 
-- 托管标识 (17.5.2+) - 系统或用户分配；有关详细信息，请参阅 [Azure 资源的托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)。
+- 托管标识 (17.5.2+) - 系统或用户分配；有关详细信息，请参阅 [Azure 资源的托管标识](/azure/active-directory/managed-identities-azure-resources/)。
 
 若要允许驱动程序将 AKV 存储的 CMK 用于列加密，请使用下列仅连接字符串关键字：
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 919a0f04eb0d6c4f15125dc9514d11930bd13f8e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b1f77ce4eb0b329fdb6911bd38f6e120e4ff7d3d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901325"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727480"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下载 ODBC Driver for SQL Server
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver for SQL Server 是单个动态链接库 (DLL)，它包含�
 - 发布日期：2020 年 7 月 31 日
 
 > [!Note]
-> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://aka.ms/downloadmsodbcsqlenglish)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
+> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本]()。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
 
 ## <a name="available-languages"></a>可用语言
 

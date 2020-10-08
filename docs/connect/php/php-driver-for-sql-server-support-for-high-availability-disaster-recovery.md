@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477999"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726751"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>支持高可用性、灾难恢复
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88477999"
 
 MultiSubnetFailover**** 连接属性指明，应用程序正部署在可用性组或故障转移群集实例中，且驱动程序会通过尝试连接到所有 IP 地址来尝试连接到主 SQL Server 实例中的数据库。 在连接到 SQL Server 可用性组侦听程序或 SQL Server 故障转移群集实例时，应始终指定 MultiSubnetFailover=True****。 如果将应用程序连接到具有故障转移功能的 AlwaysOn 数据库，那么在故障转移后，原始连接会断开，且应用程序必须建立新连接才能继续运行。
 
-有关 AlwaysOn 可用性组的完整详细信息，可以访问[高可用性、灾难恢复](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery)文档页。
+有关 AlwaysOn 可用性组的完整详细信息，可以访问[高可用性、灾难恢复](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)文档页。
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>透明网络 IP 解析 (TNIR)
 
@@ -72,4 +72,3 @@ try {
 
 ## <a name="see-also"></a>另请参阅  
 [连接到服务器](../../connect/php/connecting-to-the-server.md)  
-  

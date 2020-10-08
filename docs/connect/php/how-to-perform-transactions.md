@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5a04b2a68c47b85ce89512f4ae772fb6c9408b9
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 13eae20e5a8e51a7a46473ef62e98c03c195e382
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680632"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726819"
 ---
 # <a name="how-to-perform-transactions"></a>如何：执行事务
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -156,7 +156,6 @@ function perform_trans_ops($conn, $orderId)
 ## <a name="see-also"></a>另请参阅  
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[事务（数据库引擎）](https://msdn.microsoft.com/library/ms190612.aspx)
+[事务（数据库引擎）](/previous-versions/sql/sql-server-2008-r2/ms190612(v=sql.105))
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

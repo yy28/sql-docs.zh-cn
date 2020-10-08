@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5629096fb59bbb081aa535e8e3436a4cb06130d8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449963"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726712"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,12 +42,12 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>返回值  
 数组的 **array** 或 **false**。 数组由结果集中的每个字段的一个数组组成。 每个子数组具有下表中所述的键。 如果在检索字段元数据时出现错误，则返回 **false** 。  
   
-|键|说明|  
+|密钥|说明|  
 |-------|---------------|  
 |名称|字段对应的列的名称。|  
 |类型|对应于 SQL 类型的数值。|  
 |大小|字符类型（char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML）的字段的字符数。 二进制类型（binary(n)、varbinary(n)、UDT）的字段的字节数。 **NULL** 用于其他 SQL Server 数据类型。|  
-|精度|变量精度类型（real、numeric、decimal、datetime2、datetimeoffset 和 time）的精度。 **NULL** 用于其他 SQL Server 数据类型。|  
+|Precision|变量精度类型（real、numeric、decimal、datetime2、datetimeoffset 和 time）的精度。 **NULL** 用于其他 SQL Server 数据类型。|  
 |缩放|变量小数位数类型（numeric、decimal、datetime2、datetimeoffset 和 time）的小数位数。 **NULL** 用于其他 SQL Server 数据类型。|  
 |Nullable|指示列可以为 null (SQLSRV_NULLABLE_YES)、不可为 null (SQLSRV_NULLABLE_NO) 还是未知列是否可以为 null (SQLSRV_NULLABLE_UNKNOWN) 的枚举值************。|  
   
@@ -59,7 +59,7 @@ sqlsrv_field_metadata( resource $stmt)
 |binary|SQL_BINARY (-2)|||** 0 < n < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||** 0 < n < 8000 <sup>1</sup>|  
-|日期|SQL_TYPE_DATE (91)|10/10|0/0||  
+|date|SQL_TYPE_DATE (91)|10/10|0/0||  
 |datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
@@ -79,7 +79,7 @@ sqlsrv_field_metadata( resource $stmt)
 |sql_variant|SQL_SS_VARIANT (-150)|||变量|  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
-|timestamp|SQL_BINARY (-2)|||8 个字节|  
+|timestamp|SQL_BINARY (-2)|||8 字节|  
 |tinyint|SQL_TINYINT (-6)|||1 个字节|  
 |udt|SQL_SS_UDT (-151)|||变量|  
 |uniqueidentifier|SQL_GUID (-11)|||16|  
@@ -91,7 +91,7 @@ sqlsrv_field_metadata( resource $stmt)
   
 可以为 Null 的键可能为是或否。  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>示例：  
 以下示例创建语句资源，然后检索并显示字段元数据。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感度数据分类元数据
 
-版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 `sqlsrv_field_metadata`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)。
+版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 `sqlsrv_field_metadata`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4)。
 
 默认情况下，选项 `DataClassification` 为 `false`，但设置为 `true` 后，将使用敏感度数据分类元数据（如果存在）填充 `sqlsrv_field_metadata` 返回的数组。 
 
@@ -244,4 +244,3 @@ foreach ($fieldmeta as $f) {
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

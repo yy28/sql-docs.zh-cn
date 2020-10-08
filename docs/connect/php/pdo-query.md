@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dfceb71c40b7214d9570a62c7ff65925b4f19849
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 8f194c043ded9b8f663a6bcbfdb77ef408461468
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410943"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726784"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>示例
-此代码示例演示如何创建 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 类型的表并提取插入的数据。
+此代码示例演示如何创建 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 类型的表并提取插入的数据。
 
 ```
 <?php
@@ -170,4 +170,3 @@ Array
 [PDO 类](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

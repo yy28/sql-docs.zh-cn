@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009333"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727428"
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 
@@ -77,7 +77,7 @@ Server = tcp:localhost,1433
 
 启用加密可提高安全性，但会降低性能。
 
-有关更多信息，请参阅[加密连接到 SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) 和[使用未经验证的加密](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)。
+有关更多信息，请参阅[加密连接到 SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) 和[使用未经验证的加密](../../../relational-databases/native-client/features/using-encryption-without-validation.md)。
 
 无论 **Encrypt** 和 **TrustServerCertificate**的设置如何，服务器登录凭据（用户名和密码）都始终处于加密状态。 下表显示了 **Encrypt** 和 **TrustServerCertificate** 设置的效果。  
 

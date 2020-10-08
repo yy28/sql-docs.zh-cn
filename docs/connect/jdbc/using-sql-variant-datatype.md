@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414523"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727479"
 ---
 # <a name="using-sql_variant-data-type"></a>使用 Sql_variant 数据类型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-从版本 6.3.0 开始，JDBC 驱动程序支持 sql_variant 数据类型。 使用表值参数和 BulkCopy 等功能时，也支持 Sql_variant，本页后面部分将提到一些限制。 并非所有数据类型都可以存储在 sql_variant 数据类型中。 有关 sql_variant 支持的数据类型列表，请查看 SQL Server [Docs](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)。
+从版本 6.3.0 开始，JDBC 驱动程序支持 sql_variant 数据类型。 使用表值参数和 BulkCopy 等功能时，也支持 Sql_variant，本页后面部分将提到一些限制。 并非所有数据类型都可以存储在 sql_variant 数据类型中。 有关 sql_variant 支持的数据类型列表，请查看 SQL Server [Docs](../../t-sql/data-types/sql-variant-transact-sql.md)。
 
 ##  <a name="populating-and-retrieving-a-table"></a>填充和检索表：
 假设一个表中包含 sql_variant 列，如下所示：
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>另请参阅
 
-[了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

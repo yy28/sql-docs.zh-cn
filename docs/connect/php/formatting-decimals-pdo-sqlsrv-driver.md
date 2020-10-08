@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: db9392b523be8777a96e4d262cfca5acccc8f406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680652"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726838"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-为了保持准确性，[十进制或数字类型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)始终以精确精度和数值范围的字符串形式提取。 如果任何值小于 1，则缺少前导零。 money 和 smallmoney 字段也是如此，因为这些字段是固定数值范围等于 4 的十进制字段。
+为了保持准确性，[十进制或数字类型](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)始终以精确精度和数值范围的字符串形式提取。 如果任何值小于 1，则缺少前导零。 money 和 smallmoney 字段也是如此，因为这些字段是固定数值范围等于 4 的十进制字段。
 
 ## <a name="add-leading-zeroes-if-missing"></a>添加前导零（如果缺少）
 从版本 5.6.0 开始，连接或语句属性 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 允许用户设置十进制字符串格式。 此属性需要一个布尔值（true 或 false），并且仅影响提取结果中的十进制值或数值的格式设置。 换言之，此属性不会对其他操作（如插入或更新）产生影响。

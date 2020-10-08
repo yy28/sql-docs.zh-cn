@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862245"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727178"
 ---
 # <a name="return-codes"></a>返回代码
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862245"
 
   在最基本的级别上，成员函数要么成功，要么失败。 在稍微精确一些的级别上，函数可能会成功，但是它的成功可能并不是应用程序开发人员想要的成功。  
   
- 有关 OLE DB 返回代码的详细信息，请参阅 [Return Codes (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)（返回代码 (OLE DB)）。  
+ 有关 OLE DB 返回代码的详细信息，请参阅 [Return Codes (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85))（返回代码 (OLE DB)）。  
   
  如果 OLE DB Driver for SQL Server 的某成员函数返回 S_OK，则表明该函数执行成功。  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88862245"
   
 ## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  
-  
   

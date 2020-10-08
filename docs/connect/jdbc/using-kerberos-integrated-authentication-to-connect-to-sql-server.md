@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ecbffed0e29bc3a36a1129dbade504c9b03484c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d015565b114641f2c44c28da1f2dc03e4fdda773
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414593"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727512"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 集成身份验证连接到 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，应用程序可使用 authenticationScheme 连接属性指示它希望连接到使用类型 4 Kerberos 集成身份验证的数据库  。 有关连接属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 有关 Kerberos 的详细信息，请参阅 [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)。
+从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，应用程序可使用 authenticationScheme 连接属性指示它希望连接到使用类型 4 Kerberos 集成身份验证的数据库  。 有关连接属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 有关 Kerberos 的详细信息，请参阅 [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)。
 
 对 Java Krb5LoginModule 使用集成身份验证时，可使用[类 Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) 配置该模块  。
 
@@ -74,7 +74,7 @@ ms.locfileid: "88414593"
 
 - [为 Kerberos 连接注册服务主体名称](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
-- [对 SQL Server 使用 Kerberos](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
+- [对 SQL Server 使用 Kerberos](/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > 在 JDBC Driver 6.2 之前，为了正确使用跨领域 Kerberos，需要显式设置 serverSpn  。
