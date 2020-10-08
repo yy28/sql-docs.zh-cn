@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765766"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725864"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -80,7 +80,7 @@ kubectl config view
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/data-virtualization-extension.md)
+- Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/extensions/data-virtualization-extension.md)
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> 部署概述
@@ -255,7 +255,7 @@ Cluster deployed successfully.
    > [!TIP]
    > 如果在部署过程中未更改默认名称，请在上一个命令中使用 `-n mssql-cluster`。 `mssql-cluster` 是大数据群集的默认名称。
 
-1. 使用 [azdata login](reference-azdata.md) 登录大数据群集。 将 `--endpoint` 参数设置为控制器终结点的外部 IP 地址。
+1. 使用 [azdata login](../azdata/reference/reference-azdata.md) 登录大数据群集。 将 `--endpoint` 参数设置为控制器终结点的外部 IP 地址。
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Cluster deployed successfully.
    > [!TIP]
    > 如果你是 Kubernetes 群集管理员并且有权访问群集配置文件（kube 配置文件），则可以将当前上下文配置为指向目标 Kubernetes 群集。 在这种情况下，可以使用 `azdata login -n <namespaceName>` 登录，其中 `namespace` 是大数据群集名称。 如果登录命令中未指定凭据，则系统会提示输入凭据。
    
-1. 运行 [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) 以获取一个列表，其中包含每个终结点的描述及其对应的 IP 地址和端口值。 
+1. 运行 [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) 以获取一个列表，其中包含每个终结点的描述及其对应的 IP 地址和端口值。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> 验证群集状态
 
-部署完成后，可以通过 [azdata bdc status show](reference-azdata-bdc-status.md) 命令检查群集的状态。
+部署完成后，可以通过 [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) 命令检查群集的状态。
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 还可以使用以下命令获取更详细的状态：
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) 返回与控制管理服务关联的所有组件的运行状况状态
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) 返回与控制管理服务关联的所有组件的运行状况状态
 ```
 azdata bdc control status show
 ```

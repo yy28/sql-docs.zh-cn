@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860574"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725858"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
@@ -171,7 +171,7 @@ ms.locfileid: "88860574"
 
 ## <a name="prerequisites"></a>先决条件
 
-- [安装 azdata](deploy-install-azdata.md)。
+- [安装 azdata](../azdata/install/deploy-install-azdata.md)。
 
 - 本部分中的每个示例都假定已创建一个标准配置的副本。 有关详细信息，请参阅[创建自定义配置](deployment-guidance.md#customconfig)。 例如，以下命令根据默认的 `aks-dev-test` 配置，创建一个名为 `custom-bdc` 的目录，其中包含 `bdc.json` 和 `control.json` 两个 JSON 部署配置文件：
 

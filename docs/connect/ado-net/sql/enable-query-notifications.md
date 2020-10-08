@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e587639f5323ea76c975e3a8c35d647a7eb3d891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1fae73102dbbb29b6772213c4d021c273271458a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896974"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725629"
 ---
 # <a name="enabling-query-notifications"></a>启用查询通知
 
@@ -40,23 +40,23 @@ ms.locfileid: "78896974"
   
 **SQL Server 文档**  
   
-- [为通知创建查询](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [为通知创建查询](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Service Broker 的安全注意事项](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Service Broker 的安全注意事项](/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
-- [安全性和保护 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [安全性和保护 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
-- [Notification Services 的安全注意事项](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Notification Services 的安全注意事项](/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
-- [查询通知权限](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [查询通知权限](/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
-- [Service Broker 的国际化注意事项](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Service Broker 的国际化注意事项](/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
-- [解决方案设计注意事项 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [解决方案设计注意事项 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
-- [Service Broker 开发人员信息中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 开发人员信息中心](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [开发人员指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [开发人员指南 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>启用查询通知以运行示例代码  
 若要通过使用 SQL Server Management Studio 在 AdventureWorks 数据库上启用 Service Broker，请执行下面的 Transact-SQL 语句  ：  
@@ -88,7 +88,7 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqldependency"></a>使用 SqlDependency  
 要使用 <xref:Microsoft.Data.SqlClient.SqlDependency>，必须对所使用的 SQL Server 数据库启用 Service Broker，并且用户必须具有接收通知的权限。 Service Broker 对象（如通知队列）是预定义的。  
   
-此外，<xref:Microsoft.Data.SqlClient.SqlDependency> 会自动启动一个工作线程以在通知发布到队列中时处理这些通知；它还会分析 Service Broker 消息，将此信息作为事件参数数据公开。 必须通过调用 `Start` 方法建立对数据库的依赖关系，从而初始化 <xref:Microsoft.Data.SqlClient.SqlDependency>。 这是一个静态方法，对于每个所需的数据库连接，在应用程序初始化期间仅需调用一次。 必须在应用程序终止时为执行的每个相关连接调用 `Stop` 方法。  
+此外，<xref:Microsoft.Data.SqlClient.SqlDependency> 会自动启动一个工作线程以在通知发布到队列中时处理这些通知；它还会分析 Service Broker 消息，将此信息作为事件参数数据公开。 必须通过调用 <xref:Microsoft.Data.SqlClient.SqlDependency> 方法建立对数据库的依赖关系，从而初始化 `Start`。 这是一个静态方法，对于每个所需的数据库连接，在应用程序初始化期间仅需调用一次。 必须在应用程序终止时为执行的每个相关连接调用 `Stop` 方法。  
   
 ### <a name="using-sqlnotificationrequest"></a>使用 SqlNotificationRequest  
 与此相反，<xref:Microsoft.Data.Sql.SqlNotificationRequest> 要求你自己实现整个侦听基础结构。 此外，必须定义队列所支持的所有支持 Service Broker 对象，例如队列、服务和消息类型。 如果你的应用程序需要特殊通知消息或通知行为，或者你的应用程序是较大的 Service Broker 应用程序的一部分，则此手动方法非常有用。  

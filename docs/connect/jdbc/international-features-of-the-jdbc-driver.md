@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438399"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725498"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驱动程序的国际功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438399"
 ## <a name="collation-support"></a>排序规则支持  
  JDBC Driver 3.0 支持 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 和 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所支持的所有排序规则，并且还支持 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 中引入的新排序规则或新版 Windows 排序规则名称。  
   
- 有关排序规则的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[排序规则和 Unicode 支持](https://go.microsoft.com/fwlink/?LinkId=131366)和 [Windows 排序规则名称 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)。  
+ 有关排序规则的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[排序规则和 Unicode 支持](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105))和 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。  
   
 ## <a name="using-international-domain-names-idn"></a>使用国际域名 (IDN)  
  JDBC Driver 6.0 for SQL Server 支持使用国际化域名 (IDN)，并且可以在连接期间按照要求将 Unicode serverName 转换为 ASCII 兼容编码 (Punycode)。  如果 IDN 以 Punycode 格式（由 RFC 3490 指定）作为 ASCII 字符串存储在域名系统 (DNS) 中，通过将 serverNameAsACE 属性设置为 true 来启用 Unicode 服务器名称的转换。  否则，如果 DNS 服务配置为允许使用 Unicode 字符，请将 serverNameAsACE 属性设置为 false（默认值）。  对于旧版 JDBC 驱动程序，还可以先使用 [Java 的 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 方法将 serverName 转换为 Punycode，再为连接设置此属性。  
   
 > [!NOTE]  
->  为非 Windows 平台编写的大多数解析程序软件基于 Internet DSN 标准，因此很可能为 IDN 使用 Punycode 格式，而专用网络上的基于 Windows 的 DNS 服务器可以配置为允许针对每个服务器使用 UTF-8 字符。  有关详细信息，请参阅 [Unicode 字符支持](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)。  
+>  为非 Windows 平台编写的大多数解析程序软件基于 Internet DSN 标准，因此很可能为 IDN 使用 Punycode 格式，而专用网络上的基于 Windows 的 DNS 服务器可以配置为允许针对每个服务器使用 UTF-8 字符。  有关详细信息，请参阅 [Unicode 字符支持](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10))。  
   
 ## <a name="see-also"></a>另请参阅  
  [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   

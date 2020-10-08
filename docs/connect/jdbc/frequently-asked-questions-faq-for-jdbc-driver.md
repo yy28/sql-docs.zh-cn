@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042418"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725458"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -146,7 +146,7 @@ JDBC 驱动程序 6.0、6.2、6.4 和 7.0 是可再发行的。 查看许可协�
 是的。 驱动程序支持使用 IPv6 地址。 使用连接属性集合和 serverName 连接字符串属性。 有关详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 **什么是自适应缓冲？**  
-自 Microsoft SQL Server 2005 JDBC Driver 1.2 版起，引入了自适应缓冲。 它旨在检索任何种类的大值数据，免去了服务器游标开销。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 在 1.2 版中，缓冲模式默认为“full”，应用程序必须显式设置自适应缓冲模式。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 因此，应用程序无需显式发出自适应行为请求，即可获取自适应缓冲行为。 有关详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)和[什么是自适应响应缓冲以及我为何应使用它？](https://go.microsoft.com/fwlink/?LinkId=111575)博客文章。
+自 Microsoft SQL Server 2005 JDBC Driver 1.2 版起，引入了自适应缓冲。 它旨在检索任何种类的大值数据，免去了服务器游标开销。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 在 1.2 版中，缓冲模式默认为“full”，应用程序必须显式设置自适应缓冲模式。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 因此，应用程序无需显式发出自适应行为请求，即可获取自适应缓冲行为。 有关详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)和[什么是自适应响应缓冲以及我为何应使用它？](/archive/blogs/jdbcteam/)博客文章。
 
 **驱动程序是否支持连接池？**  
 该驱动程序支持 Java 平台 Enterprise Edition 5 (Java EE 5) 连接池。 该驱动程序实现了 JDBC 3.0 所需的接口，从而参与到任何中间件应用程序供应商提供的任何连接池实现中。 该驱动程序将参与这些环境中的已池化连接。 有关详细信息，请参阅[使用连接池](../../connect/jdbc/using-connection-pooling.md)。 该驱动程序不提供自己的池实现，而是依赖第三方的 Java 应用程序服务器。
@@ -158,7 +158,7 @@ JDBC 驱动程序 6.0、6.2、6.4 和 7.0 是可再发行的。 查看许可协�
 已针对各种应用程序服务器（包括 IBM WebSphere 和 SAP NetWeaver）对该驱动程序进行了测试。
 
 **我如何启用跟踪？**  
-该驱动程序支持使用跟踪（或日志记录）来帮助解决在应用程序中使用 JDBC 驱动程序时遇到的问题。 为了启用客户端 JAR 跟踪的使用，JDBC 驱动程序将在 java.util.logging 中使用日志记录 API。 有关详细信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。 对于客户端 XA 跟踪，请参阅 [Data Access Tracing in SQL Server（SQL Server 中的数据访问跟踪）](https://go.microsoft.com/fwlink/?LinkId=248705)。
+该驱动程序支持使用跟踪（或日志记录）来帮助解决在应用程序中使用 JDBC 驱动程序时遇到的问题。 为了启用客户端 JAR 跟踪的使用，JDBC 驱动程序将在 java.util.logging 中使用日志记录 API。 有关详细信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。 对于客户端 XA 跟踪，请参阅 [Data Access Tracing in SQL Server（SQL Server 中的数据访问跟踪）](/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))。
 
 **我在哪里可以下载旧版驱动程序，如 SQL Server 2000 JDBC Driver、2005 Driver、1.0、1.1 或 1.2 Driver？**  
 这些驱动程序版本已不再受到支持，因此不能下载。 我们在不断改善 Java 连接支持。 因此，强烈建议使用最新版 Microsoft JDBC Driver。

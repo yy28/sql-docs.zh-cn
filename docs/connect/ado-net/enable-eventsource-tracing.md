@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 17e947c108d14accb880dbd6673231e82b0b133c
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 4eac1ab519549ccace092cfc175c735dd4537269
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85110106"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725738"
 ---
 # <a name="enabling-event-tracing-in-sqlclient"></a>启用 SqlClient 中的事件跟踪
 
@@ -24,7 +24,7 @@ ms.locfileid: "85110106"
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-[Windows 事件跟踪 (ETW)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal) 是一种高效的内核级别跟踪功能，通过此功能，你可以记录驱动程序定义的事件以进行调试和测试。 SqlClient 支持在不同的信息级别捕获 ETW 事件。 若要开始捕获事件跟踪，客户端应用程序应侦听来自 SqlClient 的 EventSource 实现的事件：
+[Windows 事件跟踪 (ETW)](/windows/win32/etw/event-tracing-portal) 是一种高效的内核级别跟踪功能，通过此功能，你可以记录驱动程序定义的事件以进行调试和测试。 SqlClient 支持在不同的信息级别捕获 ETW 事件。 若要开始捕获事件跟踪，客户端应用程序应侦听来自 SqlClient 的 EventSource 实现的事件：
 
 ```
 Microsoft.Data.SqlClient.EventSource
@@ -59,5 +59,5 @@ Microsoft.Data.SqlClient.EventSource
   
 |资源|说明|  
 |--------------|-----------------|  
-|[EventSource 类](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)|提供用于创建 ETW 事件的功能。| 
-|[EventListener 类](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventlistener)|提供用于启用和禁用事件源中事件的方法。| 
+|[EventSource 类](/dotnet/api/system.diagnostics.tracing.eventsource)|提供用于创建 ETW 事件的功能。| 
+|[EventListener 类](/dotnet/api/system.diagnostics.tracing.eventlistener)|提供用于启用和禁用事件源中事件的方法。|

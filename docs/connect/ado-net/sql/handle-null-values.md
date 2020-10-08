@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393165"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725630"
 ---
 # <a name="handling-null-values"></a>处理 null 值
 
@@ -26,7 +26,7 @@ ms.locfileid: "86393165"
 如果列中的值未知或缺失，则使用关系数据库中的 null 值。 null 既不是空字符串（对于字符或日期/时间数据类型），也不是零值（对于数值数据类型）。 ANSI SQL-92 规范规定，所有数据类型的 null 值必须相同，以便一致地处理所有 null 值。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口提供 null 语义。 <xref:System.Data.SqlTypes> 中的每个数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
   
 > [!NOTE]
->  .NET Framework 版本 2.0 和 .NET Core 1.0 版本引入了对可以为 null 的类型的支持，这些类型使程序员可以扩展值类型来表示基础类型的所有值。 这些 CLR 可以为 null 的类型表示 <xref:System.Nullable> 结构的实例。 当对值类型进行装箱和取消装箱时，此功能特别有用，从而增强了与对象类型的兼容性。 CLR 可以为 null 的类型不用于存储数据库 null 值，因为 ANSI SQL null 与 `null` 引用（或 Visual Basic 中的 `Nothing`）的行为方式不同。 若要使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值，而不是 <xref:System.Nullable>。 有关在 C# 中使用 CLR 可以为 null 的类型的更多信息，请参见[可以为 null 的类型](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/)，有关 C# 的更多信息，请参见[使用可以为 null 的类型](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)。  
+>  .NET Framework 版本 2.0 和 .NET Core 1.0 版本引入了对可以为 null 的类型的支持，这些类型使程序员可以扩展值类型来表示基础类型的所有值。 这些 CLR 可以为 null 的类型表示 <xref:System.Nullable> 结构的实例。 当对值类型进行装箱和取消装箱时，此功能特别有用，从而增强了与对象类型的兼容性。 CLR 可以为 null 的类型不用于存储数据库 null 值，因为 ANSI SQL null 与 `null` 引用（或 Visual Basic 中的 `Nothing`）的行为方式不同。 若要使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值，而不是 <xref:System.Nullable>。 有关在 C# 中使用 CLR 可以为 null 的类型的更多信息，请参见[可以为 null 的类型](/dotnet/csharp/programming-guide/nullable-types/)，有关 C# 的更多信息，请参见[使用可以为 null 的类型](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)。  
   
 ## <a name="nulls-and-three-valued-logic"></a>null 和三值逻辑  
 允许列定义中的 null 值在应用程序中引入了三值逻辑。 比较的计算结果可以为以下三种情况之一：  

@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896245"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725576"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 
@@ -113,7 +113,7 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  在 SQL Server 中运行的公共语言运行时 (CLR) 代码不支持用户实例。 如果在连接字符串中有 `User Instance=true` 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 上调用 `Open`，将引发 <xref:System.InvalidOperationException>。  
+>  在 SQL Server 中运行的公共语言运行时 (CLR) 代码不支持用户实例。 如果在连接字符串中有 <xref:System.InvalidOperationException> 的 `Open` 上调用 <xref:Microsoft.Data.SqlClient.SqlConnection>，将引发 `User Instance=true`。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>用户实例连接的生存期  
 与作为服务运行的 SQL Server 版本不同，SQL Server Express 实例无需手动启动和停止。 用户每次登录并连接到用户实例时，如果用户实例尚未运行，则启动该实例。 用户实例数据库设置了 `AutoClose` 选项，以便在一段非活动期后自动关闭数据库。 在实例的最后一个连接关闭后，启动的 sqlservr.exe 进程将在有限的超时期限内持续运行，因此，如果在超时过期之前打开另一个连接，无需重新启动。 如果在超时期限过期之前没有打开新连接，用户实例将自动关闭。 父实例的系统管理员可为用户实例设置超时期限的持续时间，方法为：使用 sp_configure 更改“用户实例超时”选项   。 默认值为 60 分钟。  
@@ -143,7 +143,7 @@ private static void OpenSqlConnection()
   
 - 不需要共享数据的任何单用户应用程序。  
   
-- ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）或 .NET Core 1.0（或更高版本），以及 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用因 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 是安装的一部分，则管理员必须安装它。 有关详细信息，请参阅 [Windows 窗体的 ClickOnce 部署](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)。
+- ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）或 .NET Core 1.0（或更高版本），以及 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用因 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 是安装的一部分，则管理员必须安装它。 有关详细信息，请参阅 [Windows 窗体的 ClickOnce 部署](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)。
   
 - 使用 Windows 身份验证的专用 ASP.NET 托管。 单个 SQL Server Express 实例可以承载在 Intranet 上。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟。 用户实例不应用于第三方或共享托管场景，在这些场景中，所有应用程序将共享同一个用户实例，且不再彼此隔离。  
   

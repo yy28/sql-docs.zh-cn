@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 57222c852ac2ba8c1aedf42075b69587a4b3843d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896577"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725598"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查询通知
 
@@ -35,19 +35,19 @@ ms.locfileid: "78896577"
   
 可以为 SELECT 和 EXECUTE 语句设置通知。 使用 EXECUTE 语句时，SQL Server 将为执行的命令（而不是 EXECUTE 语句本身）注册一个通知。 命令必须满足 SELECT 语句的要求和限制。 当注册通知的命令包含多条语句时，数据库引擎将为批处理中的每条语句创建一个通知。  
   
-如果你正在开发需要在数据发生更改时提供可靠的次秒级通知的应用程序，请查看 SQL Server 联机丛书中[计划通知](https://go.microsoft.com/fwlink/?LinkId=211984)主题中的“计划高效的查询通知策略”和“查询通知的替代方法”部分 。 有关查询通知和 SQL Server Service Broker 的详细信息，请参阅以下指向 SQL Server 联机丛书中主题的链接。  
+如果你正在开发需要在数据发生更改时提供可靠的次秒级通知的应用程序，请查看 SQL Server 联机丛书中[计划通知](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105))主题中的“计划高效的查询通知策略”和“查询通知的替代方法”部分   。 有关查询通知和 SQL Server Service Broker 的详细信息，请参阅以下指向 SQL Server 联机丛书中主题的链接。  
   
 **SQL Server 文档**  
   
-- [使用查询通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [使用查询通知](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [为通知创建查询](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [为通知创建查询](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [开发 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [开发 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker 开发人员信息中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 开发人员信息中心](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [开发人员指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [开发人员指南 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>在本节中  
 [启用查询通知](enable-query-notifications.md)  

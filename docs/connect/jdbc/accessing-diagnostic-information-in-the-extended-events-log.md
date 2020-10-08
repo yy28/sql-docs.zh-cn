@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922254"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725502"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922254"
   
  可以使用 [ISQLServerConnection 接口](../../connect/jdbc/reference/isqlserverconnection-interface.md)以编程方式获取客户端连接 ID。 该连接 ID 还存在于任何与连接相关的异常中。  
   
- 存在连接错误时，服务器的 Built In Diagnostics (BID) 跟踪信息和连接环形缓冲区中的客户端连接 ID 可以帮助将客户端连接与服务器上的连接关联。 有关服务器上的 BID 跟踪的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 请注意，数据访问跟踪文章还介绍了数据访问跟踪，但并不适用于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]；若要了解如何使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 执行数据访问跟踪，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。  
+ 存在连接错误时，服务器的 Built In Diagnostics (BID) 跟踪信息和连接环形缓冲区中的客户端连接 ID 可以帮助将客户端连接与服务器上的连接关联。 有关服务器上的 BID 跟踪的详细信息，请参阅[数据访问跟踪](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))。 请注意，数据访问跟踪文章还介绍了数据访问跟踪，但并不适用于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]；若要了解如何使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 执行数据访问跟踪，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。  
   
  JDBC Driver 还会发送特定于线程的活动 ID。 如果开始会话时启用了 TRACK_CAUSAILITY 选项，则会在扩展的事件会话中捕获活动 ID。 对于与活动连接有关的性能问题，你可以从客户端的跟踪中获取活动 ID（ActivityID 字段），然后在扩展事件输出中找到该活动 ID。 扩展事件中的活动 ID 是一个 16 字节 GUID（与客户端连接 ID 的 GUID 不同），附有一个 4 字节的序列号。 序列号代表线程内某个请求的顺序。 ActivityId 会为 SQL 批处理语句和 RPC 请求发送。 为了能将 ActivityId 发送到服务器，您首先需要在 Logging.Properties 文件中指定以下键值对：  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>另请参阅
 
-[诊断 JDBC 驱动程序问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[诊断 JDBC 驱动程序问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

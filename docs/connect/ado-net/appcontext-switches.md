@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 16d3ed6db478f12157333badf93682eb861c57f3
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: e2e27070fee16e7a7e55272eb044870a704d70db
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091685"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725748"
 ---
 # <a name="appcontext-switches-in-sqlclient"></a>SqlClient 中的 AppContext 开关
 
@@ -71,7 +71,7 @@ TransparentNetworkIPResolution 默认处于启用状态。 MultiSubnetFailover �
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);
 ```
 
-有关设置这些属性的详细信息，请参阅 [SqlConnection.ConnectionString 属性](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)文档。 
+有关设置这些属性的详细信息，请参阅 [SqlConnection.ConnectionString 属性](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)文档。 
 
 ## <a name="enable-a-minimum-timeout-during-login"></a>在登录期间启用最小超时
 
@@ -95,4 +95,4 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 
 ## <a name="see-also"></a>另请参阅
 
-[AppContext 类](https://docs.microsoft.com/dotnet/api/system.appcontext?view=netcore-3.1)
+[AppContext 类](/dotnet/api/system.appcontext?view=netcore-3.1)

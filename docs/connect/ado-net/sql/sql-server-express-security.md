@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243421"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725562"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 
@@ -42,8 +42,8 @@ SQL Server Express 通常作为命名实例安装。 实例的默认名称为 `S
   
 |资源|说明|
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition 联机丛书](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文档。|  
-|SQL Server 联机丛书中的[非管理员的用户实例](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|描述如何创建和部署用户实例。|  
+|[Microsoft SQL Server 2005 Express Edition 联机丛书](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文档。|  
+|SQL Server 联机丛书中的[非管理员的用户实例](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|描述如何创建和部署用户实例。|  
 |[SQL Server Express 用户实例](sql-server-express-user-instances.md)|介绍 ADO.NET 应用程序中的用户实例功能。 提供有关如何启用用户实例、使用 <xref:Microsoft.Data.SqlClient.SqlConnection> 连接到用户实例、用户实例生存期和用户实例场景的信息。|  
   
 ## <a name="next-steps"></a>后续步骤

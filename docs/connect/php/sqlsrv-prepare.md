@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9e82a25d3386de2f86d7e43fe5bde13eb25c6416
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 51f1bd58c872516ffdf79d3a957b7c4674b82cd8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435120"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726667"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -223,7 +223,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
+> 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将十进制值作为输入参数进行绑定。  
@@ -264,4 +264,3 @@ sqlsrv_close($conn);
 [检索数据](../../connect/php/retrieving-data.md)
 
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
-

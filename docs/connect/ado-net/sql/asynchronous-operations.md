@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4c88a8ccbc242b0fd85c66acfb3539ec260c58dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3923db97ce144662f7fe5410c13278862d1ab6a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928941"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725675"
 ---
 # <a name="asynchronous-operations"></a>异步操作
 
@@ -26,7 +26,7 @@ ms.locfileid: "80928941"
 .NET 提供了几种标准异步设计模式，开发人员可以使用这些模式来利用后台线程，并释放用户界面或高优先级的线程以完成其 <xref:Microsoft.Data.SqlClient.SqlCommand> 类中的其他操作。 具体而言，<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 和 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法与 <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 和 <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> 方法一起提供异步支持。  
   
 > [!NOTE]
->  异步编程是 .NET 的核心功能。 有关可供开发人员使用的不同异步技术的更多信息，请参阅[以异步方式调用同步方法](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)。  
+>  异步编程是 .NET 的核心功能。 有关可供开发人员使用的不同异步技术的更多信息，请参阅[以异步方式调用同步方法](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)。  
   
 尽管使用带有 ADO.NET 功能的异步技术不会添加任何特别的注意事项，但请务必了解创建多线程应用程序的优点和缺点。 本部分中的示例指出了开发人员在构建合并多线程功能的应用程序时需要考虑的几个重要问题。  
   
@@ -42,4 +42,4 @@ ms.locfileid: "80928941"
   
 ## <a name="next-steps"></a>后续步骤
 - [SQL Server 和 ADO.NET](index.md)
-- [以异步方式调用同步方法](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)
+- [以异步方式调用同步方法](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

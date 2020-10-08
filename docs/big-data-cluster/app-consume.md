@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45c89f83ca8d478eac40be867bbde946ce8e51d8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 12767b789fee400130990f6451a8a29e5bce6605
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681004"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725086"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>通过 RESTful Web 服务使用部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的应用
 
@@ -26,7 +26,7 @@ ms.locfileid: "88681004"
 ## <a name="prerequisites"></a>必备条件
 
 - [SQL Server 大数据群集](deployment-guidance.md)
-- [azdata 命令行工具](deploy-install-azdata.md)
+- [azdata 命令行工具](../azdata/install/deploy-install-azdata.md)
 - 使用 [azdata](app-create.md) 或[应用部署扩展](app-deployment-extension.md)部署的应用
 
 > [!NOTE]

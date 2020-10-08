@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117130"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725465"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117130"
 
 本文介绍了如何开发结合使用 Azure Active Directory 身份验证功能与 Microsoft JDBC Driver for SQL Server 的 Java 应用程序。
 
-可以使用 Azure Active Directory (Azure AD) 身份验证，这是一种使用 Azure Active Directory 标识连接到 Azure SQL 数据库 v12 的机制。 使用 Azure Active Directory 身份验证以集中管理数据库用户的标识且作为 SQL Server 身份验证的一种替代方法使用。 使用 JDBC 驱动程序，可以在 JDBC 连接字符串中指定连接到 Azure SQL 数据库所需的 Azure Active Directory 凭据。 若要了解如何配置 Azure Active Directory 身份验证，请访问[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 
+可以使用 Azure Active Directory (Azure AD) 身份验证，这是一种使用 Azure Active Directory 标识连接到 Azure SQL 数据库 v12 的机制。 使用 Azure Active Directory 身份验证以集中管理数据库用户的标识且作为 SQL Server 身份验证的一种替代方法使用。 使用 JDBC 驱动程序，可以在 JDBC 连接字符串中指定连接到 Azure SQL 数据库所需的 Azure Active Directory 凭据。 若要了解如何配置 Azure Active Directory 身份验证，请访问[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)。 
 
 Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验证的连接属性包括：
 *   **authentication**：使用此属性，可以指明要对连接使用哪种 SQL 身份验证方法。 可能的值包括： 
@@ -287,7 +287,7 @@ You have successfully logged on as: <your user name>
     12. 在左侧面板中，单击“Azure Active Directory”。 在“应用注册”下，查找“终结点”选项卡。复制“OATH 2.0 令牌终结点”下的 URL（此为 STS URL）。
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. 以 Azure Active Directory 管理员身份登录 Azure SQL Server 的用户数据库，并使用 T-SQL 命令为应用程序主体预配包含的数据库用户。 若要详细了解如何创建 Azure Active Directory 管理员和包含的数据库用户，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。
+2. 以 Azure Active Directory 管理员身份登录 Azure SQL Server 的用户数据库，并使用 T-SQL 命令为应用程序主体预配包含的数据库用户。 若要详细了解如何创建 Azure Active Directory 管理员和包含的数据库用户，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](/azure/azure-sql/database/authentication-aad-overview)。
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ public class AADTokenBased {
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

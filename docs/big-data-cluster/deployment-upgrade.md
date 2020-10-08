@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392166"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725845"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -60,10 +60,10 @@ ms.locfileid: "89392166"
 1. 更新 `azdata`。
 
    按照说明安装 `azdata`。 
-   - [Windows Installer](deploy-install-azdata-installer.md)
-   - [带有 apt 的 Linux](deploy-install-azdata-linux-package.md)
-   - [带有 yum 的 Linux](deploy-install-azdata-yum.md)
-   - [带有 zypper 的 Linux](deploy-install-azdata-zypper.md)
+   - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
+   - [带有 apt 的 Linux](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [带有 yum 的 Linux](../azdata/install/deploy-install-azdata-yum.md)
+   - [带有 zypper 的 Linux](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >如果 `azdata` 随 `pip` 一起安装，则需要在安装 Windows 安装程序或 Linux 包管理器之前将其手动删除。

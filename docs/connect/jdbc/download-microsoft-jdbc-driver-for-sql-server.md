@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d48c3f0384a805debe13472fae1841515207d160
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 1c7d16eeaf72d5faa2c5bad47b8b8331dfdb6b54
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042440"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725478"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下载 Microsoft SQL Server JDBC 驱动程序
 
@@ -36,7 +36,7 @@ Microsoft JDBC Driver for SQL Server 是一个 Type 4 JDBC 驱动程序，它通
 下载此驱动程序时，有多个 JAR 文件。 JAR 文件名表示它支持的 Java 版本。
 
 > [!Note]
-> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://aka.ms/downloadmssqljdbcenglish)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
+> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本]()。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
 
 ## <a name="available-languages"></a>可用语言
 

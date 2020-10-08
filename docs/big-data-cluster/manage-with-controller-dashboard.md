@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64352409e567c5854d348dce8e6545317b41bc01
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730605"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725818"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>管理 SQL Server 控制器仪表板的大数据群集
 
@@ -27,14 +27,14 @@ ms.locfileid: "85730605"
 
 若要启动笔记本，需要满足以下必备条件：
 
-* [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新版本
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 的最新版本
 * [已在 Azure Data Studio 中安装 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 扩展](../azure-data-studio/data-virtualization-extension.md)
 
 除上述内容外，SQL Server 2019 大数据群集还需要：
 
 * **azdata**
-    - [Windows Installer](deploy-install-azdata-installer.md)
-    - [Linux 包管理器](deploy-install-azdata-linux-package.md)
+    - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
+    - [Linux 包管理器](../azdata/install/deploy-install-azdata-linux-package.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 

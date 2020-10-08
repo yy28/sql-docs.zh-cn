@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 1ae61c177686f072729c1763974c1cdc3d00baa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85106892"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725708"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>查找 SqlClient 驱动程序的其他信息
 
@@ -32,7 +32,7 @@ ms.locfileid: "85106892"
 |--------------|-----------------|  
 |[.NET 运行时 GitHub 存储库](https://github.com/dotnet/runtime)|此存储库包含适用于 .NET Core 的库实现。|
 |[Microsoft SqlClient Data Provider for SQL Server GitHub 存储库](https://github.com/dotnet/SqlClient)|此存储库包含 SqlClient 驱动程序的源代码。|  
-|[.NET API 浏览器](https://docs.microsoft.com/dotnet/api/)|此站点包含驱动程序的 .NET API 信息。|  
+|[.NET API 浏览器](/dotnet/api/)|此站点包含驱动程序的 .NET API 信息。|  
   
 ## <a name="next-steps"></a>后续步骤
- [SqlClient 驱动程序概述](overview-sqlclient-driver.md)  
+ [SqlClient 驱动程序概述](overview-sqlclient-driver.md)

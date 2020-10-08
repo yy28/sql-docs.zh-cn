@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988516"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726608"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Microsoft SQL 数据库的连接模块
 
-本文提供了连接模块或驱动程序  的下载链接，客户端程序可以使用这些链接与 [Microsoft SQL Server](../relational-databases/database-features.md) 及其在云中的孪生平台 [Azure SQL 数据库](/azure/sql-database/)进行交互。 驱动程序适用于多种编程语言，在以下操作系统上运行：
+本文提供了连接模块或驱动程序  的下载链接，客户端程序可以使用这些链接与 [Microsoft SQL Server](../relational-databases/databases/databases.md) 及其在云中的孪生平台 [Azure SQL 数据库](/azure/sql-database/)进行交互。 驱动程序适用于多种编程语言，在以下操作系统上运行：
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ ms.locfileid: "87988516"
 
 | 语言 | ORM 驱动程序下载 |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[实体框架（6.x 或更高版本）](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[实体框架（6.x 或更高版本）](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM，包含在 Laravel 安装中](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ ms.locfileid: "87988516"
 
 ## <a name="related-links"></a>相关链接
 
-- [使用 Java 和其他语言连接到云中的 Azure SQL 数据库的代码示例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
+- [使用 Java 和其他语言连接到云中的 Azure SQL 数据库的代码示例](/azure/sql-database/sql-database-connect-query-java)。
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

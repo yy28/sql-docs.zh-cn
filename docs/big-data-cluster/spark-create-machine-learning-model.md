@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: be8a2e43c120f154cf998e49027c5025bd4feac4
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 3ccd54d4e5e73da6492de753084ffa924341b63a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438079"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725728"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上创建和导出 Spark 机器学习模型并对其评分
 
@@ -52,7 +52,7 @@ ms.locfileid: "86438079"
 
    此笔记本包含具有此示例部分所需命令的单元格。
 
-1. 在 Azure Data Studio 中打开笔记本，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 中使用笔记本](../azure-data-studio/notebooks-guidance.md)。
+1. 在 Azure Data Studio 中打开笔记本，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 中使用笔记本](../azure-data-studio/notebooks/notebooks-guidance.md)。
 
 数据会先读入 Spark 并拆分成训练和测试数据集。 然后，代码使用训练数据训练管道模型。 最后，它将模型导出为 MLeap 捆绑包。
 

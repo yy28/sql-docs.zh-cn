@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243438"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725758"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码加速器进行数据整理
 
@@ -37,7 +37,7 @@ import prose.codeaccelerator as cx
 - 修复数据帧中的数据类型。
 - 查找表示字符串列表中模式的正则表达式。
 
-若要大致了解代码加速器方法，请参阅[文档](https://aka.ms/prose-codeaccelerator-overview)。
+若要大致了解代码加速器方法，请参阅[文档](/python/api/overview/azure/prose/intro)。
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>将数据从文件读取到数据帧
 
@@ -86,7 +86,7 @@ def read_file(file):
     return df
  ```
 
-代码加速器可以生成将带分隔符的文件、JSON 文件和固定宽度的文件加载到数据帧中的代码。 对于读取固定宽度的文件，`ReadFwfBuilder` 可以选择使用可进行分析以获取列位置的用户可读架构文件。 若要了解详细信息，请参阅[文档](https://aka.ms/prose-codeaccelerator-docs)。
+代码加速器可以生成将带分隔符的文件、JSON 文件和固定宽度的文件加载到数据帧中的代码。 对于读取固定宽度的文件，`ReadFwfBuilder` 可以选择使用可进行分析以获取列位置的用户可读架构文件。 若要了解详细信息，请参阅[文档](/python/api/overview/azure/prose/intro)。
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>修复数据帧中的数据类型
 
@@ -106,7 +106,7 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-若要了解详细信息，请参阅[文档](https://aka.ms/prose-codeaccelerator-fixtypes)。
+若要了解详细信息，请参阅[文档](/python/api/overview/azure/prose/fixdatatypes)。
 
 ## <a name="identifying-patterns-in-strings"></a>标识字符串中的模式
 
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-除了生成正则表达式外，`FindPatternsBuilder` 还可以生成用于根据生成的正则表达式将这些值聚类的代码。 它还可以断言列中所有的值都符合生成的正则表达式。 若要了解详细信息并查看其他实用场景，请参阅[文档](https://aka.ms/prose-codeaccelerator-findpatterns)。
+除了生成正则表达式外，`FindPatternsBuilder` 还可以生成用于根据生成的正则表达式将这些值聚类的代码。 它还可以断言列中所有的值都符合生成的正则表达式。 若要了解详细信息并查看其他实用场景，请参阅[文档](/python/api/overview/azure/prose/findpatterns)。

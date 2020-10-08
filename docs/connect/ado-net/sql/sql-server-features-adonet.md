@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1c1911905c1ddf0af01a2592d0be49796cd3596
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 86d0abbc216deeb583cf4a091e0c36b9cebc4ee1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393105"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725558"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "86393105"
 
 本节中的主题讨论 SQL Server 中针对使用 ADO.NET 开发数据库应用程序的功能。  
   
-有关详细信息，请参阅 SQL Server 联机丛书中的[开发（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=115245)。
+有关详细信息，请参阅 SQL Server 联机丛书中的[开发（数据库引擎）](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))。
   
 ## <a name="in-this-section"></a>在本节中  
 [枚举 SQL Server 实例 (ADO.NET)](enumerate-instances-sql-server.md)  

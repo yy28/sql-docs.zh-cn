@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57e0cec178c407cda530e6699e51743094c57dca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896544"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725588"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
 
@@ -25,11 +25,11 @@ SQL Server 和 .NET 基于不同的类型系统，这可能会导致潜在的数
   
 SQL Server 2008 引入了新的数据类型，这些数据类型旨在满足企业使用日期和时间数据、结构化数据、半结构化数据和非结构化数据的需求。 相关文档位于 SQL Server 2008 联机丛书中。  
   
-可在应用程序中使用的 SQL Server 数据类型取决于使用的 SQL Server 版本。 有关详细信息，请参阅 SQL Server 联机丛书中的[数据类型（数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)。
+可在应用程序中使用的 SQL Server 数据类型取决于使用的 SQL Server 版本。 有关详细信息，请参阅 SQL Server 联机丛书中的[数据类型（数据库引擎）](/previous-versions/sql/sql-server-2008-r2/ms187594(v=sql.105))。
   
 ## <a name="in-this-section"></a>在本节中  
 [SqlTypes 和 DataSet](sqltypes-dataset.md)  
-介绍对 `DataSet` 中 `SqlTypes` 的类型支持。  
+介绍对 `SqlTypes` 中 `DataSet` 的类型支持。  
   
 [处理 null 值](handle-null-values.md)  
 演示如何处理 null 值和三值逻辑。  

@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: b2222c72be6a499e9a60424d1a7cc508904b8f33
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528342"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726648"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>步骤 4：使用 PHP 弹性连接到 SQL
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-设计演示程序的目的是，在尝试连接的过程中，如果出现暂时性故障（这是此[附录](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)中列出的带有前缀“08”的任何错误代码），则会导致重试。 但是，在执行查询命令期间发生暂时性故障时会导致程序丢弃连接并创建新的连接，然后重试查询命令。 不建议选择这种设计。 演示程序演示了一些可供你使用的设计弹性。  
+设计演示程序的目的是，在尝试连接的过程中，如果出现暂时性故障（这是此[附录](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)中列出的带有前缀“08”的任何错误代码），则会导致重试。 但是，在执行查询命令期间发生暂时性故障时会导致程序丢弃连接并创建新的连接，然后重试查询命令。 不建议选择这种设计。 演示程序演示了一些可供你使用的设计弹性。  
   
 此代码示例的长度多半是因为捕获异常的逻辑。   
   

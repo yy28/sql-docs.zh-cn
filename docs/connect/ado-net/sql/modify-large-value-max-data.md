@@ -9,25 +9,25 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9acbd8fb795fe1a14e77e5d746f729d37c11cc8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f55cb14a95844558e4a759a4acce71509d62d4ba
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896688"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725618"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>修改 ADO.NET 中的大值（最大值）数据
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-大型对象 (LOB) 数据类型是指那些超过 8 KB 最大行大小的数据类型。 SQL Server 为 `varchar`、`nvarchar` 和 `varbinary` 数据类型引入了 `max` 说明符，以允许存储最长可达 2^32 个字节的值。 表列和 Transact-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 在 .NET 中，可通过 `DataReader` 获取 `max` 数据类型，并将其指定为输入和输出参数值而不必进行任何特殊处理。 对于大型 `varchar` 数据类型，可以增量地检索和更新数据。  
+大型对象 (LOB) 数据类型是指那些超过 8 KB 最大行大小的数据类型。 SQL Server 为 `max`、`varchar` 和 `nvarchar` 数据类型引入了 `varbinary` 说明符，以允许存储最长可达 2^32 个字节的值。 表列和 Transact-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 在 .NET 中，可通过 `max` 获取 `DataReader` 数据类型，并将其指定为输入和输出参数值而不必进行任何特殊处理。 对于大型 `varchar` 数据类型，可以增量地检索和更新数据。  
   
 `max` 数据类型可用于进行比较（作为 Transact-SQL 变量）和串联。 它们还可以用于 SELECT 语句的 DISTINCT、ORDER BY、GROUP BY 子句，以及聚合、连接和子查询。
 
-有关大值数据类型的详细信息，请参阅 SQL Server 联机丛书中的[使用大值数据类型](https://go.microsoft.com/fwlink/?LinkId=120498)。
+有关大值数据类型的详细信息，请参阅 SQL Server 联机丛书中的[使用大值数据类型](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))。
   
 ## <a name="large-value-type-restrictions"></a>大值类型限制  
 以下限制适用于对于较小数据类型不存在的 `max` 数据类型：  
@@ -63,18 +63,18 @@ Transact-SQL UPDATE 语句具有新的 WRITE 语法，用于修改 `varchar(max)
   
 UPDATE  
   
-{ \<object> }  
+{ *\<object>* }  
   
 SET  
   
 { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
   
-WRITE 方法指定将修改 column_name 值的某个部分  。 表达式是将复制到 column_name 的值，`@Offset` 是将写入表达式的开始点，`@Length` 自变量是列中该部分的长度。  
+WRITE 方法指定将修改 column_name 值的某个部分  。 表达式是将复制到 column_name 的值， *是将写入表达式的开始点，* 自变量是列中该部分的长度`@Offset``@Length`。  
   
 |如果|则|  
 |--------|----------|  
-|表达式设置为 NULL|忽略 `@Length`，并在指定的 `@Offset` 处截断 column_name 中的值。|  
-|`@Offset` 为 NULL|更新操作将表达式追加到现有 column_name 值的末尾并忽略 `@Length`。|  
+|表达式设置为 NULL|忽略 `@Length`，并在指定的  *处截断 column_name 中的值*`@Offset`。|  
+|`@Offset` 为 NULL|更新操作将表达式追加到现有 column_name 值的末尾并忽略  `@Length`。|  
 |`@Offset` 大于 column_name 值的长度|SQL Server 将返回错误。|  
 |`@Length` 为 NULL|更新操作将删除从 `@Offset` 到 `column_name` 值的结尾的所有数据。|  
   
@@ -110,10 +110,10 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>在 ADO.NET 中使用大值类型  
-通过将大值类型指定为 <xref:Microsoft.Data.SqlClient.SqlDataReader> 中的 <xref:Microsoft.Data.SqlClient.SqlParameter> 对象以返回结果集，或者通过 <xref:Microsoft.Data.SqlClient.SqlDataAdapter> 来填充 `DataSet`/`DataTable`，即可在 ADO.NET 中使用大值类型。 处理大值类型与其相关的较小值数据类型的方式没有区别。  
+通过将大值类型指定为 <xref:Microsoft.Data.SqlClient.SqlParameter> 中的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象以返回结果集，或者通过 <xref:Microsoft.Data.SqlClient.SqlDataAdapter> 来填充 `DataSet`/`DataTable`，即可在 ADO.NET 中使用大值类型。 处理大值类型与其相关的较小值数据类型的方式没有区别。  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>使用 GetSqlBytes 检索数据  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetSqlBytes` 方法可用于检索 `varbinary(max)` 列的内容。 下面的代码段假定一个名为 `cmd` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象，该对象从表中选择 `varbinary(max)` 数据，并假定一个名为 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象以 <xref:System.Data.SqlTypes.SqlBytes> 的形式检索数据。  
+`GetSqlBytes` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法可用于检索 `varbinary(max)` 列的内容。 下面的代码段假定一个名为 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `cmd` 对象，该对象从表中选择 `varbinary(max)` 数据，并假定一个名为 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 对象以 <xref:System.Data.SqlTypes.SqlBytes> 的形式检索数据。  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -124,7 +124,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlchars-to-retrieve-data"></a>使用 GetSqlChars 检索数据  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetSqlChars` 方法可用于检索 `varchar(max)` 或 `nvarchar(max)` 列的内容。 下面的代码段假定一个名为 `cmd` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象，该对象从表中选择 `nvarchar(max)` 数据，并假定一个名为 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象来检索数据。   
+`GetSqlChars` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法可用于检索 `varchar(max)` 或 `nvarchar(max)` 列的内容。 下面的代码段假定一个名为 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `cmd` 对象，该对象从表中选择 `nvarchar(max)` 数据，并假定一个名为 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 对象来检索数据。   
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -135,7 +135,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlbinary-to-retrieve-data"></a>使用 GetSqlBinary 检索数据  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetSqlBinary` 方法可用于检索 `varbinary(max)` 列的内容。 下面的代码段假定一个名为 `cmd` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象，该对象从表中选择 `varbinary(max)` 数据，并假定一个名为 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象以 <xref:System.Data.SqlTypes.SqlBinary> 流的形式检索数据。  
+`GetSqlBinary` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法可用于检索 `varbinary(max)` 列的内容。 下面的代码段假定一个名为 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `cmd` 对象，该对象从表中选择 `varbinary(max)` 数据，并假定一个名为 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 对象以 <xref:System.Data.SqlTypes.SqlBinary> 流的形式检索数据。  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -146,7 +146,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getbytes-to-retrieve-data"></a>使用 GetBytes 检索数据  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetBytes` 方法从指定的列偏移量将字节流从指定数组偏移量开始读入字节数组。 下面的代码段假定一个名为 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象，该对象将字节检索到字节数组中。 请注意，与 `GetSqlBytes` 不同，`GetBytes` 需要数组缓冲区的大小。  
+`GetBytes` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法从指定的列偏移量将字节流从指定数组偏移量开始读入字节数组。 下面的代码段假定一个名为 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 对象，该对象将字节检索到字节数组中。 请注意，与 `GetSqlBytes` 不同，`GetBytes` 需要数组缓冲区的大小。  
   
 ```csharp  
 while (reader.Read())  
@@ -157,7 +157,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getvalue-to-retrieve-data"></a>使用 GetValue 检索数据  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetValue` 方法将值从指定的列偏移量读入数组。 下面的代码段假定一个名为 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象，该对象从第一个列偏移量检索二进制数据，然后从第二列偏移量检索字符串数据。  
+`GetValue` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法将值从指定的列偏移量读入数组。 下面的代码段假定一个名为 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 对象，该对象从第一个列偏移量检索二进制数据，然后从第二列偏移量检索字符串数据。  
   
 ```csharp  
 while (reader.Read())  
@@ -171,7 +171,7 @@ while (reader.Read())
 ```  
   
 ## <a name="converting-from-large-value-types-to-clr-types"></a>从大值类型转换为 CLR 类型  
-可以使用任何字符串转换方法（如 `ToString`）来转换 `varchar(max)` 或 `nvarchar(max)` 列的内容。 下面的代码段假定一个名为 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象，该对象检索数据。  
+可以使用任何字符串转换方法（如 `varchar(max)`）来转换 `nvarchar(max)` 或 `ToString` 列的内容。 下面的代码段假定一个名为 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 对象，该对象检索数据。  
   
 ```csharp  
 while (reader.Read())  
@@ -182,7 +182,7 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>示例  
-下面的代码从 `AdventureWorks` 数据库的 `ProductPhoto` 表中检索名称和 `LargePhoto` 对象，并将其保存到文件中。 需要使用对 <xref:System.Drawing> 命名空间的引用来编译该程序集。  <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 方法返回公开 `Stream` 属性的 <xref:System.Data.SqlTypes.SqlBytes> 对象。 代码使用此对象创建新的 `Bitmap` 对象，然后以 Gif `ImageFormat` 格式保存该对象。  
+下面的代码从 `LargePhoto` 数据库的 `ProductPhoto` 表中检索名称和 `AdventureWorks` 对象，并将其保存到文件中。 需要使用对 <xref:System.Drawing> 命名空间的引用来编译该程序集。  <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法返回公开 <xref:System.Data.SqlTypes.SqlBytes> 属性的 `Stream` 对象。 代码使用此对象创建新的 `Bitmap` 对象，然后以 Gif `ImageFormat` 格式保存该对象。  
   
 [!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   

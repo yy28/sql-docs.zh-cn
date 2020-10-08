@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553022"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725878"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>在 OpenShift 本地和 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -88,7 +88,7 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
 
 ## <a name="deploy-big-data-cluster"></a>部署大数据群集
 
-1. 安装最新 [azdata](deploy-install-azdata.md)。
+1. 安装最新 [azdata](../azdata/install/deploy-install-azdata.md)。
 
 1. 根据目标环境（本地的 OpenShift 或 ARO）和部署场景，克隆 OpenShift 的某个内置配置文件。 若要了解内置配置文件中特定于 OpenShift 的设置，请参阅下面的“部署配置文件中的 OpenShift 特定设置”部分。 有关可用配置文件的更多详细信息，请参阅[部署指南](deployment-guidance.md)。
 

@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391762"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725527"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步骤 4：使用 ADO.NET 弹性连接到 SQL
 
@@ -41,7 +41,7 @@ ms.locfileid: "86391762"
   
 程序必须区分暂时性错误与持久性错误。 暂时性错误是指可在短时间内消除的错误情况，如暂时性的网络问题。  举例说明持久性错误：如果你的程序的目标数据库名称拼写错误，那么在这种情况下，“找不到此类数据库”错误将持续存在，并且不会在短时间内清除。  
   
-[SQL 数据库客户端应用程序的错误消息](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)中提供了归类为暂时性错误的错误号列表  
+[SQL 数据库客户端应用程序的错误消息](/azure/sql-database/sql-database-develop-error-messages/)中提供了归类为暂时性错误的错误号列表  
   
 ## <a name="step-2-create-and-run-sample-application"></a>步骤 2：创建并运行示例应用程序  
   
@@ -319,4 +319,4 @@ ERROR: Unable to access the database!
   
 ## <a name="next-steps"></a>后续步骤  
   
-若要了解其他最佳做法和设计指导原则，请访问[连接到 SQL 数据库：链接、最佳做法和设计指导原则](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+若要了解其他最佳做法和设计指导原则，请访问[连接到 SQL 数据库：链接、最佳做法和设计指导原则](/azure/azure-sql/database/develop-overview)
