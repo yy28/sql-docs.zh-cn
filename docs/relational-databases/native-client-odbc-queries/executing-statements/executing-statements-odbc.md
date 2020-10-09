@@ -17,12 +17,12 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45ac4b91f5aab26d1086bcc8e3b31c11821f75da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc2f16bf168fc7f37ac6f6518e7e16cd7dfa35c3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486802"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869361"
 ---
 # <a name="executing-statements-odbc"></a>执行语句 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88486802"
   
 -   准备好的执行  
   
- 直接执行涉及构建包含语句的字符串 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，并使用 **SQLExecDirect** 函数提交它以执行执行。 准备好的执行即生成一个包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的字符串，然后分两个阶段执行。 第一个阶段使用 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360) 函数分析和编译中的语句的执行计划 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 。 第二个阶段使用 **SQLExecute** 函数执行之前准备好的执行计划。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
+ 直接执行涉及构建包含语句的字符串 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，并使用 **SQLExecDirect** 函数提交它以执行执行。 准备好的执行即生成一个包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的字符串，然后分两个阶段执行。 第一个阶段使用 [SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md) 函数分析和编译中的语句的执行计划 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 。 第二个阶段使用 **SQLExecute** 函数执行之前准备好的执行计划。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
   
  直接执行和准备好的执行都可以执行单个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或批处理 SQL 语句，也可以调用存储过程。  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88486802"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;执行查询 ](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
-  
   

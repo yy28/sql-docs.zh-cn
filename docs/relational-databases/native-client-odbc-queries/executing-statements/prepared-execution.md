@@ -19,17 +19,17 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 721b2377f5539a4ee047816da6e5ecb5bc2fe213
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1eb4580f3654b12f09b39e2fadf2167a9f9e561
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486773"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869331"
 ---
 # <a name="prepared-execution"></a>准备好的执行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ODBC API 会定义准备好的执行，以此来减少反复执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句时所需的分析和编译开销。 该应用程序生成一个包含 SQL 语句的字符串，然后分两个阶段执行该语句。 它将调用 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360) 一次，以将语句分析并编译为执行计划 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 。 然后，它会在每次执行准备好的执行计划时调用 **SQLExecute** 。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
+  ODBC API 会定义准备好的执行，以此来减少反复执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句时所需的分析和编译开销。 该应用程序生成一个包含 SQL 语句的字符串，然后分两个阶段执行该语句。 它将调用 [SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md) 一次，以将语句分析并编译为执行计划 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 。 然后，它会在每次执行准备好的执行计划时调用 **SQLExecute** 。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
   
  对于多数数据库中的需要执行三次或四次以上的语句，准备好的执行要比直接执行更快速。这主要是因为准备好的执行仅需编译一次语句，而直接执行的语句在每次执行时都需要编译。 准备好的执行还可以减少网络流量，因为驱动程序在每次执行语句时都可以向数据源发送执行计划标识符及参数值，而不是整个 SQL 语句。  
   
@@ -49,5 +49,4 @@ ms.locfileid: "88486773"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;执行语句 ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
   
