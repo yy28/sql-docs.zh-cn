@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
-ms.openlocfilehash: e13dc56d78a5305b8fb8221d5622d2cd49ade704
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f9b1e77d082ad5e42a9818272fc1c4a48b44968
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734998"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529378"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016 的 SQL Server 内存中 OLTP 内部组件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,4 +32,4 @@ ms.locfileid: "85734998"
   
 **适用于：** SQL Server 2016  
   
-若要查看文档，请下载 [SQL Server 2016 的 SQL Server 内存中 OLTP 内部组件](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf) 文档。   
+要查看文档，请下载 [SQL Server 2016 的 SQL Server 内存中 OLTP 内部组件](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)文档。   

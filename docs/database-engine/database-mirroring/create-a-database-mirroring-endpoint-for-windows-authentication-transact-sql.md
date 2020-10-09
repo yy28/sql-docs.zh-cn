@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789733"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529442"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789733"
 ###  <a name="security"></a><a name="Security"></a> Security  
  服务器实例的身份验证和加密方法由系统管理员建立。  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
- 要求具有 CREATE ENDPOINT 权限，或者具有 sysadmin 固定服务器角色的成员身份。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
+ 要求具有 `CREATE ENDPOINT` 权限，或者具有 `sysadmin` 固定服务器角色的成员身份。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -58,40 +58,42 @@ ms.locfileid: "85789733"
   
 3.  使用以下语句确定数据库镜像端点是否已经存在：  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  如果服务器实例已有数据库镜像端点，则可以将该端点用于在服务器实例上建立的任何其他会话。  
   
-4.  若要使用 Transact-SQL 创建使用 Windows 身份验证的端点，请使用 CREATE ENDPOINT 语句。 该语句采用以下常规形式：  
+4.  要通过 Transact-SQL 创建使用 Windows 身份验证的终结点，请使用 `CREATE ENDPOINT` 语句。 该语句采用以下常规形式：  
   
-     CREATE ENDPOINT \<endpointName>  
+     ```syntaxsql
+     CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = \<listenerPortList> )  
+     AS TCP ( LISTENER_PORT = *\<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = WINDOWS [ \<authorizationMethod> ]  
+     [ AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod>* ]  
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { \<algorithm> } ]  
+     [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [,] ROLE = \<role>  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     其中  
+     ```
+     
+     其中：  
   
     -   \<endpointName> 是服务器实例的数据库镜像终结点的唯一名称。  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789733"
   
          每个计算机系统一次只能使用一个端口号。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 若要识别出系统上 TCP 端点当前使用的端口，请使用以下 Transact-SQL 语句：  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789733"
   
          AES RC4 指定此端点协商加密算法，但优先使用 AES 算法。 RC4 AES 指定此端点协商加密算法，但优先使用 RC4 算法。 如果两个端点都指定了这两种算法，但顺序不同，则接受连接的端点入选。 显式地提供相同的算法以避免不同服务器之间的连接错误。
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
     -   \<role> 定义服务器可以执行的一个或多个角色。 必须指定 ROLE。 不过，该端点的角色仅针对数据库镜像。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，该端点的角色将被忽略。  
   
-         若要让服务器实例对于一个数据库镜像会话执行一个角色，对于另一个会话执行另一个角色，请指定 ROLE = ALL。 若要让服务器实例限于执行伙伴角色或见证角色，请分别指定 ROLE = PARTNER 或 ROLE = WITNESS。  
+         若要让服务器实例对于一个数据库镜像会话执行一个角色，对于另一个会话执行另一个角色，请指定 ROLE = ALL。 要让服务器实例限于伙伴角色或见证角色，请分别指定 `ROLE = PARTNER` 或 `ROLE = WITNESS`。  
   
         > [!NOTE]  
         >  有关不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的数据库镜像选项详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -155,7 +157,7 @@ ms.locfileid: "85789733"
 > [!IMPORTANT]  
 >  每个服务器实例只能有一个端点。 因此，如果您希望某个服务器实例在一些会话中作为伙伴，在另一些会话中作为见证服务器，请指定 ROLE=ALL。  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

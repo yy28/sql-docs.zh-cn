@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423711"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412750"
 ---
 # <a name="import-a-policy-based-management-policy"></a>导入基于策略的管理策略
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423711"
 
 
 ## <a name="example-policies"></a>示例策略
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中没有示例策略，但你可安装 [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases) 来访问之前分发的示例策略。  安装 SQL Server Management Studio v17 后，可在 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies` 中找到示例策略。 可导入这些策略，并将其用作你自己基于策略的管理策略的基础。
+ [SQL Server 示例代码存储库](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)中提供了示例策略。 可导入这些策略，并将其用作你自己基于策略的管理策略的基础。

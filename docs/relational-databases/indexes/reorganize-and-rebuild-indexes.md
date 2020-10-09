@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537045"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753519"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引来解决索引碎片问题
 
@@ -86,7 +86,7 @@ sys.dm_db_index_physical_stats 返回的结果集包含以下列：
 
 <sup>2</sup> 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。 有关详细信息，请参阅 [INDEX](#rebuild-an-index) 和[联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)。
 
-无需对碎片或小于 5% 的索引进行碎片整理，因为删除如此少量的碎片所获得的收益始终几乎远低于重新组织或重新生成索引的 CPU 成本。 此外，重新生成或重新组织小型行存储索引通常不会减少实际的碎片。 直到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]（含），[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都使用混合盘区分配空间。 因此，小索引的页面有时存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少小索引中的碎片。 还可参阅[有关重新生成行存储索引的注意事项](#considerations-specific-to-rebuilding-rowstore-indexes)。 有关盘区的详细信息，请参阅[页和盘区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md#extents)。
+无需对碎片小于 5% 的索引进行碎片整理，因为删除如此少量碎片的获益几乎始终远低于重新组织或重新生成索引所产生的 CPU 成本。 此外，重新生成或重新组织小型行存储索引通常不会减少实际的碎片。 直到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]（含），[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都使用混合盘区分配空间。 因此，小索引的页面有时存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少小索引中的碎片。 还可参阅[有关重新生成行存储索引的注意事项](#considerations-specific-to-rebuilding-rowstore-indexes)。 有关盘区的详细信息，请参阅[页和盘区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md#extents)。
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>检测列存储索引中的碎片
 

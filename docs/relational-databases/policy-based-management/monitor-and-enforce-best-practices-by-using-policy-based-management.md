@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785089"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412734"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用基于策略的管理来监视和强制执行最佳实践
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  基于策略的管理可以监视 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的最佳实践。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
+  基于策略的管理可以监视 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的最佳实践。  手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  提供了一组[示例策略文件](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)，你可以将它们作为最佳做法策略导入，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估这些策略。
   
 ## <a name="policy-and-rules-for-database-engine"></a>用于数据库引擎的策略和规则  
- 下表列出了安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时随附的策略，并且包含有关每个策略评估的最佳实践规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关如何导入策略的详细信息，请参阅 [导入基于策略的管理策略](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)。  
+ 下表列出了该组[示例策略](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)中包含的策略，以及每个策略评估的最佳做法规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关如何导入策略的详细信息，请参阅 [导入基于策略的管理策略](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)。  
   
 |策略名称|最佳实践规则|  
 |-----------------|------------------------|  

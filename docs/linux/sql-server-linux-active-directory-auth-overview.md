@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efce6c9f297c3dba58a37a3d097a9c8176efa287
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900138"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497993"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 Active Directory 身份验证
 
@@ -52,6 +52,7 @@ ms.locfileid: "85900138"
 ## <a name="known-issues"></a>已知问题
 
 - 目前，数据库镜像终结点支持的唯一身份验证方法是“证书”。 将来的版本中将启用 WINDOWS 身份验证方法。
+- Linux 上的 SQL Server 不支持使用 NTLM 协议进行远程连接。 可能使用 NTLM 进行本地连接。
 
 ## <a name="next-steps"></a>后续步骤
 

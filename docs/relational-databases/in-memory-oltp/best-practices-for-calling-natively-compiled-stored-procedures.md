@@ -12,12 +12,12 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 053cd5f7aebf3b84de1bf08104b13aa30488704b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e26440be66b89ff789890169751a18500f465c00
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537699"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529368"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>调用本机编译存储过程的最佳做法
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89537699"
   
 -   操作速度快。  
   
- 使用本机编译存储过程所得的性能优势随行数和该过程所处理的逻辑数的上升而增加。 例如，如果本机编译存储过程使用以下一项或多项操作，将获得更好的性能：  
+ 使用本机编译存储过程所得的性能优势随行数和该过程所处理的逻辑数的上升而增加。 例如，如果原生编译存储过程使用以下一个或多个组件，将获得更好的性能：  
   
 -   聚合。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "89537699"
   
  如果只需处理一行，则使用本机编译存储过程可能没有任何性能优势。  
   
- 避免服务器映射参数名称和转换类型：  
+ 为避免服务器必须映射参数名称和转换类型，请确保：  
   
 -   使传递给过程的参数类型与过程定义中的类型相匹配。  
   

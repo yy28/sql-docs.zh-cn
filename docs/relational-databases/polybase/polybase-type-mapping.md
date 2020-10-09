@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215738"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624724"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase 的类型映射
 
@@ -43,10 +43,10 @@ ms.locfileid: "80215738"
 | real          | Single                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | smallmoney    | Decimal                   | double         | DoubleWritable        |
-| nchar         | String<br /><br /> Char[] | string         | Varchar               |
-| nvarchar      | String<br /><br /> Char[] | string         | Varchar               |
-| char          | String<br /><br /> Char[] | string         | Varchar               |
-| varchar       | String<br /><br /> Char[] | string         | Varchar               |
+| nchar         | String<br /><br /> Char[] | 字符串         | Varchar               |
+| nvarchar      | String<br /><br /> Char[] | 字符串         | Varchar               |
+| char          | String<br /><br /> Char[] | 字符串         | Varchar               |
+| varchar       | String<br /><br /> Char[] | 字符串         | Varchar               |
 | binary        | Byte[]                    | binary         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
 | date          | DateTime                  | timestamp      | TimestampWritable     |
@@ -64,7 +64,8 @@ ms.locfileid: "80215738"
 | Oracle 数据类型 | SQL Server 类型 | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 
@@ -81,11 +82,11 @@ ms.locfileid: "80215738"
 |DATE              |Datetime2        |
 |TIMESTAMP         |Datetime2        | 
 
-类型不匹配  
+类型不匹配 
 
-Float：  Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精度 (53)。 因此，可以直接映射 Float (1-53)  ，但除此之外，截断会导致数据丢失。
+Float：Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精度 (53)。 因此，可以直接映射 Float (1-53)****，但除此之外，截断会导致数据丢失。
 
-时间戳：  Oracle 中的时间戳和具有当地时区的时间戳支持 0.9 秒的精度，而 SQL Server DateTime2 仅支持 0.7 秒的精度。 
+时间戳：Oracle 中的时间戳和具有当地时区的时间戳支持 0.9 秒的精度，而 SQL Server DateTime2 仅支持 0.7 秒的精度。 
 
 
 
@@ -98,11 +99,11 @@ Float：  Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精�
 | String             | nvarchar        |
 | Binary data        | nvarchar        |
 | 对象 ID          | nvarchar        |
-| Boolean            | bit             |
+| 布尔            | bit             |
 | Date               | Datetime2       |
-| 32-bit integer     | Int             |
-| 时间戳          | nvarchar        |
-| 64-bit integer     | BigInt          |
+| 32-bit integer     | int             |
+| Timestamp          | nvarchar        |
+| 64 位整数     | BigInt          |
 |Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
 | Javascript         | nvarchar        |
@@ -120,13 +121,13 @@ MongoDB 使用 BSON 文档来存储数据记录。 与之前的方案不同，BS
 
 | Teradata 数据类型 | SQL Server 类型 | 
 | -------------      | -------------   |
-|INTEGER             |Int              |
+|INTEGER             |int              |
 |SMALLINT            |SmallInt         |
 |BIGINT              |BigInt           |
 |BYTEINT             |SmallInt         |
 |DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
-|BYTE                |Binary           |
+|BYTE                |二进制           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537071"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529428"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>对内存中 OLTP 数据库的高可用性支持
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "89537071"
 
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>AlwaysOn 可用性组和内存中 OLTP 数据库  
- 通过使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 组件配置数据库来提供以下内容：  
+ 使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 组件来配置数据库具有以下好处：  
   
 -   **完全集成的体验**   
     你可以使用相同的向导配置包含内存优化表的数据库，该向导具有对同步和异步次要副本的相同级别的支持。 此外，在 SQL Server Management Studio 中使用熟悉的 AlwaysOn 仪表板提供运行状况监视。  
   
 -   **可比较的故障转移时间**   
-    次要副本维持持久内存优化表的内存中状态。 在发生自动或强制故障转移时，由于不需要恢复，因此故障转移到新的主要副本的时间相当于故障转移到基于磁盘的表的时间。 创建为 SCHEMA_ONLY 的内存优化表在此配置中受支持。 但是，由于未对这些表的更改进行日志记录，因此辅助副本上的这些表中不会存在任何数据。  
+    次要副本维持持久内存优化表的内存中状态。 在发生自动或强制故障转移时，由于不需要恢复，因此故障转移到新的主要副本的时间相当于故障转移到基于磁盘的表的时间。 创建为 SCHEMA_ONLY 的内存优化表在此配置中受支持。 但是，由于未记录对这些表进行的更改，因此辅助副本上的这些表中不存在任何数据。  
   
 -   **可读取辅助角色**   
     你可以访问和查询次要副本上的内存优化表（如果已针对读取访问进行配置）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，次要副本上的读取时间戳与主要副本上的读取时间戳紧密同步，这意味着在主要副本上的更改很快在次要副本上变得可见。 这种紧密同步行为不同于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 内存中 OLTP。  
@@ -42,7 +42,7 @@ ms.locfileid: "89537071"
 - SQL Server 2019 为内存优化可用性组数据库引入了并行重做。 在 SQL Server 2016 和 2017 中，如果可用性组中的数据库也是内存优化的，则基于磁盘的表不会使用并行重做。 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>故障转移群集实例 (FCI) 和内存中 OLTP 数据库  
- 若要在共享存储配置中实现高可用性，则可以使用内存优化表设置带有数据库的故障转移群集实例。 你需要在设置 FCI 时考虑以下因素。  
+ 若要在共享存储配置中实现高可用性，则可以使用内存优化表设置带有数据库的故障转移群集实例。 设置 FCI 时，请考虑以下因素：  
   
 -   **恢复时间目标**   
     故障转移时间可能会更长，因为内存优化表必须在数据库变为可用之前加载到内存中。  

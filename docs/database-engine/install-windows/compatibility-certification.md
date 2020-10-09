@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 40d7c10127efa14000a3f91f2cf003bf52d95b2c
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 80fbe0c833f9b4ac7f3d0ec1f845dfd230f09e64
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200965"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603452"
 ---
 # <a name="compatibility-certification"></a>兼容性认证
 
@@ -41,10 +41,12 @@ ms.locfileid: "88200965"
 
 这是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 持续集成操作模型的基本原则。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在 Azure 中持续改进和升级，但由于现有数据库保持其当前兼容性级别，因此即使在升级到基础 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 数据库后，它们仍将继续按设计的形式工作。 
 
+SharePoint Server 2016 和 SharePoint Server 2019 也通过这种方式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]上获得了认证，因此，你可以部署任何可使用这些 SharePoint Server 版本支持的数据库兼容级别的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 有关详细信息，请参阅 [SharePoint Server 2016 的硬件和软件要求](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm)和 [SharePoint Server 2019 的硬件和软件要求](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm)。
+
 ## <a name="managing-upgrade-risk-with-compatibility-certification"></a>利用兼容性认证管理升级风险
 使用兼容性认证是数据库现代化的一种非常有用的方法。 通过基于兼容性级别进行认证，开发人员可以将应用程序的技术要求设置为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 上受支持，但应用程序生命周期将从数据库平台生命周期分离出来。 这样，公司便可以根据生命周期策略的要求来升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、利用不依赖于代码的全新可伸缩性和性能增强，以及通过升级连接应用程序以保持其功能状态。
 
-对功能和性能产生负面影响的可能性是任何升级的主要风险因素。 通过兼容性认证，你可以放心地管理以下升级风险：
+无论哪种升级，主要的风险因素都是可能对功能和性能产生不利影响。 通过兼容性认证，你可以放心地管理以下升级风险：
 
 -  在与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为相关的方面，任何更改都意味着需要重新认证应用程序的正确性。 然而，[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)设置提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的后向兼容性，但后向兼容性仅适用于指定的数据库，而不适用于整个服务器。 保持数据库兼容性级别不变可确保现有应用程序查询在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升级之前和之后继续显示相同的行为。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为和兼容性级别的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
 
@@ -54,9 +56,10 @@ ms.locfileid: "88200965"
    
 有关兼容性级别的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
    
-只要应用程序不需要使用仅在更高数据库兼容性级别中可用的增强功能，它就是升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和维护之前的数据库兼容性级别的有效方法，而无需重新认证应用程序。 有关详细信息，请参阅本文后面部分的[兼容性级别和数据库引擎升级](#compatibility-levels-and-database-engine-upgrades)。
-
-对于新的开发工作，或当现有应用程序需要使用新功能（如[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)）以及一些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 时，请计划将数据库兼容性级别升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新级别，并认证应用程序可与该兼容性级别一起使用。 有关升级数据库兼容性级别的详细信息，请参阅[升级数据库兼容性级别的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
+> [!IMPORTANT]
+> 对于已经针对给定兼容级别认证的现有应用程序，请升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，并保持以前的数据库兼容性级别。 在这种情况下，无需重新验证应用程序。 有关详细信息，请参阅本文后面部分的[兼容性级别和数据库引擎升级](#compatibility-levels-and-database-engine-upgrades)。
+>
+> 对于新的开发工作，或当现有应用程序需要使用新功能（如[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)）以及一些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 时，请考虑将数据库兼容性级别升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新级别，并重新认证应用程序可在该兼容性级别使用。 有关升级数据库兼容性级别的详细信息，请参阅[升级数据库兼容性级别的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
    
 ### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> 为什么使用查询计划形状？      
 查询计划形状是指组成查询计划的各种运算符的可视化表示形式。 其中包括查找、扫描、联接和排序等运算符，以及它们之间指示数据流和操作（必须执行这些操作才能生成指定的结果集）顺序的连接。 查询计划形状由查询优化器确定。
@@ -75,9 +78,9 @@ ms.locfileid: "88200965"
 -  升级而不更改代码。 升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 的新版本可通过保持与源系统相同的兼容性级别，在无需对代码进行更改的情况下完成，并且不需要立即重新认证，直到应用程序需要使用仅在更高的数据库兼容性级别中可用的增强功能。
 - 提高可管理性和可伸缩性，无需更改应用程序并可使用不受数据库兼容性级别限制的增强功能。 例如，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这些功能包括： 
   - 丰富的监控和故障排除改进，并提供新的[系统动态管理视图](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)、[扩展事件](../../relational-databases/extended-events/extended-events.md)和[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)。 
-  - 更高的可伸缩性，例如，提供[自动 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
+  - 提高了可伸缩性，例如 [自动 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)、[加速数据库恢复](../../relational-databases/accelerated-database-recovery-concepts.md)或[内存优化 tempdb 元数据](../../relational-databases/in-memory-database.md#memory-optimized-tempdb-metadata)。
 
-新数据库仍设置为 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本的默认兼容性级别。 但在将数据库从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 的新版本时，数据库将保留其现有的兼容性级别。 
+新数据库仍设置为[!INCLUDE[ssde_md](../../includes/ssde_md.md)]版本的默认兼容性级别。 但在将数据库从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 的新版本时，数据库将保留其现有的兼容性级别。 
 
 > [!IMPORTANT]
 > 将数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 的新版本之前，请验证该数据库兼容性级别是否仍受支持。 数据库兼容性级别支持矩阵可在[此处](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#arguments)查看。 
@@ -87,7 +90,12 @@ ms.locfileid: "88200965"
 > 若要确定当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的 compatibility_level 列。
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>兼容性级别和数据库引擎升级
-若要将 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]升级到最新版本，同时维持升级前的数据库兼容性级别及其可支持性状态，建议在数据库（存储过程、函数、触发器等可编程对象）和应用程序（使用捕获应用程序发送的动态代码的工作负荷跟踪）中，使用 [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)工具 (DMA) 对应用程序代码执行静态函数外围应用验证。 DMA 工具输出中没有关于缺失或不兼容功能的错误，可保护应用程序免受新目标版本上的任何功能回归影响。 有关详细信息，请参阅[数据迁移助手概述](../../dma/dma-overview.md)。
+要将[!INCLUDE[ssde_md](../../includes/ssde_md.md)]升级到最新版本，同时维持升级前的数据库兼容性级别及其可支持性状态，建议在数据库（存储过程、函数、触发器等可编程对象）和应用程序（使用捕获应用程序发送的动态代码的工作负荷跟踪）中，对应用程序代码执行静态函数外围应用验证  。
+
+可以使用 [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA) 轻松完成此操作。 DMA 工具输出中没有关于缺失或不兼容功能的错误，可保护应用程序免受新目标版本上的任何功能回归影响。 如果需要进行更改以确保数据库可在新版本中工作，可使用 DMA 确定需要更改的位置以及可用的解决方法。 有关详细信息，请参阅[数据迁移助手概述](../../dma/dma-overview.md)。   
+
+> [!TIP]
+> 将数据库从旧版本（例如 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]的新版本时，此功能验证尤为重要，因为你的应用程序代码可能使用不受数据库兼容性级别保护的已弃用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 但从较新版本（如 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]时，则无需担心已弃用的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 有关已弃用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
 
 > [!NOTE]
 > DMA 支持数据库兼容性级别 100 及更高级别。 排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作为源版本。   
@@ -95,7 +103,7 @@ ms.locfileid: "88200965"
 > [!IMPORTANT]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议执行一些最小测试来验证升级是否成功，同时维持之前的数据库兼容性级别。 应该确定适用于自己的应用程序和场景的最小测试。   
 
-> [!NOTE]
+> [!IMPORTANT]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 在下列情况下提供查询计划形状保护：
 >
 > - 新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（目标）在相当于之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本（源）运行的硬件上运行。

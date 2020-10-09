@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380832"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624814"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ WITH
 - ADLS Gen2 的*外部位置*： https://<account>。 dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> blob 终结点可用于 ADLS Gen2，以实现向后兼容性。 使用 blob 终结点以获得最佳性能。
+> .blob 终结点也可用于 ADLS Gen2，并且当前可获得最佳性能。 当身份验证方法不需要 .dfs 时，请使用 .blob 终结点。
 
 - *Account*：存储帐户名称
 
@@ -141,14 +141,15 @@ WITH
 |  **Azure blob 存储**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1：必须在内部位置路径使用 blob 终结点 ( **.blob**.core.windows.net)。
+1：此身份验证方法需要在外部位置路径使用 .blob 终结点 (.blob.core.windows.net)。
 
-2：必须在外部位置路径使用 dfs 终结点 ( **.dfs**.core.windows.net)。
+2：此身份验证方法需要在外部位置路径使用 .dfs 终结点 (.dfs.core.windows.net)。
+
 
 > [!NOTE]  
 >
 > - 使用 AAD 或公共存储帐户进行身份验证时，无需指定 CREDENTIAL。 
->  - 如果存储帐户与 VNet 相关联，则必须使用 MSI（托管标识）进行身份验证。
+> - 如果存储帐户与 VNet 相关联，则必须使用 MSI（托管标识）进行身份验证。
 
 - 使用共享访问签名 (SAS) 进行身份验证
   
@@ -428,9 +429,6 @@ COPY 命令将具有更好的性能，具体取决于工作负载。 为了获�
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>加载 Parquet 或 ORC 文件时，COPY 命令的文件拆分指导是什么？
 不需要拆分 Parquet 或 ORC 文件，因为 COPY 命令会自动拆分这些文件。 为了获取再最佳性能，Azure 存储帐户中的 Parquet 或 ORC 文件应为 256 MB 或更大。 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 命令什么时候正式发布？
-COPY 命令会在本日历年 (2020) 末正式发布。 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>文件的数量和大小有限制吗？
 文件的数量或大小没有限制；但是，为了获得最佳性能，建议文件至少为 4 MB。

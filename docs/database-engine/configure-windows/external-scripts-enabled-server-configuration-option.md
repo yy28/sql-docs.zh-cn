@@ -15,12 +15,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3346d217228bf6ca914b6ae1aa31af0883383908
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec430a256e07cfee21a14bbe3fe97426b044b4fd
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173238"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636127"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>启用了外部脚本的服务器配置选项
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,6 +42,10 @@ ms.locfileid: "88173238"
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 支持 R 和 Python 语言。
 
     在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中安装“机器学习服务”功能，以允许执行外部脚本。 确保在初始安装过程中至少选择一种语言：R 和/或 Python。
+    
++ 适用于 [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 和更高版本 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]支持所有 R、Python、Java 和其他第三方语言。
+
+在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的过程中安装机器学习服务和语言扩展功能，以允许执行任何受支持语言的外部脚本。
 
 ## <a name="additional-requirements"></a>其他需求
 

@@ -24,12 +24,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74fc3af1bea40a7610bc6c8fe511e6cbfe712daf
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 70ca4c4ae9f15117e888f856087e75b79bb8bd36
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380272"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529500"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -64,7 +64,7 @@ propertyname
 |ComputerNamePhysicalNetBIOS|当前运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的本地计算机的 NetBIOS 名称。<br /><br /> 对于故障转移群集上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集实例，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例故障转移到故障转移群集中的其他节点时，该值将更改。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例上，该值保持不变，并返回与 MachineName 属性相同的值。<br /><br /> **注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例位于故障转移群集中，并且您要获取故障转移群集实例的名称，请使用 MachineName 属性。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：nvarchar(128)|  
 |版本|所安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的产品版本。 使用该属性的值确定功能和限制，例如[按 SQL Server 版本划分的计算能力限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。 64 位版本的[!INCLUDE[ssDE](../../includes/ssde-md.md)]向此版本追加（64 位）。<br /><br /> 返回：<br /><br /> “Enterprise Edition”<br /><br /> “Enterprise Edition:基于内核的许可”<br /><br /> “Enterprise Evaluation Edition”<br /><br /> “Business Intelligence Edition”<br /><br /> “Developer Edition”<br /><br /> “Express Edition”<br /><br /> “Express Edition with Advanced Services”<br /><br /> “Standard Edition”<br /><br /> “Web Edition”<br /><br /> “SQL Azure”表示 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> “Azure SQL Edge Developer”表示仅适用于开发的 Azure SQL Edge 版本<br /><br /> “Azure SQL Edge”表示 Azure SQL Edge 的付费版本<br /><br /> 基本数据类型：nvarchar(128)|  
 |EditionID|EditionID 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的已安装产品版本。 使用该属性的值确定功能和限制，例如[按 SQL Server 版本划分的计算能力限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition：基于内核的许可<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]<br /><br /> -1461570097 = Azure SQL Edge Developer <br /><br /> 1994083197 = Azure SQL Edge <br /><br />基本数据类型：bigint|  
-|EngineEdition|服务器上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。<br /><br /> 1 = Personal 或 Desktop Engine（不适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。）<br /><br /> 2 = Standard（对 Standard、Web 和 Business Intelligence 返回该值。）<br /><br /> 3 = Enterprise（对 Enterprise、Developer 以及 Enterprise 版本返回该值。）<br /><br /> 4 = Express（对 Express、Express with Tools 和 Express with Advanced Services 返回该值）<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]<br /><br /> 9 = Azure SQL Edge（将为 Azure SQL Edge 的两个版本返回它）<br /><br /> 基本数据类型：int|  
+|EngineEdition|服务器上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。<br /><br /> 1 = Personal 或 Desktop Engine（不适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。）<br /><br /> 2 = Standard（对 Standard、Web 和 Business Intelligence 返回该值。）<br /><br /> 3 = Enterprise（对 Enterprise、Developer 以及 Enterprise 版本返回该值。）<br /><br /> 4 = Express（对 Express、Express with Tools 和 Express with Advanced Services 返回该值）<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]<br /><br /> 9 = Azure SQL Edge（将为 Azure SQL Edge 的所有版本返回它）<br /><br /> 基本数据类型：int|  
 |FilestreamConfiguredLevel|FILESTREAM 访问的配置级别。 有关详细信息，请参阅[文件流访问级别](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基本数据类型：int|  
 |FilestreamEffectiveLevel|FILESTREAM 访问的有效级别。 如果级别已更改，并且实例重新启动或计算机重新启动处于挂起状态，则该值可以不同于 FilestreamConfiguredLevel。 有关详细信息，请参阅[文件流访问级别](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基本数据类型：int|  
 |FilestreamShareName|FILESTREAM 使用的共享的名称。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：nvarchar(128)| 

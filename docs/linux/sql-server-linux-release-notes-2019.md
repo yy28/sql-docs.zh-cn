@@ -3,16 +3,16 @@ title: Linux 上的 SQL Server 2019 的发行说明
 description: 本文包含 Linux 上运行的 SQL Server 2019 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b5a0f9825a44e1f0d1a4d19ba5fc86a9b9fa9630
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 8ee707f13c8b02669486f5fab0106cb9357be232
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145396"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636107"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的发行说明
 
@@ -35,6 +35,8 @@ ms.locfileid: "91145396"
 
 | 发布                   | 版本       | 发布日期 |
 |---------------------------|---------------|--------------|
+| [CU8](#cu8)               |               |              |
+| [CU7（已删除）](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020 年 3 月 31 日   |
@@ -57,9 +59,13 @@ ms.locfileid: "91145396"
 - [安装 PolyBase 包](../relational-databases/polybase/polybase-linux-setup.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
 
+## <a name="cu8"></a><a id="cu8"></a> CU8
+
+SQL Server 2019 (15.x) 的累积更新 8 (CU8) 尚未发布。
+
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6（2020 年 7 月）
 
-这是 SQL Server 2019 (15.x) 的累积更新 6 (CU6) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4053.23。 有关此版本中的修补程序和改进的信息，请参阅 <https://support.microsoft.com/help/4563110>
+这是 SQL Server 2019 (15.x) 的累积更新 6 (CU6) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4053.23。 若要了解修补程序和改进，请参阅 <https://support.microsoft.com/help/4563110>。
 
 ### <a name="package-details"></a>包详细信息
 
@@ -78,7 +84,7 @@ ms.locfileid: "91145396"
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5（2020 年 6 月）
 
-这是 SQL Server 2019 (15.x) 的累积更新 5 (CU5) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4043.16。 有关此版本中的修补程序和改进的信息，请参阅 <https://support.microsoft.com/help/4552255>
+这是 SQL Server 2019 (15.x) 的累积更新 5 (CU5) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4043.16。 若要了解修补程序和改进，请参阅 <https://support.microsoft.com/help/4552255>。
 
 ### <a name="package-details"></a>包详细信息
 
@@ -97,7 +103,7 @@ ms.locfileid: "91145396"
 
 ## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4（2020 年 4 月）
 
-这是 SQL Server 2019 (15.x) 的累积更新 4 (CU4) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4033.1。 有关此版本中的修补程序和改进的信息，请参阅 <https://support.microsoft.com/help/4548597>
+这是 SQL Server 2019 (15.x) 的累积更新 4 (CU4) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4033.1。 若要了解修补程序和改进，请参阅 <https://support.microsoft.com/help/4548597>。
 
 ### <a name="package-details"></a>包详细信息
 
@@ -116,7 +122,7 @@ ms.locfileid: "91145396"
 
 ## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3（2020 年 3 月）
 
-这是 SQL Server 2019 (15.x) 的累积更新 3 (CU3) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4023.6。 有关此版本中的修补程序和改进的信息，请参阅 <https://support.microsoft.com/help/4538853>
+这是 SQL Server 2019 (15.x) 的累积更新 3 (CU3) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4023.6。 若要了解修补程序和改进，请参阅 <https://support.microsoft.com/help/4538853>。
 
 ### <a name="package-details"></a>包详细信息
 
@@ -135,7 +141,7 @@ ms.locfileid: "91145396"
 
 ## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2（2020 年 2 月）
 
-这是 SQL Server 2019 (15.x) 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4013.40。 有关此版本中的修补程序和改进的信息，请参阅 <https://support.microsoft.com/help/4536075>
+这是 SQL Server 2019 (15.x) 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4013.40。 若要了解修补程序和改进，请参阅 <https://support.microsoft.com/help/4536075>。
 
 ### <a name="package-details"></a>包详细信息
 
@@ -152,7 +158,7 @@ ms.locfileid: "91145396"
 
 ## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 （2020 年 1 月）
 
-这是 SQL Server 2019 (15.x) 的累积更新 1 (CU1) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4003.23。 有关此版本中的修补程序和改进的信息，请参阅 <https://support.microsoft.com/en-us/help/4527376>。
+这是 SQL Server 2019 (15.x) 的累积更新 1 (CU1) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4003.23。 若要了解此发行版中的修补程序和改进，请参阅 <https://support.microsoft.com/en-us/help/4527376>。
 
 ### <a name="package-details"></a>包详细信息
 

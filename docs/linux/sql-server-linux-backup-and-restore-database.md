@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088945"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753509"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 可以使用多个不同的选项备份 Linux 上的 SQL Server 2017 中的数据库。 在 Linux 服务器上，可以使用 sqlcmd 连接到 SQL Server 并进行备份****。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 各平台间的备份功能都是相同的。 例如，可以将数据库备份到本地、远程驱动器或 [Microsoft Azure Blob 存储服务](../relational-databases/backup-restore/sql-server-backup-to-url.md)中。
+
+> [!IMPORTANT]
+> Linux 上的 SQL Server 仅支持使用块 blob 备份到 Azure Blob 存储。 使用存储密钥进行备份和还原将导致使用页 blob，而这不受支持。 请改为使用共享访问签名。 有关块 blob 和页 blob 的信息，请参阅[备份到块 blob 和页 blob](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob)。
 
 ## <a name="backup-a-database"></a>备份数据库
 

@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 创建适用于 SQL Server、Azure SQL 数据库、Azure Synapse Analytics 和 Analytics Platform System 的数据库语法
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539868"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723488"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -84,7 +84,7 @@ ms.locfileid: "89539868"
 
 ## <a name="syntax"></a>语法
 
-创建数据库。
+创建数据库
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 附加数据库
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ COLLATE collation_name 指定数据库的默认排序规则。 排序规则名�
 > 包含数据库的排序方式不同于非包含数据库。 有关详细信息，请参阅[包含的数据库排序规则](../../relational-databases/databases/contained-database-collations.md)。
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本 。
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -971,6 +976,11 @@ CATALOG_COLLATION 指定元数据目录的默认排序规则。 *DATABASE_DEFAUL
 
 *SQL_Latin1_General_CP1_CI_AS* 指定用于系统视图和表的元数据目录按固定的 SQL_Latin1_General_CP1_CI_AS 排序规则进行整理。 如果未指定，这将是 Azure SQL 数据库上的默认设置。
 
+BACKUP_STORAGE_REDUNDANCY 指定如何复制数据库的时间点还原备份和长期保留备份。 仅当使用“异地”备份存储冗余创建数据库时，“异地还原”或“从区域中断恢复”功能才可用。 除非显式指定，否则通过 T-SQL 创建的数据库将使用异地冗余备份存储。 
+
+> [!IMPORTANT]
+> Azure SQL 数据库的 BACKUP_STORAGE_REDUNDANCY 选项为公共预览版，且仅在东南亚 Azure 区域提供。  
+
 EDITION 指定数据库的服务层。
 
 单一数据库和共用数据库。 可用值有：'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
@@ -999,12 +1009,12 @@ MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服�
 |150 GB|空值|√|√|√|√|
 |200 GB|空值|√|√|√|√|
 |250 GB|空值|√ (D)|√ (D)|√|√|
-|300 GB|不适用|不适用|√|√|√|
-|400 GB|不适用|不适用|√|√|√|
-|500 GB|不适用|不适用|√|√ (D)|√|
-|750 GB|不适用|不适用|√|√|√|
-|1024 GB|不适用|不适用|√|√|√ (D)|
-|从 1024 GB 到最大 4096 GB，增量为 256 GB* |空值|不适用|不适用|空值|√|√|
+|300 GB|空值|空值|√|√|√|
+|400 GB|空值|空值|√|√|√|
+|500 GB|空值|空值|√|√ (D)|√|
+|750 GB|空值|空值|√|√|√|
+|1024 GB|空值|空值|√|√|√ (D)|
+|从 1024 GB 到最大 4096 GB，增量为 256 GB* |空值|空值|空值|空值|√|√|
 
 \* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
 
@@ -1170,6 +1180,10 @@ source_server_name 源数据库所在的 [!INCLUDE[ssSDS](../../includes/sssds-m
 
 有关详细信息，请参阅[使用 TRANSACT-SQL 创建 Azure SQL 数据库的副本](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。
 
+> [!IMPORTANT]
+> 默认使用与源数据库相同的备份存储冗余创建数据库副本。 不支持在通过 T-SQL 创建数据库副本时更改备份存储冗余。 
+
+
 ## <a name="permissions"></a>权限
 
 要创建数据库，登录名必须为下列各项之一：
@@ -1258,6 +1272,15 @@ CREATE DATABASE db_copy
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>使用备份区域冗余创建数据库
+
+下面的示例为数据库备份设置区域冗余。 时间点还原备份和长期保留备份（如果已配置）将使用相同的备份存储冗余。
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>另请参阅
@@ -1380,6 +1403,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="syntax"></a>语法
 
+### <a name="sql-pool"></a>[SQL 池](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL 按需版本（预览版）](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>参数
 

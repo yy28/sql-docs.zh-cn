@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425899"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412741"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
 
@@ -96,7 +96,7 @@ ms.locfileid: "88425899"
   
  只有可返回 <xref:System.Data.SqlClient.SqlConnection> 对象的 ADO.NET 提供程序才支持使用 <xref:System.Data.SqlClient.SqlBulkCopy> 接口。 SQL Server 的 .NET 数据提供程序 (SqlClient) 可以返回 <xref:System.Data.SqlClient.SqlConnection> 对象，而自定义提供程序可以返回 <xref:System.Data.SqlClient.SqlConnection> 对象。  
   
- 可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+ 可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 来连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
  如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。    有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关  “错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   

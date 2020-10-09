@@ -15,12 +15,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899707"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670430"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -32,8 +32,8 @@ ms.locfileid: "85899707"
 
 有关安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他方法，请参阅：  
 
-* [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [使用配置文件安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)  
+* [使用配置文件安装 SQL Server](./install-sql-server-using-a-configuration-file.md)  
 * [使用 SysPrep 安装 SQL Server](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [新建 SQL Server 故障转移群集（安装程序）](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [使用安装向导升级 SQL Server（安装程序）](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -70,7 +70,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
 1. 在“许可条款”页中，审阅许可协议。 如果同意，请选中“我接受许可条款”复选框，再选择“下一步”。  
     
    > [!NOTE]
-   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
+   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)。
 
 1. 在“全局规则”页中，如果没有规则错误，安装程序会自动跳转到“产品更新”页。  
   
@@ -238,7 +238,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
    > 如果输入了企业服务器/CAL 许可证产品密钥，且计算机上有 20 多个物理内核，或者在启用超线程时有 40 个逻辑内核，则安装过程中会显示警告。 要继续安装，请选择“选中此框确认此限制或单击‘返回/取消’输入支持操作系统最大处理器数的企业内核产品许可证”复选框，或者单击“返回”并输入支持操作系统最大处理器数的许可证密钥 。
 
    > [!NOTE]
-   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
+   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)。
 
 1. 在“全局规则”页中，如果没有规则错误，安装程序会自动跳转到“产品更新”页。  
   
@@ -306,11 +306,11 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
   
 1. 使用“数据库配置 - 服务器配置”页指定以下各个选项：  
   
-    * **安全模式**：为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例选择“Windows 身份验证”或“混合模式身份验证”。 如果选择“混合模式身份验证”，必须为内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户提供强密码。  
+    * **安全模式**：为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例选择“Windows 身份验证”或“混合模式身份验证”。 如果选择“混合模式身份验证”，则必须为内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户 (sa) 提供强密码。  
   
        在设备与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功建立连接后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[“数据库引擎配置 - 服务器配置”页](../../sql-server/install/instance-configuration.md#serverconfig)。
   
-    * **SQL Server 管理员**：必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个系统管理员。 若要添加用于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请选择“添加当前用户”。 若要在系统管理员列表中添加或删除帐户，请先选择“添加”或“删除”，再编辑对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例拥有管理员权限的用户、组或计算机列表。  
+    * **SQL Server 管理员**：必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个系统管理员。 若要添加用于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请选择“添加当前用户”。 若要在系统管理员列表中添加或删除帐户，请先选择“添加”或“删除”，再编辑对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例拥有管理员权限的用户、组或计算机列表。  你还可以添加 Windows 域组，以通过 SQL Server 的 sysadmin 访问权限在 Active Directory 中建立共享的 SQL 管理员组。 
   
      使用“数据库引擎配置 - 数据目录”页指定非默认安装目录。 若要安装到默认目录，请选择“下一步”。  
   
@@ -326,14 +326,14 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
     > [!NOTE]  
     > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
     
-    有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)。 
+    有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop)。 
 
      使用“数据库引擎配置 - 内存”页，指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在启动后使用的“最小服务器内存和“最大服务器内存”值。 可以使用默认值、计算出的建议值，也可以在选择“推荐”选项后手动指定你自己的值。
      
     > [!NOTE]  
     > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
     
-    有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
+    有关详细信息，请参阅[“数据库引擎配置 - 内存”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory)。 
 
      使用“数据库引擎配置 - FILESTREAM”页为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 FILESTREAM。 有关详细信息，请参阅[“数据库引擎配置 - FILESTREAM”页](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
   
@@ -411,4 +411,4 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
 * [修复失败的 SQL Server 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [使用安装向导升级 SQL Server（安装程序）](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988739"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624828"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ ms.locfileid: "87988739"
   
 -   SQL Server 将使用页 blob 支持的最大备份大小限制为 1 TB。 并将使用块 blob 支持的最大备份大小限制为 200 GB 左右（50,000 块 * 4 MB MAXTRANSFERSIZE）。 块 blob 支持条带化，因而支持更大的备份大小。  
   
+    > [!IMPORTANT]  
+    >  虽然单个块 blob 支持的最大备份大小为 200 GB，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以更小的块大小进行写入，这可能会导致在传输整个备份之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 达到 50,000 个块的限制。 带区备份（即使它们小于 200 GB）可避免达到块限制，尤其是在使用差异备份或未压缩备份时。
+
 -   可使用 TSQL、SMO, PowerShell cmdlet、SQL Server Management Studio 备份或还原向导发出备份或还原语句。   
   
 -   不支持创建逻辑设备名称。 因此，不支持使用 sp_dumpdevice 或通过 SQL Server Management Studio 将 URL 添加为备份设备。  
@@ -204,7 +207,7 @@ ms.locfileid: "87988739"
   
  以下步骤介绍为了能够备份到 Azure 存储而对 SQL Server Management Studio 中的“备份数据库”任务做出的更改：  
   
-1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
+1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
 2.  展开“数据库”，右键单击所需数据库，指向“任务”，然后单击“备份...”。
   

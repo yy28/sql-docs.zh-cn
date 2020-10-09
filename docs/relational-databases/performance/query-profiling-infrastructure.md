@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457248"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719309"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +126,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 引入了新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 以返回大多数查询的最后已知实际执行计划的等效项，称为“最后查询计划统计信息”。 可以使用 LAST_QUERY_PLAN_STATS [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` 在数据库级别启用最后查询计划统计信息。
 
-新的 query_post_execution_plan_profile 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 query_post_execution_showplan 不同 。 可以像如下所示对使用 query_post_execution_plan_profile 扩展事件的示例会话进行配置：
+新的 query_post_execution_plan_profile 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 query_post_execution_showplan 不同 。 从 CU14 起，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 也提供此事件。 可以像如下所示对使用 query_post_execution_plan_profile 扩展事件的示例会话进行配置：
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -180,7 +180,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 |---------------|---------------|---------------|
 |Global|包含 `query_post_execution_showplan` XE 的 xEvent 会话；从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始|跟踪标志 7412；从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始|
 |Global|包含 `Showplan XML` 跟踪事件的 SQL 跟踪和 SQL Server Profiler；从 SQL Server 2000 开始|包含 `query_thread_profile` XE 的 xEvent 会话；从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始|
-|Global|-|包含 `query_post_execution_plan_profile` XE 的 xEvent 会话；从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始|
+|Global|-|包含 `query_post_execution_plan_profile` XE 的 xEvent 会话；从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起|
 |会话|使用 `SET STATISTICS XML ON`；从 SQL Server 2000 开始|将 `QUERY_PLAN_PROFILE` 查询提示与包含 `query_plan_profile` XE 的 xEvent 会话一起使用；从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始|
 |会话|使用 `SET STATISTICS PROFILE ON`；从 SQL Server 2000 开始|-|
 |会话|单击 SSMS 中的[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)按钮；从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始|-|

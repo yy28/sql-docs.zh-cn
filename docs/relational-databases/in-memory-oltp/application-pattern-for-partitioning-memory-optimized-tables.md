@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08fb58f77382dae2d6455cc181c983798c89050a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730421"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529408"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>用于对内存优化表进行分区的应用程序模式
 
@@ -24,7 +24,7 @@ ms.locfileid: "85730421"
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持的应用程序设计模式是将性能资源消耗在相对较新的数据上。 当读取或更新当前数据的频率远高于旧数据时，可以应用此模式。 在这种情况下，我们说当前数据是活动的或热的，较旧的数据是冷的。
 
-主要意图是将热数据存储在内存优化表中。 可能会按每周或每月的频率将已变冷的旧数据移动到已分区表中。 已分区表将其数据存储在磁盘或其他硬盘驱动器上，而不是存储在内存中。
+主要意图是将热数据存储在内存优化表中。 按每周或每月的频率将不太常用的旧数据移动到已分区表中。 已分区表将其数据存储在磁盘或其他硬盘驱动器上，而不是存储在内存中。
 
 通常情况下，这种设计使用一个日期时间键，使移动过程能够有效地区分冷热数据。
 

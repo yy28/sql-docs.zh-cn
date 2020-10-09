@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511309"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725998"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ WHERE [fo].[Quantity] = 361;
 - 数据库兼容性级别为 140 或更高级别。
 - 查询是 `SELECT` 语句（数据修改语句当前不符合条件）。
 - 联接符合同时由索引嵌套循环联接或哈希联接物理算法执行的条件。
-- 哈希联接使用批处理模式，通过整体查询中的列存储索引状态、联接直接引用的列存储索引表或通过使用[针对行存储功能批处理模式](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)来启用。
+- 哈希联接使用批处理模式，通过整体查询中的列存储索引状态、联接直接引用的列存储索引表，或通过使用[针对行存储功能批处理模式](./intelligent-query-processing.md#batch-mode-on-rowstore)来启用。
 - 嵌套循环联接和哈希联接生成的替代解决方案的第一个子级（外部引用）应相同。
 
 ### <a name="adaptive-threshold-rows"></a>自适应阈值行
