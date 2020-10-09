@@ -16,12 +16,12 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08218f29292458d2b61a6a91e98d3f3e3070c7d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98f01da2a10e5cc3a1311df8c6171649d2e6e734
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490732"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864812"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>创建 SQL Server Native Client OLE DB 访问接口应用程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88490732"
 3.  结果处理。  
 
 > [!NOTE]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) 对它们加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](/windows/win32/seccng/cng-portal) 对它们加密。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88490732"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
   

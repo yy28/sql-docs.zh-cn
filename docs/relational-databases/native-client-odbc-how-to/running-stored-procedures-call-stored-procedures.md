@@ -1,5 +1,5 @@
 ---
-title: 调用存储过程（ODBC） |Microsoft Docs
+title: " (ODBC) 调用存储过程 |Microsoft Docs"
 description: 在将 ODBC 应用程序用于 SQL Server 2005 或更高版本之前，了解如何使用 ODBC 管理器、以编程方式或使用文件来添加数据源。
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,11 +14,12 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0f1e1be06331ef8ba1251a352e13e9d81ae6f46
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76c5e2aab1f515ee52feb97218880e8831f3bea8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004291"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868846"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>运行存储过程 - 调用存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86004291"
   
   当 SQL 语句使用 ODBC CALL 转义子句调用存储过程时，Microsoft® SQL Server™ 驱动程序使用远程存储过程调用 (RPC) 机制将该过程发送到 SQL Server。 RPC 请求在 SQL Server 中跳过大多数语句分析和参数处理，因此，其速度快于使用 Transact-SQL EXECUTE 语句。  
   
- 有关演示此功能的示例应用程序，请参阅使用[ODBC&#41;&#40;处理返回代码和输出参数](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+ 有关演示此功能的示例应用程序，请参阅使用 [ODBC&#41;&#40;处理返回代码和输出参数 ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>将过程作为 RPC 运行  
   
@@ -37,9 +38,9 @@ ms.locfileid: "86004291"
     {? = CALL procname (?,?)}  
     ```  
   
-2.  为每个输入、输入/输出和输出参数以及过程返回值（如果有）调用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 。  
+2.  为每个输入、输入/输出和输出参数调用 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) ，并为过程返回值调用，如果有任何)  (。  
   
-3.  用[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)执行语句。  
+3.  用 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)执行语句。  
   
 > [!NOTE]  
 >  如果应用程序使用 Transact-SQL EXECUTE 语法提交过程（这与 ODBC CALL 转义序列相反），SQL Server ODBC 驱动程序会将过程调用作为 SQL 语句（而非 RPC）传递给 SQL Server。 此外，如果未使用 Transact-SQL EXECUTE 语句，则不会返回输出参数。  
@@ -49,5 +50,4 @@ ms.locfileid: "86004291"
  [运行存储过程](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [过程](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
-  
   

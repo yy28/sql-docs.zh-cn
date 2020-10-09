@@ -17,12 +17,12 @@ ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6163580d55bf4a1e0a04067328ef293d07688bce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2caa69836ac5edd0ac3c91dc15ec0df25f22dfeb
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486862"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867981"
 ---
 # <a name="ibcpsessionbcpexec-native-client-ole-db-provider"></a>IBCPSession：： BCPExec (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ HRESULT BCPExec(
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 接口。  
+ 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](../../connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法  。 如果通过使用 BCP_OPTION_ABORT 选项中止了操作，并且随后调用了 BCPExec 方法，则也会发生此调用  。  
@@ -73,5 +73,4 @@ HRESULT BCPExec(
 ## <a name="see-also"></a>另请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
-  
   

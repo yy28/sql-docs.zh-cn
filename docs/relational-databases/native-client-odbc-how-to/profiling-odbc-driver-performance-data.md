@@ -14,12 +14,12 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bedad59ad9f61b7ab12b207bc87bf1c7e250c8a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b55ba95c05d75c384cc89bd55452a5663bbc959
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88329433"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868856"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驱动程序性能数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88329433"
   此示例显示用于记录性能统计信息的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项； 其中创建了一个文件：odbcperf.log。此示例显示如何直接从 SQLPERF 数据结构（SQLPERF 结构在 Odbcss.h 中定义）创建性能数据日志文件和显示性能数据。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理器记录驱动程序性能数据  
   
@@ -244,5 +244,4 @@ int main() {
 ## <a name="see-also"></a>另请参阅  
  [分析 ODBC 驱动程序性能操作指南主题 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [ODBC 驱动程序性能事件探查](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
-  
   

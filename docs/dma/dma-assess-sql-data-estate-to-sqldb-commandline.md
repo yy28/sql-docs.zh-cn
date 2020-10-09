@@ -15,14 +15,14 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: a631ed40344fc8661cef23b9758aa35feb041c45
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91729248"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867691"
 ---
-# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database"></a>DMACMD：评估迁移到 Azure SQL 数据库 SQL Server 数据空间的准备情况 
+# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD：评估迁移到 Azure SQL 的 SQL Server 数据空间的准备情况 
 
 在尝试迁移到 Azure 的多个组织中，评估现有的本地 SQL Server 实例并识别 azure Vm 上的 azure sql 数据库、Azure SQL 托管实例或 SQL Server 至关重要，这一点非常重要。 
 
@@ -134,7 +134,7 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 - 运行评估的时间取决于数据库对象的数量。 如果可能，请避免在生产系统上运行评估并将其卸载到虚拟机或过渡服务器，尤其是对于具有大量对象的数据库。 
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [数据迁移助手 (DMA)](../dma/dma-overview.md)
 * [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

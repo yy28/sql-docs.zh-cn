@@ -14,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455961"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867993"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>枚举 SQL Server Native Client OLE DB 数据源 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例显示如何使用枚举器对象列出可用数据源。  
   
- 若要列出对 SQLOLEDB 枚举器可见的数据源，使用者将调用 [ISourcesRowset：： GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) 方法。 此方法返回与当前可见数据源有关的信息的行集。  
+ 若要列出对 SQLOLEDB 枚举器可见的数据源，使用者将调用 [ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 方法。 此方法返回与当前可见数据源有关的信息的行集。  
   
  根据所使用的网络库，将搜索相应的域以找到数据源。 对于命名管道，将搜索客户端登录到的域。 对于 AppleTalk，将搜索默认区域。 对于 SPX/IPX，将搜索在平构数据库中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的列表。 对于 Banyan VINES，将搜索在本地网络中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装。 不支持多协议和 TCP/IP 套接字。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88455961"
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>枚举 OLE DB 数据源  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

@@ -15,12 +15,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4bb999be51961d11dccf5cae107706dae9f6d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42323e6fbf35ddb6093ac4e764e81e7f0274cbb2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423979"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867472"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88423979"
 ## <a name="diagnostics"></a>诊断  
  对于 SQLPutData，有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特定的 SQLSTATE：  
   
-|SQLSTATE|错误|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
 |22026|字符串数据，长度不匹配|如果应用程序已指定要发送的数据的长度（以字节为单位），例如，使用 SQL_LEN_DATA_AT_EXEC (*n*) 其中 *n* 大于0，则应用程序通过 SQLPutData 指定的字节总数必须与指定的长度匹配。|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88423979"
   
 -   任何小于 0 的值则会出错，导致记录一个诊断记录，该记录包含 SQLState HY090 和消息“字符串或缓冲区长度无效”。  
   
- *DataPtr*参数将被忽略，但必须设置为非 NULL 值。 有关详细信息，请参阅有关 [表值参数和列值的绑定和数据传输](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)中的变量 TVP 行绑定部分。  
+ *DataPtr*参数将被忽略，但必须设置为非 NULL 值。 有关详细信息，请参阅 [Table-Valued 参数和列值的数据传输绑定](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)中的变量 TVP 行绑定部分。  
   
  如果 *StrLen_Or_Ind* 包含除 SQL_DEFAULT_PARAM 以外的任何值或介于0和 SQL_PARAMSET_SIZE (，即 SQLBindParameter) 的 *ColumnSize* 参数，则为错误。 此错误导致 SQLPutData 返回 SQL_ERROR：SQLSTATE=HY090，“字符串或缓冲区长度无效”。  
   
@@ -64,10 +64,9 @@ ms.locfileid: "88423979"
  有关详细信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData 对大型 CLR UDT 的支持  
- **SQLPutData** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLPutData** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [ODBC&#41;&#40;的大型 CLR User-Defined 类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLPutData 函数](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData 函数](../../odbc/reference/syntax/sqlputdata-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

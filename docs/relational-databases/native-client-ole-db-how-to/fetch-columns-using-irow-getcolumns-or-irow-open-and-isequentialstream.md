@@ -16,12 +16,12 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c84ce463eabda4abb641059dc62d6c767e754be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f3e1e650c91236edd76ae2800b14f5ab65e1f1f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88407983"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867007"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88407983"
   可使用 ISequentialStream 接口绑定或检索大型数据  。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列  
   
@@ -675,5 +675,4 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB 操作指南主题](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

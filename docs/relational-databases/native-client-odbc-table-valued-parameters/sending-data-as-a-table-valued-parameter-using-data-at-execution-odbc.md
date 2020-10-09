@@ -1,6 +1,6 @@
 ---
 description: 使用执行时数据将数据作为表值参数发送 (ODBC)
-title: '表值参数、执行时数据 (ODBC) '
+title: 'Table-Valued 参数、执行时数据 (ODBC) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499123"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868213"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   这类似于 " [全部在内存中](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) " 过程，但对表值参数使用执行时数据。  
   
- 有关演示表值参数的另一个示例，请参阅 [将表值参数用于 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 有关演示表值参数的另一个示例，请参阅 [使用 ODBC&#41;Table-Valued 参数 &#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
  在此示例中，当调用 SQLExecute 或 SQLExecDirect 时，驱动程序将返回 SQL_NEED_DATA。 然后，应用程序将重复调用 SQLParamData，直到驱动程序返回 SQL_NEED_DATA 以外的值。 驱动程序将返回 *ParameterValuePtr* 以通知应用程序它为其请求数据的参数。 应用程序调用 SQLPutData 在下一次调用 SQLParamData 之前提供参数数据。 对于表值参数，对 SQLPutData 的调用指示在此示例中，始终为 1) 为驱动 (程序准备了多少行。 在表值的所有行都传递到驱动程序时，将调用 SQLPutData 来指示0行可用。  
   
@@ -187,7 +187,7 @@ from @Items
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  此示例演示可以使用行流式处理，每次调用 SQLPutData 时使用 ODBC TVP，这与使用 BCP.exe 将数据加载到数据库的方式类似。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
@@ -375,7 +375,7 @@ EXIT:
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  此示例演示你可以使用 ODBC TVP，对每次调用 SQLPutData 使用多行流，这类似于你可能使用 BCP.exe 将数据加载到数据库中的方式。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 表值参数编程示例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [ODBC 表值参数编程示例](./table-valued-parameters-odbc.md)  
   

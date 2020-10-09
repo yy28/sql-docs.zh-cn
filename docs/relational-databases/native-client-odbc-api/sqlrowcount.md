@@ -15,12 +15,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11156b3b3080c537f1fb65eee081632ce7f3c1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d32f5f577d9c594556c477620e89435cf66226
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869131"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88423959"
  当 [!INCLUDE[tsql](../../includes/tsql-md.md)] 执行包含 output 子句的 INSERT、UPDATE、DELETE 或 MERGE 语句时，SQLRowCount 将不会返回受影响的行数，直到输出子句生成的结果集中的所有行都已被使用。 若要要使用这些行，请调用 SQLFetch 或 SQLFetchScroll。 SQLResultCols 将返回-1，直到使用完所有结果行为止。 在 SQLFetch 或 SQLFetchScroll 返回 SQL_NO_DATA 之后，应用程序必须调用 SQLRowCount 来确定受影响的行数，然后再调用 SQLMoreResults 以移到下一个结果。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLRowCount 函数](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount 函数](../../odbc/reference/syntax/sqlrowcount-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

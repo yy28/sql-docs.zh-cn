@@ -14,12 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420541"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868926"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>管理 text 和 image 列 - 使用执行时数据列
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88420541"
   
     -   对于第四个参数，请放入程序定义的列标识符。  
   
-2.  调用 [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) 将返回 SQL_NEED_DATA，该值指示执行时数据列已经可供处理。  
+2.  调用 [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) 将返回 SQL_NEED_DATA，该值指示执行时数据列已经可供处理。  
   
 3.  对于每个执行时数据列：  
   
-    -   调用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以获得列数组指针。 如果存在另一个执行时数据列，它将返回 SQL_NEED_DATA。  
+    -   调用 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 以获得列数组指针。 如果存在另一个执行时数据列，它将返回 SQL_NEED_DATA。  
   
     -   调用 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 一次或多次以发送列数据，直到 length 已发送。  
   
-4.  调用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以指示最后一个执行时数据列的所有数据已发送。 它不会返回 SQL_NEED_DATA。  
+4.  调用 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 以指示最后一个执行时数据列的所有数据已发送。 它不会返回 SQL_NEED_DATA。  
 
 ## <a name="example"></a>示例  
  此示例显示如何使用 SQLGetData 读取 SQL_LONG 变量字符数据。 IA64 平台不支持此示例。  
@@ -188,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [管理文本和图像列操作指南主题 &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [管理文本和图像列操作指南主题 &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

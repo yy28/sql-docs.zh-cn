@@ -1,6 +1,6 @@
 ---
 description: 使用表值参数 (ODBC)
-title: " (ODBC) 使用表值参数 |Microsoft Docs"
+title: 将 Table-Valued 参数 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1d5b7baaba443c948e0c02440d6e38520eb16c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089d113a6908b02736626445360e99c5f29807e7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499160"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866865"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用表值参数 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例演示了如何使用表值参数通过调用一次服务器插入多个行和多个列。  
   
- 有关表值参数的详细信息，请参阅 [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 有关使用表值参数的更多示例，请参阅 [ODBC 表值参数编程示例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)。  
+ 有关表值参数的详细信息，请参阅 [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 有关使用表值参数的更多示例，请参阅 [ODBC Table-Valued 参数编程示例](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="example"></a>示例  
  您将需要名为 TVPDemo 的 ODBC 数据源。 TVPDemo 的默认数据库可以是您计算机上的任何测试数据库。 此数据源必须基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驱动程序。  
@@ -1256,5 +1256,4 @@ int _tmain() {
    demo_metadata_from_catalog_APIs((SQLTCHAR *)_T("TVPOrderEntry"));  
 }  
 ```  
-  
   

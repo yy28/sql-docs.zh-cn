@@ -1,6 +1,6 @@
 ---
 description: 表值参数 (ODBC)
-title: ODBC)  (表值参数 |Microsoft Docs
+title: Table-Valued ODBC)  (参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b82ec830d04f89fd4a166a999673a6182429a66
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420501"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867867"
 ---
 # <a name="table-valued-parameters-odbc"></a>表值参数 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   针对表值参数的 ODBC 支持通过在一个调用中向服务器发送多个行，支持客户端应用程序更有效地向服务器发送参数化数据。  
   
- 有关服务器上的表值参数的信息，请参阅 [使用表值参数 &#40;数据库引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 有关服务器上的表值参数的信息，请参阅 [使用 Table-Valued 参数 &#40;数据库引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
  在 ODBC 中，向服务器发送表值参数有两种方式：  
   
@@ -77,12 +77,8 @@ ms.locfileid: "88420501"
   
  [ODBC 表值参数 API 摘要](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  列出支持表值参数的 ODBC 函数。  
-  
- [ODBC 表值参数编程示例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
- 说明如何执行常见任务。  
-  
+
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [表值参数 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
-  
   

@@ -17,11 +17,12 @@ ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 622b32871c7b21cc8e7c4ad1ee40323059a157a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 24f95a05032693773f5a9a21200ece29a96c7a73
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004623"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867026"
 ---
 # <a name="running-stored-procedures"></a>运行存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "86004623"
   
      扩展存储过程可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所不具备的 C 和 C++ 功能。  
   
-     有关如何调用存储过程的示例，请参阅使用[ODBC&#41;&#40;处理返回代码和输出参数](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+     有关如何调用存储过程的示例，请参阅使用 [ODBC&#41;&#40;处理返回代码和输出参数 ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -70,6 +71,5 @@ ms.locfileid: "86004623"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [运行存储过程操作指南主题 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
-  
+ [运行存储过程操作指南主题 &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   

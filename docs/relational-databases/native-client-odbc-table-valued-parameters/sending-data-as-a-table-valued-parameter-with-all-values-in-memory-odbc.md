@@ -1,6 +1,6 @@
 ---
 description: 所有值位于内存中时将数据作为表值参数发送 (ODBC)
-title: '表值参数，内存中的值 (ODBC) '
+title: 'Table-Valued 参数，内存中的值 (ODBC) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676d0c40ca7c064945284d5a486ec0cda698688d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a95b9d9feca9f2bb3ac896c45aa30f18f5d23ad7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499062"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868181"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅 [将表值参数用于 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅 [使用 ODBC&#41;Table-Valued 参数 &#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>先决条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -130,6 +130,5 @@ from @Items
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 表值参数编程示例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [ODBC 表值参数编程示例](./table-valued-parameters-odbc.md)  
   

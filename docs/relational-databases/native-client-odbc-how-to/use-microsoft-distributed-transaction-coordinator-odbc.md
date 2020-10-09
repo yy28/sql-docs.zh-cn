@@ -14,12 +14,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e35f7ed3cc4f93dd4a3b9a7ef697733cbdf99b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8be0e1e3ffc0692eae8b2d1dfa6464ad2e7edae
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499164"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868830"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>使用 Microsoft 分布式事务处理协调器 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88499164"
   
 4.  对于要在 MS DTC 事务中登记的每个 ODBC 连接调用一次或多次 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 第二个参数必须是 SQL_ATTR_ENLIST_IN_DTC，并且第三个参数必须是在步骤 3 中获得的 Transaction 对象。  
   
-5.  对于要更新的每个 SQL Server 调用一次 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)。  
+5.  对于要更新的每个 SQL Server 调用一次 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)。  
   
 6.  调用 MS DTC OLE ITransaction::Commit 函数以提交 MS DTC 事务。 Transaction 对象不再有效。  
 
@@ -46,9 +46,8 @@ ms.locfileid: "88499164"
  若要将 ODBC 连接用于 MS DTC 事务，然后将该连接用于本地 SQL Server 事务，请调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)（带有 SQL_DTC_DONE）。  
   
 > [!NOTE]  
->  还可以对每个 SQL Server 轮流调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)，而不是按照前面步骤 4 和 5 中的建议调用它们。  
+>  还可以对每个 SQL Server 轮流调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)，而不是按照前面步骤 4 和 5 中的建议调用它们。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;执行事务 ](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
-  
+ [&#40;ODBC&#41;执行事务 ](../native-client/odbc/performing-transactions-in-odbc.md)  
   

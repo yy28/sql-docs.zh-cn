@@ -1,6 +1,6 @@
 ---
 description: 分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
-title: " (ODBC) 记录长时间运行的查询 |Microsoft Docs"
+title: " (ODBC) 中记录 Long-Running 查询 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 650ce0033a09913c8f30b8ff51534f31c628a6e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c4942428a1f73275aeb85d9c41220467b89e3ab9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465330"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868890"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88465330"
   此示例显示用于记录长时间运行查询的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项。 此示例在运行时将创建 Odbcqry.log，其中包含执行时间超过应用程序所设定间隔的查询的列表。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理器记录长时间运行的查询  
   
@@ -221,5 +221,4 @@ int main() {
   
 ## <a name="see-also"></a>另请参阅  
  [分析 ODBC 驱动程序性能操作指南主题 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

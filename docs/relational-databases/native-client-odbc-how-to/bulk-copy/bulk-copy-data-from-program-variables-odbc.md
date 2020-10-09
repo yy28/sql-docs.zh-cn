@@ -15,12 +15,12 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4934409d9403d2edc956f6efd436a3d2abd6833
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6d8e85f20ff85133da38b1b1bafa6b4c5f6fbed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455860"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867074"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88455860"
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
- **安全说明** 如果可能，请使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) 对它们加密。  
+ **安全说明** 如果可能，请使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](/windows/win32/seccng/cng-portal) 对它们加密。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>直接在程序变量上使用大容量复制函数  
   
@@ -307,5 +307,4 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [SQL Server ODBC 驱动程序的大容量复制操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [从程序变量执行大容量复制](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
-  
   

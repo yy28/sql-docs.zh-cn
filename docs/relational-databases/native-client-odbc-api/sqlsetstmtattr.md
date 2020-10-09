@@ -15,12 +15,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909eca1ac7b61da6d9d29ecbe0f4283065b122b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420771"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868451"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88420771"
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 属性指定驱动程序是否将在游标上使用特定于驱动程序的性能选项。 设置这些选项时，不允许[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 。 默认设置为 SQL_CO_OFF。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr* 值|描述|  
+|*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|默认。 禁用快速只进、只读游标和自动提取，启用只进只读游标上的 **SQLGetData** 。 将 SQL_SOPT_SS_CURSOR_OPTIONS 设置为 SQL_CO_OFF 时，游标类型将不会发生更改。 也就是说，快速只进游标将保持为快速只进游标。 若要更改游标类型，应用程序现在必须使用 **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE 设置不同的游标类型。|  
 |SQL_CO_FFO|启用快速只进只读游标，禁用只进、只读游标上的 **SQLGetData** 。|  
@@ -65,9 +65,9 @@ ms.locfileid: "88420771"
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 特性确定是立即准备还是推迟语句，直到执行 **SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 或 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和早期版本中，将忽略此属性（没有延迟的准备）。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr* 值|描述|  
+|*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
-|SQL_DP_ON|默认。 调用 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)后，将延迟语句准备，直到 **调用 SQLExecute** 或执行元属性操作 (**SQLDescribeCol** 或 **SQLDescribeParam**) 。|  
+|SQL_DP_ON|默认。 调用 [SQLPrepare 函数](../../odbc/reference/syntax/sqlprepare-function.md)后，将延迟语句准备，直到 **调用 SQLExecute** 或执行元属性操作 (**SQLDescribeCol** 或 **SQLDescribeParam**) 。|  
 |SQL_DP_OFF|语句在执行 **SQLPrepare** 后立即准备就绪。|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -75,7 +75,7 @@ ms.locfileid: "88420771"
   
  *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr* 值|描述|  
+|*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|默认。 驱动程序不能将日期、时间和货币数据转换为使用客户端区域设置的字符串。|  
 |SQL_RE_ON|驱动程序在将日期、时间和货币数据转换为字符串数据时使用客户端区域设置。|  
@@ -90,7 +90,7 @@ ms.locfileid: "88420771"
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 属性用于切换对包含 **文本** 或 **图像** 数据的列进行的操作的日志记录。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr* 值|描述|  
+|*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|禁用对 **文本** 和 **图像** 数据执行的操作的日志记录。|  
 |SQL_TL_ON|默认。 启用对 **文本** 和 **图像** 数据执行的操作的日志记录。|  
@@ -98,7 +98,7 @@ ms.locfileid: "88420771"
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 属性在结果集中公开隐含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 语句中的列。 默认情况下，驱动程序不公开这些列。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr* 值|描述|  
+|*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|默认。 结果集中不显示 FOR BROWSE 列。|  
 |SQL_HC_ON|公开 FOR BROWSE 列。|  
@@ -132,7 +132,7 @@ ms.locfileid: "88420771"
   
  SQL_SOPT_SS_NAME_SCOPE 的类型为 SQLULEN。  
   
-|*将 valueptr* 值|描述|  
+|*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|默认。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> 当使用稀疏列功能时，SQLColumns 将仅返回不是稀疏 **column_set**的成员的列。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|指示应用程序需要表类型的元数据，而不是实际表（目录函数应返回表类型的元数据）。 然后，应用程序将表值参数的 TYPE_NAME 作为 *TableName* 参数传递。|  
@@ -149,7 +149,6 @@ ms.locfileid: "88420771"
  如果在 SQL_SOPT_SS_NAME_SCOPE 具有除 SQL_SS_NAME_SCOPE_TABLE 以外的值时调用了其他目录函数 then SQLTables、SQLColumns 或 SQLPrimaryKeys，则返回 SQL_ERROR。 生成具有 SQLSTATE HY010 和消息“函数序列错误(SQL_SOPT_SS_NAME_SCOPE 未设置为 SQL_SS_NAME_SCOPE_TABLE)”的诊断记录。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLGetStmtAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 函数](../../odbc/reference/syntax/sqlgetstmtattr-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

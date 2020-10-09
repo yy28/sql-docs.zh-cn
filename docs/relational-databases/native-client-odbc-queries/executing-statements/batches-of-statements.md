@@ -19,17 +19,17 @@ ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8371eec918fa8b47cc1daf96f5db59f4a6143631
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d0842a0cc4c38c25af9dc3bdf334f846993f480
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486803"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867306"
 ---
 # <a name="batches-of-statements"></a>语句的批处理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  一批 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句包含两个或多个语句，这些语句由分号分隔 (; ) ，内置于传递到 **SQLExecDirect** 或 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)的单个字符串。 例如：  
+  一批 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句包含两个或多个语句，这些语句由分号分隔 (; ) ，内置于传递到 **SQLExecDirect** 或 [SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md)的单个字符串。 例如：  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -50,5 +50,4 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;执行语句 ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
   

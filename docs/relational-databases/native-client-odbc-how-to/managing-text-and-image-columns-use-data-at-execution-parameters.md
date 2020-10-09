@@ -14,12 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460753"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868918"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 列 - 使用执行时数据参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88460753"
   
     -   使用程序定义参数标识符的 **rgbValue**（第 8 个参数）。  
   
-2.  调用 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 或 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 将返回 SQL_NEED_DATA，这表示执行时数据参数已经可进行处理。  
+2.  调用 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) 或 [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) 将返回 SQL_NEED_DATA，这表示执行时数据参数已经可进行处理。  
   
 3.  对于每个执行时数据参数：  
   
-    -   调用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以获取程序定义参数 ID。 如果存在其他执行时数据参数，则会返回 SQL_NEED_DATA。  
+    -   调用 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 以获取程序定义参数 ID。 如果存在其他执行时数据参数，则会返回 SQL_NEED_DATA。  
   
     -   调用 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 一次或多次以发送参数数据，直到 length 已发送。  
   
-4.  调用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以指示最后一个执行时数据参数的所有数据已发送。 它不会返回 SQL_NEED_DATA。  
+4.  调用 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 以指示最后一个执行时数据参数的所有数据已发送。 它不会返回 SQL_NEED_DATA。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用 SQLParamData 和 SQLPutData 读取 SQL_LONG 变量字符数据。 IA64 平台不支持此示例。  
@@ -226,6 +226,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [管理文本和图像列操作指南主题 &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [管理文本和图像列操作指南主题 &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

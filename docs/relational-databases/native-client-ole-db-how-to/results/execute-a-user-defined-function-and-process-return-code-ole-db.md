@@ -1,6 +1,6 @@
 ---
-description: '执行 SQL Server Native Client 用户定义函数并处理返回代码 (OLE DB) '
-title: '用户定义函数，返回代码 (OLE DB) '
+description: '执行 SQL Server Native Client User-Defined 函数并处理返回代码 (OLE DB) '
+title: 'User-Defined 函数，返回代码 (OLE DB) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e50cdc551c609f5a30e7b70aa844cb4e46739070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0f9f31caa5b026df62d509db5c276e60839877b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475729"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866643"
 ---
-# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>执行 SQL Server Native Client 用户定义函数并处理返回代码 (OLE DB) 
+# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>执行 SQL Server Native Client User-Defined 函数并处理返回代码 (OLE DB) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在此示例中，将执行一个用户定义函数并输出返回代码。 IA64 平台不支持此示例。  
@@ -29,7 +29,7 @@ ms.locfileid: "88475729"
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的存储过程。  
@@ -369,5 +369,4 @@ go
   
 ## <a name="see-also"></a>另请参阅  
  [处理结果操作指南主题 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

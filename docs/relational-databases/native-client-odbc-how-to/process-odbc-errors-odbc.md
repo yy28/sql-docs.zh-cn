@@ -14,29 +14,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5bade3c381024ef8e20ac069ed3effd16ac1e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490857"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868873"
 ---
 # <a name="process-odbc-errors-odbc"></a>处理 ODBC 错误 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  可以使用两个 ODBC 函数调用来检索 ODBC 消息： [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 **SQLGetDiagField** 来检索。  
+  可以使用两个 ODBC 函数调用来检索 ODBC 消息： [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 **SQLGetDiagField** 来检索。  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 通过 ODBC 驱动程序管理器进行处理，而不是通过单独的驱动程序进行处理。 在成功连接之前，ODBC 驱动程序管理器不会缓存特定于驱动程序的诊断字段。 在成功连接之前，无法针对特定于驱动程序的诊断字段调用 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 这包括 ODBC 连接命令，即使它们返回 SQL_SUCCESS_WITH_INFO 也是如此。 在进行下一次 ODBC 函数调用之前，特定于驱动程序的诊断字段不可用。  
+ [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 通过 ODBC 驱动程序管理器进行处理，而不是通过单独的驱动程序进行处理。 在成功连接之前，ODBC 驱动程序管理器不会缓存特定于驱动程序的诊断字段。 在成功连接之前，无法针对特定于驱动程序的诊断字段调用 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 这包括 ODBC 连接命令，即使它们返回 SQL_SUCCESS_WITH_INFO 也是如此。 在进行下一次 ODBC 函数调用之前，特定于驱动程序的诊断字段不可用。  
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
- 此示例显示一个简单的错误处理程序，它调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 以获取标准 ODBC 信息。 随后测试是否存在有效连接，如果存在，则为特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的诊断字段调用 **SQLGetDiagField**。 IA64 平台不支持此示例。  
+### <a name="description"></a>说明  
+ 此示例显示一个简单的错误处理程序，它调用 [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 以获取标准 ODBC 信息。 随后测试是否存在有效连接，如果存在，则为特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的诊断字段调用 **SQLGetDiagField**。 IA64 平台不支持此示例。  
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
  需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。  (可以从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384) 主页下载 AdventureWorks 示例数据库。 ) 此数据源必须基于操作系统提供的 ODBC 驱动程序， (驱动程序名称为 "SQL Server" ) 。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
@@ -241,5 +241,4 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC 操作指南主题](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
   

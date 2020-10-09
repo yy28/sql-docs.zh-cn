@@ -17,12 +17,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a2586a6f3a741f81cb30756006c5a2b4ae84b02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 053d9c0b9dd2a6c3e06eb55540fbde5e655759f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448465"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869217"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>使用 IRowsetFastLoad (的批量复制数据 OLE DB) 在 SQL Server Native Client 中
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88448465"
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>将数据大容量复制到 SQL Server 表中  
   
@@ -432,5 +432,4 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')
      DROP TABLE IRFLTable  
 GO  
 ```  
-  
   

@@ -15,12 +15,12 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc569bdb7eab6ce35a68d66829510c23373c25ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7717ba25c3df87dbb7400eff5b4b6d293541664
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424019"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868032"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88424019"
   
  下表列出了结果集返回的列，以及如何通过 Native Client ODBC 驱动程序扩展这些列来处理 **udt** 和 **xml** 数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|返回包含 UDT（用户定义类型）的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|返回包含 UDT 的架构的名称。|  
@@ -75,10 +75,9 @@ ms.locfileid: "88424019"
  有关更多常规信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 对大型 CLR UDT 的支持  
- **SQLProcedureColumns** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLProcedureColumns** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [ODBC&#41;&#40;的大型 CLR User-Defined 类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLProcedureColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59363)   
+ [SQLProcedureColumns 函数](../../odbc/reference/syntax/sqlprimarykeys-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

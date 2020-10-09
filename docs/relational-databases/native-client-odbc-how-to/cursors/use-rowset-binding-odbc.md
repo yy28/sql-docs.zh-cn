@@ -14,12 +14,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 763477caaba41016b5137463c6d607f548d1d5a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78c7df4d425848db41137c457f2d413b18553c64
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494060"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864022"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用行集绑定 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88494060"
   
 3.  执行语句。  
   
-4.  对 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 或 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 的每个调用都将检索 R 行并将数据传输到绑定列。  
+4.  对 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) 或 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 的每个调用都将检索 R 行并将数据传输到绑定列。  
 
 ### <a name="to-use-row-wise-binding"></a>使用按行绑定  
   
@@ -71,11 +71,10 @@ ms.locfileid: "88494060"
   
 4.  执行语句。  
   
-5.  对 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 或 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 的每个调用都将检索 R 行并将数据传输到绑定列。  
+5.  对 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) 或 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 的每个调用都将检索 R 行并将数据传输到绑定列。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用游标操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [如何实现游标](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [使用游标 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
-  
   

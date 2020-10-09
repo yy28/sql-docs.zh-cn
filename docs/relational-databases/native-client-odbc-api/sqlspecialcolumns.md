@@ -15,12 +15,12 @@ ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a4a7049c9bfbc85ff307f6472193c90e1d1d05d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66413b416482526b45c30e256751342487b005fe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420801"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868431"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,10 +37,9 @@ ms.locfileid: "88420801"
  有关更多常规信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlspecialcolumns-support-for-large-clr-udts"></a>SQLSpecialColumns 对大型 CLR UDT 的支持  
- **SQLSpecialColumns** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLSpecialColumns** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [ODBC&#41;&#40;的大型 CLR User-Defined 类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLSpecialColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59371)   
+ [SQLSpecialColumns 函数](../../odbc/reference/syntax/sqlspecialcolumns-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

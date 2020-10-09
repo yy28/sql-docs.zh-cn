@@ -16,12 +16,12 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1c63fa4b7a7e57e15d158c065c3fad5b512e8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f768aec9de1626f48cdd8fe896043242f743ba68
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475747"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867067"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大容量复制 SELECT 结果集 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88475747"
   此示例显示如何使用大容量复制函数向外大容量复制 SELECT 语句的结果集。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>向外大容量复制 SELECT 语句的结果集  
   
@@ -168,5 +168,4 @@ int main() {
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server ODBC 驱动程序的大容量复制操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
-  
   

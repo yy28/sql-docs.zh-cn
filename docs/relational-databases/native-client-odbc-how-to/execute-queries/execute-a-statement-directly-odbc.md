@@ -14,12 +14,12 @@ ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5264929258fb03c7572de1459a57fb86dbd99ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf661d045b24c3844513356a2cdd081c05ff2620
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328953"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867921"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>直接执行语句 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "88328953"
   
 1.  如果语句具有参数标记，请使用 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 将每个参数绑定到程序变量。 使用数据值填充程序变量，然后设置任何执行时数据参数。  
   
-2.  调用 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 以执行该语句。  
+2.  调用 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 以执行该语句。  
   
-3.  如果使用执行时数据输入参数，则 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
+3.  如果使用执行时数据输入参数，则 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
 
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>通过使用按列参数绑定多次执行语句  
   
@@ -57,9 +57,9 @@ ms.locfileid: "88328953"
   
      将 S 数据值和 S 数据长度放到绑定参数数组中。  
   
-3.  调用 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 以执行该语句。 驱动程序将有效地执行该语句 S 次，每组参数一次。  
+3.  调用 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 以执行该语句。 驱动程序将有效地执行该语句 S 次，每组参数一次。  
   
-4.  如果使用执行时数据输入参数，则 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
+4.  如果使用执行时数据输入参数，则 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>通过使用按行参数绑定多次执行语句  
   
@@ -83,13 +83,12 @@ ms.locfileid: "88328953"
   
 4.  用数据值填充绑定参数缓冲区数组。  
   
-5.  调用 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 以执行该语句。 驱动程序将有效地执行该语句 S 次，每组参数一次。  
+5.  调用 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 以执行该语句。 驱动程序将有效地执行该语句 S 次，每组参数一次。  
   
-6.  如果使用执行时数据输入参数，则 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
+6.  如果使用执行时数据输入参数，则 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
   
- **注意** 与 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360) 和 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 相比，与 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)一起使用时，对列和按行绑定更常见。  
+ **注意** 与 [SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md) 和 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 相比，与 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)一起使用时，对列和按行绑定更常见。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;执行查询操作指南主题 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

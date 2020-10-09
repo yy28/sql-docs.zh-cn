@@ -15,19 +15,19 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d48f89b3de07a8350217aa6dee79cfab3e32fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c51864905542e420b8764a95b2c0fdcb59672576
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420601"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868359"
 ---
 # <a name="metadata---catalog"></a>元数据 - 目录
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题介绍 **SQLColumns** 和 **SQLProcedureColumns**返回的列元数据，以及 **SQLGetTypeInfo**返回的数据类型元数据。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **SQLColumns**和**SQLProcedureColumns**为日期/时间类型返回以下列值。  
   
 |参数类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
@@ -54,7 +54,7 @@ ms.locfileid: "88420601"
 |CREATE_PARAMS|Null|scale|Null|Null|scale|scale|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|可搜索|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|Null|Null|Null|Null|Null|Null|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|Null|Null|Null|Null|Null|Null|  
@@ -68,6 +68,5 @@ ms.locfileid: "88420601"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>另请参阅  
- [Metadata &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
-  
+ [Metadata &#40;ODBC&#41;](./date-and-time-improvements-odbc.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ee418dfb4378ea0291996a0a16e5f0596faf471
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423767"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867741"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>准备和执行语句 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "88423767"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>准备一次语句，然后多次执行它  
   
-1.  调用 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360) 可准备语句。  
+1.  调用 [SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md) 可准备语句。  
   
-2.  也可以调用 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 来确定预定义语句中的参数数量。  
+2.  也可以调用 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 来确定预定义语句中的参数数量。  
   
 3.  （可选）对于预定义语句中的每个参数：  
   
@@ -42,9 +42,9 @@ ms.locfileid: "88423767"
   
     -   如果语句有参数标记，请将数据值放到绑定参数缓冲区中。  
   
-    -   调用 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 以执行预定义语句。  
+    -   调用 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 以执行预定义语句。  
   
-    -   如果使用执行时数据输入参数，则 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
+    -   如果使用执行时数据输入参数，则 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>用按列参数绑定预定义语句  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88423767"
   
 2.  调用 SQLPrepare 以准备语句。  
   
-3.  也可以调用 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 来确定预定义语句中的参数数量。  
+3.  也可以调用 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 来确定预定义语句中的参数数量。  
   
 4.  （可选）对于预定义语句中的每个参数，调用 SQLDescribeParam 以获取参数信息。  
   
@@ -116,5 +116,4 @@ ms.locfileid: "88423767"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;执行查询操作指南主题 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

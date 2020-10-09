@@ -15,12 +15,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4436f28610b465b896db8c269da3677af60c20a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac7f7f4a1bef87ed823a9db953281ee3e2682bbf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465279"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867632"
 ---
 # <a name="retrieve-rows-using-bookmarks-native-client-ole-db-provider"></a>使用书签 (Native Client OLE DB 提供程序检索行) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88465279"
   使用者可将绑定结构的 dwFlag 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签  。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 IRowsetLocate::GetRowsAt 提取行（起始行的位置为书签加上一个偏移量得到的位置）  。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>使用书签检索行  
   
@@ -385,5 +385,4 @@ int ProcessResultSet() {
    return 0;  
 }  
 ```  
-  
   

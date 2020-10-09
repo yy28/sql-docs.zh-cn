@@ -17,12 +17,12 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32a6cbd5bbd20f4e80acfecdcba7099531aa947d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a483cbdf9fdeb7e60992ddfb044239a6d495f432
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464916"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868600"
 ---
 # <a name="tracing-and-replaying-events"></a>跟踪和重播事件
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,9 +57,8 @@ ms.locfileid: "88464916"
   
  SMO 跟踪对象驻留在 <xref:Microsoft.SqlServer.Management.Trace> 命名空间中，该命名空间要求引用 Microsoft.SQLServer.ConnectionInfo.dll 文件。  
   
- **跟踪**和**重播**对象需要一个[microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象，以便与实例建立连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 [Microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象位于命名空间中[，该命名](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)空间需要对 Microsoft.SQLServer.ConnectionInfo.dll 文件的引用。  
+ **跟踪**和**重播**对象需要一个[microsoft.sqlserver.management.common.serverconnection>](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象，以便与实例建立连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 [Microsoft.sqlserver.management.common.serverconnection>](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))对象位于命名空间中[，该命名](/previous-versions/sql/sql-server-2014/ms212673(v=sql.120))空间需要对 Microsoft.SQLServer.ConnectionInfo.dll 文件的引用。  
   
 > [!NOTE]  
 >  64位平台上不支持 **跟踪** 和 **重播** 对象。  
-  
   

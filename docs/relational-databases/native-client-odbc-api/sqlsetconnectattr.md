@@ -15,11 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15f45d404a21345cec76b975054c1ecdbcb63c0f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 03dd345e2b7fc3be27b9bd1c61f3d252d7afb229
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012421"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867809"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -96,17 +97,17 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sql_copt_ss_application_intent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 连接到服务器时声明应用程序工作负荷类型。 可能的值为**Readonly**和**ReadWrite**。 例如：  
+ 连接到服务器时声明应用程序工作负荷类型。 可能的值为 **Readonly** 和 **ReadWrite**。 例如：  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 默认值为 ReadWrite  。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 ag 的支持的详细信息 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，请参阅[高可用性和灾难恢复的 SQL Server Native Client 支持](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 默认值为 ReadWrite  。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 ag 的支持的详细信息 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，请参阅 [高可用性和灾难恢复的 SQL Server Native Client 支持](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
- SQL_COPT_SS_ATTACHDBFILENAME 指定可附加的数据库的主文件名称。 附加此数据库并使其成为连接的默认数据库。 若要使用 SQL_COPT_SS_ATTACHDBFILENAME 必须将数据库名称指定为连接属性 SQL_ATTR_CURRENT_CATALOG 或[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)的 database = 参数的值。 如果数据库以前附加过，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不会重新附加它。  
+ SQL_COPT_SS_ATTACHDBFILENAME 指定可附加的数据库的主文件名称。 附加此数据库并使其成为连接的默认数据库。 若要使用 SQL_COPT_SS_ATTACHDBFILENAME 必须将数据库名称指定为连接属性 SQL_ATTR_CURRENT_CATALOG 或 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)的 database = 参数的值。 如果数据库以前附加过，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不会重新附加它。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -114,7 +115,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssbcp"></a>
 ## <a name="sql_copt_ss_bcp"></a>SQL_COPT_SS_BCP  
- SQL_COPT_SS_BCP 支持针对连接的大容量复制函数。 有关详细信息，请参阅[大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)。  
+ SQL_COPT_SS_BCP 支持针对连接的大容量复制函数。 有关详细信息，请参阅 [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -123,21 +124,21 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssbrowseconnect"></a>
 ## <a name="sql_copt_ss_browse_connect"></a>SQL_COPT_SS_BROWSE_CONNECT  
- 此属性用于自定义[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)返回的结果集。 SQL_COPT_SS_BROWSE_CONNECT 允许或禁止从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的枚举实例返回其他信息。 这可以包含服务器是否是群集、不同实例的名称以及版本号等信息。  
+ 此属性用于自定义 [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)返回的结果集。 SQL_COPT_SS_BROWSE_CONNECT 允许或禁止从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的枚举实例返回其他信息。 这可以包含服务器是否是群集、不同实例的名称以及版本号等信息。  
   
 |值|说明|  
 |-----------|-----------------|  
 |SQL_MORE_INFO_NO|默认。 返回服务器列表。|  
-|SQL_MORE_INFO_YES|**SQLBrowseConnect**返回服务器属性的扩展字符串。|  
+|SQL_MORE_INFO_YES|**SQLBrowseConnect** 返回服务器属性的扩展字符串。|  
 
 <a name="sqlcoptssbrowseserver"></a>
 ## <a name="sql_copt_ss_browse_server"></a>SQL_COPT_SS_BROWSE_SERVER  
- 此属性用于自定义**SQLBrowseConnect**返回的结果集。 SQL_COPT_SS_BROWSE_SERVER 指定**SQLBrowseConnect**为其返回信息的服务器名称。  
+ 此属性用于自定义 **SQLBrowseConnect**返回的结果集。 SQL_COPT_SS_BROWSE_SERVER 指定 **SQLBrowseConnect** 为其返回信息的服务器名称。  
   
 |值|说明|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect**返回指定计算机上的实例的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不应将双反斜杠（ \\ \\ ）用于服务器名称（例如， \\ 应使用 MyServer，而不是 \MyServer）。|  
-|Null|默认。 **SQLBrowseConnect**返回域中所有服务器的信息。|  
+|computername|**SQLBrowseConnect** 返回指定计算机上的实例的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 双反斜杠 (\\ \\) 不应用于服务器名称 (例如，而不是 \\ \MyServer，则应) 使用 MyServer。|  
+|Null|默认。 **SQLBrowseConnect** 返回域中所有服务器的信息。|  
 
 <a name="sqlcoptssconcatnull"></a>
 ## <a name="sql_copt_ss_concat_null"></a>SQL_COPT_SS_CONCAT_NULL  
@@ -157,11 +158,11 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |值|说明|  
 |-----------|-----------------|  
 |SQL_EN_ON|将加密连接。|  
-|SQL_EN_OFF|将不加密连接。 这是默认设置。|  
+|SQL_EN_OFF|将不加密连接。 这是默认值。|  
 
 <a name="sqlcoptssenlistindtc"></a>
 ## <a name="sql_copt_ss_enlist_in_dtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
- 客户端调用 Microsoft 分布式事务处理协调器（MS DTC） OLE DB **ITransactionDispenser：： BeginTransaction**方法来开始 ms dtc 事务，并创建表示该事务的 ms dtc 事务对象。 然后，应用程序调用带有 SQL_COPT_SS_ENLIST_IN_DTC 选项的**SQLSetConnectAttr** ，将 transaction 对象与 ODBC 连接相关联。 将在 MS DTC 事务的保护下执行所有相关的数据库活动。 应用程序调用**SQLSetConnectAttr**与 SQL_DTC_DONE 结束连接的 DTC 关联。  
+ 客户端调用 Microsoft 分布式事务处理协调器 (MS DTC) OLE DB **ITransactionDispenser：： BeginTransaction** 方法来开始 ms dtc 事务，并创建表示该事务的 ms dtc 事务对象。 然后，应用程序调用带有 SQL_COPT_SS_ENLIST_IN_DTC 选项的 **SQLSetConnectAttr** ，将 transaction 对象与 ODBC 连接相关联。 将在 MS DTC 事务的保护下执行所有相关的数据库活动。 应用程序调用 **SQLSetConnectAttr** 与 SQL_DTC_DONE 结束连接的 DTC 关联。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -170,7 +171,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssenlistinxa"></a>
 ## <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA  
- 若要开始使用 XA 兼容事务处理器（TP）的 XA 事务，客户端将调用 Open Group **tx_begin**函数。 然后，应用程序使用 SQL_COPT_SS_ENLIST_IN_XA 参数 TRUE 调用**SQLSetConnectAttr** ，将 XA 事务与 ODBC 连接关联。 将在 XA 事务的保护下执行所有相关的数据库活动。 若要结束 XA 与 ODBC 连接的关联，客户端必须使用 SQL_COPT_SS_ENLIST_IN_XA 参数 FALSE 调用**SQLSetConnectAttr** 。 有关详细信息，请参阅 Microsoft 分布式事务处理协调器文档。  
+ 若要开始使用 XA 兼容事务处理器的 XA 事务 (TP) ，客户端将调用 Open Group **tx_begin** 函数。 然后，应用程序使用 SQL_COPT_SS_ENLIST_IN_XA 参数 TRUE 调用 **SQLSetConnectAttr** ，将 XA 事务与 ODBC 连接关联。 将在 XA 事务的保护下执行所有相关的数据库活动。 若要结束 XA 与 ODBC 连接的关联，客户端必须使用 SQL_COPT_SS_ENLIST_IN_XA 参数 FALSE 调用 **SQLSetConnectAttr** 。 有关详细信息，请参阅 Microsoft 分布式事务处理协调器文档。  
   
 ## <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT  
  不再支持该属性。  
@@ -179,13 +180,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sql_copt_ss_failover_partner"></a>SQL_COPT_SS_FAILOVER_PARTNER  
  用于指定或检索在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行数据库镜像的故障转移伙伴的名称，它是用 Null 值结束的字符串，必须在首次连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前设置。  
   
- 建立连接后，应用程序可以使用[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)查询此属性，以确定故障转移伙伴的标识。 如果主服务器没有故障转移伙伴，则此属性将返回空字符串。 这允许智能应用程序缓存最近确定的备份服务器，但是这类应用程序应注意此信息仅在首次建立连接时才更新或重置（如果缓存），对于长期连接可能过时。  
+ 建立连接后，应用程序可以使用 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 查询此属性，以确定故障转移伙伴的标识。 如果主服务器没有故障转移伙伴，则此属性将返回空字符串。 这允许智能应用程序缓存最近确定的备份服务器，但是这类应用程序应注意此信息仅在首次建立连接时才更新或重置（如果缓存），对于长期连接可能过时。  
   
  有关详细信息，请参阅[使用数据库镜像](../../relational-databases/native-client/features/using-database-mirroring.md)。  
 
 <a name="sqlcoptssintegratedsecurity"></a>
 ## <a name="sql_copt_ss_integrated_security"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
- SQL_COPT_SS_INTEGRATED_SECURITY 强制将 Windows 身份验证用于服务器登录的访问验证。 使用 Windows 身份验证时，驱动程序将忽略作为**SQLConnect**、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)或[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)处理的一部分提供的用户标识符和密码值。  
+ SQL_COPT_SS_INTEGRATED_SECURITY 强制将 Windows 身份验证用于服务器登录的访问验证。 使用 Windows 身份验证时，驱动程序将忽略作为 **SQLConnect**、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)或 [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) 处理的一部分提供的用户标识符和密码值。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -201,7 +202,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MARS_ENABLED_NO|默认。 禁用多个活动结果集 (MARS)。|  
 |SQL_MARS_ENABLED_YES|启用 MARS。|  
   
- 有关 MARS 的详细信息，请参阅[使用多个活动的结果集 &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。  
+ 有关 MARS 的详细信息，请参阅 [使用多个活动的结果集 &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。  
 
 <a name="sqlcoptssmultisubnetfailover"></a>
 ## <a name="sql_copt_ss_multisubnet_failover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
@@ -211,7 +212,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 ag 的支持的详细信息 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，请参阅[高可用性和灾难恢复的 SQL Server Native Client 支持](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 ag 的支持的详细信息 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，请参阅 [高可用性和灾难恢复的 SQL Server Native Client 支持](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -237,15 +238,15 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_PERF_START|启动驱动程序性能数据抽样。|  
 |SQL_PERF_STOP|停止性能数据抽样的计数器。|  
   
- 有关详细信息，请参阅[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)。  
+ 有关详细信息，请参阅 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)。  
 
 <a name="sqlcoptssperfdatalog"></a>
 ## <a name="sql_copt_ss_perf_data_log"></a>SQL_COPT_SS_PERF_DATA_LOG  
- SQL_COPT_SS_PERF_DATA_LOG 分配用于记录性能数据的日志文件的名称。 该日志文件名是 ANSI 或 Unicode 以 Null 值结束的字符串（取决于应用程序编译）。 应 SQL_NTS *StringLength*参数。  
+ SQL_COPT_SS_PERF_DATA_LOG 分配用于记录性能数据的日志文件的名称。 该日志文件名是 ANSI 或 Unicode 以 Null 值结束的字符串（取决于应用程序编译）。 应 SQL_NTS *StringLength* 参数。  
 
 <a name="sqlcoptssperfdatalognow"></a>
 ## <a name="sql_copt_ss_perf_data_log_now"></a>SQL_COPT_SS_PERF_DATA_LOG_NOW  
- SQL_COPT_SS_PERF_DATA_LOG_NOW 指示驱动程序将统计信息日志条目写入磁盘。 应 SQL_NTS *StringLength*参数。  
+ SQL_COPT_SS_PERF_DATA_LOG_NOW 指示驱动程序将统计信息日志条目写入磁盘。 应 SQL_NTS *StringLength* 参数。  
 
 <a name="sqlcoptssperfquery"></a>
 ## <a name="sql_copt_ss_perf_query"></a>SQL_COPT_SS_PERF_QUERY  
@@ -256,7 +257,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_PERF_START|启动长时间运行的查询的日志记录。|  
 |SQL_PERF_STOP|停止长时间运行的查询的日志记录。|  
   
- 有关详细信息，请参阅[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)。  
+ 有关详细信息，请参阅 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)。  
 
 <a name="sqlcoptssperfqueryinterval"></a>
 ## <a name="sql_copt_ss_perf_query_interval"></a>SQL_COPT_SS_PERF_QUERY_INTERVAL  
@@ -268,12 +269,12 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsspreservecursors"></a>
 ## <a name="sql_copt_ss_preserve_cursors"></a>SQL_COPT_SS_PRESERVE_CURSORS  
- 在提交/回滚事务时，此属性允许您查询和设置连接是否保留游标。 设置为 SQL_PC_ON 或 SQL_PC_OFF。 默认值为 SQL_PC_OFF。 此设置控制在调用[SQLEndTran](../../relational-databases/native-client-odbc-api/sqlendtran.md) （或 SQLTransact）时，驱动程序是否将关闭光标。  
+ 在提交/回滚事务时，此属性允许您查询和设置连接是否保留游标。 设置为 SQL_PC_ON 或 SQL_PC_OFF。 默认值为 SQL_PC_OFF。 此设置控制在调用 [SQLEndTran](../../relational-databases/native-client-odbc-api/sqlendtran.md) (或 SQLTransact) 时，驱动程序是否将 (s) 关闭光标。  
   
 |值|说明|  
 |-----------|-----------------|  
-|SQL_PC_OFF|默认。 使用**SQLEndTran**提交或回滚事务时将关闭游标。|  
-|SQL_PC_ON|当使用**SQLEndTran**提交或回滚事务时，游标不会关闭，除非在异步模式下使用静态或键集游标。 如果在发出回滚命令时未完成游标的填充，则关闭游标。|  
+|SQL_PC_OFF|默认。 使用 **SQLEndTran**提交或回滚事务时将关闭游标。|  
+|SQL_PC_ON|当使用 **SQLEndTran**提交或回滚事务时，游标不会关闭，除非在异步模式下使用静态或键集游标。 如果在发出回滚命令时未完成游标的填充，则关闭游标。|  
 
 <a name="sqlcoptssquotedident"></a>
 ## <a name="sql_copt_ss_quoted_ident"></a>SQL_COPT_SS_QUOTED_IDENT  
@@ -312,7 +313,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |-----------|-----------------|  
 |SQL_TXN_SS_SNAPSHOT|指示您无法从一个事务中看到在其他事务中进行的更改，即便重新查询也是如此。|  
   
- 有关快照隔离的详细信息，请参阅[使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
+ 有关快照隔离的详细信息，请参阅 [使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
 ## <a name="sql_copt_ss_use_proc_for_prep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
 
@@ -322,7 +323,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 设置用户数据指针。 用户数据是基于每个连接记录的客户端拥有的内存。  
   
- 有关详细信息，请参阅[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)。  
+ 有关详细信息，请参阅 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)。  
 
 <a name="sqlcoptsswarnoncperror"></a>
 ## <a name="sql_copt_ss_warn_on_cp_error"></a>SQL_COPT_SS_WARN_ON_CP_ERROR  
@@ -335,15 +336,15 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 ## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SQLSetConnectAttr 对服务主体名称 (SPN) 的支持
 
- SQLSetConnectAttr 可用于设置新连接属性的值 SQL_COPT_SS_SERVER_SPN 和 SQL_COPT_SS_FAILOVER_PARTNER_SPN。 打开连接时不能设置这些属性；如果在打开连接时尝试设置这些属性，将返回错误 HY011 并显示消息“此时操作无效”。 （也可以使用 SQLSetConnectOption 来设置这些值。）  
+ SQLSetConnectAttr 可用于设置新连接属性的值 SQL_COPT_SS_SERVER_SPN 和 SQL_COPT_SS_FAILOVER_PARTNER_SPN。 打开连接时不能设置这些属性；如果在打开连接时尝试设置这些属性，将返回错误 HY011 并显示消息“此时操作无效”。  (SQLSetConnectOption 还可用于设置这些值。 )   
   
- 有关 Spn 的详细信息，请参阅[&#40;ODBC&#41;的客户端连接中的服务主体名称 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
+ 有关 Spn 的详细信息，请参阅 [&#40;ODBC&#41;的客户端连接中的服务主体名称 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
 
 <a name="sqlcoptssconnectiondead"></a>
 ## <a name="sql_copt_ss_connection_dead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  这是一个只读属性。  
   
- 有关 SQL_COPT_SS_CONNECTION_DEAD 的详细信息，请参阅[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)和[连接到数据源 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)。  
+ 有关 SQL_COPT_SS_CONNECTION_DEAD 的详细信息，请参阅 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 和 [连接到数据源 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)。  
   
 ## <a name="example"></a>示例
 
@@ -392,15 +393,14 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
   
 ## <a name="see-also"></a>另请参阅
 
- [SQLSetConnectAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59368)   
+ [SQLSetConnectAttr 函数](../../odbc/reference/syntax/sqlsetconnectattr-function.md)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
- [将 ANSI_NULLS 设置 &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [将 ANSI_PADDING 设置 &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [将 ANSI_WARNINGS 设置 &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [将 CONCAT_NULL_YIELDS_NULL 设置 &#40;Transact-sql&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [将 QUOTED_IDENTIFIER 设置 &#40;Transact-sql&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)   
+ [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
+ [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SQLPrepare 函数](../../odbc/reference/syntax/sqlprepare-function.md)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
-  
   

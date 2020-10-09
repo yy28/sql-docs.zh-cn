@@ -14,12 +14,12 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1f330308b276aa82d7c936d53614fd2b603b8e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5bb39a385f78849df8f0c580e9ef37aff56e85fb
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475692"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866550"
 ---
 # <a name="obtain-a-fast_forward-cursor-native-client-ole-db-provider"></a> (Native Client OLE DB 提供程序获取 FAST_FORWARD 游标) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88475692"
  本文提供了一个完整示例，说明如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置属性后，执行 SELECT 语句，以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列    。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)（Win32 加密 API）加密它们。  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>获取 FAST_FORWARD 游标  
   
@@ -409,5 +409,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   
