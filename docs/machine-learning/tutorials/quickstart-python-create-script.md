@@ -4,24 +4,24 @@ titleSuffix: SQL machine learning
 description: 在 SQL Server、大数据群集或 Azure SQL 托管实例上，使用机器学习服务运行一组简单的 Python 脚本。 了解如何使用存储过程 sp_execute_external_script 执行该脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/23/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a21e17e5732b8819a955692f2c3721736a533cf
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: a2db492306aff5b4980bb97a6f65b93515dbfe1b
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136375"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497827"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习运行简单的 Python 脚本
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-在本快速入门中，你将使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)、[Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)或在 [SQL Server 大数据群集](../../big-data-cluster/machine-learning-services.md)上运行一组简单的 Python 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
+在本快速入门中，你将使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)、[Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)或 [SQL Server 大数据群集](../../big-data-cluster/machine-learning-services.md)运行一组简单的 Python 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
 
 ## <a name="prerequisites"></a>先决条件
 

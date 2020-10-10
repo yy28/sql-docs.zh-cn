@@ -4,46 +4,33 @@ titleSuffix: SQL machine learning
 description: 在本快速入门中，你将学习如何在 SQL 机器学习中运用 Python 数学函数和效用函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a432ce08cb0c4e2f0788188dacf6676083e38990
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a810a5dbc6e5d07f0926d99dd62c71e38dfacdff
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178509"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497948"
 ---
 # <a name="quickstart-python-functions-with-sql-machine-learning"></a>快速入门：在 SQL 机器学习中使用 Python 函数
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-本快速入门介绍如何在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 数学和实用程序函数。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-本快速入门介绍如何将 Python 数学和实用程序函数与 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)结合使用。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-在本快速入门中，你会学习如何将 Python 数学函数和效用函数用于 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
-::: moniker-end
+本快速入门介绍将 Python 数学和实用函数与 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)、[Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)或 [SQL Server 大数据群集](../../big-data-cluster/machine-learning-services.md)配合使用。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
 
 ## <a name="prerequisites"></a>先决条件
 
 若要运行本快速入门，需要具备以下先决条件。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL 托管实例机器学习服务。 要了解如何注册，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
-::: moniker-end
+- 以下平台之一上的 SQL 数据库：
+  - [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
+  - SQL Server 大数据群集。 了解如何[在 SQL Server 大数据群集上启用机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+  - Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 - 用于运行包含 Python 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 

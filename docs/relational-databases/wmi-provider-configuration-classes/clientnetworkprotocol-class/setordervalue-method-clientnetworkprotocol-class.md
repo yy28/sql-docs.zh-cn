@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ea0b09b3a20322065648efd3692d835b7c16ac9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1496143b862037ae8a4d0593ac3cc412dfd0b56e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521161"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889095"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 方法（ClientNetworkProtocol 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -52,6 +52,5 @@ object.SetOrderValue(OrderValue)
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>另请参阅  
- [客户端协议属性（“顺序”选项卡）](https://technet.microsoft.com/library/ms187884.aspx)  
-  
+ [客户端协议属性（“顺序”选项卡）](../../../tools/configuration-manager/client-protocols-properties-order-tab.md)  
   

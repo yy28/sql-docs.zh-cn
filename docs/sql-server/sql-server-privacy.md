@@ -1,7 +1,7 @@
 ---
 description: SQL Server 隐私补充
 title: SQL Server 隐私补充 | Microsoft Docs
-ms.date: 01/19/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: mikeray
@@ -11,21 +11,23 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480680"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603416"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 如果在 Microsoft Azure 服务上的虚拟机中安装了 SQL Server，则会将环境信息发送到 Microsoft，以便 Microsoft 可以将 SQL Server 虚拟机资源注册到 Azure 订阅中的资源提供程序，如[此处](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)进一步说明所示。 作为注册 SQL Server 虚拟机资源的一部分，可以在虚拟机上安装 SQL Server IaaS 代理扩展，如[此处](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)进一步说明所示。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
+本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。
+
+本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
 
 - Azure SQL Database
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - 数据库迁移助手
@@ -115,6 +117,20 @@ ms.locfileid: "88480680"
 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |仅限 Microsoft 内部使用，不允许第三方访问。 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |
 |Power View 和 SQL Server Reporting Services 地图项可发送数据供必应地图使用。 |仅限会话数据 |- |
 
+## <a name="organization-identifiable-information-oii"></a>组织身份信息 (OII)
+
+从组织处接收的数据，或通过使用产品生成的数据。
+-   可链接到组织。
+-   不包含内容。
+
+### <a name="examples-of-organization-identifiable-information"></a>组织身份信息示例
+-   组织名称（例如：Microsoft Corp.）
+
+### <a name="permitted-usage-scenarios"></a>允许的使用方案
+|方案  |访问限制  |保留期要求|
+|---------|---------|---------|
+| Microsoft 可能会收集 Azure 虚拟机中运行的 SQL Server 实例的一般使用情况数据，其明确目的是为客户提供在 Azure 虚拟机中使用 SQL Server 所需的 Azure 可选权益。 | Microsoft 可以向客户公开数据，例如通过 Azure 门户，从而帮助在 Azure 虚拟机中运行 SQL Server 的客户访问特定用于在 Azure 中运行 SQL Server 的权益。 </br></br>未经客户事先同意，Microsoft 不会将此数据用于授权审核。 | 最短 90 天 - 最长 3 年 |
+
 ## <a name="system-metadata"></a>系统元数据
 
 运行服务器期间生成的数据。  该数据不包含客户内容。
@@ -134,7 +150,7 @@ ms.locfileid: "88480680"
 - 事件名称和错误代码
 - 硬件设置和 OEM 制造商等标识
 
-Microsoft 不检查其他使用 SQL Server 的程序设置的应用程序名称值（例如：Sharepoint 或第三方打包程序，并且在使用情况数据启用时将此信息包含在发送给 Microsoft 的系统元数据中）。 客户不应将个人数据（如最终用户身份信息）存储在系统元数据字段中，也不应创建旨在将个人数据存储到这些字段的应用程序。 
+Microsoft does 会检查由使用 SQL Server 的其他程序设置的应用程序名称值（示例：Sharepoint 或第三方打包程序，并在启用使用情况数据时，将此信息包含在发送给 Microsoft 的系统元数据中。 客户不应将个人数据（如最终用户身份信息）存储在系统元数据字段中，也不应创建旨在将个人数据存储到这些字段的应用程序。 
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 

@@ -21,16 +21,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809843"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892397"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   返回成功的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库连接、连接失败和死锁。 您可以使用此信息跟踪与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 相关的数据库活动或排除其故障。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "91809843"
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库的名称。 如果连接失败，并且用户未指定数据库名称，则此列为空白。|  
-|**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 对于聚合事件，时间始终为 5 分钟的倍数。 例如： 。<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 对于聚合事件，时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 对于聚合事件， **End_time** 始终比同一行中对应的 **start_time** 正好晚5分钟。 对于未聚合的事件， **start_time** 和 **end_time** 等于事件的实际 UTC 日期和时间。|  
 |**event_category**|**nvarchar (64) **|生成此事件的高级组件。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |event_type|**nvarchar (64) **|事件的类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
@@ -89,7 +89,7 @@ ms.locfileid: "91809843"
 
  有权访问 **master** 数据库的用户对此视图具有只读访问权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ### <a name="event-aggregation"></a>事件聚合
 
@@ -172,7 +172,7 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>DB 范围内的扩展事件
+### <a name="db-scoped-extended-event"></a>DB-Scoped 扩展事件
 
  使用以下示例代码设置 (XEvent) 会话的 db 范围扩展事件：  
 

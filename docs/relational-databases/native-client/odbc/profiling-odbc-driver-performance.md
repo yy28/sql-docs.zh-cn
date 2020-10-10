@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428119"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892267"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 驱动程序性能事件探查
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>应用程序配置文件统计信息  
   
-|SQLPERF 字段|描述|  
+|SQLPERF 字段|说明|  
 |-------------------|-----------------|  
 |TimerResolution|服务器时钟时间的最小解析度（以毫秒为单位）。 通常，此值报告为 0（零）并且只有在报告的数值很大时才应予以考虑。 如果服务器时钟的最小解析度大于某些基于计时器的统计信息可能使用的间隔时间，这些统计信息可能会急剧增加。|  
 |SQLidu|SQL_PERF_START 之后 INSERT、DELETE 或 UPDATE 语句的数量。|  
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|在 SQL_PERF_START 之后处理的 SELECT 语句的数量。|  
 |SQLSelectRows|在 SQL_PERF_START 之后选择的行数。|  
 |事务|SQL_PERF_START 之后用户事务的数量（包括回滚的数量）。 如果使用 SQL_AUTOCOMMIT_ON 运行 ODBC 应用程序，则每个命令都视为一个事务。|  
-|SQLPrepares|SQL_PERF_START 后的 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360) 调用数。|  
+|SQLPrepares|SQL_PERF_START 后的 [SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md) 调用数。|  
 |ExecDirects|SQL_PERF_START 后的 **SQLExecDirect** 调用数。|  
 |SQLExecutes|SQL_PERF_START 后的 **SQLExecute** 调用数。|  
 |CursorOpens|SQL_PERF_START 之后驱动程序打开服务器游标的次数。|  
@@ -116,7 +116,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>时间统计信息  
   
-|SQLPERF 字段|描述|  
+|SQLPERF 字段|说明|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 之后驱动程序花费在处理工作上的累积时间量，其中包括等待服务器的回复所花费的时间。|  
 |msNetworkServerTime|驱动程序等待服务器回复所花费的累积时间量。|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [分析 ODBC 驱动程序性能操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

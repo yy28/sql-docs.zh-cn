@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b06cdc4425c4417713911c93a119ef6979e4c606
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dc26e45350c601057b392ddf38ae4f1d96cc34e1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542843"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892527"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>FlagName 属性（ClientSettingsGeneralFlag 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,6 +46,5 @@ object.FlagName [= value]
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>另请参阅  
- [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

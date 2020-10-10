@@ -18,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: d46002843574b54c803ed0da33c02f1d795494ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2298bc5ad9a6be79d8ab48a42c579c2114bc1656
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317923"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412958"
 ---
 # <a name="connect-to-server-database-engine"></a>连接到服务器（数据库引擎）
 
@@ -65,10 +65,10 @@ ms.locfileid: "88317923"
 > Active Directory - 含 MFA 支持的通用身份验证是交互式的工作流，支持 Azure 多重身份验证 (MFA)。 Azure MFA 可满足用户简单登录过程的需求，同时可帮助保护数据访问权限和应用程序。 通过一系列的简单验证（电话、短信、带有 PIN 的智能卡或移动应用通知）提供强身份验证，用户可选择喜欢的验证方式。 用户帐户配置 MFA 后，该交互式身份验证工作流需要通过弹出式对话框、智能卡等进行额外用户交互。用户帐户配置 MFA 后，用户必须选择 Azure 通用身份验证进行连接。 如果用户帐户不需要 MFA，用户仍可使用其他两个 Azure Active Directory 身份验证选项。 有关详细信息，请参阅 [SQL 数据库和 SQL 数据仓库针对 Azure AD MFA 的 SSMS 支持](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 如有必要，可通过单击“选项  ”，选择“连接属性  ”选项卡，并完成“AD 域名或租户 ID  ”框，更改对登录名进行身份验证的域。  
 > 
 > **Azure Active Directory - 密码**  
-> Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的机制。  如果是使用凭证从未与 Azure 联合的域登录到 Windows，或使用基于初始域或客户端域的 Azure AD 进行 Azure AD 身份验证，请使用此方法连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
+> Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的机制。  如果是使用凭证从未与 Azure 联合的域登录到 Windows，或使用基于初始域或客户端域的 Azure AD 进行 Azure AD 身份验证，请使用此方法连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
 > 
 > **Active Directory - 集成**  
-> Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的机制。 如果使用 Azure Active Directory 凭证从联合域登录到 Windows，请使用此方法连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
+> Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的机制。 如果使用 Azure Active Directory 凭证从联合域登录到 Windows，请使用此方法连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
   
 **用户名**  
 连接所使用的 Windows 用户名。 只有选择使用“Azure Active Directory - 密码”身份验证进行连接时，此选项才可用  。 选择“Windows 身份验证”或“Azure Active Directory - 集成”身份验证时，它是只读的   。  

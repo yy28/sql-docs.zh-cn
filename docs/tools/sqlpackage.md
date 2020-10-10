@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989440"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498214"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |---|---|---|---|
 |**/Action:**|**/a**|发布|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|指定用于访问 Azure Key Vault 的身份验证方法 |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|指定在发布操作包含对已加密表/列的修改的情况下，使用哪种身份验证方法来访问 Azure KeyVault。 |
 |**/ClientId:**|**/cid**|{string}|必要时，指定在对 Azure KeyVault 进行身份验证时使用的客户端 ID |
 |**/DeployScriptPath:**|**/dsp**|{string}|指定用于输出部署脚本的可选文件路径。 对于 Azure 部署，如果有用于创建或修改 master 数据库的 TSQL 命令，脚本便会写入相同路径，不同之处在于使用“Filename_Master.sql”作为输出文件名。 |
 |**/DeployReportPath:**|**/drp**|{string}|指定用于输出部署报告 xml 文件的可选文件路径。 |
@@ -313,7 +313,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 |**/p:**|TableData=(STRING)|指示将从中提取数据的表。 请按以下格式指定表名，不一定要使用括号来括住名称部分：schema_name.table_identifier。 可以多次指定此选项。|
 |**/p:**|TempDirectoryForTableData=(STRING)|指定用于在将表数据写入包文件前缓冲表数据的临时目录。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定应使用的目标引擎版本。 这会影响是否允许具有 V12 功能的 Azure SQL 数据库服务器支持的对象，如生成的 bacpac 中的内存优化表。|
-|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否验证适用于 Microsoft Azure SQL 数据库 v12 的受支持全文文档类型。|
+|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否验证适用于 Microsoft Azure SQL Database v12 的受支持全文文档类型。|
   
 ## <a name="import-parameters-and-properties"></a>导入参数和属性
 

@@ -18,11 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009742"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892257"
 ---
 # <a name="create-a-distributed-transaction"></a>创建分布式事务
 
@@ -38,34 +39,34 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC 驱动程序调用 MSDTC 用于本地 SQL Server
 
-Microsoft 分布式事务处理协调器（MSDTC）允许应用程序跨两个或更多实例扩展或_分发_事务 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 即使两个实例托管在不同的计算机上，分布式事务也能正常工作。
+Microsoft 分布式事务处理协调器 (MSDTC) 允许应用程序跨两个或更多实例扩展或 _分发_ 事务 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 即使两个实例托管在不同的计算机上，分布式事务也能正常工作。
 
 为本地 Microsoft SQL Server 安装了 MSDTC，但不适用于 Microsoft 的 Azure SQL 数据库云服务。
 
-当 c + + 程序管理分布式事务时，由开放式数据库连接（ODBC）的 SQL Server Native Client 驱动程序调用 MSDTC。 Native Client ODBC 驱动程序具有符合开放组分布式事务处理（DTP） XA 标准的事务管理器。 MSDTC 需要此相容性。 通常，所有事务管理命令都是通过此 Native Client ODBC 驱动程序发送的。 顺序如下：
+当你的 c + + 程序管理分布式事务时，SQL Server Native Client 驱动程序 (ODBC) 的开放式数据库连接调用 MSDTC。 Native Client ODBC 驱动程序具有符合开放式组分布式事务处理 (DTP) XA 标准的事务管理器。 MSDTC 需要此相容性。 通常，所有事务管理命令都是通过此 Native Client ODBC 驱动程序发送的。 顺序如下：
 
-1. C + + Native Client ODBC 应用程序通过调用[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)启动了一个事务，并关闭了自动提交模式。
+1. C + + Native Client ODBC 应用程序通过调用 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)启动了一个事务，并关闭了自动提交模式。
 
 2. 应用程序在计算机 A 上的 SQL Server X 上更新某些数据。
 
 3. 应用程序会更新计算机 B 上 SQL Server Y 上的一些数据。
     - 如果 SQL Server Y 上的更新失败，则将回滚两个 SQL Server 实例上的所有未提交的更新。
 
-4. 最后，应用程序通过使用 SQL_COMMIT 或 SQL_ROLLBACK 选项调用[SQLEndTran _（1）_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)来结束事务。
+4. 最后，应用程序通过使用 SQL_COMMIT 或 SQL_ROLLBACK 选项调用 [SQLEndTran _ (1) _](../../../relational-databases/native-client-odbc-api/sqlendtran.md)来结束事务。
 
-_（1）_ 无需 ODBC 即可调用 MSDTC。 在这种情况下，MSDTC 成为事务管理器，应用程序不再使用**SQLEndTran**。
+_ (1) _ 无需 ODBC 即可调用 MSDTC。 在这种情况下，MSDTC 成为事务管理器，应用程序不再使用 **SQLEndTran**。
 
 ### <a name="only-one-distributed-transaction"></a>仅一个分布式事务
 
 假设你的 c + + Native Client ODBC 应用程序已登记到分布式事务中。 接下来，应用程序在另一个分布式事务中登记。 在这种情况下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序将离开原始分布式事务，并登记到新的分布式事务中。
 
-有关详细信息，请参阅[DTC 程序员参考](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))。
+有关详细信息，请参阅 [DTC 程序员参考](/previous-versions/windows/desktop/ms686108(v=vs.85))。
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>云中 SQL 数据库的 c # 替代项
 
 Azure SQL Database 或 Azure SQL 数据仓库不支持 MSDTC。
 
-但是，可以通过使 c # 程序使用[.net 类 system.exception](/dotnet/api/system.transactions.transactionscope)，为 SQL 数据库创建分布式事务。
+但是，可以通过使 c # 程序使用 [.net 类 system.exception](/dotnet/api/system.transactions.transactionscope)，为 SQL 数据库创建分布式事务。
 
 ### <a name="other-programming-languages"></a>其他编程语言
 
@@ -75,6 +76,6 @@ Azure SQL Database 或 Azure SQL 数据仓库不支持 MSDTC。
 - 使用 Transact-sql 的链接服务器
 - JDBC 驱动程序
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [执行事务 (ODBC)](performing-transactions-in-odbc.md)

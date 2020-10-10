@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 076c91605c245ad49f6c51a2a656d48c7dba2109
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f65cd55570312a4d86e795d224c900fa7517236e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545153"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891237"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>将 WQL 与 WMI Provider for Server Events 结合使用
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 查询 (`FROM`) 的 `DDL_DATABASE_LEVEL_EVENTS` 子句中的参数可以为可对其创建事件通知的任何有效事件。 `SELECT` 和 `WHERE` 子句中的参数可以指定与某一事件或其父事件关联的任何事件属性。 有关有效事件和事件属性的列表，请参阅 [ (数据库引擎) 的事件通知 ](https://technet.microsoft.com/library/ms182602.aspx)。  
+ WQL 查询 (`FROM`) 的 `DDL_DATABASE_LEVEL_EVENTS` 子句中的参数可以为可对其创建事件通知的任何有效事件。 `SELECT` 和 `WHERE` 子句中的参数可以指定与某一事件或其父事件关联的任何事件属性。 有关有效事件和事件属性的列表，请参阅 [ (数据库引擎) 的事件通知 ](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))。  
   
  WMI Provider for Server Events 显式支持以下 WQL 语法。 也可以指定附加 WQL 语法，但该语法并非特定于此提供程序，并且由 WMI 主机服务进行分析。 有关 WMI 查询语言的详细信息，请参阅 Microsoft Developer Network (MSDN) 上的 WQL 文档。  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  指定对与事件关联的所有属性进行查询。  
   
  event_type  
- 可针对其创建事件通知的任何事件。 有关可用事件的列表，请参阅 [WMI Provider For Server Events 类和属性](https://technet.microsoft.com/library/ms186449.aspx)。 请注意，*事件类型*名称对应于*event_type*  |  通过使用 create event notification 手动创建事件通知时可以指定的相同 event_type*event_group* 。 *事件类型*的示例包括 CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS 和 TRC_DATABASE。  
+ 可针对其创建事件通知的任何事件。 有关可用事件的列表，请参阅 [WMI Provider For Server Events 类和属性](./wmi-provider-for-server-events-classes-and-properties.md)。 请注意，*事件类型*名称对应于*event_type*  |  通过使用 create event notification 手动创建事件通知时可以指定的相同 event_type*event_group* 。 *事件类型*的示例包括 CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS 和 TRC_DATABASE。  
   
 > [!NOTE]  
 >  执行 DDL 式操作的某些系统存储过程也可以激发事件通知。 测试您的事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发在 CREATE_TYPE 事件上创建的事件通知。 但 **sp_rename** 存储过程不会激发任何事件通知。 有关详细信息，请参阅[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
@@ -111,9 +111,9 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  请注意，并非所有事件均可在任何特定的范围内进行查询。 例如，针对跟踪事件（例如 Lock_Deadlock）或跟踪事件组（例如 TRC_LOCKS）的 WQL 查询仅可在服务器级别进行注册。 与此类似，CREATE_ENDPOINT 事件和 DDL_ENDPOINT_EVENTS 事件组也只能在服务器级别进行注册。 有关用于注册事件的适当范围的详细信息，请参阅 [设计事件通知](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)。 尝试注册 WQL 查询（其 *event_type* 只能在服务器级别注册）始终在服务器级别进行。 如果 WMI 客户端拥有权限，则注册成功。 否则，将向客户端返回一个错误。 不过，在某些情况下，仍可根据与服务器级别事件对应的属性将 WHERE 子句用作服务器级别事件的筛选器。 例如，许多跟踪事件都有一个 **DatabaseName** 属性，该属性可在 WHERE 子句中用作筛选器。  
   
- 服务器范围内的事件通知在 **master** 数据库中创建，并且可以通过使用 [sys. server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目录视图来查询元数据。  
+ 服务器范围内的事件通知在 **master** 数据库中创建，并且可以通过使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目录视图来查询元数据。  
   
- 数据库范围内或对象范围内的事件通知在指定的数据库中创建，并且可以通过使用 [sys. event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) 目录视图来查询元数据。 （您必须为目录视图加上对应的数据库名前缀。）  
+ 数据库范围内或对象范围内的事件通知在指定的数据库中创建，并且可以通过使用 [sys.event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) 目录视图来查询元数据。 （您必须为目录视图加上对应的数据库名前缀。）  
   
 ## <a name="examples"></a>示例  
   
@@ -142,7 +142,6 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)   
- [事件通知（数据库引擎）](https://technet.microsoft.com/library/ms182602.aspx)  
-  
+ [WMI Provider for Server Events 的概念](./wmi-provider-for-server-events-concepts.md)   
+ [事件通知（数据库引擎）](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))  
   

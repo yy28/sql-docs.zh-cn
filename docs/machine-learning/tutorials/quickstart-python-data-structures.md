@@ -4,32 +4,24 @@ titleSuffix: SQL machine learning
 description: 在本快速入门中，了解如何使用 SQL 机器学习在 Python 中处理数据结构和数据对象。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 41feb1db8b5ad14469dbf544e9cdbe083e2e6088
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 18f16b45c6bc5f2069783333be7905af94a41b41
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178520"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497973"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习使用 Python 时的数据结构和对象
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-本快速入门介绍在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 时如何使用数据结构和数据类型。 你将了解如何在 Python 与 SQL Server 之间移动数据，以及可能出现的常见问题。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-本快速入门介绍在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 Python 时如何使用数据结构和数据类型。 你将了解如何在 Python 与 SQL Server 之间移动数据，以及可能出现的常见问题。
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-本快速入门介绍在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 Python 时如何使用数据结构和数据类型。 你将了解如何在 Python 与 Azure SQL 托管实例 之间移动数据，以及可能出现的常见问题。
-::: moniker-end
+本快速入门介绍在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)、[Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中或 [SQL Server 大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 时如何使用数据结构和数据类型。 你将了解如何在 Python 与 SQL Server 之间移动数据，以及可能出现的常见问题。
 
 SQL 机器学习依赖于 Python 的 pandas 包，该包非常适合处理表格数据。 但是，不能将标量从 Python 传递到数据库并期望它“正常运行”。 在本快速入门中，你将回顾一些基本的数据结构定义，以便为在 Python 和数据库之间传递表格数据时可能遇到的其他问题做好准备。
 
@@ -48,15 +40,10 @@ SQL 机器学习依赖于 Python 的 pandas 包，该包非常适合处理表格
 
 若要运行本快速入门，需要具备以下先决条件。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
-::: moniker-end
+- 以下平台之一上的 SQL 数据库：
+  - [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
+  - SQL Server 大数据群集。 了解如何[在 SQL Server 大数据群集上启用机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+  - Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 - 用于运行包含 Python 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 

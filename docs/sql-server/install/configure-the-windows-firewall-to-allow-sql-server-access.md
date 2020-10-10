@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238354"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497699"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ ms.locfileid: "87238354"
   
  另一种配置命名实例以侦听固定端口的方法是在防火墙中为诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **之类的** 程序创建例外（针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]）。 这会非常方便，但当使用高级安全 Windows 防火墙 MMC 管理单元时，端口号将不会显示在“入站规则”  页的“本地端口”  列中。 这会使审核哪些端口处于打开状态变得更为困难。 另一个注意事项是，Service Pack 或累积更新可能会更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的路径，这将使防火墙规则作废。  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>使用高级安全 Windows 防火墙向防火墙添加程序例外
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>使用高级安全 Windows Defender 防火墙向防火墙添加程序例外
   
-1. 从“开始”菜单键入 wf.msc  。 选择“高级安全性 Windows 防火墙”  。
+1. 从“开始”菜单键入 wf.msc  。 按 Enter 或选择搜索结果 wf.msc 打开“高级安全 Windows Defender 防火墙”。
 1. 在左窗格中，选择“入站规则”  。
-1. 在右窗格的“操作”下，选择“新建规则...”   。“新建入站规则向导”  随即打开。
+1. 在右窗格的“操作”下，选择“新建规则...”。“新建入站规则向导”随即打开。
 1. 在“规则类型”中，选择“程序”   。 选择“**下一页**”。
 1. 在“程序”中，选择“此程序路径”   。 选择“浏览”，找到 SQL Server 实例  。 该程序名为 sqlservr.exe。 通常位于：
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    选择“**下一页**”。
 
-1. 在“操作”  上，单击“允许连接”  。  
-1. 配置文件，包括所有三个配置文件。 选择“**下一页**”。
+1. 在“操作”上，选择“允许连接”。 选择“**下一页**”。
+1. 在“配置文件”上，包括所有三个配置文件。 选择“**下一页**”。
 1. 在“名称”  中键入规则的名称。 选择“完成”  。
 
 有关终结点的详细信息，请参阅[将数据库引擎配置为侦听多个 TCP 端口](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[终结点目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。 

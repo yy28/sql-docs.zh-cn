@@ -1,6 +1,6 @@
 ---
 title: SQL Server 中的身份验证
-description: 介绍了 SQL Server 登录和身份验证，并收录了其他资源的链接。
+description: 了解在使用 ADO.NET 时 SQL Server 中的登录名和身份验证，以及查找其他资源的位置。
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c12f3adacbf26cfe70e2f5993db0ace84460404
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bdcc51fad2bbc14499b60a1986bec5d2bcb6a1e
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928927"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603487"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 

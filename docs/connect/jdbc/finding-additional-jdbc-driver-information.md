@@ -1,6 +1,6 @@
 ---
-description: 查找 JDBC 驱动程序的其他信息
-title: 查找 JDBC 驱动程序的其他信息 | Microsoft Docs
+title: 查找 JDBC 驱动程序的其他信息
+description: 有关 Microsoft JDBC Driver for SQL Server 和 SQL 的总体开发详细信息，请参阅以下附加资源。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df6fa7bc4b5352ead02f66f6f5e38756030820ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19fe89b6d0e5837ac917117301e17f4bad213077
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438479"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603337"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>查找 JDBC 驱动程序的其他信息
 

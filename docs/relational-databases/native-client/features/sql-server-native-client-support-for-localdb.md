@@ -11,11 +11,12 @@ ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc043b9e26f9a940575689b9392efef5b7ee1a4a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fcbd82f5752075ead64c22e61d92a2f32066b259
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009889"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892277"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 对 LocalDB 的支持
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86009889"
   
 -   [SQL Server Express LocalDB 参考](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  总之，通过 LocalDB，您可以：  
   
@@ -41,9 +42,8 @@ ms.locfileid: "86009889"
 SERVER=(localdb)\v11.0  
 ```  
   
- 如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如 sqlcmd -S (localdb)\v11.0****。  
+ 如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如 sqlcmd -S (localdb)\v11.0  。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
   

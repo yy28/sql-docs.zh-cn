@@ -10,19 +10,19 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51dc4f1def0f612c0eb074ae1111a177e27c1413
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 71219302c9180000ee14c18f0d7f90c9557c3673
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042758"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891987"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的 SQL Server Native Client 诊断信息
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  从开始 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 data access 跟踪 ([数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)) 已更新，以便更轻松地从连接环形缓冲区和扩展事件日志中的应用程序性能信息获取有关连接失败的诊断信息。  
+  从开始 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 data access 跟踪 ([数据访问跟踪](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))) 已更新，以便更轻松地从连接环形缓冲区和扩展事件日志中的应用程序性能信息获取有关连接失败的诊断信息。  
   
- 有关读取扩展事件日志的信息，请参阅[查看事件会话数据](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)。  
+ 有关读取扩展事件日志的信息，请参阅[查看事件会话数据](../../extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。  
   
 > [!NOTE]  
 >  该功能只用于故障排除和诊断目的，可能不适合审核或安全目的。  
@@ -215,5 +215,4 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
   
 ## <a name="see-also"></a>另请参阅  
  [处理错误和消息](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
   

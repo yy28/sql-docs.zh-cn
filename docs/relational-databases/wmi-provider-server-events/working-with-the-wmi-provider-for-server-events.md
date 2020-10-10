@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb1e919942d491cdf44388f24de151b2ddeeeee0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c28188a6abada5ff699b8ee759a84c237b8d8e8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537563"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891617"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用 WMI Provider for Server Events
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题为您提供在使用 WMI Provider for Server Events 编程前应考虑的一些准则。  
   
 ## <a name="enabling-service-broker"></a>启用 Service Broker  
- WMI Provider for Server Events 通过将事件的 WQL 查询转换为目标数据库中的事件通知而发挥作用。 在针对提供程序编程时，了解事件通知的工作方式可能对您很有用。 有关详细信息，请参阅 [WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)。  
+ WMI Provider for Server Events 通过将事件的 WQL 查询转换为目标数据库中的事件通知而发挥作用。 在针对提供程序编程时，了解事件通知的工作方式可能对您很有用。 有关详细信息，请参阅 [WMI Provider for Server Events 的概念](./wmi-provider-for-server-events-concepts.md)。  
   
  特别是由于 WMI 提供程序创建的事件通知使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来发送有关服务器事件的消息，因此只要生成事件就必须启用此服务。 如果您的程序查询服务器实例的事件，必须启用该实例的 msdb 中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，因为这是提供程序所创建的目标 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务（名为 SQL/Notifications/ProcessWMIEventProviderNotification/v1.0）的位置。 如果您的程序查询数据库或特定数据库对象中的事件，必须启用该目标数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 如果在部署应用程序后未启用相应的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ，会将基础事件通知所生成的任意事件发送到事件通知使用的服务队列，但是在启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 之前不返回给 WMI 管理应用程序。  
   
@@ -114,6 +114,5 @@ WHERE DatabaseName = "AdventureWorks2012"
  在 WMI Provider for Server Events 在目标数据库中创建所需的事件通知后，该事件通知将事件数据发送到 msdb 中名为 **SQL/notification/ProcessWMIEventProviderNotification/** v1.0 的目标服务。 该目标服务将事件放入 **msdb** 中名为 **WMIEventProviderNotificationQueue**的队列。  (在首次连接到时，提供程序会动态创建服务和队列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 ) 提供程序将从该队列读取 XML 事件数据并将其转换为托管对象格式 (MOF) ，然后将其返回到客户端应用程序。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如， `SPID` 属性返回为 CIM 类型 **Sint32**。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
   
 ## <a name="see-also"></a>另请参阅  
- [WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)  
-  
+ [WMI Provider for Server Events 的概念](./wmi-provider-for-server-events-concepts.md)  
   

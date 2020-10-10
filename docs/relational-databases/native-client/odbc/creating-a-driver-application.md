@@ -25,12 +25,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d11d28460905bcf1581aeaa56777b72f987f8452
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428189"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890801"
 ---
 # <a name="creating-a-driver-application"></a>创建驱动程序应用程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -111,7 +111,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- 在生成应用程序过程的早期所做的一个设计决策是应用程序是否需要同时进行多个 ODBC 调用。 有两种方法可支持多个并发 ODBC 调用，将在本节的其余主题中介绍。 有关详细信息，请参阅 [ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ 在生成应用程序过程的早期所做的一个设计决策是应用程序是否需要同时进行多个 ODBC 调用。 有两种方法可支持多个并发 ODBC 调用，将在本节的其余主题中介绍。 有关详细信息，请参阅 [ODBC 程序员参考](../../../odbc/reference/odbc-programmer-s-reference.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -121,5 +121,4 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

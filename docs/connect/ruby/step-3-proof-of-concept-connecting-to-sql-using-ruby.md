@@ -1,6 +1,6 @@
 ---
-description: 步骤 3：使用 Ruby 连接到 SQL 的概念证明
-title: 步骤 3：使用 Ruby 连接到 SQL 的概念证明 | Microsoft Docs
+title: 步骤 3：使用 Ruby 连接到 SQL 的概念证明
+description: 第 3 步是概念证明，展示了如何使用 Ruby 连接到 SQL Server。 基本示例展示了如何选择和插入数据。
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2289009f4f0dc6d8e48dc5a6cccd58695d667da9
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484770"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603315"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步骤 3：使用 Ruby 连接到 SQL 的概念证明
 

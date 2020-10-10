@@ -3,22 +3,32 @@ title: 发行说明
 description: 本文提供了从 2017 年 11 月至今的 Azure Data Studio 版本的发行说明。 对于许多汇总问题，提供了指向其他详细信息的链接。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: overview
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/22/2020
-ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.date: 09/30/2020
+ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364190"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725098"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
+
+## <a name="september-2020-hotfix"></a>2020 年 9 月（修补程序）
+
+2020 年 9 月 30 日 &nbsp; / &nbsp; 版本：1.22.1
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| ------ | ------- |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1)。 |
 
 ## <a name="september-2020"></a>2020 年 9 月
 
@@ -33,7 +43,7 @@ ms.locfileid: "91364190"
 | Kusto (KQL) 扩展 | 为在 Azure 数据资源管理器中存储的大量实时流式处理数据的数据浏览和数据分析带来了 Kusto 的本机 Azure Data Studio 体验。 此预览版支持连接和浏览 Azure 数据资源管理器群集、编写 KQL 查询，以及通过 Kusto 内核创作笔记本。 |
 | Azure Arc 扩展 | 用户可以通过 Azure Data Studio 试用 Azure Arc 公共预览版。 这包括： <br/> &bull; &nbsp; 部署数据控制器 <br/> &bull; &nbsp; 部署 Postgres <br/> &bull; &nbsp; 部署 Azure Arc 的托管实例 <br/> &bull; &nbsp; 连接到数据控制器 <br/> &bull; &nbsp; 访问数据服务仪表板 <br/> &bull; &nbsp; Azure Arc Jupyter 书籍 |
 | 部署选项 | <br/> &bull; &nbsp; Azure SQL 数据库边缘 <br/> （边缘需要 Azure SQL Edge 部署扩展） |
-| SQL Server 导入扩展正式发布版 | 宣布推出 SQL Server 导入扩展的正式发布版，功能不再处于预览阶段。 此扩展有助于导入 csv/txt 文件。 有关此扩展的详细信息，请参阅[这篇文章](sql-server-import-extension.md)。 |
+| SQL Server 导入扩展正式发布版 | 宣布推出 SQL Server 导入扩展的正式发布版，功能不再处于预览阶段。 此扩展有助于导入 csv/txt 文件。 有关此扩展的详细信息，请参阅[这篇文章](./extensions/sql-server-import-extension.md)。 |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed)。 |
 
 ## <a name="august-2020"></a>2020 年 8 月
@@ -93,7 +103,7 @@ ms.locfileid: "91364190"
 | 向 Azure 门户集成添加了 Azure Data Studio | 用户现可通过 Azure SQL 数据库连接和 Azure Postgres 等途径直接转到 Azure 门户。 |
 | 新笔记本功能 | &bull; &nbsp; 新建笔记本工具栏 <br/> &bull; &nbsp; 新建编辑单元格工具栏 <br/> &bull; &nbsp; Python 依赖项向导 UX 更新 <br/> &bull; &nbsp; 缩减了笔记本之间的间距 |
 | 发布 SQL 评估 API 扩展 | 此扩展在 ADS 中添加了 SQL Server 的最佳做法评估。 它公开了 SQL 评估 API（以前仅在 PowerShell SqlServer 模块和 SMO 中可用），让你可评估 SQL Server 实例，并接收 SQL Server 团队对它们的建议。 在[本文](../tools/sql-assessment-api/sql-assessment-api-overview.md)中了解 SQL 评估 API 及其功能的详细信息。 |
-| [机器学习扩展改进](https://go.microsoft.com/fwlink/?linkid=2129918) | 现在支持 Azure SQL 托管实例。 |
+| [机器学习扩展改进](./extensions/machine-learning-extension.md) | 现在支持 Azure SQL 托管实例。 |
 | 数据虚拟化扩展改进 | 现在支持 MongoDB 和 Teradata |
 | Postgres 扩展 bug 修复 | 已修复 Azure MFA |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed)。 |
@@ -431,7 +441,7 @@ ms.locfileid: "91364190"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 添加了 [Azure Data Studio 的 PostgreSQL 扩展](postgres-extension.md) | 支持的功能： <br/>&bull; &nbsp; 连接对话框 <br/>&bull; &nbsp; 对象资源管理器 <br/>&bull; &nbsp; 查询编辑器 <br/>&bull; &nbsp; 制表 <br/>&bull; &nbsp; 仪表板 <br/>&bull; &nbsp; 代码片段 <br/>&bull; &nbsp; 编辑数据 <br/>&bull; &nbsp; 笔记本 |
+| 添加了 [Azure Data Studio 的 PostgreSQL 扩展](./extensions/postgres-extension.md) | 支持的功能： <br/>&bull; &nbsp; 连接对话框 <br/>&bull; &nbsp; 对象资源管理器 <br/>&bull; &nbsp; 查询编辑器 <br/>&bull; &nbsp; 制表 <br/>&bull; &nbsp; 仪表板 <br/>&bull; &nbsp; 代码片段 <br/>&bull; &nbsp; 编辑数据 <br/>&bull; &nbsp; 笔记本 |
 | 添加了 SQL 笔记本 | 向内置笔记本查看器添加了 SQL 内核支持： <br/>&bull; &nbsp; 支持 T-SQL <br/>&bull; &nbsp; 支持 PGSQL |
 | 添加了 PowerShell 扩展 | 通过 VS Code 引入了 [PowerShell 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)体验。  |
 | 添加了 SQL Server dacpac 扩展  | 从 SQL Server 导入扩展中删除数据层应用程序向导并移至新的扩展中。  |
@@ -462,11 +472,11 @@ ms.locfileid: "91364190"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 添加了“SQL Server 的管理包”扩展包。 | 这样更便于安装 SQL Server 管理相关的扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 导入](sql-server-import-extension.md) |
+| 添加了“SQL Server 的管理包”扩展包。 | 这样更便于安装 SQL Server 管理相关的扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](./extensions/sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./extensions/sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 导入](./extensions/sql-server-import-extension.md) |
 | 在 Profiler 扩展中添加了筛选扩展事件支持。 | &nbsp; |
 | 添加了“另存为 XML”功能，可将 T-SQL 结果保存为 XML。 | &nbsp; |
 | 添加了数据层应用程序向导方面的改进。 | &bull; &nbsp; 添加了“生成脚本”按钮<br/>&bull; &nbsp; 添加了视图，用于在部署过程中针对潜在数据丢失发出警告。 |
-| 更新 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md)。 |
+| 更新 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](./extensions/data-virtualization-extension.md)。 |
 | 为长时间运行的查询默认启用结果流式处理。 | &nbsp; |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)。 |
 | &nbsp; | &nbsp; |
@@ -494,7 +504,7 @@ ms.locfileid: "91364190"
 | 添加了 Azure Active Directory 身份验证支持。 | &nbsp; |
 | 宣布推出 Idera SQL DM Performance Insights（预览版）。 | &nbsp; |
 | SQL Server 导入扩展中的数据层应用程序向导支持。 | &nbsp; |
-| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md)。 |
+| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](./extensions/data-virtualization-extension.md)。 |
 | SQL Server Profiler 改进。 | &nbsp; |
 | 大型查询的结果流式处理（预览版）。 | &nbsp; |
 | Community 扩展：sp_executesql 到 sql 和新数据库。 | &nbsp; |
@@ -509,7 +519,7 @@ ms.locfileid: "91364190"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md)。 |
+| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](./extensions/data-virtualization-extension.md)。 |
 | 引入“粘贴计划”扩展。 | &nbsp; |
 | 引入增强色查询扩展，包括 SSMS 编辑器主题。 | &nbsp; |
 | 修复 SQL Server 代理、Profiler 和导入扩展中的问题。 | &nbsp; |
@@ -539,7 +549,7 @@ ms.locfileid: "91364190"
 | 引入 Azure 资源浏览器以浏览 Azure SQL 数据库。 | &nbsp; |
 | 改进对象资源管理器和查询编辑器的连接稳定性。 | &nbsp; |
 | 改进 SQL 代理扩展。 | &nbsp; |
-| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md)。 |
+| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](./extensions/data-virtualization-extension.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Bug 修复，2018 年 10 月
@@ -656,8 +666,8 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| [适用于 SQL Operations Studio 的 SQL Server 代理扩展](sql-server-agent-extension.md)改进。 | 在左侧窗格中添加了警报、运算符和代理的视图以及图标。<br/><br/>添加了“新建作业”、“新建作业步骤”、“新建警报”和“新建运算符”对话框。<br/><br/>添加了“删除作业”、“删除警报”和“删除运算符”（右键单击）。<br/><br/>添加了以前的运行可视化效果。<br/><br/>为每个列名称添加了筛选器。 |
-| [适用于 SQL Operations Studio 的 SQL Server Profiler 扩展](sql-server-profiler-extension.md)改进。 | 添加了 5 个默认模板，用于查看扩展事件。<br/><br/>添加了服务器/数据库连接名称。<br/><br/>添加了对 Azure SQL 数据库实例的支持。<br/><br/>添加了在关闭选项卡而 Profiler 依然在运行时的退出 Profiler 的建议。 |
+| [适用于 SQL Operations Studio 的 SQL Server 代理扩展](./extensions/sql-server-agent-extension.md)改进。 | 在左侧窗格中添加了警报、运算符和代理的视图以及图标。<br/><br/>添加了“新建作业”、“新建作业步骤”、“新建警报”和“新建运算符”对话框。<br/><br/>添加了“删除作业”、“删除警报”和“删除运算符”（右键单击）。<br/><br/>添加了以前的运行可视化效果。<br/><br/>为每个列名称添加了筛选器。 |
+| [适用于 SQL Operations Studio 的 SQL Server Profiler 扩展](./extensions/sql-server-profiler-extension.md)改进。 | 添加了 5 个默认模板，用于查看扩展事件。<br/><br/>添加了服务器/数据库连接名称。<br/><br/>添加了对 Azure SQL 数据库实例的支持。<br/><br/>添加了在关闭选项卡而 Profiler 依然在运行时的退出 Profiler 的建议。 |
 | 发布组合脚本扩展。 | &nbsp; |
 | 为扩展作者添加了向导和对话框扩展点。 | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -807,7 +817,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 增强仪表板扩展性模型以支持选项卡式见解和配置窗格。 | 扩展管理器可以实现简单的扩展获取。<br/><br/>[whoisactive.com](http://www.whoisactive.com) 中的 sp\_whoisactive 的仪表板扩展。<br/><br/>有关详细信息，请参阅[扩展 SQL Operations Studio 的功能](extensions.md)。 |
+| 增强仪表板扩展性模型以支持选项卡式见解和配置窗格。 | 扩展管理器可以实现简单的扩展获取。<br/><br/>[whoisactive.com](http://www.whoisactive.com) 中的 sp\_whoisactive 的仪表板扩展。<br/><br/>有关详细信息，请参阅[扩展 SQL Operations Studio 的功能](./extensions/add-extensions.md)。 |
 | 添加其他[适用于连接和对象资源管理器的扩展性 API](https://github.com/Microsoft/azuredatastudio/wiki/Extensibility-API) 管理。 | &nbsp; |
 | 继续修复影响客户的重要 [GitHub 问题](https://github.com/Microsoft/azuredatastudio/issues)。 | &nbsp; |
 | &nbsp; | &nbsp; |

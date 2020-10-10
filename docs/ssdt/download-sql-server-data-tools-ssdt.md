@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 292736c937a2345e88964521ea294c69595729e5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480529"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412879"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下载 SQL Server Data Tools (SSDT) for Visual Studio
 
@@ -39,18 +39,24 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>使用 Visual Studio 2019 安装 SSDT
 
-如果已安装 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)，则可以编辑工作负载列表，使其包括 SSDT。 如果尚未安装 Visual Studio 2019，可以下载并安装 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。
+如果已安装 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true)，则可以编辑工作负载列表，使其包括 SSDT。 如果尚未安装 Visual Studio 2019，可以下载并安装 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。
 
-* 对于 SQL 数据库项目，请在工作负载列表中的“数据存储和处理”下选择“SQL Server Data Tools” 。
+若要修改已安装的 Visual Studio 工作负载以包含 SSDT，请使用 Visual Studio 安装程序。
 
-   ![“数据存储和处理”工作负载](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+1. 启动 Visual Studio 安装程序。 在 Windows“开始”菜单中，可以搜索“安装程序”。
 
-* 对于 Analysis Services、Integration Services 或 Reporting Services 项目，请从“工具”>“扩展和更新”  或从[市场](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)安装相应的[扩展](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)。
+   ![Windows 2019“开始”菜单中的 Visual Studio 安装程序](../ssdt/media/visual-studio-installer.png)
+
+2. 在安装程序中，选择要向其添加 SSDT 的 Visual Studio 版本，然后选择“修改”。
+
+3. 在工作负载列表中的“数据存储和处理”下选择“SQL Server Data Tools”。
+
+   ![数据存储和处理工作负载 2019](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+
+对于 Analysis Services、Integration Services 或 Reporting Services 项目，可以从 Visual Studio 的“扩展” > “管理扩展”或从[市场](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)安装相应的[扩展](/visualstudio/ide/finding-and-using-visual-studio-extensions)。
 
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
-
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017
@@ -63,11 +69,19 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 ### <a name="install-ssdt-with-visual-studio-2017"></a>使用 Visual Studio 2017 安装 SSDT
 
-若要在 [Visual Studio 安装](https://docs.microsoft.com/visualstudio/install/install-visual-studio)过程中安装 SSDT，请选择“数据存储和处理”工作负荷，然后选择“SQL Server Data Tools”   。
+若要在 [Visual Studio 安装](/visualstudio/install/install-visual-studio)过程中安装 SSDT，请选择“数据存储和处理”工作负荷，然后选择“SQL Server Data Tools”   。
 
-如果已安装 Visual Studio，则可以[编辑工作负载列表](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)，使其包括 SSDT。
+如果已安装 Visual Studio，请使用 Visual Studio 安装程序修改已安装的工作负载，以包含 SSDT。
 
-![“数据存储和处理”工作负载](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
+1. 启动 Visual Studio 安装程序。 在 Windows“开始”菜单中，可以搜索“安装程序”。
+
+   ![Windows 2017“开始”菜单中的 Visual Studio 安装程序](../ssdt/media/visual-studio-installer.png)
+
+2. 在安装程序中，选择要向其添加 SSDT 的 Visual Studio 版本，然后选择“修改”。
+
+3. 在工作负载列表中的“数据存储和处理”下选择“SQL Server Data Tools”。
+
+   ![数据存储和处理工作负载 2017](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
 
 ### <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>安装 Analysis Services、Integration Services 和 Reporting Services 工具
 
@@ -96,7 +110,7 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 ### <a name="system-requirements"></a>系统要求
 
-SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs)。
+SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](/visualstudio/productinfo/vs2017-system-requirements-vs)。
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>支持的语言 - SSDT for VS 2017
 
@@ -122,7 +136,7 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 ## <a name="offline-install"></a>脱机安装
 
-若要在未连接到 Internet 时安装 SSDT，请按照此部分中的步骤操作。 有关详细信息，请参阅 [创建 Visual Studio 2017 的网络安装](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio)。
+若要在未连接到 Internet 时安装 SSDT，请按照此部分中的步骤操作。 有关详细信息，请参阅 [创建 Visual Studio 2017 的网络安装](/visualstudio/install/create-a-network-installation-of-visual-studio)。
 
 首先，在联机  时完成以下步骤：
 

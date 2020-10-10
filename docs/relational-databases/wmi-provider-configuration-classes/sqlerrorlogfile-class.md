@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11c22c1756e580cc194db336fed4e192f5b67e3b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540011"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891637"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 类
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ Next
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>安全  
  若要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 WMI 连接到日志文件，您必须在本地和远程计算机上都具有以下权限：  
   
 -   对 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。  
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> ： \PROGRAM Files\Microsoft SQL Server\MSSQL11** **。 \<InstanceName>\MSSQL\Log**  
   
- 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅 [从 Windows Vista 远程连接到 WMI](https://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅 [从 Windows Vista 远程连接到 WMI](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SqlErrorLogEvent 类](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [查看脱机日志文件](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

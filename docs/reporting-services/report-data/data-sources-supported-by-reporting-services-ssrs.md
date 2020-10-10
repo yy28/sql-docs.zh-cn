@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988433"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603491"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -100,22 +100,22 @@ ms.locfileid: "87988433"
   
 |报表<br /><br /> 数据源|Reporting Services 数据源类型|数据处理扩展插件/数据访问接口的名称|基础数据访问接口版本<br /><br /> (可选)|数据<br /><br /> 源<br /><br /> 平台 x86|数据<br /><br /> 源<br /><br /> 平台 x64|数据源的版本|RS<br /><br /> 平台 x86|RS<br /><br /> 平台 x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|[Microsoft SQL Server](#MicrosoftSQLServer)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|Y|Y|SQL Server 2008 和更高版本。|Y|Y|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|OLEDB|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OledbClient|Y|Y|SQL Server 2008 和更高版本。|Y|Y|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|[ODBC](#ODBC)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OdbcClient|Y|是|SQL Server 2008 和更高版本。|Y|是|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|[Microsoft SQL Server](#MicrosoftSQLServer)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|Y|Y|SQL Server 2012 和更高版本。|Y|Y|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|OLEDB|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OledbClient|Y|Y|SQL Server 2012 和更高版本。|Y|Y|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|[ODBC](#ODBC)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OdbcClient|Y|是|SQL Server 2012 和更高版本。|Y|是|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL 数据库](#Azure)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|空值|不可用|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|是|
 |SQL 数据仓库|[Microsoft Azure SQL 数据库](#Azure)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|空值|不可用|SQL 数据仓库|Y|是| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具|[Microsoft 并行数据仓库](#PWD)|弃用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|空值|空值|不可用|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维或表格数据库|[Microsoft SQL Server Analysis Services](#AnalysisServices)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|使用 ADOMD.NET|Y|是|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和更高版本|Y|是|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维或表格数据库|[Microsoft SQL Server Analysis Services](#AnalysisServices)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|使用 ADOMD.NET|Y|是|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及更高版本|Y|是|  
 |Power BI Premium 数据集（从 Reporting Services 2019 和 Power BI 报表服务器 2020 年 1 月版开始） |[Microsoft SQL Server Analysis Services](#AnalysisServices)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|使用 ADOMD.NET|Y|是|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及更高版本|Y|是|
 |Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|使用 ADOMD.NET|Y|是|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及更高版本|Y|是| 
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据库|OLEDB|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OledbClient<br /><br /> 10.0 版|Y|是|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|是|
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据库|OLEDB|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OledbClient<br /><br /> 10.0 版|Y|是|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|是|
 |SharePoint 列表|[Microsoft SharePoint 列表](#SharePointList)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|从 Lists.asmx 或 SharePoint 对象模型 API 接口获取数据。<br /><br /> 请参阅 [注意](#SharePointList)。|N|Y|SharePoint 2013 产品及更高版本|Y|是|   
 |XML|[XML](#XML)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|XML 数据源与平台无关。|空值|不可用|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] 或文档|Y|是|  
 |报表服务器模型|报表模型|用于已发布 SMDL 文件的弃用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|模型的数据源使用内置数据处理扩展插件。<br /><br /> 基于 Oracle 的模型要求使用 Oracle 客户端组件。<br /><br /> 基于 Teradata 的模型要求使用来自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 有关平台支持，请参阅 Teradata 文档。|空值|不可用|可以从[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本创建模型。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 或更高版本<br /><br /> Teradata V14、v13、v12 和 v6.2|N|N|  
 |SAP 多维数据库|SAP BW|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|有关平台支持，请参阅 SAP 文档。|空值|不可用|SAP BW 7.0-7.5|Y|空值|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|有关平台支持，请参阅 Hyperion 文档。|Y|空值|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|空值|  
-|Oracle 关系数据库|[Oracle](#OracleClient)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|要求使用 Oracle 客户端组件 12c 或更高版本。|Y|空值|Oracle 11g, 11g R2, 12c|Y|是|  
+|Oracle 关系数据库|[Oracle](#OracleClient)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|要求使用 Oracle 客户端组件 12c 或更高版本。|Y|空值|Oracle 11g, 11g R2, 12c, 18c, 19c|Y|是|  
 |Teradata |[Teradata](#Teradata)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展来自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 要求使用来自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 有关平台支持，请参阅 Teradata 文档。|Y|空值|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|是|N|  
 |DB2 关系数据库|自定义的已注册数据扩展插件名||2004 Host Integration (HI) Server<br /><br /> |Y|空值|不可用|是|N|  
 |一般 OLE DB 数据源|OLEDB|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|支持 OLE DB 的任何数据源。<br /><br /> 有关平台支持，请参阅数据源文档。|Y|空值|支持 OLE DB 的任何数据源。 请参阅 [注意](#OLEDBStandard)。|Y|空值|  

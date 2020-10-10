@@ -4,32 +4,24 @@ titleSuffix: SQL machine learning
 description: 在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到数据库的表中，然后通过 SQL 机器学习使用此模型来通过新数据预测值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0198ec9c27523c3465a90fa569b819072bf6014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 98c1b6235af6b521d668853a4fdcf75e75066ee8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178484"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497980"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习在 Python 中创建预测模型并对其进行评分
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用此模型基于新数据来预测值。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后通过 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)使用此模型来通过新数据预测值。
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到数据库的表中，然后通过 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)使用此模型来通过新数据预测值。
-::: moniker-end
+在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)、[Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)或 [SQL Server 大数据群集](../../big-data-cluster/machine-learning-services.md)上使用此模型基于新数据来预测值。
 
 你将创建并执行 SQL 中运行的两个存储过程。 第一个存储过程使用经典 Iris 花卉数据集，并生成 Naïve Bayes 模型，用于根据花卉特征预测 Iris 种类。 第二个存储过程用于评分，它调用第一个过程中生成的模型，从而根据新数据输出一组预测。 通过将 Python 代码用于 SQL 存储过程，操作会包含在 SQL 中，可重复使用，并且可以由其他存储过程和客户端应用程序进行调用。
 
@@ -44,15 +36,10 @@ ms.locfileid: "88178484"
 
 若要运行本快速入门，需要具备以下先决条件。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
-::: moniker-end
+- 以下平台之一上的 SQL 数据库：
+  - [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
+  - SQL Server 大数据群集。 了解如何[在 SQL Server 大数据群集上启用机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+  - Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 - 用于运行包含 Python 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 

@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.date: 09/28/2020
+ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180040"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603447"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -105,10 +105,11 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值|
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“计算机\HKEY_CLASSES_ROOT\AppID 与计算机\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下找到与 Integration Services 相关的注册表位置，在这些配置单元中将名为“LocalService”的注册表项重命名为“LocalService_A”，以获取尝试连接的 Integration Services 指定版本 | 空值|
 
-
 可参考 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server)了解其他已知问题，并向产品团队提供反馈。
 
 ## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 通过选择相关部分中的下载链接下载以前的 SSMS 版本。
 
@@ -147,7 +148,6 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 | 新建项 | 详细信息 | 解决方法 | |----------|---------||-----------| | 常规 SSMS | 关系图设计器存在一个已知 bug，导致现有关系图损坏。 例如，使用 SSMS 17.9.1 创建关系图设计，然后使用 SSMS 18.x 更新/保存它，再尝试使用 17.9.1 打开它。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/37992649)，了解更多详细信息。 | N/A | | 常规 SSMS |“新建服务器审核规范”对话框可能会导致 SSMS 发生故障，并显示访问冲突错误。 | N/A || | SMO/脚本编写 | 需要将使用 SMO 的 SSMS 扩展重新编译为面向新的 SMO v160。 | N/A | | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：| 删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 |
 
-
 ### <a name="185"></a>18.5
 
 ![下载](media/download-icon.png) [下载 SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
@@ -175,8 +175,8 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SMO/脚本 | 已取消支持功能限制  （此预览功能已从本地 SQL Azure 和 SQL 中删除）。 |
 | SMO/脚本 | 添加了“笔记本”  ，可作为“生成脚本”向导的目标。 |
 | SMO/脚本 | 添加了对按需 SQL 的支持  。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) -“平台”、“名称”和“engineEdition”字段现在可以包含常规的逗号分隔列表（“平台”  ：\[Windows  , Linux  \]），而不仅仅包含正则表达式（“平台”  ：\/Windows\|Linux\/  ）
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了 13 条评估规则。 如需了解更多详情，请转到 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) -“平台”、“名称”和“engineEdition”字段现在可以包含常规的逗号分隔列表（“平台”  ：\[Windows  , Linux  \]），而不仅仅包含正则表达式（“平台”  ：\/Windows\|Linux\/  ）
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了 13 条评估规则。 如需了解更多详情，请转到 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)。 |
 
 ### <a name="bug-fixes-in-185"></a>18.5 中的缺陷修复
 
@@ -184,7 +184,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |----------|---------|
 | 可访问性 | SSIS ADF/新建计划 - 修复了以下问题：在讲述人的扫描模式下，“新建计划”  向导下的焦点顺序不符合逻辑。 |
 | 可访问性 | 延伸数据库向导 - 修复了以下问题：屏幕阅读器在提供查询表的相关信息时不提示表名称。 |
-| Analysis Services | 修复了使用 AAD 连接在 AS 中编写脚本时的缓存连接。 |
+| Analysis Services | 修复了使用 Azure AD 连接在 AS 中编写脚本时的缓存连接。 |
 | AlwaysOn | 修复了以下问题：第一个添加到 AlwaysOn AG 的数据库无法正确联接。
 | AlwaysOn | 修复了以下问题：在连接到大数据群集终结点后，如果尝试显示仪表板，会看到错误消息。 |
 | 审核 | 修复了以下问题：如果存储帐户的根文件夹中有名称为空的文件夹，“审核日志合并”窗口发生故障。 |
@@ -231,7 +231,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SMO/脚本 | 修复了以下问题：跳过 SQL Azure 索引上的 FILLFACTOR。 |
 | SMO/脚本 | 修复了与为外部对象编写脚本相关的问题。 |
 | SMO/脚本 | 修复了以下问题：“生成脚本”不允许针对 SQL 数据库选择扩展属性的脚本选项。 同时，还修复了此类扩展属性的脚本。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 规则中的帮助链接不正确。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 规则中的帮助链接不正确。 |
 | XEvent UI | 修复了以下问题：将鼠标悬停在网格中的项之上即选中这些项。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/38262124)和 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)。 |
 
 ### <a name="known-issues-185"></a>已知问题 (18.5)
@@ -264,13 +264,13 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 查询存储 | 向查询存储的“数据库属性”    选项添加了“等待统计信息捕获模式”。 |
 | SMO/脚本 | SQL DW 中的具体化视图的支持脚本。 |
 | SMO/脚本 | 添加了对按需 SQL 的支持  。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了 50 条评估规则（请参阅 GitHub 上的详细信息）。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了基本数学表达式以及与规则条件的比较。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 RegisteredServer 对象的支持。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了以 JSON 格式存储规则的方式，还更新了应用替代项/自定义项的机制。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则以支持 Linux 上的 SQL。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则集 JSON 格式并添加了架构版本。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 输出以提高建议的可读性。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了 50 条评估规则（请参阅 GitHub 上的详细信息）。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了基本数学表达式以及与规则条件的比较。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 RegisteredServer 对象的支持。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 更新了以 JSON 格式存储规则的方式，还更新了应用替代项/自定义项的机制。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则以支持 Linux 上的 SQL。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则集 JSON 格式并添加了架构版本。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 输出以提高建议的可读性。 |
 | XEvent 探查器 | 向 XEvent 探查器会话添加了 error_reported 事件  。 |
 
 #### <a name="bug-fixes-in-184"></a>18.4 中的 bug 修复
@@ -320,10 +320,10 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将 Azure-SSIS Integration Runtime 上的 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
 | SMO/脚本 | 添加了对 Azure SQL DW 唯一约束的支持脚本的支持。 |
 | SMO/脚本 | 数据分类 </br> 添加了对 SQL 版本 10 (SQL 2008) 及更高版本的支持。 </br> - 为 SQL 版本 15 (SQL 2019) 和更高版本以及 Azure SQL 数据库添加了新的敏感度属性“rank”。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 向规则集格式添加了版本控制。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了新的检查。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 Azure SQL 托管实例的支持。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 的默认视图，将结果作为表格显示。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 向规则集格式添加了版本控制。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了新的检查。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 Azure SQL 托管实例的支持。 |
+| SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 的默认视图，将结果作为表格显示。 |
 
 #### <a name="bug-fixes-in-1831"></a>18.3.1 中的 bug 修复
 
@@ -547,7 +547,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |Azure Data Studio 集成|右键单击 OE 中的数据库节点时，将向用户显示上下文菜单，以在 Azure Data Studio 中运行查询或创建新笔记本。|
 |Azure SQL 支持| SLO/Edition/MaxSize 数据库属性现在接受自定义名称，从而更容易支持 Azure SQL 数据库的未来版本。|
 |Azure SQL 支持| 添加了对 vCore SKU（常规用途和业务关键）的支持：Gen4_24 和所有 Gen5。|
-|Azure SQL 托管实例|连接到 Azure SQL 托管实例时，在 SMO 和 SSMS 中添加了新的“AAD 登录”作为新登录类型。|
+|Azure SQL 托管实例|连接到 Azure SQL 托管实例时，在 SMO 和 SSMS 中添加了新的“Azure AD 登录”作为新登录类型。|
 |AlwaysOn|在 SSMS Always On 仪表板中重新处理 RTO（估计恢复时间）和 RPO（估计的数据丢失）。 请参阅 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) 中更新后的文档。|
 |Always Encrypted| “连接到服务器”对话框中新“Always Encrypted”选项卡的“启用 Always Encrypted”复选框现在提供为数据库连接启用/禁用 Always Encrypted 的简便方法。|
 |具有安全 Enclave 的 Always Encrypted| 已在 SQL Server 2019 中进行多项增强来支持具有安全 Enclave 的 Always Encrypted：“连接到服务器”对话框（新的“Always Encrypted”选项卡）中指定 Enclave 证明 URL 的文本字段。  “新列主密钥”对话框中用于控制新列主密钥是否允许 Enclave 计算的新复选框。  其他 Always Encrypted 密钥管理对话框现在可公开列主密钥允许 Enclave 计算的信息。|
@@ -632,7 +632,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |Azure SQL 托管实例支持|创建数据库向导未正确编写 CREATE DATABASE 语句。|
 |Azure SQL 托管实例支持|连接到托管实例时，对 SSMS 中的 SSIS 包进行特殊处理。|
 |Azure SQL 托管实例支持|修复了连接到托管实例时尝试使用“活动监视器”显示错误的问题。|
-|Azure SQL 托管实例支持|改进了对 AAD 登录（SSMS 资源管理器中）的支持。|
+|Azure SQL 托管实例支持|改进了对 Azure AD 登录（在 SSMS 资源管理器中）的支持。|
 |Azure SQL 托管实例支持|改进了 SMO 文件组对象的脚本编写。|
 |Azure SQL 托管实例支持|改进了凭据的 UI。|
 |Azure SQL 托管实例支持|添加了对逻辑复制的支持。|
@@ -648,7 +648,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |复制数据库向导|SQL Server 2017 和 SQL Server 2019 上的传输数据库任务/复制数据库向导中断。|""
 |复制数据库向导|先创建生成脚本/传输/复制数据库向导脚本表，再创建关联的外部数据源。|
 |连接对话框|启用了通过按 DEL 键从以前的用户名列表中删除用户名。 有关详细信息，请参阅[允许从 SSMS 登录窗口删除用户](https://feedback.azure.com/forums/908035/suggestions/32897632)。|
-|DAC 导入向导|修复了使用 AAD 连接时 DAC 导入向导失效的问题。|
+|DAC 导入向导|修复了使用 Azure Active Directory (Azure AD) 连接时 DAC 导入向导失效的问题。|
 |数据分类|修复了在数据分类窗格中保存分类时，其他数据分类窗格在其他数据库中打开的问题。|
 |数据层应用程序向导|解决了由于对服务器的访问受限（例如，无法访问同一服务器上的所有数据库），用户无法导入数据层应用程序 (.dacpac) 的问题。|
 |数据层应用程序向导|解决了当许多数据库碰巧托管在同一 Azure SQL 服务器上时导致导入速度非常缓慢的问题。|
@@ -691,7 +691,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |对象脚本|当编写对象脚本时，将省略具有默认值的 DB 作用域配置。|
 |对象脚本|编写脚本时不生成动态 T-SQL。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)。 |
 |对象脚本|在 SQL Server 2016 及更早版本中对表编写脚本时，省略图形语法“as edge”和“as node”。|
-|对象脚本|修复了使用 AAD 和 MFA 连接到 Azure SQL 数据库时数据库对象脚本编写失败的问题。|
+|对象脚本|修复了使用 Azure AD 和 MFA 连接到 Azure SQL 数据库时数据库对象脚本编写失败的问题。|
 |对象脚本|修复了在 Azure SQL 数据库上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 编写空间索引脚本时引发错误的问题。|
 |对象脚本|修复了即使“对象资源管理器”脚本设置已设为与源匹配也仍然导致（Azure SQL 数据库的）数据库脚本始终以本地 SQL 为目标的问题。|
 |对象脚本|修复了尝试对 SQL DW 数据库中的表（包含生成错误 T-SQL 语句的聚集索引和非聚集索引）编写脚本时出现的问题。|
@@ -717,7 +717,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |SMO|修复了在尝试还原名称中带有大括号的数据库时导致 StringBuilder.FormatError 的问题。|
 |SMO|修复了 SMO 中的 Azure 数据库默认为所有字符串比较应用不区分大小写的排序规则，而不是针对数据库使用指定的排序规则的问题。|
 |SSMS 编辑器|修复了还原默认颜色的“SQL 系统表”意外将颜色设置为暗黄绿色，而不是默认的绿色，使其难以在白色背景上读取的问题。 有关详细信息，请参阅[还原 SQL 系统表的错误默认颜色](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)。 此问题在 SSMS 的非英文版本上仍然存在。|
-|SSMS 编辑器|修复了在使用 AAD 身份验证连接到 Azure SQL DW 时 IntelliSense 不工作的问题。|
+|SSMS 编辑器|修复了在使用 Azure Active Directory (Azure AD) 身份验证连接到 Azure SQL DW 时 IntelliSense 不工作的问题。|
 |SSMS 编辑器|修复了用户缺少对 master 数据库的访问权限时，Azure 中的 IntelliSense 问题  。|
 |SSMS 编辑器|修复了目标数据库排序规则区分大小写时损坏的用于创建“时态表”的代码片段。|
 |SSMS 编辑器|新 TRANSLATE 函数当前由 intellisense 识别。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430)。 |

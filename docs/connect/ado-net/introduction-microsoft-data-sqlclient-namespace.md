@@ -1,7 +1,7 @@
 ---
 title: Microsoft.Data.SqlClient 命名空间简介
-description: Microsoft.Data.SqlClient 命名空间的简介页面。
-ms.date: 06/23/2019
+description: 了解 Microsoft.Data.SqlClient 命名空间，以及为何将其作为首选方式连接到 SQL for .NET 应用程序。
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334588"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725698"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空间简介
 
@@ -77,7 +77,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="new-connection-string-property-synonyms"></a>新的连接字符串属性同义词
 
-已为以下现有的连接字符串属性添加了新的同义词，避免在包含多个字词的属性周围出现间距混淆。 旧属性名称将继续得到支持以实现后向兼容性，但在从 [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) 中提取连接字符串时，新的连接字符串属性现在将包括在内。
+已为以下现有的连接字符串属性添加了新的同义词，避免在包含多个字词的属性周围出现间距混淆。 旧属性名称将继续得到支持以实现后向兼容性，但在从 [SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) 中提取连接字符串时，新的连接字符串属性现在将包括在内。
 
 |现有的连接字符串属性|新的同义词|
 |-----------------------------------|-----------|
@@ -206,19 +206,19 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 支持
 
-UTF-8 支持不需要更改任何应用程序代码。 当服务器支持 UTF-8 且基础列排序规则为 UTF-8 时，这些 SqlClient 更改会优化客户端与服务器之间的通信。 请参阅 [SQL Server 2019 预览版的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)中的 UTF-8 部分。
+UTF-8 支持不需要更改任何应用程序代码。 当服务器支持 UTF-8 且基础列排序规则为 UTF-8 时，这些 SqlClient 更改会优化客户端与服务器之间的通信。 请参阅 [SQL Server 2019 的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)中的 UTF-8 部分。
 
 ### <a name="always-encrypted-with-enclaves"></a>具有 enclave 的 Always Encrypted
 
-通常，使用 .NET Framework 上的 System.Data.SqlClient 和内置列主密钥存储提供程序**** 的现有文档现在还应与 .NET Core 一起使用。
+通常，使用 .NET Framework 上的 System.Data.SqlClient 和内置列主密钥存储提供程序的现有文档现在还应与 .NET Core 一起使用。
 
  [配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted：保护敏感数据并将加密密钥存储在 Windows 证书存储中](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Always Encrypted：保护敏感数据并将加密密钥存储在 Windows 证书存储中](/azure/sql-database/sql-database-always-encrypted)
 
 ### <a name="authentication"></a>身份验证
 
-可以使用“身份验证”连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅 [SqlAuthenticationMethod 的文档](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
+可以使用“身份验证”连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅 [SqlAuthenticationMethod 的文档](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
 
 > [!NOTE]
 > 自定义密钥存储提供程序（如 Azure 密钥保管库提供程序）将需要更新以支持 Microsoft.Data.SqlClient。 同样，还需要更新 enclave 提供程序以支持 Microsoft.Data.SqlClient。

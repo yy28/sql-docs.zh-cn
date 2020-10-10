@@ -2,7 +2,7 @@
 title: 了解 XA 事务
 description: Microsoft JDBC Driver for SQL Server 支持 Java 平台 Enterprise Edition/JDBC 2.0 可选分布式事务。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293992"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529328"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -63,7 +63,7 @@ ms.locfileid: "84293992"
 > JDBC 分布式事务组件包含在 JDBC 驱动程序安装的 xa 目录中。 这些组件包括 xa_install.sql 和 sqljdbc_xa.dll 文件。 如果在不同的客户端上安装了不同版本的 JDBC 驱动程序，则建议在服务器上使用最新的 sqljdbc_xa.dll。  
 
 > [!NOTE]  
-> 从 SQL Server 2019 公共预览版 CTP 2.0 开始，JDBC XA 分布式事务组件包含在 SQL Server 引擎中，可以通过系统存储过程启用或禁用。
+> 从累积更新 16 开始的 SQL Server 2017 和 SQL Server 2019 中，JDBC XA 分布式事务组件包含在 SQL Server 引擎中，可以通过系统存储过程启用或禁用。
 > 若要使用 JDBC 驱动程序启用必需组件来执行 XA 分布式事务，请执行以下存储过程。
 >
 > EXEC sp_sqljdbc_xa_install
@@ -86,7 +86,7 @@ ms.locfileid: "84293992"
   
 4. 单击“本地 DTC 属性”对话框上的“安全”选项卡   。  
   
-5. 选中“启用 XA 事务”复选框，然后单击“确定”   。 这将导致 MS DTC 服务重启。
+5. 选中“启用 XA 事务”复选框，然后单击“确定”   。 此操作将导致 MS DTC 服务重启。
   
 6. 再次单击“确定”以关闭“属性”对话框，然后关闭“组件服务”    。  
   
@@ -170,14 +170,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 ### <a name="configuring-the-user-defined-roles"></a>配置用户定义角色
 
-若要为特定用户授予使用 JDBC 驱动程序参与分布式事务的权限，请将该用户添加至 SqlJDBCXAUser 角色。 例如，使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码将名为“shelby”（SQL 标准登录用户名为“shelby”）的用户添加至 SqlJDBCXAUser 角色：  
+若要为特定用户授予使用 JDBC 驱动程序参与分布式事务的权限，请将该用户添加至 SqlJDBCXAUser 角色。 例如，使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码将名为“shelly”（SQL 标准登录用户名为“shelly”）的用户添加至 SqlJDBCXAUser 角色：  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 SQL 用户定义的角色是按数据库定义的。 若要出于安全目的创建自己的角色，必须在每个数据库中定义角色，并在每个数据库中添加用户。 主数据库中 SqlJDBCXAUser 角色的定义非常严格，因为该角色用于授予对主数据库中驻留的 SQL JDBC 扩展存储过程的访问权限。 登录到主数据库后，必须先授予单个用户对主数据库的访问权限，然后再授予这些用户对 SqlJDBCXAUser 角色的访问权限。  
