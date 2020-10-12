@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536625"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955858"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -83,9 +83,9 @@ RECONFIGURE
 |**最小值**|**int**|配置选项的最小值。|  
 |**最大值**|**int**|配置选项的最大值。|  
 |**config_value**|**int**|**Sp_configure**使用 (**sys.configurations**) 中的值将配置选项设置为的值。 有关这些选项的详细信息，请参阅 [服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 和 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
-|**run_value**|**int**|配置选项的当前运行值 (**sys.configurations. value_in_use**) 中的值。<br /><br /> 有关详细信息，请参阅 [ urations &#40;transact-sql&#41;sys.config](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**run_value**|**int**|配置选项的当前运行值 (**sys.configurations.value_in_use**) 中的值。<br /><br /> 有关详细信息，请参阅 [ urations &#40;transact-sql&#41;sys.config](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **sp_configure** 显示或更改服务器级设置。 若要更改数据库级别设置，请使用 ALTER DATABASE。 若要更改仅影响当前用户会话的设置，请使用 SET 语句。  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -112,7 +112,10 @@ RECONFIGURE
  有关详细信息，请参阅 [重新配置 &#40;transact-sql&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
 ## <a name="advanced-options"></a>高级选项  
- 某些配置选项（如 **关联掩码** 和 **恢复间隔**）被指定为高级选项。 默认情况下，无法查看和更改这些选项。 若要使其可用，请将 **ShowAdvancedOptions** 配置选项设置为1。  
+ 某些配置选项（如 **关联掩码** 和 **恢复间隔**）被指定为高级选项。 默认情况下，无法查看和更改这些选项。 若要使其可用，请将 " **显示高级选项** " 配置选项设置为1。 
+ 
+> [!CAUTION]  
+> 当选项 " **显示高级选项** " 设置为1时，此设置将应用于 "所有用户"。 建议仅在执行需要查看高级选项的任务后，暂时使用此状态，并切换回0。  
   
  有关配置选项及其设置的详细信息，请参阅 [服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
