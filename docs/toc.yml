@@ -7800,6 +7800,8 @@
                   href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
                 - name: SQL Server 连接器故障排除
                   href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+                - name: SQL Server 连接器日志记录
+                  href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
             - name: 备份服务主密钥
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: 还原服务主密钥
