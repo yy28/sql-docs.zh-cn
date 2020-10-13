@@ -13,16 +13,16 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 68144fbcffdc2535471c279b5771963fcfb05fec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646040"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868729"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-> 有关导入和导出向导的相关内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
+> 有关导入和导出向导的相关内容，请参阅 [SQL Server 导入和导出向导](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
 利用导入平面文件向导可以轻松地将数据从平面文件 (.csv, .txt) 复制到数据库中的新表。  导入平面文件向导支持以逗号分隔的文件和固定宽度格式的文件。 本概述描述了使用此向导的原因、查找此向导的方法，以及可遵循的简单示例。
 
@@ -36,7 +36,7 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>先决条件
-此功能适用于 SQL Server Management Studio (SSMS) v17.3 或更高版本。 请确保使用最新版本。 可以在[此处](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
+此功能适用于 SQL Server Management Studio (SSMS) v17.3 或更高版本。 请确保使用最新版本。 可以在[此处](../../ssms/download-sql-server-management-studio-ssms.md)找到最新版本。
  
 ## <a name="getting-started"></a><a id="started"></a>入门
 要访问导入平面文件向导，请执行以下步骤：
@@ -124,7 +124,6 @@ Failed to convert parameter value from a String to a Double. (System.Data)
 
 了解有关向导的详细信息。
  
-- **了解有关导入其他数据源的详细信息。** 如果要导入除平面文件外的其他内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
-- **了解有关连接平面文件数据源的详细信息。** 如果想要寻找有关连接平面文件数据源的详细信息，请参阅[连接到平面文件数据源](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)。
+- **了解有关导入其他数据源的详细信息。** 如果要导入除平面文件外的其他内容，请参阅 [SQL Server 导入和导出向导](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
+- **了解有关连接平面文件数据源的详细信息。** 如果想要寻找有关连接平面文件数据源的详细信息，请参阅[连接到平面文件数据源](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)。
 - **了解有关 PROSE 的详细信息。** 如果想要寻找向导使用的智能框架的概述，请参阅 [PROSE SDK](https://microsoft.github.io/prose/)。
-

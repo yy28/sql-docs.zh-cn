@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902298"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891117"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "86902298"
     - 增加 SubscriptionStreams 值的确对分发代理的总吞吐量有所帮助，因为订阅服务器的多个连接将以并行方式应用批量更改。 但是，根据处理器的数量和其他元数据条件（例如主键、外键、唯一约束和索引），较高的 SubscriptionStreams 值实际上可能会产生负面影响。 此外，如果流未能执行或提交，则分发代理将回退到使用单个流来重试失败的批处理。
 
 
-有关此测试的详细信息，请参阅博客[优化复制代理配置文件参数以获得更好的性能](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/)。
+有关此测试的详细信息，请参阅博客[优化复制代理配置文件参数以获得更好的性能](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance)。
 
 
 ### <a name="log-reader-agent"></a>日志读取器代理
@@ -162,5 +162,4 @@ SQL Server 联机丛书中的“复制分发代理”主题包含对以下 Subsc
 [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

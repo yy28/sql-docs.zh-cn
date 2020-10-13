@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5602b8796eaa9981f89037c16af0abbeab8e838e
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: fee95de639217481b3278fcf4f5f3315564a0be8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435562"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809664"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -87,14 +87,13 @@ ms.locfileid: "87435562"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持共享内存、TCP/IP 和命名管道协议。 有关选择网络协议的信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 VIA、Banyan VINES 顺序包协议 (SPP)、多协议、AppleTalk 或 NWLink IPX/SPX 网络协议。 以前使用这些协议连接的客户端必须选择其他协议才能连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器来配置 WinSock 代理。 若要配置 WinSock 代理，请参阅 ISA Server 文档。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [管理服务操作指南主题（SQL Server 配置管理器）](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+ [管理服务操作指南主题（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)  
   
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [启动、停止或暂停 SQL Server 代理服务](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [启动、停止或暂停 SQL Server 代理服务](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
  [将 SQL Server 实例设置为自动启动（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
  [防止 SQL Server 实例自动启动（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
-  
   

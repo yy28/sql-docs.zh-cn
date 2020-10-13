@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772101"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891937"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  若要如此，首先创建流式 CLR 函数。 **xml** 数据类型在 ADO.NET 中作为托管类 SqlXml 公开，并且支持返回 XmlReader 的 **CreateReader()** 方法。  
   
 > [!NOTE]  
->  本部分中的示例代码使用了 XPathDocument 和 XPathNavigator。 这些都强制要求您将所有 XML 文档加载到内存中。 如果您要在您的应用程序中使用类似代码来处理多个大型 XML 文档，此代码并不可伸缩。 而是应尽可能保持较小的内存分配并使用流式接口。 有关性能的详细信息，请参阅 [CLR 集成体系结构](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)。  
+>  本部分中的示例代码使用了 XPathDocument 和 XPathNavigator。 这些都强制要求您将所有 XML 文档加载到内存中。 如果您要在您的应用程序中使用类似代码来处理多个大型 XML 文档，此代码并不可伸缩。 而是应尽可能保持较小的内存分配并使用流式接口。 有关性能的详细信息，请参阅 [CLR 集成体系结构](../clr-integration/clr-integration-architecture-clr-hosted-environment.md)。  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>另请参阅  
  [在计算列中使用 XML](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

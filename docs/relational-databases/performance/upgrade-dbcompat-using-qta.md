@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ed1a88ec860edfc34535bbf812fd51f9930edb11
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: aafbba1fe5c4d7fe8c20b1d50d97bbd8a4277bae
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569910"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890967"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查询优化助手升级数据库
 
@@ -230,4 +230,5 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
 - [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [基数估计器](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)
+- [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+- [使用 SQL Server 查询优化助手](https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/)

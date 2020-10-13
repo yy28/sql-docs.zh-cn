@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529478"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891047"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
@@ -28,13 +28,13 @@ ms.locfileid: "91529478"
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a>使用最新 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一组用户界面，旨在配置查询存储和使用收集的工作负载数据。 单击[此处](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一组用户界面，旨在配置查询存储和使用收集的工作负载数据。 单击[此处](../../ssms/download-sql-server-management-studio-ssms.md)下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
 有关如何使用查询存储进行故障排除的简要说明，请参阅[查询存储 @Azure 博客](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a>在 Azure SQL 数据库中使用 Query Performance Insight
 
-如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中运行查询存储，则可以使用 [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) 来分析一定时段内的资源消耗情况。 虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is.md) 来获取所有查询的详细资源消耗情况（例如 CPU、内存和 I/O），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)（Azure SQL 数据库的 Query Performance Insight）。
+如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中运行查询存储，则可以使用 [Query Performance Insight](/azure/sql-database/sql-database-query-performance) 来分析一定时段内的资源消耗情况。 虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is.md) 来获取所有查询的详细资源消耗情况（例如 CPU、内存和 I/O），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)（Azure SQL 数据库的 Query Performance Insight）。
 
 本部分介绍最佳的配置默认值，这些默认值旨在确保 Query Store 以及依赖功能能够可靠运行。 默认配置已针对持续数据收集操作进行优化，即，在 OFF/READ_ONLY 状态下花费最少的时间。 有关所有可用的查询存储选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)。
 

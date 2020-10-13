@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990170"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890997"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
 
@@ -159,7 +159,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-有关为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 定制的扩展事件的信息，请参阅 [SQL 数据库中的扩展事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
+有关为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 定制的扩展事件的信息，请参阅 [SQL 数据库中的扩展事件](/azure/azure-sql/database/xevent-db-diff-from-svr)。  
   
 ## <a name="steps-to-assess-the-ce-version"></a>评估 CE 版本的步骤  
   
@@ -290,9 +290,9 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [使用 SQL Server 2014 基数估算器优化查询计划](/previous-versions/dn673537(v=msdn.10))  
  [查询提示](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [使用查询优化助手升级数据库](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)   
+ [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)

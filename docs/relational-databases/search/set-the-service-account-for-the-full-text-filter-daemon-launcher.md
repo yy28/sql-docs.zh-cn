@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e196d2778407207ece407ddbb72c3b8788b510
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420371"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869206"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>设置用于全文筛选器后台程序启动器的服务帐户
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,6 @@ SQL 全文筛选器后台程序启动器服务是可识别实例的服务，它�
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务充当 SQL 全文筛选器后台程序启动器服务客户端的命名管道服务器。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动之前另一进程便已创建该命名管道，则将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和 Windows 事件日志中记录一条错误，并且将无法使用全文搜索。  确定哪个进程或应用程序在试图使用该命名管道并停止相应的应用程序。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理服务操作指南主题（SQL Server 配置管理器）](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [管理服务操作指南主题（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)   
  [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b612f3718b35d94ec7e0a4ae60acd618faa9135e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cfbe3440f5976ed2432f5fbcc7bd7ff39dffde45
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427399"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811081"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教程：使用证书为存储过程签名
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "88427399"
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks2017 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
+- 下载 [AdventureWorks2017 示例数据库](../samples/adventureworks-install-configure.md)。
 
-有关在 SQL Server Management Studio 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
+有关在 SQL Server Management Studio 中还原数据库的说明，请参阅[还原数据库](./backup-restore/restore-a-database-backup-using-ssms.md)。   
   
 ## <a name="1-configure-the-environment"></a>1.配置环境  
 要设置示例的初始上下文，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开一个新的查询，然后运行以下代码，打开 AdventureWorks2017 数据库。 此代码将数据库上下文更改为 `AdventureWorks2012` 并创建一个新的使用密码的服务器登录名和数据库用户帐户 (`TestCreditRatingUser`)。  
@@ -288,6 +288,5 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490481"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863700"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>使用具有安全 Enclave 的 Always Encrypted 就地配置列加密 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88490481"
 
 就地加密还可以使用 [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) 语句来触发加密操作，如果没有 enclave，则此操作无法实现。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 支持的加密操作以及用于该操作的列加密密钥的要求如下：
 - 加密明文列。 用于加密列的列加密密钥必须已启用 enclave。
 - 使用新的加密类型或/和新的列加密密钥重新加密已加密的列。 当前列加密密钥和新列加密密钥（如果不同于当前密钥）都必须已启用 enclave。
@@ -43,7 +43,7 @@ ms.locfileid: "88490481"
 只能使用 SQL Server Management Studio 或自定义应用程序中的 [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) 触发就地加密。 请参阅[使用 Transact-SQL 就地配置列加密](always-encrypted-enclaves-configure-encryption-tsql.md)。
 
 > [!NOTE]
-> 当前，[Always Encrypted 向导](always-encrypted-wizard.md)和 [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet 不支持就地加密，即使配置满足上述要求，也始终下载用于加密操作的数据。 
+> 当前，[Always Encrypted 向导](always-encrypted-wizard.md)和 [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet 不支持就地加密，即使配置满足上述要求，也始终下载用于加密操作的数据。 
 
 ## <a name="next-steps"></a>后续步骤
 - [使用 Transact-SQL 就地配置列加密](always-encrypted-enclaves-configure-encryption-tsql.md)

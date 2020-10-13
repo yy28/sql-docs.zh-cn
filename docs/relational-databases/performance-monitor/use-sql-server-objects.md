@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458606"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892217"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86458606"
   
  如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以 SQLServer:\<object name> 格式显示。 命名实例的计数器以 MSSQL$\<instance name>:\<counter name> 或 SQLAgent$\<instance name>:\<counter name> 格式显示。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能计数器值是使用 Windows 性能计数器 (WPC) 引擎生成的。 某些计数器值不会直接由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 计算。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会向 WPC 引擎提供基值，而引擎会执行所需计算（如百分比）。 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 动态管理视图为所有计数器提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的原始值。 `cntr_type` 列指示计数器的类型。 WPC 引擎处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器值的方式取决于此类型。 有关性能计数器类型的详细信息，请参阅 [WMI 文档](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能计数器值是使用 Windows 性能计数器 (WPC) 引擎生成的。 某些计数器值不会直接由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 计算。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会向 WPC 引擎提供基值，而引擎会执行所需计算（如百分比）。 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 动态管理视图为所有计数器提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的原始值。 `cntr_type` 列指示计数器的类型。 WPC 引擎处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器值的方式取决于此类型。 有关性能计数器类型的详细信息，请参阅 [WMI 文档](/windows/win32/wmisdk/wmi-performance-counter-types)。
   
  通过在图表中添加或删除计数器并保存图表设置，可以指定系统监视器启动后监视的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象和计数器。  
   
@@ -144,5 +144,4 @@ ms.locfileid: "86458606"
 ## <a name="see-also"></a>另请参阅  
  [使用性能对象](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
-  
   

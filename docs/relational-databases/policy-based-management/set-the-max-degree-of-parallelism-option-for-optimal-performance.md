@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f2cd688ca16baad21ec295105eeb0fdbbbda967
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6aada496465c642570f9b60a0b1659bbe9ee3db6
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774185"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890897"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>设置最大并行度选项以获取最佳性能
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "85774185"
  配置 MAXDOP 的建议取决于使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关特定版本的指导原则，请参阅[配置“最大并行度”服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)，并配置相应的策略来验证最大并行度的值。     
   
 ## <a name="for-more-information"></a>更多信息  
- [SQL Server 中“最大并行度”配置选项的建议和指南](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [SQL Server 中“最大并行度”配置选项的建议和指南](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)    
  [配置“最大并行度”服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
-  

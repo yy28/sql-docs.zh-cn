@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e6467de5064cfd3b6d4ce2c151a456c63919e7d
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 60664db09d71d0ec6a9049a568af057ffea84a6c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480479"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892197"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>“高级编辑”（条件）对话框
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "89480479"
 |**Divide()**|Numeric Divide (Numeric expression_dividend**, Numeric expression_divisor**)|用一个数除以另一个数。|** expression_dividend - 被除数的数值表达式。 被除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。<br /><br /> ** expression_divisor - 除数的数值表达式。 除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。|返回优先级高的参数的数据类型。|**示例：** `Divide(Property1, 2)`<br /><br /> 注意：这是一个双精度运算。 若要进行整数比较，必须将结果与 `Round()`结合。 例如：`Round(Divide(10, 3), 0) = 3`。|  
 |**Enum()**|Numeric Enum (String enumTypeName**, String enumValueName**)|根据字符串创建枚举值。|enumTypeName** - 枚举类型的名称。<br /><br /> ** enumValueName - 枚举的值。|返回数值类型的枚举值。|`Enum('CompatibilityLevel','Version100')`|  
 |**Escape()**|String Escape (String replaceString**, String stringToEscape**, String escapeString**)|使用给定的转义字符串将输入字符串的子字符串转义。|replaceString - 输入字符串**。<br /><br /> stringToEscape - replaceString的子字符串****。 这是您要在前面添加转义字符串的字符串。<br /><br /> escapeString - 要在每个 stringToEscape 实例的前面添加的转义字符串****。|返回修改的 *replaceString* ，其中 *stringToEscape* 的每个实例的前面都有 *escapeString*。|`Escape("Hello", "l", "[")` 返回“`He[l[lo`”。|  
-|**ExecuteSQL()**|Variant ExecuteSQL (String returnType**, String sqlQuery**)|对目标服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。<br /><br /> 有关 ExecuteSql() 的详细信息，请参阅 [ExecuteSql() 函数](https://docs.microsoft.com/archive/blogs/sqlpbm/executesql)。|** returnType - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句返回的数据类型。 *returnType* 的有效文字如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> sqlQuery** - 包含要执行的查询的字符串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 针对 SQL Server 的目标实例运行一个标量值 TRANSACT-SQL 查询。 在 `SELECT` 语句中只能指定一列；第一列之外的其他列将被忽略。 生成的查询应只返回一行；第一行以外的其他行将被忽略。 如果查询返回空集，则围绕 `ExecuteSQL` 构建的条件表达式的计算结果将为 false。 `ExecuteSql` 支持 **按需** 和 **按计划** 计算模式。<br /><br /> -`@@ObjectName`:<br />                      对应于 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名称字段。 该变量将替换为当前对象的名称。<br /><br /> -`@@SchemaName`：对应于 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 该变量将替换为当前对象的架构名称（如果适用）。<br /><br /> 注意：若要在 ExecuteSQL 语句中包含单引号，请再使用一个单引号将其转义。 例如，若要加入对用户 O'Brian 的引用，请键入 O''Brian。|  
+|**ExecuteSQL()**|Variant ExecuteSQL (String returnType**, String sqlQuery**)|对目标服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。<br /><br /> 有关 ExecuteSql() 的详细信息，请参阅 [ExecuteSql() 函数](/archive/blogs/sqlpbm/executesql)。|** returnType - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句返回的数据类型。 *returnType* 的有效文字如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> sqlQuery** - 包含要执行的查询的字符串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 针对 SQL Server 的目标实例运行一个标量值 TRANSACT-SQL 查询。 在 `SELECT` 语句中只能指定一列；第一列之外的其他列将被忽略。 生成的查询应只返回一行；第一行以外的其他行将被忽略。 如果查询返回空集，则围绕 `ExecuteSQL` 构建的条件表达式的计算结果将为 false。 `ExecuteSql` 支持 **按需** 和 **按计划** 计算模式。<br /><br /> -`@@ObjectName`:<br />                      对应于 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名称字段。 该变量将替换为当前对象的名称。<br /><br /> -`@@SchemaName`：对应于 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 该变量将替换为当前对象的架构名称（如果适用）。<br /><br /> 注意：若要在 ExecuteSQL 语句中包含单引号，请再使用一个单引号将其转义。 例如，若要加入对用户 O'Brian 的引用，请键入 O''Brian。|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string returnType** , string namespace**, string wql**)|对提供的命名空间执行 WQL 脚本。 Select 语句只能包含一个返回列。 如果提供多个列，则会引发错误。|** returnType - 指定 WQL 返回的数据的返回类型。 有效文字为 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> ** namespace - 要对其执行脚本的 WMI 命名空间。<br /><br /> ** wql - 包含要执行的 WQL 的字符串。||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|返回布尔值 FALSE。|无|返回布尔值 FALSE。|`IsDatabaseMailEnabled = False()`|  
 |**GetDate()**|DateTime GetDate()|返回系统日期。|无|返回 DateTime 类型的系统日期。|`@DateLastModified = GetDate()`|  
@@ -98,5 +98,4 @@ ms.locfileid: "89480479"
 ## <a name="see-also"></a>另请参阅  
  [“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

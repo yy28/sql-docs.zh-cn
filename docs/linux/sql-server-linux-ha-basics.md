@@ -2,19 +2,19 @@
 title: Linux 部署的 SQL Server 高可用性
 description: 了解 Linux 上的 SQL Server 提供的高可用性选项，例如 Always On 可用性组、故障转移群集实例 (FCI) 和日志传送。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196840"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785128"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 

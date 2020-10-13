@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480391"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810692"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "89480391"
 
 -   “撤消阶段”  回滚 ATT 中找到的未完成的事务，以确保数据库的完整性。 回滚后，数据库将进入联机状态，不能再将其他事务日志备份应用到数据库。
 
-有关每个数据库恢复阶段的进度的信息记录在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [错误日志](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)中。 还可以使用扩展事件跟踪数据库恢复进度。 有关详细信息，请参阅博客文章[数据库恢复进度的新扩展事件](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)。
+有关每个数据库恢复阶段的进度的信息记录在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [错误日志](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)中。 还可以使用扩展事件跟踪数据库恢复进度。 有关详细信息，请参阅博客文章[数据库恢复进度的新扩展事件](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress)。
 
 > [!NOTE]
 > 对于段落还原方案，如果在文件备份创建之前，只读文件组就已处于只读状态，则该文件组无需应用日志备份，并且文件还原会跳过日志备份的应用过程。 
@@ -174,9 +174,9 @@ ms.locfileid: "89480391"
   
 有关详细信息，请参阅下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理性博客中有关数据库恢复顾问的信息：  
   
--   [恢复顾问：简介](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [恢复顾问：简介](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [恢复顾问：使用 SSMS 创建/还原拆分备份](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [恢复顾问：使用 SSMS 创建/还原拆分备份](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 加速数据库恢复
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中提供了[加速数据库恢复](/azure/sql-database/sql-database-accelerated-database-recovery/) 通过重新设计 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [恢复过程](#TlogAndRecovery)，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复过程的速度显著加快。 启用加速数据库恢复后，回滚取消长时间运行的事务的速度也显著加快。
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

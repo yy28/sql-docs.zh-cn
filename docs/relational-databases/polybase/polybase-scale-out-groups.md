@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818229"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892507"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 
@@ -27,7 +27,7 @@ ms.locfileid: "84818229"
 
 在处理 Hadoop 或 Azure Blob 存储中的大型数据集时，具有 PolyBase 的独立 SQL Server 实例可能成为性能瓶颈。 PolyBase 组功能允许你创建 SQL Server 实例的群集来处理来自外部数据源的大型数据集（如 Hadoop 或 Azure Blob 存储），从而通过一种扩展的方式提高查询性能。 现在可以缩放 SQL Server 计算以满足工作负载的性能需求。 PolyBase 横向扩展组，即 SQL Server 实例组，使你能够处理并行处理体系结构中的大型外部数据集。 向组添加更多 SQL Server 实例可线性提高数据加载和查询性能。 
   
-请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。
+请参阅 [PolyBase 入门](./polybase-guide.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。
   
 ![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 横向扩展组")  
   
@@ -68,5 +68,4 @@ PolyBase 数据移动服务接收来自 PolyBase 引擎的指令，并在 HDFS �
 
  [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
  [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
- [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
-
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)

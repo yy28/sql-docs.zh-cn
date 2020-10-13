@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412734"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892157"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用基于策略的管理来监视和强制执行最佳实践
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "91412734"
 |策略名称|最佳实践规则|  
 |-----------------|------------------------|  
 |非对称密钥加密算法|[非对称密钥加密强度](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|备份和数据文件位置|[备份文件必须位于与数据库文件分开的设备上](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|备份和数据文件位置|[备份文件必须位于与数据库文件分开的设备上](../backup-restore/backup-devices-sql-server.md)|  
 |数据和日志文件位置|[将数据和日志文件放到不同的驱动器上](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |数据库自动关闭|[将 AUTO_CLOSE 数据库选项设置为 OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |数据库自动收缩|[将 AUTO_SHRINK 数据库选项设置为 OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|数据库排序规则|[将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|数据库排序规则|[将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |数据库页验证|[将 PAGE_VERIFY 数据库选项设置为 CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |数据库页状态|[检查包含可疑页的数据库的完整性](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Guest 权限|[对用户数据库的 Guest 权限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "91412734"
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理方面](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

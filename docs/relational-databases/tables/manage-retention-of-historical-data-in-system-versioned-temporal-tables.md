@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 912aca78675b1cf5a0a088ba9a2264fe23b2b2eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548889"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810672"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理由系统控制版本的临时表中历史数据的保留期
 
@@ -38,10 +38,10 @@ ms.locfileid: "89548889"
 
 确定数据保留期后，下一步就是制定一个计划，规定如何管理历史数据、将历史数据存储在何处，以及如何删除超过保留要求的历史数据。 可通过以下四种方法管理时态历史记录表中的历史数据：
 
-- [Stretch 数据库](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [表分区](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [自定义清理脚本](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [保留策略](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch 数据库](#using-stretch-database-approach)
+- [表分区](#using-table-partitioning-approach)
+- [自定义清理脚本](#using-custom-cleanup-script-approach)
+- [保留策略](#using-temporal-history-retention-policy-approach)
 
  使用其中每种方法时，迁移或清理历史记录数据的逻辑将基于对应于当前表期末时间的列。 每行的期末时间值确定行版本“结束”（即放入历史记录表）的时刻。 例如，条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 指定超过一个月的历史数据需要删除并从历史记录表中移出。
 
@@ -53,7 +53,7 @@ ms.locfileid: "89548889"
 > [!NOTE]
 > Stretch Database 方法仅适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以透明方式将历史数据迁移到 Azure。 为了提高安全性，你可以使用 SQL Server 的 [始终加密](https://msdn.microsoft.com/library/mt163865.aspx) 功能来加密动态数据。 此外，你可以使用 [行级别安全性](../../relational-databases/security/row-level-security.md) 和其他高级 SQL Server 安全功能以及 Temporal 和 Stretch Database 来保护数据。
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以透明方式将历史数据迁移到 Azure。 为了提高安全性，你可以使用 SQL Server 的 [始终加密](../security/encryption/always-encrypted-database-engine.md) 功能来加密动态数据。 此外，你可以使用 [行级别安全性](../../relational-databases/security/row-level-security.md) 和其他高级 SQL Server 安全功能以及 Temporal 和 Stretch Database 来保护数据。
 
 使用 Stretch Database 方法，可以将部分或所有临时历史记录表延伸到 Azure，而 SQL Server 以无提示方式将历史数据移到 Azure。 对历史记录表启用延伸不会更改你在修改数据和执行临时查询时与临时表的交互方式。
 
@@ -98,7 +98,7 @@ ms.locfileid: "89548889"
 
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>使用 Transact-SQL 来延伸整个历史记录表
 
-也可以使用 Transact-SQL 在本地启用延伸和 [为数据库启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。 然后，你可以[使用 Transact-SQL 在表上启用 Stretch Database](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)。 对于以前为 Stretch Database 启用的数据库，请执行下面的 Transact-SQL 脚本，以延伸版本由系统控制的现有的临时历史记录表：
+也可以使用 Transact-SQL 在本地启用延伸和 [为数据库启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。 然后，你可以[使用 Transact-SQL 在表上启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。 对于以前为 Stretch Database 启用的数据库，请执行下面的 Transact-SQL 脚本，以延伸版本由系统控制的现有的临时历史记录表：
 
 ```sql
 ALTER TABLE <history table name>
@@ -315,7 +315,7 @@ COMMIT TRANSACTION
 4. 在步骤 (6) 中，通过合并下限来更改分区函数：移出 10 月份的数据后为 `MERGE RANGE(N'2015-10-31T23:59:59.999'`。
 5. 在步骤 (7) 中，通过创建新上限来拆分分区函数：移出 10 月份的数据后为 `SPLIT RANGE (N'2016-04-30T23:59:59.999'` 。
 
-但是，最佳解决方案是定期运行一个通用 Transact-SQL 脚本，该脚本无需经过修改即可每月执行相应的操作。 可以通用化上述脚本，以便能够使用提供的参数（需要合并的下限，以及要使用分区拆分创建的新边界）运行。 为了避免每个月创建临时表，你可以事先创建一个临时表，然后通过更改 check 约束以匹配要切出的分区，来重复使用该表。查看以下页面，获得有关如何使用 Transact-SQL 脚本 [完全自动化滑动窗口](https://msdn.microsoft.com/library/aa964122.aspx) 。
+但是，最佳解决方案是定期运行一个通用 Transact-SQL 脚本，该脚本无需经过修改即可每月执行相应的操作。 可以通用化上述脚本，以便能够使用提供的参数（需要合并的下限，以及要使用分区拆分创建的新边界）运行。 为了避免每个月创建临时表，你可以事先创建一个临时表，然后通过更改 check 约束以匹配要切出的分区，来重复使用该表。查看以下页面，获得有关如何使用 Transact-SQL 脚本 [完全自动化滑动窗口](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) 。
 
 ### <a name="performance-considerations-with-table-partitioning"></a>表分区的性能注意事项
 
@@ -502,7 +502,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 聚集列存储索引具有优秀的数据压缩和高效的保留清理能力，是工作负载快速生成大量历史数据时的最佳选择。 此模式尤其适用于密集型事务处理工作负载，此类工作负载使用时态表跟踪和审计更改、执行趋势分析或 IoT 数据引入。
 
-有关更多详细信息，请参阅[使用保留策略管理时态表中的历史数据](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)。
+有关更多详细信息，请参阅[使用保留策略管理时态表中的历史数据](/azure/sql-database/sql-database-temporal-tables-retention-policy)。
 
 ## <a name="next-steps"></a>后续步骤
 

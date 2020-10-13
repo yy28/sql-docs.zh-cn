@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aedf11494f925292e5f0f350909b11ca0320c06e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1c838513ab9f179034f085aa251db3213d894e07
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893253"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869084"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>对事务发布启用更新订阅
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -110,6 +110,5 @@ ms.locfileid: "85893253"
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [将 sqlcmd 与脚本变量结合使用](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [将 sqlcmd 与脚本变量结合使用](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

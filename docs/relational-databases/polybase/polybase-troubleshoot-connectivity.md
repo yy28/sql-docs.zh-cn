@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d037abd54cc0014289b949d7e00a2bf585d3a9e4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247296"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891327"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -253,7 +253,7 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 4. 如果 KDC 仅支持 AES256，请确保已安装 [JCE 策略文件](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
 
 ## <a name="see-also"></a>另请参阅
-[使用 Active Directory 身份验证将 PolyBase 与 Cloudera 集成](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
+[使用 Active Directory 身份验证将 PolyBase 与 Cloudera 集成](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera 的 Kerberos for CDH 设置指南](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks 的 Kerberos for HDP 设置指南](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [PolyBase 故障排除](polybase-troubleshooting.md)

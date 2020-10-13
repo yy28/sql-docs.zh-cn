@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 246c9d419d6f9b8fdbaae2619ef45df4d9465c36
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785079"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892427"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 课：创建并应用命名标准策略
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85785079"
 ## <a name="prerequisites"></a>先决条件
 若要完成本教程，需要 SQL Server Management Studio，以及针对运行 SQL Server 的服务器的访问权限。
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
   
 ## <a name="create-the-finance-database"></a>创建 Finance 数据库  
@@ -160,4 +160,4 @@ ms.locfileid: "85785079"
 有关教程的列表，请参阅 [SQL Server 2016 教程](../../sql-server/tutorials-for-sql-server-2016.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
+[使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

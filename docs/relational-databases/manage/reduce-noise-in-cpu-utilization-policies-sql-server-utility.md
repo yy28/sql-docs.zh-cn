@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3617249a1309a86c5ff0a083f3c0db15ee91299d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97e37ced535863dfe232fb1299be70774643c1c7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773540"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811032"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>减少 CPU 使用策略中的干扰（SQL Server 实用工具）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85773540"
   
 -   以 1 为增量将违反策略百分比的公差增加到 30%。 1 小时中的单个策略违反情况将是示例大小 4 中的 1 个数据点。 在此情况下，该策略容忍每小时 1 个策略违反，但如果在 1 小时的收集期中有 2 个或更多的策略违反（>30% 的数据点），则会报告使用过度。  
   
--   增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例和数据层应用程序的处理器使用率的策略阈值。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅 [实用工具管理（SQL Server 实用工具）](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+-   增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例和数据层应用程序的处理器使用率的策略阈值。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅 [实用工具管理（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](./utility-explorer-f1-help.md)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>违反处理器使用率策略的频度有多高后才应报告为使用不足？  
  评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”** 。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
@@ -56,12 +56,11 @@ ms.locfileid: "85773540"
   
 -   在达到该值之后会将 CPU 报告为使用不足的违反策略的数据点的默认百分比是 90%。 选项范围是从 0% 到 100%。  
   
- 基于默认值，每周收集 672 个数据点，但策略阈值是 0%。 因此，默认情况下，该策略不会生成处理器使用不足违反策略情况。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅 [实用工具管理（SQL Server 实用工具）](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 有关如何为 SQL Server 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ 基于默认值，每周收集 672 个数据点，但策略阈值是 0%。 因此，默认情况下，该策略不会生成处理器使用不足违反策略情况。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅 [实用工具管理（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))。 有关如何为 SQL Server 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](./utility-explorer-f1-help.md)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))。  
   
 ## <a name="see-also"></a>另请参阅  
- [实用工具管理（SQL Server 实用工具）](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
+ [实用工具管理（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))   
  [在 SQL Server 实用工具中监视 SQL Server 的实例](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [修改资源运行状况策略定义（SQL Server 实用工具）](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   
  [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  
   

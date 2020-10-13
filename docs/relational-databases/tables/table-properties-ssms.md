@@ -18,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463771"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810455"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "88463771"
  指示在创建对象时带引号的标识符选项是否设为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **锁升级**  
- 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15)。 可能的值包括：  
+ 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15)。 可能的值包括：  
   
  AUTO  
  此选项可让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 选择适合于表架构的锁升级粒度。  
@@ -175,5 +175,4 @@ ms.locfileid: "88463771"
 ## <a name="see-also"></a>另请参阅  
  [查看表定义](../../relational-databases/tables/view-the-table-definition.md)   
  [修改列（数据库引擎）](../../relational-databases/tables/modify-columns-database-engine.md)  
-  
   

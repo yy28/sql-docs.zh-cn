@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411143"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868906"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>向主机保护者服务注册计算机
 
@@ -120,7 +120,7 @@ HGS 在证明时会基于此基线衡量计算机，因此在收集 TPM 度量�
 | -------------------- | ---------------- | ---------- |
 | 平台标识符  | 计算机 TPM 中的公共认可密钥和 TPM 制造商提供的认可密钥证书。 | 每台计算机 1 个标识符 |
 | TPM 基线 | TPM 中的平台控制注册表 (PCR)，用于衡量在启动过程中加载的固件和 OS 配置。 示例包括安全启动状态以及故障转储是否已加密。 | 每个唯一的计算机配置一个基线（相同的硬件和软件可以使用相同的基线） |
-| 代码完整性策略 | 你信任的用于保护计算机的 [Windows Defender 应用程序控制](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)策略 | 每个部署到计算机的唯一 CI 策略一个。 |
+| 代码完整性策略 | 你信任的用于保护计算机的 [Windows Defender 应用程序控制](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)策略 | 每个部署到计算机的唯一 CI 策略一个。 |
 
 你可以在 HGS 上为每种证明项目配置多个策略，以支持混合组合硬件和软件。
 HGS 只要求计算机证明与每种策略类别中的一个策略匹配。
@@ -147,7 +147,7 @@ WDAC 代码完整性策略限制可在计算机上运行的软件，方法是检
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. 按照 [Windows Defender 应用程序控制部署指南](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)中的指导，使用[组策略](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)将 `allowall_cipolicy.bin` 文件部署到 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机。 对于工作组计算机，请使用本地组策略编辑器 (`gpedit.msc`) 执行相同的过程。
+2. 按照 [Windows Defender 应用程序控制部署指南](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)中的指导，使用[组策略](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)将 `allowall_cipolicy.bin` 文件部署到 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机。 对于工作组计算机，请使用本地组策略编辑器 (`gpedit.msc`) 执行相同的过程。
 
 3. 在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机上运行 `gpupdate /force` 以配置新的代码完整性策略，然后重启计算机以应用策略。
 
@@ -243,7 +243,7 @@ Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputerna
 
 向 HGS 注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机（对于 TPM 模式，执行[步骤 4A](#step-4a-register-a-computer-in-tpm-mode)，对于主机密钥模式，执行[步骤 4B](#step-4b-register-a-computer-in-host-key-mode)）之后，应确认它能够成功证明。
 
-可以检查 HGS 证明客户端的配置，并随时使用 [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) 执行证明尝试。
+可以检查 HGS 证明客户端的配置，并随时使用 [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) 执行证明尝试。
 该命令的输出应如下所示：
 
 ```

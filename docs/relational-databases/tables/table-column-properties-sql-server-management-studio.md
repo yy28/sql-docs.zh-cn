@@ -16,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463809"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810473"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>表列属性 (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88463809"
  显示是否可以明确地确定所选列的数据类型。  
   
  **是 DTS 发布的**  
- 显示该列是否是 DTS 发布的。 （[不推荐使用 Data Transformation Services](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0)）。 
+ 显示该列是否是 DTS 发布的。 （[不推荐使用 Data Transformation Services](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105))）。 
   
  **全文本规范**  
  显示全文检索的相关信息。 此属性的值是“是全文索引的”**** 子属性的值，指示此列是否为全文索引列。  
@@ -137,5 +137,4 @@ ms.locfileid: "88463809"
   
 > [!NOTE]  
 >  **(max)** 数据类型的长度对于每一行都会有所不同。 **sp_help** 返回 (-1) 作为 **(max)** 列的长度。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 -1 作为列大小。  
-  
   

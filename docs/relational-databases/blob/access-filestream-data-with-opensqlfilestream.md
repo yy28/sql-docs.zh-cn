@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f2f87e037f16d2d0dc46d9f677403076148868b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 959bc875e314f0fbb79b51e4f9ea36dbf5414dc9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85745176"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810273"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 访问 FILESTREAM 数据
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  OpenSqlFilestream API 为文件系统中存储的 FILESTREAM 二进制大型对象 (BLOB) 获取与 Win32 兼容的文件句柄。 句柄可以传递给以下任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  
+  OpenSqlFilestream API 为文件系统中存储的 FILESTREAM 二进制大型对象 (BLOB) 获取与 Win32 兼容的文件句柄。 句柄可以传递给以下任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile)、[TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile)、[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)、[SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) 或 [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  
   
  你必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中执行所有 FILESTREAM 数据容器访问。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句也可以在同一事务中执行。 这样可保持 SQL 数据与 FILESTREAM BLOB 数据之间的一致性。  
   
@@ -54,7 +54,7 @@ HANDLE OpenSqlFilestream (
  [in] 是由 **PathName** 函数返回的 [nvarchar(max)](../../relational-databases/system-functions/pathname-transact-sql.md) 路径。 必须从具有 FILESTREAM 表和列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 或 UPDATE 权限的帐户的上下文中调用 PathName。  
   
  *DesiredAccess*  
- [in] 设置用于访问 FILESTREAM BLOB 数据的模式。 该值传递到 [DeviceIoControl 函数](https://go.microsoft.com/fwlink/?LinkId=105527)。  
+ [in] 设置用于访问 FILESTREAM BLOB 数据的模式。 该值传递到 [DeviceIoControl 函数](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)。  
   
 |名称|值|含义|  
 |----------|-----------|-------------|  
@@ -105,5 +105,4 @@ HANDLE OpenSqlFilestream (
  [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [对 FILESTREAM 数据进行部分更新](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [避免与 FILESTREAM 应用程序中的数据库操作冲突](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
-  
   
