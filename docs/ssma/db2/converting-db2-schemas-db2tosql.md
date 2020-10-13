@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418553"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985084"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>转换 DB2 架构 (DB2ToSQL) 
 连接到 DB2、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并设置项目和数据映射选项后，可以将 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
@@ -66,7 +66,7 @@ ms.locfileid: "88418553"
 |信号语句|不支持条件。 消息可以是可选的。|  
 |WHILE 语句|已映射。|  
 |获取诊断语句|**SSMA maps 获取诊断，但有以下例外：**<br /><br />ROW_COUNT-已映射。<br /><br />DB2_RETURN_STATUS-已映射。<br /><br />MESSAGE_TEXT-已映射。<br /><br />DB2_SQL_NESTING_LEVEL-不映射到 SQL Server 语义<br /><br />DB2_TOKEN_STRING-不映射到 SQL Server 语义|  
-|光标|**SSMA 映射游标，但有以下例外：**<br /><br />ALLOCATE CURSOR 语句-不映射到 SQL Server 语义<br /><br />关联定位器语句-不映射到 SQL Server 语义<br /><br />DECLARE CURSOR Returnability 子句未映射到 SQL server 语义<br /><br />FETCH 语句-部分映射。 仅支持作为目标的变量。 SQLDA 描述符未映射到 SQL server 语义|  
+|游标|**SSMA 映射游标，但有以下例外：**<br /><br />ALLOCATE CURSOR 语句-不映射到 SQL Server 语义<br /><br />关联定位器语句-不映射到 SQL Server 语义<br /><br />DECLARE CURSOR Returnability 子句未映射到 SQL server 语义<br /><br />FETCH 语句-部分映射。 仅支持作为目标的变量。 SQLDA 描述符未映射到 SQL server 语义|  
 |变量|已映射。|  
 |异常、处理程序和条件|**SSMA 映射 "异常处理"，但以下情况例外：**<br /><br />退出处理程序-已映射。<br /><br />撤消处理程序-已映射。<br /><br />CONTINUE 处理程序-不映射。<br /><br />条件-它不映射到 SQL server 语义。|  
 |动态 SQL|未映射。|  
@@ -147,8 +147,7 @@ ms.locfileid: "88418553"
 -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "DB2 元数据资源管理器" 中，清除项旁的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db2 并从 DB2 迁移数据。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程的下一步是将已 [转换的对象加载到 SQL Server 中](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  
+迁移过程的下一步是将已 [转换的对象加载到 SQL Server 中](./loading-converted-database-objects-into-sql-server-db2tosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 DB2 数据迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

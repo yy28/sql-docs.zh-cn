@@ -1,6 +1,6 @@
 ---
-description: 'sp_special_columns_100 (SQL 数据仓库) '
-title: sp_special_columns_100 (SQL 数据仓库) |Microsoft Docs
+description: " (Azure Synapse Analytics sp_special_columns_100) "
+title: " (Azure Synapse Analytics sp_special_columns_100) "
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,14 +14,14 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725028"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987806"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL 数据仓库) 
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_special_columns_100) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   返回一组唯一标识表中某个行的最优列。 如果事务更新了行中的某个值，则还将返回自动更新的列。  
@@ -31,7 +31,7 @@ ms.locfileid: "91725028"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -77,7 +77,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|行 ID 的实际作用域。 可以为 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回0。 此字段始终返回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID 只有位于该行上时才能保证有效。 如果另一个事务更新或删除了该行，则以后使用该行 ID 重新选择时，可能无法返回一个行。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID 在当前事务期间保证有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID 在会话（跨事务边界）期间保证有效。|  
-|COLUMN_NAME|**sysname**|返回的 *表*中每列的列名。 此字段始终返回值。|  
+|COLUMN_NAME|**sysname**|返回的 *表* 中每列的列名。 此字段始终返回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 数据类型。|  
 |TYPE_NAME|**sysname**|依赖于数据源的数据类型名称;例如， **char**、 **varchar**、 **money**或 **text**。|  
 |PRECISION|**Int**|数据源中的列的精度。 此字段始终返回值。|  
@@ -85,7 +85,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |SCALE|**smallint**|数据源中列的小数位数。 对于不适用小数位数的数据类型，返回 NULL。|  
 |PSEUDO_COLUMN|**smallint**|指示列是否为伪列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  sp_special_columns 与 ODBC 中的 SQLSpecialColumns 等效。 返回的结果按 SCOPE 排序。  
   
 ## <a name="permissions"></a>权限  

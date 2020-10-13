@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488308"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984943"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 (选择位置)  (AccessToSQL) 
 在 "查找数据库" 向导的 "选择位置" 页上，输入用于查找 Access 数据库的搜索参数。  
@@ -60,5 +60,4 @@ ms.locfileid: "88488308"
   
 ## <a name="see-also"></a>另请参阅  
 [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
-[ (访问) 的用户界面参考 ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[ (访问) 的用户界面参考 ](./user-interface-reference-accesstosql.md)  

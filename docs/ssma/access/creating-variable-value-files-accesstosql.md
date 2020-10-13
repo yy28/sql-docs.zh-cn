@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8f84909de05efc5d53b924eb298adcaab93d7f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320873"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985030"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL) 
 变量值文件是一个 XML 文件，其中包含命令的参数值 (例如，通常跨服务器迁移更改) 源或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v** 开关来引用这些文件。 此行为有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
@@ -95,5 +95,4 @@ ms.locfileid: "88320873"
 操作控制台的下一步是 [&#40;AccessToSQL 创建服务器连接文件&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[ (访问) 创建服务器连接文件 ](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
-  
+[ (访问) 创建服务器连接文件 ](./creating-the-server-connection-files-accesstosql.md)  

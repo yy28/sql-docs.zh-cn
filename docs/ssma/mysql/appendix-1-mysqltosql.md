@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b05a5a6e571179dd5dcd5b1e50368d0b2e16035e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e3c86b950eb156e966db1cfe030bc40753d01f6e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320643"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988429"
 ---
 # <a name="appendix---1-mysqltosql"></a>附录 - 1 (MySQLToSQL)
 SSMA 控制台命令行选项的快速视图：  
   
-|Sl. 否。|开关|必需？|开关参数|允许的值|  
+|Sl. 错误。|开关|必需？|开关参数|允许的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/脚本|是|scriptfile|有效的 XML 文件名。<br /><br />控制台脚本定义文件。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 文件名。<br /><br />如果脚本文件中使用了变量，则必须指定此文件。|  
@@ -32,5 +32,4 @@ SSMA 控制台命令行选项的快速视图：
 |8|-?|否|不适用|不适用|  
   
 ## <a name="see-also"></a>另请参阅  
-[ (MySQL 执行 SSMA 控制台) ](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[ (MySQL 执行 SSMA 控制台) ](./executing-the-ssma-console-mysqltosql.md)  

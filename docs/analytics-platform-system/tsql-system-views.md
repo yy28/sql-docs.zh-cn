@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 52a0941a6b53a039463240f5a39987ef2a528a56
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 87a6585d225617889c32167fdebcc79bd89c761c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778496"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987203"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>用于分析平台系统并行数据仓库的系统视图
 用于分析平台系统 (AP 的系统视图) SQL Server 并行数据仓库 (PDW) 。
@@ -230,7 +230,7 @@ ms.locfileid: "88778496"
 <!--Image references-->
 
 <!--Article references-->
-[SQL Data Warehouse reference overview]: sql-data-warehouse-overview-reference.md
+[Azure Synapse Analytics reference overview]: sql-data-warehouse-overview-reference.md
 
 <!--MSDN references-->
 

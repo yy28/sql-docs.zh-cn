@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c741287bdb6986dcc84de752c6158f4c7ab6908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422981"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984873"
 ---
 # <a name="data-migration-settings-db2tosql"></a>数据迁移设置 (DB2ToSQL) 
   
 ## <a name="data-migration-settings"></a>数据迁移设置  
 **数据迁移设置** 允许用户编写自定义查询以进行数据迁移。  
   
--   当 " **扩展数据迁移选项** " 设置为 " **显示** " 时，此选项卡可用，在项目设置中设置为 " **隐藏** " 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅 [项目设置 (迁移) ](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 。  
+-   当 " **扩展数据迁移选项** " 设置为 " **显示** " 时，此选项卡可用，在项目设置中设置为 " **隐藏** " 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅 [项目设置 (迁移) ](./project-settings-migration-db2tosql.md) 。  
   
 -   自定义 SQL 语句的分析将在表节点的 " **数据迁移设置** " 选项卡中实现。  
   
@@ -53,5 +53,4 @@ ms.locfileid: "88422981"
 -   **取消：** 单击 " **取消** " 以还原在进行更改之前显示的设置。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 DB2 数据迁移到 SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
-  
+[将 DB2 数据迁移到 SQL Server](./migrating-db2-data-into-sql-server-db2tosql.md)  

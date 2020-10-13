@@ -1,5 +1,5 @@
 ---
-title: 连接到 DB2 数据库（DB2ToSQL） |Microsoft Docs
+title: 连接到 DB2 数据库 (DB2ToSQL) |Microsoft Docs
 description: 了解如何连接到 DB2 数据库的目标实例以迁移 DB2 数据库。 SSMA 获取有关所有 DB2 架构的元数据。
 ms.prod: sql
 ms.custom: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4c6f964c0acbd6536818edef5b7e6ec25fc13bf2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391777"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987453"
 ---
-# <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库（DB2ToSQL）
+# <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库 (DB2ToSQL) 
 
 若要将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，你必须连接到要迁移的 db2 数据库。 当你连接时，SSMA 将获取有关所有 DB2 架构的元数据，然后在 DB2 元数据资源管理器窗格中显示它。 SSMA 存储有关数据库服务器的信息，但不存储密码。
 
@@ -41,28 +41,28 @@ ms.locfileid: "86391777"
 
 **连接到 DB2**
 
-1. 在 "**文件**" 菜单上，选择 "**连接到 DB2**"。
+1. 在 " **文件** " 菜单上，选择 " **连接到 DB2**"。
 
-   如果以前连接到 DB2，则命令名称将**重新连接到 db2**。
+   如果以前连接到 DB2，则命令名称将 **重新连接到 db2**。
 
-2. 在 "**提供程序**" 框中，你将看到当前仅为 DB2 客户端访问提供程序的**OLE DB 提供程序**。
+2. 在 " **提供程序** " 框中，你将看到当前仅为 DB2 客户端访问提供程序的 **OLE DB 提供程序** 。
 
-3. 在 "**管理器**" 框中，可以选择**db2 for zOs**、 **db2 for LUW**或**db2 for i**
+3. 在 " **管理器** " 框中，可以选择 **db2 for zOs**、 **db2 for LUW** 或 **db2 for i**
 
-4. 在 "**模式**" 框中，选择 "**标准模式**" 或 "**连接字符串模式**"。
+4. 在 " **模式** " 框中，选择 " **标准模式**" 或 " **连接字符串模式**"。
 
    使用 "标准" 模式指定服务器名称和端口。 使用服务名称模式手动指定 DB2 服务名称。 使用连接字符串模式提供完整的连接字符串。
 
-5. 如果选择 "**标准" 模式**，请提供以下值：
+5. 如果选择 " **标准" 模式**，请提供以下值：
 
-   - 在 "**服务器名称**" 框中，输入或选择数据库服务器的名称或 IP 地址。
-   - 如果数据库服务器未配置为接受默认端口（1521）上的连接，请在 "**服务器端口**" 框中输入用于 DB2 连接的端口号。
-   - 在 "**服务器端口**" 框中，输入 tcp/ip 端口号。
-   - 在 "**初始目录**" 框中，输入数据库名称。
-   - 在 "**用户名**" 框中，输入具有所需权限的 DB2 帐户。
-   - 在 "**密码**" 框中，输入指定用户名的密码。
+   - 在 " **服务器名称** " 框中，输入或选择数据库服务器的名称或 IP 地址。
+   - 如果数据库服务器未配置为接受默认端口 (1521) 上的连接，请在 " **服务器端口** " 框中输入用于 DB2 连接的端口号。
+   - 在 " **服务器端口** " 框中，输入 tcp/ip 端口号。
+   - 在 " **初始目录** " 框中，输入数据库名称。
+   - 在 " **用户名** " 框中，输入具有所需权限的 DB2 帐户。
+   - 在 " **密码** " 框中，输入指定用户名的密码。
 
-6. 如果选择 "**连接字符串模式**"，请在 "**连接字符串**" 框中提供连接字符串。
+6. 如果选择 " **连接字符串模式**"，请在 " **连接字符串** " 框中提供连接字符串。
 
    下面的示例演示一个 OLE DB 连接字符串：
 
@@ -72,7 +72,7 @@ ms.locfileid: "86391777"
   
    `Data Source=MyDB2DB;Integrated Security=yes;`
 
-   有关详细信息，请参阅[连接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。
+   有关详细信息，请参阅 [连接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。
   
 ## <a name="reconnecting-to-db2"></a>重新连接到 DB2
 
@@ -86,22 +86,22 @@ ms.locfileid: "86391777"
 
 1. 请确保已连接到数据库。
 2. 在 DB2 元数据资源管理器中，选中要更新的每个架构或数据库对象旁边的复选框。
-3. 右键单击 "**架构**"、单个架构或数据库对象，然后选择 "**从数据库刷新**"。
+3. 右键单击 " **架构**"、单个架构或数据库对象，然后选择 " **从数据库刷新**"。
 
-   如果没有活动连接，SSMA 将显示 "**连接到 DB2** " 对话框，以便你可以连接。
+   如果没有活动连接，SSMA 将显示 " **连接到 DB2** " 对话框，以便你可以连接。
   
 4. 在 "从数据库刷新" 对话框中，指定要刷新的对象。
-   - 若要刷新对象，请单击对象旁边的**活动**字段，直到出现箭头。
-   - 若要防止对象被刷新，请单击对象旁边的**活动**字段，直到出现**X** 。
-   - 若要刷新或拒绝某个对象类别，请单击 "category" 文件夹旁边的**活动**字段。
+   - 若要刷新对象，请单击对象旁边的 **活动** 字段，直到出现箭头。
+   - 若要防止对象被刷新，请单击对象旁边的 **活动** 字段，直到出现 **X** 。
+   - 若要刷新或拒绝某个对象类别，请单击 "category" 文件夹旁边的 **活动** 字段。
 
-     若要查看颜色编码的定义，请单击 "**图例**" 按钮。
+     若要查看颜色编码的定义，请单击 " **图例** " 按钮。
 
 5. [!INCLUDE[click OK](../../includes/clickok-md.md)]
 
 ## <a name="next-step"></a>下一步
 
-- 迁移过程的下一步是[连接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)。
+- 迁移过程的下一步是 [连接到 SQL Server](./connecting-to-sql-server-db2etosql.md)。
 
 ## <a name="see-also"></a>另请参阅
 

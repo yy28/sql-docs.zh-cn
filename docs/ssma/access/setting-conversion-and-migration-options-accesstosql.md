@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8d5113a5c007105a0fab7700d92a16672fa9ab84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc9a5328095f2ef839eb0c9617798299e46371fd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488231"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987678"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a> (AccessToSQL) 设置转换和迁移选项
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项指定如何转换对象、迁移数据的方式以及源数据类型映射到目标数据类型的方式。 在将对象转换为或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 或将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，请验证配置选项是否适用于项目。  
@@ -32,15 +32,15 @@ SSMA 有四组配置设置和四种配置这些设置的模式：默认、乐观
   
 此文档的 "用户界面参考" 部分介绍了这些设置。 有关设置以及如何在每个模式下应用这些设置的详细信息，请参阅以下主题：  
   
--   [项目设置（转换）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [项目设置（转换）](./project-settings-conversion-accesstosql.md)  
   
--   [项目设置（迁移）](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [项目设置（迁移）](./project-settings-migration-accesstosql.md)  
   
--   [项目设置 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [项目设置 (GUI)](../sybase/project-settings-gui-sybasetosql.md)  
   
--   [项目设置（类型映射）](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [项目设置（类型映射）](./project-settings-type-mapping-accesstosql.md)  
   
--   [项目设置 (SQL Azure) ](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [项目设置 (SQL Azure) ](./project-settings-azure-sql-db-accesstosql.md)  
   
 ## <a name="setting-project-options"></a>设置项目选项  
 在 SSMA 中，可以配置所有项目的默认设置。 这些设置将保存到 SSMA 配置文件，并应用于你创建的任何新项目。  
@@ -87,4 +87,3 @@ SSMA 有四组配置设置和四种配置这些设置的模式：默认、乐观
   
 ## <a name="see-also"></a>另请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

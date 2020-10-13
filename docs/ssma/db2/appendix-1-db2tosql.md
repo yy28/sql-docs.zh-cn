@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6bd27b4c437d2dded9941feec3cedaa3ccd4ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b1d9148572823e8cd274fe2812e46b2a84320a3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468879"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988153"
 ---
 # <a name="appendix---1-db2tosql"></a>附录 1 (DB2ToSQL) 
 SSMA 控制台命令行选项的快速视图：  
   
-|Sl. 否。|开关|必需？|开关参数|允许的值|  
+|Sl. 错误。|开关|必需？|开关参数|允许的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/脚本|是|scriptfile|有效的 XML 文件名。<br /><br />控制台脚本定义文件。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 文件名。<br /><br />如果脚本文件中使用了变量，则必须指定此文件。|  
@@ -32,5 +32,4 @@ SSMA 控制台命令行选项的快速视图：
 |8|-?|否|不适用|不适用|  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[执行 SSMA 控制台](./executing-the-ssma-console-db2tosql.md)  

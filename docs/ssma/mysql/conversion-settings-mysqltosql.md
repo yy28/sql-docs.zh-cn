@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418463"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988633"
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **"设置"** 选项卡允许用户设置节点级别设置。 选项卡将在以下元数据库节点上提供：  
@@ -76,5 +76,4 @@ ms.locfileid: "88418463"
     3.  单击 " **应用** " 按钮后，用户所做的设置将保存在级联首选项文件中。  
   
 ## <a name="see-also"></a>另请参阅  
-[ ()  (MySQL 转换为 SQL 的项目设置) ](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[ ()  (MySQL 转换为 SQL 的项目设置) ](./project-settings-conversion-mysqltosql.md)  

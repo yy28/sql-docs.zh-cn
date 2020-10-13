@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df2a29b2d411c2502573ede95feefe9c1e061c5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418423"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987893"
 ---
 # <a name="setting-project-options-mysqltosql"></a>设置项目选项 (MySQLToSQL)
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项指定如何转换对象、迁移数据的方式以及源数据类型映射到目标数据类型的方式。  在将对象转换为 SQL Server 或 SQL Azure 或将数据迁移到 SQL Server 或 SQL Azure 之前，请验证配置选项是否适用于该项目。  
@@ -43,9 +43,9 @@ SSMA 有五组项目设置：
   
 -   乐观  
   
--   完全  
+-   完整  
   
--   “自定义”  
+-   自定义  
   
 对于大多数用户，建议使用默认模式。 乐观模式将保留最新的 MySQL 语法，并且更易于阅读。 但是，保持当前语法可能不准确。 如果 MySQL 语法必须转换为等效的 SQL Server 或 SQL Azure 语法，则完整模式将执行最完整的转换。 但是，生成的代码可能更难以读取。 在 "自定义" 模式下，可以设置选项。  
   
@@ -55,7 +55,7 @@ SSMA 有五组项目设置：
   
 -   [&#40;迁移的项目设置&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [ (GUI 的项目设置)  (SSMA 通用) ](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [ (GUI 的项目设置)  (SSMA 通用) ](../sybase/project-settings-gui-sybasetosql.md)  
   
 -   [项目设置 &#40;类型映射&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
@@ -103,4 +103,3 @@ SSMA 有五组项目设置：
   
 ## <a name="see-also"></a>另请参阅  
 [&#40;MySQLToSQL&#41;映射 MySQL 和 SQL Server 数据类型 ](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
-  

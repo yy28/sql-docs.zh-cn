@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 49df8709518a9654ca5c286c4381b274546007cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63952d4e46b1c25e49e7f29f8da1e23543232cb7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488259"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988503"
 ---
 # <a name="project-settings-conversion-accesstosql"></a> (转换的项目设置)  (AccessToSQL) 
 转换项目设置使你可以配置如何将对象从 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库对象。  
@@ -112,5 +112,4 @@ ms.locfileid: "88488259"
 -   **完整模式**： True  
   
 ## <a name="see-also"></a>另请参阅  
-[ (访问) 的用户界面参考 ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[ (访问) 的用户界面参考 ](./user-interface-reference-accesstosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa7ecb8749fb0b5a6f9a105393e3cb20a41456a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ae2a0f65d638af965b7dbb933a38c0b3b0e151e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454159"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988481"
 ---
 # <a name="user-interface-reference-db2tosql"></a>用户界面参考 (DB2ToSQL) 
 本部分包括有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 迁移助手 (SSMA) 的帮助主题。  
@@ -23,14 +23,14 @@ ms.locfileid: "88454159"
 ## <a name="in-this-section"></a>本节内容  
 下表列出了 "SSMA" 对话框：  
   
-|主题|描述|  
+|主题|说明|  
 |-|-|  
 |[&#40;DB2ToSQL&#41;的高级对象选择 ](../../ssma/db2/advanced-object-selection-db2tosql.md)|使用 " **高级对象选择** " 对话框可以通过使用筛选条件查找数据库对象，然后选择或清除这些对象。|  
 |[评估报表 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|使用 "评估" 报告查看将 DB2 对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，并估计迁移到的时间和复杂性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[连接到 DB2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用 " **连接到 db2** " 对话框连接到要迁移的 DB2 数据库。|  
 |[连接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用 " **连接到 SQL Server** " 对话框连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要迁移到的实例。|  
 |[数据迁移报表 &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|显示将数据从 DB2 迁移到的结果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|[数据迁移设置](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用 " **扩展数据迁移设置** " 选项卡可编写用于数据迁移的自定义查询。|  
+|[数据迁移设置](./data-migration-settings-db2tosql.md)|使用 " **扩展数据迁移设置** " 选项卡可编写用于数据迁移的自定义查询。|  
 |[编辑类型映射 &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用 " **新建类型映射** " 或 " **编辑类型映射** " 对话框可以创建或修改源数据库和目标数据库与数据库对象之间的数据类型映射。|  
 |[全局设置 &#40;编辑器&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|使用 " **全局设置** " 对话框的 "编辑器" 页可以配置代码编辑器选项。|  
 |[全局设置 &#40;对话框&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|使用 " **全局设置** " 对话框的 "对话框" 页可以配置默认对话框和警告设置。|  
@@ -49,4 +49,3 @@ ms.locfileid: "88454159"
 ## <a name="see-also"></a>另请参阅  
 [SSMA for DB2 &#40;DB2ToSQL&#41;的入门 ](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [将 DB2 数据库迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

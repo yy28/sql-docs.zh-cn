@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a5c60984f9f1ed8da7238c254ac8b939dc1a9dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472503"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987443"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>将 DB2 架构映射到 SQL Server 架构 (DB2ToSQL) 
 在 DB2 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将 DB2 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的数据库的架构。 但是，你可以自定义 DB2 架构和数据库之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -60,9 +60,8 @@ DB2 数据库包含架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssn
 1.  在 "架构映射" 选项卡下，选择任意行，然后单击 " **重置为默认值** " 以还原为默认数据库和架构。  
   
 ## <a name="next-steps"></a>后续步骤  
-如果要分析 DB2 对象到对象的转换 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以 [ (SSMA Common) 数据迁移报表 ](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)。  
+如果要分析 DB2 对象到对象的转换 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以 [ (SSMA Common) 数据迁移报表 ](../sybase/data-migration-report-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [将 DB2 数据库迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

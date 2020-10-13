@@ -12,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4b13e74eb5b40d76f6cbdec049a8680299d0c86f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c3b65b6e3626a79fae4f5b5ac87e997ce3c97554
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723819"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988785"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL 数据仓库) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91723819"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
 ```
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  如果不使用参数执行 **sp_pdw_ log_user_data_masking** ，则将在设备上以标量结果集的形式返回 TDE 日志用户数据掩码的当前状态。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]通过活动日志中的用户数据掩码，可以在**SELECT**和 DML 语句中替换包含预定义常量值的文本，因为它们可以包含用户数据。 将 *masking_mode* 设置为1不会掩盖元数据（如列名称或表名称）。 将 *masking_mode* 设置为2将删除带有元数据的语句，如列名称或表名称。  
   
  活动日志中的用户数据掩码 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按以下方式实现：  

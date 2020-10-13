@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497844"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988673"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>映射源和目标数据类型 (AccessToSQL) 
 Access 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型不同。 将 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象时，必须指定如何将数据类型从访问映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以接受默认的数据类型映射，也可以自定义映射，如下面的过程所示。  
   
 ## <a name="default-mappings"></a>默认映射  
-SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅 [项目设置 (类型映射) ](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅 [项目设置 (类型映射) ](./project-settings-type-mapping-accesstosql.md)。  
   
 ## <a name="customizing-data-type-mappings"></a>自定义数据类型映射  
 通过使用 " **项目设置** " 对话框，可以自定义为项目中的所有数据库和数据库对象映射类型的方式。 项目的类型映射适用于没有自定义类型映射的所有数据库和数据库对象。  
@@ -93,4 +93,3 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 ## <a name="see-also"></a>另请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

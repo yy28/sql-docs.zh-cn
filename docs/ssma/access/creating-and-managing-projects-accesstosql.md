@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373053"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988193"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a> (AccessToSQL) 创建和管理项目
 若要将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，必须先创建 SSMA 项目。 项目是一个文件，其中包含有关要迁移到或 SQL Azure 的数据库的元数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或将接收迁移对象和数据的 SQL Azure 的元数据、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接信息和项目设置。  
@@ -39,19 +39,19 @@ SSMA 包含用于转换和同步数据库对象和转换数据的几个选项。
   
 3.  在左窗格中，单击 " **转换**"。  
   
-4.  在右侧窗格中，查看选项。 有关这些选项的详细信息，请参阅 [项目设置 (转换) ](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)。  
+4.  在右侧窗格中，查看选项。 有关这些选项的详细信息，请参阅 [项目设置 (转换) ](./project-settings-conversion-accesstosql.md)。  
   
 5.  根据需要更改选项。  
   
 6.  为 " **迁移**"、" **GUI**" 和 " **类型" 映射** 页重复前面的步骤。  
   
-    -   有关迁移选项的信息，请参阅 [项目设置 (迁移) ](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
+    -   有关迁移选项的信息，请参阅 [项目设置 (迁移) ](./project-settings-migration-accesstosql.md)。  
   
-    -   有关用户界面选项的信息，请参阅 [项目设置 (GUI) ](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+    -   有关用户界面选项的信息，请参阅 [项目设置 (GUI) ](../sybase/project-settings-gui-sybasetosql.md)。  
   
-    -   有关数据类型映射设置的详细信息，请参阅 [项目设置 (类型映射) ](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+    -   有关数据类型映射设置的详细信息，请参阅 [项目设置 (类型映射) ](./project-settings-type-mapping-accesstosql.md)。  
   
-    -   有关 SQL Azure 设置的信息，请参阅 [项目设置 (SQL Azure) ](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)。  
+    -   有关 SQL Azure 设置的信息，请参阅 [项目设置 (SQL Azure) ](./project-settings-azure-sql-db-accesstosql.md)。  
   
 **注意** 仅当在创建项目时选择要 SQL Azure 的迁移时，SQL Azure 设置才可用。  
   
@@ -90,7 +90,7 @@ SSMA 创建项目文件。 你现在可以执行 [添加一个或多个 Access �
   
         保存元数据可能需要几分钟时间。 如果此时不想保存元数据，请不要选中任何复选框。  
   
-    2.  单击“ **保存**”。  
+    2.  单击“保存” 。  
   
         SSMA 将分析访问架构，并将元数据保存到项目文件。  
   
@@ -115,4 +115,3 @@ SSMA 创建项目文件。 你现在可以执行 [添加一个或多个 Access �
 ## <a name="see-also"></a>另请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
-  

@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ea9a89eadfd03f31573fd3a25e41e8bb8c1ed73f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88b8566b0ed3b264f09f0307251dcf9e69270e19
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418573"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987667"
 ---
 # <a name="appendix---1-accesstosql"></a>附录 1 (AccessToSQL) 
 SSMA 控制台命令行选项的快速视图：  
   
-|Sl. 否。|开关|必需？|开关参数|允许的值|  
+|Sl. 错误。|开关|必需？|开关参数|允许的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/脚本|是|scriptfile|有效的 XML 文件名。<br /><br />控制台脚本定义文件。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 文件名。 如果脚本文件中使用了变量，则必须指定此文件。|  
@@ -32,5 +32,4 @@ SSMA 控制台命令行选项的快速视图：
 |8|-?|否|不适用|不适用|  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台 (访问) ](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[执行 SSMA 控制台 (访问) ](./executing-the-ssma-console-accesstosql.md)  

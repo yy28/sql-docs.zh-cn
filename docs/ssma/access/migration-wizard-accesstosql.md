@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8f2e2308cbee8aea34f8fa4b33de50ee69a2fdb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8f03fa27bf8c49cfeef06246c47996860c932ba
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423031"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988643"
 ---
 # <a name="migration-wizard-accesstosql"></a>迁移向导 (AccessToSQL) 
 迁移向导将指导你完成将一个或多个数据库从访问权限迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 通过使用此向导，你将创建一个项目，将数据库添加到项目，选择要迁移的对象，然后连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 你还将转换、加载和迁移访问架构和数据。 您也可以将 Access 表链接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表。  
@@ -41,18 +41,18 @@ ms.locfileid: "88423031"
 默认情况下，启动 SSMA 时，SSMA 将启动迁移向导。 若要阻止自动启动向导，请清除此复选框。  
   
 ## <a name="create-new-project-page"></a>"创建新项目" 页  
-在 "创建新项目" 页上，你可以在其中输入项目文件名、位置和迁移项目类型 (用于迁移) 的目标 SQL Server 版本。 有关详细信息，请参阅 [New Project (SSMA) ](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
+在 "创建新项目" 页上，你可以在其中输入项目文件名、位置和迁移项目类型 (用于迁移) 的目标 SQL Server 版本。 有关详细信息，请参阅 [New Project (SSMA) ](./new-project-ssma-accesstosql.md)  
   
 ## <a name="add-access-databases-page"></a>"添加 Access 数据库" 页  
 在 "添加访问数据库" 页中，可以将一个或多个 Access 数据库添加到项目。 您可以通过单击 " **添加数据库**"，然后从 **打开** 的窗口中选择数据库来添加单个数据库。 或者，您可以使用 " **查找数据库** " 按钮查找数据库。 有关详细信息，请参阅下列主题：  
   
 -   [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   
--   [查找数据库向导（选择位置）](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
+-   [查找数据库向导（选择位置）](./find-databases-wizard-select-locations-accesstosql.md)  
   
--   [查找数据库向导（选择文件）](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
+-   [查找数据库向导（选择文件）](./find-databases-wizard-select-files-accesstosql.md)  
   
--   [查找数据库向导（验证所选内容）](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
+-   [查找数据库向导（验证所选内容）](./find-databases-wizard-verify-selection-accesstosql.md)  
   
 ## <a name="select-objects-to-migrate-page"></a>选择要迁移的对象页  
 在 "选择要迁移的对象" 页上，选择要转换的对象。 您可以选择所有对象、对象组或单个对象。  
@@ -73,7 +73,7 @@ ms.locfileid: "88423031"
   
 如果有多个对象，则可能要使用右窗格中的 **高级对象选择** 选项来筛选 Access 数据库对象。 例如，如果在左窗格中选择 " **表** "，则可以通过在 " **筛选器** " 框中输入字符串来筛选表的列表。 然后，可以使用窗格顶部的按钮来选择或清除要迁移的筛选的表。  
   
-有关筛选的详细信息，请参阅 [高级对象选择 (SSMA Common) ](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)中的 "选项" 部分。  
+有关筛选的详细信息，请参阅 [高级对象选择 (SSMA Common) ](../sybase/advanced-object-selection-sybasetosql.md)中的 "选项" 部分。  
   
 ## <a name="connect-to-sql-server-page"></a>连接到 SQL Server 页  
 在 "连接到" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页上，指定连接属性，然后连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关详细信息，请参阅 [连接到 SQL Server](connect-to-sql-server-accesstosql.md)。
@@ -96,10 +96,9 @@ ms.locfileid: "88423031"
 ## <a name="migration-status-page"></a>迁移状态页  
 "迁移状态" 页显示将访问架构转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架构、将转换后的架构加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 然后迁移数据的进度。  
   
-有关此页面的详细信息，请参阅 [转换、加载和迁移](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
+有关此页面的详细信息，请参阅 [转换、加载和迁移](./convert-load-and-migrate-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [使用 SQL Server 迁移助手入门访问 &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[ (访问) 的用户界面参考 ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[ (访问) 的用户界面参考 ](./user-interface-reference-accesstosql.md)  

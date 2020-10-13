@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b0c97c84282952f8f33aa900a394820830ae8bd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a39eb77ce3247aa72874ab5f3dfbaa4e80f0050c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488295"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984883"
 ---
 # <a name="generating-reports-accesstosql"></a> (AccessToSQL 生成报告) 
 使用命令执行的某些活动的报告在对象树级别的 SSMA 控制台中生成。  
@@ -26,7 +26,7 @@ ms.locfileid: "88488295"
   
     报告 vis-vis 命令包括：  
   
-    |Sl. 否。|Command|报表标题|  
+    |Sl. 错误。|命令|报表标题|  
     |-|-|-|  
     |1|生成-评估-报表|AssessmentReport &lt; n &gt; 。XML|  
     |2|转换-架构|SchemaConversionReport &lt; n &gt; 。XML|  
@@ -37,11 +37,11 @@ ms.locfileid: "88488295"
     > [!IMPORTANT]  
     > 输出报告不同于评估报告。 前者是有关执行的命令的性能报告，后者是用于编程的 XML 报告。  
   
-    对于输出报表的命令选项 (Sl。 否。 2-4) ，请参阅 [执行 SSMA 控制台 &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md) 部分。  
+    对于输出报表的命令选项 (Sl。 错误。 2-4) ，请参阅 [执行 SSMA 控制台 &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md) 部分。  
   
 2.  使用报表详细级别设置指示输出报表中所需的详细信息的范围：  
   
-    |Sl. 否。|命令和参数|输出描述|  
+    |Sl. 错误。|命令和参数|输出描述|  
     |-|-|-|  
     |1|verbose = "false"|生成活动的汇总报表。|  
     |2|verbose = "true"|为每个活动生成汇总且详细的状态报告。|  
@@ -51,7 +51,7 @@ ms.locfileid: "88488295"
   
 3.  使用错误报告设置来指示错误报告中所需的详细信息的范围：  
   
-    |Sl. 否。|命令和参数|输出描述|  
+    |Sl. 错误。|命令和参数|输出描述|  
     |-|-|-|  
     |1|报告错误 = "false"|没有关于错误/警告/信息消息的详细信息。|  
     |2|报告错误 = "true"|详细的错误/警告/信息消息。|  
@@ -140,5 +140,4 @@ ms.locfileid: "88488295"
 -   fail-脚本  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台 (访问) ](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[执行 SSMA 控制台 (访问) ](./executing-the-ssma-console-accesstosql.md)  

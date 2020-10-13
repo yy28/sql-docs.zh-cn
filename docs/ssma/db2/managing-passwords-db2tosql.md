@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f68af2ae2176ed4860f92a829544c7ff463254e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472476"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987413"
 ---
 # <a name="managing-passwords-db2tosql"></a> (DB2ToSQL) 管理密码
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码：  
@@ -139,5 +139,4 @@ _导入功能_ 从安全文件中读取服务器 id 和密码信息。 系统将
 8. 确认密码： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[执行 SSMA 控制台](./executing-the-ssma-console-db2tosql.md)  

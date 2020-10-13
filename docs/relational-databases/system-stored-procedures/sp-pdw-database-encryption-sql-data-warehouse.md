@@ -12,12 +12,12 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a1348f62b29f710f73b613c61cb8a4f53aeae457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6b075ac707296073f6b4a4b606306b82571b4268
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723638"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988787"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL 数据仓库) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91723638"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
 ```  
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 **sp_pdw_database_encryption**启用 TDE 时，将删除并重新创建和加密 tempdb 数据库。 出于此原因，在有其他活动会话使用 tempdb 时，无法在设备上启用 TDE。 在设备上启用或禁用 TDE 是一项操作，该操作将更改设备的状态，在大多数情况下，应在设备生存期内执行一次，并在设备上没有流量时执行。  
   
 ## <a name="permissions"></a>权限  
