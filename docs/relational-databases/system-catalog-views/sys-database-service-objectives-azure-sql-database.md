@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b62bccc5d3633a4f9f69416a49dfc3511c8370e2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: ceaed72b9a7005cadc20e185099105282693cc95
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809223"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006038"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives（Azure SQL 数据库）
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
-返回 Azure SQL 数据库或 Azure SQL 数据仓库的服务层) 、服务目标 (定价层) 和弹性池名称（如果有）的版本 (。 如果已登录到 Azure SQL 数据库服务器中的 master 数据库，则会返回所有数据库的相关信息。 对于 Azure SQL 数据仓库，必须连接到 master 数据库。  
+为 Azure SQL 数据库或 Azure Synapse 分析返回 service 层) 、服务目标 (定价层) 和弹性池名称（如果有）的版本 (。 如果已登录到 Azure SQL 数据库服务器中的 master 数据库，则会返回所有数据库的相关信息。 对于 Azure Synapse Analytics，必须连接到 master 数据库。  
   
   
  有关定价的信息，请参阅 [Sql 数据库选项和性能： Sql 数据库定价](https://azure.microsoft.com/pricing/details/sql-database/) 和 [Sql 数据仓库定价](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)。  
   
- 若要更改服务设置，请参阅 [ALTER database (AZURE Sql DATABASE) ](../../t-sql/statements/alter-database-transact-sql.md) 并 [Alter DATABASE (Azure sql 数据仓库) ](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)。  
+ 若要更改服务设置，请参阅 [ALTER database (AZURE SQL DATABASE) ](../../t-sql/statements/alter-database-transact-sql.md) 并 [Alter Database (azure Synapse Analytics) ](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)。  
   
  Sys.database_service_objectives 视图包含以下列。  
   

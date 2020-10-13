@@ -1,6 +1,6 @@
 ---
 description: sys.sql_expression_dependencies (Transact-SQL)
-title: sys. sql_expression_dependencies (Transact-sql) |Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4aabba6bd3608b4a4392b47e64ee37d7498d80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548643"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006424"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89548643"
   
 -   跨数据库和跨服务器的实体。 报告了实体名称；但实体 ID 尚未解析。  
   
--   绑定到架构的实体的列级依赖关系。 对于非绑定到架构的对象，可以使用 [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)返回这些对象的列级依赖关系。  
+-   绑定到架构的实体的列级依赖关系。 使用 [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)可以返回非绑定到架构的对象的列级依赖关系。  
   
 -   服务器级别的 DDL 触发器（在 master 数据库的上下文中时）。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "89548643"
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  
 
 > [!NOTE]
-> Azure SQL 数据仓库和并行数据仓库支持表、视图、筛选统计信息以及此列表中的 Transact-sql 存储过程实体类型。  只为表、视图和筛选统计信息创建并维护依赖关系信息。  
+> Azure Synapse Analytics 和并行数据仓库支持表、视图、筛选统计信息和 Transact-sql 存储过程的实体类型。  只为表、视图和筛选统计信息创建并维护依赖关系信息。  
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  

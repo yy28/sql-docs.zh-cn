@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8d912f3fd344c535d6101a0598750e61763f6ccf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d809281ec96263d94ccb1ec85b2028d8c16477f8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475538"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869094"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -160,11 +160,11 @@ ms.locfileid: "88475538"
 3.  （可选）若要禁用 FTP 快照传递，请在发布服务器上对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 将值 `enabled_for_internet` 指定给 `@property`，将值 `false` 指定给 `@value`。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 下面的示例创建一个合并发布，该发布允许订阅服务器通过使用 FTP 访问快照数据。 访问 FTP 共享区时，订阅服务器应使用安全的 VPN 连接。 **sqlcmd** 脚本变量用于提供登录名和密码值。 有关详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
+ 下面的示例创建一个合并发布，该发布允许订阅服务器通过使用 FTP 访问快照数据。 访问 FTP 共享区时，订阅服务器应使用安全的 VPN 连接。 **sqlcmd** 脚本变量用于提供登录名和密码值。 有关详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  
   
- 下面的示例创建一个对合并发布的订阅，在该订阅中订阅服务器通过使用 FTP 来获取快照。 访问 FTP 共享区时，订阅服务器应使用安全的 VPN 连接。 **sqlcmd** 脚本变量用于提供登录名和密码值。 有关详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
+ 下面的示例创建一个对合并发布的订阅，在该订阅中订阅服务器通过使用 FTP 来获取快照。 访问 FTP 共享区时，订阅服务器应使用安全的 VPN 连接。 **sqlcmd** 脚本变量用于提供登录名和密码值。 有关详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
  [!code-sql[HowTo#sp_createmergepullsub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_2.sql)]  
   
@@ -174,5 +174,4 @@ ms.locfileid: "88475538"
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [使用快照初始化订阅](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-  
   

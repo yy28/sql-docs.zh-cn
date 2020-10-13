@@ -12,12 +12,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eabca1300e3937d4b1a1f48531c9cc09b1978dd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722413"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867101"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85722413"
 
 以下小节介绍在采用和实现计划内存中功能时必须考虑的因素。 若要了解详细的说明性信息，请访问：
 
-- [使用内存中 OLTP 改善 Azure SQL 数据库中的应用程序性能](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
+- [使用内存中 OLTP 改善 Azure SQL 数据库中的应用程序性能](/azure/azure-sql/in-memory-oltp-configure)
 
 
 
@@ -42,7 +42,7 @@ ms.locfileid: "85722413"
 
 - [使用内存优化表的要求](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [SQL Server 2016 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [SQL 数据库定价层建议](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [SQL 数据库定价层建议](/azure/azure-sql/database/service-tiers-vcore)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 预测活动内存量
@@ -59,8 +59,8 @@ ms.locfileid: "85722413"
 
 对于 Azure SQL 数据库云服务中托管的数据库，所选的服务层会影响允许数据库使用的活动内存量。 应计划使用警报监视数据库的内存使用。 有关详细信息，请参阅：
 
-- 查看[定价层](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)的内存中 OLTP 存储限制
-- [监视内存中 OLTP 存储](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- 查看[定价层](/azure/sql-database/sql-database-purchase-models)的内存中 OLTP 存储限制
+- [监视内存中 OLTP 存储](/azure/azure-sql/in-memory-oltp-monitor-space)
 
 #### <a name="memory-optimized-table-variables"></a>内存优化表变量
 
@@ -261,7 +261,7 @@ ms.locfileid: "85722413"
 
 有关将使用不支持的功能的 Transact-SQL 模块迁移到本机编译的模块时的注意事项，请参阅：
 
-- [本机编译存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [本机编译存储过程的迁移问题](./a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 除存在对 Transact-SQL 特定元素的限制外，对本机编译的 T-SQL 模块中支持的查询运算符也存在限制。 由于这些限制，本机编译的存储过程不适用于可处理大型数据集的分析查询。
 
@@ -297,12 +297,10 @@ SQL Server 2016 中：
 通过将重试逻辑添加到脚本中，可使 Transact-SQL 脚本更可靠（针对可能的事务错误）。 频繁调用 UPDATE 和 DELETE 时，或者另一个表的外键引用内存优化表时，重试逻辑很有可能会有帮助。 有关详细信息，请参阅：
 
 - [具有内存优化表的事务](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [内存优化表的事务依赖限制 - 错误 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [内存优化表的事务依赖限制 - 错误 41839](/archive/blogs/sqlcat/transaction-dependency-limits-with-memory-optimized-tables-error-41839)
 
 
 
 ## <a name="related-links"></a>相关链接
 
 - [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
-

@@ -1,6 +1,6 @@
 ---
 description: sys.fn_helpcollations (Transact-SQL)
-title: sys. fn_helpcollations (Transact-sql) |Microsoft Docs
+title: sys.fn_helpcollations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bec27f5d1f49abb1b05beaa1b17509c6cdf1ca5b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427829"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006571"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -49,7 +49,7 @@ fn_helpcollations ()
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |名称|**sysname**|标准排序规则名称|  
-|描述|**nvarchar(1000)**|排序规则说明|  
+|说明|**nvarchar(1000)**|排序规则说明|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受支持的 Windows 排序规则之前开发的 ( # B0 80) 称为排序规则的排序规则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则仍支持向后兼容，但不能用于新的开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -58,7 +58,7 @@ fn_helpcollations ()
  以下示例返回以字母 `L` 开头并且是二进制排序规则的所有排序规则名称。
 
 > [!Note]
-> 针对 fn_helpcollations ( # A1 的 Azure SQL 数据仓库查询必须在 master 数据库中运行。  
+> 针对 fn_helpcollations ( # A1 的 Azure Synapse Analytics 查询必须在 master 数据库中运行。  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -85,4 +85,4 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 
 [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[Azure SQL 数据仓库的数据库排序规则支持。](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[Azure Synapse Analytics 的数据库排序规则支持](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

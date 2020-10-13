@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d876cbff20f80261bbd7737d72f0117acb8f3ac6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f95811113261f10701e0fcfc41c70e348891f6a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482284"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868098"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ GO
   
 3.  选择“新建全文目录”****。  
   
-4.  在“新建全文目录”**** 对话框中，指定要重新创建的目录的信息。 有关详细信息，请参阅[新建全文目录（常规页）](https://docs.microsoft.com/sql/t-sql/statements/create-fulltext-catalog-transact-sql)。  
+4.  在“新建全文目录”**** 对话框中，指定要重新创建的目录的信息。 有关详细信息，请参阅[新建全文目录（常规页）](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。  
   
     > [!NOTE]  
     >  全文目录 ID 从 00005 开始，每创建一个新目录，其 ID 值就会递增 1。  

@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23bd7c70522d1d691e4670c43bb7f07b5534c379
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497966"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005751"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle (OracleToSQL 的 SSMA 中的新增功能) 
 
@@ -73,7 +73,7 @@ SSMA for Oracle 的6.x 版包含以下更改：
 * 添加对基本 `ALTER TRIGGER` / `ALTER INDEX` DDL (启用/禁用等支持 ) 
 * 改善了与内置函数名称匹配的列的转换
 * 为可执行筛选的列生成筛选的唯一索引 `NULL`
-* 改进了 Azure SQL 数据仓库的变量声明转换
+* Azure Synapse Analytics 的可变声明转换改进
 * 解决项目名称中含有特殊字符的问题
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
@@ -85,7 +85,7 @@ SSMA for Oracle 的 v2.0 版本包括：
 * 提高了分析子句的转换 `OVER PARTITION`
 * 分析函数的新转换 `LEAD`
 * 子查询因式分解子句的新转换
-* `REPLICATE`AZURE SQL 数据仓库的新分发选项
+* `REPLICATE`Azure Synapse Analytics 的新分发选项
 * 全新的 Oracle 语法分析器，进一步提高转换性能
 
 ## <a name="ssma-v87"></a>SSMA v 8。7
@@ -251,7 +251,7 @@ SSMA for Oracle 的版本7.6 版本通过目标修补程序进行了增强，这
 
 SSMA for Oracle 的7.4 版包含以下更改：
 
-* SSMA for Oracle 现在支持将 Azure SQL 数据仓库作为迁移的目标平台。
+* SSMA for Oracle 现在支持将 Azure Synapse 分析作为迁移的目标平台。
 
   ![“新建项目”窗口](../media/new-project.png)
   * 支持数据仓库存储选项，如下图所示：
@@ -397,7 +397,7 @@ SSMA for Oracle 的2011年4月版包含以下更改：
 * 提高了 `Simple` `Bulk` 恢复模式和日志记录的数据迁移性能。
 * 添加了对早期版本的 SSMA (v4.0 和 4.2) 创建的项目的向后兼容性的支持。
 * 添加了一种功能，用于安装 SSMA for Oracle (SxS) ，以及 SSMA (v4.0 和4.2 版) 的早期版本。
-* 添加了对报表用户定义类型的支持 (包括子类型、 `VARRAY` 、 `NESTED TABLE` 、对象表和对象视图) 及其在 PL/SQL 块中的用法以及特殊错误消息。
+* 添加了对报表 User-Defined 类型的支持 (包括子类型、 `VARRAY` 、 `NESTED TABLE` 、对象表和对象视图) 及其在 PL/SQL 块中的用法以及特殊错误消息。
 
 ## <a name="july-2010"></a>2010 年 7 月
 
@@ -405,7 +405,7 @@ SSMA for Oracle 的2011年4月版包含以下更改：
 
 * 支持迁移到 SQL Server 2008 R2。
 * 用于执行命令行的新 SSMA 控制台应用程序。
-* 支持使用服务器端和客户端数据迁移引擎进行数据迁移。
+* 支持使用 Server-Side 和 Client-Side 数据迁移引擎进行数据迁移。
 * 支持数据迁移中的 "自定义" SELECT 语句。
 * 支持从 Oracle 11g R2 迁移。
 

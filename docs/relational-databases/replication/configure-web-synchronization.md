@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455612"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868137"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455612"
   
  **配置 IIS 以实现 Web 同步**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置 IIS 以实现 Web 同步](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455612"
   
 -   每个发布都应对 IIS 使用一个单独的虚拟目录。  
   
--   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (Replisapi.dll) 的帐户也是要在同步期间连接到发布服务器和分发服务器的帐户。 此帐户必须映射到发布服务器和分发服务器上的 SQL 登录帐户。 有关详细信息，请参阅[配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)中的“设置 SQL Server 复制侦听器的权限”一节。  
+-   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (Replisapi.dll) 的帐户也是要在同步期间连接到发布服务器和分发服务器的帐户。 此帐户必须映射到发布服务器和分发服务器上的 SQL 登录帐户。 有关详细信息，请参阅[配置 IIS 以实现 Web 同步](./configure-iis-7-for-web-synchronization.md)中的“设置 SQL Server 复制侦听器的权限”一节。  
   
 -   可以使用 FTP 将快照从发布服务器传递到运行 IIS 的计算机。 快照始终使用 HTTPS 从运行 IIS 的计算机传递到订阅服务器。 有关详细信息，请参阅[通过 FTP 传输快照](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455612"
   
 ## <a name="see-also"></a>另请参阅  
  [合并复制的 Web 同步](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

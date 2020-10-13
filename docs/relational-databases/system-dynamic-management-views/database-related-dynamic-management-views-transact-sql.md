@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6349d3a2b2db4c019df9607eba9424ca65beb226
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cfffdf68d61b0a9ec40b0649f0e92fed93f442b3
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544867"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006576"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>与数据库有关的动态管理视图 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,20 +54,20 @@ ms.locfileid: "89544867"
     :::column-end:::
 :::row-end:::
 
-DMV 对于 SQL 数据库或 SQL 数据仓库是唯一的。   
+DMV 对于 SQL 数据库或 Azure Synapse Analytics 是唯一的。   
 
 :::row:::
     :::column:::
-        [dm_db_wait_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
+        [Azure SQL Database &#40;sys.dm_db_wait_stats&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
 
-        [dm_db_resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)
+        [Azure SQL Database &#40;sys.dm_db_resource_stats&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)
 
-        [dm_operation_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+        [Azure SQL Database &#40;sys.dm_operation_status&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
     :::column-end:::
     :::column:::
         [sys.dm_database_copies（Azure SQL 数据库）](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
-        [dm_db_objects_impacted_on_version_change &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)
+        [Azure SQL Database &#40;sys.dm_db_objects_impacted_on_version_change&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)
     :::column-end:::
 :::row-end:::
   

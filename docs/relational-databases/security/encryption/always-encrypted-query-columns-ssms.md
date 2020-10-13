@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd8ae48dd5e1403b2dd84f6654c6954d9cd8e64
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942624"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866540"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>通过 SQL Server Management Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "86942624"
 可以在使用“连接到服务器”对话框创建新连接或更改现有连接时启用或禁用 Always Encrypted。 
 
 若要启用（禁用）Always Encrypted，请执行以下操作：
-1. 打开“连接到服务器”对话框（有关详细信息，请参阅[连接到 SQL Server 实例](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance)）。
+1. 打开“连接到服务器”对话框（有关详细信息，请参阅[连接到 SQL Server 实例](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)）。
 1. 单击“选项 >>”。
 1. 如果使用 SSMS 18 或更高版本：
     1. 选择“Always Encrypted”选项卡。
@@ -109,7 +109,7 @@ ms.locfileid: "86942624"
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted 参数化   
  
-Always Encrypted 参数化是 SQL Server Management Studio 中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（ [SqlParameter 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的实例）。 （要求至少为 SSMS 版本 17.0。）这允许用于 SQL Server 的基础 .NET Framework 数据提供程序对针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。 
+Always Encrypted 参数化是 SQL Server Management Studio 中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（ [SqlParameter 类](/dotnet/api/system.data.sqlclient.sqlparameter)的实例）。 （要求至少为 SSMS 版本 17.0。）这允许用于 SQL Server 的基础 .NET Framework 数据提供程序对针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。 
   
 如果没有进行参数化，.NET Framework 数据提供程序会传递你在“查询编辑器”中编写的每个声明，作为非参数化查询。 如果查询包含定目标到加密列的文本或 Transact-SQL 变量，用于 SQL Server 的 .NET Framework 数据提供程序便无法在将查询发送到数据库之前检测和加密它们。 结果由于纯文本文字 Transact-SQL 变量和加密列之间的类型不匹配，查询将失败。 例如，假定 `SSN` 列已加密，如果没有参数化，以下查询将失败。   
 
@@ -173,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 为了成功完成尝试的参数化操作：   
 - 用于要参数化的变量初始化的文字类型必须与变量声明中的类型匹配。   
-- 如果变量的声明类型是日期类型或时间类型，变量必须通过使用以下 [ISO 8601 标准格式](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles)之一的字符串进行初始化。    
+- 如果变量的声明类型是日期类型或时间类型，变量必须通过使用以下 [ISO 8601 标准格式](../../../t-sql/functions/cast-and-convert-transact-sql.md#date-and-time-styles)之一的字符串进行初始化。    
 
 下面是会导致参数化错误的 Transact-SQL 变量声明的示例：   
 ```sql
@@ -183,7 +183,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio 使用 Intellisense 来通知你哪些参数可成功进行参数化而哪些参数化尝试会失败（及其原因）。   
 
-可成功进行参数化的变量的声明将在“查询编辑器”中使用警告下划线进行标记。 如果将鼠标悬停在带有警告下划线标记的声明语句之上，便会看到参数化过程结果，其中包括（变量映射到的）所生成 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 对象的关键属性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 还会在“错误列表”  视图的“警告”  选项卡中，显示已成功进行参数化的所有变量的完整列表。 若要打开“错误列表”  视图，请在主菜单中选择“视图”  ，然后选择“错误列表” 。    
+可成功进行参数化的变量的声明将在“查询编辑器”中使用警告下划线进行标记。 如果将鼠标悬停在带有警告下划线标记的声明语句之上，便会看到参数化过程结果，其中包括（变量映射到的）所生成 [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) 对象的关键属性值：[SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype)、[Size](/dotnet/api/system.data.sqlclient.sqlparameter.size)、[Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision)、[Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale)、[SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue)。 还会在“错误列表”  视图的“警告”  选项卡中，显示已成功进行参数化的所有变量的完整列表。 若要打开“错误列表”  视图，请在主菜单中选择“视图”  ，然后选择“错误列表” 。    
 
 如果 SQL Server Management Studio 已尝试对变量进行参数化，但是参数化操作失败，那么变量的声明将以错误下划线进行标记。 如果将鼠标悬停在带有错误下划线标记的声明语句之上，便会看到错误的相关结果。 还会在“错误列表”  视图的“错误”  选项卡中，显示所有变量的参数化错误的完整列表。 若要打开“错误列表”  视图，请在主菜单中选择“视图”  ，然后选择“错误列表” 。   
 

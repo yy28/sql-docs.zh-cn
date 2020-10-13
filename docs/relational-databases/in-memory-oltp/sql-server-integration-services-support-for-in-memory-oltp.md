@@ -12,12 +12,12 @@ ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6edd36bacc7c2316ac747156b7d1ccdbb0e4f7ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a2e755e50bc48e418ceabd0b2334746dc6e7885d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551571"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867519"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Integration Services 支持
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "89551571"
  还可以使用 ADO .NET 源和 OLE DB 源来调用本机编译的存储过程，但是我们建议您使用 ODBC 源。 如果您配置 ADO .NET 源以执行本机编译的存储过程，将看到错误消息，因为 ADO .NET 源默认使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 的数据访问接口不支持执行本机编译的存储过程。 您可以配置 ADO .NET 源以使用 ODBC 数据访问接口、用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 OLE DB 访问接口或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 但是，请注意 ODBC 源的性能好于使用 ODBC 数据访问接口的 ADO .NET 源。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 对内存中 OLTP 的支持](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [SQL Server 对内存中 OLTP 的支持](./transact-sql-support-for-in-memory-oltp.md)  
   

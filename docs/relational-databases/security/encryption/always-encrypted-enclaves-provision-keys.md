@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13e6fd165c65aa8aeaed4394ec91a17c82b72097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482230"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867663"
 ---
 # <a name="provision-enclave-enabled-keys"></a>预配已启用 enclave 的密钥
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "88482230"
 
 一般而言，适用于 Always Encrypted 的 PowerShell 密钥预配工作流（在[使用 PowerShell 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-powershell.md)中进行了介绍）也适用于已启用 enclave 的密钥。 此部分介绍特定于已启用 enclave 的密钥的详细信息。
 
-SqlServer PowerShell 模块使用 `-AllowEnclaveComputations` 参数扩展了 [New-SqlCertificateStoreColumnMasterKeySettings****](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 和 [New-SqlAzureKeyVaultColumnMasterKeySettings****](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet，以便使你可以在预配过程中指定已启用 enclave 的列主密钥。 任一 cmdlet 都会创建包含列主密钥（存储在 Azure Key Vault 或 Windows 证书存储中）的属性的本地对象。 如果指定，则 `-AllowEnclaveComputations` 属性会在本地对象中将密钥标记为已启用 enclave。 它还会使 cmdlet 访问所引用的列主密钥（在 Azure Key Vault 或 Windows 证书存储中）以对密钥的属性进行数字签名。 为新的已启用 enclave 的列主密钥创建设置对象后，便可以在 [New-SqlColumnMasterKey****](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcolumnmasterkey) cmdlet 的后续调用中使用它，以在数据库中创建描述新密钥的元数据对象。
+SqlServer PowerShell 模块使用 `-AllowEnclaveComputations` 参数扩展了 [New-SqlCertificateStoreColumnMasterKeySettings****](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 和 [New-SqlAzureKeyVaultColumnMasterKeySettings****](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet，以便使你可以在预配过程中指定已启用 enclave 的列主密钥。 任一 cmdlet 都会创建包含列主密钥（存储在 Azure Key Vault 或 Windows 证书存储中）的属性的本地对象。 如果指定，则 `-AllowEnclaveComputations` 属性会在本地对象中将密钥标记为已启用 enclave。 它还会使 cmdlet 访问所引用的列主密钥（在 Azure Key Vault 或 Windows 证书存储中）以对密钥的属性进行数字签名。 为新的已启用 enclave 的列主密钥创建设置对象后，便可以在 [New-SqlColumnMasterKey****](/powershell/module/sqlserver/new-sqlcolumnmasterkey) cmdlet 的后续调用中使用它，以在数据库中创建描述新密钥的元数据对象。
 
 预配已启用 enclave 的列加密密钥与预配未启用 enclave 的列加密密钥不同。 只需确保用于加密新的列加密密钥的列主密钥已启用 enclave。
 
@@ -76,7 +76,7 @@ SqlServer PowerShell 模块使用 `-AllowEnclaveComputations` 参数扩展了 [N
 > SqlServer PowerShell 模块当前不支持预配存储在硬件安全模块（使用 CNG 或 CAPI）中的已启用 enclave 的密钥。
 
 ### <a name="example---provision-enclave-enabled-keys-using-windows-certificate-store"></a>示例 - 使用 Windows 证书存储预配已启用 enclave 的密钥
-下面的端到端示例演示如何预配已启用 enclave 的密钥（将列主密钥存储在 Windows 证书存储中）。 该脚本基于[不使用角色分隔的 Windows 证书存储（示例）](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example)中的示例。 请务必注意 `-AllowEnclaveComputations` 参数在 [New-SqlCertificateStoreColumnMasterKeySettings****](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet 中的使用，这是两个示例中的工作流之间的唯一区别。
+下面的端到端示例演示如何预配已启用 enclave 的密钥（将列主密钥存储在 Windows 证书存储中）。 该脚本基于[不使用角色分隔的 Windows 证书存储（示例）](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example)中的示例。 请务必注意 `-AllowEnclaveComputations` 参数在 [New-SqlCertificateStoreColumnMasterKeySettings****](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet 中的使用，这是两个示例中的工作流之间的唯一区别。
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -107,8 +107,8 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ### <a name="example---provision-enclave-enabled-keys-using-azure-key-vault"></a>示例 - 使用 Azure Key Vault 预配已启用 enclave 的密钥
 下面的端到端示例演示如何预配已启用 enclave 的密钥（将列主密钥存储在 Azure Key Vault 中）。 该脚本基于[不使用角色分隔的 Azure Key Vault（示例）](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example)中的示例。 请务必注意已启用 enclave 的密钥与未启用 enclave 的密钥相比，工作流之间的两个差异。 
-- 在下面的脚本中，[New-SqlCertificateStoreColumnMasterKeySettings****](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 使用 `-AllowEnclaveComputations` 参数使新的列主密钥启用 enclave。 
-- 下面的脚本在调用 [New-SqlAzureKeyVaultColumnMasterKeySettings****](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet 之前调用 [Add-SqlAzureAuthenticationContext****](https://docs.microsoft.com/powershell/module/sqlserver/add-sqlazureauthenticationcontext) cmdlet，以登录 Azure。 先登录 Azure 是必需的，因为 `-AllowEnclaveComputations` 参数会使 New-SqlAzureKeyVaultColumnMasterKeySettings**** 调用 Azure Key Vault 以对列主密钥的属性进行签名。
+- 在下面的脚本中，[New-SqlCertificateStoreColumnMasterKeySettings****](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 使用 `-AllowEnclaveComputations` 参数使新的列主密钥启用 enclave。 
+- 下面的脚本在调用 [New-SqlAzureKeyVaultColumnMasterKeySettings****](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet 之前调用 [Add-SqlAzureAuthenticationContext****](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) cmdlet，以登录 Azure。 先登录 Azure 是必需的，因为 `-AllowEnclaveComputations` 参数会使 New-SqlAzureKeyVaultColumnMasterKeySettings**** 调用 Azure Key Vault 以对列主密钥的属性进行签名。
 
 ```powershell
 # Create a column master key in Azure Key Vault.
@@ -156,4 +156,4 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ## <a name="see-also"></a>另请参阅  
 - [教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [管理具有安全 enclave 的 Always Encrypted 的密钥](always-encrypted-enclaves-manage-keys.md)
-- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

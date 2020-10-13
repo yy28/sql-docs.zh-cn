@@ -15,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28658f7f420976efe51d84a86123fe037965ab48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733695"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868013"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
 
@@ -28,9 +28,9 @@ ms.locfileid: "85733695"
 
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
   
--   [Windows 事件](https://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows 事件](/windows/win32/events/windows-events)  
   
--   [使用 ETW 改善调试和性能优化](https://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [使用 ETW 改善调试和性能优化](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)  
   
  ETW 目标是单独目标，尽管该目标可以被添加到多个会话中。 如果某事件在多个会话中被引发，则该事件在每次发生事件时仅被传播给 ETW 目标一次。 每个进程仅限一个扩展事件引擎实例。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85733695"
     > [!IMPORTANT]  
     >  当第一个会话启动后不能再更改该文件路径。  
   
--   托管对象格式 (MOF) 文件位于 \<your install path>\Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](https://go.microsoft.com/fwlink/?LinkId=92851) 。
+-   托管对象格式 (MOF) 文件位于 \<your install path>\Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](/windows/win32/wmisdk/managed-object-format--mof-) 。
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->
@@ -99,5 +99,4 @@ ADD TARGET package0.etw_classic_sync_target
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)  
-  
   

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e7467127593b5a853bf5c26df75e9bc52ff12e4
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480920"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867677"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480920"
 - 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行****。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]  
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
 
 下表显示了可以联机执行的索引操作、从这些联机操作中排除的索引以及可恢复的索引限制。 其中还包括其他限制。  
 
@@ -81,11 +81,11 @@ ms.locfileid: "89480920"
   
 尽管建议联机操作，但仍应评估环境和特定的需要是否满足。 脱机执行索引操作可能是最好的。 这样做可能会在操作过程中限制用户对数据的访问，但是操作将更快地完成并使用较少的资源。  
   
-在运行 SQL Server 2016 的多处理器计算机上，索引语句可能会像其他查询那样，使用多个处理器来执行与索引语句关联的扫描和排序操作。 可以使用 MAXDOP 索引选项控制专用于联机索引操作的处理器数量。 通过这种方式，可以在那些并发用户间平衡索引操作所使用的资源。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。 有关支持并行索引操作的 SQL Server 版本的详细信息，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+在运行 SQL Server 2016 的多处理器计算机上，索引语句可能会像其他查询那样，使用多个处理器来执行与索引语句关联的扫描和排序操作。 可以使用 MAXDOP 索引选项控制专用于联机索引操作的处理器数量。 通过这种方式，可以在那些并发用户间平衡索引操作所使用的资源。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。 有关支持并行索引操作的 SQL Server 版本的详细信息，请参阅[各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 由于索引操作的最后阶段持有 S 锁或 Sch-M 锁，因此当在显式用户事务（例如 BEGIN TRANSACTION...COMMIT 块）内运行联机索引操作时必须小心。 此操作会造成在事务结束之前一直持有锁，从而妨碍用户并发。  
   
-若允许通过 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 选项运行联机索引重新生成，可能会增加碎片。 有关详细信息，请参阅 [工作方式：联机索引重新生成 - 可能造成碎片增加](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation)。  
+若允许通过 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 选项运行联机索引重新生成，可能会增加碎片。 有关详细信息，请参阅 [工作方式：联机索引重新生成 - 可能造成碎片增加](/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation)。  
   
 ## <a name="transaction-log-considerations"></a>事务日志注意事项
 
@@ -129,9 +129,9 @@ ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 均仅适用于分别支持联机和可恢�
 > [!NOTE]
 > ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 不适用于 XML 索引操作。
 
-## <a name="related-content"></a>相关内容
+## <a name="related-content"></a>相关的内容
 
 - [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

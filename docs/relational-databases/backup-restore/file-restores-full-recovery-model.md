@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4d0af1b6f32ddc31cef057b2eb13a123dd13e348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36eef2c38d708b3634d669830e34f46a8480e138
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718088"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809703"
 ---
 # <a name="file-restores-full-recovery-model"></a>文件还原（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "85718088"
   
      在“联机文件还原”  中，如果数据库在还原时处于联机状态，则该数据库在文件还原过程中将保持联机状态。 不过，各文件组中如果有文件正在被还原，则该文件组在还原操作过程中将处于脱机状态。 恢复脱机文件组中的所有文件之后，该文件组将自动变为联机状态。  
   
-     有关联机页和文件还原支持的信息，请参阅 [SQL Server 2016 版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。
+     有关联机页和文件还原支持的信息，请参阅 [SQL Server 2016 版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。
   
     > [!TIP]  
     >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE  。  
@@ -141,5 +141,4 @@ RESTORE LOG database_name FROM <tail_log_backup>
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [完整数据库还原（简单恢复模式）](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

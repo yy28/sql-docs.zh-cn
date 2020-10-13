@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834758"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869305"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85834758"
 当还原每个日志备份时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 重新应用日志中记录的所有修改，以前滚所有事务。 当最后的日志备份还原后，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将使用日志信息回滚到该点未完成的所有事务。 有关详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ### <a name="supporting-transactional-replication"></a>支持事务复制
-日志读取器代理程序监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 有关详细信息，请参阅 [事务复制的工作原理](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))。
+日志读取器代理程序监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 有关详细信息，请参阅 [事务复制的工作原理](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支持高可用性和灾难恢复解决方案
 备用服务器解决方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]数据库镜像和日志传送极大程度地依赖于事务日志。 
@@ -192,5 +192,4 @@ ms.locfileid: "85834758"
 [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

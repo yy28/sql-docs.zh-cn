@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866599"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "86279333"
 >  如果失去了对前述密钥的所有访问权限，则将无法访问由这些密钥保护的对象、连接和数据。 可按照此处显示的链接中说明的方法还原服务主密钥，也可以返回原始加密系统来恢复访问权限。 没有用来恢复访问权限的“后门”。  
   
 ## <a name="in-this-section"></a>本节内容  
- [服务主密钥](../../../relational-databases/security/encryption/service-master-key.md)  
+ [服务主密钥]()  
  简要介绍服务主密钥及其最佳用法。  
   
  [可扩展密钥管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -105,5 +105,4 @@ ms.locfileid: "86279333"
  [删除和重新创建加密密钥（SSRS 配置管理器）](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

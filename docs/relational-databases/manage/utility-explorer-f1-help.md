@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4479093323ceb6bb235fd1adab6eed7d796774af
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197264"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810540"
 ---
 # <a name="utility-explorer-f1-help"></a>实用工具资源管理器的 F1 帮助
 
@@ -68,7 +68,7 @@ ms.locfileid: "86197264"
   
  请注意，在你单击某一使用率类别链接时，实用工具资源管理器导航窗格中的相应节点将追加“(已筛选)”- 也就是说，“托管实例”将标记为“托管实例(已筛选)”。 若要查看筛选设置，请在导航窗格中右键单击该节点，选择“筛选器”，然后单击“筛选设置”。 若要清除筛选设置，请在导航窗格中右键单击该节点，选择“筛选器”，然后单击“删除筛选器”。  
   
- 有关查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例的运行状况的详细信息，或者有关查看或更改策略配置设置的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
+ 有关查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例的运行状况的详细信息，或者有关查看或更改策略配置设置的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）]()。  
   
  实用工具摘要  
  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的数目以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的数据层应用程序的数目。  
@@ -96,10 +96,10 @@ ms.locfileid: "86197264"
   
 -   没有可用数据 - 数据不可用于数据层应用程序，因为包含数据层应用程序的 SQL Server 托管实例未报告数据。  
   
- 每个运行状况参数的详细状态在滑动指示器中列出。 滑动指示器右侧的部分显示有多少个数据层应用程序处于各状态类别中。 有关查看单独数据层应用程序运行状况的详细信息，或者有关查看或更改策略配置设置的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ 每个运行状况参数的详细状态在滑动指示器中列出。 滑动指示器右侧的部分显示有多少个数据层应用程序处于各状态类别中。 有关查看单独数据层应用程序运行状况的详细信息，或者有关查看或更改策略配置设置的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))。  
   
  实用工具存储使用率历史记录  
- 实用工具历史记录显示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具面板底部的时间图中。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+ 实用工具历史记录显示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具面板底部的时间图中。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 主题。  
   
  使用显示区域左侧的单选按钮可以更改图形的报告期间。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "86197264"
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
- 若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“已部署的数据层应用程序”节点，然后选择“筛选器”。 实现筛选设置后，实用工具资源管理器中的“已部署的数据层应用程序”节点将标记为“已部署的数据层应用程序 (已筛选)”。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
+ 若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“已部署的数据层应用程序”节点，然后选择“筛选器”。 实现筛选设置后，实用工具资源管理器中的“已部署的数据层应用程序”节点将标记为“已部署的数据层应用程序 (已筛选)”。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)。  
   
  默认情况下，下面的列将显示与每个数据层应用程序有关的运行状态信息。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "86197264"
   
 -   恢复模式：（简单恢复模式、完整恢复模式和大容量日志恢复模式）  
   
--   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+-   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 主题。  
   
  “CPU 使用率”选项卡  
  “CPU 使用率”选项卡为数据层应用程序和计算机 CPU 使用率显示历史数据的并排图形。  
@@ -197,7 +197,7 @@ ms.locfileid: "86197264"
 -   1 年，以 1 个月间隔显示。  
   
  “存储使用率”选项卡  
- “存储使用率”选项卡具有一个树视图，它显示属于列表视图中选定数据层应用程序的数据库文件和日志文件的存储使用率详细信息。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+ “存储使用率”选项卡具有一个树视图，它显示属于列表视图中选定数据层应用程序的数据库文件和日志文件的存储使用率详细信息。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 主题。  
   
  显示可按文件组或按卷分组。 若要使用文件组树视图，请在 **“文件分组依据:”** 选择中选择 **“文件组”** 单选按钮。  
   
@@ -256,7 +256,7 @@ ms.locfileid: "86197264"
   
 -   恢复模式：（简单恢复模式、完整恢复模式和大容量日志恢复模式）  
   
--   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。
+-   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 主题。
 
 ## <a name="managed-instance-details-sql-server-utility"></a>托管实例详细信息（SQL Server 实用工具）
  实用工具资源管理器的“托管实例”视图中的信息为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的单独实例提供使用率数据、CPU 使用率历史记录、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 对于计算机，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级别控制策略阈值；对于数据库文件和日志文件，可以在存储卷的级别控制策略阈值。 您还可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各个托管实例的属性详细信息。  
@@ -275,7 +275,7 @@ ms.locfileid: "86197264"
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
- 若要访问实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“托管实例”节点，然后选择“筛选器”。 在实现了筛选器设置后，实用工具资源管理器中的“托管实例”节点将标有“托管实例(已筛选)”。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
+ 若要访问实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“托管实例”节点，然后选择“筛选器”。 在实现了筛选器设置后，实用工具资源管理器中的“托管实例”节点将标有“托管实例(已筛选)”。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)。  
   
  默认情况下，下面的列将显示与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个托管实例有关的运行状态信息。  
   
@@ -319,7 +319,7 @@ ms.locfileid: "86197264"
   
 -   Language：  
   
--   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+-   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 主题。  
   
  “CPU 使用率”选项卡  
  “CPU 使用率”选项卡为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和计算机 CPU 使用率显示历史数据的并排图形。  
@@ -337,7 +337,7 @@ ms.locfileid: "86197264"
 -   1 年，以 1 个月间隔显示。  
   
  “存储使用率”选项卡  
- “存储使用率”选项卡具有显示存储使用率详细信息的树视图。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+ “存储使用率”选项卡具有显示存储使用率详细信息的树视图。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 主题。  
   
  显示可按数据库或按卷分组。 若要使用数据库树视图，请在 **“文件分组依据:”** 选择中选择 **“数据库”** 单选按钮。 若要查看单独数据库文件的存储使用率状态，请单击树视图中数据库名称旁的加号。 列出的数据库文件包括属于列表视图中所选 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的所有系统数据库和用户数据库。  
   
@@ -513,6 +513,5 @@ ms.locfileid: "86197264"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [SQL Server 实用工具故障排除](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

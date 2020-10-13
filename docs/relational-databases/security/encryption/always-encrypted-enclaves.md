@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435440"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867247"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 > [!IMPORTANT]
 > Microsoft 强烈建议，先为数据库启用[加速数据库恢复 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再在使用随机加密进行加密且已启用 enclave 的列上创建首个索引。
 
-如果使用遵循 [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 恢复模式的[传统数据库恢复过程](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process)，SQL Server 必须等到应用程序向 enclave 提供列的列加密密钥，才能撤消对索引的更改，而这可能需要很长时间才能完成。 ADR 大大减少了因无法从 enclave 内的缓存获取列加密密钥而必须延迟的撤消操作数。 因此，它通过最大限度地降低新事务受阻的可能性，极大地提高了数据库可用性。 启用 ADR 后，SQL Server 可能仍需要使用列加密密钥来完成旧数据版本清理，但是作为不影响数据库可用性或用户事务的后台任务来完成。 不过，错误日志中可能会显示错误消息，指明清理操作因缺少列加密密钥而失败。
+如果使用遵循 [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 恢复模式的[传统数据库恢复过程](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process)，SQL Server 必须等到应用程序向 enclave 提供列的列加密密钥，才能撤消对索引的更改，而这可能需要很长时间才能完成。 ADR 大大减少了因无法从 enclave 内的缓存获取列加密密钥而必须延迟的撤消操作数。 因此，它通过最大限度地降低新事务受阻的可能性，极大地提高了数据库可用性。 启用 ADR 后，SQL Server 可能仍需要使用列加密密钥来完成旧数据版本清理，但是作为不影响数据库可用性或用户事务的后台任务来完成。 不过，错误日志中可能会显示错误消息，指明清理操作因缺少列加密密钥而失败。
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>使用确定性加密且已启用 enclave 的列上的索引
 
@@ -187,5 +187,3 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 - [查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns.md)
 - [为现有加密列启用具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引](always-encrypted-enclaves-create-use-indexes.md)
-
-

@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546982"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810454"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系统版本控制临时表与内存优化表
 
@@ -25,7 +25,7 @@ ms.locfileid: "89546982"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-用于 [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 的系统版本控制临时表旨在为以下情形提供经济高效的解决方案：需要基于使用内存中 OLTP 工作负荷收集的数据进行 [数据审核和时间点分析](https://msdn.microsoft.com/library/mt631669.aspx)。 它们不仅提供高事务吞吐量和无锁并发，还能存储大量可轻松查询的历史记录数据。
+用于 [内存优化表](../in-memory-oltp/sample-database-for-in-memory-oltp.md) 的系统版本控制临时表旨在为以下情形提供经济高效的解决方案：需要基于使用内存中 OLTP 工作负荷收集的数据进行 [数据审核和时间点分析](./temporal-table-usage-scenarios.md)。 它们不仅提供高事务吞吐量和无锁并发，还能存储大量可轻松查询的历史记录数据。
 
 ## <a name="overview"></a>概述
 
@@ -43,7 +43,7 @@ ms.locfileid: "89546982"
 
 - 只有持久内存优化表才能进行系统版本控制 (**DURABILITY = SCHEMA_AND_DATA**)。
 - 无论创建者是最终用户还是系统，用于内存优化系统版本控制表的历史记录表都必须基于磁盘。
-- 仅影响当前表（内存中）的查询可用于 [本机编译的 T-SQL 模块](https://msdn.microsoft.com/library/dn133184.aspx)。 本机编译的模块中不支持使用 FOR SYSTEM TIME 子句的临时查询。 支持在即席查询和非本机模块中将 FOR SYSTEM TIME 子句与内存优化表一起使用。
+- 仅影响当前表（内存中）的查询可用于 [本机编译的 T-SQL 模块](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)。 本机编译的模块中不支持使用 FOR SYSTEM TIME 子句的临时查询。 支持在即席查询和非本机模块中将 FOR SYSTEM TIME 子句与内存优化表一起使用。
 - 当 **SYSTEM_VERSIONING = ON**时，系统将自动创建内部内存优化临时表，以接受对内存优化当前表执行更新和删除操作时所产生的最新系统版本控制更改。
 - 内部内存优化临时表中的数据将通过异步数据刷新任务定期移动到基于磁盘的历史记录表。 此数据刷新机制的目标之一是将内部内存缓冲区中父对象的内存消耗控制在 10% 以下。 你可以通过查询 [sys.dm_db_xtp_memory_consumers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) 并汇总内部内存优化临时表和当前临时表的数据，来跟踪内存优化系统版本控制临时表的内存总消耗。
 - 可通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)强制进行数据刷新。

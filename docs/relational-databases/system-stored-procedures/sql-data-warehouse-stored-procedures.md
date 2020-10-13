@@ -13,14 +13,14 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 75186b766ae144719838db981ea9b857876bce23
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 8edea157c14004d48f340af1313ccfabeb9d2818
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809423"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005930"
 ---
-# <a name="sql-data-warehouse-stored-procedures"></a>SQL 数据仓库存储过程
+# <a name="azure-synapse-analytics-stored-procedures"></a>Azure Synapse 分析存储过程
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 提供可用于执行与数据库角色相关的操作的内置过程。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 包括以下系统过程：  

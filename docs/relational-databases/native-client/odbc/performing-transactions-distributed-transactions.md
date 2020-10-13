@@ -18,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e5ace381694dcc3afdbed36e35e48af147067b32
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892257"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005963"
 ---
 # <a name="create-a-distributed-transaction"></a>创建分布式事务
 
@@ -64,7 +64,7 @@ _ (1) _ 无需 ODBC 即可调用 MSDTC。 在这种情况下，MSDTC 成为事�
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>云中 SQL 数据库的 c # 替代项
 
-Azure SQL Database 或 Azure SQL 数据仓库不支持 MSDTC。
+Azure SQL Database 或 Azure Synapse Analytics 不支持 MSDTC。
 
 但是，可以通过使 c # 程序使用 [.net 类 system.exception](/dotnet/api/system.transactions.transactionscope)，为 SQL 数据库创建分布式事务。
 

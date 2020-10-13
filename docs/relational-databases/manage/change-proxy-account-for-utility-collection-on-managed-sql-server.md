@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff37ba8b-a08c-4109-b6e2-5748c995a52c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 052f0e6c1e60c5753f879e325c7cfa0603ba4303
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 103092d54d1b03405e91e5f1ae385bd396faebba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776044"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868632"
 ---
 # <a name="change-proxy-account-for-utility-collection-on--managed-sql-server"></a>更改托管 SQL Server 上实用工具收集的代理帐户
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +40,5 @@ ms.locfileid: "85776044"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [SQL Server 实用工具故障排除](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

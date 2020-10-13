@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 653698d6bb6699d5434d2bfd10b21ccd93aaefa1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882485"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866996"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>通过逻辑记录对相关行的更改进行分组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "85882485"
   
 -   如果在包含参数化筛选器的发布中使用逻辑记录，必须用每台订阅服务器分区的快照初始化相应的订阅服务器。 如果用其他方法初始化订阅服务器，那么合并代理将会失败。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
--   包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  
+-   包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../view-and-resolve-data-conflicts-for-merge-publications.md)。  
   
 ### <a name="publication-settings"></a>发布设置  
   
@@ -144,5 +144,4 @@ ms.locfileid: "85882485"
   
 ## <a name="see-also"></a>另请参阅  
  [合并复制的项目选项](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bcb047dc1d998eb797a3bca7b6d09699f8585d2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729240"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867533"
 ---
 # <a name="securing-sql-server"></a>保护 SQL Server
 
@@ -56,7 +56,7 @@ ms.locfileid: "85729240"
 |---------------------------|---------|  
 |为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |为使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|为使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[配置 Windows 防火墙以允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|为使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[配置 Windows 防火墙以允许 Analysis Services 访问](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |打开防火墙上的特定端口以便启用对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |通过使用渠道绑定和服务绑定，配置对针对验证的扩展保护的支持|[使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |
@@ -144,7 +144,7 @@ Windows Defender 应用程序控制 (WDAC) 可防止未经授权的代码执行�
   
 |有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
-|连接、配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|连接、配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)|  
 |连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在命令提示符下运行查询|[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)|  
 |网络配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)|  
 |使用基于策略的管理启用和禁用功能|[使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -165,8 +165,7 @@ Windows Defender 应用程序控制 (WDAC) 可防止未经授权的代码执行�
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server 2012 安全最佳做法 - 操作和管理任务。](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
-[SQL Server 安全博客](https://blogs.msdn.microsoft.com/sqlsecurity/)  
-[安全最佳做法和标签安全白皮书](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
+[SQL Server 安全博客](/archive/blogs/sqlsecurity/)  
+[安全最佳做法和标签安全白皮书](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [行级安全性](../../relational-databases/security/row-level-security.md)   
 [保护 SQL Server 知识产权](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  

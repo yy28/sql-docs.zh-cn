@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b82259c992000578a4fcca1c5807cf551dc9d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498557"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867775"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>导出和导入使用 Always Encrypted 的数据库 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "88498557"
 有关如何导出和导入数据库的详细信息，请参阅：
 - [导出数据层应用程序](../../data-tier-applications/export-a-data-tier-application.md)
 - [导入 BACPAC 文件以创建新的用户数据库](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [将 Azure SQL 数据库导出到 BACPAC 文件](https://docs.microsoft.com/azure/sql-database/sql-database-export)
-- [将 BACPAC 文件导入到 Azure SQL 数据库中的数据库](https://docs.microsoft.com/azure/sql-database/sql-database-import)
+- [将 Azure SQL 数据库导出到 BACPAC 文件](/azure/sql-database/sql-database-export)
+- [将 BACPAC 文件导入到 Azure SQL 数据库中的数据库](/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>迁移包含加密列的数据库所需的权限

@@ -12,12 +12,12 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e92f73b4f8790c80cf0ac4e790a0587593ac75e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537723"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867355"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>本机过程中的 ATOMIC 块
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -166,6 +166,5 @@ GO
 |XACT_ABORT|OFF<br /><br /> 未捕获的异常导致原子块回滚，但不会导致事务中止，除非错误是注定事务终止的。|  
   
 ## <a name="see-also"></a>另请参阅  
- [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

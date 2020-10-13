@@ -11,22 +11,22 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 194d33d0b5318ca66494b838c7f59dfde5c72b88
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 98070662e3e097aea0edc6c0879a8c63e4bb5850
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933438"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005868"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>将 Oracle 数据库迁移到 SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 迁移助手 (SSMA) 是一个全面的环境，可帮助你快速将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE Sql Database 或 AZURE Sql 数据仓库。 通过使用 SSMA for Oracle，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE Sql 数据库或 AZURE Sql 数据仓库，然后将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure sql Database 或 Azure Sql 数据仓库。 请注意，不能迁移系统和 Oracle 架构。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 迁移助手 (SSMA) 是一个全面的环境，可帮助你快速将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL Database 或 Azure Synapse Analytics。 通过使用 SSMA for Oracle，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE SQL 数据库或 Azure Synapse analytics，然后将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure sql Database 或 Azure Synapse 分析。 请注意，不能迁移系统和 Oracle 架构。
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
-若要成功地将对象和数据从 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE Sql Database 或 AZURE Sql 数据仓库，请使用以下过程：
+若要成功地将对象和数据从 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE SQL 数据库或 Azure Synapse Analytics，请使用以下过程：
   
 1.  [创建新的 SSMA 项目](working-with-ssma-projects-oracletosql.md)。  
   
-    创建项目后，可以设置项目转换、迁移和类型映射选项。 有关项目设置的信息，请参阅[设置项目选项 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。 有关如何自定义数据类型映射的信息，请参阅[&#40;OracleToSQL&#41;映射 Oracle 和 SQL Server 数据类型](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
+    创建项目后，可以设置项目转换、迁移和类型映射选项。 有关项目设置的信息，请参阅 [设置项目选项 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。 有关如何自定义数据类型映射的信息，请参阅 [&#40;OracleToSQL&#41;映射 Oracle 和 SQL Server 数据类型 ](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
   
 2.  [连接到 Oracle 数据库服务器](connecting-to-oracle-database-oracletosql.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "87933438"
   
 4.  [将 Oracle 数据库架构映射到 SQL Server 数据库架构](mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
   
-5.  （可选）[创建评估报表](assessing-oracle-schemas-for-conversion-oracletosql.md)以评估用于转换的数据库对象，并估计转换时间。  
+5.  （可选） [创建评估报表](assessing-oracle-schemas-for-conversion-oracletosql.md) 以评估用于转换的数据库对象，并估计转换时间。  
   
 6.  [将 Oracle 数据库架构转换为 SQL Server 架构](converting-oracle-schemas-oracletosql.md)。  
   
@@ -52,5 +52,5 @@ ms.locfileid: "87933438"
   
 ## <a name="see-also"></a>另请参阅  
 [安装 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
-[SSMA for Oracle &#40;OracleToSQL&#41;的入门](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[SSMA for Oracle &#40;OracleToSQL&#41;的入门 ](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

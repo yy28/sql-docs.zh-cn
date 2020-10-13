@@ -12,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ee5476020cfcece9bf9168bc048f3a0f3d34b635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e437a9ab920ac7f6774fad58c5927d8d43db1fb4
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475349"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005652"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88475349"
 |state|**nvarchar(40)**|此表的复制表缓存状态。|"NotReady"、"Ready"|  
   
 ## <a name="example"></a>示例
-此示例将 sys. pdw_replicated_table_cache_state 与 sys.databases 联接以检索表名和复制的表缓存的状态。
+此示例将 sys.pdw_replicated_table_cache_state 与 sys.databases 联接以检索表名和复制的表缓存的状态。
 
 ```sql
 SELECT t.[name], p.[object_id], p.[state]
@@ -41,5 +41,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## <a name="next-steps"></a>后续步骤  
- 有关 SQL 数据仓库和并行数据仓库的所有目录视图的列表，请参阅 [Sql 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。   
+ 有关 Azure Synapse Analytics 和并行数据仓库的所有目录视图的列表，请参阅 [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。   
   

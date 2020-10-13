@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_partition_stats (Transact-SQL)
-title: sys. dm_db_partition_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3099e86d00f0541fc4c5b3408ec8708d04042b3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544767"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006020"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89544767"
   返回当前数据库中每个分区的页和行计数信息。  
   
 > [!NOTE]  
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_db_partition_stats**。 Dm_pdw_nodes_db_partition_stats sys.databases 中的 partition_id 不同于 Azure SQL 数据仓库的 sys.databases 目录视图中的 partition_id。
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_db_partition_stats**。 Sys.dm_pdw_nodes_db_partition_stats 中的 partition_id 不同于 Azure Synapse Analytics 的 sys.databases 目录视图中的 partition_id。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 除了 Azure SQL 数据仓库以外，此值与**sys.databases**目录视图中**partition_id**的值相同。|  
+|**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 此值与**sys.databases**目录视图中的**partition_id**的值相同，但 Azure Synapse 分析除外。|  
 |object_id|**int**|包含该分区的表或索引视图的对象 ID。|  
 |index_id|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|  
@@ -67,7 +67,7 @@ ms.locfileid: "89544767"
  可以通过求全部相关分区计数的和来获取单个表或单个索引的总计数。  
   
 ## <a name="permissions"></a>权限  
- 要求 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 权限查询 **sys.databases dm_db_partition_stats** 动态管理视图。 有关动态管理视图权限的详细信息，请参阅 [&#40;transact-sql&#41;中的动态管理视图和函数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 需要 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 权限来查询 **sys.dm_db_partition_stats** 动态管理视图。 有关动态管理视图权限的详细信息，请参阅 [&#40;transact-sql&#41;中的动态管理视图和函数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  
   

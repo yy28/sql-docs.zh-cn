@@ -18,12 +18,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4aeb545a92ef4eca7bdb7542b951021336de9800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d422c78227a4fcfa6ef26bb39197a8639eeb98ba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455416"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866572"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "88455416"
   
 4.  在 **“空间索引”** 对话框中，单击 **“添加”** 。  
   
-5.  在 **“所选空间索引”** 列表中选择新的索引，然后在右侧的网格中设置空间索引的属性。 有关属性的信息，请参阅[空间索引对话框 (Visual Database Tools)](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)。  
+5.  在 **“所选空间索引”** 列表中选择新的索引，然后在右侧的网格中设置空间索引的属性。 有关属性的信息，请参阅[空间索引对话框 (Visual Database Tools)](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md)。  
   
   
 ###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> 更改空间索引  
@@ -157,5 +157,4 @@ ms.locfileid: "88455416"
   
 ## <a name="see-also"></a>另请参阅  
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
   

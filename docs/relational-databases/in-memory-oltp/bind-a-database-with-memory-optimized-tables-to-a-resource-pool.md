@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0be95e3bbdf796f8f1a888c6f5b18e7fda95f542
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111001"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867325"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ GO
 ###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> 创建一个资源池并配置内存  
  为内存优化表配置内存时，应基于 MIN_MEMORY_PERCENT 而非 MAX_MEMORY_PERCENT 完成容量规划。  有关 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的信息，请参阅 [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 对于内存优化表，这将提高内存可用性的可预测性，因为 MIN_MEMORY_PERCENT 会对其他资源池带来内存压力以确保其得到遵守。 为确保内存可用并帮助避免内存不足情况，MIN_MEMORY_PERCENT 与 MAX_MEMORY_PERCENT 的值应相同。 请参阅下面的 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ，以了解基于已提交内存量的可用于内存优化表的内存百分比。  
   
- 有关在虚拟机环境下工作时的详细信息，请参阅[最佳做法：在虚拟机环境中使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)。  
+ 有关在虚拟机环境下工作时的详细信息，请参阅[最佳做法：在虚拟机环境中使用内存中 OLTP](/previous-versions/sql/sql-server-2016/dn529286(v=sql.130))。  
   
  下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码创建一个名为 Pool_IMOLTP 且可使用一半内存的资源池。  创建该池后，资源调控器重新配置为包括 Pool_IMOLTP。  
   
@@ -143,7 +143,7 @@ GO
  现在数据库已绑定至资源池。  
   
 ##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> 更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
- 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题[最佳做法：在虚拟机环境下使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)。  
+ 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题[最佳做法：在虚拟机环境下使用内存中 OLTP](/previous-versions/sql/sql-server-2016/dn529286(v=sql.130))。  
   
 1.  使用 `ALTER RESOURCE POOL` 可更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
   
@@ -216,5 +216,4 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [更改资源池设置](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)  
-  
   

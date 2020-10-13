@@ -13,12 +13,12 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d575705919219b038c3fd98126c0b751bf496a57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fef4e9070349168d64ddb7a5a19e4e37f0a9f027
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383957"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866767"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88383957"
   
  由于 Showplan XML Statistics Profile 事件类显示完整的编写时数据，因此包含该事件类的跟踪可能会使性能明显降低。 若要最大限度地降低引起的开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪操作。  
   
- Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkId=41740)上找到，也可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
+ Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](/previous-versions/aa720019(v=vs.71))上找到，也可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Showplan XML Statistics Profile 事件类数据列  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88383957"
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

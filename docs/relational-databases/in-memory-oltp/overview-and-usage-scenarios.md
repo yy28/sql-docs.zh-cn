@@ -12,12 +12,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9502743c1765561fd82f52e601983ec0bb8cc9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722421"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867115"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 
@@ -29,7 +29,7 @@ ms.locfileid: "85722421"
 
 ## <a name="in-memory-oltp-overview"></a>内存中 OLTP 概述
 
-对于合适的工作负荷，In-Memory OLTP 可提供显著的性能增益。 客户 BWIN 充分利用内存中 OLTP，只通过一台运行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的计算机，便成功[实现每秒 120 万次的请求](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)。 另一个客户 Quorum 也充分利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的内存中 OLTP，成功将其工作负荷翻倍，同时其[资源使用率减少 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 虽然在某些情况下，客户可实现高达 30 倍的性能增益，但是增益的多少取决于工作负荷。
+对于合适的工作负荷，In-Memory OLTP 可提供显著的性能增益。 客户 BWIN 充分利用内存中 OLTP，只通过一台运行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的计算机，便成功[实现每秒 120 万次的请求](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale)。 另一个客户 Quorum 也充分利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的内存中 OLTP，成功将其工作负荷翻倍，同时其[资源使用率减少 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 虽然在某些情况下，客户可实现高达 30 倍的性能增益，但是增益的多少取决于工作负荷。
 
 那么是如何实现性能增益的呢？ 本质上，内存中 OLTP 通过提高数据访问和事务执行的效率和移除并发执行事务间的锁闩连接，来提升事务处理的性能：不是因为在内存中速度才快；而是因为内存中的数据得以优化速度才快。 数据存储、访问和处理算法经完全重新设计，以此来充分利用内存中和高并发计算的最新增强功能。
 
@@ -122,11 +122,11 @@ ms.locfileid: "85722421"
 
 #### <a name="implementation-considerations"></a>实现注意事项
 
-若要开始操作，请参阅：[使用内存优化改进临时表和表变量性能。](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+若要开始操作，请参阅：[使用内存优化改进临时表和表变量性能。](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
 
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- 一位客户仅通过使用内存优化 TVP 替换传统 TVP，便将性能成功提升了 40%：[在 Azure 中使用内存中 OLTP 来实现高速 IoT 数据引入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- 一位客户仅通过使用内存优化 TVP 替换传统 TVP，便将性能成功提升了 40%：[在 Azure 中使用内存中 OLTP 来实现高速 IoT 数据引入](/archive/blogs/sqlserverstorageengine/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure)
 - 作为企业可扩展性改进的一部分，SentryOne 通过将 tempdb 中的表交换到内存中 OLTP 表，显著提高了数据引入能力，且监视解决方案的延迟几乎为零：[解决方案提供商通过数据监视创新突破性能上限。](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL（提取、转换、加载）
@@ -222,12 +222,12 @@ GO
 
 ## <a name="resources-to-learn-more"></a>可了解更多信息的资源
 
-- [通过内存中 OLTP 技术加速 T-SQL 性能](https://msdn.microsoft.com/library/mt694156.aspx)
+- [通过内存中 OLTP 技术加速 T-SQL 性能](./survey-of-initial-areas-in-in-memory-oltp.md)
 - 有关使用内存中 OLTP 的性能演示，请参见： [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [介绍和演示内存中 OLTP 的 17 分钟视频](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
 - [Script to enable In-Memory OLTP and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 - [Main In-Memory OLTP documentation](in-memory-oltp-in-memory-optimization.md)
 - [Azure SQL 数据库中的内存中 OLTP 的性能和资源使用率优势](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
-- [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
-- [在 SQL 数据库中使用内存中技术优化性能](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+- [在 SQL 数据库中使用内存中技术优化性能](/azure/sql-database/sql-database-in-memory)
 - [系统版本控制临时表与内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

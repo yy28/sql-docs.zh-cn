@@ -1,6 +1,6 @@
 ---
 description: sys.dm_io_virtual_file_stats (Transact-SQL)
-title: sys. dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330c14ca06fab7a67c580c1aa1337d1d5c7699cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532246"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005613"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89532246"
   返回数据和日志文件的 I/O 统计信息。 此动态管理视图替换 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) 函数。  
   
 > [!NOTE]  
->  若要从调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ，请使用名称 **dm_pdw_nodes_io_virtual_file_stats**。 
+>  若要从调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ，请使用名称 **sys.dm_pdw_nodes_io_virtual_file_stats**。 
 
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 
 ```  
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
@@ -89,7 +89,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|用户等待在文件中完成 I/O 操作所用的总时间（毫秒）。|  
 |**size_on_disk_bytes**|**bigint**|该文件在磁盘上占用的字节数。 对于稀疏文件，此数字是数据库快照在磁盘上所占用的实际字节数。|  
 |**file_handle**|**varbinary**|用于此文件的 Windows 文件句柄。|  
-|**io_stall_queued_read_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅 [sys.databases&#41;dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_read_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_resource_governor_resource_pools ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
 |**io_stall_queued_write_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  针对写的 IO 资源调控所引入的总 IO 延迟。 不可为 null。|
 |pdw_node_id|**int**|**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布的节点的标识符。
  
@@ -114,7 +114,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. 返回 tempdb 中文件的统计信息
 
-**适用于：** Azure SQL 数据仓库
+**适用于：** Azure Synapse 分析
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 

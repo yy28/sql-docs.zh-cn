@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 38626888302f4644a8cdc36c1c370cf43a8134cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46fb0f6fa4e8607296ead7a2f5e77ac97e75f9d5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493843"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866984"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>使用自定义词典自定义断字符的行为（SQL Server 搜索）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88493843"
   
  有关详细信息，请参阅下列 SharePoint 文章：  
   
- [创建自定义字典 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
+ [创建自定义字典 (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/cc263242(v=office.14))  
   
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请将自定义字典文件放置于以下文件夹中：  
   
@@ -34,5 +34,4 @@ ms.locfileid: "88493843"
  在创建或更改自定义字典文件后，使用以下命令重新启动 SQL 全文筛选器后台程序启动器：  
   
  `exec sp_fulltext_service 'restart_all_fdhosts'`  
-  
   

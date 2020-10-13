@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: ae2bfb2427d93eb0b5d923a61c4a63a159a0d48a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760197"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866587"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -253,7 +253,7 @@ GetNext() 方法返回一个数据行，它的调用次数作为 ActualRows 显�
 |![Nonclustered Index Spool 运算符图标](../relational-databases/media/index-spool-32x.gif "Nonclustered Index Spool 运算符图标")|**Index Spool**|**Index Spool** 物理运算符在 **Argument** 列中包含 SEEK:() 谓词。 **Index Spool** 运算符扫描其输入行，将每行的副本放置在隐藏的假脱机文件（存储在 **tempdb** 数据库中且只在查询的生存期内存在）中，并在这些行上生成非聚集索引。 这样可以使用索引的查找功能来仅输出那些满足 SEEK:() 谓词的行。 如果重绕该运算符（例如通过 **Nested Loops** 运算符重绕），但不需要任何重新绑定，则将使用假脱机数据，而不用重新扫描输入。| 
 |![Nonclustered Index Update 运算符图标](../relational-databases/media/nonclust-index-update-32x.gif "Nonclustered Index Update 运算符图标")|**Nonclustered Index Update**|**Nonclustered Index Update** 物理运算符用于更新 **Argument** 列内指定的非聚集索引中的输入行。 如果存在 SET:() 谓词，则将每个更新的列设置为该值。 **Nonclustered Index Update** 是一个物理运算符。| 
 |![Online Index Insert 运算符图标](../relational-databases/media/online-index-32x.gif "Online Index Insert 运算符图标")|**Online Index Insert**|**Online Index Insert** 物理运算符指示索引创建、更改或删除操作是在线执行的。 也就是说，基础表数据在索引操作期间仍然对用户可用。| 
-|无|**Parallelism**|<a name="exchange"></a> Parallelism 运算符（或交换迭代器）执行分发流、收集流和对流重新分区逻辑操作。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。 有关 Parallelism 运算符的详细信息，请参阅 [Craig Freedman 的博客系列](https://docs.microsoft.com/archive/blogs/craigfr/the-parallelism-operator-aka-exchange)。<br /><br />**注意：** 如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 Parallelism 运算符的 RunTimeInformation 元素  。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。| 
+|无|**Parallelism**|<a name="exchange"></a> Parallelism 运算符（或交换迭代器）执行分发流、收集流和对流重新分区逻辑操作。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。 有关 Parallelism 运算符的详细信息，请参阅 [Craig Freedman 的博客系列](/archive/blogs/craigfr/the-parallelism-operator-aka-exchange)。<br /><br />**注意：** 如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 Parallelism 运算符的 RunTimeInformation 元素  。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。| 
 |![Parameter Table Scan 运算符图标](../relational-databases/media/parameter-table-scan-32x.gif "Parameter Table Scan 运算符图标")|**Parameter Table Scan**|**Parameter Table Scan** 运算符扫描在当前查询中用作参数的表。 该运算符一般用于存储过程内的 INSERT 查询。 **Parameter Table Scan** 既是一个逻辑运算符，也是一个物理运算符。| 
 |无|**Partial Aggregate**|**Partial Aggregate** 用于并行计划中。 它将聚合功能应用到尽可能多的输入行中，以便不必执行向磁盘写入数据的操作（称为“溢出”）。 **Hash Match** 是实现分区聚合的唯一一个物理运算符（迭代器）。 **Partial Aggregate** 是一个逻辑运算符。| 
 |![Population Query Cursor 运算符图标](../relational-databases/media/poulation-query-32x.gif "Population Query Cursor 运算符图标")|**Population Query**|**Population Query** 运算符在打开游标时填充游标的工作表。| 
@@ -267,7 +267,7 @@ GetNext() 方法返回一个数据行，它的调用次数作为 ActualRows 显�
 |![Remote Update 运算符图标](../relational-databases/media/remote-update-32x.gif "Remote Update 运算符图标")|**Remote Update**|**Remote Update** 运算符将更新远程对象中的输入行。 **Remote Update** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Repartition Streams Parallelism 运算符图标](../relational-databases/media/parallelism-repartition-stream.gif "Repartition Streams Parallelism 运算符图标")|**Repartition Streams**|Repartition Streams 运算符（或交换迭代器）使用多个流并生成多个记录流。 记录的内容和格式不会改变。 如果查询优化器使用位图筛选器，则输出流中行的数量将减少。 输入流中的每个记录都放入一个输出流中。 如果该运算符保留次序，则必须对所有输入流排序并将它们合并到几个有序的输出流中。 如果将输出分区，那么 **Argument** 列会包含 PARTITION COLUMNS:() 谓词和分区依据列。如果输出已经排序，则 **Argument** 列包含一个 ORDER BY:() 谓词和已经排序的列。 **Repartition Streams** 是一个逻辑运算符。 该运算符只用于并行查询计划中。| 
 |![Result 语言元素图标](../relational-databases/media/result-32x.gif "Result 语言元素图标")|**结果**|**Result** 运算符是查询计划结束时返回的数据。 它通常是显示计划的根元素。 **Result** 是一个语言元素。| 
-|![RID Lookup 运算符图标](../relational-databases/media/rid-nonclust-locate-32x.gif "RID Lookup 运算符图标")|**RID Lookup**|**RID Lookup** 是使用提供的行标识符 (RID) 在堆上进行的书签查找。 **Argument** 列包含用于查找表中的行的书签标签和从中查找行的表的名称。 **RID Lookup** 通常带有 NESTED LOOP JOIN。 **RID Lookup** 是一个物理运算符。 有关书签查找的详细信息，请参阅 MSDN SQL Server 博客中的[Bookmark Lookup](https://go.microsoft.com/fwlink/?LinkId=132568)（书签查找）。| 
+|![RID Lookup 运算符图标](../relational-databases/media/rid-nonclust-locate-32x.gif "RID Lookup 运算符图标")|**RID Lookup**|**RID Lookup** 是使用提供的行标识符 (RID) 在堆上进行的书签查找。 **Argument** 列包含用于查找表中的行的书签标签和从中查找行的表的名称。 **RID Lookup** 通常带有 NESTED LOOP JOIN。 **RID Lookup** 是一个物理运算符。 有关书签查找的详细信息，请参阅 MSDN SQL Server 博客中的[Bookmark Lookup](/archive/blogs/craigfr/)（书签查找）。| 
 |![Row Count Spool 运算符图标](../relational-databases/media/remote-count-spool-32x.gif "Row Count Spool 运算符图标")|**Row Count Spool**|**Row Count Spool** 运算符扫描输入，计算现有的行数并返回相同数目的不包含任何数据的行。 必须检查现有行数（而非行中包含的数据）时，使用此运算符。 例如，如果 **Nested Loops** 运算符执行左半联接操作且联接谓词应用于内部输入，则可以在 **Nested Loops** 运算符内部输入的顶部放置行计数假脱机。 这样， **Nested Loops** 运算符就可以确定行计数假脱机输出的行数（因为不需要内侧的实际数据）以决定是否返回外部行。 **Row Count Spool** 是一个物理运算符。| 
 |无|**Right Anti Semi Join**|当第一个（顶端）输入中不存在匹配行时， **Right Anti Semi Join** 运算符返回第二个（底端）输入中的每一行。 匹配行的定义是满足 **Argument** 列中的谓词的行（如果不存在谓词，则每行都是一个匹配行）。 **Right Anti Semi Join** 是一个逻辑运算符。| 
 |无|**Right Outer Join**|**Right Outer Join** 运算符返回满足联接第二个（底端）输入与第一个（顶端）输入中每个匹配行的每一行。 此外，它还返回第二个输入中在第一个输入中没有匹配行的任何行，即与 NULL 联接。 如果 **Argument** 列内不存在任何联接谓词，则每行都是一个匹配行。 **Right Outer Join** 是一个逻辑运算符。| 
@@ -298,4 +298,3 @@ GetNext() 方法返回一个数据行，它的调用次数作为 ActualRows 显�
 |无|**Union**|**Union** 运算符扫描多个输入，输出扫描的每一行并删除重复项。 **Union** 是一个逻辑运算符。| 
 |![Update（数据库引擎）运算符图标](../relational-databases/media/update-32x.gif "Update（数据库引擎）运算符图标")|**Update**|**Update** 运算符更新在查询执行计划的 **Argument** 列中所指定对象中的每一输入行。 **Update** 是一个逻辑运算符。 物理运算符为 **Table Update**、 **Index Update**或 **Clustered Index Update**。| 
 |![While 语言元素图标](../relational-databases/media/while-32x.gif "While 语言元素图标")|**While**|**While** 运算符实现 [!INCLUDE[tsql](../includes/tsql-md.md)] while 循环。 **While** 是一个语言元素。| 
-  

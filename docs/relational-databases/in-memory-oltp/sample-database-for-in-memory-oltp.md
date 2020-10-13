@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe3f756c08229631a76effe5fc8b16bc5fe6f965
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 919b3126a47fb0f71efb41e645e0443c309f643e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216705"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867563"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88216705"
  本示例展示内存中 OLTP 功能。 它演示内存优化表和本机编译存储过程，可用于展示内存中 OLTP 的性能优势。  
   
 > [!NOTE]  
->  若要查看关于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的此主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview)。  
+>  若要查看关于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的此主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview)。  
   
  该示例将 AdventureWorks 数据库中的五个表迁移到内存优化表，并包括销售订单处理演示工作负荷。 可以使用此演示工作负荷了解在服务器上使用内存中 OLTP 的性能优势。  
   
@@ -183,10 +183,10 @@ ms.locfileid: "88216705"
   
  HASH 索引可用于进一步优化工作负荷。 这些索引特别针对点查找和行插入进行了优化。 但是，必须考虑到这些索引不支持范围扫描、有序扫描或是对前导索引键列进行的搜索。 因此，使用这些索引时需要谨慎。 此外，还需要在创建时指定 bucket_count。 它通常应设置为索引键值的一到二倍之间，不过估计过高通常不是什么问题。  
   
-有关详细信息，请参阅联机丛书以详细了解[索引指南](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations)和[选择正确 bucket_count](https://sqlserver-help.com/tag/bucket_count/) 的指南。  
+有关详细信息，请参阅联机丛书以详细了解[索引指南](/sql/relational-databases/indexes/guidelines-for-online-index-operations)和[选择正确 bucket_count](https://sqlserver-help.com/tag/bucket_count/) 的指南。  
 
 联机丛书提供有关以下主题的详细信息：
-- [索引指南](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [索引指南](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  迁移的表中的索引针对演示销售订单处理工作负荷进行了优化。 该工作负荷依赖于表 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 中的插入和点查找，还依赖于对表 Production.Product_inmem 和 Sales.SpecialOffer_inmem 中的主键列进行的点查找。  
   
@@ -274,7 +274,7 @@ ms.locfileid: "88216705"
   
     -   更新给定销售订单的发货信息。 这也会更新销售订单所有行项的发货信息。  
   
-    -   这是本机编译的存储过程 Sales.usp_UpdateSalesOrderShipInfo_native 的包装过程，其中的重试逻辑用于处理与更新该订单的并发事务形成的（意外）潜在冲突。 有关重试逻辑的更多信息，请参见 [此处](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables)的联机丛书主题。  
+    -   这是本机编译的存储过程 Sales.usp_UpdateSalesOrderShipInfo_native 的包装过程，其中的重试逻辑用于处理与更新该订单的并发事务形成的（意外）潜在冲突。 有关重试逻辑的更多信息，请参见 [此处](./transactions-with-memory-optimized-tables.md)的联机丛书主题。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -760,4 +760,4 @@ ORDER BY state, file_type
   
 ## <a name="see-also"></a>另请参阅
 
-[内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)  
+[内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)

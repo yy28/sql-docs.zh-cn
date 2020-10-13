@@ -24,12 +24,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 860f4d84084916982fb8328e2fa1cc373d8b3204
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005682"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867445"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "86005682"
   
     2.  在“从此位置”下，单击“位置…”以打开“位置”对话框，并选择一个可用的服务器位置  。 完成后，单击 **“确定”** 。  
   
-    3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](https://technet.microsoft.com/library/cc771712.aspx)。  
+    3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771712(v=ws.11))。  
   
-    4.  单击“高级…”以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](https://technet.microsoft.com/library/cc733110.aspx)。  
+    4.  单击“高级…”以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733110(v=ws.11))。  
   
     5.  单击“确定”。  
   
@@ -275,5 +275,4 @@ ms.locfileid: "86005682"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   

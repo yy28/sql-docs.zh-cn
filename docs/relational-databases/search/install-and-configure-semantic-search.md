@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3339525dbf67ee6dd1a4e4ae3b75215dd2c05d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404073"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868060"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ GO
   
  **2.附加语义语言统计数据库。**
    
- 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或通过 **FOR ATTACH** 语法调用 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 将数据库附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
+ 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或通过 **FOR ATTACH** 语法调用 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 将数据库附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
   
  默认情况下，该数据库的名称为 **semanticsdb**。 也可以选择在附加数据库时为数据库提供其他名称。 当使用后续步骤注册数据库时，必须提供此名称。  
   
@@ -146,5 +146,4 @@ GO
   
 ###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> 为 Microsoft Office 和其他 Microsoft 文档类型安装最新筛选器  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 断字符和词干分析器，但是不为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文档和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文档类型安装最新的筛选器。 要为使用最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 应用程序创建的文档编制索引，必须安装这些筛选器。 若要下载最新的筛选器，请参阅 [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062)。 （对于 Office 2013 或 Office 2016，不会显示为筛选器包版本。）
-  
   

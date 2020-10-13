@@ -14,18 +14,18 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720698"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866910"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教程：在服务器和移动客户端之间配置复制（合并）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 合并复制是解决中央服务器和偶尔连接的移动客户端之间的数据移动问题的好方法。 使用复制向导可以轻松地配置和管理合并复制拓扑。 
 
-本教程演示如何为移动客户端配置复制拓扑。 有关合并复制的详细信息，请参阅[合并复制概述](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)。
+本教程演示如何为移动客户端配置复制拓扑。 有关合并复制的详细信息，请参阅[合并复制概述](./merge/merge-replication.md)。
   
 ## <a name="what-you-will-learn"></a>学习内容  
 本教程将教你使用合并复制将数据从中央数据库发布到一个或多个移动用户，以便每个用户都能获得唯一筛选的数据子集。 
@@ -48,14 +48,14 @@ ms.locfileid: "85720698"
   
 - 在订阅服务器（目标）上，安装任意版本的 SQL Server，SQL Server Express 或 SQL Server Compact 除外。 本教程中创建的发布不支持 SQL Server Express 或 SQL Server Compact。 
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer 版本](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。  
+- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](../backup-restore/restore-a-database-backup-using-ssms.md)。  
  
   
 >[!NOTE]
 > - 在相差两个版本以上的 SQL Server 实例上不支持复制。 有关详细信息，请参阅[复制拓扑中受支持的 SQL Server 版本](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器  。 有关此角色的详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器  。 有关此角色的详细信息，请参阅[服务器级别角色](../security/authentication-access/server-level-roles.md)。  
   
   
 **学完本教程的估计时间：60 分钟**  
@@ -91,7 +91,7 @@ ms.locfileid: "85720698"
    >
    > 如果使用低于 SQL Server 2017 的内部版本，屏幕底部会显示一条消息，通知在双向复制中使用此列可能出现数据丢失。 对于此教程，可以忽略此消息。 但是，除非使用受支持的内部版本，否则不应在生产坏境中复制此数据类型。
    > 
-   > 有关如何复制 hierarchyid 数据类型的详细信息，请参阅[在复制中使用 Hierarchyid 列](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)  。
+   > 有关如何复制 hierarchyid 数据类型的详细信息，请参阅[在复制中使用 Hierarchyid 列](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables)  。
     
   
 7. 在“筛选表行”页上，选择“添加”，然后选择“添加筛选器”    。  
@@ -281,7 +281,6 @@ ms.locfileid: "85720698"
 - [使用快照初始化订阅](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [同步数据](../../relational-databases/replication/synchronize-data.md)  
 - [同步请求订阅](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
   
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482480"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891127"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 
@@ -38,7 +38,7 @@ ms.locfileid: "88482480"
 
 这是因为，自 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 起，所有查询优化器更改都会绑定到最新的[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)，因此计划不会在升级后立即更改，而是在用户将 `COMPATIBILITY_LEVEL` 数据库更改为最新版本后更改。 利用此功能和 Query Store，你可以在升级过程中对查询性能进行精确的控制。 
 
-若要详细了解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中引入的查询优化器变更，请参阅[使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)。
+若要详细了解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中引入的查询优化器变更，请参阅[使用 SQL Server 2014 基数估算器优化查询计划](/previous-versions/dn673537(v=msdn.10))。
 
 ### <a name="steps-to-resolve"></a>解决步骤
 
@@ -67,7 +67,7 @@ ms.locfileid: "88482480"
 5.  使用 `DISABLE_PARAMETER_SNIFFING` 提示重写查询。 完全禁用参数截取与使用本地变量方法的效果相同（除非使用 `OPTION(RECOMPILE)`、`WITH RECOMPILE` 或 `OPTIMIZE FOR <value>`）。
 
 > [!TIP] 
-> 利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 计划分析功能快速识别这是否是一个问题。 请访问[此处](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)了解更多可用信息。
+> 利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 计划分析功能快速识别这是否是一个问题。 请访问[此处](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier)了解更多可用信息。
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a>缺失索引
 
@@ -166,8 +166,8 @@ ms.locfileid: "88482480"
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他阅读主题
 
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Memory-Optimized Tables](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [用户定义函数](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[表变量和行预估 - 第 1 部分](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[表变量和行预估 - 第 2 部分](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[表变量和行预估 - 第 1 部分](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[表变量和行预估 - 第 2 部分](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [执行计划的缓存和重新使用](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

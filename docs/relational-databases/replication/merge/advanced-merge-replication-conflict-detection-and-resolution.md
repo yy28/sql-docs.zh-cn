@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901876"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867918"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "85901876"
  查看冲突最简单的方法是使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 提供的复制冲突查看器（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还提供了可以查询冲突表的存储过程）。 冲突查看器和交互式冲突解决程序是类似的工具，但交互式冲突解决程序使用户可以在同步发生时解决冲突，而冲突查看器则用于查看已解决的冲突。 如果冲突元数据仍存在于系统表中（默认情况下，冲突元数据保留 14 天），则可以覆盖冲突查看器中的冲突解决结果，但如果需要定期对其进行直接干预，则请考虑使用交互式冲突解决程序。  
   
 > [!NOTE]  
->  包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  
+>  包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../view-and-resolve-data-conflicts-for-merge-publications.md)。  
   
  冲突查看器显示来自三个系统表的信息：  
   
@@ -148,9 +148,8 @@ ms.locfileid: "85901876"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[查看和解决合并发布的数据冲突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [同步数据](../../../relational-databases/replication/synchronize-data.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989900"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867419"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -300,6 +300,5 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 - 用索引查找替换了对 IX_CustomerID 的全文检索扫描。 这样只需扫描 5 行，而全文检索扫描需要扫描 830 行。  
   
 ## <a name="see-also"></a>另请参阅  
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)  
   

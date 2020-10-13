@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116585"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810523"
 ---
 # <a name="statistics"></a>统计信息
 
@@ -121,7 +121,7 @@ ORDER BY s.name;
 可以使用以下指导在预 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 环境中启用跟踪标志 2371：
 
  - 如果你没有看到因统计信息过期而导致的性能问题，则无需启用此跟踪标志。
- - 如果你在 SAP 系统上，请启用此跟踪标志。  请参阅此[博客](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)获取其他信息。
+ - 如果你在 SAP 系统上，请启用此跟踪标志。  请参阅此[博客](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)获取其他信息。
  - 如果因为当前的自动更新触发频率不足而必须依赖于夜间作业来更新统计信息，请考虑启用跟踪标志 2371 以降低阈值。
   
 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
@@ -406,4 +406,4 @@ GO
  [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

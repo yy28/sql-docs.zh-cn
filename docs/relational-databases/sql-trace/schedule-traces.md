@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d40e02cfccc84e910650dbac4dbeab0b6edd8353
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f86e9cf97c82ead3059d846f9709aa7a0c87d99
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498453"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810806"
 ---
 # <a name="schedule-traces"></a>安排跟踪
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  在 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有两种计划跟踪的方法。 可以：  
+  在 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有两种计划跟踪的方法。 方法：  
   
 -   启用跟踪停止时间。  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88498453"
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [自动执行管理任务（SQL Server 代理）](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
-  
+ [自动执行管理任务（SQL Server 代理）](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
   

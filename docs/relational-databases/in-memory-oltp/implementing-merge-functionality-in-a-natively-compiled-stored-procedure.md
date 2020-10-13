@@ -12,12 +12,12 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd9a5bb3bf6defa117026f4743a0bb7c86639bcc
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 56ce52954589cb2e45ddfd38f241330ff8babcfc
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834788"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867893"
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>在本机编译的存储过程中实现 MERGE 功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -144,7 +144,6 @@ go
 ```
 
 ## <a name="see-also"></a>另请参阅  
- [本机编译的存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
+ [本机编译的存储过程的迁移问题](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
  [内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
-  
   

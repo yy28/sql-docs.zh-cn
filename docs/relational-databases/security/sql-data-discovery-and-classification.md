@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737036"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867760"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-数据发现和分类引入了全新工具，并将其内置于 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)，以便发现数据库中的敏感数据并对其进行分类、标记和报告   。
+数据发现和分类引入了全新工具，并将其内置于 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)，以便发现数据库中的敏感数据并对其进行分类、标记和报告   。
 发现最敏感的数据（如商业、金融、医疗等）并对其进行分类在组织的信息保护中可起到关键作用。 它可以充当基础结构，用于：
 * 帮助满足数据隐私标准。
 * 控制对包含高度敏感数据的数据库/列的访问，并加强其安全性。
 
 > [!NOTE]
-> SQL Server 2012 及更高版本支持数据发现和分类，这些功能可用于 [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更高版本。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification/)。
+> SQL Server 2012 及更高版本支持数据发现和分类，这些功能可用于 [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 或更高版本。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
 ## <a name="overview"></a><a id="subheading-1"></a>概述
 数据发现和分类引入了一套高级服务，形成了一种旨在保护各种数据（而不只是数据库）的全新 SQL 信息保护范例：
@@ -93,7 +93,7 @@ ms.locfileid: "85737036"
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>使用 SSMS 管理信息保护策略
 
-你可以使用 [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更高版本来管理信息保护策略：
+你可以使用 [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) 或更高版本来管理信息保护策略：
 
 1. 在 SQL Server Management Studio (SSMS) 中连接到 SQL Server。
 
@@ -116,7 +116,7 @@ ms.locfileid: "85737036"
 SQL Server 2019 引入了 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系统目录视图。 此视图返回信息类型和敏感度标签。 
 
 > [!NOTE]
-> 此视图需要 VIEW ANY SENSITIVITY CLASSIFICATION 权限。 有关详细信息，请参阅 [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15)。
+> 此视图需要 VIEW ANY SENSITIVITY CLASSIFICATION 权限。 有关详细信息，请参阅 [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15)。
 
 在 SQL Server 2019 实例上，查询 `sys.sensitivity_classifications` 以查看所有具有相应分类的已分类列。 例如： 
 
@@ -190,27 +190,27 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 可以使用 T-SQL 添加/删除列分类，以及检索整个数据库的所有分类。
 
-- 添加/更新一列或多列分类：[添加敏感度分类](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
-- 删除一列或多列分类：[删除敏感度分类](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+- 添加/更新一列或多列分类：[添加敏感度分类](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- 删除一列或多列分类：[删除敏感度分类](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 可以使用 PowerShell Cmdlet 添加/删除列分类，以及检索整个数据库的所有分类并获取建议。
 
-- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
 
 ---
 
 ## <a name="next-steps"></a><a id="subheading-6"></a>后续步骤
 
-有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](https://go.microsoft.com/fwlink/?linkid=866265)。
+有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/azure-sql/database/data-discovery-and-classification-overview)。
 
 请考虑通过应用列级别安全性机制来保护敏感列：
 
-* 用于模糊化使用中的敏感列的[动态数据掩码](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking)。
-* 用于静态加密敏感列的 [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine)。
+* 用于模糊化使用中的敏感列的[动态数据掩码](./dynamic-data-masking.md)。
+* 用于静态加密敏感列的 [Always Encrypted](./encryption/always-encrypted-database-engine.md)。
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 35f0b2698497c1c87ed6d54eab2dc82496318619
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 74420edaffb43ba1ea7d6ee20b7c1d12ea5d589d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932468"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005569"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -44,9 +44,9 @@ SSMA 支持以下目标版本。
 - SQL Server 2016
 - Windows 和 Linux 上的 SQL Server 2017
 - Windows 和 Linux 上的 SQL Server 2019
-- Azure SQL 数据库
+- Azure SQL Database
 - Azure SQL 托管实例
-- Azure SQL 数据仓库 * *
+- Azure Synapse Analytics * *
 
 * * 只有 SSMA for Oracle 支持此目标。
 
@@ -62,19 +62,19 @@ SSMA 支持以下目标版本。
 
 **) Microsoft SQL Server 迁移助手 (的帮助和支持：**  
   
-- **产品帮助**-若要访问产品支持，请启动 SSMA，并选择 "帮助" 菜单或按 F1 键。  
+- **产品帮助** -若要访问产品支持，请启动 SSMA，并选择 "帮助" 菜单或按 F1 键。  
   
-- **SQL Server 社区论坛**-提出 SQL Server 社区中的问题  
+- **SQL Server 社区论坛** -提出 SQL Server 社区中的问题  
   
-  - [SQL Server 社区](https://go.microsoft.com/fwlink/?LinkId=42455)-由 SQL Server 社区监视的新闻组和论坛。 此站点还列出了诸如博客和网站之类的社区信息源。  
+  - [SQL Server 社区](https://go.microsoft.com/fwlink/?LinkId=42455) -由 SQL Server 社区监视的新闻组和论坛。 此站点还列出了诸如博客和网站之类的社区信息源。  
   
-  - [SQL Server Developer 中心社区](https://go.microsoft.com/fwlink/?LinkId=42456)-对 SQL Server 开发人员有用的新闻组、论坛和其他社区资源  
+  - [SQL Server Developer 中心社区](https://go.microsoft.com/fwlink/?LinkId=42456) -对 SQL Server 开发人员有用的新闻组、论坛和其他社区资源  
   
-- **辅助支持**-请参阅 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 并搜索 "SQL Server 迁移助手"。  选择你的版本，然后选择 "启动请求"。  SQL Server 迁移助手工具附带了辅助支持。  
+- **辅助支持** -请参阅 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 并搜索 "SQL Server 迁移助手"。  选择你的版本，然后选择 "启动请求"。  SQL Server 迁移助手工具附带了辅助支持。  
   
-- **顶级支持**-如果你拥有顶级合同，则可以在[premier Online 门户](https://premier.microsoft.com/)上获得顶级支持。  
+- **顶级支持** -如果你拥有顶级合同，则可以在 [premier Online 门户](https://premier.microsoft.com/)上获得顶级支持。  
   
-- **咨询服务**-对于合作伙伴辅助迁移，请参阅[Azure 数据库迁移指南](https://datamigration.microsoft.com/)。
+- **咨询服务** -对于合作伙伴辅助迁移，请参阅 [Azure 数据库迁移指南](https://datamigration.microsoft.com/)。
   
 ## <a name="legal-notice-ssma"></a>法律通告 (SSMA)
 

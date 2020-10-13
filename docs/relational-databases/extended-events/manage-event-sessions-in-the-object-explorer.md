@@ -11,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90efcea33406b176706ce8d6fe0196d3c825fb3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 802ef2c4b7c73847e1c3de3cdc67516a9d35f2e3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727318"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868548"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
 
@@ -37,7 +37,7 @@ ms.locfileid: "85727318"
 -   删除扩展事件会话  
   
 ## <a name="create-an-extended-events-session"></a>创建扩展事件会话  
- 有关创建扩展事件会话的详细信息，请参阅 [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)。  
+ 有关创建扩展事件会话的详细信息，请参阅 [Create an Extended Events Session](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>开始或停止扩展事件会话  
  您可以通过 **“查询编辑器”** 使用 **ALTER EVENT SESSION** 语句，或者通过使用 **“对象资源管理器”** 中的 **“扩展事件”** 节点，启动或停止扩展事件会话。  
@@ -152,5 +152,4 @@ STATE = STOP
 DROP EVENT SESSION [session_name]  
 ON SERVER  
 ```  
-  
   

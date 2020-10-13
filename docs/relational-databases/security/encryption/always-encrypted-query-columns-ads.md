@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493811"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866697"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>通过 Azure Data Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-本文介绍如何使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 查询使用 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的列。 使用 Azure Data Studio，可以执行以下操作：
+本文介绍如何使用 [Azure Data Studio](../../../azure-data-studio/what-is.md) 查询使用 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的列。 使用 Azure Data Studio，可以执行以下操作：
 - 检索存储在加密列中的密码文本值。 
 - 检索存储在加密列中的纯文本值。  
 - 发送定目标到加密列的纯文本值（例如，在 `INSERT` 或 `UPDATE` 语句中，以及作为 `SELECT` 语句中 `WHERE` 子句的查找参数）。 
@@ -113,7 +113,7 @@ ms.locfileid: "88493811"
 
 ## <a name="parameterization-for-always-encrypted"></a>Always Encrypted 参数化
 
-Always Encrypted 参数化是 Azure Data Studio 18.1 和更高版本中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（[SqlParameter 类](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)的实例）。 这允许 [SQL Server 的基础 Microsoft .NET 数据提供程序](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。
+Always Encrypted 参数化是 Azure Data Studio 18.1 和更高版本中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（[SqlParameter 类](/dotnet/api/microsoft.data.sqlclient.sqlparameter)的实例）。 这允许 [SQL Server 的基础 Microsoft .NET 数据提供程序](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。
   
 如果没有进行参数化，SQL Server 的 Microsoft .NET 数据提供程序会传递你在查询窗口中编写的每个声明，作为非参数化查询。 如果查询包含定目标到加密列的文本或 Transact-SQL 变量，用于 SQL Server 的 .NET Framework 数据提供程序便无法在将查询发送到数据库之前检测和加密它们。 结果由于纯文本文字 Transact-SQL 变量和加密列之间的类型不匹配，查询将失败。 例如，假定 `SSN` 列已加密，如果没有参数化，以下查询将失败。   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio 使用 Intellisense 来通知你哪些参数可成功进行参数化而哪些参数化尝试会失败（及其原因）。   
 
-可成功进行参数化的变量声明在查询窗口中使用信息消息下划线进行标记。 如果将鼠标悬停在带有信息消息下划线标记的声明语句之上，便会看到包含参数化过程结果的消息，其中包括生成的 [SqlParameter 类](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)对象的键属性值（该变量映射到：[SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)、[Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size)、[Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision)、[Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale)、[SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)）。 “问题”视图中还会显示已成功进行参数化的所有变量的完整列表。 若要打开“问题”视图，请选择“视图” > “问题”  。    
+可成功进行参数化的变量声明在查询窗口中使用信息消息下划线进行标记。 如果将鼠标悬停在带有信息消息下划线标记的声明语句之上，便会看到包含参数化过程结果的消息，其中包括生成的 [SqlParameter 类](/dotnet/api/microsoft.data.sqlclient.sqlparameter)对象的键属性值（该变量映射到：[SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)、[Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size)、[Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision)、[Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale)、[SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)）。 “问题”视图中还会显示已成功进行参数化的所有变量的完整列表。 若要打开“问题”视图，请选择“视图” > “问题”  。    
 
 
 

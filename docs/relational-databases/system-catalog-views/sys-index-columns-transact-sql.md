@@ -1,6 +1,6 @@
 ---
 description: sys.index_columns (Transact-SQL)
-title: sys. index_columns (Transact-sql) |Microsoft Docs
+title: sys.index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dccbbac037400f0addda79c3fc61adfb0b971f3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e77661ec4ddd9a53a5279dd433d20ab58e4263d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546790"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006528"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "89546790"
 |**key_ordinal**|**tinyint**|键列集内的序数（从 1 开始）。<br /><br /> 0 = 不是键列，或者是 XML 索引、列存储索引或空间索引。<br /><br /> 注意： XML 索引或空间索引不能是键，因为基础列不是可比较的，这意味着不能对其值进行排序。|  
 |**partition_ordinal**|**tinyint**|分区列集内的序数（从 1 开始）。 聚集列存储索引可以具有最多 1 个分区列。<br /><br /> 0 = 非分区列。|  
 |**is_descending_key**|**bit**|1 = 索引键列采用降序排序。<br /><br /> 0 = 索引键列的排序方向为升序，或者列是列存储或哈希索引的一部分。|  
-|**is_included_column**|**bit**|1 = 列是使用 CREATE INDEX INCLUDE 子句添加到索引的非键列，或者列是列存储索引的一部分。<br /><br /> 0 = 列不是包含列。<br /><br /> 因为列是聚集键的一部分而隐式添加的列未列在 **index_columns**中。<br /><br /> 由于是分区列而隐式添加的列作为 0 返回。| 
-|**column_store_order_ordinal**</br> 适用于： Azure SQL 数据仓库 (预览) |**tinyint**|排序的聚集列存储索引中顺序列组内基于 1 (的) 。|
+|**is_included_column**|**bit**|1 = 列是使用 CREATE INDEX INCLUDE 子句添加到索引的非键列，或者列是列存储索引的一部分。<br /><br /> 0 = 列不是包含列。<br /><br /> 因为列是聚集键的一部分而隐式添加的列未在 **sys.index_columns**中列出。<br /><br /> 由于是分区列而隐式添加的列作为 0 返回。| 
+|**column_store_order_ordinal**</br> 适用于： Azure Synapse Analytics (预览版) |**tinyint**|排序的聚集列存储索引中顺序列组内基于 1 (的) 。|
   
 ## <a name="permissions"></a>权限
 

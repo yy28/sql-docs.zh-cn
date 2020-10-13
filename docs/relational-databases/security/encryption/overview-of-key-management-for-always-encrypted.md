@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784009"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867608"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 密钥管理概述
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85784009"
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>管理“始终加密”密钥的工具
 
-可以使用 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](../../scripting/sql-server-powershell.md)管理“始终加密”密钥：
+可以使用 [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) 和 [PowerShell](../../../powershell/sql-server-powershell.md)管理“始终加密”密钥：
 
 - **SQL Server Management Studio (SSMS)** - 通过对话框和向导合并涉及密钥存储访问和数据库访问的任务，因此 SSMS 不支持角色分离，但是它会让你的密钥配置很轻松。 有关使用 SSMS 管理密钥的详细信息，请参阅：
     - [使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)
@@ -101,9 +101,5 @@ ms.locfileid: "85784009"
 
 ## <a name="see-also"></a>另请参阅
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [始终加密向导教程（Azure 密钥保管库）](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [始终加密向导教程（Windows 证书存储）](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [始终加密向导教程（Azure 密钥保管库）](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [始终加密向导教程（Windows 证书存储）](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
