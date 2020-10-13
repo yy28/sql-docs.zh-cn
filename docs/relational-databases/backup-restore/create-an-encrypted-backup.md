@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748431"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809251"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85748431"
   
  **先决条件：**  
   
--   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Azure 存储对象](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
+-   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Azure 存储对象](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130))。  
   
 -   master 数据库的数据库主密钥以及 SQL Server 实例上的证书或非对称密钥。 有关加密要求和权限，请参阅 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)。  
   
@@ -129,5 +129,4 @@ ms.locfileid: "85748431"
     GO  
   
     ```  
-  
   

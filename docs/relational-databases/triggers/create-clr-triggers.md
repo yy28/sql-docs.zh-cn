@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3d7218b9d2524fd2312ea0364268821524eb926
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2c78991ea408f6b6b23169524280d834cf5c27a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446360"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809283"
 ---
 # <a name="create-clr-triggers"></a>创建 CLR 触发器
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88446360"
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建 CLR 触发器（DML 或 DDL）包括以下步骤：  
   
--   使用 .NET Framework 支持的语言将触发器定义为类。 有关如何在 CLR 中对触发器进行编程的详细信息，请参阅 [CLR 触发器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)。 然后，使用相应的语言编译器编译该类，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中生成程序集。  
+-   使用 .NET Framework 支持的语言将触发器定义为类。 有关如何在 CLR 中对触发器进行编程的详细信息，请参阅 [CLR 触发器](/dotnet/framework/data/adonet/sql/clr-triggers)。 然后，使用相应的语言编译器编译该类，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中生成程序集。  
   
 -   使用 CREATE ASSEMBLY 语句在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册程序集。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的程序集的详细信息，请参阅[程序集（数据库引擎）](../../relational-databases/clr-integration/assemblies-database-engine.md)。  
   
@@ -55,5 +55,4 @@ ms.locfileid: "88446360"
  [DML 触发器](../../relational-databases/triggers/dml-triggers.md)   
  [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
  [从 CLR 数据库对象进行数据访问](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
-  
   

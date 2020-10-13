@@ -12,12 +12,12 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7457f974820d1438d2e6d0293d31562c8c5f6a64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c89850acc4457dbabc3ff1340675daac036ee32
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722474"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868499"
 ---
 # <a name="migrating-triggers"></a>迁移触发器
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,6 +36,5 @@ ms.locfileid: "85722474"
  如果对 CREATE_PROCEDURE、DROP_PROCEDURE 或包含这些事件的任何事件组有一个或多个 DDL 触发器，则不能创建本机编译的存储过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [迁移到内存中 OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

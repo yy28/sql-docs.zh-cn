@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b75085f8b5c01ad5257f5bc165f32be7a7a91902
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748427"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809231"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>创建凭据 - 向 Azure 存储进行身份验证
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85748427"
   
 ## <a name="azure-credentials"></a>Azure 凭据  
  **管理证书**  
- 可使用此选项从本地证书存储指定与 Azure 管理证书匹配的证书。 有关 Azure 管理证书的详细信息，请参阅[创建并上载 Azure 的管理证书](https://go.microsoft.com/fwlink/?LinkId=320781)。  
+ 可使用此选项从本地证书存储指定与 Azure 管理证书匹配的证书。 有关 Azure 管理证书的详细信息，请参阅[创建并上载 Azure 的管理证书](/previous-versions/azure/gg551722(v=azure.100))。  
   
  **订阅**  
  选择、键入或粘贴与本地证书存储中的管理证书匹配的 Azure 订阅 ID。  
@@ -44,5 +44,4 @@ ms.locfileid: "85748427"
   
 ## <a name="storage-account"></a>存储帐户  
  选择要用于存储备份文件的存储帐户。  
-  
   

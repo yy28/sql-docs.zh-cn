@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498597"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867455"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88498597"
 |类型|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|假设的文件类型，基于其规范类型。|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|项的标题。 例如，文档的标题、邮件的主题、照片的题注或音乐曲目的名称。|  
   
- 为了提倡在文件格式之间保持一致性，Microsoft 为几类文档确定了部分常用的高优先级文档属性。 其中包括通信、联系人、文档、音乐文件、图片和视频。 有关每个类别排名靠前的属性的详细信息，请参阅 Windows 搜索文档中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) （自定义文件格式的系统定义属性）。  
+ 为了提倡在文件格式之间保持一致性，Microsoft 为几类文档确定了部分常用的高优先级文档属性。 其中包括通信、联系人、文档、音乐文件、图片和视频。 有关每个类别排名靠前的属性的详细信息，请参阅 Windows 搜索文档中的 [system-defined properties for custom file formats](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) （自定义文件格式的系统定义属性）。  
   
  特定的文件格式可能实现三种类型的属性：  
   
@@ -84,9 +84,9 @@ propID = 4
 ...  
 ```  
   
- 有关该属性的完整说明，请参阅 Windows 搜索文档中的 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 。  
+ 有关该属性的完整说明，请参阅 Windows 搜索文档中的 [System.Author](/windows/win32/properties/props-system-author) 。  
   
- 有关 Windows 属性的完整列表，请参阅也在 Windows 搜索文档中的 [Windows 属性](https://go.microsoft.com/fwlink/?LinkId=215013)。  
+ 有关 Windows 属性的完整列表，请参阅也在 Windows 搜索文档中的 [Windows 属性](/windows/win32/properties/props)。  
   
 ##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> 将属性添加到搜索属性列表  
  下面的示例说明如何将属性添加到搜索属性列表中。 该示例使用 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 语句将 `System.Author` 属性添加到名为 `PropertyList1`的搜索属性列表，并为属性 `Author`提供用户友好名称。  
@@ -107,5 +107,4 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

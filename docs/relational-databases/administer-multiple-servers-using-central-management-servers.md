@@ -18,12 +18,12 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9fcf805dc2c4ff9e639b43e0d6ea455d3aa439fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 73f2e9153ebfc204a0f63a6f8aea305815da4e59
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915703"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810722"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>使用中央管理服务器管理多台服务器
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,8 @@ ms.locfileid: "86915703"
 ## <a name="create-central-management-server-and-server-groups"></a>创建中央管理服务器和服务器组 
  若要创建中央管理服务器和服务器组，请使用 **中的** “已注册的服务器” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]窗口。 请注意，中央管理服务器不能是它所维护的组的成员。 
  
- 有关如何创建中央管理服务器和服务器组的信息，请参阅[创建中央管理服务器和服务器组 (SQL Server Management Studio)](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)。  
+ 有关如何创建中央管理服务器和服务器组的信息，请参阅[创建中央管理服务器和服务器组 (SQL Server Management Studio)](../ssms/register-servers/create-a-central-management-server-and-server-group.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10c344ac156a59dda89e678709e6b846bf3c33a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cededc3af0cb9c5e1980246ef67491c7e68fc960
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541166"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868147"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>创建内存优化表和本机编译的存储过程
 
@@ -42,7 +42,7 @@ ms.locfileid: "89541166"
 
 ### <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程
 
-本机编译的存储过程是编译为本机代码且访问内存优化表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 通过本机编译的存储过程，可在存储过程中高效执行查询和业务逻辑。 有关本机编译过程的更详细信息，请参阅 [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md)。 有关将基于磁盘的存储过程迁移到本机编译的存储过程的详细信息，请参阅 [本机编译的存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。
+本机编译的存储过程是编译为本机代码且访问内存优化表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 通过本机编译的存储过程，可在存储过程中高效执行查询和业务逻辑。 有关本机编译过程的更详细信息，请参阅 [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md)。 有关将基于磁盘的存储过程迁移到本机编译的存储过程的详细信息，请参阅 [本机编译的存储过程的迁移问题](./a-guide-to-query-processing-for-memory-optimized-tables.md)。
 
 > [!NOTE]
 > 解释型（基于磁盘的）存储过程与本机编译的存储过程之间的一个区别在于解释型存储过程是在首次执行时编译的，而本机编译的存储过程是在创建时编译的。 对于本机编译的存储过程，可在创建时检测到许多错误情况（例如算术溢出、类型转换和一些被零除的情况），并且将导致本机编译的存储过程的创建失败。 对于解释型存储过程，在创建存储过程时这些错误情况通常不会导致失败，但所有执行都将失败。
@@ -291,6 +291,5 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [内存中 OLTP 代码示例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [内存中 OLTP 代码示例](./sample-database-for-in-memory-oltp.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723108"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866615"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 
@@ -143,7 +143,7 @@ ms.locfileid: "85723108"
 
 在这种情况下，最佳做法是对 `(CustomerCategoryID, CustomerId)` 使用非聚集索引。 此索引可用于使用涉及 `CustomerCategoryID` 的谓词的查询，但索引键不包含重复项。 因此，重复的 CustomerCategoryID 值或索引中额外的列不会导致低效的索引维护。
 
-下面的查询显示表 `CustomerCategoryID` 中的 `Sales.Customers`索引的平均重复索引键值数，该表位于示例数据库 [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md)中。
+下面的查询显示表 `CustomerCategoryID` 中的 `Sales.Customers`索引的平均重复索引键值数，该表位于示例数据库 [WideWorldImporters](../../samples/wide-world-importers-what-is.md)中。
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ WHERE col1 = 'dn';
  [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
  [内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

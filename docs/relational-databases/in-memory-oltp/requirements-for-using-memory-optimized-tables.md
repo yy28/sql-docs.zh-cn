@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62e63082d016d36855cd6a9e9f6067257bc6c77c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 796a0423da44917251fa87828c71d0e47092d028
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551566"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867055"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  若要了解如何在 Azure DB 中使用内存中 OLTP，请参阅 [Get started with In-Memory in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)（在 SQL 数据库中使用内存中功能入门）。  
+  若要了解如何在 Azure DB 中使用内存中 OLTP，请参阅 [Get started with In-Memory in SQL Database](/azure/azure-sql/in-memory-oltp-overview)（在 SQL 数据库中使用内存中功能入门）。  
   
  除了需要满足 [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)外，还要满足以下使用内存中 OLTP 的要求：  
   
@@ -59,4 +59,3 @@ ms.locfileid: "89551566"
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)  
  [内存体系结构指南](../../relational-databases/memory-management-architecture-guide.md)
-  

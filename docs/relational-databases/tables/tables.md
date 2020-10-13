@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 588b33d51a2a3814c3be8ddf3b083050df856c41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55fdb422e4a8dd35a23e8e637cabd165729c97b0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488579"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809973"
 ---
 # <a name="tables"></a>表
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88488579"
 
 ### <a name="system-tables"></a>系统表
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将定义服务器配置及其所有表的数据存储在一组特殊的表中，这组表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将定义服务器配置及其所有表的数据存储在一组特殊的表中，这组表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](../../t-sql/language-reference.md)。 
  
 ### <a name="wide-tables"></a>宽表
 
@@ -103,5 +103,3 @@ ms.locfileid: "88488579"
 
 ## <a name="see-also"></a>另请参阅
  [主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [唯一约束和 CHECK 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
-
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e7e7ba7e0e3f526c69026b9f759937d7329d50c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472907"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811071"
 ---
 # <a name="create-clr-functions"></a>创建 CLR 函数
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88472907"
 -   [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>访问本机代码  
- 通过使用托管代码中的 PInvoke，可以使用 CLR 函数来访问本机（非托管）代码，如用 C 或 C++ 编写的代码（有关详细信息，请参阅 [从托管代码调用本机函数](https://go.microsoft.com/fwlink/?LinkID=181929) ）。 这样，您就可以重新将旧代码用作 CLR UDF，或在本机代码中使用性能关键的 UDF。 这要求使用 UNSAFE（非安全）程序集。 有关使用 UNSAFE 程序集的注意事项，请参阅 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
+ 通过使用托管代码中的 PInvoke，可以使用 CLR 函数来访问本机（非托管）代码，如用 C 或 C++ 编写的代码（有关详细信息，请参阅 [从托管代码调用本机函数](/cpp/dotnet/calling-native-functions-from-managed-code) ）。 这样，您就可以重新将旧代码用作 CLR UDF，或在本机代码中使用性能关键的 UDF。 这要求使用 UNSAFE（非安全）程序集。 有关使用 UNSAFE 程序集的注意事项，请参阅 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
@@ -64,5 +64,4 @@ ms.locfileid: "88472907"
  [执行用户定义函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   
  [查看用户定义函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)   
  [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

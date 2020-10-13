@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627446"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866684"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>使用 Always Encrypted 向导配置列加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ Always Encrypted 向导是一个功能强大的工具，可让你为所选数据
 建议使用 PowerShell 
 
  - 有关显示如何使用向导配置 Always Encrypted 并在客户端应用程序中使用它的端到端演练，请参阅以下 Azure SQL 数据库教程：
-    - [使用 Always Encrypted 和 Windows 证书存储中的列主密钥保护 Azure SQL 数据库中的敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [使用 Always Encrypted 和 Azure Key Vault 中的列主密钥保护 Azure SQL 数据库中的敏感数据](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [使用 Always Encrypted 和 Windows 证书存储中的列主密钥保护 Azure SQL 数据库中的敏感数据](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+    - [使用 Always Encrypted 和 Azure Key Vault 中的列主密钥保护 Azure SQL 数据库中的敏感数据](/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - 有关包括使用该向导的视频，请参阅 [使用始终加密保持敏感数据的安全](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，还可参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全团队博客 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545)（SSMS 加密向导 - 用几个简单的步骤启用 Always Encrypted）。  
  - 有关 Always Encrypted 密钥的信息，请参阅 [Always Encrypted 密钥管理概述](overview-of-key-management-for-always-encrypted.md)。

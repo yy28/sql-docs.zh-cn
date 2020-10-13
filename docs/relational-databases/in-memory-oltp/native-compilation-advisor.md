@@ -15,23 +15,23 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722450"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868533"
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   借助事务性能分析报告，你可以了解数据库中的哪些已解释的存储过程在移植后使用本机编译会给你带来好处。 有关详细信息，请参阅 [确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)。  
   
- 确定要在移植后使用本机编译的存储过程后，你可以使用本机编译顾问 (NCA) 来帮助你将已解释的存储过程迁移到本地编译。 有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 确定要在移植后使用本机编译的存储过程后，你可以使用本机编译顾问 (NCA) 来帮助你将已解释的存储过程迁移到本地编译。 有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)。  
   
  在给定的已解释的存储过程中，NCA 可方便你确定本机模块不支持的所有功能。 NCA 提供解决方法或解决方案的文档链接。  
   
- 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](/previous-versions/dn673538(v=msdn.10))。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用本机编译顾问的演练  
  在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”** 。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击“下一步”以继续。  
@@ -105,7 +105,6 @@ SELECT * from SalesOrders;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
+ [迁移到内存中 OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
  [使用内存优化表的要求](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
   

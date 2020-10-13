@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24ebd7d212b125d5cce1e39aab0427c35784eefc
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759103"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809743"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>从 Microsoft Azure 中存储的备份还原
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "85759103"
 -   还原任务用于使用 SQL Server Management Studio 还原数据库。 备份介质页现在包含“URL”选项，可以显示存储在 Azure Blob 存储服务中的备份文件。 您还必须提供用于对存储帐户进行身份验证的 SQL 凭据。 随后，使用 Azure Blob 存储中的可用备份填充“要还原的备份集”网格。 有关详细信息，请参阅[使用 SQL Server Management Studio 从 Azure 存储还原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
   
 ### <a name="optimizing-restores"></a>优化还原  
- 要减小还原写入时间，请将 **“执行卷维护任务”** 用户权限添加到 SQL Server 用户帐户。 有关详细信息，请参阅 [数据库文件初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果在开启即时文件初始化后还原操作仍很慢，请查看执行数据库备份的实例的日志文件的大小。 如果日志非常大（好几 GB），则还原操作慢是正常的。 在还原过程中，必须清空日志文件，这需要花费相当多的时间。  
+ 要减小还原写入时间，请将 **“执行卷维护任务”** 用户权限添加到 SQL Server 用户帐户。 有关详细信息，请参阅 [数据库文件初始化](/previous-versions/sql/sql-server-2008-r2/ms175935(v=sql.105))。 如果在开启即时文件初始化后还原操作仍很慢，请查看执行数据库备份的实例的日志文件的大小。 如果日志非常大（好几 GB），则还原操作慢是正常的。 在还原过程中，必须清空日志文件，这需要花费相当多的时间。  
   
- 要减少还原次数，建议使用压缩的备份。  对于大小超过 25 GB 的备份，请使用 [AzCopy 实用工具](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) 下载到本地驱动器，然后执行还原。 有关其他备份最佳实践和建议，请参阅 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
+ 要减少还原次数，建议使用压缩的备份。  对于大小超过 25 GB 的备份，请使用 [AzCopy 实用工具](/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) 下载到本地驱动器，然后执行还原。 有关其他备份最佳实践和建议，请参阅 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
  在执行还原操作时，也可开启跟踪标志 3051，以生成详细日志。 此日志文件放置在日志目录中，以下面的格式命名：BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log。 日志文件包含每次往返 Azure 存储的相关信息（包括计时），这在诊断问题时可能非常有用。  
   
@@ -57,5 +57,4 @@ ms.locfileid: "85759103"
 -   [文件还原（完整恢复模式）](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)  
   
 -   [段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

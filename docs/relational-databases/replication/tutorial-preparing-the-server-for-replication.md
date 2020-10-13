@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ae1dddb8ac5b84bea8a602264c43797b2b041e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f9cbaaca472c6b63d0196cb2f751e28b184e206
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726034"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868392"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教程：为复制准备 SQL Server（发布服务器、分发服务器、订阅服务器）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "85726034"
   
 - 订阅服务器（目标）上，安装任意版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssEW](../../includes/ssew-md.md)] 除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 不能充当事务复制中的订阅服务器。  
   
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer 版本](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](../backup-restore/restore-a-database-backup-using-ssms.md)。 
     
 >[!NOTE]
 > - 在相差两个版本以上的 SQL Server 实例上不支持复制。 有关详细信息，请参阅[复制拓扑中受支持的 SQL Server 版本](replication-backward-compatibility.md)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器  。 有关此角色的详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器  。 有关此角色的详细信息，请参阅[服务器级别角色](../security/authentication-access/server-level-roles.md)。  
 
 
 **学完本教程的估计时间：30 分钟**
@@ -247,5 +247,4 @@ ms.locfileid: "85726034"
 > [!div class="nextstepaction"]
 > [教程：在两个完全连接的服务器之间配置复制（事务）](tutorial-replicating-data-between-continuously-connected-servers.md)
 
-  
   

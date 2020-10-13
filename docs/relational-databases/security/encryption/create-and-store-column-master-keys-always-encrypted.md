@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765052"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867826"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>创建并存储 Always Encrypted 的列主密钥
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 创建自签名证书
 
 有关详细信息，请参阅[使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)。
-有关使用 SSMS 并在 Windows 证书存储中存储“始终加密”密钥的分布式教程，请参阅 [《Always Encrypted Wizard tutorial (Windows Certificate Store)》](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)（始终加密向导教程（Windows 证书存储））。
+有关使用 SSMS 并在 Windows 证书存储中存储“始终加密”密钥的分布式教程，请参阅 [《Always Encrypted Wizard tutorial (Windows Certificate Store)》](/azure/azure-sql/database/always-encrypted-certificate-store-configure)（始终加密向导教程（Windows 证书存储））。
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>使证书可用于应用程序和用户
@@ -104,7 +104,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>创建 Azure 密钥保管库中的列主密钥
 
-Azure 密钥保管库有助于保护加密密钥和机密，是用于存储“始终加密”的列主密钥的便利选项，尤其是当你的应用程序在 Azure 中托管时。 若要在 [Azure 密钥保管库](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)中创建密钥，需要有 [Azure 订阅](https://azure.microsoft.com/free/) 和 Azure 密钥保管库。
+Azure 密钥保管库有助于保护加密密钥和机密，是用于存储“始终加密”的列主密钥的便利选项，尤其是当你的应用程序在 Azure 中托管时。 若要在 [Azure 密钥保管库](/azure/key-vault/general/overview)中创建密钥，需要有 [Azure 订阅](https://azure.microsoft.com/free/) 和 Azure 密钥保管库。
 
 ### <a name="using-powershell"></a>使用 PowerShell
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS)
 
 有关如何使用 SSMS 在 Azure Key Vault 中创建列主密钥的详细信息，请参阅[使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)。
-有关使用 SSMS 并在 Azure 密钥保管库中存储“始终加密”密钥的分布式教程，请参阅 [《Always Encrypted Wizard tutorial (Azure Key Vault)》](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault)（始终加密向导教程（Azure 密钥保管库））。
+有关使用 SSMS 并在 Azure 密钥保管库中存储“始终加密”密钥的分布式教程，请参阅 [《Always Encrypted Wizard tutorial (Azure Key Vault)》](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)（始终加密向导教程（Azure 密钥保管库））。
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>使 Azure 密钥保管库密钥可用于应用程序和用户
 
@@ -138,7 +138,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 
 #### <a name="using-powershell"></a>使用 PowerShell
 
-若要使用户和应用程序能够访问 Azure Key Vault 中的实际密钥，必须设置保管库访问策略 ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))：
+若要使用户和应用程序能够访问 Azure Key Vault 中的实际密钥，必须设置保管库访问策略 ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))：
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ Windows 包含以下基于软件的（不受 HSM 支持）支持 RSA 且可用�
   
 ## <a name="see-also"></a>另请参阅 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

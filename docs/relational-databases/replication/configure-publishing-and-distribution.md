@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863336"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866569"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "87863336"
 
 5. 通过调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法安装分布服务器。 指定安全密码（在连接到远程分发服务器时由发布服务器使用）和步骤 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象。 有关详细信息，请参阅[保护分发服务器的安全](../../relational-databases/replication/security/secure-the-distributor.md)。
 
-   > `IMPORTANT!!` 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。
+   > `IMPORTANT!!` 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](/previous-versions/aa719848(v=vs.71)) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。
 
 6. 创建的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。
 
@@ -158,7 +158,7 @@ ms.locfileid: "87863336"
 11. 调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 传递远程分发服务器的名称和在步骤 5 中指定的远程分发服务器的密码。
 
 > [!IMPORTANT]
-> 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 Windows .NET Framework 提供的 [Cryptographic Services](https://go.microsoft.com/fwlink/?LinkId=34733) （加密服务）。
+> 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 Windows .NET Framework 提供的 [Cryptographic Services](/previous-versions/aa719848(v=vs.71)) （加密服务）。
 
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> 示例 (RMO) 
 可以通过使用复制管理对象 (RMO) 以编程方式配置复制发布和分发。
@@ -172,6 +172,4 @@ ms.locfileid: "87863336"
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [配置分发](../../relational-databases/replication/configure-distribution.md)  
 [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[为 AlwaysOn 可用性组配置复制 (SQL Server)](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[为 AlwaysOn 可用性组配置复制 (SQL Server)](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

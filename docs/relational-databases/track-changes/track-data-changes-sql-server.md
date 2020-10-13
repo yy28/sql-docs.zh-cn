@@ -21,12 +21,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ac9ba37fae91916675a8a8edb4dfe904306112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463786"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810718"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "88463786"
   
      介绍更改跟踪，提供更改跟踪工作方式的概要说明，并描述更改跟踪如何与其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能进行交互。  
   
--   [Microsoft Sync Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework 开发人员中心](/previous-versions/sql/synchronization/mt490616(v=msdn.10))  
   
      提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文档。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文档中，“如何使用 SQL Server 更改跟踪”主题包含了详细信息和代码示例。  
   
@@ -176,7 +176,5 @@ ms.locfileid: "88463786"
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [更改数据捕获存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [变更数据捕获表 (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [与变更数据捕获相关的动态管理视图 (Transact-SQL)](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [与变更数据捕获相关的动态管理视图 (Transact-SQL)](../system-dynamic-management-views/system-dynamic-management-views.md)  
   
-  
-

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448062"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867940"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
@@ -34,7 +34,7 @@ ms.locfileid: "88448062"
 
 如果不再需要无法访问的数据库，可以立即删除它，以停止产生成本。 在恢复对 Azure Key Vault 密钥的访问权限，且数据库恢复联机之前，不允许对数据库执行其他任何操作。 在无法访问使用客户托管密钥加密的数据库期间，也不可能在服务器上将 TDE 选项从客户托管密钥更改为服务托管密钥。 这是必要的，可以在对 TDE 保护程序的权限遭撤销期间保护数据免遭未经授权的访问。 
 
-如果数据库无法访问的时长超过 8 小时，便无法再自动恢复。 如果那期间之后所需的 Azure Key Vault 密钥访问已恢复，必须手动重新验证对密钥的访问，这样数据库才能恢复联机。 在这种情况下让数据库恢复联机可能需要相当长的时间（具体视数据库大小而定）。 在数据库恢复联机后，以前配置的设置（如[故障转移组](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group)、PITR 历史记录和任何标记）则会丢失  。 因此，建议使用[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)实现通知系统，以便尽快了解并解决基础密钥保管库密钥访问问题。 
+如果数据库无法访问的时长超过 8 小时，便无法再自动恢复。 如果那期间之后所需的 Azure Key Vault 密钥访问已恢复，必须手动重新验证对密钥的访问，这样数据库才能恢复联机。 在这种情况下让数据库恢复联机可能需要相当长的时间（具体视数据库大小而定）。 在数据库恢复联机后，以前配置的设置（如[故障转移组](/azure/sql-database/sql-database-auto-failover-group)、PITR 历史记录和任何标记）则会丢失  。 因此，建议使用[操作组](/azure/azure-monitor/platform/action-groups)实现通知系统，以便尽快了解并解决基础密钥保管库密钥访问问题。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>导致数据库无法访问的常见错误
 
@@ -68,17 +68,17 @@ ms.locfileid: "88448062"
 
 使用下面的 cmdlet 或命令，以确保已向逻辑 SQL Server 实例分配标识：
 
-- Azure PowerShell：[Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell：[Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Azure CLI：[az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI：[az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 **缓解**
 
 使用下面的 cmdlet 或命令，以配置逻辑 SQL Server 实例的 Azure AD 标识 (AppId)：
 
-- Azure PowerShell：[Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)（含 `-AssignIdentity` 选项）。
+- Azure PowerShell：[Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)（含 `-AssignIdentity` 选项）。
 
-- Azure CLI：[az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)（含 `--assign_identity` 选项）。
+- Azure CLI：[az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)（含 `--assign_identity` 选项）。
 
 在 Azure 门户中，依次转到密钥保管库和“访问策略”  。 完成以下步骤： 
 
@@ -103,9 +103,9 @@ ms.locfileid: "88448062"
 
 1. 使用下面的 cmdlet 或命令，以获取具体逻辑 SQL Server 实例的密钥 URI：
 
-    - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI：[az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI：[az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. 使用密钥 URI 来标识密钥保管库：
 
@@ -165,7 +165,7 @@ ms.locfileid: "88448062"
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>从活动日志中获取 TDE 状态
 
-为了监视由于 Azure Key Vault 密钥访问问题而导致的数据库状态，以下事件将根据 Azure 资源管理器 URL 和 Subscription+Resourcegroup+ServerName+DatabaseName 记录到[活动日志](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)中，以获取资源 ID： 
+为了监视由于 Azure Key Vault 密钥访问问题而导致的数据库状态，以下事件将根据 Azure 资源管理器 URL 和 Subscription+Resourcegroup+ServerName+DatabaseName 记录到[活动日志](/azure/service-health/alerts-activity-log-service-notifications)中，以获取资源 ID： 
 
 **当服务失去对 Azure Key Vault 密钥的访问权限时发生的事件**
 
@@ -238,7 +238,5 @@ ms.locfileid: "88448062"
 
 ## <a name="next-steps"></a>后续步骤
 
-- 了解 [Azure 资源运行状况](https://docs.microsoft.com/azure/service-health/resource-health-overview)。
-- 将[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)设置为，根据偏好设置（例如，电子邮件/短信/推送/语音、逻辑应用、Webhook、ITSM 或自动化 Runbook）接收通知和警报。 
-
-
+- 了解 [Azure 资源运行状况](/azure/service-health/resource-health-overview)。
+- 将[操作组](/azure/azure-monitor/platform/action-groups)设置为，根据偏好设置（例如，电子邮件/短信/推送/语音、逻辑应用、Webhook、ITSM 或自动化 Runbook）接收通知和警报。

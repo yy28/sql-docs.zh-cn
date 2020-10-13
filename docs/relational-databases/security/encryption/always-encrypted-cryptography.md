@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627554"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866921"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85627554"
   
  列加密密钥 (CEK) 是受 CMK 保护的内容加密密钥（例如，用于保护数据的密钥）。  
   
- 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存储提供程序都通过将 RSA 与最佳非对称加密填充 (RSA-OAEP) 配合使用来加密 CEK。 支持 Microsoft 加密 API 的密钥存储提供程序：.NET Framework 中的下一代加密技术 (CNG) ([SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) 使用 A.2.1 节中 RFC 8017 指定的默认参数。 这些默认参数使用 SHA-1 哈希函数和 SHA-1 附带的 MGF1 掩码生成函数。 其他所有密钥存储提供程序都使用 SHA-256。 
+ 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存储提供程序都通过将 RSA 与最佳非对称加密填充 (RSA-OAEP) 配合使用来加密 CEK。 支持 Microsoft 加密 API 的密钥存储提供程序：.NET Framework 中的下一代加密技术 (CNG) ([SqlColumnEncryptionCngProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) 使用 A.2.1 节中 RFC 8017 指定的默认参数。 这些默认参数使用 SHA-1 哈希函数和 SHA-1 附带的 MGF1 掩码生成函数。 其他所有密钥存储提供程序都使用 SHA-256。 
   
 ## <a name="data-encryption-algorithm"></a>数据加密算法  
  始终加密使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 算法来加密数据库中的数据。  
@@ -181,5 +181,4 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="see-also"></a>另请参阅  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [使用 Always Encrypted 开发应用程序](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
   

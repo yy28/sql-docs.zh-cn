@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442530"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868052"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件批量导入数据 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "87442530"
   * SQLNCHAR 或 SQLNVARCHAR（以 Unicode 格式发送数据）
   * SQLBINARY 或 SQLVARYBIN（不经任何转换即发送数据）。
 * Azure SQL 数据库和 Azure SQL 数据仓库仅支持 [bcp](../../tools/bcp-utility.md)。  有关其他信息，请参阅：
-  * [将数据载入 Azure SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [将数据从 SQL Server 载入 Azure SQL 数据仓库（平面文件）](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [迁移数据](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * [将数据载入 Azure SQL 数据仓库](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [将数据从 SQL Server 载入 Azure SQL 数据仓库（平面文件）](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [迁移数据](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>示例测试条件
 本主题中格式化文件示例基于下面定义的表和数据文件。
@@ -263,4 +263,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

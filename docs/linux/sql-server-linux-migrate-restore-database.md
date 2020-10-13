@@ -1,20 +1,20 @@
 ---
 title: 将 Windows 中的 SQL Server 数据库迁移到 Linux
 description: 本教程演示如何在 Windows 上执行 SQL Server 数据库备份，并将其还原到运行 SQL Server 的 Linux 计算机。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 63226ae06abe2771c50fc5debc1a1dc63cb7c590
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971525"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785063"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 

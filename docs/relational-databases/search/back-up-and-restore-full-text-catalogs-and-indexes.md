@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b6708493f92712fddb22582fe94382d882f0a2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464989"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869190"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>备份和还原全文目录和索引
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88464989"
   本主题说明如何备份和还原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中创建的全文索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文目录是一个逻辑概念，并不驻留在文件组中。 因此，若要备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的全文目录，必须识别包含属于该目录的全文索引的每个文件组。 然后您必须逐个备份这些文件组。  
   
 > [!IMPORTANT]  
->  可以在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库时导入全文目录。 每个导入的全文目录在其自身的文件组中都是一个数据库文件。 若要备份导入的目录，只需备份其文件组即可。 有关详细信息，请参阅 [联机丛书中的](https://go.microsoft.com/fwlink/?LinkID=121052)备份和还原全文目录 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
+>  可以在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库时导入全文目录。 每个导入的全文目录在其自身的文件组中都是一个数据库文件。 若要备份导入的目录，只需备份其文件组即可。 有关详细信息，请参阅 [联机丛书中的]()备份和还原全文目录 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> 备份全文目录的全文索引  
   
@@ -105,5 +105,4 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

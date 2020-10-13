@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248622"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810173"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>启用目标为 Azure 的 SQL Server 托管备份
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍了如何在数据库级别和实例级别使用默认设置启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 还介绍了如何启用电子邮件通知以及如何监视备份活动。  
   
- 本教程使用 Azure PowerShell。 教程开始前， [请下载并安装 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+ 本教程使用 Azure PowerShell。 教程开始前， [请下载并安装 Azure PowerShell](/powershell/azure/)。  
   
 > [!IMPORTANT]  
 >  如果想启用高级选项或使用自定义计划，请在启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前先配置这些设置。 有关详细信息，请参阅[为目标为 Microsoft Azure 的 SQL Server 托管备份配置高级选项](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "87248622"
 
 此过程需要一个 Azure 帐户。 如果已有帐户，请转到下一步。 如果没有，可以使用 [免费试用版](https://azure.microsoft.com/pricing/free-trial/) 开始，或者浏览 [购买选项](https://azure.microsoft.com/pricing/purchase-options/)。
 
-有关存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。 
+有关存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](/azure/storage/common/storage-account-create)。 
 
 #### <a name="azure-cli"></a>[Azure CLI](#tab/azure-cli)
 
@@ -106,7 +106,7 @@ ms.locfileid: "87248622"
 |**SAS 令牌**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 若要详细了解 SAS，请参阅[共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
+将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 若要详细了解 SAS，请参阅[共享访问签名，第 1 部分：了解 SAS 模型](/azure/storage/common/storage-sas-overview)。  
   
 ## <a name="enable-managed-backup-to-azure"></a>启用目标为 Azure 的托管备份
   
@@ -211,4 +211,4 @@ ms.locfileid: "87248622"
 本节中描述的步骤是专门用于在数据库上首次配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 你可以使用相同的系统存储过程来修改现有配置，并提供新值。  
   
 ## <a name="see-also"></a>另请参阅  
- [目标为 Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [目标为 Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

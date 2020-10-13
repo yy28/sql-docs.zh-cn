@@ -1,8 +1,8 @@
 ---
 title: 在 Windows 和 Linux 上配置 SQL Server AlwaysOn 可用性组
 description: 了解如何创建 SQL Server“Always On 可用性组 (AG)”，且一个副本在 Windows 服务器上，另一个副本在 Linux 服务器上。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/31/2018
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d38aed51796609a9fb97c2f6d06a7383fba9dde
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088940"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784836"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>在 Windows 和 Linux 上配置 SQL Server AlwaysOn 可用性组（跨平台）
 

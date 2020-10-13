@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456442"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869466"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>原因
-在使用任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之前，必须启动数据库。 数据库启动过程涉及初始化各种数据结构（这些结构表示数据库和数据库文件），打开属于数据库的所有文件，最后在数据库上运行恢复。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API 函数打开属于数据库的文件。
+在使用任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之前，必须启动数据库。 数据库启动过程涉及初始化各种数据结构（这些结构表示数据库和数据库文件），打开属于数据库的所有文件，最后在数据库上运行恢复。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API 函数打开属于数据库的文件。
  
 消息 17207（和 17204）指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试在启动过程中打开数据库文件时遇到错误。
  
@@ -83,7 +83,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 1. 如果收到 ```Access is Denied``` 操作系统错误 = 5，请考虑使用以下方法：
    -  通过在 Windows 资源管理器中查看文件的属性，检查文件的权限设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Windows 组对各种文件资源预配访问控制。 确保相应的组（名称类似于 SQLServerMSSQLUser$ComputerName$MSSQLSERVER 或 SQLServerMSSQLUser$ComputerName$InstanceName）具有对错误消息中提及的数据库文件的必要权限。 有关更多详细信息，请参阅[配置数据库引擎访问的文件系统权限](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)。 确保 Windows 组实际包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户或服务 SID。
    -  查看当前正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户。 可以使用 Windows 任务管理器来获取此信息。 查找可执行文件“sqlservr.exe”的“用户名”值。 另外，如果你最近更改了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户，请注意，支持执行此操作的方法是使用 SQL Server 配置管理器实用工具。 有关详细信息，请参阅 [SQL Server 配置管理器](../sql-server-configuration-manager.md)。 
-   -  根据操作类型（在服务器启动期间打开数据库、附加数据库、还原数据库等），用于模拟和访问数据库文件的帐户可能会有所不同。 请查看[保护数据和日志文件](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)主题，了解哪些操作为哪些帐户设置了哪些权限。 使用 Windows SysInternals [进程监视器](https://docs.microsoft.com/sysinternals/downloads/procmon)之类的工具，了解是否在 SQL Server 实例服务启动帐户（或服务 SID）或模拟帐户的安全上下文中执行了文件访问。
+   -  根据操作类型（在服务器启动期间打开数据库、附加数据库、还原数据库等），用于模拟和访问数据库文件的帐户可能会有所不同。 请查看[保护数据和日志文件](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105))主题，了解哪些操作为哪些帐户设置了哪些权限。 使用 Windows SysInternals [进程监视器](/sysinternals/downloads/procmon)之类的工具，了解是否在 SQL Server 实例服务启动帐户（或服务 SID）或模拟帐户的安全上下文中执行了文件访问。
 
       如果 SQL Server 正在模拟可执行 ALTER DATABASE 或 CREATE DATABASE 操作的登录用户凭据，你将在进程监视器工具（示例）中注意到以下信息。
 
@@ -115,7 +115,6 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
    - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试访问这些位置上的数据库文件之前，请确保任何磁盘或网络位置[如 iSCSI 驱动器]可用。 如果需要，请在群集管理员或服务控制管理器中创建所需的依赖项。
 
 1. 如果遇到 `The process cannot access the file because it is being used by another process` 操作系统错误 = 32：
-   - 使用 Windows Sysinternals 中的[进程资源管理器](https://docs.microsoft.com/sysinternals/downloads/process-explorer)或[句柄](https://docs.microsoft.com/sysinternals/downloads/handle)之类的工具来确定其他进程或服务是否已获取此数据库文件的排他锁。
+   - 使用 Windows Sysinternals 中的[进程资源管理器](/sysinternals/downloads/process-explorer)或[句柄](/sysinternals/downloads/handle)之类的工具来确定其他进程或服务是否已获取此数据库文件的排他锁。
    - 阻止该进程访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库文件。 常见示例包括防病毒程序（请参阅以下[知识库文章](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)中的文件排除指南）。
    - 在群集环境中，确保前一个所属节点中的 sqlservr.exe 进程实际上已经将句柄释放到数据库文件。 通常不会发生这种情况，但群集或 I/O 路径的错误配置可能会导致此类问题。
-  

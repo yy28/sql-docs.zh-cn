@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df99c766fa727af8981f048b231abac95c3a168c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715394"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868768"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 
@@ -135,7 +135,7 @@ GO
 
 有关分布式查询的详细信息，请参阅以下主题：
 
-- [分布式查询](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx)（SQL Server 2016 仍支持分布式查询，但此功能的相关文档尚未更新。）
+- [分布式查询](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105))（SQL Server 2016 仍支持分布式查询，但此功能的相关文档尚未更新。）
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 - [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
@@ -252,8 +252,8 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 有关复制向导的详细信息，请参阅以下主题：
 
-- [数据工厂复制向导](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [教程：使用数据工厂复制向导创建带有复制活动的管道](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
+- [数据工厂复制向导](/azure/data-factory/data-factory-azure-copy-wizard)
+- [教程：使用数据工厂复制向导创建带有复制活动的管道](/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure 数据工厂
 
@@ -263,14 +263,14 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 若要详细了解如何使用这些数据工厂源和接收器，请参阅以下主题：
 
-- [文件系统](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL 数据库](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [文件系统](/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](/azure/data-factory/data-factory-sqlserver-connector)
+- [Azure SQL 数据库](/azure/data-factory/data-factory-azure-sql-connector)
 
 若要开始学习如何使用 Azure 数据工厂复制数据，请参阅以下主题：
 
-- [使用复制活动移动数据](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [教程：使用 Azure 门户创建带有复制活动的管道](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [使用复制活动移动数据](/azure/data-factory/data-factory-data-movement-activities)
+- [教程：使用 Azure 门户创建带有复制活动的管道](/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>常见错误
 

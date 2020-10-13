@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718063"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809430"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718063"
   
 -   RESTORE WITH MOVE 是必需的。  
   
--   有关高级存储的其他信息，请参阅[高级存储：Azure 虚拟机工作负载的高性能存储](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)  
+-   有关高级存储的其他信息，请参阅[高级存储：Azure 虚拟机工作负载的高性能存储](/azure/virtual-machines/disks-types)  
   
  **单个存储帐户：** 文件快照和目标 blob 必须使用相同的存储帐户。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718063"
   
  **联机还原：** 使用文件快照备份时，不能执行联机还原。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
- **计费：** 使用 SQL Server 文件快照备份时，如果数据发生更改，将会产生额外的费用。 有关详细信息，请参阅 [了解快照如何产生费用](https://msdn.microsoft.com/library/azure/hh768807.aspx)。  
+ **计费：** 使用 SQL Server 文件快照备份时，如果数据发生更改，将会产生额外的费用。 有关详细信息，请参阅 [了解快照如何产生费用](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges)。  
   
  **存档：** 如果你想要将文件快照备份存档，则可以存档到 blob 存储或流备份。 若要存档到 blob 存储，请将文件快照备份集中的 blob 复制到单独的 blob。 若要存档到流备份，请将文件快照备份还原为新数据库，然后使用压缩和/或加密执行标准流备份，并根据需要将其独立于基本 blob 进行存档。  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

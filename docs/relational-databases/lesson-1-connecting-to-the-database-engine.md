@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a3dedb6c503983cf2d916ffecbbf78e8fe1fc06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424109"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864053"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88424109"
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
 
 ### <a name="basic-tools"></a>基本工具
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 SSMS 可以从 [Microsoft 下载中心](https://msdn.microsoft.com/library/mt238290.aspx)免费下载。 最新版本可同较旧版本的 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]一同使用。  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 SSMS 可以从 [Microsoft 下载中心](../ssms/download-sql-server-management-studio-ssms.md)免费下载。 最新版本可同较旧版本的 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]一同使用。  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和客户端工具一起安装。 使用它，您可以启用服务器协议，配置协议选项（例如 TCP 端口），将服务器服务配置为自动启动，以及将客户端计算机配置为以所需的方式连接。 此工具会配置更高级的连接元素，但不会启用功能。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "88424109"
 - 如果知道实例名并且以计算机上的本地管理员组成员身份进行连接，则可以使用同一台计算机上运行的工具轻松连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 必须在承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的同一台计算机上执行下面的过程。  
 
 > [!NOTE]  
-> 本主题讨论连接到本地 SQL Server 的相关内容。 要连接到 Azure SQL 数据库，请参阅 [Connect to SQL Database with SQL Server Management Studio and execute a sample T-SQL query](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/)（使用 SQL Server Management Studio 连接到 SQL 数据库并执行示例 T-SQL 查询）。  
+> 本主题讨论连接到本地 SQL Server 的相关内容。 要连接到 Azure SQL 数据库，请参阅 [Connect to SQL Database with SQL Server Management Studio and execute a sample T-SQL query](/azure/azure-sql/database/connect-query-ssms)（使用 SQL Server Management Studio 连接到 SQL 数据库并执行示例 T-SQL 查询）。  
 
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>确定数据库引擎实例的名称  
 
@@ -111,4 +111,3 @@ ms.locfileid: "88424109"
 
 ## <a name="next-lesson"></a>下一课  
 [第 2 课：从其他计算机进行连接](../relational-databases/lesson-2-connecting-from-another-computer.md)    
-  

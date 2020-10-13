@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863348"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868772"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 
@@ -156,7 +156,7 @@ CREATE EVENT SESSION [event_counter_1]
 > [!NOTE]
 > Azure SQL 数据库仅支持在 Azure Blob 存储中存储 `xel` 文件。 
 >
-> 有关 SQL 数据库（和 SQL 托管实例）特定的 event_file 代码示例，请参阅 [SQL 数据库中扩展事件的事件文件目标代码](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)。
+> 有关 SQL 数据库（和 SQL 托管实例）特定的 event_file 代码示例，请参阅 [SQL 数据库中扩展事件的事件文件目标代码](/azure/sql-database/sql-database-xevent-code-event-file)。
 
 ::: moniker-end
 
@@ -792,9 +792,6 @@ Package0 还有两个其他目标，但它们不能在 Transact-SQL 中使用：
 ### <a name="xevent-namespaces"></a>XEvent 命名空间
 
 
-- [Microsoft.SqlServer.Management.XEvent 命名空间](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Microsoft.SqlServer.Management.XEvent 命名空间](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Microsoft.SqlServer.XEvent.Linq 命名空间](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Microsoft.SqlServer.XEvent.Linq 命名空间](/dotnet/api/microsoft.sqlserver.xevent.linq)
