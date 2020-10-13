@@ -1,21 +1,21 @@
 ---
 title: SSMS 组件和配置
 description: 介绍 SQL Server Management Studio 环境的组件和基本配置选项的教程。
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/16/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
-ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/16/2018
+ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247294"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662026"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 组件和配置
 
@@ -53,7 +53,7 @@ ms.locfileid: "75247294"
 
 * **属性** (F4)：当查询窗口打开时，可看到“属性”视图。 该视图显示查询的基本属性。 例如，它显示查询开始的时间，返回的行数及连接详细信息。  
 
-    ![属性](media/ssms-configuration/properties.png)
+    ![配置属性](media/ssms-configuration/properties.png)
 
 * **模板浏览器** (Ctrl+Alt+T)：模板浏览器中有各种预构建的 T-SQL 模板。 可使用这些模板执行各种功能，如创建或备份数据库。 
 

@@ -1,25 +1,25 @@
 ---
 title: 通过命令提示符安装
-description: 运行 SQL Server 命令行安装程序将 R 语言和 Python 集成添加到 SQL Server 数据库引擎实例。
+description: 运行 SQL Server 命令行安装程序，将具有 R 和 Python 的机器学习服务添加到 SQL Server 数据库引擎实例。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179796"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624754"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>从命令行安装 SQL Server 机器学习 R 和 Python 组件
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>从命令行安装具有 R 和 Python 的 SQL Server 机器学习服务
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-本文提供从命令行安装 SQL Server 机器学习组件的说明：
+本文提供从命令行安装 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)的说明：
 
 + [新的数据库内实例](#indb)
 + [添加到现有数据库引擎实例](#add-existing)

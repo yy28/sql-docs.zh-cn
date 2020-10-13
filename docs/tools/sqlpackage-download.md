@@ -8,14 +8,14 @@ ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.reviewer: alayu; sstein
-ms.date: 06/20/2018
-ms.openlocfilehash: 40c95546496b6b79aeb95bc63db7750646f833fc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.reviewer: drskwier; sstein
+ms.date: 10/02/2020
+ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990140"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721578"
 ---
 # <a name="download-and-install-sqlpackage"></a>下载并安装 sqlpackage
 
@@ -26,13 +26,23 @@ sqlpackage 在 Windows、macOS 和 Linux 上运行。
 |平台|下载|发布日期|版本|构建
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2143544)|2020 年 9 月 18 日| 18.6 | 15.0.4897.1 |
-|macOS .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143659)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
-|Linux .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143497)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
-|Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143659)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143497)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes-sqlpackage.md)。 若要下载其他语言，请参阅[可用语言](#available-languages)部分。
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+## <a name="dacfx"></a>DacFx
+DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) 是一种用于将数据库部署集成到应用程序管道的相关机制。  DacServices API 可通过 nuget 在包 [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx) 中获得。  当前 DacFx 版本为 150.4897.1。
+
+通过 .NET CLI 安装 nuget 包时，可通过以下命令完成：
+
+```cmd
+> dotnet add package Microsoft.SqlServer.DACFx
+```
+
+>[!NOTE]
+> 其他的 nuget 包以 DacFx 名称“Microsoft.SqlServer.DacFx.x64”和“Microsoft.SqlServer.DacFx.x86”发布。 “Microsoft.SqlServer.DACFx”包涵盖了对这两个平台的支持。 应对此包（而不是 x64 或 x86 变体）进行新的引用。
 
 ## <a name="get-sqlpackage-for-windows"></a>获取适用于 Windows 的 sqlpackage
 
@@ -129,7 +139,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上运行。
 
 ## <a name="supported-operating-systems"></a>受支持的操作系统
 
-sqlpackage 在 Windows、macOS 和 Linux 上运行，并使用 .NET Core 3.1 生成。  [.NET Core 3.1 OS 要求](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)] 适用于 sqlpackage。
+sqlpackage 在 Windows、macOS 和 Linux 上运行，并使用 .NET Core 3.1 生成。  [.NET Core 3.1 OS 要求](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) 适用于 sqlpackage。
 
 ### <a name="windows-x64"></a>Windows (x64)
 
@@ -168,6 +178,7 @@ sqlpackage .NET Core macOS：
 
 sqlpackage .NET Core Linux：  
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40a)
+
 
 ## <a name="next-steps"></a>后续步骤
 

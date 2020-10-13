@@ -1,22 +1,22 @@
 ---
-title: 下载用于脱机安装的更新
+title: 用于脱机安装的 CAB 下载更新
 description: 下载适用于 SQL Server 机器学习服务的 Python 和 R CAB 文件。 这些 CAB 文件包含对机器学习服务（Python 和 R）功能的更新，在不访问 Internet 的服务器上安装 SQL Server 时，可以使用这些文件。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 10/02/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c7af170b3e64e60c886dd1cab2a02cba06e318e2
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: f2d9867ebad010ea8e518f3faee29041eebd79a8
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498276"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670790"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server 机器学习服务的累积更新的 CAB 下载
+# <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>用于脱机安装 SQL Server 机器学习服务的累积更新的 CAB 下载
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -50,7 +50,7 @@ CAB 文件按时间倒序列出。 下载 CAB 文件并将其传输到目标计�
 
 |发布 | 组件 | 下载链接 | 解决的问题 |
 |------- | --------- | ------------- | ---------------- |
-|[SQL Server 2019 CU7](https://support.microsoft.com/help/4552255) |  |  |  |
+|**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | Microsoft R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |

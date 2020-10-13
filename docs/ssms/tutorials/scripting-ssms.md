@@ -1,15 +1,15 @@
 ---
 title: SSMS 脚本对象
 description: 为 SQL Server Management Studio (SSMS) 中找到的各种对象生成 Transact-SQL (T-SQL) 脚本。
-keywords: SQL Server, SSMS, SQL Server Management Studio, 脚本, 编写脚本
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/13/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio, 脚本, 编写脚本
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
+ms.date: 03/13/2018
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 0cc0e394e622880dc60991b1c0ca3b0c00597be6
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523329"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662036"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中编写对象脚本
 
@@ -156,7 +156,7 @@ ms.locfileid: "87523329"
 
 9. 选择“全部替换”以将所有 AdventureWorks2016 实例替换为 AdventureWorks2016b    。
 
-    ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
+    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
 10. 选择“执行”以执行查询并创建新的 AdventureWorks2016b 数据库  。
 

@@ -5,16 +5,16 @@ description: 使用已启用 Azure Arc 的 SQL Server 管理 SQL Server 实例
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589296"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834312"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>已启用 Azure Arc 的 SQL Server（预览）
 
@@ -44,8 +44,7 @@ ms.locfileid: "91589296"
 ### <a name="required-permissions"></a>所需的权限
 
 若要将 SQL Server 实例和宿主连接到 Azure Arc，你必须有一个帐户且该帐户有权执行以下操作：
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read

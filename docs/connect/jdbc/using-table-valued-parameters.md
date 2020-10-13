@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631935"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727468"
 ---
 # <a name="using-table-valued-parameters"></a>使用表值参数
 
@@ -35,8 +35,8 @@ ms.locfileid: "81631935"
   
 | 资源                                                                                                             | 说明                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| SQL Server 联机丛书中的[表值参数（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=98363) | 介绍了如何创建和使用表值参数                             |
-| SQL Server 联机丛书中的[用户定义的表类型](https://go.microsoft.com/fwlink/?LinkId=98364)                  | 介绍了用于声明表值参数的用户定义的表类型 |
+| SQL Server 联机丛书中的[表值参数（数据库引擎）](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) | 介绍了如何创建和使用表值参数                             |
+| SQL Server 联机丛书中的[用户定义的表类型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))                  | 介绍了用于声明表值参数的用户定义的表类型 |
 | CodePlex 的 [Microsoft SQL Server 数据库引擎](https://go.microsoft.com/fwlink/?LinkId=120507)一节        | 收录了展示如何使用 SQL Server 特性和功能的示例  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在旧版 SQL Server 中传递多行  
@@ -53,7 +53,7 @@ ms.locfileid: "81631935"
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
 
-表值参数基于使用 Transact-SQL `CREATE TYPE` 语句定义的强类型表结构。 必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅 SQL Server 联机丛书中的[用户定义的表类型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
+表值参数基于使用 Transact-SQL `CREATE TYPE` 语句定义的强类型表结构。 必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅 SQL Server 联机丛书中的[用户定义的表类型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -315,4 +315,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序概述](overview-of-the-jdbc-driver.md)  
+[JDBC 驱动程序概述](overview-of-the-jdbc-driver.md)

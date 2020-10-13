@@ -1,12 +1,12 @@
 ---
 title: 使用 SSMS 的提示和技巧
 description: 了解如何使用 SQL Server Management Studio 注释和取消注释代码、缩进文本、筛选对象、访问错误日志，以及查找 SQL Server 实例名称。
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462341"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724508"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和技巧
 
-本文介绍了一些使用 SQL Server Management Studio (SSMS) 的提示和技巧。 本文介绍如何： 
+本文介绍了一些使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 的提示和技巧。 本文介绍如何： 
 
 > [!div class="checklist"]
 > * 注释/取消注释 Transact-SQL (T-SQL) 文本
 > * 缩进文本
 > * 在对象资源管理器中筛选对象
-> * 访问 SQL Server 错误日志
-> * 查找 SQL Server 实例的名称
+> * 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志
+> * 查找 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称
 
 ## <a name="prerequisites"></a>先决条件
 
-若要测试本文提供的步骤，必须有 SQL Server Management Studio、对 SQL Server 的访问权限，以及 AdventureWorks 数据库。 
+若要测试本文提供的步骤，必须有 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、对 SQL Server 的访问权限，以及 AdventureWorks 数据库。 
 
 * 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-* 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+* 安装 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 * 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>注释/取消注释 T-SQL 代码
 
 可使用工具栏中的“注释”按钮注释和取消注释部分文本  。 系统不会执行已注释掉的文本。
 
-1. 打开 SQL Server Management Studio。
+1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
 
 2. 连接到 SQL Server。
 
 3. 打开“新建查询”窗口。
 
-4. 将以下 T-SQL 代码粘贴到文本窗口。
+4. 将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码粘贴到文本窗口。
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ ms.locfileid: "84462341"
 
 1. 打开“新建查询”窗口。
 
-2. 将以下 T-SQL 代码粘贴到文本窗口：
+2. 将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码粘贴到文本窗口：
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ ms.locfileid: "84462341"
 
 ## <a name="access-your-sql-server-error-log"></a>访问 SQL Server 错误日志
 
-错误日志是一个文件，其中包含 SQL Server 实例中所发生操作的相关详细信息。 可浏览和查询 SSMS 中的错误日志。 错误日志是位于磁盘上的日志文件。
+错误日志是一个文件，其中包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所发生操作的相关详细信息。 可浏览和查询 SSMS 中的错误日志。 错误日志是位于磁盘上的日志文件。
 
 ### <a name="open-the-error-log-in-ssms"></a>在 SSMS 中打开错误日志
 
-1. 连接到 SQL Server。  
+1. 连接到你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
 2. 展开“管理” > “SQL Server 日志”   。 
 
@@ -181,7 +181,7 @@ ms.locfileid: "84462341"
 
 2. 打开“新建查询”窗口。
 
-3. 将以下 T-SQL 代码粘贴到查询窗口：
+3. 将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码粘贴到查询窗口：
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ ms.locfileid: "84462341"
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>如果连接到 SQL Server，请查找错误日志位置
 
-1. 连接到 SQL Server。
+1. 连接到你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 2. 打开“新建查询”窗口。
 
-3. 将以下 T-SQL 代码粘贴到查询窗口并选择“执行”  ：
+3. 将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码粘贴到查询窗口，然后选择“执行”：
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ ms.locfileid: "84462341"
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>如果无法连接到 SQL Server，请查找错误日志位置
 
-你的 SQL Server 错误日志的路径可能有所不同，具体取决于你的配置设置。 可以在 SQL Server 配置管理器内的启动参数中找到错误日志位置的路径。 请按照以下步骤来找到标识 SQL Server 错误日志位置的相关启动参数。 你的路径可能与以下指示的路径有所不同  。
+你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志的路径可能有所不同，具体取决于你的配置设置。 可以在 SQL Server 配置管理器内的启动参数中找到错误日志位置的路径。 请按照以下步骤来找到标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志位置的相关启动参数。 你的路径可能与以下指示的路径有所不同  。
 
 1. 打开“SQL Server 配置管理器”。
 
 2. 展开“服务”  。
 
-3. 右键单击“SQL Server 实例”，然后选择“属性”  ：
+3. 右键单击你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后选择“属性”：
 
     ![Configuration Manager 服务器属性](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ ms.locfileid: "84462341"
 
     ![错误日志](media/ssms-tricks/errorlog.png)
 
-    此位置中包含多个 errorlog.* 文件。 当前错误日志的文件名以 *.log 结尾。 以前的日志文件的文件名以数字结尾。 每次重新启动 SQL Server 时都会创建一个新日志。
+    此位置中包含多个错误日志文件。 当前错误日志的文件名以 *.log 结尾。 以前的日志文件的文件名以数字结尾。 每次重新启动 SQL Server 时都会创建一个新日志。
 
-6. 在记事本中打开 errorlog.log 文件。 
+6. 在记事本中打开 errorlog.log 文件。
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>查找 SQL Server 实例名称
+## <a name="find-sql-server-instance-name"></a>查找 SQL Server 实例名称
 
-在连接到 SQL Server 之前和之后，有几个选项可用于查找 SQL Server 的名称。  
+在连接到 SQL Server 之前和之后，有几个选项可用于查找 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的名称。  
 
 ### <a name="before-you-connect-to-sql-server"></a>连接到 SQL Server 之前
 
@@ -243,7 +243,7 @@ ms.locfileid: "84462341"
 
 3. 搜索文本“服务器名称是”  。
 
-    单引号中列出的所有内容都是将连接到的 SQL Server 实例的名称：
+    单引号中列出的所有内容都是将连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称：
 
     ![在错误日志中查找服务器名称](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "84462341"
 
 ### <a name="when-youre-connected-to-sql-server"></a>连接到 SQL Server 时
 
-连接到 SQL Server 时，可在三个位置找到服务器名称： 
+连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可在三个位置找到服务器名称： 
 
 1. 服务器名称将在“对象资源管理器”中列出：
 
@@ -266,19 +266,19 @@ ms.locfileid: "84462341"
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>如果连接到别名或可用性组侦听程序
 
-如果连接到别名或可用性组侦听程序，则将在“对象资源管理器”和“属性”中显示该信息。 在这种情况下，SQL Server 名称可能不是显而易见的，并且必须进行查询：
+如果连接到别名或可用性组侦听程序，则将在“对象资源管理器”和“属性”中显示该信息。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名称可能不是显而易见的，并且必须进行查询：
 
 1. 连接到 SQL Server。
 
 2. 打开“新建查询”窗口。
 
-3. 将以下 T-SQL 代码粘贴到该窗口：
+3. 将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码粘贴到窗口中：
 
       ```sql
        select @@Servername
      ```
 
-4. 查看查询结果，确定连接到的 SQL Server 实例的名称： 
+4. 查看查询结果，确定连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称： 
 
     ![查询 SQL Server 名称](media/ssms-tricks/queryservername.png)
 

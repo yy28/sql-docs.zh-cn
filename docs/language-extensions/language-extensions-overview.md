@@ -1,7 +1,7 @@
 ---
 title: 什么是 SQL Server 语言扩展？
 titleSuffix: ''
-description: 语言扩展是 SQL Server 的一项功能，用于执行外部代码。 SQL Server 2019 支持 Java。 可以使用扩展性框架在外部代码中使用关系数据。
+description: 语言扩展是 SQL Server 的一项功能，用于执行外部代码。 在 SQL Server 2019 中，Java、R 和 Python 受支持。 可以使用扩展性框架在外部代码中使用关系数据。
 author: dphansen
 ms.author: davidph
 ms.date: 08/19/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a7e79d6253c531ef2a008a7284fa8d7cd0365999
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645920"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765791"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>什么是 SQL Server 语言扩展？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -30,7 +30,7 @@ SQL Server 2019 支持 Java。 默认的 Java 运行时为 Zulu Open JRE。 此�
 
 语言扩展使用扩展性框架来执行外部代码。 代码执行与核心引擎进程隔离，但与 SQL Server 查询执行完全集成。 它们使你可以在数据所在的位置执行代码，从而无需通过网络提取数据。
 
-外部语言通过 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) 定义。 系统存储过程 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 用作执行代码的接口。
+外部语言通过 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) 定义。 系统存储过程 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 用作执行代码的接口。
 
 语言扩展可提供多种优势：
 
@@ -53,9 +53,9 @@ SQL Server 2019 支持 Java。 默认的 Java 运行时为 Zulu Open JRE。 此�
 
 + 安装[用于 Java 的 Microsoft 扩展性 SDK](how-to/extensibility-sdk-java-sql-server.md) 以在 SQL Server 上执行 Java 代码****
 
-+ 使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) 在 SQL Server 上执行外部代码****
++ 使用 [Azure Data Studio](../azure-data-studio/what-is.md) 或 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md) 在 SQL Server 上执行外部代码****
 
-+ 使用系统存储过程 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 在 SQL Server 上执行 Java 代码****。
++ 使用系统存储过程 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 上执行 Java 代码****。
 
 ### <a name="step-3-write-your-first-code"></a>步骤 3：编写第一个代码
 
@@ -69,5 +69,7 @@ SQL Server 2019 支持 Java。 默认的 Java 运行时为 Zulu Open JRE。 此�
 
 ## <a name="next-steps"></a>后续步骤
 
++ 安装[适用于 SQL Server 的 Python 自定义运行时](../machine-learning/install/custom-runtime-python.md)
++ 安装[适用于 SQL Server 的 R 自定义运行时](../machine-learning/install/custom-runtime-r.md)
 + 在 [Windows](install/install-sql-server-language-extensions-on-windows.md) 或 [Linux](../linux/sql-server-linux-setup-language-extensions.md) 上安装 SQL Server 语言扩展
 + 安装[用于 Java 的 Microsoft 扩展性 SDK](how-to/extensibility-sdk-java-sql-server.md)

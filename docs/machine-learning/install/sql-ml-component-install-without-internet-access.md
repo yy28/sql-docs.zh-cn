@@ -1,23 +1,25 @@
 ---
-title: 没有 Internet 访问权限的安装
-description: 在隔离在网络防火墙之后的计算机上安装 SQL Server 机器学习 R 和 Python。
+title: 脱机安装（无 Internet 访问）
+description: 在隔离在网络防火墙之后的计算机上，脱机安装具有 R 和 Python 的 SQL Server 机器学习服务。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487640"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636149"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在无 Internet 访问的情况下在计算机上安装 SQL Server 机器学习 R 和 Python
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>在没有 Internet 访问的情况下，在计算机上安装 SQL Server 机器学习服务 Python 和 R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+本文介绍如何在隔离在网络防火墙之后且无 internet 访问的的计算机上，脱机安装 SQL Server 机器学习服务。
 
 默认情况下，安装程序会连接到 Microsoft 下载站点以获取在 SQL Server 上进行机器学习所需的组件和更新的组件。 如果防火墙约束阻止安装程序访问这些站点，你可以使用连接到 Internet 的设备下载文件、将文件传输到脱机服务器，然后进行安装设置。
 

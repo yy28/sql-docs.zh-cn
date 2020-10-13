@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6457c4bfe1579453a68e8d5ea11f45b67980ca8b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772386"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785107"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 python 脚本在 Azure Kubernetes 服务 (AKS) 上部署 SQL Server 大数据群集
 
@@ -75,17 +75,23 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Azure 订阅 ID** | 用于 AKS 的 Azure 订阅 ID。 可以通过从另一个命令行运行 `az account list` 来列出所有订阅及其 ID。 |
    | **Azure 资源组** | 要为 AKS 群集创建的 Azure 资源组名称。 |
    | **Azure 区域** | 新 AKS 群集的 Azure 区域（默认为“westus”）  。 |
-   | **计算机大小** | 用于 AKS 群集中节点的[计算机大小](/azure/virtual-machines/windows/sizes)（默认为“Standard_L8s”）  。 |
+   | **计算机大小** | 用于 AKS 群集中节点的[计算机大小](/azure/virtual-machines/windows/sizes)（默认为“Standard_D16s_v3”）。 |
    | **辅助角色节点** | AKS 群集中的工作器节点数（默认值为“1”）  。 |
    | **群集名称** | AKS 群集和大数据群集的名称。 大数据群集的名称只能为小写字母数字字符，不能有空格。 （默认为“sqlbigdata”）  。 |
    | **密码** | 控制器、HDFS/Spark 网关和主实例的密码（默认为“MySQLBigData2019”）  。 |
    | **用户名** | 控制器用户的用户名（默认为“admin”）  。 |
 
    > [!IMPORTANT]
-   > 默认的“Standard_L8s”计算机大小可能在每个 Azure 区域都不可用  。 如果确实选择了不同的计算机大小，请确保可以跨群集中的节点连接的磁盘总数大于或等于 24。 群集中的每个永久性卷声明都需要附加磁盘。 目前，大数据群集需要 24 个永久性卷声明。 例如，[Standard_L8s](/azure/virtual-machines/lsv2-series) 计算机大小支持 32 个附加磁盘，因此可以使用此计算机大小的单个节点评估大数据群集。
+   > 默认的“Standard_D16s_v3”计算机大小可能在每个 Azure 区域都不可用。 如果确实选择了不同的计算机大小，请确保可以跨群集中的节点连接的磁盘总数大于或等于 24。 群集中的每个永久性卷声明都需要附加磁盘。 目前，大数据群集需要 24 个永久性卷声明。
+   >
+   >运行以下命令以标识可用的 VM 类型。
+   >
+   >```azurecli-interactive
+   >az vm list-sizes --query "sort_by(@,&name)[?contains(name,'Standard_D16s')]" -l westus2 -o table
+   >```
 
    > [!NOTE]
-   > 在大数据群集部署期间，SQL Server `sa` 帐户处于禁用状态。 SQL Server 主实例中预配了一个新的 sysadmin 登录名，其名称与为“用户名”输入指定的名称相同，密码与“密码”输入相对应   。 相同的“用户名”和“密码”值用于预配控制器管理员用户   。 在 SQL Server 2019 CU5 之前部署的群集上，网关 (Knox) 仅支持根用户，密码与上面相同。
+   > 在大数据群集部署期间，SQL Server `sa` 帐户处于禁用状态。 SQL Server 主实例中预配了一个新的 sysadmin 登录名，其名称与为“用户名”输入指定的名称相同，密码与“密码”输入相对应 。 相同的“用户名”和“密码”值用于预配控制器管理员用户   。 在 SQL Server 2019 CU5 之前部署的群集上，网关 (Knox) 仅支持根用户，密码与上面相同。
    >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. 该脚本将首先使用指定的参数创建 AKS 群集。 此步骤需要花费几分钟时间。
