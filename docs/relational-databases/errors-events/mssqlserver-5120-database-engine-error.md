@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 756fba8fdec761d149240cf00ca0229fd816d80f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 368fba2b9f56af0b86741db0d15ceebcc238ab52
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487025"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869432"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88487025"
 如果收到 `Access is Denied` 操作系统错误 = 5，请考虑使用以下方法：
    -  通过在 Windows 资源管理器中查看文件的属性，检查文件的权限设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Windows 组对各种文件资源预配访问控制。 确保相应的组[名称类似于 SQLServerMSSQLUser$ComputerName$MSSQLSERVER 或 SQLServerMSSQLUser$ComputerName$InstanceName]具有对错误消息中提及的数据库文件的必要权限。 有关更多详细信息，请参阅[配置数据库引擎访问的文件系统权限](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)。 确保 Windows 组实际包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户或服务 SID。
    -  查看当前正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户。 可以使用 Windows 任务管理器来获取此信息。 查找可执行文件“sqlservr.exe”的“用户名”值。 另外，如果你最近更改了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户，请注意，支持执行此操作的方法是使用 [SQL Server 配置管理器](../sql-server-configuration-manager.md)实用工具。 
-   -  根据操作类型（在服务器启动期间打开数据库、附加数据库、还原数据库等），用于模拟和访问数据库文件的帐户可能会有所不同。 请查看[保护数据和日志文件](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)主题，了解哪些操作为哪些帐户设置了哪些权限。 使用 Windows SysInternals [进程监视器](https://docs.microsoft.com/sysinternals/downloads/procmon)这样的工具，了解是否在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例服务启动帐户[或服务 SID] 或模拟帐户的安全上下文中执行了文件访问。
+   -  根据操作类型（在服务器启动期间打开数据库、附加数据库、还原数据库等），用于模拟和访问数据库文件的帐户可能会有所不同。 请查看[保护数据和日志文件](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105))主题，了解哪些操作为哪些帐户设置了哪些权限。 使用 Windows SysInternals [进程监视器](/sysinternals/downloads/procmon)这样的工具，了解是否在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例服务启动帐户[或服务 SID] 或模拟帐户的安全上下文中执行了文件访问。
 
       如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在模拟可执行 ALTER DATABASE 或 CREATE DATABASE 操作的登录用户凭据，你将在进程监视器工具（示例）中注意到以下信息。
       
@@ -87,4 +87,3 @@ ms.locfileid: "88487025"
    exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
    go
    ```
- 

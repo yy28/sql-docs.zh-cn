@@ -15,12 +15,12 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730864"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868571"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85730864"
   
 -   将表和数据迁移到内存优化表中（如果使用的功能均受支持的话）。  
     
- 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](/previous-versions/dn673538(v=msdn.10))。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用内存优化顾问进行演练  
  在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”** 。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  
@@ -99,7 +99,7 @@ ms.locfileid: "85730864"
   
  如果主键不存在并且该表正迁移到非持久表，则该屏幕将不会出现。  
   
- 对于文本列（类型为 **char**、 **nchar**、 **varchar**和 **nvarchar**的列），必须选择相应的排序规则。 对于内存优化表上的列，内存中 OLTP 仅支持 BIN2 排序规则，并且不支持具有增补字符的排序规则。 有关支持的排序规则以及排序规则中更改的潜在影响的信息，请参阅 [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 。  
+ 对于文本列（类型为 **char**、 **nchar**、 **varchar**和 **nvarchar**的列），必须选择相应的排序规则。 对于内存优化表上的列，内存中 OLTP 仅支持 BIN2 排序规则，并且不支持具有增补字符的排序规则。 有关支持的排序规则以及排序规则中更改的潜在影响的信息，请参阅 [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) 。  
   
  可为主键配置以下参数：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "85730864"
   
 -   NONCLUSTERED 索引。 此类型的索引最适合于具有许多范围查询的索引。 您可以在 **“排序列和顺序”** 列表中配置每一列的排序顺序。  
   
- 若要了解最适合你的主键的索引的类型，请参阅 [哈希索引](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
+ 若要了解最适合你的主键的索引的类型，请参阅 [哈希索引](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130))。  
   
  在选择了您的主键后单击 **“下一步”** 。  
   
@@ -130,6 +130,5 @@ ms.locfileid: "85730864"
  在完成该过程后，刷新 **对象资源管理器** 可查看新的内存优化表和旧的基于磁盘的表。 您可以保留旧表或者在方便时删除它。  
   
 ## <a name="see-also"></a>另请参阅  
- [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [迁移到内存中 OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

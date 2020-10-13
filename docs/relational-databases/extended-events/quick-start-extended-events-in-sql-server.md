@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18e0b44567d2e6a06dfc243231aebe6f9be11222
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624784"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869426"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 
@@ -49,13 +49,13 @@ ms.locfileid: "91624784"
 在博客和其他非正式对话中，有时将扩展事件简称为 *xevents*。
 
 > [!NOTE]
-> 有关 Azure SQL 数据库中的扩展事件的信息（包括代码示例），请参阅 [SQL 数据库中的扩展事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
+> 有关 Azure SQL 数据库中的扩展事件的信息（包括代码示例），请参阅 [SQL 数据库中的扩展事件](/azure/azure-sql/database/xevent-db-diff-from-svr)。
 
 ## <a name="preparations-before-demo"></a>演示前的准备工作
 
 实际执行即将进行的演示时，需做好以下准备工作。
 
-1. [下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+1. [下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
    每个月应安装 SSMS 最新的每月更新。
 2. 登录到 Microsoft SQL Server 2014 或更高版本。
@@ -359,7 +359,7 @@ SELECT
 - [查找具有最多锁定的对象](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 此应用场景使用目标 package0.histogram，该目标会将原始事件数据处理后再向你显示。
 - [确定持有锁的查询](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - 此应用场景使用 [目标 package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件对为 sqlserver.lock_acquire 和 lock_release。
+  - 此应用场景使用 [目标 package0.pair_matching](/previous-versions/sql/sql-server-2016/ff878062(v=sql.130))，其中的事件对为 sqlserver.lock_acquire 和 lock_release。
 
 ## <a name="terms-and-concepts-in-extended-events"></a>扩展事件中的术语和概念
 
@@ -541,7 +541,7 @@ SELECT HAS_PERMS_BY_NAME
 - 内置函数 [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)的详细信息
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.server_principals (Transact-SQL)](../system-catalog-views/sys-server-principals-transact-sql.md)
 - 博客：[Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
 - PDF 形式的可缩放 [海报](https://aka.ms/sql-permissions-poster)，显示所有 SQL Server 权限的层次结构。
 

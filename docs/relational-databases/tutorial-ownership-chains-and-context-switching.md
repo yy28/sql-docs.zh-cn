@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472947"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809363"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>教程：所有权链和上下文切换
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "88472947"
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks2017 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
+- 下载 [AdventureWorks2017 示例数据库](../samples/adventureworks-install-configure.md)。
 
-有关在 SQL Server Management Studio 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
+有关在 SQL Server Management Studio 中还原数据库的说明，请参阅[还原数据库](./backup-restore/restore-a-database-backup-using-ssms.md)。   
   
 ## <a name="1-configure-the-environment"></a>1.配置环境  
 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 及以下代码打开 `AdventureWorks2017` 数据库，然后使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 语句检查 dbo 用户是否显示为上下文。  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

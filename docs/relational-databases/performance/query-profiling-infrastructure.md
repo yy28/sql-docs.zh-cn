@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719309"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890775"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> 有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）。 
+> 有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice:Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)（开发人员之选：随时随地查询进度）。 
 
 当运行使用 query_thread_profile 事件的扩展事件会话时，还会使用轻型分析填充 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV，它使用[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)或直接查询 DMV，为所有会话启用实时查询统计。
 
@@ -212,4 +212,4 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)      
+ [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)

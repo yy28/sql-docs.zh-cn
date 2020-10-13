@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 83abd087cab67c0b048ed6333e912ac1edc76f7c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480962"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810153"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "89480962"
  许多第三方存储解决方案供应商都开发了符合这些标准 API、在不同存储平台上支持 BLOB 存储的 RBS 提供程序。  
   
 ## <a name="rbs-requirements"></a>RBS 要求  
- - 对于存储 BLOB 元数据的主数据库服务器，RBS 要求安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。  但是，如果使用提供的 FILESTREAM 提供程序，则可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上存储 BLOB 本身。 若要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RBS 要求对 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 至少使用 ODBC 驱动程序版本 11，对 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]至少使用 ODBC 驱动程序版本 13。 驱动程序可在 [下载 ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)中获得。    
+ - 对于存储 BLOB 元数据的主数据库服务器，RBS 要求安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。  但是，如果使用提供的 FILESTREAM 提供程序，则可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上存储 BLOB 本身。 若要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RBS 要求对 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 至少使用 ODBC 驱动程序版本 11，对 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]至少使用 ODBC 驱动程序版本 13。 驱动程序可在 [下载 ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)中获得。    
   
  RBS 包括 FILESTREAM 提供程序，因此，您可以使用 RBS 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上存储 BLOB。 如果要使用 RBS 在其他存储解决方案中存储 BLOB，则必须使用为该存储解决方案开发的第三方 RBS 提供程序，或者使用 RBS API 开发自定义 RBS 提供程序。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)上以学习资源的形式提供了在 NTFS 文件系统中存储 BLOB 的示例提供程序。  
   
 ## <a name="rbs-security"></a>RBS 安全性  
- SQL 远程 Blob 存储团队博客是有关此功能的一个非常好的信息源。 [RBS 安全模型](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model)一文中介绍了 RBS 安全模型。  
+ SQL 远程 Blob 存储团队博客是有关此功能的一个非常好的信息源。 [RBS 安全模型](/archive/blogs/sqlrbs/rbs-security-model)一文中介绍了 RBS 安全模型。  
   
 ### <a name="custom-providers"></a>自定义提供程序  
  使用自定义提供程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部存储 BLOB 时，请确保使用适合于自定义提供程序所使用的存储介质的权限和加密选项保护存储的 BLOB。  
@@ -89,7 +89,7 @@ ms.locfileid: "89480962"
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 示例演示如何开发 RBS 应用程序，如何开发和安装自定义 RBS 提供程序。  
   
  **RBS 博客**  
- [RBS 博客](https://docs.microsoft.com/archive/blogs/sqlrbs/) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
+ [RBS 博客](/archive/blogs/sqlrbs/) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> 密钥轮换脚本  
  此示例创建一个名为 `sp_rotate_rbs_symmetric_credential_key` 的存储过程，以将当前使用的 RBS 凭据存储对称密钥替换为  
@@ -241,5 +241,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
 ## <a name="see-also"></a>另请参阅  
 [远程 Blob 存储和 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
-  
   

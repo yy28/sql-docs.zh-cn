@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488558"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809473"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 课：将表转换为层次结构
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88488558"
 ## <a name="prerequisites"></a>必备条件  
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks2017 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
+- 下载 [AdventureWorks2017 示例数据库](../../samples/adventureworks-install-configure.md)。
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。  
+此处提供在 SSMS 中还原数据库的说明：[还原数据库](../backup-restore/restore-a-database-backup-using-ssms.md)。  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>检查 Employee 表的当前结构
 示例 Adventureworks2017（或更高版本）数据库包含基于“HumanResources”架构的“Employee”表********。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询 **HumanResources.EmployeeDemo** 表以查看在不使用 **hierarchyid** 数据类型的情况下表中数据的结构。  
@@ -224,7 +224,7 @@ ms.locfileid: "88488558"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
-在[使用现有层次结构数据填充表](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务中创建的“NewOrd”表包含所有雇主信息，该表使用 hierarchyid 数据类型表示层次结构********。 此任务添加了新的索引，以便支持对“hierarchyid”**** 列的搜索。  
+在[使用现有层次结构数据填充表]()任务中创建的“NewOrd”表包含所有雇主信息，该表使用 hierarchyid 数据类型表示层次结构********。 此任务添加了新的索引，以便支持对“hierarchyid”**** 列的搜索。  
   
 
 “hierarchyid”**** 列 (**OrgNode**) 是“NewOrg”**** 表的主键。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”**** 列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  

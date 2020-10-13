@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a017eb6d2f9267408387413782a83488fa39d542
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3073607520bc6ebe25debf39e9ccc3a4b5b29d64
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748448"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809873"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>连接到 Microsoft Azure 订阅
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 使用 **连接到 Microsoft 订阅** 向你的 SQL Server 实例注册现有的 Azure Blob 容器。  对话框将在 Azure Blob 容器中创建共享访问签名和存储访问策略，然后创建 SQL Server 凭据。  使用 SQL Server Management Studio 的备份或还原任务时，将出现该对话框，且此操作涉及到 URL 设备。
 
 ## <a name="limitation"></a>限制
-**连接到 Microsoft 订阅** 只适用于通过服务管理（经典）部署模型创建的 Azure 存储帐户。  关于 Azure 部署模型的详细信息，请参阅 [Azure Resource Manager vs. classic deployment](https://azure.microsoft.com/documentation/articles/resource-manager-deployment-model/)（Azure 资源管理器与经典部署）。
+**连接到 Microsoft 订阅** 只适用于通过服务管理（经典）部署模型创建的 Azure 存储帐户。  关于 Azure 部署模型的详细信息，请参阅 [Azure Resource Manager vs. classic deployment](/azure/azure-resource-manager/management/deployment-models)（Azure 资源管理器与经典部署）。
 
 ## <a name="options"></a>选项
 **登录**     

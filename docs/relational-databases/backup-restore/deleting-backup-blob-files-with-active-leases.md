@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95b7165fb16832b8b76e6a9c7a331433d49ff0a9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737819"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809633"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
 
@@ -24,7 +24,7 @@ ms.locfileid: "85737819"
 
 在备份到 Microsoft Azure 存储或从中还原时，SQL Server 获得无限期租约以锁定对 blob 的独占访问。 当成功完成备份或还原过程时，释放租约。 如果备份或还原失败，备份过程将尝试清除所有无效的 blob。 但是，如果由于持续很长时间的网络连接故障而导致备份失败，备份过程可能无法再次访问 blob 且 blob 可能保持孤立状态。 这意味着在释放租约前，不能写入或删除 blob。 本主题说明如何释放（中断）租约和删除 blob。
   
-有关租约类型的详细信息，请阅读此[文章](https://go.microsoft.com/fwlink/?LinkId=275664)。  
+有关租约类型的详细信息，请阅读此[文章](/rest/api/storageservices/Lease-Blob)。  
   
 如果备份操作失败，它可能生成无效的备份文件。 备份 blob 文件可能还有活动租约，以防止其被删除或覆盖。 若要删除或覆盖这类 blob，应首先释放（中断）租约。 如果备份失败，我们建议你清除租约并删除 blob。 还可以定期清除租约并删除作为存储管理任务的一部分的 blob。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85737819"
   
 1. **标识具有租约的 blob：** 如果有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。  还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦标识了 blob，我们建议查看列表，在删除 blob 前验证备份文件的有效性。  
   
-1. **中断租约：** 获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
+1. **中断租约：** 获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](/rest/api/storageservices/Lease-Blob) 。  
   
     > [!TIP]  
     > SQL Server 发出租约 ID 以在还原操作期间建立独占访问。 还原租约 ID 是 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
@@ -46,7 +46,7 @@ ms.locfileid: "85737819"
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell 脚本示例  
   
 > [!IMPORTANT]
-> 如果您正在运行 PowerShell 2.0，可能遇到加载 Microsoft WindowsAzure.Storage.dll 程序集的问题。 我们建议升级 [Powershell](https://docs.microsoft.com/powershell/) 以解决该问题。 还可使用以下解决方法，以使用以下语句创建或修改 powershell.exe.config 文件以在运行时加载 .NET 2.0 和 .NET 4.0 程序集：  
+> 如果您正在运行 PowerShell 2.0，可能遇到加载 Microsoft WindowsAzure.Storage.dll 程序集的问题。 我们建议升级 [Powershell](/powershell/) 以解决该问题。 还可使用以下解决方法，以使用以下语句创建或修改 powershell.exe.config 文件以在运行时加载 .NET 2.0 和 .NET 4.0 程序集：  
 >
 > ```xml
 > <?xml version="1.0"?>
@@ -128,4 +128,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>另请参阅
 
-[从 SQL Server 备份到 URL 的最佳做法和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[从 SQL Server 备份到 URL 的最佳做法和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457871"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890782"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457871"
   
 > [!WARNING]  
 > 此功能主要用于故障排除。 使用此功能会明显降低整体查询性能，尤其是在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
-> 此功能可与 [Transact-SQL 调试器](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)配合使用。  
+> 此功能可与 [Transact-SQL 调试器](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)配合使用。  
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>查看某查询的实时查询统计信息 
   
@@ -79,4 +79,4 @@ ms.locfileid: "86457871"
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)   
+ [查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)

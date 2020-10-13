@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e01e01544a0417210a8f2e3a40bb10398875c37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c953e5a707bb197457d76e9d5d4f64635515ffce
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719964"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807517"
 ---
 # <a name="back-up-a-transaction-log"></a>备份事务日志
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -153,7 +153,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell
 
-设置和使用 [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)。 使用 **Backup-SqlDatabase** cmdlet 并为 **-BackupAction** 参数的值指定 **Log** 。  
+设置和使用 [SQL Server PowerShell 提供程序](../../powershell/sql-server-powershell-provider.md)。 使用 **Backup-SqlDatabase** cmdlet 并为 **-BackupAction** 参数的值指定 **Log** 。  
   
 下面的示例在服务器实例 `<myDatabase>` 的默认备份位置创建数据库 `Computer\Instance`的日志备份。  
   
@@ -174,4 +174,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
+ [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)

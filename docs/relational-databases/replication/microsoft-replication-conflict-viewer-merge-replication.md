@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e10e89850c8028590fd9e498a062abe0ac0de06
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722038"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868231"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85722038"
  在同步过程中解决冲突后，落选行的数据将写入冲突表中。 无论是接受原始解决方法还是选择其他解决方法来解决冲突，都将从冲突表中删除记录的冲突行。 应定期检查冲突以减小冲突跟踪表的大小。  
   
 > [!NOTE]  
->  包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  
+>  包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](./view-and-resolve-data-conflicts-for-merge-publications.md)。  
   
 ## <a name="options"></a>选项  
  复制冲突查看器划分为两个部分。 对话框的上半部分显示所选表的冲突列表。 单击冲突列表中的项时，将在对话框的下半部分显示该冲突的详细信息。  
@@ -87,5 +87,4 @@ ms.locfileid: "85722038"
 ## <a name="see-also"></a>另请参阅  
  [查看和解决合并发布的数据冲突 (SQL Server Management Studio)](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420921"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869418"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420921"
   通过链接服务器，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 可从远程数据源中读取数据，并针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之外的 OLE DB 数据源等远程数据库服务器执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel 和 Azure CosmosDB。
 
 > [!NOTE]
-> 链接服务器在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中可用。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一实例和弹性池中未启用链接服务器。 这些是部分[可在此处查找到的托管实例中的约束](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)。 
+> 链接服务器在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中可用。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一实例和弹性池中未启用链接服务器。 这些是部分[可在此处查找到的托管实例中的约束](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)。 
 
 ## <a name="when-to-use-linked-servers"></a>何时使用链接服务器？
 
@@ -76,7 +76,7 @@ ms.locfileid: "88420921"
 > 使用 OLE DB 提供程序时，运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有对安装提供程序的目录及其所有子目录的读取权限和执行权限。 这包括 Microsoft 发布的提供程序和任何第三方提供程序。
 
 > [!NOTE]
-> 使用完全委派时，链接服务器支持 Active Directory 传递身份验证。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 起，还支持使用约束委派的传递身份验证；但是不支持[基于资源的约束委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)。
+> 使用完全委派时，链接服务器支持 Active Directory 传递身份验证。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 起，还支持使用约束委派的传递身份验证；但是不支持[基于资源的约束委派](/windows-server/security/kerberos/kerberos-constrained-delegation-overview)。
 
 ## <a name="managing-providers"></a>管理访问接口  
 有一组选项可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何加载和使用注册表中指定的 OLE DB 访问接口。  
@@ -107,5 +107,4 @@ ms.locfileid: "88420921"
   
 ## <a name="related-content"></a>相关内容  
  [sys.servers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540825"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809185"
 ---
 # <a name="temporal-table-usage-scenarios"></a>时态表使用方案
 
@@ -59,7 +59,7 @@ CREATE TABLE Employee
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>对现有表启用系统版本控制，以便进行数据审核
 
-若需在现有数据库中执行数据审核，可使用 ALTER TABLE 扩展非临时表，使之成为系统版本控制型的。 为了避免在应用程序中进行中断性变更，可以 HIDDEN 方式添加时间段列，详见[将非时态表更改为由系统控制版本的时态表](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)中所述。 以下示例说明了如何在虚构 HR 数据库中针对现有 Employee 表启用系统版本控制。
+若需在现有数据库中执行数据审核，可使用 ALTER TABLE 扩展非临时表，使之成为系统版本控制型的。 为了避免在应用程序中进行中断性变更，可以 HIDDEN 方式添加时间段列，详见[将非时态表更改为由系统控制版本的时态表](./creating-a-system-versioned-temporal-table.md)中所述。 以下示例说明了如何在虚构 HR 数据库中针对现有 Employee 表启用系统版本控制。
 
 ```sql
 /*

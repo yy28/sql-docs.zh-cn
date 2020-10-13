@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990388"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809291"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的时态表
 
@@ -84,7 +84,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 
 - 对于 **HISTORY_TABLE** 参数，架构名称是必需的。
 - 如果指定的架构不存在， **CREATE TABLE** 语句将失败。
-- 如果 **HISTORY_TABLE** 参数指定的表已存在，则将根据新创建的临时表就 [schema consistency and temporal data consistency](https://msdn.microsoft.com/library/dn935015.aspx)（架构一致性和临时数据一致性）对其进行验证。 如果指定的历史记录表无效，CREATE TABLE 语句将失败  。
+- 如果 **HISTORY_TABLE** 参数指定的表已存在，则将根据新创建的临时表就 [schema consistency and temporal data consistency](./temporal-tables.md)（架构一致性和临时数据一致性）对其进行验证。 如果指定的历史记录表无效，CREATE TABLE 语句将失败  。
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>使用用户定义的历史记录表创建临时表
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [在系统版本控制的临时表中修改数据](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [在系统版本控制临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [更改系统版本控制的临时表架构](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [停止对系统版本的临时表的系统版本控制](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [停止对系统版本的临时表的系统版本控制](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

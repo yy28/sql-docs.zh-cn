@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723123"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868672"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85723123"
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>访问内存优化表中的数据  
 
-可以最高效地从本机编译的存储过程访问内存优化表（[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)）。 还可以使用（传统的）解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)]访问内存优化表。 解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是指在不使用本机编译的存储过程的情况下访问内存优化表。 解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问的一些示例包括从 DML 触发器、即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、视图和表值函数访问内存优化表。  
+可以最高效地从本机编译的存储过程访问内存优化表（[本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)）。 还可以使用（传统的）解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)]访问内存优化表。 解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是指在不使用本机编译的存储过程的情况下访问内存优化表。 解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问的一些示例包括从 DML 触发器、即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、视图和表值函数访问内存优化表。  
   
  下表总结了对各种对象的本机和解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问。  
   
@@ -108,5 +108,4 @@ EXECUTE AS CALLER 会对调用方产生由权限检查造成的微小（约为 1
 ## <a name="see-also"></a>另请参阅
 
 [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409173"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868657"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88409173"
 * 表需要 varchar(max)、nvarchar(max) 或 varbinary(max) 数据类型。 或者，将列存储索引设计为不包含这些列。
 * 表数据不是持久性的。 需要快速存储和删除数据时，请考虑使用堆或临时表。
 * 表的每个分区包含的行数不超过 100 万。 
-* 在针对表执行的操作中，10% 以上是更新和删除。 大量的更新和删除会导致碎片。 碎片会影响压缩率和查询性能，然后，你需要运行一个称为“重新整理”的操作，强制将数据移入列存储并删除碎片。 有关详细信息，请参阅[最小化列存储索引中的索引碎片](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)。
+* 在针对表执行的操作中，10% 以上是更新和删除。 大量的更新和删除会导致碎片。 碎片会影响压缩率和查询性能，然后，你需要运行一个称为“重新整理”的操作，强制将数据移入列存储并删除碎片。 有关详细信息，请参阅[最小化列存储索引中的索引碎片](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)。
 
 有关详细信息，请参阅[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。
 
@@ -100,7 +100,7 @@ ms.locfileid: "88409173"
 
 有关详细信息，请参阅[开始使用列存储索引进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-有关选择最佳列存储索引的详细信息，请参阅 Sunil Agarwal 的博客 [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload)（哪种列存储索引适合我的工作负荷？）。
+有关选择最佳列存储索引的详细信息，请参阅 Sunil Agarwal 的博客 [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload)（哪种列存储索引适合我的工作负荷？）。
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>使用表分区来管理数据和提高查询性能
 列存储索引支持分区，这是管理和存档数据的一种良好方式。 分区还可将操作局限于一个或多个分区，从而提高查询性能。
@@ -130,7 +130,7 @@ ms.locfileid: "88409173"
 * 将 100 万行载入一个分区或非分区表。 获取一个包含 100 万行的压缩行组。 这非常适合用于提高数据压缩率和查询性能。
 * 将 100 万行均匀载入 10 个分区。 每个分区包含 10 万行，低于列存储压缩的最小阈值。 因此，列存储索引可以包含 10 个增量行组，每个行组包含 10 万行。 可通过某些方法强制将增量行组载入列存储。 不过，如果这些是列存储索引中的唯一行，压缩行组就会太小，无法实现最佳压缩和查询性能。
 
-有关分区的详细信息，请参阅 Sunil Agarwal 的博客文章 [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/)（我是否应该将列存储索引分区？）。
+有关分区的详细信息，请参阅 Sunil Agarwal 的博客文章 [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index)（我是否应该将列存储索引分区？）。
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>选择适当的数据压缩方法
 列存储索引为数据压缩提供两个选项：列存储压缩和存档压缩。 可在创建索引时选择压缩选项，以后可以使用 [ALTER INDEX...REBUILD](../../t-sql/statements/alter-index-transact-sql.md) 来更改选项。
@@ -193,4 +193,3 @@ ms.locfileid: "88409173"
 * 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，请参阅 [CREATE TABLE（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。
 
 有关如何将现有行存储堆或 B 树索引转换为聚集列存储索引，或创建非聚集列存储索引的详细信息，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
-

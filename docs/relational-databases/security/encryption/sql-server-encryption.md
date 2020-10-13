@@ -16,12 +16,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 702b7f39a3435255432474542b74a8d1f210284d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720438"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869241"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "85720438"
  [保护 SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  简要介绍如何帮助确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台的安全性以及如何处理用户和安全对象。  
 
-[Azure SQL 数据库安全功能概述](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
+[Azure SQL 数据库安全功能概述](/azure/sql-database/sql-database-security-overview)
 </br>对用于保护数据、控制访问及执行主动监视的 Azure SQL 数据库安全功能的概述。
   
  [加密函数 (Transact-SQL)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -88,5 +88,4 @@ ms.locfileid: "85720438"
  [SQL Server 和数据库加密密钥（数据库引擎）](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [备份和还原 Reporting Services 加密密钥](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
  [启用数据库引擎的加密连接](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
   

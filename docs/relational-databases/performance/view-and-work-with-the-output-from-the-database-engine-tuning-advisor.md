@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458569"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890907"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>查看和使用来自数据库引擎优化顾问 (DTA) 的输出
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458569"
  还可以使用 GUI 查看由 **dta** 命令行实用工具生成的优化输出。  
   
 > [!NOTE]  
->  如果使用 **dta** 命令行实用工具并使用 **-ox** 参数来指定将输出写入 XML 文件，则可以通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“文件”  菜单上的“打开文件”  ，打开和查看 XML 输出文件。 有关详细信息，请参阅 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 有关 **dta** 命令行实用工具的详细信息，请参阅 [dta 实用工具](../../tools/dta/dta-utility.md)。  
+>  如果使用 **dta** 命令行实用工具并使用 **-ox** 参数来指定将输出写入 XML 文件，则可以通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“文件”  菜单上的“打开文件”  ，打开和查看 XML 输出文件。 有关详细信息，请参阅 [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)。 有关 **dta** 命令行实用工具的详细信息，请参阅 [dta 实用工具](../../tools/dta/dta-utility.md)。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 查看优化建议  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458569"
 ## <a name="see-also"></a>另请参阅  
  [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta 实用工具](../../tools/dta/dta-utility.md)  
-  
   

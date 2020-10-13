@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b907472303d6ba11691efe72bb08717ac7854ea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 75b1f1b489a50041d360ac8abc60dd492bf43378
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537995"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868241"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -159,9 +159,8 @@ GO
 要缓解此问题，请将足够内存预先分配至数据库以恢复或重新启动数据库，而不要分配最小值，依靠动态内存在需要时分配更多内存。
   
 ## <a name="see-also"></a>另请参阅  
- [管理内存中 OLTP 的内存](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [管理内存中 OLTP 的内存](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))   
  [内存使用情况的监视和故障排除](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [数据库与资源池绑定的指南，请参阅主题](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md)  
  [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
-  

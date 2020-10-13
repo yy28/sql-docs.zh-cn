@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98b00f32fd2a49d8a326a2df94d84c72fa999cf3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e2348d17f2ccb3181441e2d816af83b6636f0f6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759113"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809733"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>还原 master 数据库 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85759113"
   
      `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
-     REPLACE 选项指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使已经存在同名数据库也要还原指定的数据库。 现有的数据库（如果存在）被删除。 在单用户模式下，建议在 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)中输入 RESTORE DATABASE 语句。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
+     REPLACE 选项指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使已经存在同名数据库也要还原指定的数据库。 现有的数据库（如果存在）被删除。 在单用户模式下，建议在 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)中输入 RESTORE DATABASE 语句。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../../ssms/scripting/sqlcmd-use-the-utility.md)。  
   
     > [!IMPORTANT]  
     >  在还原 **master** 后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例会关闭，并终止 **sqlcmd** 进程。 在重新启动服务器实例之前，请删除单用户引导参数。 有关详细信息，请参阅[配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
@@ -66,5 +66,4 @@ ms.locfileid: "85759113"
  [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
-  
   

@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423381"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869399"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "88423381"
   
     -   **从现有全文非索引字表创建**  
   
-     有关详细信息，请参阅[新建全文非索引字表（常规页）](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309)。  
+     有关详细信息，请参阅[新建全文非索引字表（常规页）](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130))。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ ms.locfileid: "88423381"
   
 4.  右键单击要更改其属性的非索引字表，然后选择“属性”。****  
   
-5.  在“ [全文非索引字表属性](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ”对话框中：  
+5.  在“ [全文非索引字表属性](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) ”对话框中：  
   
     1.  在 **“操作”** 列表框中，选择下列操作之一： **“添加非索引字”**、 **“删除非索引字”**、 **“删除所有非索引字”** 或 **“清除非索引字表”**。  
   
@@ -139,6 +139,5 @@ ms.locfileid: "88423381"
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>从 SQL Server 2005 升级干扰词  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 干扰词已替换为非索引字。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级数据库后，将不再使用干扰词文件。 然而，干扰词文件存储在 FTDATA\FTNoiseThesaurusBak 文件夹中，您可以在以后更新或生成对应的非索引字表时使用它们。 有关将干扰词文件升级到非索引字表的信息，请参阅 [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)。  
-  
   
   

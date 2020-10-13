@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e22b9695d229c83cbf95a08c0ef81462b8074a63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720702"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868279"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 事务复制是在持续连接的服务器之间实现数据移动的好方法。 使用复制向导可以轻松地配置和管理复制拓扑。 
 
-本教程演示如何为持续连接的服务器配置事务复制拓扑。 若要深入了解事务复制的工作机制，请参阅[事务复制概述](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)。 
+本教程演示如何为持续连接的服务器配置事务复制拓扑。 若要深入了解事务复制的工作机制，请参阅[事务复制概述](./transactional/transactional-replication.md)。 
   
 ## <a name="what-you-will-learn"></a>学习内容  
 本教程将演示如何使用事务复制将数据从一个数据库发布到另一个数据库。  
@@ -50,13 +50,13 @@ ms.locfileid: "85720702"
   
 - 订阅服务器（目标）上，安装任意版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssEW](../../includes/ssew-md.md)] 除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 不能充当事务复制中的订阅服务器。  
   
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer 版本](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](../backup-restore/restore-a-database-backup-using-ssms.md)。 
  
 >[!NOTE]
 > - 在相差两个版本以上的 SQL Server 实例上不支持复制。 有关详细信息，请参阅[复制拓扑中受支持的 SQL Server 版本](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器  。 有关此角色的详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器  。 有关此角色的详细信息，请参阅[服务器级别角色](../security/authentication-access/server-level-roles.md)。  
   
   
 **学完本教程的估计时间：60 分钟**  
@@ -168,7 +168,7 @@ ms.locfileid: "85720702"
 
    ![已选中发布的发布页](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. 在“分发代理位置”  页上，选择“在分发服务器上运行所有代理”  ，然后选择“下一步”  。  有关请求订阅和推送订阅的详细信息，请参阅[订阅发布](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications)。
+4. 在“分发代理位置”  页上，选择“在分发服务器上运行所有代理”  ，然后选择“下一步”  。  有关请求订阅和推送订阅的详细信息，请参阅[订阅发布](./subscribe-to-publications.md)。
 
    ![已选中“在分发服务器上运行所有代理”的“分发代理位置”页](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753185"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868661"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ ALTER DATABASE CURRENT
 | 错误代码 | 说明 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 尝试更新自从启动现有事务以来，已在其他事务中更新的行。 | 如果两个并发事务试图同时更新或删除同一行，则会发生此错误条件。 其中一个事务会收到此错误消息，并需要重试。 <br/><br/>  | 
-| **41305**| 可重复读验证失败。 此事务从内存优化表中读取的行已由另一个在此事务提交前提交的事务更新。 | 如果使用 REPEATABLE READ 或 SERIALIZABLE 隔离，并且某个并发事务的操作导致外键约束冲突，则会发生此错误。 <br/><br/>这种并发的外键约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误。 因此，建议始终在内存优化表中的外键列上创建索引。 <br/><br/> 有关外键冲突导致的验证失败的更多详细注意事项，请参阅 SQL Server 客户咨询团队发布的 [这篇博客文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  
+| **41305**| 可重复读验证失败。 此事务从内存优化表中读取的行已由另一个在此事务提交前提交的事务更新。 | 如果使用 REPEATABLE READ 或 SERIALIZABLE 隔离，并且某个并发事务的操作导致外键约束冲突，则会发生此错误。 <br/><br/>这种并发的外键约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误。 因此，建议始终在内存优化表中的外键列上创建索引。 <br/><br/> 有关外键冲突导致的验证失败的更多详细注意事项，请参阅 SQL Server 客户咨询团队发布的 [这篇博客文章](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) 。 |  
 | **41325** | 可序列化验证失败。 将新行插入到了现有事务之前已扫描的区域。 我们将此称为虚拟行。 | 如果使用 SERIALIZABLE 隔离，并且某个并发事务的操作导致主键约束、唯一约束或外键约束冲突，则会发生此错误。 <br/><br/> 这种并发的约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误，这一点与可重复读验证失败相似。 |  
 | **41301** | 依赖项失败：依赖另一个事务，但该事务随后无法提交。 | 此事务 (Tx1) 在另一个事务 (Tx2) 处于其验证或提交处理阶段时，通过读取该事务 (Tx2) 写入的数据依赖于 Tx2。 Tx2 随后无法提交。 Tx2 无法提交最常见的原因是可重复读 (41305) 和可序列化 (41325) 验证失败；不太常见的原因是日志 IO 失败。 |
 | 41823 和 41840 | 已达到内存优化表和表变量中的用户数据配额。 | 错误 41823 适用于 SQL Server Express/Web/Standard Edition，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的单一数据库。 错误 41840 适用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的弹性池。 <br/><br/> 在大多数情况下，这些错误表示已达到最大用户数据大小。从内存优化表中删除数据可解决该错误。 但是，也存在极少数特殊情况，即此错误是暂时性的。 因此，我们建议在第一次遇到这些错误时重试。<br/><br/> 同此列表中的其他错误一样，错误 41823 和 41840 会导致活动事务中止。 |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [数据库引擎中基于行版本控制的隔离级别](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [数据库引擎中基于行版本控制的隔离级别](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)   
+- [控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)

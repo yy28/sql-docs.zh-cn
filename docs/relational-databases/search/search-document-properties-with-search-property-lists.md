@@ -20,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868963"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "88464959"
   
     -   **从现有搜索属性列表创建**  
   
-     有关详细信息，请参阅 [New Search Property List](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql)。  
+     有关详细信息，请参阅 [New Search Property List](../../t-sql/statements/create-search-property-list-transact-sql.md)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -202,7 +202,7 @@ GO
   
     2.  若要添加某个文档属性，请在该列表底部的空行中单击，然后在 **\*** 右侧为这个新属性输入值。  
   
-         有关这些值的信息，请参阅 [搜索属性列表编辑器](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql)。 有关如何获取由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
+         有关这些值的信息，请参阅 [搜索属性列表编辑器](../../t-sql/statements/create-search-property-list-transact-sql.md)。 有关如何获取由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -228,5 +228,4 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89006f322ce113808deb989010b62ff9df49f04c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460219"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809463"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>第 2 课：创建和管理层次结构表中的数据
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "88460219"
 ## <a name="prerequisites"></a>先决条件  
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks2017 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
+- 下载 [AdventureWorks2017 示例数据库](../../samples/adventureworks-install-configure.md)。
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
+此处提供在 SSMS 中还原数据库的说明：[还原数据库](../backup-restore/restore-a-database-backup-using-ssms.md)。   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>使用 hierarchyid 数据类型创建表
 下例创建了一个名为 EmployeeOrg 的表，该表包含雇员数据及其报告层次结构。 本例在 AdventureWorks2017 数据库中创建该表，但这是可选操作。 为了简化该示例，此表仅包含五列：  
@@ -392,4 +392,3 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 之前向 Jill 报告的整个组织树（Wanida 和 Kevin）现在均向 Sariya 报告。  
   
 有关重新组织层次结构中的某一部分的存储过程，请参阅 [移动子树](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees)的“移动子树”部分。  
-  

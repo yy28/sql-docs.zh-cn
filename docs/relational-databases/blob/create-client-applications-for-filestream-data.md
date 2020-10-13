@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3eaf19bb73d4b36f5ba31ce61c0cc62b14a923d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5de9ab4b9a0e89197173dcee5f0e6f7ffb1b7e75
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768005"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809928"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>为 FILESTREAM 数据创建客户端应用程序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85768005"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 可返回表示会话当前事务的标记。 应用程序使用此标记可将 FILESTREAM 文件系统流式处理操作绑定到该事务。  
   
--   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 可获取 Win32 文件句柄。 应用程序使用句柄来流式传输 FILESTREAM 数据，然后可以将句柄传递给以下 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果应用程序使用此句柄来调用任何其他 API，则会返回 ERROR_ACCESS_DENIED 错误。 应用程序应使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)来关闭此句柄。  
+-   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 可获取 Win32 文件句柄。 应用程序使用句柄来流式传输 FILESTREAM 数据，然后可以将句柄传递给以下 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile)、[TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile)、[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)、[SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) 或 [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers)。 如果应用程序使用此句柄来调用任何其他 API，则会返回 ERROR_ACCESS_DENIED 错误。 应用程序应使用 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle)来关闭此句柄。  
   
  所有 FILESTREAM 数据容器访问都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中执行的。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以保持 SQL 数据和 FILESTREAM 数据之间的一致性。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "85768005"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="obtaining-a-win32-file-handle"></a><a name="handle"></a> 获取 Win32 文件句柄  
- 若要获取 Win32 文件句柄，请调用 OpenSqlFilestream API。 此 API 是从 sqlncli.dll 文件中导出的。 返回的句柄可以传递给以下任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下面的示例说明了如何获取 Win32 文件句柄并使用它在 FILESTREAM BLOB 中读取和写入数据。  
+ 若要获取 Win32 文件句柄，请调用 OpenSqlFilestream API。 此 API 是从 sqlncli.dll 文件中导出的。 返回的句柄可以传递给以下任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile)、[TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile)、[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)、[SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) 或 [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers)。 下面的示例说明了如何获取 Win32 文件句柄并使用它在 FILESTREAM BLOB 中读取和写入数据。  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
@@ -91,5 +91,4 @@ ms.locfileid: "85768005"
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [对 FILESTREAM 数据进行部分更新](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)  
-  
   

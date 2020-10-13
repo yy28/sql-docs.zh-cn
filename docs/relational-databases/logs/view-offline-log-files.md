@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667859"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869281"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85667859"
   
  如果正在使用已注册的服务器，您想要连接到的实例必须在 **“本地服务器组”** 或 **“中央管理服务器”** 下注册。 实例可以单独进行注册，也可以注册为服务器组的成员。有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加到已注册的服务器的详细信息，请参阅以下主题：  
   
--   [创建或编辑服务器组 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [创建或编辑服务器组 (SQL Server Management Studio)](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [注册连接的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [注册连接的服务器 (SQL Server Management Studio)](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [创建中央管理服务器和服务器组 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [创建中央管理服务器和服务器组 (SQL Server Management Studio)](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  有关如何以编程方式通过 WMI 和 WQL 查询查看脱机日志文件的详细信息，请参阅以下主题：  
   
@@ -122,5 +122,4 @@ ms.locfileid: "85667859"
   
 ## <a name="see-also"></a>另请参阅  
  [日志文件查看器](../../relational-databases/logs/log-file-viewer.md)  
-  
   

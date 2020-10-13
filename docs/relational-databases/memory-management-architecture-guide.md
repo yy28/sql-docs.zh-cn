@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116225"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809803"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 
@@ -81,7 +81,7 @@ ms.locfileid: "91116225"
 <sup>6</sup> 如果授予“锁定内存中的页”权限 (LPIM)（在支持 AWE 的 32 位系统上或单独在 64 位系统上），建议也要设置最大服务器内存。 有关 LPIM 的详细信息，请参阅[“服务器内存”服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> 旧版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可在 32 位操作系统上运行。 在 32 位操作系统上访问超过 4 GB 的内存需要地址窗口化扩展插件 (AWE) 对内存进行管理。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位操作系统上运行，则不需要。 有关 AWE 的详细信息，请参阅 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文档中的[进程地址空间](https://msdn.microsoft.com/library/ms189334.aspx)和[管理大型数据库的内存](https://msdn.microsoft.com/library/ms191481.aspx)。   
+> 旧版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可在 32 位操作系统上运行。 在 32 位操作系统上访问超过 4 GB 的内存需要地址窗口化扩展插件 (AWE) 对内存进行管理。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位操作系统上运行，则不需要。 有关 AWE 的详细信息，请参阅 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文档中的[进程地址空间](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105))和[管理大型数据库的内存](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105))。   
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

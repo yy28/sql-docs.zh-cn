@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279363"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868159"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "86279363"
   - 具有扩展页表的 Intel VT-x。
   - 具有快速虚拟化索引的 AMD-V。
   - 如果在 VM 中运行 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]，则虚拟机监控程序和物理 CPU 必须提供嵌套虚拟化功能。 
-    - 在 Hyper-V 2016 或更高版本中，[在 VM 处理器上启用嵌套虚拟化扩展](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
-    - 在 Azure 中，选择支持嵌套虚拟化的 VM 大小。 这包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 请参阅[创建可嵌套的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
+    - 在 Hyper-V 2016 或更高版本中，[在 VM 处理器上启用嵌套虚拟化扩展](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
+    - 在 Azure 中，选择支持嵌套虚拟化的 VM 大小。 这包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 请参阅[创建可嵌套的 Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
     - 在 VMWare vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
     - 其他虚拟机监控程序和公有云可能支持嵌套虚拟化功能，这些功能也实现具有 VBS Enclave 的 Always Encrypted。 有关兼容性和配置说明，请查看虚拟化解决方案的文档。
 - [SQL Server Management Studio (SSMS) 18.3 或更高版本](../../ssms/download-sql-server-management-studio-ssms.md)。
@@ -264,7 +264,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     2. 选择列主密钥名称：CMK1。
     3. 请确保选择“Windows 证书存储(当前用户或本地计算机)”或“Azure Key Vault” 。
     4. 选择“允许 enclave 计算”。
-    5. 如果选择了 Azure Key Vault，请登录到 Azure 并选择密钥保管库。 若要深入了解如何创建 Always Encrypted 的密钥保管库，请参阅 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)（从 Azure 门户管理密钥保管库）。
+    5. 如果选择了 Azure Key Vault，请登录到 Azure 并选择密钥保管库。 若要深入了解如何创建 Always Encrypted 的密钥保管库，请参阅 [Manage your key vaults from Azure portal](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal)（从 Azure 门户管理密钥保管库）。
     6. 选择证书或 Azure Key Value 密钥（如果已存在），或单击“生成证书”按钮，创建新证书。
     7. 选择“确定”。
 

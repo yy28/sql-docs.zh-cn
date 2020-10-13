@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410983"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868207"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 部署主机保护者服务
 
@@ -53,7 +53,7 @@ ms.locfileid: "87410983"
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    HGS 计算机将再次重启，以完成 Active Directory 林的配置。 下一次登录时，你的管理员帐户将是域管理员帐户。 建议查看 [Active Directory 域服务操作文档](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations)以了解有关管理和保护新林的详细信息。
+    HGS 计算机将再次重启，以完成 Active Directory 林的配置。 下一次登录时，你的管理员帐户将是域管理员帐户。 建议查看 [Active Directory 域服务操作文档](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations)以了解有关管理和保护新林的详细信息。
 
 3. 接下来，你将设置 HGS 群集并安装证明服务，方法是在提升的 Windows PowerShell 控制台中运行以下命令：
 
@@ -218,7 +218,7 @@ Set-HgsServer -TrustHostKey
 
 1. 使用步骤 1.3 中的完全限定 HGS 服务名称作为使用者名称，从证书颁发机构获取 TLS 证书。 如果你不知道自己的服务名称，可以通过在任何 HGS 计算机上运行 `Get-HgsServer` 来找到它。 如果 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机使用不同的 DNS 名称来访问 HGS 群集（例如，如果 HGS 位于具有不同地址的网络负载均衡器后面），则可以将 DNS 替代名称添加到“使用者替代名称”列表。
 
-2. 在 HGS 计算机上，使用 [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver) 启用 HTTPS 绑定，并指定在上一步中获得的 TLS 证书。 如果证书已安装到本地证书存储中的计算机上，请使用以下命令将其注册到 HGS：
+2. 在 HGS 计算机上，使用 [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) 启用 HTTPS 绑定，并指定在上一步中获得的 TLS 证书。 如果证书已安装到本地证书存储中的计算机上，请使用以下命令将其注册到 HGS：
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

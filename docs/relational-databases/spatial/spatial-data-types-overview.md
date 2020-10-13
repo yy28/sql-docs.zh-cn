@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464900"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809525"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 
@@ -74,7 +74,7 @@ geometry 和 geography 类型的子类型分为简单类型和集合类型。  �
 
 在平面（平面球）系统中，均以相同的度量单位为坐标测量距离和面积。 如果使用 geometry 数据类型，(2, 2) 和 (5, 6) 之间的距离为五个单位，与所用的单位无关。  
 
-在椭圆体（或圆球）系统中，坐标以经度和纬度的度数给定。 但是，即使测量可能依据的是 geography 实例的[空间引用标识符](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)，长度和面积的测量单位也通常为米或平方米。 **geography** 数据类型最常见的度量单位为米。  
+在椭圆体（或圆球）系统中，坐标以经度和纬度的度数给定。 但是，即使测量可能依据的是 geography 实例的[空间引用标识符](./spatial-reference-identifiers-srids.md)，长度和面积的测量单位也通常为米或平方米。 **geography** 数据类型最常见的度量单位为米。  
 
 ### <a name="orientation-of-spatial-data"></a>空间数据的方向
 
@@ -201,10 +201,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## <a name="see-also"></a>另请参阅
 
-- [空间数据 (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [geometry 数据类型方法引用](https://msdn.microsoft.com/library/bb933973.aspx)
-- [geography 数据类型方法引用](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [空间数据 (SQL Server)](./spatial-data-sql-server.md)
+- [geometry 数据类型方法引用](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [geography 数据类型方法引用](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves（geometry 数据类型）](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves（geography 数据类型）](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText（geometry 数据类型）](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText（geography 数据类型）](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText（geography 数据类型）](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

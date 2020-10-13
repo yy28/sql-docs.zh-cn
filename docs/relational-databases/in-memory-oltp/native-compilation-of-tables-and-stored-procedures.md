@@ -12,12 +12,12 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e26bb81bb4289d2b60f069444230e6fb25142ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2600cee68204b3ec05c68e074cfc12d48cfee9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722437"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868522"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>表和存储过程的本机编译
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -149,7 +149,7 @@ GO
 
 对使用 NATIVE_COMPILATION 来标记的存储过程执行本机编译。 这意味着该过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句均被编译为本机代码，以便高效执行性能关键的业务逻辑。
 
-有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。
+有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)。
 
 考虑下面的示例存储过程，它在前一示例的表 t1 中插入行：
 
@@ -212,6 +212,6 @@ native_sp 的 DLL 可直接与 t1 的 DLL 以及内存中 OLTP 存储引擎交�
 
 ## <a name="see-also"></a>另请参阅
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)
 
-[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)

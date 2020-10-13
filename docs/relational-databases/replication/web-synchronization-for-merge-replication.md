@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404473"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869274"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404473"
   
  因此， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部门为每台便携式计算机配置了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并启用了合并复制以便使用 Web 同步。 每台便携式计算机上的合并代理都有一个 Internet URL，它指向运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 的计算机上所安装的复制组件。 这些组件用于使订阅服务器与发布服务器同步。 现在，每个代表能够通过任何可用的 Internet 连接进行连接而无须使用远程拨号，能够上载和下载合适的数据。 Internet 连接使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”），因此不需要虚拟专用网 (VPN)。  
   
- 有关如何配置 Web 同步所需的组件的信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)、[配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)和[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
+ 有关如何配置 Web 同步所需的组件的信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)、[配置 IIS 以实现 Web 同步](./configure-iis-7-for-web-synchronization.md)和[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
   
 > [!NOTE]  
 >  Web 同步的设计目的是为了与便携式计算机、手持设备以及其他客户端同步数据， Web 同步并不适于大容量服务器对服务器应用程序。  
@@ -85,5 +85,4 @@ ms.locfileid: "88404473"
 ## <a name="see-also"></a>另请参阅  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Web 同步的拓扑](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

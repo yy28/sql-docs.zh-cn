@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6c52fb67b4536da8d164784301f17237fdd0b24a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458823"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890917"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -284,8 +284,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server 2016 中不推荐使用的全文搜索功能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement 事件类](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support 事件类](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
- [SQL Server 2016 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server 2016 中废弃的全文搜索功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [SQL Server 2016 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
+ [SQL Server 2016 中废弃的全文搜索功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
  [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
-  
   

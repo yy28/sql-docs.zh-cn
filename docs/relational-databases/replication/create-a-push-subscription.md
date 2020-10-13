@@ -18,12 +18,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f69f19c766fc0768bf72101955ee5bc08b9e8702
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110574"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869250"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ ms.locfileid: "87110574"
  可以使用复制管理对象 (RMO) 以编程方式创建推送订阅。 用于创建推送订阅的 RMO 类取决于要为其创建订阅的发布类型。  
   
 > [!IMPORTANT]
-> 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733)。  
+> 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[加密服务](/previous-versions/aa719848(v=vs.71))。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>创建快照或事务发布的推送订阅  
   
@@ -266,6 +266,5 @@ ms.locfileid: "87110574"
  [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [同步推送订阅](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [将 sqlcmd 与脚本变量结合使用](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fbaf3147eaa9cf8c68e0d0b8b3ee0510c6b4ef7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76768274921bceb17ba9ea05c73850f449441082
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540810"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810126"
 ---
 # <a name="temporal-tables"></a>临时表
 
@@ -35,7 +35,7 @@ SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由�
   - [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
   - [临时表使用方案](../../relational-databases/tables/temporal-table-usage-scenarios.md)
 
-  - [Azure SQL 数据库中的临时表入门](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)
+  - [Azure SQL 数据库中的临时表入门](/azure/azure-sql/temporal-tables)
 
 - **示例：**
 

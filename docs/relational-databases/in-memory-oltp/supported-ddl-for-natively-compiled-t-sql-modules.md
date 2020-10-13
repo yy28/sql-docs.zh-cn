@@ -12,12 +12,12 @@ ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c2a91b1568b139038cad32e81e273d564fbec98
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e7dc391e0f199ab6ab8855599506bb01365333a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715384"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868477"
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>对于本机编译的 T-SQL 模块支持的 DDL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,6 +58,5 @@ ms.locfileid: "85715384"
      有关详细信息，请参阅 [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md) 和 [DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

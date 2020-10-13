@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59ad240e910a4188672b0d73abcd98f168603f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9db611e60deea85ee5d24006f111db425f66924f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88326893"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868227"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步的安全体系结构
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "88326893"
   
 -   Xmlsub  
   
- 该帐户还应属于 IIS_WPG 组。 有关详细信息，请参阅[配置 IIS 以实现 Web 同步](../../../relational-databases/replication/configure-iis-for-web-synchronization.md)中的“设置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器的权限”一节。  
+ 该帐户还应属于 IIS_WPG 组。 有关详细信息，请参阅[配置 IIS 以实现 Web 同步](../configure-iis-7-for-web-synchronization.md)中的“设置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器的权限”一节。  
   
 |帐户的类型|指定帐户的位置|  
 |---------------------|------------------------------------|  
@@ -140,5 +140,4 @@ ms.locfileid: "88326893"
 ## <a name="see-also"></a>另请参阅  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
-  
   

@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195093"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809645"
 ---
 # <a name="create-unique-constraints"></a>创建唯一约束
 
@@ -32,7 +32,7 @@ ms.locfileid: "89195093"
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建唯一约束，以便确保在未参与主键的特定列中不输入重复值。 创建唯一约束会自动创建相应的唯一索引。  
   
 > [!NOTE]    
-> 有关 Azure Synapse Analytics 中的唯一性约束的信息，请参阅 [Azure Synapse Analytics 中的主键、外键和唯一键](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)。
+> 有关 Azure Synapse Analytics 中的唯一性约束的信息，请参阅 [Azure Synapse Analytics 中的主键、外键和唯一键](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)。
   
  **本主题内容**  
   
@@ -128,4 +128,4 @@ ms.locfileid: "89195093"
   
      有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)、[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)。  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

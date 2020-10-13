@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001184"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868804"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>在 SQL Server 和 Azure SQL 数据库中导入和导出数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86001184"
 ### <a name="design-your-own-import-or-export"></a>设计自己的导入或导出
 如果想要设计自定义数据导入，可使用以下功能或服务中的一项：
 -   SQL Server Integration Services。 有关详细信息，请参阅 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)。
--   Azure 数据工厂。 有关详细信息，请参阅 [Azure 数据工厂简介](https://docs.microsoft.com/azure/data-factory/data-factory-introduction)。
+-   Azure 数据工厂。 有关详细信息，请参阅 [Azure 数据工厂简介](/azure/data-factory/data-factory-introduction)。
 
 ## <a name="data-formats-for-import-and-export"></a>导入和导出的数据格式
 
@@ -53,7 +53,7 @@ ms.locfileid: "86001184"
 可使用多种格式导入和导出数据，包括平面文件或多种其他文件格式、关系数据库和云服务。 要详细了解特定工具的这些选项，请参阅以下主题
 -   对于 SQL Server 导入和导出向导，请参阅[使用 SQL Server 导入和导出向导连接到数据源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。
 -   对于 SQL Server Integration Services，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。
--   对于 Azure 数据工厂，请参阅 [Azure 数据工厂连接器](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector)。
+-   对于 Azure 数据工厂，请参阅 [Azure 数据工厂连接器](/azure/data-factory/data-factory-amazon-redshift-connector)。
 
 ### <a name="commonly-used-data-formats"></a>常用的数据格式
 

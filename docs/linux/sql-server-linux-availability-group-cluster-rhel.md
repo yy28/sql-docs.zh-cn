@@ -2,20 +2,20 @@
 title: RHEL：为 Linux 中的 SQL Server 配置可用性组
 description: 了解如何在运行 Red Hat Enterprise Linux (RHEL) 时为 SQL Server 配置可用性组。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2eb6198e7d2b776a9c7fefd811f2883675adb83b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896954"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784895"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 RHEL 群集
 

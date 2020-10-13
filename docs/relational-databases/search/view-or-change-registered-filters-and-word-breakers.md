@@ -17,12 +17,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f261aeafc9ae6010f02a8f4cff4cb14168e81303
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec6bffa39e5f7a9b3bb1938f42dac110b8385da5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490510"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868929"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>查看或更改注册的筛选器和断字符
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "88490510"
   
      **安装并加载 Microsoft Filter Pack IFilter**  
   
-    -   [如何将 Microsoft Filter Pack IFilter 注册到 SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [如何将 Microsoft Filter Pack IFilter 注册到 SQL Server]()  
   
 4.  按如下方式使用 **sp_fulltext_service** 加载服务器实例中新安装的断字符和筛选器：  
   
@@ -105,5 +105,4 @@ ms.locfileid: "88490510"
  [设置用于全文筛选器后台程序启动器的服务帐户](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-  
   

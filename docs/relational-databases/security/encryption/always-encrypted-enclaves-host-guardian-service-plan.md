@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411369"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869168"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>规划主机保护者服务证明
 
@@ -42,7 +42,7 @@ HGS 安装程序会为 HGS 服务器、故障转移群集资源和管理员帐�
 ### <a name="high-availability"></a>高可用性
 
 HGS 功能会自动安装和配置故障转移群集。
-在生产环境中，建议使用三台 HGS 服务器来实现高可用性。 请参阅[故障转移群集文档](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum)以了解有关群集仲裁确定方式和备用配置的详细信息（包括具有外部见证服务器的两节点群集）。
+在生产环境中，建议使用三台 HGS 服务器来实现高可用性。 请参阅[故障转移群集文档](/windows-server/failover-clustering/manage-cluster-quorum)以了解有关群集仲裁确定方式和备用配置的详细信息（包括具有外部见证服务器的两节点群集）。
 
 HGS 节点之间无需共享存储。 证明数据库的副本存储在每台 HGS 服务器上，由群集服务自动通过网络进行复制。
 
@@ -67,7 +67,7 @@ HGS 支持对 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] �
 通常，我们提供以下建议：
 
 - 对于物理生产服务器，我们建议使用 TPM 证明来实现它所提供的其他保证  。
-- 对于虚拟生产服务器，我们建议使用主机密钥证明，因为大多数虚拟机都没有虚拟 TPM 或安全启动  。 如果你使用的是安全增强型 VM（例如，[本地防护型 VM](https://aka.ms/shieldedvms)），则可以选择使用 TPM 模式。 在所有虚拟化部署中，证明过程仅分析 VM 环境，而不分析 VM 所在的虚拟化平台。
+- 对于虚拟生产服务器，我们建议使用主机密钥证明，因为大多数虚拟机都没有虚拟 TPM 或安全启动  。 如果你使用的是安全增强型 VM（例如，[本地防护型 VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node)），则可以选择使用 TPM 模式。 在所有虚拟化部署中，证明过程仅分析 VM 环境，而不分析 VM 所在的虚拟化平台。
 - **对于开发/测试方案**，我们建议使用主机密钥证明，因为它更易于设置。
 
 ### <a name="trust-model"></a>信任模型
@@ -114,7 +114,7 @@ TPM 证明需要安全启动，以确保 UEFI 加载了由 Microsoft 签名的�
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机先决条件
 
-运行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的计算机必须满足[安装 SQL Server 的要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)和 [Hyper-V 硬件要求](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)。
+运行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的计算机必须满足[安装 SQL Server 的要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)和 [Hyper-V 硬件要求](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)。
 
 这些要求包括：
 
@@ -124,7 +124,7 @@ TPM 证明需要安全启动，以确保 UEFI 加载了由 Microsoft 签名的�
   - 具有扩展页表的 Intel VT-x。
   - 具有快速虚拟化索引的 AMD-V。
   - 如果在 VM 中运行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]，则虚拟机监控程序和物理 CPU 必须提供嵌套虚拟化功能。 请参阅[信任模型](#trust-model)部分，以了解有关在 VM 中运行 VBS enclave 时的保证的信息。
-    - 在 Hyper-V 2016 或更高版本中，[在 VM 处理器上启用嵌套虚拟化扩展](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
+    - 在 Hyper-V 2016 或更高版本中，[在 VM 处理器上启用嵌套虚拟化扩展](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
     - 在 Azure 中，选择支持嵌套虚拟化的 VM 大小。 所有 v3 系列的 VM 都支持嵌套虚拟化，例如 Dv3 和 Ev3。 请参阅[创建可嵌套的 Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
     - 在 VMware vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
     - 其他虚拟机监控程序和公有云可能支持嵌套虚拟化功能，这些功能也实现具有 VBS Enclave 的 Always Encrypted。 有关兼容性和配置说明，请查看虚拟化解决方案的文档。

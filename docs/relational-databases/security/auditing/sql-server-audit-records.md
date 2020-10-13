@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1683231db68ea20fda3082a8ade8f945fcae4c29
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885315"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868555"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85885315"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|触发可审核操作的日期/时间。|**datetime2**|是|  
 |**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|**int**|是|  
-|**action_id**|操作的 ID<br /><br /> 提示：要将 action_id 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|是|  
+|**action_id**|操作的 ID<br /><br /> 提示：要将 action_id 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|是|  
 |**succeeded**|指示触发审核事件的操作的权限检查是否成功或失败。 |**bit**<br /> - 1 = 成功， <br />0 = 失败|是|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|**bigint**|否|  
 |**is_column_permission**|指示列级别权限的标志|**bit** <br />- 1 = True, <br />0 = False|否|  
@@ -110,5 +110,4 @@ ms.locfileid: "85885315"
  [sys.dm_audit_actions (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
  [sys.dm_audit_class_type_map (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753202"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868780"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753202"
   
  有关针对内存优化表和编辑编译的存储过程的支持的功能的详细信息，请参阅：  
   
--   [本机编译存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [本机编译存储过程的迁移问题](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [对内存中 OLTP 的 Transact-SQL 支持](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>使用内存中 OLTP 的数据库  
  下表列出了不受支持的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能，以及涉及内存中 OLTP 数据库的错误消息文本中可能显示的关键字。 此表还列出了错误的解决方法。  
@@ -110,7 +110,7 @@ ms.locfileid: "85753202"
 |Feature|COMPUTE|不支持 **COMPUTE** 子句。 从查询中删除它。|  
 |Feature|SELECT INTO|**INTO** 语句不支持 **SELECT** 子句。 将查询重写为 INSERT INTO Table SELECT 。|  
 |Feature|不完整的插入列列表|一般情况下，在 INSERT 语句中，必须为表中的所有列指定值。<br /><br /> 但是，我们支持内存优化表上的 DEFAULT 约束和 IDENTITY(1,1) 列。 可以将这些列（如果为 IDENTITY 列，则必须）从 INSERT 列列表中忽略。|  
-|Feature|*Function*|本机编译存储过程中不支持某些内置函数。 从存储过程中删除被拒绝的函数。 有关支持的内置函数的详细信息，请参阅<br />[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|Feature|*Function*|本机编译存储过程中不支持某些内置函数。 从存储过程中删除被拒绝的函数。 有关支持的内置函数的详细信息，请参阅<br />[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)。|  
 |Feature|CASE|适用对象：[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 开始的 SQL Server<br/>本机编译存储过程中的查询不支持 CASE 表达式。 创建每个情况的查询。 有关详细信息，请参阅 [在本机编译的存储过程中实现 CASE 表达式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server 不支持 CASE 表达式。|  
 |Feature|INSERT EXECUTE|删除引用。|  
 |Feature|EXECUTE|仅支持执行本机编译存储过程和用户定义函数。|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753202"
 |操作员|TSEQUAL|不支持此运算符。 从本机编译的存储过程中删除 **TSEQUAL** 。|  
 |操作员|LIKE|不支持此运算符。 从本机编译的存储过程中删除 **LIKE** 。|  
 |操作员|NEXT VALUE FOR|不能在本机编译的存储过程内引用序列。 使用解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)]获取值，然后将它传递到本机编译的存储过程。 有关详细信息，请参阅 [在内存优化表中实现 IDENTITY](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)。|  
-|Set 选项|*option*|在本机编译的存储过程内无法更改 SET 选项。 可以使用 BEGIN ATOMIC 语句设置某些选项。 有关详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)中有关原子块的章节。|  
+|Set 选项|*option*|在本机编译的存储过程内无法更改 SET 选项。 可以使用 BEGIN ATOMIC 语句设置某些选项。 有关详细信息，请参阅 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)中有关原子块的章节。|  
 |操作数|TABLESAMPLE|不支持此运算符。 从本机编译的存储过程中删除 **TABLESAMPLE** 。|  
 |选项|RECOMPILE|在创建时编译本机编译的存储过程。 从过程定义中删除 **RECOMPILE** 。<br /><br /> 可以对本机编译存储过程执行 sp_recompile，使其在下一次执行时进行重新编译。|  
 |选项|ENCRYPTION|不支持此选项。 从过程定义中删除 **ENCRYPTION** 。|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753202"
 |Feature|DTC|访问内存优化的表的事务不能是分布式事务。|  
   
 ## <a name="see-also"></a>另请参阅  
- [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [迁移到内存中 OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

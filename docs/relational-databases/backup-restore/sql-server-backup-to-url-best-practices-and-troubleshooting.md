@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759025"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809173"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>从 SQL Server 备份到 URL 的最佳做法和疑难解答
 
@@ -67,7 +67,7 @@ ms.locfileid: "85759025"
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 **db_backupoperator** 且拥有 ***更改任意凭据*** 权限的登录帐户。  
@@ -92,7 +92,7 @@ ms.locfileid: "85759025"
   
     -   还可以查看 Windows 事件日志（位于应用程序日志之下，名为“`SQLBackupToUrl`”），查找相关信息。  
 
-    -   在备份大型数据库时，请考虑 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多个 URL 参数。  请参阅[将 VLDB 备份到 Azure Blob 存储](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
+    -   在备份大型数据库时，请考虑 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多个 URL 参数。  请参阅[将 VLDB 备份到 Azure Blob 存储](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
   
         ```console
         Msg 3202, Level 16, State 1, Line 1
@@ -182,4 +182,3 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
  [从 Microsoft Azure 中存储的备份还原](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c105d3f4d4d49cd7bf064a2c3c6b88fc5a7eae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756874"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868792"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN
 
@@ -80,7 +80,7 @@ ms.locfileid: "85756874"
 
 本部分针对相同定义的事件会话匹配和关联三种不同的技术角度。 已在 SQL Server Management Studio (SSMS.exe) 的 **对象资源管理器** 中定义并显示会话，但是该会话当前未运行。
 
-每月 [安装 SSMS 的最新更新](https://msdn.microsoft.com/library/mt238290.aspx)是明智之举，以避免意外故障。
+每月 [安装 SSMS 的最新更新](../../ssms/download-sql-server-management-studio-ssms.md)是明智之举，以避免意外故障。
 
 
 有关扩展事件的目录视图的参考文档位于 [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)（扩展事件目录视图 (Transact-SQL)）。
@@ -891,5 +891,3 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
-
-

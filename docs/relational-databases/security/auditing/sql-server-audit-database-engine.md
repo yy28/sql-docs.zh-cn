@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f37e26803ebc57479d0c70dcd69dc951881c119a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923926"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868592"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86923926"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的所有版本均支持服务器级审核。 从 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 开始，所有版本都支持数据库级审核。 在此之前，数据库级审核限制为 Enterprise、Developer 和 Evaluation 版本。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 > [!NOTE]  
->  本     主题适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]的信息，请参阅 [Get started with SQL database auditing（SQL 数据库审核入门）](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)。  
+>  本     主题适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]的信息，请参阅 [Get started with SQL database auditing（SQL 数据库审核入门）](/azure/azure-sql/database/auditing-overview)。  
   
 ## <a name="sql-server-audit-components"></a>SQL Server 审核组件  
   “审核”是将若干元素组合到一个包中，用于执行一组特定服务器操作或数据库操作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的组件组合生成的输出就称为审核，就如同报表定义与图形和数据元素组合生成报表一样。  
@@ -70,7 +70,7 @@ ms.locfileid: "86923926"
 > [!IMPORTANT]  
 >  任何经过身份验证的用户可以读取和写入到 Windows 应用程序事件日志。 应用程序事件日志要求的权限比 Windows 安全事件日志低，安全性低于 Windows 安全事件日志。  
   
- 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，可通过使用审核策略程序 ( **AuditPol.exe)** 从命令行设置更详细的**应用程序生成**策略。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](https://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
+ 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，可通过使用审核策略程序 ( **AuditPol.exe)** 从命令行设置更详细的**应用程序生成**策略。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](https://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10))。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
   
  在您将审核信息保存到某一文件时，为了帮助避免被篡改，可以通过以下方式限制对文件位置的访问：  
   
@@ -215,12 +215,10 @@ ms.locfileid: "86923926"
  [DDL 触发器](../../../relational-databases/triggers/ddl-triggers.md)  
  介绍如何使用数据定义语言 (DDL) 触发器来跟踪对数据库的更改。  
   
- [Microsoft TechNet：SQL Server 技术中心：SQL Server 2005 安全性和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server 技术中心：SQL Server 2005 安全性和保护](../../../sql-server/index.yml)  
  提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [SQL Server 审核记录](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
-  
-

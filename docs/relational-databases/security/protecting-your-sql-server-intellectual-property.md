@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4619b4bd72258e67388ee7498eff63b28a1f3b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773883"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869012"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保护 SQL Server 知识产权
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,11 @@ ms.locfileid: "85773883"
 如果客户端不是计算机上的管理员，则你可以阻止客户端的访问。 你可以使用[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)来加密数据文件、加密备份，以及审核所有用户的操作。 但是，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 管理员以及 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 计算机的管理员可以撤消这些操作。
 
 ## <a name="solution"></a>解决方案
-在不将 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装在客户端计算机上的情况下，可通过多种方式配置客户端数据访问。 最简单的方法可能是使用 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]（也许可以结合 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)），使客户端不会成为管理员。 有关如何开始使用 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的详细信息，请参阅[什么是 SQL 数据库？SQL 数据库简介](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)。  
+在不将 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装在客户端计算机上的情况下，可通过多种方式配置客户端数据访问。 最简单的方法可能是使用 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]（也许可以结合 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)），使客户端不会成为管理员。 有关如何开始使用 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的详细信息，请参阅[什么是 SQL 数据库？SQL 数据库简介](/azure/sql-database/sql-database-technical-overview)。  
 
 还可以将 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 托管在自己的网络中，并允许客户端在你的网络中直接或通过 Web 应用程序访问数据。
 
 ## <a name="see-also"></a>另请参阅
 
 [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[保护 SQL Server](../../relational-databases/security/securing-sql-server.md)  
-
+[保护 SQL Server](../../relational-databases/security/securing-sql-server.md)

@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: fc5ba7ab181e07552f9865eff482d67e292c0249
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767995"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809907"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>启用 FileTable 的先决条件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ GO
  非事务性访问的可用级别为 FULL、READ_ONLY 和 OFF。  
   
  **使用 Transact-SQL 指定非事务性访问的级别**  
- - **创建新数据库**时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。
+ - **创建新数据库**时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。
 
    ```sql
    CREATE DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  您指定的名称必须在跨数据库级目录的实例中是唯一的。  
   
 **使用 Transact-SQL 指定 FileTable 的目录**  
-- **创建新数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。
+- **创建新数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。
 
    ```sql
    CREATE DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   **附加数据库**时，调用带 **FOR ATTACH** 选项和 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
+-   **附加数据库**时，调用带 **FOR ATTACH** 选项和 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -153,5 +153,4 @@ GO
 -   在数据库级别启用或禁用非事务性访问时，该操作不检查是否已指定目录名称或该名称是否唯一。  
   
 -   删除已为 FileTable 启用的数据库时，将删除数据库级目录和其下的所有 FileTable 的所有目录结构。  
-  
   
