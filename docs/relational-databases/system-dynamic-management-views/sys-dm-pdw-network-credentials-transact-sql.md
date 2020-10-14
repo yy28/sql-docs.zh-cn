@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_network_credentials (Transact-sql) '
-title: sys. dm_pdw_network_credentials (Transact-sql) |Microsoft Docs
+description: 'sys.dm_pdw_network_credentials (Transact-sql) '
+title: sys.dm_pdw_network_credentials (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b66dc3fcdbb358e1177b3db3fd62cc1b8aa80259
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 243319d55d703317847dd1475398b23bea56afc6
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530906"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035327"
 ---
-# <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials (Transact-sql) 
+# <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   返回所有目标服务器在设备中存储的所有网络凭据的列表 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 为控制节点和每个计算节点列出结果。  
@@ -39,6 +39,6 @@ ms.locfileid: "89530906"
  此动态管理视图的键 *pdw_node_id* 加 *target_server_name*。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

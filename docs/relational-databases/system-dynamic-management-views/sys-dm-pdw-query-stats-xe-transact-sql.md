@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_query_stats_xe (Transact-sql) '
-title: sys. dm_pdw_query_stats_xe (Transact-sql) |Microsoft Docs
+description: 'sys.dm_pdw_query_stats_xe (Transact-sql) '
+title: sys.dm_pdw_query_stats_xe (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13b09ebe66a759d0c57161c99cfb16864be1b094
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae6e1bad82f1280bd0e2ed4c461f93dfb2dd9e34
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530245"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035240"
 ---
-# <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-sql) 
+# <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys.dm_pdw_query_stats_xe (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   此 DMV 已弃用，并将在将来的版本中删除。 在此版本中，它返回0行。  
@@ -30,7 +30,7 @@ ms.locfileid: "89530245"
 |event|**nvarchar(60)**|此视图的键。||  
 |event_id|**nvarchar (36) **|||  
 |create_time|**datetime**|||  
-|session_id|**int**|会话的 id。|请参阅 dm_pdw_exec_sessions sys.databases 中的 session_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
+|session_id|**int**|会话的 id。|请参阅 [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
 |cpu|**int**|||  
 |reads|**int**|自事件开始后的逻辑读取次数。||  
 |Writes|**int**|自事件开始后的逻辑写入次数。||  
@@ -40,6 +40,6 @@ ms.locfileid: "89530245"
 |pdw_node_id|**int**|此 Xevent 实例正在其上运行的节点。|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

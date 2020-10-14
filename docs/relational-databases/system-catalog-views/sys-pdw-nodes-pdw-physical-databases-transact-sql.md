@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_nodes_pdw_physical_databases (Transact-sql) '
-title: 'sys. pdw_nodes_pdw_physical_databases (Transact-sql) '
+description: 'sys.pdw_nodes_pdw_physical_databases (Transact-sql) '
+title: 'sys.pdw_nodes_pdw_physical_databases (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4b29984f962f2ec4f542a57cd604c619a78c6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475354"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036710"
 ---
-# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-sql) 
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   计算节点上的每个物理数据库在各占一行。 聚合物理数据库信息以获取有关数据库的详细信息。 若要合并信息，请将联接 `sys.pdw_nodes_pdw_physical_databases` 到 `sys.pdw_database_mappings` 和 `sys.databases` 表。  
@@ -28,7 +28,7 @@ ms.locfileid: "88475354"
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|数据库的对象 ID。 请注意，此值与 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 视图中的 database_id 不相同。|  
-|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值与 [pdw_database_mappings sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 视图中 physical_name 列的值相同。|  
+|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值与 [sys.pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 视图的 "physical_name" 列中的值相同。|  
 |pdw_node_id|**int**|与节点关联的唯一数字 id。|  
   
 ## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -47,7 +47,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. 使用 sys. pdw_nodes_pdw_physical_databases 收集详细的对象信息  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. 使用 sys.pdw_nodes_pdw_physical_databases 收集详细的对象信息  
  下面的查询显示有关索引的信息，并包括有关对象属于数据库中对象的数据库的有用信息。  
   
 ```  
@@ -64,7 +64,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. 使用 sys. pdw_nodes_pdw_physical_databases 确定加密状态  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. 使用 sys.pdw_nodes_pdw_physical_databases 确定加密状态  
  以下查询提供 AdventureWorksPDW2012 数据库的加密状态。  
   
 ```  
@@ -87,9 +87,9 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Azure Synapse Analytics 和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

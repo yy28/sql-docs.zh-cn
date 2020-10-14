@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_sql_requests (Transact-sql) '
-title: sys. dm_pdw_sql_requests (Transact-sql) |Microsoft Docs
+description: 'sys.dm_pdw_sql_requests (Transact-sql) '
+title: sys.dm_pdw_sql_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -13,26 +13,26 @@ ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d6ec963b5e46578e8fb543169ef897533b26ca4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bbf99db3971ecb9979c1ef234d1f57c1761afa9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474660"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035200"
 ---
-# <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-sql) 
+# <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   将有关所有 SQL Server 查询分发的信息保存为查询中的 SQL 步骤的一部分。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|此 SQL 查询分发所属的查询的唯一标识符。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
-|step_index|**int**|此分发所属的查询步骤的索引。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 dm_pdw_request_steps sys.databases 中的 step_index [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
-|pdw_node_id|**int**|运行此查询分发的节点的唯一标识符。|请参阅 dm_pdw_nodes sys.databases 中的 node_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
-|distribution_id|**int**|运行此查询分发的分发的唯一标识符。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 pdw_distributions sys.databases 中的 distribution_id [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。 对于在节点范围内运行的请求，将设置为-1，而不是分布作用域。|  
-|状态|**nvarchar(32)**|查询分发的当前状态。|挂起、正在运行、已失败、已取消、完成、已中止、CancelSubmitted|  
-|error_id|**nvarchar (36) **|与此查询分布关联的错误的唯一标识符（如果有）。|请参阅 dm_pdw_errors sys.databases 中的 error_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果未发生错误，则设置为 NULL。|  
+|request_id|**nvarchar(32)**|此 SQL 查询分发所属的查询的唯一标识符。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 [sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
+|step_index|**int**|此分发所属的查询步骤的索引。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 [sys.dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 step_index。|  
+|pdw_node_id|**int**|运行此查询分发的节点的唯一标识符。|请参阅 [sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中的 node_id。|  
+|distribution_id|**int**|运行此查询分发的分发的唯一标识符。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 [sys.pdw_distributions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)中的 distribution_id。 对于在节点范围内运行的请求，将设置为-1，而不是分布作用域。|  
+|status|**nvarchar(32)**|查询分发的当前状态。|挂起、正在运行、已失败、已取消、完成、已中止、CancelSubmitted|  
+|error_id|**nvarchar (36) **|与此查询分布关联的错误的唯一标识符（如果有）。|请参阅 [sys.dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)中的 error_id。 如果未发生错误，则设置为 NULL。|  
 |start_time|**datetime**|开始执行查询分发的时间。|小于或等于当前时间，大于或等于此查询分布所属的查询步骤 start_time|  
 |end_time|**datetime**|此查询分发完成执行、已取消或失败的时间。|大于或等于开始时间; 如果查询分发正在进行或排队，则设置为 NULL。|  
 |total_elapsed_time|**int**|表示查询分发已运行的时间（以毫秒为单位）。|大于或等于0。 与已完成、失败或已取消的查询分发的 start_time 和 end_time 的增量相等。<br /><br /> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  
@@ -43,6 +43,6 @@ ms.locfileid: "88474660"
  有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8feb8a1a7de67ecac01946f025545eb3536d977c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46b1d3bd60a3a2603cb0a317e0d2bbc3a206c3ea
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372523"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038841"
 ---
 # <a name="appendix---1-sybasetosql"></a>附录 - 1 (SybaseToSQL)
 SSMA 控制台命令行选项的快速视图：  
@@ -34,5 +34,4 @@ SSMA 控制台命令行选项的快速视图：
 |8|-?|否|不适用|不适用|  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台 (Sybase) ](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[执行 SSMA 控制台 (Sybase) ](./executing-the-ssma-console-sybasetosql.md)  

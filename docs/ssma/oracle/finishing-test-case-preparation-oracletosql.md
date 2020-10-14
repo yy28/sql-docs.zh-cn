@@ -11,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4707c68c0b744e092844d57bd6f235a69dbec9ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463222"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038040"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>完成测试用例准备 (OracleToSQL)
 向导的最后一页显示测试用例说明以及有关测试中涉及的对象的信息。 此外，在此页上，您可以设置测试执行选项。  
@@ -55,10 +55,9 @@ ms.locfileid: "88463222"
   
 -   如果选择 " **在表比较失败时询问用户**"，则在发生错误时，用户可以选择必要的操作。  
   
-单击 " **完成** " 按钮，将准备好的测试用例保存到 [使用测试存储库 (OracleToSQL) ](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)。  
+单击 " **完成** " 按钮，将准备好的测试用例保存到 [使用测试存储库 (OracleToSQL) ](./using-test-repositories-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用测试存储库 &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [&#40;OracleToSQL&#41;运行测试用例 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [测试迁移的数据库对象 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

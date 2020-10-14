@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_nodes_partitions (Transact-sql) '
-title: sys. pdw_nodes_partitions (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_nodes_partitions (Transact-sql) '
+title: sys.pdw_nodes_partitions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 82903661be207c73b1b848e8273b594ff49d1642
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: ff60a994457c8836446520aae7772f2ab6150a46
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062266"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036720"
 ---
-# <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql) 
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   对于所有表的每个分区，以及数据库中的大多数类型的索引，都包含一行 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 所有表和索引都至少包含一个分区，无论它们是否已明确分区。  
@@ -71,7 +71,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

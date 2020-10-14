@@ -4,11 +4,11 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 3087a7558856ec723ce2f448f476d094de66b24c
-ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+ms.openlocfilehash: 59ea64f6a15a6c74b76bdb35ed8fc293a76c3f39
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84124497"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92038577"
 ---
-<Token>**适用于：** ![是 ](media/yes-icon.png) SQL Server 2017 及更高版本 ![ 是 ](media/yes-icon.png) azure sql 托管实例 ![ 无 ](media/no-icon.png) azure Sql 数据仓库 ![ 否 ](media/no-icon.png) 并行数据仓库</Token>
+<Token>**适用于：** ![是 ](media/yes-icon.png) SQL Server 2017 及更高版本 ![ 是 ](media/yes-icon.png) azure SQL 托管实例 ![ 没有任何 ](media/no-icon.png) Azure Synapse 分析 ![ 任何 ](media/no-icon.png) 并行数据仓库 </Token>

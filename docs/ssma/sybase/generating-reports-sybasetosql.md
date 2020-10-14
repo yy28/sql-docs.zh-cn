@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ff4e618126d9bb720d5bd4e8323e333c421f74f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99516dc132f9c086c96bb3b886424927d68bab1b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372173"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034956"
 ---
 # <a name="generating-reports-sybasetosql"></a>生成报告 (SybaseToSQL)
 使用命令执行的某些活动的报告在对象树级别的 SSMA 控制台中生成。  
@@ -30,7 +30,7 @@ ms.locfileid: "88372173"
   
     报告 vis-vis 命令包括：  
   
-    |Sl. 否。|Command|报表标题|  
+    |Sl. 否。|命令|报表标题|  
     |-|-|-|  
     |1|生成-评估-报表|AssessmentReport &lt; n &gt; 。XML|  
     |2|转换-架构|SchemaConversionReport &lt; n &gt; 。XML|  
@@ -143,5 +143,4 @@ ms.locfileid: "88372173"
 -   fail-脚本  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台 (Sybase) ](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[执行 SSMA 控制台 (Sybase) ](./executing-the-ssma-console-sybasetosql.md)  

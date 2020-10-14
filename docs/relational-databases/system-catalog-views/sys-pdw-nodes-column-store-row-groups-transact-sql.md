@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_nodes_column_store_row_groups (Transact-sql) '
-title: 'sys. pdw_nodes_column_store_row_groups (Transact-sql) '
+description: 'sys.pdw_nodes_column_store_row_groups (Transact-sql) '
+title: 'sys.pdw_nodes_column_store_row_groups (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,26 +13,26 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062346"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038290"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql) 
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  按段提供聚集列存储索引信息，以帮助管理员在中做出系统管理决策 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 **sys. pdw_nodes_column_store_row_groups** 包含物理存储的总行数的列 (包括标记为已删除的行) 以及标记为已删除的行数的列。 使用 **sys. pdw_nodes_column_store_row_groups** 确定哪些行组的已删除行的百分比较高并应重新生成。  
+  按段提供聚集列存储索引信息，以帮助管理员在中做出系统管理决策 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 **sys.pdw_nodes_column_store_row_groups** 包含了物理存储的总行数的列 (包括标记为已删除的行) 以及标记为已删除的行数的列。 使用 **sys.pdw_nodes_column_store_row_groups** 确定哪些行组的已删除行的百分比很高，应重新生成这些行组。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|基础表的 ID。 这是计算节点上的物理表，而不是控制节点上逻辑表的 object_id。 例如，object_id 与 sys.databases 中的 object_id 不匹配。<br /><br /> 若要与 sys.databases 联接，请使用 sys. pdw_index_mappings。|  
+|object_id|**int**|基础表的 ID。 这是计算节点上的物理表，而不是控制节点上逻辑表的 object_id。 例如，object_id 与 sys.databases 中的 object_id 不匹配。<br /><br /> 若要与 sys.databases 联接，请使用 sys.pdw_index_mappings。|  
 |index_id|**int**|*Object_id*表上的聚集列存储索引的 ID。|  
 |**partition_number**|**int**|保存行组 *row_group_id*的表分区的 ID。 你可以使用 *partition_number* 将此 DMV 加入 sys.databases。|  
 |**row_group_id**|**int**|此行组的 ID。 这在分区中是唯一的。|  
 |**dellta_store_hobt_id**|**bigint**|delta 行组的 hobt_id；或如果行组类型不是 delta，则为 NULL。 delta 行组是正在接受新记录的读/写行组。 增量行组具有 **打开** 状态。 delta 行组仍采用行存储格式，并且尚未压缩成列存储格式。|  
-|State|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state**|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|行组的持久状态的说明：<br /><br /> OPEN-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充但尚未由元组移动器进程压缩的行组。<br /><br /> 压缩-已填充和压缩的行组。|  
 |**total_rows**|**bigint**|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|**bigint**|在标记为删除的行组中物理存储的行数。<br /><br /> 对于增量行组，始终为0。|  
@@ -43,7 +43,7 @@ ms.locfileid: "89062346"
 ## <a name="remarks"></a>备注  
  针对每个表中具有聚合或非聚合列存储索引的每个列存储行组返回一行。  
   
- 使用 **sys. pdw_nodes_column_store_row_groups** 确定包含在行组中的行数和行组的大小。  
+ 使用 **sys.pdw_nodes_column_store_row_groups** 来确定行组中包含的行数和行组的大小。  
   
  当行组中的已删除行数量增长到占总行数的较大百分比时，该表的效率将下降。 重新生成列存储索引以减少表的大小，同时减少读取该表所需的磁盘 I/O。 若要重新生成列存储索引，请使用**ALTER index**语句的**rebuild**选项。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "89062346"
  需要 VIEW SERVER STATE 权限  。  
   
 ## <a name="examples-sssdw-and-sspdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例将 **sys. pdw_nodes_column_store_row_groups** 表联接到其他系统表，以返回有关特定表的信息。 计算的 `PercentFull` 列是对行组效率的估计。 若要查找单个表的信息，请删除 WHERE 子句前面的注释连字符，并提供表名称。  
+ 下面的示例将 **sys.pdw_nodes_column_store_row_groups** 表联接到其他系统表，以返回有关特定表的信息。 计算的 `PercentFull` 列是对行组效率的估计。 若要查找单个表的信息，请删除 WHERE 子句前面的注释连字符，并提供表名称。  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -109,9 +109,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Azure Synapse Analytics 和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [&#40;Transact-sql&#41;创建列存储索引 ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c9e605f33615fa09b87a3c58353689db9eeecdd7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1b6f9c7dc71bec58dd101f2fa7cb9f30f7f7ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463261"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037380"
 ---
 # <a name="appendix---1-oracletosql"></a>附录 - 1 (OracleToSQL)
 SSMA 控制台命令行选项的快速视图：  
@@ -33,5 +33,4 @@ SSMA 控制台命令行选项的快速视图：
 |8|-?|否|不适用|不适用|  
   
 ## <a name="see-also"></a>另请参阅  
-[ (Oracle) 执行 SSMA 控制台 ](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[ (Oracle) 执行 SSMA 控制台 ](./executing-the-ssma-console-oracletosql.md)  

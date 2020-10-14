@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 89603e61a51ebac9ccf8d834e493bbd463645a02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2268615b8a8ed25883d7d9dce92d8e775f228a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497661"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034974"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>将 Sybase ASE 数据迁移到 SQL Server-Azure SQL 数据库 (SybaseToSQL) 
 成功将 Sybase 自适应服务器企业 (ASE) 数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库后，可以将数据从 ASE 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库。  
   
 > [!IMPORTANT]  
-> 如果正在使用的引擎是服务器端数据迁移引擎，则在迁移数据之前，必须在运行 SSMA 的计算机上安装适用于 Sybase ASE 扩展包和 Sybase ASE 提供程序的 SSMA。 SQL Server 代理服务也必须正在运行。 有关如何安装扩展包的详细信息，请参阅 [在 SQL Server 上安装 SSMA 组件 (SybaseToSQL) ](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+> 如果正在使用的引擎是服务器端数据迁移引擎，则在迁移数据之前，必须在运行 SSMA 的计算机上安装适用于 Sybase ASE 扩展包和 Sybase ASE 提供程序的 SSMA。 SQL Server 代理服务也必须正在运行。 有关如何安装扩展包的详细信息，请参阅 [在 SQL Server 上安装 SSMA 组件 (SybaseToSQL) ](./installing-ssma-components-on-sql-server-sybasetosql.md)  
   
 ## <a name="setting-migration-options"></a>设置迁移选项  
 在将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库之前，请在 " **项目设置** " 对话框中查看项目迁移选项。  
   
--   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅 [ (Sybase) 的项目设置 (迁移) ](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)。  
+-   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅 [ (Sybase) 的项目设置 (迁移) ](./project-settings-migration-sybasetosql.md)。  
   
     有关 **扩展数据迁移设置**的详细信息，请参阅 [数据迁移设置](data-migration-settings-sybasetosql.md)  
   
@@ -46,11 +46,11 @@ ms.locfileid: "88497661"
 -   在 " **项目设置**" 中，默认情况下会设置 **客户端数据迁移引擎** 选项。  
   
     > [!NOTE]  
-    > 客户端数据迁移引擎驻留在 SSMA 应用程序中，因此不依赖于扩展包的可用性。  
+    > Client-Side 数据迁移引擎驻留在 SSMA 应用程序中，因此不依赖于扩展包的可用性。  
   
 **服务器端数据迁移：**  
   
--   在服务器端数据迁移期间，引擎驻留在目标数据库上。 它通过扩展包进行安装。 有关如何安装扩展包的详细信息，请参阅 [在 SQL Server 上安装 SSMA 组件 (SybaseToSQL) ](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+-   在服务器端数据迁移期间，引擎驻留在目标数据库上。 它通过扩展包进行安装。 有关如何安装扩展包的详细信息，请参阅 [在 SQL Server 上安装 SSMA 组件 (SybaseToSQL) ](./installing-ssma-components-on-sql-server-sybasetosql.md)  
   
 -   若要在服务器端启动迁移，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
   
@@ -99,15 +99,14 @@ ms.locfileid: "88497661"
   
 5.  在 " **连接到 SYBASE ASE** " 对话框中，输入连接凭据，然后单击 " **连接**"。 有关连接到 Sybase ASE 的详细信息，请参阅 [连接到 sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
-    如果目标数据库 SQL Server，请在 " **连接到 SQL Server** " 对话框中输入连接凭据，然后单击 " **连接**"。 有关连接到 SQL Server 的详细信息，请参阅 [连接到 SQL Server (SybaseToSQL) ](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
+    如果目标数据库 SQL Server，请在 " **连接到 SQL Server** " 对话框中输入连接凭据，然后单击 " **连接**"。 有关连接到 SQL Server 的详细信息，请参阅 [连接到 SQL Server (SybaseToSQL) ](./connecting-to-sql-server-sybasetosql.md)  
   
     如果目标数据库是 Azure SQL 数据库，则在 " **连接到 AZURE Sql 数据库** " 对话框中输入连接凭据，并单击 " **连接**"。 有关连接到 Azure SQL 数据库的详细信息，请参阅 [连接到 AZURE Sql 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
-    消息将显示在 " **输出** " 窗格中。 迁移完成后，将显示 " **数据迁移" 报表** 。 如果任何数据未迁移，请单击包含错误的行，然后单击 " **详细信息**"。 完成报表后，单击 " **关闭**"。 有关数据迁移报表的详细信息，请参阅 [数据迁移报表 (SSMA Common) ](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    消息将显示在 " **输出** " 窗格中。 迁移完成后，将显示 " **数据迁移" 报表** 。 如果任何数据未迁移，请单击包含错误的行，然后单击 " **详细信息**"。 完成报表后，单击 " **关闭**"。 有关数据迁移报表的详细信息，请参阅 [数据迁移报表 (SSMA Common) ](./data-migration-report-sybasetosql.md)  
   
 > [!NOTE]  
 > 当 SQL Express edition 用作目标数据库时，只允许客户端数据迁移，不支持服务器端数据迁移。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

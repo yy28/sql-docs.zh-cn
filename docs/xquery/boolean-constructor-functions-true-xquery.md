@@ -1,6 +1,6 @@
 ---
-title: true 函数（XQuery） |Microsoft Docs
-description: 了解返回布尔值 True 的 XQuery 函数 true （）。
+title: " (XQuery) 为 true 函数 |Microsoft Docs"
+description: '了解 XQuery 函数 true ( # A1，返回布尔值 True。'
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3661757a2352c5a4a968e58c8676aec609391652
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8dc3582cb34c80f488005f5a2eaf1c6022c5e1be
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914635"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035790"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布尔构造函数 - true (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>示例  
- 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种 **xml** 类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. 使用 XQuery 布尔函数 true()  
- 下面的示例将查询一个非类型化的**xml**变量。 如果 "aaa" 是属性值，则**value （）** 方法中的表达式返回布尔**true （）** 。 **Xml**数据类型的**value （）** 方法将布尔值转换为位并将其返回。  
+ 下面的示例将查询一个非类型化的 **xml** 变量。 如果 "aaa" 是属性值，则 **值 ( # B1 ** 方法 ** ( # ** B1 方法返回布尔值 true。 **Xml**数据类型** ( # B1**方法的值将布尔值转换为位并将其返回。  
   
 ```  
 DECLARE @x XML  
@@ -48,11 +48,11 @@ go
 -- result = 1  
 ```  
   
- 在下面的示例中，对类型化的**xml**列指定了查询。 `if`表达式检查 <> 元素的类型化布尔值， `ROOT` 并相应地返回构造的 XML。 该示例执行以下操作：  
+ 在下面的示例中，对类型化的 **xml** 列指定了查询。 `if`表达式检查 <> 元素的类型化布尔值， `ROOT` 并相应地返回构造的 XML。 该示例执行以下操作：  
   
 -   创建定义 `ROOT` xs： boolean 类型的 <> 元素的 XML 架构集合。  
   
--   使用 XML 架构集合创建包含类型化**xml**列的表。  
+-   使用 XML 架构集合创建包含类型化 **xml** 列的表。  
   
 -   将 XML 实例保存在列中并查询它。  
   
@@ -90,6 +90,5 @@ go
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [布尔构造函数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
-  
+ [布尔构造函数 &#40;XQuery&#41;](./xquery-functions-against-the-xml-data-type.md)  
   

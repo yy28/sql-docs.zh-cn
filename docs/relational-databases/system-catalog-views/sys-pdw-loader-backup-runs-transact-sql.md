@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_loader_backup_runs (Transact-sql) '
-title: sys. pdw_loader_backup_runs (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_loader_backup_runs (Transact-sql) '
+title: sys.pdw_loader_backup_runs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490250"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036972"
 ---
-# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-sql) 
+# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   包含有关中正在进行的和已完成的备份和还原操作的信息 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，以及有关中的正在进行的和已完成的备份、还原和加载操作的信息 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 信息在两次系统重启之间仍会保留。  
@@ -38,9 +38,9 @@ ms.locfileid: "88490250"
 |database_name|**nvarchar(255)**|作为此操作的上下文的数据库的名称||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|请求操作的用户的 ID。||  
-|session_id|**nvarchar(32)**|执行操作的会话的 ID。|请参阅 dm_pdw_exec_sessions sys.databases 中的 session_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
-|request_id|**nvarchar(32)**|执行操作的请求的 ID。 对于负载，这是与此负载关联的当前或最后一个请求。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
-|状态|**nvarchar (16) **|运行状态。|"已取消"、"已完成"、"失败"、"排队"、"正在运行"|  
+|session_id|**nvarchar(32)**|执行操作的会话的 ID。|请参阅 [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
+|request_id|**nvarchar(32)**|执行操作的请求的 ID。 对于负载，这是与此负载关联的当前或最后一个请求。|请参阅 [sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
+|status|**nvarchar (16) **|运行状态。|"已取消"、"已完成"、"失败"、"排队"、"正在运行"|  
 |进度|**int**|已完成百分比。|0 到 100|  
 |command|**nvarchar(4000)**|用户提交的命令的完整文本。|如果长度超过4000个字符，则将被截断)  (。|  
 |rows_processed|**bigint**|作为此操作的一部分处理的行数。||  
@@ -48,6 +48,6 @@ ms.locfileid: "88490250"
 |rows_inserted|**bigint**|作为此操作的一部分，插入到数据库表中的行数 () 。||  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

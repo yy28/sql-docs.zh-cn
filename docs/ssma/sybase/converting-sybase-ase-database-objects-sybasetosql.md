@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 076f1d8a5f3227d906ddb76b0352a57eb80d4915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66384c27490bbc9d330f5f2d186bad1b4f4b97ee
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492340"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038858"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>将 SAP ASE 数据库对象转换 (SybaseToSQL) 
 连接到 SAP 自适应服务器企业 (ASE) 、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE sql 并设置项目和数据映射选项后，可以将 SAP 自适应服务器企业 (ASE) 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库对象。  
@@ -154,8 +154,7 @@ SSMA for SAP ASE 在转换为本地 SQL Server 时使用以下 T-sql 关键字�
 -   可以从迁移中排除对象。 在 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE Sql 元数据资源管理器" 和 "Sybase 元数据资源管理器" 中，清除项旁边的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL，并从 SAP ASE 迁移数据。  
   
 ## <a name="next-steps"></a>后续步骤  
-迁移过程的下一步是将已 [转换的数据库对象加载到 SQL Server/SQL Azure (SybaseToSQL) ](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)。  
+迁移过程的下一步是将已 [转换的数据库对象加载到 SQL Server/SQL Azure (SybaseToSQL) ](./loading-converted-database-objects-into-sql-server-sybasetosql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 SAP ASE 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

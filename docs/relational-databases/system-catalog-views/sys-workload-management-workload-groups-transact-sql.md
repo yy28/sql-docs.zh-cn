@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a2d573ef8cfc97d40451ad59d0fe51f98542c677
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006400"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033695"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-sql) 
 
@@ -47,4 +47,4 @@ modify_time|**datetime**|上次修改工作负荷组的时间。 不可为 null�
 
 ## <a name="next-steps"></a>后续步骤
 
- 有关 Azure Synapse Analytics 和并行数据仓库的所有目录视图的列表，请参阅 [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。 若要创建工作负荷组，请参阅 [创建工作负荷组](../../t-sql/statements/create-workload-group-transact-sql.md)。 有关工作负荷分类的详细信息，请参阅 [工作负荷隔离](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)
+ 有关 Azure Synapse Analytics 和并行数据仓库的所有目录视图的列表，请参阅 [Azure Synapse analytics 和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。 若要创建工作负荷组，请参阅 [创建工作负荷组](../../t-sql/statements/create-workload-group-transact-sql.md)。 有关工作负荷分类的详细信息，请参阅 [工作负荷隔离](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)

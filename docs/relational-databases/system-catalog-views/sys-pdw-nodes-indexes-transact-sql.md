@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_nodes_indexes (Transact-sql) '
-title: sys. pdw_nodes_indexes (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_nodes_indexes (Transact-sql) '
+title: sys.pdw_nodes_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f6c518d53122015af3e86350b0037e1b88604543
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70d4fbc8c6f6558001211646f79a16a79659e6e9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490240"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036911"
 ---
-# <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-sql) 
+# <a name="syspdw_nodes_indexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   返回的索引 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
@@ -51,6 +51,6 @@ ms.locfileid: "88490240"
  需要 CONTROL SERVER 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

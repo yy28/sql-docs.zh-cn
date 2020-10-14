@@ -11,19 +11,19 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7df7afd3e58c93d2d9a4e30ef87039cdca9b5dc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a46cdca0d713dc9d33cc919e312a500d867fbfbd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492331"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038050"
 ---
 # <a name="data-migration-settings-oracletosql"></a>数据迁移设置 (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>数据迁移设置  
 **数据迁移设置** 允许用户编写自定义查询以进行数据迁移。  
   
--   当 " **扩展数据迁移选项** " 设置为 " **显示** " 时，此选项卡可用，在项目设置中设置为 " **隐藏** " 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅 [项目设置 (迁移) ](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) 。  
+-   当 " **扩展数据迁移选项** " 设置为 " **显示** " 时，此选项卡可用，在项目设置中设置为 " **隐藏** " 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅 [项目设置 (迁移) ](./project-settings-migration-oracletosql.md) 。  
   
 -   自定义 SQL 语句的分析将在表节点的 " **数据迁移设置** " 选项卡中实现。  
   
@@ -55,4 +55,3 @@ ms.locfileid: "88492331"
   
 ## <a name="see-also"></a>另请参阅  
 [将 Oracle 数据迁移到 SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
-  

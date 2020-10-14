@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3da213467ad6513d4c25e6888bd095e80746cba7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492410"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038270"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>处理 SSMA 项目 (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须先创建 SSMA 项目。 项目是包含以下信息的文件：  
@@ -54,7 +54,7 @@ SSMA 包含一些设置，用于转换和加载数据库、迁移数据以及将
   
 -   有关同步到 SQL Server 的设置的信息，请参阅 [项目设置 &#40;同步&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)。  
   
--   有关 GUI 设置的信息，请参阅 [ (GUI 的项目设置)  (SSMA Common) ](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+-   有关 GUI 设置的信息，请参阅 [ (GUI 的项目设置)  (SSMA Common) ](../sybase/project-settings-gui-sybasetosql.md)。  
   
 -   有关数据类型映射设置的信息，请参阅 [项目设置 &#40;类型映射&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   
@@ -106,7 +106,7 @@ SSMA 创建项目文件。
   
 1.  对于显示 " **缺少元数据**" 状态的每个数据库，请选中数据库名称旁边的复选框。 保存元数据可能需要几分钟时间。 如果此时不想保存元数据，请不要选中任何复选框。  
   
-2.  单击“ **保存**”。  
+2.  单击“保存”  。  
   
 SSMA 将分析 MySQL 架构，并将元数据保存到项目文件。  
   
@@ -137,4 +137,3 @@ SSMA 将分析 MySQL 架构，并将元数据保存到项目文件。
 [将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
 [连接到 Azure SQL 数据库 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-  

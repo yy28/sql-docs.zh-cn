@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3b71f795855c8edecf5fb4cfc0d752181257310f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ec67a6dd1346efc4199d3ebec22589ae8ee741b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418263"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036611"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Sybase 控制台 (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) ，为 Sybase 自适应服务器企业 (ASE) 发布，现在可以通过命令行的控制台应用程序进行访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
@@ -24,7 +24,7 @@ ms.locfileid: "88418263"
   
 本部分中涵盖的主题包括：  
   
-|主题|描述|  
+|主题|说明|  
 |-|-|  
 |[入门，用于 Sybase 控制台 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
@@ -38,5 +38,4 @@ ms.locfileid: "88418263"
 |[&#40;SybaseToSQL 的疑难解答&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|提供有关修复迁移问题的简要信息。|  
   
 ## <a name="see-also"></a>另请参阅  
-[入门，用于 Sybase 控制台 (SybaseToSQL) ](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
-  
+[入门，用于 Sybase 控制台 (SybaseToSQL) ](./getting-started-with-ssma-for-sybase-console-sybasetosql.md)  

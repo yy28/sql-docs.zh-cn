@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_nodes_database_encryption_keys (Transact-sql) '
-title: 'sys. dm_pdw_nodes_database_encryption_keys (Transact-sql) '
+description: 'sys.dm_pdw_nodes_database_encryption_keys (Transact-sql) '
+title: 'sys.dm_pdw_nodes_database_encryption_keys (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c4011dd07b6de3b89f6efb39a6f98e4577b88500
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e8a399d58c4ffa4f61e9509bd243f7e9c71275e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397603"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037720"
 ---
-# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-sql) 
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 **sys. dm_pdw_nodes_database_encryption_keys** 提供每个节点的此信息。 有关数据库加密的详细信息，请参阅 [透明数据加密 (SQL Server PDW) ](../../analytics-platform-system/transparent-data-encryption.md)。  
+  返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 **sys.dm_pdw_nodes_database_encryption_keys** 提供每个节点的此信息。 有关数据库加密的详细信息，请参阅 [透明数据加密 (SQL Server PDW) ](../../analytics-platform-system/transparent-data-encryption.md)。  
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -61,7 +61,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  

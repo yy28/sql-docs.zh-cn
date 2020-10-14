@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce33aca0939a6a956f053824da1f7fdd35930b30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b070a45c7990efbb598401b241083fcb2d804f5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320073"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035136"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用测试存储库 (OracleToSQL)
 SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以后使用。 存储库数据保存在**ssmatesterdb**数据库的架构**ssma_oracle_utilities**的 SQL Server 表**TestCaseRepository**和**RunTestCaseResultRepository**中。  
@@ -50,7 +50,7 @@ SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以
   
 -   单击 " **编辑** " 按钮以运行测试用例向导并更改所选测试。  
   
--   单击 " **运行** " 按钮以打开 " [正在运行的测试用例" (OracleToSQL) ](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) "对话框并执行所选测试。  
+-   单击 " **运行** " 按钮以打开 " [正在运行的测试用例" (OracleToSQL) ](./running-test-cases-oracletosql.md) "对话框并执行所选测试。  
   
 ## <a name="test-results-repository"></a>测试结果存储库  
 您可以在 "**测试用例**" 窗口的 "**测试结果**" 页上查看测试结果存储库。 通过单击 "**测试**器" 菜单上的 "**测试结果 ...** " 打开它。  
@@ -78,4 +78,3 @@ SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以
 ## <a name="see-also"></a>另请参阅  
 [&#40;OracleToSQL&#41;运行测试用例 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [测试迁移的数据库对象 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  
