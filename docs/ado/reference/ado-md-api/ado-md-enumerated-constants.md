@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c302bde71ea759a068aaa9e7274ec0182217a0cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 65cd2c14b9d10376ee553f3dfdae66645893f06f
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987548"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059405"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 枚举常量
 为了协助调试，ADO MD 枚举的常量会列出每个常量的值。 不过，此值是纯粹的建议，可能会从 ADO MD 的一种版本更改为另一版本。 你的代码只应依赖于枚举常量的名称，而不是实际值。  
@@ -30,7 +30,7 @@ ms.locfileid: "88987548"
 -   [MemberTypeEnum](./membertypeenum.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
  [ADO MD 代码示例](./ado-md-code-examples.md)   
  [ADO MD 集合](./ado-md-collections.md)   
  [ADO MD 方法](./ado-md-methods.md)   

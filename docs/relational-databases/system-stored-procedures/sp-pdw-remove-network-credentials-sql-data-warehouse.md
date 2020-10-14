@@ -1,5 +1,5 @@
 ---
-description: 'sp_pdw_remove_network_credentials (SQL 数据仓库) '
+description: " (Azure Synapse Analytics sp_pdw_remove_network_credentials) "
 title: sp_pdw_remove_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -15,14 +15,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4c65a7c67dde39e9a382180f0e01e2bf06cbbee3
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: f53f7d439db50afde5b6aa556d418e20499ab0fc
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005790"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059316"
 ---
-# <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL 数据仓库) 
+# <a name="sp_pdw_remove_network_credentials-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_remove_network_credentials) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   这会删除存储在中 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 用于访问网络文件共享的网络凭据。 例如，使用此存储过程删除在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 驻留在自己的网络中的服务器上执行备份和还原操作的权限。  
@@ -60,7 +60,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="metadata"></a>Metadata  
  若要列出所有凭据并验证是否已删除凭据，请使用 [&#40;transact-sql&#41;sys.dm_pdw_network_credentials ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。  
   
- 若要添加凭据，请使用 [&#41;sp_pdw_add_network_credentials &#40;SQL 数据仓库 ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
+ 若要添加凭据，请使用 [&#40;Azure Synapse Analytics&#41;sp_pdw_add_network_credentials ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

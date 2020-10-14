@@ -13,12 +13,12 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d81f8646196c2b8af01fa2689633284d700398c3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 5efa6d9c501d9f7903ee81770e8ceb364baadc8a
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036960"
+ms.locfileid: "92059495"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-sql)  
 
@@ -30,7 +30,7 @@ ms.locfileid: "92036960"
 |-----------------|---------------|-----------------|  
 |object_id|**int**|列所属对象的 ID。 |  
 |column_id|**int**|列的 ID。|  
-|distribution_ordinal|**tinyint**|0 = 不是分布列。</br> 1 = SQL 数据仓库使用此列来分配具体化视图。|
+|distribution_ordinal|**tinyint**|0 = 不是分布列。</br> 1 = Azure Synapse Analytics 使用此列来分发具体化视图。|
  
 ## <a name="permissions"></a>权限 
 

@@ -14,12 +14,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 03397db88a1a99e2fbf661662311537671bfa862
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987806"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059445"
 ---
 # <a name="sp_special_columns_100-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_special_columns_100) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -85,7 +85,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |SCALE|**smallint**|数据源中列的小数位数。 对于不适用小数位数的数据类型，返回 NULL。|  
 |PSEUDO_COLUMN|**smallint**|指示列是否为伪列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  sp_special_columns 与 ODBC 中的 SQLSpecialColumns 等效。 返回的结果按 SCOPE 排序。  
   
 ## <a name="permissions"></a>权限  
@@ -101,7 +101,7 @@ EXEC sp_special_columns_100 @table_name = 'FactFinance';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库存储过程](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
+ [Azure Synapse 分析存储过程](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
 

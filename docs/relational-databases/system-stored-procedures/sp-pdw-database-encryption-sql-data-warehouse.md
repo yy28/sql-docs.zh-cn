@@ -1,6 +1,6 @@
 ---
-description: 'sp_pdw_database_encryption (SQL 数据仓库) '
-title: sp_pdw_database_encryption (SQL 数据仓库) |Microsoft Docs
+description: " (Azure Synapse Analytics sp_pdw_database_encryption) "
+title: sp_pdw_database_encryption (Azure Synapse Analytics) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b075ac707296073f6b4a4b606306b82571b4268
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 142ebd04c32491a800dbc7651fe91fbcdd715a56
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988787"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059225"
 ---
-# <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL 数据仓库) 
+# <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_database_encryption) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   使用 **sp_pdw_database_encryption** 在设备上启用透明数据加密 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 如果 **sp_pdw_database_encryption** 设置为1，请使用 **ALTER database** 语句，通过使用 TDE 对数据库进行加密。  
@@ -34,7 +34,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
 `[ @enabled = ] enabled` 确定是否已启用透明数据加密。 *enabled* 为 **int**，可以为以下值之一：  
   
 -   0 - 禁用  
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **sp_pdw_database_encryption**启用 TDE 时，将删除并重新创建和加密 tempdb 数据库。 出于此原因，在有其他活动会话使用 tempdb 时，无法在设备上启用 TDE。 在设备上启用或禁用 TDE 是一项操作，该操作将更改设备的状态，在大多数情况下，应在设备生存期内执行一次，并在设备上没有流量时执行。  
   
 ## <a name="permissions"></a>权限  
@@ -60,7 +60,7 @@ EXEC sys.sp_pdw_database_encryption 1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
- [sp_pdw_log_user_data_masking &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+ [&#40;Azure Synapse Analytics sp_pdw_database_encryption_regenerate_system_keys&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
+ [&#40;Azure Synapse Analytics sp_pdw_log_user_data_masking&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
   

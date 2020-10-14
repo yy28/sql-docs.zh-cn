@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005613"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059615"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|数据库名称。</br></br>对于 SQL 数据仓库，这是节点上存储的数据库的名称，由 pdw_node_id 标识。 每个节点都有一个包含13个文件的 tempdb 数据库。 每个节点在每个分发中也有一个数据库，每个分发数据库都有5个文件。 例如，如果每个节点都包含4个分布区，则结果将显示每个 pdw_node_id 20 个分发数据库文件。 
+|**database_name**|**sysname**|数据库名称。</br></br>对于 Azure Synapse Analytics，这是节点上存储的数据库的名称，由 pdw_node_id 标识。 每个节点都有一个包含13个文件的 tempdb 数据库。 每个节点在每个分发中也有一个数据库，每个分发数据库都有5个文件。 例如，如果每个节点都包含4个分布区，则结果将显示每个 pdw_node_id 20 个分发数据库文件。 
 |database_id|**smallint**|数据库的 ID。|  
 |file_id|**smallint**|文件的 ID。|  
 |**sample_ms**|**bigint**|自从计算机启动以来的毫秒数。 可以使用此列来比较该函数的不同输出。</br></br>数据类型的数据类型为**int** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  

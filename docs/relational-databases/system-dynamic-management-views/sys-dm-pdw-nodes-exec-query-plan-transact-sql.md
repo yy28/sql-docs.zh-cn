@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: db75957476f38a108eab5631bb00f330465b6ed3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ec94a367ca0cc9bb354fd35cbc214d8e83ede584
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035320"
+ms.locfileid: "92059527"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "92035320"
 ## <a name="permissions"></a>权限  
  要求对服务器具有 **sysadmin** 服务器角色或 `VIEW SERVER STATE` 权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>后续步骤
- 有关更多开发技巧，请参阅 [SQL 数据仓库开发概述](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。
+ 有关更多开发技巧，请参阅 [Azure Synapse Analytics 开发概述](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。

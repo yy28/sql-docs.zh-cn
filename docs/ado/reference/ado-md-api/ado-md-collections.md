@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdd41be1cf7ed4d412978d387270242874b56d7f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e0e912950c12b6d3a3c87a497a43d75ab1c29199
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987568"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059415"
 ---
 # <a name="ado-md-collections"></a>ADO MD 集合
 
@@ -34,7 +34,7 @@ ms.locfileid: "88987568"
 |[位置](./positions-collection-ado-md.md)|包含定义轴上的点的 **位置** 对象。|  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
  [ADO MD 代码示例](./ado-md-code-examples.md)   
  [ADO MD 枚举常量](./ado-md-enumerated-constants.md)   
  [ADO MD 方法](./ado-md-methods.md)   

@@ -1,6 +1,6 @@
 ---
-description: 'sp_datatype_info_90 (SQL 数据仓库) '
-title: sp_datatype_info_90 (SQL 数据仓库) |Microsoft Docs
+description: " (Azure Synapse Analytics sp_datatype_info_90) "
+title: " (Azure Synapse Analytics sp_datatype_info_90) "
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a7f2cc25af40cc85ae3600e18d861d106af7168
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987943"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059435"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL 数据仓库) 
+# <a name="sp_datatype_info_90-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_datatype_info_90) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   返回有关当前环境所支持的数据类型的信息。  
@@ -70,7 +70,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|如果 *data_type* 为 **interval**，则为间隔前导精度值;否则为 NULL。|  
 |USERTYPE|**smallint**|systypes 表中的**usertype**值。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  sp_datatype_info 等效于 ODBC 中的 SQLGetTypeInfo。 返回的结果按 DATA_TYPE 排序，再按数据类型映射到相应 ODBC SQL 数据类型的紧密程度进行排序。  
   
 ## <a name="permissions"></a>权限  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库存储过程](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
+ [Azure Synapse 分析存储过程](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

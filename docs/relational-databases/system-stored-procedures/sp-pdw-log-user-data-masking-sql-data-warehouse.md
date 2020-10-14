@@ -1,6 +1,6 @@
 ---
-description: 'sp_pdw_log_user_data_masking (SQL 数据仓库) '
-title: sp_pdw_log_user_data_masking (SQL 数据仓库) |Microsoft Docs
+description: " (Azure Synapse Analytics sp_pdw_log_user_data_masking) "
+title: sp_pdw_log_user_data_masking (Azure Synapse Analytics) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c3b65b6e3626a79fae4f5b5ac87e997ce3c97554
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988785"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059348"
 ---
-# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL 数据仓库) 
+# <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_log_user_data_masking) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   使用 **sp_pdw_log_user_data_masking** 在活动日志中启用用户数据屏蔽 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 用户数据掩码影响设备上所有数据库上的语句。  
@@ -41,7 +41,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
 `[ @masking_mode = ] masking_mode` 确定是否已启用透明数据加密日志用户数据掩码。 *masking_mode* 为 **int**，可以是下列值之一：  
   
 -   0 = 禁用，用户数据显示在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活动日志中。  
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  如果不使用参数执行 **sp_pdw_ log_user_data_masking** ，则将在设备上以标量结果集的形式返回 TDE 日志用户数据掩码的当前状态。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]通过活动日志中的用户数据掩码，可以在**SELECT**和 DML 语句中替换包含预定义常量值的文本，因为它们可以包含用户数据。 将 *masking_mode* 设置为1不会掩盖元数据（如列名称或表名称）。 将 *masking_mode* 设置为2将删除带有元数据的语句，如列名称或表名称。  
   
  活动日志中的用户数据掩码 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按以下方式实现：  
@@ -76,7 +76,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_pdw_database_encryption &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [&#40;Azure Synapse Analytics sp_pdw_database_encryption&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [&#40;Azure Synapse Analytics sp_pdw_database_encryption_regenerate_system_keys&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   
