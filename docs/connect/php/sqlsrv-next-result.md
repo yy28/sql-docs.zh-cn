@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7d88913a06e44bdec247793b0080f3ba860025
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426229"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081256"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>返回值  
 如果下一个结果成功进入活动状态，将返回布尔值 **true** 。 如果在使下一个结果处于活动状态时发生错误，将返回 **false** 。 如果没有更多可用结果，将返回 **NULL** 。  
   
-## <a name="example"></a>示例  
+## <a name="example-1"></a>示例 1  
 以下示例创建和执行将产品评论插入 *Production.ProductReview* 表的存储过程，然后选择指定产品的所有评论。 执行存储过程后，无需调用 sqlsrv_next_result 即可使用第一个结果（存储过程中受 INSERT 查询影响的行数）****。 通过调用 sqlsrv_next_result 可获取下一个结果（存储过程中 SELECT 查询返回的行），并可通过 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 使用该结果****。  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ sqlsrv_close( $conn );
   
 在执行具有输出参数的存储过程时，建议在使用其他所有结果后再访问输出参数的值。 有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序指定参数方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)。  
   
-## <a name="example"></a>示例  
+## <a name="example-2"></a>示例 2  
 以下示例执行大容量查询，即检索指定产品 ID 的产品评论信息、插入产品评论，然后再次检索指定产品 ID 的产品评论信息。 新插入的产品评论将包括在大容量查询的最终结果集中。 该示例使用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 从大容量查询的一个结果移动到下一个结果。  
   
 > [!NOTE]  

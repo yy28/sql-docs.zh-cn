@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15ca9251c5cb9f541710d7a18b8c10864cd24b8c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 576f4955afdd735eb1b4d016c954828064be139e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945513"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891847"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
 
@@ -36,7 +36,7 @@ ms.locfileid: "87945513"
   
 -   SQL Server 实例的名称和足以对任何数据库进行只读访问的凭据。 各教程中的数据集查询使用文字数据，但必须由 SQL Server 实例处理每个查询以返回报表数据集所必需的元数据。 例如，以下连接字符串仅指定一个服务器： `data source=<servername>`。 您必须对默认数据库具有读取权限，该权限是由授予您对服务器的访问权限的系统管理员分配给您的。 您还可以指定数据库，如以下连接字符串中所示： `data source=<servername>;initial catalog=<database>`。  
   
--   对于[教程：地图报表（报表生成器）](tutorial-map-report-report-builder.md)，报表服务器必须配置为支持将必应地图用作背景。 有关详细信息，请参阅 [计划地图报表支持](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs)。   
+-   对于[教程：地图报表（报表生成器）](tutorial-map-report-report-builder.md)，报表服务器必须配置为支持将必应地图用作背景。 有关详细信息，请参阅 [计划地图报表支持](./report-design/plan-a-map-report-report-builder-and-ssrs.md)。   
 
 -   [教程：生成钻取报表和主报表（报表生成器）](tutorial-creating-drillthrough-and-main-reports-report-builder.md)教程要求有权访问 Contoso Sales 多维数据集。 有关详细信息，请参阅该教程。 
   

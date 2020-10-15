@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9dbfe61cce1650bf7ffe21a986866e25f4a4da53
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: c997c7886d04971fc9ee373cbf8675235b2391ee
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914810"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866853"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
@@ -67,7 +67,7 @@ azdata bdc spark batch create --file -f
 ### <a name="examples"></a>示例
 创建新的 Spark 批处理。
 ```bash
-azdata spark batch create --code "2+2"
+azdata bdc spark batch create --code "2+2"
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--file -f`
@@ -120,7 +120,7 @@ azdata bdc spark batch list
 ### <a name="examples"></a>示例
 列出所有活动的批处理。
 ```bash
-azdata spark batch list
+azdata bdc spark batch list
 ```
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
@@ -142,7 +142,7 @@ azdata bdc spark batch info --batch-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的批处理的信息。
 ```bash
-azdata spark batch info --batch-id 0
+azdata bdc spark batch info --batch-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--batch-id -i`
@@ -167,7 +167,7 @@ azdata bdc spark batch log --batch-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的批处理的日志。
 ```bash
-azdata spark batch log --batch-id 0
+azdata bdc spark batch log --batch-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--batch-id -i`
@@ -192,7 +192,7 @@ azdata bdc spark batch state --batch-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的批处理的状态。
 ```bash
-azdata spark batch state --batch-id 0
+azdata bdc spark batch state --batch-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--batch-id -i`
@@ -217,7 +217,7 @@ azdata bdc spark batch delete --batch-id -i
 ### <a name="examples"></a>示例
 删除批处理。
 ```bash
-azdata spark batch delete --batch-id 0
+azdata bdc spark batch delete --batch-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--batch-id -i`

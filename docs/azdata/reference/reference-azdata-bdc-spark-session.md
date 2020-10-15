@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bdae6053196eef621d25a4917780dd8f95318ecd
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: d68afcf51ba55005886b46b3734379f44315834c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914800"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866833"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
@@ -65,7 +65,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>示例
 创建会话。
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>可选参数
 #### `--session-kind -k`
@@ -115,7 +115,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>示例
 列出所有活动会话。
 ```bash
-azdata spark session list
+azdata bdc spark session list
 ```
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
@@ -137,7 +137,7 @@ azdata bdc spark session info --session-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的会话的会话信息。
 ```bash
-azdata spark session info --session-id 0
+azdata bdc spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`
@@ -162,7 +162,7 @@ azdata bdc spark session log --session-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的会话的会话日志。
 ```bash
-azdata spark session log --session-id 0
+azdata bdc spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`
@@ -187,7 +187,7 @@ azdata bdc spark session state --session-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的会话的会话状态。
 ```bash
-azdata spark session state --session-id 0
+azdata bdc spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`
@@ -212,7 +212,7 @@ azdata bdc spark session delete --session-id -i
 ### <a name="examples"></a>示例
 删除会话。
 ```bash
-azdata spark session delete --session-id 0
+azdata bdc spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`

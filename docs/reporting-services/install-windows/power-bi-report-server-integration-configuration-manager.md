@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991862"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891297"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
@@ -24,9 +24,9 @@ ms.locfileid: "88991862"
 
 除了具有活动的 Internet 连接，以便你可以浏览到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服务以外，还需要满足以下 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]集成的要求。
 
-- **Azure Active Directory：** 你的组织必须使用 Azure Active Directory，以便为 Azure 服务和 Web 应用程序提供目录和身份管理。 有关详细信息，请参阅[什么是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory：** 你的组织必须使用 Azure Active Directory，以便为 Azure 服务和 Web 应用程序提供目录和身份管理。 有关详细信息，请参阅[什么是 Azure Active Directory？](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- **托管租户：** 你想要将报表项固定到其上的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板必须是 Azure AD 托管租户的一部分。  托管租户在组织第一次订阅 Azure 服务（如 Microsoft 365 和 Microsoft Intune）时自动创建。   目前不支持病毒性租户。  有关详细信息，请参阅 [“什么是 Azure AD 目录？”](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的“什么是 Azure AD 租户”和“如何获取 Azure AD 目录”部分。
+- **托管租户：** 你想要将报表项固定到其上的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板必须是 Azure AD 托管租户的一部分。  托管租户在组织第一次订阅 Azure 服务（如 Microsoft 365 和 Microsoft Intune）时自动创建。   目前不支持病毒性租户。  有关详细信息，请参阅 [“什么是 Azure AD 目录？”](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)中的“什么是 Azure AD 租户”和“如何获取 Azure AD 目录”部分。
 
 - 执行 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成的用户需要是 Azure AD 租户的成员、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 系统管理员和 ReportServer 目录数据库的系统管理员。
 
@@ -46,7 +46,7 @@ ms.locfileid: "88991862"
 
 ## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> 集成并注册报表服务器
 
-完成 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的以下步骤。 有关详细信息，请参阅 [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+完成 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的以下步骤。 有关详细信息，请参阅[报表服务器配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 1. 选择 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成页。
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725698"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081466"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空间简介
 
@@ -218,7 +218,7 @@ UTF-8 支持不需要更改任何应用程序代码。 当服务器支持 UTF-8 
 
 ### <a name="authentication"></a>身份验证
 
-可以使用“身份验证”连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅 [SqlAuthenticationMethod 的文档](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
+可以使用“身份验证”连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅 [SqlAuthenticationMethod 的文档](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true)。
 
 > [!NOTE]
 > 自定义密钥存储提供程序（如 Azure 密钥保管库提供程序）将需要更新以支持 Microsoft.Data.SqlClient。 同样，还需要更新 enclave 提供程序以支持 Microsoft.Data.SqlClient。

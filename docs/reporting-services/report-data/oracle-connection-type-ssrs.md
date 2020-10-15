@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 425f864e31f1280fd31852de44a40d5e2d5c61ef
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246476"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891717"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle 连接类型（SSRS 和 Power BI 报表服务器）
 
@@ -114,7 +114,7 @@ Data Source="Oracle"; Unicode="True"
   
  有关详细信息，请参阅以下文章：  
   
--   [如何使用 Reporting Services 配置和访问 Oracle 数据源](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
+-   [如何使用 Reporting Services 配置和访问 Oracle 数据源](/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [如何为 NETWORK SERVICE 安全主体添加权限](https://support.microsoft.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>备用数据扩展插件 
@@ -137,5 +137,4 @@ Data Source="Oracle"; Unicode="True"
  [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

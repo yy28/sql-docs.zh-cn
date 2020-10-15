@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247232"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891487"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括几个可用于创建、管理和查看报表的工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
@@ -29,9 +29,6 @@ ms.locfileid: "87247232"
 ## <a name="in-this-section"></a>本节内容  
  [报表设计器的 F1 帮助](../reporting-services/tools/report-designer-f1-help.md)  
  提供报表设计器及其相关对话框、报表向导和图像向导的帮助。  
-  
- [Reporting Services 配置管理器帮助主题](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- 提供用于部署和管理报表服务器实例的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置工具的帮助。  
   
  [Management Studio 中报表服务器的 F1 帮助](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  为用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中管理报表和报表服务器的对话框提供帮助。  

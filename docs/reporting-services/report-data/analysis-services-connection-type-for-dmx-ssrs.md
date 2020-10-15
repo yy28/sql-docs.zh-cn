@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e44b1872f3962f27666bf68b1f661b9804b8880b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: acb81c5dc8533e4870b540dda7c091eb37542d2c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458979"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891817"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>针对 DMX 的 Analysis Services 连接类型 (SSRS)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源创建数据集时，如果检测到有效多维数据集，则报表设计器将显示多维表达式 (MDX) 查询设计器。 如果未检测到多维数据集，但有数据挖掘模型可用，则报表设计器将会显示数据挖掘扩展插件 (DMX) 查询设计器。 要在 MDX 和 DMX 设计器之间切换，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "更改为 DMX 查询语言视图")）按钮。 使用 DMX 查询设计器以交互方式生成使用图形元素的 DMX 查询。 若要使用 DMX 查询设计器，指定的数据源必须已具有可提供数据的数据挖掘模型。 查询结果被转换为要在报表中使用的平展行集。  
   
 > [!NOTE]  
->  在设计报表前必须为模型定型。 有关详细信息，请参阅 [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
+>  在设计报表前必须为模型定型。 有关详细信息，请参阅 [数据挖掘解决方案](/analysis-services/data-mining/data-mining-solutions)。  
   
 ## <a name="design-mode"></a>设计模式  
  DMX 查询设计器将在设计模式下打开。 设计模式包含用于选择单个数据挖掘模型和输入表的图形设计图面，同时还包含用于指定预测查询的网格。 DMX 查询设计器还有其他两种模式：查询模式和结果模式。 在查询模式中，查询窗格取代了设计模式中的网格，您可以在查询窗格中键入 DMX 查询。 在结果模式中，由查询返回的结果集显示在数据网格中。  
@@ -46,8 +46,7 @@ ms.locfileid: "86458979"
  有关如何管理报表参数与查询参数之间关系的详细信息，请参阅[将查询参数与报表参数关联（报表生成器和 SSRS）](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)。 有关参数的详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
+ [数据挖掘解决方案](/analysis-services/data-mining/data-mining-solutions)   
  [查询设计工具 (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
   

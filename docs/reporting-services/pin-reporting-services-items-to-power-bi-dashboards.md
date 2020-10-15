@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6fbf2020d22994fdf214c7e869368c20b7b40cf7
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75952483"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891837"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>将 Reporting Services 分页报表项固定到 Power BI 仪表板
 
@@ -68,7 +68,7 @@ ms.locfileid: "75952483"
   
 4. 选择要固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]的报表项。 一次只能固定一个项。  报表查看器将显示你的报表的着色视图，可以固定的报表项将突出显示，而不能固定的项将呈现深色阴影。  
   
-    **(1)** 选择包含要固定到的仪表板的组， **(2)** 选择要将项固定到的仪表板，以及 **(3)** 选择希望仪表板中的磁贴进行更新的频率。   ![说明](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。  
+    **(1)** 选择包含要固定到的仪表板的组， **(2)** 选择要将项固定到的仪表板，以及 **(3)** 选择希望仪表板中的磁贴进行更新的频率。   ![说明](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -142,4 +142,3 @@ ms.locfileid: "75952483"
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

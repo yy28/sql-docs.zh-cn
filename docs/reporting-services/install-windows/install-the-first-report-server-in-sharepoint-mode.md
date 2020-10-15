@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b90baf141289a8dbee8eebe0c788823a50aa6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ccffdc3beca07d53302b7a7dceff0e30bbb6331
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446099"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891217"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式下安装第一个 Report Server
 
@@ -51,7 +51,7 @@ ms.locfileid: "88446099"
  ![SSRS SharePoint 模式单服务器部署](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint 模式单服务器部署")  
   
 > [!TIP]  
->  有关更复杂的部署实例，请参阅 [SharePoint 中 SQL Server BI 功能的部署拓扑](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。  
+>  有关更复杂的部署实例，请参阅 [SharePoint 中 SQL Server BI 功能的部署拓扑](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130))。  
   
 ##  <a name="setup-accounts"></a><a name="bkmk_setupaccounts"></a> 安装帐户
 
@@ -63,7 +63,7 @@ ms.locfileid: "88446099"
   
  **创建 Reporting Services 服务应用程序**  
   
--   在安装并注册 Reporting Services 服务后，创建一个或多个 Reporting Services 服务应用程序。 “SharePoint 场服务帐户”需要暂时成为本地管理员组的成员才能创建 Reporting Services 服务应用程序。 有关 SharePoint 2013 帐户权限的详细信息，请参阅 [SharePoint 2013 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) ；对于 SharePoint 2016，请参阅 [SharePoint 2016 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
+-   在安装并注册 Reporting Services 服务后，创建一个或多个 Reporting Services 服务应用程序。 “SharePoint 场服务帐户”需要暂时成为本地管理员组的成员才能创建 Reporting Services 服务应用程序。 有关 SharePoint 2013 帐户权限的详细信息，请参阅 [SharePoint 2013 中的帐户权限和安全设置](/SharePoint/install/account-permissions-and-security-settings-in-sharepoint-server-2016) (https://technet.microsoft.com/library/cc678863.aspx) ；对于 SharePoint 2016，请参阅 [SharePoint 2016 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
   
      根据最佳安全做法，SharePoint 场管理员帐户不应同时作为本地操作系统管理员帐户。 如果您在安装过程中向本地管理员组中添加场管理员帐户，建议您在安装完成后从本地管理员组中删除该帐户。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "88446099"
   
 9. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”** 。  
   
-     ![请注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注")与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
+     ![请注意](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注")与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
   
 10. 如果您看到 **“服务器配置”** 页，则键入相应的凭据。 如果要使用 Reporting Services 数据警报或订阅功能，则需要将 SQL Server 代理的“启动类型”更改为“自动”   。 根据已在计算机上安装的项，您可能不会看到 **“服务器配置”** 页。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "88446099"
 15. 安装将需要几分钟时间。 您将看到 **“完成”** 页，其中列出了功能以及各功能的状态。 您可能会看到一个信息对话框，指示计算机需要重新启动。  
   
 ##  <a name="step-2-register-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a> 步骤 2：注册并启动 Reporting Services SharePoint 服务  
- ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")  
+ ![PowerShell 相关内容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")  
   
 > [!NOTE]
 > 如果您要安装到现有 SharePoint 场，则不需要完成本节中的步骤。 当你在本文档的上一节中运行 SQL Server 安装向导时，就已经安装并启动了 Reporting Services SharePoint 服务。  
@@ -261,7 +261,7 @@ ms.locfileid: "88446099"
   
 11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果要使用 Reporting Services 订阅功能或数据警报功能，请完成此设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
- ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容") 有关使用 PowerShell 创建 Reporting Services 服务应用程序的信息，请参阅：  
+ ![PowerShell 相关内容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容") 有关使用 PowerShell 创建 Reporting Services 服务应用程序的信息，请参阅：  
   
 -   请参阅下面的 [等同于步骤 1-4 的 Windows PowerShell 脚本](#bkmk_full_script)部分。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "88446099"
   
      打开浏览器找到所需的 SharePoint 网站。 如 https://\<servername>/sites/bi  
   
-2.  选择“设置”![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。  
+2.  选择“设置”![SharePoint 设置](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。  
   
 3.  选择“网站设置”。  
   
@@ -304,7 +304,7 @@ ms.locfileid: "88446099"
   
  参数  
   
--   更新服务代理的 **-Account** 。 该帐户在 SharePoint 场中必须是一个托管服务帐户。 有关详细信息，请参阅 SharePoint 主题 [规划 SharePoint 2013 中的管理和服务帐户](https://technet.microsoft.com/library/cc263445.aspx)。  
+-   更新服务代理的 **-Account** 。 该帐户在 SharePoint 场中必须是一个托管服务帐户。 有关详细信息，请参阅 SharePoint 主题 [规划 SharePoint 2013 中的管理和服务帐户](/SharePoint/security-for-sharepoint-server/plan-for-administrative-and-service-accounts)。  
   
 -   更新服务应用程序的 -DatabaseServer 参数。 此参数是数据库引擎实例  
   
@@ -398,15 +398,15 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  对于 SharePoint 2016，需要配置 [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) 以使用 Excel Services。 有关详细信息，请参阅以下白皮书。
  
- - [在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
+ - [在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View](/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [在多层 SharePoint 2016 场中部署 SQL Server 2016 PowerPivot 和 Power View](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
+ - [在多层 SharePoint 2016 场中部署 SQL Server 2016 PowerPivot 和 Power View](/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  对于 SharePoint 2016，你需要创建并配置一个 Excel Services 应用程序。 有关详细信息，请参阅以下主题：  
   
--   [在 Power Pivot 模式下安装 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode) 中的“为 Analysis Services 集成配置 Excel Services”部分。  
+-   [在 Power Pivot 模式下安装 Analysis Services](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode) 中的“为 Analysis Services 集成配置 Excel Services”部分。  
   
--   [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)。  
+-   [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](/SharePoint/administration/manage-excel-services-data-model-settings)。  
 
 此外，Reporting Services 服务应用程序使用的应用程序池安全帐户必须是 Analysis Services 服务器上的管理员。
   
@@ -414,7 +414,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  Reporting Services 订阅和数据警报功能可能要求配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则应更新权限。 您可以在“创建服务应用程序成功”页上单击链接 **“设置订阅和警报”** ，以便转到其他页来设置 SQL Server 代理。 如果你的部署是跨计算机边界的部署（例如，当 SQL Server 数据库实例位于其他计算机上时），会需要此设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>为 SSRS 服务应用程序配置电子邮件  
- Reporting Services 数据警报功能会在电子邮件中发送警报。 若要发送电子邮件，可能需要配置 Reporting Services 服务应用程序，并可能需要修改该服务应用程序的电子邮件传递扩展插件。 如果计划将电子邮件传递扩展插件用于 Reporting Services 订阅功能，则需要进行电子邮件设置。 有关详细信息，请参阅[为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2013 和 SharePoint 2016）](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)。 
+ Reporting Services 数据警报功能会在电子邮件中发送警报。 若要发送电子邮件，可能需要配置 Reporting Services 服务应用程序，并可能需要修改该服务应用程序的电子邮件传递扩展插件。 如果计划将电子邮件传递扩展插件用于 Reporting Services 订阅功能，则需要进行电子邮件设置。 有关详细信息，请参阅[为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2013 和 SharePoint 2016）](./configure-e-mail-for-a-reporting-services-service-application.md)。 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>将 Reporting Services 内容类型添加到内容库  
  Reporting Services 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件和报表生成器报表定义 (.rdl) 文件。 将“报表生成器报表”**** 和“报表数据源”**** 内容类型添加到库中将启用“新建”**** 命令，以便创建对应类型的新文档。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
@@ -429,7 +429,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
 -   在 SharePoint 文档库中，创建一个仅包含文本框的基本 Reporting Services 报表，例如标题。 该报表不包含任何数据源或数据集。 目标是确认您能打开报表生成器，生成基本报表，以及预览该报表。  
   
-     将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器（报表生成器）](https://technet.microsoft.com/library/ms159221.aspx)。  
+     将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器（报表生成器）](../report-builder/start-report-builder.md)。  
   
 ## <a name="next-steps"></a>后续步骤
 

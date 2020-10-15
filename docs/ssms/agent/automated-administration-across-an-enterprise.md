@@ -22,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e043f333f752a515ca629c58c13045eac883127
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468833"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033390"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”**。 使用多服务器管理可以执行下列操作：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88468833"
 包含有关多服务器环境中的自动化管理如何利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自我优化功能的信息。  
   
 ## <a name="see-also"></a>另请参阅  
-[有关安装 SQL Server 数据库引擎的向后兼容性主题](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[有关安装 SQL Server 数据库引擎的向后兼容性主题](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
 [注册服务器](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
 [sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
@@ -99,4 +99,3 @@ ms.locfileid: "88468833"
 [sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
 [syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
 [systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
-  

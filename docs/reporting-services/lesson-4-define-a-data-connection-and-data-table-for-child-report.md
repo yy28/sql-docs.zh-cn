@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a13617ec599390718e5c56222fb40b5e78f384fd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245116"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892067"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 课：定义用于子报表的数据连接和数据表
 设计父报表后，接下来要创建用于子报表的数据连接和数据表。 在本教程中，数据连接指向 AdventureWorks2014 数据库。  
@@ -62,7 +62,7 @@ ms.locfileid: "87245116"
     > [!WARNING]  
     > 务必取消选中“创建方法以将更新直接发送到数据库(GenerateDBDirectMethods)”  
   
-    配置 ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 作为报表的数据源现已完毕。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 **DataTable** ，其中列出在查询中指定的列。 DataSet2 由根据查询从 PurhcaseOrderDetail 表获得的数据组成。  
+    配置 ADO.NET [DataTable](/dotnet/api/system.data.datatable) 作为报表的数据源现已完毕。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 **DataTable** ，其中列出在查询中指定的列。 DataSet2 由根据查询从 PurhcaseOrderDetail 表获得的数据组成。  
   
 11. 保存文件。  
   
@@ -70,5 +70,3 @@ ms.locfileid: "87245116"
   
 ## <a name="next-task"></a>下一个任务  
 您已成功创建了用于子报表的数据连接和数据表。 接下来，将使用报表向导设计子报表。 请参阅[第 5 课：使用报表向导设计子报表](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)。  
-  
-

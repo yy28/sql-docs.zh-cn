@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7838979bb6ba1cbd4c4067bc6d83597f6567115d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68566f7fb3f29f94d2b27bed472c113981afc7cb
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290825"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891797"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、Reporting Services Web 门户或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
@@ -95,7 +95,6 @@ ms.locfileid: "80290825"
 ## <a name="see-also"></a>另请参阅  
  [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [“报表属性”对话框，页面设置（报表生成器）](https://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [“报表属性”对话框，页面设置（报表生成器）](/previous-versions/sql/sql-server-2016/dd220640(v=sql.130))   
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)  
-  
   

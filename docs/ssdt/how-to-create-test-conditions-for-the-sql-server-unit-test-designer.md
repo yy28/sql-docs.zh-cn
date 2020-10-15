@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518887"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985935"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：为 SQL Server 单元测试设计器创建测试条件
 
-可以使用可扩展的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类来创建新的测试条件。 例如，您可以创建一个新的测试条件，验证结果集中列或值的数目。  
+可以使用可扩展的 [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 类来创建新的测试条件。 例如，您可以创建一个新的测试条件，验证结果集中列或值的数目。  
   
 ## <a name="to-create-a-test-condition"></a>创建测试条件  
 此过程说明如何创建要在 SQL Server 单元测试设计器中出现的测试条件。  
@@ -47,9 +47,9 @@ ms.locfileid: "85518887"
   
 9. 保存文件并将其关闭。 在“解决方案资源管理器”中右键单击该项目，然后选择“重新加载项目”。  
   
-10. 从 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类派生你的类。  
+10. 从 [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 类派生你的类。  
   
-11. 用强名称为程序集签名。 有关详细信息，请参阅[操作说明：使用强名称为程序集签名](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
+11. 用强名称为程序集签名。 有关详细信息，请参阅[操作说明：使用强名称为程序集签名](/dotnet/standard/assembly/sign-strong-name)。  
   
 12. 生成类库。  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-该自定义测试条件的类是从基 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类继承的。 由于自定义测试条件上的其他属性，用户可以在安装了测试条件后从“属性”窗口配置该条件。  
+该自定义测试条件的类是从基 [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 类继承的。 由于自定义测试条件上的其他属性，用户可以在安装了测试条件后从“属性”窗口配置该条件。  
   
-[ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) 必须添加到扩展 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 的类中。 此特性使该类能够被 SQL Server Data Tools 发现并且在单元测试设计和执行过程中使用。 该特性有两个参数：  
+[ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)) 必须添加到扩展 [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 的类中。 此特性使该类能够被 SQL Server Data Tools 发现并且在单元测试设计和执行过程中使用。 该特性有两个参数：  
   
 |特性参数|位置|说明|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ Assert 方法执行测试条件的主要任务。 您重写 Assert 方法以便�
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

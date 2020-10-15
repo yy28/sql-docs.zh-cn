@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a933145d646c8e8a0c65151eaff7307066a223d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7ca5fa6785257de26e173a1946045109f00fbd7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550587"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986085"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>安装 SQL Server 文档以在 SSMS 中进行脱机查看
 
@@ -22,7 +22,7 @@ ms.locfileid: "89550587"
 
 本文介绍如何在 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 中下载和查看 SQL Server 脱机内容。 下载脱机内容后，便可在没有 Internet 连接的情况下访问文档（尽管最初下载时还是需要 Internet 连接）。
 
-SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机查看早期版本的内容](https://docs.microsoft.com/previous-versions/sql/)，但在访问早期内容时，脱机方式非常便捷。
+SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机查看早期版本的内容](/previous-versions/sql/)，但在访问早期内容时，脱机方式非常便捷。
 
 - [SQL Server 2016 及更高版本](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
@@ -171,6 +171,6 @@ SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机�
 如需详细了解存档内容和帮助查看器，请参考下面的链接。
 
 - [SQL Server 联机文档](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
-- [SQL Server 2014 联机文档](https://docs.microsoft.com/previous-versions/sql/2014)
+- [SQL Server 2014 联机文档](/previous-versions/sql/2014)
 - [SQL Server 早期版本联机文档](previous-versions-sql-server.md)
 - [SQL 文档的版本控制系统](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)
