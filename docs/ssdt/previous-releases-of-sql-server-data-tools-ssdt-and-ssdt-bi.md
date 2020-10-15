@@ -11,12 +11,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/17/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f6fea0264cdbd28c8f6665f5f0d67eda4a8da3c9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5c88e83bcc0b4722bf52da697bdaa03af37b972d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009941"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988566"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
 
@@ -138,7 +138,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 | [西班牙语](https://go.microsoft.com/fwlink/?linkid=518814&clcid=0x40a) | 6D81FB572A7003C54C29D2ACF076D2CED4A1CA80F329BFF9D41A806920D64EEE |
 
 > [!Note]
-> SSDT 支持两个最新版本的 Visual Studio。 Visual Studio 2019 发布后，Visual Studio 2015 及更早版本的 SSDT 版本将不再更新。 SSDT for Visual Studio 2010 不再可用。 有关详细信息，请参阅[此 SSDT 团队博客文章](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)的“常见问题解答”部分。
+> SSDT 支持两个最新版本的 Visual Studio。 Visual Studio 2019 发布后，Visual Studio 2015 及更早版本的 SSDT 版本将不再更新。 SSDT for Visual Studio 2010 不再可用。 有关详细信息，请参阅[此 SSDT 团队博客文章](/archive/blogs/ssdt/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017)的“常见问题解答”部分。
 
 ## <a name="sql-bi-analysis-services-reporting-services-integration-services"></a>SQL BI：Analysis Services、Reporting Services、Integration Services
 

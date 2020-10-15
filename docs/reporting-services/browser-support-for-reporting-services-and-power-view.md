@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8b47d98cdb6da8b29983cadbe3c0f6f44ba924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245176"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891227"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
 
@@ -157,9 +157,8 @@ ms.locfileid: "87245176"
 
 [在 Web 门户中查找和查看报表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
-[Web 门户（SSRS 本机模式）](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Web 门户（SSRS 本机模式）](./web-portal-ssrs-native-mode.md)  
 [HTML 查看器和报表工具栏](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
-

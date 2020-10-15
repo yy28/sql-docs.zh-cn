@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c686ff203b9a080424fb46e50c42a6edefd7655
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 2119850a1352c8c959fafcb5ce5168072e9ccd29
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548029"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987173"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>创建、修改和删除报表历史记录中的快照
   报表历史记录是报表快照的集合。 通过添加和删除快照或修改影响报表历史记录存储的属性，可以对报表历史记录进行维护。 您可以手动或按计划创建报表历史记录。  
@@ -27,7 +27,7 @@ ms.locfileid: "84548029"
  报表历史记录中的快照按其创建日期和时间进行标识， 而日期和时间则基于查询的执行时间。  
   
 ## <a name="creating-snapshots-in-report-history"></a>在报表历史记录中创建快照  
- 对于所有可在无人参与情况下运行的报表，可以手动或按计划间隔为其创建快照。 若要在无人参与的情况下运行，报表必须使用已存储凭据或根本不使用凭据。 此外，如果报表使用参数，则必须指定运行报表时所用的默认值。 可以在报表的属性页中指定已存储凭据和参数值。 有关详细信息，请参阅[参数属性页（报表管理器）](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)。  
+ 对于所有可在无人参与情况下运行的报表，可以手动或按计划间隔为其创建快照。 若要在无人参与的情况下运行，报表必须使用已存储凭据或根本不使用凭据。 此外，如果报表使用参数，则必须指定运行报表时所用的默认值。 可以在报表的属性页中指定已存储凭据和参数值。 有关详细信息，请参阅[参数属性页（报表管理器）](/previous-versions/sql/sql-server-2016/ms189700(v=sql.130))。  
   
  创建报表快照后，以下元素将随报表快照一起存储在报表服务器数据库中：  
   
@@ -60,9 +60,8 @@ ms.locfileid: "84548029"
   
 ## <a name="see-also"></a>另请参阅  
  [创建报表历史记录（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)   
  [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [向报表历史记录添加快照（报表管理器）](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [限制报表历史记录（报表管理器）](../../reporting-services/reports/limit-report-history-report-manager.md)  
-  
   

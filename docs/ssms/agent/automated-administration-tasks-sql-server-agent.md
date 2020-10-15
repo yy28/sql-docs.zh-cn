@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3cb9af36adb7ea1212b23684ed335c26ce3fd53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbf48eb7ad2b960006a9e1c5987378a06d8fc44e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418363"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035745"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>自动执行管理任务（SQL Server 代理）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许您自动执行管理任务。 若要自动进行管理，您需要先定义可预测的管理任务，然后再指定每个任务发生的条件。 使用自动管理来处理日常事务和事件，使您有时间执行其他管理功能。  
   
@@ -40,4 +40,3 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许您自
 [监视事件和响应事件](../../ssms/agent/monitor-and-respond-to-events.md)  
   
 [企业范围的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-  

@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570306"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988263"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89570306"
 添加了动态管理视图 (DMV) **sys.dm_db_stats_properties**。 您可以使用此 DMV 为当前数据库中指定的表或索引视图返回统计信息属性。 例如，此 DMV 可返回取样的行数和直方图梯级数。  
   
 ## <a name="20-before-you-install"></a>2.0 安装前  
-有关如何安装 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的信息，请参阅 [SQL Server 2008 R2 服务文档](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)(#sql-server-2008-r2-服务文档)。  
+有关如何安装 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的信息，请参阅 [SQL Server 2008 R2 服务文档](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105))(#sql-server-2008-r2-服务文档)。  
   
 有关如何安装和开始使用 SQL Server 2008 R2 的一般信息，请参阅 SQL Server 2008 R2 自述文件。 安装介质中提供了自述文档。
   
@@ -65,4 +65,3 @@ ms.locfileid: "89570306"
   
 ## <a name="see-also"></a>另请参阅  
 [如何确定 SQL Server 的版本和版本类别](https://support.microsoft.com/kb/321185)  
-  

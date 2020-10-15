@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 887ed2fd171dc6164a9af45cfc4af3e0992c166f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f9c5d6fcb92c7b090c19d70969dfd37dc405e868
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497292"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036008"
 ---
 # <a name="manage-files-with-encoding"></a>管理使用编码的文件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,5 +65,4 @@ ms.locfileid: "88497292"
   
 ## <a name="see-also"></a>另请参阅  
 [用于管理解决方案和项目的文件](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  
+[将文件扩展名与代码编辑器关联](../scripting/associate-file-extensions-to-a-code-editor.md)  

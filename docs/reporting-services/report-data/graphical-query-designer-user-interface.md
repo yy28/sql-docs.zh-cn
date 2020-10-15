@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd66f5f839c101343babf642e40fdfd999a528e9
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 2f26eb4e27649e1b47af909f34fd2df6db61b904
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458269"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891307"
 ---
 # <a name="graphical-query-designer-user-interface"></a>图形查询设计器用户界面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同时提供了图形查询设计器和基于文本的查询设计器，用于创建在报表设计器中为报表数据集检索关系数据库中的数据的查询。 使用图形查询设计器能够以交互方式生成查询并查看数据源类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的结果。 使用基于文本的查询设计器可以指定多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、复杂的查询或命令语句以及基于表达式的查询。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。 有关使用特定数据源类型的详细信息，请参阅 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同时提供了图形查询设计器和基于文本的查询设计器，用于创建在报表设计器中为报表数据集检索关系数据库中的数据的查询。 使用图形查询设计器能够以交互方式生成查询并查看数据源类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的结果。 使用基于文本的查询设计器可以指定多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、复杂的查询或命令语句以及基于表达式的查询。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](/previous-versions/sql/)。 有关使用特定数据源类型的详细信息，请参阅 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
  .  
   
 ## <a name="graphical-query-designer"></a>图形查询设计器  
- 此图形查询设计器支持三种类型的查询命令：Text、StoredProcedure 或 TableDirect。 为数据集创建查询之前，必须在 [“数据集属性”](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 对话框的“查询”页中选择一个命令类型选项。  
+ 此图形查询设计器支持三种类型的查询命令：Text、StoredProcedure 或 TableDirect。 为数据集创建查询之前，必须在 [“数据集属性”](/previous-versions/sql/) 对话框的“查询”页中选择一个命令类型选项。  
   
  以下是可用于查询类型的选项：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "86458269"
   
  当您在前三个窗格的任意一个窗格中更改信息时，其他窗格中也会显示这些更改。 例如，如果在“关系图”窗格中添加了一个表，则将自动在 SQL 窗格的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询中添加该表。 如果在 SQL 窗格的查询中添加了一个字段，则将自动在“网格”窗格的列表中添加该字段并更新“关系图”窗格中的表。  
   
- 有关详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
+ 有关详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)。  
   
 #### <a name="toolbar-for-the-graphical-query-designer"></a>图形查询设计器的工具栏  
  图形查询设计器工具栏提供了有助于您使用图形界面来设计 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的按钮。  
@@ -150,6 +150,5 @@ EXEC uspGetEmployeeManagers '1';
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Oracle 连接类型 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [设计查询和视图操作指南主题 (Visual Database Tools)](https://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
-  
+ [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

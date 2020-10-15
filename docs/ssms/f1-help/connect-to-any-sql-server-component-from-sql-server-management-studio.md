@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3df8294e7028573518fe349d8c490fe6b5a266d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497416"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034900"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>从 SQL Server Management Studio 连接到任何 SQL Server 组件
 
@@ -51,6 +51,5 @@ ms.locfileid: "88497416"
 使用解决方案资源管理器，可以在项目中存储相关的查询、脚本、连接和其他关联的信息。 每个脚本项目都包含一个名为“连接”  的节点，可以在其中保存一个或多个连接。 若要添加连接，请右键选择“连接”，然后选择“新建连接” 。 若要访问已保存的连接，请展开“连接”，然后双击选中该连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 随即会打开一个与该连接关联的查询窗口。 保存后，脚本会保留其与特定连接的关联。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用 SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[使用 SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [对象资源管理器](../../ssms/object/object-explorer.md)  
-  

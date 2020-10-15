@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5a10fdbc94858a9fe3f5b523fdd43b505e2563f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243528"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987553"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：为 SQL Server 数据库单元测试创建测试项目
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243528"
 |不同的 SQL Server 单元测试是否需要访问不同的数据库连接才能执行或验证测试？|如果是，则需要创建多个测试项目。 您无法为执行测试指定多个数据库连接。 不过，您可以为验证测试指定不同的数据库连接。|  
 |您是否要为不同的单元测试部署不同的数据库项目？|如果是，则需要创建多个测试项目。 一个测试项目只能部署单个数据库项目。|  
   
-有关上述每个问题的详细信息，请参见[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 作为创建多个测试项目的替代方法，你还可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService implementation 实现。  
+有关上述每个问题的详细信息，请参见[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 作为创建多个测试项目的替代方法，你还可以提供自己的 [DatabaseTestService](/previous-versions/visualstudio/visual-studio-2010/dd154755(v=vs.100)) Microsoft.Data.Schema.UnitTesting.DatabaseTestService implementation 实现。  
   
 您可以采用三种方法将测试项目添加到包含数据库项目的解决方案中：  
   
@@ -56,4 +56,3 @@ ms.locfileid: "87243528"
   
 ## <a name="see-also"></a>另请参阅  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

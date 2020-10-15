@@ -29,12 +29,12 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b817d15b8ddc7b3b14fd7b39f9643418840d6aaf
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3b1a75530245a3f3727fc47dee817b6a40416439
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901936"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036368"
 ---
 # <a name="search-and-replace"></a>搜索和替换
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,10 +51,9 @@ ms.locfileid: "88901936"
  通常，您无法搜索包含图形视图的项。  
   
 ## <a name="see-also"></a>另请参阅  
- [增量搜索活动文档](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [交互式搜索文档](../../relational-databases/scripting/search-documents-interactively.md)   
- [使用结果列表搜索文档](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [使用正则表达式搜索文本](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [增量搜索活动文档](./search-an-active-document-incrementally.md)   
+ [交互式搜索文档](./search-documents-interactively.md)   
+ [使用结果列表搜索文档](./search-documents-using-results-lists.md)   
+ [使用通配符搜索文本](./search-text-with-wildcards.md)   
+ [使用正则表达式搜索文本](./search-text-with-regular-expressions.md)  
   

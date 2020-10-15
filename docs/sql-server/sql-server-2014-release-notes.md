@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111123"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988533"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序�
 
 |Feature|说明|更多信息|
 |---|---|---|
-|自动 Soft NUMA 分区|可在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft NUMA。|[软件 NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|缓冲池扩展|启用 SQL Server 缓冲池以缩放 8 TB 以上。|[缓冲池扩展](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
-|动态内存对象缩放| 基于节点数和核心数对内存对象进行动态分区。 此增强功能消除了对跟踪标志 8048 post SQL 2014 SP2 的需求。|[Dynamic Memory Object Scaling](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)（动态内存对象缩放）|
-|DBCC CHECK* 命令的 MAXDOP 提示|此改进有助于通过除 sp_configure 值之外的 MAXDOP 设置运行 DBCC CHECKDB。|[提示 (Transact-SQL) - 查询](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
-|SOS_RWLock 旋转锁改进|无需使用 SOS_RWLock 旋转锁，改为使用类似于内存中 OLTP 的无锁技术。 |[SOS_RWLock 重新设计](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|自动 Soft NUMA 分区|可在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft NUMA。|[软件 NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)|
+|缓冲池扩展|启用 SQL Server 缓冲池以缩放 8 TB 以上。|[缓冲池扩展](../database-engine/configure-windows/buffer-pool-extension.md)|
+|动态内存对象缩放| 基于节点数和核心数对内存对象进行动态分区。 此增强功能消除了对跟踪标志 8048 post SQL 2014 SP2 的需求。|[Dynamic Memory Object Scaling](/archive/blogs/sql_server_team/dynamic-memory-object-scaling)（动态内存对象缩放）|
+|DBCC CHECK* 命令的 MAXDOP 提示|此改进有助于通过除 sp_configure 值之外的 MAXDOP 设置运行 DBCC CHECKDB。|[提示 (Transact-SQL) - 查询](../t-sql/queries/hints-transact-sql-query.md)|
+|SOS_RWLock 旋转锁改进|无需使用 SOS_RWLock 旋转锁，改为使用类似于内存中 OLTP 的无锁技术。 |[SOS_RWLock 重新设计](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign)|
 |空间本机实现|空间查询性能有重大改进。|[SQL Server 2012 和 2014 中的空间性能改进](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 中的可支持性和诊断改进
 
 |Feature|说明|更多信息|
 |---|---|---|
-|AlwaysON 超时日志记录|添加租约超时消息的新日志记录功能，以便记录当前时间和预期的续订时间。 |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)（改进的 AlwaysOn 可用性组租约超时诊断）
+|AlwaysON 超时日志记录|添加租约超时消息的新日志记录功能，以便记录当前时间和预期的续订时间。 |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)（改进的 AlwaysOn 可用性组租约超时诊断）
 |AlwaysON XEvent 和性能计数器|新 AlwaysON XEvent 和性能计数器，在对 AlwaysON 的延迟问题进行故障排除时改进诊断。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 和 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |更改跟踪清除|新存储过程 sp_flush_CT_internal_table_on_demand 根据需要清除更改跟踪内部表。|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |数据库克隆|通过克隆架构、元数据和统计信息（数据除外），使用新 DBCC 命令对现有生产数据库进行故障排除。 克隆的数据库并不用于生产环境。|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF 添加件|新 DMF sys.dm_db_incremental_stats_properties 公开每个分区的增量统计信息。|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
-|用于检索 SQL Server 中输入缓冲区的 DMF|现提供用于检索会话/请求 (sys.dm_exec_input_buffer) 的输入缓冲区的新 DMF。 它在功能上等同于 DBCC INPUTBUFFER。|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|用于检索 SQL Server 中输入缓冲区的 DMF|现提供用于检索会话/请求 (sys.dm_exec_input_buffer) 的输入缓冲区的新 DMF。 它在功能上等同于 DBCC INPUTBUFFER。|[sys.dm_exec_input_buffer](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
 |对复制的 DROP DDL 支持|允许从数据库和出版物中删除以文章形式包含在事务复制出版物中的表。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
-|针对 SQL 服务帐户的 IFI 特权|确定即时文件初始化 (IFI) 在 SQL Server 服务启动时是否有效。|[数据库文件初始化](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|针对 SQL 服务帐户的 IFI 特权|确定即时文件初始化 (IFI) 在 SQL Server 服务启动时是否有效。|[数据库文件初始化](../relational-databases/databases/database-instant-file-initialization.md)
 |内存授予 - 处理问题|可以通过设置诊断提示的内存授予上限，在运行查询时利用诊断提示防止内存争用。|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|轻型按运算符查询执行分析 |优化按运算符查询执行统计信息（如实际行数）的收集。|[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）
+|轻型按运算符查询执行分析 |优化按运算符查询执行统计信息（如实际行数）的收集。|[Developers Choice:Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)（开发人员之选：随时随地查询进度）
 |查询执行诊断|现可在查询执行计划中报告读取的实际行，以帮助改进查询性能故障排除。|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Tempdb 溢出的查询执行诊断|哈希警告和排序警告现在具有其他列来跟踪物理 I/O 统计信息、使用的内存和受影响的行。 |[改进 temptdb 溢出诊断](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Tempdb 可支持性 |在服务器启动时，为 tempdb 文件数、tempdb 数据文件更改使用新的错误日志消息。|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -82,7 +82,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 ### <a name="download-pages-and-more-information-for-sp1"></a>下载页和 SP1 详细信息
 
 - [下载 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 已发布 - 已更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 Service Pack 1 已发布 - 已更新](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -103,7 +103,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 1.  将 SQL Server 2014 CTP 2 数据库附加到 SQL Server 2014 RTM 实例。    
 2.  将在 SQL Server 2014 CTP 2 上执行的数据库备份还原到 SQL Server 2014 RTM 实例。    
 3.  就地升级到 SQL Server 2014 RTM。
-4.  滚动升级到 SQL Server 2014 RTM。 在启动滚动升级前，您需要切换到手动故障转移模式。 有关详细信息，请参考[在停机时间和数据丢失最少的情况下升级和更新可用性组服务器](https://msdn.microsoft.com/library/dn178483.aspx)。    
+4.  滚动升级到 SQL Server 2014 RTM。 在启动滚动升级前，您需要切换到手动故障转移模式。 有关详细信息，请参考[在停机时间和数据丢失最少的情况下升级和更新可用性组服务器](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
 5.  通过 SQL Server 2014 CTP 2 中安装的事务性能收集组收集的数据不能通过 SQL Server 2014 RTM 中的 SQL Server Management Studio 查看，反之亦然。
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>从 SQL Server 2014 RTM 降级到 SQL Server 2014 CTP 2  
@@ -158,7 +158,7 @@ SQL Server 2014 Standard 具有以下更改：
 -   最大内存从 64 GB 增加到 128 GB。  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>内存优化顾问将默认约束标记为不兼容  
-**问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中支持的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)(#本机编译的存储过程中支持的构造)。  
+**问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中支持的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md?viewFallbackFrom=sql-server-2014)(#本机编译的存储过程中支持的构造)。  
   
 **解决方法：** 如果要使用顾问来识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
   
@@ -348,7 +348,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
     此解决方法将允许向导在 Azure 中完成添加副本的工作。  
   
-2.  向导完成后，将需要按照 [Azure 中 AlwaysOn 可用性组的侦听器配置](https://msdn.microsoft.com/library/dn376546.aspx)中所述在 Azure 中完成侦听器配置  
+2.  向导完成后，将需要按照 [Azure 中 AlwaysOn 可用性组的侦听器配置](/previous-versions/azure/dn376546(v=azure.100))中所述在 Azure 中完成侦听器配置  
   
 ### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
@@ -361,7 +361,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](https://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)。  
   
 **详细信息：**  
   
@@ -376,7 +376,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](https://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)。  
   
 **详细信息：**  
   

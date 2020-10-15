@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823352"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081426"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server 的驱动程序功能支持矩阵
 
@@ -51,8 +51,8 @@ ms.locfileid: "87823352"
 | [多重活动结果集 (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [是](ado-net/sql/multiple-active-result-sets-mars.md) | [是](ado-net/sql/multiple-active-result-sets-mars.md) | [是](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [是](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [空间数据类型](../relational-databases/spatial/spatial-data-sql-server.md) | | “是” | | 是 |
 | [表值参数 (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [是](ado-net/sql/table-valued-parameters.md) | [是](ado-net/sql/table-valued-parameters.md) | [是](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [是](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
-| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [是](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [是](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [是](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0) | [是](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8) |
-| [透明网络 IP 解析](odbc/using-transparent-network-ip-resolution.md) | | [是](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1) | | [是](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8) |
+| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [是](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [是](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [是](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0&preserve-view=true) | [是](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8&preserve-view=true) |
+| [透明网络 IP 解析](odbc/using-transparent-network-ip-resolution.md) | | [是](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1&preserve-view=true) | | [是](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 | <a id="table2"></a>功能 | [Windows 上的 ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md) | [Linux 和 macOS 上的 ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md) | [JDBC Driver for SQL Server](jdbc/microsoft-jdbc-driver-for-sql-server.md) | [适用于 SQL Server 的 OLE DB 驱动程序](oledb/oledb-driver-for-sql-server.md) |

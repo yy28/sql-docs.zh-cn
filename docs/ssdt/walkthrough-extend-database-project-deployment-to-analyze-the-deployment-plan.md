@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897476"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987543"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>演练：扩展数据库项目部署以分析部署计划
 
@@ -46,7 +46,7 @@ ms.locfileid: "85897476"
   
 -   创建类库项目并添加所需的引用。  
   
--   定义一个名为 DeploymentUpdateReportContributor 的类，该类继承自 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。  
+-   定义一个名为 DeploymentUpdateReportContributor 的类，该类继承自 [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor)。  
   
 -   重写 OnExecute 方法。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "85897476"
   
     ```  
   
-    现在，您已定义继承自 DeploymentPlanExecutor 的部署参与者。 在生成和部署过程中，将从标准扩展目录中加载自定义参与者。 部署计划执行器参与者将由 [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx) 属性标识。  
+    现在，您已定义继承自 DeploymentPlanExecutor 的部署参与者。 在生成和部署过程中，将从标准扩展目录中加载自定义参与者。 部署计划执行器参与者将由 [ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute) 属性标识。  
   
     必须使用该属性才能发现参与者。 该属性应与下面类似：  
   
@@ -249,9 +249,9 @@ ms.locfileid: "85897476"
             }  
     ```  
   
-    将向 OnExecute 方法传递一个 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 对象，该对象提供对任何指定参数、源和目标数据库模型、生成属性以及扩展文件的访问权。 在此示例中，我们获取模型，然后调用帮助器函数来输出有关模型的信息。 我们在基类上使用 PublishMessage 帮助器方法报告发生的任何错误。  
+    将向 OnExecute 方法传递一个 [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) 对象，该对象提供对任何指定参数、源和目标数据库模型、生成属性以及扩展文件的访问权。 在此示例中，我们获取模型，然后调用帮助器函数来输出有关模型的信息。 我们在基类上使用 PublishMessage 帮助器方法报告发生的任何错误。  
   
-    其他相关的类型和方法包括：[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 和 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)。  
+    其他相关的类型和方法包括：[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)、[ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult)、[DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle) 和 [SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions)。  
   
     接下来，您定义探究部署计划的详细信息的帮助器类。  
   
@@ -524,11 +524,11 @@ ms.locfileid: "85897476"
   
     |代码区域|有用的类型|  
     |-----------------|--------------------|  
-    |类成员|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |类成员|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)、[ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult)、[DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |WriteReport 方法|XmlWriter 和 XmlWriterSettings|  
-    |ReportPlanOperations 方法|相关类型包括：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />有许多其他步骤 - 有关这些步骤的完整列表，请参见 API 文档。|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |ReportPlanOperations 方法|相关类型包括：[DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)、[SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep)、[SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep)、[SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep)、[CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep)、[AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep)、[DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep)。<br /><br />有许多其他步骤 - 有关这些步骤的完整列表，请参见 API 文档。|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     接下来，你将生成类库。  
   
@@ -738,10 +738,9 @@ ms.locfileid: "85897476"
     通过在执行部署计划时分析该计划，您可以报告部署中包含的任何信息，并可以基于该计划中的步骤执行其他操作。  
   
 ## <a name="next-steps"></a>后续步骤  
-可以创建其他工具来处理输出 XML 文件。 这只是 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的一个示例。 还可以创建 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，以便在执行部署计划前更改该计划。  
+可以创建其他工具来处理输出 XML 文件。 这只是 [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) 的一个示例。 还可以创建 [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier)，以便在执行部署计划前更改该计划。  
   
 ## <a name="see-also"></a>另请参阅  
-[演练：扩展数据库项目生成以生成模型统计信息](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[演练：扩展数据库项目部署以修改部署计划](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[使用生成参与者和部署参与者来自定义数据库生成和部署](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[演练：扩展数据库项目生成以生成模型统计信息](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[演练：扩展数据库项目部署以修改部署计划](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[使用生成参与者和部署参与者来自定义数据库生成和部署](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

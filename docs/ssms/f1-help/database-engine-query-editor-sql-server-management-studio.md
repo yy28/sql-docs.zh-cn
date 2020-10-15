@@ -38,12 +38,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 50542a1a86adcd2149a7170240796b4f6a511879
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288265"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035460"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) 查询编辑器
 
@@ -300,8 +300,8 @@ Microsoft 数据库引擎优化顾问 (DTA) 分析数据库并对优化查询性
 | 将文本从脚本的一个位置中拖出，然后放入一个新位置。| [拖放文本](../scripting/drag-and-drop-text.md) |
 | 如何设置书签，以便更容易地查找重要代码片段。 | [管理书签](../scripting/manage-bookmarks.md) |
 | 如何打印窗口或网格中的脚本或结果。| [打印代码和结果](../scripting/print-code-and-results.md) |
-| 查看和使用 MDX 查询编辑器的基本功能。 | [创建 Analysis Services 脚本](https://docs.microsoft.com/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| 查看和使用 DMX 查询编辑器的基本功能。 | [创建 DMX 查询](https://docs.microsoft.com/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| 查看和使用 MDX 查询编辑器的基本功能。 | [创建 Analysis Services 脚本](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
+| 查看和使用 DMX 查询编辑器的基本功能。 | [创建 DMX 查询](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
 | 查看和使用 XML/A 编辑器的基本功能。 | [XML 编辑器](../scripting/xml-editor-sql-server-management-studio.md) |
 | 如何使用数据库引擎查询编辑器中的 sqlcmd 功能。| [编辑 SQLCMD 脚本](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | 如何使用数据库引擎查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。| [T-SQL 代码片段](../scripting/add-transact-sql-snippets.md) |

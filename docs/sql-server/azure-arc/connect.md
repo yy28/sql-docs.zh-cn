@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5b07323de0c8d385ad4df739c935a8bef96b4022
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990295"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987993"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>将 SQL Server 连接到 Azure Arc
 
@@ -22,7 +22,7 @@ ms.locfileid: "90990295"
 ## <a name="prerequisites"></a>必备知识
 
 * 你的计算机上至少安装了一个 SQL Server 实例
-* 对于 Windows 计算机，已安装 Azure PowerShell。 按照这些说明[安装 Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps)。
+* 对于 Windows 计算机，已安装 Azure PowerShell。 按照这些说明[安装 Azure PowerShell](/powershell/azure/install-az-ps)。
 * 对于 Linux 计算机，已下载 Azure CLI 并连接到 Azure 帐户。 按照说明[安装 Azure CLI](/cli/azure/install-azure-cli-apt)。
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "90990295"
 3. 选择订阅、资源组、Azure 区域和主机操作系统。 如果需要，还要指定你的网络用于连接到 Internet 的代理。
 
 > [!IMPORTANT]
-> 如果承载 SQL Server 实例的计算机已[连接到 Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal)，请确保选择包含相应“计算机 - Azure Arc”资源的同一资源组。
+> 如果承载 SQL Server 实例的计算机已[连接到 Azure Arc](/azure/azure-arc/servers/onboard-portal)，请确保选择包含相应“计算机 - Azure Arc”资源的同一资源组。
 
 ![服务器详细信息](media/join/server-details-sql-server-azure-arc.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "90990295"
 
 ### <a name="windows"></a>Windows
 
-1. 启动 powershell.exe 的管理员实例，并使用你的 Azure 凭据登录 PowerShell 模块。 按照[登录说明](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in)进行操作。
+1. 启动 powershell.exe 的管理员实例，并使用你的 Azure 凭据登录 PowerShell 模块。 按照[登录说明](/powershell/azure/install-az-ps#sign-in)进行操作。
 
 2. 执行已下载的脚本
 
@@ -69,7 +69,7 @@ ms.locfileid: "90990295"
 
 ### <a name="linux"></a>Linux
 
-1. 使用 Azure CLI 通过 Azure 凭据登录。 按照[登录说明](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)进行操作
+1. 使用 Azure CLI 通过 Azure 凭据登录。 按照[登录说明](/cli/azure/authenticate-azure-cli)进行操作
 
 2. 对已下载的脚本授予执行权限并执行该脚本。
 

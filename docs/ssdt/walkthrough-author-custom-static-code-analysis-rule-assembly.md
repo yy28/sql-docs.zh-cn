@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c734a2907ec4ad2d312385976013f8c1c39effcc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896238"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987723"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
 
@@ -70,7 +70,7 @@ ms.locfileid: "85896238"
 
 在创建规则本身的类之前，将为项目添加访问者类和属性类。 这些类对于创建其他自定义规则可能会很有用。  
   
-第一种必须定义的类为从 [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor) 派生的 WaitForDelayVisitor 类。 此类可访问模型中的 WAITFOR DELAY 语句。 访问者类使用 SQL Server 提供的 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API。 在此 API 中，Transact\-SQL 代码表示为抽象语法树 (AST)，如果希望查找特定语法对象（例如 WAITFORDELAY 语句），访问者类会很有用。 使用对象模型查找语法对象可能会很困难，因为它们没有与特定对象属性或关系关联，而使用访问者模式和 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API 查找它们就很容易。  
+第一种必须定义的类为从 [TSqlConcreteFragmentVisitor](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor) 派生的 WaitForDelayVisitor 类。 此类可访问模型中的 WAITFOR DELAY 语句。 访问者类使用 SQL Server 提供的 [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) API。 在此 API 中，Transact\-SQL 代码表示为抽象语法树 (AST)，如果希望查找特定语法对象（例如 WAITFORDELAY 语句），访问者类会很有用。 使用对象模型查找语法对象可能会很困难，因为它们没有与特定对象属性或关系关联，而使用访问者模式和 [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) API 查找它们就很容易。  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>定义 WaitForDelayVisitor 类  
   
@@ -120,7 +120,7 @@ ms.locfileid: "85896238"
     }  
     ```  
   
-    此方法访问模型中的 WAITFOR 语句，并且将指定了 DELAY 选项的语句添加到 WAITFOR DELAY 语句列表中。 此处引用的关键类为 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)。  
+    此方法访问模型中的 WAITFOR 语句，并且将指定了 DELAY 选项的语句添加到 WAITFOR DELAY 语句列表中。 此处引用的关键类为 [WaitForStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.waitforstatement)。  
   
 9. 在“文件”菜单上，单击“保存”。  
   
@@ -400,9 +400,9 @@ ms.locfileid: "85896238"
   
 9. 为 Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.Analyze(Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext) 方法添加替代，它使用 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext 作为输入参数。 此方法返回潜在问题列表。  
   
-    此方法从上下文参数获取 Microsoft.SqlServer.Dac.Model.TSqlModel、Microsoft.SqlServer.Dac.Model.TSqlObject 和 [TSqlFragment](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx)。 然后使用 WaitForDelayVisitor 类获取包含模型中所有 WAITFOR DELAY 语句的列表。  
+    此方法从上下文参数获取 Microsoft.SqlServer.Dac.Model.TSqlModel、Microsoft.SqlServer.Dac.Model.TSqlObject 和 [TSqlFragment](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment)。 然后使用 WaitForDelayVisitor 类获取包含模型中所有 WAITFOR DELAY 语句的列表。  
   
-    将为列表中的每个 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx) 创建一个 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem。  
+    将为列表中的每个 [WaitForStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.waitforstatement) 创建一个 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem。  
   
     ```  
     /// <summary>  

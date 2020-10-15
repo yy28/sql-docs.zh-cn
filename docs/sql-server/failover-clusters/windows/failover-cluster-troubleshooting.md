@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111024"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988285"
 ---
 # <a name="failover-cluster-troubleshooting"></a>故障转移群集疑难解答
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111024"
 -   使用扩展存储过程和 COM 对象。  
   
 ## <a name="basic-troubleshooting-steps"></a>故障排除的基本步骤  
- 第一个诊断步骤是运行最新的群集验证检查。 有关验证的详细信息，请参阅[故障转移群集分步指南：针对故障转移群集验证硬件](https://technet.microsoft.com/library/cc732035.aspx)。  这可以在不中断任何服务的情况下完成，因为它不影响任何联机的群集资源。 一旦故障转移群集功能安装完成，就可以在任何时候，包括部署群集前、创建群集期间以及群集运行时进行验证。 实际上，一旦群集处于使用状态就会执行其他测试，检查高度可用的工作负载是否遵循了最佳做法。 在这几十项测试中，只有几项会影响正在运行的群集工作负载，而这些工作负载都处于存储类别中，因此跳过这整个类别是避免破坏性测试的简便方法。  
+ 第一个诊断步骤是运行最新的群集验证检查。 有关验证的详细信息，请参阅[故障转移群集分步指南：针对故障转移群集验证硬件](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10))。  这可以在不中断任何服务的情况下完成，因为它不影响任何联机的群集资源。 一旦故障转移群集功能安装完成，就可以在任何时候，包括部署群集前、创建群集期间以及群集运行时进行验证。 实际上，一旦群集处于使用状态就会执行其他测试，检查高度可用的工作负载是否遵循了最佳做法。 在这几十项测试中，只有几项会影响正在运行的群集工作负载，而这些工作负载都处于存储类别中，因此跳过这整个类别是避免破坏性测试的简便方法。  
 故障转移群集附带了内置的保护措施，以防止在验证过程中运行存储测试时出现意外故障时间。 如果在启动验证时该群集有任何联机组，并且存储测试保持选定状态，则会提示用户确认是否要要运行所有测试（会导致故障时间），或跳过所有联机组的磁盘测试以避免故障时间。 如果已从测试中排除整个存储类别，则不会显示此提示。 这可以使群集验证在没有故障时间的情况下进行。  
   
 #### <a name="how-to-revalidate-your-cluster"></a>如何重新验证群集  
@@ -189,5 +189,4 @@ ms.locfileid: "91111024"
  [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [扩展存储过程的工作方式](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [扩展存储过程的执行特征](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

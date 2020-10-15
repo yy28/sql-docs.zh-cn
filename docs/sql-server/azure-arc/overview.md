@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834312"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987983"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>已启用 Azure Arc 的 SQL Server（预览）
 
@@ -49,7 +49,7 @@ ms.locfileid: "91834312"
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-为了获得最佳安全性，我们建议在 Azure 中创建自定义角色并列出基础权限。 若要了解如何在 Azure 中创建自定义角色并配置基础权限，请参阅[自定义角色概述](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview)。 若要添加角色分配，请参阅[使用 Azure 门户添加或删除角色分配](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal)或[使用 Azure RBAC 和 Azure CLI 添加或删除角色分配](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli)。
+为了获得最佳安全性，我们建议在 Azure 中创建自定义角色并列出基础权限。 若要了解如何在 Azure 中创建自定义角色并配置基础权限，请参阅[自定义角色概述](/azure/active-directory/users-groups-roles/roles-custom-overview)。 若要添加角色分配，请参阅[使用 Azure 门户添加或删除角色分配](/azure/role-based-access-control/role-assignments-portal)或[使用 Azure RBAC 和 Azure CLI 添加或删除角色分配](/azure/role-based-access-control/role-assignments-cli)。
 
 ### <a name="azure-subscription-and-service-limits"></a>Azure 订阅和服务限制
 

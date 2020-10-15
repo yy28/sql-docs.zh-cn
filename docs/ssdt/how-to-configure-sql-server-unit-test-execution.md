@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519027"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987963"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：配置 SQL Server 单元测试执行
 
@@ -30,7 +30,7 @@ ms.locfileid: "85519027"
 -   架构部署。 数据库项目是数据库的脱机表示形式。 数据库项目表示数据库对象的结构，但不包含任何数据。 在数据库项目中做出架构更改后，您可在实际数据库中测试这些更改。 在架构部署步骤中，将要测试的数据库对象将会从您的数据库项目复制到您要对其运行测试的数据库中。 有关架构部署的更多信息，请参见[部署数据库架构](#DeployingDBSchema)。  
   
     > [!NOTE]  
-    > 测试不在解决方案文件夹中运行，而是在本地硬盘上的一个单独的文件夹中运行。 虽然您可配置测试部署的各个方面，但通常不需要为单元测试配置它们。 有关测试部署的更多信息，请参见[运行测试](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)。  
+    > 测试不在解决方案文件夹中运行，而是在本地硬盘上的一个单独的文件夹中运行。 虽然您可配置测试部署的各个方面，但通常不需要为单元测试配置它们。 有关测试部署的更多信息，请参见[运行测试](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100))。  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>指定连接字符串  
   
@@ -85,4 +85,3 @@ ms.locfileid: "85519027"
 ## <a name="see-also"></a>另请参阅  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [使用 SQL Server 单元测试验证数据库代码](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480203"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034909"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
 
@@ -163,5 +163,4 @@ ms.locfileid: "88480203"
 > 某些命令仅在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示相关内容时才可用。 如果菜单上的所有命令均不可用，则该菜单项将不可用。  
   
 ## <a name="see-also"></a>另请参阅  
-[SQL Server Management Studio 中的功能](../ssms/features-in-sql-server-management-studio.md)  
-  
+[SQL Server Management Studio 中的功能](./sql-server-management-studio-ssms.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442367"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988293"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>升级故障转移群集实例 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "87442367"
   
  此过程使停机时间限制为整个故障转移群集升级过程中的一次故障转移时间和数据库升级脚本执行时间。  
   
- 若要控制升级过程中群集节点的故障转移行为，请从命令提示符运行升级操作，并使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+ 若要控制升级过程中群集节点的故障转移行为，请从命令提示符运行升级操作，并使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
 
  ## <a name="upgrade-with-installation-media"></a>使用安装介质升级 
   
@@ -83,7 +83,7 @@ ms.locfileid: "87442367"
   
 7.  在“选择实例”页上指定要升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]实例。 单击 **“下一步”** 继续。  
   
-8.  在“功能选择”页上会预先选择要升级的功能。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 若要在升级操作完成后向 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 的已升级实例中添加功能，请参阅 [向 SQL Server 2016 的实例添加功能（安装程序）](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
+8.  在“功能选择”页上会预先选择要升级的功能。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 若要在升级操作完成后向 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 的已升级实例中添加功能，请参阅 [向 SQL Server 2016 的实例添加功能（安装程序）](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)。  
   
      在右侧窗格中显示所选功能的必备组件。 SQL Server 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。 为了节省时间，应在每个节点上预安装这些必备组件。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87442367"
   
 10. “磁盘空间要求”页计算指定的功能所需的磁盘空间，并将磁盘空间要求与正在运行安装程序的计算机上的可用磁盘空间进行比较。  
   
-11. 在“全文搜索升级”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+11. 在“全文搜索升级”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](../../../database-engine/install-windows/install-sql-server.md)。  
   
 12. 在 **“错误报告”** 页上，指定要发送到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 以帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的信息。 默认情况下，将启用用于错误报告的选项。  
   
@@ -140,8 +140,7 @@ ms.locfileid: "87442367"
   
 -   [更改数据库兼容性模式和使用 Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [利用新的 SQL Server 2016 功能](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [利用新的 SQL Server 2016 功能](../../what-s-new-in-sql-server-2017.md)  
   
 
-  
   

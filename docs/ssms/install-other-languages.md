@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: 044813df5fc1e222c24418c60d0a1c7d40d8c011
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 22c9550044e5420426f6a423d340e3b32b7a77a4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522999"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034841"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安装非英语语言版本的 SQL Server Management Studio (SSMS)
 
@@ -53,4 +53,4 @@ SSMS 提供了多种语言，但如果系统区域设置不匹配 SSMS 语言，
 
 ## <a name="next-steps"></a>后续步骤
 
-- [教程：SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [教程：SQL Server Management Studio](./quickstarts/connect-query-sql-server.md)
