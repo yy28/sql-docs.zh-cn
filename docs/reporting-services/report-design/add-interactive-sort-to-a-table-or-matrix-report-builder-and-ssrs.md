@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 7674b05ba6c1fb5de836ed3b767e6653cbdc51cf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255510"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933293"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>向表或矩阵添加交互式排序（报表生成器和 SSRS）
   添加交互式排序按钮可以让用户能够更改表和矩阵中行和列的排序顺序。 只有支持用户交互的呈现格式（例如 HTML）才支持此功能。  
@@ -61,7 +61,7 @@ ms.locfileid: "84255510"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> 对表或矩阵的顶级父行组进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并按该列中显示的值对表或矩阵中的父组行进行排序。 子组的顺序保持不变。  
@@ -85,7 +85,7 @@ ms.locfileid: "84255510"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> 对组的子组或详细信息行进行排序  
  将交互式排序按钮添加到组头行，可使用户能够对父组中的子组的值进行排序，或者对最内部的子组的详细信息行进行排序。  
@@ -108,7 +108,7 @@ ms.locfileid: "84255510"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> 基于复杂组表达式对行进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并对组合的父组和子组进行排序。 若要获得此效果，必须将组表达式更改为两个组的组合。 例如，假定用一个矩阵显示某个商店中按颜色和大小分组的商品的库存总计。 若要基于颜色和大小的组合对行进行排序，而不是让颜色和大小各有单独的组，则可以基于颜色和大小的组合来定义组。 有关定义组表达式的详细信息，请参阅[组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
@@ -165,7 +165,7 @@ ms.locfileid: "84255510"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。 矩阵将按组表达式的组合值进行排序，但每个值分别显示在其各自的列中。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> 同步多个数据区域的排序顺序  
  添加交互式排序按钮，可使用户能够单击一个排序按钮并对多个数据区域进行排序。 创建交互式排序按钮时，可以指定是否基于相同报表数据集同步多个数据区域的排序。 例如，报表可能包括以图形方式显示数据的矩阵和图表。 用户更改矩阵中行的排序顺序时，图表将自动显示相同的排序顺序。  
@@ -214,12 +214,11 @@ ms.locfileid: "84255510"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。 矩阵将按组表达式的组合值进行排序，但每个值分别显示在其各自的列中。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [交互式排序（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
-  
   

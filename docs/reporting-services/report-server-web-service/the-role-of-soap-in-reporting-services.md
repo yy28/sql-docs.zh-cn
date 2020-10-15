@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3550bd04341d9975870aa18483f2901e845795e0
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 8f11ec9625a675e42d712bd1bb1bba953ce979c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627521"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934577"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   报表服务器 Web 服务使用简单对象访问协议 (SOAP) 消息通过网络发送基于文本的命令。 这些命令采用的形式为使用 HTTP 通过万维网发送的 XML 文本。 通过将 SOAP 用作其通信协议，报表服务器 Web 服务使应用程序和组件能够使用开放和广为接受的基础结构与报表服务器交换数据。 SOAP 标准在 www.w3.org/TR/SOAP 中定义。  
@@ -60,8 +60,7 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>另请参阅  
  [访问 SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)   
  [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [报表服务器 Web 服务](../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
   

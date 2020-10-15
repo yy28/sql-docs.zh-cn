@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396106"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986623"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>禁用或暂停报表和订阅处理  
 可采用多种方法禁用或暂停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和订阅处理。 本主题中的方法从禁用订阅到中断数据源连接，无所不包。 并非所有方法都支持这两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式。 下表总结了方法以及支持的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式：  
@@ -60,7 +60,7 @@ ms.locfileid: "87396106"
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")：**使用 Windows PowerShell 禁用单个订阅：** 使用以下 PowerShell 脚本禁用特定订阅。 更新脚本中的服务器名称和订阅 ID。  
+![PowerShell 相关内容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")：**使用 Windows PowerShell 禁用单个订阅：** 使用以下 PowerShell 脚本禁用特定订阅。 更新脚本中的服务器名称和订阅 ID。  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 列出所有禁用的订阅：** 使用以下 PowerShell 脚本列出当前本机模式报表服务器上所有已禁用的订阅。 更新服务器名称。  
+ ![PowerShell 相关内容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 列出所有禁用的订阅：** 使用以下 PowerShell 脚本列出当前本机模式报表服务器上所有已禁用的订阅。 更新服务器名称。  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 启用所有禁用的订阅：** 使用以下 PowerShell 脚本启用当前已禁用的所有订阅。 更新服务器名称。  
+ ![PowerShell 相关内容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 启用所有禁用的订阅：** 使用以下 PowerShell 脚本启用当前已禁用的所有订阅。 更新服务器名称。  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 禁用所有订阅：** 使用以下 PowerShell 脚本列出禁用的所有  订阅。  
+ ![PowerShell 相关内容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 禁用所有订阅：** 使用以下 PowerShell 脚本列出禁用的所有  订阅。  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> 暂停共享计划  
  如果报表或订阅按照某个共享计划运行，您可以通过暂停该计划来阻止这些报表或订阅的处理。 在恢复计划之前，会延迟由该计划驱动的所有报表和订阅处理。  
   
--   **SharePoint 模式：** 在“站点设置”  的 ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")中，选择“管理共享计划”  。 选择计划，并单击“暂停所选计划”  。  
+-   **SharePoint 模式：** 在“站点设置”  的 ![SharePoint 设置](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")中，选择“管理共享计划”  。 选择计划，并单击“暂停所选计划”  。  
   
 -   **本机模式：** 在 Web 门户中，从 Web 门户屏幕顶部的菜单栏中选择“设置”  按钮![设置按钮](media/ssrs-portal-settings-gear.png)，并从下拉菜单中选择“站点设置”  。 选择“计划”  选项卡以显示计划页。 选中要启用或禁用的计划旁边的复选框，然后分别选择“启用”  或“禁用”  按钮，以执行所需的操作。 “状态”列将相应地更新为“禁用”或“启用”。  
   
@@ -177,4 +177,3 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [安全对象](../../reporting-services/security/securable-items.md) 
-  

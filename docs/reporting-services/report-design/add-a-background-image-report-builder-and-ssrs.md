@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 719201b31c4bbfef138799f6712d33e24c50b725
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: c611c521ec3e98d205b4156e84800549341996d3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689357"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934826"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>添加背景图像（报表生成器和 SSRS）
   您可以向报表项（如矩形、文本框、列表、矩阵、表和某些图表部件）或报表区域（如页眉、页脚或表体）添加背景图像。 在“属性”窗格中，可以为报表设计图面上显示 **BackgroundImage** 的任何所选项定义背景图像。 与其他图像相似，背景图像可以是指向报表服务器上的图像的 URL、数据集字段的图像，也可以是报表定义中嵌入的图像。 若要使用在报表中嵌入的图像，您必须首先向报表定义中添加该嵌入图像，然后才能向设计图面中添加该图像。  
@@ -68,6 +68,5 @@ ms.locfileid: "83689357"
   
 ## <a name="see-also"></a>另请参阅  
  [图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
-  
+ [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](./images-report-builder-and-ssrs.md)  
   

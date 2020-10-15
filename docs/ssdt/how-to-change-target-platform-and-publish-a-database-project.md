@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942463"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987213"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：更改目标平台并发布数据库项目
 
@@ -43,7 +43,7 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
   
 3.  请注意，以下错误将出现在“错误列表”**** 窗格中：SQL70015: 在 SQL Azure 中不支持“文件组引用和分区方案”。  
   
-    SSDT 将基于目标平台自动验证您的脚本。 在这种情况下，因为 SQL Azure 不支持文件组，所以 SSDT 将返回错误。 有关 SQL Azure 中不支持的 Transact\-SQL 语句，请参阅[部分支持的 Transact-SQL 语句（Microsoft Azure SQL 数据库）](https://msdn.microsoft.com/library/ee336267.aspx)。  
+    SSDT 将基于目标平台自动验证您的脚本。 在这种情况下，因为 SQL Azure 不支持文件组，所以 SSDT 将返回错误。 有关 SQL Azure 中不支持的 Transact\-SQL 语句，请参阅[部分支持的 Transact-SQL 语句（Microsoft Azure SQL 数据库）](/previous-versions/azure/ee336267(v=azure.100))。  
   
 4.  删除 `ON` 子句。 请注意，该错误将立即从 **“错误列表”** 中消失。  
   
@@ -68,4 +68,3 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
 将 Microsoft SQL Server 2012 指定为目标平台的项目可能会遇到与 SQL Server 2008 的兼容性问题****    如果此类项目包含 Microsoft SQL Server 2012 中引入的实体（例如，一个 Sequence 对象），则发布操作将失败。  
   
 如果对象谓词对新创建的全文索引使用 CONTAINS 或 FREETEXT，并且使用了事务脚本，则部署将失败 。 如果在部署期间启用包含事务脚本的选项，则当在部署脚本结尾在事务外定义全文索引时在事务内定义过程和视图。 由于脚本中的这一顺序，使用 CONTAINS 或 FREETEXT 的过程或视图将不会针对全文索引进行解析，从而导致部署错误。  
-  

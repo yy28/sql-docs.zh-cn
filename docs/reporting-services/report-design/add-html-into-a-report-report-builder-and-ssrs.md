@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b07521bb6a3cf293761342af6d7bdcbec728959
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: b2fcdc9d0ff735f069a897626b454bcf4e4cccee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255643"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933340"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>向报表添加 HTML（报表生成器和 SSRS）
   可以使用占位符从数据集中的字段导入 HTML 以在报表中使用。 默认情况下，占位符表示纯文本，因此需要将占位符的标记类型改为 HTML。 有关详细信息，请参阅[将 HTML 导入报表（报表生成器和 SSRS）](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "84255643"
   
 1.  在 **“插入”** 选项卡上，单击 **“列表”** 。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。  
   
-     此时将打开 **“数据集属性”** 对话框。 可以使用共享数据集或嵌入在报表中的数据集。 有关详细信息，请单击[“数据集属性”对话框 ->“查询”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)或[“数据集属性”对话框 ->“查询”](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)。  
+     此时将打开 **“数据集属性”** 对话框。 可以使用共享数据集或嵌入在报表中的数据集。 有关详细信息，请单击[“数据集属性”对话框 ->“查询”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)或[“数据集属性”对话框 ->“查询”](/previous-versions/sql/)。  
   
 2.  在 **“插入”** 选项卡上，单击 **“文本框”** 。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
   
@@ -43,6 +43,5 @@ ms.locfileid: "84255643"
 ## <a name="see-also"></a>另请参阅  
  [设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [设置线条、颜色和图像的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [“占位符属性”对话框 ->“常规”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
-  
+ [“占位符属性”对话框 ->“常规”（报表生成器和 SSRS）](./text-boxes-report-builder-and-ssrs.md)  
   

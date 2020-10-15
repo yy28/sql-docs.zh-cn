@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 276e6e9f1ad326b0b3930d729fe233f2e4cbb7c6
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: c310b902889b8dc78b81609439f09ba2d6e4beb7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255618"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934887"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
   运算符是一种符号，用来表示要应用到表达式中一个或多个字词的操作。 表达式中支持下列类别的运算符：算术、比较、串联、逻辑或位，以及移位。  
@@ -78,10 +78,9 @@ ms.locfileid: "84255618"
 |>>|对位模式执行算术右移位运算。|  
   
 ## <a name="see-also"></a>另请参阅  
- [“表达式”对话框](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [“表达式”对话框](/previous-versions/sql/)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [“表达式”对话框（报表生成器）](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
-  
+ [“表达式”对话框（报表生成器）](./expressions-report-builder-and-ssrs.md)  
   

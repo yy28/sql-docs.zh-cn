@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510118"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986653"
 ---
 # <a name="limit-report-history---reporting-services"></a>限制报表历史记录 - Reporting Services
   报表历史记录是随着时间变化而创建的报表快照的集合。 您可以按需创建报表历史记录，也可以安排快照的创建频率以及将快照添加到报表历史记录中的频率。  
@@ -45,11 +45,11 @@ ms.locfileid: "79510118"
   
 3.  单击 **“历史记录”** 选项卡。  
   
-4.  为您的报表选择相应选项，再单击 **“应用”** 。 有关每个选项的详细信息，请参阅[“快照选项”属性页（报表管理器）](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。  
+4.  为您的报表选择相应选项，再单击 **“应用”** 。 有关每个选项的详细信息，请参阅[“快照选项”属性页（报表管理器）](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130))。  
   
 ## <a name="see-also"></a>另请参阅  
  [向报表历史记录添加快照（报表管理器）](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)  
 
 ::: moniker-end
 
@@ -71,10 +71,9 @@ ms.locfileid: "79510118"
   
 3.  单击 **“历史记录”** 选项卡。  
   
-4.  为您的报表选择相应选项，再单击 **“应用”** 。 要详细了解每个选项，请参阅[“快照选项”属性页](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。  
+4.  为您的报表选择相应选项，再单击 **“应用”** 。 要详细了解每个选项，请参阅[“快照选项”属性页](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130))。  
   
 ## <a name="see-also"></a>另请参阅  
  [向报表历史记录添加快照](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end
-  

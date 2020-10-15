@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373163"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987243"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 文档的版本控制系统
 
@@ -159,17 +159,17 @@ ms.locfileid: "88373163"
 
 - 2012及早期版本：&nbsp; 版本控制系统不用于 SQL Server 2012 或更早版本。
     - “SQL Server - 旧版本”的特殊名字对象意味着隐藏几乎所有文章。 极少数例外是旧版本客户可能一次需要几篇文章。
-    - [SQL Server 的早期版本，2012-2005](../toc/previous-versions-sql-server.md)
+    - [SQL Server 的早期版本，2012-2005](./previous-versions-sql-server.md)
 
 - 2014：&nbsp; 版本控制系统为 SQL Server 2014 实现了一半。 可以在版本控制控件中选择 SQL Server 2014，此方法有效。 然而在内部，2014 的文件专门用于 2014 年，就像 2008 年的文件专用于 2008 年一样。
-    - [SQL Server 2014 脱机文档](/sql/sql-server/sql-server-offline-documentation)
+    - [SQL Server 2014 脱机文档](./sql-server-offline-documentation.md)
 
 - 2016 及更高版本：&nbsp; SQL Server 2016 及更高版本已完全实现版本控制系统。
-    - [欢迎使用 2016 及更高版本的 SQL Server 文档](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
+    - [欢迎使用 2016 及更高版本的 SQL Server 文档](./index.yml?preserve-view=true&view=sql-server-2016)
     - [SQL Server 2016 脱机文档](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>另请参阅
 
-[SQL Server 的早期版本，2014-2005](../toc/previous-versions-sql-server.md)  
+[SQL Server 的早期版本，2014-2005](./previous-versions-sql-server.md)  
 [SQL Server 文档导航指南](sql-docs-navigation-guide.md)  
-[如何参与编辑 SQL Server 文档](sql-server-docs-contribute.md)  
+[如何参与编辑 SQL Server 文档](sql-server-docs-contribute.md)

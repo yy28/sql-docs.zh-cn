@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893919"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987533"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
 
@@ -23,15 +23,15 @@ ms.locfileid: "85893919"
   
 -   [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [如何：在生成应用程序后配置和运行计划的测试](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [如何：在生成应用程序后配置和运行计划的测试](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [创建基本生成定义](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [创建基本生成定义](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 在使用这些过程之前，必须首先通过执行以下任务来配置工作环境：  
   
 -   安装 Team Foundation Build 和 Team Foundation 版本控制。 您可能必须在不同计算机上安装 Team Foundation Build 和 Team Foundation 版本控制。  
   
--   将 Microsoft SQL Server Data Tools 生成实用工具安装在 Team Foundation Build 所在的计算机上。 要安装 SQL Server Data Tools 生成实用工具，请首先执行一个管理安装点。 有关管理安装点的更多信息，请参阅[安装 SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md)。 然后从用于管理安装点的位置 (/location) 将 SSDTBuildUtilties.msi 安装到生成服务器。  
+-   将 Microsoft SQL Server Data Tools 生成实用工具安装在 Team Foundation Build 所在的计算机上。 要安装 SQL Server Data Tools 生成实用工具，请首先执行一个管理安装点。 有关管理安装点的更多信息，请参阅[安装 SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md)。 然后从用于管理安装点的位置 (/location) 将 SSDTBuildUtilties.msi 安装到生成服务器。  
   
 -   连接到 Visual Studio Team Foundation Server 的实例。  
   
@@ -215,22 +215,22 @@ ms.locfileid: "85893919"
   
 1.  连接到运行 Team Foundation Server 的计算机。  
   
-    有关详细信息，请参阅[使用源代码管理器](https://msdn.microsoft.com/library/ms181370(VS.100).aspx)。  
+    有关详细信息，请参阅[使用源代码管理器](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100))。  
   
 2.  如果您的解决方案尚未包含在源代码管理中，请将它添加到源代码管理中。  
   
-    有关更多信息，请参阅[将项目或解决方案添加到版本控制](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
+    有关更多信息，请参阅[将项目或解决方案添加到版本控制](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100))。  
   
 3.  单击“视图”，然后单击“挂起的签入”。  
   
 4.  签入您的解决方案的所有文件。  
   
-    有关详细信息，请参阅[签入挂起的更改](https://msdn.microsoft.com/library/ms181411(VS.100).aspx)。  
+    有关详细信息，请参阅[签入挂起的更改](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100))。  
   
     > [!NOTE]  
     > 您可能有特定的团队流程来控制如何创建和管理自动测试。 例如，该流程可能要求您先在本地验证您的生成，然后再将该代码以及在代码上运行的测试一起签入。  
   
-    在“解决方案资源管理器”中，挂锁图标显示在每个文件旁边，以指示该文件已签入。 有关详细信息，请参阅[查看版本控制文件和文件夹属性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
+    在“解决方案资源管理器”中，挂锁图标显示在每个文件旁边，以指示该文件已签入。 有关详细信息，请参阅[查看版本控制文件和文件夹属性](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100))。  
   
     您的测试现在已经可用于 Team Foundation Build。 您现在可以创建包含要运行的测试的生成定义。  
   
@@ -280,11 +280,10 @@ ms.locfileid: "85893919"
   
 3.  确认“生成定义”****、“生成代理”**** 和“该生成的放置文件夹”**** 字段中的值全部正确，然后单击“排队”****。  
   
-    此时将显示“生成资源管理器”的“排队”选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
+    此时将显示“生成资源管理器”的“排队”选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100))或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140))。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  
-[创建基本生成定义](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[将生成排队](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[监视正在运行的生成的进度](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[创建基本生成定义](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[将生成排队](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[监视正在运行的生成的进度](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

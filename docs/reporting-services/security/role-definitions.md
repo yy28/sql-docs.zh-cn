@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 985ba6df5091c13ab4b91c7f2ba95b4c1484a584
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8dbfe6d890c84bee9a66141971a554c410d47dd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498050"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987377"
 ---
 # <a name="role-definitions"></a>角色定义
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，*角色定义*是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
@@ -46,7 +46,7 @@ ms.locfileid: "88498050"
   
  若要创建角色定义，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)。  
   
- 在创建角色定义后，可以通过在角色分配中选择该角色定义来使用它。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)。  
+ 在创建角色定义后，可以通过在角色分配中选择该角色定义来使用它。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](./grant-user-access-to-a-report-server.md)。  
   
 ## <a name="customize-or-delete-a-role-definition"></a>修改或删除角色定义  
  可以修改预定义角色，也可以用自定义角色替换它们。 若要修改角色，请向角色定义中添加任务或从角色定义中删除任务。 不能对角色重命名。 您所进行的任何更改都会立即应用到包含该角色定义的所有角色分配中。  
@@ -57,8 +57,7 @@ ms.locfileid: "88498050"
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [授予用户对报表服务器的访问权限（报表管理器）](./grant-user-access-to-a-report-server.md)   
  [修改或删除角色分配（报表管理器）](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
-  
   

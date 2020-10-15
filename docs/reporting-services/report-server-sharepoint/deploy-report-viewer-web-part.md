@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767020"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933565"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -53,7 +53,7 @@ ms.locfileid: "83767020"
 
 1. 在 SharePoint Server 上，使用“以管理员身份运行”选项打开 SharePoint 命令行管理程序。
 
-2. 运行 [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) 以添加场解决方案。
+2. 运行 [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) 以添加场解决方案。
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ ms.locfileid: "83767020"
 
     该 cmdlet 返回解决方案的名称、其解决方案 ID 和 Deployed=False。 在下一步骤中，您将部署解决方案。
 
-3. 运行 [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) cmdlet 以部署场解决方案。
+3. 运行 [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) cmdlet 以部署场解决方案。
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ ms.locfileid: "83767020"
 
 6. 通过打开各网站并单击“网站操作”来对其他网站集重复上述操作。
 
-或者，还可使用 PowerShell 通过 [ Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx) cmdlet 在所有网站上启用此功能。
+或者，还可使用 PowerShell 通过 [ Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature) cmdlet 在所有网站上启用此功能。
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

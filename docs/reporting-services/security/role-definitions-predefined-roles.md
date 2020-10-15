@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454519"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987383"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定义 - 预定义角色
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安装了预定义角色，您可以使用它们授予对报表服务器操作的访问权限。 每个预定义角色都描述了一个相关任务的集合。 可以向预定义角色分配组帐户和用户帐户，以提供对报表服务器操作的立即访问。  
@@ -60,11 +60,11 @@ ms.locfileid: "88454519"
 |----------|-----------------|  
 |使用报表|读取报表定义。|  
 |创建链接报表|创建基于非链接报表的链接报表。|  
-|管理所有订阅|查看、修改和删除报表和链接报表的所有订阅，而不论拥有此订阅的为何人。 此任务支持创建数据驱动的订阅。 它还支持编辑和执行 [Power BI 报表服务器中 Power BI (.pbix) 文件的计划的刷新](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh)。|  
+|管理所有订阅|查看、修改和删除报表和链接报表的所有订阅，而不论拥有此订阅的为何人。 此任务支持创建数据驱动的订阅。 它还支持编辑和执行 [Power BI 报表服务器中 Power BI (.pbix) 文件的计划的刷新](/power-bi/report-server/configure-scheduled-refresh)。|  
 |管理数据源|创建和删除共享数据源项，以及查看和修改数据源的属性及内容。|  
 |管理文件夹|创建、查看和删除文件夹，以及查看和修改文件夹属性。|  
 |管理模型|创建、查看和删除模型，以及查看和修改模型属性。|  
-|管理单独的订阅|创建、查看、修改和删除用户拥有的对报表和链接报表的订阅。 此任务还支持编辑和执行 [Power BI 报表服务器中 Power BI (.pbix) 文件的计划的刷新](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh)。|  
+|管理单独的订阅|创建、查看、修改和删除用户拥有的对报表和链接报表的订阅。 此任务还支持编辑和执行 [Power BI 报表服务器中 Power BI (.pbix) 文件的计划的刷新](/power-bi/report-server/configure-scheduled-refresh)。|  
 |管理报表历史记录|创建、查看和删除报表历史记录，查看报表历史记录的属性，以及查看和修改确定快照历史记录限值以及缓存工作方式的设置。|  
 |管理报表|添加和删除报表，修改报表参数，查看和修改报表属性，查看和修改为报表提供内容的数据源，查看和修改报表定义，以及设置报表级安全策略。|  
 |管理资源|创建、修改和删除资源，以及查看和修改资源属性。|  
@@ -216,4 +216,3 @@ ms.locfileid: "88454519"
 [修改或删除角色分配（SSRS Web 门户）](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [任务和权限](../../reporting-services/security/tasks-and-permissions.md)
-  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd4b92dcacf94e2a0196f210050954a84c1ac3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f30b82c72a726faf5d2fb0e221fa36f4872acf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498010"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987333"
 ---
 # <a name="securable-items"></a>安全对象
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的安全性来控制对报表服务器上存储的项的访问权限。 通常通过创建一对角色分配来向用户授予对报表服务器的访问权限：  
@@ -61,7 +61,6 @@ ms.locfileid: "88498010"
 ## <a name="see-also"></a>另请参阅  
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [授予用户对报表服务器的访问权限（报表管理器）](./grant-user-access-to-a-report-server.md)   
  [修改或删除角色分配（报表管理器）](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3b615a45df3d9e45338514423700a706980eee0
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c02d85c3230502f3360039b132e8328e40d06d28
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84535495"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987153"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移动或删除项（报表管理器）
   发布到报表服务器的报表和与报表相关的项将存储在文件夹中。 您可以将这些项移动到不同文件夹，并且报表服务器自动维护对这些项的引用。 在删除项之前，请注意是否有其他项依赖它。  
@@ -40,7 +40,7 @@ ms.locfileid: "84535495"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>从“内容”页中移动项  
   
-1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后找到要移动的项。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "84535495"
  或者，您也可以导航到要移动的对象，单击 **“属性”** ，再单击该页顶部的 **“移动”** 。  
   
 ## <a name="delete-an-item"></a>删除项  
- 在删除项之前，确定是否有其他项使用该项。 例如，如果您删除了一个共享数据源，则使用该数据源的报表和模型将无法再运行。 删除报表时，也将删除与该报表关联的订阅和报表历史记录。 若要查找项的依赖项，请参阅[“依赖项”页（报表管理器）](https://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e)。  
+ 在删除项之前，确定是否有其他项使用该项。 例如，如果您删除了一个共享数据源，则使用该数据源的报表和模型将无法再运行。 删除报表时，也将删除与该报表关联的订阅和报表历史记录。 若要查找项的依赖项，请参阅[“依赖项”页（报表管理器）](../web-portal-ssrs-native-mode.md)。  
   
 #### <a name="to-delete-a-report-or-item"></a>删除报表或项  
   
-1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后找到要删除的项。  
   
@@ -72,7 +72,6 @@ ms.locfileid: "84535495"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [“内容”页（报表管理器）](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [“内容”页（报表管理器）](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
   

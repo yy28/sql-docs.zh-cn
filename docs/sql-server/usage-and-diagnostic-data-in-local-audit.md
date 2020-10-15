@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362504"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987263"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用情况和诊断数据收集的本地审核 (CEIP)
 
@@ -333,7 +333,7 @@ DBA 需要自行管理该目录中文件的清理，以避免占用过多磁盘�
 
 **是否存在可以用于读取此 JSON 输出的客户端或工具？**
 可以使用记事本、Visual Studio 或选择的任何 JSON 读取器来读取输出。
-或者，可以按如下所示在 SQL Server 实例中读取 JSON 文件并分析数据。 有关如何在 SQL Server 中读取 JSON 文件的更多详细信息，请访问 [使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 将 JSON 文件导入 SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)。
+或者，可以按如下所示在 SQL Server 实例中读取 JSON 文件并分析数据。 有关如何在 SQL Server 中读取 JSON 文件的更多详细信息，请访问 [使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 将 JSON 文件导入 SQL Server](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server)。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

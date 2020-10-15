@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548019"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987183"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>创建、删除或修改文件夹 - Reporting Services
   可以创建文件夹来组织和管理发布到报表服务器的项。 创建文件夹有助于用户查找他们关注的报表。 对于内容管理员来说，文件夹提供了应用权限的框架。 可以对特定的文件夹创建角色分配，来限制对处于开发阶段或者不应大范围分布的报表的访问。  
@@ -23,7 +23,7 @@ ms.locfileid: "84548019"
 
 ## <a name="to-create-a-folder"></a>创建文件夹  
   
-1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，选择主文件夹，再单击 **“新建文件夹”** 。 或者，若要在现有文件夹中创建文件夹，请在 **“内容”** 页中导航到该文件夹，再单击该文件夹将其打开。 然后单击 **“新建文件夹”** 。  
   

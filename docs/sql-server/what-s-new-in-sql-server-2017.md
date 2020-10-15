@@ -11,16 +11,16 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93d7520da2d011de53c0dc6d80eea9f131f9a470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfddd7509a8ff9a038cb5ec6bee060deae8d3a09
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718508"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987563"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题概括了特定功能区域的新增功能，并包括指向其他详细信息的链接。 有关 Linux 上的 SQL Server 的相关详细信息，请参阅 [Linux 上的 SQL Server 文档](https://docs.microsoft.com/sql/linux/)
+SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题概括了特定功能区域的新增功能，并包括指向其他详细信息的链接。 有关 Linux 上的 SQL Server 的相关详细信息，请参阅 [Linux 上的 SQL Server 文档](/sql/linux/)
 
 [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **试用：** [下载 SQL Server 2017 版本 - 2017 年 10 月](https://go.microsoft.com/fwlink/?LinkID=829477)。
 
@@ -84,7 +84,7 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 - 用于 SSDT 的 DAX 编辑器。 (CTP 2.0)
 - 编码提示，一种用于优化大型内存中表格模型的数据刷新的高级功能。 (CTP 1.3)
 - 支持针对表格模型的 1400 兼容级别  。 若要新建或将现有表格模型项目升级到 1400 兼容级别，请下载并安装 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
-- 1400 兼容级别的表格模型的新式获取数据  体验。 请参阅 [Analysis Services 团队博客](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
+- 1400 兼容级别的表格模型的新式获取数据  体验。 请参阅 [Analysis Services 团队博客](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services)。 (CTP 1.1)
 - Hide Members  属性可隐藏不规则层次结构中的空白成员。 (CTP 1.1)
 - 新的详细信息行  最终用户操作可显示聚合信息的详细信息  。 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 和 DETAILROWS  函数用于创建详细信息行表达式。 (CTP 1.1)
 - DAX IN  运算符可指定多个值。 (CTP 1.1)
@@ -94,7 +94,7 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 不可再通过 SQL Server 安装程序安装 SQL Server Reporting Services。 请转到 Microsoft 下载中心以[下载 Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。 
 - 注释现在可用于报表，以增加视角并与他人协作。 还可包含带有批注的附件。
-- 在最新版本的报表生成器和 SQL Server Data Tools 中，通过在查询设计器中拖放所需的字段，可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+- 在最新版本的报表生成器和 SQL Server Data Tools 中，通过在查询设计器中拖放所需的字段，可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 请参阅 [Reporting Services 博客](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools)。
 - 为了实现现代应用程序开发以及自定义，SSRS 现在支持完全符合 OpenAPI 规范的 RESTful API。 现在可在 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) 上找到完整的 API 规范和文档。
 
 有关详细信息，请参阅 [SQL Server Reporting Services (SSRS) 中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
@@ -118,7 +118,7 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 
 ## <a name="next-steps"></a>后续步骤
 - 请参阅 [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)。
-- 了解 [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)（Linux 上 SQL Server 2017 的新增功能）。
+- 了解 [What's new for SQL Server 2017 on Linux](../linux/sql-server-linux-whats-new.md)（Linux 上 SQL Server 2017 的新增功能）。
 - 查找 [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
