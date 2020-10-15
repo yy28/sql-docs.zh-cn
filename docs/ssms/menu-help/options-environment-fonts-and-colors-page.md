@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 018a84c06eb9d74032b5d2eaf5dc7041372a14f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480229"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037230"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>选项（“环境” - “字体和颜色”页）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,4 +83,4 @@ ms.locfileid: "89480229"
 显示在“显示其设置”  和“显示项”  中选定值的字形、字号和颜色方案的示例。 在尝试不同格式设置选项时，您可以使用此文本框来预览结果。  
   
 ## <a name="see-also"></a>另请参阅  
-[代码编辑器中的颜色代码](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+[代码编辑器中的颜色代码](../scripting/color-coding-in-query-editors.md)

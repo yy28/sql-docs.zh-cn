@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5789a0791654b89ac78f9333cb71e10f3ca9322e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 107b4cc7c68f1fdf91a685235d336556740547c7
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173665"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956588"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中创建 MDX 查询
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) 包支持对 SQL Server Analysis Services 中托管的多维数据集执行 MDX 查询。 可以针对现有多维数据集生成查询，浏览维度和其他多维数据集对象，并粘贴进现有 MDX 查询以检索数据。
+[olapR](/machine-learning-server/r-reference/olapr/olapr) 包支持对 SQL Server Analysis Services 中托管的多维数据集执行 MDX 查询。 可以针对现有多维数据集生成查询，浏览维度和其他多维数据集对象，并粘贴进现有 MDX 查询以检索数据。
 
 本文介绍 olapR 包的两大主要用途  ：
 
@@ -75,9 +75,9 @@ ms.locfileid: "88173665"
 
 下面的示例基于 AdventureWorks 数据市场和多维数据集项目，因为该项目在多个版本中广泛可用，包括可以轻松还原到 Analysis Services 的备份文件。 如果没有现有的多维数据集，请使用以下任一选项获取示例多维数据集：
 
-+ 按照 Analysis Services 教程第 4 课，创建在这些示例中使用的多维数据集：[创建 OLAP 多维数据集](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
++ 按照 Analysis Services 教程第 4 课，创建在这些示例中使用的多维数据集：[创建 OLAP 多维数据集](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ 将现有多维数据集作为备份下载，然后将其还原为 Analysis Services 的实例。 例如，此站点提供压缩格式的完全处理的多维数据集：[Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件，然后将其还原到 SSAS 实例。 有关详细信息，请参阅[备份和还原](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)或 [Restore-ASDatabase Cmdlet](/powershell/module/sqlserver/restore-asdatabase)。
++ 将现有多维数据集作为备份下载，然后将其还原为 Analysis Services 的实例。 例如，此站点提供压缩格式的完全处理的多维数据集：[Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件，然后将其还原到 SSAS 实例。 有关详细信息，请参阅[备份和还原](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)或 [Restore-ASDatabase Cmdlet](/powershell/module/sqlserver/restore-asdatabase)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.带切片器的基本 MDX
 

@@ -23,12 +23,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09732c9089781026239c300dd53f51108d3e149a
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901977"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039076"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>运行 TSQL 调试器之前配置防火墙规则
 
@@ -170,8 +170,8 @@ ms.locfileid: "88901977"
 
 ## <a name="see-also"></a>另请参阅
 
-- [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)
-- [运行 Transact-SQL 调试器](../../relational-databases/scripting/run-the-transact-sql-debugger.md)
-- [逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [数据库引擎查询编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL 调试器](./transact-sql-debugger.md)
+- [运行 Transact-SQL 调试器](./run-the-transact-sql-debugger.md)
+- [逐句通过 Transact-SQL 代码](./step-through-transact-sql-code.md)
+- [Transact-SQL 调试器信息](./transact-sql-debugger-information.md)
+- [数据库引擎查询编辑器 (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

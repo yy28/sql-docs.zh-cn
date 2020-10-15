@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990350"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988003"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>将 SQL Server 实例大规模连接到 Azure Arc
 
-你可以使用[为单台计算机生成的相同脚本](connect.md)，将多台 Windows 或 Linux 计算机上安装的多个 SQL Server 实例连接到 Azure Arc。 该脚本会将每台计算机及其上安装的 SQL Server 实例连接并注册到 Azure Arc。为获得最佳体验，建议使用 Azure Active Directory [服务主体](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals)。 服务主体是一种特殊的受限管理标识，它仅被授予了最低权限，可将计算机连接到 Azure，以及为启用了 Azure Arc 的服务器和启用了 Azure Arc 的 SQL Server 创建 Azure 资源。 这比使用较高特权的帐户（例如租户管理员）更安全，并且可以遵循我们的访问控制安全性最佳做法。  
+你可以使用[为单台计算机生成的相同脚本](connect.md)，将多台 Windows 或 Linux 计算机上安装的多个 SQL Server 实例连接到 Azure Arc。 该脚本会将每台计算机及其上安装的 SQL Server 实例连接并注册到 Azure Arc。为获得最佳体验，建议使用 Azure Active Directory [服务主体](/azure/active-directory/develop/app-objects-and-service-principals)。 服务主体是一种特殊的受限管理标识，它仅被授予了最低权限，可将计算机连接到 Azure，以及为启用了 Azure Arc 的服务器和启用了 Azure Arc 的 SQL Server 创建 Azure 资源。 这比使用较高特权的帐户（例如租户管理员）更安全，并且可以遵循我们的访问控制安全性最佳做法。  
 
 安装和配置 Connected Machine 代理的安装方法要求你在计算机上拥有管理员权限。 在 Linux 上，需使用 root 帐户；在 Windows 上，需要以“本地管理员组”的成员身份使用这些方法。
 

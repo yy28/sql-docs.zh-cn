@@ -9,30 +9,30 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a387e10afc9210fd90248fb0240e3b77c37b2afd
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 229b0843fc8602457328921eaa6ff8991f4b5655
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042520"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956708"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)实例以及[大数据群集](../../big-data-cluster/machine-learning-services.md)。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库内运行的 Python 脚本。
+本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)实例以及[大数据群集](../../big-data-cluster/machine-learning-services.md)。 安装的包可用于使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 语句在数据库内运行的 Python 脚本。
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)实例。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库内运行的 Python 脚本。
+本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)实例。 安装的包可用于使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 语句在数据库内运行的 Python 脚本。
 ::: moniker-end
 
 有关包位置和安装路径的详细信息，请参阅[获取 Python 包信息](../package-management/python-package-information.md)。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> 本文中所述的 sqlmlutils 包用于将 Python 包添加到 SQL Server 2019 或更高版本。 对于 SQL Server 2017 及更早版本，请参阅[使用 Python 工具安装包](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017)。
+> 本文中所述的 sqlmlutils 包用于将 Python 包添加到 SQL Server 2019 或更高版本。 对于 SQL Server 2017 及更早版本，请参阅[使用 Python 工具安装包](./install-python-packages-standard-tools.md?view=sql-server-2017)。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
@@ -41,7 +41,7 @@ ms.locfileid: "89042520"
 + 必须使用 Python 语言选项安装 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。
 ::: moniker-end
 
-+ 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
++ 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](../../azure-data-studio/what-is.md)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
 
 + 在 Azure Data Studio 中安装 Python 内核。 此外，还可以从命令行安装和使用 Python，并且可能需要一个 Python 开发环境，例如具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)的 [Visual Studio Code](https://code.visualstudio.com/download)。
 
@@ -74,7 +74,7 @@ ms.locfileid: "89042520"
 
 如果要在 Azure Data Studio 中使用 sqlmlutils，可以使用 Python 内核笔记本中的“管理包”功能来安装它。
 
-1. 在 [Azure Data Studio 中的 Python 内核笔记本](../../azure-data-studio/notebooks-tutorial-python-kernel.md)中，单击“管理包”。
+1. 在 [Azure Data Studio 中的 Python 内核笔记本](../../azure-data-studio/notebooks/notebooks-python-kernel.md)中，单击“管理包”。
 1. 单击“新增” 。
 1. 在“搜索 Pip 包”字段中输入“sqlmlutils”，然后单击“搜索” 。
 1. 选择要安装的“包版本”（建议选择最新版本）。

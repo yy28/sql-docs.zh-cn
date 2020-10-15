@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93c36fbfc42ac35d973068d551ecf61ed30791fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5199f22e5e72e68be3b1a76769fb8bd3a9518413
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173737"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956598"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务上设置用于 Python 开发的数据科学客户端
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 从 SQL Server 2017 及更高版本开始，如果在[机器学习服务（数据库内）安装](../install/sql-machine-learning-services-windows-install.md)中包含 Python 选项，将提供 Python 集成功能。 
 
-若要为 SQL Server 开发和部署 Python 解决方案，请在开发工作站上安装 Microsoft 的 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 和其他 Python 库。 revoscalepy 库也位于远程 SQL Server 实例上，负责协调两个系统之间的计算请求。 
+若要为 SQL Server 开发和部署 Python 解决方案，请在开发工作站上安装 Microsoft 的 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 和其他 Python 库。 revoscalepy 库也位于远程 SQL Server 实例上，负责协调两个系统之间的计算请求。 
 
 本文介绍如何配置 Python 开发工作站，以便能够与启用了机器学习和 Python 集成的远程 SQL Server 进行交互。 完成本文中的步骤后，你将拥有与 SQL Server 上相同的 Python 库。 你还将了解如何将计算从本地 Python 会话推送到 SQL Server 上的远程 Python 会话。
 
@@ -37,7 +37,7 @@ ms.locfileid: "88173737"
 
 ## <a name="commonly-used-tools"></a>常用工具
 
-无论是没接触过 SQL 的 Python 开发人员，还是没接触过 Python 和数据库内分析的 SQL 开发人员，都需要使用 Python 开发工具和 T-SQL 查询编辑器（例如 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)）来行使数据库内分析的所有功能。
+无论是没接触过 SQL 的 Python 开发人员，还是没接触过 Python 和数据库内分析的 SQL 开发人员，都需要使用 Python 开发工具和 T-SQL 查询编辑器（例如 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)）来行使数据库内分析的所有功能。
 
 进行 Python 开发时，可以使用 Jupyter Notebook，它随附在 SQL Server 安装的 Anaconda 发行版中。 本文介绍如何启动 Jupyter Notebook，以便在本地以及在 SQL Server 上远程运行 Python 代码。
 
@@ -47,7 +47,7 @@ SSMS 需单独下载，它用于在 SQL Server 上创建和运行存储过程，
 
 本地工作站必须具有与 SQL Server 上相同的 Python 包版本（包括具有 Python 3.5.2 发行版的基本 Anaconda 4.2.0），以及特定于 Microsoft 的包。
 
-安装脚本会向 Python 客户端添加三个特定于 Microsoft 的库。 该脚本将安装用于定义数据源对象和计算上下文的 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)， 以及可提供机器学习算法的 [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 同时还会安装 [azureml](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) 包，但该包适用于与独立（非实例）Machine Learning Server 上下文相关联的操作化任务，并且可能在数据库内分析中用途有限。
+安装脚本会向 Python 客户端添加三个特定于 Microsoft 的库。 该脚本将安装用于定义数据源对象和计算上下文的 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)， 以及可提供机器学习算法的 [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 同时还会安装 [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) 包，但该包适用于与独立（非实例）Machine Learning Server 上下文相关联的操作化任务，并且可能在数据库内分析中用途有限。
 
 1. 下载安装脚本。
 
@@ -110,7 +110,7 @@ Anaconda 包含 Jupyter Notebook。 下一步是创建笔记本，并运行包�
 
 4. 输入并运行 `print(revoscalepy.__version__)` 以返回版本信息。 你应该会看到 9.2.1 或 9.3.0。 可以在服务器上使用其中任一版本的 [revoscalepy](../package-management/r-package-information.md)。
 
-4. 输入一系列更复杂的语句。 此示例使用 [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) 针对某个本地数据集生成摘要统计信息。 其他函数用于获取示例数据的位置，以及为本地 .xdf 文件创建数据源对象。
+4. 输入一系列更复杂的语句。 此示例使用 [rx_summary](/machine-learning-server/python-reference/revoscalepy/rx-summary) 针对某个本地数据集生成摘要统计信息。 其他函数用于获取示例数据的位置，以及为本地 .xdf 文件创建数据源对象。
 
    ```python
    import os
@@ -228,7 +228,7 @@ def send_this_func_to_sql():
 
 ### <a name="send-the-function-to-sql-server"></a>将函数发送到 SQL Server
 
-在此示例中，创建远程计算上下文，然后使用 [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) 将函数的执行任务发送到 SQL Server。 **rx_exec** 函数非常有用，因为它接受计算上下文作为参数。 要远程执行的任何函数都必须具有一个计算上下文参数。 某些函数（例如 [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)）直接支持此参数。 对于不执行的操作，可以使用 **rx_exec** 在远程计算上下文中传递代码。
+在此示例中，创建远程计算上下文，然后使用 [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec) 将函数的执行任务发送到 SQL Server。 **rx_exec** 函数非常有用，因为它接受计算上下文作为参数。 要远程执行的任何函数都必须具有一个计算上下文参数。 某些函数（例如 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)）直接支持此参数。 对于不执行的操作，可以使用 **rx_exec** 在远程计算上下文中传递代码。
 
 在此示例中，无需将原始数据从 SQL Server 传输到 Jupyter Notebook。 所有计算都在 Iris 数据库内进行，并且仅将图像文件返回到客户端。
 
@@ -289,7 +289,7 @@ display.Image(data=image)
 | **解释器路径** | C:\Program Files\Microsoft\PyForMLS\python.exe |
 | **窗口化解释器** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
 
-有关配置 Python 环境的帮助，请参阅[在 Visual Studio 中管理 Python 环境](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)。
+有关配置 Python 环境的帮助，请参阅[在 Visual Studio 中管理 Python 环境](/visualstudio/python/managing-python-environments-in-visual-studio)。
 
 ### <a name="pycharm"></a>PyCharm
 
@@ -303,7 +303,7 @@ display.Image(data=image)
 
 ## <a name="next-steps"></a>后续步骤
 
-你已经拥有工具以及与 SQL Server 的有效连接，现在可以使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 通过浏览 Python 快速入门来扩展你的技能。
+你已经拥有工具以及与 SQL Server 的有效连接，现在可以使用 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 通过浏览 Python 快速入门来扩展你的技能。
 
 > [!div class="nextstepaction"]
 > [快速入门：通过 SQL Server 机器学习服务创建和运行简单的 Python 脚本](../tutorials/quickstart-python-create-script.md)

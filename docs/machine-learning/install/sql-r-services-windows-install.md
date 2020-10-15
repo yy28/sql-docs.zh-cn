@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487650"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956761"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "88487650"
 
 + 需要数据库引擎实例。 不能只安装 R，但可将其以增量方式添加到现有实例。
 
-+ 为实现业务连续性，R Services 支持 [Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 必须在每个节点上安装 R Services 并配置包。
++ 为实现业务连续性，R Services 支持 [Always On 可用性组](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 必须在每个节点上安装 R Services 并配置包。
 
 + 请勿在 SQL Server Always On 故障转移群集 (FCI) 上安装 R Services。 用于隔离 R 进程的安全机制与 SQL Server Always On 故障转移群集 (FCI) 环境不兼容。
 
@@ -91,7 +91,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
     + 数据库引擎服务
     + R Services（数据库内）
 
-1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
@@ -110,7 +110,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 ##  <a name="enable-script-execution"></a>启用脚本执行
 
-1. 打开 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+1. 打开 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 或 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 1. 连接到安装了 R Services 的实例，单击“新建查询”打开查询窗口，然后运行以下命令：
 
@@ -181,7 +181,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 1. 开始使用已安装的基线实例：SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2。
 
-1. 请转到累积更新列表：[Microsoft SQL Server 的最新更新](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. 请转到累积更新列表：[Microsoft SQL Server 的最新更新](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. 选择最新服务包（尚未作为基线实例安装）和累积更新。 自动下载并提取可执行文件。
 
@@ -205,7 +205,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 * [SQL Server 机器学习服务的防火墙配置](../../machine-learning/security/firewall-configuration.md)。
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)。
-* [管理磁盘配额](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免外部脚本运行耗尽磁盘空间的任务。
+* [管理磁盘配额](/windows/desktop/fileio/managing-disk-quotas)以避免外部脚本运行耗尽磁盘空间的任务。
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

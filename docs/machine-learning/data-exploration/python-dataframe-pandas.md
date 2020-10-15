@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 32b546107697dffdf3c77ea292b7b68c5c7dc9b5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179817"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956831"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>将 SQL 表中的数据插入 Python pandas 数据框
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "88179817"
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL 数据库。 有关注册方法，请参阅 [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+* Azure SQL 数据库。 有关注册方法，请参阅 [Azure SQL 数据库](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 托管实例。 有关注册方法，请参阅 [Azure SQL 托管实例](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart)。
+* Azure SQL 托管实例。 有关注册方法，请参阅 [Azure SQL 托管实例](/azure/azure-sql/managed-instance/instance-create-quickstart)。
 
 * 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end

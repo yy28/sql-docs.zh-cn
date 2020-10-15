@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662804"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988371"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>排查 Reporting Services 报表问题
 本主题可以帮助解决在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 报表设计、预览报表、将报表发布到本机模式或 SharePoint 集成模式下的报表服务器、在报表服务器上查看报表或以其他文件格式导出报表时遇到的问题。  
@@ -38,7 +38,7 @@ ms.locfileid: "80662804"
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 验证查询和凭据  
 在将复杂查询包含在报表中之前，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 进行验证。   
   
-有关详细信息，请参阅 [数据库引擎查询编辑器](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 和 [通过使用对象资源管理器管理对象](~/ssms/object/manage-objects-by-using-object-explorer.md)。  
+有关详细信息，请参阅 [数据库引擎查询编辑器](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) 和 [通过使用对象资源管理器管理对象](~/ssms/object/manage-objects-by-using-object-explorer.md)。  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>使用客户端上缓存的报表数据分析问题报表  
 报表作者在 Business Intelligence Development Studio 中创建报表时，创作客户端会将数据缓存为一个 .rdl 数据文件，预览报表时会使用该文件。 每次查询更改时，缓存都会更新。 有时候为了调试报表问题，防止刷新报表数据会很有用，这样进行调试时数据将不会更改。   
@@ -60,5 +60,3 @@ ms.locfileid: "80662804"
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73a11047ecfe6b797cb2c79fd2c48e3c7386882f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898983"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987743"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用 Transact-SQL 断言
 
@@ -79,11 +79,10 @@ RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)
   
 @ErrorState 是介于 1 和 127 之间的任一整数。 您可以使用此整数来区分在代码中的不同位置引发的同一个错误。  
   
-有关详细信息，请参见 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 在 SQL Server 单元测试中使用 RAISERROR 的示例在主题[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)中提供。  
+有关详细信息，请参见 [RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md)。 在 SQL Server 单元测试中使用 RAISERROR 的示例在主题[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)中提供。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [在 SQL Server 单元测试中使用测试条件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [使用 SQL Server 单元测试验证数据库代码](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [如何：打开 SQL Server 单元测试以进行编辑](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
-  

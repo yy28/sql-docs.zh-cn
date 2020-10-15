@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: e40a80f58bcc3eb2210ebb127248746e8a45a4f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767091"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935536"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
 
@@ -72,9 +72,9 @@ ms.locfileid: "83767091"
   
  有关详细信息，请参阅 SharePoint 文档中的以下主题：  
   
- [SharePoint 文档中的备份服务应用程序 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)。  
+ [SharePoint 文档中的备份服务应用程序 (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748601(v=office.14))。  
   
- [备份服务应用程序 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [备份服务应用程序 (SharePoint Server 2010)](/SharePoint/administration/back-up-a-service-application)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>验证执行帐户和数据库身份验证
 
@@ -126,9 +126,9 @@ ms.locfileid: "83767091"
   
  有关详细信息，请参阅 SharePoint 文档中的以下主题：  
   
- [还原服务应用程序 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)。  
+ [还原服务应用程序 (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748615(v=office.14))。  
   
- [还原服务应用程序 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)。  
+ [还原服务应用程序 (SharePoint Server 2010)](/SharePoint/administration/restore-a-service-application)。  
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>使用 SharePoint 管理中心还原加密密钥
 

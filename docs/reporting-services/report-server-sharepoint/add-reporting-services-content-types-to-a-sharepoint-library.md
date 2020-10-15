@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197196"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935559"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>将 Reporting Services 内容类型添加到 SharePoint 库
 
@@ -61,7 +61,7 @@ ms.locfileid: "86197196"
   
 2.  转到 **“站点设置”** 。  
   
-    -   在 SharePoint 2013 中，单击 **“设置”** 图标。 ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")  
+    -   在 SharePoint 2013 中，单击 **“设置”** 图标。 ![SharePoint 设置](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")  
   
     -   在 SharePoint 2010 中，单击 **“网站操作”** ，然后单击 **“网站设置”** 。  
   
@@ -173,5 +173,4 @@ ms.locfileid: "86197196"
 ## <a name="see-also"></a>另请参阅  
  [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)  
-  
   

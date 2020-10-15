@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093422"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038972"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理编辑器和视图模式
 
@@ -91,7 +91,7 @@ ms.locfileid: "89093422"
  如果未启用虚拟空间模式，则光标会在到达一行的结尾时转到下一行的第一个字符（或相反）。  
   
 ## <a name="displaying-line-numbers"></a>显示行号  
- 您可以在代码中打开编号功能。 行号在代码定位时非常有用。 有关详细信息，请参阅 [导航代码和文本](../../relational-databases/scripting/navigate-code-and-text.md)。  
+ 您可以在代码中打开编号功能。 行号在代码定位时非常有用。 有关详细信息，请参阅 [导航代码和文本](./navigate-code-and-text.md)。  
   
 > [!NOTE]  
 >  打开编号功能并不意味着在打印文档时会打印行号。 若要打印行号，则必须在 **“文件”** 菜单上的 **“页面设置”** 命令中选中 **“行号”** 复选框。  
@@ -122,5 +122,4 @@ ms.locfileid: "89093422"
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>同时隐藏所有工具窗口  
   
 1.  选择 **“窗口”** 菜单上的 **“全部自动隐藏”** 。  
-  
   

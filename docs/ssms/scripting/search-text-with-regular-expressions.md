@@ -17,12 +17,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132064138e0272911bdd8bb4c89a24444fd1c0
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 564aafe28198a0afc46ba379849d24a7f3ec588f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902111"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036348"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -134,5 +134,5 @@ ms.locfileid: "88902111"
 |象形/汉字/日文汉字|:Id|匹配象形字符，如汉字和日文汉字。|  
   
 ## <a name="see-also"></a>另请参阅  
- [搜索和替换](../../relational-databases/scripting/search-and-replace.md)   
- [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)  
+ [搜索和替换](./search-and-replace.md)   
+ [使用通配符搜索文本](./search-text-with-wildcards.md)

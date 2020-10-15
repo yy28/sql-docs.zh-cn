@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e67b6dabc0d8db2b3644a6183b4a6855738e54ba
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 21d4787fb085bb518fc39200d557e91685448c3f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897620"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988508"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>数据库代码分析规则的扩展性概述
 
-包含 SQL Server Data Tools 的 Visual Studio 版本在数据库代码中包括要报告的有关 Transact\-SQL 设计、命名和性能警告的代码分析规则。 有关详细信息，请参阅[分析数据库代码以改进代码质量](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)。  
+包含 SQL Server Data Tools 的 Visual Studio 版本在数据库代码中包括要报告的有关 Transact\-SQL 设计、命名和性能警告的代码分析规则。 有关详细信息，请参阅[分析数据库代码以改进代码质量](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100))。  
   
-如果内置代码分析规则未涵盖你希望包含的特定 Transact\-SQL 问题，你可以创建自定义数据库代码分析规则。 例如，你可能想要创建避免使用 WAITFOR DELAY 语句的自定义规则，如[创作 SQL Server 的自定义静态代码分析规则程序集演练](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)中所述。 若要创建自定义数据库代码分析规则，请使用 [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx) 命名空间中的类。  
+如果内置代码分析规则未涵盖你希望包含的特定 Transact\-SQL 问题，你可以创建自定义数据库代码分析规则。 例如，你可能想要创建避免使用 WAITFOR DELAY 语句的自定义规则，如[创作 SQL Server 的自定义静态代码分析规则程序集演练](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)中所述。 若要创建自定义数据库代码分析规则，请使用 [CodeAnalysis](/dotnet/api/microsoft.sqlserver.dac.codeanalysis) 命名空间中的类。  
   
 在创建自定义代码分析规则前，你应该了解数据库代码分析规则的各种组件之间的基本体系结构。  
   
@@ -30,9 +30,9 @@ ms.locfileid: "85897620"
   
 ![数据库代码分析规则组件](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "数据库代码分析规则组件")  
   
-当你通过直接运行静态代码分析（有关详细信息，请参阅[操作方法：分析 Transact-SQL 代码以找到缺陷](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)）或通过执行生成使用数据库代码分析规则功能时，将根据你在项目中的配置方式加载和使用所有规则。 有关详细信息，请参阅[操作说明：为数据库代码的静态分析启用和禁用特定规则](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)。 扩展管理器还将加载你已创建和注册的任何自定义规则程序集。 有关详细信息，请参阅[操作说明：安装和管理功能扩展](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
+当你通过直接运行静态代码分析（有关详细信息，请参阅[操作方法：分析 Transact-SQL 代码以找到缺陷](/previous-versions/visualstudio/visual-studio-2010/dd172119(v=vs.100))）或通过执行生成使用数据库代码分析规则功能时，将根据你在项目中的配置方式加载和使用所有规则。 有关详细信息，请参阅[操作说明：为数据库代码的静态分析启用和禁用特定规则](/previous-versions/visualstudio/visual-studio-2010/dd172131(v=vs.100))。 扩展管理器还将加载你已创建和注册的任何自定义规则程序集。 有关详细信息，请参阅[操作说明：安装和管理功能扩展](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
   
-自定义代码分析规则类继承自 [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx)。 自定义规则类可通过其规则执行上下文访问多个有用的对象。 其中包括：  
+自定义代码分析规则类继承自 [SqlCodeAnalysisRule](/dotnet/api/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule)。 自定义规则类可通过其规则执行上下文访问多个有用的对象。 其中包括：  
   
 -   有关规则本身的元数据。  
   
@@ -40,10 +40,9 @@ ms.locfileid: "85897620"
   
 -   对于检查特定元素的规则，Dac.Model.TSqlObject 表示模型中的架构元素包含在上下文中。  
   
--   许多架构对象还具有 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) 表示形式，该表示形式可通过此上下文访问 - 这是基于 AST 的元素表示形式，在尝试查看潜在语法问题（例如存在 [SelectStarExpression](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression.aspx)）时可能会很有用。  
+-   许多架构对象还具有 [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) 表示形式，该表示形式可通过此上下文访问 - 这是基于 AST 的元素表示形式，在尝试查看潜在语法问题（例如存在 [SelectStarExpression](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression)）时可能会很有用。  
   
-Dac.CodeAnalysis.SqlRuleProblem 由规则创建，用于表示任何由其发现的问题。 在创建它时，相关的 Dac.Model.TSqlObject 以及可能的 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) 表示形式元素将传递到构造函数中，并且它们将用于确定问题在源代码文件中的位置。 在分析结束时，所有这些问题将传递到错误管理器并在错误列表中显示。  
+Dac.CodeAnalysis.SqlRuleProblem 由规则创建，用于表示任何由其发现的问题。 在创建它时，相关的 Dac.Model.TSqlObject 以及可能的 [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) 表示形式元素将传递到构造函数中，并且它们将用于确定问题在源代码文件中的位置。 在分析结束时，所有这些问题将传递到错误管理器并在错误列表中显示。  
   
 ## <a name="see-also"></a>另请参阅  
 [扩展数据库功能](../ssdt/extending-the-database-features.md)  
-  

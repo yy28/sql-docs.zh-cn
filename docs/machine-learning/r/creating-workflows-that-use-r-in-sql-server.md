@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288278"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956613"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>在 SQL Server 上使用 R 创建 SSIS 和 SSRS 工作流
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "89288278"
 
 以下示例来自 Jimmy Wong 在一个现已停用的 MSDN 博客上撰写的一篇文章：`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-本示例演示如何使用 SSIS 实现任务自动化。 使用 SQL Server Management Studio 创建含有嵌入式 R 的存储过程，然后通过 SSIS 包中的[执行 T-SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)执行这些存储过程。
+本示例演示如何使用 SSIS 实现任务自动化。 使用 SQL Server Management Studio 创建含有嵌入式 R 的存储过程，然后通过 SSIS 包中的[执行 T-SQL 任务](../../integration-services/control-flow/execute-t-sql-statement-task.md)执行这些存储过程。
 
-要逐步完成此示例，你应熟悉 Management Studio、SSIS、SSIS 设计器、包设计和 T-SQL。 SSIS 包使用三个[执行 T-SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)，这些任务将培训数据插入到表中，为数据建模，并对数据进行评分以获取预测输出。
+要逐步完成此示例，你应熟悉 Management Studio、SSIS、SSIS 设计器、包设计和 T-SQL。 SSIS 包使用三个[执行 T-SQL 任务](../../integration-services/control-flow/execute-t-sql-statement-task.md)，这些任务将培训数据插入到表中，为数据建模，并对数据进行评分以获取预测输出。
 
 ### <a name="load-training-data"></a>加载培训数据
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-在 SSIS 设计器中，创建一个用于执行先前定义的存储过程的[执行 SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)。 SQLStatement 的脚本删除现有数据，指定要插入的数据，然后调用存储过程来提供数据  。
+在 SSIS 设计器中，创建一个用于执行先前定义的存储过程的[执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md)。 SQLStatement 的脚本删除现有数据，指定要插入的数据，然后调用存储过程来提供数据  。
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-创建一个通过 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 生成线性模型的存储过程。 RevoScaleR 和 revoscalepy 库在 SQL Server 的 R 和 Python 会话中自动可用，因此无需导入该库。
+创建一个通过 [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) 生成线性模型的存储过程。 RevoScaleR 和 revoscalepy 库在 SQL Server 的 R 和 Python 会话中自动可用，因此无需导入该库。
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-在 SSIS 设计器中，创建一个[执行 SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)来执行 generate_iris_rx_model  存储过程。 模型被序列化并保存到 ssis_iris_models 表中。 SQLStatement  脚本如下所示：
+在 SSIS 设计器中，创建一个[执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md)来执行 generate_iris_rx_model  存储过程。 模型被序列化并保存到 ssis_iris_models 表中。 SQLStatement  脚本如下所示：
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 现在已有用于加载培训数据和生成模型的代码，剩下的唯一步骤是使用此模型生成预测。 
 
-为此，请将 R 脚本放入 SQL 查询中，以触发 ssis_iris_model 上的 [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) 内置 R 函数。 名为 predict_species_length 的存储过程将完成此任务  。
+为此，请将 R 脚本放入 SQL 查询中，以触发 ssis_iris_model 上的 [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) 内置 R 函数。 名为 predict_species_length 的存储过程将完成此任务  。
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-在 SSIS 设计器中，创建一个[执行 SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)，用于执行 predict_species_length 存储过程来生成预测的花瓣长度  。
+在 SSIS 设计器中，创建一个[执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md)，用于执行 predict_species_length 存储过程来生成预测的花瓣长度  。
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e1da1d708bf8fbe5b3c3cb6cea0a6d65f6e9ccf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 0e8a7371760076e300fc4eb8dd75365682e34974
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059385"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098656"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 对象模型
 本主题介绍如何在 ADO MD 中表示和相关对象。  
@@ -32,7 +32,7 @@ ms.locfileid: "92059385"
  [轴](./axis-object-ado-md.md)、[单元格、单元](./cell-object-ado-md.md)[集](./cellset-object-ado-md.md)、 [CubeDef](./cubedef-object-ado-md.md)、[维度](./dimension-object-ado-md.md)、[层次结构](./hierarchy-object-ado-md.md)、[级别](./level-object-ado-md.md)和[成员](./member-object-ado-md.md)对象都具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](?view=sql-server-ver15&preserve-view=true)   
+ [ADO MD API 参考](?view=sql-server-ver15)   
  [ADO MD 代码示例](./ado-md-code-examples.md)   
  [ADO MD 集合](./ado-md-collections.md)   
  [ADO MD 枚举常量](./ado-md-enumerated-constants.md)   

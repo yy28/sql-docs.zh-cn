@@ -12,12 +12,12 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff6f5f8cd3bd9300e38f0eaaebd9d7c442ab95e8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 2e5902be2e28aaa2b3f020664ac31b8582de2a42
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479526"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038973"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,14 +30,13 @@ ms.locfileid: "89479526"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何配置 IntelliSense 选项（如语句完成选项）或您希望对其关闭 IntelliSense 的 Transact-SQL 脚本的大小。|[配置 IntelliSense (SQL Server Management Studio)](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
-|介绍如何使用“参数信息”获得有关函数或存储过程的参数数目、参数名称和参数大小的信息。|[参数信息 (IntelliSense)](../../relational-databases/scripting/parameter-info-intellisense.md)|  
-|介绍如何使用“快速信息”获得描述标识符（如表或视图名称）的工具提示。|[快速信息 (IntelliSense)](../../relational-databases/scripting/quick-info-intellisense.md)|  
-|介绍如何在您键入名称的足够多内容以列出名称以同一字符串开头的对象的简短列表后让 IntelliSense 完成填写标识符的其余部分。|[完成单词 (IntelliSense)](../../relational-databases/scripting/complete-word-intellisense.md)|  
-|介绍 IntelliSense 如何标识分隔符对的两端以及您如何在该分隔符对的两端之间切换。|[语法对的自动匹配](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
+|介绍如何配置 IntelliSense 选项（如语句完成选项）或您希望对其关闭 IntelliSense 的 Transact-SQL 脚本的大小。|[配置 IntelliSense (SQL Server Management Studio)](./configure-intellisense-sql-server-management-studio.md)|  
+|介绍如何使用“参数信息”获得有关函数或存储过程的参数数目、参数名称和参数大小的信息。|[参数信息 (IntelliSense)](./parameter-info-intellisense.md)|  
+|介绍如何使用“快速信息”获得描述标识符（如表或视图名称）的工具提示。|[快速信息 (IntelliSense)](./quick-info-intellisense.md)|  
+|介绍如何在您键入名称的足够多内容以列出名称以同一字符串开头的对象的简短列表后让 IntelliSense 完成填写标识符的其余部分。|[完成单词 (IntelliSense)](./complete-word-intellisense.md)|  
+|介绍 IntelliSense 如何标识分隔符对的两端以及您如何在该分隔符对的两端之间切换。|[语法对的自动匹配](./automatic-matching-of-syntax-pairs.md)|  
 |介绍 IntelliSense 可能无法正常工作的条件。|IntelliSense 故障排除 (SQL Server Management Studio)|  
   
 ## <a name="see-also"></a>另请参阅  
- [查询和文本编辑器 (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [查询和文本编辑器 (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

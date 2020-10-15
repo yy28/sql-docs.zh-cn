@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480148"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037590"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>创建新的已注册的服务器 (SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88480148"
   
 -   本地服务器组  
   
-     可以使用本地服务器组方便地连接到经常管理的服务器。 本地服务器和非本地服务器都是在本地服务器组中注册的。 对于每个用户来说，本地服务器组是唯一的。 有关如何共享已注册的服务器信息，请参阅 [导出已注册服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) 和 [导入已注册的服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)的已注册服务器组件中注册服务器，以保存经常访问的服务器的连接信息。  
+     可以使用本地服务器组方便地连接到经常管理的服务器。 本地服务器和非本地服务器都是在本地服务器组中注册的。 对于每个用户来说，本地服务器组是唯一的。 有关如何共享已注册的服务器信息，请参阅 [导出已注册服务器信息 (SQL Server Management Studio)](./export-registered-server-information-sql-server-management-studio.md) 和 [导入已注册的服务器信息 (SQL Server Management Studio)](./import-registered-server-information-sql-server-management-studio.md)的已注册服务器组件中注册服务器，以保存经常访问的服务器的连接信息。  
   
     > [!NOTE]  
     >  建议您尽量使用 Windows 身份验证。  
@@ -98,7 +98,7 @@ ms.locfileid: "88480148"
      单击此项可保存已注册服务器的设置。  
   
 ## <a name="multiserver-queries"></a>多服务器查询  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器窗口可以同时连接到多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并对其进行查询。 可以将查询返回的结果合并到单个结果窗格中，也可以在单独结果窗格中返回这些结果。 查询编辑器可以选择包含一些列（提供生成每个行的服务器名称）以及登录名（用于连接到提供每个行的服务器）。 有关如何执行多服务器查询的详细信息，请参阅[同时对多个服务器执行语句 (SQL Server Management Studio)](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器窗口可以同时连接到多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并对其进行查询。 可以将查询返回的结果合并到单个结果窗格中，也可以在单独结果窗格中返回这些结果。 查询编辑器可以选择包含一些列（提供生成每个行的服务器名称）以及登录名（用于连接到提供每个行的服务器）。 有关如何执行多服务器查询的详细信息，请参阅[同时对多个服务器执行语句 (SQL Server Management Studio)](./execute-statements-against-multiple-servers-simultaneously.md)。  
   
  若要对本地服务器组中的所有服务器执行查询，请右键单击该服务器组，指向并单击“连接”  ，然后单击“新建查询”  。 在新的查询编辑器窗口中执行查询时，将利用存储的连接信息（包括用户身份验证上下文）对该组中的全部服务器进行查询。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证注册服务器但未保存密码，服务器将无法进行连接。  
   
@@ -106,7 +106,6 @@ ms.locfileid: "88480148"
   
 ## <a name="see-also"></a>另请参阅  
  [在对象资源管理器中隐藏系统对象](../object/hide-system-objects-in-object-explorer.md)   
- [导出已注册服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [导入已注册的服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [导出已注册服务器信息 (SQL Server Management Studio)](./export-registered-server-information-sql-server-management-studio.md)   
+ [导入已注册的服务器信息 (SQL Server Management Studio)](./import-registered-server-information-sql-server-management-studio.md)  
   

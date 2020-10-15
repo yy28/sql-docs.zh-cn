@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b39d73a46a5ac82c3b85606536f283e4d6bbf57e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 60aecdbd44d13308a30434f42a01f3919fc72aa5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173691"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956630"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>在 SQL Server 中通过 R 进行数据浏览和预测性建模
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88173691"
 
 ## <a name="whats-different-about-revoscaler"></a>RevoScaleR 有什么不同？
 
-**RevoScaleR** 包包含部分最常用 R 函数的实现，这些实现在经过重新设计后可提供并行度和缩放功能。 有关详细信息，请参阅[使用 RevoScaleR 进行分布式计算](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
+**RevoScaleR** 包包含部分最常用 R 函数的实现，这些实现在经过重新设计后可提供并行度和缩放功能。 有关详细信息，请参阅[使用 RevoScaleR 进行分布式计算](/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
 
 RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完整解决方案还是单个函数，都应使用托管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的资源进行计算，而不应使用本地工作站。 这样做有很多好处：避免不必要的数据移动，并可利用服务器计算机上更强大的计算资源。
 
@@ -60,7 +60,7 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
   
      **RevoPemaR** 包允许你在 R 中开发自己的并行外部存储器算法。  
   
-     有关这些包及其使用方法的详细信息，请参阅[什么是 RevoScaleR ](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler)和 [RevoPemaR 入门](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar)。 
+     有关这些包及其使用方法的详细信息，请参阅[什么是 RevoScaleR ](/machine-learning-server/r/concept-what-is-revoscaler)和 [RevoPemaR 入门](/machine-learning-server/r/how-to-developer-pemar)。 
 
 + MicrosoftML 包含 Microsoft 数据科学团队提供的高度优化的机器学习算法和数据转换的集合  。 Azure 机器学习还使用了许多算法。 有关详细信息，请参阅 [SQL Server 中的 MicrosoftML](ref-r-microsoftml.md)。
 
@@ -82,14 +82,14 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
   
      可以在 R 代码中使用此函数来定义 *数据源*。 数据源对象指定数据所在的服务器和表，并管理在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中读写数据的任务。
   
--   **RxInSqlServer** 函数可用来指定计算上下文。   换言之，你可以指定执行 R 代码的位置：本地工作站或托管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机。  有关详细信息，请参阅 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+-   **RxInSqlServer** 函数可用来指定计算上下文。   换言之，你可以指定执行 R 代码的位置：本地工作站或托管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机。  有关详细信息，请参阅 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)。
   
      当你设置计算上下文时，该上下文仅影响支持远程执行上下文的计算，即 RevoScaleR 包及相关函数提供的 R 操作。 通常，基于标准 CRAN 包的 R 解决方案不能在远程计算上下文中运行，但如果是由 T-SQL 启动的，则它们可以在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 计算机上运行。 不过，你可以使用 `rxExec` 函数调用各个 R 函数并在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中远程运行它们。
 
 有关如何创建和使用数据源和执行上下文的示例，请参阅以下教程：
 
 + [对数据科学的深入探讨](../../machine-learning/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [使用 Microsoft R 进行数据分析](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++  [使用 Microsoft R 进行数据分析](/machine-learning-server/r/how-to-introduction)
 
 ## <a name="deploy-r-code-to-production"></a>将 R 代码部署到生产环境
 
@@ -101,6 +101,6 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
 
 ## <a name="see-also"></a>另请参阅
 
-[Base R 函数和 RevoScaleR 函数之对比](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
+[Base R 函数和 RevoScaleR 函数之对比](/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
 
 [SQL Server 中的 RevoScaleR 库](ref-r-revoscaler.md)

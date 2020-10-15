@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491740"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038927"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88491740"
 展开此项可显示“表达式”**** 属性字段。  
   
 **表达式**  
-显示选定的 CHECK 约束的表达式。 对于新约束，必须先输入表达式，然后才能退出此框。 您还可以编辑现有的 CHECK 约束。 有关详细信息，请参阅[使用约束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
+显示选定的 CHECK 约束的表达式。 对于新约束，必须先输入表达式，然后才能退出此框。 您还可以编辑现有的 CHECK 约束。 有关详细信息，请参阅[使用约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
 **标识类别**  
 展开此项可显示“名称”**** 和“说明”**** 的属性。  
@@ -69,5 +69,5 @@ ms.locfileid: "88491740"
   
 ## <a name="see-also"></a>另请参阅
 
-[使用约束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[使用约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [“索引 - 键”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

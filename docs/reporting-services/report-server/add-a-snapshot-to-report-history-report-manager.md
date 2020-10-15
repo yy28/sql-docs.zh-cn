@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245730"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935326"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>向报表历史记录添加快照
 
@@ -71,7 +71,7 @@ ms.locfileid: "87245730"
 - [配置报表的执行属性（报表管理器）](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [限制报表历史记录（报表管理器）](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [计划](../../reporting-services/subscriptions/schedules.md)   
-- [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ ms.locfileid: "87245730"
 - [配置报表的执行属性（Web 门户）](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [限制报表历史记录（Web 门户）](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [计划](../../reporting-services/subscriptions/schedules.md)   
-- [Web 门户（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Web 门户（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

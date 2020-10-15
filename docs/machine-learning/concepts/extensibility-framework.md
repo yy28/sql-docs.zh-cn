@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173306"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956513"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的扩展性体系结构 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "88173306"
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer 和 SQL Satellite
 
-**BxlServer** 是由 Microsoft 提供的一个可执行文件，用于管理 SQL Server 和语言运行时之间的通信。 它为 Windows 创建 Windows 作业对象，或为 Linux 创建命名空间，用来包含外部脚本会话。 它还为每个外部脚本作业预配安全的工作文件夹，并使用 SQL Satellite 管理外部运行时与 SQL Server 之间的数据传输。 如果在某个作业运行时运行[进程资源管理器](https://technet.microsoft.com/sysinternals/processexplorer.aspx)，则可能会看到一个或多个 BxlServer 实例。
+**BxlServer** 是由 Microsoft 提供的一个可执行文件，用于管理 SQL Server 和语言运行时之间的通信。 它为 Windows 创建 Windows 作业对象，或为 Linux 创建命名空间，用来包含外部脚本会话。 它还为每个外部脚本作业预配安全的工作文件夹，并使用 SQL Satellite 管理外部运行时与 SQL Server 之间的数据传输。 如果在某个作业运行时运行[进程资源管理器](/sysinternals/downloads/process-explorer)，则可能会看到一个或多个 BxlServer 实例。
 
 实际上，BxlServer 是语言运行时环境的配套项，该运行时环境与 SQL Server 一起传输数据和管理任务。 BXL 是二进制交换语言的缩写，是指在 SQL Server 与外部进程之间有效移动数据时所用的数据格式。 BxlServer 也是 Microsoft R Client 和 Microsoft R Server 等相关产品的重要组成部分。
 
@@ -139,7 +139,7 @@ SQL Satellite 使用自定义数据格式，这种格式已针对 SQL Server 与
 
 + **其他协议**
 
-  可能需要在“区块”中工作或将数据传输回远程客户端的进程还可以使用 [XDF 文件格式](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)。 实际数据传输通过编码的 blob 进行。
+  可能需要在“区块”中工作或将数据传输回远程客户端的进程还可以使用 [XDF 文件格式](/machine-learning-server/r/concept-what-is-xdf)。 实际数据传输通过编码的 blob 进行。
 
 ## <a name="see-also"></a>另请参阅
 

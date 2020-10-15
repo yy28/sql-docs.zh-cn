@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d42c0bb0c18b7917ef0e8c8a29e9522e744ce2d2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314623"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037760"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>数据库演化问题 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +36,5 @@ ms.locfileid: "88314623"
 无论如何更改数据库设计，都应保留更改的历史记录。 可以通过保留对成品数据库进行的所有修改的 SQL 脚本来保留所做更改。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用约束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [多用户环境 (Visual Database Tools)](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
-  

@@ -26,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efaef467cc332d0d398849693b52718c789b96d4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480295"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038240"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 作业步骤是作业对数据库或服务器执行的操作。 每个作业必须至少有一个作业步骤。 作业步骤可以为：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88480295"
   
 每个作业步骤都在特定的安全上下文中运行。 如果作业步骤指定一个代理，该作业步骤将在该代理凭据的安全上下文中运行。 如果作业步骤没有指定代理，该作业步骤将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的上下文中运行。 只有 sysadmin 固定服务器角色成员可以创建没有显式指定代理的作业。  
   
-由于作业步骤在特定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 用户的上下文中运行，所以该用户必须具有执行作业步骤所需的权限和配置。 例如，如果您创建一个需要驱动器号或通用命名约定 (UNC) 路径的作业，则在测试任务时，可使用您的 Windows 用户帐户来运行作业步骤。 但是，运行作业步骤的 Windows 用户还必须具有所需的权限、驱动器号配置权限或对所需驱动器的访问权限。 否则，作业步骤会失败。 为了防止出现这种问题，请确保每个作业步骤的代理都具有该作业步骤所执行任务的必要权限。 有关详细信息，请参阅 [安全性和保护（数据库引擎）](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)。  
+由于作业步骤在特定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 用户的上下文中运行，所以该用户必须具有执行作业步骤所需的权限和配置。 例如，如果您创建一个需要驱动器号或通用命名约定 (UNC) 路径的作业，则在测试任务时，可使用您的 Windows 用户帐户来运行作业步骤。 但是，运行作业步骤的 Windows 用户还必须具有所需的权限、驱动器号配置权限或对所需驱动器的访问权限。 否则，作业步骤会失败。 为了防止出现这种问题，请确保每个作业步骤的代理都具有该作业步骤所执行任务的必要权限。 有关详细信息，请参阅 [安全性和保护（数据库引擎）](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。  
   
 ## <a name="job-step-logs"></a>作业步骤日志  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以将某些作业步骤的输出写入操作系统文件，也可以将其写入 msdb 数据库中的 sysjobstepslogs 表。 下列类型的作业步骤的输出可以写入以上两个目标位置：  
@@ -96,7 +96,7 @@ ms.locfileid: "88480295"
   
 还可以选择将现有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文件作为作业步骤的命令打开。  
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息，请参阅 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息，请参阅 [sp_add_jobstep (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)。  
   
 > [!NOTE]  
 > 一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含多个批处理。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含嵌入的 GO 命令。  
@@ -108,7 +108,7 @@ ms.locfileid: "88480295"
   
 -   要打开的现有 PowerShell 脚本文件。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 PowerShell 子系统打开一个 PowerShell 会话，并加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元。用作作业步骤命令的 PowerShell 脚本可以引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 PowerShell 子系统打开一个 PowerShell 会话，并加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元。用作作业步骤命令的 PowerShell 脚本可以引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 脚本作业步骤  
   
@@ -172,7 +172,7 @@ Set oServer = nothing
   
 -   键入要执行的语句。 该语句必须是一个多维表达式 (MDX) 查询。  
   
-有关 MDX 的详细信息，请参阅 [MDX 语句基础知识 (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
+有关 MDX 的详细信息，请参阅 [MDX 语句基础知识 (MDX)](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services?viewFallbackFrom=sql-server-ver15)。  
   
 ## <a name="integration-services-packages"></a>Integration Services 包  
 当创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包作业步骤时，必须执行下列操作：  
@@ -216,7 +216,6 @@ Set oServer = nothing
 |说明如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志。|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>另请参阅  
-[sysjobstepslogs (Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql.md)  
 [创建作业](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
-  
+[sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  

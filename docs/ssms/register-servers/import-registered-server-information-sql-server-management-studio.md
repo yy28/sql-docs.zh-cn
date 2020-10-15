@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ed7c74f225998a7556ece2d6f62bf5ce6e47d7eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eafa770651260fb99931556308ccce58f1bf681c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462979"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037556"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>导入已注册服务器信息 (SQL Server Management Studio)
 
@@ -56,8 +56,7 @@ ms.locfileid: "88462979"
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的服务器注册按用户来存储密码。 在导入服务器注册信息后，用户在首次连接时必须输入每台服务器的密码，以便将密码存储在该用户的已注册服务器列表中。 对于通过 Windows 身份验证进行注册的服务器，则不需要如此操作。  
   
 ## <a name="see-also"></a>另请参阅  
- [更改服务器的注册信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)   
- [导出已注册服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [创建新的已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [更改服务器的注册信息 (SQL Server Management Studio)](./change-a-server-s-registration-sql-server-management-studio.md)   
+ [导出已注册服务器信息 (SQL Server Management Studio)](./export-registered-server-information-sql-server-management-studio.md)   
+ [创建新的已注册的服务器 (SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md)  
   

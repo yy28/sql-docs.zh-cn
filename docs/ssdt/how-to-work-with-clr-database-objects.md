@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893852"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988680"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>如何：使用 CLR 数据库对象
 
-除了 Transact\-SQL 编程语言之外，还可以使用 .NET Framework 语言创建用于检索和更新数据的数据库对象。 使用托管代码编写的数据库对象被称为“SQL Server 公共语言运行时 (CLR) 数据库对象”。 有关使用在 SQL Server 中承载的 CLR 数据库对象的优点以及如何在 Transact\-SQL 和 CLR 之间进行选择的说明，请参阅 [CLR 集成的优点](../relational-databases/clr-integration/clr-integration-overview.md)和[使用托管代码创建数据库对象的优点](https://msdn.microsoft.com/library/k2e1fb36.aspx)。  
+除了 Transact\-SQL 编程语言之外，还可以使用 .NET Framework 语言创建用于检索和更新数据的数据库对象。 使用托管代码编写的数据库对象被称为“SQL Server 公共语言运行时 (CLR) 数据库对象”。 有关使用在 SQL Server 中承载的 CLR 数据库对象的优点以及如何在 Transact\-SQL 和 CLR 之间进行选择的说明，请参阅 [CLR 集成的优点](../relational-databases/clr-integration/clr-integration-overview.md)和[使用托管代码创建数据库对象的优点](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))。  
   
 若要使用 SQL Server Data Tools 创建 CLR 数据库对象，应创建一个数据库项目，然后向其中添加一个 CLR 数据库对象。 与 Visual Studio 以前的版本不同的是，您无需创建不同的 CLR 项目然后从数据库项目添加对它的引用。 当您生成并发布数据库项目时，将会同时在该项目中自动发布 CLR 对象。 在发布这些 CLR 对象之后，可以像其他数据库对象一样调用和执行它们。  
   
@@ -29,7 +29,7 @@ CLR 属性页和 CLR 生成属性页包含很多关于在项目中使用 CLR 数
   
 若要启用 CLR 数据库对象的调试，请打开 SQL Server 对象资源管理器。 右键单击包含你想要调试的 CLR 数据库项目的服务器，然后选择“允许 SQL/CLR 调试”。 此时将显示一个消息框，其中包含一条警告：“注意，调试过程中服务器上的所有托管线程都将停止。 是否要在此服务器上启用 SQL CLR 调试?”。 调试 CLR 数据库项目时，如果中断执行，则会中断服务器上的所有线程，从而会影响其他用户。 因此，不应在生产服务器上针对 CLR 数据库对象调试应用程序。 还应注意，一旦开始调试，更改 SQL Server 对象资源管理器中的设置就晚了。 在 SQL Server 对象资源管理器中所做的更改只有在开始下次调试会话时才会生效。  
   
-有关生成 CLR 数据库对象的要求的更多信息，请参阅[使用公共语言运行时 (CLR) 集成生成数据库对象](https://msdn.microsoft.com/library/ms131046.aspx)。  
+有关生成 CLR 数据库对象的要求的更多信息，请参阅[使用公共语言运行时 (CLR) 集成生成数据库对象](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。  
   
 > [!WARNING]  
 > 以下过程利用在[连接的数据库开发](../ssdt/connected-database-development.md)和[面向项目的脱机数据库开发](../ssdt/project-oriented-offline-database-development.md)部分中的之前过程中创建的实体。  
@@ -103,6 +103,5 @@ CLR 属性页和 CLR 生成属性页包含很多关于在项目中使用 CLR 数
   
 ## <a name="see-also"></a>另请参阅  
 [CLR 集成的优点](../relational-databases/clr-integration/clr-integration-overview.md)  
-[使用托管代码创建数据库对象的优点](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
-[使用公共语言运行时 (CLR) 集成生成数据库对象](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[使用托管代码创建数据库对象的优点](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))  
+[使用公共语言运行时 (CLR) 集成生成数据库对象](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

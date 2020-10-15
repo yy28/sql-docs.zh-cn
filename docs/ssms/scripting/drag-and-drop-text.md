@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f341d4dd956bd032bd5dcee264cbf48a5fd05e22
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 14ad38d835e4ef96cbf91a009026e35d504ca8cb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093423"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039031"
 ---
 # <a name="drag-and-drop-text"></a>拖放文本
 
@@ -49,6 +49,5 @@ ms.locfileid: "89093423"
  如果以拖动方式移动文本，便会从旧位置上清除文本，并将其移至新位置。 按住 Ctrl 键的同时拖动文本，可将其复制到新位置。 但从对象资源管理器拖动对象是一个例外，该操作不会从对象资源管理器删除对象名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [代码和文本定位](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [代码和文本定位](./navigate-code-and-text.md)  
   

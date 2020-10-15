@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1259cc5d536e66b95db4e6575237484efafcc581
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179956"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956905"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什么是 SQL Server 中独立的 Machine Learning Server 或 R Server？
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,7 +24,7 @@ SQL Server 为独立于 SQL Server 运行的独立 R Server 或 Machine Learning
 在 SQL Server 2016 中，此功能称为 R Server（独立版），且仅用于 R  。 在 SQL Server 2017 中，它称为 Machine Learning Server（独立版），且包括 R 和 Python  。  
 
 > [!Note]
-> 独立服务器由 SQL Server 安装程序进行安装，其在功能上等同于 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) 的非 SQL 品牌版本，支持相同的用户方案，包括远程执行、操作化和 Web 服务，以及 R 库和 Python 库的完整集合。
+> 独立服务器由 SQL Server 安装程序进行安装，其在功能上等同于 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) 的非 SQL 品牌版本，支持相同的用户方案，包括远程执行、操作化和 Web 服务，以及 R 库和 Python 库的完整集合。
 
 ## <a name="components"></a>组件
 
@@ -48,7 +48,7 @@ R 和 Python 开发者通常会选择独立服务器，以打破开放源代码 
 
 作为与 SQL Server 分离的独立服务器，其 R 和 Python 环境是使用独立服务器（而非 SQL Server）中提供的基础操作系统和标准工具进行配置、保护和访问的。 没有对 SQL Server 关系数据的内置支持。 如果要使用 SQL Server 数据，可以创建数据源对象和连接（就像从任何客户端创建数据源对象和连接一样）。
 
-如果需要进行本地计算和远程计算，则作为 SQL Server 的附属物的独立服务器还可用作功能强大的开发环境。 独立服务器上的 R 和 Python 包与随数据库引擎安装提供的 R 和 Python 包相同，允许实现代码可移植性和[计算上下文切换](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)。
+如果需要进行本地计算和远程计算，则作为 SQL Server 的附属物的独立服务器还可用作功能强大的开发环境。 独立服务器上的 R 和 Python 包与随数据库引擎安装提供的 R 和 Python 包相同，允许实现代码可移植性和[计算上下文切换](/machine-learning-server/r/concept-what-is-compute-context)。
 
 ## <a name="how-to-get-started"></a>如何入门
 
@@ -72,15 +72,15 @@ R 和 Python 开发者通常会选择独立服务器，以打破开放源代码 
 
 使用 RevoScaleR、revoscalepy 和机器学习算法中的函数来编写 R 或 Python 脚本。
   
-  + [通过 25 个函数探索 R 和 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)：从基本的 R 命令开始，然后使用 RevoScaleR 可分发的分析函数，这些函数可提高 R 解决方案的性能和可伸缩性。 包括许多最流行的 R 建模包的可并行化版本，例如 K-均值聚类、决策树和决策林以及用于数据操作的工具。
+  + [通过 25 个函数探索 R 和 RevoScaleR](/machine-learning-server/r/tutorial-r-to-revoscaler)：从基本的 R 命令开始，然后使用 RevoScaleR 可分发的分析函数，这些函数可提高 R 解决方案的性能和可伸缩性。 包括许多最流行的 R 建模包的可并行化版本，例如 K-均值聚类、决策树和决策林以及用于数据操作的工具。
 
-  + [快速入门：microsoftml Python 包的二元分类示例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)：使用 microsoftml 中的函数和熟知的乳腺癌数据集创建二元分类模型。
+  + [快速入门：microsoftml Python 包的二元分类示例](/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)：使用 microsoftml 中的函数和熟知的乳腺癌数据集创建二元分类模型。
 
 选择最适合任务的语言。 R 非常适合用于使用 SQL 难以实现的统计计算。 对数据进行基于集的操作时，可利用强大的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来实现最佳的性能。 对列进行快速计算时，可使用内存数据库引擎。
 
 ### <a name="step-4-operationalize-your-solution"></a>步骤 4：操作你的解决方案
 
-独立服务器可以使用非 SQL 品牌 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) 的[操作化](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)功能。 可以为操作化配置独立服务器，这样配置具有以下好处：将代码作为 Web 服务部署和托管、运行诊断、测试 Web 服务容量。
+独立服务器可以使用非 SQL 品牌 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) 的[操作化](//machine-learning-server/what-is-operationalization)功能。 可以为操作化配置独立服务器，这样配置具有以下好处：将代码作为 Web 服务部署和托管、运行诊断、测试 Web 服务容量。
 
 ### <a name="step-5-maintain-your-server"></a>步骤 5：维护服务器
 
@@ -93,4 +93,3 @@ SQL Server 定期发布累积更新。 应用累积更新可以增强现有安�
 ## <a name="see-also"></a>另请参阅
 
  [安装 R Server（独立版）或 Machine Learning Server（独立版）](../install/sql-machine-learning-standalone-windows-install.md)
-

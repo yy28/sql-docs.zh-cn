@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179168"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956669"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 安装 R 包
 
@@ -33,12 +33,12 @@ ms.locfileid: "88179168"
 
 | 函数 | 说明 |
 |----------|-------------|
-| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 确定远程 SQL Server 上实例库的路径。 |
-| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 获取远程 SQL Server 上的一个或多个包的路径。 |
-| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | 从远程 R 客户端调用此函数，从指定存储库或通过读取本地保存的压缩包，将包安装到 SQL Server 计算上下文。 此函数检查依赖项并确保任何相关包可安装到 SQL Server，就像本地计算上下文中的 R 包安装一样。 若要使用此选项，必须在服务器和数据库上启用包管理。 客户端和服务器环境必须具有相同版本的 RevoScaleR。 |
-| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 在指定的计算上下文中获取安装的包的列表。 |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 对于指定的计算上下文，在文件系统和数据库之间复制有关包库的信息。 |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 删除指定计算上下文中的包。 它还会计算依赖项，并确保删除 SQL Server 上其他包不再使用的包以释放资源。 |
+| [rxSqlLibPaths](/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 确定远程 SQL Server 上实例库的路径。 |
+| [rxFindPackage](/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 获取远程 SQL Server 上的一个或多个包的路径。 |
+| [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | 从远程 R 客户端调用此函数，从指定存储库或通过读取本地保存的压缩包，将包安装到 SQL Server 计算上下文。 此函数检查依赖项并确保任何相关包可安装到 SQL Server，就像本地计算上下文中的 R 包安装一样。 若要使用此选项，必须在服务器和数据库上启用包管理。 客户端和服务器环境必须具有相同版本的 RevoScaleR。 |
+| [rxInstalledPackages](/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 在指定的计算上下文中获取安装的包的列表。 |
+| [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 对于指定的计算上下文，在文件系统和数据库之间复制有关包库的信息。 |
+| [rxRemovePackages](/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 删除指定计算上下文中的包。 它还会计算依赖项，并确保删除 SQL Server 上其他包不再使用的包以释放资源。 |
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -56,14 +56,14 @@ ms.locfileid: "88179168"
 
 ## <a name="client-connections"></a>客户端连接
 
-在同一网络上，客户端工作站可以是 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) 或 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)（数据科学家经常使用免费开发人员版）。
+在同一网络上，客户端工作站可以是 [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) 或 [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install)（数据科学家经常使用免费开发人员版）。
 
-从远程 R 客户端调用包管理函数时，必须先使用 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函数创建计算上下文对象。 此后，针对你使用的每个包管理函数，将计算上下文作为参数传递。
+从远程 R 客户端调用包管理函数时，必须先使用 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函数创建计算上下文对象。 此后，针对你使用的每个包管理函数，将计算上下文作为参数传递。
 
 用户标识通常在设置计算上下文时指定。 如果在创建计算上下文时未指定用户名和密码，则将使用运行 R 代码的用户标识。
 
 1. 在 R 命令行中，定义实例和数据库的连接字符串。
-2. 利用连接字符串，使用 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 构造函数来定义 SQL Server 计算上下文。
+2. 利用连接字符串，使用 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 构造函数来定义 SQL Server 计算上下文。
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -74,7 +74,7 @@ ms.locfileid: "88179168"
     packageList <- c("e1071", "mice")
     ```
 
-4. 调用 [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages)，并传递计算上下文和包含包名称的字符串变量。
+4. 调用 [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages)，并传递计算上下文和包含包名称的字符串变量。
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
