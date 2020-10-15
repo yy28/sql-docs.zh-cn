@@ -17,12 +17,12 @@ ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 5e70db23f7fb2e07855228204a8c1318c9eb0a2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afe40ef4863965905dedd825ee04bdb8a0e3e4d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479970"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038402"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,13 +40,12 @@ ms.locfileid: "88479970"
   
 4.  将其他两个表中的主键列复制到联接表中。 与任何其他表一样，您可以向此表中添加其他列。  
   
-5.  在联接表中，将主键设置为包含其他两个表中的所有主键列。 有关详细信息，请参阅[如何创建主键](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)。  
+5.  在联接表中，将主键设置为包含其他两个表中的所有主键列。 有关详细信息，请参阅[如何创建主键](../../relational-databases/tables/create-primary-keys.md)。  
   
-6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅[如何在表之间创建关系](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)。  
+6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅[如何在表之间创建关系](../../relational-databases/tables/create-foreign-key-relationships.md)。  
   
     > [!NOTE]  
     > 在数据库关系图中创建联接表并不会将数据从相关表插入联接表中。 有关将数据插入表的信息，请参阅[创建插入结果查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  

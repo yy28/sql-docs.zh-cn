@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b0bb11779dc90e17f0646bfe747550df62e94ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a08bda94128619aa9bf8c190652654ebd765d03
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462992"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035481"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88462992"
 指定在菜单上选择某个工具时传递到该工具的变量。 参数可以指定启动工具或命令时传递给工具或命令的值。 例如，参数值可以指定文件名或目录。 使用箭头按钮可以从预定义的参数列表中进行选择。 您可以添加多个参数。 有关预定义参数及其定义的完整列表，请参阅 [外部工具的参数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 还可以输入自定义参数（例如，命令行开关），这取决于所使用的命令或工具。  
   
 **使用输出窗口**  
-打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 输出窗口显示正在运行命令的输出。 并非所有工具都以在输出窗口中显示的格式显示输出。 有关详细信息，请参阅 [输出窗口](../relational-databases/scripting/transact-sql-debugger-output-window.md)。  
+打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 输出窗口显示正在运行命令的输出。 并非所有工具都以在输出窗口中显示的格式显示输出。 有关详细信息，请参阅 [输出窗口](./scripting/transact-sql-debugger-output-window.md)。  
   
 **将输出按 Unicode 处理**  
 将输出解析为 Unicode。  
@@ -78,4 +78,3 @@ ms.locfileid: "88462992"
 ## <a name="see-also"></a>另请参阅  
 [外部工具的参数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [常规用户界面元素](../ssms/general-user-interface-elements.md)  
-  

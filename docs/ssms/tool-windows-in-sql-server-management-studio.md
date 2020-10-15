@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ec93cc023145e051115318c67c644ea98403663
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b75edb6b6a66c4722bda7c8b63615a1523838206
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417843"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035950"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,5 +39,4 @@ ms.locfileid: "88417843"
 -   从对象资源管理器打开与具体数据库连接的“SQL 编辑器”窗口。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-  
+[使用 SQL Server Management Studio](./sql-server-management-studio-ssms.md)  

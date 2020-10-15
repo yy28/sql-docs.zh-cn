@@ -15,12 +15,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5808e51f9311a90f84527bce104d25c673198953
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901918"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036362"
 ---
 # <a name="search-documents-interactively"></a>交互式搜索文档
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,10 +64,9 @@ ms.locfileid: "88901918"
  **“全部替换”** 命令将替换所有搜索匹配项，包括那些已经用 **“查找下一个”** 按钮跳过的匹配项。 若要取消 **“全部替换”** ，请在关闭任何文件之前从 **“编辑”** 菜单中单击 **“撤消”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [增量搜索活动文档](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [搜索和替换](../../relational-databases/scripting/search-and-replace.md)   
- [使用结果列表搜索文档](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [使用正则表达式搜索文本](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [增量搜索活动文档](./search-an-active-document-incrementally.md)   
+ [搜索和替换](./search-and-replace.md)   
+ [使用结果列表搜索文档](./search-documents-using-results-lists.md)   
+ [使用通配符搜索文本](./search-text-with-wildcards.md)   
+ [使用正则表达式搜索文本](./search-text-with-regular-expressions.md)  
   

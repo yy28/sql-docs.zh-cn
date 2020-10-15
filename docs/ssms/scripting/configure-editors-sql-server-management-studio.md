@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99fb2ac932b3fde03c024d1ecce06de2ef37d5b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 7da0e6a9eff582e69fa37ccd4396039fe6ac1727
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093488"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039091"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>配置编辑器 (SQL Server Management Studio)
 
@@ -42,7 +42,7 @@ ms.locfileid: "89093488"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何指定通过在 Windows 资源管理器中双击具有指定扩展名的文件来打开编辑器。|[将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|介绍如何自定义字体以使代码和文本更具可读性。|[更改字体颜色、大小和样式](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|介绍如何查看属性。|[使用 Management Studio 中的“属性”窗口](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
-|编辑器选项对话框的 F1 帮助页的位置。|[“查询选项”页的 F1 帮助](https://docs.microsoft.com/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio)|
+|介绍如何指定通过在 Windows 资源管理器中双击具有指定扩展名的文件来打开编辑器。|[将文件扩展名与代码编辑器关联](./associate-file-extensions-to-a-code-editor.md)|  
+|介绍如何自定义字体以使代码和文本更具可读性。|[更改字体颜色、大小和样式](./change-font-color-size-and-style.md)|  
+|介绍如何查看属性。|[使用 Management Studio 中的“属性”窗口](./use-the-properties-window-in-management-studio.md)|  
+|编辑器选项对话框的 F1 帮助页的位置。|[“查询选项”页的 F1 帮助](../f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|

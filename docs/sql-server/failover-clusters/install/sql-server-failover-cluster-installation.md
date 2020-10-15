@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fc5aaf5bb89edabcc483baebe8cb4b709314a383
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 8cdecc3ac5f8b23e947b92a43e469c568c68d740
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91112189"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988346"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,6 @@ ms.locfileid: "91112189"
 ## <a name="see-also"></a>另请参阅  
  [安装故障转移群集前的准备工作](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

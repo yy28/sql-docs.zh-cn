@@ -14,12 +14,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8127d6b7c38fc2ca95acea9de94fd030773e7a20
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56201dec5bb9b6a66c63f6c4bca50d90b4e27c33
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901279"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039035"
 ---
 # <a name="find-in-files"></a>在文件中查找
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,10 +84,10 @@ ms.locfileid: "88901279"
  指示如何解释“查找内容”或“替换为”文本框中输入的特殊字符。 选项包括 **“通配符”** 和 **“正则表达式”** 。  
   
  **“正则表达式”**  
- 定义文本匹配模式的特殊表示法。 有关列表，请参阅 [使用正则表达式搜索文本](../../relational-databases/scripting/search-text-with-regular-expressions.md)。  
+ 定义文本匹配模式的特殊表示法。 有关列表，请参阅 [使用正则表达式搜索文本](./search-text-with-regular-expressions.md)。  
   
  **通配符**  
- 用于表示一个或多个字符特殊字符，如星号 (`*`) 和问号 (`?`)。 有关列表，请参阅 [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)。  
+ 用于表示一个或多个字符特殊字符，如星号 (`*`) 和问号 (`?`)。 有关列表，请参阅 [使用通配符搜索文本](./search-text-with-wildcards.md)。  
   
  **查找以下文件类型**  
  此列表指示要在“查找范围”中指定的目录中搜索的文件的类型。 如果此字段保留为空，将搜索 **“查找范围”** 中指定的目录中的所有文件。  
@@ -135,4 +135,4 @@ ms.locfileid: "88901279"
  使用此工具栏选项卡，将把对话框更改为“在符号中查找”对话框。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

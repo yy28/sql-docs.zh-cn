@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179146"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956688"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>使用 Python 工具在 SQL Server 上安装包
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88179146"
 
 若要让安装的新 Python 包可以在 SQL Server 上的脚本中使用，请在机器学习服务的实例中安装包。 如果有多个机器学习服务实例，则必须将包添加到每个实例中。
 
-下面各示例中安装的包是 [CNTK](https://docs.microsoft.com/cognitive-toolkit/)，这是 Microsoft 提供的深度学习框架，可支持自定义、定型和共享不同类型的神经网络。
+下面各示例中安装的包是 [CNTK](/cognitive-toolkit/)，这是 Microsoft 提供的深度学习框架，可支持自定义、定型和共享不同类型的神经网络。
 
 ### <a name="for-offline-install-download-the-python-package"></a>下载 Python 包以供脱机安装
 
@@ -63,7 +63,7 @@ ms.locfileid: "88179146"
 > [!IMPORTANT]
 > 请务必获取 Windows 版本的包。 如果文件以 .gz 结尾，表明版本可能不正确。
 
-若要详细了解如何下载适用于多个平台和多个版本 Python 的 CNTK 框架，请参阅[在计算机上安装 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)。
+若要详细了解如何下载适用于多个平台和多个版本 Python 的 CNTK 框架，请参阅[在计算机上安装 CNTK](/cognitive-toolkit/Setup-CNTK-on-your-machine)。
 
 ### <a name="locate-the-python-library"></a>查找 Python 库
 
@@ -123,5 +123,5 @@ import cntk
 ## <a name="see-also"></a>另请参阅
 
 + [获取 Python 包信息](python-package-information.md)
-+ [SQL Server 机器学习服务的 Python 教程](../tutorials/sql-server-python-tutorials.md)
++ [SQL Server 机器学习服务的 Python 教程](../tutorials/python-tutorials.md)
 + [用于 CNTK 的 Python API](https://cntk.ai/pythondocs/tutorials.html)。

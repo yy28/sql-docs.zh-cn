@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451776ba842c38ca306c17291404355908cb5202
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901596"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036300"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定断点条件
 
@@ -52,5 +52,5 @@ ms.locfileid: "88901596"
   
 ## <a name="see-also"></a>另请参阅
 
-- [指定命中计数](../../relational-databases/scripting/specify-a-hit-count.md)
-- [指定断点操作](../../relational-databases/scripting/specify-a-breakpoint-action.md)
+- [指定命中计数](./specify-a-hit-count.md)
+- [指定断点操作](./specify-a-breakpoint-action.md)

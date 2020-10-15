@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179686"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956609"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server R 包同步
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -23,7 +23,7 @@ SQL Server 2017 附带的 RevoScaleR 版本包含在文件系统与使用包的�
 
 提供此功能是为了更轻松地备份与 SQL Server 数据库相关联的 R 包集合。 使用此功能，管理员不仅可以还原数据库，还可以还原在该数据库中工作的由数据科学家使用的任何 R 包。
 
-本文介绍包同步功能，以及如何使用 [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) 函数执行以下任务：
+本文介绍包同步功能，以及如何使用 [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) 函数执行以下任务：
 
 + 同步整个 SQL Server 数据库的包列表
 
@@ -56,7 +56,7 @@ SQL Server 2017 CTP 2 或更高版本中提供此功能。
 1. 服务器管理员启用 SQL Server 实例的功能。
 2. 对于每个数据库，管理员会授予各个用户使用数据库角色安装或共享 R 包的能力。
 
-完成此操作后，可以使用 RevoScaleR 函数（如 [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages)）将包安装到数据库中。  有关用户和可使用的包的信息存储在 SQL Server 实例中。 
+完成此操作后，可以使用 RevoScaleR 函数（如 [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages)）将包安装到数据库中。  有关用户和可使用的包的信息存储在 SQL Server 实例中。 
 
 每当使用包管理功能添加新包时，SQL Server 和文件系统中的记录都将更新。 此信息可用于还原整个数据库的包信息。
 
@@ -74,7 +74,7 @@ SQL Server 2017 CTP 2 或更高版本中提供此功能。
 
 ## <a name="how-package-synchronization-works"></a>包同步的工作原理
 
-若要使用包同步，请调用 [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)，它是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中的新函数。 
+若要使用包同步，请调用 [rxSyncPackages](/r-server/r-reference/revoscaler/rxsyncpackages)，它是 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中的新函数。 
 
 对于 `rxSyncPackages` 的每个调用，必须指定一个 SQL Server 实例和数据库。 然后，列出要同步的包或指定包范围。
 

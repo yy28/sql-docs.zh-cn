@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901805"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036114"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 调试器 -“监视”窗口
 
@@ -64,9 +64,9 @@ ms.locfileid: "88901805"
  显示表达式的数据类型。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [“局部变量”窗口](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [“调用堆栈”窗口](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [“快速监视”对话框](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL 调试器](./transact-sql-debugger.md)   
+ [Transact-SQL 调试器信息](./transact-sql-debugger-information.md)   
+ [“局部变量”窗口](./transact-sql-debugger-locals-window.md)   
+ [“调用堆栈”窗口](./transact-sql-debugger-call-stack-window.md)   
+ [“快速监视”对话框](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 577f31593aae858596ac08c4aa7f44e121a22ce8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2abd5aa8f15a0213a8eccee0965688cf626abc02
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480703"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988143"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务与SharePoint 组权限对比
   本主题将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  
@@ -63,7 +63,7 @@ ms.locfileid: "88480703"
 |---|**权限级别组：** 例如“查看者”组的“仅查看”。|  
 |**任务：** 例如“管理报表”。|**权限：** 例如，在“仅查看”组中，有“查看项”、“查看版本”和“查看应用程序页”权限相关的列表。|  
   
- 有关 SharePoint 权限的详细信息，请参阅 [权限级别和权限](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) 以及 [在 SharePoint 2013 中确定权限级别和组](https://technet.microsoft.com/library/cc262690.aspx)。  
+ 有关 SharePoint 权限的详细信息，请参阅 [权限级别和权限](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) 以及 [在 SharePoint 2013 中确定权限级别和组](/SharePoint/sites/determine-permission-levels-and-groups-in-sharepoint-server)。  
   
 ##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> 比较本机模式角色与 SharePoint 组  
  下表将在本机模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的预定义角色定义与标准 SharePoint 组进行比较。 如果 SharePoint 组与您需要的特定角色不匹配，可以在 SharePoint 中创建自定义组并分配权限级别。  
@@ -118,5 +118,4 @@ ms.locfileid: "88480703"
  [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定义](../../reporting-services/security/role-definitions.md)   
  [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
-  
   

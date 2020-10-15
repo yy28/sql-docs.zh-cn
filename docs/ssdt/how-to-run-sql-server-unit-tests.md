@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ed1a61d719063643d0fef3c1c0598e45cec54555
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3968ea4001b4ada8940f4434bfbb2eff35840850
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893886"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988203"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>如何：运行 SQL Server 单元测试
 
@@ -58,7 +58,6 @@ ms.locfileid: "85893886"
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  
-[如何：从 Microsoft Visual Studio 2010 运行自动测试](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[从命令行运行自动化测试 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[测试应用程序 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
-  
+[如何：从 Microsoft Visual Studio 2010 运行自动测试](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))  
+[从命令行运行自动化测试 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182486(v=vs.100))  
+[测试应用程序 (Visual Studio 2012)](/azure/devops/test/overview)  

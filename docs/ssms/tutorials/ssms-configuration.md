@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662026"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038942"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 组件和配置
 
@@ -33,7 +33,7 @@ ms.locfileid: "91662026"
 
 若要完成本教程，需要 SQL Server Management Studio。  
 
-* 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+* 安装 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件
 
@@ -138,7 +138,7 @@ ms.locfileid: "91662026"
 
 熟悉 SSMS 的最好方式是进行实践演练。 这些教程  和操作说明  文章可帮助你使用 SSMS 的各种功能。  这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
 
-* [连接到实例和查询实例](connect-query-sql-server.md)
+* [连接到实例和查询实例](../quickstarts/connect-query-sql-server.md)
 * [脚本](scripting-ssms.md)
 * [在 SSMS 中使用模板](../template/templates-ssms.md)
 * [使用 SSMS 的其他提示和技巧](ssms-tricks.md)

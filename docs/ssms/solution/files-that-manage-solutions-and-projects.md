@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d611776bc72c9c95786f40269acb069d56fa5a48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 367b305c8866f922192b2b67bc5beda9daa8d372
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88315843"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036030"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>用于管理解决方案和项目的文件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,5 +57,4 @@ ms.locfileid: "88315843"
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  
 [解决方案 (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [项目 (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)  
-[解决方案资源管理器源代码管理](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
-  
+[解决方案资源管理器源代码管理](./solution-explorer.md)  

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283548"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956510"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用 Resource Governor 管理 Python 和 R 工作负载
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,9 +38,9 @@ Python 和 R 中的机器学习算法需要大量计算。 根据工作负载优
 
 另外，还可以使用关联工作负载组和分类器创建自定义外部资源池，以确定对源自特定程序、主机或所提供的其他条件的请求的资源分配。 外部资源池是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中引入的一种资源池，可帮助管理数据库引擎外部的 R 和 Python 进程。
 
-1. [启用资源调控](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor)（默认情况下处于关闭状态）。
+1. [启用资源调控](../../relational-databases/resource-governor/enable-resource-governor.md)（默认情况下处于关闭状态）。
 
-2. 运行 [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) 创建和配置资源池，然后运行 [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) 将其实现。
+2. 运行 [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 创建和配置资源池，然后运行 [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) 将其实现。
 
 3. 创建用于具体分配的工作负荷组，例如在定型和评分之间。
 

@@ -22,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdc1069f0dfd9d12307d27ec7e2309f2ef0a9aec
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5516a294c8cd3dfb331db7c447982099c513ad99
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480582"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934997"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
   在使用向导向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加地图或地图层之后，可能希望更改地图在报表中的显示方式。 可以考虑以下构思来进行改进：  
@@ -87,7 +87,7 @@ ms.locfileid: "89480582"
   
 -   分辨率和简化。 对于线条和多边形，在绘制时间与轮廓详细程度之间选择平衡。  
   
- 若要更改这些选项，请右键单击地图视区，然后使用[地图视区属性”对话框 -&gt;“常规”](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52)页和相关页。  
+ 若要更改这些选项，请右键单击地图视区，然后使用[地图视区属性”对话框 -&gt;“常规”](./maps-report-builder-and-ssrs.md)页和相关页。  
   
 ##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> 更改图例的选项  
  图例可帮助用户解释地图上的数据。  
@@ -122,7 +122,7 @@ ms.locfileid: "89480582"
   
  组表达式指定如何为层上的每个地图元素聚合与空间数据具有一定关系的分析数据。 默认情况下，组表达式是为空间数据与分析数据之间的关系指定的一组匹配字段。 例如，对于显示某个国家或地区的城市位置和人口规模的气泡地图，匹配字段必须包括城市名称 [City] 和区域名称 [Region]，因为可能有多个城市具有相同的名称。 相应的组表达式包括两个字段：[City] 和 [Region]。  
   
- 有关详细信息，请参阅[地图提示：如何将形状文件导入 SQL Server 并聚合空间数据](https://docs.microsoft.com/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data)。  
+ 有关详细信息，请参阅[地图提示：如何将形状文件导入 SQL Server 并聚合空间数据](/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data)。  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> 更改层上地图元素的选项  
  地图元素是层上的点、线条或多边形，它们基于空间数据。 对于地图元素，可以设置以下选项。 这些选项适用于层上的所有地图元素，无论这些元素是否为嵌入的元素：  
@@ -163,5 +163,4 @@ ms.locfileid: "89480582"
 ## <a name="see-also"></a>另请参阅  
  [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

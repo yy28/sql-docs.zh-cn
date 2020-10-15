@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 14591802d542ac15448836a5b46e005f59026367
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681516"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935221"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>在图表中显示包含多个数据区域的序列
 
@@ -66,7 +66,7 @@ ms.locfileid: "84681516"
 [设置图表的格式](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [图表中的三维效果、凹凸效果和其他效果](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [图表](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[“轴属性”对话框 ->“轴选项”](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[“轴属性”对话框 ->“轴选项”](/previous-versions/sql/)   
 [收集饼图上的小切片](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

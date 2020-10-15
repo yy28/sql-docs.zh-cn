@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50ff7c29e6718d8d38829d9cb23f5fafb6cf4dea
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: fa3f4741e4b1eec0acc218c3be3a4df73c0ed694
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767044"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935065"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 Web 部件
 
@@ -85,7 +85,7 @@ ms.locfileid: "83767044"
 |参数区域宽度|可以选择度量单位和值。 默认值为 200 像素。 对于此属性，唯一的要求是其值大于零。|  
 |文档结构图|报表中定义的报表导航控件，用于提供对报表特定部分的一键式访问。 可在 HTML 报表中使用此控件。 文档结构图显示在报表视图区域旁的可折叠区域中。 有效值包括 **Displayed**、 **Collapsed**和 **Hidden**。 如果已为报表定义文档结构图，并且未在 Web 部件属性中将其选为隐藏或折叠，则默认情况下将展开此区域。 如果文档结构图处于折叠状态，可以单击箭头将其展开。|  
 |文档结构图区域宽度|可以选择度量单位和值。 默认值为 200 像素。 对于此属性，唯一的要求是其值大于零。|  
-|加载参数|检索报表的参数属性。 并非所有报表都具有参数。 如果报表不具有参数，则不返回任何值。 如果为刚上载的报表设置属性，可能会收到错误信息，指明数据源连接已删除。 如果遇到这种情况，请重置连接并在指定连接后完成参数属性的设置。 有关如何设置连接的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。<br /><br /> 为了达到最佳效果，请在单击“加载参数”之前单击 **“应用”** 。<br /><br /> 加载参数属性之后，可以设置它们，方法与在报表的参数属性页上进行设置相同。 有关如何设置参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。|  
+|加载参数|检索报表的参数属性。 并非所有报表都具有参数。 如果报表不具有参数，则不返回任何值。 如果为刚上载的报表设置属性，可能会收到错误信息，指明数据源连接已删除。 如果遇到这种情况，请重置连接并在指定连接后完成参数属性的设置。 有关如何设置连接的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](/previous-versions/sql/)。<br /><br /> 为了达到最佳效果，请在单击“加载参数”之前单击 **“应用”** 。<br /><br /> 加载参数属性之后，可以设置它们，方法与在报表的参数属性页上进行设置相同。 有关如何设置参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。|  
 
 ## <a name="customizing-the-toolbar"></a>自定义工具栏
 
@@ -95,13 +95,13 @@ ms.locfileid: "83767044"
 
 ## <a name="customizing-the-viewing-area"></a>自定义视图区域
 
- 视图区域用于显示报表。 使用参数区域和凭据区域时，它们还将与报表视图区域共存。 需要凭据时，凭据区域将显示在空报表视图区域的旁边。 在用户提供凭据并运行报表后，凭据区域将关闭。 若要自定义提示用户设置凭据的文本，请修改数据源连接属性。 有关详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 视图区域用于显示报表。 使用参数区域和凭据区域时，它们还将与报表视图区域共存。 需要凭据时，凭据区域将显示在空报表视图区域的旁边。 在用户提供凭据并运行报表后，凭据区域将关闭。 若要自定义提示用户设置凭据的文本，请修改数据源连接属性。 有关详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](/previous-versions/sql/)。  
   
  参数区域提供用于在运行报表之前输入值的字段。 仅在报表定义包括参数时才使用此区域。 显示参数或凭据区域时，将调整报表视图以充分利用 Web 部件的其余部分。 可以通过设置 Web 部件的属性来自定义参数区域的宽度。 也可以定义显示在页面上各个参数旁的标签。 有关如何修改参数标签的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ## <a name="see-also"></a>另请参阅
 
- [SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint 站点上的报表查看器 Web 部件](./report-viewer-web-part-sharepoint-site.md)   
  [将报表查看器 Web 部件添加到网页](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

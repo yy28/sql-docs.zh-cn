@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d770a7396f48aa11e00eb4f4663285f4cf6eef9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370303"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037573"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>导出已注册服务器信息 (SQL Server Management Studio)
 
@@ -61,7 +61,6 @@ ms.locfileid: "88370303"
     >  尽管导出文件已加密，但是，如果该文件中包括用户名和 SQL Server 身份验证密码，则应当仔细控制对该文件的访问。 因此，默认情况下，不在导出文件中包括用户名和密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [导入已注册的服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)   
- [创建新的已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [导入已注册的服务器信息 (SQL Server Management Studio)](./import-registered-server-information-sql-server-management-studio.md)   
+ [创建新的已注册的服务器 (SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md)  
   

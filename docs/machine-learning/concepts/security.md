@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989832"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956502"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中扩展性框架的安全体系结构
 
@@ -153,7 +153,7 @@ SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且
 
 ## <a name="appcontainer-isolation"></a>AppContainer 隔离
 
-通过 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 实现隔离。 在运行时，如果在存储过程或查询中检测到外部脚本，SQL Server 会调用 Launchpad，并请求提供特定于扩展的启动程序。 Launchpad 在进程中以标识调用相应的运行时环境，并实例化 AppContainer 以将其包含在内。 此更改十分有用，因为不再需要本地帐户和密码管理。 此外，在禁止本地用户帐户的安装上，不再依赖本地用户帐户意味着现在就可使用此功能。
+通过 [AppContainer](/windows/desktop/secauthz/appcontainer-isolation) 实现隔离。 在运行时，如果在存储过程或查询中检测到外部脚本，SQL Server 会调用 Launchpad，并请求提供特定于扩展的启动程序。 Launchpad 在进程中以标识调用相应的运行时环境，并实例化 AppContainer 以将其包含在内。 此更改十分有用，因为不再需要本地帐户和密码管理。 此外，在禁止本地用户帐户的安装上，不再依赖本地用户帐户意味着现在就可使用此功能。
 
 因为由 SQL Server 实现，所以 AppContainer 是一种内部机制。 尽管你不会在进程监视器中看到 AppContainer 的物理证据，但是可以在出站防火墙规则中找到它们，这些规则是由安装程序创建的，用于防止进程进行网络调用。 有关详细信息，请参阅 [SQL Server 机器学习服务的防火墙配置](../../machine-learning/security/firewall-configuration.md)。
 
@@ -216,7 +216,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 默示身份验证介绍了连接请求行为，在该行为下，环回请求数据或操作时，在 AppContainers 下运行的的外部进程会作为受信任的用户标识呈现给 SQL Server  。 默示身份验证概念不再是 Windows 身份验证独有的，在指定信任连接的 SQL Server 连接字符串中，用于处理来自外部进程（如 R 或 Python 脚本）的请求。 有时，它也称为环回  。
 
-通过管理标识和凭据，AppContainer 可防止使用用户凭据来获取对资源的访问权限或登录到其他环境。 AppContainer 环境创建使用用户和应用程序的组合标识的标识符，因此凭据对每个用户/应用程序配对都是唯一的，并且应用程序无法模拟用户。 有关详细信息，请参阅 [AppContainer 隔离](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation)。
+通过管理标识和凭据，AppContainer 可防止使用用户凭据来获取对资源的访问权限或登录到其他环境。 AppContainer 环境创建使用用户和应用程序的组合标识的标识符，因此凭据对每个用户/应用程序配对都是唯一的，并且应用程序无法模拟用户。 有关详细信息，请参阅 [AppContainer 隔离](/windows/win32/secauthz/appcontainer-isolation)。
 
 有关环回连接的更多详细信息，请参阅[从 Python 或 R 脚本到 SQL Server 的环回连接](../connect/loopback-connection.md)。
 

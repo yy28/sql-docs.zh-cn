@@ -16,12 +16,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 979018404b696ef3d8a39b198d4cf115e28f068f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901910"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039011"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 代码段
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901910"
 ## <a name="inserting-snippets"></a>插入代码段  
  可以使用 **“插入代码段”** 菜单打开可供选择的代码段的分类列表。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段包含替换点：建议与该点相关的语法的文本。 例如，CREATE TABLE 代码段包含元素（如表名称、列名称和列数据类型）的替换点。 插入代码段后，必须更改替换文本，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [完成 Transact-SQL 代码段](../../relational-databases/scripting/complete-transact-sql-snippets.md)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段包含替换点：建议与该点相关的语法的文本。 例如，CREATE TABLE 代码段包含元素（如表名称、列名称和列数据类型）的替换点。 插入代码段后，必须更改替换文本，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [完成 Transact-SQL 代码段](./complete-transact-sql-snippets.md)。  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>通过使用“插入代码段”菜单插入代码段  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901910"
 3.  双击代码段，或从代码段选择器中选择代码段，然后按 Tab 或 Enter。  
   
 ## <a name="see-also"></a>另请参阅  
- [插入外侧 Transact-SQL 代码片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [插入外侧 Transact-SQL 代码片段](./insert-surround-with-transact-sql-snippets.md)  
   

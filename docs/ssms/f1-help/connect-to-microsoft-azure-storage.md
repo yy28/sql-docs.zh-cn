@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417923"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035465"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>连接到 Microsoft Azure 存储
 
@@ -32,7 +32,7 @@ ms.locfileid: "88417923"
 1.  **存储帐户** - 指定存储帐户名称。
 
    >[!NOTE]
-   > 只能连接到[常规用途存储帐户](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services)。 连接到其他类型的存储帐户可能会导致如下错误：
+   > 只能连接到[常规用途存储帐户](/azure/storage/common/storage-introduction#azure-storage-services)。 连接到其他类型的存储帐户可能会导致如下错误：
    >
    >  其中一个 HTTP 标头的值格式不正确。 (Microsoft.SqlServer.StorageClient)。
    >
@@ -43,4 +43,3 @@ ms.locfileid: "88417923"
 3.  **使用安全终结点 (HTTPS)** - 此选项利用网络 Web 服务器的加密通信和安全标识。  
   
 4.  **保存帐户密钥** - 此选项可将密码保存在加密文件中。  
-  

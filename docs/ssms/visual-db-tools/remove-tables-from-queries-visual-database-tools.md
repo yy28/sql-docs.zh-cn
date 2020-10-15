@@ -16,19 +16,19 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51402e1a0017f80b192bde54d7ef53aff99f61d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c92732dc2cb4fcd817a8c954fa9d29048cd57bd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491588"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038399"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>从查询中删除表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 可从查询中移除表或任何表值对象。  
   
 > [!NOTE]  
-> 移除表或表值对象不会从数据库中删除任何内容，该操作只会将表或表值对象从当前查询中移除。 有关从数据库中删除表的详细信息，请参阅[如何：从数据库中删除表](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)。  
+> 移除表或表值对象不会从数据库中删除任何内容，该操作只会将表或表值对象从当前查询中移除。 有关从数据库中删除表的详细信息，请参阅[如何：从数据库中删除表](../../relational-databases/tables/delete-tables-database-engine.md)。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>移除表或表结构对象  
   
@@ -46,4 +46,3 @@ ms.locfileid: "88491588"
 [指定搜索条件](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [汇总查询结果](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [执行基本的查询操作](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-  

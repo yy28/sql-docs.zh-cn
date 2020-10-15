@@ -24,12 +24,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: f38ebd07eedcfe8ece4cc904def24186b76b7a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60446c708927de250ef664728fe4046ae5099d66
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317443"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037207"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
 
@@ -58,4 +58,4 @@ ms.locfileid: "88317443"
   
 ## <a name="see-also"></a>另请参阅
 
-- [SQL Server Management Studio 中的“属性”窗口](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)
+- [SQL Server Management Studio 中的“属性”窗口](../scripting/use-the-properties-window-in-management-studio.md)

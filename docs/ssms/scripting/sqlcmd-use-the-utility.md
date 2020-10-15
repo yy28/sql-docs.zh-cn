@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3a7425eebb86ae2afd5d9e41af51fa0badbb304
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901519"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036260"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901519"
   
 -   用户通过下列方式提交 **sqlcmd** 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可能在命令提示符处显示。  
   
--   [查询编辑器中的](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 模式 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+-   [查询编辑器中的](./edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 模式 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 -   SQL Server 管理对象 (SMO)  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88901519"
  行 `3> GO` 后的几行内容为 `SELECT` 语句的输出。 生成输出后， `sqlcmd` 重置 `sqlcmd` 提示符并显示 `1>`。 在 `EXIT` 行输入 `1>`后，命令提示符窗口显示第一次打开时显示的行。 它指示 `sqlcmd` 已退出会话。 现在可以再键入一个 `EXIT` 命令关闭命令提示符窗口。  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 运行 Transact-SQL 脚本文件  
- 可以使用 **sqlcmd** 执行数据库脚本文件。 脚本文件是一些文本文件，它们同时包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、 **sqlcmd** 命令和脚本变量。 有关如何使用脚本变量的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 **sqlcmd** 与脚本文件中语句、命令和脚本变量的配合方式类似于它与交互输入的语句和命令的配合方式。 主要区别在于 **sqlcmd** 从输入文件连续读取内容，而不是等待用户输入语句、命令和脚本变量。  
+ 可以使用 **sqlcmd** 执行数据库脚本文件。 脚本文件是一些文本文件，它们同时包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、 **sqlcmd** 命令和脚本变量。 有关如何使用脚本变量的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](./sqlcmd-use-with-scripting-variables.md)。 **sqlcmd** 与脚本文件中语句、命令和脚本变量的配合方式类似于它与交互输入的语句和命令的配合方式。 主要区别在于 **sqlcmd** 从输入文件连续读取内容，而不是等待用户输入语句、命令和脚本变量。  
   
  可以通过几种不同的方式创建数据库脚本文件：  
   
@@ -535,9 +535,8 @@ SQLCMD -E -N -C
   
 ## <a name="more-about-sqlcmd"></a>有关 sqlcmd 的详细信息  
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
- [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [使用查询编辑器编辑 SQLCMD 脚本](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [将 sqlcmd 与脚本变量结合使用](./sqlcmd-use-with-scripting-variables.md)   
+ [使用查询编辑器编辑 SQLCMD 脚本](./edit-sqlcmd-scripts-with-query-editor.md)   
  [管理作业步骤](../../ssms/agent/manage-job-steps.md)   
  [创建 CmdExec 作业步骤](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

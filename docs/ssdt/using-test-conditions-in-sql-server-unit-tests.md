@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43dbf8c960e45ab0b9099951b7b03b331170ad53
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895110"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987753"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用测试条件
 
-在 SQL Server 单元测试中，将执行一个或多个 Transact\-SQL 测试脚本。 可以在 Transact\-SQL 脚本内对结果进行评估，并且使用 THROW 或 RAISERROR 来返回错误和使测试失败，或者可以在测试中对测试条件进行定义以便评估结果。 该测试返回 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 类的实例。 此类的实例包含一个或多个数据集、执行时间和受脚本影响的行。 所有这些信息都是在脚本的执行过程中收集的。 这些结果可使用测试条件进行评估。 SQL Server Data Tools 提供一组预定义的测试条件。 还可以创建和使用自定义条件；请参阅 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  
+在 SQL Server 单元测试中，将执行一个或多个 Transact\-SQL 测试脚本。 可以在 Transact\-SQL 脚本内对结果进行评估，并且使用 THROW 或 RAISERROR 来返回错误和使测试失败，或者可以在测试中对测试条件进行定义以便评估结果。 该测试返回 [SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)) 类的实例。 此类的实例包含一个或多个数据集、执行时间和受脚本影响的行。 所有这些信息都是在脚本的执行过程中收集的。 这些结果可使用测试条件进行评估。 SQL Server Data Tools 提供一组预定义的测试条件。 还可以创建和使用自定义条件；请参阅 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  
   
 ## <a name="predefined-test-conditions"></a>预定义的测试条件  
 下表列出了可以使用 SQL Server 单元测试设计器中的“测试条件”窗格添加的预定义测试条件。  
@@ -92,7 +92,7 @@ ms.locfileid: "85895110"
   
     此时将显示“TestConditionName 的配置”  对话框。  
   
-5.  指定与要测试的数据库的连接。 有关详细信息，请参阅[操作说明：创建数据库连接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
+5.  指定与要测试的数据库的连接。 有关详细信息，请参阅[操作说明：创建数据库连接](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100))。  
   
 6.  默认情况下，测试的 Transact\-SQL 正文将出现在编辑窗格中。 您可修改代码（如有必要）以产生预期的结果。 例如，如果您的测试具有预先测试代码，则您可能必须添加该代码。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "85895110"
   
     此时将显示“TestConditionName 的配置”  对话框。  
   
-5.  指定与要测试的数据库的连接。 有关详细信息，请参阅[操作说明：创建数据库连接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
+5.  指定与要测试的数据库的连接。 有关详细信息，请参阅[操作说明：创建数据库连接](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100))。  
   
 6.  默认情况下，测试的 Transact\-SQL 正文将出现在编辑窗格中。 您可修改代码（如有必要）以产生预期的结果。 例如，如果您的测试具有预先测试代码，则您可能必须添加该代码。  
   
@@ -144,4 +144,3 @@ ms.locfileid: "85895110"
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [在 SQL Server 单元测试中使用 Transact-SQL 断言](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [SQL Server 单元测试中的脚本](../ssdt/scripts-in-sql-server-unit-tests.md)  
-  

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171780"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956839"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 PREDICT T-SQL 语句
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88171780"
 
 ## <a name="table-of-extended-events"></a>扩展事件表
 
-以下扩展事件在所有支持 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL 语句的 SQL Server 版本中都可用。 
+以下扩展事件在所有支持 [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 语句的 SQL Server 版本中都可用。 
 
 |name |object_type|description| 
 |----|----|----|
@@ -47,7 +47,7 @@ WHERE object_name LIKE `predict%'
 
 要使用 PREDICT 捕获有关评分会话性能的信息，请执行以下操作：
 
-1. 使用 Management Studio 或其他受支持的[工具](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)创建新的扩展事件会话。
+1. 使用 Management Studio 或其他受支持的[工具](../../relational-databases/extended-events/extended-events-tools.md)创建新的扩展事件会话。
 2. 将事件 `predict_function_completed` 和 `predict_model_cache_hit` 添加到会话中。
 3. 启动扩展事件会话。
 4. 运行使用 PREDICT 的查询。
@@ -82,6 +82,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 有关扩展事件（有时称为 XEvent）以及如何在会话中跟踪事件的更多信息，请参阅以下文章：
 
 + [在 SQL Server 机器学习服务中使用扩展事件监视 Python 和 R 脚本](extended-events.md)
-+ [扩展事件的概念和体系结构](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [在 SSMS 中设置事件捕获](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [在对象资源管理器中管理事件会话](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [扩展事件的概念和体系结构](../../relational-databases/extended-events/extended-events.md)
++ [在 SSMS 中设置事件捕获](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [在对象资源管理器中管理事件会话](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

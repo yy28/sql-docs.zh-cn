@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178654"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956791"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安装程序安装 Machine Learning Server（独立版）或 R Server（独立版）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 
 SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 SQL Server 外部运行的独立机器学习服务器。 在 SQL Server 2016 中，此功能称为 **R Server（独立版）** 。  
 ::: moniker-end
 
-由 SQL Server 安装程序安装的独立服务器在功能上等同于 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) 的非 SQL 品牌版本，并且支持相同的用例和应用场景，其中包括：
+由 SQL Server 安装程序安装的独立服务器在功能上等同于 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) 的非 SQL 品牌版本，并且支持相同的用例和应用场景，其中包括：
 
 + 远程执行，可在同一控制台中在本地会话与远程会话之间进行切换
 + 通过 Web 节点和计算节点实现操作化
@@ -192,7 +192,7 @@ SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 
 
 3. 如果为 Web 服务部署启用了操作化以作为 Web 节点和计算节点运行，请备份 **AppSettings.json** 文件，以防万一。 应用 SQL Server 2017 CU13 或更高版本会修改此文件，因此你可能需要一个备份副本来保留原始版本。
 
-4. 在连接 Internet 的计算机上，从 [Microsoft SQL Server 的最新更新](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)下载你的版本的最新累积更新。
+4. 在连接 Internet 的计算机上，从 [Microsoft SQL Server 的最新更新](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)下载你的版本的最新累积更新。
 
 5. 下载最新的累积更新。 它是一个可执行文件。
 
@@ -215,7 +215,7 @@ SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 
     }
     ```
 
-9. [运行管理 CLI 实用工具](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)以重新启动 Web 节点和计算节点。 有关步骤和语法，请参阅[监视、启动和停止 Web 节点与计算节点](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)。
+9. [运行管理 CLI 实用工具](/machine-learning-server/operationalize/configure-admin-cli-launch)以重新启动 Web 节点和计算节点。 有关步骤和语法，请参阅[监视、启动和停止 Web 节点与计算节点](/machine-learning-server/operationalize/configure-admin-cli-stop-start)。
 
 ## <a name="development-tools"></a>开发工具
 

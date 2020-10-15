@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee55a195e449b333fd2d0f71f8426ab2cf73928d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 7c09057dab83f8aedf05256245afed845b0153f6
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759757"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035958"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 环境
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,6 +34,5 @@ ms.locfileid: "88759757"
 [解决方案资源管理器](../ssms/solution/solution-explorer.md)  
 介绍解决方案资源管理器，该用户界面提供了项目及其文件的结构化视图，并可随时访问管理项目和文件的命令。  
   
-[解决方案资源管理器源代码管理](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
+[解决方案资源管理器源代码管理](./solution/solution-explorer.md)  
 说明 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 与源代码管理产品的集成方式。  
-  

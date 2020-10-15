@@ -10,19 +10,19 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45965ac8d40496fb2cd18c576ca6bb1228ce855b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510128"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988623"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>预览 SQL Server Reporting Services (SSRS) 中的报表
 
   在设计 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表时，在将报表发布到生产环境中之前可能需要查看该报表。 可使用多种方法查看该报表：在报表设计器中切换到预览模式、使用报表设计器中的预览窗口以及在测试环境中将报表发布到报表服务器。  
   
 > [!NOTE]  
-> 在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data  。 关闭报表设计器时，不会删除该文件。  
+> 在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data。 关闭报表设计器时，不会删除该文件。  
   
 ## <a name="preview-mode"></a>预览模式
 
@@ -53,5 +53,5 @@ ms.locfileid: "79510128"
 
  - [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
  - [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
- - [发布报表](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)
+ - [发布报表](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
  - [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)

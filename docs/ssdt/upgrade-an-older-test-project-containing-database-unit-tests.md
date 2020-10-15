@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c12a659e702765b4d69b58d5e1b4247d7aba3c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883394"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987783"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>升级包含数据库单元测试的较旧的测试项目
 
@@ -24,7 +24,7 @@ ms.locfileid: "85883394"
 > [!TIP]  
 > 如果你正在使用 Visual Studio 2010，则在将 SQL Server 单元测试添加到测试项目后，不应使用较旧数据库单元测试模板添加单元测试。 如果这样做，将需要再次转换项目，之后测试才能正确执行。  
   
-如果你有在低于 Visual Studio 2010 的版本中创建的测试数据库项目，在将项目升级到 SQL Server Data Tools 前，可以使用[如何：从早期版本的 Visual Studio 升级数据库单元测试](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)中的信息来将数据库项目升级到 Visual Studio 2010。  
+如果你有在低于 Visual Studio 2010 的版本中创建的测试数据库项目，在将项目升级到 SQL Server Data Tools 前，可以使用[如何：从早期版本的 Visual Studio 升级数据库单元测试](/previous-versions/visualstudio/visual-studio-2010/dd193412(v=vs.100))中的信息来将数据库项目升级到 Visual Studio 2010。  
   
 ### <a name="initiating-an-upgrade"></a>启动升级  
   
@@ -41,4 +41,3 @@ ms.locfileid: "85883394"
   
 ## <a name="see-also"></a>另请参阅  
 [使用 SQL Server 单元测试验证数据库代码](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  
