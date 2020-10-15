@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 77b8f5845f8fb3aea8712b6b63e54e10e62e2c6a
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227115"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081726"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "91227115"
 |**is_read_only**|**bit**|1 = 数据库为 READ_ONLY<br /> 0 = 数据库为 READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE 为 ON<br /> 0 = AUTO_CLOSE 为 OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK 为 ON<br /> 0 = AUTO_SHRINK 为 OFF|  
-|State|**tinyint**|**值**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = 正在恢复 <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = SUSPECT  <br /> 5 = 紧急 <sup>1</sup><br /> 6 = 脱机 <sup>1</sup><br /> 7 = 正在复制 <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **注意：** 对于 Always On 数据库，请查询 `database_state` `database_state_desc` [sys.databases dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)的或列。<br /><br /><sup>1</sup> **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
+|**state**|**tinyint**|**值**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = 正在恢复 <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = SUSPECT  <br /> 5 = 紧急 <sup>1</sup><br /> 6 = 脱机 <sup>1</sup><br /> 7 = 正在复制 <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **注意：** 对于 Always On 数据库，查询 `database_state` sys.dm_hadr_database_replica_states 的或 `database_state_desc` 列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /><sup>1</sup> **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
 |**state_desc**|**nvarchar(60)**|数据库状态的说明。 请参阅状态。|  
 |**is_in_standby**|**bit**|对于还原日志而言，数据库是只读的。|  
 |**is_cleanly_shutdown**|**bit**|1 = 数据库完全关闭；在启动时不需要恢复<br /> 0 = 数据库并未完全关闭；在启动时需要恢复|  
@@ -82,7 +82,7 @@ ms.locfileid: "91227115"
 |**is_db_chaining_on**|**bit**|1 = 跨数据库所有权链接为 ON<br /> 0 = 跨数据库所有权链接为 OFF|  
 |**is_parameterization_forced**|**bit**|1 = 参数化为 FORCED<br /> 0 = 参数化为 SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 数据库具有加密的主密钥<br /> 0 = 数据库没有加密的主密钥|  
-|**is_query_store_on**|**bit**|1 = 为此数据库启用查询存储。 查看 [sys.databases database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 以查看查询存储状态。<br /> 0 = 未启用查询存储<br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）  。|  
+|**is_query_store_on**|**bit**|1 = 为此数据库启用查询存储。 选中 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 查看查询存储状态。<br /> 0 = 未启用查询存储<br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）  。|  
 |is_published|**bit**|1 = 数据库为事务复制拓扑或快照复制拓扑中的发布数据库<br /> 0 = 不是发布数据库|  
 |**is_subscribed**|**bit**|未使用此列。 它将始终返回 0，而与数据库的订阅服务器状态无关。|  
 |**is_merge_published**|**bit**|1 = 数据库为合并复制拓扑中的发布数据库<br /> 0 = 不是合并复制拓扑中的发布数据库|  
@@ -93,8 +93,8 @@ ms.locfileid: "91227115"
 |**log_reuse_wait**|**tinyint**|事务日志空间的重复使用目前正在等待最后一个检查点的下列其中一项。 有关这些值的更多详细说明，请参阅 [事务日志](../../relational-databases/logs/the-transaction-log-sql-server.md)。<br /> **值**<br /> 0 = 无<br /> 1 = 检查点 (当数据库使用恢复模式并且具有内存优化数据文件组时，应看到 `log_reuse_wait` 该列指示 `checkpoint` 或 `xtp_checkpoint`) <sup>1</sup><br /> 2 = 日志备份 <sup>1</sup><br /> 3 = 活动备份或还原 <sup>1</sup><br /> 4 = 活动事务 <sup>1</sup><br /> 5 = 数据库镜像 <sup>1</sup><br /> 6 = 复制 <sup>1</sup><br /> 7 = 数据库快照创建 <sup>1</sup><br /> 8 = 日志扫描 <br /> 9 = Always On 可用性组的辅助副本正将此数据库的事务日志记录应用到相应的辅助数据库。 <sup>2</sup><br /> 9 = 其他 (暂时性) <sup>3</sup><br /> 10 = 仅供内部使用 <sup>2</sup><br /> 11 = 仅供内部使用 <sup>2</sup><br /> 12 = 仅供内部使用 <sup>2</sup><br /> 13 = 最早第<sup>2</sup>页<br /> 14 = 其他 <sup>2</sup><br />  16 = XTP_CHECKPOINT (当数据库使用恢复模式并且具有内存优化数据文件组时，应会看到 `log_reuse_wait` 列指示 `checkpoint` 或 `xtp_checkpoint`) <sup>4</sup><br /><br /><sup>1</sup> **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><sup>2</sup> **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><sup>3</sup> **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多 (，包括 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]) <br /><sup>4</sup> **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**log_reuse_wait_desc**|**nvarchar(60)**|日志空间的重复使用正在等待最后一个检查点的描述。|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION 为 ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION 为 OFF|  
-|**is_cdc_enabled**|**bit**|1 = 对数据库启用变更数据捕获。 有关详细信息，请参阅 [sys.databases&#41;sp_cdc_enable_db &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
-|**is_encrypted**|**bit**|指示是否对数据库进行加密 (反映使用子句) 上次设置的状态 `ALTER DATABASE SET ENCRYPTION` 。 可以是以下值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，将 `is_encrypted` 显示值0。 您可以使用 [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图来查看加密过程的状态。|  
+|**is_cdc_enabled**|**bit**|1 = 对数据库启用变更数据捕获。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.sp_cdc_enable_db ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
+|**is_encrypted**|**bit**|指示是否对数据库进行加密 (反映使用子句) 上次设置的状态 `ALTER DATABASE SET ENCRYPTION` 。 可以是以下值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，将 `is_encrypted` 显示值0。 可以通过使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图来查看加密过程的状态。|  
 |**is_honor_broker_priority_on**|**bit**|指示数据库是否采用会话优先级 (反映上次使用子句) 设置的状态 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 。 可以是以下值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库的 broker 优先级为 off。|  
 |**replica_id**|**uniqueidentifier**|数据库参与的可用性组（如果有）的本地 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性副本的唯一标识符。<br /> NULL = 数据库不是可用性组中的可用性副本的一部分。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|数据库参与到 Always On 可用性组（如果有）内的数据库的唯一标识符。 对于主副本上的此数据库以及已将数据库联接到可用性组的每个辅助副本， **group_database_id**都是相同的。<br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。<br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -123,7 +123,7 @@ ms.locfileid: "91227115"
 |**is_accelerated_database_recovery_on**|**bit**|指示是否启用加速数据库恢复 (ADR) 。<br />1 = 启用 ADR<br />0 = 禁用 ADR<br />适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_tempdb_spill_to_remote_store**|**bit**|指示是否启用 tempdb 溢出到远程存储。<br />1 = 已启用<br />0 = 已禁用<br />**适用**于： [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2。 尽管此功能已推出到所有区域，但请查看部署到实例的版本，以及最新的 [Azure Synapse 发行说明](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) 和 [Gen2 升级计划](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) 以了解功能可用性。|
 |**is_stale_page_detection_on**|**bit**|指示是否启用过时页检测。<br />1 = 已启用过时页检测<br />0 = 禁用陈旧页面检测<br />**适用**于： [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2。 尽管此功能已推出到所有区域，但请查看部署到实例的版本，以及最新的 [Azure Synapse 发行说明](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) 和 [Gen2 升级计划](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) 以了解功能可用性。|
-|**is_memory_optimized_enabled**|**bit**|指示是否为数据库启用了某些内存中功能（如 [混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)）。 不反映 [内存中 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或配置状态。 <br />1 = 启用了内存优化功能<br />0 = 禁用了内存优化的功能<br />适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_memory_optimized_enabled**|**bit**|指示是否为数据库启用了某些 In-Memory 功能，如 [混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 不反映 [内存中 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或配置状态。 <br />1 = 启用了内存优化功能<br />0 = 禁用了内存优化的功能<br />适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
   
 ## <a name="permissions"></a>权限
 
@@ -157,7 +157,7 @@ FROM sys.databases;
   
 ```sql
 -- Execute from the master database.  
-SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
+SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percent_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
@@ -179,6 +179,6 @@ FROM sys.databases AS a;
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
-- [sys. database_recovery_status &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [sys.database_recovery_status &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
 - [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
 - [sys.dm_database_copies（Azure SQL 数据库）](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
