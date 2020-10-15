@@ -16,12 +16,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adce5f66d608c4c359962ed35bbf5090cf323e53
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 0845fc6cbf14259c02e2fdbf1f30bcf450917f00
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902055"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039141"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>将文件扩展名与代码编辑器关联
 
@@ -58,6 +58,5 @@ ms.locfileid: "88902055"
 4.  在 **“编辑器”** 框中，单击要用于打开此文件类型的代码编辑器，单击 **“添加”**，再单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [Ssms 实用工具](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Ssms 实用工具](../ssms-utility.md)  
   

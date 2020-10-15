@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901269"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039045"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>启用、禁用和删除断点
 
@@ -29,7 +29,7 @@ ms.locfileid: "88901269"
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>“断点”窗口  
- **“断点”** 窗口列出了一些信息，例如断点处于哪个代码行。 在 **“断点”** 窗口中，还可以删除、禁用和启用断点。 有关 **“断点”** 窗口的详细信息，请参阅 [“断点” Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)。  
+ **“断点”** 窗口列出了一些信息，例如断点处于哪个代码行。 在 **“断点”** 窗口中，还可以删除、禁用和启用断点。 有关 **“断点”** 窗口的详细信息，请参阅 [“断点” Window](./transact-sql-debugger-breakpoints-window.md)。  
   
  禁用断点可以暂停断点执行，但会保留其定义，以便以后启用该断点。 删除断点将会永久删除此断点。 您必须切换一个新断点，以对该语句暂停执行。  
   
@@ -101,6 +101,5 @@ ms.locfileid: "88901269"
 -   在 **“断点”** 窗口的工具栏上，单击 **“删除所有断点”** 按钮。  
   
 ## <a name="see-also"></a>另请参阅  
- [切换断点](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [切换断点](./toggle-a-breakpoint.md)  
   

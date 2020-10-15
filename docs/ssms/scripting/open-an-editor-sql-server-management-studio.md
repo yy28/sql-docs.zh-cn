@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093467"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036480"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ ms.locfileid: "89093467"
 ### <a name="using-the-fileopen-menu"></a>使用“文件”/“打开”菜单  
  在 **“文件”** 菜单上，单击 **“打开”** ，然后浏览到一个文件并打开它。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 根据文件扩展名打开相应类型的编辑器，将该文件的内容复制到编辑器窗口中，如果需要，还会打开一个连接对话框。 例如，如果打开了一个扩展名为 .sql 的文件， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将打开一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，并将该 .sql 文件的内容复制到其中，然后打开一个连接对话框。 如果您打开的文件的扩展名不与特定编辑器相关联， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将打开一个文本编辑器窗口并将该文件的内容复制到其中。  
   
- 有关详细信息，请参阅 [将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+ 有关详细信息，请参阅 [将文件扩展名与代码编辑器关联](./associate-file-extensions-to-a-code-editor.md)。  
   
 ### <a name="using-the-toolbar"></a>使用工具栏  
  在 **“标准”** 工具栏上，单击下列按钮之一：  

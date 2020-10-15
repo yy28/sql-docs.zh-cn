@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 762d272661fd9bfaa61781391e42d3d9919d78c1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442913"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956954"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>结合利用 SQL 机器学习和 PREDICT T-SQL 函数的本机评分功能
 
@@ -71,7 +71,7 @@ ms.locfileid: "87442913"
 
 必须使用 [RevoScaleR](../r/ref-r-revoscaler.md) 或 [revoscalepy](../python/ref-py-revoscalepy.md) 包以及下面列出的某个支持的 rx 算法对该模型进行预定型。
 
-使用适用于 R 的 [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 和适用于 Python 的 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) 对模型进行序列化。 已对这些序列化函数进行了优化，以支持快速评分。
+使用适用于 R 的 [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) 和适用于 Python 的 [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) 对模型进行序列化。 已对这些序列化函数进行了优化，以支持快速评分。
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -81,19 +81,19 @@ Revoscalepy 和 RevoScaleR 支持以下算法。
 
 + revoscalepy 算法
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + RevoScaleR 算法
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
+  + [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
+  + [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](/r-server/r-reference/revoscaler/rxdtree)
+  + [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
 如果需要使用 MicrosoftML 或 microsoftml 中的算法，请[使用 sp_rxPredict 实时评分](../predictions/real-time-scoring.md)。
 
@@ -210,7 +210,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> 请确保使用 RevoScaleR 的 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 函数保存模型。 标准 R `serialize` 函数无法生成所需格式。
+> 请确保使用 RevoScaleR 的 [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) 函数保存模型。 标准 R `serialize` 函数无法生成所需格式。
 
 可以运行如下语句，以二进制格式查看存储的模型：
 

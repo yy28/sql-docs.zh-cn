@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b317c09026eb6baa0e9d0f8f2957c7c7c717af55
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179988"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956568"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能：结果和资源
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -357,19 +357,19 @@ RevoScaleR 和 MicrosoftML 包都用于在涉及大型数据集的复杂 R 解�
 
 + [如何确定 64 位版本 Windows 的合适页面文件大小](https://support.microsoft.com/kb/2860880)
 
-+ [了解 NUMA](https://technet.microsoft.com/library/ms178144.aspx)
++ [了解 NUMA](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [SQL Server 如何支持 NUMA](https://technet.microsoft.com/library/ms180954.aspx)
++ [SQL Server 如何支持 NUMA](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### <a name="learn-about-sql-server-optimizations"></a>了解 SQL Server 优化
 
 + [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [内存优化表简介](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [内存优化表简介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ [演示：内存中 OLTP 的性能改进](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [演示：内存中 OLTP 的性能改进](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [Data compression](../../relational-databases/data-compression/data-compression.md)（数据压缩）
 
@@ -383,7 +383,7 @@ RevoScaleR 和 MicrosoftML 包都用于在涉及大型数据集的复杂 R 解�
 
 + [资源调控器](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Resource Governor 简介](https://technet.microsoft.com/library/bb895232.aspx)
++ [Resource Governor 简介](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [配置 Resource Governor 的示例](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -391,7 +391,7 @@ RevoScaleR 和 MicrosoftML 包都用于在涉及大型数据集的复杂 R 解�
 
 + [DISKSPD 存储负载生成器/性能测试工具](https://github.com/microsoft/diskspd)
 
-+ [FSUtil 实用工具参考](https://technet.microsoft.com/library/cc753059.aspx)
++ [FSUtil 实用工具参考](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))
 
 
 ## <a name="other-articles-in-this-series"></a>本系列中的其他文章

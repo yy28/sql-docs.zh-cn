@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882916"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987933"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
 
@@ -40,7 +40,7 @@ ms.locfileid: "85882916"
 当某个单元测试在存储过程中检测到错误后，您需要更正该错误，然后重新运行测试。  
   
 ## <a name="prerequisites"></a>先决条件  
-若要完成本演练，您必须能够连接到有权在其上创建和部署数据库的数据库服务器（或 LocalDB 数据库）。 有关详细信息，请参阅 [执行 Visual Studio 的数据库功能所需的权限](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
+若要完成本演练，您必须能够连接到有权在其上创建和部署数据库的数据库服务器（或 LocalDB 数据库）。 有关详细信息，请参阅 [执行 Visual Studio 的数据库功能所需的权限](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100))。  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>创建包含数据库架构的脚本  
   
@@ -992,4 +992,3 @@ ms.locfileid: "85882916"
 [使用 SQL Server 单元测试验证数据库代码](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [如何：创建空的 SQL Server 单元测试](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

@@ -9,12 +9,12 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 02fe62db4f59916f5b97624c4b4560a33738d761
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7940de563ab3b5dbee0fe59fb93f1dfe2d02ce3b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454339"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988253"
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database 扩展事件
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88454339"
 
 Stretch Database 提供了一系列扩展事件以进行故障排除。  
   
-有关详细信息，请参阅 [扩展事件](../../relational-databases/extended-events/extended-events.md)。 有关如何启动扩展事件会话进行故障排除的详细信息，请参阅 [创建扩展事件会话](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
+有关详细信息，请参阅 [扩展事件](../../relational-databases/extended-events/extended-events.md)。 有关如何启动扩展事件会话进行故障排除的详细信息，请参阅 [创建扩展事件会话](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))  
   
 ## <a name="list-of-extended-events-for-stretch-database"></a>Stretch Database 扩展事件列表  
   
@@ -82,5 +82,4 @@ stretch_table_validation_error|报告用户启用延伸时表验证完成
 stretch_unprovision_table_start|报告延伸表取消设置开始  
   
 ## <a name="see-also"></a>另请参阅  
-[延伸数据库的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[延伸数据库的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)

@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370835"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037610"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>创建中央管理服务器和服务器组
 
@@ -65,7 +65,7 @@ ms.locfileid: "88370835"
   
 4.  在 **“已注册的服务器”** 中，输入服务器名称和可选说明。  
   
-5.  在“连接属性”**** 选项卡中，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)。  
+5.  在“连接属性”**** 选项卡中，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](../f1-help/connect-to-server-connection-properties-page-database-engine.md)。  
   
 6.  单击 **“测试”**，对连接进行测试。  
   
@@ -79,13 +79,12 @@ ms.locfileid: "88370835"
   
 3.  在“已注册的服务器”**** 中，右键单击服务器组，然后单击“新建服务器注册”****。  
   
-4.  在新服务器注册中，选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[创建新的已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md). 根据需要添加更多服务器。  
+4.  在新服务器注册中，选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[创建新的已注册的服务器 (SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md). 根据需要添加更多服务器。  
   
 #### <a name="to-execute-queries-against-several-configuration-targets-at-the-same-time"></a>同时对多个配置目标执行查询  
   
--   在创建中央管理服务器、一个或多个服务器组以及一个或多个已注册的服务器后，您可以同时对整个组执行查询。 有关如何同时对服务器组中的服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的详细信息，请参阅[同时对多个服务器执行语句 (SQL Server Management Studio)](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)。  
+-   在创建中央管理服务器、一个或多个服务器组以及一个或多个已注册的服务器后，您可以同时对整个组执行查询。 有关如何同时对服务器组中的服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的详细信息，请参阅[同时对多个服务器执行语句 (SQL Server Management Studio)](./execute-statements-against-multiple-servers-simultaneously.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用中央管理服务器管理多台服务器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

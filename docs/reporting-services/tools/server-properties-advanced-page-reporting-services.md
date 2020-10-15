@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 9d5132ad1ea115e051a4c9d4ba898aa53ddeb98a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89282391"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988738"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>服务器属性高级页 - Power BI 报表服务器和 Reporting Services
 
@@ -82,7 +82,7 @@ ms.locfileid: "89282391"
 
 #### <a name="setting-the-customheaders-property"></a>设置 CustomHeaders 属性
 
-- 可以使用将 CustomHeaders 属性作为参数进行传递的 [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP 终结点来设置该属性。
+- 可以使用将 CustomHeaders 属性作为参数进行传递的 [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP 终结点来设置该属性。
 - 可以使用 REST 终结点 [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties)：`/System/Properties` 传递 CustomHeaders 属性
 
 #### <a name="example"></a>示例

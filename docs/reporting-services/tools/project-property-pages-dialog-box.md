@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9a3be836ba4df9bcb4ef6f8b6ca24caa5c7a67bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7935ed0f792293eab2f3f9afa3ac71a1ecf0faf9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909996"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988579"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
 
@@ -83,7 +83,7 @@ ms.locfileid: "86909996"
 
 ## <a name="next-steps"></a>后续步骤
 
-[发布报表](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[发布报表](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))   
 [将报表发布到 SharePoint 库](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
 [设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [报表设计器的 F1 帮助](../../reporting-services/tools/report-designer-f1-help.md)  

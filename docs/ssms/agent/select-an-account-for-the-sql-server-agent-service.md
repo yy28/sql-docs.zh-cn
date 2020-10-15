@@ -23,19 +23,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0bab74ab5bbd51099ef8d38b7ad8471e1d7fee55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bcfa24368b913258b1e5538bae6c21da7330450
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88318453"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037810"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务选择一个帐户，可选帐户如下：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "88318453"
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：针对多服务器管理使用非管理帐户  
 目标服务器可能无法登记到主服务器，并出现以下错误信息：“登记操作失败”。  
   
-若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)。  
+若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：针对多服务器管理使用本地系统帐户  
 仅当主服务器和目标服务器位于同一台计算机中，并在本地系统帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务时，才支持多服务器管理。 如果使用此配置，则在将目标服务器登记到主服务器时返回以下消息：  
@@ -120,13 +120,12 @@ ms.locfileid: "88318453"
   
 **指定 SQL Server 代理的邮件配置文件**  
   
--   [如何：将 SQL Server 代理邮件配置为使用数据库邮件](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [如何：将 SQL Server 代理邮件配置为使用数据库邮件](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 > [!NOTE]  
 > 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以指定启动操作系统时必须启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  
   
 ## <a name="see-also"></a>另请参阅  
 [设置 Windows 服务帐户](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
-[使用 SQL 计算机管理器管理服务](https://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[使用 SQL 计算机管理器管理服务](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)  
 [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
-  

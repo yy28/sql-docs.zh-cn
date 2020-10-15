@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894026"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985073"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
 
@@ -56,12 +56,12 @@ ms.locfileid: "85894026"
   
 |**类**|**方法/属性**|**说明**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|用于查询对象的模型，并且是模型 API 的主入口点。 只能查询顶级类型，如表或视图 - 诸如列这样的类型只能通过遍历模型来查找。 如果未指定 ModelTypeClass 筛选器，则将返回所有顶级类型。|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|查找与当前 TSqlObject 引用的元素的关系。 例如，对于表，这将返回类似表的列的对象。 在此情况下，ModelRelationshipClass 筛选器可用于指定要查询的确切关系（例如，使用“Table.Columns”筛选器将确保仅返回列）。<br /><br />有多种类似的方法，如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 有关详细信息，请参阅 API 文档。|  
+|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)|GetObjects()|用于查询对象的模型，并且是模型 API 的主入口点。 只能查询顶级类型，如表或视图 - 诸如列这样的类型只能通过遍历模型来查找。 如果未指定 ModelTypeClass 筛选器，则将返回所有顶级类型。|  
+|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|GetReferencedRelationshipInstances()|查找与当前 TSqlObject 引用的元素的关系。 例如，对于表，这将返回类似表的列的对象。 在此情况下，ModelRelationshipClass 筛选器可用于指定要查询的确切关系（例如，使用“Table.Columns”筛选器将确保仅返回列）。<br /><br />有多种类似的方法，如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 有关详细信息，请参阅 API 文档。|  
   
 **唯一标识你的参与者**  
   
-在生成过程中，将从标准扩展目录中加载自定义参与者。 生成参与者由 [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 属性标识。 必须使用该属性才能发现参与者。 此属性应与下面类似：  
+在生成过程中，将从标准扩展目录中加载自定义参与者。 生成参与者由 [ExportBuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute) 属性标识。 必须使用该属性才能发现参与者。 此属性应与下面类似：  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ ms.locfileid: "85894026"
   
 -   创建类库项目并添加所需的引用。  
   
--   定义从 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 继承的名为 ModelStatistics 的类。  
+-   定义从 [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor) 继承的名为 ModelStatistics 的类。  
   
 -   重写 OnExecute 方法。  
   
@@ -594,4 +594,3 @@ Relationships
 ## <a name="see-also"></a>另请参阅  
 [使用生成参与者和部署参与者来自定义数据库生成和部署](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [演练：扩展数据库项目部署以分析部署计划](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

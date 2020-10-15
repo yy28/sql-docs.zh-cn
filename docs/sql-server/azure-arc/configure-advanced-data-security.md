@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a51ec53b5b5e928bd19dd66cb1ac6a8da162e817
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990370"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988023"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>为已启用 Azure Arc 的 SQL Server 实例配置高级数据安全
 
@@ -77,7 +77,7 @@ ms.locfileid: "90990370"
 
    ![漏洞报告](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. 单击任意安全警报，了解完整的详细信息并进一步了解 [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview) 中的攻击。 下图是暴力攻击警报的示例。
+1. 单击任意安全警报，了解完整的详细信息并进一步了解 [Azure Sentinel](/azure/sentinel/overview) 中的攻击。 下图是暴力攻击警报的示例。
 
    ![暴力攻击警报](media/configure-advanced-data-security/brute-force-alert.png)
 

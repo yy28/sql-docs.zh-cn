@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179986"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956571"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R 服务性能 - 数据优化
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -131,19 +131,19 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 许多 RevoScaleR 算法都支持用于控制已定型模型生成方式的参数。 尽管模型的精确性和正确性非常重要，但算法的性能也同样重要。 若要在精确性和定型时间之间获得正确的平衡，可以通过修改参数来提高计算速度。在许多情况下，可以在不降低精确性和正确性的前提下提高性能。
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree` 支持 `maxDepth` 参数，该参数控制决策树的深度。 由于增大 `maxDepth` 可能会降低性能，因此，必须分析增大深度带来的好处与降低性能的好处，这点非常重要。
 
     还可通过调整 `maxNumBins``maxDepth`、`maxComplete` 和 `maxSurrogate` 的参数来控制时间复杂性与预测准确性之间的平衡。 将深度增大到 10 或 15 以上可能会使计算开销变得极高。
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     如果公式中的第一个因变量是因子变量，请尝试使用 `cube` 参数。
     
     如果 `cube` 设置为 `TRUE`，将使用分块求逆执行回归，与标准的回归计算相比，这可能会提高速度，减少内存用量。 如果公式中有大量的变量，性能提升可能非常明显。
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     如果第一个因变量是因子变量，则使用 `cube` 参数。
     
@@ -153,31 +153,31 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + 支持文章：[rxDForest 和 rxDTree 的性能优化选项](https://support.microsoft.com/kb/3104235)
 
-+ 控制模型在提升树模型中的拟合方法：[使用随机梯度提升来估算模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ 控制模型在提升树模型中的拟合方法：[使用随机梯度提升来估算模型](/r-server/r/how-to-revoscaler-boosting)
 
-+ RevoScaleR 如何移动和处理数据的概述：[在 ScaleR 中编写自定义分块算法](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ RevoScaleR 如何移动和处理数据的概述：[在 ScaleR 中编写自定义分块算法](/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ RevoScaleR 的编程模型：[管理 RevoScaleR 中的线程](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ RevoScaleR 的编程模型：[管理 RevoScaleR 中的线程](/r-server/r/how-to-developer-manage-threads)
 
-+ [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest) 的函数参考
++ [rxDForest](/r-server/r-reference/revoscaler/rxdforest) 的函数参考
 
-+ [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees) 的函数参考
++ [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees) 的函数参考
 
 ### <a name="use-microsoftml"></a>使用 MicrosoftML
 
 另外，你也可查看新的“MicrosoftML”包，该包提供了可缩放的机器学习算法，这种算法可以使用 RevoScaleR 提供的计算上下文和转换  。
 
-+ [MicrosoftML 入门](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [MicrosoftML 入门](/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [如何选择 MicrosoftML 算法](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [如何选择 MicrosoftML 算法](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
 ### <a name="operationalize-a-solution-using-microsoft-r-server"></a>使用 Microsoft R Server 操作解决方案
 
-如果你的方案涉及使用存储模型或在应用程序中集成机器学习进行快速预测，则可以使用 Microsoft R Server（以前称为 DeployR）中的[操作化](https://docs.microsoft.com/r-server/what-is-operationalization)功能。
+如果你的方案涉及使用存储模型或在应用程序中集成机器学习进行快速预测，则可以使用 Microsoft R Server（以前称为 DeployR）中的[操作化](/r-server/what-is-operationalization)功能。
 
-+ 数据科研人员可使用 [mrsdeploy 包](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)来与其他计算机共享 R 代码，并在 Web、桌面、移动和仪表板应用程序中集成 R 分析  ：[如何在 R Server 中发布和管理 R web 服务](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ 数据科研人员可使用 [mrsdeploy 包](/r-server/r-reference/mrsdeploy/mrsdeploy-package)来与其他计算机共享 R 代码，并在 Web、桌面、移动和仪表板应用程序中集成 R 分析  ：[如何在 R Server 中发布和管理 R web 服务](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ 管理员可以了解如何管理包、监视 web 节点和计算节点以及控制 R 作业的安全性  ：[如何与 R 交互并使用 Web 服务](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ 管理员可以了解如何管理包、监视 web 节点和计算节点以及控制 R 作业的安全性  ：[如何与 R 交互并使用 Web 服务](/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>本系列文章
 

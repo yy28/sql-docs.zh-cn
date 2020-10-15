@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e6744d8296272dab3b8c774f57e2d60e3ac5858
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: eca7c941bbf64c0e9f159c868e35413415b18136
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901497"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036200"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 断点
 
@@ -39,15 +39,14 @@ ms.locfileid: "88901497"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|说明如何指定想要调试器在其上暂停的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|[切换断点](../../relational-databases/scripting/toggle-a-breakpoint.md)|  
-|说明如何暂时停用一个断点，并在以后将其重新激活。 还介绍了如何删除断点。|[启用、禁用和删除断点](../../relational-databases/scripting/enable-disable-and-delete-breakpoints.md)|  
-|说明如何指定一个条件，该条件定义断点是否基于指定 Transact-SQL 表达式的计算结果而中断。|[指定断点条件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
-|说明如何指定一个命中计数，该命中计数仅在包含断点的语句已执行了指定次数时才会导致断点中断。|[指定命中计数](../../relational-databases/scripting/specify-a-hit-count.md)|  
-|说明如何指定一个筛选器，该筛选器使断点仅对于指定的进程或线程才会中断。|[指定断点筛选器](../../relational-databases/scripting/specify-a-breakpoint-filter.md)|  
-|说明如何指定一个“命中条件”操作，该“命中条件”  操作是一种在执行断点语句时执行的自定义操作。 示例将打印一条消息。|[指定断点操作](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
-|说明如何编辑断点的位置。|[编辑断点位置](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
+|说明如何指定想要调试器在其上暂停的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|[切换断点](./toggle-a-breakpoint.md)|  
+|说明如何暂时停用一个断点，并在以后将其重新激活。 还介绍了如何删除断点。|[启用、禁用和删除断点](./enable-disable-and-delete-breakpoints.md)|  
+|说明如何指定一个条件，该条件定义断点是否基于指定 Transact-SQL 表达式的计算结果而中断。|[指定断点条件](./specify-a-breakpoint-condition.md)|  
+|说明如何指定一个命中计数，该命中计数仅在包含断点的语句已执行了指定次数时才会导致断点中断。|[指定命中计数](./specify-a-hit-count.md)|  
+|说明如何指定一个筛选器，该筛选器使断点仅对于指定的进程或线程才会中断。|[指定断点筛选器](./specify-a-breakpoint-filter.md)|  
+|说明如何指定一个“命中条件”操作，该“命中条件”  操作是一种在执行断点语句时执行的自定义操作。 示例将打印一条消息。|[指定断点操作](./specify-a-breakpoint-action.md)|  
+|说明如何编辑断点的位置。|[编辑断点位置](./edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)  
-  
+ [Transact-SQL 调试器信息](./transact-sql-debugger-information.md)  
   

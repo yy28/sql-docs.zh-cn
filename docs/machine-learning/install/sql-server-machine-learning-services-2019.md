@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30097342700a9daccb6107f5fafe9e5acef3e225
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4a4f32c73d1fdf0cd47caaa031321eaa0ef52092
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179230"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956738"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上的 SQL Server 2019：机器学习服务的隔离更改
 [!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "88179230"
 
 ## <a name="changes-to-isolation-mechanism"></a>隔离机制的更改
 
-在 Windows 上，SQL Server 2019 安装程序更改了外部进程的隔离机制。 此更改将本地工作线程帐户替换为 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)，这是用于 Windows 上运行的客户端应用程序的隔离技术。 
+在 Windows 上，SQL Server 2019 安装程序更改了外部进程的隔离机制。 此更改将本地工作线程帐户替换为 [AppContainer](/windows/desktop/secauthz/appcontainer-isolation)，这是用于 Windows 上运行的客户端应用程序的隔离技术。 
 
 修改后，管理员没有特定的操作项。 在新的或已升级的服务器上，从 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行的所有外部脚本和代码都会自动遵循新的隔离模型。 
 
@@ -39,7 +39,7 @@ ms.locfileid: "88179230"
 
 在以前的版本中，SQLRUserGroup 包含一个用于隔离和运行外部进程的本地 Windows 用户帐户池 (MSSQLSERVER00-MSSQLSERVER20)  。 需要运行外部进程时，SQL Server Launchpad 服务将获取一个可用帐户，并使用该帐户运行进程。 
 
-在 SQL Server 2019 中，安装程序不再创建本地工作线程帐户。 而是通过 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 来实现隔离。 在运行时，如果在存储过程或查询中检测到嵌入式脚本或代码，SQL Server 会调用 Launchpad，并请求提供特定于扩展的启动程序。 Launchpad 在进程中以标识调用相应的运行时环境，并实例化 AppContainer 以将其包含在内。 此更改十分有用，因为不再需要本地帐户和密码管理。 此外，在禁止本地用户帐户的安装上，不再依赖本地用户帐户意味着现在就可使用此功能。
+在 SQL Server 2019 中，安装程序不再创建本地工作线程帐户。 而是通过 [AppContainer](/windows/desktop/secauthz/appcontainer-isolation) 来实现隔离。 在运行时，如果在存储过程或查询中检测到嵌入式脚本或代码，SQL Server 会调用 Launchpad，并请求提供特定于扩展的启动程序。 Launchpad 在进程中以标识调用相应的运行时环境，并实例化 AppContainer 以将其包含在内。 此更改十分有用，因为不再需要本地帐户和密码管理。 此外，在禁止本地用户帐户的安装上，不再依赖本地用户帐户意味着现在就可使用此功能。
 
 因为由 SQL Server 实现，所以 AppContainer 是一种内部机制。 尽管你不会在进程监视器中看到 AppContainer 的物理证据，但是可以在出站防火墙规则中找到它们，这些规则是由安装程序创建的，用于防止进程进行网络调用。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e60acfeb4f8a785fa55ee8df70003b9b8b42f13b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b523b792889c21a0b1d00ea3ab3ea3ac6fbf2aa
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114637"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988383"
 ---
 # <a name="remove-a-failover-cluster-instance-setup"></a>删除故障转移群集实例（安装程序）
 
@@ -39,7 +39,7 @@ ms.locfileid: "91114637"
   
 -   如果卸载具有多个 SQL IP 群集资源的故障转移群集，则必须使用故障转移群集管理器或 PowerShell 删除额外的 SQL IP 资源。  
   
- 有关命令提示符语法的信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+ 有关命令提示符语法的信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ### <a name="to-uninstall-a-ssnoversion-failover-cluster-instance"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例
   
@@ -47,5 +47,4 @@ ms.locfileid: "91114637"
   
 ## <a name="see-also"></a>另请参阅  
  [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

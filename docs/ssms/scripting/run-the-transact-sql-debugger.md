@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901963"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036378"
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
 
@@ -42,7 +42,7 @@ ms.locfileid: "88901963"
 
 启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的要求如下：
 
-- 如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器连接到其他计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则必须配置调试器进行远程调试。 有关详细信息，请参阅 [运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。
+- 如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器连接到其他计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则必须配置调试器进行远程调试。 有关详细信息，请参阅 [运行 TSQL 调试器之前配置防火墙规则](./configure-firewall-rules-before-running-the-tsql-debugger.md)。
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 必须在作为 sysadmin 固定服务器角色成员的 Windows 帐户下运行。
 
@@ -114,8 +114,8 @@ ms.locfileid: "88901963"
   
 ## <a name="see-also"></a>另请参阅
 
-- [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)
-- [逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [数据库引擎查询编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL 调试器](./transact-sql-debugger.md)
+- [逐句通过 Transact-SQL 代码](./step-through-transact-sql-code.md)
+- [Transact-SQL 调试器信息](./transact-sql-debugger-information.md)
+- [数据库引擎查询编辑器 (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)

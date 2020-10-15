@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662036"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038958"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中编写对象脚本
 
@@ -43,11 +43,11 @@ ms.locfileid: "91662036"
 
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
-* 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+* 安装 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
 * 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 * 下载 [AdventureWorks2016 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+此处提供在 SSMS 中还原数据库的说明：[还原数据库](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。 
 
 ## <a name="script-queries-from-the-gui"></a>从 GUI 编写查询脚本
 
@@ -146,7 +146,7 @@ ms.locfileid: "91662036"
    ![编写对象脚本](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > 如果为“要编写脚本的数据的类型”选项选择“架构和数据”，可以为数据库的数据编写脚本   。 但是，这对于大型数据库来说并不是理想之选。 它可能需要比 SSMS 分配更多的内存。 这个限制也适用于小型数据库。 如果要移动大型数据库的数据，请使用[导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
+   > 如果为“要编写脚本的数据的类型”选项选择“架构和数据”，可以为数据库的数据编写脚本   。 但是，这对于大型数据库来说并不是理想之选。 它可能需要比 SSMS 分配更多的内存。 这个限制也适用于小型数据库。 如果要移动大型数据库的数据，请使用[导入和导出向导](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
 6. 选择“确定”  ，然后选择“下一步”  。
 
@@ -199,7 +199,7 @@ ms.locfileid: "91662036"
 
 ## <a name="script-extended-events"></a>编写扩展事件脚本
 
-本部分介绍如何编写[扩展事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)脚本。
+本部分介绍如何编写[扩展事件](../../relational-databases/extended-events/extended-events.md)脚本。
 
 1. 连接到运行 SQL Server 的服务器。
 
@@ -226,7 +226,7 @@ ms.locfileid: "91662036"
 
 熟悉 SSMS 的最好方式是进行实践演练。 这些教程  和操作说明  文章可帮助你使用 SSMS 的各种功能。 这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
 
-* [连接到实例和查询实例](connect-query-sql-server.md)
+* [连接到实例和查询实例](../quickstarts/connect-query-sql-server.md)
 * [在 SSMS 中使用模板](../template/templates-ssms.md)
 * [SSMS 配置](ssms-configuration.md)
 * [使用 SSMS 的其他提示和技巧](ssms-tricks.md)

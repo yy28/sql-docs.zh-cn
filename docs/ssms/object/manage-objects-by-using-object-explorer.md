@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 974cf89ca255f42f088d9b271863c45f4294fbbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19caca02569f477570236eb2b71adceb388b1358
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491890"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037214"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用对象资源管理器管理对象
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88491890"
 对象资源管理器连接到服务器后，可以使用对象资源管理器的连接设置打开一个新的“代码编辑器”窗口。 若要打开一个新的“代码编辑器”窗口，请在对象资源管理器中右键单击服务器名称，然后单击“新建查询”****。 若要使用特定数据库打开“代码编辑器”窗口，请右键单击数据库名称，然后单击“新建查询”****。 打开 Analysis Services 服务器的新查询时，可以选择 DMX、MDX 或 XMLA 查询。  
   
 ### <a name="start-powershell"></a>启动 PowerShell  
-可通过右键单击对象资源管理器树中的大多数文件夹和对象并选择“启动 PowerShell”来启动 PowerShell 会话。 这将启动已启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支持的 PowerShell 会话，并将路径设置为在对象资源管理器中右键单击的对象。 然后，您可以在交互式 PowerShell 环境中输入 PowerShell 命令。 有关详细信息，请参阅 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+可通过右键单击对象资源管理器树中的大多数文件夹和对象并选择“启动 PowerShell”来启动 PowerShell 会话。 这将启动已启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支持的 PowerShell 会话，并将路径设置为在对象资源管理器中右键单击的对象。 然后，您可以在交互式 PowerShell 环境中输入 PowerShell 命令。 有关详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [对象资源管理器](../../ssms/object/object-explorer.md)  
@@ -61,4 +61,3 @@ ms.locfileid: "88491890"
 [从对象资源管理器连接到实例](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [对象资源管理器详细信息窗格](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)  
-  

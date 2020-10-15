@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 028f92e064b41d68e8c168f22faa479f1c29f559
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893828"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988173"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>解释 SQL Server 单元测试结果
 
@@ -23,18 +23,17 @@ ms.locfileid: "85893828"
   
 若要查看有关某个测试结果的详细信息，请在“测试结果”窗口中双击该测试结果以显示“测试结果详细信息”页。 有关测试结果的详细信息，请双击测试结果。  
   
-有关如何更改“测试结果”**** 窗口的显示的详细信息，请参阅[如何：在测试窗口中添加或移除列 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx)或[如何：在测试窗口中添加或移除列 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx)。  
+有关如何更改“测试结果”**** 窗口的显示的详细信息，请参阅[如何：在测试窗口中添加或移除列 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182508(v=vs.100))或[如何：在测试窗口中添加或移除列 (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182508(v=vs.110))。  
   
 ## <a name="storing-test-results"></a>存储测试结果  
-单元测试的结果将会自动存储在硬盘上文件扩展名为 .trx 的文件中。 .trx 文件是包含测试运行的详细信息的 XML 文件。 您可加载之前的测试运行的 .trx 文件以查看这些测试运行的结果或重新运行之前的测试。 有关详细信息，请参阅[操作说明：重新运行测试 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
+单元测试的结果将会自动存储在硬盘上文件扩展名为 .trx 的文件中。 .trx 文件是包含测试运行的详细信息的 XML 文件。 您可加载之前的测试运行的 .trx 文件以查看这些测试运行的结果或重新运行之前的测试。 有关详细信息，请参阅[操作说明：重新运行测试 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100))。  
   
 > [!NOTE]  
 > 不能远程运行单元测试。  
   
 如果团队使用 Visual Studio Team Foundation Server 团队项目来帮助管理团队工作，则还可将测试数据发布到称为“操作存储区”的 SQL Server 数据库。  
   
-有关如何保存测试结果、重用测试结果以及与团队共享测试结果的详细信息，请参阅[如何：在 Visual Studio 2010 中保存和打开测试结果](https://msdn.microsoft.com/library/ms404662(VS.100).aspx)或[如何：在 Visual Studio 2012 中保存和打开测试结果](https://msdn.microsoft.com/library/ms404662.aspx)。  
+有关如何保存测试结果、重用测试结果以及与团队共享测试结果的详细信息，请参阅[如何：在 Visual Studio 2010 中保存和打开测试结果](/previous-versions/visualstudio/visual-studio-2010/ms404662(v=vs.100))或[如何：在 Visual Studio 2012 中保存和打开测试结果](/previous-versions/ms404662(v=vs.140))。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  
-  

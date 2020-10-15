@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901342"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038998"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
 
@@ -25,7 +25,7 @@ ms.locfileid: "88901342"
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用“生成和发布脚本向导”为多个对象创建脚本  。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”** 菜单为单个对象或多个对象生成脚本。
 
-有关介绍如何使用 SQL Server Management Studio (SSMS) 编写各种对象的脚本的详细教程，请参阅[教程：在 SSMS 中编写脚本](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)。
+有关介绍如何使用 SQL Server Management Studio (SSMS) 编写各种对象的脚本的详细教程，请参阅[教程：在 SSMS 中编写脚本](../tutorials/scripting-ssms.md)。
 
 ## <a name="before-you-begin"></a>开始之前
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901342"
 
 ###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> 生成和发布脚本向导
 
-使用 **“生成和发布脚本向导”** 可为多个对象创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 此向导为数据库中的所有对象或所选对象子集生成脚本。 该向导具有许多用于您的脚本的选项，例如是否包括权限、排序规则和约束等。 有关使用向导的说明，请参阅 [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).
+使用 **“生成和发布脚本向导”** 可为多个对象创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 此向导为数据库中的所有对象或所选对象子集生成脚本。 该向导具有许多用于您的脚本的选项，例如是否包括权限、排序规则和约束等。 有关使用向导的说明，请参阅 [Generate and Publish Scripts Wizard](./generate-and-publish-scripts-wizard.md).
   
 ### <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> 对象资源管理器“编写脚本为”菜单
 

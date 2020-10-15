@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480380"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036118"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 调试器
 
@@ -47,7 +47,7 @@ ms.locfileid: "89480380"
 
     如果要调试一个存储过程或函数，则可单步执行模块。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 会打开一个由模块源代码填充的新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，将该窗口置于调试模式，并暂停对模块中第一个语句的执行。 然后，您就可以在模块代码中导航，例如通过设置断点或逐句通过代码。  
 
-有关如何通过调试器浏览代码的详细信息，请参阅 [Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
+有关如何通过调试器浏览代码的详细信息，请参阅 [Transact-SQL 代码](./step-through-transact-sql-code.md)。  
 
 ## <a name="viewing-debugger-information"></a>查看调试器信息
 
@@ -69,11 +69,11 @@ ms.locfileid: "89480380"
 
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何配置 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器以用于远程调试。|[运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|介绍如何启动、停止和控制调试器的操作。|[运行 Transact-SQL 调试器](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句通过代码。|[逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|介绍如何使用调试器查看 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据，例如参数、变量和系统信息。|[Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|介绍如何配置 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器以用于远程调试。|[运行 TSQL 调试器之前配置防火墙规则](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|介绍如何启动、停止和控制调试器的操作。|[运行 Transact-SQL 调试器](./run-the-transact-sql-debugger.md)|  
+|介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句通过代码。|[逐句通过 Transact-SQL 代码](./step-through-transact-sql-code.md)|  
+|介绍如何使用调试器查看 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据，例如参数、变量和系统信息。|[Transact-SQL 调试器信息](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>另请参阅
 
-[查询和文本编辑器 (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[查询和文本编辑器 (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

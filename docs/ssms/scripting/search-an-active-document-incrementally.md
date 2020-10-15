@@ -15,12 +15,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 390ffb66c98f2328b8bfb1807a1c6dc7f4a78def
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 6e28ed3ad28a47fba60a703882684a1625523675
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901950"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036405"
 ---
 # <a name="search-an-active-document-incrementally"></a>增量搜索活动文档
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +50,9 @@ ms.locfileid: "88901950"
 >  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [搜索和替换](../../relational-databases/scripting/search-and-replace.md)   
- [交互式搜索文档](../../relational-databases/scripting/search-documents-interactively.md)   
- [使用结果列表搜索文档](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [使用正则表达式搜索文本](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [搜索和替换](./search-and-replace.md)   
+ [交互式搜索文档](./search-documents-interactively.md)   
+ [使用结果列表搜索文档](./search-documents-using-results-lists.md)   
+ [使用通配符搜索文本](./search-text-with-wildcards.md)   
+ [使用正则表达式搜索文本](./search-text-with-regular-expressions.md)  
   

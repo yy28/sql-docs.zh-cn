@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227320"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988013"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>为启用了 Azure Arc 的 SQL Server 实例配置按需 SQL 评估
 
@@ -23,13 +23,13 @@ ms.locfileid: "91227320"
 
 * SQL Server 实例已连接到 Azure Arc。按照以下说明[将 SQL Server 实例载入已启用 Arc 的 SQL Server](connect.md)。
 
-* 在计算机上安装和配置 MMA 扩展。 按照以下说明[安装 Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma)。 有关详细信息，请参阅 [Log Analytics 代理](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent)。
+* 在计算机上安装和配置 MMA 扩展。 按照以下说明[安装 Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma)。 有关详细信息，请参阅 [Log Analytics 代理](/azure/azure-monitor/platform/log-analytics-agent)。
 
 * 你的 SQL Server 启用了 [TCP/IP 协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
 * 如果你正在操作 SQL Server 的命名实例，则 [SQL Server 浏览器](../../tools/configuration-manager/sql-server-browser-service.md)正在运行。
 
-* 你已查看[服务中心按需评估先决条件](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)处的 SQL Server 文档。
+* 你已查看[服务中心按需评估先决条件](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)处的 SQL Server 文档。
 
 ## <a name="enable-on-demand-sql-assessment"></a>启用按需 SQL 评估
 
@@ -75,6 +75,6 @@ Microsoft Monitoring Agent 每 15 分钟扫描一次工作文件夹，查找 new
 
 ## <a name="next-steps"></a>后续步骤
 
-查看[服务中心按需评估先决条件](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)处的 SQL Server 文档，以了解详细信息。
+查看[服务中心按需评估先决条件](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)处的 SQL Server 文档，以了解详细信息。
 
 若要获得对按需 SQL 评估的全面支持，需要一个顶级或统一支持订阅。 有关详细信息，请参阅 [Azure 顶级支持](https://azure.microsoft.com/support/plans/premier)。

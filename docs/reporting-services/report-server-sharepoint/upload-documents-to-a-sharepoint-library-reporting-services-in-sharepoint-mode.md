@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a7a9e0aaf57d3084e6be239cb8fedcdd3d2e9066
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 2af61cc504fe89a4a8992397df69816f411f353f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767337"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935491"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）
 
@@ -44,7 +44,7 @@ ms.locfileid: "83767337"
   
      如果报表定义使用共享数据源 (.rsds) 文件存储与外部数据源的连接信息，则可以同时上载 .rdl 和 .rsds 文件。 为此，请单击 **“上载多个文档”** ，指定这两个文件，然后单击 **“确定”** 。  
   
- 如果您上载的报表包含对共享数据源、报表模型或子报表的引用，则文件上载后这些引用将会断开。 有关如何重置引用的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 如果您上载的报表包含对共享数据源、报表模型或子报表的引用，则文件上载后这些引用将会断开。 有关如何重置引用的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](/previous-versions/sql/)。  
   
  上载报表后，它将在打开时按需运行，并从数据源检索实时数据。 您可以将报表配置为按计划检索数据或使用缓存数据。 有关详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   

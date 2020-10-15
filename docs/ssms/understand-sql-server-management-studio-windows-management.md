@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f7c34e9904cef3ce3719873aa907a7d06c74d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae810e74288610f0d0484501c24188ec69458376
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88315403"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035900"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>了解 SQL Server Management Studio Windows 管理
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,6 +46,5 @@ ms.locfileid: "88315403"
 > 当一个登录名（或包含的数据库用户）进行连接并经过身份验证后，该连接缓存有关该登录名的标识信息。 对于 Windows 身份验证登录，此标识信息包含有关 Windows 组中的成员身份的信息。 只要保持连接，该登录名的标识就保持已经过身份验证的状态。 若要在标识中强制进行更改（例如，重置密码或更改 Windows 组成员身份），则必须从身份验证机构（Windows 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]）注销，然后再次登录。 **sysadmin** 固定服务器角色的成员或任何使用 **ALTER ANY CONNECTION** 权限的登录名都可以使用 **KILL** 命令结束连接，并强制登录名重新连接。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以在打开与对象资源管理器和查询编辑器窗口之间的多个连接时重用连接信息。 关闭所有连接可强制重新连接。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[使用 SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [SQL Server Management Studio 环境](../ssms/the-sql-server-management-studio-environment.md)  
-  

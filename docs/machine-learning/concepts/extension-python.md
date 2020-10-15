@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9263d11f271249d7fa31b1a3f3af83a21c04c793
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173290"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956498"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的 Python 语言扩展
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -42,8 +42,8 @@ Microsoft 为并行和分布式工作负荷添加的 Python 包包含以下库�
 
 | 库 | 说明 |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象以及数据浏览、操作、转换和可视化。 它支持创建远程计算上下文以及各种可缩放的机器学习模型，例如 **rxLinMod**。 有关详细信息，请参阅 [revoscalepy 模块与 SQL Server](../python/ref-py-revoscalepy.md)。  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含针对速度和准确性进行了优化的机器学习算法，以及用于处理文本和图像的内联转换。 有关详细信息，请参阅 [microsoftml 模块与 SQL Server](../python/ref-py-microsoftml.md)。 |
+| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象以及数据浏览、操作、转换和可视化。 它支持创建远程计算上下文以及各种可缩放的机器学习模型，例如 **rxLinMod**。 有关详细信息，请参阅 [revoscalepy 模块与 SQL Server](../python/ref-py-revoscalepy.md)。  |
+| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含针对速度和准确性进行了优化的机器学习算法，以及用于处理文本和图像的内联转换。 有关详细信息，请参阅 [microsoftml 模块与 SQL Server](../python/ref-py-microsoftml.md)。 |
 
 Microsoftml 和 revoscalepy 紧密耦合；microsoftml 中使用的数据源定义为 revoscalepy 对象。 Revoscalepy 中的计算上下文限制传递到 microsoftml。 即，所有功能都可用于本地操作，但切换到远程计算上下文需要 RxInSqlServer。
 
@@ -102,7 +102,7 @@ Microsoftml 和 revoscalepy 紧密耦合；microsoftml 中使用的数据源定�
 ## <a name="next-steps"></a>后续步骤
 
 + [SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)
-+ [revoscalepy 函数参考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy 函数参考](/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server 中的扩展性框架](extensibility-framework.md)
 + [SQL Server 中的 R 和机器学习扩展](extension-r.md)
 + [获取 Python 包信息](../package-management/python-package-information.md)

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178664"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956982"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -26,7 +26,7 @@ ms.locfileid: "88178664"
 
 + 需要数据库引擎实例。 不能只安装 Python 或 R 功能，但可以将它们逐渐添加到现有实例。
 
-+ 为了实现业务连续性，机器学习服务支持 [Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 在每个节点上安装机器学习服务并配置包。
++ 为了实现业务连续性，机器学习服务支持 [Always On 可用性组](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 在每个节点上安装机器学习服务并配置包。
 
 + SQL Server 2017 中的 [Always On 故障转移群集实例 (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 不支持安装机器学习服务。 SQL Server 2019 及更高版本支持上述服务。
  
@@ -52,11 +52,11 @@ ms.locfileid: "88178664"
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2017 的版本和受支持的功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017)。
+有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2017 的版本和受支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2019 (15.x) 的版本和受支持的功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15)。
+有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2019 (15.x) 的版本和受支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。
 ::: moniker-end
 
 ## <a name="run-setup"></a>运行安装程序
@@ -147,7 +147,7 @@ ms.locfileid: "88178664"
 
    请注意配置文件存储路径 `..\Setup Bootstrap\Log` 下的文件夹位置。 安装完成后，可以在“摘要”文件中查看已安装的组件。
 
-1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。
 
 ::: moniker-end
 
@@ -165,7 +165,7 @@ ms.locfileid: "88178664"
 
    请注意配置文件存储路径 `..\Setup Bootstrap\Log` 下的文件夹位置。 安装完成后，可以在“摘要”文件中查看已安装的组件。
 
-4. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+4. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。
 
 ::: moniker-end
 
@@ -189,7 +189,7 @@ ms.locfileid: "88178664"
 1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
     > [!TIP]
-    > 可以从此页下载并安装相应的版本：[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+    > 可以从此页下载并安装相应的版本：[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
     > 
     > 还可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
   
@@ -287,7 +287,7 @@ ms.locfileid: "88178664"
 
 1. 开始使用已安装的基线实例：SQL Server 2017 初始版本
 
-2. 请转到累积更新列表：[Microsoft SQL Server 的最新更新](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+2. 请转到累积更新列表：[Microsoft SQL Server 的最新更新](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 3. 选择最新的累积更新。 自动下载并提取可执行文件。
 
@@ -311,7 +311,7 @@ ms.locfileid: "88178664"
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [为 SQLRUserGroup 创建登录名](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* [管理磁盘配额](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免外部脚本运行耗尽磁盘空间的任务
+* [管理磁盘配额](/windows/desktop/fileio/managing-disk-quotas)以避免外部脚本运行耗尽磁盘空间的任务
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 在 Windows 上的 SQL Server 2019 中，隔离机制已发生更改。 此机制会影响 SQLRUserGroup、防火墙规则、文件权限和默示身份验证。 有关详细信息，请参阅 [机器学习服务的隔离更改](sql-server-machine-learning-services-2019.md)。

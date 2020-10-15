@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 69fbb16e0671c14426fc550d61bdb929b64d06ab
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764931"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935521"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
 
@@ -35,7 +35,7 @@ ms.locfileid: "83764931"
 
 ## <a name="cmdlet-summary"></a>Cmdlet 摘要
 
- 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)** 。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序“数据库”的引用指的是由 Reporting Services 服务应用程序所创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
+ 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)** 。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序“数据库”的引用指的是由 Reporting Services 服务应用程序所创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "83764931"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 有关详细信息，请参阅 [使用 Windows PowerShell 管理 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx)。  
+ 有关详细信息，请参阅 [使用 Windows PowerShell 管理 SharePoint 2013](/powershell/module/sharepoint-server/)。  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>打开 SharePoint Management Shell 并运行 cmdlet
   
@@ -291,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>后续步骤
 
 [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[清单：使用 PowerShell 验证 Power Pivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
-[获取 SQL Server PowerShell 帮助](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[清单：使用 PowerShell 验证 Power Pivot for SharePoint](/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[获取 SQL Server PowerShell 帮助](../../powershell/sql-server-powershell.md)   
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 49cb6fddf2906583d64aa732d222a1d1a100e6c8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200294"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988591"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 终止支持选项 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88200294"
 - 升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前版本。
 - 购买[扩展安全更新订阅](https://www.microsoft.com/cloud-platform/extended-security-updates)。 
 - 将工作负载按原样迁移到 Azure 虚拟机，以便获取[免费扩展安全更新](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)。
-- 将工作负载迁移到 [Azure SQL 数据库服务](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)。 
+- 将工作负载迁移到 [Azure SQL 数据库服务](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)。 
 
 有关计划和自动化升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](https://www.microsoft.com/sql-server/sql-server-2005)和 [SQL Server 2008 终止支持](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)。  
 
@@ -241,7 +241,7 @@ ms.locfileid: "88200294"
 
 ### <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-对于新式、可伸缩、移动和 Web 应用程序（使用 JSON 数据并要求结合使用功能强大的查询和事务数据处理），请考虑使用 Azure Cosmos DB。 有关详细信息，请参阅 [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)。 有关导入数据的信息，请参阅[将数据导入到 Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/import-data/)。
+对于新式、可伸缩、移动和 Web 应用程序（使用 JSON 数据并要求结合使用功能强大的查询和事务数据处理），请考虑使用 Azure Cosmos DB。 有关详细信息，请参阅 [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)。 有关导入数据的信息，请参阅[将数据导入到 Cosmos DB](/azure/cosmos-db/import-data/)。
 
 Azure Cosmos DB 具有以下优点：
 - 已为你的文档编制索引，你可以使用熟悉的 SQL 语法来查询它们。
@@ -274,7 +274,7 @@ Azure 表存储具有以下优点：
 | [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
 
 > [!IMPORTANT]
 > 如果该表与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 生命周期页之间存在任何差异，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 生命周期将取代该表，因为该表将用作近似引用。  
@@ -286,5 +286,4 @@ Azure 表存储具有以下优点：
 [扩展安全更新 (ESU) 概述](sql-server-extended-security-updates.md)   
 [用于按原样迁移到 Azure 的免费扩展安全更新 (ESU)](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
 [SQL Server VM 概述](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
-[Azure SQL 数据库概述](/azure/sql-database/sql-database-technical-overview)    
-
+[Azure SQL 数据库概述](/azure/sql-database/sql-database-technical-overview)

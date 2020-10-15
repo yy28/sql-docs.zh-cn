@@ -14,7 +14,7 @@
       href: quickstart-sql-server.md
     - name: 连接并查询 Azure SQL 数据库
       href: quickstart-sql-database.md
-    - name: 连接并查询 Azure SQL 数据仓库
+    - name: 连接和查询 Azure Synapse Analytics
       href: quickstart-sql-dw.md
     - name: 连接和查询 PostgreSQL
       href: quickstart-postgres.md
@@ -130,7 +130,7 @@
       href: code-snippets.md
     - name: 资源管理器 Azure SQL 资源
       href: azure-resource-explorer.md
-    - name: 键盘快捷方式
+    - name: 键盘快捷键
       href: keyboard-shortcuts.md
     - name: 使用情况数据收集
       href: usage-data-collection.md

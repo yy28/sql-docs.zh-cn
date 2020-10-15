@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd7c686682a83b95e6053d60323fe1829a500752
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b3b36bfa75c39a4acc0c41c8dae5199b7973391
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88316183"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036048"
 ---
 # <a name="add-new-items-to-a-project"></a>向项目添加新项
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,6 @@ ms.locfileid: "88316183"
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  
-[将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[将文件扩展名与代码编辑器关联](../scripting/associate-file-extensions-to-a-code-editor.md)  
 [向项目中添加现有项](../../ssms/solution/add-existing-items-to-a-project.md)  
 [移除或删除项或项目](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

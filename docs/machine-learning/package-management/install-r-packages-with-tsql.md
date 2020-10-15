@@ -9,25 +9,25 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1c2860efa5b47d3f6b6209f152e7085094fabaf3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 00ead49bdc0aa14304b3c95f0bee51329f6ad163
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178956"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956658"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-SQL (CREATE EXTERNAL LIBRARY) 将 R 包安装在 SQL Server 上
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 本文介绍如何在启用了机器学习的 SQL Server 实例上安装新的 R 包。 有多种方法可供选择。 使用 T-SQL 最适用于不熟悉 R 的服务器管理员。
 
-使用 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 语句，可以将包或包集添加到实例或特定数据库，而无需直接运行 R 或 Python 代码。 但是，此方法需要准备好包以及额外的数据库权限。
+使用 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 语句，可以将包或包集添加到实例或特定数据库，而无需直接运行 R 或 Python 代码。 但是，此方法需要准备好包以及额外的数据库权限。
 
 + 所有包都必须作为本地压缩文件提供，而不是根据需要从 Internet 下载。
 
 + 必须按名称和版本标识所有依赖项，并将其包含在 zip 文件中。 如果所需的包不可用（包括下游包依赖项），则语句将失败。 
 
-+ 你必须是 db_owner 或在数据库角色中享有 CREATE EXTERNAL LIBRARY 权限。 有关详细信息，请参阅 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
++ 你必须是 db_owner 或在数据库角色中享有 CREATE EXTERNAL LIBRARY 权限。 有关详细信息，请参阅 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)。
 
 ## <a name="download-packages-in-archive-format"></a>下载存档格式的包
 
@@ -68,4 +68,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>另请参阅
 
 + [获取 R 包信息](r-package-information.md)
-+ [R 教程](../tutorials/sql-server-r-tutorials.md)
++ [R 教程](../tutorials/r-tutorials.md)

@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480075"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038915"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88480075"
 展开此项可显示剩余的属性。  
   
 **数据类型**  
-显示所选列的数据类型。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+显示所选列的数据类型。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 **标识增量**  
 显示标识列各后续行的“标识种子”**** 将增加的增量。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。）  
@@ -95,7 +95,7 @@ ms.locfileid: "88480075"
 显示列的数据类型是否允许空值。  
   
 **数据类型**  
-显示所选列的数据类型。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+显示所选列的数据类型。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 **默认值或绑定**  
 如果未为此列指定值，则显示此列的默认值。 下拉列表中包含了数据源中定义的所有全局默认值。 若要将该列绑定到某个全局默认值，请从下拉列表中进行选择。 另外，若要为该列创建默认约束，请直接以文本格式键入默认值。  
@@ -143,7 +143,7 @@ ms.locfileid: "88480075"
 指示用于对列进行索引的语言。  
   
 **统计语义**  
-选择是否为所选列启用统计语义索引。 有关详细信息，请参阅 [语义搜索占位符](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
+选择是否为所选列启用统计语义索引。 有关详细信息，请参阅 [语义搜索占位符](../../relational-databases/search/semantic-search-sql-server.md)。  
   
 如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将设置为 **“否”** 并且无法修改。 如果您在选择 **“语言”** 前为 **“统计语义”** 选项选择 **“是”**，则 **“语言”** 列中提供的语言将限制为存在语义语言模型支持的那些语言。  
   
@@ -188,4 +188,3 @@ ms.locfileid: "88480075"
   
 > [!NOTE]  
 > **varchar(max)** 数据类型的长度对于每一行都会有所不同。 sp_help 返回 (-1) 作为 **varchar(max)** 列的长度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示 -1 作为列大小。  
-  

@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 5708f31a580e5ba3373397d1d55a83edd4c93d3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 39991d0c69efe81bae92bb1de2d9ee9221245bf4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238197"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988060"
 ---
 # <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 和 2017：硬件和软件要求
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "87238197"
   
   
 > [!IMPORTANT]
-> 对于 PolyBase 功能还有其他硬件和软件要求。 有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)。  
+> 对于 PolyBase 功能还有其他硬件和软件要求。 有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/polybase-guide.md)。  
   
 
 
@@ -240,7 +240,7 @@ ms.locfileid: "87238197"
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前支持标准本机扇区大小为 512 字节和 4 KB 的磁盘驱动器。  扇区大小大于 4 KB 的硬盘在尝试存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件时可能会导致错误。  要详细了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的硬盘扇区大小支持，请参阅 [SQL Server 中的硬盘驱动器扇区大小支持边界](https://support.microsoft.com/kb/926930) 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装只支持使用本地磁盘安装 tempdb 文件。 确保为 tempdb 数据和日志文件指定的路径在所有群集节点上均有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。
 -   共享存储  
--   [存储空间直通 \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+-   [存储空间直通 \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 -   SMB 文件共享  
     - 无论是独立安装还是群集安装， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件均不支持 SMB 存储。 请改用直接连接的存储、存储区域网络或 S2D。 
     - SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [SMB 文件共享用作存储选项时安装 SQL Server](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
@@ -277,4 +277,3 @@ ms.locfileid: "87238197"
 ## <a name="next-steps"></a>后续步骤
 
 查看安装 SQL Server 的硬件和软件要求后，即可开始[规划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)或查看 [SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。
-

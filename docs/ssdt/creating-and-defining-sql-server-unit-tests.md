@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518747"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988213"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>创建和定义 SQL Server 单元测试
 
@@ -43,9 +43,8 @@ ms.locfileid: "85518747"
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  
 在创建 SQL Server 单元测试后，可以从“测试视图”窗口、SQL Server 单元测试设计器或通过使用 Team Foundation Build 来运行这些测试。  
   
-[场景：定义数据库单元测试的自定义测试条件](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[场景：定义数据库单元测试的自定义测试条件](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 您可以创建自定义测试条件来测试默认测试条件无法验证的行为。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用 SQL Server 单元测试验证数据库代码](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

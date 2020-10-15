@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 832b73c751a6c475afd75769c4cf18d8e2e609a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 164b825f2d896085d217e0bd7e87ac405511477c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418063"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038220"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>在目标服务器上设置加密选项
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 如果无法在主服务器和部分/所有目标服务器之间的传输层安全性 (TLS)（以前称为“安全套接字层 (SSL)”）加密通信中使用证书，但需要对它们之间的通道进行加密，请将目标服务器配置为使用所需的安全级别。  
   
@@ -45,5 +45,4 @@ ms.locfileid: "88418063"
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
-[如何：启用数据库引擎的加密连接（SQL Server 配置管理器）](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
-  
+[如何：启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  

@@ -16,12 +16,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97616d707849e94de995e29bda6b7853f6631d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: e7596e6ef216682ad66695b30712b3e77e2aa5ab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901927"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038991"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入外侧 Transact-SQL 代码段
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901927"
 ## <a name="inserting-surround-with-snippets"></a>插入外侧代码段  
  外侧代码段可以通过以下三种方式之一实现：键盘快捷键、“编辑”菜单和上下文菜单。  
   
- 插入代码段后，必须更改替换文本，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [完成 Transact-SQL 代码段](../../relational-databases/scripting/complete-transact-sql-snippets.md)。  
+ 插入代码段后，必须更改替换文本，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [完成 Transact-SQL 代码段](./complete-transact-sql-snippets.md)。  
   
 #### <a name="to-insert-a-surround-with-snippet"></a>插入外侧代码段  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901927"
 3.  使用鼠标或通过键入代码段名称并按 Tab 或 Enter 从列表中选择代码段名称（BEGIN、IF 或 WHILE）。  
   
 ## <a name="see-also"></a>另请参阅  
- [插入 Transact-SQL 代码片段](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
-  
+ [插入 Transact-SQL 代码片段](./insert-transact-sql-snippets.md)  
   

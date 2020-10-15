@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518817"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988691"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>如何：创建空的 SQL Server 单元测试
 
@@ -96,10 +96,9 @@ ms.locfileid: "85518817"
 -   添加测试条件或其他断言语句以验证脚本结果。  
   
 > [!NOTE]  
-> 无结论的测试条件是添加到每个测试中的默认条件。 包含此测试条件是为了指示尚未执行测试验证。 在您添加其他测试条件之后，请将此测试条件从测试中删除。 有关详细信息，请参阅[操作说明：向数据库单元测试添加测试条件](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
+> 无结论的测试条件是添加到每个测试中的默认条件。 包含此测试条件是为了指示尚未执行测试验证。 在您添加其他测试条件之后，请将此测试条件从测试中删除。 有关详细信息，请参阅[操作说明：向数据库单元测试添加测试条件](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100))。  
   
 ## <a name="see-also"></a>另请参阅  
 [如何：运行 SQL Server 单元测试](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[创建单元测试](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[创建单元测试](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

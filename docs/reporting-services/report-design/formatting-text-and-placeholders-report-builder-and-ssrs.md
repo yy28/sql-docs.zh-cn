@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e507c40fba6755a0a7a82e3047b2b9b44cbc66d
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: e50c5c3f239900ab1c477f1c9d49507b3b4a43e8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012655"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935340"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>设置文本和占位符的格式（报表生成器和 SSRS）
   文本框可以是数据区域中包含以下内容的报表项或独立单元：文本、计算字段、指向数据库中字段的指针或前面所有三项的组合。 您可以混合字体和颜色、添加加粗和倾斜样式以及使用段落样式（如对齐和悬挂缩进）。 可以设置整个文本框的格式，也可以设置文本框内特定文本、数字、表达式或字段的格式。  
@@ -44,7 +44,7 @@ ms.locfileid: "84012655"
   
 -   将 **“报表数据”** 窗格中的字段拖放到文本框中。 如果将表达式拖放到表体的任意其他位置，则将创建包含占位符的新文本框。 该占位符的值将为与已删除字段对应的字段表达式。  
   
--   右键单击文本框中的任意位置，并选择“插入占位符”。 在 **“占位符属性”** 对话框中，可以将表达式指定为占位符的值。 有关详细信息，请参阅 [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)。  
+-   右键单击文本框中的任意位置，并选择“插入占位符”。 在 **“占位符属性”** 对话框中，可以将表达式指定为占位符的值。 有关详细信息，请参阅 [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](./text-boxes-report-builder-and-ssrs.md)。  
   
 -   在文本框中键入任何简单或复杂表达式。 例如，如果在文本框中键入 **Name: [Name]** ，则 **[Name]** 文本将作为表示 `=Fields!Name.Value`表达式的占位符显示。  
   
@@ -74,8 +74,7 @@ ms.locfileid: "84012655"
  [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [“占位符属性”对话框 ->“常规”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [“占位符属性”对话框 ->“常规”（报表生成器和 SSRS）](./text-boxes-report-builder-and-ssrs.md)   
  [导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [文本框（报表生成器和 SSRS）](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
-  
   

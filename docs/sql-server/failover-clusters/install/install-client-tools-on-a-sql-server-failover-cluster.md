@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b62c15496df5ded2295c3b401d7870bc2aa3184b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: fd0050d606d27f27285e7ba1376dd32f13e40cae
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115379"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988399"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,12 +48,11 @@ ms.locfileid: "91115379"
   
 2.  若要只安装基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install Features=SSMS。 这将为 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]、sqlcmd 实用工具以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 提供程序安装 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 支持。  
   
-3.  若要安装完整的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install /Features=ADV_SSMS。 有关功能的参数值的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+3.  若要安装完整的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install /Features=ADV_SSMS。 有关功能的参数值的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ### <a name="uninstalling-ssnoversion-client-tools"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
  它们在“控制面板”的“添加或删除程序”中显示为 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** ，可从此处将其删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

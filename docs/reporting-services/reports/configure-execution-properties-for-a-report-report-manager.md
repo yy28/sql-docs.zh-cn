@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f30c3e123c80b9a16fd020e3126a3c40f366834
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b74b5437eb9df1cd51425929ffb70770595a69
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510168"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988385"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>配置报表的执行属性
   可以设置报表处理选项以指定何时为报表检索数据。 如果外部数据源按照特定的时间刷新（例如，每天或每周刷新数据仓库），并且您想要避免每当请求报表时对同一数据进行检索的开销，则为报表计划数据处理非常有用。 如果您想要控制外部数据库服务器上的处理负载，或者如果想要为必须使用相同数据集的多个用户提供一致的结果，则计划数据处理也很有用。 使用可变数据的按需运行报表每分钟都会生成不同的结果。 相反，报表快照则可用来针对包含同一时间点数据的其他报表或分析工具进行有效比较。  
@@ -31,7 +31,7 @@ ms.locfileid: "79510168"
   
 ## <a name="to-configure-report-processing-options"></a>配置报表处理选项  
   
-1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../web-portal-ssrs-native-mode.md)。  
   
 2.  导航到并打开要设置处理选项的报表。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "79510168"
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [“内容”页（报表管理器）](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [“内容”页（报表管理器）](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
  [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [“处理选项”属性页（报表管理器）](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
+ [“处理选项”属性页（报表管理器）](/previous-versions/sql/sql-server-2016/ms178821(v=sql.130))  
   
 ::: moniker-end
 

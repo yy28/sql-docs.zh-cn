@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a90f644aeaf17bd51c8963f355c9932c85da7c58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b758a04f81dffc31844af91933a544960f6ba2d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468408"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037516"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88468408"
   
 6.  网格列出了本地列及与其匹配的外部列。 您可以添加或删除表列或者更改映射。  
   
-7.  选择“确定”。  
+7.  选择 **“确定”** 。  
   
     此时将出现“外键关系”**** 对话框。 “选定的关系”**** 中显示了已创建的关系。  
   
@@ -50,6 +50,5 @@ ms.locfileid: "88468408"
   
 ## <a name="see-also"></a>另请参阅  
 [“表和列”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[使用约束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [使用数据库关系图中的表 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-  

@@ -19,12 +19,12 @@ ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 062c72f0a57807c42d03ec3b40c5ef04a24c2586
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b813ed75abfe3577ad7dc90accc7837d36024bd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417783"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038901"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>设计数据库关系图 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88417783"
   
 如果修改了某个表，但尚未保存该表，则表名末尾将显示一个星号 (*)，表示未保存更改。 有关保存修改后的表和关系图的详细信息，请参阅 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**行选择器** 可以通过单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键的信息，请参阅[使用键](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)。  
+**行选择器** 可以通过单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键的信息，请参阅[使用键](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
   
 **属性列** 属性列组仅在表的某些视图中可见。 您可以在五个不同视图中的任何一个视图中查看表，以帮助您管理关系图的大小和布局。  
   
@@ -73,4 +73,3 @@ ms.locfileid: "88417783"
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [使用数据库关系图中的表 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
 [使用关系图布局 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
-  

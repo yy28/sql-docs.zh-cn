@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 3363414382df2eb73a21dd32a9daa3a950c6907a
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990360"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035903"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>在 SQL Server Management Studio (SSMS) 崩溃后，获取诊断数据
 
@@ -28,7 +28,7 @@ ms.locfileid: "90990360"
 
 若要捕获诊断信息来排除 SSMS 崩溃或无响应故障，请按照以下步骤操作。
 
-1. 下载 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
+1. 下载 [ProcDump](/sysinternals/downloads/procdump)。
 
 2. 将下载内容解压缩到文件夹中。
 
@@ -62,7 +62,7 @@ ms.locfileid: "90990360"
 
 若要捕获诊断信息以排查 SSMS 引发的 OutOfMemoryException，请按照以下步骤操作。
 
-1. 下载 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
+1. 下载 [ProcDump](/sysinternals/downloads/procdump)。
 
 2. 将下载内容解压缩到文件夹中。
 

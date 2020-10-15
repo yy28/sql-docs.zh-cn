@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: e78e984dee92f925467db818caee4f49b4d3fabd
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860029"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956822"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 Python 和 R 脚本
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-有关如何扩展事件的详细信息，请参阅[扩展事件工具](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)。
+有关如何扩展事件的详细信息，请参阅[扩展事件工具](../../relational-databases/extended-events/extended-events-tools.md)。
 
 ## <a name="additional-events-specific-to-machine-learning-services"></a>特定于机器学习服务的其他事件
 
