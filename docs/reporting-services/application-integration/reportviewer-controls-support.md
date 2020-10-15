@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 06/03/2020
-ms.openlocfilehash: 43d1e84377f7d08718ec4452b6b3376c627064ba
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 087be959ea39ba9b223b7bd5ae0e3e343d90a594
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423191"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891477"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Report Viewer 当前分支版本支持
 
@@ -28,4 +28,4 @@ Microsoft Report Viewer 控件与遵循 Microsoft 现代[支持生命周期策�
 - [Windows 窗体](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/)
 - [ASP.Net Web 窗体](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
 
-有关 Report Viewer 控件的当前版本的详细信息，请参阅以下[博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2016/11/30/report-viewer-2016-control-update-now-available/)。
+有关 Report Viewer 控件的当前版本的详细信息，请参阅以下[博客](/archive/blogs/sqlrsteamblog/report-viewer-2016-control-update-now-available)。

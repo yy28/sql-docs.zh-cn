@@ -11,18 +11,18 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4d02c4130ae089ba7b625688b8e4c6c227cc1c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 532bbc5c8061a02e5e05ec56b5f6a1853f252d42
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498060"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890844"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示符处安装 Reporting Services 2016
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持从 SQL Server 安装程序进行命令行安装。 本主题包含特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的若干命令行安装示例。 有关可用于所有 SQL Server 组件的命令行选项的完整说明，请参阅[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 本主题不介绍用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的命令行选项。 有关该外接程序的命令行安装的信息，请参阅 [使用安装文件 rsSharePoint.msi 安装外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持从 SQL Server 安装程序进行命令行安装。 本主题包含特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的若干命令行安装示例。 有关可用于所有 SQL Server 组件的命令行选项的完整说明，请参阅[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。 本主题不介绍用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的命令行选项。 有关该外接程序的命令行安装的信息，请参阅 [使用安装文件 rsSharePoint.msi 安装外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)。
 
 ##  <a name="native-mode-reporting-services"></a><a name="bkmk_native_mode"></a> 本机模式 Reporting Services
 
@@ -87,6 +87,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [SysPrep 参数](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[从命令提示符安装 Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013#bkmk_install)  
+[从命令提示符安装 Power Pivot](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013#bkmk_install)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

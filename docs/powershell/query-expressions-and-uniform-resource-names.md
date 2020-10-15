@@ -1,10 +1,7 @@
 ---
 title: 查询表达式和统一资源名称 | Microsoft Docs
 description: 了解用于枚举对象模型层次结构中一个或多个对象的查询表达式，以及用于唯一地标识单个对象的统一资源名称 (URN)。
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714115"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081896"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
 
@@ -27,15 +27,11 @@ ms.locfileid: "88714115"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元使用与 XPath 表达式相似的两种类型的表达式。 查询表达式是指定一组条件的字符串，用于枚举对象模型层次结构中的一个或多个对象。 统一资源名称 (URN) 是一种特定类型的查询表达式字符串，用于唯一标识单个对象。  
 
-> [!NOTE]
-> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS 。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新。 最新的 PowerShell 模块是 SqlServer 模块。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能 。  
-> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer 模块。
-> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
-  
 ## <a name="syntax"></a>语法  
-  
-```  
+
+```powershell
   
 Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]  
   
@@ -50,48 +46,48 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | @DatePropertyName=datetime('DateString')  
  | is_null(@PropertyName)  
  | not(<PropertyExpression>)  
-  
 ```  
+
+## <a name="arguments"></a>自变量
+
+*Object*  
+指定在表达式字符串的节点表示的对象的类型。 每个对象表示那些 SMO 对象模型名称空间中的一个集合类：  
+
+<xref:Microsoft.SqlServer.Management.Smo>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Agent>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Broker>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Mail>  
+
+<xref:Microsoft.SqlServer.Management.Dmf>  
+
+<xref:Microsoft.SqlServer.Management.Facets>  
+
+<xref:Microsoft.SqlServer.Management.RegisteredServers>  
+
+<xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
+
+例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
+
+\@*PropertyName*  
+指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
   
-## <a name="arguments"></a>自变量  
- *Object*  
- 指定在表达式字符串的节点表示的对象的类型。 每个对象表示那些 SMO 对象模型名称空间中的一个集合类：  
+\@*BooleanPropertyName*=true()  
+枚举指定的布尔属性设置为 TRUE 的所有对象。  
   
- <xref:Microsoft.SqlServer.Management.Smo>  
+\@*BooleanPropertyName*=false()  
+枚举指定的布尔属性设置为 FALSE 的所有对象。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Agent>  
+contains(\@StringPropertyName, 'PatternString')  
+枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker>  
+\@*StringPropertyName*='*PatternString*'  
+枚举指定字符串属性的值与在“*PatternString*”中指定的字符模式完全相同的所有对象。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Mail>  
-  
- <xref:Microsoft.SqlServer.Management.Dmf>  
-  
- <xref:Microsoft.SqlServer.Management.Facets>  
-  
- <xref:Microsoft.SqlServer.Management.RegisteredServers>  
-  
- <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
-  
- 例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
-  
- \@*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
-  
- \@*BooleanPropertyName*=true()  
- 枚举指定的布尔属性设置为 TRUE 的所有对象。  
-  
- \@*BooleanPropertyName*=false()  
- 枚举指定的布尔属性设置为 FALSE 的所有对象。  
-  
- contains(\@StringPropertyName, 'PatternString')  
- 枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
-  
- \@*StringPropertyName*='*PatternString*'  
- 枚举指定字符串属性的值与在“*PatternString*”中指定的字符模式完全相同的所有对象。  
-  
- \@*DatePropertyName*= datetime('*DateString*')  
- 枚举指定日期属性的值与在“*DateString*”中指定的日期相匹配的所有对象。 DateString 必须遵循格式 yyyy-mm-dd hh:mi:ss.mmm。  
+\@*DatePropertyName*= datetime('*DateString*')  
+枚举指定日期属性的值与在“*DateString*”中指定的日期相匹配的所有对象。 DateString 必须遵循格式 yyyy-mm-dd hh:mi:ss.mmm。  
   
 |DateString 组件|说明|  
 |-|-|  
@@ -112,18 +108,20 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
 ## <a name="remarks"></a>备注  
- 查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
-  
- 查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  
-  
- 如果没有为对象指定 \<FilterExpression>，将枚举该节点的所有对象。  
+
+查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
+
+查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  
+
+如果没有为对象指定 \<FilterExpression>，将枚举该节点的所有对象。  
   
 ## <a name="uniform-resource-names-urn"></a>统一资源名称 (URN)  
- URN 是查询表达式的子集。 每个 URN 形成对单个对象的完全限定引用。 典型的 URN 使用 Name 属性来标识每个节点的单个对象。 例如，该 URN 引用一个特定列：  
+
+URN 是查询表达式的子集。 每个 URN 形成对单个对象的完全限定引用。 典型的 URN 使用 Name 属性来标识每个节点的单个对象。 例如，该 URN 引用一个特定列：  
   
-```  
+```powershell
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
-```  
+```
   
 ## <a name="examples"></a>示例  
   
@@ -169,8 +167,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit（数据库引擎）](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)
+- [SQL Server Audit（数据库引擎）](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

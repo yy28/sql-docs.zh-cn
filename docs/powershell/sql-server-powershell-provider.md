@@ -2,7 +2,6 @@
 title: SQL Server PowerShell 提供程序 | Microsoft Docs
 description: 了解用于 Windows PowerShell 的 SQL Server 提供程序，该提供程序通过类似于文件系统路径的路径提供对 SQL Server 对象的访问。
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 06288ab89e61b3ff2203949de2b3ef6373e3aefc
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 68546680f73674b416aa42d141c7ea5d2f8b51b7
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714285"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081906"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供程序
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序用类似于文件系统路径的路径公开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。 可以使用路径来查找对象，然后使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型中的方法来针对对象执行操作。  
-  
-> [!NOTE]
-> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS 。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新。 最新的 PowerShell 模块是 SqlServer 模块。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能 。  
-> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer 模块。
-> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
+
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>SQL Server PowerShell 提供程序的优点
 
@@ -51,11 +48,11 @@ ms.locfileid: "88714285"
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|基于策略的管理对象，如策略和方面。|  
 |`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|已注册的服务器对象，如服务器组和已注册服务器。|  
 |`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|实用工具对象，例如， [!INCLUDE[ssDE](../includes/ssde-md.md)]的托管实例|  
-|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|数据层应用程序对象（如 DAC 包）和操作（如部署 DAC）。|  
+|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|数据层应用程序对象（如 DAC 包）和操作（如部署 DAC）。|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|数据收集器对象，如收集组和配置存储区。|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象，如项目、包和环境。|  
 |`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|SQL Server 扩展事件|
-|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|SQL Server 扩展事件|
+|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|SQL Server 扩展事件|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象，例如多维数据集、聚合和维度。|  
   
  例如，可以使用 SQLSERVER:\SQL 文件夹作为路径的开头，该路径可以表示 SMO 对象模型支持的任何对象。 SQLSERVER:\SQL 路径的前导部分是 SQLSERVER:\SQL\\*计算机名称*\\*实例名称*。 实例名称后面的节点在对象集合（如 *数据库* 或 *视图*）和对象名称（如 AdventureWorks2012）之间交替变化。 架构不用对象类表示。 在为架构中的顶层对象（如表或视图）指定节点时，必须以 *SchemaName.ObjectName*格式指定对象名称。  
@@ -81,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |----------------------|-----------|  
 |介绍如何使用 Windows PowerShell cmdlet 导航路径中的节点，以及如何在每个节点获取该节点上对象的列表。|[导航 SQL Server PowerShell 路径](navigate-sql-server-powershell-paths.md)|  
 |介绍如何使用 SMO 方法和属性对路径中的节点表示的对象进行报告和执行任务。 还介绍如何获取该节点的 SMO 方法和属性的列表。|[使用 SQL Server PowerShell 路径](work-with-sql-server-powershell-paths.md)|  
-|介绍如何将 SMO 统一资源名称 (URN) 转换为 SQL Server 提供程序路径。|[将 URN 转换为 SQL Server 提供程序路径](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
+|介绍如何将 SMO 统一资源名称 (URN) 转换为 SQL Server 提供程序路径。|[将 URN 转换为 SQL Server 提供程序路径](/powershell/module/sqlserver/Convert-UrnToPath)|  
 |介绍如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序打开 SQL Server 身份验证连接。 默认情况下，提供程序使用通过运行 Windows PowerShell 会话的 Windows 帐户的凭据生成的 Windows 身份验证连接。|[在数据库引擎 PowerShell 中管理身份验证](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="next-steps"></a>后续步骤

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25115cc1e5d34624b13c6218cef256e686d39e3d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7651d01bef5b17981c0e4c93c450f26e7970524d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727184"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081916"
 ---
 # <a name="information-in-error-interfaces"></a>错误接口中的信息
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91727184"
 |成员函数|说明|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|使用有关错误的基本信息填充 ERRORINFO 结构。 ERRORINFO 结构包含标识错误的 HRESULT 返回值的成员、访问接口和该错误适用的接口。|  
-|**GetCustomErrorObject**|返回对 ISQLErrorInfo 和 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 接口的引用  。|  
+|**GetCustomErrorObject**|返回对 ISQLErrorInfo 和 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) 接口的引用  。|  
 |**GetErrorInfo**|返回对 IErrorInfo 接口的引用  。|  
 |**GetErrorParameters**|OLE DB Driver for SQL Server 不通过 GetErrorParameters  向使用者返回参数。|  
 |**GetRecordCount**|可用错误记录的计数。|  

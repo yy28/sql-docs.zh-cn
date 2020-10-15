@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a4c7664c35d4c98ebcf8f8ae4a57d2948a83624c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727443"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081516"
 ---
 # <a name="data-classification"></a>数据分类
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91727443"
 ## <a name="overview"></a>概述
 为了管理敏感数据，SQL Server 和 Azure SQL Server 引入了向数据库列提供敏感度元数据的功能，使客户端应用程序可以根据数据保护策略处理不同类型的敏感数据（例如运行状况、财务等）。
 
-有关如何将分类分配到列的详细信息，请参阅 [SQL 数据发现和分类](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017)。
+有关如何将分类分配到列的详细信息，请参阅 [SQL 数据发现和分类](../../relational-databases/security/sql-data-discovery-and-classification.md)。
 
 Microsoft ODBC Driver 17.2 允许使用 SQL_CA_SS_DATA_CLASSIFICATION 字段标识符通过 SQLGetDescField 检索此元数据。
 

@@ -14,16 +14,16 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1daf6c1205c33d0522f44105397be8b87dabda23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728106"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985723"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
-  本主题介绍 SQL Server 2016 版本的限制和问题，包括服务包。 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)（SQL Server 2016 的新增功能）。
+  本主题介绍 SQL Server 2016 版本的限制和问题，包括服务包。 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](./what-s-new-in-sql-server-2016.md)（SQL Server 2016 的新增功能）。
 
 - [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 从 **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)下载 SQL Server 2016**
 - [![Azure 虚拟机小](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
@@ -71,14 +71,14 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 |sys.dm_exec_query_stats 中的段信息   |   向 sys.dm_exec_query_stats 添加了新的列，用于跟踪跳过和读取的列存储段数（如 total_columnstore_segment_reads 和 total_columnstore_segment_skips）。   |   [KB4051358](https://support.microsoft.com/help/4051358)   |
 |为分发数据库设置正确的兼容级别   |   安装 Service Pack 后，分发数据库的兼容级别会更改为 90。 这是由于 sp_vupgrade_replication 存储过程中的代码路径。 SP 现已改为设置分发数据库的正确兼容级别。   |      |
 |公开已知的最新良好 DBCC CHECKDB 信息   |   添加了新的数据库选项，从而能以编程方式返回最新一次成功运行 DBCC CHECKDB 的日期。 用户现可查询 DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)，获取单个值，该值代表上一次在指定数据库上成功运行 DBCC CHECKDB 的日期/时间。   |      |
-|显示计划 XML 增强|   [关于使用哪些统计信息编译查询计划的信息](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)，其中包括统计信息名称、修改计数器、采样百分比以及统计信息的上次更新时间。 请注意，这仅添加至 CE 模型 120 及更高版本。 例如，CE 70 并不支持。| |
-| |如果查询优化器采用“行目标”逻辑，则向显示计划 XML 添加新属性 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/)。| |
-| |实际显示计划 XML 中的新运行时属性 [UdfCpuTime and UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/)，用于跟踪标量的用户定义函数 (UDF) 所花费的时间。| |
-| |在实际显示计划 XML 中将 CXPACKET 等待类型添加到[可能的前 10 等待列表](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) - 并行查询的执行经常涉及 CXPACKET 等待，但是实际显示计划 XML 中不会报告这种类型的等待。   |      |
+|显示计划 XML 增强|   [关于使用哪些统计信息编译查询计划的信息](/archive/blogs/sql_server_team/sql-server-2017-showplan-enhancements)，其中包括统计信息名称、修改计数器、采样百分比以及统计信息的上次更新时间。 请注意，这仅添加至 CE 模型 120 及更高版本。 例如，CE 70 并不支持。| |
+| |如果查询优化器采用“行目标”逻辑，则向显示计划 XML 添加新属性 [EstimateRowsWithoutRowgoal](/archive/blogs/sql_server_team/more-showplan-enhancements-row-goal)。| |
+| |实际显示计划 XML 中的新运行时属性 [UdfCpuTime and UdfElapsedTime](/archive/blogs/sql_server_team/more-showplan-enhancements-udfs)，用于跟踪标量的用户定义函数 (UDF) 所花费的时间。| |
+| |在实际显示计划 XML 中将 CXPACKET 等待类型添加到[可能的前 10 等待列表](/archive/blogs/sql_server_team/new-showplan-enhancements) - 并行查询的执行经常涉及 CXPACKET 等待，但是实际显示计划 XML 中不会报告这种类型的等待。   |      |
 | |扩展运行时溢出警告，从而报告在并行运算符溢出期间写入到 TempDB 的页数。| |
 |对使用补充字符排序规则的数据库的复制支持   |   现已对使用补充字符排序规则的数据库提供复制支持。   |      |
 |通过可用性组故障转移，对 Service Broker 进行正确的处理   |   在目前的执行情况中，如果在可用性组数据库上启用了 Service Broker，则 AG 故障转移期间，主要副本发起的所有 Service Broker 连接均保持打开状态。 在 AG 故障转移期间，这一改进会关闭所有此类打开的连接。   |      |
-|通过添加   |   新的 [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/) 等待，改进了并行等待故障排除。   |      |
+|通过添加   |   新的 [CXCONSUMER](/archive/blogs/sql_server_team/making-parallelism-waits-actionable) 等待，改进了并行等待故障排除。   |      |
 |已针对相同信息改进 DMV 之间的一致性   |   sys.dm_exec_session_wait_stats DMV 现在跟踪与 sys.dm_os_wait_stats DMV 一致的 CXPACKET 和 CXCONSUMER 等待。   |      |
 |查询内并行死锁的故障排除已改进 | 在 xEvent 字段名称 worktable_physical_writes 中添加了新的 exchange_spill 扩展事件，用于报告并行运算符溢出期间写入到 TempDB 的页数。| |
 | |sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats DMV 中的溢出列（如 total_spills）现也包括并行运算符溢出的数据。| |
@@ -108,21 +108,21 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
 |Feature|说明|详细信息|
 |---|---|---|
-|在 TF 715 下与自动 TABLOCK 成堆的大容量插入| 跟踪标志 715 为没有非聚集索引的堆中的大容量加载操作启用表锁。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
-|CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|在 TF 715 下与自动 TABLOCK 成堆的大容量插入| 跟踪标志 715 为没有非聚集索引的堆中的大容量加载操作启用表锁。|[Migrating SAP workloads to SQL Server just got 2.5x faster](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
+|CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](/archive/blogs/sqlserverstorageengine/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1)|
 |对复制的 DROP TABLE 支持|DROP TABLE DDL 支持复制，以允许删除复制文章。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
-|文件流 RsFx 驱动程序签名|文件流 RsFx 驱动程序使用 Windows 硬件开发人员中心仪表板门户（开发门户）签名和认证，从而允许在 Windows Server 2016/Windows 10 上毫无问题地安装 SQL Server 2016 SP1 文件流 RsFx 驱动程序。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
-|SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[Developers Choice:Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)（开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权）|
+|文件流 RsFx 驱动程序签名|文件流 RsFx 驱动程序使用 Windows 硬件开发人员中心仪表板门户（开发门户）签名和认证，从而允许在 Windows Server 2016/Windows 10 上毫无问题地安装 SQL Server 2016 SP1 文件流 RsFx 驱动程序。|[Migrating SAP workloads to SQL Server just got 2.5x faster](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
+|SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[Developers Choice:Programmatically identify LPIM and IFI privileges in SQL Server](/archive/blogs/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)（开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权）|
 |手动更改跟踪清除|新存储过程根据需要清除更改跟踪内部表。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
-|本地临时表的并行 INSERT...SELECT更改|INSERT..SELECT 操作中的新并行插入。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)（SQL Server 客户咨询团队）|
+|本地临时表的并行 INSERT...SELECT更改|INSERT..SELECT 操作中的新并行插入。|[SQL Server Customer Advisory Team](/archive/blogs/sqlcat/real-world-parallel-insert-what-else-you-need-to-know)（SQL Server 客户咨询团队）|
 |Showplan XML|扩展诊断包括授予警告和针对查询启用的最大内存、启用的跟踪标志，并且还显示其他诊断信息。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
-|存储类内存|在 Windows Server 2016 中使用存储类内存推进事务处理，带来的结果是事务提交时间加快了几个数量级。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[Developers Choice:USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)（开发人员选择：USE HINT 查询提示）|
-|XEvent 添加件|新 XEvent 和 Perfmon 诊断功能改进了延迟的故障排除。|[扩展事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+|存储类内存|在 Windows Server 2016 中使用存储类内存推进事务处理，带来的结果是事务提交时间加快了几个数量级。|[SQL Server 数据库引擎博客](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)|
+|USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[Developers Choice:USE HINT query hints](/archive/blogs/sql_server_team/developers-choice-use-hint-query-hints)（开发人员选择：USE HINT 查询提示）|
+|XEvent 添加件|新 XEvent 和 Perfmon 诊断功能改进了延迟的故障排除。|[扩展事件](../relational-databases/extended-events/extended-events.md)|
 
 此外，请注意以下修补程序：
 - 根据来自 DBA 和 SQL 社区的反馈，启动 SQL 2016 SP1，Hekaton 日志记录消息会减少至最少。
-- 评审新的[跟踪标志](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。
+- 评审新的[跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 - WideWorldImporters 示例数据库的完整版本现在可用于 Standard Edition 和 Express Edition，启动 SQL Server 2016 SP1，在 [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 中可用。 示例中无需任何更改。 在 RTM 中创建的 Enterprise Edition 数据库备份可用于 SP1 中的 Standard 和 Express 版。
 
 SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做法，建议在安装 SQL Server 2016 SP1 后计划并执行重新启动。
@@ -130,9 +130,9 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 ### <a name="download-pages-and-more-information"></a>下载页和详细信息
 
 - [下载 Microsoft SQL Server 2016 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 (SP1) 已发布](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [SQL Server 2016 Service Pack 1 (SP1) 已发布](/archive/blogs/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released)
 - [SQL Server 2016 Service Pack 1 的发布信息](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的服务包），请参阅 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx)
+- ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的服务包），请参阅 [SQL Server 更新中心](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
@@ -219,7 +219,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
  **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按 F1 时，将在浏览器中显示 F1 帮助文章的联机版本。 此问题在于基于浏览器的帮助，即使已配置并安装了本地帮助也不例外。
 
-**更新内容：** 在 SQL Server Management Studio 和 Visual Studio 中，Help Viewer 应用程序可能会在添加文档的过程中停止响应。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。
+**更新内容：** 在 SQL Server Management Studio 和 Visual Studio 中，Help Viewer 应用程序可能会在添加文档的过程中停止响应。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](/previous-versions/mt654096(v=vs.140))。
 
 * 在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings |HlpViewer_VisualStudio14_en US.settings 文件，并将下面代码中的日期更改为在将来的某个日期。
 
@@ -228,8 +228,8 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 ```
 
 ## <a name="additional-information"></a>其他信息
-+ [SQL Server 2016 安装](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
++ [SQL Server 2016 安装](../database-engine/install-windows/install-sql-server.md)
++ [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

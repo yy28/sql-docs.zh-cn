@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4090a01d4aa50fcbbfa64182dcd23a3e01c50e78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a1874b3253136a12973a60e6619e199995b5314
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245096"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891547"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：向应用程序添加 ReportViewer 控件
 使用报表向导设计子报表后，接下来要向网站应用程序添加 ReportViewer 控件。 如果使用 ASP.NET 报表网站，它将添加 ReportViewer 控件到 default.aspx 页。   
@@ -31,7 +31,7 @@ ms.locfileid: "87245096"
   
 5.  在“选择报表”框中，选择由你创建的父报表。  
   
-    选择某个报表后，将自动创建在该报表中使用的数据源的实例。 并将生成代码以使每个 DataTable（及其 [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 容器）实例化。 向设计图面添加 [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) 控件，对应于报表中使用的每个数据源。 此数据源控件为自动配置。  
+    选择某个报表后，将自动创建在该报表中使用的数据源的实例。 并将生成代码以使每个 DataTable（及其 [DataSet](/dotnet/api/system.data.dataset) 容器）实例化。 向设计图面添加 [ObjectDataSource](/dotnet/api/system.web.ui.webcontrols.objectdatasource) 控件，对应于报表中使用的每个数据源。 此数据源控件为自动配置。  
   
 6.  在“生成”菜单上，单击“生成网站”。  
   
@@ -39,5 +39,3 @@ ms.locfileid: "87245096"
   
 ## <a name="next-task"></a>下一个任务  
 您已成功地将 ReportViewer 控件添加到网站应用程序。 接下来，将在父报表上添加钻取操作。 请参阅[第 7 课：在父报表上添加钻取操作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)。  
-  
-
