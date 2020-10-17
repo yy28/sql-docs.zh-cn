@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810183"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155080"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91810183"
 
 机器学习服务、 [Python](../../machine-learning/concepts/extension-python.md) 和 [R](../../machine-learning/concepts/extension-r.md) 是受支持的语言。 对于语言扩展，Java 是支持的，但必须用 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)定义。
 
-若要执行 **sp_execute_external_script**，必须首先安装机器学习服务或语言扩展。 有关详细信息，请参阅在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安装 SQL Server 机器学习服务 (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions.md)[上安装 SQL Server 语言扩展](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
+若要执行 **sp_execute_external_script**，必须首先安装机器学习服务或语言扩展。 有关详细信息，请参阅在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安装 SQL Server 机器学习服务 (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)[上安装 SQL Server 语言扩展](../../language-extensions/install/windows-java.md)。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -322,7 +322,7 @@ GO
 
 要进行评分，还可以使用本机 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [SQL 机器学习](../../machine-learning/index.yml)
 + [SQL Server 语言扩展](../../language-extensions/language-extensions-overview.md)。 
