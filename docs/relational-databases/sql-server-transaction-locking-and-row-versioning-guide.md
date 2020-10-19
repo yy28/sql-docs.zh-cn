@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480933"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868197"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a>动态锁定
  使用低级锁（如行锁）可以降低两个事务同时在相同数据块上请求锁的可能性，从而提高并发性。 使用低级锁还会增加锁的数量以及管理锁所需的资源。 使用高级表锁或页锁可以减少开销，但代价是降低了并发性。  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![锁定成本与并发成本](../relational-databases/media/lockcht.png) 
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用动态锁定策略确定最经济的锁。 执行查询时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]会根据架构和查询的特点自动决定最合适的锁。 例如，为了缩减锁定的开销，优化器可能在执行索引扫描时在索引中选择页级锁。  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 以下示例显示了单击以上结果的第一个链接之后的输出：
 
@@ -2080,8 +2080,15 @@ GO
   
 -   在事务中尽量使访问的数据量最小。  
     这样可以减少锁定的行数，从而减少事务之间的争夺。  
+    
+-   尽可能避免使用悲观锁定提示（如 holdlock）。 
+    诸如 HOLDLOCK 或 SERIALIZABLE 隔离级别之类的提示可能会导致进程即使在获取共享锁时也要等待，并且会降低并发性
+
+-   尽可能避免使用隐式事务。隐式事务会因其性质而导致不可预知的行为。 请参阅[隐式事务和并发问题](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)
+
+-   使用缩减的[填充因子](indexes/specify-fill-factor-for-an-index.md)设计索引。缩减填充因子可能有助于避免或减少索引页碎片，从而减少索引搜寻时间，尤其是从磁盘检索时。 若要查看表或视图的数据和索引的碎片信息，可以使用 sys.dm_db_index_physical_stats。 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>避免并发问题和资源问题  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>隐式事务以及避免并发问题和资源问题  
  为了防止并发问题和资源问题，应小心管理隐式事务。 使用隐式事务时，`COMMIT` 或 `ROLLBACK` 后的下一个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句会自动启动一个新事务。 这可能会在应用程序浏览数据时（甚至在需要用户输入时）打开一个新事务。 在完成保护数据修改所需的最后一个事务之后，应关闭隐性事务，直到再次需要使用事务来保护数据修改。 此过程使 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能够在应用程序浏览数据以及获取用户输入时使用自动提交模式。  
   
  另外，启用快照隔离级别后，尽管新事务不会控制锁，但是长时间运行的事务将阻止从 `tempdb`中删除旧版本。  
@@ -2112,8 +2119,8 @@ GO
  您可能必须使用 KILL 语句。 但是，在使用此语句时请务必小心，特别是在运行重要的进程时。 有关详细信息，请参阅 [KILL (Transact-SQL)](../t-sql/language-elements/kill-transact-sql.md)。  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他阅读主题   
-[行版本控制的系统开销](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[行版本控制的系统开销](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [扩展事件](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [动态管理视图和函数 (Transact-SQL)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[与事务相关的动态管理视图和函数 (Transact-SQL)](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[与事务相关的动态管理视图和函数 (Transact-SQL)](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

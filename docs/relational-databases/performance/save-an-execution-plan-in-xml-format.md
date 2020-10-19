@@ -18,12 +18,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bcf97d3f0e3607d9444c6ab5b3b101004d3926b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f10e2cd6b6b146bb7c91d9732ba04b7f6a4d5ebb
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457611"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784731"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "86457611"
   
 5.  在“保存 \<Grid or Text> 结果”对话框中的“保存类型”框中，单击“所有文件(\*.\*)”   。  
   
-6.  在“文件名”框中，提供“\<name**>.sqlplan**”格式的名称，然后单击“保存” 。  
+6.  在“文件名”框中，提供“\<name>.sqlplan”格式的名称，然后单击“保存”  。  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>使用 SQL Server Management Studio 选项保存执行计划  
   
@@ -83,7 +83,7 @@ ms.locfileid: "86457611"
   
 3.  在“另存为”对话框中，确保将“保存类型”设置为“执行计划文件(\*.sqlplan)”。  
   
-4.  在“文件名”框中，提供“\<name**>.sqlplan**”格式的名称，然后单击“保存” 。  
+4.  在“文件名”框中，提供“\<name>.sqlplan”格式的名称，然后单击“保存”  。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中打开保存的 XML 查询计划  
   

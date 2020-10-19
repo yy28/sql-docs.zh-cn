@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669837"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866555"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 
@@ -89,7 +89,7 @@ ms.locfileid: "91669837"
 
 下图表示可用性组。
 
-![原始可用性组](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![具有主要副本、次要副本和异步次要副本的可用性组](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 以下 Transact-SQL 脚本创建此 AG。 在此示例中，每个副本都会指定 `READ_WRITE_ROUTING_URL`。
 ```sql
@@ -144,18 +144,13 @@ GO
 
 在下图中，客户端应用程序连接到 COMPUTER02，且 `ApplicationIntent=ReadWrite`。 连接重定向到主要副本。 
 
-![原始可用性组](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![与计算机 2 的连接重定向到主要副本](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 次要副本会将读/写调用重定向到主要副本。 与任一副本的读写连接将重定向到主要副本。 
 
 在下图中，主要副本已手动故障转移至 COMPUTER02。 客户端应用程序连接到 COMPUTER01，且 `ApplicationIntent=ReadWrite`。 连接重定向到主要副本。 
 
-![原始可用性组](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>SQL Server 实例脱机
-
-如果连接字符串中指定的 SQL Server 实例不可用（发生中断），则无论目标服务器上的副本扮演何种角色，连接都将失败。 若要避免长时间的应用程序故障时间，请在连接字符串中配置备用 `FailoverPartner`。 应用程序必须实现重试逻辑，以适应在实际故障转移期间未联机的主要副本和次要副本。 有关连接字符串的信息，请参阅 [SqlConnection.ConnectionString 属性](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring)。
+![连接重定向到计算机 2 上的新主要副本](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>另请参阅
 

@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988795"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864048"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使数据库可移植
 
@@ -41,7 +41,7 @@ ms.locfileid: "87988795"
 
  在包含的数据库用户模型中，master 数据库中不存在登录名。 相反，身份验证过程发生在用户数据库中，并且用户数据库中的数据库用户在 master 数据库中没有关联的登录名。 包含的数据库用户模型支持 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中使用。 若要作为包含的数据库用户进行连接，连接字符串必须始终包含用户数据库的参数，以便 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 知道哪个数据库负责管理身份验证过程。 包含的数据库用户的活动仅限于验证数据库，因此当作为包含的数据库用户进行连接时，必须在用户将需要的每个数据库中独立创建数据库用户帐户。 若要更改数据库， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 用户必须创建一个新的连接。 如果另一个数据库中存在相同的用户， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的包含的数据库用户可以更改数据库。  
   
-**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 支持将 Azure Active Directory 标识作为包含的数据库用户。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支持包含的数据库用户使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，而 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支持。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 使用 Azure Active Directory 身份验证时，可以使用 Active Directory 通用身份验证建立来自 SSMS 的连接。  管理员将通用身份验证配置为需要多重身份验证，这会使用电话呼叫、短信、智能卡 pin 或移动应用通知来验证身份。 有关详细信息，请参阅 [SQL 数据库和 SQL 数据仓库针对 Azure AD MFA 的 SSMS 支持](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
+**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 支持将 Azure Active Directory 标识作为包含的数据库用户。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支持包含的数据库用户使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，而 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支持。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)。 使用 Azure Active Directory 身份验证时，可以使用 Active Directory 通用身份验证建立来自 SSMS 的连接。  管理员将通用身份验证配置为需要多重身份验证，这会使用电话呼叫、短信、智能卡 pin 或移动应用通知来验证身份。 有关详细信息，请参阅 [SQL 数据库和 SQL 数据仓库针对 Azure AD MFA 的 SSMS 支持](/azure/azure-sql/database/authentication-mfa-ssms-overview)。  
   
  对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，因为连接字符串中始终需要数据库名称，所以在从传统模型切换到包含的数据库用户模型时，无需更改连接字符串。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，如果数据库名称尚不存在，它将必须添加到连接字符串。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "87988795"
   
  有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火墙规则的详细信息，请参阅以下主题：  
   
-- [Azure SQL Database 防火墙](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [如何：配置防火墙设置（Azure SQL 数据库）](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Azure SQL Database 防火墙](/previous-versions/azure/ee621782(v=azure.100))  
+- [如何：配置防火墙设置（Azure SQL 数据库）](/previous-versions/azure/jj553530(v=azure.100))  
 - [sp_set_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -79,24 +79,34 @@ ms.locfileid: "87988795"
 
 在包含的数据库的上下文中，Azure SQL 托管实例的行为与本地 SQL Server 的类似。 创建包含的用户时，请确保将数据库的上下文从主数据库更改为用户数据库。 此外，在设置包含选项时，不应与用户数据库建立活动连接。 
 
-例如： 
+
+例如：
+
+> [!WARNING]
+> 在运行以下脚本之前，请确保托管实例数据库上没有其他连接处于活动状态。 此脚本可能会中断数据库上正在运行的其他进程。
 
 ```sql
 Use MASTER;
 GO 
 
 ALTER DATABASE Test
-SET containment=partial
+SET RESTRICTED_USER
+WITH ROLLBACK IMMEDIATE;
 
+ALTER DATABASE Test
+SET containment=partial;
+
+ALTER DATABASE Test
+SET MULTI_USER;
 
 USE Test;  
-GO  
+GO 
+
 CREATE USER Carlo  
 WITH PASSWORD='Enterpwdhere*'  
 
-
 SELECT containment_desc FROM sys.databases
-WHERE name='test'
+WHERE name='Test'
 ```
 
   
@@ -115,5 +125,4 @@ WHERE name='test'
  [包含的数据库](../../relational-databases/databases/contained-databases.md)   
  [针对包含数据库的安全性最佳方法](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
- [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
-  
+ [使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)  

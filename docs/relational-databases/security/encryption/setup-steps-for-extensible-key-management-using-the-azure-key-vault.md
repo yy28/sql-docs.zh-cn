@@ -2,7 +2,7 @@
 title: 使用 Azure 密钥保管库设置透明数据加密 (TDE) 可扩展密钥管理
 description: 为 Azure 密钥保管库安装和配置 SQL Server 连接器。
 ms.custom: seo-lt-2019
-ms.date: 08/12/2020
+ms.date: 10/08/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: e5b18c46f602d24339c092b8f3e622b2a915baeb
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+author: Rupp29
+ms.author: arupp
+ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042864"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866610"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>使用 Azure 密钥保管库设置 SQL Server TDE 可扩展密钥管理
 
@@ -34,7 +34,7 @@ ms.locfileid: "90042864"
   
 - 必须拥有 Azure 订阅。
   
-- 安装 [Azure PowerShell 5.2.0 版或更高版本](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+- 安装 [Azure PowerShell 5.2.0 版或更高版本](/powershell/azure/)。  
 
 - 创建 Azure Active Directory (Azure AD) 实例。
 
@@ -61,7 +61,7 @@ ms.locfileid: "90042864"
 
       ![“所有 Azure 服务”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
-1. 通过执行以下操作，将应用程序注册到 Azure Active Directory。 （有关详细的分步说明，请参阅 [Azure 密钥保管库博客文章](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)中的“获取应用程序的标识”部分。）
+1. 通过执行以下操作，将应用程序注册到 Azure Active Directory。 （有关详细的分步说明，请参阅 [Azure 密钥保管库博客文章](/archive/blogs/kv/azure-key-vault-step-by-step)中的“获取应用程序的标识”部分。）
 
     a. 在“Azure Active Directory 概述”窗格中，选择“应用注册”。
 
@@ -85,7 +85,7 @@ ms.locfileid: "90042864"
 
     f. 在“证书和密码”窗格的“值”下，选择要用于在 SQL Server 中创建非对称密钥的客户端密码值旁边的“复制”按钮。
 
-    ![“证书和密码”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+    ![密码值的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
     g. 在左侧窗格中，选择“概述”，然后在“应用程序(客户端) ID”框中，复制要用于在 SQL Server 中创建非对称密钥的值。
 
@@ -160,7 +160,7 @@ ms.locfileid: "90042864"
 > [!IMPORTANT]
 > 创建密钥保管库的订阅必须在创建 Azure AD 服务主体的同一默认 Azure AD 实例中。 如果想要使用默认实例以外的 Azure AD 实例来创建 SQL Server 连接器的服务主体，则必须在创建密钥保管库之前更改 Azure 帐户中的默认 Azure AD 实例。 若要了解如何将默认 Azure AD 实例更改为要使用的实例，请参阅 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)的“常见问题”部分。  
   
-1. 使用以下命令安装并登录到 [Azure PowerShell 5.2.0 或更高版本](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)：  
+1. 使用以下命令安装并登录到 [Azure PowerShell 5.2.0 或更高版本](/powershell/azure/)：  
   
     ```powershell  
     Connect-AzAccount  
@@ -266,7 +266,7 @@ ms.locfileid: "90042864"
 
 - 在本地硬件安全模块 (HSM) 设备上创建加密密钥。 确保使用非对称 RSA 2048 密钥，以便得到 SQL Server 的支持。
 - 将加密密钥导入到 Azure 密钥保管库。 此过程在后续部分中介绍。
-- 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 有关详细信息，请参阅 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 命令。
+- 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 有关详细信息，请参阅 [Backup-AzureKeyVaultKey]() 命令。
 - 每次更改密钥（例如添加 ACL、标记或密钥属性）时，务必再进行一次 Azure 密钥保管库密钥备份。
 
   > [!NOTE]
@@ -340,7 +340,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 > - 从版本 1.0.3.0 开始，SQL Server 连接器向 Windows 事件日志报告相关错误消息，以便进行故障排除。
 > - 从版本 1.0.4.0 开始，支持私有 Azure 云，包括 Azure 中国、Azure 德国和 Azure 政府。
 > - 1\.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 后，可能会遭遇数据库还原失败。 有关详细信息，请参阅[知识库文章 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
-> - 从版本 1.0.7.0 开始，SQL Server 连接器支持筛选消息和网络请求重试逻辑。
+> - 从版本 1.0.5.0（时间戳：2020 年 9 月）开始，SQL Server 连接器支持筛选消息和网络请求重试逻辑。
   
   ![SQL Server 连接器安装向导的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

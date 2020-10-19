@@ -9,12 +9,12 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7107c1489521f733eb685887e6c1bcc543a2c147
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725228"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987848"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 资源浏览器浏览和管理 Azure SQL 资源
 
@@ -101,4 +101,4 @@ Azure 资源浏览器提供快速访问，可帮助你连接到 SQL Server 和�
 ## <a name="next-steps"></a>后续步骤
 
 - [使用 [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
-- [使用 [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据仓库中的数据](quickstart-sql-dw.md)
+- [使用 [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] 在 Azure Synapse Analytics 中连接和查询数据](quickstart-sql-dw.md)

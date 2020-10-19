@@ -13,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 785060a9f12b68f38e7d59420f7a2e31a77312fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7161ce97faa4d1baab514df45429592629e2518b
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499317"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765727"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>在 AUTO 模式下自动格式化 JSON 输出 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88499317"
 
 使用 **FOR JSON AUTO** 选项的查询必须具有 **FROM** 子句。  
   
-下面的一些示例展示了如何使用 **AUTO** 选项指定 **FOR JSON** 子句。  
+下面的一些示例展示了如何使用 **AUTO** 选项指定 **FOR JSON** 子句。 建议使用 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 作为 JSON 查询的查询编辑器，因为它会自动格式化 JSON 结果（如本文所示），而不是显示平面字符串。
   
 ## <a name="examples"></a>示例
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603371"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892437"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ GO
 - 仅包含常量的算术表达式，如 1+1、5/3*2。
 - 仅包含常量的逻辑表达式，如 1=1 和 1>2 AND 3>4。
 - 被 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 认为可折叠的内置函数包括 `CAST` 和 `CONVERT`。 通常，如果内部函数只与输入有关而与其他上下文信息（例如 SET 选项、语言设置、数据库选项和加密密钥）无关，则该内部函数是可折叠的。 不确定性函数是不可折叠的。 确定性内置函数是可折叠的，但也有例外情况。
-- CLR 用户定义类型的确定性方法和确定性的标量值 CLR 用户定义函数（从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始）。 有关详细信息，请参阅 [CLR 用户定义函数和方法的常量折叠](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15)。
+- CLR 用户定义类型的确定性方法和确定性的标量值 CLR 用户定义函数（从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始）。 有关详细信息，请参阅 [CLR 用户定义函数和方法的常量折叠](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
 
 > [!NOTE] 
 > 使用大型对象类型时将出现例外。 如果折叠进程的输出类型是大型对象类型（text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 或 XML），则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不折叠该表达式。
@@ -1030,7 +1030,7 @@ WHERE ProductID = 63;
     有关游标的详细信息，请参阅 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
     
 -   **递归查询**        
-    有关递归的详细信息，请参阅[定义和使用递归公用表表达式的准则](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的递归](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
+    有关递归的详细信息，请参阅[定义和使用递归公用表表达式的准则](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的递归](/previous-versions/sql/legacy/aa175801(v=sql.80))。
 
 -   **多语句表值函数 (MSTVF)**         
     有关 MSTVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
@@ -1270,7 +1270,8 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种方
 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 改进了许多并行计划的已分区表的查询处理性能，更改了并行和串行计划的表示方式，并增强了编译时和运行时执行计划中所提供的分区信息。 本主题将说明这些改进并提供有关如何解释已分区表和索引的查询执行计划的指南，此外还将提供改进已分区对象的查询性能的最佳方法。 
 
 > [!NOTE]
-> 只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition 和 Evaluation Edition 支持已分区表和已分区索引。
+> 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 之前，只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition 和 Evaluation Edition 支持已分区表和已分区索引。   
+> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 也支持已分区表和已分区索引。 
 
 ### <a name="new-partition-aware-seek-operation"></a>新增的可识别分区的查找操作
 
@@ -1435,7 +1436,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * 使用具有快速处理器的服务器以及尽可能多的处理器核，以充分利用并行查询处理能力。
 * 确保服务器具有足够的 I/O 控制器带宽。 
 * 对每个大型已分区表创建聚集索引，以充分利用 B 树扫描优化。
-* 向已分区的表中大容量加载数据时，请遵照白皮书 [The Data Loading Performance Guide（数据加载性能指南）](https://msdn.microsoft.com/library/dd425070.aspx)中的最佳做法建议操作。
+* 向已分区的表中大容量加载数据时，请遵照白皮书 [The Data Loading Performance Guide（数据加载性能指南）](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))中的最佳做法建议操作。
 
 ### <a name="example"></a>示例
 

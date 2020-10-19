@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715491"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987583"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ ON
   
  **数据库错误**  
   
-1.  *创建数据库时出错*   
-    解决方法：有关第 4 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-4-restore-database-to-virtual-machine-from-url.md)。  
+**创建数据库时出错** 解决方法：有关第 4 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-4-restore-database-to-virtual-machine-from-url.md)。  
   
-2.  *运行 Alter 语句时出错*   
-    解决方法：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 有关第 7 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+**运行 Alter 语句时出错** 解决方案：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 有关第 7 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
-3.  *错误代码 5120 无法打开物理文件“%.\*ls”。操作系统错误 %d：“%ls”*   
+**错误代码 - 5120 无法打开物理文件“%.\*ls”。操作系统错误 %d：“%ls”**   
 
-    解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，并显示错误代码 5120，指示无法打开物理文件“%.ls”\* *。操作系统错误 %d：“%ls”* 。  
+解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，并显示错误代码 5120，指示无法打开物理文件“%.ls”\* *。操作系统错误 %d：“%ls”* 。  
   
-     要解决此问题，首先需要确定是否需要 ServerA 访问 Azure 存储中的数据库文件。 如果不需要，请删除 ServerA 与 Azure 存储中数据库文件之间的任何连接。 为此，请按照下列步骤进行操作：  
-  
-    1.  使用 ALTER Database 语句将 ServerA 的文件路径设置为本地文件夹。  
-  
-    2.  在 ServerA 中将数据库设置为脱机状态。  
-  
-    3.  然后，将数据库文件从 Azure 存储复制到 Server A 中的本地文件夹。这可确保 ServerA 仍有一个本地数据库副本。  
-  
-    4.  将数据库设置为联机状态。  
+要解决此问题，首先需要确定是否需要 ServerA 访问 Azure 存储中的数据库文件。 如果不需要，请删除 ServerA 与 Azure 存储中数据库文件之间的任何连接。 为此，请按照下列步骤进行操作：  
+
+1.  使用 ALTER Database 语句将 ServerA 的文件路径设置为本地文件夹。  
+
+2.  在 ServerA 中将数据库设置为脱机状态。  
+
+3.  然后，将数据库文件从 Azure 存储复制到 Server A 中的本地文件夹。这可确保 ServerA 仍有一个本地数据库副本。  
+
+4.  将数据库设置为联机状态。
+
+**错误代码 833 - I/O 请求完成所用的时间超过 15 秒** 
+   
+   此错误表示存储系统无法满足 SQL Server 工作负荷的需求。 要么减少应用程序层的 IO 活动，要么提高存储层的吞吐能力。 若要了解更多信息，请参阅[错误 833](../errors-events/mssqlserver-833-database-engine-error.md)。 如果性能问题仍然存在，请考虑将文件移到其他存储层，如 Premium 或 UltraSSD。 有关 Azure VM 上的 SQL Server，请参阅[优化存储性能](/azure/virtual-machines/premium-storage-performance)。
+
 
 ## <a name="next-steps"></a>后续步骤  
   

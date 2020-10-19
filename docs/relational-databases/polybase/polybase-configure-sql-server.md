@@ -1,7 +1,7 @@
 ---
 title: 访问外部数据：SQL Server - PolyBase
 description: 了解如何使用 SQL Server 实例上的 PolyBase 来查询另一个 SQL Server 实例中的外部数据。 创建外部表以引用外部数据。
-ms.date: 12/13/2019
+ms.date: 10/06/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3bb2528613bc4e13cf5c3559e8d257e64e276fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741322"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834022"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>配置 PolyBase 以访问 SQL Server 中的外部数据
 
@@ -27,11 +27,13 @@ ms.locfileid: "85741322"
 
 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。 这篇安装文章介绍了安装的先决条件。 安装后，还应确保[启用 PolyBase](polybase-installation.md#enable)。
 
+SQL Server 外部数据源使用 SQL 身份验证。
+
 在创建数据库范围凭据之前，必须先创建[主密钥](../../t-sql/statements/create-master-key-transact-sql.md)。 
 
 ## <a name="configure-a-sql-server-external-data-source"></a>配置 SQL Server 外部数据源
 
-若要查询 SQL Server 数据源中的数据，必须创建外部表以引用外部数据。 本节提供用于创建这些外部表的示例代码。 
+若要查询 SQL Server 数据源中的数据，必须创建外部表以引用外部数据。 本节提供用于创建这些外部表的示例代码。
  
 为了获得最佳查询性能，请在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的表列。
 
@@ -47,8 +49,10 @@ ms.locfileid: "85741322"
     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
+   >[!IMPORTANT]
+   >用于 PolyBase 的 SQL ODBC 连接器仅支持基本身份验证，不支持 Kerberos 身份验证。
 
-1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 创建外部数据源。 下面的示例：
+1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 创建外部数据源。 如下示例中：
 
    - 创建名为 `SQLServerInstance` 的外部数据源。
    - 标识外部数据源 (`LOCATION = '<vendor>://<server>[:<port>]'`)。 在示例中，它指向 SQL Server 的默认实例。
@@ -72,7 +76,7 @@ ms.locfileid: "85741322"
     WITH FULLSCAN;
   ```
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >创建外部数据源后，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令在该数据源上创建可查询的表。
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 连接器兼容类型

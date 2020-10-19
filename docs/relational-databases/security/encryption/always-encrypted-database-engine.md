@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216772"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810003"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 - 具有 `ROWGUIDCOL` 属性的列。  
 - 采用非 bin2 排序规则的字符串（`varchar`、`char` 等）列。  
 - 使用随机加密时用作聚集索引和非聚集索引的键的列（支持确定性加密）。
-- 使用随机加密时用作全文索引的键的列（支持确定性加密）。  
+- 全文检索中包含的列（Always Encrypted 不支持[全文搜索](../../../relational-databases/search/full-text-search.md)）。  
 - 计算列。
 - 计算列引用的列（当表达式针对 Always Encrypted 执行不受支持的操作时）。  
 - 稀疏列集。  

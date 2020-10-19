@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470352"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891007"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在默认情况下支持多达 15,000 个分区。 在早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，默认情况下，分区数限制为 1000 个。 在基于 x86 的系统上，可以创建具有超过 1000 个分区的表或索引，但不支持这样做。  
@@ -48,7 +48,7 @@ ms.locfileid: "88470352"
 以下术语适用于表和索引分区。  
   
 ### <a name="partition-function"></a>分区函数  
-一种数据库对象，它定义如何根据某个列（称为分区列）的值将表或索引的行映射到一组分区。 也就是说，分区函数定义表将具有的分区数和分区边界的定义方式。 例如，如果有一个包含销售订单数据的表，你可能想要基于“日期时间”  列（如销售日期）将表划分为 12 个（按月）分区。  
+一种数据库对象，它定义如何根据某个列（称为分区列）的值将表或索引的行映射到一组分区。 分区列中的每个值都是分区函数的输入，该函数会返回分区值。 分区函数定义表将具有的分区数和分区边界。 例如，如果有一个包含销售订单数据的表，你可能想要基于“日期时间”  列（如销售日期）将表划分为 12 个（按月）分区。  
   
 ### <a name="partition-scheme"></a>分区方案 
 将分区函数的分区映射到一组文件组的数据库对象。 在各个文件组上放置分区的主要原因是为了确保可以在分区上独立执行备份操作。 这是因为您可以在各个文件组上执行备份。  
@@ -129,9 +129,8 @@ ms.locfileid: "88470352"
  对于已分区表和索引策略以及实现方式，以下白皮书可能对您很有用。  
 -   [使用 SQL Server 2008 的已分区表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [如何实现自动滑动窗口](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [大容量加载到已分区表](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Project REAL:Data Lifecycle -- Partitioning](https://technet.microsoft.com/library/cc966424.aspx)（Project REAL：数据生命周期 - 分区）    
--   [关于已分区表和索引的查询处理增强功能](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [大容量加载到已分区表](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Project REAL:Data Lifecycle -- Partitioning](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))（Project REAL：数据生命周期 - 分区）    
+-   [关于已分区表和索引的查询处理增强功能](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [生成大型关系数据仓库的 10 大最佳做法](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf)（来自 _SQLCAT 的指南：关系工程_）
-  
   

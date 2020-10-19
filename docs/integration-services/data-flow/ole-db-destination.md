@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477789"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987633"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
 
@@ -96,7 +96,7 @@ ms.locfileid: "88477789"
   
 |快速加载选项|说明|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项的格式为 KILOBYTES_PER_BATCH  = \<positive integer value**>**。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项的格式为 KILOBYTES_PER_BATCH  = \<positive integer value>。|  
 |FIRE_TRIGGERS|指定是否在插入表上激发触发器。 选项的格式为 **FIRE_TRIGGERS**。 出现该选项说明要激发触发器。|  
 |ORDER|指定输入数据如何排序。 选项格式为 ORDER \<column name> ASC&#124;DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表中的聚集索引对输入数据进行排序，可以提升性能。|  
   
