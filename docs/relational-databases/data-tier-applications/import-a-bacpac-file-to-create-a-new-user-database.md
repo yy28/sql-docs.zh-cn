@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412433"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195579"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412433"
   
  **对于 Azure SQL 数据库：**  
   
- - [导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-import/) 提供了有关使用 Azure 门户、PowerShell、SSMS 或 SqlPackage 的分步说明。  
- - 有关不同服务层的详细信息，请查阅 **[SQL 数据库选项和性能：了解每个服务层中的可用功能](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 。  
+ - [导入 BACPAC 文件以创建新的 Azure SQL 数据库](/azure/azure-sql/database/database-import) 提供了有关使用 Azure 门户、PowerShell、SSMS 或 SqlPackage 的分步说明。  
+ - 有关不同服务层的详细信息，请查阅 **[SQL 数据库选项和性能：了解每个服务层中的可用功能](/azure/azure-sql/database/purchasing-models)** 。  
 
 ### <a name="validation-page"></a>“验证”页  
  使用此页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”  确保验证成功。  
@@ -144,8 +144,7 @@ ms.locfileid: "88412433"
  单击“**关闭**”以关闭向导。  
   
 ## <a name="see-also"></a>另请参阅  
-[导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[导入 BACPAC 文件以创建新的 Azure SQL 数据库](/azure/azure-sql/database/database-import)  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [导出数据层应用程序](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

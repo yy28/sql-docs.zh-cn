@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5238049681cfb8ec71ea27a444a4e41bf7c64703
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495572"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196382"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>连接到 SQL Server 数据源（SQL Server 导入和导出向导）
 
@@ -68,7 +68,7 @@ ms.locfileid: "88495572"
 ODBC 驱动程序不在数据源的下拉列表中列出。 若要使用 ODBC 驱动程序连接，首先选择“用于 ODBC 的 .NET Framework 数据提供程序”作为数据源  。 此提供程序充当 ODBC 驱动程序的包装器。
 
 > [!TIP]
-> 获取最新的驱动程序  。 下载 [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql)。
+> 获取最新的驱动程序  。 下载 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
 下面是选择用于 ODBC 的 .NET Framework 数据提供程序后随即显示的常规屏幕。
 
@@ -120,8 +120,8 @@ Trusted_Connection；或 Uid 和 Pwd
 
 > [!IMPORTANT]
 > SQL Server 2012 之后的 SQL Server 版本不支持用于 SQL Server 和 SQL Server Native Client 的 Microsoft OLE DB 提供程序。 请改用 ODBC 驱动程序。 若要了解有关转为使用 ODBC 驱动程序的详细信息，请参阅以下博客文章。
->   -   [Microsoft 正在与 ODBC 对齐以进行本机关系数据访问](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)
->   -   [引入新的 Microsoft ODBC Drivers for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)
+>   -   [Microsoft 正在与 ODBC 对齐以进行本机关系数据访问](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)
+>   -   [引入新的 Microsoft ODBC Drivers for SQL Server](/archive/blogs/sqlnativeclient/introducing-the-new-microsoft-odbc-drivers-for-sql-server)
 
 ## <a name="other-data-providers-and-more-info"></a>其他数据提供程序和详细信息
 有关如何使用此处未列出的数据提供程序连接到 SQL Server 的信息，请参阅 [SQL Server 连接字符串](https://www.connectionstrings.com/sql-server/)。 此第三方网站还包含有关此页介绍的数据提供程序和连接参数的详细信息。
@@ -129,4 +129,3 @@ Trusted_Connection；或 Uid 和 Pwd
 ## <a name="see-also"></a>另请参阅
 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

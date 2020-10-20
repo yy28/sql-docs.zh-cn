@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df2b88cc69b8f77a43ad6d1a26bfa706fed12eaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3265871cc1ddf221b3fb4090936d146f555dd3b5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393503"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194286"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
 
@@ -115,9 +115,9 @@ ms.locfileid: "88393503"
   
 2.  将任务和容器添加到 Foreach 循环容器。 有关详细信息，请参阅 [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
-3.  使用优先约束连接 Foreach 循环容器中的任务和容器。 有关详细信息，请参阅 [使用默认优先约束来连接任务和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
+3.  使用优先约束连接 Foreach 循环容器中的任务和容器。 有关详细信息，请参阅 [使用默认优先约束来连接任务和容器](./precedence-constraints.md)。  
   
-4.  配置 Foreach 循环容器。 有关详细信息，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+4.  配置 Foreach 循环容器。 有关详细信息，请参阅 [配置 Foreach 循环容器]()。  
 
 ## <a name="configure-a-foreach-loop-container"></a>配置 Foreach 循环容器
 此过程介绍如何配置 Foreach 循环容器，包括如何在枚举器级和容器级上配置属性表达式。  
@@ -185,7 +185,7 @@ ms.locfileid: "88393503"
 ## <a name="general-page---foreach-loop-editor"></a>“常规”页 - Foreach 循环编辑器
 可以使用 **“Foreach 循环编辑器”** 对话框的 **“常规”** 页，对 Foreach 循环容器进行命名和说明，该容器使用指定的枚举器重复集合中每个成员的工作流。  
   
- 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器]()。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -200,7 +200,7 @@ ms.locfileid: "88393503"
 ## <a name="collection-page---foreach-loop-editor"></a>“集合”页 - Foreach 循环编辑器
  可以使用“Foreach 循环编辑器”  对话框的“集合”  页，指定枚举器类型以及配置枚举器。  
   
- 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器]()。  
   
 ### <a name="static-options"></a>静态选项  
  **枚举器**  
@@ -289,7 +289,7 @@ ms.locfileid: "88393503"
  **“列”**  
  单击此项可以配置项中的列的数据类型。  
   
- **相关主题：** [“For Each Item 列”对话框 UI 参考](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **相关主题：** [“For Each Item 列”对话框 UI 参考]()  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Enumerator = Foreach ADO 枚举器  
  您可以使用 Foreach ADO 枚举器枚举变量中存储的 ADO 或 ADO.NET 对象中的行或表。 例如，如果 Foreach 循环包括可将数据集写入变量的脚本任务，则可以使用 Foreach ADO 枚举器枚举数据集中的行。 如果变量包含 ADO.NET 数据集，则可以将枚举器配置为枚举多个表中的行或枚举表。  
@@ -300,7 +300,7 @@ ms.locfileid: "88393503"
 > [!NOTE]  
 >  变量必须有 Object 数据类型，否则会发生错误。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
  **第一个表中的行**  
  选择此项将只枚举第一个表中的行。  
@@ -320,7 +320,7 @@ ms.locfileid: "88393503"
 > [!IMPORTANT]  
 >  ADO.NET 连接管理器必须使用 .NET provider for OLE DB。 如果连接到 SQL Server，则建议使用的访问接口为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **“连接管理器”** 对话框的 **.Net Providers for OleDb** 部分中列出的  Native Client。  
   
- **相关主题：** [ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)、[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **相关主题：** [ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)、[配置 ADO.NET 连接管理器](../connection-manager/ado-net-connection-manager.md)  
   
  **架构**  
  选择要枚举的架构。  
@@ -328,7 +328,7 @@ ms.locfileid: "88393503"
  **设置限制**  
  设置要应用于指定架构的限制。  
   
- **相关主题：** [“架构限制”对话框](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **相关主题：** [“架构限制”对话框]()  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerator = Foreach 源变量枚举器  
  您可以使用 Foreach 源变量枚举器枚举指定变量中的可枚举对象。 例如，如果 Foreach 循环包括运行查询并在变量中存储结果的执行 SQL 任务，则可以使用 Foreach 源变量枚举器枚举查询结果。  
@@ -336,14 +336,14 @@ ms.locfileid: "88393503"
  **变量**  
  在列表中选择变量，或单击“\<**New variable...**>创建一个新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 枚举器  
  您可以使用 Foreach Nodelist 枚举器枚举一组通过将 XPath 表达式应用到 XML 文件而生成的 XML 节点。 例如，如果 Foreach 循环包括脚本任务，则可以使用 Foreach NodeList 枚举器将满足 XPath 表达式条件的值从 XML 文件传递到脚本任务。  
   
  应用到 XML 文件的 XPath 表达式为外部 XPath 运算，存储于 OuterXPathString 属性中。 如果 XPath 枚举类型设置为 **ElementCollection**，则 Foreach NodeList 枚举器可以将内部 XPath 表达式（存储于 InnerXPathString 属性中）应用到元素的集合。  
   
- 若要了解有关使用 XML 文档和数据的详细信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)”。  
+ 若要了解有关使用 XML 文档和数据的详细信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](/previous-versions/aa720019(v=vs.71))”。  
   
  **DocumentSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项：  
@@ -359,11 +359,11 @@ ms.locfileid: "88393503"
   
  如果 DocumentSourceType 设置为“文件连接”，请选择“文件连接管理器”，或单击“\<**New connection...**>”创建新的连接管理器 。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
  如果 DocumentSourceType 设置为“变量”，请选择现有变量，或单击“\<**New variable...**>”创建新变量 。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)。  
   
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项：  
@@ -389,11 +389,11 @@ ms.locfileid: "88393503"
   
  如果 OuterXPathStringSourceType 设置为“文件连接”，请选择“文件连接管理器”，或单击“\<**New connection...**>创建新的连接管理器 。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
  如果 OuterXPathStringSourceType 设置为“变量”，请选择现有变量，或单击“\<**New variable...**>创建新的变量 。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)。  
   
  **InnerElementType**  
  如果将 **EnumerationType** 设置为 **ElementCollection**，请从列表中选择内部元素的类型。  
@@ -412,11 +412,11 @@ ms.locfileid: "88393503"
   
  如果 InnerXPathStringSourceType 设置为“文件连接”，请选择“文件连接管理器”，或单击“\<**New connection...**>创建新的连接管理器 。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
  如果 InnerXPathStringSourceType 设置为“变量”，请选择现有变量，或单击“\<**New variable...**>创建新的变量 。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)。  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 枚举器  
  您可以使用 Foreach SMO 枚举器枚举 SQL Server 管理对象 (SMO) 对象。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach SMO 枚举器枚举 **AdventureWorks** 数据库中的表并运行计算每个表中行数的查询。  
@@ -424,7 +424,7 @@ ms.locfileid: "88393503"
  **Connection**  
  选择现有 ADO.NET 连接管理器，或单击“\<**New connection...**>”以创建新的连接管理器。  
   
- 相关主题：[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)、[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ 相关主题：[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)、[配置 ADO.NET 连接管理器](../connection-manager/ado-net-connection-manager.md)  
   
  **枚举**  
  指定要枚举的 SMO 对象。  
@@ -432,7 +432,7 @@ ms.locfileid: "88393503"
  **“浏览”**  
  选择 SMO 枚举。  
   
- **相关主题：** [“选择 SMO 枚举”对话框](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **相关主题：** [“选择 SMO 枚举”对话框]()  
   
 ####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> 枚举器 = Foreach HDFS 文件枚举器  
  “Foreach HDFS 文件枚举器”  允许 SSIS 包在指定的 HDFS 位置枚举 HDFS 文件。 每个 HDFS 文件名都可以存储在变量中并用于 Foreach 循环容器内的任务。  
@@ -512,20 +512,20 @@ FolderPath
 
 ***有关服务主体权限配置的说明***
 
-Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定权限。
-请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
+Data Lake Storage Gen2 由 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 和 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定权限。
+请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
 这与用于 RBAC 配置的应用程序（客户端）ID 有所不同。
 通过内置角色或自定义角色向安全主体授予 RBAC 数据权限时，将首先根据请求的授权来评估这些权限。
 如果请求的操作已获得安全主体的 RBAC 分配的授权，则授权会立即得到解决，且不会执行任何其他 ACL 检查。
 或者，如果安全主体没有 RBAC 分配，或请求的操作与分配的权限不匹配，则会执行 ACL 检查来确定是否已授权安全主体执行请求的操作。
 要使枚举器有效，请从根文件系统开始授予至少“执行”权限，并授予目标文件夹的“读取”权限   。
 或者，通过 RBAC 授予至少“存储 Blob 数据读取器”角色  。
-有关详细信息，请参阅[此](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
+有关详细信息，请参阅[此](/azure/storage/blobs/data-lake-storage-access-control)文章。
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>“变量映射”页 - Foreach 循环编辑器
  可以使用 **“Foreach 循环编辑器”** 对话框的 **“变量映射”** 页，将变量映射到集合值。 循环每次迭代时，都会用集合值更新变量的值。  
   
- 若要了解如何在 Integration Services 包中使用 Foreach 循环容器，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。 若要了解如何配置该循环容器，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要了解如何在 Integration Services 包中使用 Foreach 循环容器，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。 若要了解如何配置该循环容器，请参阅 [配置 Foreach 循环容器]()。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 教程“创建简单 ETL 包教程”包括一节介绍如何添加和配置 Foreach 循环的课程。  
   
@@ -536,7 +536,7 @@ Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/commo
 > [!NOTE]  
 >  映射一个变量之后，“变量”  列表中会自动增加一行。  
   
- **相关主题**：[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题**：[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
  **Index**  
  如果使用的是 Foreach Item 枚举器，请指定集合值中要映射到变量的列的索引。 对于其他枚举器类型，索引是只读的。  
@@ -557,7 +557,7 @@ Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/commo
  **变量**  
  使用变量来定义限制。 从列表中选择变量，或单击“新建变量...”以创建新的变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
  **Text**  
  提供文本来定义限制。  
@@ -610,5 +610,4 @@ Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/commo
 ## <a name="see-also"></a>另请参阅  
  [控制流](../../integration-services/control-flow/control-flow.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

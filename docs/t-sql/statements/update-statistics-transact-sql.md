@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 153a0654613c01805b4d5b66f078c0637464e5e2
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 3225978926ade62bd932e41f9d46d8a5bdd8720b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670170"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036870"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -116,7 +116,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  对于大多数工作负载，不需要完全扫描，默认采样已经足够。  
 但是，对广泛变化的数据分布敏感的某些工作负载可能需要增加样本大小，或者甚至需要完全扫描。  
-有关详细信息，请参阅 [CSS SQL 升级服务博客](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)。  
+有关详细信息，请参阅 [CSS SQL 升级服务博客](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)。  
   
  RESAMPLE  
  使用最近的采样速率更新每个统计信息。  
@@ -319,4 +319,4 @@ UPDATE STATISTICS Customer;
  [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
- [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)

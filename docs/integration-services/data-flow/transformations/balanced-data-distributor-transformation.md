@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17650c2fd72996ea0d8f0eb080fbc170d779fdbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0af6a36d456b52791f2cafccc9c017f644893975
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495708"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194632"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡的数据分发服务器转换
 
@@ -42,6 +42,5 @@ ms.locfileid: "88495708"
  请注意，如果 SSIS 包中的瓶颈在于从源读取数据的速度，则 BDD 组件无助于性能的提高。 如果 SSIS 包中的瓶颈是因为目标不支持并行，则 BDD 爱莫能助；但是，可以并行执行所有转换并使用 Union All 转换将来自不同 BDD 转换输出路径的输出数据合并，然后再将数据发送至目标。  
   
 > [!IMPORTANT]  
->  有关使用该转换的演示，请观看 TechNet Library 上 [平衡的数据分发服务器视频](https://go.microsoft.com/fwlink/?LinkID=226278) 。  
-  
+>  有关使用该转换的演示，请观看 TechNet Library 上 [平衡的数据分发服务器视频](/previous-versions/dn912438(v=msdn.10)) 。  
   

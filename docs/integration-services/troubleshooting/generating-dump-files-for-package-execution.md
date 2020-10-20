@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913736"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193769"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>生成包执行的转储文件
 
@@ -35,7 +35,7 @@ ms.locfileid: "86913736"
   
      调用此存储过程以暂停正在运行的包并创建转储文件。  
   
- 如果你正在使用包部署模型，则可以使用 **dtexec** 实用工具或 **dtutil** 实用工具在命令行下指定调试转储选项，来创建调试转储文件。 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md) 和 [dtutil Utility](../../integration-services/dtutil-utility.md)。 有关包部署模型的详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](https://msdn.microsoft.com/library/hh213290.aspx)以及[早期包部署 (SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md)。   
+ 如果你正在使用包部署模型，则可以使用 **dtexec** 实用工具或 **dtutil** 实用工具在命令行下指定调试转储选项，来创建调试转储文件。 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md) 和 [dtutil Utility](../../integration-services/dtutil-utility.md)。 有关包部署模型的详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../packages/deploy-integration-services-ssis-projects-and-packages.md)以及[早期包部署 (SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md)。   
   
 ## <a name="debug-dump-file-format"></a>调试转储文件格式  
  指定调试转储选项时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建下列调试转储文件：  
@@ -55,4 +55,4 @@ ms.locfileid: "86913736"
 |最近的消息|系统最近发出的消息。 包括每条消息的时间、类型、说明和线程 ID。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp:2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID:2368           (ThreadID)<br /><br /> [E:3]         Event Name:OnError                        (EventName)<br /><br /> [E:3]         Source Name:              (SourceName)<br /><br /> [E:3]         Source ID:                      (SourceID)<br /><br /> [E:3]         Execution ID:               (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description:该组件不存在、未注册、不可升级或缺少所需接口。 此组件的联系人信息为“”。|  
   
 ## <a name="related-information"></a>相关信息  
-[“执行包”对话框](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[“执行包”对话框](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

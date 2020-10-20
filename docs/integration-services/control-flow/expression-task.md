@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52ed6a20fa7b125b3d95d854a6e380512cc1e424
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afbfe24c671d8dae1089ca1e1acb892d5d388372
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393863"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196539"
 ---
 # <a name="expression-task"></a>表达式任务
 
@@ -35,9 +35,8 @@ ms.locfileid: "88393863"
  有关使用表达式设置属性的示例，请参阅 **Use Property Expressions in Packages** 中的 [示例属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)部分。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [在数据流组件中使用表达式](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [在数据流组件中使用表达式](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>相关内容  
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=746575)。  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468032"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038340"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 数据库函数有哪些？
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88468032"
 |[字符串函数](string-functions-transact-sql.md)|对字符串（char 或 varchar）输入值执行运算，然后返回一个字符串或数字值   。|  
 |[系统函数](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|执行运算后返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中有关值、对象和设置的信息。|  
 |[系统统计函数](system-statistical-functions-transact-sql.md)|返回系统的统计信息。|  
-|[文本和图像函数](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|对文本或图像输入值或列执行运算，然后返回有关值的信息。|  
+|[文本和图像函数](./text-and-image-functions-textptr-transact-sql.md)|对文本或图像输入值或列执行运算，然后返回有关值的信息。|  
   
 ## <a name="function-determinism"></a>函数确定性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内置函数可以是确定的或是不确定的。 如果任何时候用一组特定的输入值调用内置函数，返回的结果总是相同的，则这些内置函数为确定的。 如果每次调用内置函数时，即使用的是同一组特定输入值，也总返回不同结果，则这些内置函数为不确定的。 有关详细信息，请参阅 [确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  
@@ -83,5 +83,4 @@ ms.locfileid: "88468032"
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   
  [确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [使用存储过程 &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

@@ -15,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9058445789197a3ddcf8b2412028f0bfc5fc85f4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426469"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036828"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教程：编写 Transact-SQL 语句
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88426469"
 >**注意：** 如果你是初学者，可能会发现使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 比编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句更容易。  
   
 ## <a name="finding-more-information"></a>查找详细信息  
-若要查找有关任何特定语句的详细信息，请在 SQL Server 联机丛书中按名称搜索该语句，或使用“目录”浏览在 [Transact-SQL 引用（数据库引擎）](../t-sql/transact-sql-reference-database-engine.md)下按字母顺序列出的 1,800 个语言元素。 另一种查找信息的好办法是搜索与您感兴趣的主题相关的关键字。 例如，如果想要知道如何返回日期的一部分（例如月份），请在索引中搜索 **dates [SQL Server]**，然后选择 **dateparts**。 这会让你转到主题[日期部分 (Transact-SQL)](../t-sql/functions/datepart-transact-sql.md)。 作为另一个示例，若要了解如何使用字符串，请搜索 **string functions**。 这会让你转到主题[字符串函数 (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)。  
+若要查找有关任何特定语句的详细信息，请在 SQL Server 联机丛书中按名称搜索该语句，或使用“目录”浏览在 [Transact-SQL 引用（数据库引擎）](./language-reference.md)下按字母顺序列出的 1,800 个语言元素。 另一种查找信息的好办法是搜索与您感兴趣的主题相关的关键字。 例如，如果想要知道如何返回日期的一部分（例如月份），请在索引中搜索 **dates [SQL Server]**，然后选择 **dateparts**。 这会让你转到主题[日期部分 (Transact-SQL)](../t-sql/functions/datepart-transact-sql.md)。 作为另一个示例，若要了解如何使用字符串，请搜索 **string functions**。 这会让你转到主题[字符串函数 (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
 本教程将介绍如何创建数据库、在数据库中创建表、将数据插入到表中、更新数据、读取数据、删除数据，然后删除表。 您将创建视图和存储过程，并为数据库和数据配置用户。  
@@ -58,5 +58,3 @@ ms.locfileid: "88426469"
  
   
   
-  
-

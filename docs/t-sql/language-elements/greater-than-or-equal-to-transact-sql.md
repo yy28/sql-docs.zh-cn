@@ -25,12 +25,12 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8774e928cb7487cd05132242aad0d678e8d6240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 174c0b1e429bc72b26d3d5c1873c7d5ff9fc510e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467649"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193403"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;=（大于或等于）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ expression >= expression
 ## <a name="result-types"></a>结果类型  
  Boolean  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  当比较非空表达式时，如果左边操作数的值大于或等于右边的操作数，则结果为 TRUE；否则结果为 FALSE。  
   
  与 =（等于）比较运算符不同，使用 >= 比较两个 NULL 值的结果不依赖于 ANSI_NULLS 设置。  
@@ -64,14 +64,13 @@ expression >= expression
 ### <a name="a-using--in-a-simple-query"></a>A. 在简单查询中使用 >=  
  下面的示例返回 `HumanResources.Department` 表中其 `DepartmentID` 的值大于或等于 13 的所有行。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE DepartmentID >= 13  
-ORDER BY DepartmentID;  
-  
+ORDER BY DepartmentID;   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

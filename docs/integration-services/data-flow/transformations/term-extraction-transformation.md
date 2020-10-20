@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05e63dfc96f14db84feefe92165a952fb4207fd8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67bb55d536c34d8312694d366594819b0f87e595
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425699"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195921"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
 
@@ -181,7 +181,7 @@ ms.locfileid: "88425699"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "88425699"
  为将包含每个所提取字词的分数的输出列提供名称。  
   
  **配置错误输出**  
- 使用[“配置错误输出” ](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[“配置错误输出” ](../error-handling-in-data.md) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>字词提取转换编辑器（“排除”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“排除”** 选项卡，建立与排除表的连接并指定包含排除字词的列。  
@@ -223,7 +223,7 @@ ms.locfileid: "88425699"
  在表或视图中选择包含排除字词的列。  
   
  **配置错误输出**  
- 使用[“配置错误输出” ](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[“配置错误输出” ](../error-handling-in-data.md) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
@@ -254,9 +254,8 @@ ms.locfileid: "88425699"
  指定是否将提取设置为区分大小写。 默认值为 **False**。  
   
  **配置错误输出**  
- 使用[“配置错误输出” ](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[“配置错误输出” ](../error-handling-in-data.md) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
- [字词查找转换](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
+ [字词查找转换](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)

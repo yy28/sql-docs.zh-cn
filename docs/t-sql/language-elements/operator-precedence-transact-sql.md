@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d95c22ef26f7e0cbecad3c0f2e6b04f2ac8c8b37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eab9aaf31173a9aaa40b6cfb32c27dbaf6474428
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467569"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187307"
 ---
 # <a name="operator-precedence-transact-sql"></a>运算符优先级 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88467569"
  如果一个表达式中的两个运算符有相同的优先级别，则按照它们在表达式中的位置对其从左到右进行求值。 例如，在下面的 `SET` 语句所使用的表达式中，在加运算符之前先对减运算符进行求值。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 4 - 2 + 27;  
 -- Evaluates to 2 + 27 which yields an expression result of 29.  
 SELECT @MyNumber;  
@@ -57,7 +57,7 @@ SELECT @MyNumber;
  例如，在下面的 `SET` 语句所使用的表达式中，乘运算符具有比加运算符更高的优先级别。 首先计算乘法运算；表达式结果为 `13`。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * 4 + 5;  
 -- Evaluates to 8 + 5 which yields an expression result of 13.  
 SELECT @MyNumber;  
@@ -66,7 +66,7 @@ SELECT @MyNumber;
  在以下 `SET` 语句使用的表达式中，括号使加法先进行计算。 此表达式的结果为 `18`。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + 5);  
 -- Evaluates to 2 * 9 which yields an expression result of 18.  
 SELECT @MyNumber;  
@@ -75,7 +75,7 @@ SELECT @MyNumber;
  如果表达式有嵌套的括号，那么首先对嵌套最深的表达式求值。 以下示例中包含嵌套的括号，其中表达式 `5 - 3` 在嵌套最深的那对括号中。 该表达式产生一个值 `2`。 然后，加法运算符 (`+`) 将此结果与 `4` 相加，得到值 `6`。 最后将 `6` 与 `2` 相乘，生成表达式的结果 `12`。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + (5 - 3) );  
 -- Evaluates to 2 * (4 + 2) which then evaluates to 2 * 6, and   
 -- yields an expression result of 12.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 227414c3527633c941f7db123cd75083e1b6207b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc8ff10121320da5b291c3c10cdcdac36f0cc364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495164"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194037"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
 
@@ -214,7 +214,7 @@ order by source_component_name desc
 9. 在“要显示的列”区域中，选择要在数据查看器中显示的列。 默认情况下，所有可用列都处于选定状态并在 **“已显示的列”** 列表中列出。 选择不希望使用的列，然后单击向左键，将它们移到 **“未使用的列”** 列表中。  
   
     > [!NOTE]  
-    >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 **T** 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+    >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 **T** 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](../data-flow/parsing-data.md)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 10. 单击“确定”。  
 
@@ -274,9 +274,8 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  启用详细日志记录级别并添加数据分流点会增加数据集成解决方案所执行的 I/O 操作数。 因此，建议仅出于故障排除目的添加数据分流点。  
   
 ### <a name="video"></a>视频  
- 此 [video on TechNet](https://technet.microsoft.com/sqlserver/dn600163) 演示了如何在 SQL Server 2012 SSISDB 目录中添加/使用数据分流点，从而有助于以编程方式对包进行调试并在运行时捕获部分结果。 它还讨论了如何列出/删除这些数据分流点，并讨论了在 SSIS 包中使用数据分流点的最佳实践。  
+ 此 [video on TechNet](../../sql-server/index.yml) 演示了如何在 SQL Server 2012 SSISDB 目录中添加/使用数据分流点，从而有助于以编程方式对包进行调试并在运行时捕获部分结果。 它还讨论了如何列出/删除这些数据分流点，并讨论了在 SSIS 包中使用数据分流点的最佳实践。  
  
 ## <a name="see-also"></a>另请参阅  
  [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
-  
   

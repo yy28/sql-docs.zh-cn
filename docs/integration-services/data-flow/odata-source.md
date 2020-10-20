@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424417"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194788"
 ---
 # <a name="odata-source"></a>OData 源
 
@@ -42,7 +42,7 @@ ms.locfileid: "89424417"
 
 OData 源包括对以下数据源的支持：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
--   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL：`https://<server>/_vti_bin/ListData.svc`。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](https://msdn.microsoft.com/library/ff521587.aspx)。
+-   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL：`https://<server>/_vti_bin/ListData.svc`。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14))。
 
 ## <a name="supported-data-types"></a>支持的数据类型
 
@@ -159,5 +159,4 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
   
 ## <a name="see-also"></a>另请参阅  
  [OData 连接管理器](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
   

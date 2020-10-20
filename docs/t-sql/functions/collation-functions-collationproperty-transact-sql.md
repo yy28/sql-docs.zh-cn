@@ -20,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67977deba00a1df52a9264256b83f6e57bc49ed5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116135"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035930"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>排序规则函数 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ COLLATIONPROPERTY( collation_name , property )
   
 |属性名称|描述|  
 |---|---|
-|**CodePage**|排序规则的非 Unicode 代码页。 这是 varchar**** 数据使用的字符集。 请参阅 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx)（附录 G DBCS/Unicode 映射表）和 [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx)（附录 H 代码页）以转换这些值并查看它们的字符映射。<br /><br />基本数据类型：int|  
-|**LCID**|排序规则的 Windows 区域设置 ID。 此区域性用于排序和比较规则。 请参阅 [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx)（LCID 结构）以转换这些值（首先需要转换为 varbinary）****。<br /><br />基本数据类型：int|  
+|**CodePage**|排序规则的非 Unicode 代码页。 这是 varchar**** 数据使用的字符集。 请参阅 [Appendix G DBCS/Unicode Mapping Tables](/previous-versions/cc194886(v=msdn.10))（附录 G DBCS/Unicode 映射表）和 [Appendix H Code Pages](/previous-versions/cc195051(v=msdn.10))（附录 H 代码页）以转换这些值并查看它们的字符映射。<br /><br />基本数据类型：int|  
+|**LCID**|排序规则的 Windows 区域设置 ID。 此区域性用于排序和比较规则。 请参阅 [LCID Structure](/openspecs/windows_protocols/ms-lcid/63d3d639-7fd2-4afb-abbe-0d5b5551eef8)（LCID 结构）以转换这些值（首先需要转换为 varbinary）****。<br /><br />基本数据类型：int|  
 |**ComparisonStyle**|排序规则的 Windows 比较样式。 对于二进制排序规则（(\_BIN) 和 (\_BIN2)），以及需区分所有属性时（ (\_CS\_AS\_KS\_WS)、(\_CS\_AS\_KS\_WS\_SC) 和 (\_CS\_AS\_KS\_WS\_VSS)），返回 0。 位掩码值：<br /><br /> 忽略大小写：1<br /><br /> 忽略重音：2<br /><br /> 忽略假名：65536<br /><br /> 忽略宽度：131072<br /><br /> 注意：尽管会影响比较行为，但此值中不会显示区分变体选择符 (\_VSS) 选项。<br /><br />基本数据类型：int|  
 |**Version**|排序规则的版本。 返回的值介于 0 到 3 之间。<br /><br /> 名称中含有“140”的排序规则返回 3。<br /><br /> 名称中含有“100”的排序规则返回 2。<br /><br /> 名称中含有“90”的排序规则返回 1。<br /><br /> 所有其他排序规则均返回 0。<br /><br />基本数据类型：tinyint|  
   
@@ -86,5 +86,3 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ## <a name="see-also"></a>另请参阅
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
-  
-

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2abf3c8a09ead6369a5201a2d582623f05bc2f79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85b62ff41c9b413c49ff6312e918f648fba430cd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477839"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194819"
 ---
 # <a name="excel-destination"></a>Excel 目标
 
@@ -54,7 +54,7 @@ ms.locfileid: "88477839"
   
  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Excel 自定义属性](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88477839"
 |选项|说明|  
 |------------|-----------------|  
 |表或视图|将数据加载到 Excel 数据源中的工作表或指定范围。|  
-|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息**：[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息**：[在包中使用变量](../integration-services-ssis-variables.md)|  
 |SQL 命令|使用 SQL 查询将数据加载到 Excel 目标中。|  
   
  **Excel 表的名称**  

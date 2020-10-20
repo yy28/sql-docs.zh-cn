@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392103"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194770"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392103"
  ODBC 目标具有一个常规输出和一个错误输出。  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 加载选项  
- ODBC 目标可以使用两个访问加载模块之一。 在 [ODBC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)中设置模式。 这两种模式是：  
+ ODBC 目标可以使用两个访问加载模块之一。 在 [ODBC 源编辑器（“连接管理器”页）](./odbc-source.md)中设置模式。 这两种模式是：  
   
 -   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392103"
   
 -   标准的输出数据列。  
   
- 根据错误行为设置，CDC 目标支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [ODBC 源编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)。  
+ 根据错误行为设置，CDC 目标支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [ODBC 源编辑器（“错误输出”页）](./odbc-source.md)。  
   
 ## <a name="parallelism"></a>并行度  
  对于可对同一台计算机或不同计算机（并非一般的全局会话限制）上的相同表或不同表并行运行的 ODBC 目标组件的数目没有限制。  
@@ -67,11 +67,11 @@ ms.locfileid: "88392103"
   
  有关详细信息，请参阅下列主题之一：  
   
--   [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目标编辑器（“连接管理器”页）]()  
   
--   [ODBC 目标编辑器（“映射”页）](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目标编辑器（“映射”页）]()  
   
--   [ODBC 目标编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目标编辑器（“错误输出”页）]()  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392103"
   
 #### <a name="redirect-flow"></a>重定向流  
  将引起错误或截断的行定向到 ODBC 目标的错误输出。 有关详细信息，请参阅 ODBC 目标。  
-  

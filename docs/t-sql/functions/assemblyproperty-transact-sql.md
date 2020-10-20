@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 25ce07cf4605082faf496264aa6c3b6e5fe513e7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 722d6c4b2130ad51c2249f083691233524d3834c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117186"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037080"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ property_name
 **sql_variant**
   
 ## <a name="examples"></a>示例  
-此示例假定在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中注册了 `HelloWorld` 程序集。 有关详细信息，请参阅 [Hello World 示例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
+此示例假定在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中注册了 `HelloWorld` 程序集。 有关详细信息，请参阅 [Hello World 示例](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130))。
   
 ```sql
 USE AdventureWorks2012;  
@@ -76,5 +76,4 @@ SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');
 ## <a name="see-also"></a>另请参阅
 [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)
-  
   

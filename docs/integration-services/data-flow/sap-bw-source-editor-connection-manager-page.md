@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b745e73cb7f25ff8936ddc385979c69ad675f8ea
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495721"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194741"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
 
@@ -54,7 +54,7 @@ ms.locfileid: "88495721"
  **新建**  
  使用“SAP BW 连接管理器”**** 对话框创建新的连接管理器。  
   
- 有关此对话框的详细信息，请参阅 [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)。  
+ 有关此对话框的详细信息，请参阅 [SAP BW Connection Manager Editor](../connection-manager/sap-bw-connection-manager.md)。  
   
  **OHS 目标**  
  选择用来从源中提取数据的 Open Hub Service (OHS) 目标。  
@@ -133,5 +133,4 @@ ms.locfileid: "88495721"
  [SAP BW 源编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [SAP BW 源编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
   

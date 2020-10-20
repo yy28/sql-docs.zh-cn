@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484600"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194269"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484600"
   
  发送或接收消息时，“消息队列”任务使用以下四种消息类型之一：数据文件、字符串、变量的字符串消息或变量。 仅在接收消息时才能使用针对变量消息类型的字符串消息。  
   
- 任务使用 MSMQ 连接管理器连接到消息队列。 有关详细信息，请参阅 [MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)。 有关消息队列的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)。  
+ 任务使用 MSMQ 连接管理器连接到消息队列。 有关详细信息，请参阅 [MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)。 有关消息队列的详细信息，请参阅 [MSDN Library](../../sql-server/index.yml)。  
   
  消息队列任务要求安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的 **“要安装的组件”** 页或 **“功能选择”** 页上选择安装某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，将同时安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集。 这些组件对特定任务是有用的，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能将受到限制。 例如， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项会安装设计包所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，但不安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，因此消息队列任务不起作用。 为了确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] “要安装的组件” **页上选择** 。 有关安装和运行“消息队列”任务的详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484600"
  有关以编程方式设置这些属性的信息，请参阅开发人员指南中针对 **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** 类的文档。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请参阅 [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请参阅 [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“常规”** 页，对消息队列任务进行命名和说明，指定消息格式，以及指示任务是发送还是接收消息。  
@@ -123,7 +123,7 @@ ms.locfileid: "88484600"
  **MSMQConnection**  
  选择现有 MSMQ 连接管理器，或单击“\<**New connection...**>”以创建新的连接管理器。  
   
- **相关主题**：[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **相关主题**：[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../connection-manager/msmq-connection-manager.md)  
   
  **消息**  
  指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”** ，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”** ，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”** 。  
@@ -233,7 +233,7 @@ ms.locfileid: "88484600"
  **变量**  
  键入变量名称，或单击“\<**New variable...**>”，然后配置新的变量。  
   
- **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>Filter 动态选项  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484600"
  **变量**  
  键入要保存接收到的消息的变量名，或单击“\<**New variable...**>”，然后配置新的变量。  
   
- **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>选择变量
   可以使用 **“选择变量”** 对话框，指定在消息队列任务的发送消息操作中使用的变量。 “可用变量”列表包括消息队列任务或其父容器作用域内的系统变量和用户定义变量  。 该任务使用 **“所选变量”** 列表中的变量。  
@@ -299,9 +299,8 @@ ms.locfileid: "88484600"
  **新建变量**  
  创建新变量。  
   
- **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

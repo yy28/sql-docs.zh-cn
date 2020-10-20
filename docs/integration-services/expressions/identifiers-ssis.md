@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34d66b1dd07bfc167c71c97de51474cc6c63dd2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c73fe0f45976cf9beade00d2a02abd31dead7419
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391223"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194529"
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
 
@@ -106,7 +106,7 @@ ms.locfileid: "88391223"
 ## <a name="unique-variable-names"></a>唯一变量名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持自定义变量并提供一组系统变量。 默认情况下，自定义变量属于 **User** 命名空间，而系统变量属于 **System** 命名空间。 可以为自定义变量创建其他命名空间并更新命名空间名称来满足应用程序要求。 表达式生成器列出了所有命名空间中的作用域内变量。  
   
- 所有变量都有作用域并属于某个命名空间。 变量的作用域可以是包或者包中的容器或任务。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的表达式生成器仅列出作用域内变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 所有变量都有作用域并属于某个命名空间。 变量的作用域可以是包或者包中的容器或任务。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的表达式生成器仅列出作用域内变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../integration-services-ssis-variables.md)。  
   
  表达式中使用的变量必须具有唯一的名称，表达式计算器才能正确地计算表达式。 如果包使用多个同名变量，则它们的命名空间必须不同。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了命名空间解析运算符，该运算符由两个冒号 (::) 组成，用于以命名空间限定变量。 例如，下面的表达式使用两个名为 **Count**的变量；一个属于 **User** 命名空间，另一个属于 **MyNamespace** 命名空间。  
   
@@ -127,5 +127,4 @@ ms.locfileid: "88391223"
   
 ## <a name="related-content"></a>相关内容  
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=746575)。  
-  
   

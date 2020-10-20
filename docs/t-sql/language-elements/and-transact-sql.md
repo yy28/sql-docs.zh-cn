@@ -23,12 +23,12 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf84d48b89218d4d37a7c1c1b9cf57df6a45775e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c4d9a4169bac272cf57699a1436e36b53181e390
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417163"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196861"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ boolean_expression AND boolean_expression
 ### <a name="a-using-the-and-operator"></a>A. 使用 AND 运算符  
  下面的示例选择与职位为 `Marketing Assistant` 且可用假期小时数超过 `41` 的员工有关的信息。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT  BusinessEntityID, LoginID, JobTitle, VacationHours   
@@ -81,7 +81,7 @@ AND VacationHours > 41 ;
 ### <a name="b-using-the-and-operator-in-an-if-statement"></a>B. 在 IF 语句中使用 AND 运算符  
  下面的示例显示如何在 IF 语句中使用 AND。 在第一个语句中，`1 = 1` 和 `2 = 2` 均为 True，因此结果是 True。 在第二个示例中，参数 `2 = 17` 为 False，因此结果为 False。  
   
-```  
+```sql  
 IF 1 = 1 AND 2 = 2  
 BEGIN  
    PRINT 'First Example is TRUE'  

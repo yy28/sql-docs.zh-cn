@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430669"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194161"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
 
@@ -108,11 +108,10 @@ ms.locfileid: "88430669"
     > [!NOTE]  
     >  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”** 页上指定的表名。  
   
-13. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+13. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](./lookup-transformation.md)。  
   
 14. 单击 **“确定”** 以保存对查找转换的更改，然后运行包。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

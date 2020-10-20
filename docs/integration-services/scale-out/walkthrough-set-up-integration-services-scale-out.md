@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522341"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196349"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>演练：安装 Integration Services (SSIS) Scale Out
 
@@ -76,7 +76,7 @@ ms.locfileid: "87522341"
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>从命令提示符安装 Scale Out Master
 
-按照 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的说明操作。 执行以下操作，为 Scale Out Master 设置参数：
+按照 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)中的说明操作。 执行以下操作，为 Scale Out Master 设置参数：
  
 1.  将 `IS_Master` 添加到参数 `/FEATURES`
 
@@ -131,7 +131,7 @@ ms.locfileid: "87522341"
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>从命令提示符安装 Scale Out Worker
 
-按照 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的说明操作。 执行以下操作，为 Scale Out Worker 设置参数：
+按照 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)中的说明操作。 执行以下操作，为 Scale Out Worker 设置参数：
 
 1.  将 IS_Worker 添加到参数 `/FEATURES`。
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5f12eefb4f84b7ee936bfcbd736c3d22ba9162c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d1460c83488f7ba708f737e7c9bb7bd46819152
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459923"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037460"
 ---
 # <a name="tostring-database-engine"></a>ToString（数据库引擎）
 
@@ -121,8 +121,7 @@ this.ToString()
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[hierarchyid 数据类型方法引用](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid 数据类型方法引用](./hierarchyid-data-type-method-reference.md)  
 [分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

@@ -21,12 +21,12 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3efeffa1d628395824893bb2c0ae9d546347f79d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 1e91b310355bf42e465989e84d93f6f292fa853d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115349"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037470"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ uniqueidentifier 数据类型的列或局部变量可通过以下方式初始化
 
 这些工具和功能不支持 `uniqueidentifier` 数据类型：
 - PolyBase
-- 适用于并行数据仓库的 [dwloader 加载工具](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)
+- 适用于并行数据仓库的 [dwloader 加载工具](../../analytics-platform-system/dwloader.md)
 
 ## <a name="examples"></a>示例  
 以下示例将 `uniqueidentifier` 值转换为 `char` 数据类型。
@@ -86,5 +86,4 @@ String                                       TruncatedValue
 [NEWSEQUENTIALID (Transact-SQL)](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-  
   

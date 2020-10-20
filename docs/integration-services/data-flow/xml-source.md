@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425609"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194543"
 ---
 # <a name="xml-source"></a>XML 源
 
@@ -83,7 +83,7 @@ ms.locfileid: "88425609"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [XML 源自定义属性](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88425609"
 |值|描述|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
-|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息**：[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息**：[在包中使用变量](../integration-services-ssis-variables.md)|  
 |来自变量的 XML 数据|从变量检索 XML 数据。|  
   
  **使用内联架构**  
@@ -174,4 +174,4 @@ ms.locfileid: "88425609"
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [使用 XML 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [使用 XML 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

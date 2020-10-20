@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412741"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194869"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
 
@@ -33,7 +33,7 @@ ms.locfileid: "91412741"
 
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
   
- 可使用 ADO NET 目标连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请参阅[通用指导原则和限制（Azure SQL 数据库）](https://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 可使用 ADO NET 目标连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请参阅[通用指导原则和限制（Azure SQL 数据库）](/previous-versions/azure/ee336245(v=azure.100))。  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO NET 目标故障排除  
  可以记录 ADO NET 目标对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除 ADO NET 目标执行将数据保存到外部数据源的操作过程中发生的故障。 若要记录 ADO NET 目标对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "91412741"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [ADO NET 自定义属性](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "91412741"
   
  可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 来连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。    有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关  “错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
+ 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。    有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关  “错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）]()。  
   
 > [!NOTE]
 >  如果 SQL Server 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标之前使用“执行 SQL 任务”来启用 IDENTITY_INSERT，并在之后再次禁用它。 （标识列属性为列指定一个增量值。 使用 SET IDENTITY_INSERT 语句，可将源表中的显式值插入目标表中的标识列。）  
@@ -171,5 +171,4 @@ ms.locfileid: "91412741"
   
  **应用**  
  将错误处理选项应用到选定的单元格。  
-  
   

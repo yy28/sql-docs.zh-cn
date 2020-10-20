@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807028"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196141"
 ---
 # <a name="variables-transact-sql"></a>变量 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ Transact-SQL 局部变量是可以保存单个特定类型数据值的对象。 
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ DECLARE 语句通过以下操作初始化 Transact-SQL 变量：
 
 例如，下面的 DECLARE**** 语句创建名为 \@mycounter**** 且数据类型为 int 的局部变量。  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 若要声明多个局部变量，请在定义的第一个局部变量后使用一个逗号，然后指定下一个局部变量名称和数据类型。
 
 例如，下面的 DECLARE**** 语句创建了三个局部变量，分别名为 \@LastName****、\@FirstName**** 和 \@StateProvince****，并将每个变量都初始化为 NULL：  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 变量的作用域就是可以引用该变量的 Transact-SQL 语句的范围。 变量的作用域从声明变量的地方开始到声明变量的批处理或存储过程的结尾。 例如，下面的脚本存在语法错误，因为在一个批处理中引用了在另一个批处理中声明的变量：  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 变量具有局部作用域，只在定义它们的批处理或过程中可见。 在下面的示例中，为执行 sp_executesql 创建的嵌套作用域不能访问在更高作用域中声明的变量，从而返回错误。  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ GO
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ GO
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

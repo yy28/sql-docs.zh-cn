@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457415"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196461"
 ---
 # <a name="cdc-source"></a>CDC 源
 
@@ -36,7 +36,7 @@ ms.locfileid: "88457415"
   
  CDC 源使用以下配置：  
   
--   用于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 连接管理器。 有关配置 CDC 源连接的详细信息，请参阅 [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)。  
+-   用于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 连接管理器。 有关配置 CDC 源连接的详细信息，请参阅 [CDC 源编辑器（“连接管理器”页）]()。  
   
 -   为 CDC 启用的表。  
   
@@ -105,11 +105,11 @@ use <cdc-enabled-database-name>
   
  有关详细信息，请参阅下列主题之一：  
   
--   [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [CDC 源编辑器（“连接管理器”页）]()  
   
--   [CDC 源编辑器（“列”页）](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC 源编辑器（“列”页）]()  
   
--   [CDC 源编辑器（“错误输出”页）](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC 源编辑器（“错误输出”页）]()  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -251,5 +251,4 @@ use <cdc-enabled-database-name>
 ## <a name="related-content"></a>相关内容  
   
 -   mattmasson.com 上的博客文章 [CDC 源的处理模式](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
-  
   

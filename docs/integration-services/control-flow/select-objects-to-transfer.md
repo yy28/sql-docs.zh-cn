@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3328426a280f8e974ddaa8cbb99ea944e006553f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fa807b323adb198b65de4ac3fb38017120ad4ad
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350163"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194932"
 ---
 # <a name="select-objects-to-transfer"></a>选择要传输的对象
 
@@ -33,10 +33,9 @@ ms.locfileid: "88350163"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [传输作业任务编辑器（“常规”页）](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
- [传输登录名任务编辑器（“登录名”页）](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   
- [传输 SQL Server 对象任务编辑器（“对象”页）](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md)   
- [传输主存储过程任务编辑器（“存储过程”页）](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [传输错误消息任务编辑器（“消息”页）](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
-  
+ [传输作业任务编辑器（“常规”页）](./transfer-jobs-task.md)   
+ [传输登录名任务编辑器（“登录名”页）](./transfer-logins-task.md)   
+ [传输 SQL Server 对象任务编辑器（“对象”页）](./transfer-sql-server-objects-task.md)   
+ [传输主存储过程任务编辑器（“存储过程”页）](./transfer-master-stored-procedures-task.md)   
+ [传输错误消息任务编辑器（“消息”页）](./transfer-error-messages-task.md)  
   

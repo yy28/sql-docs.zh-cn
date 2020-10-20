@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: afd8fb3bf9b77eaaf5ee69728fafd83ed4f63889
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b22c31b7e38936adec2ac7355912e2899024659c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430109"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197011"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 运行来自 SSMS 的 SSIS 包
 
@@ -27,7 +27,7 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 ## <a name="prerequisites"></a>先决条件
 
-开始之前，请确保有最新版本的 SQL Server Management Studio (SSMS)。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+开始之前，请确保有最新版本的 SQL Server Management Studio (SSMS)。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。
 
 Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
@@ -107,4 +107,4 @@ GO
     - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [从命令提示符运行 SSIS 包](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 运行 SSIS 包](ssis-quickstart-run-powershell.md)
-    - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md) 
+    - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md)

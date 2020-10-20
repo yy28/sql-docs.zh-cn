@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a538c99d7f10e7bde271ed0ea622e05b4944a22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac1283f291e31b42d6b5099546673459f73caf0b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477607"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195309"
 ---
 # <a name="row-count-transformation"></a>行计数转换
 
@@ -44,7 +44,7 @@ ms.locfileid: "88477607"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -55,5 +55,4 @@ ms.locfileid: "88477607"
  [Integration Services (SSIS) 变量](../../../integration-services/integration-services-ssis-variables.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

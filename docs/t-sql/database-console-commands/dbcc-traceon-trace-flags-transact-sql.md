@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 99dd26d2eec49212ae1603cc2acb8e7464dfbd2b
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 9f7914db08efd8a00e0fbcc0c69d6df0d9d8de26
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210602"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037094"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91210602"
 |**260**|打印有关扩展存储过程动态链接库 (DLL) 的版本控制信息。 有关 **GetXpVersion()** 的详细信息，请参阅[创建扩展存储过程](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)。<br /><br />**作用域：** 全局或会话|
 |**272**|在服务器意外重新启动或故障转移到辅助服务器的情况下，禁用标识预分配以避免标识列的值出现差异。 请注意，标识缓存用于提高具有标识列的表的 INSERT 性能。<br /><br />**注意：** 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 IDENTITY_CACHE 选项。<br /><br />**作用域**：仅全局|
 |**460**|将数据截断消息 ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) 替换为消息 ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4468101)。<br /><br />自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 VERBOSE_TRUNCATION_WARNINGS 选项。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 及更高内部版本。<br /><br />**注意：** 从数据库兼容性级别 150 开始，消息 ID 2628 为默认设置，此跟踪标志无效。<br /><br />**作用域**：全局或会话|
-|**610**|控制对索引表进行的以最低限度记录的插入。 从 SQL Server 2016 开始，不需要此跟踪标志，因为对索引表默认启用了最低限度记录。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，当大容量加载操作导致分配一个新页面时，如果符合最低限度记录的其他所有先决条件，则会以最低限度记录按顺序填充该新页面的所有行。 为了维护索引顺序而插入到现有页面中的行（不分配新页面）仍以完整方式记录，这与在加载过程中由于页面拆分而移动的行一样。 为索引启用 ALLOW_PAGE_LOCKS（默认启用）以便让最低限度记录操作正常运行也很重要，因为在分配期间会获取页锁，从而仅记录页面或盘区分配。 有关详细信息，请参阅[数据加载性能指南](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))。<br /><br />**作用域**：全局或会话|
+|**610**|控制对索引表进行的以最低限度记录的插入。 从 SQL Server 2016 开始，不需要此跟踪标志，因为对索引表默认启用了最低限度记录。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，当大容量加载操作导致分配一个新页面时，如果符合最低限度记录的其他所有先决条件，则会以最低限度记录按顺序填充该新页面的所有行。 为了维护索引顺序而插入到现有页面中的行（不分配新页面）仍以完整方式记录，这与在加载过程中由于页面拆分而移动的行一样。 为索引启用 ALLOW_PAGE_LOCKS（默认启用）以便让最低限度记录操作正常运行也很重要，因为在分配期间会获取页锁，从而仅记录页面或盘区分配。 有关详细信息，请参阅[数据加载性能指南](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))。<br /><br />**作用域**：全局或会话|
 |**634**|禁用背景列存储压缩任务。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期运行元组发动机后台任务，对含有未压缩数据的列存储索引行组进行压缩，每次压缩一个这种行组。<br /><br />列存储压缩可提高查询性能，但也会占用系统资源。 通过用跟踪标志 634 禁用后台压缩任务，然后随时显式调用 ALTER INDEX...REORGANIZE 或 ALTER INDEX...REBUILD，可以手动控制列存储压缩计时。<br /><br />**作用域：** 仅全局|
 |**652**|禁用页面预提取扫描。 如果启用跟踪标志 652，则在扫描操作使用这些数据库页之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会再将数据库页引入缓冲池中。 其结果是，受益于页预提取功能的查询会表现出较低的性能。 <br /><br />**作用域**：全局或会话|
 |**661**|禁用虚影记录删除进程。 跟踪标志 661 会禁用虚影记录删除进程。 虚影记录是删除操作的结果。 删除记录时，已删除的记录将保留为虚影记录。 稍后，虚影记录删除进程将清除已删除的记录。 如果禁用此进程，则不会清除已删除的记录。 这样的话已删除的记录所使用的空间不会被释放。 此行为会影响扫描操作的空间消耗量和性能。 有关详细信息，请查看[虚影清除进程指南](../../relational-databases/ghost-record-cleanup-process-guide.md) <br /><br />**作用域**：仅全局|
@@ -187,7 +187,7 @@ ms.locfileid: "91210602"
 |**9495**|在 INSERT...SELECT 操作的插入过程中禁用并行，它适用于用户表和临时表。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/kb/3180087)<br /><br />**作用域**：全局或会话| 
 |**9567**|对自动种子设定过程中的 Always On 可用性组启用数据流压缩。 在自动种子设定过程中，压缩可大幅缩短传输时间，并且将增加处理器上的负载。 有关详细信息，请参阅[自动初始化 Always On 可用性组](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[调整可用性组的压缩](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**作用域**：全局或会话|
 |**9571**|禁用可用性组自动设定种子到默认数据库路径。 有关详细信息，请参阅[磁盘布局](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)。<br /><br />**作用域**：全局或会话| 
-|**9576**|在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 中引入的可用性组故障转移，禁用增强的错误集合。 有关详细信息，请参阅 [SQL Server 可用性组 - 增强的数据库级故障转移](https://docs.microsoft.com/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)。<br /><br />**作用域：** 仅全局| 
+|**9576**|在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 中引入的可用性组故障转移，禁用增强的错误集合。 有关详细信息，请参阅 [SQL Server 可用性组 - 增强的数据库级故障转移](/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)。<br /><br />**作用域：** 仅全局| 
 |**9591**|在 Always On 可用性组中禁用日志块压缩。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，日志块压缩是用于同步副本和异步副本的默认行为。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，压缩仅用于异步副本。 <br /><br />**作用域**：全局或会话|
 |**9592**|对同步可用性组启用日志流压缩。 默认情况下，对同步可用性组禁用此功能，因为压缩会增加延迟。 有关详细信息，请参阅 [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)（调整可用性组的压缩）。<br /><br />**作用域**：全局或会话| 
 |**9929**|将每个内存中检查点文件都缩减为 1 MB。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3147012)。<br /><br />**作用域**：仅全局|  

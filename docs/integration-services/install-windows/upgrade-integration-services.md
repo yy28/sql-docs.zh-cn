@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 95ffd6eb4e200139f653d3c051b6106c5f472497
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480599"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193899"
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
 
@@ -51,14 +51,14 @@ ms.locfileid: "89480599"
 > -   执行 DTS 2000 包任务  
 > -   升级 DTS 包的顾问扫描。  
 > 
->  有关其他已停止的功能的信息，请参阅 [SQL Server 2016 中已停止使用的 Integration Services 功能](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)。  
+>  有关其他已停止的功能的信息，请参阅 [SQL Server 2016 中已停止使用的 Integration Services 功能](/previous-versions/sql/sql-server-2016/bb500429(v=sql.130))。  
   
 ## <a name="upgrading-integration-services"></a>升级 Integration Services  
  可以通过使用下列方法之一来进行升级：  
   
 -   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序，然后选择“从 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级 **”选项**。  
   
--   在命令提示符处运行 **setup.exe** ，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安装脚本”部分。  
+-   在命令提示符处运行 **setup.exe** ，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) 中的“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安装脚本”部分。  
   
  不能通过升级执行下列操作：  
   
@@ -151,5 +151,4 @@ ms.locfileid: "89480599"
   
 ## <a name="external-resources"></a>外部资源  
  blogs.msdn.com 上的博客文章： [使您的现有自定义 SSIS 扩展插件和应用程序在 Denali 下工作](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951)。  
-  
   

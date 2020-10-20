@@ -19,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425219"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196363"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
 
@@ -95,7 +95,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 
 有关本部分中描述的错误和 SSIS 服务帐户所需权限的详细信息，请参阅以下博客文章：
  
-- [System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端不具有所需权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端不具有所需权限](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  
@@ -114,7 +114,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
     -   如果您在早期版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中创建了项目，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中打开项目文件之后，将该项目转换为项目部署模型。  
   
         > [!NOTE]  
-        >  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到项目中的包可共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+        >  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到项目中的包可共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))。  
   
          根据您是从 **还是从** 运行 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，该向导将执行不同的转换任务。  
   
@@ -530,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。  
   
 > [!NOTE]  
->  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+>  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))。  
   
  **您希望做什么？**  
   
@@ -655,7 +655,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  键入可选的项目说明。  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> 设置“更新执行包任务”页上的选项  
- 更新包中所含的执行包任务，以使用基于项目的引用。 有关详细信息，请参阅 [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)。  
+ 更新包中所含的执行包任务，以使用基于项目的引用。 有关详细信息，请参阅 [Execute Package Task Editor](../control-flow/execute-package-task.md)。  
   
  **父包**  
  列出使用执行包任务执行子包的包名称。  
@@ -746,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  直到在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中保存项目后，才保存项目转换。  
   
  **保存报告**  
- 单击以在 .xml 文件中保存项目转换的摘要。  
+ 单击以在 .xml 文件中保存项目转换的摘要。
