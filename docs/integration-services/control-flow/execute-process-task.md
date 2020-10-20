@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430979"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197207"
 ---
 # <a name="execute-process-task"></a>执行进程任务
 
@@ -46,12 +46,12 @@ ms.locfileid: "88430979"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="property-settings"></a>属性设置  
  当执行进程任务运行自定义应用程序时，该任务将通过以下一种或两种方法为该应用程序提供输入：  
   
--   在 **StandardInputVariable** 属性设置中指定的变量。 有关变量的详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   在 **StandardInputVariable** 属性设置中指定的变量。 有关变量的详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../integration-services-ssis-variables.md)。  
   
 -   在 **Arguments** 属性设置中指定的参数。 （例如，如果该任务打开一个 Word 格式的文档，该参数就可指定该 .doc 文件的名称。）  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88430979"
   
  可以使用表达式设置执行进程任务的各种属性。  
   
- 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库中的 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)主题。  
+ 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库中的 [Console.ReadLine 方法](/dotnet/api/system.console.readline)主题。  
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88430979"
   
 -   如果使用 Microsoft Visual C# 编写应用程序，请使用 **Main** 方法。  
   
-     有关详细信息，请参阅 C# 编程指南中的 [命令行参数（C# 编程指南）](https://go.microsoft.com/fwlink/?LinkId=129406)这一主题。  
+     有关详细信息，请参阅 C# 编程指南中的 [命令行参数（C# 编程指南）](/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments)这一主题。  
   
  执行进程任务还包括 **StandardOutputVariable** 和 **StandardErrorVariable** 属性，用来分别指定使用该应用程序的标准输出和错误输出的变量。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88430979"
  **StandardInputVariable**  
  选择为进程提供输入的变量，或单击 \<**New variable...**> 创建新的变量：  
   
- **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](../integration-services-ssis-variables.md)  
   
  **StandardOutputVariable**  
  选择捕获进程输出的变量，或单击 \<**New variable...**> 创建新的变量。  
@@ -145,5 +145,4 @@ ms.locfileid: "88430979"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

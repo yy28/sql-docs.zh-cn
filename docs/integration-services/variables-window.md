@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495093"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193734"
 ---
 # <a name="variables-window"></a>“变量”窗口
 
@@ -50,7 +50,7 @@ ms.locfileid: "88495093"
  从列表中选择变量，然后单击“删除变量”。****  
   
  **网格选项**  
- 单击此项可打开“变量网格选项”对话框，从中可以更改列选择并对“变量”窗口应用筛选器。******** 有关详细信息，请参阅 [变量网格选项](../integration-services/variable-grid-options.md)。  
+ 单击此项可打开“变量网格选项”对话框，从中可以更改列选择并对“变量”窗口应用筛选器。******** 有关详细信息，请参阅 [变量网格选项]()。  
   
  **名称**  
  查看变量名称。 您可以更新用户定义变量的名称。  
@@ -116,8 +116,7 @@ ms.locfileid: "88495093"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)   
- [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [在包中使用变量](./integration-services-ssis-variables.md)   
  [Integration Services (SSIS) 表达式](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [生成包执行的转储文件](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

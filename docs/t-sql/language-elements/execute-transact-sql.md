@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a8e535c8cfa51075680850b222e377d16825e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: ec45204c6144ce51b809c84e5339af6cff9b292f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227241"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194962"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -504,7 +504,7 @@ GO
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中执行 `spGetWhereUsedProductID` 存储过程。 该存储过程将传递两个参数：第一个参数为产品 ID (`819`)，第二个参数 `@CheckDate,` 是 `datetime` 值。  
   
 ```sql    
-DECLARE @CheckDate datetime;  
+DECLARE @CheckDate DATETIME;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
 GO  
@@ -542,7 +542,7 @@ GO
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
 ```sql    
-DECLARE @retstat int;  
+DECLARE @retstat INT;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
   
@@ -550,7 +550,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
  以下示例创建一个代表存储过程名称的变量。  
   
 ```sql  
-DECLARE @proc_name varchar(30);  
+DECLARE @proc_name VARCHAR(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
   
@@ -565,15 +565,14 @@ IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL
 GO  
 -- Create the stored procedure.  
 CREATE PROCEDURE dbo.ProcTestDefaults (  
-@p1 smallint = 42,   
-@p2 char(1),   
-@p3 varchar(8) = 'CAR')  
+@p1 SMALLINT = 42,   
+@p2 CHAR(1),   
+@p3 VARCHAR(8) = 'CAR')  
 AS   
    SET NOCOUNT ON;  
    SELECT @p1, @p2, @p3  
 ;  
 GO  
-  
 ```  
   
  `Proc_Test_Defaults` 存储过程可使用多种组合执行。  
@@ -620,7 +619,7 @@ GO
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中执行 `ufnGetSalesOrderStatusText` 标量用户定义函数。 该语句使用 `@returnstatus` 变量存储函数的返回值。 函数需要一个输入参数 `@Status`。 该参数定义为 **tinyint** 数据类型。  
   
 ```sql    
-DECLARE @returnstatus nvarchar(15);  
+DECLARE @returnstatus NVARCHAR(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
 PRINT @returnstatus;  
@@ -665,7 +664,7 @@ GO
  以下示例执行用于创建表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字符串并指定 `AS USER` 子句将语句的执行上下文从调用方切换为 `User1`。 当语句运行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将检查 `User1` 的权限。 `User1` 必须为数据库中的用户，必须具有在 `Sales` 架构中创建表的权限，否则语句将失败。  
   
 ```sql    
-EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
+EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID INT, SalesName VARCHAR(10));')  
 AS USER = 'User1';  
 GO  
 ```  
@@ -695,13 +694,13 @@ GO
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
-   ([Reporting Level] int NOT NULL,  
-    [ID of Employee] int NOT NULL,  
-    [Employee First Name] nvarchar(50) NOT NULL,  
-    [Employee Last Name] nvarchar(50) NOT NULL,  
-    [Employee ID of Manager] nvarchar(max) NOT NULL,  
-    [Manager First Name] nvarchar(50) NOT NULL,  
-    [Manager Last Name] nvarchar(50) NOT NULL )  
+   ([Reporting Level] INT NOT NULL,  
+    [ID of Employee] INT NOT NULL,  
+    [Employee First Name] NVARCHAR(50) NOT NULL,  
+    [Employee Last Name] NVARCHAR(50) NOT NULL,  
+    [Employee ID of Manager] NVARCHAR(max) NOT NULL,  
+    [Manager First Name] NVARCHAR(50) NOT NULL,  
+    [Manager Last Name] NVARCHAR(50) NOT NULL )  
 );  
   
 ```  
@@ -713,7 +712,7 @@ WITH RESULT SETS
   
 ```sql    
 --Create the procedure  
-CREATE PROC Production.ProductList @ProdName nvarchar(50)  
+CREATE PROC Production.ProductList @ProdName NVARCHAR(50)  
 AS  
 -- First result set  
 SELECT ProductID, Name, ListPrice  
@@ -732,12 +731,12 @@ GO
 EXEC Production.ProductList '%tire%'  
 WITH RESULT SETS   
 (  
-    (ProductID int,   -- first result set definition starts here  
-    Name Name,  
-    ListPrice money)  
+    (ProductID INT,   -- first result set definition starts here  
+    Name NAME,  
+    ListPrice MONEY)  
     ,                 -- comma separates result set definitions  
-    (Name Name,       -- second result set definition starts here  
-    NumberOfOrders int)  
+    (Name NAME,       -- second result set definition starts here  
+    NumberOfOrders INT)  
 );  
   
 ```  
@@ -828,7 +827,7 @@ EXEC ('EXEC (''SELECT * FROM sys.types'')');
  执行字符串变量：  
   
 ```sql  
-DECLARE @stringVar nvarchar(100);  
+DECLARE @stringVar NVARCHAR(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
@@ -841,8 +840,8 @@ EXEC (@stringVar);
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  
-    @name nvarchar(50),  
-@color nvarchar (15)  
+    @name NVARCHAR(50),  
+@color NVARCHAR(15)  
 AS   
 SELECT ProductKey, EnglishProductName, Color FROM [dbo].[DimProduct]  
 WHERE EnglishProductName LIKE @name  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6b057a4f2d3959d3f56074a1af603eaba2902a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca2c1223a195d05816b74dd4288b6c2b242d86ac
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425869"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197113"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
 
@@ -83,7 +83,7 @@ ms.locfileid: "88425869"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，单击 [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，单击 [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="related-content"></a>相关内容  
   
@@ -156,16 +156,15 @@ ms.locfileid: "88425869"
  **MessageSource**  
  从列表中选择“文件连接管理器，或单击“\<**New connection...**>”创建新”的连接管理器。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
  在列表中选择变量，或单击“\<**New variable...**>”创建新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

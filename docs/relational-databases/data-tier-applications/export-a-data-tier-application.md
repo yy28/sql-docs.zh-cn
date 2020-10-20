@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8895f6198c6ed60430390bdf3275d0cc500bd85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62166f813bee655bda939c1f230d02a1a5b0afbc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456683"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195611"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88456683"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库导出 DAC 或数据库。  
   
- 如果数据库有 DAC 中不支持的对象或包含用户，则不能导出该数据库。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)。  
+ 如果数据库有 DAC 中不支持的对象或包含用户，则不能导出该数据库。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))。  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  导出 DAC 至少要求 ALTER ANY LOGIN 和数据库范围内的 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。
@@ -131,5 +131,4 @@ ms.locfileid: "88456683"
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [从数据库中提取 DAC](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
-  
   

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea7d90c70b68111e6ed9f1f63986c955f7bb1055
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dec4eb37c00e524c019b07de3943efd4137e7ab9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459187"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194949"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -112,7 +112,7 @@ WAITFOR
 ### <a name="a-using-waitfor-time"></a>A. 使用 WAITFOR TIME  
  下面的示例在晚上 10:20 在 msdb 数据库中执行 `sp_update_job` 存储过程。 (`22:20`).  
   
-```  
+```sql  
 EXECUTE sp_add_job @job_name = 'TestJob';  
 BEGIN  
     WAITFOR TIME '22:20';  
@@ -125,7 +125,7 @@ GO
 ### <a name="b-using-waitfor-delay"></a>B. 使用 WAITFOR DELAY  
  以下示例在两小时的延迟后执行存储过程。  
   
-```  
+```sql  
 BEGIN  
     WAITFOR DELAY '02:00';  
     EXECUTE sp_helpdb;  
@@ -136,7 +136,7 @@ GO
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. 在 WAITFOR DELAY 中使用局部变量  
  以下示例显示如何对 `WAITFOR DELAY` 选项使用局部变量。 该存储过程将等待可变的时间段，然后将经过的小时、分钟和秒数信息返回给用户。  
   
-```  
+```sql  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
     DROP PROCEDURE dbo.TimeDelay_hh_mm_ss;  
 GO  
@@ -145,7 +145,7 @@ CREATE PROCEDURE dbo.TimeDelay_hh_mm_ss
     @DelayLength char(8)= '00:00:00'  
     )  
 AS  
-DECLARE @ReturnInfo varchar(255)  
+DECLARE @ReturnInfo VARCHAR(255)  
 IF ISDATE('2000-01-01 ' + @DelayLength + '.000') = 0  
     BEGIN  
         SELECT @ReturnInfo = 'Invalid time ' + @DelayLength   

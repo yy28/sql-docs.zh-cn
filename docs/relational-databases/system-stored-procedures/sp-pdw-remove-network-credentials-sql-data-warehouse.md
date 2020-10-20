@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f53f7d439db50afde5b6aa556d418e20499ab0fc
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f8bf71d7cc81c8433821393779bf2d80595f2f78
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059316"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92254665"
 ---
 # <a name="sp_pdw_remove_network_credentials-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_remove_network_credentials) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,7 +38,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-  
+
 ## <a name="arguments"></a>参数  
  "*target_server_name*"  
  指定目标服务器主机名或 IP 地址。 将从中删除用于访问此服务器的凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 这不会更改或删除你自己的团队管理的实际目标服务器上的任何权限。  

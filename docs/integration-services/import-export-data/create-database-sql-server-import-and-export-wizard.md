@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477246"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195878"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
 
@@ -29,7 +29,7 @@ ms.locfileid: "88477246"
 向导中的“创建数据库”**** 对话框仅提供可用于创建新 SQL Server 数据库的基本选项。 若要查看和配置用于新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的所有选项，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建数据库或在向导创建数据库后对其进行配置。 
 
 > [!NOTE]
-> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“创建数据库”**** 对话框的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“创建数据库”**** 对话框的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>“创建数据库”页的屏幕截图  
 以下屏幕截图显示向导的“创建数据库” **** 对话框。  
@@ -89,8 +89,7 @@ ms.locfileid: "88477246"
  指定日志文件可以增长的大小 (MB)。  
 
 ### <a name="more-info"></a>更多信息
-有关在此页上看到的文件大小选项的详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 
+有关在此页上看到的文件大小选项的详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)。 
 
 ## <a name="whats-next"></a>下一步操作  
- 为向导将创建的新数据库提供名称并单击“确定” **** 之后，“创建数据库” **** 对话框会使你返回到“选择目标” **** 页。 有关详细信息，请参阅 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。  
-
+ 为向导将创建的新数据库提供名称并单击“确定” **** 之后，“创建数据库” **** 对话框会使你返回到“选择目标” **** 页。 有关详细信息，请参阅 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。

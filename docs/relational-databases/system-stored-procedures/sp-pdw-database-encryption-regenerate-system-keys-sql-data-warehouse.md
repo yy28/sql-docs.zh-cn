@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aa0f0f3afb40492e398e316095a3458169d03eaf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f432d19a558b82abd52bef2839c0887dff70f7ba
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059305"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92254754"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_database_encryption_regenerate_system_keys) 
 
@@ -56,5 +56,4 @@ EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;
 ## <a name="see-also"></a>另请参阅  
  [&#40;Azure Synapse Analytics sp_pdw_database_encryption&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [&#40;Azure Synapse Analytics sp_pdw_log_user_data_masking&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-  
   

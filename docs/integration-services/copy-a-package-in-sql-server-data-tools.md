@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b1f57c7b37994a9a34a792fab2ab19169aa5d9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bdd78011dc51986691ac31b031735d766dd6f5a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457512"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194886"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中复制包
 
@@ -58,8 +58,7 @@ ms.locfileid: "88457512"
 11. 在 **“文件”** 菜单上，单击 **“保存选定项”** ，以保存新建的包。  
   
 ## <a name="see-also"></a>另请参阅  
- [保存一个包副本](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+ [保存一个包副本](./save-packages.md)   
  [在 SQL Server Data Tools 中创建包](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Integration Services (SSIS) 包](../integration-services/integration-services-ssis-packages.md)  
-  
   

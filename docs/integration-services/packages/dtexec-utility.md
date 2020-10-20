@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 206f7d54967eea85c96198e78471f026197a6a64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27f8433667f68bb654fae4317295358a45c82825
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477231"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197063"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
 
@@ -180,13 +180,13 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Conf[igFile]** _filespec_：（可选）。 指定要从中提取值的配置文件。 使用该选项，可以设置一个与设计包时指定的配置不同的运行时配置。 可以将不同的配置设置存储在 XML 配置文件中，然后在执行包之前使用 **/ConfigFile** 选项加载这些设置。  
   
-     可以使用 **/ConfigFile** 选项在运行时加载在设计时未指定的其他配置。 不过，不能使用 **/ConfigFile** 选项来替换在设计时也指定了的配置值。 若要了解如何应用包配置，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
+     可以使用 **/ConfigFile** 选项在运行时加载在设计时未指定的其他配置。 不过，不能使用 **/ConfigFile** 选项来替换在设计时也指定了的配置值。 若要了解如何应用包配置，请参阅 [Package Configurations](./legacy-package-deployment-ssis.md)。  
   
 -   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ ：（可选）。 指定带有指定名称或 GUID 的连接管理器位于包中，并指定了连接字符串。  
   
      该选项要求同时指定两个参数：必须在 *id_or_name* 参数中提供连接管理器名称或 GUID，并且在 *connection_string* 参数中指定有效的连接字符串。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
-     在运行时，可以使用 **/Connection** 选项从在设计时指定的位置之外的某个位置加载包配置。 这些配置的值随后将替换最初指定的值。 不过，可以将 **/Connection** 选项仅用于使用连接管理器的配置，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置。 若要了解如何应用包配置，请参阅 [包配置](../../integration-services/packages/package-configurations.md) 和 [SQL Server 2016 中 Integration Services 功能的行为更改](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
+     在运行时，可以使用 **/Connection** 选项从在设计时指定的位置之外的某个位置加载包配置。 这些配置的值随后将替换最初指定的值。 不过，可以将 **/Connection** 选项仅用于使用连接管理器的配置，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置。 若要了解如何应用包配置，请参阅 [包配置](./legacy-package-deployment-ssis.md) 和 [SQL Server 2016 中 Integration Services 功能的行为更改](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))。  
   
 -   /Cons[oleLog] [[displayoptions]；[list_optionssrc_name_or_guid]...]     ：（可选）。 在包执行过程中，在控制台显示指定的日志项。 如果省略该选项，则不会在控制台中显示日志项。 如果指定该选项时不带限制显示的参数，则会显示所有日志项。 若要限制控制台显示的日志项，可以使用 *displayoptions* 参数指定要显示的列，并使用 *list_options* 参数限制日志项类型。  
   
@@ -228,7 +228,7 @@ dtexec /option [value] [/option [value]]...
   
      有关 **/ConsoleLog** 选项的若干示例，请参阅 **备注** 部分。  
   
--   **/D[ts]** _package_path_：（可选）。 从 SSIS 包存储区加载包。 使用旧的包部署模型部署存储在 SSIS 包存储区中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+-   **/D[ts]** _package_path_：（可选）。 从 SSIS 包存储区加载包。 使用旧的包部署模型部署存储在 SSIS 包存储区中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)。  
   
      *package_path* 参数指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的相对路径，从 SSIS 包存储的根目录开始，包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的名称。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
   
@@ -417,13 +417,13 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     可以使用 **/Set** 选项更改自其加载包配置的位置。 但是，不能使用 **/Set** 选项覆盖设计时某个配置所指定的值。 若要了解如何应用包配置，请参阅 [包配置](../../integration-services/packages/package-configurations.md) 和 [SQL Server 2016 中 Integration Services 功能的行为更改](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
+     可以使用 **/Set** 选项更改自其加载包配置的位置。 但是，不能使用 **/Set** 选项覆盖设计时某个配置所指定的值。 若要了解如何应用包配置，请参阅 [包配置](./legacy-package-deployment-ssis.md) 和 [SQL Server 2016 中 Integration Services 功能的行为更改](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))。  
   
 -   **/Ser[ver]** _server_：（可选）。 指定 **/SQL** 或 **/DTS** 选项后，此选项可以指定从中检索包的服务器的名称。 如果省略 **/Server** 选项但指定 **/SQL** 或 **/DTS** 选项，则尝试对本地服务器执行包。 *server_instance* 值可以用引号引起来。  
   
      指定 **/ISServer** 选项时，必须指定 **/Ser[ver]** 选项。  
   
--   **/SQ[L]** _package_path_：加载存储在 msdb 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的包  。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。   
+-   **/SQ[L]** _package_path_：加载存储在 msdb 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的包  。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)。   
   
 -   *package_path* 参数指定要检索的包的名称。 如果文件夹包含在路径中，则文件夹将以反斜杠（“\\”）结束。 *package_path* 值可以用引号引起来。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
   
@@ -645,5 +645,4 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ## <a name="related-content"></a>相关内容  
  [www.mattmasson.com](www.mattmasson.com) 上的博客文章 [退出代码、DTEXEC 和 SSIS 目录](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
-  
   

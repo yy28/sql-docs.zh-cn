@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 15083ee98c5752fc22cb2a1584883764bd1076a8
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 6d3a6d83b14c401ca6fc7ff6c773ef9565662a0f
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785142"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115437"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的各版本和支持的功能
 
@@ -245,5 +245,5 @@ Linux 上的 SQL Server 2017 目前不支持以下功能和服务。 随着时�
  [SQL Server 2019 的各版本和支持的功能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 的各版本和支持的功能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 的各版本和支持的功能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [安装 SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server 的产品规格](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+ [安装 SQL Server](../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server 的产品规格](../sql-server/index.yml)

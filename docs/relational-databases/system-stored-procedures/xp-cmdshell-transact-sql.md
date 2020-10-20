@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3333e8d26c6f79bc3f99298e2854f05789caac9f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541007"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257604"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,14 +65,15 @@ The command(s) completed successfully.
   
 ## <a name="remarks"></a>备注  
  **Xp_cmdshell**生成的 Windows 进程与服务帐户具有相同的安全权限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 
+> [!IMPORTANT]
+>  **xp_cmdshell** 是一项功能强大的功能，默认情况下已禁用。 可以使用基于策略的管理或通过执行**sp_configure**来启用和禁用**xp_cmdshell** 。 有关详细信息，请参阅 [外围应用配置](../../relational-databases/security/surface-area-configuration.md) 和 [Xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
- **xp_cmdshell** 同步操作。 在命令 shell 命令执行完毕之前，不会将控制权返回给调用方。  
-  
- 可以使用基于策略的管理或通过执行**sp_configure**来启用和禁用**xp_cmdshell** 。 有关详细信息，请参阅 [外围应用配置](../../relational-databases/security/surface-area-configuration.md) 和 [Xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
-  
+ **xp_cmdshell** 同步操作。 在命令 shell 命令执行完毕之前，不会将控制权返回给调用方。 
+ 
 > [!IMPORTANT]
 >  如果 **xp_cmdshell** 在批处理中执行并返回错误，则批处理将失败。 这是行为的更改。 在早期版本的中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批处理将继续执行。  
-  
+ 
 ## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell 代理帐户  
  如果由不是 **sysadmin** 固定服务器角色成员的用户调用， **xp_cmdshell** 将使用名为 **# #xp_cmdshell_proxy_account # #** 的凭据中存储的帐户名和密码连接到 Windows。 如果此代理凭据不存在， **xp_cmdshell** 将会失败。  
   

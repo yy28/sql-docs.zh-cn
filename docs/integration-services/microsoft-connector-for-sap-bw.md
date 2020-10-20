@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430149"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194046"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430149"
   
 -   **SAP BW 连接管理器** - SAP BW 连接管理器将 SAP BW 源或 SAP BW 目标连接到 SAP Netweaver BW 版本 7 系统。  
   
- 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server Integration Services 与 SAP BI 7.0 一起使用](https://go.microsoft.com/fwlink/?LinkId=301897)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
+ 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server Integration Services 与 SAP BI 7.0 一起使用](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
 ## <a name="documentation"></a>文档  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 的此帮助文件包含以下主题和部分：  
@@ -58,5 +58,4 @@ ms.locfileid: "88430149"
   
  [Microsoft Connector for SAP BW F1 帮助](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  介绍 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 的各组件的用户界面。  
-  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd306ce541f3fe4f6cf352421e0087afb595c41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a61d85e961b2572ce60d9766e7df0c83d042e84e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430809"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195369"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
 
@@ -34,7 +34,7 @@ ms.locfileid: "88430809"
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
   
 > [!NOTE]  
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
+>  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../load-data-to-from-excel-with-ssis.md)。  
   
  OLE DB 源提供四种不同数据访问模式用于提取数据：  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88430809"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB 自定义属性](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -122,9 +122,9 @@ ms.locfileid: "88430809"
   可以使用 **“OLE DB 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 OLE DB 连接管理器。 使用此页还可以选择数据库中的表或视图。  
   
 > [!NOTE]  
->  若要从使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 的数据源加载数据，请使用 OLE DB 源。 使用 Excel 源无法从 Excel 2007 数据源加载数据。 有关详细信息，请参阅 [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)。  
+>  若要从使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 的数据源加载数据，请使用 OLE DB 源。 使用 Excel 源无法从 Excel 2007 数据源加载数据。 有关详细信息，请参阅 [Configure OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
 >   
->  若要从使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 或更低版本的数据源加载数据，请使用 Excel 源。 有关详细信息，请参阅 [Excel 源编辑器（“连接管理器”页）](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)。  
+>  若要从使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 或更低版本的数据源加载数据，请使用 Excel 源。 有关详细信息，请参阅 [Excel 源编辑器（“连接管理器”页）](./excel-source.md)。  
   
 > [!NOTE]  
 >  OLE DB 源的 **CommandTimeout** 属性未在 **“OLE DB 源编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 有关此属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“Excel 源”部分。  
@@ -150,7 +150,7 @@ ms.locfileid: "88430809"
 |选项|说明|  
 |------------|-----------------|  
 |表或视图|从 OLE DB 数据源中的表或视图中检索数据。|  
-|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息：** [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息：** [在包中使用变量](../integration-services-ssis-variables.md)|  
 |SQL 命令|使用 SQL 查询从 OLE DB 数据源中检索数据。|  
 |变量中的 SQL 命令|在变量中指定 SQL 查询文本。|  
   
@@ -234,5 +234,4 @@ ms.locfileid: "88430809"
  [OLE DB 目标](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
-  
   

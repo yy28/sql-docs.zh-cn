@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fa01bbaa018e53bba906a0c2b9b53d8b75df02d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4cdfda50c648eaf5afbc97a22c3764cb2070c88
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479874"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037129"
 ---
 # <a name="read-database-engine-by-using-csharp"></a>使用 C# 读取（数据库引擎）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,6 +71,5 @@ hid.Read(br);
 [Write（数据库引擎）](../../t-sql/data-types/write-database-engine.md)  
 [ToString（数据库引擎）](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[hierarchyid 数据类型方法引用](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
-  
+[hierarchyid 数据类型方法引用](./hierarchyid-data-type-method-reference.md)
   

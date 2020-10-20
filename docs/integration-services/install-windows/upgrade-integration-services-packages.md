@@ -15,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: dca0076160c9e21b991c444986d1b27162941f5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7353d02985194024c24319df5c6eca1100607d29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346213"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195865"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
 
@@ -62,7 +62,7 @@ ms.locfileid: "88346213"
   
  若要使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 设计包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 自定义组件的包，需要修改位于 \<drive>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE 的 devenv.exe.config 文件。  
   
- 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
+ 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime)。  
   
 ### <a name="locating-the-assemblies"></a>定位程序集  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
@@ -81,5 +81,4 @@ ms.locfileid: "88346213"
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>依赖于 ADODB.dll 的脚本  
  在未安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的计算机上，可能不能升级或运行显式引用 ADODB.dll 的“脚本任务”和“脚本组件”脚本。 为了升级这些“脚本任务”或“脚本组件”脚本，建议你删除对 ADODB.dll 的依赖关系。  Ado.Net 是建议用于托管代码（如 VB 和 C# 脚本）的替代项。  
-  
   

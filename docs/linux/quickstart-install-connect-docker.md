@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614615"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115660"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -132,7 +132,7 @@ any changes to one section should be duplicated in the other-->
    > [!NOTE]
    > 密码应符合 SQL Server 默认密码策略，否则容器无法设置 SQL Server，将停止工作。 默认情况下，密码的长度必须至少为 8 个字符，并且必须包含以下四种字符中的三种：大写字母、小写字母、十进制数字和符号。 你可以通过执行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令检查错误日志。
    >
-   > 默认情况下，这会创建一个使用 SQL Server 2017 开发人员版的容器。 在容器中运行生产版本的过程略有不同。 有关详细信息，请参阅[运行生产容器映像](sql-server-linux-configure-docker.md#production)。
+   > 默认情况下，这会创建一个使用 SQL Server 2017 开发人员版的容器。 在容器中运行生产版本的过程略有不同。 有关详细信息，请参阅[运行生产容器映像](./sql-server-linux-docker-container-deployment.md#production)。
 
    下表对前一个 `docker run` 示例中的参数进行了说明：
 
@@ -171,7 +171,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps 命令输出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口  。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting) 。
+4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口  。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](./sql-server-linux-docker-container-troubleshooting.md) 。
 
 如上所述的 `-h`（主机名）参数将容器的内部名称更改为自定义值。 也就是以下 Transact-SQL 查询中返回的名称：
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > 本快速入门使用 SQL Server 2019 Docker 映像。 若要运行 SQL Server 2017 映像，请参阅[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
 
-   前一命令拉取基于 Ubuntu 的 SQL Server 2019 容器映像。 若要改为使用基于 RedHat 的容器映像，请参阅[运行基于 RHEL 的容器映像](sql-server-linux-configure-docker.md#rhel)。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/_/microsoft-mssql-server)。
+   前一命令拉取基于 Ubuntu 的 SQL Server 2019 容器映像。 若要改为使用基于 RedHat 的容器映像，请参阅[运行基于 RHEL 的容器映像](./sql-server-linux-docker-container-deployment.md#rhel)。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/_/microsoft-mssql-server)。
 
    ::: zone pivot="cs1-bash"
    对于本文中的 bash 命令，将使用 `sudo`。 在 MacOS 上，可能不需要 `sudo`。 在 Linux 上，如果不想使用 `sudo` 来运行 Docker，可以配置一个 **docker** 组，并将用户添加到该组。 有关详细信息，请参阅 [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/)（适用于 Linux 的安装后步骤）。
@@ -500,7 +500,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
 连接到 SQL Server 的其他常见工具包括：
 
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [适用于 Windows 的 SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli（预览版）](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)

@@ -1,5 +1,6 @@
 ---
-title: 验证 (Master Data Services) | Microsoft Docs
+title: 验证
+description: 验证数据以确保它的准确性，自动或基于你在 Master Data Services 中创建的业务规则。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 139e22ae5911e81442a816a260666d81ccc42444
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cf834f59c907fd852bd69dfd72c83ee2ea95df1a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92258041"
 ---
 # <a name="validation-master-data-services"></a>验证 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，对数据进行验证以确保其准确性。 一些验证自动发生，而另一些验证则基于管理员创建的业务规则。  
   
@@ -37,11 +38,11 @@ ms.locfileid: "68017408"
 |任务说明|主题|  
 |----------------------|-----------|  
 |创建业务规则并发布它们，以便针对它们验证数据。|[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|根据业务规则验证数据版本。 仅限于管理员。|[针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
+|根据业务规则验证数据版本。 仅适用于管理员。|[针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
 |根据业务规则验证数据的特定子集。 有权访问 **“资源管理器”** 功能区域的所有用户。|[针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |根据业务规则验证数据的特定子集。 有权访问 **“资源管理器”** 功能区域且使用 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]的所有用户。|[应用业务规则（用于 Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   

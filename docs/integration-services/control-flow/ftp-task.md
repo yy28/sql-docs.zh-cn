@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d17bad386cc020be1a61696aec96a81b6126d8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 013fffc66c8e40ca2124b949f555e0638df7967e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393545"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194242"
 ---
 # <a name="ftp-task"></a>FTP 任务
 
@@ -77,7 +77,7 @@ ms.locfileid: "88393545"
 ## <a name="related-tasks"></a>Related Tasks  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，请参阅 [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，请参阅 [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
  有关如何以编程方式设置这些属性的详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88393545"
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- **相关主题**：[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题**：[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../connection-manager/ftp-connection-manager.md)  
   
  **StopOnFailure**  
  指示在 FTP 操作失败时是否终止 FTP 任务。  
@@ -157,7 +157,7 @@ ms.locfileid: "88393545"
  **RemotePath**  
  选择现有 FTP 连接管理器，或单击“\<**New connection...**>”以创建连接管理器。  
   
- **相关主题：** [FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题：** [FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../connection-manager/ftp-connection-manager.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 动态选项  
   
@@ -176,5 +176,4 @@ ms.locfileid: "88393545"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

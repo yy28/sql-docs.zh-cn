@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227460"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038891"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>事务 (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  如果运行时语句错误以外的错误使显式事务无法成功完成，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将自动回滚事务并释放该事物占用的所有资源。 例如，如果客户端与 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 实例的网络连接中断或客户端已注销应用程序，那么当网络向实例通知该中断后，该连接的所有未提交事务均会被回滚。  
   
- 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚********。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)****。  
+ 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚********。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)****。  
   
 ## <a name="general-remarks"></a>一般备注  
  给定时间内，一个会话只能运行一个事务；不支持保存点和嵌套事务。  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能在发出一个 COMMIT 语句之后回滚事务，因为数据修改已经成为数据库的一个永久部分。  
   
- 不能在显式事务内使用 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 和 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
+ 不能在显式事务内使用 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) 和 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 没有事务共享机制。 这意味着，在任何给定时间点，只能有一个会话处理系统中的任何事务。  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT (Transact-SQL)](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

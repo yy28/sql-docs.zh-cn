@@ -1,5 +1,6 @@
 ---
-title: 生成模型 (MDS Add-in for Excel) | Microsoft Docs
+description: 生成模型（用于 Excel 的 MDS 外接程序）
+title: 生成模型
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a6f3f669f0f1699618399bbfdccaf33f6e4c13a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84dd1d79dc049baf5d1f993b6bd50a837ba56a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258066"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>生成模型（用于 Excel 的 MDS 外接程序）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以执行在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中提供的一部分管理功能。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68092495"
 ## <a name="related-tasks"></a>Related Tasks  
  大多数管理任务仍必须在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中或通过使用 Web 服务完成。 下表显示管理员可用于在 MDS 中完成任务的工具。  
   
-|任务说明|Tool|主题|  
+|任务说明|工具|主题|  
 |----------------------|----------|-----------|  
 |创建模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建模型 (Master Data Services)](../../master-data-services/create-a-model-master-data-services.md)|  
 |创建一个实体。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序、Web 服务或 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[创建实体（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)|  

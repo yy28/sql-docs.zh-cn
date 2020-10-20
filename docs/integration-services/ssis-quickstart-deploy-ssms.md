@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57a1c38bff7d5b302de595226a74ea66ba4f80ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47cce068cada1a40ec3fda76013ec428ef5d7e11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495462"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195182"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 部署 SSIS 项目
 
@@ -27,7 +27,7 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 ## <a name="prerequisites"></a>先决条件
 
-开始之前，请确保具有最新版本的 SQL Server Management Studio。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+开始之前，请确保具有最新版本的 SQL Server Management Studio。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。
 
 本文中介绍的用于部署到 Azure SQL 数据库的验证需要 SQL Server Data Tools (SSDT) 版本 17.4 或更高版本。 要获取最新版 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
@@ -123,4 +123,4 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
     - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [从命令提示符运行 SSIS 包](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 运行 SSIS 包](ssis-quickstart-run-powershell.md)
-    - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md) 
+    - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md)

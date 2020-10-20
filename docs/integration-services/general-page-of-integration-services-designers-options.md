@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391113"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195219"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 设计器选项的“常规”页
 
@@ -33,7 +33,7 @@ ms.locfileid: "88391113"
  **加载包时检查数字签名**  
  选择让 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在加载包时检查数字签名。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 仅会检查数字签名是否存在、是否有效，并且是否来自可靠来源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 不会检查包经过签名后是否发生过更改。  
   
- 如果你设置 **BlockedSignatureStates** 注册表值，则此注册表值会替代“加载包时检查数字签名” **** 选项。 有关详细信息，请参阅 [通过设置注册表值实现签名策略](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)。  
+ 如果你设置 **BlockedSignatureStates** 注册表值，则此注册表值会替代“加载包时检查数字签名” **** 选项。 有关详细信息，请参阅 [通过设置注册表值实现签名策略](./security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
  有关数字证书和包的详细信息，请参阅 [使用数字签名标识包的源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391113"
 ## <a name="see-also"></a>另请参阅  
  [安全性概述 (Integration Services)](../integration-services/security/security-overview-integration-services.md)   
  [用脚本扩展包](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

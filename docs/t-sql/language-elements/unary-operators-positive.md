@@ -22,12 +22,12 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33134b3f32620ce68edf844737e9e6c1814f1fcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48ea2ba928333eef0980ad199e33f93f94a859c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459219"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195419"
 ---
 # <a name="unary-operators---positive"></a>一元运算符 - 正
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "88459219"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 + numeric_expression  
 ```  
   
@@ -68,8 +67,8 @@ ms.locfileid: "88459219"
 ### <a name="a-setting-a-variable-to-a-positive-value"></a>A. 将一个变量设置为正值  
  以下示例将变量设置为正值。  
   
-```  
-DECLARE @MyNumber decimal(10,2);  
+```sql  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = +123.45;  
 SELECT @MyNumber;  
 GO  
@@ -87,10 +86,10 @@ GO
 ### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>B. 将一元加号运算符用于负值  
  以下示例显示了如何将一元加号用于负表达式和将 ABS() 函数用于同一负表达式上。 一元加号不影响该表达式，但 ABS 函数将返回该表达式的正值。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = -5;  
 SELECT +@Num1, ABS(@Num1);  
 GO  

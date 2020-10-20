@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425879"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197126"
 ---
 # <a name="script-task"></a>脚本任务
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425879"
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
   
--   [脚本任务编辑器（“常规”页）](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [脚本任务编辑器（“常规”页）]()  
   
--   [脚本任务编辑器（“脚本”页）](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [脚本任务编辑器（“脚本”页）]()  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请参阅以下主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>以编程方式配置脚本任务  
  有关以编程方式设置这些属性的详细信息，请参阅以下主题：  
@@ -123,7 +123,7 @@ ms.locfileid: "88425879"
   
  创建任务的脚本后，将无法更改 **ScriptLanguage** 属性的值。  
   
- 若要设置脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。 有关详细信息，请参阅 [General Page](../../integration-services/control-flow/script-task-editor-general-page.md)。  
+ 若要设置脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。 有关详细信息，请参阅 [General Page]()。  
   
  **EntryPoint**  
  指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时作为脚本任务代码入口点调用的方法。 指定的方法必须在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 项目的 ScriptMain 类中。ScriptMain 类是脚本模板生成的默认类。  
@@ -148,5 +148,4 @@ ms.locfileid: "88425879"
 ## <a name="related-content"></a>相关内容  
   
 -   shareourideas.com 上的技术文章 [如何在 C# 中发送具有传递通知的电子邮件](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
-  
   

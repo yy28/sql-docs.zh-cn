@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 411fe456ae96afdd5a01c0d6cb649035e121fb1b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785128"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115638"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
@@ -216,7 +216,7 @@ Pacemaker 群集的日志位置因分发版而异。
 对于虚拟化下的 AG 和 FCI，请确保为给定 Pacemaker 群集的节点设置了反关联性。 在 AG 或 FCI 配置中配置为高可用性时，托管 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 不应在同一虚拟机监控程序主机上运行。 例如，如果部署了双节点 FCI，则需要至少有三个虚拟机监控程序主机，以便在主机发生故障时，特别是使用 Live Migration 或 vMotion 等功能时，其中一个托管节点的 VM 可以找到某个位置。
 
 有关更多详细信息，请参阅：
--   Hyper-V 文档 - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)（使用来宾群集实现高可用性）
+-   Hyper-V 文档 - [Using Guest Clustering for High Availability](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11))（使用来宾群集实现高可用性）
 -   白皮书（专为基于 Windows 的部署编写，但大多数概念仍然适用）- [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)（使用 VMware vSphere 规划高可用性、关键任务 SQL Server 部署）
 
 ### <a name="networking"></a>网络

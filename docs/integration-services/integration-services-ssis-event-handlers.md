@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 235bd7cd4a46441156b4e4d2b262daf76c6faa23
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449826"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193869"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
 
@@ -100,7 +100,7 @@ ms.locfileid: "88449826"
   
  当 **“事件处理程序”** 选项卡活动时， **设计器中的工具箱的** “控制流项” **和** “维护计划中的任务” [!INCLUDE[ssIS](../includes/ssis-md.md)] 节点包含用于生成事件处理程序中控制流的任务和容器。 **“数据流源”**、 **“转换”** 和 **“数据流目标”** 节点包含用于生成事件处理程序中数据流的数据源、转换和目标。 有关详细信息，请参阅 [Control Flow](../integration-services/control-flow/control-flow.md) 和 [Data Flow](../integration-services/data-flow/data-flow.md)。  
   
- **“事件处理程序”** 选项卡也包含 **“连接管理器”** 区域，在这里可创建并修改事件处理程序用来连接到服务器和数据源的连接管理器。 有关详细信息，请参阅 [创建连接管理器](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ **“事件处理程序”** 选项卡也包含 **“连接管理器”** 区域，在这里可创建并修改事件处理程序用来连接到服务器和数据源的连接管理器。 有关详细信息，请参阅 [创建连接管理器](./connection-manager/integration-services-ssis-connections.md)。  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>在“事件处理程序”选项卡上添加事件处理程序  
   
@@ -129,11 +129,10 @@ ms.locfileid: "88449826"
 ## <a name="set-the-properties-of-an-event-handler"></a>设置事件处理程序的属性  
  可以在 **的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 窗口中设置属性，或以编程方式设置属性。  
   
- 有关如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中设置这些属性的信息，请参阅 [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 有关如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中设置这些属性的信息，请参阅 [设置任务或容器的属性](./control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
  有关如何以编程方式设置这些属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何向包中添加事件处理程序的信息，请参阅 [在包中添加事件处理程序](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
-  
+ 有关如何向包中添加事件处理程序的信息，请参阅 [在包中添加事件处理程序]()。  
   

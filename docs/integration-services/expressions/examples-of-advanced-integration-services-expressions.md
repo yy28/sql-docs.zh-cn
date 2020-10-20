@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e0ab5a444d660d505ae6b71cd34cf5253686d3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5a0e9c219a1649385b337ea378dec751f7851d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477585"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194542"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>高级 Integration Services 表达式的示例
 
@@ -105,9 +105,8 @@ ms.locfileid: "88477585"
     ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [在数据流组件中使用表达式](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [在数据流组件中使用表达式](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>相关内容  
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=746575)。  
-  
   

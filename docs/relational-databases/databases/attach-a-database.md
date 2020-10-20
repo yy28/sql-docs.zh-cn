@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1987fae42f804e861c1f15e55deb60e273e0d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789579"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194393"
 ---
 # <a name="attach-a-database"></a>附加数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85789579"
 不建议对“备份和恢复”使用分离和附加。 没有事务日志备份，并且可能会意外删除文件。
   
 ###  <a name="security"></a><a name="Security"></a> Security  
-文件访问权限可在很多数据库操作过程中设置，其中包括分离或附加数据库。 有关分离或附加数据库时设置的文件权限的信息，请参阅 [联机丛书（仍为有效读物！）中的](https://technet.microsoft.com/library/ms189128.aspx) 保护数据和日志文件 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 
+文件访问权限可在很多数据库操作过程中设置，其中包括分离或附加数据库。 有关分离或附加数据库时设置的文件权限的信息，请参阅 [联机丛书（仍为有效读物！）中的](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) 保护数据和日志文件 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 
   
 建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。 有关附加数据库的详细信息以及在附加数据库时对元数据进行的更改的信息，请参阅 [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "85789579"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  使用带 `FOR ATTACH` 子句的 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
+3.  使用带 `FOR ATTACH` 子句的 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 语句。  
   
      将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
   
@@ -157,8 +157,7 @@ EXEC sys.sp_cdc_vupgrade
 ``` 
  
 ## <a name="see-also"></a>另请参阅  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
  <br>[使数据库在其他服务器上可用时管理元数据](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [分离数据库](../../relational-databases/databases/detach-a-database.md)  
-  
   

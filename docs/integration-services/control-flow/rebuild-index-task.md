@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98be7870112403b610420a8508928ba1c60f266e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ea6820033ad5b545cc73ce79741b52953bd5caa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425919"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197151"
 ---
 # <a name="rebuild-index-task"></a>“重新生成索引”任务
 
@@ -65,10 +65,9 @@ ms.locfileid: "88425919"
  [“重新生成索引”任务（维护计划）](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的更多信息，请参阅 [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的更多信息，请参阅 [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

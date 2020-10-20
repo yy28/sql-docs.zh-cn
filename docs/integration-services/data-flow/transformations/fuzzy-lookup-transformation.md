@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df26e437d7c03510f7e634693296a928696a96b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab0e3826b20df90102bfc97d5d3730b4e83806dd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430679"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195941"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
 
@@ -49,7 +49,7 @@ ms.locfileid: "88430679"
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
   
 > [!NOTE]  
->   有关模糊查找转换的详细信息（包括性能和内存限制），请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
+>   有关模糊查找转换的详细信息（包括性能和内存限制），请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
   
  模糊查找转换与查找转换之间的不同之处在于：它使用了模糊匹配。 查找转换使用同等联接在引用表中查找匹配的记录。 它返回带有至少一个匹配记录的记录，并且返回没有匹配记录的记录。 与此相比较，模糊查找转换使用模糊匹配返回引用表中一个或多个接近的匹配项。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "88430679"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -222,5 +222,4 @@ ms.locfileid: "88430679"
  [查找转换](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

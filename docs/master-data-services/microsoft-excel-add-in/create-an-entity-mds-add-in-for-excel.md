@@ -1,5 +1,6 @@
 ---
-title: 创建实体 (MDS Add-in for Excel) | Microsoft Docs
+description: 创建实体（用于 Excel 的 MDS 外接程序）
+title: 创建实体
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bae68b9b241f14af1267eaf84e32dc97a39b8ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73161344ae6722e2b7e3ece9d1b8725779c82780
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257684"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>创建实体（用于 Excel 的 MDS 外接程序）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以创建新的实体来存储数据。 当您创建实体时，应加载要存储的数据的至少一个抽样。  
   
@@ -28,7 +29,7 @@ ms.locfileid: "68092465"
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)。  
   
 -   您必须具有要在其中创建实体的现有模型。 有关详细信息，请参阅[创建模型 (Master Data Services)](../../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68092465"
   
 2.  选择要将新实体加载到的单元。  
   
-3.  在 **“主数据”** 选项卡上的 **“生成模型”** 组中，单击 **“创建实体”** 。  
+3.  在 **“主数据”** 选项卡上的 **“生成模型”** 组中，单击 **“创建实体”**。  
   
 4.  如果系统提示您连接到某一 MDS 存储库，则进行连接。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68092465"
   
 7.  从 **“模型”** 列表中，选择某一模型。  
   
-8.   从“版本”列表中，选择某一版本。  
+8.  **** 从“版本”列表中，选择某一版本。  
   
 9. 在 **“新的实体名称”** 框中，键入实体的名称。  
   
@@ -70,15 +71,15 @@ ms.locfileid: "68092465"
   
 11. 可选。 从 **“名称”** 列表中，选择包含每个成员的名称的列。  
   
-12. 单击 **“确定”** 。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
+12. 单击“确定”。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   若要查看发生的错误，请在 **“发布并验证”** 组中单击 **“显示状态”** 。 将显示 ValidationStatus 和 InputStatus 列。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
+-   若要查看发生的错误，请在 **“发布并验证”** 组中单击 **“显示状态”**。 将显示 ValidationStatus 和 InputStatus 列。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 -   确认属性以您期望的数据类型创建。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建基于域的属性（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

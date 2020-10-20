@@ -1,5 +1,6 @@
 ---
-title: 快捷查询文件 (MDS Add-in for Excel) | Microsoft Docs
+description: 快捷查询文件（用于 Excel 的 MDS 外接程序）
+title: 快捷查询文件
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3028682669ae1a7e33cb85847fbf6e9456c11d42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 884e74db4cc6f8a3fd98d09757fc52245b275856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257888"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>快捷查询文件（用于 Excel 的 MDS 外接程序）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用快捷查询文件可快速连接并加载常用数据。 当您要与他人共享 MDS 数据时，也可以使用这些文件。 不需要保存工作表再通过电子邮件发送，而应保存一个快捷查询文件然后通过电子邮件发送该文件。 这将确保您同时连接到 MDS 存储库，以获取最新数据。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "68074394"
 ## <a name="queryopener-application"></a>QueryOpener 应用程序  
  安装了 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 的所有用户都装有名为 QueryOpener 的应用程序。 此应用程序用于在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中打开快捷查询文件。 如果双击快捷查询文件，将自动使用此应用程序在该外接程序中打开该文件。  
   
- 使用此应用程序打开快捷查询文件时，系统会提示将该连接视为“安全”连接，这意味着你信任此位置的内容。 （通过选中提示窗口中的“始终允许连接到此地址”  ，可以确保连接的安全性。）每次将某个连接标记为安全连接后，该连接都会添加到列表中。 如果要清空该列表，请打开 **“设置”** 对话框，然后在 **“添加到安全列表的服务器”** 部分中，单击 **“全部清除”** 。  
+ 使用此应用程序打开快捷查询文件时，系统会提示将该连接视为“安全”连接，这意味着你信任此位置的内容。  (通过在提示窗口中选择 " **始终允许连接到此地址** "，可以确保连接是安全的。 ) 每次将连接标记为安全时，它都会添加到列表中。 如果要清空该列表，请打开 **“设置”** 对话框，然后在 **“添加到安全列表的服务器”** 部分中，单击 **“全部清除”**。  
   
  该应用程序的默认位置为 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe。  
   

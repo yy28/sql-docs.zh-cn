@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449762"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193820"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449762"
 ## <a name="system-and-user-defined-variables"></a>系统变量和用户定义变量  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持两种类型的变量：用户定义变量和系统变量。 用户定义变量由包开发人员定义，系统变量由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定义。 可以创建包所需数量的用户定义变量，但不能另外创建系统变量。  
   
- 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅 [执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅 [执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](./control-flow/execute-sql-task.md)。  
   
 > [!NOTE]  
 >  用户定义变量和系统变量的名称是区分大小写的。  
@@ -79,7 +79,7 @@ ms.locfileid: "88449762"
   
  不同的容器类型有一组不同的系统变量可用。 有关包及其元素所使用的系统变量的详细信息，请参阅 [System Variables](../integration-services/system-variables.md)。  
   
- 有关变量的实际使用情况的详细信息，请参阅 [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 有关变量的实际使用情况的详细信息，请参阅 [在包中使用变量]()。  
   
 ## <a name="properties-of-variables"></a>变量属性  
  你可通过在“变量”窗口或“属性”窗口中设置以下属性来配置用户定义变量********。 某些属性仅在“属性”窗口中提供。  
@@ -114,7 +114,7 @@ ms.locfileid: "88449762"
   
  变量在包的作用域内或者包中的容器、任务或事件处理程序的作用域内创建。 因为包容器位于容器层次结构的顶部，所以包作用域内的变量所起作用类似于全局变量，而且这些变量可由包中所有容器使用。 同样，在 For 循环容器等容器的范围内定义的变量可由 For 循环容器中所有任务或容器使用。  
   
- 如果包使用执行包任务运行其他包，则可以使用父包变量配置类型，使在调用的包或执行包任务范围内定义的变量可供被调用的包使用。 有关详细信息，请参阅 [Package Configurations](../integration-services/packages/package-configurations.md)。  
+ 如果包使用执行包任务运行其他包，则可以使用父包变量配置类型，使在调用的包或执行包任务范围内定义的变量可供被调用的包使用。 有关详细信息，请参阅 [Package Configurations](./packages/legacy-package-deployment-ssis.md)。  
   
 **IncludeInDebugDump**  
  指示调试转储文件中是否包括变量值。  
@@ -159,13 +159,13 @@ ms.locfileid: "88449762"
   
  **数据流表达式** ：在派生列转换和有条件拆分转换用于填充列的表达式中使用变量来提供值，或将数据行定向到不同的转换输出中。 例如，表达式 `@varSalutation + LastName`连接 `VarSalutation` 变量和 `LastName` 列中的值。 表达式 `Income < @HighIncome`将 `Income` 列值小于 `HighIncome` 变量值的数据行定向到一个输出。 有关详细信息，请参阅 [派生列转换](../integration-services/data-flow/transformations/derived-column-transformation.md)、[有条件拆分转换](../integration-services/data-flow/transformations/conditional-split-transformation.md)和 [Integration Services (SSIS) 表达式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- **优先约束表达式** ：提供要在优先约束中用来确定受约束的可执行文件是否运行的值。 这些表达式可以和执行结果（成功、失败、完成）一起使用，也可代替执行结果。 例如，如果表达式 `@varMax > @varMin`的计算结果为 **true**，则运行可执行文件。 有关详细信息，请参阅 [将表达式添加到优先约束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+ **优先约束表达式** ：提供要在优先约束中用来确定受约束的可执行文件是否运行的值。 这些表达式可以和执行结果（成功、失败、完成）一起使用，也可代替执行结果。 例如，如果表达式 `@varMax > @varMin`的计算结果为 **true**，则运行可执行文件。 有关详细信息，请参阅 [将表达式添加到优先约束](./control-flow/precedence-constraints.md)。  
   
- **参数和返回代码** ：为输入参数提供值，或存储输出参数和返回代码的值。 可通过将变量映射到参数和返回值来执行上述操作。 例如，如果将变量 `varProductId` 设置为 23 并运行 SQL 语句 `SELECT * from Production.Product WHERE ProductID = ?`，查询将检索 `ProductID` 为 23 的产品。 有关详细信息，请参阅 [执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ **参数和返回代码** ：为输入参数提供值，或存储输出参数和返回代码的值。 可通过将变量映射到参数和返回值来执行上述操作。 例如，如果将变量 `varProductId` 设置为 23 并运行 SQL 语句 `SELECT * from Production.Product WHERE ProductID = ?`，查询将检索 `ProductID` 为 23 的产品。 有关详细信息，请参阅 [执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](./control-flow/execute-sql-task.md)。  
   
  **For 循环表达式** ：提供要在 FOR 循环的初始化表达式、求值表达式和赋值表达式中使用的值。 例如，如果变量 `varCount` 为 2， `varMaxCount` 为 10，初始化表达式为 `@varCount`，求值表达式为  `@varCount < @varMaxCount`，赋值表达式为 `@varCount =@varCount +1`，则循环将重复 8 次。 有关详细信息，请参阅 [For 循环容器](../integration-services/control-flow/for-loop-container.md)。  
   
- **父包变量配置** ：将值由父包传递给子包。 子包可通过使用父包变量配置来访问父包中的变量。 例如，如果子包必须与父包使用相同日期，则子包可以定义一个父包变量配置，该配置将指定 GETDATE 函数在父包中设置的变量。 有关详细信息，请参阅 [Execute Package Task](../integration-services/control-flow/execute-package-task.md) 和 [Package Configurations](../integration-services/packages/package-configurations.md)。  
+ **父包变量配置** ：将值由父包传递给子包。 子包可通过使用父包变量配置来访问父包中的变量。 例如，如果子包必须与父包使用相同日期，则子包可以定义一个父包变量配置，该配置将指定 GETDATE 函数在父包中设置的变量。 有关详细信息，请参阅 [Execute Package Task](../integration-services/control-flow/execute-package-task.md) 和 [Package Configurations](./packages/legacy-package-deployment-ssis.md)。  
   
  **脚本任务和脚本组件** 为脚本任务或脚本组件提供只读和可读/写变量的列表，在脚本内更新读/写变量，然后在该脚本内或该脚本外使用更新的值。 例如，在代码 `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`中，脚本变量 `numberOfCars` 由 `NumberOfCars`变量中的值更新。 有关详细信息，请参阅 [Using Variables in the Script Task](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)。  
 
@@ -189,7 +189,7 @@ ms.locfileid: "88449762"
   
 6.  也可以单击 **“网格选项”** 图标，选择要在 **“变量网格选项”** 对话框中显示的其他列，然后单击 **“确定”**。  
   
-7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)定义。  
+7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性]()定义。  
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -320,9 +320,9 @@ ms.locfileid: "88449762"
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>使用配置以动态方式更新变量  
- 若要动态更新变量，可以为变量创建配置，将这些配置部署到包中，然后在部署包时更新配置文件中的变量值。 在运行时，包使用更新后的变量值。 有关详细信息，请参阅 [创建包配置](../integration-services/packages/create-package-configurations.md)。  
+ 若要动态更新变量，可以为变量创建配置，将这些配置部署到包中，然后在部署包时更新配置文件中的变量值。 在运行时，包使用更新后的变量值。 有关详细信息，请参阅 [创建包配置](./packages/legacy-package-deployment-ssis.md)。  
 
 ## <a name="related-tasks"></a>Related Tasks  
  [在子包中使用变量和参数的值](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [将查询参数映射到数据流组件中的变量](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [将查询参数映射到数据流组件中的变量](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)

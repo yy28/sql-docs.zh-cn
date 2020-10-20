@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227213"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035848"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -204,7 +204,7 @@ FROM { <table_source> [ ,...n ] }
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 指定其中一个行集函数（如 OPENROWSET），该函数返回可用于替代表引用的对象。 有关行集函数的列表的详细信息，请参阅[行集函数 (Transact-SQL)](../../t-sql/functions/rowset-functions-transact-sql.md)。  
+ 指定其中一个行集函数（如 OPENROWSET），该函数返回可用于替代表引用的对象。 有关行集函数的列表的详细信息，请参阅[行集函数 (Transact-SQL)](../functions/opendatasource-transact-sql.md)。  
   
  使用 OPENROWSET 和 OPENQUERY 函数指定远程对象依赖于访问该对象的 OLE DB 访问接口的性能。  
   
@@ -899,4 +899,4 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
  [OPENQUERY (Transact-SQL)](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
- [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)

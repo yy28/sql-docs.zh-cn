@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: af3dff9699813079a68c44125d488a97ffd33781
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bbf74447df6d3e7f4681288d256137eda28a30b1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117187"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037118"
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -182,7 +182,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE (Transact-SQL)](../statements/collations.md)  
 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)  
 [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  

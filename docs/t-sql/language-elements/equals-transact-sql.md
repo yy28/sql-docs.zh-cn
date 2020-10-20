@@ -22,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3923bc7a36387e3ccef353f43aafcbaea2600658
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422511"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196569"
 ---
 # <a name="-equals-transact-sql"></a>=（等于）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422511"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 expression = expression  
 ```  
   
@@ -49,7 +49,7 @@ expression = expression
  为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果表达式的数据类型不同，则其中一个表达式的数据类型必须可以隐式转换为另一个表达式的数据类型。 该转换基于[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的规则进行。  
   
 ## <a name="result-types"></a>结果类型  
- 布尔  
+ Boolean  
   
 ## <a name="remarks"></a>备注  
  使用 NULL 表达式进行比较时，结果取决于 `ANSI_NULLS` 设置：  
@@ -68,13 +68,12 @@ expression = expression
 ### <a name="a-using--in-a-simple-query"></a>A. 在简单查询中使用 =  
  下面的示例使用“等于”运算符返回 `HumanResources.Department` 表中的所有行，在该表中，`GroupName` 列中的值等于字词“Manufacturing”。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE GroupName = 'Manufacturing';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -93,7 +92,7 @@ DepartmentID Name
 ### <a name="b-comparing-null-and-non-null-values"></a>B. 比较 NULL 值和非 NULL 值  
  以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还表明，`IS NULL` 不受 `SET ANSI_NULLS` 设置的影响。  
   
-```  
+```sql  
 -- Create table t1 and insert 3 rows.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 VALUES (NULL),(0),(1);  
@@ -158,7 +157,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

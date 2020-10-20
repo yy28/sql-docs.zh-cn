@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab2ad7c0e824332d59f0c724c835b1f5fedfeb97
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 944d72fd82143a3d1f36fa57e9faaed0055d2a6e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570292"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195831"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -46,8 +46,8 @@ SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是用于�
 有关在 SQL Server 中安装 SQL Server Integration Services 以及其他可能想要或需要的下载信息，请参阅[安装 Integration Services](install-windows/install-integration-services.md)。
 
 ##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) 资源
--   [通过 SSIS 论坛获取帮助](https://docs.microsoft.com/answers/topics/sql-server-integration-services.html)
+-   [通过 SSIS 论坛获取帮助](/answers/topics/sql-server-integration-services.html)
 -   [通过 Stack Overflow 获取帮助](https://stackoverflow.com/questions/tagged/ssis)  
 -   [关注 SSIS 团队博客](https://blogs.msdn.microsoft.com/ssis/)
 -   [报告问题和请求功能](https://feedback.azure.com/forums/908035-sql-server)
--   [获取电脑上的文档](../sql-server/sql-server-help-installation.md)
+-   [获取电脑上的文档](../sql-server/sql-server-offline-documentation.md)

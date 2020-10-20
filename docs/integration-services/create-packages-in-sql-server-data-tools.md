@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 521bc0dd4a454472586c18f108a42e4393498323
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72529ac177ddd069ca7e8412da375db45fe958e2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457550"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194898"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建包
 
@@ -48,9 +48,9 @@ ms.locfileid: "88457550"
   
      [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导创建一个用于简单导入或导出的完整包。 此向导可以配置连接、源和目标，以及添加允许您立即运行导入或导出所需的任何数据转换。 您还可以保存包以便以后再次运行该包，或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中完善和增强该包。 但是，如果保存该包，则必须先将该包添加到现有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，然后才能更改该包或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中运行该包。  
   
- 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 设计器在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中创建的包被保存到文件系统。 若要将包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或保存到包存储区，则需要保存包的副本。 有关详细信息，请参阅 [保存一个包副本](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)。  
+ 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 设计器在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中创建的包被保存到文件系统。 若要将包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或保存到包存储区，则需要保存包的副本。 有关详细信息，请参阅 [保存一个包副本](./save-packages.md)。  
 
- 有关演示如何使用默认的包模板创建基本包的视频，请参阅 [创建基本包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131023)。  
+ 有关演示如何使用默认的包模板创建基本包的视频，请参阅 [创建基本包（SQL Server 视频）](/previous-versions/sql/sql-server-2008/cc952921(v=sql.100))。  
 
 ## <a name="get-sql-server-data-tools"></a>获取 SQL Server Data Tools
 若要安装 SQL Server Data Tools (SSDT)，请参阅 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
@@ -77,5 +77,4 @@ ms.locfileid: "88457550"
      ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
   
  你可以创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
-  
   

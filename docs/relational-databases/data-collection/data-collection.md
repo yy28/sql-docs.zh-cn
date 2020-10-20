@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943426"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193417"
 ---
 # <a name="data-collection"></a>数据收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87943426"
   
  您可以使用数据收集器根据自己的测试和生产环境调整数据收集的范围。 数据收集器还使用数据仓库，数据仓库是一个关系数据库，借助此数据库，您可以通过为数据设置不同的保持期来管理收集的数据。  
   
- 数据收集器支持对数据收集进行动态优化并可通过其 API 进行扩展。 有关详细信息，请参阅 [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql)。  
+ 数据收集器支持对数据收集进行动态优化并可通过其 API 进行扩展。 有关详细信息，请参阅 [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md)。  
   
  下图显示数据收集器如何配合 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据收集和数据管理的总体策略。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "87943426"
   
 -   代理帐户  
   
- 有关详细信息，请参阅 [自动执行管理任务（SQL Server 代理）](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)。  
+ 有关详细信息，请参阅 [自动执行管理任务（SQL Server 代理）](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 用于执行从各个数据提供程序收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
   
@@ -119,5 +119,3 @@ ms.locfileid: "87943426"
 |使用管理数据仓库来收集自身为数据收集目标的服务器的数据。|[管理数据仓库](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |可以利用 SQL Server Profiler 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用通用 SQL 跟踪收集器类型的收集组| [使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-
