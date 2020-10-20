@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495640"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195181"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>连接到平面文件数据源（SQL Server 导入和导出向导）
 
@@ -261,7 +261,7 @@ ms.locfileid: "88495640"
  **“刷新”**  
  通过单击“刷新”可以查看更改要跳过的行数后的效果。**** 只有在更改其他连接选项之后，此按钮才可见。  
  
-有关“预览”页的详细信息，请参阅以下 Integration Services 参考页面：[平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)。
+有关“预览”页的详细信息，请参阅以下 Integration Services 参考页面：[平面文件连接管理器编辑器（“预览”页）](../connection-manager/flat-file-connection-manager.md)。
 
 ## <a name="connect-to-a-flat-file-destination"></a>连接到平面文件目标
 对于平面文件目标，只有一页选项，如以下屏幕截图所示。 浏览以选择文件，然后在“格式”**** 部分验证设置。
@@ -303,4 +303,3 @@ ms.locfileid: "88495640"
 ## <a name="see-also"></a>另请参阅
 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

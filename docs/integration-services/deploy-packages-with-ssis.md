@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430649"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194572"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
 
@@ -37,9 +37,9 @@ ms.locfileid: "88430649"
     
 首先，您将执行任务为部署做好准备。 您将在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建一个新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目，再将现有的包和数据文件添加到该项目。 不是从头开始创建任何新包，而是仅使用专为本教程创建的已完成包。 将不修改本教程中包的功能；但是，在将包添加到项目后，您可能会发现在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开包并查看每个包的内容是很有用的。 通过检查包，您将了解有关包依赖项（如日志文件）的信息和有关包的其他有趣功能的信息。    
     
-在为部署做准备时，您还将更新包以使用配置。 配置使得包属性和包对象在运行时是可更新的。 在本教程中，您将使用配置来更新日志文件和文本文件的连接字符串以及包所用的 XML 和 XSD 文件的位置。 有关详细信息，请参阅 [包配置](../integration-services/packages/package-configurations.md) 和 [创建包配置](../integration-services/packages/create-package-configurations.md)。    
+在为部署做准备时，您还将更新包以使用配置。 配置使得包属性和包对象在运行时是可更新的。 在本教程中，您将使用配置来更新日志文件和文本文件的连接字符串以及包所用的 XML 和 XSD 文件的位置。 有关详细信息，请参阅 [包配置](./packages/legacy-package-deployment-ssis.md) 和 [创建包配置](./packages/legacy-package-deployment-ssis.md)。    
     
-在验证包是否在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功运行后，将创建用来安装包的部署捆绑。 部署捆绑将包括包文件和您添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的其他项、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 自动包括的包依赖项以及您生成的部署实用工具。 有关详细信息，请参阅 [Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md)。    
+在验证包是否在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功运行后，将创建用来安装包的部署捆绑。 部署捆绑将包括包文件和您添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的其他项、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 自动包括的包依赖项以及您生成的部署实用工具。 有关详细信息，请参阅 [Create a Deployment Utility](./packages/legacy-package-deployment-ssis.md)。    
     
 然后，将部署捆绑复制到目标计算机，并运行包安装向导以安装包和包依赖项。 包将安装在 msdb SQL Server 数据库中，支持文件和辅助文件将安装在文件系统中。 由于已部署的包使用配置，因此将配置更新为使用新的值，这样包就可以在新环境中成功运行。    
     
@@ -98,5 +98,3 @@ ms.locfileid: "88430649"
     
 [第 3 课：安装 SSIS 包](../integration-services/lesson-3-install-ssis-packages.md)    
 在本课中，将部署捆绑复制到目标计算机，安装包，再运行包。    
-    
-

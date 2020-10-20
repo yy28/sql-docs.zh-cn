@@ -1,5 +1,6 @@
 ---
-title: 安全性 (Master Data Services) | Microsoft Docs
+title: 安全性
+description: 了解 Master Data Services 中的安全性，包括用户类型、如何在 Excel 外接程序中设置安全性、安全和相关任务。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,31 +11,31 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257824"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全设置可以确保用户可以访问完成自己工作所需的特定主数据，并防止他们访问自己不应查看的数据。  
   
  还可以使用安全设置使某人成为特定模型和功能区域的管理员（例如，允许某人创建 Customer 模型的版本或使某人可以设置安全权限）。  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安全设置基于本地或 Active Directory 域用户和组。 MDS 安全设置允许您在确定用户可以访问的数据时使用不同的详细粒度级别。 由于存在这种粒度，安全设置很容易复杂化，因此在使用重叠的用户和组时应慎用。 有关详细信息，请参阅[重叠的用户和组权限 (Master Data Services)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安全设置基于本地或 Active Directory 域用户和组。 MDS 安全设置允许您在确定用户可以访问的数据时使用不同的详细粒度级别。 由于存在这种粒度，安全设置很容易复杂化，因此在使用重叠的用户和组时应慎用。 有关详细信息，请参阅 [重叠的用户和组权限 (Master Data Services)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
   
-  可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的“用户和组权限”功能区域中分配安全访问权限或使用 Web 服务进行分配。  
+ **** 可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的“用户和组权限”功能区域中分配安全访问权限或使用 Web 服务进行分配。  
   
 ## <a name="types-of-users"></a>用户类型  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中有两种类型的用户：  
   
--    在“资源管理器”功能区域中访问数据的用户。  
+-   **** 在“资源管理器”功能区域中访问数据的用户。  
   
--    可以在“资源管理器”之外的区域中执行管理任务的用户。 这些用户称为[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   **** 可以在“资源管理器”之外的区域中执行管理任务的用户。 这些用户称为 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="how-to-set-security"></a>如何设置安全性  
  要在 MDS 中授予用户或组访问数据或功能的权限，您必须分配：  
@@ -62,12 +63,12 @@ ms.locfileid: "68085673"
 |通过将权限分配给模型对象来将权限分配给属性值。|[分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |通过将权限分配给层次结构节点来将权限分配给成员值。|[分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>请参阅  
- [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)   
- [用户和组 (Master Data Services)](../master-data-services/users-and-groups-master-data-services.md)   
- [功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   
- [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
+ [用户和组 &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [&#40;Master Data Services 的模型对象权限&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [层次结构成员权限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

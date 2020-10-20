@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480875"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196431"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480875"
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>模糊查找和模糊分组转换  
- 有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
+ 有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
   
 #### <a name="lookup-transformation"></a>查找转换  
  通过输入仅查找所需列的 SELECT 语句，最小化内存中引用数据的大小。 这种方法优于选择整个表或视图，因为后者将返回大量不必要的数据。  
@@ -175,15 +175,15 @@ ms.locfileid: "89480875"
 ## <a name="related-content"></a>相关内容  
  **文章和博客文章**  
   
--   technet.microsoft.com 上的技术文章 [SQL Server 2005 Integration Services：性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com 上的技术文章 [SQL Server 2005 Integration Services：性能策略](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10))  
   
--   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10))  
   
 -   SQLCAT 针对 BI 和 Analytics 的指南中的技术文章[通过将同步转换拆分为多个任务来增加管道的吞吐量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
--   msdn.microsoft.com 上的技术文章 [数据加载性能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
+-   msdn.microsoft.com 上的技术文章 [数据加载性能指南](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))。  
   
--   msdn.microsoft.com 上的技术文章 [我们使用 SSIS 加载 1TB 数据仅用了 30 分钟，因此您也行](https://go.microsoft.com/fwlink/?LinkId=220817)。  
+-   msdn.microsoft.com 上的技术文章 [我们使用 SSIS 加载 1TB 数据仅用了 30 分钟，因此您也行](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))。  
   
 -   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](https://go.microsoft.com/fwlink/?LinkId=220818)。  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480875"
   
 -   视频系列 [设计和优化企业中 SSIS 包的性能（SQL 视频系列）](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   technet.microsoft.com 上的视频 [优化企业中的 SSIS 包数据流（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686901.aspx)  
+-   technet.microsoft.com 上的视频 [优化企业中的 SSIS 包数据流（SQL Server 视频）](/previous-versions/ff686901(v=msdn.10))  
   
--   technet.microsoft.com 上的视频 [理解 SSIS 数据流缓冲区（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686905.aspx)  
+-   technet.microsoft.com 上的视频 [理解 SSIS 数据流缓冲区（SQL Server 视频）](/previous-versions/ff686905(v=msdn.10))  
   
 -   channel9.msdn.com 上的视频 [Microsoft SQL Server Integration Services 性能设计模式](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
   
 -   sqlcat.com 上的演示文稿 [Microsoft IT 如何利用 SQL Server 2008 SSIS 数据流引擎的增强功能](https://go.microsoft.com/fwlink/?LinkId=217660)。  
   
--   technet.microsoft.com 上的视频 [平衡的数据分发服务器](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
+-   technet.microsoft.com 上的视频 [平衡的数据分发服务器](/previous-versions/dn912438(v=msdn.10))。  
   
 ## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

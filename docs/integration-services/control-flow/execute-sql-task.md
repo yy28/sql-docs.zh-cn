@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394163"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196533"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394163"
 >  执行 SQL 任务可能无法成功分析在执行 SQL 任务外编写的有效 SQL 语句。  
   
 > [!NOTE]  
->  执行 SQL 任务将使用 **RecognizeAll** ParseMode 枚举值。 有关详细信息，请参阅 [ManagedBatchParser 命名空间](https://go.microsoft.com/fwlink/?LinkId=223617)。  
+>  执行 SQL 任务将使用 **RecognizeAll** ParseMode 枚举值。 有关详细信息，请参阅 [ManagedBatchParser 命名空间](/dotnet/api/managedbatchparser)。  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>在批中发送多个语句  
  如果在执行 SQL 任务中包含了多个语句，则可以将这些语句进行分组，并将它们作为一批来运行。 若要标明批的结束，请使用 GO 命令。 在两个 GO 命令间的所有 SQL 语句都作为一批发送到 OLE DB 访问接口来运行。 SQL 命令可以包含多个由 GO 命令分隔的批。  
@@ -115,7 +115,7 @@ ms.locfileid: "88394163"
 ## <a name="general-page---execute-sql-task-editor"></a>“常规”页 - 执行 SQL 任务编辑器
  可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“常规”** 页，配置执行 SQL 任务以及提供任务运行的 SQL 语句。  
 
-若要了解关于 Transact-SQL 查询语言的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)。  
+若要了解关于 Transact-SQL 查询语言的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/language-reference.md)。  
   
 ### <a name="static-options"></a>静态选项  
  **名称**  
@@ -186,19 +186,19 @@ ms.locfileid: "88394163"
  **SQLStatement**  
  在选项框中键入要执行的 SQL 语句，或者单击浏览按钮 (…)，在“输入 SQL 查询”对话框中键入 SQL 语句，还可以单击“生成查询”，使用“查询生成器”对话框编写 SQL 语句    。  
   
- **相关主题：** [查询生成器](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **相关主题：** [查询生成器](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 文件连接  
  **文件连接**  
  选择现有“文件连接管理器”，或单击 \<**New connection...**> 以创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 变量  
  **SourceVariable**  
  选择现有变量或单击 \<**New variable...**> 以创建新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>“参数映射”页 - 执行 SQL 任务编辑器
 可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
@@ -385,7 +385,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](../../odbc/reference/develop-app/procedure-parameters.md)（过程参数）主题。|  
 |ADO|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     |ODBC|1, 2, 3, …|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
   
-10. 从 **“变量名称”** 列表中选择变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+10. 从 **“变量名称”** 列表中选择变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](../integration-services-ssis-variables.md)。  
   
 11. 在 **“方向”** 列表中指定该参数是输入、输出还是返回值。  
   
@@ -474,7 +474,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](../../odbc/reference/develop-app/procedure-parameters.md)（过程参数）主题。|  
 |ADO|如果 IsQueryStoreProcedure 设置为 False，则为 `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 设置为 True，则为 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|将 IsQueryStoreProcedure 设置为 **True**。<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 8.  若要添加结果集映射，请单击 **“添加”** 。  
   
-9. 从 **“变量名称”** 列表中，选择变量或创建新变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+9. 从 **“变量名称”** 列表中，选择变量或创建新变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](../integration-services-ssis-variables.md)。  
   
 10. 在 **“结果名称”** 列表中，可根据需要修改结果集的名称。  
   
@@ -579,5 +579,4 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 |日志项|说明|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|提供有关 SQL 语句的执行阶段的信息。 在任务获得与数据库的连接时、任务开始准备 SQL 语句时以及执行完 SQL 语句之后写入日志项。 准备阶段的日志条目包括任务所使用的 SQL 语句。|  
-
+|**ExecuteSQLExecutingQuery**|提供有关 SQL 语句的执行阶段的信息。 在任务获得与数据库的连接时、任务开始准备 SQL 语句时以及执行完 SQL 语句之后写入日志项。 准备阶段的日志条目包括任务所使用的 SQL 语句。|

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088817"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115825"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
@@ -39,7 +39,7 @@ SQL Server 作业用于在 SQL Server 数据库中定期执行相同的命令序
 以下先决条件是可选的：
 
 * 带有 SSMS 的 Windows 计算机：
-  * 用于可选 SSMS 步骤的 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+  * 用于可选 SSMS 步骤的 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 
 ## <a name="enable-sql-server-agent"></a>启用 SQL Server 代理
 
@@ -81,7 +81,7 @@ SQL Server 作业用于在 SQL Server 数据库中定期执行相同的命令序
 以下步骤使用 Transact-SQL 命令在 Linux 上创建 SQL Server 代理作业。 该作业运行示例数据库“SampleDB”的每日备份  。
 
 > [!TIP]
-> 可以使用任何 T-SQL 客户端运行这些命令。 例如，在 Linux 上可以使用 [sqlcmd](sql-server-linux-setup-tools.md) 或 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)。 在远程 Windows Server 中，还可以在 SQL Server Management Studio (SSMS) 中运行查询，或使用 UI 界面进行作业管理，下一部分将对此进行说明。
+> 可以使用任何 T-SQL 客户端运行这些命令。 例如，在 Linux 上可以使用 [sqlcmd](sql-server-linux-setup-tools.md) 或 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)。 在远程 Windows Server 中，还可以在 SQL Server Management Studio (SSMS) 中运行查询，或使用 UI 界面进行作业管理，下一部分将对此进行说明。
 
 1. 使用 [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) 创建名为 `Daily SampleDB Backup` 的作业。
 
@@ -200,4 +200,4 @@ SQL Server 作业用于在 SQL Server 数据库中定期执行相同的命令序
 接下来，探索用于创建和管理作业的其他功能：
 
 > [!div class="nextstepaction"]
->[SQL Server 代理文档](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[SQL Server 代理文档](../ssms/agent/sql-server-agent.md)

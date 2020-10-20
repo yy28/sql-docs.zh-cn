@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: b4bcae3e857fd6dfa7a64acd828529bf9a599552
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990017"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194092"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包
 
@@ -26,9 +26,9 @@ ms.locfileid: "90990017"
 
 ## <a name="prerequisites"></a>先决条件
 
-开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-另外确保已经在 Azure 中设置 SSISDB 数据库并预配了 Azure-SSIS Integration Runtime。 有关如何在 Azure 上预配 SSIS 的信息，请参阅[将 SQL Server Integration Services 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+另外确保已经在 Azure 中设置 SSISDB 数据库并预配了 Azure-SSIS Integration Runtime。 有关如何在 Azure 上预配 SSIS 的信息，请参阅[将 SQL Server Integration Services 包部署到 Azure](/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>对于 Azure SQL 数据库，请获取连接信息
 
@@ -192,7 +192,7 @@ Write-Host "All done."
 
 也可以在对象资源管理器中选择包，右击并选择“报表”  ，然后选择“标准报表”  、“所有执行”  。
 
-有关如何在 SSMS 中监视正在运行的包的详细信息，请参阅[监视正在运行的包和其他操作](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)。
+有关如何在 SSMS 中监视正在运行的包的详细信息，请参阅[监视正在运行的包和其他操作](../performance/monitor-running-packages-and-other-operations.md)。
 
 ## <a name="monitor-the-execute-ssis-package-activity"></a>监视 SSIS 包活动的执行
 
@@ -204,7 +204,7 @@ Write-Host "All done."
 
 若要获取有关运行有包的 Azure-SSIS Integration Runtime 的状态信息，请使用以下 PowerShell 命令。 对于每个命令，请提供数据工厂、Azure-SSIS IR 和资源组的名称。
 
-有关详细信息，请参阅[监视 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
+有关详细信息，请参阅[监视 Azure-SSIS Integration Runtime](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>获取有关 Azure-SSIS Integration Runtime 的元数据
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349343"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195393"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349343"
   
  不要向该变量赋予值来作为其定义的一部分。 该值必须由 CDC 控制任务设置。  
   
- 如果您计划将该 CDC 控制任务用于 **“自动状态持久化”** ，则该 CDC 状态变量将从您指定的数据库状态表中读取并且在其值更改时将更新回该相同的表。 有关状态表的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)和 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)。  
+ 如果您计划将该 CDC 控制任务用于 **“自动状态持久化”** ，则该 CDC 状态变量将从您指定的数据库状态表中读取并且在其值更改时将更新回该相同的表。 有关状态表的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)和 [CDC Control Task Editor](../control-flow/cdc-control-task.md)。  
   
  如果您不将该 CDC 控制任务用于“自动状态持久化”，则必须从持久性存储区中加载该变量值，在该持久性存储区中，在上次包运行时保存了该变量值并且在当前处理范围完成后该变量值将写回持久性存储区。  
   
 ## <a name="see-also"></a>另请参阅  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC 控制任务编辑器](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [CDC 控制任务编辑器](../control-flow/cdc-control-task.md)  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6684e36201e20ee84821f25694dd8326915aaf46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26df10981a17b2c5f94fbe47c6e765264c8944e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430859"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194809"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
 
@@ -56,8 +56,7 @@ ms.locfileid: "88430859"
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [ODBC 源编辑器（“列”页）](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [ODBC 源编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [ODBC 源编辑器（“连接管理器”页）](./odbc-source.md)   
+ [ODBC 源编辑器（“列”页）](./odbc-source.md)   
+ [ODBC 源编辑器（“错误输出”页）](./odbc-source.md)  
   

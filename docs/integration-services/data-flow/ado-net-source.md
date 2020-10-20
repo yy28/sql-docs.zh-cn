@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94a94ba7bcd71510f82769ebb1517caef7e5a0fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b10ca4ddff49785c1b5b6e33d7510985fd801c85
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425849"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194859"
 ---
 # <a name="ado-net-source"></a>ADO NET 源
 
@@ -36,12 +36,12 @@ ms.locfileid: "88425849"
 
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
   
- 可使用 ADO NET 源连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请参阅[通用指导原则和限制（Azure SQL 数据库）](https://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 可使用 ADO NET 源连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请参阅[通用指导原则和限制（Azure SQL 数据库）](/previous-versions/azure/ee336245(v=azure.100))。  
   
 ## <a name="data-type-support"></a>数据类型支持  
  源会将未映射到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的任意数据类型转换为 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 即使数据类型为 **System.Object**，也会发生此转换。  
   
- 可以将 DT_NTEXT 数据类型更改为 DT_WSTR 数据类型，也可以将 DT_WSTR 更改为 DT_NTEXT。 通过在 ADO NET 源的 **“高级编辑器”** 对话框中设置 **DataType** 属性可更改数据类型。 有关详细信息，请参阅 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 可以将 DT_NTEXT 数据类型更改为 DT_WSTR 数据类型，也可以将 DT_WSTR 更改为 DT_NTEXT。 通过在 ADO NET 源的 **“高级编辑器”** 对话框中设置 **DataType** 属性可更改数据类型。 有关详细信息，请参阅 [Common Properties](./set-the-properties-of-a-data-flow-component.md)。  
   
  通过在 ADO NET 源之后使用数据转换，还可以将 DT_NTEXT 数据类型转换为 DT_BYTES 或 DT_STR 数据类型。 有关详细信息，请参阅 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "88425849"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [ADO NET 自定义属性](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -207,5 +207,4 @@ ms.locfileid: "88425849"
  [DataReader 目标](../../integration-services/data-flow/datareader-destination.md)   
  [ADO NET 目标](../../integration-services/data-flow/ado-net-destination.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
-  
   

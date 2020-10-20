@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c184f0be8a853eb373063468e3bded901c4b58e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2197b4a47a01e114b4bac330fb170e5489ff614
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495905"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195978"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 数据读取器任务
 
@@ -55,7 +55,7 @@ ms.locfileid: "88495905"
  WMI 数据读取器任务使用 WMI 连接管理器连接到该任务从中读取 WMI 信息的服务器。 有关详细信息，请参阅 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)。  
   
 ## <a name="wql-query"></a>WQL 查询  
- WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文档。  
+ WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](../../sql-server/index.yml)中的 Windows Management Instrumentation 文档。  
   
 > [!NOTE]  
 >  WMI 类因 Windows 版本的不同而异。  
@@ -100,7 +100,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="wmi-data-reader-task-editor-general-page"></a>WMI 数据读取器任务编辑器（“常规”页）
   可以使用 **“WMI 数据读取器任务编辑器”** 对话框的 **“常规”** 页，对 WMI 数据读取器任务进行命名和说明。  
@@ -126,7 +126,7 @@ Select * FROM Win32_QuickFixEngineering
  **WMIConnectionName**  
  从列表中选择 WMI 连接管理器，或单击 \<**New WMI Connection...**> 创建新的连接管理器。  
   
- **相关主题：** [WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **相关主题：** [WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 连接管理器编辑器](../connection-manager/wmi-connection-manager.md)  
   
  **WQLQuerySourceType**  
  选择任务运行的 WQL 查询的源类型。 此属性具有下表所列的选项。  
@@ -161,13 +161,13 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySource**  
  从列表中选择文件连接管理器，或单击“\<**New connection...**>”创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 变量  
  **WQLQuerySource**  
  在列表中选择变量，或单击“\<**New variable...**>创建一个新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
 ### <a name="destinationtype-dynamic-options"></a>DestinationType 动态选项  
   
@@ -175,16 +175,15 @@ Select * FROM Win32_QuickFixEngineering
  **目标**  
  从列表中选择文件连接管理器，或单击 \<**New connection...**> 创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
 #### <a name="destinationtype--variable"></a>DestinationType = 变量  
  **目标**  
  在列表中选择变量，或单击 \<**New variable...**> 创建新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

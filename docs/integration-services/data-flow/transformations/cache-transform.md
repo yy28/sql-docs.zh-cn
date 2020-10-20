@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495723"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194643"
 ---
 # <a name="cache-transform"></a>缓存转换
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495723"
   
  若想将查找转换配置为在完全缓存模式中运行，可使用缓存连接管理器。 在此模式下，在查找转换运行前，引用数据集会加载到缓存中。  
   
- 有关如何使用缓存连接管理器和“缓存转换”转换配置完全缓存模式下的查找转换的说明，请参阅 [在完全缓存模式下使用缓存连接管理器实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
+ 有关如何使用缓存连接管理器和“缓存转换”转换配置完全缓存模式下的查找转换的说明，请参阅 [在完全缓存模式下使用缓存连接管理器实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
   
  有关缓存引用数据集的详细信息，请参阅 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495723"
   
  在单个包中，只有一个缓存转换可以将数据写入同一缓存连接管理器。 如果某个包中包含多个缓存转换，则该包在运行时所调用的第一个缓存转换会将数据写入连接管理器。 后续缓存转换将无法执行写入操作。  
   
- 有关详细信息，请参阅[缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
+ 有关详细信息，请参阅[缓存连接管理器](../../connection-manager/cache-connection-manager.md)。  
   
 ## <a name="configuration-of-the-cache-transform"></a>缓存转换的配置  
  可以将缓存连接管理器配置为向缓存文件 (.caw) 中保存数据。  
@@ -65,7 +65,7 @@ ms.locfileid: "88495723"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>缓存转换编辑器（“连接管理器”页）
   可以使用 **“缓存转换编辑器”** 对话框的 **“连接管理器”** 页，选择现有缓存连接管理器或创建新的缓存连接管理器。  
   
- 若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
+ 若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](../../connection-manager/cache-connection-manager.md)。  
   
 ### <a name="options"></a>选项  
  **“完全缓存”**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495723"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)  
-  
   

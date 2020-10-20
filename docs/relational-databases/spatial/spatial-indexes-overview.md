@@ -13,15 +13,15 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4abd4b9c915a47318ccc8f13d67507af67f0e1d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447993"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006274"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引” ** 是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 **geometry** 或 **geography**）的数据的表列。  
   
 > [!IMPORTANT]  

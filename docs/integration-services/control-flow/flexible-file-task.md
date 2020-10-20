@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393544"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196491"
 ---
 # <a name="flexible-file-task"></a>灵活的文件任务
 
@@ -29,7 +29,7 @@ ms.locfileid: "88393544"
 
 - 本地文件系统
 - [Azure Blob 存储](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
 
 灵活的文件任务是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组成部分。
 
@@ -62,12 +62,12 @@ ms.locfileid: "88393544"
 ***有关服务主体权限配置的说明***
 
 要使“测试连接”起作用（Blob 存储或 Data Lake Storage Gen2），应向服务主体分配至少存储帐户的“存储 Blob 数据读取器”角色   。
-可通过 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 实现。
+可通过 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 实现。
 
 对于 Blob 存储，通过分别分配至少“存储 Blob 数据读取器”和“存储 Blob 数据参与者”角色来授予读取和写入权限   。
 
-对于 Data Lake Storage Gen2，权限由 RBAC 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定。
-请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
+对于 Data Lake Storage Gen2，权限由 RBAC 和 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定。
+请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
 这与用于 RBAC 配置的应用程序（客户端）ID 有所不同。
 通过内置角色或自定义角色向安全主体授予 RBAC 数据权限时，将首先根据请求的授权来评估这些权限。
 如果请求的操作已获得安全主体的 RBAC 分配的授权，则授权会立即得到解决，且不会执行任何其他 ACL 检查。
@@ -76,4 +76,4 @@ ms.locfileid: "88393544"
 - 对于读取权限，请从源文件系统开始授予至少“执行”权限，并授予要复制的文件的“读取”权限   。 或者，通过 RBAC 授予至少“存储 Blob 数据读取器”角色  。
 - 对于写入权限，请从接收器文件系统开始授予至少“执行”权限，并授予接收器文件夹的“写入”权限   。 或者，通过 RBAC 授予至少“存储 Blob 数据参与者”角色  。
 
-有关详细信息，请参阅[此](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
+有关详细信息，请参阅[此](/azure/storage/blobs/data-lake-storage-access-control)文章。

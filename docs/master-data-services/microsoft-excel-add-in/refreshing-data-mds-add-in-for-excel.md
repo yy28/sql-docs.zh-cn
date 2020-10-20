@@ -1,5 +1,6 @@
 ---
-title: 刷新数据 (MDS Add-in for Excel) | Microsoft Docs
+description: 刷新数据（用于 Excel 的 MDS 外接程序）
+title: 刷新数据
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4f01d93394caf538931fc60e9d3484792e225a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9fe89ec7abff9a3440b72bb00d4aaee86837ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257774"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>刷新数据（用于 Excel 的 MDS 外接程序）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，当你要从 MDS 存储库中获取最新信息但不想打开新工作表时，可刷新数据。 您可以刷新所有单元，也可以刷新所选单元。 如果您插入的列中包含自定义公式或其他不由 MDS 管理但您想要保留的数据，这样做会很有帮助。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68074450"
 > -   刷新时，将删除 MDS 管理的单元上的注释。  
   
 ## <a name="how-to-refresh-mds-managed-data"></a>如何刷新 MDS 管理的数据  
- 在功能区上的 **“连接并加载”** 组中， **“刷新”** 按钮提供两个选项： **“全部刷新”** 和 **“刷新所选内容”** 。 功能区按钮的默认操作是 **“全部刷新”** 。 若要使用服务器的值刷新整个工作表，请单击 **“刷新”** 按钮或选择 **“全部刷新”** 选项。 若要仅刷新工作表中的部分单元格，请选择这些单元格（必须是一个连续选择的单元格区域），然后选择“刷新所选内容”选项  。  
+ 在功能区上的 **“连接并加载”** 组中， **“刷新”** 按钮提供两个选项： **“全部刷新”** 和 **“刷新所选内容”**。 功能区按钮的默认操作是 **“全部刷新”**。 若要使用服务器的值刷新整个工作表，请单击 **“刷新”** 按钮或选择 **“全部刷新”** 选项。 若要仅刷新工作表中的部分单元格，请选择这些单元格（必须是一个连续选择的单元格区域），然后选择“刷新所选内容”选项****。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68074450"
   
 -   [连接（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [概述：将数据导出到 Excel (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [用于 Microsoft Excel 的 Master Data Services 外接程序](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   

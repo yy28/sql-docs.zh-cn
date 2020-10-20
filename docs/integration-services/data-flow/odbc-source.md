@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392113"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194756"
 ---
 # <a name="odbc-source"></a>ODBC 源
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392113"
   
 -   标准的输出数据列。  
   
- 根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)。  
+ 根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [ODBC 目标编辑器（“连接管理器”页）](./odbc-destination.md)。  
   
 ## <a name="data-type-support"></a>数据类型支持  
  有关 ODBC 源支持的数据类型的信息，请参阅开放式数据库连接 (ODBC) 连接器。  
@@ -195,5 +195,4 @@ ms.locfileid: "88392113"
   
 #### <a name="redirect-flow"></a>重定向流  
  将引起错误或截断的行定向到 ODBC 源的错误输出。  
-  
   

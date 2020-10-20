@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41d40f419497ccb2917052ac477c888a9338c135
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392153"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195259"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 
@@ -268,7 +268,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  此示例中用到的哈希并不是真正的哈希。  
   
- 有关详细信息，请参阅 [使用 Authenticode 签名和检查代码](https://go.microsoft.com/fwlink/?LinkId=78100)中的 CertMgr 部分。  
+ 有关详细信息，请参阅 [使用 Authenticode 签名和检查代码](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))中的 CertMgr 部分。  
   
 ### <a name="encrypt-examples"></a>加密示例  
  以下示例使用完全包加密和密码将基于文件的 PackageToEncrypt.dtsx 加密为基于文件的 EncryptedPackage.dts。 加密所用的密码是 *EncPswd*。  
@@ -279,5 +279,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
   
 ## <a name="see-also"></a>另请参阅  
 [运行 Integration Services (SSIS) 包](../integration-services/packages/run-integration-services-ssis-packages.md)  
-  
   

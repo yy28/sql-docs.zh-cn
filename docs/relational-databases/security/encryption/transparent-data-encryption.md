@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: edb5d6b73305b9acc840c2f34461c3056a3b9cbd
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866641"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006476"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
 
@@ -52,7 +52,7 @@ TDE 保护静态数据，也就是数据和日志文件。 它让你可以遵循
 >**相关主题：**
 >
 > - [借助 Azure SQL 数据库实现透明数据加密](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
-> - [开始在 SQL 数据仓库上使用透明数据加密 (TDE)](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
+> - [Azure Synapse Analytics 中的透明数据加密 (TDE) 入门](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [将受 TDE 保护的数据库移到其他 SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [使用 EKM 在 SQL Server 上启用 TDE](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
@@ -325,7 +325,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ## <a name="related-content"></a>相关内容
 
 [借助 Azure SQL 数据库实现透明数据加密](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
-[开始在 SQL 数据仓库上使用透明数据加密 (TDE)](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
+[Azure Synapse Analytics 中的透明数据加密 (TDE) 入门](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server 加密](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [SQL Server 和数据库加密密钥（数据库引擎）](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 

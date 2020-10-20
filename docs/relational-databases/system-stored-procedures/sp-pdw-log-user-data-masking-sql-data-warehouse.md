@@ -12,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059348"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255604"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_log_user_data_masking) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,8 +40,8 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-  
-#### <a name="parameters"></a>parameters  
+
+#### <a name="parameters"></a>参数  
 `[ @masking_mode = ] masking_mode` 确定是否已启用透明数据加密日志用户数据掩码。 *masking_mode* 为 **int**，可以是下列值之一：  
   
 -   0 = 禁用，用户数据显示在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活动日志中。  

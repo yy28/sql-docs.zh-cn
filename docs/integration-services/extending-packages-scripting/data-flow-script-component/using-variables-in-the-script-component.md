@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8e1e0b55183e2d1a2093d4726abdfd39f55f19ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d27181eac591f6c66166810e9662c04b6b97fc40
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425369"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196403"
 ---
 # <a name="using-variables-in-the-script-component"></a>在脚本组件中使用变量
 
@@ -32,7 +32,7 @@ ms.locfileid: "88425369"
 > [!IMPORTANT]  
 >  ReadWriteVariables 集合仅供在 PostExecute 方法中尽可能优化性能并降低锁定冲突的风险********。 因此不能在处理每行数据时直接递增包变量的值， 而应递增本地变量的值，并在所有数据处理完毕后，在 PostExecute 方法中将包变量的值设置为本地变量的值****。 还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 属性解决此限制问题，本主题稍后会进行介绍。 但是，在处理每一行时直接写包变量将会对性能产生负面影响，并增加锁定冲突的风险。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“脚本”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)********。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“脚本”页）](../../data-flow/transformations/script-component.md)********。  
   
  脚本组件在 ComponentWrapper 项目项中创建一个 Variables 集合类，该集合类为每个预配置变量值包含一个强类型的取值函数属性，该属性与变量本身同名********。 此集合通过 ScriptMain 类的 Variables 属性公开********。 取值函数属性根据需要提供对变量值的只读或读/写权限。 例如，如果将名为 `MyIntegerVariable` 的整数变量添加到 ReadOnlyVariables 列表中，可在脚本中使用以下代码检索该变量的值****：  
   
@@ -42,6 +42,5 @@ ms.locfileid: "88425369"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../../../integration-services/integration-services-ssis-variables.md)   
- [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [在包中使用变量](../../integration-services-ssis-variables.md)  
   

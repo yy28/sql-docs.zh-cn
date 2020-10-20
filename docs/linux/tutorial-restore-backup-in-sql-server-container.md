@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902329"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115860"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中还原 SQL Server 数据库
 
@@ -85,7 +85,7 @@ ms.locfileid: "85902329"
    此命令使用开发人员版本创建 SQL Server 2017 容器（默认）。 SQL Server 端口 1433 在主机上公开为端口 1401   。 可选的 `-v sql1data:/var/opt/mssql` 参数创建名为 sql1ddata  的数据卷容器。 这用于保留 SQL Server 创建的数据。
 
    > [!IMPORTANT]
-   > 该示例在 Docker 中使用数据卷容器。 如果改为选择映射主机目录，请注意，在用于 Mac 和 Windows 的 Docker 上此方法存在一些限制。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md#persist)。
+   > 该示例在 Docker 中使用数据卷容器。 如果改为选择映射主机目录，请注意，在用于 Mac 和 Windows 的 Docker 上此方法存在一些限制。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](./sql-server-linux-docker-container-configure.md#persist)。
 
 1. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
@@ -97,7 +97,7 @@ ms.locfileid: "85902329"
    docker ps -a
    ```
 
-1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](./sql-server-linux-docker-container-troubleshooting.md)。
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ ms.locfileid: "85902329"
    docker ps -a
    ```
 
-1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](./sql-server-linux-docker-container-troubleshooting.md)。
 
    ```bash
    $ sudo docker ps -a
@@ -170,7 +170,7 @@ ms.locfileid: "85902329"
 
 ## <a name="copy-a-backup-file-into-the-container"></a>将备份文件复制到容器中
 
-本教程使用 [Wide World Importers 示例数据库](../sample/world-wide-importers/wide-world-importers-documentation.md)。 使用以下步骤下载 Wide World Importers 数据库备份文件并将其复制到 SQL Server 容器。
+本教程使用 [Wide World Importers 示例数据库](../samples/wide-world-importers-what-is.md)。 使用以下步骤下载 Wide World Importers 数据库备份文件并将其复制到 SQL Server 容器。
 
 1. 首先，使用 docker exec  来创建备份文件夹。 以下命令在 SQL Server 容器中创建 /var/opt/mssql/backup 目录  。
 
@@ -208,7 +208,7 @@ ms.locfileid: "85902329"
 备份文件现在位于容器内。 在还原备份之前，请务必了解备份中的逻辑文件名和文件类型。 以下 Transact-SQL 命令使用容器中的 sqlcmd 检查备份并执行还原  。
 
 > [!TIP]
-> 本教程在容器中使用 sqlcmd，因为容器内预安装了该工具  。 不过，也可以使用容器外的其他客户端工具，如 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 或 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)，来运行 Transact-SQL 语句。 若要连接，请使用映射到容器中的 1433 端口的主机端口。 在此示例中，为主机上的“localhost,1401”和远程的“Host_IP_Address,1401”   。
+> 本教程在容器中使用 sqlcmd，因为容器内预安装了该工具  。 不过，也可以使用容器外的其他客户端工具，如 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) 或 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)，来运行 Transact-SQL 语句。 若要连接，请使用映射到容器中的 1433 端口的主机端口。 在此示例中，为主机上的“localhost,1401”和远程的“Host_IP_Address,1401”   。
 
 1. 在容器中运行 sqlcmd，列出备份中的逻辑文件名和路径  。 这是通过“RESTORE FILELISTONLY”Transact-SQL 语句实现的  。
 
@@ -545,4 +545,4 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 接下来，查看其他 Docker 配置和故障排除方案：
 
 > [!div class="nextstepaction"]
->[Docker 上的 SQL Server 2017 配置指南](sql-server-linux-configure-docker.md)
+>[Docker 上的 SQL Server 2017 配置指南](./sql-server-linux-docker-container-deployment.md)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0892e0a2a6db25e6a82f56177544572b8a5af388
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: feb85bc9b14169c862447c8465ce47c4637b5c32
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471207"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195009"
 ---
 # <a name="move-user-databases"></a>移动用户数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "88471207"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-     有关如何使用 **sqlcmd** 实用工具的详细信息，请参阅 [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
+     有关如何使用 **sqlcmd** 实用工具的详细信息，请参阅 [使用 sqlcmd 实用工具](../../ssms/scripting/sqlcmd-use-the-utility.md)。  
   
 4.  退出 **sqlcmd** 实用工具或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -179,12 +179,11 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)   
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [移动系统数据库](../../relational-databases/databases/move-system-databases.md)   
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
-  
   

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348440"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195948"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
 
@@ -44,7 +44,7 @@ ms.locfileid: "88348440"
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
   
 > [!NOTE]  
->   有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
+>   有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
   
  模糊分组转换要求与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例建立连接，以创建该转换算法完成工作所需的临时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 该连接必须解析为有权在数据库中创建表的用户。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88348440"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -184,5 +184,4 @@ ms.locfileid: "88348440"
 ## <a name="see-also"></a>另请参阅  
  [模糊查找转换](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

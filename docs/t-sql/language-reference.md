@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 422ab559997e5dc33a0d8155c198cb23cba5698b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076668"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035890"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 引用（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "90076668"
 本主题提供有关如何查找和使用 Microsoft [!INCLUDE[tsql](../includes/tsql-md.md)] (T-SQL) 的基础知识。 T-SQL 是使用 Microsoft SQL 产品和服务的关键所在。 与 SQL 数据库通信的所有工具和应用程序均通过发送 T-SQL 命令使用这些产品和服务。  
 
 ## <a name="t-sql-compliance-to-sql-standard"></a>T-SQL 的 SQL 标准符合性
-有关如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中实现某些标准的详细技术文档，请参阅 [Microsoft SQL Server 标准支持文档](https://docs.microsoft.com/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2)。
+有关如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中实现某些标准的详细技术文档，请参阅 [Microsoft SQL Server 标准支持文档](/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2)。
 
 ## <a name="tools-that-use-t-sql"></a>使用 T-SQL 的工具
 发出 T-SQL 命令的一些 Microsoft 工具如下：
@@ -43,7 +43,7 @@ ms.locfileid: "90076668"
 要查找 T-SQL 主题，请使用本页右上角的搜索功能或使用本页左侧的目录。 还可以在 Management Studio 查询编辑器窗口中键入 T-SQL 关键字并按 F1。 
   
 ## <a name="find-system-views"></a>查找系统视图
-要查找系统表、视图、函数和过程，请参阅 SQL 文档[使用关系数据库](../relational-databases/database-features.md)部分中的这些链接。
+要查找系统表、视图、函数和过程，请参阅 SQL 文档[使用关系数据库](../relational-databases/databases/databases.md)部分中的这些链接。
 
 - [系统目录视图](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [系统兼容性视图](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
@@ -67,7 +67,7 @@ ms.locfileid: "90076668"
 在某些情况下，某个产品或服务使用了主题，但并非所有参数都受到支持。 在此情况下，将其他 **适用于** 部分插入到该主题正文中相应的参数说明中。  
  
 ## <a name="get-help-from-microsoft-q--a"></a>从 Microsoft 问答获取帮助  
-有关联机帮助的信息，请参阅 [Microsoft 问答 Transact-SQL 论坛](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html)。  
+有关联机帮助的信息，请参阅 [Microsoft 问答 Transact-SQL 论坛](/answers/topics/sql-server-transact-sql.html)。  
  
 ## <a name="see-other-language-references"></a>查看其他语言参考
 SQL 文档包括包括如下其他语言参考：
@@ -75,7 +75,7 @@ SQL 文档包括包括如下其他语言参考：
 - [XQuery 语言参考](../xquery/xquery-language-reference-sql-server.md)
 - [Integration Services 语言参考](../integration-services/integration-services-language-reference.md)
 - [复制语言参考](../relational-databases/replication/replication-language-reference.md)
-- [Analysis Services 语言参考](../mdx/analysis-services-language-reference.md)  
+- [Analysis Services 语言参考](../mdx/multidimensional-expressions-mdx-reference.md)  
 
 ## <a name="next-steps"></a>后续步骤
 现在，你已了解了如何查找 T-SQL 参考主题，可以：
@@ -83,5 +83,4 @@ SQL 文档包括包括如下其他语言参考：
 - 学习有关如何编写 T-SQL 的简短教程，请参阅[教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。 
 - 查看 [Transact-SQL 语法约定 (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
 
-  
   

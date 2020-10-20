@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d40072ea8b347001feba5d74e6e08c8c4c8ae340
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 49f47819a6ca128ce45f950c9cd6881e325bec59
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88089022"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115590"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入门：在云中运行 SQL Server
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-在本快速入门中，你将在所选的云中的 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 或 Ubuntu 上安装 SQL Server。 转到[在 Azure 门户中预配 Linux SQL Server 虚拟机](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)，在 Azure 中运行 Linux 上的 SQL Server。
+在本快速入门中，你将在所选的云中的 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 或 Ubuntu 上安装 SQL Server。 转到[在 Azure 门户中预配 Linux SQL Server 虚拟机](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%252fsql%252ftoc%252ftoc.json)，在 Azure 中运行 Linux 上的 SQL Server。
 
 > [!NOTE]
 > 如果选择运行付费版本的 SQL Server，则需要自带许可证 (BYOL)。

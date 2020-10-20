@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ff8e4b35d30e9b2504dd128ca9694007647f5eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7aa2c4e59ced60c31467b13a4de154887c84f52
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477911"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195406"
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
 
@@ -40,7 +40,7 @@ ms.locfileid: "88477911"
  传输登录名任务并不报告登录名传输的进度，它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的登录名数。 通过将用户定义的变量分配给传输登录名任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关登录名传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的登录名数。 通过将用户定义的变量分配给传输登录名任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关登录名传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../integration-services-ssis-variables.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输登录名任务包括下列自定义日志项：  
@@ -79,7 +79,7 @@ ms.locfileid: "88477911"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>传输登录名任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
@@ -140,4 +140,3 @@ ms.locfileid: "88477911"
   
  **CopySids**  
  选择是否应将与登录名相关联的安全标识符复制到目标服务器。 如果传输登录名任务与传输数据库任务一起使用，则必须将**CopySids** 设置为 **True** 。 否则，传输的数据库将不能识别复制的登录名。  
-  

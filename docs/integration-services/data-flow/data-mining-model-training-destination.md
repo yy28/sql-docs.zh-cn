@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e79b6190a8e3659b97f3e8f1c82533f3270bd42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b70fe92da0c7efb0e59dbc89505ad623cad64432
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430909"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196448"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) 和 [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+  数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](/analysis-services/data-mining/mining-structure-columns) 和 [Mining Model Columns](/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="configuration-of-the-data-mining-model-training-destination"></a>数据挖掘模型定型目标的配置  
- 如果目标结构以及在该结构上生成的模型的事例级别列具有内容类型 KEY TIME 或 KEY SEQUENCE，则输入数据必须基于此列排序。 例如，用 Microsoft 时序算法生成的模型使用内容类型 KEY TIME。 如果输入数据未排序，则对模型的处理可能失败。 如果数据需要排序，您可以事先在数据流中使用排序转换对数据进行排序。 此要求不适用于具有 KEY 内容类型的列。 有关详细信息，请参阅[内容类型（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)和[排序转换](../../integration-services/data-flow/transformations/sort-transformation.md)。  
+ 如果目标结构以及在该结构上生成的模型的事例级别列具有内容类型 KEY TIME 或 KEY SEQUENCE，则输入数据必须基于此列排序。 例如，用 Microsoft 时序算法生成的模型使用内容类型 KEY TIME。 如果输入数据未排序，则对模型的处理可能失败。 如果数据需要排序，您可以事先在数据流中使用排序转换对数据进行排序。 此要求不适用于具有 KEY 内容类型的列。 有关详细信息，请参阅[内容类型（数据挖掘）](/analysis-services/data-mining/content-types-data-mining)和[排序转换](../../integration-services/data-flow/transformations/sort-transformation.md)。  
   
 > [!NOTE]  
 >  数据挖掘模型定型目标的输入必须经过排序。 若要对数据进行排序，您可以将数据挖掘模型定型目标的排序目标上游包括到该数据流中。 有关详细信息，请参阅 [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "88430909"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [数据挖掘模型定型目标自定义属性](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
@@ -88,4 +88,3 @@ ms.locfileid: "88430909"
   
  **挖掘结构列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  
-  

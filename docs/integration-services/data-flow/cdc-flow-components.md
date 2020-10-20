@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480889"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196481"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
 
@@ -86,7 +86,7 @@ ms.locfileid: "89480889"
   
  这一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流包含两个 CDC 控制任务以及一个数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。******** 基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
   
- 有关使用 CDC 控制任务的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 和 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)。  
+ 有关使用 CDC 控制任务的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 和 [CDC Control Task Editor](../control-flow/cdc-control-task.md)。  
   
  下图显示了 **“处理更改”** 数据流，该数据流在概念上演示了如何处理更改。  
   
@@ -104,11 +104,11 @@ ms.locfileid: "89480889"
   
  [CDC 源](../../integration-services/data-flow/cdc-source.md)  
   
- [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [CDC 源编辑器（“连接管理器”页）](./cdc-source.md)  
   
- [CDC 源编辑器（“列”页）](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [CDC 源编辑器（“列”页）](./cdc-source.md)  
   
- [CDC 源编辑器（“错误输出”页）](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC 源编辑器（“错误输出”页）](./cdc-source.md)  
   
  有关 CDC 拆分器的详细信息，请参阅：  
   
@@ -217,9 +217,8 @@ ms.locfileid: "89480889"
   
 -   social.technet.microsoft.com 上的技术文章 [解决 Microsoft Change Data Capture for Oracle by Attunity 中的 CDC 实例错误问题](https://go.microsoft.com/fwlink/?LinkId=252961)。  
   
--   technet.microsoft.com 上的视频 [使用 SQL Server Integration Services 2012 时 Oracle 数据库的 CDC（SQL Server 视频）](https://technet.microsoft.com/sqlserver/jj218898)。  
+-   technet.microsoft.com 上的视频 [使用 SQL Server Integration Services 2012 时 Oracle 数据库的 CDC（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))。  
   
 ## <a name="see-also"></a>另请参阅  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

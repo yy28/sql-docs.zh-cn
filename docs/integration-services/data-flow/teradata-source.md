@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484473"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194699"
 ---
 # <a name="connect-to-the-teradata-source"></a>连接到 Teradata 源
 
@@ -31,7 +31,7 @@ Teradata 源使用以下内容从 Teradata 数据库提取数据：
 
 可以记录 Teradata 源对 Teradata Parallel Transporter (TPT) API 所做的调用。 要执行此操作，可以在包级别启用包日志记录并选择“诊断”**** 事件。
 
-可以通过启用 ODBC 驱动程序管理器跟踪，记录 Teradata 源对 Teradata ODBC 驱动程序所做的开放式数据库连接 (ODBC) 调用。 有关详细信息，请参阅 [ODBC 数据源管理员如何生成 ODBC 跟踪](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options)。
+可以通过启用 ODBC 驱动程序管理器跟踪，记录 Teradata 源对 Teradata ODBC 驱动程序所做的开放式数据库连接 (ODBC) 调用。 有关详细信息，请参阅 [ODBC 数据源管理员如何生成 ODBC 跟踪](../../odbc/admin/setting-tracing-options.md)。
 
 ## <a name="parallelism"></a>并行度
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477897"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195989"
 ---
 # <a name="web-service-task"></a>Web 服务任务
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477897"
   
  WSDL 文件列出 Web 服务提供的方法、方法要求的输入参数、方法返回的响应以及如何与 Web 服务通信。  
   
- 如果方法使用输入参数，那么 Web 服务任务要求参数值。 例如，需要根据身高建议应该购买多长的滑雪板的 Web 服务方法，就要求在输入参数中提交您的身高。 该参数值可以通过任务中定义的字符串来提供，也可以通过任务作用域或父级容器中定义的变量来提供。 使用变量的优点在于可通过使用包配置或脚本来动态地更新参数值。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[包配置](../../integration-services/packages/package-configurations.md)。  
+ 如果方法使用输入参数，那么 Web 服务任务要求参数值。 例如，需要根据身高建议应该购买多长的滑雪板的 Web 服务方法，就要求在输入参数中提交您的身高。 该参数值可以通过任务中定义的字符串来提供，也可以通过任务作用域或父级容器中定义的变量来提供。 使用变量的优点在于可通过使用包配置或脚本来动态地更新参数值。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[包配置](../packages/legacy-package-deployment-ssis.md)。  
   
  许多 Web 服务方法不使用输入参数。 例如，获取本月出生的总统姓名的 Web 服务方法就不需要输入参数，因为该 Web 服务可以在本地确定本月。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477897"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Web 服务任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击下列主题之一：  
@@ -93,7 +93,7 @@ ms.locfileid: "88477897"
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- **相关主题：** [HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **相关主题：** [HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 (…) 并定位到该文件  。  
@@ -176,13 +176,13 @@ ms.locfileid: "88477897"
  **File**  
  从列表中选择“文件连接管理器”，或单击“\<**New Connection...**>”创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  
  在列表中选择变量，或单击“\<**New Variable...**>”创建新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>相关内容  
- MSDN 库中的视频[操作说明：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=259642)。  
+ MSDN 库中的视频[操作说明：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))。

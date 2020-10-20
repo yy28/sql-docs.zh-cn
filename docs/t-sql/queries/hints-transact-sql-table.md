@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288230"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035830"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 如果 SET 选项不包含筛选索引所需的值，查询优化器将不考虑使用索引提示。 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="using-noexpand"></a>使用 NOEXPAND  
-NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)、[SQL Server 2017 各个版本支持的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)和 [SQL Server 2019 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
+NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[SQL Server 2017 各个版本支持的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)和 [SQL Server 2019 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
 但是，为了使查询优化器考虑使用索引视图进行匹配，或者使用通过 NOEXPAND 提示引用的索引视图，则必须将以下 SET 选项设置为 ON。  
 
@@ -482,5 +482,4 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
  [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)  
-  
   

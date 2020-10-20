@@ -29,12 +29,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 427310d9693e4845290b1cbb06dba13a3d3101d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6525a5ba3352a2d841cea556bcaffc40c1ce5472
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467605"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037090"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 语法约定 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -118,10 +118,8 @@ object\_name
 文章的常规主题可能用于某一产品，但在某些情况下，所有参数都不受支持。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中介绍了包含的数据库用户。 CREATE USER  语句可用于任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品，但 WITH PASSWORD  语法无法用于旧版本。 其他“适用于”  部分插入到文章正文中的相应参数说明中。  
   
 ## <a name="see-also"></a>另请参阅  
-[Transact-SQL 参考（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)    
+[Transact-SQL 参考（数据库引擎）](../language-reference.md)    
 [保留关键字 (Transact SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
-[Transact-SQL 设计问题](https://msdn.microsoft.com/library/dd193411.aspx)    
-[Transact-SQL 命名问题](https://msdn.microsoft.com/library/dd193246.aspx)        
-[Transact-SQL 性能问题](https://msdn.microsoft.com/library/dd172117.aspx)    
-
-
+[Transact-SQL 设计问题](/previous-versions/visualstudio/visual-studio-2010/dd193411(v=vs.100))    
+[Transact-SQL 命名问题](/previous-versions/visualstudio/visual-studio-2010/dd193246(v=vs.100))        
+[Transact-SQL 性能问题](/previous-versions/visualstudio/visual-studio-2010/dd172117(v=vs.100))

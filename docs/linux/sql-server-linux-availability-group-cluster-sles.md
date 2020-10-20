@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: efa93b1d85e0aec5be7ea62ce76cb0270c68178f
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: f353230ecedbec6e30347a6999fabc706c9b09c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784877"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081716"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
@@ -320,7 +320,7 @@ commit
 若要防止 IP 地址暂时指向具有故障转移前的次要副本的节点，请添加排序约束。 若要添加排序约束，请在一个节点上运行以下命令： 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

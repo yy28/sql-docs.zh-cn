@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088877"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115630"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 
@@ -92,7 +92,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供程序
 
-连接到 SQL Server 实例的另一种方法是使用 [SQL Server PowerShell 提供程序](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  使用此提供程序可以导航 SQL Server 实例，就像在对象资源管理器中（但在命令行中）导航树结构一样。  此提供程序默认显示为名为 `SQLSERVER:\` 的 PSDrive，可用于连接和导航域帐户有权访问的 SQL Server 实例。  有关如何为 Linux 上的 SQL Server 设置 Active Directory 身份验证的信息，请参阅[配置步骤](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps)。
+连接到 SQL Server 实例的另一种方法是使用 [SQL Server PowerShell 提供程序](../powershell/sql-server-powershell-provider.md)。  使用此提供程序可以导航 SQL Server 实例，就像在对象资源管理器中（但在命令行中）导航树结构一样。  此提供程序默认显示为名为 `SQLSERVER:\` 的 PSDrive，可用于连接和导航域帐户有权访问的 SQL Server 实例。  有关如何为 Linux 上的 SQL Server 设置 Active Directory 身份验证的信息，请参阅[配置步骤](./sql-server-linux-active-directory-auth-overview.md#configuration-steps)。
 
 还可以使用 SQL Server PowerShell 提供程序进行 SQL 身份验证。 为此，请使用 `New-PSDrive` cmdlet 创建新的 PSDrive，并提供适当的凭据以进行连接。
 
@@ -128,7 +128,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-如果需要查看实例上的所有数据库，可以使用 [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) cmdlet。
+如果需要查看实例上的所有数据库，可以使用 [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase) cmdlet。
 
 ## <a name="examine-sql-server-error-logs"></a>检查 SQL Server 错误日志
 
@@ -152,5 +152,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>另请参阅
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [SqlServer cmdlet](/powershell/module/sqlserver)

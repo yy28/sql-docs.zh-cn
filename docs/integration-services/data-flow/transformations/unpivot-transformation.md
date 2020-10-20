@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4dd81bf33b43f4adf73225faa199fd9c5f792fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ebed637551110df71897dc17afe0c1a959eb0e5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425629"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194581"
 ---
 # <a name="unpivot-transformation"></a>逆透视转换
 
@@ -52,7 +52,7 @@ ms.locfileid: "88425629"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -99,5 +99,4 @@ ms.locfileid: "88425629"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
  [透视转换](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
-  
   

@@ -1,6 +1,7 @@
 ---
-title: 用于 Microsoft Excel 的 Master Data Services 外接程序 | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+title: 概述
+description: 了解如何使用 Master Data Services Add-in for Excel 将数据从 Master Data Services 加载到 Excel 中并将其发布回 Master Data Services。
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec0059471e10db953db26cfdd4c7b620a3378316
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074592"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257788"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以将筛选过的数据列表从 MDS 加载到 Excel 中，从中按照处理任何其他数据的方式来处理加载的数据。 处理完成后，您可以将数据发布回 MDS，这是集中存储数据的位置。 可通过安全权限来确定你可以查看和更新的数据。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074592"
 ## <a name="downloads"></a>下载 
 >*  从[此 Microsoft 下载中心页面](https://www.microsoft.com/download/details.aspx?id=56838)下载适用于 SQL Server 2016 SP2 的用于 Excel 的 Master Data Services 外接程序。 
 >* 从[此 Microsoft 下载中心页面](https://go.microsoft.com/fwlink/?linkid=836867)下载适用于 SQL Server 2017 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。
->*  Master Data Services 外接程序下载 for Excel，从 SQL Server 2019 ctp[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=2086948)。 
+>*  从此 [Microsoft 下载中心页面](https://go.microsoft.com/fwlink/?linkid=2086948)下载 SQL SERVER 2019 CTP 的 Master Data Services Add-in for Excel。 
  
   
 ## <a name="terms"></a>术语  
@@ -42,11 +43,11 @@ ms.locfileid: "68074592"
   
 -   *model* 是一种数据容器。 可以为这些容器创建多个版本，并且通常最新版本是最近创建的。 有关详细信息，请参阅[模型 (Master Data Services)](../../master-data-services/models-master-data-services.md)。  
   
--   *entity* 是一个数据列表。 您可以将实体视作数据库中的表。  例如，Color 实体可能包含一个颜色列表。 有关详细信息，请参阅[实体 (Master Data Services)](../../master-data-services/entities-master-data-services.md)。  
+-   *entity* 是一个数据列表。 您可以将实体视作数据库中的表。 **** 例如，Color 实体可能包含一个颜色列表。 有关详细信息，请参阅[实体 (Master Data Services)](../../master-data-services/entities-master-data-services.md)。  
   
--   成员  是一行数据（一条记录）。 每个实体都包含成员。 **Blue**就是成员的一个示例。 有关详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。  
+-   成员 ** 是一行数据（一条记录）。 每个实体都包含成员。 **Blue**就是成员的一个示例。 有关详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。  
   
--   *attribute* 是数据列。 每个成员都具有属性。 例如，“Blue”  成员的“代码”  属性是“B”  有关属性的详细信息，请参阅[属性 (Master Data Services)](../../master-data-services/attributes-master-data-services.md)。  
+-   *attribute* 是数据列。 每个成员都具有属性。 例如， **Blue**成员的**Code**属性是**B**。有关特性的详细信息，请参阅[Master Data Services&#41;&#40;特性](../../master-data-services/attributes-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68074592"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 创建指向  存储库的连接。|[连接到 MDS 存储库（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |将 MDS 管理的数据加载到 Excel 中。|[将数据从 Master Data Services 导出到 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |保存快捷查询，用于在将来打开当前显示的 MDS 管理的数据。|[保存快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|与他人共享快捷方式。|[通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|与他人共享快捷方式。|[以电子邮件形式发送快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |查看对成员所做的所有更改。|[查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
 |在发布新数据之前，确定是否存在重复。|[匹配相似数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)|  
 |将数据从工作表发布到 MDS 存储库中。|[将数据从 Excel 导入 Master Data Services（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
@@ -67,13 +68,13 @@ ms.locfileid: "68074592"
   
 -   [连接（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [概述：将数据导出到 Excel (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [刷新数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [概述：从 Excel 导入数据&#40;MDS add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

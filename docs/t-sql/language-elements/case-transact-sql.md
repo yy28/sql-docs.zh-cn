@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be188a87a06a91467a16862ea0a0d572e4f71b93
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227397"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187499"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -51,12 +51,13 @@ ms.locfileid: "91227397"
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-Simple CASE expression:   
+--Simple CASE expression:   
 CASE input_expression   
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
 END   
-Searched CASE expression:  
+
+--Searched CASE expression:  
 CASE  
      WHEN Boolean_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
@@ -197,7 +198,7 @@ SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END; 
+         ELSE CountryRegionName END;  
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. 在 UPDATE 语句中使用 CASE  
@@ -215,13 +216,13 @@ SET VacationHours =
     )  
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
-WHERE SalariedFlag = 0;  
+WHERE SalariedFlag = 0;   
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. 在 SET 语句中使用 CASE  
  下面的示例在表值函数 `dbo.GetContactInfo` 中的 SET 语句中使用 CASE 表达式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，与人员有关的所有数据都存储在 `Person.Person` 表中。 例如，该人员可以是员工、供应商代表或消费者。 该函数将返回给定 `BusinessEntityID` 的名字与姓氏以及该人员的联系人类型。SET 语句中的 CASE 表达式将根据该 `BusinessEntityID` 列是存在于 `Employee`、`Vendor` 还是存在于 `Customer` 表中来确定要为 `ContactType` 列显示的值。  
   
-```sql   
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
@@ -287,13 +288,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);
+FROM dbo.GetContactInformation(5);  
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. 在 HAVING 子句中使用 CASE  
  下面的示例在 HAVING 子句中使用 CASE 表达式，以限制由 SELECT 语句返回的行。 该语句将返回 `HumanResources.Employee` 表中针对每个职位的最高每小时薪金。 HAVING 子句将职位限制为两类员工：一是最高每小时薪金超过 40 美元的男性员工，二是最高每小时薪金超过 42 美元的女性员工。  
   
-```sql  
+```sql 
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -306,7 +307,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC; 
+ORDER BY MaximumRate DESC;  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -333,7 +334,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>H. 在 UPDATE 语句中使用 CASE  
  下面的示例在 UPDATE 语句中使用 CASE 表达式，以确定为 `VacationHours` 设置为 0 的员工的 `SalariedFlag` 列所设置的值。 如果 `VacationHours` 减去 10 小时后会得到一个负值，则 `VacationHours` 将增加 40 小时；否则 `VacationHours` 将增加 20 小时。  
   
-```sql  
+```sql 
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  

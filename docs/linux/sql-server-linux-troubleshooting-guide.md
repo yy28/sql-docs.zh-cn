@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088733"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115793"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -42,11 +42,11 @@ ms.locfileid: "88088733"
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > 但如果是 Azure VM，则此方法不适用。 对于 Azure VM，请[在 Azure 门户中查找 VM 的公共 IP](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)。
+   > 但如果是 Azure VM，则此方法不适用。 对于 Azure VM，请[在 Azure 门户中查找 VM 的公共 IP](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)。
 
 - 如果适用，请检查是否已在防火墙上打开了 SQL Server 端口（默认为 1433）。
 
-- 对于 Azure VM，请检查是否有[默认 SQL Server 端口的网络安全组规则](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)。
+- 对于 Azure VM，请检查是否有[默认 SQL Server 端口的网络安全组规则](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)。
 
 - 验证用户名和密码是否存在任何拼写错误、多余空格或错误大小写。
 
@@ -90,7 +90,7 @@ ms.locfileid: "88088733"
    ```
 
 > [!TIP]
-> 有关 Docker 的更多故障排除提示，请参阅 [SQL Server Docker 容器疑难解答](sql-server-linux-configure-docker.md#troubleshooting)。
+> 有关 Docker 的更多故障排除提示，请参阅 [SQL Server Docker 容器疑难解答](./sql-server-linux-docker-container-troubleshooting.md)。
 
 ## <a name="access-the-log-files"></a>访问日志文件
    
@@ -109,7 +109,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    ```
 ## <a name="extended-events"></a>扩展的事件
 
-可通过 SQL 命令查询扩展事件。  可在[此处](https://technet.microsoft.com/library/bb630282.aspx)找到扩展事件的详细信息：
+可通过 SQL 命令查询扩展事件。  可在[此处](../relational-databases/extended-events/extended-events.md)找到扩展事件的详细信息：
 
 ## <a name="crash-dumps"></a>故障转储 
 
@@ -197,7 +197,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 
 - [查询存储](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [系统动态管理视图 (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [SQL Server Management Studio 中的性能仪表板](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [SQL Server Management Studio 中的性能仪表板](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>常见问题
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088793"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115810"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
 
@@ -250,7 +250,7 @@ SET ENCRYPTION ON;
 > [!WARNING]
 >  启用了 TDE 的数据库的备份文件也使用数据库加密密钥进行加密。 因此，当您还原这些备份时，用于保护数据库加密密钥的证书必须可用。 也就是说，除了备份数据库之外，您还要确保自己保留了服务器证书的备份以防数据丢失。 如果证书不再可用，将会导致数据丢失。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
 
-有关 TDE 的详细信息，请参阅[透明数据加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md)。   
+有关 TDE 的详细信息，请参阅[透明数据加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md)。   
 
 
 ## <a name="configure-backup-encryption"></a>配置备份加密

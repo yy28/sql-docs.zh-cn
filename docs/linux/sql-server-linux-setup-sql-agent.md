@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 9492b8fcdbcd4ddf930d9f5d1d5ee43415fb2a1c
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088783"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115764"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088783"
 
 本文介绍如何在 Linux 上启用或安装 SQL Server 代理。
 
-[SQL Server 代理](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)运行计划的 SQL Server 作业。 从 SQL Server 2017 CU4 开始，SQL Server 代理包含在 **mssql-server** 包中，默认情况下处于禁用状态。 若要了解此版本 SQL Server 代理支持的功能和版本信息，请参阅[发行说明](sql-server-linux-release-notes.md)。
+[SQL Server 代理](../ssms/agent/sql-server-agent.md)运行计划的 SQL Server 作业。 从 SQL Server 2017 CU4 开始，SQL Server 代理包含在 **mssql-server** 包中，默认情况下处于禁用状态。 若要了解此版本 SQL Server 代理支持的功能和版本信息，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 ## <a name="instructions"></a>Instructions
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d46d3598bb309029319c1b74b467983e681b96ac
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495772"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197042"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
 
@@ -88,7 +88,7 @@ ms.locfileid: "88495772"
   
  如果您不知道配置目标所需的所有值，可能需要询问您的 SAP 管理员。  
   
- 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](https://go.microsoft.com/fwlink/?LinkID=137090)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
+ 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>使用 SSIS 设计器配置目标  
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的 SAP BW 目标属性的详细信息，请单击以下主题之一进行了解：  
@@ -121,5 +121,4 @@ ms.locfileid: "88495772"
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft Connector for SAP BW 组件](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

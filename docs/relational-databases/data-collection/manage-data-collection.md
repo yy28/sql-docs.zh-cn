@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754aff825e0da8fd888deafb927936599a4d8631
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494630"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196761"
 ---
 # <a name="manage-data-collection"></a>管理数据收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88494630"
   
 >**重要说明!!** 与常规存储过程不同的是，数据收集器存储过程使用严格类型化的参数，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
- 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建和执行提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。 或者，您可在任何编辑器中创建查询并将其保存为文件扩展名为 .sql 的文本文件。 您可以从 Windows 命令提示符处使用 **sqlcmd** 实用程序执行查询。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
+ 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建和执行提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。 或者，您可在任何编辑器中创建查询并将其保存为文件扩展名为 .sql 的文本文件。 您可以从 Windows 命令提示符处使用 **sqlcmd** 实用程序执行查询。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../../ssms/scripting/sqlcmd-use-the-utility.md)。  
   
 ### <a name="stored-procedures-and-views"></a>存储过程和视图  
  **使用数据收集器**  
@@ -174,7 +174,6 @@ ms.locfileid: "88494630"
   
 ## <a name="see-also"></a>另请参阅  
  [执行存储过程](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [使用 SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)   
  [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
-  
   

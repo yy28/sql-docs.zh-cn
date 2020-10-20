@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cfe799e9a0abb8731642ee8b2d8d293c8a8851a2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784848"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115926"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
@@ -80,7 +80,7 @@ ms.locfileid: "91784848"
 >[!NOTE]
 >可用性组可以包括其他同步或异步副本。 
 
-在 Linux 上创建 AG 以实现高可用性。 配合使用 [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) 与 `CLUSTER_TYPE = EXTERNAL`。 
+在 Linux 上创建 AG 以实现高可用性。 配合使用 [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md) 与 `CLUSTER_TYPE = EXTERNAL`。 
 
 * 可用性组 - `CLUSTER_TYPE = EXTERNAL` 指定：由外部群集实体管理 AG。 Pacemaker 是外部群集实体的一个示例。 当 AG 群集类型为外部时， 
 

@@ -13,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306640"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035846"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>第 2 课：配置数据库对象的权限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88306640"
 ## <a name="prerequisites"></a>先决条件
 若要完成本教程，需要 SQL Server Management Studio 以及针对 SQL Server 实例的访问权限。 
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
 - **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **macOS**：[在 Docker 上下载 SQL Server 2017](../linux/quickstart-install-connect-docker.md)。
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -111,4 +111,3 @@ ms.locfileid: "88306640"
 转到下一篇文章，了解详细信息：
 > [!div class="nextstepaction"]
 >[后续步骤](lesson-3-deleting-database-objects.md)
-  

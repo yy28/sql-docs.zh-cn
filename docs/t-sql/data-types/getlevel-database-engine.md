@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0dc98efb298d06682b29c53c05b14e014ad8361a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f0aa604a88902dc8bfba522556f11b267fa1e184
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111247"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037158"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel（数据库引擎）
 
@@ -94,7 +94,6 @@ this.GetLevel()
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[hierarchyid 数据类型方法引用](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid 数据类型方法引用](./hierarchyid-data-type-method-reference.md)  
 [分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  

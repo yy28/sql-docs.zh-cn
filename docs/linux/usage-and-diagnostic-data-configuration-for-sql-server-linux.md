@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8d137a12cdb11fc0f5d5cd9065db9a758de57154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902337"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115721"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 配置使用情况和诊断数据收集
 
@@ -21,7 +21,7 @@ ms.locfileid: "85902337"
 
 默认情况下，Microsoft SQL Server 收集有关其客户如何使用应用程序的信息。 具体来说，SQL Server 收集有关安装体验、使用情况和性能的信息。 此信息有助于 Microsoft 改进产品以更好地满足客户需求。 例如，Microsoft 收集有关客户遇到的错误代码类型信息，这样我们就可以修复相关 bug，改进关于如何使用 SQL Server 的文档，并确定是否应将功能添加到产品中以更好地为客户服务。
 
-本文档提供有关收集的信息类型以及如何配置 Linux 上的 Microsoft SQL Server 以将收集的信息发送给 Microsoft 的详细信息。 SQL Server 2017 包含隐私声明，其中对我们会从用户处收集的信息以及我们不会从用户处收集的信息进行了说明。 有关详细信息，请参阅[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。
+本文档提供有关收集的信息类型以及如何配置 Linux 上的 Microsoft SQL Server 以将收集的信息发送给 Microsoft 的详细信息。 SQL Server 2017 包含隐私声明，其中对我们会从用户处收集的信息以及我们不会从用户处收集的信息进行了说明。 有关详细信息，请参阅[隐私声明](../sql-server/sql-server-privacy.md)。
 
 具体而言，Microsoft 不会通过这种机制发送以下任何类型的信息：
 
@@ -56,7 +56,7 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
    ```
    
 ### <a name="on-docker"></a>在 Docker 上
-若要在 docker 上禁用使用情况和诊断数据收集，则必须让 Docker [保留你的数据](sql-server-linux-configure-docker.md)。 
+若要在 docker 上禁用使用情况和诊断数据收集，则必须让 Docker [保留你的数据](./sql-server-linux-docker-container-deployment.md)。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -143,7 +143,7 @@ Microsoft SQL Server 2017 包含支持 Internet 的功能，可以收集关于�
    ```
    
 ### <a name="on-docker"></a>在 Docker 上
-若要在 docker 上启用本地审核，则必须让 Docker [保留你的数据](sql-server-linux-configure-docker.md)。 
+若要在 docker 上启用本地审核，则必须让 Docker [保留你的数据](./sql-server-linux-docker-container-deployment.md)。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
