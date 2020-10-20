@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 292736c937a2345e88964521ea294c69595729e5
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 39f1f79701a0a3fd871b2b273a48197b8b42187b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412879"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005891"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下载 SQL Server Data Tools (SSDT) for Visual Studio
 
@@ -39,7 +39,7 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>使用 Visual Studio 2019 安装 SSDT
 
-如果已安装 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true)，则可以编辑工作负载列表，使其包括 SSDT。 如果尚未安装 Visual Studio 2019，可以下载并安装 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。
+如果已安装 [Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019)，则可以编辑工作负载列表，使其包括 SSDT。 如果尚未安装 Visual Studio 2019，可以下载并安装 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。
 
 若要修改已安装的 Visual Studio 工作负载以包含 SSDT，请使用 Visual Studio 安装程序。
 
@@ -164,7 +164,7 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](/vis
 
 |项目模板|支持的 SQL 平台|
 |-------------------|--------------------|
-|关系数据库| SQL Server 2005\* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL Database<br /><br />Azure SQL 数据仓库（仅支持查询；尚不支持数据库项目）<br /><br /> \* SQL Server 2005 支持已停止提供，<br /><br /> 请迁移到官方支持的 SQL 版本|
+|关系数据库| SQL Server 2005\* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL Database<br /><br />Azure Synapse Analytics（仅支持查询；尚不支持数据库项目）<br /><br /> \* SQL Server 2005 支持已停止提供，<br /><br /> 请迁移到官方支持的 SQL 版本|
 |Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 - SQL Server 2017|
 |Integration Services 包| SQL Server 2012 - SQL Server 2019 |
 
@@ -180,9 +180,9 @@ SSDT for Visual Studio 2015 和 2017 都使用 DacFx 17.4.1：[下载数据层�
 
 * [SSDT MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT 团队博客](https://docs.microsoft.com/archive/blogs/ssdt/)
+* [SSDT 团队博客](/archive/blogs/ssdt/)
 
-* [DACFx API 参考](https://msdn.microsoft.com/library/dn645454.aspx)
+* [DACFx API 参考](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))
 
 * [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -194,7 +194,7 @@ SSDT for Visual Studio 2015 和 2017 都使用 DacFx 17.4.1：[下载数据层�
 
 * [SSIS 教程：创建简单的 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)
 
-* [Analysis Services 教程](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)
+* [Analysis Services 教程](/analysis-services/analysis-services-tutorials-ssas)
 
 * [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

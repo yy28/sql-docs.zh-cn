@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 8ad83932fc6d02986f715a35fefbfedba5f320c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728329"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080746"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>如何：使用 SQL Server 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "81728329"
 > [!NOTE]  
 > 在建立连接时，可以设置除用户 ID 和密码之外的连接属性。 有关受支持的连接属性的完整列表，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
   
-## <a name="example"></a>示例  
+## <a name="sqlsrv-example"></a>SQLSRV 示例  
 以下示例使用 SQLSRV 驱动程序和 SQL Server 身份验证来连接到 SQL Server 的本地实例。 所需的 UID  和 PWD  连接属性的值从 C:\AppData  目录中应用程序特定的文本文件 uid.txt  和 pwd.txt  中获取。 建立连接后，将查询服务器以验证用户登录名。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV 示例  
 此示例使用 PDO_SQLSRV 驱动程序来演示如何使用 SQL Server 身份验证进行连接。  
   
 ```  

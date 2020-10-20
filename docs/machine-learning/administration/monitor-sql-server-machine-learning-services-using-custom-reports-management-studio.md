@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 878c83f76a0235a43bcc22bb65e10dfa9eceb1b1
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179649"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847357"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的自定义报表监视 Python 和 R 脚本执行
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-使用 SQL Server Management Studio (SSMS) 中的自定义报表来监视外部脚本（Python 和 R）的执行情况、使用的资源、诊断问题，以及 SQL Server 机器学习服务中的优化性能。
+使用 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 中的自定义报表来监视外部脚本（Python 和 R）的执行情况和资源使用情况，诊断问题，以及优化 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中的性能。
 
 在这些报表中，可以查看以下详细信息：
 

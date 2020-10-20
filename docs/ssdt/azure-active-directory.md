@@ -1,6 +1,6 @@
 ---
 title: SSDT 中的 Azure Active Directory
-description: 了解 SQL Server Data Tools (SSDT) 为 Azure SQL 数据库和 Azure SQL 数据仓库提供的 Azure Active Directory 身份验证方法。
+description: 了解 SQL Server Data Tools (SSDT) 为 Azure SQL 数据库和 Azure Synapse Analytics 提供的 Azure Active Directory 身份验证方法。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480840"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005915"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) 提供了多种 [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) 身份验证方法。
+SQL Server Data Tools (SSDT) 提供了多种 [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis) 身份验证方法。
 
 在 Visual Studio 中，打开“SQL Server 对象资源管理器”（在“视图”菜单中），然后选择“添加 SQL Server”  ：
 
@@ -32,7 +32,7 @@ SQL Server Data Tools (SSDT) 提供了多种 [Azure Active Directory (Azure AD)]
 本文介绍 [Azure 云](https://azure.microsoft.com/)中以下 Azure SQL 产品列表的 Azure AD：
 
 - Azure SQL 数据库
-- Azure SQL 数据仓库
+- Azure Synapse Analytics
 
 ## <a name="active-directory-password-authentication"></a>Active Directory 密码身份验证
 
@@ -41,18 +41,18 @@ Active Directory 密码验证是一种连接到之前列出的 Azure SQL 产品�
 - 使用来自未与 Azure 联合的域的凭据登录到 Windows，或者
 - 通过 Azure AD 使用 Azure AD 身份验证，并且它基于初始域或客户端域。
 
-有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。  
+有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/sql-database/sql-database-aad-authentication)。  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 集成身份验证
 
-Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制**。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制**。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 交互式身份验证
 
-使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 或更高版本**。
+使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 或更高版本**。
 
 - [下载并安装任何版本的 .NET Framework](https://www.microsoft.com/net/download/all)。
-- [Visual Studio 2017 版本 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 或更高版本。
+- [Visual Studio 2017 版本 15.6](/visualstudio/releasenotes/vs2017-relnotes) 或更高版本。
 
 #### <a name="multi-factor-authentication-mfa"></a>多重身份验证 (MFA)
 
@@ -86,9 +86,9 @@ Azure AD 通过此附加 MFA 弹出窗口强制执行 MFA。
 
 ## <a name="see-also"></a>另请参阅  
 
-[多重身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[向 SQL 数据库进行Azure Active Directory 身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[多重身份验证](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[向 SQL 数据库进行Azure Active Directory 身份验证](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT 团队博客](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[DACFx API 参考](https://msdn.microsoft.com/library/dn645454.aspx)  
-[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[SSDT 团队博客](/archive/blogs/ssdt/)  
+[DACFx API 参考](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

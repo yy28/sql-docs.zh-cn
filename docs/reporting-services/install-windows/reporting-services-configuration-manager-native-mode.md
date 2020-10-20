@@ -1,6 +1,6 @@
 ---
-description: Reporting Services 配置管理器（本机节点）
-title: Reporting Services 配置管理器（本机模式）| Microsoft Docs
+description: 报表服务器配置管理器（本机模式）
+title: 报表服务器配置管理器（本机模式）| Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff3c1f00f91da57f91bdd0c7738929b1f5362f60
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454563"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891317"
 ---
-# <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
+# <a name="report-server-configuration-manager-native-mode"></a>报表服务器配置管理器（本机模式）
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "88454563"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理员不设计用来管理 SharePoint 模式报表服务器。 SharePoint 模式通过使用 SharePoint 管理中心和 PowerShell 脚本进行管理和配置。  
   
-##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> 要使用 Reporting Services 配置管理器的情形  
+##  <a name="scenarios-to-use-report-server-configuration-manager"></a><a name="bkmk_scenarios"></a>使用 Report Server Configuration Manager 的情形  
  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器执行下列任务：  
   
 -   配置报表服务器服务帐户。 此帐户最初是在安装过程中配置的，但是，如果需要更新密码或使用其他帐户，则可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器进行修改。  
@@ -63,19 +63,19 @@ ms.locfileid: "88454563"
 
 - 在可以连接到远程报表服务器实例并对其进行配置之前，必须使远程 Windows Management Instrumentation (WMI) 调用能够通过 Windows 防火墙。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。
 
-安装 SQL Server Reporting Services 时，将自动安装 Reporting Services 配置管理器。
+安装 SQL Server Reporting Services 时，会自动安装报表服务器配置管理器。
 
-##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> 启动 Reporting Services 配置管理器
+##  <a name="to-start-the-report-server-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> 启动报表服务器配置管理器
 
 1.  使用适合于您的 Microsoft Windows 版本的以下步骤：
 
-    - 从 Windows“开始”屏幕上，键入 **Reporting** ，然后从搜索结果中选择 **“Reporting Services 配置管理器”** 。
+    - 从 Windows“开始”屏幕上，键入“Reporting”，然后从搜索结果中选择“报表服务器配置管理器” 。
 
     - 选择“开始”****，依次指向“所有程序”****、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“配置工具”****。
 
          如果要从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置报表服务器实例，请打开此版本的程序文件夹。 例如，在打开 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 服务器组件的配置工具时，应指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 而非 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。
 
-         选择“Reporting Services 配置管理器”****。
+         选择“报表服务器配置管理器”。
 
 2. 此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 选择“连接”。
 

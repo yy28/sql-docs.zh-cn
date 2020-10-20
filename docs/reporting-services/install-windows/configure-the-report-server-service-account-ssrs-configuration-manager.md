@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042848"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935448"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>配置报表服务器服务帐户（报表服务器配置管理器）
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为单个服务实现，其中包含报表服务器 Web 服务、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]以及用于计划的报告处理和订阅传递的后台处理应用程序。 本主题说明最初如何配置服务帐户以及如何使用 Reporting Services 配置工具修改帐户或密码。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "90042848"
   
 ## <a name="updating-an-expired-password"></a>更新过期密码
 
- 如果报表服务器服务在域帐户下运行，并且密码还未在 Reporting Services 配置管理器中更新就已过期，则指定新密码之前，该服务无法启动。  
+ 如果报表服务器服务在域帐户下运行，并且密码还未在报表服务器配置管理器中更新就已过期，则指定新密码之前，该服务无法启动。  
   
  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的服务帐户密码已过期，则尝试连接到报表服务器时，将出现 **rsReportServerDatabaseUnavailable** 错误。 重置密码可以解决此错误。  
   
@@ -115,5 +115,4 @@ ms.locfileid: "90042848"
   
 ## <a name="next-steps"></a>后续步骤
 
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

@@ -1,5 +1,5 @@
 ---
-title: 发行说明
+title: Azure Data Studio 发行说明
 description: 本文提供了从 2017 年 11 月至今的 Azure Data Studio 版本的发行说明。 对于许多汇总问题，提供了指向其他详细信息的链接。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,32 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
-ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.date: 10/14/2020
+ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725098"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059185"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
+
+## <a name="october-2020"></a>2020 年 10 月
+
+2020 年 10 月 14 日&nbsp; / &nbsp;版本：1.23.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| ------ | ------- |
+| Azure SQL Edge | 支持 Azure SQL Edge 对象。 |
+| Bug 修复 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed)。 |
+| 数据库| 支持相同的数据库引用。 |
+| 扩展更新 | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[机器学习](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[架构比较](extensions/schema-compare-extension.md)</br>SQL 评估</br>[SQL 数据库项目](extensions/sql-database-project-extension.md)</br>[SQL Server 导入](extensions/sql-server-import-extension.md) |
+| 新增部署功能 | 添加了 Azure SQL DB 和 VM 部署。 |
+| PowerShell | 添加了 PowerShell 内核结果流式处理支持。 |
 
 ## <a name="september-2020-hotfix"></a>2020 年 9 月（修补程序）
 
@@ -68,8 +83,8 @@ ms.locfileid: "91725098"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 修补了 bug #11372“对象资源管理器拖放表不正确地包装了表名” | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| 修补了 bug #11356“深色主题现为默认主题” | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| 修补了 bug #11372“对象资源管理器拖放表不正确地包装了表名” | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| 修补了 bug #11356“深色主题现为默认主题” | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>已知问题
@@ -90,7 +105,6 @@ ms.locfileid: "91725098"
 | 在活动栏中添加了 Azure 帐户图标 | 用户现可轻松了解在何处登录到 Azure |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)。 |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="june-2020"></a>2020 年 6 月
 
@@ -882,7 +896,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| “创建防火墙规则”对话框现在可用于协助连接到 Azure SQL 数据库和 Azure SQL 数据仓库。 | &nbsp; |
+| “创建防火墙规则”对话框现在可用于协助连接到 Azure SQL 数据库和 Azure Synapse Analytics。 | &nbsp; |
 | 添加了 Windows 安装程序以及 Linux DEB 和 RPM 安装包。 | &nbsp; |
 | 管理仪表板视觉布局编辑器。 | &nbsp; |
 | “编写更改脚本”和“编写执行脚本”命令 。 | &nbsp; |
@@ -904,7 +918,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 - [连接并查询 SQL Server](quickstart-sql-server.md)
 - [连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
-- [连接并查询 Azure 数据仓库](quickstart-sql-dw.md)
+- [连接和查询 Azure Synapse Analytics](quickstart-sql-dw.md)
 
 参与 Azure Data Studio：
 

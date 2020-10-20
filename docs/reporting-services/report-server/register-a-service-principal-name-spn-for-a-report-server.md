@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4fad93d5682a8e3cfdd6fdf5341944c4b4b58a83
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: c87da88bcec8d1fcc29c282a1e012121a81f6f45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603172"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986683"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>为报表服务器注册服务主体名称 (SPN)
   如果要在使用 Kerberos 协议进行相互身份验证的网络中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并且将报表服务器服务配置为以域用户帐户身份运行，则必须为报表服务器服务创建服务主体名称 (SPN)。  
@@ -24,7 +24,7 @@ ms.locfileid: "91603172"
   
  若要创建 SPN，可以使用 **SetSPN** 命令行实用工具。 有关详细信息，请参阅以下主题：  
   
--   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) 。  
+-   [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) 。  
   
 -   [服务主体名称 (SPN) SetSPN 语法 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
   
@@ -69,8 +69,7 @@ Setspn -s http/<computer-name>.<domain-name> <domain-user-account>
 7.  添加 `<RSWindowsNegotiate/>` 作为该部分的第一个项，以启用 Kerberos。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置服务帐户（报表服务器配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器服务帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
   

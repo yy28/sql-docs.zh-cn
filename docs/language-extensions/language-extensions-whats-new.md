@@ -9,21 +9,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f90d3d25009676f33f57c42ced48284dfae75bd2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765748"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934877"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 语言扩展中有哪些新增功能？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-随着我们继续扩大、扩展和深化外部语言与数据平台之间的集成，每个版本的 SQL Server 中都将添加[语言扩展](language-extensions-overview.md)功能。 
+随着我们继续扩大、扩展和深化外部语言与数据平台之间的集成，每个版本的 SQL Server 中都将添加[语言扩展](language-extensions-overview.md)功能。
 
-## <a name="new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能 
+## <a name="new-python-and-r-language-extensions-in-sql-server-2019"></a>SQL Server 2019 中的新 Python 和 R 语言扩展
 
-此版本添加了对 SQL Server 中语言扩展的支持。 有关此版本中所有功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的发行说明](../sql-server/sql-server-version-15-release-notes.md)。
++ 自定义运行时可用于 [Windows 上的 Python](../machine-learning/install/custom-runtime-python.md) 若要在 Linux 上安装，请参阅[在 Linux 上安装适用于 SQL Server 的 Python 自定义运行时](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)。
+
++ 自定义运行时可用于 [Windows上的 R](../machine-learning/install/custom-runtime-r.md)。 若要在 Linux 上安装，请参阅[在 Linux 上安装适用于 SQL Server 的 R 自定义运行时](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
+
+
+## <a name="new-java-language-extension-in-sql-server-2019"></a>SQL Server 2019 中的新 Java 语言扩展
+
+有关此版本中所有功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的发行说明](../sql-server/sql-server-version-15-release-notes.md)。
 
 - Windows 和 Linux 上的默认 Java 运行时是 Open Zulu JRE，并且包含在 [Windows 上的 SQL Server 语言扩展安装](install/install-sql-server-language-extensions-on-windows.md)和 [Linux 上的 SQL Server 语言扩展安装](../linux/sql-server-linux-setup-language-extensions.md)中。
 - 支持的 [Java 数据类型](how-to/java-to-sql-data-types.md)。

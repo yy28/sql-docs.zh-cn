@@ -3,64 +3,64 @@ title: 转换 R 和 SQL 数据类型
 description: 查看数据科学和机器学习解决方案中 R 和 SQL Server 之间的隐式和显式数据类型转换。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a200917a21e664a21b4186ca1d643bfb0e275869
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2cd8a40fc1c85b8a58216a4c15ff0d1bb56df1da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179971"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892237"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 与 SQL Server 之间的数据类型映射
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-对于在 SQL Server 机器学习服务中的 R 集成功能上运行的 R 解决方案，请查看不支持的数据类型列表，以及在 R 库和 SQL Server 之间传递数据时可能隐式执行的数据类型转换。
+本文列出了在 SQL Server 机器学习服务中使用 R 集成功能时所支持的数据类型以及所执行的数据类型转换。
 
 ## <a name="base-r-version"></a>基本 R 版本
 
-SQL Server 2016 R Services 和带有 R 的 SQL Server 机器学习服务与 Microsoft R Open 的特定版本保持一致。 例如，最新版本 SQL Server 机器学习服务是基于 Microsoft R Open 3.3.3 构建的。
+SQL Server 2016 R Services 和带有 R 的 SQL Server 机器学习服务与 Microsoft R Open 的特定版本保持一致。 例如，最新版本 SQL Server 2019 机器学习服务是基于 Microsoft R Open 3.5.2 构建的。
 
-若要查看与 SQL Server 的特定实例关联的 R 版本，请打开 RGui  。 对于默认实例，路径将如下所示：`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+若要查看与 SQL Server 的特定实例关联的 R 版本，请打开 SQL 实例中的 RGui。 例如，SQL Server 2019 中默认实例的路径为：`C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`。
 
-此工具将加载基本 R 和其他库。 会话启动时加载的每个包的通知中都提供了包版本信息。 
+此工具将加载基本 R 和其他库。 会话启动时加载的每个包的通知中都提供了包版本信息。
 
 ## <a name="r-and-sql-data-types"></a>R 和 SQL 数据类型
 
-虽然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持几十种数据类型，但 R 的标量数据类型（数字、整数、复杂、逻辑、字符、日期/时间和原始）则有数量限制。 因此，每当在 R 脚本中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据时，数据都可能隐式转换为兼容的数据类型。 但是，通常无法自动执行精确的转换并将返回错误，如“SQL 数据类型未处理”。
+尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持几十种数据类型，但 R 的标量数据类型（数字、整数、复杂、逻辑、字符、日期/时间和原始）则有数量限制。 因此，每当在 R 脚本中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据时，数据都可能隐式转换为兼容的数据类型。 但是，通常无法自动执行精确的转换并将返回错误，如“SQL 数据类型未处理”。
 
 本节列出了提供的隐式转换，并列出了不受支持的数据类型。 提供了一些有关在 R 和 SQL Server 之间映射数据类型的指南。
 
-## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R 与 SQL Server 之间的隐式数据类型转换
+## <a name="implicit-data-type-conversions"></a>隐式数据类型转换
 
 下表显示了当来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据在 R 脚本中使用，然后返回到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，数据类型和值中的变化。
 
-|SQL 类型|R 类|RESULT SET 类型|注释|
-|-|-|-|-|
-|**bigint**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 bigint 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 R 仅支持最多 53 位整数，如果位数更高将开始有精度损失。|
-|**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
-|**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|输入数据帧 (input_data_1) 是在未明确设置 stringsAsFactors 参数的情况下创建的，因此列类型取决于 R 中的 default.stringsAsFactors() |
-|**datetime**|`POSIXct`|**datetime**|表示为 GMT|
-|**date**|`POSIXct`|**datetime**|表示为 GMT|
-|**decimal(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 decimal 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 带有 R 脚本的 `sp_execute_external_script` 不支持数据类型的完整范围，它会更改最后几个小数位，尤其是小数部分。|
-|**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
-|**money**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 money 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 有时，美分值会不精确，将发出警告：“警告：无法精确表示的美分值”。  |
-|**numeric(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 numeric 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 带有 R 脚本的 `sp_execute_external_script` 不支持数据类型的完整范围，它会更改最后几个小数位，尤其是小数部分。|
-|**real**|`numeric`|**float**||
-|**smalldatetime**|`POSIXct`|**datetime**|表示为 GMT|
-|**smallint**|`integer`|**int**||
-|**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
-|**uniqueidentifier**|`character`|**varchar(max)**||
-|**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
-|**varbinary(max)**|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|输入数据帧 (input_data_1) 是在未明确设置 stringsAsFactors 参数的情况下创建的，因此列类型取决于 R 中的 default.stringsAsFactors() |
+| SQL 类型                         | R 类     | RESULT SET 类型    | 注释            |
+|----------------------------------|-------------|--------------------|---------------------|
+| **bigint**                       | `numeric`   | **float**          | 使用 `sp_execute_external_script` 执行 R 脚本支持将 bigint 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 R 仅支持最多 53 位整数，如果位数更高将开始有精度损失。                                                                                         |
+| **binary(n)**<br /> n <= 8000    | `raw`       | **varbinary(max)** | 仅允许作为输入参数和输出 |
+| **bit**                          | `logical`   | **bit**            |                     |
+| **char(n)**<br /> n <= 8000      | `character` | **varchar(max)**   | 输入数据帧 (input_data_1) 是在未明确设置 stringsAsFactors 参数的情况下创建的，因此列类型取决于 R 中的 default.stringsAsFactors()                                                                                                                                                                                                                                            |
+| **datetime**                     | `POSIXct`   | **datetime**       | 表示为 GMT  |
+| **date**                         | `POSIXct`   | **datetime**       | 表示为 GMT  |
+| **decimal(p,s)**                 | `numeric`   | **float**          | 使用 `sp_execute_external_script` 执行 R 脚本支持将 decimal 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 带有 R 脚本的 `sp_execute_external_script` 不支持数据类型的完整范围，它会更改最后几个小数位，尤其是小数部分。 |
+| **float**                        | `numeric`   | **float**          |                     |
+| **int**                          | `integer`   | **int**            |                     |
+| **money**                        | `numeric`   | **float**          | 使用 `sp_execute_external_script` 执行 R 脚本支持将 money 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 有时，美分值会不精确，将发出警告：“警告：无法精确表示的美分值”。                                               |
+| **numeric(p,s)**                 | `numeric`   | **float**          | 使用 `sp_execute_external_script` 执行 R 脚本支持将 numeric 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 带有 R 脚本的 `sp_execute_external_script` 不支持数据类型的完整范围，它会更改最后几个小数位，尤其是小数部分。 |
+| **real**                         | `numeric`   | **float**          |                     |
+| **smalldatetime**                | `POSIXct`   | **datetime**       | 表示为 GMT  |
+| **smallint**                     | `integer`   | **int**            |                     |
+| **smallmoney**                   | `numeric`   | **float**          |                     |
+| **tinyint**                      | `integer`   | **int**            |                     |
+| **uniqueidentifier**             | `character` | **varchar(max)**   |                     |
+| **varbinary(n)**<br /> n <= 8000 | `raw`       | **varbinary(max)** | 仅允许作为输入参数和输出 |
+| **varbinary(max)**               | `raw`       | **varbinary(max)** | 仅允许作为输入参数和输出 |
+| **varchar(n)**<br /> n <= 8000   | `character` | **varchar(max)**   | 输入数据帧 (input_data_1) 是在未明确设置 stringsAsFactors 参数的情况下创建的，因此列类型取决于 R 中的 default.stringsAsFactors()                                                                                                                                                                                                                                            |
 
 ## <a name="data-types-not-supported-by-r"></a>R 不支持的数据类型
 
@@ -72,15 +72,15 @@ SQL Server 2016 R Services 和带有 R 的 SQL Server 机器学习服务与 Micr
 
 ## <a name="data-types-that-might-convert-poorly"></a>转换结果可能不佳的数据类型
 
-+ 除 **datetimeoffset** 以外的大多数 datetime 类型应可正常转换 
-+ 支持大部分数字数据类型，但 **money** 和**smallmoney** 的转换可能会失败
++ 除 datetimeoffset 以外的大多数 datetime 类型应可正常转换。
++ 支持大部分数字数据类型，但“money”和“smallmoney”的转换可能会失败 。
 + 支持 **varchar**，但由于 SQL Server 往往使用 Unicode，因此，我们建议尽量使用 **nvarchar** 和其他 Unicode 文本数据类型。
 + RevoScaleR 库中带有 rx 前缀的函数可以处理 SQL 二进制数据类型（**binary** 和 **varbinary**），但大多数情况下，需要对这些类型进行特殊处理。 大多数 R 代码无法处理二进制列。
 
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的详细信息，请参阅[数据类型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。
 
-## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>SQL Server 2016 与早期版本中数据类型的变化
+## <a name="changes-in-data-types-between-sql-server-versions"></a>SQL Server 版本之间数据类型的变化
 
 Microsoft SQL Server 2016 及更高版本对数据类型转换和其他一些操作进行了改进。 其中的大多数改进都提高了处理浮点类型时的精度，同时对经典 **datetime** 类型的操作做了轻微的改变。
 
@@ -89,7 +89,7 @@ Microsoft SQL Server 2016 及更高版本对数据类型转换和其他一些操
 有关详细信息，请参阅 [SQL Server 2016 improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon-)（SQL Server 2016 在处理某些数据类型和不常见操作方面所做的改进）。
  
 
-## <a name="verify-r-and-sql-data-schemas-in-advance"></a>提前验证 R 和 SQL 数据架构 
+## <a name="verify-r-and-sql-data-schemas-in-advance"></a>提前验证 R 和 SQL 数据架构
 
 一般情况下，每当你对特定的数据类型或数据结构在 R 中如何使用有疑问时，请使用  `str()` 函数获取 R 对象的内部结构和类型。 函数的结果将打印到 R 控制台，并且也在 **中的“消息”** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]选项卡中的查询结果中可用。 
 
@@ -153,19 +153,19 @@ outputDataSet <- inputDataSet'
 
 由此，可以看到下面的数据类型转换作为此查询的一部分隐式地执行：
 
--   **列 C1**。 列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `integer` 和输出结果集中的 **ssNoversion** 。  
++ **列 C1**。 列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `integer` 和输出结果集中的 **ssNoversion** 。  
   
-     未执行任何类型转换。  
+  未执行任何类型转换。  
   
--   **列 C2**。 列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `factor` 和输出结果集中的 **varchar(max)** 。  
++ **列 C2**。 列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `factor` 和输出结果集中的 **varchar(max)** 。  
   
-     注意输出如何变化；R 中的任何字符串（因子或常规字符串）将被表示为 **varchar(max)** ，不论字符串的长度为多少。  
+  注意输出如何变化；R 中的任何字符串（因子或常规字符串）将被表示为 **varchar(max)** ，不论字符串的长度为多少。  
   
--   **列 C3**。  列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `character` 和输出结果集中的 **varchar(max)** 。
++ **列 C3**。  列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `character` 和输出结果集中的 **varchar(max)** 。
   
-     注意发生的数据类型转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **ssNoversion** ，但 R 不支持；因此，标识符表示为字符串。
+  注意发生的数据类型转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **ssNoversion** ，但 R 不支持；因此，标识符表示为字符串。
   
--   **列 C4**。 列包含由 R 脚本生成的值且不会出现在原始数据中。
++ **列 C4**。 列包含由 R 脚本生成的值且不会出现在原始数据中。
 
 
 ## <a name="example-2-dynamic-column-selection-using-r"></a>示例 2：使用 R 进行动态列选择
@@ -182,3 +182,4 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>另请参阅
 
++ [Python 与 SQL Server 之间的数据类型映射](../python/python-libraries-and-data-types.md)

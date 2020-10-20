@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cc43babe2ae064731f293a0dc96219aaeced5a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417883"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035988"
 ---
 # <a name="ssms-utility"></a>SSMS 实用工具
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417883"
 
 SSMS 实用工具打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果指定， **Ssms** 还可以与服务器建立连接并打开查询、脚本、文件、项目和解决方案。
 
-可以指定包含查询、项目或解决方案的文件。 如果提供了连接信息并且文件类型与服务器类型关联，则包含查询的文件将自动连接到该服务器。 例如，.sql 文件在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开一个 SQL 查询编辑器窗口，.mdx 文件在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开一个 MDX 查询编辑器窗口。 SQL Server 解决方案和项目  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开。 
+可以指定包含查询、项目或解决方案的文件。 如果提供了连接信息并且文件类型与服务器类型关联，则包含查询的文件将自动连接到该服务器。 例如，.sql 文件在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开一个 SQL 查询编辑器窗口，.mdx 文件在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开一个 MDX 查询编辑器窗口。 SQL Server 解决方案和项目  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开。
 
 > [!NOTE]
 > **Ssms** 实用工具不能运行查询。 若要从命令行运行查询，请使用 **sqlcmd** 实用工具。 
@@ -62,7 +62,10 @@ solutionfile 指定要打开的解决方案  。 该参数必须包含解决方�
 
 [ **-U** _username_] 通过“SQL 身份验证”进行连接时的用户名
 
-[ **-P** _password_] 使用“SQL 身份验证”进行连接时的密码
+> [!Note]
+> SSMS 版本 18.0 中删除了 -P。
+>
+> 解决方法：尝试使用 UI 一次连接到服务器，并保存密码。
 
 [-E] 使用 Windows 身份验证进行连接
 
@@ -91,40 +94,40 @@ solutionfile 指定要打开的解决方案  。 该参数必须包含解决方�
 
 以下脚本将在命令指示符下使用默认设置打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ：
 
-```
+```console
   Ssms
 ```
 
 以下脚本在命令提示符下使用“Active Directory - 集成”打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：
 
-```
+```console
 Ssms.exe -S servername.database.windows.net -G
 ```
 
 以下脚本将在命令指示符下，使用 Windows 身份验证打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，其中代码编辑器设置为 `ACCTG and the database AdventureWorks2012,` ，并且不显示初始屏幕：
 
-```
+```console
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
 ```
 
 以下脚本将在命令指示符下打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，并打开 MonthEndQuery 脚本。
 
-```
+```console
 Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
 ```
 
 以下脚本在命令指示符下打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，并打开名为 `developer`的计算机上的 NewReportsProject 项目：
 
-```
+```console
 Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 ```
 
 以下脚本在命令提示符下打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，并打开 MonthlyReports 解决方案： 
 
-```
+```console
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```
 
 ## <a name="see-also"></a>另请参阅
 
-[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[使用 SQL Server Management Studio](./sql-server-management-studio-ssms.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPControl method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b3d050fcfd04538036b3982aaaf1ccca5fa8e8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: dfb42fe378d428dbe272bb135492ab93c6eb619c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726998"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081826"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ HRESULT BCPControl(
 |BCP_OPTION_ABORT|停止正在进行的大容量复制操作。 可以从其他线程调用 eOption 参数为 BCP_OPTION_ABORT 的 BCPControl 方法，以停止正在运行的大容量复制操作   。 忽略 iValue  参数。|  
 |BCP_OPTION_BATCH|每批的行数。 默认值为 0，在提取数据时，该默认值表示表中的所有行；在将数据复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，该默认值表示用户数据文件中的所有行。 值小于 1 则将 BCP_OPTION_BATCH 重置为默认值。|  
 |BCP_OPTION_DELAYREADFMT|一个布尔值，如果设置为 true，将导致 [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 在执行时读取该值。 如果为 false（默认值），IBCPSession::BCPReadFmt 将立即读取格式化文件。 如果 BCP_OPTION_DELAYREADFMT  为 true，并且调用 IBCPSession::BCPColumns 或 IBCPSession::BCPColFmt，则会发生序列错误。<br /><br /> 如果在调用 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` 和 IBCPSession::BCPWriteFmt 后调用 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`，同样会发生序列错误。<br /><br /> 有关详细信息，请参阅[元数据发现](../../oledb/features/metadata-discovery.md)。|  
-|BCP_OPTION_FILECP|iValue 参数包含数据文件的代码页的编号  。 可以指定代码页的编号，例如 1252 或 850，或者采用以下值之一：<br /><br /> BCP_FILECP_ACP：文件中的数据位于客户端的 Microsoft Windows® 代码页中。<br /><br /> BCP_FILECP_OEMCP：文件中的数据位于客户端的 OEM 代码页中（默认值）。<br /><br /> BCP_FILECP_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的代码页中。|  
+|BCP_OPTION_FILECP|iValue 参数包含数据文件的代码页的编号  。 可以指定代码页的编号，例如 1252 或 850，或者采用以下值之一：<br /><br /> BCP_FILECP_ACP：文件中的数据位于客户端的 Microsoft Windows� 代码页中。<br /><br /> BCP_FILECP_OEMCP：文件中的数据位于客户端的 OEM 代码页中（默认值）。<br /><br /> BCP_FILECP_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的代码页中。|  
 |BCP_OPTION_FILEFMT|数据文件格式的版本号。 该版本号可以是 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)])、100（[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]），或 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])。 默认值为 110。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。  例如，若要将从 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 服务器中的文本列获取的数据导入到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本服务器中的 varchar(max) 列，则应该指定为 80  。 同样，如果从 varchar(max) 列导出数据时指定为 80，数据的保存方式就与按照 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 格式保存的文本列类似，并且可以将这些数据导入到 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 服务器的文本列中  。|  
 |BCP_OPTION_FIRST|要复制的文件或表的第一行数据。 默认值为 1；值小于 1 则将此选项重置为其默认值。|  
 |BCP_OPTION_FIRSTEX|对于 BCP out 操作，指定要复制到数据文件的数据库表的第一行。<br /><br /> 对于 BCP in 操作，指定要复制到数据库表的数据文件的第一行。<br /><br /> iValue 参数应为包含值的带符号的 64 位整数的地址  。 可以传递到 BCPFIRSTEX 的最大值为 2^63-1。|  
@@ -77,7 +77,7 @@ HRESULT BCPControl(
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 接口。  
+ 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) 接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用此函数前，未调用 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445999"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891167"
 ---
 # <a name="upgrade-a-report-server-database"></a>升级报表服务器数据库
 
@@ -61,7 +61,7 @@ ms.locfileid: "88445999"
   
  但是，如果您没有对远程计算机上的数据库的 **sysadmin** 权限，则系统将拒绝连接，并出现以下错误：  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  此时，报表服务器程序文件将被升级，但报表服务器数据库将为早期版本的格式。 报表服务器将不可用，直到通过手动升级数据库来完成升级过程为止。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88445999"
   
 ## <a name="next-steps"></a>后续步骤
 
-[Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[报表服务器配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [创建报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [迁移 Reporting Services 安装](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

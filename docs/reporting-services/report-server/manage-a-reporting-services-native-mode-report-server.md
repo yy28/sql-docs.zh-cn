@@ -13,37 +13,37 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 8e6fe5d4571ea8cd276da46f8c89688cd310da07
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547952"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935107"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
-  本节包含使用 Reporting Services 配置管理器配置本机模式报表服务器实例的过程。  
+  本节包含使用报表服务器配置管理器配置本机模式报表服务器实例的过程。  
   
 ## <a name="in-this-section"></a>本节内容  
  本节中的主题进行了适当分类，以便于您轻松找到所需说明。 第一部分包含有关本机模式的报表服务器的基本配置任务主题。 第二部分包含高级配置主题。 第三部分包含有关将报表服务器配置为以 SharePoint 集成模式运行的主题。  
   
 ### <a name="basic-configuration"></a>基本配置  
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  提供启动 Reporting Services 配置工具的步骤。  
   
- [配置服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [配置服务帐户（报表服务器配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  说明如何为报表服务器服务指定帐户和密码信息。  
   
  [为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  说明如何为在使用 Kerberos 身份验证的网络上的域用户帐户下运行的报表服务器手动注册 SPN。  
   
- [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  说明如何建立一个或多个用于访问报表服务器 Web 服务和 Web 门户的 URL。  
   
- [创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [创建本机模式报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  提供创建报表服务器数据库的步骤。 此步骤是部署 Reporting Services 安装所必需的步骤。  
   
 ### <a name="advanced-or-optional-configuration"></a>高级或可选配置  
- [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供配置多个报表服务器以共享报表服务器数据库的步骤。  
   
  [Reporting Services 中的电子邮件传递](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   

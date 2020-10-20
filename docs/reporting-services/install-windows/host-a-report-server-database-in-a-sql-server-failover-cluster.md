@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bceb380b1c21f717ba6e20fd6a41c78cc393dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ec845ccda5f7f8efbdee6a110915f02fa30dee0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492663"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933461"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集中承载报表服务器数据库
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对故障转移群集的支持，用户可以针对一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用多个磁盘。 对故障转移群集的支持仅限于报表服务器数据库；您不能将报表服务器服务作为故障转移群集的一部分运行。  
@@ -24,6 +24,6 @@ ms.locfileid: "88492663"
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
+ [创建报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
   

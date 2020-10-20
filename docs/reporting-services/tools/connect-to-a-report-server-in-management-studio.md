@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 027d3bb67c087f119c3848a2d81ac0875b138db3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918413"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934849"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
 
@@ -112,5 +112,5 @@ ms.locfileid: "86918413"
 
 ## <a name="see-also"></a>另请参阅
 
- [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  [SQL Server Management Studio 中的 Reporting Services (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

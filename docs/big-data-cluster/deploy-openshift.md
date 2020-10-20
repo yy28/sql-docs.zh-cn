@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725878"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892487"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>在 OpenShift 本地和 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,8 +37,8 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
 > [!IMPORTANT]
 > 必须由具有足够的权限来创建这些群集级别对象的 OpenShift 群集管理员（群集管理员群集角色）才能执行以下先决条件。 有关 OpenShift 中的群集角色的详细信息，请参阅[使用 RBAC 定义和应用权限](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html)。
 
-1. 确认 OpenShift 上的 pidsLimit 设置是否更新，以适应 SQL Server 工作负载。 对于工作负载这样的生产环境，OpenShift 中的默认值太低。 建议的值至少为 4096，但最佳值取决于 SQL Server 中的最大工作线程设置以及 OpenShift 主机节点上的 CPU 处理器数量。 
-    - 若要了解如何为 OpenShift 群集更新 pidsLimit，请使用[这些说明]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)。 请注意，低于 4.3.5 的 OpenShift 版本存在一个缺陷，该缺陷会导致更新的值无效。 请确保将 OpenShift 升级到最新版本。 
+1. 确保 OpenShift 上的 `pidsLimit` 设置已更新，以适应 SQL Server 工作负载。 对于工作负载这样的生产环境，OpenShift 中的默认值太低。 建议的值至少为 `4096`，但最佳值取决于 SQL Server 中的 `max worker threads` 设置以及 OpenShift 主机节点上的 CPU 处理器数量。 
+    - 若要了解如何为 OpenShift 群集更新 `pidsLimit`，请使用[这些说明]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)。 请注意，低于 `4.3.5` 的 OpenShift 版本存在一个缺陷，该缺陷会导致更新的值无效。 请确保将 OpenShift 升级到最新版本。 
     - 为了帮助你根据环境和计划的 SQL Server 工作负载计算最佳值，可以使用以下估算和示例：
 
     |处理器数目|默认最大工作线程数|每个处理器的默认辅助角色|最小 pidsLimit 值|
@@ -56,7 +56,7 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
     ```
 
     > [!NOTE]
-    > BDC 的自定义 SCC 基于 OpenShift 中内置的 nonroot SCC，并具有其他权限。 若要详细了解 OpenShift 中的安全性上下文约束，请参阅[管理安全性上下文约束](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html)。 有关 nonroot SCC 上的大数据群集所需的其他权限的详细信息，请在[此处](https://aka.ms/sql-bdc-openshift-security)下载白皮书。
+    > BDC 的自定义 SCC 基于 OpenShift 中内置的 `nonroot` SCC，并具有其他权限。 若要详细了解 OpenShift 中的安全性上下文约束，请参阅[管理安全性上下文约束](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html)。 有关 `nonroot` SCC 上的大数据群集所需的其他权限的详细信息，请在[此处](https://aka.ms/sql-bdc-openshift-security)下载白皮书。
 
 3. 创建命名空间/项目：
 
@@ -104,7 +104,7 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   对于在 ARO 上进行的部署，建议从其中某个 aro- 配置文件开始，其中包括适用于该环境的 serviceType 和 storageClass 的默认值  。 例如：
+   对于在 ARO 上进行的部署，我们建议从其中某个 `aro-` 配置文件开始，包括适用于该环境的 `serviceType` 和 `storageClass` 的默认值。 例如：
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -113,7 +113,7 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
 1. 自定义配置文件 control.json 和 bdc.json。 下面是一些其他资源，可指导你完成各种用例支持的自定义：
 
    - [存储](concept-data-persistence.md)
-   - [AD 相关设置](deploy-active-directory.md)
+   - [AD 相关设置](active-directory-deploy.md)
    - [其他自定义](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -136,7 +136,7 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>部署配置文件中特定于 OpenShift 的设置
 
-SQL Server 2019 CU5 引入了两个功能开关来控制 Pod 和节点指标的集合。 这些参数在 OpenShift 的内置配置文件中默认设置为 false，因为监视容器需要[特权安全性上下文](https://www.openshift.com/blog/managing-sccs-in-openshift)，这将放宽部署命名空间 BDC 的一些安全约束。
+SQL Server 2019 CU5 引入了两个功能开关来控制 Pod 和节点指标的集合。 这些参数在 OpenShift 的内置配置文件中默认设置为 `false`，因为监视容器需要[特权安全性上下文](https://www.openshift.com/blog/managing-sccs-in-openshift)，这将放宽部署命名空间 BDC 的一些安全约束。
 
 ```json
     "security": {

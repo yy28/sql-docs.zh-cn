@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 15130a351548ab5ad1d21ef2142b5b8c68db11b8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435204"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081866"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 unset($stmt);
 ```
 
-## <a name="example"></a>示例
+## <a name="forward-only-example"></a>只进游标示例
 本示例演示如何将 PDO::prepare 与参数标记以及只进游标结合使用。
 
 ```
@@ -100,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a>示例
+## <a name="static-cursor-example"></a>静态游标示例
 此示例演示如何将 PDO::prepare 与服务器端静态游标结合使用。 有关展示客户端端游标的示例，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。
 
 ```
@@ -140,7 +140,7 @@ print_r($row);
 ?>
 ```
 
-## <a name="example"></a>示例
+## <a name="targeted-example"></a>目标示例
 以下两个代码段演示如何将 PDO::prepare 与面向 CHAR/VARCHAR 列的数据一起使用。 因为 PDO::prepare 的默认编码为 UTF-8，所以用户可以使用选项 `PDO::SQLSRV_ENCODING_SYSTEM` 来避免隐式转换。
 
 **选项 1**
@@ -169,7 +169,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>示例
+## <a name="prepare-example"></a>Prepare 示例
 
 此示例演示如何将 PDO::prepare 设置为 true 的 `PDO::ATTR_EMULATE_PREPARES` 结合使用。
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426299"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080666"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ SELECT SCOPE_IDENTITY()
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>示例  
+## <a name="object-example"></a>对象示例  
 以下示例将每一行结果集检索为 PHP 对象。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="class-example"></a>类示例  
 以下示例将每一行结果集检索为在脚本中定义的 *Product* 类的实例。 该示例将从产品（具有指定到期日期 DueDate 且库存量 StockQty 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 和 Production.Product 表中检索产品信息   。 该示例重点介绍在对 **sqlsrv_fetch_object**的调用中指定某个类时所应用的某些规则：  
   
 -   *$product* 变量是 *Product* 类的实例，为存在使用 *$className* 参数和 *Product* 类指定的“Product”。  

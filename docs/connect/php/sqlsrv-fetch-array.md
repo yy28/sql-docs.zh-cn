@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391802"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080637"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 如果结果集包含多个不带名称的列，则最后一个未命名列的值将分配到空字符串 ("") 键。  
   
-## <a name="example"></a>示例  
+## <a name="associative-array-example"></a>关联阵列示例  
 以下示例将每一行结果集检索为一个关联 **阵列**。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="indexed-array-xample"></a>索引阵列示例  
 以下示例将每一行结果集检索为一个数字索引的阵列。  
   
 该示例将从产品（具有指定日期且库存量 (StockQty) 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 表中检索产品信息 。  

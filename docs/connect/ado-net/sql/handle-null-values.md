@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d11586f380354d0cef98039fbe95d2f9ed3287b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725630"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081456"
 ---
 # <a name="handling-null-values"></a>处理 null 值
 
@@ -107,7 +107,7 @@ null 值为特殊值，其存储和赋值语义在不同类型系统和存储系
   
 - <xref:System.Data.DataRow.IsNull%2A> 方法为 `true` 和 `DbNull.Value` 返回 `INullable.Null`。  
   
-## <a name="assigning-null-values"></a>分配 null 值  
+## <a name="assigning-null-values-to-sqltypes"></a>将 null 值分配给 SqlTypes  
 任何 <xref:System.Data.SqlTypes> 实例的默认值为 null。  
   
 <xref:System.Data.SqlTypes> 中的 null 值为特定类型，不能由单个值表示，如 `DbNull`。 使用 `IsNull` 属性检查 null 值。  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 369f8962752bcdc67c407b561400138f3c179abe
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396686"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935335"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
 
@@ -68,7 +68,7 @@ ms.locfileid: "87396686"
  对于配置为不使用报表服务器的 SharePoint 技术（本地模式），不支持此选项。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式和连接模式报表对比（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  **不需要凭据（不使用凭据）：**  
- 若要使用此选项，必须为报表服务器配置无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 若要使用此选项，必须为报表服务器配置无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  有关 Microsoft BI 堆栈中声明身份验证支持的信息，请参阅 [在 Microsoft BI 堆栈中使用声明身份验证](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   

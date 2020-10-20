@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 602b368e8d36a39b3350c0e61e290da053484e38
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 225b29beb82bf8ee010dc96fff92da2b82bcc28a
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726778"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081406"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ $data_type：由 PDO::PARAM_* 常量表示的可选（整数）数据类型**。
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
-## <a name="example"></a>示例  
+## <a name="parameter-example"></a>参数示例  
 本示例显示，在绑定 $contact 的值后，更改该值不会更改在查询中传递的值。  
   
 ```  
@@ -79,7 +79,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 > [!NOTE]
 > 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
-## <a name="example"></a>示例  
+## <a name="decimal-input-example"></a>十进制值输入示例  
 此代码示例演示如何将十进制值作为输入参数进行绑定。  
 
 ```

@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 9a3fa6a8e427417b8c165f031cf5bd2295e9a50a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076752"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005602"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
@@ -42,7 +42,7 @@ ms.locfileid: "90076752"
 
 > 有关在 Linux 上使用 bcp 的信息，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 >
-> 有关将 bcp 与 Azure SQL 数据仓库配合使用的详细信息，请参阅[使用 bcp 加载数据](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+> 有关将 bcp 与 Azure Synapse Analytics 配合使用的详细信息，请参阅[使用 bcp 加载数据](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
 大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据   。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
 
@@ -64,8 +64,8 @@ ms.locfileid: "90076752"
 生成号：15.0.2000.5<br>
 发行日期：2020 年 9 月 11 日
 
-新版本的 SQLCMD 支持 Azure AD 身份验证，包括对 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
-新 BCP 支持 Azure AD 身份验证，包括对 SQL 数据库和 SQL 数据仓库的多重身份验证 (MFA) 支持。
+新版本的 SQLCMD 支持 Azure AD 身份验证，包括对 SQL 数据库、Azure Synapse Analytics 和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
+新 BCP 支持 Azure AD 身份验证，包括对 SQL 数据库和 Azure Synapse Analytics 的多重身份验证 (MFA) 支持。
 
 ### <a name="system-requirements"></a>系统要求
 
@@ -181,7 +181,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果指定了 -d database_name 和包含三部分的名称（database_name.schema.table，作为第一个参数传递给 bcp.exe），则将发生错误，因为该数据库名称不能指定两次。 如果 database_name 以连字符 (-) 或正斜杠 (/) 开头，则不要在 -d 与数据库名称之间添加空格。  
 
 **-D**<a name="D"></a>  
-使值传递给将解释为数据源名称 (DSN) 的 `bcp` `-S` 选项。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。
+使值传递给将解释为数据源名称 (DSN) 的 `bcp` `-S` 选项。 DSN 可以用于嵌入驱动程序选项，以简化命令行，强制执行其他无法从命令行（例如 MultiSubnetFailover）访问的驱动程序选项，或帮助防止敏感凭据被视为命令行参数。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。
+
 
  **-e** _**err\_file**_<a name="e"></a>  
  指定错误文件的完整路径，此文件用于存储 **bcp** 实用工具无法从文件传输到数据库的所有行。 **bcp** 命令产生的错误消息将被发送到用户的工作站。 如果不使用此选项，则不会创建错误文件。  
@@ -215,7 +216,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 **-G**<a name="G"></a>
 
- 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本 14.0.3008.27 或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[将 Azure Active Directory 身份验证用于 SQL 数据库或 SQL 数据仓库身份验证](/azure/sql-database/sql-database-aad-authentication)。 
+ 当连接到 Azure SQL 数据库或 Azure Synapse Analytics 时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本 14.0.3008.27 或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[将 Azure Active Directory 身份验证用于 SQL 数据库或 Azure Synapse Analytics 身份验证](/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!IMPORTANT]
 > **-G** 选项仅适用于 Azure SQL 数据库 和 Azure 数据仓库。
@@ -258,7 +259,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 交互式身份验证**  
 
-   使用面向 Azure SQL 数据库和 SQL 数据仓库的 Azure AD 交互式身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅 [Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。
+   使用面向 Azure SQL 数据库和 Azure Synapse Analytics 的 Azure AD 交互式身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅 [Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。
 
    Azure AD 交互式身份验证需要 bcp [版本 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 或更高版本，以及 [ODBC 版本 17.2 或更高版本](https://aka.ms/downloadmsodbcsql)。  
 
@@ -404,13 +405,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 不需要网络用户的安全凭据 login_id 和 password。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。
 
 > [!IMPORTANT]
-> 如果 **bcp** 实用工具通过使用集成安全性的可信连接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，则使用的是 **-T** 选项（可信连接），而不是用户名和密码的组合。  当 **bcp** 实用工具连接到 SQL 数据库或 SQL 数据仓库时，不支持使用 Windows 身份验证或 Azure Active Directory 身份验证。 使用 **-U** 和 **-P** 选项。 
+> 如果 **bcp** 实用工具通过使用集成安全性的可信连接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，则使用的是 **-T** 选项（可信连接），而不是用户名和密码的组合。  当 bcp 实用工具连接到 SQL 数据库或 Azure Synapse Analytics 时，不支持使用 Windows 身份验证或 Azure Active Directory 身份验证。 使用 **-U** 和 **-P** 选项。 
   
  **-U** _**login\_id**_<a name="U"></a>  
  指定用于连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的登录 ID。  
   
 > [!IMPORTANT]
-> 如果 **bcp** 实用工具通过使用集成安全性的可信连接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，则使用的是 **-T** 选项（可信连接），而不是用户名和密码的组合。  当 **bcp** 实用工具连接到 SQL 数据库或 SQL 数据仓库时，不支持使用 Windows 身份验证或 Azure Active Directory 身份验证。 使用 **-U** 和 **-P** 选项。
+> 如果 **bcp** 实用工具通过使用集成安全性的可信连接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，则使用的是 **-T** 选项（可信连接），而不是用户名和密码的组合。  当 bcp 实用工具连接到 SQL 数据库或 Azure Synapse Analytics 时，不支持使用 Windows 身份验证或 Azure Active Directory 身份验证。 使用 **-U** 和 **-P** 选项。
   
  **-v**<a name="v"></a>  
  报告 **bcp** 实用工具的版本号和版权信息。  

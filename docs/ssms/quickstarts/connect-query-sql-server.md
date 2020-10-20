@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: ba646353b0ded0a1cc4617c1b4c9ffc3c159662e
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: d44e59e8dfdd9ba38feb2c860348f44af325c768
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662768"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038380"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>快速入门：使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例
 
@@ -35,12 +35,12 @@ ms.locfileid: "91662768"
 
 若要完成本文，需要 SQL Server Management Studio 以及针对 SQL Server 实例的访问权限。
 
-* 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+* 安装 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
 
 * Windows：[下载 SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-* **macOS**：[在 Docker 上下载 SQL Server 2019](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+* **macOS**：[在 Docker 上下载 SQL Server 2019](../../linux/quickstart-install-connect-docker.md)。
 
 ## <a name="connect-to-a-sql-server-instance"></a>连接到 SQL Server 实例
 
@@ -54,7 +54,7 @@ ms.locfileid: "91662768"
 
     * 对于“服务器类型”****，选择“数据库引擎”****（通常的默认选项）。
     * 对于“服务器名称”，输入 SQL Server 实例的名称****。 （本文使用主机名 NODE5 [NODE5\SQL2016ST] 上的实例名称 SQL2016ST。）如果不知道如何确定 SQL Server 实例的名称，请参阅[使用 SSMS 的其他提示和技巧](../tutorials/ssms-tricks.md#find-sql-server-instance-name)。
-    * 对于“身份验证”，选择“Windows 身份验证”********。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”****，便会看到输入用户名和密码的提示。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
+    * 对于“身份验证”，选择“Windows 身份验证”********。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”****，便会看到输入用户名和密码的提示。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](../f1-help/connect-to-server-database-engine.md)。
 
     ![“服务器名称”字段与使用 SQL Server 实例的选项](media/connect-query-sql-server/connection-2.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "91662768"
 * 连接到 SQL Azure DB - 示例中为 msftestserver.database.windows.net：![连接到 SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> 在本文中，之前已使用 Windows 身份验证连接到本地 SQL Server，但此方法不支持连接到 SQL Azure DB。 因此，此图像显示使用 SQL 身份验证连接到 SQL Azure DB。 有关详细信息，请参阅 [SQL 本地身份验证](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)。
+> 在本文中，之前已使用 Windows 身份验证连接到本地 SQL Server，但此方法不支持连接到 SQL Azure DB。 因此，此图像显示使用 SQL 身份验证连接到 SQL Azure DB。 有关详细信息，请参阅 [SQL 本地身份验证](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 身份验证](/azure/sql-database/sql-database-security-overview#access-management)。
 
 ## <a name="create-a-database"></a>创建数据库
 
@@ -198,7 +198,7 @@ ms.locfileid: "91662768"
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-也可以使用 Azure Data Studio 连接和查询 [SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL 数据库](../../azure-data-studio/quickstart-sql-database.md)和 [Azure SQL 数据仓库](../../azure-data-studio/quickstart-sql-dw.md)。
+也可以使用 Azure Data Studio 连接和查询 [SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL 数据库](../../azure-data-studio/quickstart-sql-database.md)和 [Azure Synapse Analyticss](../../azure-data-studio/quickstart-sql-dw.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

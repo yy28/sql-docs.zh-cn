@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497201"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891587"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>配置 Reporting Services 以使用使用者可选名称 (SAN)
 
@@ -33,11 +33,11 @@ ms.locfileid: "91497201"
   
 1.  启动报表服务器配置管理器。  
   
-     有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+     有关详细信息，请参阅[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在“Web 服务 URL”  页上，选择 TLS/SSL 端口和 TLS/SSL 证书。  
   
-     ![Reporting Services 配置管理器](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 配置管理器")  
+     ![报表服务器配置管理器](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "报表服务器配置管理器")  
   
      配置管理器为端口注册 TLS/SSL 证书。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "91497201"
 ## <a name="see-also"></a>另请参阅
 
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [报表服务器配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [修改 Reporting Services 配置文件](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

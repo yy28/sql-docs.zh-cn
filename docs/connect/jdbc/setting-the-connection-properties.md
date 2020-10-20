@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9793fb9a130fdca5c11af671f7fd3412530a6a98
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a322af478215a215975942fb2b055a6cff755dfe
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727558"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081696"
 ---
 # <a name="setting-the-connection-properties"></a>设置连接属性
 
@@ -109,7 +109,7 @@ ms.locfileid: "91727558"
 | trustStorePassword<br/><br/>字符串<br/><br/>Null | 用于检查 trustStore 数据完整性的密码。<br/><br/> 如果设置了 trustStore 属性，但未设置 trustStorePassword 属性，则不检查 trustStore 的完整性。<br/><br/> 如果未指定 trustStore 和 trustStorePassword 属性，驱动程序将使用 JVM 系统属性“javax.net.ssl.trustStore”和“javax.net.ssl.trustStorePassword”。 如果未指定“javax.net.ssl.trustStorePassword”系统属性，则不检查 trustStore 的完整性。<br/><br/> 如果未指定 trustStore 属性，但设置了 trustStorePassword 属性，JDBC 驱动程序将使用由“javax.net.ssl.trustStore”指定作为信任存储区的文件，并使用指定的 trustStorePassword 检查信任存储区的完整性。 当客户端应用程序不希望在 JVM 系统属性中存储密码时，这一点可能是必需的。<br/><br/> **注意：** 当且仅当连接使用 TLS 加密并且 trustServerCertificate 属性设置为 false 时，trustStorePassword 属性才影响证书 trustStore 查找  。 |
 | trustStoreType<br/><br/>字符串<br/><br/>JKS | 设置此属性可以指定要用于 FIPS 模式的信任存储类型。 <br/><br/>可取值为 PKCS12  或由 FIPS 提供程序定义的类型。 |
 | useBulkCopyFor...<br/>BatchInsert<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _useBulkCopyForBatchInsert_<br/><br/> 自 Microsoft JDBC Driver 7.0 for SQL Server 起，可以启用此连接属性，以在使用 `java.sql.PreparedStatement` 执行批量插入操作来提升性能时使用大容量复制 API。 <br/><br/>仅当目标服务器的类型为 Azure 数据仓库  时，此功能才起作用。 它默认处于禁用状态，将此属性设置为“true”即可启用此功能。 <br/></br> **重要事项：** 此功能只支持完全参数化 INSERT 查询。 如果 INSERT 查询与其他 SQL 查询组合在一起，或包含值中的数据，执行会回退到基本的批量插入操作。 <br/><br/> 若要详细了解如何使用此属性，请参阅[使用大容量复制 API 执行批量插入操作](use-bulk-copy-api-batch-insert-operation.md)|
-| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | 自 Microsoft JDBC Driver for SQL Server v7.4 起，可以使用另一种方法从服务器查询参数元数据，即指定 useFmtOnly  连接属性。 将此属性设置为“true”可以指定，驱动程序应在查询参数元数据时使用 `SET FMTONLY` 逻辑。 此功能默认处于禁用状态，不建议使用此属性，因为 `SET FMTONLY` 已标记为要弃用。 useFmtOnly  只能用作 [`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md?view=sql-server-2017) 中已知问题和限制的解决方法。<br/><br/> 此功能目前只支持单个 `SELECT/INSERT/UPDATE/DELETE` 查询。 尝试将此功能用于不受支持的/多个查询会导致驱动程序尝试分析一个或多个查询，但很可能会导致异常抛出。<br/><br/> 有关详细信息，请参阅[通过 useFmtOnly 检索 ParameterMetaData](../../connect/jdbc/using-usefmtonly.md)。 |
+| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | 自 Microsoft JDBC Driver for SQL Server v7.4 起，可以使用另一种方法从服务器查询参数元数据，即指定 useFmtOnly  连接属性。 将此属性设置为“true”可以指定，驱动程序应在查询参数元数据时使用 `SET FMTONLY` 逻辑。 此功能默认处于禁用状态，不建议使用此属性，因为 `SET FMTONLY` 已标记为要弃用。 useFmtOnly  只能用作 [`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 中已知问题和限制的解决方法。<br/><br/> 此功能目前只支持单个 `SELECT/INSERT/UPDATE/DELETE` 查询。 尝试将此功能用于不受支持的/多个查询会导致驱动程序尝试分析一个或多个查询，但很可能会导致异常抛出。<br/><br/> 有关详细信息，请参阅[通过 useFmtOnly 检索 ParameterMetaData](../../connect/jdbc/using-usefmtonly.md)。 |
 | userName,<br/>user<br/><br/>字符串<br/>[&lt;=128 char]<br/><br/>Null | 数据库用户（如果使用 SQL 用户和密码进行连接的话）。<br/><br/>如果使用主体名称和密码进行 Kerberos 连接，此属性设置为 Kerberos 主体名称。 |
 | workstationID<br/><br/>字符串<br/>[&lt;=128 char]<br/><br/>&lt;空字符串&gt; | 工作站 ID。 用于在各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 探查和日志记录工具中标识特定的工作站。 <br/><br/>如果未指定任何内容，则将使用 &lt;空字符串&gt;。 |
 | xopenStates<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | 设置为“true”将指定驱动程序在异常时返回 XOPEN 兼容的状态代码。 <br/><br/>默认将返回 SQL 99 状态代码。 |

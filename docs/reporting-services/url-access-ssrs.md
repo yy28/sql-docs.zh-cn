@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ea0b098296ef5e4617fffc1f172ecdb30a94d0e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: df897731d0172a2d496446e3ee6a12d6320a0d0b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248101"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934740"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
   通过 SQL Server Reporting Services (SSRS) 中报表服务器的 URL 访问，您可以通过 URL 请求将命令发送到报表服务器。 例如，您可以自定义报表在本机模式报表服务器上或 SharePoint 库中的呈现。 您可能已经使用了一组特定的报表参数值查看了报表，或者可能正在查看报表中感兴趣的特定页。 您可以使用预定义的 URL 访问参数在 URL 中封装这些信息。 您可以通过为呈现格式嵌入参数，或者为报表查看器的外观嵌入参数，进一步自定义报表服务器处理报表的方式。 然后，您可以将此 URL 直接粘贴到电子邮件或网页中，让他人在浏览器中采用相同的方式访问您的报表。  
@@ -57,7 +57,7 @@ reportpath
   
 ### <a name="syntax-description"></a>语法说明  
  *rswebserviceurl*  
- 报表服务器的 Web 服务 URL。 对于本机模式，它是在 Reporting Services 配置管理器中配置的报表服务器实例的 Web 服务 URL（请参阅[配置报表服务器 URL（SSRS 配置管理器）](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)）。 例如：  
+ 报表服务器的 Web 服务 URL。 对于本机模式，它是在 Reporting Services 配置管理器中配置的报表服务器实例的 Web 服务 URL（请参阅[配置报表服务器 URL（报表服务器配置管理器）](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)）。 例如：  
   
 ```  
 https://myrshost/reportserver  

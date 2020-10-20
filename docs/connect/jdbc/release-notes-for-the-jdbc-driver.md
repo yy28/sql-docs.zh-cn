@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062306"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005666"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 发行说明
 
@@ -361,9 +361,9 @@ Microsoft JDBC Driver 7.0 for SQL Server 支持 SQL 数据发现和分类，以�
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>添加了连接属性：useBulkCopyForBatchInsert
 
-Microsoft JDBC Driver 7.0 for SQL Server 引入了新的连接属性 `useBulkCopyForBatchInsert`。 只有 Azure SQL 数据仓库才支持此属性。
+Microsoft JDBC Driver 7.0 for SQL Server 引入了新的连接属性 `useBulkCopyForBatchInsert`。 只有 Azure Synapse Analytics 才支持此属性。
 
-默认情况下禁用此属性。 当将大量数据推送到 Azure SQL 数据仓库时，可以启用此属性以提高用户应用程序的性能。 启用此属性将更改批插入操作的行为，以切换为对用户提供的数据执行大容量复制操作。 有关此属性及其限制的详细信息，请参阅[将大容量复制 API 用于批插入操作](use-bulk-copy-api-batch-insert-operation.md)。
+默认情况下禁用此属性。 当将大量数据推送到 Azure Synapse Analytics 时，可以启用此属性以提高用户应用程序的性能。 启用此属性将更改批插入操作的行为，以切换为对用户提供的数据执行大容量复制操作。 有关此属性及其限制的详细信息，请参阅[将大容量复制 API 用于批插入操作](use-bulk-copy-api-batch-insert-operation.md)。
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>添加了连接属性：cancelQueryTimeout
 

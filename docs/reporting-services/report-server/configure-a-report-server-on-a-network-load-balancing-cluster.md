@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: b5bf533e9b74edd11d6c39d10d97eeb385c9e1a9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545569"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933855"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
 
@@ -36,7 +36,7 @@ ms.locfileid: "84545569"
 |1|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[配置本机模式报表服务器扩展部署](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|配置 NLB 群集并验证它是否正常工作。<br /><br /> 确保将主机标头名称映射到 NLB 群集的虚拟服务器 IP。 主机标头名称用在报表服务器 URL 中，它比 IP 地址便于记忆和键入。|有关详细信息，请参阅您运行的 Windows 操作系统版本的 Windows Server 产品文档。|  
 |3|将主机标头的 NetBIOS 和完全限定域名 (FQDN) 添加到 Windows 注册表中存储的 **BackConnectionHostNames** 列表中。<br /><br /> 例如，如果主机标头名称 \<MyServer> 是 Windows 计算机名称“contoso”的虚拟名称，可以将该 FQDN 形式引用为“contoso.domain.com”。 需要将主机标头名称 (MyServer) 与 FQDN 名称 (contoso.domain.com) 一起添加到 **BackConnectionHostNames**的列表中。  <br /><br /> 然后重新启动计算机以确保更改生效。|如果您的服务器环境涉及本地计算机上的 NTLM 身份验证并且造成环回连接，则此步骤是必需的。<br /><br /> 如果出现这种情况，将会出现报表管理器和报表服务器之间的请求失败，错误号为 401（未经授权）。|  
-|4|在已是 NLB 群集一部分的节点上以“仅文件”模式安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，并为扩展部署配置报表服务器实例。<br /><br /> 所配置的扩展部署将不响应那些定向到虚拟服务器 IP 的请求。 在配置视图状态验证之后，会在以后的步骤中将扩展部署配置为使用虚拟服务器 IP。|[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
+|4|在已是 NLB 群集一部分的节点上以“仅文件”模式安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，并为扩展部署配置报表服务器实例。<br /><br /> 所配置的扩展部署将不响应那些定向到虚拟服务器 IP 的请求。 在配置视图状态验证之后，会在以后的步骤中将扩展部署配置为使用虚拟服务器 IP。|[配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|配置视图状态验证。<br /><br /> 为了达到最佳效果，请在配置扩展部署之后、配置报表服务器实例以使用虚拟服务器 IP 之前执行此步骤。 通过先配置视图状态验证，可以避免在用户试图访问交互式报表时出现有关状态验证失败的异常。|本主题中的[如何配置视图状态验证](#ViewState) 。|  
 |6|将 **Hostname** 和 **UrlRoot** 配置为使用 NLB 群集的虚拟服务器 IP。|本主题中的[如何配置 Hostname 和 UrlRoot](#SpecifyingVirtualServerName) 。|  
 |7|验证能否通过指定的主机名来访问服务器。|本主题中的[验证报表服务器访问权限](#Verify) 。|  
@@ -105,7 +105,7 @@ ms.locfileid: "84545569"
   
  如果将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 集成到一起，或者在自定义 Web 应用程序中承载报表，则可能需要仅配置 **UrlRoot** 属性。 在这种情况下，将 **UrlRoot** 属性配置为 SharePoint 站点或 Web 应用程序的 URL。 这会将报表环境的网络流量定位到处理报表的应用程序，而不是报表服务器或 NLB 群集。  
   
- 请不要修改 **ReportServerUrl**。 如果修改了此 URL，那么，在每次处理内部请求时，都将额外引入一个通过虚拟服务器的往返过程。 有关详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 有关编辑配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
+ 请不要修改 **ReportServerUrl**。 如果修改了此 URL，那么，在每次处理内部请求时，都将额外引入一个通过虚拟服务器的往返过程。 有关详细信息，请参阅[配置文件中的 URL（报表服务器配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 有关编辑配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 1. 在文本编辑器中打开 RSReportServer.config。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "84545569"
   
 ## <a name="see-also"></a>另请参阅
 
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

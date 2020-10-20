@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726885"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004557"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) 是一项中心用户 ID 管理技术，可以作为 [SQL Server 身份验证](how-to-connect-using-sql-server-authentication.md)的替代方法。 Azure AD 允许使用用户名和密码、Windows 集成身份验证或 Azure AD 访问令牌在 Azure AD 中使用联合身份连接到 Microsoft Azure SQL 数据库和 SQL 数据仓库。 适用于 SQL Server 的 PHP 驱动程序提供对这些功能的部分支持。
+[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) 是一项中心用户 ID 管理技术，可以作为 [SQL Server 身份验证](how-to-connect-using-sql-server-authentication.md)的替代方法。 Azure AD 允许使用用户名和密码、Windows 集成身份验证或 Azure AD 访问令牌在 Azure AD 中使用联合身份连接到 Microsoft Azure SQL 数据库和 Azure Synapse Analytics。 适用于 SQL Server 的 PHP 驱动程序提供对这些功能的部分支持。
 
 若要使用 Azure AD，请使用“Authentication”  或“AccessToken”  关键字（它们互相排斥），如下表所示。 有关更多技术详细信息，请参阅[结合使用 Azure Active Directory 和 ODBC 驱动程序](../odbc/using-azure-active-directory.md)。
 

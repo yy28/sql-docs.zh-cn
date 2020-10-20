@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725465"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081306"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
@@ -31,7 +31,7 @@ Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验�
     * **ActiveDirectoryMSI**
         * 自驱动程序版本 v7.2  起受支持，`authentication=ActiveDirectoryMSI` 可用于从已启用“标识”支持的 Azure 资源内部连接到 Azure SQL 数据库/数据仓库。 （可选）还可以在 Connection/DataSource 属性中指定 msiClientId（与此身份验证模式一起），其中必须包含用于获取建立连接所需的 accessToken 的托管标识的客户端 ID。
     * **ActiveDirectoryIntegrated**
-        * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryIntegrated` 可用于使用集成身份验证连接到 Azure SQL 数据库/数据仓库。 必须将本地 Active Directory 联合身份验证服务 (ADFS) 与云中的 Azure Active Directory 联合，才能使用此身份验证模式。 设置后，连接方法有两种，一种是将本机库“mssql-jdbc_auth-\<version>-\<arch>.dll”添加到 Windows OS 上的应用程序类路径，另一种是设置用于提供跨平台身份验证支持的 Kerberos 票证。 登录域加入计算机后，可以访问 Azure SQL 数据库/SQL 数据仓库，而不会看到系统提示输入凭据。
+        * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryIntegrated` 可用于使用集成身份验证连接到 Azure SQL 数据库/数据仓库。 必须将本地 Active Directory 联合身份验证服务 (ADFS) 与云中的 Azure Active Directory 联合，才能使用此身份验证模式。 设置后，连接方法有两种，一种是将本机库“mssql-jdbc_auth-\<version>-\<arch>.dll”添加到 Windows OS 上的应用程序类路径，另一种是设置用于提供跨平台身份验证支持的 Kerberos 票证。 登录域加入计算机后，可以访问 Azure SQL 数据库/Azure Synapse Analytics，而不会看到系统提示输入凭据。
     * **ActiveDirectoryPassword**
         * 自驱动程序版本 v6.0 起受支持，`authentication=ActiveDirectoryPassword` 可用于使用 Azure AD 用户名和密码连接到 Azure SQL 数据库/Data Warehouse。
     * **SqlPassword**
@@ -286,8 +286,8 @@ You have successfully logged on as: <your user name>
     11. 在“密钥”部分下，创建密钥，具体方法为填写“名称”字段，选择密钥期限，然后保存配置（将“值”字段留空）。 保存后，“值”字段应该会自动填充，复制生成的值。 这是客户端密码。
     12. 在左侧面板中，单击“Azure Active Directory”。 在“应用注册”下，查找“终结点”选项卡。复制“OATH 2.0 令牌终结点”下的 URL（此为 STS URL）。
     
-    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. 以 Azure Active Directory 管理员身份登录 Azure SQL Server 的用户数据库，并使用 T-SQL 命令为应用程序主体预配包含的数据库用户。 若要详细了解如何创建 Azure Active Directory 管理员和包含的数据库用户，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](/azure/azure-sql/database/authentication-aad-overview)。
+    ![Azure 门户应用注册终结点 - STS URL](media/jdbc_aad_token.png)  
+2. 以 Azure Active Directory 管理员身份登录 Azure SQL Server 的用户数据库，并使用 T-SQL 命令为应用程序主体预配包含的数据库用户。 若要详细了解如何创建 Azure Active Directory 管理员和包含的数据库用户，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)。
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER

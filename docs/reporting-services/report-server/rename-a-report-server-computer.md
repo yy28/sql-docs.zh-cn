@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 2fbe0a54b6f48c97c81b288b8eebb5514cc637ac
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544519"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892407"
 ---
 # <a name="rename-a-report-server-computer"></a>重命名报表服务器计算机
   重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下，在计算机名称发生更改之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能无法访问。 若要在计算机名更改后重新配置报表服务器，请按照本主题中的步骤操作。  
@@ -46,7 +46,7 @@ ms.locfileid: "84544519"
   
 ## <a name="see-also"></a>另请参阅  
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [rsconfig 实用工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)  

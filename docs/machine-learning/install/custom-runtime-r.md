@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227156"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956280"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>为 SQL Server 安装 R 自定义运行时
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍如何安装自定义运行时，以便使用 SQL Server 运行 R 脚本。 适用于 R 的自定义运行时可用于以下方案：
+本文介绍如何安装自定义运行时，以便使用 SQL Server 运行 R 脚本。 自定义运行时使用在可扩展性框架上生成的语言扩展来执行外部代码。 适用于 R 的自定义运行时可用于以下方案：
 
 + 使用扩展性框架安装 SQL Server。
 
@@ -71,7 +71,7 @@ ms.locfileid: "91227156"
     + 数据库引擎服务
     + 机器学习服务和语言扩展
 
-1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。
 
 ## <a name="install-r"></a>安装 R
 

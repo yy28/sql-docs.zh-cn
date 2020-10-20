@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b4d8ce66078d49f7bf70e226de762a7c8a63325
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3dc1e561835cf3e44f48ed1ef77fe22d289a3ec6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811366"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935020"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>配置分页报表的数据源属性
   在运行分页报表时，报表服务器检索属性信息以确定连接到数据源的方法。 数据源类型、连接字符串和凭据信息在已发布报表的“数据源”属性页中指定。 可以设置这些属性以使数据源连接信息与创建报表时指定的原始值不同。  
@@ -53,7 +53,7 @@ ms.locfileid: "85811366"
   
     -   如果数据源不使用凭据（例如，如果数据源是通过文件系统访问的 XML 文件），请单击“不需要凭据”****。 仅当此凭据类型对于相应数据源有效时，才能指定它。 如果为要求身份验证的数据源选择此选项，则连接将失败。 如果选择此选项，请确保配置无人参与的执行帐户，以便在用户凭据不可用时，报表服务器可连接到其他计算机以检索数据或文件。  
   
- 有关配置凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 有关无人参与的执行帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 有关配置凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 有关无人参与的执行帐户的详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   

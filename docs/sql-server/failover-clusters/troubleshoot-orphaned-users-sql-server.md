@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e538c68882c1fc49a449767c51c39123ee222f6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115344"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006256"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户疑难解答 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  输出中列出了当前数据库中未链接到任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证用户以及对应的安全标识符 (SID)。  
 
-**对于 SQL Database 和 SQL 数据仓库**
+**对于 SQL 数据库和 Azure Synapse Analytics**
 
-`sys.server_principals` 表不适用于 SQL Database 或 SQL 数据仓库。 在这些环境中按以下步骤识别孤立用户：
+`sys.server_principals` 表不适用于 SQL Database 或 Azure Synapse Analytics。 在这些环境中按以下步骤识别孤立用户：
 
 1. 连接到 `master` 数据库，按下列查询为登录名选择 SID：
     ```

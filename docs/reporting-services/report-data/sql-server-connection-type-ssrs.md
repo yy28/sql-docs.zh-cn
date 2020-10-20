@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5b7527f0af44931307acc930468df8d4d6404e1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 347ad41fb6165b3ab9364ee799aac3d3629ee78a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812220"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935470"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 连接类型 (SSRS)
   若要在报表中包括来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的数据，你必须具有一个基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的当前版本和早期版本并从中检索数据。  
@@ -47,7 +47,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   提示用户输入凭据。 此选项仅支持 Windows 集成安全性。  
   
--   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。 
+-   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。 
   
  有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   

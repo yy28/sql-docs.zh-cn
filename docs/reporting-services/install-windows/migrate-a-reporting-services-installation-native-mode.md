@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454573"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934843"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
 
@@ -122,7 +122,7 @@ ms.locfileid: "88454573"
 
  在安装新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例之前，请确保对当前安装中的所有文件进行备份。  
   
-1. 备份报表服务器数据库的加密密钥。 此步骤对于成功迁移至关重要。 而且，在迁移过程中，必须还原加密密钥才能使报表服务器重新获得对加密数据的访问权限。 若要备份密钥，请使用 Reporting Services 配置管理器。  
+1. 备份报表服务器数据库的加密密钥。 此步骤对于成功迁移至关重要。 而且，在迁移过程中，必须还原加密密钥才能使报表服务器重新获得对加密数据的访问权限。 若要备份密钥，请使用报表服务器配置管理器。  
   
 2. 使用任一支持的备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的方法来备份报表服务器数据库。 有关详细信息，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)中有关如何备份报表服务器数据库的说明。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88454573"
   
 1. 确定是支持程序集还是需要重新编译程序集：
 
-    * 必须使用 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 接口重新编写自定义安全扩展插件。
+    * 必须使用 [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2) 接口重新编写自定义安全扩展插件。
   
     * 必须使用呈现对象模型 (ROM) 重新编写 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自定义呈现扩展插件。  
   
@@ -237,15 +237,15 @@ ms.locfileid: "88454573"
 > [!IMPORTANT]
 >  如果横向扩展部署中的所有报表服务器均联机并且尚未被迁移，则它们可能会遇到 rsInvalidReportServerDatabase 异常，因为它们在连接到升级的报表服务器数据库之后使用的仍是旧版架构  。  
 
-如果迁移的报表服务器配置为用于横向扩展部署的共享数据库，则需要在配置报表服务器服务前从 ReportServer 数据库的 Keys 表中删除所有旧加密密钥   。 如果未删除这些密钥，迁移的报表服务器将尝试在扩展部署模式下进行初始化。 有关详细信息，请参阅[添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)和[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
+如果迁移的报表服务器配置为用于横向扩展部署的共享数据库，则需要在配置报表服务器服务前从 ReportServer 数据库的 Keys 表中删除所有旧加密密钥   。 如果未删除这些密钥，迁移的报表服务器将尝试在扩展部署模式下进行初始化。 有关详细信息，请参阅[添加和删除横向扩展部署的加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)和[配置和管理加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
 
 无法使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器删除扩展密钥。 必须使用 SQL Server Management Studio 从 **Keys** 数据库的 **ReportServer** 表中删除旧密钥。 删除 Keys 表中的所有行。 此操作清除该表并准备将其用于只还原对称密钥，如下面的步骤所述。  
 
 在删除密钥之前，建议您首先备份对称加密密钥。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来备份密钥。 打开配置管理器，单击“加密密钥”选项卡，然后单击“备份”按钮  。 还可以撰写 WMI 命令的脚本以便备份加密密钥。 有关 WMI 的详细信息，请参阅 [BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
   
-1. 启动 Reporting Services 配置管理器，然后连接到安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1. 启动报表服务器配置管理器，然后连接到安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 有关详细信息，请参阅[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2. 为报表服务器和 Web 门户配置 URL。 有关详细信息，请参阅[配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
+2. 为报表服务器和 Web 门户配置 URL。 有关详细信息，请参阅[配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
 3. 配置报表服务器数据库，并从以前的安装中选择现有的报表服务器数据库。 成功配置之后，报表服务器服务将重新启动，并且一旦与报表服务器数据库建立连接，该数据库就会自动升级到 SQL Server Reporting Services。 有关如何运行“更改服务器向导”（该向导可用来创建或选择报表服务器数据库）的详细信息，请参阅[创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
@@ -300,6 +300,6 @@ ms.locfileid: "88454573"
 * [报表服务器数据库](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Reporting Services 后向兼容性](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [报表服务器配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

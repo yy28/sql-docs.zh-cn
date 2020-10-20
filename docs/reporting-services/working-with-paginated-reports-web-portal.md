@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243567"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935411"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分页报表（Web 门户）
 
@@ -117,7 +117,7 @@ ms.locfileid: "87243567"
   
 此选项允许你不为数据源提供任何凭据。 如果数据源要求用户登录，则选择此选项将不起任何作用。 只有在数据源连接不需要用户凭据的情况下，才应选择此选项。  
   
-若要使用此选项，则以前必须为报表服务器配置过无人参与的执行帐户。 当其他凭据源不可用时，可以使用无人参与的执行帐户连接到外部数据源。 如果您指定此选项，但是未配置无人参与的执行帐户，则到报表数据源的连接将失败，而且将不会进行报表处理。 有关此帐户的详细信息，请参阅 [配置无人参与的执行帐户（SSRS 配置管理器）](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+若要使用此选项，则以前必须为报表服务器配置过无人参与的执行帐户。 当其他凭据源不可用时，可以使用无人参与的执行帐户连接到外部数据源。 如果您指定此选项，但是未配置无人参与的执行帐户，则到报表数据源的连接将失败，而且将不会进行报表处理。 有关此帐户的详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="subscriptions"></a>订阅  
 Reporting Services 订阅是一种配置，它在特定时间或为响应某个事件，以指定的文件格式传递报表。 例如，每周三将 MonthlySales.rdl 报表作为 Microsoft Word 文档保存至文件共享。 订阅可以用于对报表的传递（以特定报表参数值集）进行计划并使其自动完成。 有关详细信息，请参阅[使用订阅](working-with-subscriptions-web-portal.md)。

@@ -1,7 +1,7 @@
 ---
 title: SQL Server 语言扩展中的扩展性体系结构
 titleSuffix: ''
-description: 了解用于 SQL Server 语言扩展的扩展性体系结构，该体系结构允许在 SQL Server 中运行外部代码。 SQL Server 2019 支持 Java。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
+description: 了解用于 SQL Server 语言扩展的扩展性体系结构，该体系结构允许在 SQL Server 中运行外部代码。 在 SQL Server 2019 中，支持 Java、Python 和 R。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765695"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935374"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 语言扩展中的扩展性体系结构
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-了解用于 SQL Server 语言扩展的扩展性体系结构，该体系结构允许在 SQL Server 中运行外部代码。 SQL Server 2019 支持 Java。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
+了解用于 SQL Server 语言扩展的扩展性体系结构，该体系结构允许在 SQL Server 中运行外部代码。 在 SQL Server 2019 中，支持 Java、Python 和 R。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
 
 ## <a name="background"></a>背景
 
-扩展性框架的用途是在 SQL Server 与外部语言（如 Java）之间提供接口。 通过在 SQL Server 管理的安全框架中执行受信任的语言，数据库管理员可以维护安全性，同时允许数据科学家访问企业数据。
+扩展性框架的用途是在 SQL Server 与外部语言之间提供接口。 通过在 SQL Server 管理的安全框架中执行受信任的语言，数据库管理员可以维护安全性，同时允许数据科学家访问企业数据。
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -53,10 +53,6 @@ The following diagram visually describes opportunities and benefits of the exten
 ## <a name="launchpad"></a>启动板
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 是一种服务，用于管理负责脚本执行的外部进程的生存期、资源和安全边界。 这类似于全文索引和查询服务启动单独主机来处理全文查询的方式。 该 Launchpad 服务只能启动 Microsoft 发布的受信任启动器，或者经 Microsoft 认证满足性能和资源管理要求的启动器。
-
-| 受信任的启动器 | 分机 | SQL Server 版本 |
-|-------------------|-----------|---------------------|
-| 用于 Java 的 JavaLauncher.dll | Java 扩展 | SQL Server 2019 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在 SQLRUserGroup 下运行，后者将 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) 用于执行隔离。
 

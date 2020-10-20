@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 60e0814a72d09ff8612ef6d14a6ef7abfd2e92f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866300"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934657"
 ---
-# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>删除和重新创建加密密钥（SSRS 配置管理器）
+# <a name="delete-and-recreate-encryption-keys-report-server-configuration-manager"></a>删除并重新创建加密密钥（报表服务器配置管理器）
   删除和重新创建加密密钥不属于常规加密密钥维护活动。 您可以为了响应对报表服务器的特定威胁来执行这些任务，或者当无法访问报表服务器数据库时作为最后一种解决手段来执行这些任务。  
   
 -   如果你认为现有对称密钥已遭入侵，请重新创建对称密钥。 作为安全性方面的最佳做法，还可以定期重新创建密钥。  
@@ -35,7 +35,7 @@ ms.locfileid: "74866300"
   
  只有在报表服务器处于工作状态时，才能重新创建对称密钥。 重新创建加密密钥和重新加密内容都会中断服务器操作。 在进行重新加密时，必须将服务器脱机。 在重新加密过程中，不应该向报表服务器发送请求。  
   
- 可以使用 Reporting Services 配置工具或 **rskeymgmt** 实用工具重置对称密钥和加密的数据。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 可以使用 Reporting Services 配置工具或 **rskeymgmt** 实用工具重置对称密钥和加密的数据。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>如何重新创建加密密钥（Reporting Services 配置工具）  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74866300"
 4.  对于使用加密数据的订阅（其中包括文件共享传递扩展插件和使用加密的任何第三方传递扩展插件），打开每个订阅，再重新键入凭据。 使用报表服务器电子邮件传递的订阅不使用加密数据，因而不受密钥更改的影响。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [配置和管理加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [存储加密的报表服务器数据（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

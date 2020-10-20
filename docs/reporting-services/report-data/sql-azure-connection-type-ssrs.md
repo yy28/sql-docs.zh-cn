@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988468"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935196"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 连接类型 (SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87988468"
 > [!NOTE]  
 > 打开到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的连接时，将连接超时值设置为 30 秒。
   
-有关详细信息，请参阅 [docs.microsoft.com 上的 Microsoft Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)。  
+有关详细信息，请参阅 [docs.microsoft.com 上的 Microsoft Azure SQL 数据库](/azure/sql-database/)。  
   
 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
@@ -55,7 +55,7 @@ Windows 身份验证（集成安全性）不受支持。 如果试图使用 Wind
   
 - 使用存储的用户名和密码。 若要协商当包含报表数据的数据库与报表服务器不同时产生的双跃点，请选择使用凭据作为 Windows 凭据的选项。 也可以选择在连接到数据源后模拟经过身份验证的用户。  
   
-- 不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+- 不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
@@ -79,7 +79,7 @@ Windows 身份验证（集成安全性）不受支持。 如果试图使用 Wind
   
 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)和[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，可帮助你编写仅检索摘要数据的查询。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言的完全支持，包括分组和聚合。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)。  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，可帮助你编写仅检索摘要数据的查询。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言的完全支持，包括分组和聚合。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/language-reference.md)。  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> 使用 Text 查询类型
 
@@ -161,9 +161,9 @@ WHERE EmployeeID = (@EmpID)
 正确设置以下项后，可以实现此方案：
 
 - 在报表服务器上安装[适用于 SQL Server 的 Active Directory 身份验证库 (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742)。
-- 将 [Active Directory 联合身份验证服务 (ADFS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) 配置为，跨本地 Active Directory (AD) 和 AAD 进行联合。
-- 将 [Kerberos 约束委派 (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) 从报表服务器配置到 ADFS 服务器。
-- 将报表/数据源配置为，在用户查看报表时对 [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)进行身份验证。
+- 将 [Active Directory 联合身份验证服务 (ADFS)](/windows-server/identity/active-directory-federation-services) 配置为，跨本地 Active Directory (AD) 和 AAD 进行联合。
+- 将 [Kerberos 约束委派 (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) 从报表服务器配置到 ADFS 服务器。
+- 将报表/数据源配置为，在用户查看报表时对 [Azure SQL 数据库](/azure/sql-database/sql-database-technical-overview)进行身份验证。
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ WHERE EmployeeID = (@EmpID)
   
 ## <a name="see-also"></a>另请参阅
 
-[docs.microsoft.com 上的 Microsoft Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)  
+[docs.microsoft.com 上的 Microsoft Azure SQL 数据库](/azure/sql-database/)  
 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

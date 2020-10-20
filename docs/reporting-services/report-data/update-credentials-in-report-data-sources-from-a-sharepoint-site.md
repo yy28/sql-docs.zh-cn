@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e1dc0c59a6fbe96062e48e24e2f6b126770f0c84
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458953"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935150"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>从 SharePoint 站点更新报表数据源的凭据
   本主题介绍如何更新报表中嵌入的数据源和保存在 SharePoint 文档库中的共享数据源。  
@@ -43,7 +43,7 @@ ms.locfileid: "86458953"
   
      **“不需要凭据”** 选项也可以在某些情况下使用。  
   
-     对于某些数据源类型，必须在报表服务器上配置无人参与的执行帐户。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)和[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中相应的数据源类型的主题。  
+     对于某些数据源类型，必须在报表服务器上配置无人参与的执行帐户。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中相应的数据源类型的主题。  
   
 7.  键入用户名和密码。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "86458953"
   
      **“不需要凭据”** 选项也可以在某些情况下使用。 仅当数据源不接受凭据，或者要通过其他方式传递凭据时，才使用此选项。  
   
-     对于某些数据源类型，必须在报表服务器上配置无人参与的执行帐户。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)和[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中相应的数据源类型的主题。  
+     对于某些数据源类型，必须在报表服务器上配置无人参与的执行帐户。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中相应的数据源类型的主题。  
   
 5.  键入用户名和密码。  
   

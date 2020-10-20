@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f07e5cbcbe3604f140f197d64c4666d992f8112e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244555"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934864"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  
@@ -49,7 +49,7 @@ ms.locfileid: "75244555"
   
      当您首次保存到、发布到或浏览到报表服务器或 SharePoint 站点时，可能需要输入凭据。 在报表生成器会话结束之前，将始终使用所输入的凭据。 如果选择保存凭据，则这些凭据将安全地与您的用户设置一起存储在您的计算机上。 在后续的报表生成器会话中，将使用保存的凭据连接到同一报表服务器或 SharePoint 站点。 报表服务器管理员或 SharePoint 管理员指定要使用哪一种类型的凭据。  
   
--   在嵌入数据源的[“数据源属性”对话框 ->“凭据”（报表生成器）](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99)页输入的数据源凭据。  
+-   在嵌入数据源的[“数据源属性”对话框 ->“凭据”（报表生成器）](/previous-versions/sql/)页输入的数据源凭据。  
   
      报表服务器使用这些凭据与外部数据源建立数据连接。 对于某些类型的数据源，可以将凭据安全地存储在报表服务器上。 利用这些凭据，其他用户无需提供凭据即可运行报表进行基础数据连接。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75244555"
   
      对于共享数据源，使用 **“保存我的密码”** 选项可以将凭据与用户设置一起保存到本地计算机上。 报表生成器在每次连接到相应的外部数据源时使用保存的凭据。  
   
- 有关详细信息，请参阅[“数据源属性”对话框 ->“常规”（报表生成器）](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)和[在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
+ 有关详细信息，请参阅[“数据源属性”对话框 ->“常规”（报表生成器）](/previous-versions/sql/)和[在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="using-remote-data-sources"></a>使用远程数据源  
  如果报表从远程数据库服务器检索数据，请验证以下内容：  
@@ -142,7 +142,7 @@ ms.locfileid: "75244555"
   
 -   报表是一个使用了父报表的凭据的子报表。  
   
- 上述情况下，报表服务器使用一个您必须事先定义的无人参与的执行帐户连接到远程数据源。 由于报表服务器不能使用它的服务凭据连接到远程服务器，因此必须指定一个可由报表服务器用于建立连接的帐户。 有关创建此帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 上述情况下，报表服务器使用一个您必须事先定义的无人参与的执行帐户连接到远程数据源。 由于报表服务器不能使用它的服务凭据连接到远程服务器，因此必须指定一个可由报表服务器用于建立连接的帐户。 有关创建此帐户的详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="user-name-and-password-login"></a>使用用户名和密码登录  
  选择 **“使用此用户名和密码”** 时，必须提供用户名和密码才能访问数据源。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，凭据针对的可能是数据库登录。 凭据将传递到数据源用于身份验证。  
@@ -165,5 +165,4 @@ ms.locfileid: "75244555"
  [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)   
  [配置报表的数据源属性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
   

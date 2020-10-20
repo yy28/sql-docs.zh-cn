@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 89ad4ef0d7537f1b5e8cad9349eb7aeacf0872c6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545580"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934608"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以通过指定 IP 地址、端口和虚拟目录的 URL 访问报表服务器应用程序和已发布的报表。 如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的迹象为尝试从远程客户端计算机打开 Web 门户时出现空白页，或请求报表后出现空白网页。  
@@ -75,10 +75,10 @@ ms.locfileid: "84545580"
  还可以通过在其他计算机上启动 Web 门户来验证是否正确打开了端口。 有关详细信息，请参阅[报表服务器的 Web 门户](../../reporting-services/web-portal-ssrs-native-mode.md)。
   
 ## <a name="see-also"></a>另请参阅  
- [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器服务帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [创建报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [配置报表服务器服务帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

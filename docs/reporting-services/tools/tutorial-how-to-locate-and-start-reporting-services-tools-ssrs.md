@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462162"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934961"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
 
 本教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建并发布分页和移动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表的工具。 如果你已经熟悉了这些工具，你可以转到其他教程学习有关使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的技能。 有关其他教程，请参阅 [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)的技能。
 
-## <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Reporting Services 配置管理器（本机节点）
+## <a name="report-server-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a>报表服务器配置管理器（本机模式）
 使用本机模式配置管理器完成以下任务：
 
 - 指定服务帐户。
@@ -43,15 +43,15 @@ ms.locfileid: "84462162"
 
 **安装：** 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时，会安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)。
 
-### <a name="to-start-the-reporting-services-configuration-manager"></a>启动 Reporting Services 配置管理器
+### <a name="to-start-the-report-server-configuration-manager"></a>启动报表服务器配置管理器
 
-1. 在 Windows“开始”屏幕上，键入 **reporting** ，然后在“应用”  搜索结果中，单击“Reporting Services 配置管理器”  。
+1. 在 Windows“开始”屏幕上，键入“reporting”，然后在“应用”搜索结果中，单击“报表服务器配置管理器”  。
 
-    ![“开始”屏幕中的 Reporting Services 配置管理器](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "“开始”屏幕中的 Reporting Services 配置管理器")
+    ![启动时的报表服务器配置管理器](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "启动时的报表服务器配置管理器")
 
     **Or**
 
-    单击 **“开始”** ，然后依次单击 **“程序”** 、“ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”、 **“配置工具”** 、 **“Reporting Services 配置管理器”** 。
+    单击“启动”，然后依次单击“程序”、“[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”、“配置工具”、“报表服务器配置管理器”   。
 
     此时将出现 **“选择报表服务器安装实例”** 对话框，可以选择要配置的报表服务器实例。
 
@@ -67,7 +67,7 @@ ms.locfileid: "84462162"
 
     ![Reporting Services 配置工具](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 配置工具")
 
- **后续步骤：** [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services 配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+ **后续步骤：** [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 ## <a name="web-portal-native-mode"></a>Web 门户（本机模式）
 
@@ -81,7 +81,7 @@ ms.locfileid: "84462162"
 
 1. 打开浏览器。 有关支持的浏览器和浏览器版本的信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。
 
-2. 在 Web 浏览器的地址栏中，输入 Web 门户 URL。 默认情况下，该 URL 为 `https://<serverName>/reports`的技能。 可以使用 Reporting Services 配置工具确认服务器名称和 URL。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用的 URL 的详细信息，请参阅[配置报表服务器 URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。
+2. 在 Web 浏览器的地址栏中，输入 Web 门户 URL。 默认情况下，该 URL 为 `https://<serverName>/reports`的技能。 可以使用 Reporting Services 配置工具确认服务器名称和 URL。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用的 URL 的详细信息，请参阅[配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。
 
 3. Web 门户将在浏览器窗口中打开。 引导页为主文件夹。 根据权限，您可能看到引导页中的其他文件夹、指向报表的超链接和资源文件。 也可能在工具栏上看到其他按钮和命令。
 

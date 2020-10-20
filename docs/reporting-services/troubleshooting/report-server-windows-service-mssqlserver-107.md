@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 375387ca85b13572014d206cf7a37ed3fc19d907
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4e68ffa14bfe98bc55e5424abe0dbdac944950a1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394562"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933700"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>报表服务器 Windows 服务 (MSSQLServer) 107
     
@@ -49,8 +49,10 @@ ms.locfileid: "87394562"
 ## <a name="internal-only"></a>仅内部  
   
 ## <a name="see-also"></a>另请参阅  
- [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+
+ [配置报表服务器服务帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+
  [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

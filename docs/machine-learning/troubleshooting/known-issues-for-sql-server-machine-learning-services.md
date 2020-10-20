@@ -3,18 +3,18 @@ title: Python 和 R 的已知问题
 description: 本文描述了 SQL Server 机器学习服务和 SQL Server 2016 R Services 中所提供的 Python 和 R 组件的已知问题或限制。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495015"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059555"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的已知问题
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9.无法使用 sqlmlutils 安装 tensorflow 包 
 
-[sqlmlutils 包](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15)用于在 SQL Server 2019 中安装 Python 包。 但是，无法使用 sqlmlutils 安装 tensorflow 包。 Tensorflow 包依赖于 numpy 的新版本，而不是 SQL Server 中安装的版本。 但是，numpy 是预安装的系统包，在尝试安装 tensorflow 时 sqlmlutils 无法更新该包。
+[sqlmlutils 包](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15)用于在 SQL Server 2019 中安装 Python 包。 你需要下载、安装和更新 [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/)。 但是，无法使用 sqlmlutils 安装 tensorflow 包。 Tensorflow 包依赖于 numpy 的新版本，而不是 SQL Server 中安装的版本。 但是，numpy 是预安装的系统包，在尝试安装 tensorflow 时 sqlmlutils 无法更新该包。
 
 **解决方法**
 

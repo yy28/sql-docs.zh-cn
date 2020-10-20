@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5fc07a171e42338ca76d51d66c04af187cb6beda
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922095"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005908"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 的功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +42,7 @@ ODBC Driver 13.1 for SQL Server 不仅包含以前版本 (11) 的所有功能，
   
 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 SQL Server 显示加密密钥。 安装在客户端计算机上的启用始终加密的驱动程序通过在 SQL Server 客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 SQL Server，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序以透明方式对存储在加密数据库列（包含在查询结果中）中的数据进行解密。 有关详细信息，请参阅[在 ODBC 驱动程序中使用 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)。
  
-使用 Azure Active Directory，用户、DBA 和应用程序程序员可以将 Azure Active Directory 身份验证用作一种机制，通过这种机制可以使用 Azure Active Directory (Azure AD) 中的标识连接到 Microsoft Azure SQL 数据库和 Microsoft SQL Server 2016。 有关详细信息，请参阅[结合使用 Azure Active Directory 和 ODBC 驱动程序](../using-azure-active-directory.md)和[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](/azure/sql-database/sql-database-aad-authentication)。   
+使用 Azure Active Directory，用户、DBA 和应用程序程序员可以将 Azure Active Directory 身份验证用作一种机制，通过这种机制可以使用 Azure Active Directory (Azure AD) 中的标识连接到 Microsoft Azure SQL 数据库和 Microsoft SQL Server 2016。 有关详细信息，请参阅[结合使用 Azure Active Directory 和 ODBC 驱动程序](../using-azure-active-directory.md)和[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 Azure Synapse Analytics](/azure/sql-database/sql-database-aad-authentication)。   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 for SQL Server（Windows 平台）  
 

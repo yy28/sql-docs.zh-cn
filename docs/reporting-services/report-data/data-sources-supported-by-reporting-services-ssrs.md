@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603491"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006453"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -157,7 +157,7 @@ ms.locfileid: "91603491"
   
  如果您在图形模式下使用该查询设计器，则会分析查询并可能将其重写。 基于文本的查询设计器也可用于编写查询。 如果希望控制用于查询的精确 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，请使用基于文本的查询设计器。   
   
- 从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、SQL 数据仓库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检索数据的方式类似，但存在一些仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的要求。 有关详细信息，请参阅 [Azure SQL 连接类型 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。  
+ 从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、Azure Synapse Analytics 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检索数据的方式类似，但存在一些仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的要求。 有关详细信息，请参阅 [Azure SQL 连接类型 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。  
   
  [返回数据源表](#DataSourcesTable)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "91603491"
   
  此数据访问接口使用 ADOMD.NET 对象模型创建使用 XML for Analysis (XMLA) 版本 1.1 的查询。 结果将以平展行集的形式返回。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)、[针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)、[Analysis Services MDX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)和 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。 
  
- 对于 Azure Analysis Services 和 Power BI Premium 数据集数据源，请注意，必须禁用多重身份验证，才能使用凭据连接到数据源。 如果需要为环境启用多重身份验证，请查看 <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">Azure Active Directory 条件访问</a>，将其作为为数据源中使用的凭据禁用多重身份验证的一种方式。
+ 对于 Azure Analysis Services 和 Power BI Premium 数据集数据源，请注意，必须禁用多重身份验证，才能使用凭据连接到数据源。 如果需要为环境启用多重身份验证，请查看 <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory 条件访问</a>，将其作为为数据源中使用的凭据禁用多重身份验证的一种方式。
   
  连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持多值参数，并将单元格和成员属性映射到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的扩展属性。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "91603491"
   
  此扩展插件支持命名参数。 对于 Oracle 版本 11g 或更高版本而言，支持多值参数。 对于位置相关的未命名参数，请使用 OLE DB 数据处理扩展插件和数据访问接口 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle。 有关将 Oracle 配置为数据源的详细信息，请参阅 [如何使用 Reporting Services 配置和访问 Oracle 数据源](https://support.microsoft.com/kb/834305)。 有关附加权限配置的详细信息，请参阅 [知识库中的](https://support.microsoft.com/kb/870668) 如何为 NETWORK SERVICE 安全主体添加权限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
- 您可以使用多个输入参数从存储过程中检索数据，但存储过程必须只返回一个输出游标。 有关详细信息，请参阅“使用 DataReader 检索数据”中的[使用 Oracle REF CURSOR 返回结果](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors)。
+ 您可以使用多个输入参数从存储过程中检索数据，但存储过程必须只返回一个输出游标。 有关详细信息，请参阅“使用 DataReader 检索数据”中的[使用 Oracle REF CURSOR 返回结果](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors)。
   
  有关详细信息，请参阅 [Oracle 连接类型 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)。 有关关联查询设计器详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。  
   
@@ -317,5 +317,4 @@ ms.locfileid: "91603491"
  [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

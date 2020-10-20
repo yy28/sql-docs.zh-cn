@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d8076a74005b52da656b1241d215a5aed7f43ac2
-ms.sourcegitcommit: 6eae1fda4962050e8abd7f105a614744009712d9
+ms.openlocfilehash: 5e480c0b24a05a42ba7cb53a3d35125a7e2b3976
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722979"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934909"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]RsReportServer.config  文件存储报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -72,7 +72,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|----------|  
 |**Dsn**|指定承载报表服务器数据库的数据库服务器的连接字符串。 在创建报表服务器数据库时，此值会进行加密并添加到配置文件中。 对于 SharePoint，从 SharePoint 配置数据库获取数据库连接信息。|N,S|  
 |**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效值为 **Default** 和 **Impersonate**。 如果将报表服务器配置为使用**登录帐户或服务帐户连接至报表服务器数据库，则指定** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定**Impersonate** 。|N|  
-|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 将报表服务器连接配置为使用域帐户时，会创建 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
+|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 将报表服务器连接配置为使用域帐户时，会创建 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
 |**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值为 MSRS12\<instancename>。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|安装程序创建的报表服务器安装的标识符。 此值设置为 GUID。 请不要修改此设置。|N|  
 |**SecureConnectionLevel**|指定 Web 服务调用必须使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）的程度。 此设置用于报表服务器 Web 服务和 Web 门户。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 在 SQL Server 2008 R2 中，SecureConnectionLevel 是一个开关。 对于早于 SQL Server 2008 R2 的版本，其有效值范围是 0 到 3（0 最不安全）。 有关详细信息，请参阅 [ConfigurationSetting 方法 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)、[使用安全 Web 服务方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)和[在本机模式报表服务器上配置 TLS 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|
@@ -103,7 +103,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 > [!WARNING]  
 >  对于 SharePoint 模式，在 SharePoint 管理中心中配置 URL 预留。 有关详细信息，请参阅[配置备用访问映射 (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
   
- 请不要直接在该配置文件中修改 URL 预留。 请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器或报表服务器 WMI 提供程序创建或修改用于本机模式报表服务器的 URL 预留。 如果在配置文件中修改此值，则可能会破坏预留，这将导致服务器运行时错误或在卸载软件时将孤立的预留留在未删除的 HTTP.SYS 中。 有关详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)和[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。  
+ 请不要直接在该配置文件中修改 URL 预留。 请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器或报表服务器 WMI 提供程序创建或修改用于本机模式报表服务器的 URL 预留。 如果在配置文件中修改此值，则可能会破坏预留，这将导致服务器运行时错误或在卸载软件时将孤立的预留留在未删除的 HTTP.SYS 中。 有关详细信息，请参阅[配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)和[配置文件中的 URL（报表服务器配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。  
   
  **URLReservations** 是可选元素。 如果在 RSReportServer.config 文件中没有显示该元素，则可能不用配置服务器。 如果指定了该元素，则必须指定除 **AccountName** 以外的所有子元素。  
   
@@ -115,7 +115,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**名称**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有效值为 ReportServerWebService 或 ReportManager。|N|  
 |**VirtualDirectory**|指定应用程序的虚拟目录名称。|N|  
 |**URLs，URL**|包含应用程序的一个或多个 URL 预留。|N|  
-|**UrlString**|指定适用于 HTTP.SYS 的 URL 语法。 有关语法的详细信息，请参阅 [URL 预留语法（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。|N|  
+|**UrlString**|指定适用于 HTTP.SYS 的 URL 语法。 有关语法的详细信息，请参阅 [URL 预留语法（报表服务器配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。|N|  
 |**AccountSid**|指定已为其创建 URL 预留的帐户的安全标识符 (SID)。 该帐户应为报表服务器服务运行时所使用的帐户。 如果 SID 与服务帐户不匹配，则报表服务器可能无法侦听相应 URL 上的请求。|N|  
 |**AccountName**|指定与 **AccountSid**对应的可读帐户名称。 该名称不会被使用，但它会显示在文件中，这样你便可以轻松确定用于相应 URL 预留的帐户的服务帐户。|N|  
   
@@ -176,7 +176,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxAppDomainUnloadTime**|指定在回收操作期间允许卸载应用程序域的时间间隔。 如果在该时间段内没有完成回收，则应用程序域中的所有处理将会停止。 有关详细信息，请参阅 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)。<br /><br /> 以分钟为单位指定此值。 有效值的范围为 0 到最大整数之间。 默认值为 **30**。|N、S、P|  
 |**MaxQueueThreads**|指定报表服务器 Windows 服务同时处理订阅和通知所用的线程数。 有效值的范围为 0 到最大整数之间。 默认值为 0。 如果选择了 0，报表服务器将确定最大的线程数。 如果指定了某个整数，则所指定的值将设置可以同时创建的线程数的上限。 有关报表服务器 Windows 服务如何针对运行中的进程管理内存的详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N、S、P|  
 |**UrlRoot**|此设置由报表服务器传递扩展插件使用，用来编写在电子邮件和文件共享订阅中传递的报表使用的 URL。此外，在使用 Globals!ReportServerUrl 解析表达式时，报表处理也会使用此设置。 它必须是有效的指向报表服务器的 URL 地址，通过该地址可以访问已发布的报表。 报表服务器使用此设置生成供脱机访问或以无人参与方式访问的 URL。 这些 URL 用于导出的报表中，传递扩展插件使用它们来编写包含在传递消息（例如电子邮件中的链接）中的 URL。 报表服务器基于以下行为确定报表中的 URL：<br /><br /> 如果 **UrlRoot** 为空（默认值）且存在 URL 预留，则报表服务器会自动确定 URL，其方式与 ListReportServerUrls 方法生成 URL 的方式相同。 将使用 ListReportServerUrls 方法返回的第一个 URL。 或者，如果 SecureConnectionLevel 大于零 (0)，则使用第一个 TLS URL。<br /><br /> 如果将 **UrlRoot** 设置为一个特定值，则会使用显式值。<br /><br /> 如果 **UrlRoot** 为空且未配置任何 URL 预留，则所呈现的报表和电子邮件链接中的 URL 是不正确的。|N、S、P|  
-|**UnattendedExecutionAccount**|指定报表服务器运行报表时所使用的用户名、密码和域。 这些值已经过加密。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具来设置这些值。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 对于 SharePoint 模式，您使用 SharePoint 管理中心设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|N、P|  
+|**UnattendedExecutionAccount**|指定报表服务器运行报表时所使用的用户名、密码和域。 这些值已经过加密。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具来设置这些值。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 对于 SharePoint 模式，您使用 SharePoint 管理中心设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|N、P|  
 |**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rssrvrpolicy.config。有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|N、S、P|  
 |**IsWebServiceEnabled**|指定报表服务器 Web 服务是否响应 SOAP 和 URL 访问请求。 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用服务时，设置此值。|N,S|  
 |**IsReportManagerEnabled**|从 SQL Server 2016 Reporting Services 累积更新 2 开始已弃用此设置。 将始终启用 Web 门户。|N|  
@@ -855,9 +855,10 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [初始化报表服务器（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [存储加密的报表服务器数据（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+
  更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

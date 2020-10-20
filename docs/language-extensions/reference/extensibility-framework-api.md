@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: 可以使用 Extensibility Framework 为 SQL Server 编写编程语言扩展插件。 适用于 Microsoft SQL Server 的 Extensibility Framework API 是一种 API，语言扩展插件可使用它来与 SQL Server 交互和交换数据。
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765769"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956858"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>适用于 SQL Server 的 Extensibility Framework API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 可以使用 Extensibility Framework 为 SQL Server 编写编程语言扩展插件。 适用于 Microsoft SQL Server 的 Extensibility Framework API 是一种 API，语言扩展插件可使用它来与 SQL Server 交互和交换数据。
 
-作为语言扩展插件作者，你可以将此参考资料与[适用于 SQL Server 的开放源代码 Java 语言扩展插件](../how-to/extensibility-sdk-java-sql-server.md)结合阅读，以了解如何使用 API 编写自己的语言扩展插件。 你可以在 [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions) 中找到 Java 语言扩展插件的源代码。
+作为语言扩展插件作者，你可以将此参考资料与开放源代码语言扩展插件结合使用，以了解如何使用 API 编写自己的语言扩展插件。 你可以在 [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions) 中找到语言扩展插件的源代码。
 
 在下面查找有关所有 API 函数的语法和参数信息。
 
@@ -36,7 +36,7 @@ ms.locfileid: "91765769"
 
 ## <a name="init"></a>Init
 
-此函数仅调用一次，用于初始化运行时以执行。 例如，Java 扩展插件初始化 JVM。
+此函数仅调用一次，用于初始化运行时以执行。 
 
 ### <a name="syntax"></a>语法
 
@@ -262,7 +262,7 @@ ParamValue
 StrLen_or_Ind   
 \[输入\] 一个整数值，指示 ParamValue 的长度（以字节为单位），或指示数据为 NULL 的 SQL_NULL_DATA  。
 
-如果列不可为 NULL 且不表示以下任何一个数据类型，则可以忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY、SQL_C_NUMERIC 或 SQL_C_TYPE_TIMESTAMP。 否则，它将指向具有 \[RowsNumber\] 元素的有效数组，其中每个元素包含其长度或 NULL 指示器数据。
+如果列不可为 null，且不表示以下任何一个数据类型，则可以忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY、SQL_C_NUMERIC 或 SQL_C_TYPE_TIMESTAMP。 否则，它将指向具有 \[RowsNumber\] 元素的有效数组，其中每个元素包含其长度或 NULL 指示器数据。
 
 InputOutputType   
 \[输入\] 参数的类型。 InputOutputType 参数为以下其中一个值  ：
@@ -304,14 +304,14 @@ RowsNumber
 \[输入\] Data 中的行数  。
 
 *数据*  
-\[输入\] 一个二维数组，其中包含 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中的 `@input_data_1` 的结果集。
+\[输入\] 一个二维数组，其中包含 `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 的结果集。
 
 列总数为在 [InitSession](#initsession) 调用中收到的 InputSchemaColumnsNumber  。 每一列都包含 RowsNumber 元素，这些元素应根据 [InitColumn](#initcolumn) 中的列类型进行解释  。
 
 StrLen_or_Ind 中指示为 NULL 的元素不保证有效，应忽略  。
 
 StrLen_or_Ind   
-\[输入\] 一个二维数组，其中包含 Data 中每个值的长度/NULL 指示器  。 每个单元格的可能值：
+\[输入\] 一个二维数组，其中包含“数据”中每个值的长度/NULL 指示器。 每个单元格的可能值：
 
 - n，其中 n > 0。 指示数据的长度（以字节为单位）
 - SQL_NULL_DATA，指示 NULL 值。
@@ -407,19 +407,19 @@ RowsNumber
 \[输出\] 指向缓冲区的指针，该缓冲区包含 Data 中的行数  。
 
 *数据*  
-\[输出\] 指向二维数组的指针，该二维数组由包含 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中的 `@script` 的结果集的扩展插件分配。
+\[输出\] 指向二维数组的指针，该二维数组由包含 `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 的结果集的扩展插件分配。
 
 列总数应为在 [Execute](#execute) 调用中检索到的 OutputSchemaColumnsNumber  。 每一列都应包含 RowsNumber 元素，这些元素应根据 [GetResultColumn](#getresultcolumn) 中的列类型进行解释  。
 
 StrLen_or_Ind   
-\[输出\] 指向二维数组的指针，该二维数组由包含 Data 中每个值的长度/NULL 指示器的扩展插件分配  。 每个单元格的可能值：
+\[输出\] 指向二维数组的指针，该二维数组由包含“数据”中每个值的长度/NULL 指示器的扩展插件分配。 每个单元格的可能值：
 
 - n，其中 n > 0。 指示数据的长度（以字节为单位）
 - SQL_NULL_DATA，指示 NULL 值。
 
 列总数应为在 [Execute](#execute) 调用中接收到的 OutputSchemaColumnsNumber  。 每一列都包含 RowsNumber 元素，这些元素应根据 [GetResultColumn](#getresultcolumn) 中的列类型进行解释  。
 
-如果列不可为 NULL 且不表示以下任何一个数据类型，则将忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY [添加日期]。 否则，它将指向具有 RowsNumber 元素的有效数组，每个元素包含其长度或 NULL 指示器数据  。
+如果列不可为 NULL，且不表示以下任何一个数据类型，则将忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY [添加日期]。 否则，它将指向具有 RowsNumber 元素的有效数组，每个元素包含其长度或 NULL 指示器数据  。
 
 ## <a name="getoutputparam"></a>GetOutputParam
 
@@ -638,3 +638,5 @@ LibraryErrorLength
 ## <a name="next-steps"></a>后续步骤
 
 - [适用于 SQL Server 的Microsoft Java Extensibility SDK](../how-to/extensibility-sdk-java-sql-server.md)
+- [Python 自定义运行时](../../machine-learning/install/custom-runtime-python.md)
+- [R 自定义运行时](../../machine-learning/install/custom-runtime-r.md)。

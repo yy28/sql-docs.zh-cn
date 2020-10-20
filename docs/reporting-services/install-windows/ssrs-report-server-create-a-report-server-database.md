@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603383"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935570"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>创建报表服务器数据库，SSRS 配置管理器  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>创建报表服务器数据库（报表服务器配置管理器）  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
  ### <a name="native-mode"></a>本机模式
  可通过以下方式创建本机模式的报表服务器数据库：  
   
-- **自动**。 如果选择默认配置安装选项，请使用 SQL Server 安装向导。 在 SQL Server 安装向导中，此选项为“报表服务器安装选项”页中的“安装和配置”   。 如果选择“仅安装”选项，则必须使用 SQL Server Reporting Services 配置管理器来创建数据库  。  
+- **自动**。 如果选择默认配置安装选项，请使用 SQL Server 安装向导。 在 SQL Server 安装向导中，此选项为“报表服务器安装选项”页中的“安装和配置”   。 如果选择“仅安装”选项，则必须使用 SQL Server 报表服务器配置管理器来创建数据库。  
   
 - **手动**。 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
@@ -85,7 +85,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-若要在远程计算机上创建报表服务器数据库，请将连接配置为使用域用户帐户或具有网络访问权限的服务帐户。 如果使用远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请考虑报表服务器应使用哪些凭据来连接实例。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS Configuration Manager）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+若要在远程计算机上创建报表服务器数据库，请将连接配置为使用域用户帐户或具有网络访问权限的服务帐户。 如果使用远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请考虑报表服务器应使用哪些凭据来连接实例。 有关详细信息，请参阅[配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 > [!IMPORTANT]  
 > 报表服务器和用于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可位于不同的域中。 对于 Internet 部署，通常的做法是使用防火墙后的服务器。 
@@ -98,6 +98,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 
 ## <a name="next-steps"></a>后续步骤
 
-请参阅 [Reporting Services 配置管理器](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)。  
+阅读有关[报表服务器配置管理器](reporting-services-configuration-manager-native-mode.md)的信息。  
 
 更多疑问？ 请访问 [Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)。

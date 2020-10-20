@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1716581451737a20951cf941bb57b81c8d14e5e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3e0cfd07bafed3bc79a57b3f139852db9e13e1c
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918423"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933775"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>为部署和管理任务编写脚本
 
@@ -46,14 +46,14 @@ ms.locfileid: "86918423"
 |任务|方法|  
 |----------|--------------|  
 |安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。|可以从命令行运行安装程序以执行无人参与的安装。<br /><br /> 可以使用安装程序安装和配置报表服务器，但是只有在指定默认配置选项且系统满足此安装类型的所有要求时才能这样做。 如果不能安装默认配置，则必须执行“仅文件”安装。|  
-|配置服务帐户。|服务帐户最初是在安装过程中配置的。 若要将更改服务帐户作为安装后任务自动执行，必须编写可对报表服务器 WMI 接口进行调用的自定义代码。 没有用于以编程方式配置服务帐户的命令提示实用工具或脚本模板。<br /><br /> 如果编码要求阻止您自动执行此步骤，则可通过运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具轻松地手动配置帐户。 有关详细信息，请参阅[配置服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。|  
-|配置报表服务器 Web 服务和报表管理器 URL。|必须编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。 没有用来配置 URL 的命令行实用工具或脚本模板。<br /><br /> 如果希望避免编写代码，则可以通过运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来手动配置 URL。 有关详细信息，请参阅[配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。|  
-|创建报表服务器数据库。|必须编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。 没有用来创建报表服务器数据库和 RSExecRole 的命令提示实用工具或脚本模板。<br /><br /> 如果希望避免编写代码，则可以通过运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来手动创建数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。|  
-|配置报表服务器数据库连接。|如果要更改连接字符串、帐户、密码或身份验证类型，请通过运行 **rsconfig** 实用工具来配置连接。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)和 [rsconfig 实用工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)。<br /><br /> 不能使用 rsconfig.exe 来创建或升级数据库。 数据库和 RSExecRole 必须已经存在。|  
-|配置扩展部署。|从以下用于自动执行扩展部署的方法中进行选择：<br /><br /> -   运行 rskeymgmt.exe 实用工具以将报表服务器实例联接到现有安装。 有关详细信息，请参阅[添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。<br />-   编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
+|配置服务帐户。|服务帐户最初是在安装过程中配置的。 若要将更改服务帐户作为安装后任务自动执行，必须编写可对报表服务器 WMI 接口进行调用的自定义代码。 没有用于以编程方式配置服务帐户的命令提示实用工具或脚本模板。<br /><br /> 如果编码要求阻止您自动执行此步骤，则可通过运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具轻松地手动配置帐户。 有关详细信息，请参阅[配置服务帐户（报表服务器配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。|  
+|配置报表服务器 Web 服务和报表管理器 URL。|必须编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。 没有用来配置 URL 的命令行实用工具或脚本模板。<br /><br /> 如果希望避免编写代码，则可以通过运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来手动配置 URL。 有关详细信息，请参阅[配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。|  
+|创建报表服务器数据库。|必须编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。 没有用来创建报表服务器数据库和 RSExecRole 的命令提示实用工具或脚本模板。<br /><br /> 如果希望避免编写代码，则可以通过运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来手动创建数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。|  
+|配置报表服务器数据库连接。|如果要更改连接字符串、帐户、密码或身份验证类型，请通过运行 **rsconfig** 实用工具来配置连接。 有关详细信息，请参阅[配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)和 [rsconfig 实用工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)。<br /><br /> 不能使用 rsconfig.exe 来创建或升级数据库。 数据库和 RSExecRole 必须已经存在。|  
+|配置扩展部署。|从以下用于自动执行扩展部署的方法中进行选择：<br /><br /> -   运行 rskeymgmt.exe 实用工具以将报表服务器实例联接到现有安装。 有关详细信息，请参阅[添加和删除横向扩展部署的加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。<br />-   编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
 |备份加密密钥。|从以下用于自动备份加密密钥的方法中进行选择：<br /><br /> -   运行 rskeymgmt.exe 实用工具以备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。<br />-   编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
 |配置报表服务器电子邮件。|编写针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序运行的自定义代码。 该提供程序支持部分电子邮件配置设置。<br /><br /> 虽然 RSReportServer.config 文件包含所有设置，但是不要以自动执行的方式使用该文件。 具体来说，不要使用批处理文件将该文件复制到另一个报表服务器。 每个配置文件都包含特定于当前实例的值。 这些值对于其他报表服务器实例将是无效的。<br /><br /> 有关设置的详细信息，请参阅[电子邮件设置 - Reporting Services 本机模式（配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
-|配置无人参与的执行帐户。|从以下用于自动配置无人参与处理帐户的方法中进行选择：<br /><br /> -   运行 rsconfig.exe 实用工具以配置帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br />-   编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。|  
+|配置无人参与的执行帐户。|从以下用于自动配置无人参与处理帐户的方法中进行选择：<br /><br /> -   运行 rsconfig.exe 实用工具以配置帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br />-   编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。|  
 |将现有的内容（包括文件夹层次结构、角色分配、报表、订阅、计划、数据源和资源）部署到另一台报表服务器上。|重新创建现有报表服务器环境的最佳方式是将报表服务器数据库复制到新的报表服务器实例中。<br /><br /> 替代方法是编写自定义代码，以编程方式重新创建现有的报表服务器内容。 但应注意，订阅、报表快照和报表历史记录无法以编程方式重新创建。<br /><br /> 某些部署受益于以上两项技术的结合使用（也就是说，还原报表服务器数据库，然后运行自定义代码以便为特定安装修改报表服务器数据库）。<br /><br /> 有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。<br /><br /> 有关重新定位报表服务器数据库的详细信息，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 有关以编程方式创建报表服务器环境的详细信息，请参阅本主题中的“使用脚本迁移报表服务器内容和文件夹”一节。|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>用于自动执行服务器部署的工具和技术  

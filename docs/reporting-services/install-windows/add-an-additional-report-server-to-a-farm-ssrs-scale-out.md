@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418673"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934698"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 
@@ -26,7 +26,7 @@ ms.locfileid: "88418673"
 > [!TIP]  
 >  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，您将不使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器添加服务器和扩展报表服务器。 将带有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的 SharePoint 服务器添加到场中时，SharePoint 产品管理 Reporting Services 的扩展。  
   
- 有关如何扩展本机模式报表服务器的信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
+ 有关如何扩展本机模式报表服务器的信息，请参阅[配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 ##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> 负载平衡  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的负载平衡将由 SharePoint 自动管理，除非您的环境具有自定义或第三方负载平衡解决方案。 默认 SharePoint 负载平衡行为是，每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序都将在您启动了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的所有应用程序服务器之间保持平衡。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 若要确认  服务是否安装和启动，请在 SharePoint 管理中心中单击“管理服务器上的服务”。  
@@ -60,7 +60,7 @@ ms.locfileid: "88418673"
   
 |步骤|说明和链接|  
 |----------|--------------------------|  
-|将 SharePoint 服务器添加到场。|你需要安装 SharePoint 以部署其他 Reporting Services 应用程序。<br/><br/>有关 SharePoint 2013 的详细信息，请参阅 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)。<br/><br/>有关 SharePoint 2016 的详细信息，请参阅 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)。|  
+|将 SharePoint 服务器添加到场。|你需要安装 SharePoint，以部署其他 Reporting Services 应用程序。<br/><br/>有关 SharePoint 2013 的详细信息，请参阅 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)。<br/><br/>有关 SharePoint 2016 的详细信息，请参阅 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)。|  
 |安装和配置 Reporting Services SharePoint 模式。|运行 SQL Server 安装。 有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)<br /><br /> 如果该服务器将仅用作应用程序服务器并且将不用作 WFE，则无需选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。<br /><br /> 1) 在“设置角色”页上，选择“SQL Server 功能安装”  <br /><br /> 2) 在“功能选择”页上，选择“Reporting Services - SharePoint”  <br /><br /> 3) 在“Reporting Services 配置”页上，确认为“Reporting Services SharePoint 模式”选择了“仅安装”选项    。|  
 |验证 Reporting Services 是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”   。<br /><br /> 2) 验证“SQL Server Reporting Services 服务”服务  。<br /><br />有关详细信息，请参阅 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
   
@@ -81,7 +81,7 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 
 ## <a name="next-steps"></a>后续步骤
 
-[在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[在 SharePoint 2016 中将 SharePoint 服务器添加到场](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[在 SharePoint 2013 中将 SharePoint 服务器添加到场](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

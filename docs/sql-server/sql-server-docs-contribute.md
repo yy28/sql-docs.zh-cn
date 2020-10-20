@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480609"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005834"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 
@@ -34,7 +34,7 @@ SQL 内容团队会对所有公开发表的内容进行验证，以确保技术�
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a>在浏览器中编辑
 
-可以在浏览器中对 SQL Server 内容进行简单编辑，然后将其提交到 Microsoft。 有关详细信息, 请参阅 [Microsoft Docs 参与者指南概述](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)。 
+可以在浏览器中对 SQL Server 内容进行简单编辑，然后将其提交到 Microsoft。 有关详细信息, 请参阅 [Microsoft Docs 参与者指南概述](/contribute/#quick-edits-to-existing-documents)。 
 
 以下步骤概述了这一过程： 
 
@@ -59,10 +59,10 @@ SQL 内容团队会对所有公开发表的内容进行验证，以确保技术�
 
 若要使用此方法参与编辑，请参阅以下文章：
 
-- [创建 GitHub 帐户](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [安装内容创作工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [设置本地 Git 存储库](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [使用工具参与编辑](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [创建 GitHub 帐户](/contribute/get-started-setup-github)
+- [安装内容创作工具](/contribute/get-started-setup-tools)
+- [设置本地 Git 存储库](/contribute/get-started-setup-local)
+- [使用工具参与编辑](/contribute/how-to-write-workflows-major)
 
 如果提交包含对文档的重大更改的拉取请求，则将在 GitHub 中收到一条注释，要求提交联机“贡献许可协议 (CLA)”。 必须先完成联机窗体，然后系统才会接受你的拉取请求。
 
@@ -107,13 +107,13 @@ SQL 内容团队会对所有公开发表的内容进行验证，以确保技术�
 - 有关常用 include 的列表，请参阅 [SQL Server 版本和 applies-to include文件](applies-to-includes.md)。
 - 查看包含相同功能或相关任务的其他文章。 如果编辑此文章，则可针对适用范围包含链接复制 Markdown（可取消编辑而不提交编辑）。
 - 针对包含文本“适用范围”的文件搜索 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目录。 可使用 github 中的“查找”按钮快速筛选。 单击文件，查看其呈现方式。
-- 注意命名约定。 如果名称中包含 x，它们通常是占位符，表示缺少对服务的支持。 例如，appliesto-xx-xxxx-asdw-xxx-md.md 表示仅支持 Azure SQL 数据仓库，因为仅拼写出了 asdw，而其他字段具有 x 。
+- 注意命名约定。 如果名称中包含 x，它们通常是占位符，表示缺少对服务的支持。 例如，appliesto-xx-xxxx-asdw-xxx-md.md 表示仅支持 Azure Synapse Analytics，因为仅拼写出了 asdw，而其他字段具有 x 内容 。
 - 某些包含指定了版本号，如 tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md。 仅当知道通过特定版本的 SQL Server 引入了此功能时才使用这些包含。
 
 ## <a name="contributor-resources"></a>参与者资源
 
-- [docs.microsoft.com 参与者指南](https://docs.microsoft.com/contribute/)
-- [Microsoft 风格指南](https://docs.microsoft.com/teamblog/style-guide)
+- [docs.microsoft.com 参与者指南](/contribute/)
+- [Microsoft 风格指南](/teamblog/style-guide)
 - [Markdown 基本信息](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

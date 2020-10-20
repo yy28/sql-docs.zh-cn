@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50b21145d0e1929b6ef5ba1f6e0f23692d9b4b7c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0a60966d6ba73a7669562d406b460f749303ca56
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510098"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988599"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  
@@ -29,7 +29,7 @@ ms.locfileid: "79510098"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“属性”** 。 “\<项目>属性页”对话框即会打开   。  
+2.  在 **“项目”** 菜单上，单击 **“属性”** 。 打开 \<project>“属性页”对话框。  
   
 3.  选择发布到 SharePoint 站点所用的 **“配置”** 。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "79510098"
 9. 在解决方案资源管理器中，右键单击要发布的共享数据源，然后单击“部署”  。 数据源将发布到 **TargetDataSourceFolder**中指定的位置。 部署错误将显示在输出窗口中。  
   
     > [!NOTE]  
-    >  将共享数据源发布到 SharePoint 站点后，该数据源文件的扩展名会更改为 .rsds。 可以直接在 SharePoint 站点上编辑和管理共享数据源。 有关详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+    >  将共享数据源发布到 SharePoint 站点后，该数据源文件的扩展名会更改为 .rsds。 可以直接在 SharePoint 站点上编辑和管理共享数据源。 有关详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](/previous-versions/sql/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [将报表发布到 SharePoint 库](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
@@ -57,5 +57,4 @@ ms.locfileid: "79510098"
  [设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [将报表发布到报表服务器](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
  [将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
-  
   

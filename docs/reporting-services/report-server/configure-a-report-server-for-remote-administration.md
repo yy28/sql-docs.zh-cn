@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: f41eef01d203a873b3d5beac61ab5feb2995867f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545582"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891397"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以通过本地或远程方式配置报表服务器实例。 若要配置远程报表服务器实例，可以使用 Reporting Services 配置工具或编写使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序的自定义代码。 Reporting Services 配置工具为 WMI 提供程序提供了一个图形界面，这样您便可以直接配置报表服务器，而不必编写代码。 启动该工具时，可以指定要连接的远程服务器。  
@@ -140,6 +140,6 @@ ms.locfileid: "84545582"
 13. 在 **“允许”** 列中，选择 **“启用帐户”** 、 **“远程启用”** 和 **“读取安全”** ，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

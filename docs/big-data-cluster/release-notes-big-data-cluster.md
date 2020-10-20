@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 28cfd7e9a78646527bb8c0508535a1475159e35c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834514"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891077"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -93,7 +93,7 @@ SQL Server 2019 的累积更新 6 (CU6) 版本。
 此版本包含少许修补程序和增强功能。 以下文章包括与这些更新相关的信息：
 
 - [在 Active Directory 模式下管理大数据群集](manage-user-access.md)
-- [在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md)
+- [在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deploy.md)
 - [部署高可用性 SQL Server 大数据群集](deployment-high-availability.md)
 - [配置 SQL Server 大数据群集](configure-cluster.md)
 - [在大数据群集中配置 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md)
@@ -175,11 +175,11 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 
 - **受影响的版本**：通过当前累积更新
 
-- **问题及其对客户的影响**：在升级过程中，sparkhead 返回 404 错误。
+- **问题及其对客户的影响**：在升级过程中，`sparkhead` 返回 404 错误。
 
 - **解决方法**：升级 BDC 之前，请确保没有活动的 Livy 会话或批处理作业。 按照[从支持的版本升级](deployment-upgrade.md#upgrade-from-supported-release)中的说明进行操作，以避免这种情况。 
 
-   如果在升级过程中 Livy 返回 404 错误，请在两个 sparkhead 节点上重新启动 Livy 服务器。 例如：
+   如果在升级过程中 Livy 返回 404 错误，请在两个 `sparkhead` 节点上重启 Livy 服务器。 例如：
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

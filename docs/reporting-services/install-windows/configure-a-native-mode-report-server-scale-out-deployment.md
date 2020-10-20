@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459997"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890868"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
 
@@ -62,7 +62,7 @@ Reporting Services 本机模式支持扩展部署模式。该模式允许运行�
   
          为避免在将服务器实例连接到共享数据库时出现数据库兼容错误，应确保所有实例都为同一版本。 例如，如果使用 SQL Server 2016 报表服务器实例创建报表服务器数据库，则同一部署中的其他所有实例也必须为 SQL Server 2016 实例。  
   
-    -   使用 Reporting Services 配置管理器将每个报表服务器连接到共享数据库。 您一次只能连接并配置一台报表服务器。  
+    -   使用报表服务器配置管理器，将每个报表服务器都连接到共享数据库。 您一次只能连接并配置一台报表服务器。  
   
     -   使用 Reporting Services 配置工具将新的报表服务器实例联接到已经与报表服务器数据库连接的第一个报表服务器实例来完成扩展。  
   

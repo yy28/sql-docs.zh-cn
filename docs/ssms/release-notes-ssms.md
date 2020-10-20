@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 7115c3c36f79b35fbb66d39ec530b320d7929c0e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603447"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039151"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -66,8 +66,8 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 数据分类 | 更新 SSMS 以支持通过 PowerShell cmdlet 导出/导入导出的策略。 |
 | 导入平面文件 | 添加了对固定宽度文件的支持，以及对 .csv/.tsv 文件的文件类型检测的支持，确保它们分别分析为 csv/tsv 文件。 |
 | Integration Services | 添加了对 Azure SQL 托管实例代理作业的支持，以便在 Azure-SSIS IR 中从包存储执行 SSIS 包。 |
-| SMO/脚本编写 | 添加了对在 [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)（以前的 SQL Azure DW）上编写动态数据掩码脚本的支持。 |
-| SMO/脚本编写 | 添加了对在 [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)（以前的 SQL DW）上编写安全策略脚本的支持。 |
+| SMO/脚本编写 | 添加了对在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)（以前的 SQL Azure DW）上编写动态数据掩码脚本的支持。 |
+| SMO/脚本编写 | 添加了对在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)（以前的 SQL DW）上编写安全策略脚本的支持。 |
 
 ### <a name="bug-fixes-in-186"></a>18.6 中的 bug 修复
 
@@ -376,7 +376,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 查询执行或结果 | 在消息中添加了一个完成时间，以跟踪给定查询执行完毕的时间  。 |
 | 查询执行或结果 | 允许显示更多数据（结果转换为文本）以及将其存储在单元中（结果转换为网格）。 对于这两种情况，SSMS 当前最多支持 200 万个字符（之前分别为 25.6 万和 6.4 万）。 这还解决了用户无法从网格单元中获取超过 43680 个字符的问题。 |
 | 显示计划 | 在启用了[内联标量 UDF 特性](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqludfs) 的情况下，在 QueryPlan 中添加了新的属性。 |
-| SMO | 添加了对 SQL 评估 API  的支持。 有关详细信息，请参阅 [SQL 评估 API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview)。 |
+| SMO | 添加了对 SQL 评估 API  的支持。 有关详细信息，请参阅 [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md)。 |
 |  |  |
 
 #### <a name="bug-fixes-in-182"></a>18.2 中的 bug 修复
@@ -526,7 +526,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |SSMS 需要 NetFx 4.7.2 或更高版本|我们将最低要求从 NetFx4.6.1 升级到 NetFx4.7.2：这让我们能够利用新框架公开的新功能。|
 |迁移 SSMS 设置的功能| 当 SSMS 18 首次启动时，系统会提示用户迁移 17.x 设置。 用户设置文件现存储为纯 XML 文件，从而提高了可移植性并且可能允许编辑。|
 |支持高 DPI| 现默认启用高 DPI。|
-|SSMS 附带 Microsoft OLE DB 驱动程序| 有关详细信息，请参阅[下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server)。|
+|SSMS 附带 Microsoft OLE DB 驱动程序| 有关详细信息，请参阅[下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序](../connect/oledb/download-oledb-driver-for-sql-server.md)。|
 |Windows 8 不支持 SSMS。 Windows 10 和 Windows Server 2016 需要 1607 (10.0.14393) 或更高版本|由于 NetFx 4.7.2 上新的依赖项，SSMS 18.0 不会安装在 Windows 8、较旧版本的 Windows 10 和 Windows Server 2016 上。 SSMS 安装程序会阻止这些系统。 仍然支持 Windows 8.1。|
 |SSMS 不再添加到 PATH 环境变量|SSMS.EXE 的路径（以及常规工具）不再添加到路径中。 用户可以手动添加它，也可以在新式 Windows 计算机上使用“开始”菜单添加。|
 |不再需要包 ID 来开发 SSMS 扩展| 以前 SSMS 仅选择性地加载已知包，因此需要开发人员注册其自己的包。 这种情况不会再出现。|
@@ -553,10 +553,10 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |具有安全 Enclave 的 Always Encrypted| 已在 SQL Server 2019 中进行多项增强来支持具有安全 Enclave 的 Always Encrypted：“连接到服务器”对话框（新的“Always Encrypted”选项卡）中指定 Enclave 证明 URL 的文本字段。  “新列主密钥”对话框中用于控制新列主密钥是否允许 Enclave 计算的新复选框。  其他 Always Encrypted 密钥管理对话框现在可公开列主密钥允许 Enclave 计算的信息。|
 |审核文件|已将身份验证方法从基于存储帐户密钥更改为基于 Azure AD 的身份验证。|
 |数据分类| 重新组织了数据分类任务菜单：将子菜单添加到了数据库任务菜单中，并添加了从菜单中打开报表而无需先打开分类数据窗口的选项。|
-|数据分类|向 SMO 添加了新功能“数据分类”。 列对象公开新属性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId 和 IsClassified（只读）。 有关详细信息，请参阅 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
+|数据分类|向 SMO 添加了新功能“数据分类”。 列对象公开新属性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId 和 IsClassified（只读）。 有关详细信息，请参阅 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |数据分类|向“数据分类”浮出控件添加了新的“分类报表”菜单项。|
 |数据分类| 更新了建议。|
-|数据库兼容性级别升级|在“数据库名称” > “任务” > “数据库升级”下添加了一个新选项。 此选项将启动新的查询优化助手 (QTA)，引导用户完成以下过程  ：在升级数据库兼容性级别之前，收集性能基线。 升级到所需数据库兼容性级别。  对同一工作负荷收集第二轮性能数据。 检测工作负荷回归并提供测试建议，以提高工作负荷性能。  这类似于在[查询存储使用方案](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade)中记录的数据库升级过程，最后一步（QTA 不依赖之前已知的良好状态来生成建议）除外。|
+|数据库兼容性级别升级|在“数据库名称” > “任务” > “数据库升级”下添加了一个新选项。 此选项将启动新的查询优化助手 (QTA)，引导用户完成以下过程  ：在升级数据库兼容性级别之前，收集性能基线。 升级到所需数据库兼容性级别。  对同一工作负荷收集第二轮性能数据。 检测工作负荷回归并提供测试建议，以提高工作负荷性能。  这类似于在[查询存储使用方案](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中记录的数据库升级过程，最后一步（QTA 不依赖之前已知的良好状态来生成建议）除外。|
 |数据层应用程序向导|添加了对使用图形表导入/导出数据层应用程序的支持。|
 |平面文件导入向导|添加了用于通知用户导入可能已导致列重命名的逻辑。|
 |Integration Services (SSIS)|添加了支持，使客户能够在 Azure 政府云中的 Azure-SSIS IR 上安排 SSIS 包。|
@@ -576,7 +576,7 @@ SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |显示计划|添加了显示“Materializer 运算符（外部选择）”的逻辑。|
 |显示计划|添加新的显示计划属性 BatchModeOnRowStoreUsed 以轻松识别正在使用“行存储的批处理模式扫描”功能的查询。 每当查询执行行存储的批处理模式扫描时，都会将新属性 (BatchModeOnRowStoreUsed="true") 添加到 StmtSimple 元素。|
 |显示计划|为 DW ROLLUP 和 CUBE 添加了对 LocalCube RelOp 的显示计划支持。|
-|显示计划|适用于 Azure SQL 数据仓库中新的 ROLLUP 和 CUBE 聚合功能的新 LocalCube 运算符。|
+|显示计划|适用于 Azure Synapse Analyticss 中新的 ROLLUP 和 CUBE 聚合功能的新 LocalCube 运算符。|
 |SMO| 为可恢复索引创建扩展 SMO 支持。|
 |SMO| 在 SMO 对象（“PropertyMissing”）上添加了新事件以帮助应用程序作者更快地检测 SMO 性能问题。|
 |SMO| 公开了 Configuration 对象上新的 DefaultBackupChecksum 属性，该属性映射到“备份校验和默认值”服务器配置。|

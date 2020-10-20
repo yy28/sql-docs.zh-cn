@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4d030b54944b8fe25d930f7f0b4fc540f7aff67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae893bb1e291b244b5101ccfb2ed66bcf765f049
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784328"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866850"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>使用 curl 将数据加载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的 HDFS 中
 
@@ -47,12 +47,24 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
+## <a name="authentication-with-active-directory"></a>使用 Active Directory 进行身份验证
+
+对于使用 Active Directory 的部署，请将身份验证参数与协商身份验证的 `curl` 一起使用。 
+
+若要将 `curl` 与 Active Directory 身份验证一起使用，请运行此命令：
+
+```
+kinit <username>
+```
+
+此命令针对要使用的 `curl` 生成 Kerberos 令牌。 后续部分中演示的命令指定用于 `curl` 的 `--anyauth` 参数。 对于需要协商身份验证的 URL，`curl` 会自动检测并使用生成的 Kerberos 令牌（而不是用户名和密码）对 URL 进行身份验证。
+
 ## <a name="list-a-file"></a>列出文件
 
 要列出 hdfs:///product_review_data 下的文件，请使用以下 curl 命令：
 
 ```terminal
-curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -60,7 +72,7 @@ curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP ex
 对于不使用根的终结点，请使用以下 curl 命令：
 
 ```terminal
-curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>将本地文件放入 HDFS
@@ -68,7 +80,7 @@ curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-e
 要将新文件“test.csv”从本地目录放入 product_review_data 目录，请使用以下 curl 命令（Content-Type 参数是必需的） ：
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -76,7 +88,7 @@ curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP
 对于不使用根的终结点，请使用以下 curl 命令：
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>创建目录
@@ -84,14 +96,14 @@ curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-sv
 要在 `hdfs:///` 下创建目录测试，请使用以下命令：
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 对于不使用根的终结点，请使用以下 curl 命令：
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>后续步骤

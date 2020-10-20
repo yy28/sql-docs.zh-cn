@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53d12c7441b796bf4564bbaf05a84ecfd7aae86a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934574"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多实例报表服务器部署的 URL 预留
   如果将多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例安装在同一台计算机上，则必须考虑如何为每个实例定义 URL 预留。 在每个实例中，报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 都必须至少有一个 URL 预留。 整组预留在 HTTP.SYS 中必须保持唯一。  
@@ -46,7 +46,7 @@ ms.locfileid: "88445959"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基础技术对于唯一名称施加了一定的要求。 HTTP.SYS 要求其存储库中的所有 URL 保持唯一。 您可以通过改变端口、主机名或虚拟目录名称来创建唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求同一个进程内的应用程序标识保持唯一。 此要求会影响虚拟目录名称。 它规定您不能在同一个报表服务器实例中复制虚拟目录名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   

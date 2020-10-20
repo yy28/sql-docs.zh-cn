@@ -1,6 +1,6 @@
 ---
-title: 连接并查询 Azure SQL 数据仓库
-description: 本快速入门演示如何使用 Azure Data Studio 连接到 Azure SQL 数据仓库并运行查询
+title: 使用 Azure Synapse Analytics 进行连接和查询
+description: 本快速入门介绍如何使用 Azure Data Studio 连接到 Azure Synapse Analytics 中的专用 SQL 池，并运行查询。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766366"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005486"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用 Azure Data Studio 连接并查询 Azure SQL 数据仓库中的数据
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入门：使用 Azure Data Studio，在 Azure Synapse Analytics 中借助专用 SQL 池连接和查询数据
 
-本快速入门演示如何使用 Azure Data Studio 连接到 Azure SQL 数据仓库，然后使用 Transact-SQL 语句创建、插入和选择数据。 
+本快速入门演示如何使用 Azure Data Studio 连接到 Azure Synapse Analytics 中的专用 SQL 池，然后使用 Transact-SQL 语句创建、插入和选择数据。 
 
 ## <a name="prerequisites"></a>先决条件
-若要完成此快速入门，需要 Azure Data Studio 和 Azure SQL 数据仓库。
+若要完成此快速入门，需要 Azure Data Studio 和 Azure Synapse Analytics 中的专用 SQL 池。
 
 - [安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
 
-如果还没有 SQL 数据仓库，请参阅[创建 SQL 数据仓库](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
+如果还没有专用 SQL 池，请参阅[创建专用 SQL 池](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
 
 请记下服务器名称和登录凭据！
 
 
-## <a name="connect-to-your-data-warehouse"></a>连接到数据仓库
+## <a name="connect-to-your-dedicated-sql-pool"></a>连接到专用 SQL 池
 
-使用 Azure SQL Data 建立与 Azure SQL 数据仓库服务器的连接。
+使用 Azure Data Studio 建立与 Azure Synapse Analytics 服务器的连接。
 
 1. 首次运行 Azure SQL Data，应会打开“连接”页。 如果无法看到“连接”页，请单击“SERVERS”边栏中的“添加连接”或“新建连接”图标   ：
    
@@ -58,7 +58,7 @@ ms.locfileid: "88766366"
 
 4. 成功连接后，你的服务器将在“服务器”边栏中打开。
 
-## <a name="create-the-tutorial-data-warehouse"></a>创建教程数据仓库
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>创建教程专用 SQL 池
 1. 在对象资源管理器中右键单击服务器，选择“新建查询”。
 
 1. 将以下代码片段粘贴到查询编辑器中，并单击“运行”：
@@ -145,4 +145,4 @@ ms.locfileid: "88766366"
 
 ## <a name="next-steps"></a>后续步骤
 
-现在已成功连接到 Azure SQL 数据仓库并运行查询，请试用[代码编辑器教程](tutorial-sql-editor.md)。
+成功连接到 Azure Synapse Analytics 并运行查询后，请试用[代码编辑器教程](tutorial-sql-editor.md)。

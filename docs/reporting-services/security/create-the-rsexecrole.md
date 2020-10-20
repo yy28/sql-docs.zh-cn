@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08895328856056d01b927a8c80962ff0b90570f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3735f53eac6101d2cc02568d1ea6fa789df50512
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492630"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935387"
 ---
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
 
@@ -266,8 +266,8 @@ GO
 ## <a name="next-steps"></a>后续步骤
 
 [将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
-[Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[创建本机模式报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

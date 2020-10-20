@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746147"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081566"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio 中的源代码管理
 
@@ -22,12 +22,12 @@ Azure Data Studio 支持用于版本/源代码管理的 Git。
 
 ## <a name="git-support-in-azure-data-studio"></a>Azure Data Studio 中的 Git 支持
 
-Azure Data Studio 附带 Git 源控制管理器 (SCM)，但仍需要[安装 Git（版本 2.0.0 或更高版本）](https://git-scm.com/download)，然后才能使用这些功能。 
+Azure Data Studio 附带 Git 源控制管理器 (SCM)，但仍需要[安装 Git（版本 2.0.0 或更高版本）](https://git-scm.com/download)，然后才能使用这些功能。
 
 ## <a name="open-an-existing-git-repository"></a>打开现有 Git 存储库
 
 1. 在“文件”菜单下，选择“打开文件夹...”
-2. 浏览到包含 Git 所跟踪文件的文件夹，然后单击“选择文件夹”。 可在此处选择本地存储库中的子文件夹。
+2. 浏览到包含 Git 所跟踪文件的文件夹，然后选择“选择文件夹”。 可在此处选择本地存储库中的子文件夹。
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新 Git 存储库
 

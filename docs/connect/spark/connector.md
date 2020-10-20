@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 47412f3781274fa242c03975295cdc5ba66b1669
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284805"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867232"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark 连接器：SQL Server 和 Azure SQL
 
@@ -25,7 +25,7 @@ ms.locfileid: "89284805"
 
 [Apache Spark](https://spark.apache.org/) 是用于大规模数据处理的统一分析引擎。
 
-可以从源构建连接器，或从 GitHub 的“发布”部分下载 jar。 有关连接器的最新信息，请参阅 [SQL Spark 连接器 GitHub 存储库](https://github.com/microsoft/sql-spark-connector)。
+你可以通过 Maven 坐标将连接器导入项目：`com.microsoft.azure:spark-mssql-connector:1.0.0`。 也可以从源构建连接器，或从 GitHub 的“发布”部分下载 jar。 有关连接器的最新信息，请参阅 [SQL Spark 连接器 GitHub 存储库](https://github.com/microsoft/sql-spark-connector)。
 
 ## <a name="supported-features"></a>支持的功能
 
@@ -54,9 +54,10 @@ ms.locfileid: "89284805"
 | 选项 | 默认 | 说明 |
 | --------- | ------------------ | ------------------------------------------ |
 | `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` 或 `NO_DUPLICATES`。 `NO_DUPLICATES` 在执行器重启方案中实现可靠插入 |
-| `dataPoolDataSource` | `none` | `none` 表示未设置值，连接器应写入 SQL Server 的单实例。 将此值设置为数据源名称以写入 SQL Server 大数据群集中的数据池表|
+| `dataPoolDataSource` | `none` | `none` 表示未设置值，连接器应写入 SQL Server 单实例。 将此值设置为数据源名称，以在大数据群集中写入数据池表|
 | `isolationLevel` | `READ_COMMITTED` | 指定隔离级别 |
 | `tableLock` | `false` | 实现带有 `TABLOCK` 选项的插入以提高写入性能 |
+| `schemaCheckEnabled` | `true` | 当设置为 false 时，禁用严格的数据帧和 SQL 表架构检查 |
 
 其他[大容量复制选项](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)可以设置为 `dataframe` 上的选项，并将在写入时传递到 `bulkcopy` API
 
@@ -227,3 +228,5 @@ jdbc_df = spark.read \
 ## <a name="next-steps"></a>后续步骤
 
 请访问 [SQL Spark 连接器 GitHub 存储库](https://github.com/microsoft/sql-spark-connector)。
+
+有关隔离级别的信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。

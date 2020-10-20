@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 69df287d23713b1465a44f46e68f190bf3e25b09
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728348"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081736"
 ---
 # <a name="example-application-sqlsrv-driver"></a>示例应用程序（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](..
 -   已在本地计算机上安装了已连接 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库的 SQL Server 2005 或 SQL Server 2008。  
 -   安装了 Web 浏览器。  
   
-## <a name="demonstrates"></a>演示  
+## <a name="adventureworks-example"></a>AdventureWorks 示例  
 AdventureWorks 产品评论示例应用程序演示以下内容：  
   
 -   如何使用 Windows 身份验证打开 SQL Server。  
@@ -52,8 +52,7 @@ AdventureWorks 产品评论示例应用程序演示以下内容：
 -   如何以流的形式发送数据。  
 -   如何检查是否有错误。  
   
-## <a name="example"></a>示例  
-AdventureWorks 产品评论示例应用程序为名称包含用户输入的字符串的产品返回数据库中的产品信息。 从返回的产品列表中，用户可以查看评论、查看图像、上载图像和为选定产品撰写评论。  
+此示例为名称包含用户输入的字符串的产品返回来自数据库的产品信息。 从返回的产品列表中，用户可以查看评论、查看图像、上载图像和为选定产品撰写评论。  
   
 将以下代码放在名为 adventureworks_demo.php 的文件中：  
   
@@ -492,7 +491,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="lob-example"></a>LOB 示例  
 photo.php 脚本返回指定的 **ProductID**的产品照片。 此脚本从 adventureworks_demo.php 脚本中调用。  
   
 将以下代码放在名为 photo.php 的文件中：  

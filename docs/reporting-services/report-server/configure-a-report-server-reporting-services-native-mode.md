@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3c23ea4581998fe462175cad1b0e12107d39b0e
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: cf028fa4de6457b5ddfe520bae1d2348c52362bf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545552"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935011"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>配置报表服务器（Reporting Services 本机模式）
   报表服务器可能需要进行其他配置后才能使用，具体取决于安装过程中所选的选项。 至少，报表服务器配置应包含以下内容：  
@@ -38,11 +38,11 @@ ms.locfileid: "84545552"
   
 ## <a name="to-minimally-configure-a-report-server-installation"></a>对报表服务器安装进行最小配置  
   
-1.  启动 Reporting Services 配置工具，然后连接到报表服务器实例。 有关说明，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1.  启动 Reporting Services 配置工具，然后连接到报表服务器实例。 有关说明，请参阅[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  单击 **“Web 服务 URL”** ，打开用于配置报表服务器 URL 的页。 有关如何定义 URL 的说明，请参阅[配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
+2.  单击 **“Web 服务 URL”** ，打开用于配置报表服务器 URL 的页。 有关如何定义 URL 的说明，请参阅[配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
-3.  单击 **“数据库”** 创建报表服务器数据库。 有关指导，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
+3.  单击 **“数据库”** 创建报表服务器数据库。 有关指导，请参阅[创建本机模式报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
 4.  返回到 **“Web 服务 URL”** 页，单击该 URL 以验证其是否有效。  
   
@@ -62,5 +62,5 @@ ms.locfileid: "84545552"
  [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [配置本机模式报表服务器以进行本地管理 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   

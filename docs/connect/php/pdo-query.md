@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f194c043ded9b8f663a6bcbfdb77ef408461468
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726784"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081846"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +62,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 PDO::exec 的行为；有关详细�
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
-## <a name="example"></a>示例  
+## <a name="query-example"></a>查询示例  
 此示例显示多个查询。  
   
 ```  
@@ -118,7 +118,7 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a>示例
+## <a name="sql_variant-example"></a>Sql_variant 示例
 此代码示例演示如何创建 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 类型的表并提取插入的数据。
 
 ```

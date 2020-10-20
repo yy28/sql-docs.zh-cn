@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 31756cbc2f0ede497ea34077f1bdd760412c716c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645531"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081836"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ PHP 7.2 中引入了新的 PDO 常量，以添加对[绑定 Unicode 和非 Unico
 ## <a name="remarks"></a>注解  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
-## <a name="example"></a>示例  
+## <a name="string-escape-example"></a>字符串转义示例  
   
 ```  
 <?php  
@@ -70,7 +70,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="pdo-quote-example"></a>PDO 引用示例  
 
 下面的脚本演示了一些示例，说明扩展字符串类型如何影响带有 PHP 7.2+ 的 PDO::quote()。
 

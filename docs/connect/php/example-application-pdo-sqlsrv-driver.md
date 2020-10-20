@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629165"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081746"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>示例应用程序（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](..
 -   已在本地计算机上安装了已连接 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库的 SQL Server 2005 或 SQL Server 2008。  
 -   安装了 Web 浏览器。  
   
-## <a name="demonstrates"></a>演示  
+## <a name="adventureworks-example"></a>AdventureWorks 示例  
 AdventureWorks 产品评论示例应用程序演示以下内容：  
   
 -   如何使用 Windows 身份验证打开 SQL Server。  
@@ -46,8 +46,7 @@ AdventureWorks 产品评论示例应用程序演示以下内容：
 -   如何检索数据。  
 -   如何检查是否有错误。  
   
-## <a name="example"></a>示例  
-AdventureWorks 产品评论示例应用程序为名称包含用户输入的字符串的产品返回数据库中的产品信息。 从返回的产品列表中，用户可以查看评论、查看图像、上载图像和为选定产品撰写评论。  
+此示例为名称包含用户输入的字符串的产品返回来自数据库的产品信息。 从返回的产品列表中，用户可以查看评论、查看图像、上载图像和为选定产品撰写评论。  
   
 将以下代码放在名为 adventureworks_demo_pdo.php 的文件中：  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="lob-example"></a>LOB 示例  
 photo.php 脚本返回指定的 **ProductID**的产品照片。 此脚本从 adventureworks_demo.php 脚本中调用。  
   
 将以下代码放在名为 photo_pdo.php 的文件中：  

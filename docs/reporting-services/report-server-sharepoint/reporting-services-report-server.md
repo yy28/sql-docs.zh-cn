@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c5d469cdf48a6c03a332a370e4c2b173ae7d18d1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934246"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934685"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>比较本机和 SharePoint Reporting Services 报表服务器
 
@@ -40,7 +40,7 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
   
  Reporting Services 报表服务器支持两种报表服务器实例部署模式：  
   
--   **本机模式**：包括带有 SharePoint Web 部件的本机模式，其中报表服务器作为应用程序服务器运行，并完全通过 Reporting Services 组件提供所有处理和管理功能。 使用 Reporting Services 配置管理器和 SQL Server Management Studio 对本机模式报表服务器进行配置。  
+-   **本机模式**：包括带有 SharePoint Web 部件的本机模式，其中报表服务器作为应用程序服务器运行，并完全通过 Reporting Services 组件提供所有处理和管理功能。 使用报表服务器配置管理器和 SQL Server Management Studio 对本机模式报表服务器进行配置。  
   
 -   **SharePoint 模式**：在此情况下，报表服务器作为 SharePoint 服务器场的一部分安装。  通过使用 PowerShell 命令或 SharePoint 内容管理页来部署和配置 SharePoint 模式。  
   
@@ -137,8 +137,8 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
   
 |任务|链接|  
 |----------|----------|  
-|查看硬件和软件要求。|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)列中的一个值匹配。|  
-|在 SharePoint 模式中安装 Reporting Services。|[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
+|查看硬件和软件要求。|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130))列中的一个值匹配。|  
+|在 SharePoint 模式中安装 Reporting Services。|[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |说明如何为报表服务器 Web 服务和 Windows 服务优化内存设置。|[为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |说明为远程管理配置报表服务器的建议步骤。|[配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |提供有关在本机报表服务器实例上配置 **“我的报表”** 的可用性的说明。|[启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

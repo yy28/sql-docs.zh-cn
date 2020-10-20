@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3d3bf132fb869ac2273a1db76dd34c4f24970ad
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: c082a4dc31ffcbed20a4b5c855346dd8d52f2056
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569877"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935101"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
 
@@ -53,7 +53,7 @@ ms.locfileid: "89569877"
   
 ##  <a name="troubleshoot-problems-with-sharepoint-mode-installations"></a><a name="bkmk_tshoot_sharepoint"></a>排除 SharePoint 模式安装问题  
   
--   [Reporting Services 配置管理器不启动](#bkmk_configmanager_notstart)  
+-   [报表服务器配置管理器未启动](#bkmk_configmanager_notstart)  
   
 -   [在 SharePoint 模式下安装 SQL Server 2016 SSRS 后，在 SharePoint 管理中心看不到 SQL Server Reporting Services 服务](#bkmk_no_ssrs_service)  
   
@@ -69,13 +69,13 @@ ms.locfileid: "89569877"
   
 -   [您看到一条指示 PREPAREIMAGE 不支持 RS_SHP 的错误消息](#bkmk_RS_SHP_notsupported)  
 
-### <a name="reporting-services-configuration-manager-does-not-start"></a><a name="bkmk_configmanager_notstart"></a> Reporting Services 配置管理器无法启动
+### <a name="report-server-configuration-manager-does-not-start"></a><a name="bkmk_configmanager_notstart"></a>报表服务器配置管理器未启动
 
  **说明：** 此问题是 SQL Server 2012 和更高版本中的设计问题。 Reporting Services 是为 SharePoint 服务体系结构而设计的。 在 SharePoint 模式下配置和管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不再需要配置管理器。  
   
  **解决方法：** 使用 SharePoint 管理中心在 SharePoint 模式中配置报表服务器。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-do-not-see-the-sql-server-reporting-services-service-in-sharepoint-central-administration-after-installing-sql-server-2016-ssrs-in-sharepoint-mode"></a><a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安装 SQL Server 2016 SSRS 后，在 SharePoint 管理中心看不到 SQL Server Reporting Services 服务  
  **说明：** 如果在 SharePoint 模式中成功安装 SQL Server 2016 Reporting Services 和适用于 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 加载项后，在以下两个菜单中看不到“SQL Server Reporting Services”，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务尚未注册：  
@@ -104,7 +104,7 @@ ms.locfileid: "89569877"
   
 2.  请验证 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务状态在以下页面上是否显示为“已启动”：SharePoint 2013/2016 管理中心 ->“应用程序管理”->“管理服务器上的服务”   
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="reporting-services-powershell-cmdlets-are-not-available-and-commands-are-not-recognized"></a><a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet 不可用，并且命令无法识别  
  **说明：** 尝试运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 时，会看到类似如下的错误消息：  
@@ -125,7 +125,7 @@ ms.locfileid: "89569877"
   
 -   [在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-see-an-error-message-indicating-the-url-is-not-configured"></a><a name="bkmk_URL_not_configured"></a> 您将会看到一则错误消息，指示 URL 未配置  
  **说明**：会看到类似如下错误消息：  
@@ -148,7 +148,7 @@ ms.locfileid: "89569877"
   
 -   管理服务应用程序。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="setup-fails-on-a-computer-with-sharepoint-installed-but-it-is-not-configured"></a><a name="bkmk_sharepoint_not_confiugred"></a> 在安装有但未配置 SharePoint 的计算机上进行安装时安装程序将失败  
  **说明：** 如果选择在安装有但未配置 SharePoint 的计算机上安装 Reporting Services SharePoint 模式，则将看到一条类似于以下内容的消息，而且安装程序将停止运行：  
@@ -159,20 +159,20 @@ ms.locfileid: "89569877"
   
  **更多信息：** 将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到现有 SharePoint 安装中时，安装程序会尝试安装并启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务。 如果未配置 SharePoint，服务安装将失败，从而导致安装程序失败。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="sharepoint-central-administration-page-is-blank"></a><a name="bkmk_central_admin_blank"></a> SharePoint 管理中心页空白  
  **说明：** 你能够成功地安装 SharePoint 2013/2016，而不出现任何安装错误。 但是，当您浏览到管理中心时，您仅看到空白页：  
   
  **解决方法：** 此问题不是特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，但与整体 SharePoint 安装中的权限配置有关。 下面是一些建议：  
   
--   查看有关开发环境的 SharePoint 文章。 [为 SharePoint 设置常规开发环境](https://msdn.microsoft.com/library/ee554869)  
+-   查看有关开发环境的 SharePoint 文章。 [为 SharePoint 设置常规开发环境](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)  
   
 -   查阅论坛帖子： [在 Windows 7 上进行安装后管理中心返回空白页](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   用于 SharePoint 2013/2016 管理中心服务等 SharePoint 服务的服务帐户在本地操作系统中应具有管理权限。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-see-an-error-message-when-you-try-to-create-a-new-report-builder-report"></a><a name="bkmk_reportbuilder_newreport_error"></a> 当您尝试创建新的报表生成器报表时，您会看到一条错误消息  
  **说明：** 当您尝试在文档库内创建报表生成器报表时您会看到一条类似于以下内容的错误消息：  
@@ -181,7 +181,7 @@ ms.locfileid: "89569877"
   
  **解决方法：** 确认您有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序且已正确对其进行配置。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-see-an-error-message-that-rs_shp-is-not-supported-with-prepareimage"></a><a name="bkmk_RS_SHP_notsupported"></a> 您看到一条指示 PREPAREIMAGE 不支持 RS_SHP 的错误消息  
  **说明：** 尝试为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 运行 PREPAREIMAGE 时，会看到类似如下的错误消息：  
@@ -190,7 +190,7 @@ ms.locfileid: "89569877"
   
  **解决方法：** 目前没有解决方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式支持 SYSPREP。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   
@@ -245,7 +245,7 @@ ms.locfileid: "89569877"
  修复 64 位实例或手动重新添加注册表项之后，可以使用性能监视器来配置要监视的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能对象。  
   
 ###  <a name="reportserverexternalurl-and-passthroughcookies-configuration-properties-are-not-configured-after-an-upgrade-from-sql-server-2005"></a><a name="ConfigPropsMissing"></a> 从 SQL Server 2005 升级后，未配置 ReportServerExternalURL 和 PassThroughCookies 配置属性  
- 当你从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]时，升级过程不会配置 **ReportServerExternalURL** 和 **PassThroughCookies** 配置属性。 **ReportServerExternalURL** 是一个可选属性，并且仅在以下情况下才应对其进行设置：如果你使用的是 SharePoint 2.0 Web 部件，并且希望用户能够检索报表并在新的浏览器窗口中打开。 有关 ReportServerExternalURL 的详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)****。 仅当使用自定义身份验证方法时，才需要**PassThroughCookies** 。 有关 PassThroughCookies的详细信息，请参阅 [配置 Web 门户以便传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)****。  
+ 当你从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]时，升级过程不会配置 **ReportServerExternalURL** 和 **PassThroughCookies** 配置属性。 **ReportServerExternalURL** 是一个可选属性，并且仅在以下情况下才应对其进行设置：如果你使用的是 SharePoint 2.0 Web 部件，并且希望用户能够检索报表并在新的浏览器窗口中打开。 有关 ReportServerExternalURL 的详细信息，请参阅[配置文件中的 URL（报表服务器配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 仅当使用自定义身份验证方法时，才需要**PassThroughCookies** 。 有关 PassThroughCookies的详细信息，请参阅 [配置 Web 门户以便传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)****。  
   
 > [!NOTE]  
 >  使用自定义身份验证时，建议您迁移安装而不是执行升级。 有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的详细信息，请参阅[迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  
@@ -274,8 +274,7 @@ ms.locfileid: "89569877"
   
 -   TechNet Wiki：[排除 SharePoint 2010 集成模式下的 SQL Server Reporting Services (SSRS) 问题](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Microsoft 问答：SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
+-   [Microsoft 问答：SQL Server Reporting Services](/answers/topics/sql-server-reporting-services.html)  
   
 -   获得反馈或提出更多问题？ 请访问 [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)。  
-  
   

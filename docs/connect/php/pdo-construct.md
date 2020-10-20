@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 9a815f72ef466442c601d0720243f9476a0cfc95
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646218"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081666"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +54,7 @@ PDOException
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
-## <a name="example"></a>示例  
+## <a name="example-with-database"></a>使用数据库的示例  
 此示例显示如何使用 Windows 身份验证连接到服务器，以及如何指定数据库。  
   
 ```  
@@ -70,7 +70,7 @@ PDOException
 ?>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="example-without-database"></a>不使用数据库的示例  
 此示例显示如何连接到服务器，从而指定更高版本的数据库。  
   
 ```  

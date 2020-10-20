@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b9f2d2db41914062d791d675577bc8f8664e903
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913631"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935241"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  
@@ -121,10 +121,10 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [存储加密的报表服务器数据（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [报表服务器命令提示实用工具 (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  

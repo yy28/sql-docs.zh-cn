@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2b27341f5181b8774f56d0d648cfdfe40b1629a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5480e7b56f1ebaae56d30be0b0027a989d6ff816
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418643"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933487"
 ---
 # <a name="files-only-installation-reporting-services"></a>“仅文件”安装 (Reporting Services)
   “仅文件安装”** 指的是一种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装模式，在该安装模式中，安装程序为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程序文件创建文件夹结构、将文件复制到磁盘、在本地计算机上注册报表服务器服务、配置服务帐户、向服务帐户授予文件权限以及注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序。  
   
  “仅文件”安装包括以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能：报表服务器服务（它承载报表服务器 Web 服务和后台处理应用程序）、报表生成器、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令行实用工具（rsconfig.exe、rskeymgmt.exe 和 rs.exe）。 它不适用于共享功能，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。必须将此类功能指定为独立项，才能安装它们。  
   
- 与其他安装模式不同，“仅文件”模式下安装的报表服务器在安装程序完成后不能正常工作。 要使用 [Reporting Services 配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)来使报表服务器联机，需要进行其他配置。  
+ 与其他安装模式不同，“仅文件”模式下安装的报表服务器在安装程序完成后不能正常工作。 通过使用[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)来使报表服务器联机，需要进行其他配置。  
   
 ## <a name="when-to-select-files-only-installation-mode"></a>何时选择“仅文件”安装模式  
  在以下情况下必须执行“仅文件”安装：  
@@ -57,9 +57,9 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
   
 ## <a name="see-also"></a>另请参阅  
  [验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
- [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器服务帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 

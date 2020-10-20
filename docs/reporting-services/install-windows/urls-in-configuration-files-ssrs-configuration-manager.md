@@ -1,5 +1,5 @@
 ---
-description: 配置文件中的 URL（SSRS 配置管理器）
+description: 配置文件中的 URL（报表服务器配置管理器）
 title: 配置文件中的 URL（配置管理器）| Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3382a5d51a46d1fb2fdbe33f94ca56e398bfd3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17eaa59595b8a35fe1d9aa7fa3c69e6d0b39860f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472659"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934506"
 ---
-# <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>配置文件中的 URL（SSRS 配置管理器）
+# <a name="urls-in-configuration-files--report-server-configuration-manager"></a>配置文件中的 URL（报表服务器配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 RSReportServer.config 文件中存储应用程序设置。 在此文件内，有一些既用于 URL 又用于 URL 预留的配置设置。 这些配置设置的用途和修改规则大不相同。 如果您习惯于通过修改配置文件来优化部署，则本主题可帮助您了解每项 URL 设置的用法。  
   
 ## <a name="url-settings-in-rsreportserverconfig-file"></a>RSReportServer.config 文件中的 URL 设置  
@@ -28,9 +28,9 @@ ms.locfileid: "88472659"
   
 -   要查看 URLReservations 部分中每个元素的说明，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  。  
   
--   若要深入了解仅 UrlString 元素的语法信息，请参阅 [URL 预留语法 （SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  。  
+-   若要深入了解仅 UrlString 元素的语法信息，请参阅 [URL 预留语法（报表服务器配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。  
   
--   有关如何配置用于应用程序访问的 URL 的说明，请参阅 [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
+-   有关如何配置用于应用程序访问的 URL 的说明，请参阅[配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
 #### <a name="urls-for-report-access"></a>用于进行报表访问的 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括可用于发送报表链接或附件的报表服务器电子邮件传递扩展插件。 传递报表时将构造报表链接。 报表服务器电子邮件传递扩展插件使用配置文件中的 **UrlRoot** 设置来创建链接。 **UrlRoot** 还用于解析通过无人参与的报表处理生成的呈现报表中的链接。  
@@ -57,5 +57,5 @@ ms.locfileid: "88472659"
 |**ReportServerExternalUrl**|可选。 除非您自己添加此元素，否则此元素不包含在 RSReportServer.config 文件中。<br /><br /> 仅当您使用的是 SharePoint 2.0 Web 部件且希望用户能够检索报表并在新的浏览器窗口中打开该报表时，才应设置此元素。<br /><br /> 将 \<**ReportServerExternalUrl**> 添加在 \<**ReportServerUrl**> 元素下方，然后将其设置为在单独的浏览器窗口中被访问时解析为报表服务器实例的完全限定报表服务器名称。 请勿删除 \<**ReportServerUrl**>。<br /><br /> 下面的示例说明了相应的语法：<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|该值由 SharePoint 2.0 Web 部件使用。<br /><br /> 在早期版本中，建议您设置该值以在面向 Internet 的报表服务器上部署报表生成器。 这是未经测试的部署方案。 如果您在过去使用此设置支持对报表生成器的 Internet 访问，那么现在您应考虑使用替代策略。|  
   
 ## <a name="see-also"></a>另请参阅  
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+ [配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

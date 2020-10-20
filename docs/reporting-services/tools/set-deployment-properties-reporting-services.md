@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891647"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88512333"
  使用配置管理器可以在项目配置中创建和管理项目属性集。 配置管理器是一项受 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]支持的功能， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 正是基于此功能。  
   
 > [!NOTE]  
-> 请不要将此功能与 Reporting Services 配置管理器相混淆，后者用于在安装完成后配置 Reporting Services。 有关详细信息，请参阅[配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
+> 请不要将此功能与报表服务器配置管理器相混淆，后者用于在安装完成后配置 Reporting Services。 有关详细信息，请参阅[配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
 >
 > [!NOTE]  
 > 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，从报表服务器项目或解决方案发布报表的操作称为“部署报表”。  

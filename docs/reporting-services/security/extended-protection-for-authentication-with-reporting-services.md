@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373464"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935480"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
 
@@ -154,7 +154,7 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
 |ComputerNamePhysicalDnsHostname|本地计算机的 DNS 主机名。 如果本地计算机为群集中的节点，则将使用本地计算机的 DNS 主机名，而不使用群集虚拟服务器的名称。|  
 |ComputerNamePhysicalNetBIOS|本地计算机的 NetBIOS 名称。 如果本地计算机为群集中的节点，则将使用本地计算机的 NetBIOS 主机名，而不使用群集虚拟服务器的名称。|  
   
-有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)和[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
+有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 和[关于 URL 预留和注册（报表服务器配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
   
 ## <a name="next-steps"></a>后续步骤
 

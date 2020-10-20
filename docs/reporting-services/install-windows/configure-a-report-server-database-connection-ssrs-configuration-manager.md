@@ -9,20 +9,20 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531165"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935276"
 ---
-# <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
+# <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>配置报表服务器数据库连接（报表服务器配置管理器）
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-每个报表服务器实例都需要连接到存储由服务器管理的报表、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库并配置连接的分步说明，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。
+每个报表服务器实例都需要连接到存储由服务器管理的报表、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库并配置连接的分步说明，请参阅[创建本机模式报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。
 
 如果出现下列情况，则必须配置报表服务器数据库连接：  
 
@@ -30,13 +30,13 @@ ms.locfileid: "80531165"
 
 - 配置报表服务器以使用不同的报表服务器数据库。  
 
-- 更改数据库连接所使用的用户帐户或密码。 当帐户信息存储在 RSReportServer.config 文件中时，您只需要更新数据库连接。 如果使用服务帐户进行连接（该帐户使用 Windows 集成安全性作为凭据类型），则不会存储密码，从而无需更新连接信息。 有关更改帐户的详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+- 更改数据库连接所使用的用户帐户或密码。 当帐户信息存储在 RSReportServer.config 文件中时，您只需要更新数据库连接。 如果使用服务帐户进行连接（该帐户使用 Windows 集成安全性作为凭据类型），则不会存储密码，从而无需更新连接信息。 有关更改帐户的详细信息，请参阅[配置报表服务器服务帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
 
-- 配置报表服务器扩展部署。 配置扩展部署时，您需要创建多个到报表服务器数据库的连接。 有关如何执行此多步操作的详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
+- 配置报表服务器扩展部署。 配置扩展部署时，您需要创建多个到报表服务器数据库的连接。 有关如何执行此多步操作的详细信息，请参阅[配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
 
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Reporting Services 如何连接到数据库引擎
 
-报表服务器根据凭据和连接信息以及对使用该数据库的报表服务器实例有效的加密密钥来访问报表服务器数据库。 拥有有效的加密密钥对于存储和检索敏感数据是必要的。 首次配置数据库时，会自动创建加密密钥。 创建密钥之后，如果更改报表服务器服务标识，则必须更新这些密钥。 有关使用加密密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
+报表服务器根据凭据和连接信息以及对使用该数据库的报表服务器实例有效的加密密钥来访问报表服务器数据库。 拥有有效的加密密钥对于存储和检索敏感数据是必要的。 首次配置数据库时，会自动创建加密密钥。 创建密钥之后，如果更改报表服务器服务标识，则必须更新这些密钥。 有关使用加密密钥的详细信息，请参阅[配置和管理加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
 
 报表服务器数据库为内部组件，只有报表服务器可以访问。 为报表服务器数据库指定的凭据和连接信息专门由报表服务器使用。 请求报表的用户不需要拥有报表服务器数据库的数据库权限或数据库登录名。  
 
@@ -52,7 +52,7 @@ ms.locfileid: "80531165"
 
 - 承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。  
 
-- 报表服务器数据库的名称。 首次创建连接时，可以创建新的报表服务器数据库，或选择现有数据库。 有关详细信息，请参阅 [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
+- 报表服务器数据库的名称。 首次创建连接时，可以创建新的报表服务器数据库，或选择现有数据库。 有关详细信息，请参阅[创建报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
 
 - 凭据类型。 可以使用服务帐户、Windows 域帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。  
 
@@ -64,7 +64,7 @@ ms.locfileid: "80531165"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
 
-并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即，使用服务帐户来建立连接），则 \<LogonUser>、\<LogonDomain> 和 \<LogonCred> 将为空，如下所示    ：  
+并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户建立连接），则 \<**LogonUser**>、\<**LogonDomain**> 和 \<**LogonCred**> 将为空，如下所示：  
 
 ```
 <Dsn></Dsn>  
@@ -102,7 +102,7 @@ ms.locfileid: "80531165"
 
 可以使用 Windows 集成安全性通过报表服务器服务帐户进行连接。 已为此帐户授予了登录报表服务器数据库的权限。 如果以默认配置安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，这将是安装程序选择的默认凭据类型。  
 
-此服务帐户为可信帐户，此帐户提供一种低维护方法来管理报表服务器数据库连接。 由于此服务帐户使用 Windows 集成安全性来建立连接，因此无需存储凭据。 但是，如果以后要更改服务帐户密码或标识（例如从内置帐户切换到域帐户），请确保使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具进行更改。 该工具会将数据库权限自动更新为使用修改后的帐户信息。 有关详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+此服务帐户为可信帐户，此帐户提供一种低维护方法来管理报表服务器数据库连接。 由于此服务帐户使用 Windows 集成安全性来建立连接，因此无需存储凭据。 但是，如果以后要更改服务帐户密码或标识（例如从内置帐户切换到域帐户），请确保使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具进行更改。 该工具会将数据库权限自动更新为使用修改后的帐户信息。 有关详细信息，请参阅[配置报表服务器服务帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
 
 将数据库连接配置为使用服务帐户时，如果报表服务器数据库位于远程计算机上，则帐户必须拥有网络权限。 如果报表服务器数据库位于不同的域中，并且位于防火墙之后，或者您使用的是工作组安全性而非域安全性，则不要使用服务帐户。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户。  
 
@@ -134,7 +134,7 @@ ms.locfileid: "80531165"
 
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>将多个报表服务器配置为使用同一个报表服务器数据库
 
-可以将多个报表服务器配置为使用同一个报表服务器数据库。 此部署配置称为扩展部署。 如果要在服务器群集中运行多个报表服务器，则此配置为必备条件。 但是，如果要将服务应用程序分段，或者要测试新的报表服务器实例的安装和设置以将其与现有报表服务器安装进行比较，则也以可使用此配置。 有关详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
+可以将多个报表服务器配置为使用同一个报表服务器数据库。 此部署配置称为扩展部署。 如果要在服务器群集中运行多个报表服务器，则此配置为必备条件。 但是，如果要将服务应用程序分段，或者要测试新的报表服务器实例的安装和设置以将其与现有报表服务器安装进行比较，则也以可使用此配置。 有关详细信息，请参阅[配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 

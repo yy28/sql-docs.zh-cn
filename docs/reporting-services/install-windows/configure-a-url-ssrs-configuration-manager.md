@@ -1,5 +1,5 @@
 ---
-description: 配置 URL（SSRS 配置管理器）
+description: 配置 URL（报表服务器配置管理器）
 title: 配置 URL (Configuration Manager) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427089"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934781"
 ---
-# <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
+# <a name="configure-a-url--report-server-configuration-manager"></a>配置 URL（报表服务器配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL  。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
   
  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来配置 URL。 URL 的所有部分均在此工具中定义。 与早期版本不同，Internet Information Services (IIS) 网站不再提供对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更高版本中的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 应用程序的访问。  
@@ -32,7 +32,7 @@ ms.locfileid: "88427089"
   
 -   设置高级 URL 属性以定义其他 URL。  
   
- 要详细了解如何存储和维护 URL 或详细了解互操作性问题，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)和[并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
+ 要详细了解如何存储和维护 URL 或详细了解互操作性问题，请参阅[关于 URL 预留和注册（报表服务器配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)和[并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
   
 ## <a name="prerequisites"></a>先决条件  
  在创建或修改 URL 之前，请注意以下几点：  
@@ -45,7 +45,7 @@ ms.locfileid: "88427089"
   
 -   选择一个报表活动较少的时间。 每次 URL 预留发生更改时，都可能会回收报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的应用程序域。  
   
--   有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中 URL 构造和用法的概述，请参阅 [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)创建 URL。  
+-   有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 URL 构造和用法的概述，请参阅[配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>为报表服务器 Web 服务配置 URL  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88427089"
   
 9. 单击 **“应用”** 创建 URL。  
   
-10. 通过单击页面 **URL** 部分中的链接来测试该 URL。 请注意，必须先创建并配置报表服务器数据库，然后才能测试 URL。 有关指导，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
+10. 通过单击页面 **URL** 部分中的链接来测试该 URL。 请注意，必须先创建并配置报表服务器数据库，然后才能测试 URL。 有关指导，请参阅[创建本机模式报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
 > [!NOTE]
 >  如果你已有 TLS 绑定和 URL 预留，且要更改 TLS 绑定（例如使用不同的证书或主机头），建议按顺序完成以下步骤：  
@@ -161,7 +161,7 @@ ms.locfileid: "88427089"
 6.  通过打开浏览器窗口并输入 URL 来测试 URL。  
   
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>同一台计算机上多个报表服务器实例的 URL  
- 如果为多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例保留 URL，则应遵循下列命名约定以避免命名冲突。 有关详细信息，请参阅[多实例报表服务器部署的 URL 预留（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)。  
+ 如果为多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例保留 URL，则应遵循下列命名约定以避免命名冲突。 有关详细信息，请参阅[多实例报表服务器部署的 URL 预留（报表服务器配置管理器）](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)。  
   
 ##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> URL 配置示例  
  下面列出了报表服务器 URL 的某些可能样式示例：  
@@ -192,6 +192,6 @@ ms.locfileid: "88427089"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>另请参阅  
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+## <a name="see-also"></a>另请参阅
+
+ [配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

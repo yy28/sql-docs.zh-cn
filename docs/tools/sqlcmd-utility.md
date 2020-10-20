@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076762"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005947"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
@@ -65,8 +65,8 @@ ms.locfileid: "90076762"
 生成号：15.0.2000.5<br>
 发行日期：2020 年 9 月 11 日
 
-新版本的 SQLCMD 支持 Azure AD 身份验证，包括对 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
-新 BCP 支持 Azure AD 身份验证，包括对 SQL 数据库和 SQL 数据仓库的多重身份验证 (MFA) 支持。
+新版本的 SQLCMD 支持 Azure AD 身份验证，包括对 SQL 数据库、Azure Synapse Analytics 和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
+新 BCP 支持 Azure AD 身份验证，包括对 SQL 数据库和 Azure Synapse Analytics 的多重身份验证 (MFA) 支持。
 
 **系统要求** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008 - 2019。
 
@@ -102,6 +102,7 @@ sqlcmd
    -c batch_terminator
    -C (trust the server certificate)
    -d db_name
+   -D
    -e (echo input)
    -E (use trusted connection)
    -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
@@ -148,17 +149,23 @@ sqlcmd
 
 **登录相关选项**
 
-**-A**
-
+**-A**  
 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 此连接只适用于支持 DAC 的服务器计算机。 如果 DAC 不可用，sqlcmd 会生成错误消息并退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 不支持同时使用 -A 选项和 -G 选项。 使用 -A 连接到 SQL 数据库时，你必须是 SQL Server 管理员。 DAC 不适用于 Azure Active Directory 管理员。
 
-**-C** 该开关供客户端用于将其配置为隐式信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
+**-C**  
+该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
 
 -d db_name  
 在你启动 sqlcmd 时，此选项发出一个 `USE` db_name 语句。 此选项设置 **sqlcmd** 脚本变量 SQLCMDDBNAME。 此参数指定初始数据库。 默认为您的登录名的默认数据库属性。 如果数据库不存在，则生成错误消息且 **sqlcmd** 退出。  
 
+**-D**  
+将提供给 -S 的服务器名称解释为 DSN 而不是主机名。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。
+
+> [!NOTE]
+> -D 选项仅适用于 Linux 和 MacOS 客户端。 在 Windows 客户端上，它以前引用的选项现在已过时，该选项已被删除并被忽略。
+
 -l login_timeout  
-指定在你尝试连接到服务器时 **sqlcmd** 登录 ODBC 驱动程序的超时时间（以秒为单位）。 此选项设置 **sqlcmd** 脚本变量 SQLCMDLOGINTIMEOUT。 登录到 **sqlcmd** 的默认超时时间为 8 秒。 当使用 **-G** 选项连接到 SQL 数据库或 SQL 数据仓库并使用 Azure Active Directory 进行身份验证时，建议超时值至少为 30 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。 该值为 0 时，则允许无限制等待。
+指定在你尝试连接到服务器时 **sqlcmd** 登录 ODBC 驱动程序的超时时间（以秒为单位）。 此选项设置 **sqlcmd** 脚本变量 SQLCMDLOGINTIMEOUT。 登录到 **sqlcmd** 的默认超时时间为 8 秒。 当使用 -G 选项连接到 SQL 数据库或 Azure Synapse Analytics，并使用 Azure Active Directory 进行身份验证时，建议超时值至少为 30 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。 该值为 0 时，则允许无限制等待。
 
 **-E**  
 使用信任连接而不是用户名和密码登录 SQL Server。 默认情况下，如果未指定 **-E** ， **sqlcmd** 将使用信任连接选项。  
@@ -169,7 +176,7 @@ sqlcmd
 将列加密设置设为 `Enabled`。 有关详细信息，请参阅 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)。 仅支持存储在 Windows 证书存储中的主密钥。 -g 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。
 
 **-G**  
-当连接到 SQL 数据库或 SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 **sqlcmd** 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](/azure/azure-sql/database/authentication-aad-overview)。 不支持同时使用 -A 选项和 -G 选项。
+当连接到 SQL 数据库或 Azure Synapse Analytics 时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 **sqlcmd** 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)。 不支持同时使用 -A 选项和 -G 选项。
 
 > [!IMPORTANT]
 > `-G` 选项仅适用于 Azure SQL 数据库和 Azure 数据仓库。
@@ -209,7 +216,7 @@ sqlcmd
 
 - **Azure Active Directory 交互式身份验证**
 
-    使用面向 Azure SQL 数据库和 SQL 数据仓库的 Azure AD 交互式身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅 [Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
+    使用面向 Azure SQL 数据库和 Azure Synapse Analytics 的 Azure AD 交互式身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅 [Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
 
    Azure AD 交互式身份验证需要 sqlcmd [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 或更高版本，以及 [ODBC 版本 17.2 或更高版本](https://aka.ms/downloadmsodbcsql)。  
 

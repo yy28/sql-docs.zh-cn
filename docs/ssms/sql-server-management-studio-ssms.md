@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 91fc06c59f9e2be53409d67d0c00de1fe187e611
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480422"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035970"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什么是 SQL Server Management Studio (SSMS)？
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用于管理任何 SQL 基础结构的集成环境。 使用 SSMS，可以访问、配置、管理和开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL 数据库和 SQL 数据仓库的所有组件。 SSMS 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的访问权限。
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用于管理任何 SQL 基础结构的集成环境。 使用 SSMS 可以访问、配置、管理和开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL 数据库和 Azure Synapse Analytics 的所有组件。 SSMS 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的访问权限。
 
 - [**下载 SQL Server Management Studio (SSMS)** ](download-sql-server-management-studio-ssms.md)
 - [**下载 SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
@@ -43,7 +43,7 @@ ms.locfileid: "89480422"
 |如何使用“模板资源管理器”生成和管理用于加快查询和脚本开发速度的样板文本文件  。|[模板资源管理器](../ssms/template/template-explorer.md)|  
 |如何使用不推荐使用的“解决方案资源管理器”  生成用于管理诸如脚本和查询等管理项的项目。|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|  
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中包含的可视化设计工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>适用于商业智能的 SQL Server Management Studio
 
@@ -58,7 +58,7 @@ ms.locfileid: "89480422"
 
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目，可在其中开发并保存使用多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 和 XML for Analysis (XMLA) 编写的脚本。 可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 实例中执行管理任务或重新创建对象（如数据库和多维数据集）。 例如，可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目中开发一个 XMLA 脚本，以直接在现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 实例中创建新的对象。 可以将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目保存为解决方案的一部分，以及与源代码管理集成在一起。
   
-有关如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [使用 SQL Server Management Studio 进行开发和实现](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)
+有关如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [使用 SQL Server Management Studio 进行开发和实现](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理 Integration Services 解决方案
 
@@ -90,7 +90,7 @@ ms.locfileid: "89480422"
 
 - 从 SSMS 17.0 开始，SQL 工具团队采用 [Microsoft 新式生命周期策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 - 阅读原版[新式生命周期策略公告](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)。 有关详细信息，请参阅[新式策略常见问题解答](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)。
-- 若要了解诊断数据收集和功能使用情况，请参阅 [SQL Server 隐私补充](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)。
+- 若要了解诊断数据收集和功能使用情况，请参阅 [SQL Server 隐私补充](../sql-server/sql-server-privacy.md)。
 
 ## <a name="cross-platform-tool"></a>跨平台工具
 
@@ -101,8 +101,8 @@ ms.locfileid: "89480422"
 ## <a name="next-steps"></a>后续步骤
 
 - [安装非英语版的 SSMS](install-other-languages.md)
-- [连接到 SQL Server 实例并进行查询](tutorials/connect-query-sql-server.md)
-- [编写 Transact-SQL 语句](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [连接到 SQL Server 实例并进行查询](./quickstarts/connect-query-sql-server.md)
+- [编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

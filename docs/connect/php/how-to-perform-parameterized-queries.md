@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b146a03031f71b9385d5a51d161b822bd4ed832f
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392805"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081796"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：执行参数化查询
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86392805"
 > [!NOTE]  
 > 参数使用 **sqlsrv_prepare**。 这意味着，如果使用 **sqlsrv_prepare** 准备参数化查询并更新参数数组中的值，将在下一次执行查询时使用更新的值。 有关更多详细信息，请参阅本主题中的下一个示例。  
   
-## <a name="example"></a>示例  
+## <a name="query-example"></a>查询示例  
 以下示例更新 AdventureWorks 数据库的 *Production.ProductInventory* 表中的指定产品 ID 的数量。 数量和产品 ID 是 UPDATE 查询中的参数。  
   
 然后，此示例查询数据库来验证数量是否已正确更新。 产品 ID 是 SELECT 查询中的参数。  
@@ -113,7 +113,7 @@ sqlsrv_close( $conn);
   
 上一个示例使用 **sqlsrv_query** 函数来执行查询。 本功能适合用于执行一次性查询，因为它可进行语句准备和执行。 sqlsrv_prepare/sqlsrv_execute 的组合最适合于使用不同的参数值重复执行查询 。 若要查看使用不同的参数值重复执行查询的示例，请参阅下一个示例。  
   
-## <a name="example"></a>示例  
+## <a name="prepare-example"></a>Prepare 示例  
 以下示例演示使用 **sqlsrv_prepare** 函数时隐式绑定变量。 此示例将多个销售订单插入到 *Sales.SalesOrderDetail* 表中。 当调用 sqlsrv_prepare 时，$params 数组绑定到语句 $stmt 。 在每次执行将新的销售订单插入到表中的查询时，将使用对应于销售订单详细信息的新值更新 *$params* 数组。 后续查询执行使用新的参数值。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2aa39f932c0fed1a64155037f32cfc207bfede4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3f8b6fb8aa45357318c398773708ecd2c66dba30
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458989"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935073"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>针对 MDX 的 Analysis Services 连接类型 (SSRS)
   若要在报表中包括来自 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集的数据，你必须具有一个基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据扩展插件。 可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中检索有关维度、层次结构、级别、关键绩效指标 (KPI)、度量值和属性的元数据，以用作报表数据。  
@@ -46,7 +46,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   提示用户输入凭据。 此选项仅支持 Windows 集成安全性。  
   
--   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
+-   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
   
  有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
@@ -78,7 +78,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="remarks"></a><a name="Remarks"></a> 注释  
- Analysis Services 数据扩展插件基于 XMLA (XML for Analysis) 协议。 通过 XMLA 协议将来自多维数据集的结果集作为平展行集进行检索。 不支持不规则层次结构。 有关详细信息，请参阅 [不规则层次结构](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies)。  
+ Analysis Services 数据扩展插件基于 XMLA (XML for Analysis) 协议。 通过 XMLA 协议将来自多维数据集的结果集作为平展行集进行检索。 不支持不规则层次结构。 有关详细信息，请参阅 [不规则层次结构](/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies)。  
   
  还可以从 OLE DB 数据源类型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中检索数据。 有关详细信息，请参阅 [OLE DB 连接类型 (SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)。  
   
@@ -111,5 +111,4 @@ data source=<server name>;initial catalog=<database name>
  [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

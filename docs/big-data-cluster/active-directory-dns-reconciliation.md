@@ -1,19 +1,19 @@
 ---
 title: 大数据群集部署中的 Active Directory 和 Kubernetes DNS 协调
-description: 管理对大数据群集的访问
-author: mihaelablendea
-ms.author: mihaelab
+description: 在 Active Directory 模式下配置用于 SQL Server 大数据群集的 DNS 协调
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279422"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892457"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>大数据群集部署中的 Active Directory 和 Kubernetes DNS 协调
 
@@ -89,6 +89,6 @@ BDC 部署的 CoreDNS 服务将具有可从所有 Pod 访问的经过注册的�
 
 ## <a name="next-steps"></a>后续步骤
 
-- [在 Active Directory 模式下部署 SQL Server 大数据群集](deploy-active-directory.md)
+- [在 Active Directory 模式下部署 SQL Server 大数据群集](active-directory-deploy.md)
 - [在 Active Directory 模式下管理大数据群集](active-directory-objects.md)
 - [在同一 Active Directory 域中部署多个 SQL Server 大数据群集](active-directory-deployment-background.md)

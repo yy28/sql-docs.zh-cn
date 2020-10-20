@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989430"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005975"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | 添加了对 SQL Server 2019 的安全 enclave 导入和导出的支持 |
 | 部署 | 添加了支持，以在从 Azure SQL 数据库导出时忽略已启用变更数据捕获的表 |
 | 部署 | 添加了对 Azure SQL 数据库中 OPTIMIZE_FOR_SEQUENTIAL_KEY 索引选项的支持 |
-| 部署 | 添加了对 Azure SQL 数据仓库的标识列的支持 | 
+| 部署 | 添加了对 Azure Synapse Analytics 的标识列的支持 | 
 | 帮助 | 在帮助 (?) 中输出 sqlpackage 版本，并支持 version 参数 | 
 
 ### <a name="fixes"></a>修复项
@@ -63,12 +63,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 部署 | 修复了在 .NET Core 中部署时的 dacpac 注册问题 | 
 | 部署 | 修复了在 .NET Core 中处理 accessToken (at) 参数时的 sqlpackage 问题 | 
 | 部署 | 允许将存储过程中的 ALTER TABLE 语句作为非顶级语句 | 
-| 部署 | 修复了在具体化视图中验证 Azure SQL 数据仓库时不区分大小写的问题 | 
+| 部署 | 修复了在具体化视图中验证 Azure Synapse Analytics 时不区分大小写的问题 | 
 
 ### <a name="known-issues"></a>已知问题
 | Feature | 详细信息 |
 | :------ | :------ |
-| 部署 | 目前尚不支持 Azure SQL 数据仓库工作负荷管理功能（工作负荷组和工作负荷分类器） | 
+| 部署 | 目前尚不支持 Azure Synapse Analytics 工作负荷管理功能（工作负荷组和工作负荷分类器） | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>功能
 | Feature | 详细信息 |
 | :------ | :------ |
-| 部署 | 现在 SQL Server 2008 及更高版本、Azure SQL 数据库和 Azure SQL 数据仓库支持数据敏感度分类 |
-| 部署 | 针对表约束添加 Azure SQL 数据仓库支持 |
-| 部署 | 针对有序聚集列存储索引添加 Azure SQL 数据仓库支持 |
+| 部署 | 现在 SQL Server 2008 及更高版本、Azure SQL 数据库和 Azure Synapse Analytics 支持数据敏感度分类 |
+| 部署 | 针对表约束添加 Azure Synapse Analytics 支持 |
+| 部署 | 针对有序聚集列存储索引添加 Azure Synapse Analytics 支持 |
 | 部署 | 为外部数据源（适用于 Oracle、Teradata、MongoDB/CosmosDB、ODBC、大数据群集）和外部表（适用于 SQL Server 2019 大数据群集）添加支持 |
 | 部署 | 添加 SQL Database Edge 实例作为支持的版本 |
 | 部署 | 支持格式为“\<server>.\<dnszone>.database.windows.net”的托管实例服务器名称 |
-| 部署 | 在 Azure SQL 数据仓库中添加对复制命令的支持 |
-| 部署 | 在发布过程中添加部署选项“IgnoreTablePartitionOptions”，以便在 Azure SQL 数据仓库表的分区功能发生更改时避免重新创建表 |
+| 部署 | 在 Azure Synapse Analytics 中添加对复制命令的支持 |
+| 部署 | 在发布过程中添加部署选项“IgnoreTablePartitionOptions”，以便在 Azure Synapse Analytics 的分区功能发生更改时避免重新创建表 |
 | .NET Core | 在 sqlpackage 的 .NET Core 版本中添加对 Microsoft.Data.SqlClient 的支持 |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 部署 | 修复为 AlterAnyDatabaseScopedConfiguration 和 AlterAnySensitivityClassification 权限生成 GRANT 语句的问题 |
 | 部署 | 修复无法识别外部脚本权限的问题 |
 | 部署 | 修复内联属性 - 属性的隐式添加不应显示差别，但显式提及应通过脚本显示 |
-| 部署 | 解决了更改具体化视图 (MV) 引用的表会导致生成改变视图语句（Azure SQL 数据仓库的 MV 不支持该语句）的问题 |
-| 部署 | 修复在将列添加到包含 Azure SQL 数据仓库数据的表时发布失败的问题 |
-| 部署 | 修复在为 Azure SQL 数据仓库更改分布列类型（数据丢失方案）时更新脚本应将数据移动到新表的问题 |
+| 部署 | 解决了更改具体化视图 (MV) 引用的表会导致生成改变视图语句（Azure Synapse Analytics 的 MV 不支持该语句）的问题 |
+| 部署 | 修复在将列添加到包含 Azure Synapse Analytics 数据的表时发布失败的问题 |
+| 部署 | 修复在为 Azure Synapse Analytics 更改分布列类型（数据丢失方案）时更新脚本应将数据移动到新表的问题 |
 | ScriptDom | 修复无法识别在内联索引之后定义的内联约束的 ScriptDom bug |
 | ScriptDom | 修复 ScriptDom SYSTEM_TIME 在批处理语句中缺少右括号的问题 |
 | Always Encrypted | 修复 #tmpErrors 表在 sqlpackage 重新连接并且临时表已消失时无法删除（因为临时表会在连接终止时消失）的问题 |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | 详细信息 |
 | :------ | :------ |
-| 部署 | 添加对部署到 Azure SQL 数据仓库 (GA) 的支持。 | 
+| 部署 | 添加对部署到 Azure Synapse Analytics (GA) 的支持。 | 
 | 平台 | 适用于 macOS、Linux 和 Windows 的 sqlpackage .NET Core GA。 | 
 | 安全性 | 删除 SHA1 代码签名。 |
 | 部署 | 添加对新 Azure 数据库版本的支持：GeneralPurpose、BusinessCritical、超大规模 |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | 详细信息 |
 | :------ | :------ |
-| 部署 | 添加对部署到 Azure SQL 数据仓库（预览版）的支持。 | 
+| 部署 | 添加对部署到 Azure Synapse Analytics（预览版）的支持。 | 
 | 部署 | 将 /p:DatabaseLockTimeout=(INT32 '60') 参数添加到 sqlpackage。 | 
 | 部署 | 将 /p:LongRunningCommandTimeout=(INT32) 参数添加到 sqlpackage。 |
 | 导出/提取 | 将 /p:TempDirectoryForTableData=(STRING) 参数添加到 sqlpackage。 |

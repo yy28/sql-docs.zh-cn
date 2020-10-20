@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 62334a277bc169350af4db1c2961595178e733a6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634831"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081756"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>如何：使用 Windows 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81634831"
   
 如果 Windows 身份验证不可行，请参阅[如何：使用 SQL Server 身份验证进行连接](how-to-connect-using-sql-server-authentication.md)。  
   
-## <a name="example"></a>示例  
+## <a name="sqlsrv-example"></a>SQLSRV 示例  
 通过使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驱动程序，以下示例将使用 Windows 身份验证连接到 SQL Server 的本地实例。 建立连接后，服务器将查询正在访问数据库的用户登录名。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV 示例  
 下面的示例使用 PDO_SQLSRV 驱动程序来完成与上一示例相同的任务。  
   
 ```  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c7c914306258394bde91d64e5cb84665d62ab2b4
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726808"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081396"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91726808"
   
 可以将 UTF-8 或 SQLSRV_ENC_CHAR 传递到 CharacterSet，但无法传递 SQLSRV_ENC_BINARY。 默认编码是 SQLSRV_ENC_CHAR。  
   
-## <a name="example"></a>示例  
+## <a name="connection-example"></a>连接示例  
 以下示例演示如何通过在建立连接时指定 UTF-8 字符集来发送和检索 UTF-8 编码的数据。 该示例会更新已指定查看 ID 的 Production.ProductReview 表的“注释”列。 该示例还会检索并显示最近更新的数据。 请注意，“注释”列的类型是 nvarchar(3850)。 另请注意，数据在发送到服务器之前，将通过使用 PHP utf8_encode 函数转换为 UTF-8 编码。 此操作仅用于演示目的。 实际的应用程序方案会从 UTF-8 编码的数据开始。  
   
 该示例假定已在本地计算机上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
@@ -128,7 +128,7 @@ sqlsrv_close( $conn);
   
 有关存储 Unicode 数据的信息，请参阅[使用 Unicode 数据](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105))。  
   
-## <a name="example"></a>示例  
+## <a name="column-example"></a>列示例  
 以下示例类似于第一个示例，但并非指定连接上的 UTF-8 字符集，此示例显示如何指定列上的 UTF-8 字符集。  
   
 ```  

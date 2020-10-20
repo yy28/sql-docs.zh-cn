@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901369"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039014"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901369"
 
 你可以使用“生成和发布脚本向导”  创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。
 
-有关介绍如何使用“生成和发布脚本”向导的更详细教程，请参阅[教程：“生成脚本”向导](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases)。
+有关介绍如何使用“生成和发布脚本”向导的更详细教程，请参阅[教程：“生成脚本”向导](../tutorials/scripting-ssms.md#script-databases)。
 
 ## <a name="before-you-begin"></a>开始之前
 
@@ -130,7 +130,7 @@ ms.locfileid: "88901369"
 
 ![另存为笔记本](media/generate-and-publish-scripts-wizard/save.png)
 
-- [另存为笔记本](../../azure-data-studio/notebooks-guidance.md)  - 将脚本保存到一个或多个 .sql 文件。 选择浏览按钮 (…  ) 可以指定文件的名称和位置。
+- [另存为笔记本](../../azure-data-studio/notebooks/notebooks-guidance.md)  - 将脚本保存到一个或多个 .sql 文件。 选择浏览按钮 (…  ) 可以指定文件的名称和位置。
 
 - 另存为脚本文件  - 将脚本保存到一个或多个 .sql 文件。 选择浏览按钮 (…)  可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 选中“一个脚本文件”  或“每对象一个脚本文件”  可以指定脚本的生成方式。 选中“Unicode 文本”  或“ANSI 文本”  可以指定应在脚本中使用的文本的类型。
 
@@ -246,7 +246,7 @@ ms.locfileid: "88901369"
 
 如果所有设置都正确，则配置成功完成。
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>在 Azure SQL 数据仓库上生成脚本
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>在 Azure Synapse Analytics 上生成脚本
 
 如果使用“Script As…”生成的语法看起来不像 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 语法，或如果你收到一条错误消息，则可能需要将 SQL Server Management Studio 中的脚本选项设置为 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。
 

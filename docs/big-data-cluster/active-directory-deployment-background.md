@@ -1,20 +1,20 @@
 ---
 title: 在 Active Directory 域中部署多个大数据群集
 titleSuffix: SQL Server Big Data Cluster
-description: 了解 Active Directory 域中的 SQL Server 大数据群集部署。
-author: mihaelablendea
-ms.author: mihaelab
+description: 了解如何在单个 Active Directory 域中部署多个 SQL Server 大数据群集。
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9617e4a447db1d2cef3aa9e6afc7927eb007a981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730939"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892497"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>在同一 Active Directory 域中部署多个 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 

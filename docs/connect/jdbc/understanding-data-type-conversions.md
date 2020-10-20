@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa84b420b4100e74a9e57047f1bfbbd386fa5fa6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 266db3efac0fb737ccb36900ef3b27f24c8c8888
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435313"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081676"
 ---
 # <a name="understanding-data-type-conversions"></a>了解数据类型转换
 
@@ -28,7 +28,7 @@ ms.locfileid: "87435313"
 
 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，以下图表包含 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 get\<Type>() 方法的 JDBC 驱动程序转换映射，以及 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 get\<Type>> 方法的受支持转换。
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![JDBC 到 SQL Server 类型转换矩阵](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 JDBC 驱动程序的 getter 方法支持三类转换：
 

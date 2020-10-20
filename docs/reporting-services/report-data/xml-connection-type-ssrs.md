@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458494"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933437"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -45,7 +45,7 @@ ms.locfileid: "86458494"
   
 -   当前 Windows 用户（也称为集成安全性）。  
   
--   不需要提供任何凭据。 如果选择不使用任何凭据，则将使用匿名访问。 请确保您已为报表服务器定义了无人参与的执行帐户以连接到外部数据源。 XML 数据处理扩展插件不会将凭据传递到目标 URL 或 Web 服务；只有在定义了无人参与的执行帐户之后，连接才会成功。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+-   不需要提供任何凭据。 如果选择不使用任何凭据，则将使用匿名访问。 请确保您已为报表服务器定义了无人参与的执行帐户以连接到外部数据源。 XML 数据处理扩展插件不会将凭据传递到目标 URL 或 Web 服务；只有在定义了无人参与的执行帐户之后，连接才会成功。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  不支持存储的凭据和提示的凭据。 注意，如果禁用 Windows 集成安全性，则无法使用它来检索数据。 如果指定了存储凭据或提示凭据，则会在执行时发生错误。  
   

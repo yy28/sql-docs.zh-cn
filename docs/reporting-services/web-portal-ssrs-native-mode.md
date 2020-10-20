@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759796"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987373"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>报表服务器的 Web 门户（SSRS 本机模式）
 
@@ -48,7 +48,7 @@ Web 门户仅适用于在本机模式下运行的报表服务器。 配置为 Sh
 
 仅在特定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中才提供某些 Web 门户功能。 有关详细信息，请参阅 [SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
-如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅[授予用户报表服务器的访问权限](security/grant-user-access-to-a-report-server-report-manager.md)
+如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅[授予用户报表服务器的访问权限](./security/grant-user-access-to-a-report-server.md)
 
 > [!NOTE]
 > 如果浏览至服务器正在其上运行的本地计算机上的 Web 门户，你可能会看到一条消息指示你不能查看此文件夹。 这是由于通用访问控制 (UAC) 以及你未以管理员身份运行浏览器的原因造成的。你不能以管理员身份运行 Microsoft Edge。你将需要使用 Internet Explorer。 你可以远程浏览至服务器，或以管理员身份启动 Internet Explorer 并浏览至 Web 门户。 如果想要远程使用 Web 门户，则需要给为你的帐户授予文件夹的内容管理者权限。  
@@ -115,7 +115,7 @@ Web 门户将项按不同的类别分组。 可用类别如下。
 ## <a name="see-also"></a>另请参阅
 
 [使用 SQL Server 移动报表发布服务器创建移动报表](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-[配置 URL（SSRS 配置管理器）](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+[配置 URL（报表服务器配置管理器）](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [Reporting Services 浏览器支持计划](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  

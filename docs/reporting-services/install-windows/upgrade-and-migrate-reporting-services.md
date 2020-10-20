@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446072"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934627"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -139,13 +139,13 @@ ms.locfileid: "88446072"
 ##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> 升级 Reporting Services 本机模式扩展部署  
  下面概述了如何升级扩展为多个报表服务器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署。 此过程需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署停机：  
   
-1.  备份报表服务器数据库和加密密钥。 有关详细信息，请参阅 [Reporting Services 的备份和还原操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)和[添加和删除横向扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。  
+1.  备份报表服务器数据库和加密密钥。 有关详细信息，请参阅 [Reporting Services 的备份和还原操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)和[添加和删除横向扩展部署的加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。  
   
-2.  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，从扩展部署中删除所有报表服务器。 有关详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
+2.  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，从扩展部署中删除所有报表服务器。 有关详细信息，请参阅[配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 3.  将其中一台报表服务器升级为 SQL Server Reporting Services。  
   
-4.  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，将报表服务器重新添加到扩展部署。 有关详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
+4.  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，将报表服务器重新添加到扩展部署。 有关详细信息，请参阅[配置本机模式报表服务器横向扩展部署（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
      对于每个服务器，重复升级和扩展步骤。  
   

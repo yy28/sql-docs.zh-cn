@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454559"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933762"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密密钥 - 备份和还原加密密钥
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454559"
   
  在发生以下任何事件时，必须还原加密密钥的备份副本：  
   
--   更改报表服务器 Windows 服务帐户名或重置密码。 使用 Reporting Services 配置管理器时，对密钥进行备份是服务帐户名称更改操作的一部分。  
+-   更改报表服务器 Windows 服务帐户名或重置密码。 使用报表服务器配置管理器时，对密钥进行备份是服务帐户名称更改操作的一部分。  
   
     > [!NOTE]
     > 重置密码不同于更改密码。 密码重置需要相应的权限以覆盖域控制器上的帐户信息。 密码重置在您忘记或不知道特定密码时由系统管理员执行。 只有密码重置才需要还原对称密钥。 定期更改帐户密码不需要重置对称密钥。  
@@ -47,7 +47,7 @@ ms.locfileid: "88454559"
 
  备份对称密钥是将密钥写入所指定的文件，然后使用所提供的密码对密钥进行加密的过程。 对称密钥绝对不能在未加密状态下存储，所以在将它保存到磁盘时，必须提供密码对密钥进行加密。 创建文件后，必须将其存储在安全的位置， **并记住文件的解锁密码** 。 若要备份对称密钥，可以使用以下工具：  
   
- **本机模式：** Reporting Services 配置管理器或 **rskeymgmt** 实用工具。  
+ **本机模式：** 报表服务器配置管理器或 rskeymgmt 实用工具。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454559"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 备份加密密钥 - Reporting Services 配置管理器（本机模式）  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 备份加密密钥 - 报表服务器配置管理器（本机模式）  
   
 1.  启动报表服务器配置管理器，然后连接到要配置的报表服务器实例。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454559"
   
 -   删除以前存储的对称密钥数据（例如，在以前部署的报表服务器数据库中已存在的密钥信息）。  
   
- 若要还原加密密钥，必须具有保存在文件中的加密密钥副本。 还必须知道用来对存储的副本进行解锁的密码。 如果您具有密钥和密码，则可以运行 Reporting Services 配置工具或 **rskeymgmt** 实用工具来还原密钥。 该对称密钥必须与用来对报表服务器数据库中当前存储的加密数据进行锁定和解锁的密钥相同。 如果还原的副本无效，则报表服务器将无法访问报表服务器数据库中当前存储的加密数据。 在这种情况下，如果无法恢复有效的密钥，则最好删除所有加密值。 如果由于某些原因（例如，如果没有备份副本）而无法还原加密密钥，则必须删除现有密钥和加密内容。 有关详细信息，请参阅[删除和重新创建加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 若要还原加密密钥，必须具有保存在文件中的加密密钥副本。 还必须知道用来对存储的副本进行解锁的密码。 如果您具有密钥和密码，则可以运行 Reporting Services 配置工具或 **rskeymgmt** 实用工具来还原密钥。 该对称密钥必须与用来对报表服务器数据库中当前存储的加密数据进行锁定和解锁的密钥相同。 如果还原的副本无效，则报表服务器将无法访问报表服务器数据库中当前存储的加密数据。 在这种情况下，如果无法恢复有效的密钥，则最好删除所有加密值。 如果由于某些原因（例如，如果没有备份副本）而无法还原加密密钥，则必须删除现有密钥和加密内容。 有关详细信息，请参阅[删除和重新创建加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 还原加密密钥 - Reporting Services 配置管理器（本机模式）  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a>还原加密密钥 - 报表服务器配置管理器（本机模式）  
   
-1.  启动 Reporting Services 配置管理器，然后连接到要配置的报表服务器实例。  
+1.  启动报表服务器配置管理器，然后连接到要配置的报表服务器实例。  
   
 2.  在“加密密钥”页上，选择“还原”****。  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454559"
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [配置和管理加密密钥（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: 订阅设置和文件共享帐户（配置管理器）| Microsoft Docs
-description: 使用 Reporting Services 配置管理器的订阅设置页，为本机模式报表服务器和文件共享订阅配置文件共享帐户。
+description: 使用报表服务器配置管理器的“订阅设置”页，为本机模式报表服务器和文件共享订阅配置文件共享帐户。
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866270"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935547"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>订阅设置和文件共享帐户（SSRS 配置管理器）
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>订阅设置和文件共享帐户（报表服务器配置管理器）
   使用 **配置管理器的**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “订阅设置”页为本机模式报表服务器和文件共享订阅配置文件共享帐户。 文件共享帐户运行使用将报表传递给文件共享的多个订阅中的单组凭据。 需要更改凭据时，可以为文件共享帐户配置更改并且无需更新每个单独的订阅。  
   
  两个工作流与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件共享订阅共存：  

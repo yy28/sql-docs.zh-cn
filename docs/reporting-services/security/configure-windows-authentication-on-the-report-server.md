@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb6981b3396afdc387693c7ae89430179a6d68b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b41e35d48f6add25f4ff8c535fb7e96ed7afe67f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492650"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935424"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
   默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求。 如果部署中包括使用这些安全提供程序的客户端应用程序和浏览器，则可以使用这些默认值，而无需附加配置。 如果要使用不同的安全提供程序来获取 Windows 集成安全性（例如，如果要直接使用 Kerberos）或者修改了默认值并且要还原原始设置，则可以使用本主题中的信息来指定报表服务器上的身份验证设置。  
@@ -131,7 +131,7 @@ ms.locfileid: "88492650"
   
 -   在域用户帐户下为报表服务器服务注册 SPN。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
--   将服务帐户更改为在网络服务等内置帐户下运行。 内置帐户将 HTTP SPN 映射到将计算机联网时定义的 Host SPN。 有关详细信息，请参阅[配置服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。
+-   将服务帐户更改为在网络服务等内置帐户下运行。 内置帐户将 HTTP SPN 映射到将计算机联网时定义的 Host SPN。 有关详细信息，请参阅[配置服务帐户（报表服务器配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。
   
 -   使用 NTLM。 通常，NTLM 将在 Kerberos 身份验证失败时发挥作用。 若要使用 NTLM，从 RSReportServer.config 文件中删除 **RSWindowsNegotiate** 并验证仅指定了 **RSWindowsNTLM** 。 如果选择此方法，则可以继续将域用户帐户用于报表服务器服务（即使没有为其定义 SPN）。  
   

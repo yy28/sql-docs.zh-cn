@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c705c0ea22b7fcd4a92c94493035764864d1a3f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259330"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935177"
 ---
-# <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
+# <a name="about-url-reservations-and-registration--report-server-configuration-manager"></a>关于 URL 预留和注册（报表服务器配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，URL 预留是同时针对报表服务器 Web 服务和 Web 门户进行定义。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
   
 -   安装程序将使用默认值创建 URL 预留。 如果安装程序安装默认配置，它将预留两个 URL：一个用于报表服务器 Web 服务，另一个用于 Web 门户。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具添加更多 URL 或修改安装程序创建的默认 URL。  
@@ -105,6 +105,7 @@ ms.locfileid: "76259330"
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]， [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 和更高版本包括新的安全功能，可以将偶然使用提升的权限运行程序的风险降到最低。 还需要执行一些其他步骤，才能在这些操作系统上启用本地管理。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL 预留语法（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [配置 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 预留语法（报表服务器配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b741c74a2cc614ecab4e866f9bcfe26618133aa4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498077"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891897"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
 
@@ -58,7 +58,7 @@ ms.locfileid: "88498077"
 
 - 报表服务器数据库的连接信息，又称为数据源名称 (DSN)。
 
- 安装程序不会配置无人参与的执行帐户和报表服务器电子邮件，不会备份加密密钥或进行扩展部署。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器配置这些属性。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+ 安装程序不会配置无人参与的执行帐户和报表服务器电子邮件，不会备份加密密钥或进行扩展部署。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器配置这些属性。 有关详细信息，请参阅[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 ## <a name="when-to-install-the-default-configuration-for-native-mode"></a><a name="bkmk_whentoinstalldefaultconfig"></a> 何时安装本机模式默认配置
 

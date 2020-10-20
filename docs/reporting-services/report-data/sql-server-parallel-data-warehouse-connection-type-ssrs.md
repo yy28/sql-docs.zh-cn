@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fa55524aa371e65f747ee0f53d6ef2b666f8519
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 9d445092d609be13cca75c06e49f3ae76b51851b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458169"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935503"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
 
@@ -49,7 +49,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   使用存储的用户名和密码。 若要协商当包含报表数据的数据库与报表服务器不同时产生的双跃点，请选择使用凭据作为 Windows 凭据的选项。 也可以选择在连接到数据源后模拟经过身份验证的用户。  
   
--   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。 
+-   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（报表服务器配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。 
   
  有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
@@ -79,7 +79,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，有助于编写仅检索摘要数据的查询。 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语言的完全支持，包括分组和聚合。  
   
- 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)。  
+ 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/language-reference.md)。  
   
 ###  <a name="using-query-type-text"></a><a name="QueryText"></a> 使用 Text 查询类型  
  在基于文本的查询设计器中，可以键入 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令来定义数据集中的数据。 用于从 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 检索数据的查询与用于从不在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序中运行的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 实例检索数据的查询是相同的。 例如，下面的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 查询选择职位为销售助理的所有雇员的姓名：  

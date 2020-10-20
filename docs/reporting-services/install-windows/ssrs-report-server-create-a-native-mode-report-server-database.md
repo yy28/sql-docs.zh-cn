@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866328"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934753"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>创建本机模式报表服务器数据库（SSRS 配置管理器）
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>创建本机模式报表服务器数据库（报表服务器配置管理器）
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "74866328"
  创建或配置报表服务器数据库是一个多步骤过程。 创建报表服务器数据库之前，请考虑要如何指定下列各项：  
   
  **选择数据库服务器**  
- 查看支持的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，以及主题[创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)中支持的版本。  
+ 查看支持的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，以及查看[创建报表服务器数据库（报表服务器配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)主题中支持的版本。  
   
  **启用 TCP/IP 连接**  
  启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的 TCP/IP 连接。 默认情况下，某些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本不启用 TCP/IP。 本主题中提供了相关说明。  
@@ -47,7 +47,7 @@ ms.locfileid: "74866328"
  **确定报表服务器凭据**  
  确定报表服务器与报表服务器数据库的连接方式。 凭据类型包括域用户帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户或报表服务器服务帐户。  
   
- 这些凭据经过加密并存储在 RSReportServer.config 文件中。 报表服务器将这些凭据用于与报表服务器数据库进行的连接。 如果您要使用 Windows 用户帐户或数据库用户帐户，请确保指定已经存在的帐户。 尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将创建登录名并设置必要的权限，但不会为您创建帐户。 有关详细信息，请参阅 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)中支持的版本。  
+ 这些凭据经过加密并存储在 RSReportServer.config 文件中。 报表服务器将这些凭据用于与报表服务器数据库进行的连接。 如果您要使用 Windows 用户帐户或数据库用户帐户，请确保指定已经存在的帐户。 尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将创建登录名并设置必要的权限，但不会为您创建帐户。 有关详细信息，请参阅[配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
  **确定报表服务器语言**  
  选择要为报表服务器指定的语言。 当用户使用不同语言版本的浏览器连接到服务器时，预定义的角色名称、说明和“我的报表”文件夹不会以不同的语言显示。  
@@ -73,7 +73,7 @@ ms.locfileid: "74866328"
   
 ### <a name="to-create-a-local-report-server-database"></a>创建本地报表服务器数据库  
   
-1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在“数据库”页上，选择“更改数据库”  。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74866328"
   
 4.  连接到您将用于创建和承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例：  
   
-    1.  键入要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。 向导将显示作为默认实例（如果可用）运行的本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 否则，您必须键入要使用的服务器和实例。 以此种格式指定命名的实例：\<servername>\\<instancename\>。  
+    1.  键入要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。 向导将显示作为默认实例（如果可用）运行的本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 否则，您必须键入要使用的服务器和实例。 命名实例采用以下格式：\<servername>\\<instancename\>。  
   
     2.  输入用于一次性连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的凭据以创建报表服务器数据库。 有关如何使用这些凭据的详细信息，请参阅本主题中的 [开始之前](#rsdbrequirements) 。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "74866328"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器提供了更改凭据向导，可引导您完成重新配置报表服务器用于连接到报表服务器数据库的帐户的步骤。 更改凭据时，配置管理器将为报表服务器当前使用的报表服务器数据库更新数据库服务器的所有权限和数据库登录信息。 
 
-1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在“数据库”页上，选择“更改凭据”  。 
 
@@ -151,6 +151,6 @@ ms.locfileid: "74866328"
 
 [配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[报表服务器配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

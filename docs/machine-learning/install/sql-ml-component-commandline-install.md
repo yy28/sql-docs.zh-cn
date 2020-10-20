@@ -1,30 +1,25 @@
 ---
 title: 通过命令提示符安装
-description: 运行 SQL Server 命令行安装程序，将具有 R 和 Python 的机器学习服务添加到 SQL Server 数据库引擎实例。
+description: 运行 SQL Server 命令行安装程序，将具有 Python 和 R 的机器学习服务添加到 SQL Server 数据库引擎实例。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/30/2020
+ms.date: 10/12/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624754"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956759"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>从命令行安装具有 R 和 Python 的 SQL Server 机器学习服务
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-本文提供从命令行安装 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)的说明：
-
-+ [新的数据库内实例](#indb)
-+ [添加到现有数据库引擎实例](#add-existing)
-+ [无提示安装](#silent)
-+ [新的独立服务器](#shared-feature)
+本文说明如何从命令行安装具有 Python 和 R 的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)。
 
 可以指定与安装程序用户界面是进行无提示交互、基本交互还是完全交互。 本文对[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) 进行了补充，介绍了 R 和 Python 机器学习组件的唯一参数。
 
@@ -39,7 +34,6 @@ ms.locfileid: "91624754"
 + 请勿在域控制器上安装。 安装程序的机器学习服务部分将失败。
 
 + 避免在同一台计算机上安装独立实例和数据库内实例。 一个独立服务器将争夺相同的资源，从而降低这两个安装的性能。
-
 
 ## <a name="command-line-arguments"></a>命令行参数
 
@@ -202,7 +196,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 安装完成后，你就有了一个服务器、Microsoft 包、开放源代码分发版的 R 和 Python、工具、示例以及作为分发一部分的脚本。 
 
-若要打开 R 控制台窗口，请转到 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` 并双击“RGui.exe”  。 不熟悉 R？ 试用本教程：[基本 R 命令和 RevoScaleR 函数：25 个常见示例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)。
+若要打开 R 控制台窗口，请转到 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` 并双击“RGui.exe”  。 不熟悉 R？ 试用本教程：[基本 R 命令和 RevoScaleR 函数：25 个常见示例](/machine-learning-server/r/tutorial-r-to-revoscaler)。
 
 若要打开 Python 命令，请转到 `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` 并双击“python.exe”  。
 

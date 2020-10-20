@@ -1,6 +1,6 @@
 ---
 title: SQL 工具概述
-description: 适用于 SQL Server、Azure SQL（Azure SQL 数据库、Azure SQL 托管实例、SQL 虚拟机）和 Azure SQL 数据仓库的 SQL 查询和管理工具。
+description: 适用于 SQL Server、Azure SQL（Azure SQL 数据库、Azure SQL 托管实例、SQL 虚拟机）和 Azure Synapse Analytics 的 SQL 查询和管理工具。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1c46afa8b1edbbb548c5367197327de72e2acd27
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 668ab3177cb49cfcbafc81500325740c941046d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603518"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006625"
 ---
 # <a name="sql-tools-overview"></a>SQL 工具概述
 
@@ -37,7 +37,7 @@ ms.locfileid: "91603518"
 | 工具 | 说明 | 操作系统 |
 |:--|:--|:--|
 | [ **![ADS 映像](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | 可以运行按需 SQL 查询，查看结果并将其保存为文本、JSON 或 Excel 格式的轻型编辑器。 编辑数据，组织你最喜欢的数据库连接，并以熟悉的对象浏览体验浏览数据库对象。 | **Windows</br>macOS</br>Linux** |
-| [ **![SSMS 映像](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | 管理具有完整 GUI 支持的 SQL Server 实例或数据库。 访问、配置、管理和开发 SQL Server、Azure SQL 数据库和 SQL 数据仓库的所有组件。 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 SQL 的访问权限。 | **Windows** |
+| [ **![SSMS 映像](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | 管理具有完整 GUI 支持的 SQL Server 实例或数据库。 访问、配置、管理和开发 SQL Server、Azure SQL 数据库和 Azure Synapse Analytics 的所有组件。 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 SQL 的访问权限。 | **Windows** |
 | [ **![SSDT 映像](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | 一款新式开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 [Visual Studio](https://visualstudio.microsoft.com/downloads/) 中开发应用程序一样轻松。 | **Windows** |
 | [ **![VS Code 映像](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | Visual Studio Code 的 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) 为官方 Visual Studio Code 扩展，它支持连接到 SQL Server，并在 Visual Studio Code 中为 T-SQL 提供丰富的编辑体验。 在轻型编辑器中编写 T-SQL 脚本。 | **Windows</br>macOS</br>Linux** |
 

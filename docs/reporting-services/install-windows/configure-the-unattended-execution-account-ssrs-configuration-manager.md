@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866314"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933550"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>配置无人参与的执行帐户（报表服务器配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
   
 -   通过网络为使用数据库身份验证的报表发送连接请求，或连接到不需要或不使用身份验证的外部报表数据源。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
@@ -41,7 +41,7 @@ ms.locfileid: "74866314"
   
  若要指定帐户，可使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具。 配置无人参与的执行帐户的最简便方法是运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后在“执行帐户”页中指定凭据。  
   
-1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到要配置的报表服务器实例。 有关说明，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到要配置的报表服务器实例。 有关说明，请参阅[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在“执行帐户”页上，选择 **“指定执行帐户”** 。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866314"
   
 3.  键入以下命令，为本地报表服务器实例配置该帐户：  
   
-     rsconfig -e -u\<域/用户名> -p\<密码>  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** 支持其他参数。 要详细了解语法并查看命令示例，请参阅 [rsconfig 实用工具 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866314"
  将从 RSReportServer.config 文件中删除此帐户的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 配置管理器（SSRS 本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [报表服务器配置管理器（SSRS 本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

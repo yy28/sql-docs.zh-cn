@@ -9,17 +9,17 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227261"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956279"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>为 SQL Server 安装 Python 自定义运行时
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍如何安装自定义运行时，以便使用 SQL Server 运行 Python 脚本。 适用于 Python 的自定义运行时可用于以下方案：
+本文介绍如何安装自定义运行时，以便使用 SQL Server 运行 Python 脚本。 自定义运行时使用在可扩展性框架上生成的语言扩展来执行外部代码。 适用于 Python 的自定义运行时可用于以下方案：
 
 + 使用扩展性框架安装 SQL Server。
 
@@ -29,6 +29,8 @@ ms.locfileid: "91227261"
 
 > [!NOTE]
 > 本文介绍如何在 Windows 上安装适用于 Python 的自定义运行时。 若要在 Linux 上安装，请参阅[在 Linux 上安装适用于 SQL Server 的 Python 自定义运行时](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)。
+
+
 
 ## <a name="pre-install-checklist"></a>安装前清单
 
@@ -73,14 +75,14 @@ ms.locfileid: "91227261"
     + 数据库引擎服务
     + 机器学习服务和语言扩展
 
-1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。
 
 
 ## <a name="install-python-37"></a>安装 Python 3.7 
 
 安装 [Python 3.7]( https://www.python.org/downloads/release/python-379/) 并将其添加到 PATH。
 
-![将 Python 3.7 添加到路径。](../install/media/python-379.png) 更新映像 - 备注
+![将 Python 3.7 添加到路径。](../install/media/python-379.png) 
 
 
 #### <a name="install-pandas"></a>安装 pandas
@@ -105,7 +107,7 @@ python.exe -m pip install pandas
 
 ## <a name="grant-access-to-the-custom-python-installation-folder"></a>授权访问自定义 Python 安装文件夹
 
-从新的提升的命令提示符运行以下 icacls 命令，以向 PYTHONHOME 授予对 SQL Server Launchpad 服务和 SID S-1-15-2-1 (ALL_APPLICATION_PACKAGES) 的读取和执行访问权限。   Launchpad 服务用户名的格式为 `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` 是 SQL Server 的实例名称。 这些命令将以递归方式授予给定目录路径下的所有文件和文件夹的访问权限。
+从新的提升的命令提示符运行以下 icacls 命令，以向 PYTHONHOME 授予对 SQL Server Launchpad 服务和 SID S-1-15-2-1 (ALL_APPLICATION_PACKAGES) 的读取和执行访问权限。   Launchpad 服务用户名为：`NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` 是 SQL Server 的实例名称。 这些命令将以递归方式授予给定目录路径下的所有文件和文件夹的访问权限。
 
 将实例名称追加到 `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`)。 在此示例中，INSTANCENAME 是默认实例 `MSSQLSERVER`。
 
@@ -138,7 +140,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="register-external-language"></a>注册外部语言
 
-将此 Python 语言扩展注册到你要在其中使用此扩展的每个数据库的 [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)。 使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) 连接到 SQL Server 并运行以下 T-SQL 命令。 修改此语句中的路径，以反映下载的语言扩展 zip 文件 (python-lang-extension) 的位置。
+将此 Python 语言扩展注册到你要在其中使用此扩展的每个数据库的 [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)。 使用 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 连接到 SQL Server 并运行以下 T-SQL 命令。 修改此语句中的路径，以反映下载的语言扩展 zip 文件 (python-lang-extension) 的位置。
 
 > [!NOTE]
 > Python 是保留字。 为外部语言使用不同的名称，例如“myPython”。
@@ -284,7 +286,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="register-external-language"></a>注册外部语言
 
-将此 Python 语言扩展注册到你要在其中使用此扩展的每个数据库的 [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)。 使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) 连接到 SQL Server 并运行以下 T-SQL 命令。 
+将此 Python 语言扩展注册到你要在其中使用此扩展的每个数据库的 [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)。 使用 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 连接到 SQL Server 并运行以下 T-SQL 命令。 
 修改此语句中的路径，以反映下载的语言扩展 zip 文件 (python-lang-extension) 的位置。
 
 > [!NOTE]
@@ -302,7 +304,7 @@ GO
 
 可以通过针对 SQL Server 运行的存储过程 [sp_execute_external 脚本](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，来执行以 Python 语言编写的外部脚本。 
 
-若要启用外部脚本，请使用连接到 SQL Server 的 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) 执行以下 SQL 命令。
+若要启用外部脚本，请使用连接到 SQL Server 的 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 执行以下 SQL 命令。
 
 ```sql
 sp_configure 'external scripts enabled', 1;

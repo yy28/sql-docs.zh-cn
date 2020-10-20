@@ -10,12 +10,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286241"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890857"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>安装或卸载用于 SharePoint 的 Reporting Services 加载项 (SSRS)
 
@@ -53,7 +53,7 @@ ms.locfileid: "79286241"
 ##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> 安装方法概述  
  使用以下两种方法之一可以安装用于 SharePoint 产品的 SQL Server 2016 Reporting Services 外接程序：  
   
--   **安装向导：** ![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 在 SQL Server 2016 中，此加载项可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”  页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。  
+-   **安装向导：** ![注意](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 在 SQL Server 2016 中，此加载项可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”  页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。  
   
 -   **rsSharepoint.msi：** 加载项可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -213,7 +213,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> 安装日志文件  
- 安装程序在运行期间，会为安装 **外接程序的用户将相应信息记录到** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件夹下的一个日志文件中。 例如，**c:\Users\\<用户名\>\AppData\Local\Temp**。此文件名为 **RS_SP_\<number>.log**，例如，**RS_SP_0.log**。 日志中的每个错误都以字符串“SSRSCustomActionError”开头。  
+ 安装程序在运行期间，会为安装 **外接程序的用户将相应信息记录到** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件夹下的一个日志文件中。 例如，c:\Users\\<username\>\AppData\Local\Temp。此文件名为 RS_SP_\<number>.log，例如 RS_SP_0.log  。 日志中的每个错误都以字符串“SSRSCustomActionError”开头。  
   
 > [!NOTE]  
 >  AppData 是 Windows 操作系统中隐藏的文件夹。 您可能需要修改您的 Windows 资源管理器的文件夹设置，以便可以看到隐藏的文件和文件夹。  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: dd2d1feb1ae156d685dbd18595447a248836eba9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646607"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081416"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ $driver_options：可选（混合）驱动程序专用选项。 例如，你可�
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
 
-## <a name="example"></a>示例  
+## <a name="parameter-example"></a>参数示例  
 本代码示例演示在将 $contact 绑定到参数后，更改该值会更改在查询中传递的值。  
   
 ```  
@@ -81,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="output-parameter-example"></a>输出参数示例  
 此代码示例演示如何访问输出参数。  
   
 ```  
@@ -102,7 +102,7 @@ echo $input1;
 > [!NOTE]
 > 将输出参数绑定到 bigint 类型时，如果值最终超出 [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 范围，那么结合使用 PDO::PARAM_INT 和 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 可能会导致“值超出范围”异常抛出。 因此，请改用默认的 PDO::PARAM_STR，并提供生成的字符串的大小（大小上限为 21 个字符）。 它是任意 bigint 值的最大位数（包括负号）。 
 
-## <a name="example"></a>示例  
+## <a name="inputoutput-example"></a>输入/输出示例  
 此代码示例演示如何使用输入/输出参数。  
   
 ```  
@@ -124,7 +124,7 @@ echo $input1;
 > [!NOTE]
 > 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
-## <a name="example"></a>示例  
+## <a name="decimal-input-example"></a>十进制值输入示例  
 此代码示例演示如何将十进制值作为输入参数进行绑定。  
 
 ```

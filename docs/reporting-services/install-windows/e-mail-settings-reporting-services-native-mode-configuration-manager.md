@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866000"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892077"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
 SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用户通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
 
-默认情况下，未配置报表服务器电子邮件传递扩展插件。 必须使用 Reporting Services 配置管理器最低配置此扩展插件。 若要设置高级属性，必须编辑 RSReportServer.config 文件。 如果无法将报表服务器配置为使用此扩展插件，则可以将报表传递到共享文件夹。 有关详细信息，请参阅 Reporting Services 中的文件共享传递。
+默认情况下，未配置报表服务器电子邮件传递扩展插件。 必须使用报表服务器配置管理器对此扩展插件进行最低配置。 若要设置高级属性，必须编辑 RSReportServer.config 文件。 如果无法将报表服务器配置为使用此扩展插件，则可以将报表传递到共享文件夹。 有关详细信息，请参阅 Reporting Services 中的文件共享传递。
 
 ## <a name="configuration-requirements"></a>配置要求
 
@@ -41,16 +41,16 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 
 若要针对电子邮件传递配置报表服务器，请执行下列操作：
 
-- 如果要仅指定一个 SMTP 服务器和一个具有发送电子邮件权限的用户帐户，则使用 Reporting Services 配置管理器。 以下是配置报表服务器电子邮件传递扩展插件所需的最低设置。
+- 如果要仅指定一个 SMTP 服务器和一个具有发送电子邮件权限的用户帐户，请使用报表服务器配置管理器。 以下是配置报表服务器电子邮件传递扩展插件所需的最低设置。
 
 - （可选）使用文本编辑器在 RSreportserver.config 文件中指定其他设置。 此文件包含报表服务器电子邮件传递的所有配置设置。 如果要使用本地 SMTP 服务器或将电子邮件限定传递到特定主机，则需要在这些文件中指定其他设置。 要详细了解如何查找和修改配置文件，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。
 
 > [!NOTE] 
 > 报表服务器电子邮件设置都是基于 CDO。 若要了解有关特定设置的更多详细信息，可以参考 CDO 产品文档。
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>使用 Reporting Services 配置管理器配置报表服务器电子邮件
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>使用报表服务器配置管理器配置报表服务器电子邮件
 
-1. 启动 Reporting Services 配置管理器，然后连接到报表服务器实例。
+1. 启动报表服务器配置管理器，然后连接到报表服务器实例。
 
 2. 在“发件人地址”中，输入要在所生成电子邮件的“发件人：”字段中使用的电子邮件地址   。 
 
@@ -137,12 +137,12 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 
 - `<SMTPServerPort>` 默认情况下，为端口 25 进行配置。
 - `<SMTPAuthenticate>` 指定如何将报表服务器连接到远程 SMTP 服务器。 默认值为 **0** （或不进行身份验证）。 这种情况下，将通过匿名访问创建连接。 报表服务器和 SMTP 服务器可能需要成为同一域的成员，这取决于域配置。
-- 若要向受限制的通讯组列表发送电子邮件（例如，只接受经过身份验证的帐户发来的邮件的通讯组列表），则将 `<SMTPAuthenticate>` 设置为 **1** 或 **2**。 如果设置为 **1**，你将还需要设置 `<SendUserName>` 和 `<SendPassword>`。 建议通过 Reporting Services 配置管理器执行此操作，因为它将加密 `<SendUserName>` 和 `<SendPassword>`的值。
+- 若要向受限制的通讯组列表发送电子邮件（例如，只接受经过身份验证的帐户发来的邮件的通讯组列表），则将 `<SMTPAuthenticate>` 设置为 **1** 或 **2**。 如果设置为 **1**，你将还需要设置 `<SendUserName>` 和 `<SendPassword>`。 建议通过报表服务器配置管理器执行此操作，因为它将加密 `<SendUserName>` 和 `<SendPassword>` 的值。
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>配置报表服务器的远程 SMTP 服务
 
 > [!NOTE] 
-> 建议你通过 Reporting Services 配置管理器配置邮件服务器。
+> 建议通过报表服务器配置管理器配置邮件服务器。
 
 1. 请验证报表服务器 Windows 服务是否对 SMTP 服务器拥有 **Send As** 权限。
 
@@ -154,7 +154,7 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
      
 5. 在 `<SMTPServer>`中，键入 SMTP 服务器的名称。 此值可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。
 
-6. 将 `<SendUsing>` 的值设置为 **2** 以使用报表服务器的服务帐户。 将 `<SendUsing>` 的值设置为 **1** 以进行基本身份验证。 如果设置为 **1**，将需要另外提供 `<SendUserName>` 和 `<SendPassword>`的值。 如果想要加密这些值，则在 Reporting Services 配置管理器中设置身份验证。
+6. 将 `<SendUsing>` 的值设置为 **2** 以使用报表服务器的服务帐户。 将 `<SendUsing>` 的值设置为 **1** 以进行基本身份验证。 如果设置为 **1**，将需要另外提供 `<SendUserName>` 和 `<SendPassword>`的值。 如果想要加密这些值，请在报表服务器配置管理器中设置身份验证。
 
 7. 如果设置 `<SMTPAuthenticate>` 的值为 1 或 2，则将 **的值设置为** 1 `<SendUsing>` 。
 
@@ -222,7 +222,7 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 17. 保存文件。
   
 ## <a name="see-also"></a>另请参阅  
-[Reporting Services 配置管理器（本机节点）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
