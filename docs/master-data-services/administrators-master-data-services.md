@@ -1,5 +1,5 @@
 ---
-title: 管理员
+title: Administrators
 description: 了解 Master Data Services 中的管理员类型：模型管理员、实体管理员和超级用户。
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480313"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193645"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
 
@@ -72,11 +72,10 @@ ms.locfileid: "89480313"
 |实体管理员|可以是基于显式分配的管理员权限或者从组继承的权限的实体管理员。<br /><br /> 仅对向其分配访问权限的功能区域具有访问权限。<br /><br /> 自动对特定实体中的所有对象和成员具有所有权限。<br /><br /> 如果实体变更需要批准，则可以批准挂起的变更集。|  
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章 [安全性改进](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)。  
+ msdn.com 上的博客文章 [安全性改进](/archive/blogs/e7/improvements-to-autoplay)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建模型管理员 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [创建 Master Data Services 数据库](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)  
-  
   

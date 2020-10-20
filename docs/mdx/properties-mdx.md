@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d571ed020c1b36ea2e09beca7d2ccbef5899951f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbdae47b3ede8ad2b22258e83a69b4f2776115d9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500470"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192337"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -36,7 +36,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  成员属性名称的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- **Properties**函数返回指定成员属性的指定成员的值。 成员属性可以是任何内部成员属性，如 **NAME**、 **ID**、 **KEY**或 **CAPTION**，也可以是用户定义的成员属性。 有关详细信息，请参阅 [&#40;mdx&#41;的内部成员属性 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 和 [用户定义的成员属性 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
+ **Properties**函数返回指定成员属性的指定成员的值。 成员属性可以是任何内部成员属性，如 **NAME**、 **ID**、 **KEY**或 **CAPTION**，也可以是用户定义的成员属性。 有关详细信息，请参阅 [&#40;mdx&#41;的内部成员属性 ](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 和 [用户定义的成员属性 &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
   
  默认情况下，将该值强迫为一个字符串。 如果指定了 **类型化** ，则返回值为强类型。  
   
@@ -106,7 +106,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;MDX&#41;使用成员属性 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [&#40;MDX&#41;使用成员属性 ](/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
-  
   

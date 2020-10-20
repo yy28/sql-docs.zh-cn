@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491381"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193463"
 ---
 # <a name="using-set-expressions"></a>使用集表达式
 
@@ -58,9 +58,8 @@ ms.locfileid: "88491381"
   
  由三个元组组成，每个元组包含对 Product 维度的 Product Categories 层次结构和 Date 维度的 Calendar 层次结构上成员的两个显式引用。  
   
- 有关返回集的函数的示例，请参阅 [使用成员、元组和集 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
+ 有关返回集的函数的示例，请参阅 [使用成员、元组和集 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
 ## <a name="see-also"></a>另请参阅  
  [MDX&#41;&#40;表达式 ](../mdx/expressions-mdx.md)  
-  
   

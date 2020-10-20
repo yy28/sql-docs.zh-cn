@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785162"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196888"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>如何调试 CLR 数据库对象
 
@@ -47,7 +47,7 @@ ms.locfileid: "91785162"
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行的调试遵循单连接模式。 一个调试器只能检测和调试其附加到的客户端连接的活动。 由于调试器的功能不受连接类型的限制，因此表格格式数据流 (TDS) 和 HTTP 连接都可以进行调试。 不过，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许调试现有连接。 调试支持在服务器上执行的例程中使用所有常见的调试功能。 调试器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间的交互通过分布式组件对象模型 (COM) 进行。  
   
-有关调试托管存储过程、函数、触发器、用户定义类型和聚合的详细信息和方案，请参阅 Visual Studio 文档中的 [SQL SERVER CLR 集成数据库调试](https://go.microsoft.com/fwlink/?LinkId=120378) 。  
+有关调试托管存储过程、函数、触发器、用户定义类型和聚合的详细信息和方案，请参阅 Visual Studio 文档中的 [SQL SERVER CLR 集成数据库调试](/previous-versions/ms165050(v=vs.100)) 。  
   
 必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 网络协议，才能使用 Visual Studio 进行远程开发、调试和开发。 有关在服务器上启用 TCP/IP 协议的详细信息，请参阅 [配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "91785162"
 2.  (c # ) 创建新的 SQL CLR 类型：
 
    1. 在 **解决方案资源管理器**中，右键单击项目，然后选择 " **添加**"、" **新建项 ...**"。 
-   1. 从 " **添加新项** " 窗口中，选择 " **Sql Clr c # 存储过程**"、 **Sql clr c # 用户定义的函数**、 **Sql clr c # 用户定义的类型**、 **Sql Clr c # 触发器**、 **sql clr c # 聚合**或 **类**。
+   1. 从 " **添加新项** " 窗口中，选择 " **Sql Clr c # 存储过程**"、" **Sql clr c # User-Defined 函数**、 **sql CLR c # User-Defined 类型**、 **Sql Clr c # 触发器**、 **sql clr c # 聚合**或 **类**"。
    1. 指定新类型的源文件的名称，然后选择 " **添加**"。
 
 3. 将此新类型的代码添加到文本编辑器中。 有关示例存储过程的示例代码，请参阅本文中的以下示例部分。
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>后续步骤
   
-有关使用 Visual Studio 调试托管代码的详细信息，请参阅 Visual Studio 文档中的 [调试托管代码](https://go.microsoft.com/fwlink/?LinkId=120377) 。  
+有关使用 Visual Studio 调试托管代码的详细信息，请参阅 Visual Studio 文档中的 [调试托管代码](/visualstudio/debugger/debugging-managed-code) 。  
 
 有关详细信息，请参阅 [公共语言运行时集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

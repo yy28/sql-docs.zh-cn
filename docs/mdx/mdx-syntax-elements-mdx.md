@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10a9aa360a50b43324ae9e41b77dee6ce84baf60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27755806802e5238329b4a9ecb49e6a9f6ad5ce2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483885"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196937"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX 语法元素 (MDX)
 
@@ -30,9 +30,8 @@ ms.locfileid: "88483885"
 |[函数](../mdx/functions-mdx-syntax.md)|函数是可以接受零个、一个或多个输入值并返回一个标量值或对象的语法元素。 示例包括用于添加几个值的 [Sum](../mdx/sum-mdx.md) 函数、用于从维度或级别返回一组成员的 [成员](../mdx/members-set-mdx.md) 函数等。|  
 |[注释](../mdx/comments-mdx-syntax.md)|注释是插入到 MDX 语句或脚本中，用来说明语句用途的文本段。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行注释。|  
 |[保留关键字](../mdx/reserved-keywords-mdx-syntax.md)|保留关键字是保留起来供 MDX 使用，且不应用作 MDX 语句中使用的对象名称的关键字。|  
-|[成员、元组和集](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|成员、元组和集是创建 MDX 查询之前必须了解的多维数据的核心概念。|  
+|[成员、元组和集](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|成员、元组和集是创建 MDX 查询之前必须了解的多维数据的核心概念。|  
   
 ## <a name="see-also"></a>另请参阅  
  [多维表达式 (MDX) 参考](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
   

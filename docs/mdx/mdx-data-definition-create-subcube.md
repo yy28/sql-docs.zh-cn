@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34da0a8cc7f2b6aa069a45e0366d361b06102feb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477019"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193939"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 数据定义 - CREATE SUBCUBE
 
@@ -53,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  删除子多维数据集时，也会删除在该子多维数据集的上下文中创建的会话对象。  
   
- 有关子多维数据的详细信息，请参阅 [在 mdx 中生成子多维数据 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
+ 有关子多维数据的详细信息，请参阅 [在 mdx 中生成子多维数据 &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
   
 ## <a name="example"></a>示例  
  下例创建了一个子多维数据集，将表观多维数据集空间限制为与加拿大关联的成员。 然后，它使用 **MEMBERS** 函数返回 Geography 用户定义的层次结构的国家/地区级别的所有成员-仅返回加拿大国家/地区。  
@@ -127,9 +127,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] 和 [All Resellers] 分别为列和行，包含所有成员（而不仅是可见成员）的总数。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX &#40;Analysis Services 中的关键概念&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX &#40;Analysis Services 中的关键概念&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 脚本语句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [&#40;MDX&#41;删除子多维数据集语句 ](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT 语句 (MDX)](../mdx/mdx-data-manipulation-select.md)  
-  
   

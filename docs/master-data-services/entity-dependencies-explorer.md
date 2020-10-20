@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389293"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192399"
 ---
 # <a name="entity-dependencies-explorer"></a>实体依赖关系资源管理器
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389293"
   
 它有助于回答以下问题：“谁在使用我的实体，如何使用？”。 此视图类似于派生层次结构资源管理器页面，但它包含的内容更多。 它显示了所有 DBA 关系，而不仅仅是那些定义为某个特定层次结构的一部分的关系。 由于显示的层次结构只是从现有的 DBA 推断，因此层次结构定义不是必需的。  
   
-在资源管理器页面菜单中，实体依赖关系菜单项列出了模型中至少被一个实体所依赖的所有实体（即，至少一个实体具有引用列出的实体的 DBA）。 实体名称旁边显示依赖项（直接和间接）的数量，并按此数字对列表以及顶部大量引用的实体进行排序。 以下来自 [sample data（数据采样）](https://msdn.microsoft.com/library/master-data-services-sample.aspx)的 Customer 模型的屏幕截图显示，BigArea 实体由 7 个实体（直接或间接）引用：  
+在资源管理器页面菜单中，实体依赖关系菜单项列出了模型中至少被一个实体所依赖的所有实体（即，至少一个实体具有引用列出的实体的 DBA）。 实体名称旁边显示依赖项（直接和间接）的数量，并按此数字对列表以及顶部大量引用的实体进行排序。 以下来自 [sample data（数据采样）](./sql-server-samples-model-deployment-packages-mds.md)的 Customer 模型的屏幕截图显示，BigArea 实体由 7 个实体（直接或间接）引用：  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ ms.locfileid: "88389293"
   
   
   
-  
-

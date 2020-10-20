@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471769"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193487"
 ---
 # <a name="operators-mdx-syntax"></a>运算符（MDX 语法）
 
@@ -83,7 +83,7 @@ ms.locfileid: "88471769"
 ### <a name="determining-results"></a>确定结果  
  将简单的表达式合并成复杂的表达式时，运算符的规则与数据类型优先级的规则一起决定结果值的数据类型。  
   
- 如果结果是一个字符或 Unicode 值，则结果的排序规则由运算符的规则和排序优先级的规则一起决定。 有关排序规则的详细信息，请参阅 [&#41;Analysis Services 语言和排序规则 &#40;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)。  
+ 如果结果是一个字符或 Unicode 值，则结果的排序规则由运算符的规则和排序优先级的规则一起决定。 有关排序规则的详细信息，请参阅 [&#41;Analysis Services 语言和排序规则 &#40;](/analysis-services/languages-and-collations-analysis-services)。  
   
  另外还有一些规则，根据简单表达式的精度、小数位数和长度来确定结果的精度、小数位数和长度。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "88471769"
   
 |原始类型|所需类型|转换|  
 |-------------------|-----------------|----------------|  
-|级别|设置|\<level>。成员|  
+|Level|设置|\<level>。成员|  
 |层次结构|成员|\<hierarchy>。 defaultmember|  
 |成员|Tuple|(\<Member>)|  
 |Tuple|成员|\<tuple>。项 (0) |  
@@ -101,5 +101,4 @@ ms.locfileid: "88471769"
 ## <a name="see-also"></a>另请参阅  
  [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX 语法元素 (MDX)](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

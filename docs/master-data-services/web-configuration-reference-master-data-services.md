@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34e3e849a86cb23c3974b32b9d3d8c0721601274
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456750"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196091"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 配置参考 (Master Data Services)
 
@@ -29,19 +29,19 @@ ms.locfileid: "88456750"
 ## <a name="webconfig-elements"></a>Web.Config 元素  
  Web.config 文件 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **\<masterDataServices>** 除了包含标准 IIS、.NET Framework、ASP.NET 和 WINDOWS COMMUNICATION FOUNDATION (WCF) 配置元素外，还包含一个自定义元素。 下表描述了 Web.config 文件中包括的元素。  
   
-|配置元素|描述|  
+|配置元素|说明|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自定义元素。 将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务连接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。|  
-|**connectionStrings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [connectionStrings 元素（ASP.NET 设置架构）](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
-|**system.web**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web 元素（ASP.NET 设置架构）](https://go.microsoft.com/fwlink/?LinkId=178348) 。|  
-|**阶段**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<startup> 元素](https://go.microsoft.com/fwlink/?LinkId=178349)。|  
-|**时会**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<runtime> 元素](https://go.microsoft.com/fwlink/?LinkId=178350)。|  
-|**system.codedom**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<system.codedom> 元素](https://go.microsoft.com/fwlink/?LinkId=178351)。|  
-|**system.web. extensions**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web.extensions 元素（ASP.NET 设置架构）](https://go.microsoft.com/fwlink/?LinkId=178352) 。|  
-|**system.webServer**|包含 IIS 元素的节组。 有关详细信息，请参阅 MSDN Library 中的 [system.webServer 节组 \[IIS 7 设置架构\]](https://go.microsoft.com/fwlink/?LinkId=178353)。|  
-|**system.serviceModel**|WCF 元素。 有关详细信息，请参阅 [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) MSDN 库中的。|  
-|**system.diagnostics**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<system.diagnostics> 元素](https://go.microsoft.com/fwlink/?LinkId=178355)。|  
-|**appSettings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [appSettings 元素（常规设置架构）](https://go.microsoft.com/fwlink/?LinkId=178356) 。|  
+|**connectionStrings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [connectionStrings 元素（ASP.NET 设置架构）](/previous-versions/dotnet/netframework-4.0/bf7sd233(v=vs.100)) 。|  
+|**system.web**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web 元素（ASP.NET 设置架构）](/previous-versions/dotnet/netframework-4.0/dayb112d(v=vs.100)) 。|  
+|**阶段**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<startup> 元素](/dotnet/framework/configure-apps/file-schema/startup/startup-element)。|  
+|**运行时**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<runtime> 元素](/dotnet/framework/configure-apps/file-schema/runtime/runtime-element)。|  
+|**system.codedom**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<system.codedom> 元素](/dotnet/framework/configure-apps/file-schema/compiler/system-codedom-element)。|  
+|**system.web. extensions**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web.extensions 元素（ASP.NET 设置架构）](/previous-versions/dotnet/netframework-4.0/bb546044(v=vs.100)) 。|  
+|**system.webServer**|包含 IIS 元素的节组。 有关详细信息，请参阅 MSDN Library 中的 [system.webServer 节组 \[IIS 7 设置架构\]](/previous-versions/iis/settings-schema/ms689429(v=vs.90))。|  
+|**system.serviceModel**|WCF 元素。 有关详细信息，请参阅 [\<system.serviceModel>](/dotnet/framework/configure-apps/file-schema/wcf/system-servicemodel) MSDN 库中的。|  
+|**system.diagnostics**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的[ \<system.diagnostics> 元素](/dotnet/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element)。|  
+|**appSettings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [appSettings 元素（常规设置架构）](/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100)) 。|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 元素  
  **\<masterDataServices>** 元素是一个自定义元素，用于将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务连接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
@@ -56,7 +56,7 @@ ms.locfileid: "88456750"
   
 ### <a name="elements-and-attributes"></a>元素和属性  
   
-|项|描述|  
+|项目|说明|  
 |----------|-----------------|  
 |**实例**|子元素。 包含指定 Web 服务和数据库连接字符串信息的属性。|  
 |**virtualPath**|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 这对应于**path** **\<application>** **\<site>** IIS ApplicationHost.config 文件中元素下的元素的 path 属性。|  
@@ -72,5 +72,4 @@ ms.locfileid: "88456750"
    <instance virtualPath="/MDS" siteName="Contoso" connectionName="MDSDB" serviceName="MDS1" />  
 </masterDataServices>  
 ```  
-  
   

@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c307172d7bf8b258cbd56b4ef4abfe6704750358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885918"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192357"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 集成入门
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-本主题概述了使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时（CLR）的集成编译数据库对象所需的命名空间和库。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
+本主题概述了使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 的集成编译数据库对象所需的命名空间和库。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
   
 ## <a name="required-namespaces"></a>所需命名空间  
 
@@ -50,7 +50,7 @@ system.data.dll 程序集包含以下命名空间，这些命名空间是编译 
 - `System.Data.SqlTypes`  
 
 > [!TIP]
-> 支持在 Linux 上加载 CLR 数据库对象，但必须用 .NET Framework 生成它们（SQL Server CLR 集成不支持 .NET Core）。 此外，Linux 不支持具有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集。
+> 支持在 Linux 上加载 CLR 数据库对象，但必须用 .NET Framework (生成，SQL Server CLR 集成不支持 .NET Core) 。 此外，Linux 不支持具有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集。
 
 ## <a name="writing-a-simple-hello-world-stored-procedure"></a>撰写一个简单的“Hello World”存储过程  
 
@@ -90,7 +90,7 @@ End Class
   
 ```  
   
-这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类**[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 和**[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**，创建托管数据库对象以输出简单的短信。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程，然后采用与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程相同的方式运行。  
+这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类 **[SqlContext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** 和 **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)**，创建托管数据库对象以输出简单的短信。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程，然后采用与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程相同的方式运行。  
   
 将此程序编译为库，将其加载到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，并将其作为存储过程运行。  
   
@@ -120,7 +120,7 @@ Version 包含已安装 .NET Framework 可再发行组件的版本号。 例如�
 
 一旦该存储过程示例成功编译后，就可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中测试它。 为此，打开 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 并创建一个新查询，将其连接到适合的测试数据库（例如，AdventureWorks 示例数据库）。  
   
-在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以通过使用**sp_configure**系统存储过程来启用 CLR 代码。 有关详细信息，请参阅 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
+在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以通过使用 **sp_configure** 系统存储过程来启用 CLR 代码。 有关详细信息，请参阅 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
   
 我们将需要创建该程序集，以便可以访问该存储过程。 对于此示例，我们将假定您已在 C:\ 目录中创建了 helloworld.dll 程序集。 将以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句添加到您的查询中。  
   
@@ -138,7 +138,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
-一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 运行以下命令：  
+一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 执行以下命令：  
   
 ```sql
 DECLARE @J nchar(25)  
@@ -175,7 +175,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 
 有关 SQL Server 中的 CLR 集成的详细信息，请参阅以下文章：
 
-- [CLR 存储过程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [CLR 存储过程](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [SQL Server 进程内专用的 ADO.NET 扩展](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [调试 CLR 数据库对象](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [CLR 集成安全性](../../../relational-databases/clr-integration/security/clr-integration-security.md)

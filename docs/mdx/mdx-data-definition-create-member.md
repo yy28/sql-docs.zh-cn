@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483900"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196983"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 数据定义 - CREATE MEMBER
 
@@ -48,9 +48,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  定义计算成员属性值的有效标量表达式。  
   
 ## <a name="remarks"></a>备注  
- CREATE MEMBER 语句定义的计算成员在整个会话期间均可用，因此可在会话期间用于多个查询。 有关详细信息，请参阅 [创建会话作用域的计算成员 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
+ CREATE MEMBER 语句定义的计算成员在整个会话期间均可用，因此可在会话期间用于多个查询。 有关详细信息，请参阅 [&#40;MDX&#41;创建 Session-Scoped 计算成员 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
   
- 还可以定义供一个查询使用的计算成员。 若要定义只供一个查询使用的计算成员，请在 SELECT 语句中使用 WITH 子句。 有关详细信息，请参阅 [&#40;MDX&#41;创建查询作用域的计算成员 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
+ 还可以定义供一个查询使用的计算成员。 若要定义只供一个查询使用的计算成员，请在 SELECT 语句中使用 WITH 子句。 有关详细信息，请参阅 [&#40;MDX&#41;创建 Query-Scoped 计算成员 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
   
  *Property_Name* 可以引用标准或可选的计算成员属性。 标准成员属性在本主题后面列出。 使用 CREATE MEMBER 而不使用 **session** 值创建的计算成员具有会话作用域。 另外，计算成员定义中的字符串用双引号分隔。 这不同于 OLE DB 定义的方法，后者指定字符串应由单引号分隔。  
   
@@ -62,7 +62,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  计算成员可出现在下表列出的一个作用域中。  
   
  查询范围  
- 计算成员的可见性和生存期限制在查询中。 计算成员在单独的查询中定义。 查询作用域将覆盖会话作用域。 有关详细信息，请参阅 [&#40;MDX&#41;创建查询作用域的计算成员 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
+ 计算成员的可见性和生存期限制在查询中。 计算成员在单独的查询中定义。 查询作用域将覆盖会话作用域。 有关详细信息，请参阅 [&#40;MDX&#41;创建 Query-Scoped 计算成员 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
   
  会话范围  
  计算成员的可见性和生存期限制在创建计算成员时所在的会话中。 如果在计算成员上发出 DROP MEMBER 语句， (生存期小于会话持续时间。 ) CREATE MEMBER 语句将创建具有会话作用域的计算成员。  
@@ -124,5 +124,4 @@ WHERE ProfitRatio
  [DROP MEMBER 语句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [&#40;MDX&#41;更新成员语句 ](../mdx/mdx-data-definition-update-member.md)   
  [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

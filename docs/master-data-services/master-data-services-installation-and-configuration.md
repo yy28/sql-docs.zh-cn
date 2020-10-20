@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823745"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195801"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -110,7 +110,7 @@ ms.locfileid: "87823745"
   
  有关使用安装程序安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的详细信息，请参阅[使用安装向导安装 SQL Server 2016（安装程序）](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
- 有关使用命令提示符安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 使用命令提示符时， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 作为功能参数提供。  
+ 有关使用命令提示符安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。 使用命令提示符时， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 作为功能参数提供。  
   
  有关链接到与预安装任务相关的其他信息的简要说明，请参阅 [安装 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)。  
   
@@ -128,15 +128,15 @@ ms.locfileid: "87823745"
   
 2.  单击“创建数据库”****，然后在“创建数据库向导”**** 中单击“下一步”****。  
   
-3.  在 "**数据库服务器**" 页上，指定 SQL Server 实例。 
+3.  在 " **数据库服务器** " 页上，指定 SQL Server 实例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]添加对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为托管实例的主机。 例如 `xxxxxx.xxxxxx.database.windows.net`。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 添加对 SQL Server 托管实例的支持。 将 **SQL Server 实例** 的值设置为托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net`。
 
-4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
+4. 选择 **身份验证类型** ，然后单击 " **测试连接** " 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”  。
 
     >对于 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] ，若要连接到托管实例，请使用以下身份验证类型之一：
     >
-    >- Azure Active Directory 集成身份验证：**当前用户– Active Directory 集成**
+    >- Azure Active Directory 集成身份验证： **当前用户– Active Directory 集成**
     >- SQL Server 身份验证： **SQL Server 帐户**。
     >
     >在 SQL 托管实例中，用户必须是 `sysadmin` 固定服务器角色的成员。
@@ -146,7 +146,7 @@ ms.locfileid: "87823745"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在“数据库名称”**** 字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”********。 单击“下一步”。
+4.  在“数据库名称”**** 字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”********。 单击“下一步”  。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "87823745"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_AdminPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-adminpage.png)  
   
-6.  单击 "**下一步**" 查看数据库的设置摘要 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，然后再次单击 "**下一步**" 以创建数据库。 出现“进度和完成”页****。
+6.  单击 " **下一步** " 查看数据库的设置摘要 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，然后再次单击 " **下一步** " 以创建数据库。 出现“进度和完成”页****。
 
 7. 创建和配置数据库后，单击“完成”****。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "87823745"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 单击“应用”。 显示“配置完成”消息框****。 在消息框中单击“确定”，启动 Web 应用程序****。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
+15. 单击“应用”  。 显示“配置完成”消息框****。 在消息框中单击“确定”，启动 Web 应用程序****。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -294,5 +294,4 @@ ms.locfileid: "87823745"
  [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)   
  ["数据库配置" 页 &#40;Master Data Services 配置管理器&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

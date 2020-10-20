@@ -11,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522001"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194089"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-本文介绍 Always On 可用性组配置上托管的 Master Data Service （MDS）解决方案。 本文介绍如何在 SQL 2016 Always On 可用性组（AG）上安装和配置 SQL 2016 Master Data Services。 此解决方案的主要目的是改善 SQL Server 数据库上托管的 MDS 后端数据的高可用性和灾难恢复。
+本文介绍 Always On 可用性组配置上托管的 Master Data Service (MDS) 的解决方案。 本文介绍如何在 (AG) 的 SQL 2016 Always On 可用性组上安装和配置 SQL 2016 Master Data Services。 此解决方案的主要目的是改善 SQL Server 数据库上托管的 MDS 后端数据的高可用性和灾难恢复。
 
 ## <a name="introduction"></a>简介
 
-本文介绍了在 Always On 可用性组配置上托管的 Master Data Service （MDS）解决方案。 本文介绍如何在 SQL 2016 Always On 可用性组（AG）上安装和配置 SQL 2016 MDS。 此解决方案的主要目的是改善 SQL Server 数据库上托管的 MDS 后端数据的高可用性和灾难恢复。
+本文介绍 Always On 可用性组配置上托管的 Master Data Service (MDS) 的解决方案。 本文介绍如何在 (AG) 的 SQL 2016 Always On 可用性组上安装和配置 SQL 2016 MDS。 此解决方案的主要目的是改善 SQL Server 数据库上托管的 MDS 后端数据的高可用性和灾难恢复。
 
 若要实现该解决方案，需完成本文所述的以下任务。
 
@@ -59,7 +59,7 @@ ms.locfileid: "87522001"
 
 - 如何实现 IIS（托管 Master Data Service UI 的 Web 服务器）的高可用性和在灾难后进行恢复。 MDS 不会对 IIS 施加任何特定要求，因此实现 IIS 高可用性和负载均衡的标准技术也适用于此处。
 
-- 如何使用 SQL Server Always On 故障转移群集实例（FCI）来支持 MDS 后端的高可用性（HA）。 SQL Server 故障转移群集是另外一种 HA 解决方案，受到 SQL Server 的正式支持，并且适用于 MDS。
+- 如何使用 SQL Server Always On 故障转移群集实例 (FCI) 来支持 MDS 后端的高可用性 (HA) 。 SQL Server 故障转移群集是另外一种 HA 解决方案，受到 SQL Server 的正式支持，并且适用于 MDS。
 
 - 如何使用 FCI 和 AG 的混合解决方案来支持 MDS 后端的高可用性。 该混合解决方案适用于 MDS。
 
@@ -108,7 +108,7 @@ WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一�
 
 3. 选择“故障转移群集”复选框，然后单击“下一步”完成安装********。 请参阅图 2。
 
-   如果要求确认**添加故障转移群集所需的功能**，请单击 "**添加功能**"。 请参阅图 3。
+   如果要求确认 **添加故障转移群集所需的功能**，请单击 " **添加功能**"。 请参阅图 3。
 
    ![添加角色和功能向导、故障转移群集](media/Fig2_SelectFeatures.png)
 
@@ -180,13 +180,13 @@ WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一�
 
    稍后如需添加节点，请在故障转移群集管理器的右窗格中单击“添加节点”操作********。
 
-注意：
+说明：
 
 - 不是所有版本的 Windows Server 都具备 WSFC 功能。 请确保你的版本具备该功能。
 
-- 请确保你拥有适当特权在 Active Directory 中安装 WSFC。 如有任何问题，请参阅 [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)（故障转移群集分步指南：在 Active Directory 中配置帐户）。
+- 请确保你拥有适当特权在 Active Directory 中安装 WSFC。 如有任何问题，请参阅 [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10))（故障转移群集分步指南：在 Active Directory 中配置帐户）。
 
-有关 WSFC 的更多详细信息，请参阅[故障转移群集](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx)。
+有关 WSFC 的更多详细信息，请参阅[故障转移群集](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10))。
 
 ## <a name="sql-server-always-on-availability-group"></a>Always On 可用性组 SQL Server
 
@@ -200,9 +200,9 @@ WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一�
 
 Always On 提供了两种功能来为 MDS 提供高可用性和灾难恢复，两者都是基于 WSFC 构建的。
 
-- Always On 可用性组（AG）
+- Always On 可用性组 (AG) 
 
-- Always On 故障转移群集实例（FCI）。
+- Always On 故障转移群集实例 (FCI) 。
 
 AG 提供数据库级别的可用性。 AG（一组用户数据库）及其虚拟网络名称均在 WSFC 中注册为资源。
 
@@ -228,7 +228,7 @@ Fci 提供实例级高可用性。 SQL Server 服务及其相关服务在 WSFC �
 
    图 10
 
-2. 在 " **SQL Server （MSSQLSERVER）** **属性**" 对话框中，单击 " **Always On 高可用性**" 选项卡，然后选中 "**启用 Always On 可用性组**" 复选框。 当“Windows 故障转移群集名称”文本框中显示值时，单击“确定”继续********。 请参阅图 11。
+2. 在 " **SQL Server (MSSQLSERVER) ** " **属性** "对话框中，单击" **Always On 高可用性** "选项卡，然后选中" **启用 Always On 可用性组** "复选框。 当“Windows 故障转移群集名称”文本框中显示值时，单击“确定”继续********。 请参阅图 11。
 
    ![启用 Always On 可用性组选项](media/Fig11_EnableAlwaysOn.png)
 
@@ -265,7 +265,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
    > [!NOTE]
    > 在此数据库上创建 AG 时需要完整的数据库备份。
 
-3. 在**对象资源管理器**中，展开 " **Always On 高可用性**" 文件夹，然后单击 "**新建可用性组向导**" 以启动 "**新建可用性组向导**"。 请参阅图 13。
+3. 在 **对象资源管理器**中，展开 " **Always On 高可用性** " 文件夹，然后单击 " **新建可用性组向导** " 以启动 " **新建可用性组向导**"。 请参阅图 13。
 
    ![启动新建可用性组向导](media/Fig13_AvailabilityGroupsFolder.png)
 
@@ -318,7 +318,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
    d. 在“网络模式”文本框中输入 DHCP，然后单击“下一步”继续********。
 
    > [!NOTE]
-   > 还可以选择 "静态 IP" 作为**网络模式**，并输入静态 ip。 也可输入不同于 1433 的端口。
+   > 还可以选择 "静态 IP" 作为 **网络模式** ，并输入静态 ip。 也可输入不同于 1433 的端口。
 
    ![配置侦听器](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -326,7 +326,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
 9. 在“选择数据同步”页上，单击“完整”，然后指定每个节点都能访问的网络共享********。 单击“下一步”以继续。 请参阅图 19。
 
-   此网络共享用于存储数据库备份以创建次要副本。 如果它不适用于你的组织，请选择其他数据同步选项。 请参阅[SQL Server 2016 Always On 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)，了解如何使用其他选项创建辅助副本。 图 17 还列出了其他选项。
+   此网络共享用于存储数据库备份以创建次要副本。 如果它不适用于你的组织，请选择其他数据同步选项。 请参阅 [SQL Server 2016 Always On 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) ，了解如何使用其他选项创建辅助副本。 图 17 还列出了其他选项。
 
    ![配置数据同步](media/Fig19_AvailabilityGroupDataSync.png)
 
@@ -342,7 +342,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
 1. 打开 SSMS，连接到在[创建可用性](#create-an-availability-group)部分所创建的侦听器 DNS 名称。 在此示例中，为 MDSSQLServer。
 
-2. 在**对象资源管理器**中，展开 " **Always On 高可用性**" 文件夹，右键单击刚在 "[创建可用性组](#create-an-availability-group)" 部分中创建的 AG，并单击 "**显示仪表板**"。 请参阅图 20。 将会出现新建 AG 及其副本的状态。
+2. 在 **对象资源管理器**中，展开 " **Always On 高可用性** " 文件夹，右键单击刚在 " [创建可用性组](#create-an-availability-group) " 部分中创建的 AG，并单击 " **显示仪表板**"。 请参阅图 20。 将会出现新建 AG 及其副本的状态。
 
    ![查看仪表板](media/Fig20_ShowDashboard.png)
 
@@ -352,7 +352,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    AG 设置已完成。
 
-有关 Always On 可用性组的详细信息，请参阅[SQL Server 2016 Always On 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。
+有关 Always On 可用性组的详细信息，请参阅 [SQL Server 2016 Always On 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。
 
 ## <a name="configure-mds-to-run-on-an-wsfc-node"></a>将 MDS 配置为在 WSFC 节点上运行
 
@@ -382,7 +382,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    MDS 的安装已完成。 可重复上述步骤将 MDS 设置为在所有节点上运行。 同一 AG 上的后端数据库是相同的。
 
-6. 如果以前创建了一个临时数据库（请参阅[创建可用性组](#create-an-availability-group)部分），则应删除该临时数据库
+6. 如果以前创建了临时数据库 (请参阅 [创建可用性组](#create-an-availability-group) 部分) 以创建 AG，然后应删除临时数据库
 
    有关 Master Data Service 的详细信息，请参阅 [Master Data Services](../master-data-services-overview-mds.md)。
 
@@ -394,5 +394,4 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
 此白皮书对您有帮助吗？ 请单击文章顶部的“评论”向我们提供反馈****。 
 
-你的反馈将帮助我们改进所发布的白皮书质量。 
-
+你的反馈将帮助我们改进所发布的白皮书质量。

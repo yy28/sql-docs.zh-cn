@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 32f5084190642bd4237d225404c92f0c4754da7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 391b39dd92011ce43b146d740b232d0c4fca6669
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466469"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193477"
 ---
 # <a name="unary-operators"></a>一元运算符
 
@@ -23,7 +23,7 @@ ms.locfileid: "88466469"
   
  MDX 支持下表中列出的一维运算符。  
   
-|操作员|描述|  
+|运算符|说明|  
 |--------------|-----------------|  
 |[-（负）](../mdx/negative-mdx.md)|返回数值表达式的负值。|  
 |[+（正）](../mdx/positive-mdx.md)|返回数值表达式的正值。|  
@@ -41,9 +41,8 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- 此外，MDX 使用特殊一元运算符来确定由 [RollupChildren](../mdx/rollupchildren-mdx.md) 函数执行的聚合操作。 有关这些特殊一元运算符的详细信息，请参阅 [向维度中添加自定义聚合](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)。  
+ 此外，MDX 使用特殊一元运算符来确定由 [RollupChildren](../mdx/rollupchildren-mdx.md) 函数执行的聚合操作。 有关这些特殊一元运算符的详细信息，请参阅 [向维度中添加自定义聚合](/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)。  
   
 ## <a name="see-also"></a>另请参阅  
  [运算符 &#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
-  
   

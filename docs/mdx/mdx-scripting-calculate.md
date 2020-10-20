@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6ec4d0e86c2719613527ec7ea8206f980deebc3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff995f08ffef27abca65db10ff2cd38f2dd01e95
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429759"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196961"
 ---
 # <a name="mdx-scripting---calculate"></a>MDX 脚本 - CALCULATE
 
@@ -41,7 +41,6 @@ CALCULATE
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 脚本语句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [MDX 脚本编写基础 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
- [定义赋值和其他脚本命令](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
-  
+ [MDX 脚本编写基础 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
+ [定义赋值和其他脚本命令](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

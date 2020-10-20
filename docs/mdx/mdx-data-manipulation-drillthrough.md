@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8899c5a9325c638549383683b82724eefa2b1464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387032"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196181"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 数据操作 - DRILLTHROUGH
 
@@ -50,7 +50,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  MDX 语句指定了目标单元。 **MAXROWS**参数指定的值指示生成的行集应返回的最大行数。  
   
- 默认情况下，返回的最大行数为 10000 行。 这意味着，如果未指定 **MAXROWS** ，则会收到10000行或更少的行。 如果此值对于你的方案来说太小，则可以将 **MAXROWS** 设置为更大的数字，如 `MAXROWS 20000` 。 如果此值太低，则可以通过更改 **OLAP\Query\DefaultDrillthroughMaxRows** 服务器属性来增加默认值。 有关更改此属性的详细信息，请参阅 [中的服务器属性 Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)。  
+ 默认情况下，返回的最大行数为 10000 行。 这意味着，如果未指定 **MAXROWS** ，则会收到10000行或更少的行。 如果此值对于你的方案来说太小，则可以将 **MAXROWS** 设置为更大的数字，如 `MAXROWS 20000` 。 如果此值太低，则可以通过更改 **OLAP\Query\DefaultDrillthroughMaxRows** 服务器属性来增加默认值。 有关更改此属性的详细信息，请参阅 [中的服务器属性 Analysis Services](/analysis-services/server-properties/server-properties-in-analysis-services)。  
   
  除非另行指定，否则返回的列包括与指定度量值的度量值组相关的所有维度（多对多维度除外）的所有粒度属性。 多维数据集维度带有 $ 前缀，以区分维度和度量值组。 **RETURN**子句用于指定钻取查询返回的列。 以下函数可通过 **RETURN** 子句应用于单个属性或度量值。  
   
@@ -99,5 +99,4 @@ RETURN
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 数据操作语句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

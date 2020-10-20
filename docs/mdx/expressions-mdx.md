@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b0943d8e493edf60cc491ca8fa7af1447b59ee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387523"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196009"
 ---
 # <a name="expressions-mdx"></a>表达式 (MDX)
 
@@ -74,7 +74,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[使用多维数据集表达式和子多维数据集表达式](../mdx/using-cube-and-subcube-expressions.md)|定义多维数据集和子多维数据集表达式。|  
 |[使用维度表达式](../mdx/using-dimension-expressions.md)|定义维度表达式。|  
@@ -86,6 +86,5 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 语言参考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
-  
+ [MDX 查询基础知识 (Analysis Services)](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   

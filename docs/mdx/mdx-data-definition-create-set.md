@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d8aa29715753cfb169d87df3a31230eeec9397f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483880"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193949"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 数据定义 - CREATE SET
 
@@ -50,9 +50,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>备注  
  命名集是为重用而创建的维度成员集（或者是用于定义集的表达式）。 例如，使用命名集可以定义由销售额排在前十名的商店组成的维度成员集。 可以静态方式定义此集，也可以通过 [TopCount](../mdx/topcount-mdx.md)等函数进行定义。 然后，可以使用此命名集，只要需要前10个存储的集合。  
   
- CREATE SET 语句创建的命名集在整个会话过程中保持可用，因此可用于会话中的多个查询。 有关详细信息，请参阅 [创建会话作用域的计算成员 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
+ CREATE SET 语句创建的命名集在整个会话过程中保持可用，因此可用于会话中的多个查询。 有关详细信息，请参阅 [&#40;MDX&#41;创建 Session-Scoped 计算成员 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
   
- 也可以定义用于单个查询的命名集。 若要定义这种集，请在 SELECT 语句中使用 WITH 子句。 有关 WITH 子句的详细信息，请参阅 [&#40;MDX&#41;创建查询作用域的命名集 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
+ 也可以定义用于单个查询的命名集。 若要定义这种集，请在 SELECT 语句中使用 WITH 子句。 有关 WITH 子句的详细信息，请参阅 [&#40;MDX&#41;创建 Query-Scoped 命名集 ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
   
  *Set_Expression*子句可以包含支持 MDX 语法的任何函数。 如果使用 CREATE SET 语句创建集时没有指定 SESSION 子句，则该集的作用域为会话。 使用 WITH 子句创建具有查询作用域的集。  
   
@@ -62,7 +62,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  用户定义的集的作用域可以是下表所列的任意一个作用域。  
   
  查询范围  
- 集的可见性和生存期被限制在查询中。 集是在单个查询中定义的。 查询作用域将覆盖会话作用域。 有关详细信息，请参阅 [&#40;MDX&#41;创建查询作用域的命名集 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
+ 集的可见性和生存期被限制在查询中。 集是在单个查询中定义的。 查询作用域将覆盖会话作用域。 有关详细信息，请参阅 [&#40;MDX&#41;创建 Query-Scoped 命名集 ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
   
  会话范围  
  集的可见性和生存期被限制在创建该集的会话中。 如果对集发出 DROP SET 语句， (生存期小于会话持续时间。 ) CREATE SET 语句将创建具有会话作用域的集。 使用 WITH 子句创建具有查询作用域的集。  
@@ -103,5 +103,4 @@ SELECT [Core Products] ON 0
 ## <a name="see-also"></a>另请参阅  
  [DROP SET 语句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

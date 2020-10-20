@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e80ec1e7ffaa4f3bbce87363de109aa85132f74d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480659"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194032"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "89480659"
 -   如果为一个层次结构节点分配**创建** / **读取** / **更新** / **删除**权限的任意组合，并为另一个节点分配了 "**拒绝**" 权限，则对该节点中的成员的访问被拒绝。  
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章 [安全性改进](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)。  
+ msdn.com 上的博客文章 [安全性改进](/archive/blogs/e7/improvements-to-autoplay)。  
   
 ## <a name="see-also"></a>另请参阅  
  [将层次结构成员权限分配 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
@@ -72,5 +72,4 @@ ms.locfileid: "89480659"
  [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [层次结构 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
  [立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
-  
   

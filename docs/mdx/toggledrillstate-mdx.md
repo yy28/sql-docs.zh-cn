@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e10c62742e28b69545efac51f70bf9628b43e08d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd716e631adc3ded77f81278c20f754b28199b49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412891"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192317"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -46,7 +46,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  如果使用了可选的 **递归** 标志，则将以递归方式应用向上钻取和向下钻取。 有关递归标志的详细信息，请参阅 [DrillupMember](../mdx/drillupmember-mdx.md) 和 [DrilldownMember](../mdx/drilldownmember-mdx.md) 函数。  
   
- 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅 [&#40;xmla&#41;支持的 Xmla 属性 ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
+ 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅 [&#40;xmla&#41;支持的 Xmla 属性 ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
  有关涉及此函数的方案和示例，请参阅 [数据库日志： MDX 集函数： ToggleDrillState ( # A1 函数](https://go.microsoft.com/fwlink/?LinkId=517759) 。  
   
@@ -66,5 +66,4 @@ SELECT ToggleDrillState
   
 ## <a name="see-also"></a>另请参阅  
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812963"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197014"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>从表导入数据 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85812963"
   
 -   您必须有权将数据插入 stg.<name。 \<name>_Leaf stg.<name。 \<name>_Consolidated stg.<name。 \<name>数据库中的 _Relationship 表 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
--   您必须具有 \<name> 在数据库中执行 udp_ stg.<name _Leaf、stg.<name \_ \<name> _Consolidated 或 stg.<name \_ \<name> _Relationship 存储过程 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的权限。  
+-   您必须有权 \<name> 在数据库中执行 stg.udp_ _Leaf stg.<name \_ \<name> _Consolidated 或 stg.<name \_ \<name> _Relationship 存储过程 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
 -   模型的状态不能是“已提交” ****。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812963"
   
 2.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 并为自己的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库连接到数据库引擎实例。  
   
-     有关详细信息，请参阅[SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)。  
+     有关详细信息，请参阅 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)。  
   
 3.  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导将数据导入到临时表。  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812963"
      在主数据管理器中，导航到模型的“资源管理器” **** 功能区域，然后应用业务规则以验证数据。 有关详细信息，请参阅[业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 同时可以使用存储过程来验证数据。 有关详细信息，请参阅 [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)。  
   
      使用临时表加载数据时，不会自动根据业务规则验证数据。 有关执行何种验证以及何时执行的详细信息，请参阅[验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)。  
-  
   

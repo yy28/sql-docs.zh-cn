@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429699"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192287"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函数
 
 
-  本文档包含在 MDX 支持的 [Visual Basic for Applications 函数](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) 中提供的所有 VBA 函数的交叉引用;此外，此列表还包含与 DAX 语言的功能等效性时的注释。  
+  本文档包含在 MDX 支持的 [Visual Basic for Applications 函数](/office/vba/Language/Reference/functions-visual-basic-for-applications) 中提供的所有 VBA 函数的交叉引用;此外，此列表还包含与 DAX 语言的功能等效性时的注释。  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函数引用  
   
@@ -43,7 +43,7 @@ ms.locfileid: "88429699"
 |CLng|仅 MDX||  
 |CLngLng|不支持||  
 |CLngPtr|不支持||  
-|Command|不支持||  
+|命令|不支持||  
 |Cos|仅 MDX||  
 |CreateObject|不支持||  
 |CSng|仅 MDX||  
@@ -68,7 +68,7 @@ ms.locfileid: "88429699"
 |FileAttr|不支持||  
 |FileDateTime|不支持||  
 |FileLen|不支持||  
-|筛选|不支持|**警告** MDX 实现同名的不同函数;筛选器 (Set_Expression，Logical_Expression) 函数返回根据给定自变量中的搜索条件筛选指定集而生成的集<br /><br /> **警告** DAX 实现了具有相同名称的不同函数;FILTER (\<table> \<filter>) 函数返回一个表，该表表示来自给定参数的另一个表或表达式的子集|  
+|筛选器|不支持|**警告** MDX 实现同名的不同函数;筛选器 (Set_Expression，Logical_Expression) 函数返回根据给定自变量中的搜索条件筛选指定集而生成的集<br /><br /> **警告** DAX 实现了具有相同名称的不同函数;FILTER (\<table> \<filter>) 函数返回一个表，该表表示来自给定参数的另一个表或表达式的子集|  
 |Fix|仅 MDX||  
 |Format  (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|不支持||  
@@ -82,7 +82,7 @@ ms.locfileid: "88429699"
 |GetObject|不支持||  
 |GetSetting|不支持||  
 |Hex|仅 MDX||  
-|Hour|DAX、MDX||  
+|小时|DAX、MDX||  
 |Iif|仅 MDX|**警告** DAX 实现了类似于名称的函数：如果 (logical_test，value_if_true value_if_false) 函数。|  
 |IMEStatus|不支持||  
 |输入|不支持||  
@@ -136,8 +136,8 @@ ms.locfileid: "88429699"
 |秒|DAX、MDX||  
 |Seek|不支持||  
 |Sgn|DAX、MDX||  
-|shell|不支持||  
-|正弦|仅 MDX||  
+|Shell|不支持||  
+|Sin|仅 MDX||  
 |SLN|仅 MDX||  
 |Space|仅 MDX||  
 |Spc|不支持||  
@@ -146,17 +146,17 @@ ms.locfileid: "88429699"
 |Str|仅 MDX||  
 |StrComp|仅 MDX||  
 |StrConv|仅 MDX||  
-|字符串|仅 MDX||  
+|String|仅 MDX||  
 |StrReverse|不支持||  
 |开关|仅 MDX||  
 |SYD|仅 MDX||  
 |选项卡|不支持||  
 |Tan|仅 MDX||  
 |时间|不支持||  
-|计时器|仅 MDX||  
+|Timer|仅 MDX||  
 |TimeSerial|仅 MDX||  
 |TimeValue|DAX、MDX||  
-|Trim|DAX、MDX||  
+|裁剪|DAX、MDX||  
 |TypeName|仅 MDX||  
 |UBound|不支持||  
 |UCase|仅 MDX||  
@@ -165,5 +165,4 @@ ms.locfileid: "88429699"
 |星期|DAX、MDX||  
 |WeekdayName|不支持||  
 |Year|DAX、MDX||  
-  
   

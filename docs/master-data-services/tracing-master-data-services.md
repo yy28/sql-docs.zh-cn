@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480409"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195031"
 ---
 # <a name="tracing-master-data-services"></a>跟踪 (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480409"
   
 -   为警告和 ActivityTracing 消息启用跟踪。  
   
-     有关详细信息，请参阅 [SourceLevels 枚举](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels)。  
+     有关详细信息，请参阅 [SourceLevels 枚举](/dotnet/api/system.diagnostics.sourcelevels)。  
   
 -   日志保存在 WebApplication 文件夹下的 Logs 文件夹中。 默认位置为 C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs。  
   
@@ -65,11 +65,10 @@ ms.locfileid: "89480409"
     |-------------|-----------------|  
     |时间|跟踪条目出现的时间。|  
     |CorrelationID|每个请求都分配有一个相关 ID。 此请求触发的所有跟踪都使用同一个相关 ID。<br /><br /> 当 UI 出错时，错误消息中会显示相关 ID。|  
-    |Operation|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
+    |操作|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
     |Level|此跟踪条目的级别。|  
-    |消息|跟踪的消息正文|  
+    |Message|跟踪的消息正文|  
   
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博文 [Troubleshooting Logging Improvement（日志记录故障排除改进）](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)。  
-  
   

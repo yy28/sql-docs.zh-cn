@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bc5a787f6bc1b214aa60ef54b5b8172f07c11a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a041e8dac7459e1f0322bd8492b5e5737ae80691
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494860"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195633"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 数据定义 - CREATE GLOBAL CUBE
 
 
-  基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息，请参阅 [&#40;Analysis Services 多维数据&#41;的本地多维数据集 ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)。  
+  基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息，请参阅 [&#40;Analysis Services 多维数据&#41;的本地多维数据集 ](/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -200,5 +200,4 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ## <a name="see-also"></a>另请参阅  
  [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [&#40;MDX 创建会话 CUBE 语句&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
-  
   

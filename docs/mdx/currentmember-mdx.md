@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471869"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196041"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 当前成员在查询中的轴上使用的层次结构上进行更改。 因此，同一维度上未在轴上使用的其他层次结构上的当前成员也可以更改;此行为称为 "自动 exists"，在 [MDX &#40;Analysis Services&#41;的关键概念 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)中可以找到更多详细信息。 例如，下面的查询说明当 Calendar 层次结构上的当前成员显示在行轴上时，Date 维度的 Calendar Year 层次结构上的当前成员如何随 Calendar 层次结构上的当前成员更改：  
+ 当前成员在查询中的轴上使用的层次结构上进行更改。 因此，同一维度上未在轴上使用的其他层次结构上的当前成员也可以更改;此行为称为 "自动 exists"，在 [MDX &#40;Analysis Services&#41;的关键概念 ](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)中可以找到更多详细信息。 例如，下面的查询说明当 Calendar 层次结构上的当前成员显示在行轴上时，Date 维度的 Calendar Year 层次结构上的当前成员如何随 Calendar 层次结构上的当前成员更改：  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -119,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>另请参阅  
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
-  
   

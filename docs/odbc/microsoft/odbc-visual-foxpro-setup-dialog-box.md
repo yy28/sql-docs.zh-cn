@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60d65d23a3a72f0194145c9a567f274e2e07ff74
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88340703"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194322"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 设置对话框
 利用 " **ODBC Visual Foxpro 设置** " 对话框，您可以添加或更改 Visual FoxPro 数据源。  
   
- 若要下载驱动程序，请参阅 [Visual FOXPRO ODBC 驱动程序下载站点](https://go.microsoft.com/fwlink/?LinkId=121318)。  
+ 若要下载驱动程序，请参阅 [Visual FOXPRO ODBC 驱动程序下载站点](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10))。  
   
 ## <a name="dialog-box-options"></a>对话框选项  
  **数据源名称**  

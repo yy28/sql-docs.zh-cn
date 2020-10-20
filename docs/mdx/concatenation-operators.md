@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54e935e3491156c04e1a4b9e704b655a7151fdb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b53f5d79124a86e8748a473af5b371152932514e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466489"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192552"
 ---
 # <a name="concatenation-operators"></a>串联运算符
 
@@ -33,10 +33,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="language-considerations"></a>语言注意事项  
- 当串联中使用的字符串具有相同的排序规则时，生成的串联字符串具有与输入字符串相同的排序规则。 当串联中使用的字符串具有不同的排序规则时，生成的串联字符串的排序规则由排序规则的优先顺序规则确定。 有关详细信息，请参阅[语言和排序规则 (Analysis Services)](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)。  
+ 当串联中使用的字符串具有相同的排序规则时，生成的串联字符串具有与输入字符串相同的排序规则。 当串联中使用的字符串具有不同的排序规则时，生成的串联字符串的排序规则由排序规则的优先顺序规则确定。 有关详细信息，请参阅[语言和排序规则 (Analysis Services)](/analysis-services/languages-and-collations-analysis-services)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [运算符 &#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
-  
   

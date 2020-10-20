@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88f297829a13c1b7d132230aebab76b9f546704d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756299"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192600"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 数据库对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85756299"
  请务必确保解决所有编译器错误和警告。 随后，可以使用 Visual Studio 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中注册包含 CLR 例程的程序集。  
   
 > [!NOTE]  
->  必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 网络协议，才能使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 进行远程开发、调试和开发。 有关在服务器上启用 TCP/IP 协议的详细信息，请参阅[配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)。  
+>  必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 网络协议，才能使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 进行远程开发、调试和开发。 有关在服务器上启用 TCP/IP 协议的详细信息，请参阅 [配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)。  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>使用 Visual Studio 部署程序集  
   
@@ -58,7 +58,7 @@ ms.locfileid: "85756299"
   
  `vbc /target:library C:\helloworld.vb`  
   
- 这些命令使用 **/target**选项启动 Visual c # 或 Visual Basic 编译器，以指定生成库 DLL。  
+ 这些命令使用 **/target** 选项启动 Visual c # 或 Visual Basic 编译器，以指定生成库 DLL。  
   
 1.  解决所有生成错误和警告，然后将程序集部署到测试服务器。  
   
@@ -76,10 +76,10 @@ ms.locfileid: "85756299"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- 有关在中创建不同类型的托管数据库对象的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[Clr 用户定义函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)、 [Clr 用户](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)定义的聚合、 [Clr 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)、 [clr 存储过程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)和[clr 触发器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)。  
+ 有关在中创建不同类型的托管数据库对象的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [Clr User-Defined 函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)、 [clr User-Defined 聚合](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)、 [Clr User-Defined 类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)、 [clr 存储过程](/dotnet/framework/data/adonet/sql/clr-stored-procedures)和 [clr 触发器](/dotnet/framework/data/adonet/sql/clr-triggers)。  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>将程序集部署到生产服务器  
- 在测试服务器上测试并验证了 CLR 数据库对象后，便可以将这些数据库对象分发到生产服务器。 有关调试托管数据库对象的详细信息，请参阅[调试 CLR 数据库对象](../../relational-databases/clr-integration/debugging-clr-database-objects.md)。  
+ 在测试服务器上测试并验证了 CLR 数据库对象后，便可以将这些数据库对象分发到生产服务器。 有关调试托管数据库对象的详细信息，请参阅 [调试 CLR 数据库对象](../../relational-databases/clr-integration/debugging-clr-database-objects.md)。  
   
  托管数据库对象的部署类似于常规数据库对象（如表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 例程等）。 可以使用部署脚本将包含 CLR 数据库对象的程序集部署到其他服务器。 部署脚本可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的“生成脚本”功能生成。 部署脚本也可以手动生成，或使用“生成脚本”功能生成然后手动更改。 部署脚本生成之后，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他实例上运行，以部署托管数据库对象。  
   
@@ -87,26 +87,25 @@ ms.locfileid: "85756299"
   
 1.  打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，然后连接到注册要部署的托管程序集或数据库对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-2.  在**对象资源管理器**中，展开 **\<server name>** 和**数据库**树。 右键单击托管数据库对象所注册到的数据库，选择 "**任务**"，然后选择 "**生成脚本**"。 将打开脚本向导。  
+2.  在 **对象资源管理器**中，展开 **\<server name>** 和 **数据库** 树。 右键单击托管数据库对象所注册到的数据库，选择 " **任务**"，然后选择 " **生成脚本**"。 将打开脚本向导。  
   
-3.  从列表框中选择数据库，然后单击 "**下一步**"。  
+3.  从列表框中选择数据库，然后单击 " **下一步**"。  
   
-4.  在 "**选择脚本选项**" 窗格中，单击 "**下一步**"，或更改选项，然后单击 "**下一步**"。  
+4.  在 " **选择脚本选项** " 窗格中，单击 " **下一步**"，或更改选项，然后单击 " **下一步**"。  
   
-5.  在 "**选择对象类型**" 窗格中，选择要部署的数据库对象的类型。 单击“下一步”。  
+5.  在 " **选择对象类型** " 窗格中，选择要部署的数据库对象的类型。 单击“下一步”  。  
   
-6.  对于在 "**选择对象类型**" 窗格中选择的每个对象类型，将显示 " ** \<type> 选择**" 窗格。 在此窗格中，可以从在指定数据库中注册的该数据库对象类型的所有实例中进行选择。 选择一个或多个对象，然后单击 "**下一步**"。  
+6.  对于在 "**选择对象类型**" 窗格中选择的每个对象类型，将显示 " ** \<type> 选择**" 窗格。 在此窗格中，可以从在指定数据库中注册的该数据库对象类型的所有实例中进行选择。 选择一个或多个对象，然后单击 " **下一步**"。  
   
-7.  选择了所有所需的数据库对象类型后，将出现 "**输出选项**" 窗格。 选择 "**将脚本保存到文件**" 并指定脚本的文件路径。 选择“**下一页**”。 查看您的选择，然后单击 "**完成**"。 部署脚本将保存到指定的文件路径。  
+7.  选择了所有所需的数据库对象类型后，将出现 " **输出选项** " 窗格。 选择 " **将脚本保存到文件** " 并指定脚本的文件路径。 选择“**下一页**”。 查看您的选择，然后单击 " **完成**"。 部署脚本将保存到指定的文件路径。  
   
 ## <a name="post-deployment-scripts"></a>后期部署脚本  
  您可以运行后期部署脚本。  
   
- 若要添加后期部署脚本，请在 Visual Studio 项目目录中添加一个名为 postdeployscript.sql 的文件。 例如，在**解决方案资源管理器**中右键单击项目，然后选择 "**添加现有项**"。 将文件添加到项目的根目录，而不是 TestScripts 文件夹中。  
+ 若要添加后期部署脚本，请在 Visual Studio 项目目录中添加一个名为 postdeployscript.sql 的文件。 例如，在 **解决方案资源管理器** 中右键单击项目，然后选择 " **添加现有项**"。 将文件添加到项目的根目录，而不是 TestScripts 文件夹中。  
   
  单击“部署”时，Visual Studio 将在项目部署完成之后运行此脚本。  
   
 ## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

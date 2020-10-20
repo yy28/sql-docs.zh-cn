@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947010"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196865"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
 
@@ -47,10 +47,10 @@ ms.locfileid: "87947010"
  [宿主保护属性和 CLR 集成编程](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  提供有关 SAFE 和 EXTERNAL_ACCESS 程序集中禁止的宿主保护属性 (HPA) 值的信息。  
   
- [CLR 集成安全性中的链接](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [CLR 集成安全性中的链接]()  
  介绍在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中用户代码段是如何能相互调用的。  
   
- [模拟和 CLR 集成安全性](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [模拟和 CLR 集成安全性](../data-access/impersonation-and-credentials-for-connections.md)  
  讨论托管代码是如何使用模拟来访问外部资源的。  
   
  讨论当托管方法调用其他程序集中所包含类的方法时所产生的问题。  
@@ -60,5 +60,4 @@ ms.locfileid: "87947010"
   
 ## <a name="see-also"></a>另请参阅  
  [管理 CLR 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
-  
   
