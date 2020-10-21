@@ -14,12 +14,12 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5bff24a63829f1820048bf371f4be497a95f6c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b4588b18973beca0890b44ed1af0551d6bba0fe
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756244"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196736"
 ---
 # <a name="database-object-extended-properties-page"></a>数据库对象（“扩展属性”页）
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,6 +42,5 @@ ms.locfileid: "85756244"
  删除所选扩展属性。  
   
 ## <a name="see-also"></a>另请参阅  
- [扩展属性目录视图 (Transact-SQL)](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
-  
+ [扩展属性目录视图 (Transact-SQL)](../system-catalog-views/catalog-views-transact-sql.md)  
   

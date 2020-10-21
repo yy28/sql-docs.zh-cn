@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 50c8e19dd3ed6782a7a8fe8532ab0edb61cceb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e278c50b6a467660c827e3e59181945fdb9985e7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360403"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035800"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ CLR 返回类型：SqlGeography
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 地球的周长）  
   
-理论缓冲区与计算缓冲区之间的误差为 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 tolerance 参数的值__。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
+理论缓冲区与计算缓冲区之间的误差为 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 tolerance 参数的值__。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](./stequals-geography-data-type.md)。  
   
 此方法不精确。  
   
@@ -89,5 +89,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ## <a name="see-also"></a>另请参阅  
 [STBuffer（geography 数据类型）](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [地理实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
   

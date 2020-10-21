@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425189"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192465"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
 
@@ -45,17 +45,17 @@ ms.locfileid: "88425189"
 -   [对计划的包进行故障排除](#trouble)  
   
 ##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的服务，使您能够通过运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业自动执行任务和计划任务的执行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须处于运行状态，作业才能自动运行。 有关详细信息，请参阅 [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的服务，使您能够通过运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业自动执行任务和计划任务的执行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须处于运行状态，作业才能自动运行。 有关详细信息，请参阅 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)。  
   
  在您连接到 **的实例时，** “SQL Server 代理” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 节点将出现在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的对象资源管理器中。  
   
- 若要自动执行某一重复发生的任务，您可以通过使用 **“新建作业”** 对话框创建某个作业。 有关详细信息，请参阅 [执行作业](https://docs.microsoft.com/sql/ssms/agent/implement-jobs)。  
+ 若要自动执行某一重复发生的任务，您可以通过使用 **“新建作业”** 对话框创建某个作业。 有关详细信息，请参阅 [执行作业](../../ssms/agent/implement-jobs.md)。  
   
- 创建该作业后，必须至少添加一个步骤。 一个作业可以包括多个步骤，并且每个步骤可以执行不同的任务。 有关详细信息，请参阅 [Manage Job Steps](https://docs.microsoft.com/sql/ssms/agent/manage-job-steps)。  
+ 创建该作业后，必须至少添加一个步骤。 一个作业可以包括多个步骤，并且每个步骤可以执行不同的任务。 有关详细信息，请参阅 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)。  
   
- 在创建作业和作业步骤后，可以创建一个运行作业的计划。 不过，您还可以创建手动运行的无人参与的作业。 有关详细信息，请参阅 [创建计划并将计划附加到作业](https://docs.microsoft.com/sql/ssms/agent/create-and-attach-schedules-to-jobs)。  
+ 在创建作业和作业步骤后，可以创建一个运行作业的计划。 不过，您还可以创建手动运行的无人参与的作业。 有关详细信息，请参阅 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
- 可以通过设置通知选项来增强作业，如指定在作业完成时向某个操作员发送电子邮件或添加警报。 有关详细信息，请参阅 [“警报”](https://docs.microsoft.com/sql/ssms/agent/alerts)。  
+ 可以通过设置通知选项来增强作业，如指定在作业完成时向某个操作员发送电子邮件或添加警报。 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
   
 ##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  在您创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以便计划 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包后，必须至少添加一个步骤，并将该步骤的类型设置为 **“SQL Server Integration Services 包”** 。 一个作业可以包括多个步骤，并且每个步骤可以运行不同的包。  
@@ -64,14 +64,14 @@ ms.locfileid: "88425189"
   
  有关详细信息，请参阅 [使用 SQL Server 代理计划包](#schedule)。  
   
- 有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请观看 MSDN 库中的视频主页[操作说明：使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)。  
+ 有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请观看 MSDN 库中的视频主页[操作说明：使用 SQL Server 代理自动执行包（SQL Server 视频）](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))。  
   
 ##  <a name="troubleshooting"></a><a name="trouble"></a> 故障排除  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤可能无法启动某个包，即便该包可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及从命令行成功运行。 该问题有一些常见的原因和一些推荐的解决方法。 有关详细信息，请参阅以下资源。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章： [当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)  
   
--   MSDN 库中的视频[排除故障：使用 SQL Server 代理执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)。  
+-   MSDN 库中的视频[排除故障：使用 SQL Server 代理执行包（SQL Server 视频）](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤启动某个包后，该包可能无法执行，或者包可能成功运行但出现意外结果。 可以使用下列工具来解决这些问题。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "88425189"
 
         > **注意：** 如果代理帐户所用凭据的密码更改，那么您需要更新凭据密码。 否则，该作业步骤将失败。  
 
-        有关配置 SQL Server 代理服务帐户的信息，请参阅[为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)。  
+        有关配置 SQL Server 代理服务帐户的信息，请参阅[为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)。  
 
 8.  在 **“包源”** 列表框中，单击该包的源，然后为作业步骤配置选项。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88425189"
     ||**密码**|  
     ||**包**<br /><br /> 单击省略号按钮并选择包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“已存储的包”** 节点下的文件夹中选择包。|  
     |**包**<br /><br /> 这些是存储在文件系统中的包的选项卡选项。|**包**<br /><br /> 键入包文件的完整路径，或单击省略号按钮选择包。|  
-    |**配置**|添加 XML 配置文件以便使用特定配置来运行包。 使用包配置可在运行时更新包属性的值。<br /><br /> 此选项对应于 **dtexec** 的 **/ConfigFile**选项。<br /><br /> 若要了解如何应用包配置，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。 有关如何创建包配置的信息，请参阅 [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)。|  
+    |**配置**|添加 XML 配置文件以便使用特定配置来运行包。 使用包配置可在运行时更新包属性的值。<br /><br /> 此选项对应于 **dtexec** 的 **/ConfigFile**选项。<br /><br /> 若要了解如何应用包配置，请参阅 [Package Configurations](./legacy-package-deployment-ssis.md)。 有关如何创建包配置的信息，请参阅 [Create Package Configurations](./legacy-package-deployment-ssis.md)。|  
     |**命令文件**|在单独的文件中指定要使用 **dtexec**运行的附加选项。<br /><br /> 例如，可以包括一个包含 /Dump errorcode 选项的文件，以便在包运行期间发生一个或多个指定事件时生成调试转储文件。<br /><br /> 您可以使用不同的选项组运行包，只需创建多个文件，然后通过使用 **“命令文件”** 选项指定正确的文件即可。<br /><br /> “命令文件”选项对应于 **dtexec** 的 **/CommandFile** 选项。|  
     |**数据源**|查看包中包含的连接管理器。 若要修改某个连接字符串，请单击连接管理器，再单击该连接字符串。<br /><br /> 此选项对应于 **dtexec** 的 **/Connection**选项。|  
     |**执行选项**|**出现验证警告时包失败**<br /> 指示是否将警告消息视为错误。 如果选择此选项并且在验证期间出现警告，包将无法通过验证。 此选项对应于 **dtexec** 的 **/WarnAsError**选项。<br /><br /> **验证但不执行包**<br /> 指示是否在验证阶段之后停止执行包，而不实际运行包。 此选项对应于 **dtexec** 的 **/Validate**选项。<br /><br /> **覆盖 MacConcurrentExecutables 属性**<br /> 指定包可以同时执行的可执行文件数。 如果值为 -1，则表示包可以运行的最大可执行文件数等于执行包的计算机上的处理器总数加二。 此选项对应于 **dtexec** 的 **/MaxConcurrent**选项。<br /><br /> **启用包检查点**<br /> 指示包在执行期间是否使用检查点。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此选项对应于 **dtexec** 的 **/CheckPointing**选项。<br /><br /> **覆盖重新启动选项**<br /> 指示是否为包的 **CheckpointUsage** 属性设置了新值。 从 **“重新启动选项”** 列表框中选择一个值。<br /><br /> 此选项对应于 **dtexec** 的 **/Restart**选项。<br /><br /> **使用 32 位运行时**<br /> 指示是否在已安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 64 位计算机上，使用 32 位版本的 dtexec 实用工具运行包。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
@@ -212,14 +212,13 @@ ms.locfileid: "88425189"
   
 -   [网站上的知识库文章：](https://support.microsoft.com/kb/918760)当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   MSDN 库中的视频[排除故障：使用 SQL Server 代理执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)  
+-   MSDN 库中的视频[排除故障：使用 SQL Server 代理执行包（SQL Server 视频）](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))  
   
--   MSDN 库中的视频[操作说明：使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)  
+-   MSDN 库中的视频[操作说明：使用 SQL Server 代理自动执行包（SQL Server 视频）](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))  
   
 -   mssqltips.com 上的技术文章 [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)（使用 Windows PowerShell 检查 SQL Server 代理作业）  
   
 -   mssqltips.com 上的技术文章 [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)（在 SQL 代理作业启用或禁用时针对它们的自动警报）  
   
 -   mssqltips.com 上的博客文章 [配置 SQL 代理作业以便写入 Windows 事件日志](https://go.microsoft.com/fwlink/?LinkId=220745)。  
-  
   

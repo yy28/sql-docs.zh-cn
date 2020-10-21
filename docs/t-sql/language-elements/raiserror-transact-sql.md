@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4c2ec582a2900986906ee127ad48462dcb43c58
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1696a1fdcf2e27b8c13b24cbc5ae5b7a43cb1eec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227216"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196811"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -141,7 +141,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  可以指定“-1”来返回与以下示例中所示的错误关联的严重性值。  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -186,7 +186,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  通常，连续的参数替换连续的转换规格；第一个参数替换第一个转换规格，第二个参数替换第二个转换规格，以此类推。 例如，在以下 `RAISERROR` 语句中，第一个参数 `N'number'` 替换第一个转换规格 `%s`，第二个参数 `5` 替换第二个转换规格 `%d.`。  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -200,7 +200,7 @@ GO
   
  例如，下列两个 `RAISERROR` 语句都返回相同的字符串。 一个指定参数列表中的宽度值和精度值；另一个指定转换规格中的宽度值和精度值。  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -225,7 +225,7 @@ GO
 > [!NOTE]  
 >  RAISERROR 仅能生成状态为 1 到 127 的错误。 由于[!INCLUDE[ssDE](../../includes/ssde-md.md)]可能引发状态为 0 的错误，因此，建议您先检查由 ERROR_STATE 返回的错误状态，然后将它作为一个值传递给状态参数 RAISERROR。  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -257,7 +257,7 @@ END CATCH;
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. 在 sys.messages 中创建即席消息  
  以下示例显示如何引发 sys.messages 目录视图中存储的消息。 该消息通过 `sp_addmessage` 系统存储过程，以消息号 `50005` 添加到 sys.messages 目录视图中。  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -275,7 +275,7 @@ GO
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. 使用局部变量提供消息文本  
  以下代码示例显示如何使用局部变量为 `RAISERROR` 语句提供消息文本。  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417043"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038310"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88417043"
   
  最大距离限制允许将缓冲区构造得尽可能灵活。  
   
- 理论缓冲区与所计算的缓冲区之间的误差是 max(tolerance, extents * 1.E-7)，其中 tolerance = distance \* .001。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
+ 理论缓冲区与所计算的缓冲区之间的误差是 max(tolerance, extents * 1.E-7)，其中 tolerance = distance \* .001。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](./stequals-geography-data-type.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建 `LineString``geography` 实例。 然后，它使用 `STBuffer()` 返回该实例的 1 米内的区域。  
@@ -79,5 +79,4 @@ SELECT @g.STBuffer(1).ToString();
 ## <a name="see-also"></a>另请参阅  
  [BufferWithTolerance（geography 数据类型）](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
   

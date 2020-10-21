@@ -1,24 +1,25 @@
 ---
-title: 实现 Data Quality Services 与 Master Data Services 的集成 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 启用 Data Quality Services 集成
+description: 在 Excel Master Data Services 外接程序中，匹配功能由 Data Quality Services (DQS) 提供。
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9c89efdcf1c9ad2b3bad9bf2b29506d21f2514e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 27c374ff84a33ed750c9b425dae9a75c6b33f8e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944980"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257843"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>实现 Data Quality Services 与 Master Data Services 的集成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，匹配功能由 Data Quality Services (DQS) 提供。 此功能必须启用后才能使用。  
   
@@ -36,13 +37,13 @@ ms.locfileid: "67944980"
   
 3.  在 **“Web 配置”** 页上，选择网站和 Web 应用程序。  
   
-4.  在 **“启用 DQS 集成”** 部分中，单击 **“启用与 Data Quality Services 的集成”** 。  
+4.  在 **“启用 DQS 集成”** 部分中，单击 **“启用与 Data Quality Services 的集成”**。  
   
-5.  在确认对话框中，单击 **“确定”** 。  
+5.  在确认对话框中，单击 **“确定”**。  
   
-## <a name="see-also"></a>请参阅  
- [用于 Excel 的 MDS 外接程序中的数据质量匹配](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [用于 Microsoft Excel 的 Master Data Services 外接程序](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
+## <a name="see-also"></a>另请参阅  
+ [MDS Add-in for Excel 中的数据质量匹配](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

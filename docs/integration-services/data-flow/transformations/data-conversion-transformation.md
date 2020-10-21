@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 642e6ad5d7d0b8ad1103571b5868ba16a509876d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477707"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192660"
 ---
 # <a name="data-conversion-transformation"></a>数据转换
 
@@ -51,7 +51,7 @@ ms.locfileid: "88477707"
  此转换有一个输入、一个输出和一个错误输出。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关在 SSIS 设计器中使用数据转换的信息，请参阅[使用数据转换将数据转换为其他数据类型](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)。 有关如何以编程方式设置此转换的属性的信息，请参阅 [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 和 [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关在 SSIS 设计器中使用数据转换的信息，请参阅[使用数据转换将数据转换为其他数据类型](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)。 有关如何以编程方式设置此转换的属性的信息，请参阅 [通用属性](../set-the-properties-of-a-data-flow-component.md) 和 [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
 ## <a name="related-content"></a>相关内容  
  blogs.msdn.com 上的博客文章 [SSIS 2008 中数据类型转换技术之间的性能比较](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)。  
@@ -88,11 +88,10 @@ ms.locfileid: "88477707"
  为 DT_STR 类型的列选择相应的代码页。  
   
  **配置错误输出**  
- 使用 [配置错误输出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框指定处理行级错误的方式。  
+ 使用 [配置错误输出](../error-handling-in-data.md) 对话框指定处理行级错误的方式。  
   
 ## <a name="see-also"></a>另请参阅  
- [快速分析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [快速分析](../parsing-data.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

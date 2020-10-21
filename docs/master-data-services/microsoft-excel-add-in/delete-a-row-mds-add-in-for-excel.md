@@ -1,5 +1,6 @@
 ---
-title: 删除行 (MDS Add-in for Excel) | Microsoft Docs
+description: 删除行（用于 Excel 的 MDS 外接程序）
+title: 删除行
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8ea865049ecbcfa41390671880e0b5bbeae38cb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bb83bdbe463efb5ed93364cbe643f87be988cc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257627"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>删除行（用于 Excel 的 MDS 外接程序）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果你不希望用户再使用某个数据行（成员），则可以将其从 MDS 存储库中删除。  
   
@@ -37,11 +38,11 @@ ms.locfileid: "68092401"
   
 1.  通过单击行标题来选择要删除的一整行。  
   
-2.  在 **“发布并验证”** 组中，单击 **“删除”** 。  
+2.  在 **“发布并验证”** 组中，单击 **“删除”**。  
   
-3.  在确认对话框中，单击 **“是”** 。  
+3.  在确认对话框中，单击 **“是”**。  
   
-## <a name="see-also"></a>请参阅  
- [概述：从 Excel 导入数据&#40;MDS add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>另请参阅  
+ [概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

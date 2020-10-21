@@ -50,9 +50,9 @@
     - name: 教程 - 部署和运行 Azure 中的程序包
       href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
     - name: 使用 Windows 身份验证连接到数据
-      href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
+      href: /azure/data-factory/ssis-azure-connect-with-windows-auth
     - name: 保存文件并连接到文件共享
-      href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
+      href: /azure/data-factory/ssis-azure-files-file-shares
     - name: 连接到 Azure 中的 SSIS 目录
       href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
     - name: 验证部署到 Azure 的包
@@ -327,7 +327,7 @@
           href: ../integration-services/control-flow/message-queue-task.md
           items:
             - name: 选择变量
-              href: ../integration-services/control-flow/select-variables.md
+              href: ./control-flow/message-queue-task.md
             - name: 选择包
               href: ../integration-services/control-flow/select-a-package.md
         - name: “通知操作员”任务
@@ -630,7 +630,7 @@
       href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
       items:
         - name: DQS 清理连接管理器
-          href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+          href: ./connection-manager/dqs-cleansing-connection-manager.md
         - name: 将数据质量规则应用于数据源
           href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
         - name: 将列映射到复合域
@@ -657,9 +657,9 @@
         - name: 在不缓存模式或部分缓存模式下实现查找
           href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
         - name: 在完全缓存模式下使用缓存连接管理器实现查找转换
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
         - name: 在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
         - name: 为查找转换创建和部署缓存
           href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
         - name: 创建关系
@@ -668,7 +668,7 @@
           href: ../integration-services/data-flow/transformations/cache-transform.md
           items:
             - name: 缓存连接管理器
-              href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+              href: ./connection-manager/cache-connection-manager.md
     - name: 合并转换
       href: ../integration-services/data-flow/transformations/merge-transformation.md
     - name: Merge Join Transformation
@@ -1846,7 +1846,7 @@
 - name: 资源
   items:
     - name: SSIS 论坛 >>
-      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
+      href: /answers/topics/sql-server-integration-services.html
     - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: SSIS 博客 >>

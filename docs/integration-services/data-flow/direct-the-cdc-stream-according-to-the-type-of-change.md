@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fc9b1025bc4b3d4399203d12253a1aa9caa38883
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4d6f406aa50176e60cabd72e348f1daeb0c56d3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477881"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197119"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流
 
@@ -25,7 +25,7 @@ ms.locfileid: "88477881"
 
   若要添加并配置 CDC 拆分器转换，包必须包含至少一个数据流任务和一个 CDC 源。  
   
- 添加到包的 CDC 源必须选择了 NetCDC 处理模式。 有关选择处理模式的详细信息，请参阅 [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)。  
+ 添加到包的 CDC 源必须选择了 NetCDC 处理模式。 有关选择处理模式的详细信息，请参阅 [CDC 源编辑器（“连接管理器”页）](./cdc-source.md)。  
   
 ### <a name="to-direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88477881"
   
 ## <a name="see-also"></a>另请参阅  
  [CDC 拆分器](../../integration-services/data-flow/cdc-splitter.md)  
-  
   

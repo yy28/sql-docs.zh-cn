@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430129"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192427"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
 
@@ -66,9 +66,9 @@ ms.locfileid: "88430129"
 |----------------------|-----------------|  
 |不保存敏感数据 (**DontSaveSensitive**)|保存包时不保存包中敏感属性的值。 这种保护级别不进行加密，但它防止标记为敏感的属性随包一起保存，因此其他用户将无法使用这些敏感数据。 如果其他用户打开该包，敏感信息将被替换为空白，用户必须提供这些敏感信息。<br /><br /> 当与 **dtutil** 实用工具 (dtutil.exe) 一起使用时，此保护级别对应的值为 0。|  
 |使用密码加密所有数据 (**EncryptAllWithPassword**)|使用密码加密整个包。 使用用户在创建包或导出包时提供的密码加密包。 用户必须提供包密码，才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。 如果没有密码，用户将无法访问或运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 3。|  
-|使用用户密钥加密所有数据 (**EncryptAllWithUserKey**)|使用基于当前用户配置文件的密钥加密整个包。 只有创建或导出了包的用户才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 4。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)。|  
+|使用用户密钥加密所有数据 (**EncryptAllWithUserKey**)|使用基于当前用户配置文件的密钥加密整个包。 只有创建或导出了包的用户才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 4。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [https://msdn.microsoft.com/library](/previous-versions/ms995355(v=msdn.10))。|  
 |使用密码加密敏感数据 (**EncryptSensitiveWithPassword**)|使用密码只加密包中敏感属性的值。 DPAPI 用于此加密。 敏感数据作为包的一部分保存，但数据是使用当前用户在创建包或导出包时提供的密码加密的。 若要在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，用户必须提供包密码。 如果不提供该密码，则包虽然可以打开但其中不包含敏感数据，当前用户必须为敏感数据提供新值。 如果用户试图在不提供密码的情况下执行包，则包执行将会失败。 有关密码和命令行执行的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 2。|  
-|使用用户密钥加密敏感数据 (**EncryptSensitiveWithUserKey**)|使用基于当前用户配置文件的密钥只加密包中敏感属性的值。 只有使用同一配置文件的同一个用户才能加载此包。 如果其他用户打开该包，敏感信息将被替换为空白，当前用户必须为敏感数据提供新值。 如果用户试图执行该包，则包执行将会失败。 DPAPI 用于此加密。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 1。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)。|  
+|使用用户密钥加密敏感数据 (**EncryptSensitiveWithUserKey**)|使用基于当前用户配置文件的密钥只加密包中敏感属性的值。 只有使用同一配置文件的同一个用户才能加载此包。 如果其他用户打开该包，敏感信息将被替换为空白，当前用户必须为敏感数据提供新值。 如果用户试图执行该包，则包执行将会失败。 DPAPI 用于此加密。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 1。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [https://msdn.microsoft.com/library](/previous-versions/ms995355(v=msdn.10))。|  
 |依靠服务器存储进行加密 (**ServerStorage**)|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色保护整个包。 将包保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库后，支持此选项。 此外，SSISDB 目录使用 **ServerStorage** 保护级别。<br /><br /> 在将包从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]保存到文件系统时，不支持此选项。|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保护级别设置和 SSISDB 目录  
@@ -163,4 +163,3 @@ ms.locfileid: "88430129"
  [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
  [安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil 实用工具](../../integration-services/dtutil-utility.md)  
-  

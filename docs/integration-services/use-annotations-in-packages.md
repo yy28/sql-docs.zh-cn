@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495110"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193759"
 ---
 # <a name="use-annotations-in-packages"></a>在包中使用批注
 
@@ -31,7 +31,7 @@ ms.locfileid: "88495110"
   
  按 Enter 时，文本会换行到下一行。 在添加其他文本行时，批注框的大小会自动增加。 包批注会以明文形式持久保持在包文件的 CDATA 部分。  
   
- 有关更改包文件格式的详细信息，请参阅 [SSIS 包格式](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)。  
+ 有关更改包文件格式的详细信息，请参阅 [SSIS 包格式](./integration-services-ssis-packages.md)。  
   
  保存包时， [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器将批注保存在包中。  
   
@@ -56,4 +56,4 @@ ms.locfileid: "88495110"
   
 7.  若要向组添加批注，请右键单击该批注，然后单击“组”****。  
   
-8.  若要保存更新后的包，请单击 **“文件”** 菜单中的 **“全部保存”**。  
+8.  若要保存更新后的包，请单击 **“文件”** 菜单中的 **“全部保存”**。

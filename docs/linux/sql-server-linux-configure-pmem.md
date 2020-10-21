@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088921"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115682"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 使用 `ndctl` 配置、创建和装载设备后，可以将数据库文件放在该设备中，也可以创建新的数据库。
 
-由于 PMEM 设备是 O_DIRECT（直接 I/O）安全的，请考虑启用跟踪标志 3979 来禁用强制刷新机制。 有关详细信息，请参阅 [FUA 支持](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux)。 [FUA 内部信息](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/)中介绍了强制单元访问的内部信息。
+由于 PMEM 设备是 O_DIRECT（直接 I/O）安全的，请考虑启用跟踪标志 3979 来禁用强制刷新机制。 有关详细信息，请参阅 [FUA 支持](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux)。 [FUA 内部信息](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals)中介绍了强制单元访问的内部信息。
 
 ## <a name="next-steps"></a>后续步骤
 

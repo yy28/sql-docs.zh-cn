@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bbd5718a5c57bdb874af00ba57dafedc9dd8654
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430959"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195958"
 ---
 # <a name="data-flow"></a>数据流
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430959"
   
  此外， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还提供将一个组件的输出连接到另一个组件的输入的路径。 路径定义组件的序列，并允许您向数据流添加批注或查看列的源。  
   
- 您可以通过把源和目标的输出连接到转换和目标的输入来连接数据流组件。 在构造数据流的过程中，通常在将第二个以及后续组件添加到该数据流时连接这些组件。 连接组件后，输入列即可用在对该组件的配置中。 如果没有可用的输入列，则在组件连接到数据流后才能完成对该组件的配置。 有关详细信息，请参阅 [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md) 和 [使用路径连接组件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
+ 您可以通过把源和目标的输出连接到转换和目标的输入来连接数据流组件。 在构造数据流的过程中，通常在将第二个以及后续组件添加到该数据流时连接这些组件。 连接组件后，输入列即可用在对该组件的配置中。 如果没有可用的输入列，则在组件连接到数据流后才能完成对该组件的配置。 有关详细信息，请参阅 [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md) 和 [使用路径连接组件](./connect-components-in-a-data-flow.md)。  
   
  以下关系图显示的数据流具有一个源、带有一个输入和一个输出的转换以及一个目标。 除了输入列、输出列和外部列之外，该关系图还包含输入、输出和错误输出。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "88430959"
 |SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
 |Teradata 源|Teradata 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
- 有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
+ 有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))。  
   
 ## <a name="transformations"></a>转换  
  转换的功能非常广泛。 转换可以执行如更新、汇总、清除、合并和分发数据等任务。 可以修改列中的值、查找表中的值、清理数据以及聚合列值。  
@@ -169,10 +169,10 @@ ms.locfileid: "88430959"
 |SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
 |Teradata 目标|Teradata 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
- 有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
+ 有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))。  
   
 ## <a name="connection-managers"></a>连接管理器  
- 许多数据流组件都连接到数据源，因此，必须将组件所需的连接管理器添加到包，然后才能正确配置组件。 可以在构造数据流时或开始构造数据流之前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ 许多数据流组件都连接到数据源，因此，必须将组件所需的连接管理器添加到包，然后才能正确配置组件。 可以在构造数据流时或开始构造数据流之前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](../connection-manager/integration-services-ssis-connections.md)。  
   
 ## <a name="external-metadata"></a>外部元数据  
  使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器在包中创建数据流时，源和目标的元数据被复制到源和目标的外部列，充当架构的快照。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 验证包时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器将此快照与源或目标的架构比较，并根据更改发布错误和警告。  
@@ -220,4 +220,4 @@ ms.locfileid: "88430959"
  [连接数据流中的组件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>相关内容  
- technet.microsoft.com 上的视频 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
+ technet.microsoft.com 上的视频 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))。

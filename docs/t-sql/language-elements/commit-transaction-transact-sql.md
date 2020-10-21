@@ -30,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e890507e66f328d513a270e0f9f6258d626d9aa
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 252fdfd8accd33d8081b7f0770eec3264391a278
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227247"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196671"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,7 +102,7 @@ COMMIT [ TRAN | TRANSACTION ]
 
 以下示例删除候选作业。 它使用 AdventureWorks。 
   
-```   
+```sql   
 BEGIN TRANSACTION;   
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;   
@@ -114,17 +114,17 @@ COMMIT TRANSACTION;
 
 下面的示例创建一个表，生成三个级别的嵌套事务，然后提交该嵌套事务。 虽然每个 `COMMIT TRANSACTION` 语句都具有一个 *transaction_name* 参数，但 `COMMIT TRANSACTION` 与 `BEGIN TRANSACTION` 语句之间没有关系。 *transaction_name* 参数可帮助程序员确保编码正确数量的提交来将 `@@TRANCOUNT` 减少到 0，从而提交外部事务。 
   
-```   
+```sql   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
     DROP TABLE TestTran;  
 GO  
-CREATE TABLE TestTran (Cola int PRIMARY KEY, Colb char(3));  
+CREATE TABLE TestTran (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 -- This statement sets @@TRANCOUNT to 1.  
 BEGIN TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after BEGIN OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 INSERT INTO TestTran VALUES (1, 'aaa');  
  
@@ -132,7 +132,7 @@ INSERT INTO TestTran VALUES (1, 'aaa');
 BEGIN TRANSACTION Inner1;  
  
 PRINT N'Transaction count after BEGIN Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (2, 'bbb');  
   
@@ -140,7 +140,7 @@ INSERT INTO TestTran VALUES (2, 'bbb');
 BEGIN TRANSACTION Inner2;  
   
 PRINT N'Transaction count after BEGIN Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (3, 'ccc');  
   
@@ -149,21 +149,21 @@ INSERT INTO TestTran VALUES (3, 'ccc');
 COMMIT TRANSACTION Inner2;  
  
 PRINT N'Transaction count after COMMIT Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 -- This statement decrements @@TRANCOUNT to 1.  
 -- Nothing is committed.  
 COMMIT TRANSACTION Inner1;  
  
 PRINT N'Transaction count after COMMIT Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 -- This statement decrements @@TRANCOUNT to 0 and  
 -- commits outer transaction OuterTran.  
 COMMIT TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after COMMIT OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 ```  
   
 ## <a name="see-also"></a>另请参阅  

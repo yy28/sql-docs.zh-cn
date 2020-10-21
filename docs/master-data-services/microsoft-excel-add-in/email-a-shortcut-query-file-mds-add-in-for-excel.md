@@ -1,5 +1,6 @@
 ---
-title: 通过电子邮件发送快捷查询文件 (MDS Add-in for Excel) | Microsoft Docs
+description: 通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）
+title: 通过电子邮件发送快捷查询文件
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a9c800ecf5eabd6c97ab3f0c96dec998d911d11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9dae0ad64323ea2879f0e752fd8a8d737bf003d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257618"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，如果想要确保用户使用和你一样的数据，则可以通过电子邮件向他们发送快捷查询文件。 您应该共享查询，而不是将工作表保存并通过电子邮件发送。  
   
@@ -34,13 +35,13 @@ ms.locfileid: "68092416"
   
 1.  确保工作表中的数据采用您想要共享的格式。 有关筛选数据和对列重新排序的详细信息，请参阅[导出前筛选数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)和[对列重新排序（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)。  
   
-2.  在 **“保存并发送”** 组中，单击 **“发送查询”** 。 随即打开一封电子邮件，其中附加了查询快捷文件。  
+2.  在 **“保存并发送”** 组中，单击 **“发送查询”**。 随即打开一封电子邮件，其中附加了查询快捷文件。  
   
 ## <a name="next-steps"></a>后续步骤  
   
 -   若要打开快捷查询文件，电子邮件收件人必须装有 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 。 收件人可通过双击该文件将其打开。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

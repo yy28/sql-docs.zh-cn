@@ -1,5 +1,6 @@
 ---
-title: 概述：导入表中数据 (Master Data Services) | Microsoft Docs
+title: 从表导入数据
+description: 在 Master Data Services 中为数据创建模型后，从表中导入数据，并对数据进行更改。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257543"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概述：导入表中数据 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中创建数据模型后，你便可以开始添加数据，并能更改数据。   你使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 临时表、存储过程和主数据管理器。  
   
  有关如何添加和修改数据的说明，请参阅[导入表中的数据 (Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md)。  
   
 > [!NOTE]
->  你还可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，将 Excel 中的数据添加到 MDS 存储库（[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库）中。 有关详细信息，请参阅[概述：从 Excel 导入数据 (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+>  你还可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，将 Excel 中的数据添加到 MDS 存储库（[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库）中。 有关详细信息，请参阅[概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
   
  在添加和修改数据时，你可以执行以下操作。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68097381"
 >  在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]中，已停止提供对 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的支持。  
   
 ## <a name="deactivating-and-deleting-members-mds"></a>停用和删除成员 (MDS)  
- 停用意味着可以重新激活成员。 如果您重新激活某成员，可还原成员的属性以及成员在层次结构和集合中的成员身份。 以前的所有事务都将保持不变。 管理员可以在主数据管理器的“版本管理”  功能区域中查看停用事务。  
+ 停用意味着可以重新激活成员。 如果您重新激活某成员，可还原成员的属性以及成员在层次结构和集合中的成员身份。 以前的所有事务都将保持不变。 管理员可以在主数据管理器的“版本管理” **** 功能区域中查看停用事务。  
   
  删除意味着从系统中永久清除成员。 将永久删除该成员的所有事务、所有关系和所有属性。  
   
@@ -83,21 +84,21 @@ ms.locfileid: "68097381"
   
  模型中的每个实体都有一个临时表。 表名称指示相应的实体以及实体类型，如叶成员。 下图显示货币、客户和产品实体的临时表。  
   
- ![MDS 数据库中的临时表](../master-data-services/media/mds-staging-tables.png "Staging Tables in MDS database")  
+ ![MDS 数据库中的临时表](../master-data-services/media/mds-staging-tables.png "MDS 数据库中的临时表")  
   
  该表的名称在创建实体时指定，且不可更改。 如果临时表的名称包含 _1 或其他数字，则在创建实体时已存在带此名称的其他表。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括以下类型的临时存储过程。  
   
--   stg.udp_\<name>_Leaf  
+-   stg.udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   stg.udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   stg.udp_ \<name> _Relationship  
   
  对于模型中的每个实体，有三个对应于叶成员、合并成员和关系临时表的存储过程。  下图显示货币、客户和产品实体的临时存储过程。  
   
- ![MDS 数据库中的临时存储过程](../master-data-services/media/mds-staging-storedprocedures.png "Staging stored procedures in the MDS database")  
+ ![MDS 数据库中的临时存储过程](../master-data-services/media/mds-staging-storedprocedures.png "MDS 数据库中的临时存储过程")  
   
  有关存储过程的详细信息，请参阅[临时存储过程 (Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: d92a41782ec094b323aaaec3eaff5fb584637dc7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195133"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192517"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>验证部署到 Azure 的 SQL Server Integration Services (SSIS) 包
 
@@ -33,7 +33,7 @@ ms.locfileid: "89195133"
 ## <a name="validate-connection-managers"></a>验证连接管理器
 
 向导检查某些连接管理器是否存在以下问题，这些问题可能会导致连接失败：
-- **Windows 身份验证**。 如果连接字符串使用 Windows 身份验证，验证将引发警告。 Windows 身份验证需要其他配置步骤。 有关详细信息，请参阅[使用 Windows 身份验证连接到数据和文件共享](ssis-azure-connect-with-windows-auth.md)。
+- **Windows 身份验证**。 如果连接字符串使用 Windows 身份验证，验证将引发警告。 Windows 身份验证需要其他配置步骤。 有关详细信息，请参阅[使用 Windows 身份验证连接到数据和文件共享](/azure/data-factory/ssis-azure-connect-with-windows-auth)。
 - **文件路径**。 如果连接字符串包含硬编码的本地文件路径（例如 `C:\\...`），验证将引发警告。 包含绝对路径的包可能会失败。
 - **UNC 路径**。 如果连接字符串包含 UNC 路径，验证将引发警告。 包含 UNC 路径的包可能会失败，这通常是因为 UNC 路径需要 Windows 身份验证才能访问。
 - **主机名**。 如果服务器属性包含主机名而不是 IP 地址，验证将引发警告。 包含主机名的包可能会失败，这通常是因为 Azure 虚拟网络需要正确的 DNS 配置才能支持 DNS 名称解析。

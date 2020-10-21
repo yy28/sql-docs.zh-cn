@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed5b4ad8fb62b326f48c85dced98fdb2686750c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425689"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194616"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -56,9 +56,9 @@ ms.locfileid: "88425689"
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
   
- 本主题列出并描述了各种数据流转换的自定义属性。 有关对大多数数据流对象都通用的属性的信息，请参阅 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 本主题列出并描述了各种数据流转换的自定义属性。 有关对大多数数据流对象都通用的属性的信息，请参阅 [Common Properties](../set-the-properties-of-a-data-flow-component.md)。  
   
- 某些转换属性可以使用属性表达式进行设置。 有关详细信息，请参阅 [可以使用表达式设置的数据流属性](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)。  
+ 某些转换属性可以使用属性表达式进行设置。 有关详细信息，请参阅 [可以使用表达式设置的数据流属性](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))。  
   
 ## <a name="transformations-with-custom-properties"></a>包含自定义属性的转换  
 
@@ -159,7 +159,7 @@ ms.locfileid: "88425689"
 |ValidateExternalMetadata|Boolean|指示在设计时是否已使用外部数据源对缓存转换进行了验证。 如果将该属性设置为 **False**，则会在运行时针对外部数据源进行验证。<br /><br /> 默认值为 **True**。|  
 |AvailableInputColumns|String|可用输入列的列表。|  
 |InputColumns|String|选定输入列的列表。|  
-|CacheColumnName|String|指定映射到选定输入列的列名称。<br /><br /> CacheColumnName 属性中的列名称必须与“缓存连接管理器编辑器”  的“列”  页中列出的对应列的名称相匹配。<br /><br /> 有关详细信息，请参阅 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
+|CacheColumnName|String|指定映射到选定输入列的列名称。<br /><br /> CacheColumnName 属性中的列名称必须与“缓存连接管理器编辑器”  的“列”  页中列出的对应列的名称相匹配。<br /><br /> 有关详细信息，请参阅 [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md)|  
   
 ##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 字符映射转换自定义属性  
  字符映射转换仅包含在组件级别对所有数据流组件通用的属性。  
@@ -211,7 +211,7 @@ ms.locfileid: "88425689"
   
 |properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 **False**。 有关详细信息，请参阅 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 .<br /><br /> 注意：此属性在数据转换编辑器  中未提供，但可通过“高级编辑器”  进行设置。|  
+|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 **False**。 有关详细信息，请参阅 [Fast Parse](../parsing-data.md) 和 [Standard Parse](../parsing-data.md)。 .<br /><br /> 注意：此属性在数据转换编辑器  中未提供，但可通过“高级编辑器”  进行设置。|  
 |SourceInputColumnLineageId|Integer|作为输出列的源的输入列的 **LineageID** 。|  
   
  数据转换的输入、输入列和输出不包含自定义属性。  
@@ -370,7 +370,7 @@ ms.locfileid: "88425689"
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的默认代码页。|  
 |MaxMemoryUsage|Integer|查找表的最大缓存大小。 此属性的默认值为 **25**，表示缓存没有大小限制。|  
 |MaxMemoryUsage64|Integer|64 位计算机上的查找表的最大缓存大小。|  
-|NoMatchBehavior|Integer（枚举）|该值用于指定是否将引用数据集中不包含匹配项的行视为错误。<br /><br /> 如果将该属性设置为“将没有匹配项的行视为错误”(0)  ，则不包含匹配项的行将被视为错误。 使用 **“查找转换编辑器”** 对话框的 **“错误输出”** 页可以指定当发生此类错误时会发生什么情况。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 如果将该属性设置为“将没有匹配项的行发送至无匹配输出”  (1)，则不会将行视为错误。<br /><br /> 默认值为“将没有匹配项的行视为错误”(0)  。|  
+|NoMatchBehavior|Integer（枚举）|该值用于指定是否将引用数据集中不包含匹配项的行视为错误。<br /><br /> 如果将该属性设置为“将没有匹配项的行视为错误”(0)  ，则不包含匹配项的行将被视为错误。 使用 **“查找转换编辑器”** 对话框的 **“错误输出”** 页可以指定当发生此类错误时会发生什么情况。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](./lookup-transformation.md)。<br /><br /> 如果将该属性设置为“将没有匹配项的行发送至无匹配输出”  (1)，则不会将行视为错误。<br /><br /> 默认值为“将没有匹配项的行视为错误”(0)  。|  
 |ParameterMap|String|以分号分隔的沿袭 ID 列表，这些 ID 映射到 **SqlCommand** 语句中所使用的参数。|  
 |ReferenceMetadataXML|String|转换复制到其输出的查找表中的列的元数据。|  
 |SqlCommand|String|用于填充查找表的 SELECT 语句。|  
@@ -656,8 +656,7 @@ ms.locfileid: "88425689"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [路径属性](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [可以使用表达式设置的数据流属性](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
-  
+ [通用属性](../set-the-properties-of-a-data-flow-component.md)   
+ [路径属性](../integration-services-paths.md)   
+ [可以使用表达式设置的数据流属性](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))  
   

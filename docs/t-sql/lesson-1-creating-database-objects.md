@@ -11,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459169"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035877"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "88459169"
 ## <a name="prerequisites"></a>先决条件
 若要完成本教程，需要 SQL Server Management Studio 以及针对 SQL Server 实例的访问权限。 
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 
 如果没有 SQL Server 实例，请创建一个。 若要创建一个 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
 - **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **macOS**：[在 Docker 上下载 SQL Server 2017](../linux/quickstart-install-connect-docker.md)。
 
 ## <a name="create-a-database"></a>创建数据库
 与许多 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句一样，[`CREATE DATABASE`](statements/create-database-transact-sql.md) 语句具有一个必需参数：数据库的名称。` CREATE DATABASE` 还具有许多可选参数，如希望放置数据库文件的磁盘位置。 当你执行不带可选参数的 `CREATE DATABASE` 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用其中许多参数的默认值。
@@ -241,7 +241,7 @@ ms.locfileid: "88459169"
         [数学函数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [文本与图像函数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [文本与图像函数 (Transact-SQL)](./functions/text-and-image-functions-textptr-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -304,6 +304,5 @@ ms.locfileid: "88459169"
 转到下一篇文章，了解详细信息：
 > [!div class="nextstepaction"]
 > [后续步骤](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

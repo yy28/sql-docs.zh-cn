@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6db12047bd1a8228f6576989e8331b9611bb0742
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b5f944c2fb6b0a2029ed7b8481a8b7f71485a41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495552"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192460"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
 
@@ -421,11 +421,10 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部资源  
   
--   technet.microsoft.com 上的视频：[如何使用 SQL Server 代理自动执行 SSIS 包（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686764.aspx)  
+-   technet.microsoft.com 上的视频：[如何使用 SQL Server 代理自动执行 SSIS 包（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))  
   
 ## <a name="see-also"></a>另请参阅  
  [了解本地和远程执行之间的区别](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [以编程方式加载和运行本地包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [加载本地包的输出](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
-  
   

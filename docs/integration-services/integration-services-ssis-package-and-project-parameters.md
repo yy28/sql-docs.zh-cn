@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6949a8130601bf0bf3ffac5903d7584a16d7d83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 662b52803ddca54f5c660fa79c457cdc05ced3fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449819"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193854"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
 
@@ -28,7 +28,7 @@ ms.locfileid: "88449819"
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
   
- 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，您使用 **Project.params** 窗口创建、修改或删除项目参数。 通过使用 **设计器中的** “参数” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡来创建、修改和删除包参数。 通过使用 **“参数化”** 对话框，您可以将新的或现有的参数与任务属性相关联。 有关使用 **Project.params** 窗口和 **“参数”** 选项卡的详细信息，请参阅 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)。 有关 **“参数化”** 对话框的详细信息，请参阅 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
+ 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，您使用 **Project.params** 窗口创建、修改或删除项目参数。 通过使用 **设计器中的** “参数” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡来创建、修改和删除包参数。 通过使用 **“参数化”** 对话框，您可以将新的或现有的参数与任务属性相关联。 有关使用 **Project.params** 窗口和 **“参数”** 选项卡的详细信息，请参阅 [Create Parameters]()。 有关 **“参数化”** 对话框的详细信息，请参阅 [Parameterize Dialog Box]()。  
   
 ## <a name="parameters-and-package-deployment-model"></a>参数和包部署模型  
  如果您正在使用包部署模型部署包，通常应使用配置而非参数。  
@@ -42,7 +42,7 @@ ms.locfileid: "88449819"
   
 -   [存储过程（Integration Services 目录）](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [“配置”对话框](../integration-services/service/configure-dialog-box.md)  
+-   [“配置”对话框](./catalog/configure-dialog-box.md)  
   
 -   [“执行包”对话框](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88449819"
 ### <a name="parameter-validation"></a>参数验证  
  如果无法解析参数值，则相应的包执行将失败。 为了帮助避免失败，您可以使用 **中的** “验证” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框来验证项目和包。 通过验证，您可以确认所有参数都具有必需的值或者可以使用特定的环境引用解析必需的值。 验证还检查是否存在其他常见的包问题。  
   
- 有关详细信息，请参阅 [Validate Dialog Box](../integration-services/service/validate-dialog-box.md)。  
+ 有关详细信息，请参阅 [Validate Dialog Box](./catalog/validate-dialog-box.md)。  
   
 ### <a name="parameter-example"></a>参数示例  
  此示例介绍一个名为 **pkgOptions** 的参数，该参数用于为驻留在其中的包指定选项。  
@@ -166,7 +166,7 @@ ms.locfileid: "88449819"
     > **警告！！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。  可以使用“删除 (X)”工具栏按钮来删除参数。  使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-“参数化”  对话框可使将新的或现有的参数与任务属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。  以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
+“参数化”  对话框可使将新的或现有的参数与任务属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。  以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数]()。
   
 ### <a name="options"></a>选项  
  **属性**  
@@ -219,5 +219,4 @@ ms.locfileid: "88449819"
   
 ## <a name="related-content"></a>相关内容  
  mattmasson.com 上的博客文章 [SSIS 快速提示：必需参数](https://go.microsoft.com/fwlink/?LinkId=239781)。  
-  
   

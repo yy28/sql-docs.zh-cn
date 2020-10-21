@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82e34adab1dc0f732f96d5e248b98ff8fc7186c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7951c07be9159162c31572933a17e7af27fcc951
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425889"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192827"
 ---
 # <a name="sequence-container"></a>序列容器
 
@@ -58,11 +58,10 @@ ms.locfileid: "88425889"
  有关以编程方式设置这些属性的详细信息，请参阅开发人员指南中针对 **T:Microsoft.SqlServer.Dts.Runtime.Sequence** 类的文档。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设置组件属性的信息，请参阅 [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 有关如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设置组件属性的信息，请参阅 [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [使用默认优先约束来连接任务和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
+ [使用默认优先约束来连接任务和容器](./precedence-constraints.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

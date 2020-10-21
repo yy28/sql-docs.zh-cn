@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa7cd3bd09f71555c826622030e3183d269abb4a
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 7b6583ce7fb4ae2d0b37d898b549a385cfc09763
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088887"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115430"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 的常见问题解答 (FAQ)
 
@@ -95,7 +95,7 @@ ms.locfileid: "88088887"
 
 1. 是否可以在 Linux 上执行无人参与安装 SQL Server？
 
-   是的。 有关无人参与安装的介绍，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md#unattended)。 请参阅 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 和 [Ubuntu](sample-unattended-install-ubuntu.md) 的示例脚本。 还可以查看 SQL Server 客户顾问团队创建的[此示例脚本](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)。
+   是的。 有关无人参与安装的介绍，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md#unattended)。 请参阅 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 和 [Ubuntu](sample-unattended-install-ubuntu.md) 的示例脚本。 还可以查看 SQL Server 客户顾问团队创建的[此示例脚本](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux)。
 
 ## <a name="tools"></a>工具
 
@@ -117,7 +117,7 @@ ms.locfileid: "88088887"
 
 1. 有哪些工具可用于监视 Linux 上的 SQL Server 性能？
 
-   可使用[系统动态管理视图 (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 收集有关 SQL Server 的各种类型的信息，包括 Linux 进程信息。 可使用[查询存储](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)提高查询性能。 其他工具（例如，内置[性能仪表板](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)）可在 Windows 的 SQL Server Management Studio (SSMS) 中远程工作。
+   可使用[系统动态管理视图 (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 收集有关 SQL Server 的各种类型的信息，包括 Linux 进程信息。 可使用[查询存储](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)提高查询性能。 其他工具（例如，内置[性能仪表板](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)）可在 Windows 的 SQL Server Management Studio (SSMS) 中远程工作。
 
    > [!TIP]
    > 正确配置 Linux 操作系统和 SQL Server 实例是提高性能的一种方法。 有关详细信息，请参阅 [Linux 上的 SQL Server 的性能最佳做法和配置指南](sql-server-linux-performance-best-practices.md)。
@@ -130,7 +130,7 @@ ms.locfileid: "88088887"
 
 1. Linux 上的 SQL Server 是否支持同一主机上的多个实例？
 
-   我们建议在主机上运行多个容器以获得多个不同的实例。 使用 docker 很容易实现这一点，但每个容器都需要侦听不同的端口。 有关详细信息，请参阅[运行多个 SQL Server 容器](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)。
+   我们建议在主机上运行多个容器以获得多个不同的实例。 使用 docker 很容易实现这一点，但每个容器都需要侦听不同的端口。 有关详细信息，请参阅[运行多个 SQL Server 容器](./sql-server-linux-docker-container-deployment.md#multiple)。
 
 1. **Linux 上是否支持 Active Directory 身份验证？**
 

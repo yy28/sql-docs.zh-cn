@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477734"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192677"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477734"
   
  查找转换通过将所连接数据源输入列中的数据和引用数据集中的列进行联接来执行查找。  
   
- 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [缓存转换](../../../integration-services/data-flow/transformations/cache-transform.md)。  
+ 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [缓存连接管理器](../../connection-manager/cache-connection-manager.md) 和 [缓存转换](../../../integration-services/data-flow/transformations/cache-transform.md)。  
   
  若要了解查找转换和缓存文件的更多信息，请参阅 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477734"
     > [!NOTE]  
     >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。  
   
-     有关详细信息，请参阅 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)。  
+     有关详细信息，请参阅 [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md)。  
   
 7.  根据需要配置缓存转换。  
   
-     有关详细信息，请参阅[缓存转换编辑器（“连接管理器”页）](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)和[缓存转换编辑器（“映射”页）](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
+     有关详细信息，请参阅[缓存转换编辑器（“连接管理器”页）](./cache-transform.md)和[缓存转换编辑器（“映射”页）](./cache-transform.md)。  
   
 8.  运行包。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477734"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目，再打开该包。  
   
-2.  创建包配置（可选）。 有关详细信息，请参阅 [创建包配置](../../../integration-services/packages/create-package-configurations.md)。  
+2.  创建包配置（可选）。 有关详细信息，请参阅 [创建包配置](../../packages/legacy-package-deployment-ssis.md)。  
   
 3.  执行以下操作将缓存文件添加到项目：  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477734"
   
      该文件将显示在解决方案资源管理器中的 **“杂项”** 文件夹。  
   
-4.  配置项目以创建一个部署实用工具，再生成项目。 有关详细信息，请参阅 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)。  
+4.  配置项目以创建一个部署实用工具，再生成项目。 有关详细信息，请参阅 [Create a Deployment Utility](../../packages/legacy-package-deployment-ssis.md)。  
   
      将创建一个清单文件 \<*project name*>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件。  
   
-5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
+5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../packages/legacy-package-deployment-ssis.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建部署实用工具](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [创建部署实用工具](../../packages/legacy-package-deployment-ssis.md)  
   

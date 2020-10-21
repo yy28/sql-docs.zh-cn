@@ -24,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459369"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193377"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ test_expression [ NOT ] IN
 ### <a name="a-comparing-or-and-in"></a>A. 比较 OR 和 IN  
  以下示例选择设计工程师、工具设计人员或销售助理等雇员的姓名列表。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -100,7 +100,7 @@ GO
   
  但是，也可以使用 IN 检索相同的结果：  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -131,7 +131,7 @@ Mary        Dempsey     Marketing Assistant
 ### <a name="b-using-in-with-a-subquery"></a>B. 带子查询使用 IN  
  以下示例查找 `SalesPerson` 表中所有销售人员的 ID 以获得当年销售额超过 $250,000 的雇员，然后从 `Employee` 表中选择 `EmployeeID` 与 `SELECT` 子查询的结果相匹配的所有雇员的姓名。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -160,7 +160,7 @@ Tete         Mensa-Annan
 ### <a name="c-using-not-in-with-a-subquery"></a>C. 带子查询使用 NOT IN  
  以下示例查找销售额不超过 $250,000 的销售人员。 `NOT IN` 查找与值列表中的项不匹配的销售人员。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -179,7 +179,7 @@ GO
 ### <a name="d-using-in-and-not-in"></a>D. 使用 IN 和 NOT IN  
  下面的示例查找 `FactInternetSales` 表中与 `DimSalesReason` 表中的 `SalesReasonKey` 值相匹配的所有条目。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -189,7 +189,7 @@ IN (SELECT SalesReasonKey FROM DimSalesReason);
   
  下面的示例查找 `FactInternetSalesReason` 表中与 `DimSalesReason` 表中的 `SalesReasonKey` 值不匹配的所有条目。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -200,7 +200,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ### <a name="e-using-in-with-an-expression-list"></a>E. 将 IN 与表达式列表结合使用  
  下面的示例查找 `DimEmployee` 表中销售人员的所有 ID，该表中员工的名字（不含姓氏）均为 `Mike` 或 `Michael`。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

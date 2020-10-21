@@ -19,12 +19,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a4665cd3b3f554c33a1c8640ee47dea94f911d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e33c98e664c794477b913fc1b7826f43f8e9a09c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630671"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192895"
 ---
 # <a name="delete-a-database"></a>删除数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -104,7 +104,6 @@ GO
  备份 **master** 数据库。 如果必须还原 **master** ，则自上次备份 **master** 之后删除的所有数据库都将仍在系统目录视图中具有引用，并且可能会导致出现错误消息。  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
-  
   

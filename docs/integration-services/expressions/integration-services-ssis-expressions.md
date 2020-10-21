@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: def15673fbc8c92148fa8ab025d6e1769b2ee236
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e24e9006219d659a6a3700c8b922a8e0745166a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425499"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92190750"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 表达式
 
@@ -68,12 +68,11 @@ ms.locfileid: "88425499"
  变量具有作用域，因此表达式生成器中的 **“变量”** 文件夹只列出处于作用域中并且可以使用的变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [在数据流组件中使用表达式](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [在数据流组件中使用表达式](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>相关内容  
  social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
   

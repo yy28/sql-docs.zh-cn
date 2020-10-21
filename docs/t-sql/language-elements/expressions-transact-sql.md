@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227212"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191747"
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "91227212"
   
  在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 这类编程语言中，表达式的计算结果始终为单值结果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 选择列表中的表达式按以下规则进行变体：分别对结果集中的每一行计算表达式的值。 同一个表达式对结果集内的每一行可能会有不同的值，但该表达式在每一行的值是唯一的。 例如，在 `SELECT` 语句中，对 `ProductID` 的引用以及选择列表中的术语 `1+2` 都是表达式：  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, 1+2  
