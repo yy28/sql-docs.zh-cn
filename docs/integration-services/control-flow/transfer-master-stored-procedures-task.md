@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b4fccce21cd319049a4e313c27da6c4202a72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a053581c9f6ca8f9592aef42c1649511ecc51a02
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495945"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194219"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务
 
@@ -52,7 +52,7 @@ ms.locfileid: "88495945"
  传输主存储过程任务并不报告存储过程传输的进度；它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的存储过程数。 通过将用户定义的变量分配给传输主存储过程任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关存储过程传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的存储过程数。 通过将用户定义的变量分配给传输主存储过程任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关存储过程传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../integration-services-ssis-variables.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输主存储过程任务包括下列自定义日志项：  
@@ -82,7 +82,7 @@ ms.locfileid: "88495945"
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>传输主存储过程任务编辑器（“常规”页）
   可以使用 **“传输主存储过程任务编辑器”** 对话框的 **“常规”** 页，对传输主存储过程任务进行命名和说明。  
@@ -139,5 +139,4 @@ ms.locfileid: "88495945"
  [传输 SQL Server 对象任务](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

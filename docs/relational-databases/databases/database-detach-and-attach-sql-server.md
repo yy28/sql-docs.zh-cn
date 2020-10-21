@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf2c73cc1d9c3bed3b54ff0c1a71acf22462889a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756286"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192387"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "85756286"
   
 **附加数据库**  
   
--   [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [附加数据库](../../relational-databases/databases/attach-a-database.md)  
   
@@ -157,5 +157,4 @@ ms.locfileid: "85756286"
   
 ## <a name="see-also"></a>另请参阅  
  [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)  
-  
   

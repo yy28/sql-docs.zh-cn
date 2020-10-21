@@ -1,5 +1,6 @@
 ---
-title: 重新激活成员或集合 (Master Data Services) | Microsoft Docs
+description: 重新激活成员或集合 (Master Data Services)
+title: 重新激活成员或集合
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dce90b3bf8b151ec5ea24dda8ea3628852a8dcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257934"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以重新激活以下成员：  
   
@@ -42,31 +43,31 @@ ms.locfileid: "68093115"
   
  重新激活集合或成员时，将还原以前的所有事务。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您必须具有对 **“版本管理”** 功能区域的权限。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>重新激活成员或集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”**。  
   
-2.  在菜单栏上，单击 **“事务”** 。  
+2.  在菜单栏上，单击 **“事务”**。  
   
 3.  在 **“事务”** 页上，从 **“模型”** 列表中选择某个模型。  
   
-4.   从“版本”列表中，选择某一版本。  
+4.  **** 从“版本”列表中，选择某一版本。  
   
-5.  在 **“事务”** 窗格中，单击要重新激活的成员或集合所对应的行。 此行应在“旧值”  列中显示“活动”  并在“新值”  列中显示“已停用”  。  
+5.  在 **“事务”** 窗格中，单击要重新激活的成员或集合所对应的行。 此行应在“旧值”**** 列中显示“活动”**** 并在“新值”**** 列中显示“已停用”****。  
   
-6.  单击 **“撤消事务”** 。  
+6.  单击 **“撤消事务”**。  
   
-7.  在确认对话框中，单击 **“确定”** 。 添加新事务，在 **“新值”** 列中显示 **“活动”** 。  
+7.  在确认对话框中，单击 **“确定”**。 添加新事务，在 **“新值”** 列中显示 **“活动”** 。  
   
-## <a name="see-also"></a>请参阅  
- [删除成员或集合 (Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Master Data Services 中删除成员或集合&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d271139edbde0f1c67467b6fe880f916fb6c5142
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495605"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193107"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
 
@@ -53,7 +53,7 @@ ms.locfileid: "88495605"
   
  在“脚本转换编辑器”**** 的“输入列”**** 页上，列列表显示数据流上游组件输出中的可用列。 选择要转换或传递的列。 将要就地转换的所有列标记为读/写。  
   
- 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
+ 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>配置输入、输出和输出列  
  转换组件支持一个或多个输出。  
@@ -70,7 +70,7 @@ ms.locfileid: "88495605"
   
 -   您可以添加更多列来包含其他信息。 您必须编写自己的代码来向这些附加列填充数据。 有关重现标准错误输出行为的信息，请参阅[模拟脚本组件的错误输出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
  如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。  
@@ -79,7 +79,7 @@ ms.locfileid: "88495605"
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../data-flow/transformations/script-component.md)   。  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>在代码设计模式下编写异步转换组件脚本  
  为组件配置完所有元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
@@ -238,5 +238,4 @@ public class ScriptMain:
  [了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [开发具有异步输出的自定义转换组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
-  
   

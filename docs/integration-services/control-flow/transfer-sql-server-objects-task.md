@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2cd15daac2c287c2dc750e1f79032f855d5640d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7162d2eb4c718330fb3fec38dceddc4f0bf8e04e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349163"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192764"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
 
@@ -86,7 +86,7 @@ ms.locfileid: "88349163"
  传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务并不报告对象传输的进度；它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在任务的 **ExecutionValue** 属性中存储的执行值返回已传输的对象数。 通过将用户定义的变量分配给传输 SQL Server 对象任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关对象传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 在任务的 **ExecutionValue** 属性中存储的执行值返回已传输的对象数。 通过将用户定义的变量分配给传输 SQL Server 对象任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关对象传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../integration-services-ssis-variables.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输 SQL Server 对象任务包括下列自定义日志项：  
@@ -117,7 +117,7 @@ ms.locfileid: "88349163"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>以编程方式配置传输 SQL Server 对象任务  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
@@ -331,7 +331,7 @@ ms.locfileid: "88349163"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
- [传输 SQL Server 对象任务编辑器（“常规”页）](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [传输 SQL Server 对象任务编辑器（“常规”页）]()   
  [“表达式”页](../../integration-services/expressions/expressions-page.md)   
  [用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

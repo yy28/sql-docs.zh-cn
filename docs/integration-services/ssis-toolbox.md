@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487660"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192369"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487660"
  > [!NOTE]
 > 如果看不到该工具箱，转到“查看”->“其他窗口”->“SSIS 工具箱”。
  
-单击组件在工具箱底部查看其说明，了解有关工具箱中组件的详细信息。 对于某些组件，还可访问演示如何配置和使用这些组件的示例。 在 [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189)上提供这些示例。 若要从 **“SSIS 工具箱”** 访问示例，请单击在说明的下方出现的 **“查找示例”** 链接。  
+单击组件在工具箱底部查看其说明，了解有关工具箱中组件的详细信息。 对于某些组件，还可访问演示如何配置和使用这些组件的示例。 在 [MSDN](/samples/browse/)上提供这些示例。 若要从 **“SSIS 工具箱”** 访问示例，请单击在说明的下方出现的 **“查找示例”** 链接。  
   
 > [!NOTE]
 > 不能从工具箱中删除已安装的组件**。  
@@ -65,5 +65,4 @@ ms.locfileid: "88487660"
   
 ## <a name="refresh-the-ssis-toolbox"></a>刷新 SSIS 工具箱  
   
-1.  右键单击 SSIS 工具箱，然后单击“刷新工具箱”****。  
-
+1.  右键单击 SSIS 工具箱，然后单击“刷新工具箱”****。

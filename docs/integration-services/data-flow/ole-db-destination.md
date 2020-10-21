@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cdf54622b3db05b661f5c71c3f3b6a2e67fbd1ff
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987633"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195379"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
 
@@ -39,7 +39,7 @@ ms.locfileid: "91987633"
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
   
 > [!NOTE]  
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
+>  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../load-data-to-from-excel-with-ssis.md)。  
   
  OLE DB 目标为数据加载提供了五种数据访问模式：  
   
@@ -112,7 +112,7 @@ ms.locfileid: "91987633"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB 自定义属性](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -126,7 +126,7 @@ ms.locfileid: "91987633"
   使用 **“OLE DB 目标编辑器”** 对话框的 **“连接管理器”** 页可以为目标选择 OLE DB 连接。 使用此页还可以选择数据库中的表或视图。  
   
 > [!NOTE]  
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
+>  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../load-data-to-from-excel-with-ssis.md)。  
   
 > [!NOTE]  
 >  OLE DB 目标的 **CommandTimeout** 属性未在 **“OLE DB 目标编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
@@ -147,7 +147,7 @@ ms.locfileid: "91987633"
 |------------|-----------------|  
 |表或视图|将数据加载到 OLE DB 目标中的表或视图。|  
 |表或视图 - 快速加载|将数据加载到 OLE DB 目标中的表或视图，并使用快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。|  
-|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息**：[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息**：[在包中使用变量](../integration-services-ssis-variables.md)|  
 |表名变量或视图名变量 - 快速加载|在变量中指定表或视图名称，并使用快速加载选项加载数据。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。|  
 |SQL 命令|使用 SQL 查询将数据加载到 OLE DB 目标中。|  
   
@@ -309,5 +309,4 @@ ms.locfileid: "91987633"
  [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)  
   
  [数据流](../../integration-services/data-flow/data-flow.md)  
-  
   

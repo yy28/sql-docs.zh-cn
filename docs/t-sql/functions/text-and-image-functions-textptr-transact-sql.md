@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 90365bd45edac8e3e5a131ab4786449352b70011
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380502"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036458"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>文本与图像函数 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -192,8 +192,7 @@ pr_info
  [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT (Transact-SQL)](../../t-sql/queries/readtext-transact-sql.md)   
  [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)   
- [文本与图像函数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [文本与图像函数 (Transact-SQL)]()   
  [UPDATETEXT (Transact-SQL)](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
-  
   

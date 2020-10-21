@@ -17,12 +17,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c880b9ff6a96a7bcd5365e3afc098467630b3a7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82efd353b95faba757622e37d0471f784d13d58d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465402"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192837"
 ---
 # <a name="system-databases"></a>系统数据库
 
@@ -38,7 +38,7 @@ ms.locfileid: "88465402"
 |[tempdb 数据库](../../relational-databases/databases/tempdb-database.md)|一个工作空间，用于保存临时对象或中间结果集。|  
 
 > [!IMPORTANT]
-> 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 tempdb 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 tempdb 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="modifying-system-data"></a>修改系统数据  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持用户直接更新系统对象（如系统表、系统存储过程和目录视图）中的信息。 实际上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一整套管理工具，用户可以使用这些工具充分管理他们的系统以及数据库中的所有用户和对象。 其中包括：  
@@ -78,5 +78,4 @@ ms.locfileid: "88465402"
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
  [数据库](../../relational-databases/databases/databases.md)  
-  
   

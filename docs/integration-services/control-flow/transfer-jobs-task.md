@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5eaf7aca7e96aaf3aae3e095e92fecfa749cb1ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab4dfc14db0efacfe03ee7289c27f684b3e4a9eb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430969"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192785"
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
 
@@ -50,7 +50,7 @@ ms.locfileid: "88430969"
  传输作业任务将引发报告已传输的作业数的信息事件，而且在覆盖作业时还会引发警告事件。 该任务并不报告作业传输的进度，它仅报告 0% 和 100% 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的作业数。 通过将用户定义的变量分配给传输作业任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关作业传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的作业数。 通过将用户定义的变量分配给传输作业任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关作业传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../integration-services-ssis-variables.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输作业任务包括下列自定义日志项：  
@@ -78,7 +78,7 @@ ms.locfileid: "88430969"
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-jobs-task-editor-general-page"></a>传输作业任务编辑器（“常规”页）
   可以使用 **“传输作业任务编辑器”** 对话框的 **“常规”** 页，对传输作业任务进行命名和说明。  
@@ -151,5 +151,4 @@ ms.locfileid: "88430969"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
-  
   

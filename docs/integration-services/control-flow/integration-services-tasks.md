@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0136b994f064a01a66d4c0884499172b1dab894b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392643"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197201"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 任务
 
@@ -79,7 +79,7 @@ ms.locfileid: "88392643"
   
  有关如何以编程方式向包中添加任务的详细信息，请参阅 [以编程方式添加任务](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)。  
   
- 对于每个任务，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器为每个任务提供的自定义对话框单独配置，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包含的“属性”窗口进行配置。 一个包中可以包含多个相同类型的任务（如六个执行 SQL 任务），对每个任务可进行不同的配置。 有关详细信息，请参阅 [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 对于每个任务，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器为每个任务提供的自定义对话框单独配置，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包含的“属性”窗口进行配置。 一个包中可以包含多个相同类型的任务（如六个执行 SQL 任务），对每个任务可进行不同的配置。 有关详细信息，请参阅 [设置任务或容器的属性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="tasks-connections-and-groups"></a>任务连接和组  
  如果连接和分组任务中包含多个任务，则它们将被按照优先约束在控制流中进行连接和排序。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
@@ -88,5 +88,4 @@ ms.locfileid: "88392643"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 52d895380cb76a094b46787b1cbc16cfac6ce39f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea62ec35accc4f808fdbd1b2ff4319c0b44cdcc5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487153"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195662"
 ---
 # <a name="extract-a-dac-from-a-database"></a>从数据库中提取 DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88487153"
  您可以从驻留在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更高版本的实例上的数据库中提取 DAC。 如果对已从 DAC 部署的数据库运行提取进程，则仅提取数据库中对象的定义。 该进程并不引用在 **msdb** 中注册的 DAC（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）。 该提取进程不注册当前数据库引擎实例中的 DAC 定义。 有关注册 DAC 的详细信息，请参阅 [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)。  
   
 ##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
- 只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库中提取 DAC。 如果数据库有 DAC 中不支持的对象或包含的用户，则不能提取 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)。  
+ 只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库中提取 DAC。 如果数据库有 DAC 中不支持的对象或包含的用户，则不能提取 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))。  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  提取 DAC 至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 提取 DAC 可由 securityadmin 固定服务器角色的成员（也是从其提取 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以提取 DAC。  
@@ -163,5 +163,4 @@ $extractionunit.Extract($dacpacPath)
   
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d485d827f94c3ed9fe8e30fa48fd978aca6971a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad3aeaa27bba3594489a70d4f98492596fd0d747
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456495"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195045"
 ---
 # <a name="monitor-data-tier-applications"></a>监视数据层应用程序
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88456495"
  SSMS **“对象资源管理器”** 显示与部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个 DAC 有关的基本配置信息，而与该实例是否在 SQL Server 实用工具中进行管理无关。 此外，可以使用与用于监视任何数据库的相同过程来监视与部署的 DAC 相关联的数据库。  
   
 ## <a name="using-the-sql-server-utility"></a>使用 SQL Server 实用工具  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 实用工具资源管理器中的“已部署的数据层应用程序”详细信息页显示一个面板，该面板报告已部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例的所有 DAC 的资源利用情况 。 该详细信息页的顶部窗格列出每个已部署的 DAC，同时还列出直观的指示器，显示 CPU 和文件资源的使用率是否超出为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具定义的策略。 如果您在列表视图中选择任何 DAC，则进一步的详细信息将显示在该页面的底部窗格的选项卡中。 有关详细信息页上提供的信息的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 实用工具资源管理器中的“已部署的数据层应用程序”详细信息页显示一个面板，该面板报告已部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例的所有 DAC 的资源利用情况 。 该详细信息页的顶部窗格列出每个已部署的 DAC，同时还列出直观的指示器，显示 CPU 和文件资源的使用率是否超出为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具定义的策略。 如果您在列表视图中选择任何 DAC，则进一步的详细信息将显示在该页面的底部窗格的选项卡中。 有关详细信息页上提供的信息的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))。  
   
  在使用“已部署的数据层应用程序”详细信息页迅速确定导致硬件资源利用不足或压力过大的 DAC 后，你可以制订计划以便解决任何问题。 未充分利用其当前硬件资源的多个 DAC 可被合并为单个服务器，从而释放某些服务器以用于其他用途。 如果某一 DAC 对其当前服务器上的资源压力过大，则可以将该 DAC 移到性能更高的服务器上，或者向当前服务器添加更多的资源。  
   
- 针对资源利用率的最低和最高限制由在 **“实用工具管理”** 详细信息页中定义的应用程序监视策略定义。 数据库管理员可以对策略进行定制，以便匹配其组织建立的限制。 例如，一个公司可以将 75% 设置为针对某一 DAC 的最高 CPU 利用率，而另一个公司可以将该最高值设置为 80%。 有关设置应用程序监视策略的详细信息，请参阅[实用工具管理（SQL Server 实用工具）](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。  
+ 针对资源利用率的最低和最高限制由在 **“实用工具管理”** 详细信息页中定义的应用程序监视策略定义。 数据库管理员可以对策略进行定制，以便匹配其组织建立的限制。 例如，一个公司可以将 75% 设置为针对某一 DAC 的最高 CPU 利用率，而另一个公司可以将该最高值设置为 80%。 有关设置应用程序监视策略的详细信息，请参阅[实用工具管理（SQL Server 实用工具）](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))。  
   
  查看“已部署的数据层应用程序”详细信息页：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88456495"
 ## <a name="using-the-dac-system-views-and-tables"></a>使用 DAC 系统视图和表  
  msdb.dbo.sysdac_history_internal 系统表记录对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例执行的所有 DAC 管理操作是成功还是失败。 该表记录发生每个操作的时间，以及执行了操作的登录名。 有关详细信息，请参阅 [sysdac_history_internal (Transact-SQL)](../../relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal.md)。  
   
- DAC 系统视图报告基本的目录信息。 有关详细信息，请参阅[数据层应用程序视图 (Transact-SQL)](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)。  
+ DAC 系统视图报告基本的目录信息。 有关详细信息，请参阅[数据层应用程序视图 (Transact-SQL)](../system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)。  
   
 ## <a name="monitoring-dac-databases"></a>监视 DAC 数据库  
  在已成功部署某一 DAC 后，在该 DAC 中包含的数据库将像任何其他数据库一样操作。 使用标准 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 技术和工具来监视数据库的性能、日志、事件和资源利用率。  
@@ -76,5 +76,4 @@ ms.locfileid: "88456495"
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [部署数据层应用程序](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
-  
   

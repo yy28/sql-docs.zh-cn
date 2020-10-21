@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cb194e8da7b64bef3cf6f33e65a5a5ee1ab136c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457089"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192440"
 ---
 # <a name="performance-counters"></a>性能计数器
 
@@ -76,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   codeplex.com 上的工具 [Business Intelligence Development Studio 的 SSIS 性能可视化（CodePlex 项目）](https://go.microsoft.com/fwlink/?LinkId=146626)。  
   
--   msdn.microsoft.com 上的视频 [测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=150497)。  
+-   msdn.microsoft.com 上的视频 [测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100))。  
   
 -   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](https://go.microsoft.com/fwlink/?LinkId=235319)。  
 
@@ -122,4 +122,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  必须使用属于 Administrators 组成员的本地帐户或域帐户启动性能日志和警报服务。  
 
 ## <a name="see-also"></a>另请参阅  
- [项目和包的执行](../packages/run-integration-services-ssis-packages.md) [Integration Services 包记录的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [项目和包的执行](../packages/run-integration-services-ssis-packages.md) [Integration Services 包记录的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)

@@ -22,12 +22,12 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a42282f0f6f0c4cf645c64d1df94e95eae79b5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9bc857eb48c33d0ef8e4ffb906866a61cef6124f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85980162"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192267"
 ---
 # <a name="database-identifiers"></a>数据库标识符
 
@@ -133,7 +133,7 @@ WHERE [Order] = 10;            --Identifier is a reserved keyword.
 
 ## <a name="see-also"></a>另请参阅
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
-[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)   
 [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
 [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
@@ -145,4 +145,4 @@ WHERE [Order] = 10;            --Identifier is a reserved keyword.
 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
 [保留关键字 (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
-[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  
+[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)

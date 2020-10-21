@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6bf07a7c949c76ebeae0d17b632d47e4a87fce1b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 128510b920e171b39bddacebca89624289d67213
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173738"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115737"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>在 Docker 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -93,7 +93,7 @@ ms.locfileid: "88173738"
    ```
   
    > [!NOTE]
-   > 在容器中运行 SQL Server 生产版本的过程略有不同。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
+   > 在容器中运行 SQL Server 生产版本的过程略有不同。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](./sql-server-linux-docker-container-deployment.md)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
 
 2. 若要查看 Docker 容器，请运行 `docker ps` 命令：
 
@@ -101,7 +101,7 @@ ms.locfileid: "88173738"
    sudo docker ps -a
    ```
 
-3. 如果“状态”列显示“正常运行”状态，表明 SQL Server 正在容器中运行，且正在侦听“端口”列中指定的端口。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting) 。
+3. 如果“状态”列显示“正常运行”状态，表明 SQL Server 正在容器中运行，且正在侦听“端口”列中指定的端口。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](./sql-server-linux-docker-container-troubleshooting.md) 。
 
  
     输出：
@@ -130,4 +130,4 @@ Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server
 R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
 + [快速入门：在 T-SQL 中运行 R](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [教程：适用于 R 开发人员的数据库内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教程：适用于 R 开发人员的数据库内分析](../machine-learning/tutorials/r-taxi-classification-introduction.md)

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725186"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098696"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 的 Kusto (KQL) 扩展（预览版）
 
@@ -124,7 +124,7 @@ StormEvents
 
 ## <a name="sanddance-visualization"></a>SandDance 可视化效果
 
-[SandDance 扩展](../sanddance-extension.md)和 Azure Data Studio 中的 Kusto (KQL) 扩展结合使用时会带来丰富的交互式可视化效果。 从 KQL 查询结果集中，选择“可视化工具”按钮，启动 [SandDance](https://sanddance.js.org/)。
+[SandDance 扩展](sanddance-extension.md)和 Azure Data Studio 中的 Kusto (KQL) 扩展结合使用时会带来丰富的交互式可视化效果。 从 KQL 查询结果集中，选择“可视化工具”按钮，启动 [SandDance](https://sanddance.js.org/)。
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto 扩展":::
 

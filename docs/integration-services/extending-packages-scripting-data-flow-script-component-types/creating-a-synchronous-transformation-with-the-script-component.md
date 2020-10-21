@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d5a3e10574188f4d365ed93b9e1e765b96b6dcba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71a22131a6852708f087ddda67cabc19cdbfd87e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477212"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193113"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用脚本组件创建同步转换
 
@@ -53,7 +53,7 @@ ms.locfileid: "88477212"
   
  在“脚本转换编辑器”的“输入列”页中，列列表显示数据流上游组件的输出中可用的列。 选择要转换或传递的列。 将要就地转换的所有列标记为读/写。  
   
- 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
+ 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>配置输入、输出和输出列  
  转换组件支持一个或多个输出。  
@@ -71,7 +71,7 @@ ms.locfileid: "88477212"
   
 -   向行级错误的模拟错误输出添加新列。 通常，同一 ExclusionGroup 中的多个输出具有相同的输出列集  。 但是，如果要创建模拟的错误输出，则可能要添加多个列来包含错误信息。 有关数据流引擎如何处理错误行的信息，请参阅[在数据流组件中使用错误输出](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)。 请注意，在脚本组件中，必须编写您自己的代码以便使用适当的错误信息填充这些附加列。 有关详细信息，请参阅[模拟脚本组件的错误输出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
  如果要在脚本中使用现有的变量，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量     。  
@@ -80,7 +80,7 @@ ms.locfileid: "88477212"
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../data-flow/transformations/script-component.md)。  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>在代码设计模式下编写同步转换组件脚本  
  为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
@@ -267,4 +267,3 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
  [了解同步和异步转换](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
  [使用脚本组件创建异步转换](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
  [开发具有同步输出的自定义转换组件](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
- 

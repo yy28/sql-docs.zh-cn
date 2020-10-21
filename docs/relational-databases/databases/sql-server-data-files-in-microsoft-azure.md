@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987583"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192847"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ Azure 磁盘与企业范围的业务连续性和灾难恢复解决方案兼容�
 ### <a name="azure-storage-concepts"></a>Azure 存储概念  
 使用“Azure 中的 SQL Server 数据文件”功能时，需要在 Azure 中创建一个存储帐户和一个容器。 然后，需要创建一个 SQL Server 凭据，其中包括有关容器策略的信息以及访问容器所需的共享访问签名。  
 
-在 [Windows Azure](https://azure.microsoft.com) 中，[Azure 存储](https://azure.microsoft.com/services/storage/)帐户代表用于访问 blob 的命名空间的最高级别。 一个存储帐户可包含无限数量的容器，前提是这些容器的总大小低于存储限制。 有关存储限制的最新信息，请参阅 [Azure 订阅与服务限制、配额和约束](https://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器对 [blob ](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器。 同样，一个容器可以存储无限数量的 blob。 可将两类 Blob 存储到 Azure 存储中：块 Blob 和页 Blob。 这一新功能使用页 Blob，在文件字节数经常发生修改的情况下这些 Blob 更为高效。 你可以使用以下 URL 格式访问 blob：`https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
+在 [Windows Azure](https://azure.microsoft.com) 中，[Azure 存储](https://azure.microsoft.com/services/storage/)帐户代表用于访问 blob 的命名空间的最高级别。 一个存储帐户可包含无限数量的容器，前提是这些容器的总大小低于存储限制。 有关存储限制的最新信息，请参阅 [Azure 订阅与服务限制、配额和约束](/azure/azure-subscription-service-limits)。 容器对 [blob ](/azure/storage/common/storage-introduction#blob-storage)集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器。 同样，一个容器可以存储无限数量的 blob。 可将两类 Blob 存储到 Azure 存储中：块 Blob 和页 Blob。 这一新功能使用页 Blob，在文件字节数经常发生修改的情况下这些 Blob 更为高效。 你可以使用以下 URL 格式访问 blob：`https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
 
 ### <a name="azure-billing-considerations"></a>Azure 计费注意事项  
 
@@ -91,7 +91,7 @@ ON
 >[!IMPORTANT]
 >如果当前存在任何对容器中数据文件的引用，则尝试删除相应的 SQL Server 凭据会失败。
 
-有关详细信息，请参阅 [管理对 Azure 存储资源的访问权限](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
+有关详细信息，请参阅 [管理对 Azure 存储资源的访问权限](/azure/storage/blobs/storage-manage-access-to-resources)  
 
 ### <a name="security"></a>安全性  
  以下是在 Azure 存储中存储 SQL Server 数据文件时的安全注意事项和要求。
@@ -120,7 +120,7 @@ ON
   
 - 使用“Azure 中的 SQL Server 数据文件”功能时，存储帐户不支持异地复制。 如果对存储帐户进行地理复制并发生地理故障转移，则可能出现数据库损坏。  
   
-- 有关容量限制，请参阅 [Blob 存储简介](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)。  
+- 有关容量限制，请参阅 [Blob 存储简介](/azure/storage/blobs/storage-blobs-introduction)。  
   
 - 无法使用“Azure 存储中的 SQL Server 数据文件”功能在 blob 存储中存储内存中 OLTP 数据。 这是因为内存 OLTP 依赖于 **FileStream** ，并且，在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。  
   
@@ -166,10 +166,10 @@ ON
     解决方法：尝试删除 Azure 存储中活动数据库文件仍在使用的凭据时，可能会看到此错误。 要删除凭据，必须先删除拥有此数据库文件的关联 Blob。 要删除具有活动租约的 blob，必须先释放租约。  
   
 - *未在容器上正确创建共享访问签名。*    
-     解决方法：确保已在容器上正确创建了共享访问签名。 有关第 2 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)。  
+     解决方法：确保已在容器上正确创建了共享访问签名。 有关第 2 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)。  
   
 - *尚未正确创建 SQL Server 凭据。*    
-    解决方法：确保已对“标识”字段使用了“共享访问签名”，并正确创建了机密。 有关第 3 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-3-database-backup-to-url.md)。  
+    解决方法：确保已对“标识”字段使用了“共享访问签名”，并正确创建了机密。 有关第 3 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url)。  
   
  **租赁 Blob 错误：**  
   

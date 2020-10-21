@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442904"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115434"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的新增功能
 
@@ -42,7 +42,7 @@ ms.locfileid: "87442904"
 | Linux 上的 PolyBase | 在 Linux 上为非 Hadoop 连接器[安装 PolyBase](../relational-databases/polybase/polybase-linux-setup.md)。<br/><br/>[PolyBase 类型映射](../relational-databases/polybase/polybase-type-mapping.md)。 |
 | 变更数据捕获 (CDC) 支持 | Linux 上的 SQL Server 2019 现在支持变更数据捕获 (CDC)。 |
 | Microsoft 容器注册表 | [Microsoft 容器注册表](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)现在将 Docker Hub 替换为新的官方 Microsoft 容器映像，其中包括 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 |
-| 非根容器 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了通过在默认情况下以非根用户身份启动 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 进程来创建更安全容器的功能。 有关更多详细信息，请参阅[以非根用户的身份构建并运行 SQL Server 容器](sql-server-linux-configure-docker.md#buildnonrootcontainer)。 |
+| 非根容器 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了通过在默认情况下以非根用户身份启动 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 进程来创建更安全容器的功能。 有关更多详细信息，请参阅[以非根用户的身份构建并运行 SQL Server 容器](./sql-server-linux-docker-container-security.md#buildnonrootcontainer)。 |
 
 ## <a name="next-steps"></a>后续步骤
 

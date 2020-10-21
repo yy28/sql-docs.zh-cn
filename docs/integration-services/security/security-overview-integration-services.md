@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487676"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193779"
 ---
 # <a name="security-overview-integration-services"></a>安全性概述 (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487676"
   
  如果将配置存储到文件系统而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，请确保包含包配置文件的文件夹的安全。  
   
- 有关配置的详细信息，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
+ 有关配置的详细信息，请参阅 [Package Configurations](../packages/legacy-package-deployment-ssis.md)。  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>控制对 Integration Services 服务的访问  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务列出所存储的包。 若要防止未经授权的用户查看有关存储在本地和远程计算机上的包的信息，从而获取私有信息，请限制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的计算机的访问。  
@@ -121,7 +121,7 @@ ms.locfileid: "88487676"
 ### <a name="configuration-files"></a>配置文件  
  如果配置中有敏感的信息，例如登录名和密码信息，则应当考虑将配置保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或使用访问控制列表 (ACL) 来限制对存储文件的位置或文件夹的访问，并只允许访问某些帐户。 通常，可以向允许其运行包的帐户以及负责管理包和排除包的故障的帐户授予访问权，这些权限可能包括检查配置、检查点和日志文件的内容。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了更安全的存储方式，因为它在服务器和数据库级别提供保护。 若要将配置保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置类型。 若要保存到文件系统，请使用 XML 配置类型。  
   
- 有关详细信息，请参阅 [包配置](../../integration-services/packages/package-configurations.md)、 [创建包配置](../../integration-services/packages/create-package-configurations.md)和 [有关 SQL Server 安装的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
+ 有关详细信息，请参阅 [包配置](../packages/legacy-package-deployment-ssis.md)、 [创建包配置](../packages/legacy-package-deployment-ssis.md)和 [有关 SQL Server 安装的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   
 ### <a name="checkpoint-files"></a>检查点文件  
  同样，如果包所使用的检查点文件包含敏感信息，则应使用访问控制列表 (ACL) 来保证文件存储位置或所在文件夹的安全。 检查点文件用于保存有关包进度的当前状态信息和变量的当前值。 例如，包中可能包含含有电话号码的自定义变量。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
@@ -147,4 +147,4 @@ ms.locfileid: "88487676"
   
 -   [使用数字证书对包签名](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [设置或更改包的保护级别](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [设置或更改包的保护级别](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

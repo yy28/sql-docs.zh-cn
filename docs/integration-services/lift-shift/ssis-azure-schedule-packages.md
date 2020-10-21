@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989965"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195169"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>计划 Azure 中部署的 SQL Server Integration Services (SSIS) 包的执行
 
@@ -44,13 +44,13 @@ ms.locfileid: "90989965"
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> 使用 SQL 数据库弹性作业计划安排一个包
 
-有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理横向扩展的云数据库](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
+有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理横向扩展的云数据库](/azure/sql-database/sql-database-elastic-jobs-overview)。
 
 ### <a name="prerequisites"></a>必备条件
 
 在可以使用弹性作业来计划存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的 SSIS 包之前，必须先完成以下操作：
 
-1.  安装并配置弹性数据库作业组件。 有关详细信息，请参阅[安装弹性数据库作业概述](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)。
+1.  安装并配置弹性数据库作业组件。 有关详细信息，请参阅[安装弹性数据库作业概述](/azure/sql-database/sql-database-elastic-jobs-service-installation)。
 
 2. 创建数据库范围的凭据，作业可使用该凭据将命令发送到 SSIS 目录数据库。 有关详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL（创建数据库范围的凭据）(Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
@@ -166,17 +166,17 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 
 若要计划数据工厂管道，请使用以下触发器之一：
 
-- [计划触发器](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [计划触发器](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [翻转窗口触发器](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [翻转窗口触发器](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [基于事件的触发器](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [基于事件的触发器](/azure/data-factory/how-to-create-event-trigger)
 
 若要将 SSIS 包作为数据工厂管道的一部分运行，请使用以下活动之一：
 
-- [执行 SSIS 包活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
+- [执行 SSIS 包活动](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
 
-- [已存储过程活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
+- [已存储过程活动](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
 
 ## <a name="next-steps"></a>后续步骤
 

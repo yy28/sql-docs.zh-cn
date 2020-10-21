@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 763f3abaff3d2b12d6a03b0d0dabb43f9111a910
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8de40479b8f52187901a99f37412fcf12c255dc6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480959"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193085"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
 
@@ -211,9 +211,8 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>外部资源  
   
--   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](https://docs.microsoft.com/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations)。  
+-   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations)。  
   
 ## <a name="see-also"></a>另请参阅  
  [在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
-  
   

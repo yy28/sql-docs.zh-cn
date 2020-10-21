@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67dcda91fa83869c927b10d769af3866b8bcd146
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 118516d9d6c149b9a8c86840af60b96170e6f091
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477719"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192658"
 ---
 # <a name="create-relationships"></a>创建关系
 
@@ -55,8 +55,7 @@ ms.locfileid: "88477719"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
- [模糊查找转换编辑器（“列”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [查找转换编辑器（“列”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [字词查找转换编辑器（“字词查找”选项卡）](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
+ [模糊查找转换编辑器（“列”选项卡）](./fuzzy-lookup-transformation.md)   
+ [查找转换编辑器（“列”页）](./lookup-transformation.md)   
+ [字词查找转换编辑器（“字词查找”选项卡）](./term-lookup-transformation.md)  
   

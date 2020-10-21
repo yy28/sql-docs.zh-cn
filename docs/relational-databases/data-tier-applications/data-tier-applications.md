@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386933"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193047"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88386933"
 -   **UPGRADE** - 可以使用 DACPAC 升级数据库。 甚至在之前未注册为数据层应用程序的数据库上也支持升级操作，但升级操作的结果是，将隐式注册数据库。  
   
 ## <a name="bacpac"></a>BACPAC  
- BACPAC 是扩展名为 .bacpac 的 Windows 文件，用于封装数据库的架构和数据。 BACPAC 的主要用例是将数据库从一台服务器移到另一台服务器上（或[将数据库从本地服务器移到云中](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)），同时以开放格式对现有数据库进行存档。  
+ BACPAC 是扩展名为 .bacpac 的 Windows 文件，用于封装数据库的架构和数据。 BACPAC 的主要用例是将数据库从一台服务器移到另一台服务器上（或[将数据库从本地服务器移到云中](/azure/azure-sql/database/migrate-to-database-from-sql-server)），同时以开放格式对现有数据库进行存档。  
  与 DACPAC 类似，BACPAC 文件是开放的 - BACPAC 的架构内容与 DACPAC 的架构内容相同。 BACPAC 中的数据是以 JSON 格式进行存储。  
   
  虽然 DACPAC 和 BACPAC 相似，但它们面向的方案不同。 DACPAC 侧重于捕获和部署架构，包括升级现有数据库。 DACPAC 的主要用例是将严密定义的架构依次部署到开发、测试和生产环境中。 用例还包括与此相反的情况：捕获生产的架构并将其应用回测试和开发环境。  
@@ -130,6 +130,5 @@ ms.locfileid: "88386933"
 |介绍如何使用向导部署现有数据库。 此向导使用 DAC 执行部署。|[使用 DAC 部署数据库](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [对 SQL Server 对象和版本的 DAC 支持](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [对 SQL Server 对象和版本的 DAC 支持](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

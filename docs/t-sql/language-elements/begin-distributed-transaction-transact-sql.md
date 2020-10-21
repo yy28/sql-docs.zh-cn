@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04b4284795a48e15f56c99fee4c868e26250fd4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 757e838efe95130f745cf8966789cab4432bc0d5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417143"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196845"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,6 @@ ms.locfileid: "88417143"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   
 [ ; ]  
@@ -88,7 +87,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 > [!NOTE]  
 >  除非正在运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例的计算机中当前安装了 MS DTC，否则本示例会产生错误消息。 有关安装 MS DTC 的详细信息，请参见 Microsoft 分布式事务处理协调器文档。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN DISTRIBUTED TRANSACTION;  

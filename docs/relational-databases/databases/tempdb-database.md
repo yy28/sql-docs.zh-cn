@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024339"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195550"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
@@ -40,9 +40,9 @@ ms.locfileid: "91024339"
   > [!IMPORTANT]
   > Azure SQL 数据库单一数据库和弹性池支持存储在 `tempdb` 中并且范围为数据库级别的全局临时表和全局临时存储过程。 
   >
-  > 全局临时表和全局临时存储过程供同一 SQL 数据库中的所有用户会话共享。 其他 SQL 数据库中的用户会话无法访问全局临时表。 有关详细信息，请参阅[数据库作用域内全局临时表（Azure SQL 数据库）](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)与 SQL Server 支持相同的临时对象。
+  > 全局临时表和全局临时存储过程供同一 SQL 数据库中的所有用户会话共享。 其他 SQL 数据库中的用户会话无法访问全局临时表。 有关详细信息，请参阅[数据库作用域内全局临时表（Azure SQL 数据库）](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)与 SQL Server 支持相同的临时对象。
   >
-  > 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 `tempdb` 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server) 有关 Azure SQL 数据库单一数据库和弹性池上下文中 `tempdb` 的讨论，请参阅 [Azure SQL 数据库单一数据库和弹性池中的 tempdb 数据库](#tempdb-database-in-sql-database)。 
+  > 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 `tempdb` 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器？](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server) 有关 Azure SQL 数据库单一数据库和弹性池上下文中 `tempdb` 的讨论，请参阅 [Azure SQL 数据库单一数据库和弹性池中的 tempdb 数据库](#tempdb-database-in-sql-database)。 
   >
   > 对于 Azure SQL 托管实例，所有系统数据库都适用。
 
@@ -149,7 +149,7 @@ ms.locfileid: "91024339"
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>基于 vCore 的服务层的 tempdb 大小
 
-请参阅[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)。
+请参阅[基于 vCore 的资源限制](/azure/sql-database/sql-database-vcore-resource-limits)。
 
 ## <a name="restrictions"></a>限制
 
@@ -223,7 +223,7 @@ GO
 - `tempdb` 中的所有分配使用统一盘区。 不再需要[跟踪标志 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 - 对于主文件组，`AUTOGROW_ALL_FILES` 属性已启用，且不能修改此属性。
 
-有关 `tempdb` 中性能改进的详细信息，请参阅博客文章 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)（TEMPDB - 文件和跟踪标志以及更新，天哪！）。
+有关 `tempdb` 中性能改进的详细信息，请参阅博客文章 [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my)（TEMPDB - 文件和跟踪标志以及更新，天哪！）。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>内存优化 tempdb 元数据
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行的许多工作负载，`tempdb` 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一项新功能，它属于[内存数据库](../in-memory-database.md)功能系列：内存优化 tempdb 元数据。 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [移动数据库文件](../../relational-databases/databases/move-database-files.md)    
-  

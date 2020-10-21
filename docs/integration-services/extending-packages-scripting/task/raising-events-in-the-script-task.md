@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 590691ef8e1a9791325a19cafdca378d3b95ee14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f08d7185375906020df764441927f91fe97f7ed
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88347503"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195249"
 ---
 # <a name="raising-events-in-the-script-task"></a>在脚本任务中引发事件
 
@@ -149,6 +149,5 @@ public class ScriptMain
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [在包中添加事件处理程序](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [在包中添加事件处理程序](../../integration-services-ssis-event-handlers.md)  
   

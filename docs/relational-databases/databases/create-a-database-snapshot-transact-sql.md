@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e1d10976a795570a1bfded3d4d379284dc317b3
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 39110067ea0abb2722da0ee88f70946d2875ccee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847347"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192564"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     其中，source_database_name 是源数据库，logical_file_name 是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name 是创建该文件时操作系统使用的路径和文件名，database_snapshot_name 是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+     其中，source_database_name 是源数据库，logical_file_name 是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name 是创建该文件时操作系统使用的路径和文件名，database_snapshot_name 是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)。  
   
     > [!NOTE]  
     >  创建数据库快照时，CREATE DATABASE 语句中不允许有日志文件、脱机文件、还原文件和不起作用的文件。  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> B. 对 Sales 数据库创建快照  
- 此示例对 `sales_snapshot1200`数据库创建数据库快照 `Sales` 。 此数据库是在 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)中的“创建具有文件组的数据库”示例中创建的。  
+ 此示例对 `sales_snapshot1200`数据库创建数据库快照 `Sales` 。 此数据库是在 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)中的“创建具有文件组的数据库”示例中创建的。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -179,8 +179,6 @@ GO
 -   [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)   
  [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
-  
-

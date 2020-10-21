@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487765"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192417"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
 
@@ -71,7 +71,7 @@ ms.locfileid: "88487765"
 |3|阻止无效签名、不可信签名以及未签名的包<br /><br /> 该设置也阻止自我生成的签名。|  
   
 > [!NOTE]  
->  **BlockedSignatureStates** 的建议设置为 3。 该设置提供针对未签名包或者无效或不可信签名的最强保护功能。 不过，建议的设置并非适用于所有情况。 有关如何进行数字资产签名的详细信息，请参阅 MSDN Library 中的主题“[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)（代码签名简介）”。  
+>  **BlockedSignatureStates** 的建议设置为 3。 该设置提供针对未签名包或者无效或不可信签名的最强保护功能。 不过，建议的设置并非适用于所有情况。 有关如何进行数字资产签名的详细信息，请参阅 MSDN Library 中的主题“[Introduction to Code Signing](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))（代码签名简介）”。  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>实现包的签名策略  
   
@@ -104,11 +104,11 @@ ms.locfileid: "88487765"
   
     -   从颁发证书的公共商业证书颁发机构获取证书。  
   
-    -   从允许组织在内部颁发证书的证书服务器获取证书。 必须将用于对证书进行签名的根证书添加到 **“受信任的根证书颁发机构”** 存储区中。 若要添加根证书，可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的证书管理单元。 有关详细信息，请参阅 MSDN 库中的主题“[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)（证书服务）”。  
+    -   从允许组织在内部颁发证书的证书服务器获取证书。 必须将用于对证书进行签名的根证书添加到 **“受信任的根证书颁发机构”** 存储区中。 若要添加根证书，可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的证书管理单元。 有关详细信息，请参阅 MSDN 库中的主题“[Certificate Services](/windows/win32/seccrypto/certificate-services)（证书服务）”。  
   
-    -   创建自己的证书（仅用于测试目的）。 证书创建工具 (Makecert.exe) 会生成仅用于测试目的的 X.509 证书。 有关详细信息，请参阅 MSDN Library 中的主题“[证书创建工具 (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)”。  
+    -   创建自己的证书（仅用于测试目的）。 证书创建工具 (Makecert.exe) 会生成仅用于测试目的的 X.509 证书。 有关详细信息，请参阅 MSDN Library 中的主题“[证书创建工具 (Makecert.exe)](/previous-versions/dotnet/netframework-2.0/bfsktky3(v=vs.80))”。  
   
-     有关证书的详细信息，请参阅证书管理单元的联机帮助。 有关如何对数字资产进行签名的详细信息，请参阅 MSDN 库中的主题“[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)（使用 Authenticode 签名和检查代码）”。  
+     有关证书的详细信息，请参阅证书管理单元的联机帮助。 有关如何对数字资产进行签名的详细信息，请参阅 MSDN 库中的主题“[Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))（使用 Authenticode 签名和检查代码）”。  
   
 -   确保已为代码签名启用证书。 若要确定证书是否是为代码签名而启用的，请在“证书”管理单元中检查证书的属性。  
   
@@ -153,5 +153,4 @@ ms.locfileid: "88487765"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
  [安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
-  
   

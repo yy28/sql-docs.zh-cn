@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e1d40b856409ab1e4d7859c818f1259133dc60b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19fe9c40aa87d4ee1cdc7b719e06911de9a1f167
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477232"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193129"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
 
@@ -55,7 +55,7 @@ ms.locfileid: "88477232"
   
  有关如何在脚本组件中使用连接管理器的常规信息，请参阅[在脚本组件中连接数据源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”  的“连接管理器”  页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
+ 有关“脚本转换编辑器”  的“连接管理器”  页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="configuring-outputs-and-output-columns"></a>配置输出和输出列  
  源组件没有输入，支持一个或多个输出。 在“脚本转换编辑器”的“输入和输出”页中，已默认创建一个输出，但是还没有创建任何输出列   。 在编辑器的这一页，可能需要或希望配置以下各项。  
@@ -71,7 +71,7 @@ ms.locfileid: "88477232"
   
 -   通常，同一 ExclusionGroup 中的多个输出具有相同的输出列  。 但是，如果要创建模拟的错误输出，则可能要添加多个列来存储错误信息。 有关数据流引擎如何处理错误行的信息，请参阅[在数据流组件中使用错误输出](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)。 但是，在脚本组件中，必须编写您自己的代码以便使用适当的错误信息填充这些附加列。 有关详细信息，请参阅[模拟脚本组件的错误输出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
  如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量     。  
@@ -80,7 +80,7 @@ ms.locfileid: "88477232"
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../data-flow/transformations/script-component.md)   。  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>在代码设计模式下编写源组件脚本  
  为组件配置完元数据后，可以打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 编写自定义脚本的代码。 若要打开 VSTA，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”    。 可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编写你的脚本，具体取决于为 ScriptLanguage 属性选择的脚本语言  。  
@@ -394,5 +394,4 @@ ms.locfileid: "88477232"
 ## <a name="see-also"></a>另请参阅  
  [使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [开发自定义源组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
-  
   

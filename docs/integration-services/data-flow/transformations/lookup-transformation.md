@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480899"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193209"
 ---
 # <a name="lookup-transformation"></a>查找转换
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480899"
 
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
   
- 引用数据集可以是缓存文件、现有的表或视图、新表或 SQL 查询的结果。 查找转换使用 OLE DB 连接管理器或缓存连接管理器来连接到引用数据集。 有关详细信息，请参阅 [OLE DB 连接管理器](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
+ 引用数据集可以是缓存文件、现有的表或视图、新表或 SQL 查询的结果。 查找转换使用 OLE DB 连接管理器或缓存连接管理器来连接到引用数据集。 有关详细信息，请参阅 [OLE DB 连接管理器](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [缓存连接管理器](../../connection-manager/cache-connection-manager.md)。  
   
  可以用以下方式来配置查找转换：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "89480899"
   
  下面是将缓存保留到文件中的其他好处：  
   
--   ***在多个包中共享缓存文件。有关更多信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
+-   ***在多个包中共享缓存文件。有关更多信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
   
 -   使用包部署缓存文件。 ***随后即可在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "89480899"
   
      此缓存选项与 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]中查找转换的完全缓存选项兼容。  
   
--   在查找转换运行之前，从数据流中的已连接数据源或从缓存文件生成引用数据集并将该引用数据集加载到缓存中。 您可以使用缓存连接管理器并根据需要使用缓存转换来访问该数据集。 有关详细信息，请参阅 [缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [缓存转换](../../../integration-services/data-flow/transformations/cache-transform.md)。  
+-   在查找转换运行之前，从数据流中的已连接数据源或从缓存文件生成引用数据集并将该引用数据集加载到缓存中。 您可以使用缓存连接管理器并根据需要使用缓存转换来访问该数据集。 有关详细信息，请参阅 [缓存连接管理器](../../connection-manager/cache-connection-manager.md) 和 [缓存转换](../../../integration-services/data-flow/transformations/cache-transform.md)。  
   
 -   在执行查找转换过程中，通过使用表、视图或 SQL 查询生成引用数据集。 在引用数据集中有匹配项的行以及在该数据集中没有匹配项的行都会加载到缓存中。  
   
@@ -127,15 +127,15 @@ ms.locfileid: "89480899"
   
 -   [在不缓存模式或部分缓存模式下实现查找](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [在完全缓存模式下使用缓存连接管理器实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [在完全缓存模式下使用缓存连接管理器实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相关内容  
   
--   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
+-   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))（如何在完全缓存模式下实现查找转换）  
   
 -   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480899"
  从列表中选择现有表或视图，或单击“新建”创建新表。  
   
 > [!NOTE]  
->  在此处选择的表名将由在 **“查找转换编辑器”** 的 **“高级”** 页上指定的 SQL 语句覆盖和替换。 有关详细信息，请参阅 [查找转换编辑器（“高级”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)。  
+>  在此处选择的表名将由在 **“查找转换编辑器”** 的 **“高级”** 页上指定的 SQL 语句覆盖和替换。 有关详细信息，请参阅 [查找转换编辑器（“高级”页）]()。  
   
  **新建**  
  通过使用“创建表”  对话框创建一个新表。  
@@ -270,7 +270,7 @@ ms.locfileid: "89480899"
  修改用来生成引用数据集的 SQL 语句。  
   
 > [!NOTE]  
->  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”** 页上指定的表名。 有关详细信息，请参阅 [查找转换编辑器（“连接”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)。  
+>  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”** 页上指定的表名。 有关详细信息，请参阅 [查找转换编辑器（“连接”页）]()。  
   
  **设置参数**  
  使用“设置查询参数”**** 对话框将输入列映射到参数。  
@@ -283,5 +283,4 @@ ms.locfileid: "89480899"
  [字词查找转换](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

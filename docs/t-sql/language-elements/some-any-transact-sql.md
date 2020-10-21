@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f620e240605b72e52b84204bed74ad083388fe01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db6bf2a03ee0b187345de9b9c406b9c2ca86cc29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445430"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195469"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88445430"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-  
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   
 ```  
@@ -73,9 +72,9 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ### <a name="a-running-a-simple-example"></a>A. 运行简单示例  
  以下语句创建一个简单表，并向 `1` 列添加值 `2`、`3`、`4` 和 `ID`。  
   
-```  
+```sql  
 CREATE TABLE T1  
-(ID int) ;  
+(ID INT) ;  
 GO  
 INSERT T1 VALUES (1) ;  
 INSERT T1 VALUES (2) ;  
@@ -85,7 +84,7 @@ INSERT T1 VALUES (4) ;
   
  以下查询返回 `TRUE`，因为 `3` 小于表中的某些值。  
   
-```  
+```sql  
 IF 3 < SOME (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -94,7 +93,7 @@ PRINT 'FALSE' ;
   
  下面的查询返回 `FALSE`，因为 `3` 并不小于表中的所有值。  
   
-```  
+```sql  
 IF 3 < ALL (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -104,10 +103,10 @@ PRINT 'FALSE' ;
 ### <a name="b-running-a-practical-example"></a>B. 运行实际示例  
  以下示例创建一个存储过程，该过程确定是否能够在指定的天数中制造出 `SalesOrderID` 数据库中具有指定 `AdventureWorks2012` 的所有组件。 该示例使用子查询为具有特定 `DaysToManufacture` 的所有组件创建 `SalesOrderID` 值的列表，然后测试子查询返回的值中是否有大于指定天数的值。 如果返回的所有 `DaysToManufacture` 的值都小于规定的天数，则条件为 TRUE，并输出第一个消息。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE ManyDaysToComplete @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE ManyDaysToComplete @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays < SOME  
@@ -126,7 +125,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
  若要测试该过程，请使用 `SalesOrderID``49080`（具有一个需要 `2` 天的组件和两个需要 0 天的组件）来执行该过程。 第一个语句符合条件。 第二个查询不符合条件。  
   
-```  
+```sql  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
 ```  
   

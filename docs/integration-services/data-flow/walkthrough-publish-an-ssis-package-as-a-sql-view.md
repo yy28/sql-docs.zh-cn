@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425639"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194566"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout 指示在 SSIS 包中的新数据到达之前，OLE DB Provider for SSIS 可以等待的秒数。 默认情况下，超时为 60 秒。 可以指定介于 20 和 32000 之间的整数超时值。  
   
- Parameters 包含包参数和项目参数的值。 参数的规则与 [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)中的参数相同。  
+ Parameters 包含包参数和项目参数的值。 参数的规则与 [DTExec](../packages/dtexec-utility.md)中的参数相同。  
   
  以下列表指定了查询子句中允许的特殊字符：  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>另请参阅  
  [数据流目标](../../integration-services/data-flow/data-streaming-destination.md)   
- [配置数据流目标](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [配置数据流目标](./data-streaming-destination.md)  
   

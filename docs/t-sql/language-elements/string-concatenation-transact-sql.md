@@ -22,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889d6d6c8b76c57b906cd0a6a87e250619084322
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422461"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193259"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+（字符串串联）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422461"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -51,7 +51,7 @@ expression + expression
  在二进制字符串之间串联二进制字符串和任何字符串时，必须显式转换字符数据。 以下示例显示了对于二进制串联，何时必须使用 `CONVERT` 或 `CAST`，何时不需要使用 `CONVERT` 或 `CAST`。  
   
 ```sql
-DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
+DECLARE @mybin1 VARBINARY(5), @mybin2 VARBINARY(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
 -- No CONVERT or CAST function is required because this example   
@@ -59,12 +59,11 @@ SET @mybin2 = 0xA5
 SELECT @mybin1 + @mybin2  
 -- A CONVERT or CAST function is required because this example  
 -- concatenates two binary strings plus a space.  
-SELECT CONVERT(varchar(5), @mybin1) + ' '   
-   + CONVERT(varchar(5), @mybin2)  
+SELECT CONVERT(VARCHAR(5), @mybin1) + ' '   
+   + CONVERT(VARCHAR(5), @mybin2)  
 -- Here is the same conversion using CAST.  
-SELECT CAST(@mybin1 AS varchar(5)) + ' '   
-   + CAST(@mybin2 AS varchar(5))  
-  
+SELECT CAST(@mybin1 AS VARCHAR(5)) + ' '   
+   + CAST(@mybin2 AS VARCHAR(5))  
 ```  
   
 ## <a name="result-types"></a>结果类型  
@@ -94,7 +93,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```sql  
 -- Uses AdventureWorks  
   
-SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
+SELECT 'The order is due on ' + CONVERT(VARCHAR(12), DueDate, 101)  
 FROM Sales.SalesOrderHeader  
 WHERE SalesOrderID = 50001;  
 GO  
@@ -139,12 +138,12 @@ GO
 以下示例将多个字符串串联成一个长字符串，然后尝试计算最终字符串的长度。 结果集的最后长度为 16000，因为表达式计算从左开始，即 @x + @z + @y => (@x + @z) + @y。 在本例中，(@x + @z) 的结果在 8000 字节处截断，然后将 @y 添加到结果集中，这使得最终的字符串长度为 16000。 由于 @y 为大型值类型字符串时，所以不会发生截断。
 
 ```sql
-DECLARE @x varchar(8000) = replicate('x', 8000)
-DECLARE @y varchar(max) = replicate('y', 8000)
-DECLARE @z varchar(8000) = replicate('z',8000)
+DECLARE @x VARCHAR(8000) = REPLICATE('x', 8000)
+DECLARE @y VARCHAR(max) = REPLICATE('y', 8000)
+DECLARE @z VARCHAR(8000) = REPLICATE('z',8000)
 SET @y = @x + @z + @y
 -- The result of following select is 16000
-SELECT len(@y) AS y
+SELECT LEN(@y) AS y
 GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

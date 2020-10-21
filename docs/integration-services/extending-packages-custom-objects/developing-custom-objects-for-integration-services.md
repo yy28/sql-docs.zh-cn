@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4887fd9ea7151c75940d919bcec128e4933f05b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8064836dcfe27a19339363301b876ab723b78294
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479499"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193147"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
 
@@ -113,10 +113,9 @@ ms.locfileid: "89479499"
   
 ## <a name="external-resources"></a>外部资源  
   
--   blogs.msdn.com 上的博客文章：[Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://docs.microsoft.com/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references)（Visual Studio 解决方案生成流程由于 SSIS 引用而针对 .NET Framework 程序集上的间接依赖关系发出警告）。  
+-   blogs.msdn.com 上的博客文章：[Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references)（Visual Studio 解决方案生成流程由于 SSIS 引用而针对 .NET Framework 程序集上的间接依赖关系发出警告）。  
   
 ## <a name="see-also"></a>另请参阅  
  [使自定义对象持久化](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [生成、部署和调试自定义对象](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
-  
   

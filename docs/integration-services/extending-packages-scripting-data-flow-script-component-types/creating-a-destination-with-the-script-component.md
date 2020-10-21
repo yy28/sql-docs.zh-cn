@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 416f9721802690688d82838bd477aa028e1301fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f02b74a6e5e28fc44a1bab9eb3f101b91610d481
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477247"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193126"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
 
@@ -57,18 +57,18 @@ ms.locfileid: "88477247"
   
  有关如何在脚本组件中使用连接管理器的常规信息，请参阅[在脚本组件中连接数据源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”  的“连接管理器”  页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
+ 有关“脚本转换编辑器”  的“连接管理器”  页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="configuring-inputs-and-input-columns"></a>配置输入和输入列  
  目标组件有一个输入，没有输出。  
   
  在“脚本转换编辑器”的“输入列”页中，列列表显示数据流上游组件的输出中可用的列。 选择要保存的列。  
   
- 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
+ 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../data-flow/transformations/script-component.md)。  
   
  “脚本转换编辑器”**** 的“输入和输出”**** 页显示单一输入，可以将其重命名。 通过使用在自动生成的代码中创建的取值函数属性，在脚本中将通过输入的名称来引用输入。  
   
- 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../data-flow/transformations/script-component.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
  如果要在脚本中使用现有的变量，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量     。  
@@ -77,7 +77,7 @@ ms.locfileid: "88477247"
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../data-flow/transformations/script-component.md)   。  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>在代码设计模式下编写目标组件脚本  
  为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
@@ -357,5 +357,4 @@ public class ScriptMain:
 ## <a name="see-also"></a>另请参阅  
  [使用脚本组件创建源](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
  [开发自定义目标组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
-  
   

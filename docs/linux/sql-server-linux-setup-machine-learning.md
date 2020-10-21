@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178252"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115756"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -47,7 +47,7 @@ ms.locfileid: "88178252"
 
 * 应安装用于运行 T-SQL 命令的工具。 
 
-  * 你可使用免费的 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) 数据库工具，该工具在 Linux、Windows 和 macOS 上运行。
+  * 你可使用免费的 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 数据库工具，该工具在 Linux、Windows 和 macOS 上运行。
 
 ## <a name="package-list"></a>包列表
 
@@ -439,4 +439,4 @@ Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server
 R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
 + [快速入门：在 T-SQL 中运行 R](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [教程：适用于 R 开发人员的数据库内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教程：适用于 R 开发人员的数据库内分析](../machine-learning/tutorials/r-taxi-classification-introduction.md)

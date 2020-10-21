@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897201"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115790"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上的日志传送入门
 
@@ -30,7 +30,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 - 还原辅助 SQL Server 实例上的事务日志备份文件
 
 ## <a name="prerequisites"></a>必备条件
-- [在 Linux 上安装 SQL Server 代理](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [在 Linux 上安装 SQL Server 代理](./sql-server-linux-setup-sql-agent.md)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>使用 CIFS 为日志传送设置网络共享 
 
@@ -319,5 +319,3 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
-

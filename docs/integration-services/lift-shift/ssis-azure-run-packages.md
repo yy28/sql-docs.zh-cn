@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 6da4e6ea9ecb867ab35c6e8c8fb6d5a85b2b7431
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4f6031cd363db4ae3c26511daf91811c3d133d1e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915323"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192537"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>运行部署在 Azure 中的 SQL Server Integration Services (SSIS) 包
 
@@ -74,11 +74,11 @@ ms.locfileid: "86915323"
 
 ## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a>使用“执行 SSIS 包”活动运行包
 
-有关详细信息，请参阅[在 Azure 数据工厂中使用“执行 SSIS 包”活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
+有关详细信息，请参阅[在 Azure 数据工厂中使用“执行 SSIS 包”活动运行 SSIS 包](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
 
 ## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a>使用“存储过程”活动运行包
 
-有关详细信息，请参阅[在 Azure 数据工厂中使用存储过程活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
+有关详细信息，请参阅[在 Azure 数据工厂中使用存储过程活动运行 SSIS 包](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
 
 ## <a name="next-steps"></a>后续步骤
 

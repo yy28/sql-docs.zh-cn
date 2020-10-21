@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ddfed49481df7de8c63db08c8a184247c30857a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465399"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194300"
 ---
 # <a name="modified-features-contained-database"></a>经过修改的功能（包含数据库）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88465399"
  在包含数据库外部使用时，ALTER DATABASE 的语法与用于非包含数据库时不同。 这些更改可防止超出数据库范围。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="create-database"></a>CREATE DATABASE  
- 包含数据库的 CREATE DATABASE 语法与非包含数据库的不同。 有关新的语法要求和考虑事项的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 包含数据库的 CREATE DATABASE 语法与非包含数据库的不同。 有关新的语法要求和考虑事项的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)。  
   
 ## <a name="temporary-tables"></a>临时表  
  包含数据库中允许使用局部临时表，但它们的行为不同于非包含数据库中的局部临时表。 在非包含数据库中，临时表数据是按照 **tempdb**的排序规则调整的。 在包含数据库中，临时表数据是按照包含数据库的排序规则调整的。  
@@ -55,5 +55,4 @@ ms.locfileid: "88465399"
 ## <a name="see-also"></a>另请参阅  
  [包含数据库的排序规则](../../relational-databases/databases/contained-database-collations.md)   
  [包含的数据库](../../relational-databases/databases/contained-databases.md)  
-  
   
