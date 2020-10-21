@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59756c7690301d35a1ad53b9db5bde441ce74c24
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425619"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194603"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425619"
 ## <a name="configuration-of-the-union-all-transformation"></a>Union All 转换的配置  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](../set-the-properties-of-a-data-flow-component.md)。  
   
  有关如何设置属性的详细信息，请单击下列主题之一：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88425619"
   可以使用 **“Union All 转换编辑器”** 对话框，将多个输入行集合并到单个输出行集中。 通过在数据流中包含 Union All 转换，可以从多个数据流合并数据、通过嵌套 Union All 转换来创建复杂数据集、以及在更正数据中的错误之后重新合并行。  
   
 ### <a name="options"></a>选项  
- **输出列名称**  
+ **输出列的名称**  
  为每一列键入一个别名。 默认值为第一个（引用）输入中输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
   
  **Union All 输入 1**  
@@ -68,5 +68,4 @@ ms.locfileid: "88425619"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [通过使用 Union All 转换来合并数据](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   
