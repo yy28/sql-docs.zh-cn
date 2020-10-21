@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f833aeaa63838281eaff92c0dfe1e9fed799cdb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47df12a85a22251a9cd962834e8e2a97170a4528
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360323"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038314"
 ---
 # <a name="point-geography-data-type"></a>Point（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Point ( Lat, Long, SRID )
  一个 float 表达式，表示正在生成的 Point 的 X 坐标   。 有关有效的纬度值和经度值的详细信息，请参阅 [Point](../../relational-databases/spatial/point.md)。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geography 实例的[空间引用标识符](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)   。  
+ 一个 int 表达式，表示希望返回的 geography 实例的[空间引用标识符](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)   。  
   
 > [!NOTE]  
 >  Point（地理数据类型）方法的参数具有与 WKT 相反的坐标。  
@@ -68,4 +68,4 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [扩展静态地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [扩展静态地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a694df5f4920ecd70e4aa27def778712fbbf953
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425739"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195292"
 ---
 # <a name="script-component"></a>脚本组件
 
@@ -66,7 +66,7 @@ ms.locfileid: "88425739"
  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 在元数据设计模式中，可以添加和修改脚本组件的输入和输出，但不能编写代码。 配置完所有的输入和输出后，即可切换至代码设计模式编写脚本。 脚本组件从输入和输出的元数据自动生成基代码。 如果在脚本组件生成基代码后更改元数据，则您的代码可能无法再编译，因为更新的基代码可能与您的代码不兼容。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>编写组件使用的脚本  
- 脚本组件将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作编写脚本的环境。 您可以从 **“脚本转换编辑器”** 访问 VSTA。 有关详细信息，请参阅 [脚本转换编辑器（“脚本”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+ 脚本组件将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作编写脚本的环境。 您可以从 **“脚本转换编辑器”** 访问 VSTA。 有关详细信息，请参阅 [脚本转换编辑器（“脚本”页）]()。  
   
  脚本组件提供一个 VSTA 项目，其中包含一个名为 ScriptMain 的自动生成的类，表示组件元数据。 例如，如果将脚本组件用作具有三个输出的转换，则 ScriptMain 为每个输出都包含一种方法。 ScriptMain 是脚本的入口点。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88425739"
 ### <a name="configuring-the-script-component-programmatically"></a>以编程方式配置脚本组件  
  有关可在 **“属性”** 窗口中或以编程形式设置的属性的详细信息，请单击以下主题之一：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "88425739"
  **Inputs and outputs**  
  在左侧选择输入或输出即可在右侧的表中查看其属性。 选择不同的输入或输出，可编辑的属性也有所不同。 显示的许多属性是只读的。 有关各个属性的详细信息，请参阅以下主题：  
   
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
  [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -224,5 +224,4 @@ ms.locfileid: "88425739"
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

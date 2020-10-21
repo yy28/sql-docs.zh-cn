@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733872"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193428"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733872"
  使用此页可选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器和管理数据仓库。 管理数据仓库是将存储收集的数据的关系数据库。  
   
 > [!NOTE]  
->  您必须拥有相应级别的权限才能在服务器上创建管理数据仓库。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 您还必须拥有为管理数据仓库角色创建登录名的相应级别权限。  
+>  您必须拥有相应级别的权限才能在服务器上创建管理数据仓库。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)。 您还必须拥有为管理数据仓库角色创建登录名的相应级别权限。  
   
  **服务器名称**  
  指定将承载管理数据仓库的服务器的名称。  
@@ -139,5 +139,4 @@ ms.locfileid: "85733872"
  [sp_syscollector_disable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
  [管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

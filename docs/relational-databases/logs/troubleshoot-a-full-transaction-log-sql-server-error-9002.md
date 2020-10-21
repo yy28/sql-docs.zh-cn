@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006544"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175914"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>解决事务日志已满的问题（SQL Server 错误 9002）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006544"
  
  若要在给定情况下查找阻止日志截断的原因，请使用 **sys.database** 目录视图的 **log_reuse_wait** 列和 **log_reuse_wait_desc** 列。 有关详细信息，请参阅 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。 有关延迟日志截断的因素的说明，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
-> **重要说明!!**  
+> [!IMPORTANT]  
 >  如果数据库在恢复过程中出现 9002 错误，则在解决此问题后，可使用 [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 恢复数据库。  
   
  响应已满事务日志的备选方法包括：  
@@ -61,8 +61,8 @@ ms.locfileid: "86006544"
   
  **创建事务日志备份**  
   
-> **重要事项**  
->  如果数据库已损坏，请参阅[结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+> [!IMPORTANT]  
+> 如果数据库已损坏，请参阅[结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
 -   [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006544"
 ### <a name="move-the-log-file-to-a-different-disk"></a>将日志文件移至其他磁盘  
  如果在当前包含日志文件的驱动器上无法释放足够的磁盘空间，请考虑将该文件移至空间充足的其他驱动器上。  
   
-> **重要说明!!** 日志文件决不要放在压缩文件系统中。  
+> [!IMPORTANT]
+> 日志文件决不要放在压缩文件系统中。  
   
  **移动日志文件**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006544"
   
 -   使用 ALTER DATABASE 语句启用自动增长以针对 FILEGROWTH 选项设置非零增量。  
   
-> **请注意** 不管哪种情况，如果已达到当前大小限制，则应增加 MAXSIZE 值。  
+> [!NOTE]
+> 不管哪种情况，如果已达到当前大小限制，则应增加 MAXSIZE 值。  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>在其他磁盘上添加日志文件  
  使用 ALTER DATABASE <database_name> ADD LOG FILE，向具有足够空间的其他磁盘上的数据库中添加新日志文件。  

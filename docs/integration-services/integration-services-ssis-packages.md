@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449809"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193846"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 包
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449809"
 ### <a name="configurations"></a>配置  
  配置是一组属性值对，它定义当包运行时包及其任务、容器、变量、连接和事件处理程序的属性。 使用配置，不必对包进行修改即可更新属性。 包运行时，将加载配置信息并更新属性值。 例如，配置可更新连接的连接字符串。  
   
- 将包安装到另一台不同的计算机时，系统会先保存配置，然后将配置与包一起进行部署。 当安装包时可更新配置中的值以支持不同环境中的该包。 有关详细信息，请参阅 [创建包配置](../integration-services/packages/create-package-configurations.md)。  
+ 将包安装到另一台不同的计算机时，系统会先保存配置，然后将配置与包一起进行部署。 当安装包时可更新配置中的值以支持不同环境中的该包。 有关详细信息，请参阅 [创建包配置](./packages/legacy-package-deployment-ssis.md)。  
   
 ### <a name="logging-and-log-providers"></a>日志记录和日志提供程序  
  日志是在包运行时所收集的有关包的信息集合。 例如，日志可提供包运行的起始时间和结束时间。 日志提供程序定义了包及其容器和任务在记录运行时信息时可使用的目标类型和格式。 日志与包相关联，但包中的任务和容器可将信息记录到任何包日志中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含了多种用于日志记录的内置日志提供程序。 例如， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中包含了用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和文本文件的日志提供程序。 您还可以创建自定义日志提供程序并将其用于日志记录。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -117,5 +117,4 @@ ms.locfileid: "88449809"
 -   [在 SQL Server Data Tools 中创建包](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   请参阅开发者指南中的[以编程方式生成包](../integration-services/building-packages-programmatically/building-packages-programmatically.md)。 
-  
   

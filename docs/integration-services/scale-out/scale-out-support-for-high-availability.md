@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522889"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192451"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -98,9 +98,9 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 在 Azure 虚拟机上，此配置步骤需要额外的步骤。 这些概念和这些步骤的完整解释超出了本文的范围。
 
-1.  必须设置 Azure 域。 Windows Server 故障转移群集要求群集中的所有计算机都是同一个域的成员。 有关详细信息，请参阅[使用 Azure 门户启用 Azure Active Directory 域服务](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)。
+1.  必须设置 Azure 域。 Windows Server 故障转移群集要求群集中的所有计算机都是同一个域的成员。 有关详细信息，请参阅[使用 Azure 门户启用 Azure Active Directory 域服务](/azure/active-directory-domain-services/create-instance)。
 
-2. 必须设置 Azure 负载均衡器。 这是可用性组侦听程序的一项要求。 有关详细信息，请参阅[教程：使用 Azure 门户通过基本负载均衡器将内部流量在各台 VM 之间进行负载均衡](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
+2. 必须设置 Azure 负载均衡器。 这是可用性组侦听程序的一项要求。 有关详细信息，请参阅[教程：使用 Azure 门户通过基本负载均衡器将内部流量在各台 VM 之间进行负载均衡](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8.在 SSISDB 中更新 Scale Out Master 地址
 

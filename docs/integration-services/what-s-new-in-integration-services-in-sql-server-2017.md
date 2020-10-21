@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456882"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193719"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services 中的新增功能
 
@@ -78,7 +78,7 @@ ms.locfileid: "88456882"
 -   Scale Out 中用于包执行的 SSISDB 日志记录性能得到了改进。 事件消息和消息上下文日志现批量写入 SSISDB 中，而不是逐一写入。 以下是有关此改进的一些其他说明：        
     - 在当前版本的 SQL Server Management Studio (SSMS) 中，某些报表目前不显示要在 Scale Out 中执行的日志。预计将在下一版本的 SSMS 中支持它们。 受影响的报表包括“所有连接”报表、“错误上下文”报表和 Integration Service 仪表板中的“连接信息”部分******。
     - 新增了列 event_message_guid****。 在 Scale Out 中查询这些执行日志时，使用 event_message_guid 替代 event_message_id 联接 [catalog].[event_message_context] 和 [catalog].[event_messages] 视图****。
--   若要获取用于 SSIS Scale Out 的管理应用程序，请[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 或更高版本。
+-   若要获取用于 SSIS Scale Out 的管理应用程序，请[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 或更高版本。
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>SQL Server 2017 CTP 2.0 中新的 SSIS 功能
 
@@ -113,4 +113,3 @@ Scale Out 功能使在多台计算机上运行 [!INCLUDE[ssIS_md](../includes/ss
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>支持 Microsoft Dynamics Online 资源
 
 OData 源和 OData 连接管理器现支持连接到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 源。
-

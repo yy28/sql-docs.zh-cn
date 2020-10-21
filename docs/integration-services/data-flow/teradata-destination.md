@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484501"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194709"
 ---
 # <a name="teradata-destination"></a>Teradata 目标
 
@@ -223,7 +223,7 @@ TPT Stream 模式中没有并行性限制。 可以同时对同一个表运行�
 
 选择 Teradata 目标应如何处理流中的错误：忽略失败、重定向行或使组件失败。
 
-**相关主题**：[数据中的错误处理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**相关主题**：[数据中的错误处理](./error-handling-in-data.md?view=sql-server-2017)
 
 **截断**
 

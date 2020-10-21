@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 230ada5b116e5789b008a1562ba5e2ba9325a9e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477808"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197081"
 ---
 # <a name="flexible-file-source"></a>灵活的文件源
 
@@ -28,7 +28,7 @@ ms.locfileid: "88477808"
 当前支持的存储服务为
 
 - [Azure Blob 存储](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
   
 要查看“灵活的文件源”的编辑器，请将“灵活的文件源”拖放到数据流设计器上，然后双击它打开编辑器****。
   
@@ -51,7 +51,7 @@ ms.locfileid: "88477808"
 - **escapeChar：** 用于转义输入文件内容中的列分隔符的特殊字符。 不能同时指定表的 escapeChar 和 quoteChar。 只能使用一个字符。 没有默认值。
 - **quoteChar：** 将字符串值用引号括起来的字符。 引号字符内的列和行分隔符将被视为字符串值的一部分。 此属性适用于输入和输出数据集。 不能同时指定表的 escapeChar 和 quoteChar。 只能使用一个字符。 没有默认值。
 - **nullValue：** 用于表示 null 值的一个或多个字符。 默认值为 \N****。
-- **encodingName：** 指定编码名称。 请参阅 [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8) 属性。
+- **encodingName：** 指定编码名称。 请参阅 [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8) 属性。
 - **skipLineCount：** 指示从输入文件读取数据时要跳过的非空行数。 如果同时指定了 skipLineCount 和 firstRowAsHeader，则先跳过行，然后从输入文件读取标头信息。
 - **treatEmptyAsNull：** 指定是否在从输入文件读取数据时将 null 或空字符串视为 null 值。 默认值为 True。
 
@@ -60,16 +60,16 @@ ms.locfileid: "88477808"
 **有关服务主体权限配置的说明**
 
 要使“测试连接”起作用（Blob 存储或 Data Lake Storage Gen2），应向服务主体分配至少存储帐户的“存储 Blob 数据读取器”角色   。
-可通过 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 实现。
+可通过 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 实现。
 
 对于 Blob 存储，通过分配至少“存储 Blob 数据读取器”角色来授予读取权限****。
 
-对于 Data Lake Storage Gen2，权限由 RBAC 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定。
-请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
+对于 Data Lake Storage Gen2，权限由 RBAC 和 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定。
+请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
 这与用于 RBAC 配置的应用程序（客户端）ID 有所不同。
 通过内置角色或自定义角色向安全主体授予 RBAC 数据权限时，将首先根据请求的授权来评估这些权限。
 如果请求的操作已获得安全主体的 RBAC 分配的授权，则授权会立即得到解决，且不会执行任何其他 ACL 检查。
 或者，如果安全主体没有 RBAC 分配，或请求的操作与分配的权限不匹配，则会执行 ACL 检查来确定是否已授权安全主体执行请求的操作。
 对于读取权限，请从源文件系统开始授予至少“执行”权限，并授予要读取的文件的“读取”权限********。
 或者，通过 RBAC 授予至少“存储 Blob 数据读取器”角色  。
-有关详细信息，请参阅[此](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
+有关详细信息，请参阅[此](/azure/storage/blobs/data-lake-storage-access-control)文章。

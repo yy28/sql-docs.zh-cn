@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 125e1b8fdadc04a7d3ba08807a72ef594b42388e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785063"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115850"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 
@@ -37,7 +37,7 @@ ms.locfileid: "91785063"
 
 * 安装了以下内容的 Windows 计算机：
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)。
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
   * 要迁移的目标数据库。
 
 * 安装了以下内容的 Linux 计算机：
@@ -78,7 +78,7 @@ ms.locfileid: "91785063"
 
 1. 在支持“scp”（安全复制）和“ssh”（远程登录）命令的 Windows 计算机上安装 Bash shell   。 以下介绍两个示例：
 
-   * [适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * [适用于 Linux 的 Windows 子系统](/windows/wsl/about) (Windows 10)
    * Git Bash Shell ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. 在 Windows 上打开 Bash 会话。

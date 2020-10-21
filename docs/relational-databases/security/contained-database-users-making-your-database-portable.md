@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864048"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004668"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使数据库可移植
 
@@ -41,7 +41,7 @@ ms.locfileid: "91864048"
 
  在包含的数据库用户模型中，master 数据库中不存在登录名。 相反，身份验证过程发生在用户数据库中，并且用户数据库中的数据库用户在 master 数据库中没有关联的登录名。 包含的数据库用户模型支持 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中使用。 若要作为包含的数据库用户进行连接，连接字符串必须始终包含用户数据库的参数，以便 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 知道哪个数据库负责管理身份验证过程。 包含的数据库用户的活动仅限于验证数据库，因此当作为包含的数据库用户进行连接时，必须在用户将需要的每个数据库中独立创建数据库用户帐户。 若要更改数据库， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 用户必须创建一个新的连接。 如果另一个数据库中存在相同的用户， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的包含的数据库用户可以更改数据库。  
   
-**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 支持将 Azure Active Directory 标识作为包含的数据库用户。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支持包含的数据库用户使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，而 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支持。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)。 使用 Azure Active Directory 身份验证时，可以使用 Active Directory 通用身份验证建立来自 SSMS 的连接。  管理员将通用身份验证配置为需要多重身份验证，这会使用电话呼叫、短信、智能卡 pin 或移动应用通知来验证身份。 有关详细信息，请参阅 [SQL 数据库和 SQL 数据仓库针对 Azure AD MFA 的 SSMS 支持](/azure/azure-sql/database/authentication-mfa-ssms-overview)。  
+**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 支持将 Azure Active Directory 标识作为包含的数据库用户。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支持包含的数据库用户使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，而 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支持。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)。 使用 Azure Active Directory 身份验证时，可以使用 Active Directory 通用身份验证建立来自 SSMS 的连接。  管理员将通用身份验证配置为需要多重身份验证，这会使用电话呼叫、短信、智能卡 pin 或移动应用通知来验证身份。 有关详细信息，请参阅 [SQL 数据库和 Azure Synapse Analytics 针对 Azure AD MFA 的 SSMS 支持](/azure/azure-sql/database/authentication-mfa-ssms-overview)。  
   
  对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，因为连接字符串中始终需要数据库名称，所以在从传统模型切换到包含的数据库用户模型时，无需更改连接字符串。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，如果数据库名称尚不存在，它将必须添加到连接字符串。  
   

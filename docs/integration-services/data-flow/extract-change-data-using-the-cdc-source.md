@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6ae5739b4309c9f56d2f67a17573722f141ec5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb1fc17be92259e0fe642c90f760c375e5eacb0f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430879"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192724"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 源提取更改数据
 
@@ -76,8 +76,7 @@ ms.locfileid: "88430879"
 15. 单击“确定”。  
   
 ## <a name="see-also"></a>另请参阅  
- [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [CDC 源编辑器（“列”页）](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [CDC 源编辑器（“错误输出”页）](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
+ [CDC 源编辑器（“连接管理器”页）](./cdc-source.md)   
+ [CDC 源编辑器（“列”页）](./cdc-source.md)   
+ [CDC 源编辑器（“错误输出”页）](./cdc-source.md)  
   

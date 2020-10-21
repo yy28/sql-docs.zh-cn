@@ -1,5 +1,6 @@
 ---
-title: 概述：从 Excel (MDS add-in for Excel) 中导入数据 |Microsoft Docs
+description: 概述：从 Excel 导入数据（适用于 Excel 的 MDS 加载项）
+title: 从 Excel 导入数据
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1da9e1876995f81fd2b40b9ef1bb4b509b4c848d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df78497bc65d383a3dc44225971ab1df742f32b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257781"
 ---
-# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概述：从 Excel 导入数据 (MDS Add-in for Excel)
+# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概述：从 Excel 导入数据（适用于 Excel 的 MDS 加载项）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，要想与其他用户共享数据，可将数据发布到 MDS 存储库。 数据一经发布，即可供该外接程序的其他用户下载。  
   

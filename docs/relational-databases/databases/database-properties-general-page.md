@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 35ab83fe9c30cd51143f7267a9156d4f95a56236
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 741ba510a628addbbf7c3150315a9aaaea7fa5ce
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756189"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192857"
 ---
 # <a name="database-properties-general-page"></a>数据库属性（“常规”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,8 +57,7 @@ ms.locfileid: "85756189"
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)  
-  
   

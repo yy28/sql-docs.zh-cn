@@ -25,12 +25,12 @@ ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12b531d2f8615e9ff2cb9bbfc33973e6aab5d33f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28cca0a52c68716f363003d486f4c2f6a199fd16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361873"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196981"
 ---
 # <a name="-addition-transact-sql"></a>+（加法）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88361873"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -59,7 +59,7 @@ expression + expression
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. 使用加法运算符计算每个雇员离岗的总小时数。  
  此示例通过将休假小时数和病假小时数相加来计算每个雇员离岗的总小时数。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, VacationHours, SickLeaveHours,   
@@ -73,10 +73,9 @@ GO
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. 使用加法运算符将天数添加到日期和时间值中  
  此示例将若干天添加到 `datetime` 日期上。  
   
-```  
-  
+```sql
 SET NOCOUNT ON  
-DECLARE @startdate datetime, @adddays int;  
+DECLARE @startdate DATETIME, @adddays INT;  
 SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
@@ -97,8 +96,8 @@ Start Date                  Add Date
 ### <a name="c-adding-character-and-integer-data-types"></a>C. 将字符和整数数据类型相加  
  以下示例通过将字符数据类型转换为 int，将 int 数据类型值与字符值相加 。如果 char 字符串中具有无效字符，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 返回一个错误。  
   
-```  
-DECLARE @addvalue int;  
+```sql  
+DECLARE @addvalue INT;  
 SET @addvalue = 15;  
 SELECT '125127' + @addvalue;  
 ```  
@@ -117,7 +116,7 @@ SELECT '125127' + @addvalue;
 ### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D. 使用加法运算符计算每个雇员离岗的总小时数  
  以下示例通过将休假小时数和病假小时数相加来计算每个雇员离岗的总小时数，并将结果按升序排列。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours, SickLeaveHours,   
