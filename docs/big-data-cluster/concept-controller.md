@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765676"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358415"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
 
@@ -57,7 +57,7 @@ ms.locfileid: "88765676"
 对控制器服务终结点的身份验证可使用 Active Directory 标识，也可基于用户名和密码。 使用环境变量 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 的输入在群集启动时预配这些凭据。
 
 > [!NOTE]
-> 必须提供符合 [SQL Server 密码复杂性要求](../relational-databases/security/password-policy.md?view=sql-server-2017)的密码。
+> 必须提供符合 [SQL Server 密码复杂性要求](../relational-databases/security/password-policy.md)的密码。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570283"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194519"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>解决启动板服务和 SQL Server 中外部脚本执行的问题
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "89570283"
 
 ## <a name="determine-whether-launchpad-is-running"></a>确定启动板是否正在运行
 
-1. 打开“服务”面板 (Services.msc)  。 或者，从命令行中键入 SQLServerManager13.msc 或 SQLServerManager14.msc，打开 [SQL Server 配置管理器](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)   。
+1. 打开“服务”面板 (Services.msc)  。 或者，从命令行中键入 SQLServerManager13.msc 或 SQLServerManager14.msc，打开 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)   。
 
 2. 记下运行启动板的服务帐户。 启用 R 或 Python 的每个实例都应具有其自己的启动板服务实例。 例如，命名实例的服务可能类似于 MSSQLLaunchpad $ InstanceName  。
 
@@ -121,7 +121,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 如果已经安装并启用了机器学习功能，但是在尝试运行 R 或 Python 脚本时遇到此错误，则实例的 Launchpad 服务可能已停止运行。
 
-1. 通过 Windows 命令提示符打开 SQL Server 配置管理器。 有关详细信息，请参阅 [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)。
+1. 通过 Windows 命令提示符打开 SQL Server 配置管理器。 有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。
 
 2. 右键单击“SQL Server Launchpad 实例”，然后选择“属性”  。
 
@@ -223,7 +223,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 解决方法之一是应在安装了 SQL Server 和 R Services 的卷上启用 8dot3 表示法。 然后，必须提供 R Services 配置文件中工作目录的短名称。
 
-1. 若要启用 8dot3 表示法，请运行包含 8dot3name 参数的 fsutil 实用程序，操作步骤如下所述：[fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx)  。
+1. 若要启用 8dot3 表示法，请运行包含 8dot3name 参数的 fsutil 实用程序，操作步骤如下所述：[fsutil 8dot3name](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff621566(v=ws.11))  。
 
 2. 启用 8dot3 表示法后，打开 RLauncher.config 文件并记下属性 `WORKING_DIRECTORY`。 有关如何查找此文件的信息，请参阅[机器学习疑难解答的数据收集](data-collection-ml-troubleshooting-process.md)。
 

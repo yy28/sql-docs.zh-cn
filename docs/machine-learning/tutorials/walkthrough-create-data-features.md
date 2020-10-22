@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173588"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192627"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 函数创建数据特征（演练）
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88173588"
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 可以采用由有效 SELECT 查询（作为 _sqlQuery_ 参数的自变量提供）组成的查询，也可以采用表对象的名称（作为 _table_ 参数提供）。
+    - [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) 可以采用由有效 SELECT 查询（作为 _sqlQuery_ 参数的自变量提供）组成的查询，也可以采用表对象的名称（作为 _table_ 参数提供）。
     
     - 如果想要从表中采样数据，则必须使用 _sqlQuery_ 参数，使用 T-SQL TABLESAMPLE 子句定义采样参数，并将 _rowBuffering_ 自变量设为 FALSE。
 
@@ -91,7 +91,7 @@ ms.locfileid: "88173588"
     rxSetComputeContext("local");
     ```
 
-5. 调用 [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 函数以获取特征工程数据，并将 `env$ComputeDist` 函数应用于内存中的数据。
+5. 调用 [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep) 函数以获取特征工程数据，并将 `env$ComputeDist` 函数应用于内存中的数据。
 
     ```R
     start.time <- proc.time();
@@ -109,7 +109,7 @@ ms.locfileid: "88173588"
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + rxDataStep 函数支持用于就地修改数据的各种方法。 有关详细信息，请参阅此文章：[如何在 Microsft R 中转换和子集化数据](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + rxDataStep 函数支持用于就地修改数据的各种方法。 有关详细信息，请参阅此文章：[如何在 Microsft R 中转换和子集化数据](/r-server/r/how-to-revoscaler-data-transform)
     
     但是，关于 rxDataStep 有几点值得注意： 
     
@@ -117,7 +117,7 @@ ms.locfileid: "88173588"
 
     当在较大的数据集上运行时，上述代码还会生成警告消息。 当行数乘以要创建的列数超过设定值（默认值为 3,000,000）时，rxDataStep 将返回警告，并且返回的数据帧中的行数将被截断。 若要删除警告，可以在 rxDataStep 函数中修改 _maxRowsByCols_ 自变量。 但是，如果 _maxRowsByCols_ 太大，则在将数据帧加载到内存中时可能会遇到问题。
 
-7. （可选）可以调用 [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) 来检查转换后的数据源的架构。
+7. （可选）可以调用 [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) 来检查转换后的数据源的架构。
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -127,7 +127,7 @@ ms.locfileid: "88173588"
 
 在本练习中，学习如何使用 SQL 函数（而不是自定义 R 函数）来完成同一任务。 
 
-切换到 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或其他查询编辑器，以运行 T-SQL 脚本。
+切换到 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 或其他查询编辑器，以运行 T-SQL 脚本。
 
 1. 使用名为 *fnCalculateDistance* 的 SQL 函数。 该函数应该已经存在于 NYCTaxi_Sample 数据库中。 在对象资源管理器中，通过导航到以下路径来验证该函数是否存在：“数据库”>“NYCTaxi_Sample”>“可编程性”>“函数”>“标量值函数”>“dbo.fnCalculateDistance”。
 
@@ -252,4 +252,3 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 
 > [!div class="nextstepaction"]
 > [生成 R 模型并保存到 SQL](walkthrough-build-and-save-the-model.md)
-

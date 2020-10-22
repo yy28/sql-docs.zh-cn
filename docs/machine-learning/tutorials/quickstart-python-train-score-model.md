@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834052"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194445"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习在 Python 中创建预测模型并对其进行评分
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "91834052"
 
 在本步骤中，需要执行过程以运行嵌入代码，并创建已定型和已序列化的模型作为输出。 
 
-存储在数据库中以供重复使用的模型将序列化为字节流，并存储在数据库表中的 VARBINARY(MAX) 列。 创建、定型、序列化模型并将其保存到数据库之后，在对工作负载评分时可通过其他过程或 [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 函数调用该模型。
+存储在数据库中以供重复使用的模型将序列化为字节流，并存储在数据库表中的 VARBINARY(MAX) 列。 创建、定型、序列化模型并将其保存到数据库之后，在对工作负载评分时可通过其他过程或 [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) 函数调用该模型。
 
 1. 运行以下脚本以执行过程。 用于运行存储过程的特定语句是第四行的 `EXECUTE`。
 

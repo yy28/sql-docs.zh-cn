@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180439"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195761"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +30,7 @@ olapR 包是由 Microsoft 提供的 R 包，可与 Machine Learning Server 和 S
 
 OLAP 是联机分析处理的缩写。 一直以来，OLAP 解决方案广泛用于捕获和存储重要的业务数据。 通过多种工具、仪表板和可视化效果将 OLAP 数据用于业务分析。 有关详细信息，请参阅[联机分析处理](https://en.wikipedia.org/wiki/Online_analytical_processing)。
 
-Microsoft 提供了 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services)，这使你可以以多维数据集或表格模型的形式设计、部署和查询 OLAP 数据   。 多维数据集是一种多维数据库。 维度与数据的方面或 R 中的因素类似：使用维度来标识要汇总或分析的某些特定数据子集  。 例如，时间是一个重要维度，以至于许多 OLAP 解决方案都包含默认定义的多个日历，以便在切片和汇总数据时使用。 
+Microsoft 提供了 [Analysis Services](/analysis-services/analysis-services-overview)，这使你可以以多维数据集或表格模型的形式设计、部署和查询 OLAP 数据   。 多维数据集是一种多维数据库。 维度与数据的方面或 R 中的因素类似：使用维度来标识要汇总或分析的某些特定数据子集  。 例如，时间是一个重要维度，以至于许多 OLAP 解决方案都包含默认定义的多个日历，以便在切片和汇总数据时使用。 
 
 出于性能方面的考虑，OLAP 数据库通常会预先计算汇总（或聚合），然后将其进行存储以实现更快的检索  。 汇总基于度量值，后者表示可应用于数值数据的公式  。 可使用维度来定义数据子集，然后计算该数据的度量值。 例如，可使用度量值计算某个产品系列多个季度减去税费后的总销售额、报告特定供应商的平均运输成本以及年初至今支付的累计工资等。
 
@@ -95,11 +95,11 @@ MDX（即多维表达式的缩写）是用于查询多维数据集的语言。 M
 
 有关这两种模型类型的常规信息，请参阅以下文章：
 
-+ [比较多维模型和表格模型](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [比较多维模型和表格模型](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 有关查询服务器属性的信息，请参阅以下文章：
 
-+ [OLE DB for OLAP 架构行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [OLE DB for OLAP 架构行集](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>不支持写回
 
@@ -107,9 +107,9 @@ MDX（即多维表达式的缩写）是用于查询多维数据集的语言。 M
 
 通常情况下，即使为写回启用了多维数据集，也仅支持有限的操作，并且可能还需要其他配置。 建议使用 MDX 进行此类操作。
 
-+ [启用写操作的维度](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [可写入的分区](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [设置对单元数据的自定义访问权限](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [启用写操作的维度](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [可写入的分区](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [设置对单元数据的自定义访问权限](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>长时间运行的 MDX 查询会阻止处理多维数据集
 

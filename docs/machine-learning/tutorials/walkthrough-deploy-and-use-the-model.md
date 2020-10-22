@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179740"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193639"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型并在 SQL Server 中使用它（演练）
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -216,7 +216,7 @@ ms.locfileid: "88179740"
     ```
 
     >[!TIP]
-    > 针对 Visual Studio 的 R 工具 (RTVS) 提供了与 SQL Server 和 R 的良好集成。有关将 RODBC 与 SQL Server 连接一起使用的更多示例，请参阅：[使用 SQL Server 和 R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > 针对 Visual Studio 的 R 工具 (RTVS) 提供了与 SQL Server 和 R 的良好集成。有关将 RODBC 与 SQL Server 连接一起使用的更多示例，请参阅：[使用 SQL Server 和 R](/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -229,5 +229,5 @@ ms.locfileid: "88179740"
 
 + [数据科学方案和解决方案模板](data-science-scenarios-and-solution-templates.md)
 + [数据库内高级分析](r-taxi-classification-introduction.md)
-+ [Machine Learning Server 操作指南](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server 其他资源](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Machine Learning Server 操作指南](/machine-learning-server/r/how-to-introduction)
++ [Machine Learning Server 其他资源](//machine-learning-server/resources-more)

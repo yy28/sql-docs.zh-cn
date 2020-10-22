@@ -9,19 +9,19 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179714"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193652"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中使用 R 创建基于分区的模型
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在 SQL Server 2019 中，“基于分区的建模”功能可用于根据分区数据创建和训练模型。 对于自然分割为给定分类方案的分层数据（例如地理区域、日期和时间、年龄或性别），可以对整个数据集执行脚本，并能够对在所有这些操作中保持不变的分区进行建模、训练和评分。 
 
-基于分区的建模可通过 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 上的两个新参数启用：
+基于分区的建模可通过 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 上的两个新参数启用：
 
 + input_data_1_partition_by_columns，指定要按其进行分区的列。
 + input_data_1_order_by_columns，指定要按其进行排序的列。 
@@ -39,7 +39,7 @@ ms.locfileid: "88179714"
 
 + 系统资源充足。 数据集较大，且训练操作需要大量资源。 如果可能，请使用至少具有 8 GB RAM 的系统。 或者，可以使用较小的数据集来应对资源约束。 有关缩减数据集的指令是内联的。 
 
-+ 具有用于执行 T-SQL 查询的工具，如 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
++ 具有用于执行 T-SQL 查询的工具，如 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 + 具有 [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，可以将其[下载并还原](demo-data-nyctaxi-in-sql.md)到本地数据库引擎实例。 文件大小约为 90 MB。
 
@@ -105,7 +105,7 @@ GO
 
 本教程将 R 脚本包装在存储过程中。 在本步骤中，你将创建一个存储过程，该存储过程使用 R 创建输入数据集，生成用于预测提示结果的分类模型，然后将该模型存储在数据库中。
 
-在此脚本使用的参数输入中，可看到 input_data_1_partition_by_columns 和 input_data_1_order_by_columns 。 请记住，这些参数分区建模所依据的机制。 这些参数作为输入传递到 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 以处理分区，且外部脚本对每个分区执行一次。 
+在此脚本使用的参数输入中，可看到 input_data_1_partition_by_columns 和 input_data_1_order_by_columns 。 请记住，这些参数分区建模所依据的机制。 这些参数作为输入传递到 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 以处理分区，且外部脚本对每个分区执行一次。 
 
 为了加快完成速度，此存储过程[使用并行执行](#parallel)。
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>并行执行
 
-请注意，[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 输入包括 `@parallel=1`，用于启用并行处理。 与以前的版本相比，SQL Server 2019 中的 `@parallel=1` 设置为查询优化器提供更强大的提示，增大了并行执行的可能性。
+请注意，[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 输入包括 `@parallel=1`，用于启用并行处理。 与以前的版本相比，SQL Server 2019 中的 `@parallel=1` 设置为查询优化器提供更强大的提示，增大了并行执行的可能性。
 
 默认情况下，查询优化器通常针对包含超过 256 行的表在 `@parallel=1` 下运行，但可以通过设置 `@parallel=1` 来进行显式处理，如此脚本所示。
 
@@ -336,8 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，使用了 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 对分区数据迭代操作。 要详细了解如何在存储过程中调用外部脚本以及如何使用 RevoScaleR 函数，请继续学习以下教程。
+在本教程中，使用了 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 对分区数据迭代操作。 要详细了解如何在存储过程中调用外部脚本以及如何使用 RevoScaleR 函数，请继续学习以下教程。
 
 > [!div class="nextstepaction"]
 > [R 和 SQL Server 演练](walkthrough-data-science-end-to-end-walkthrough.md)
-

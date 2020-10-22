@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218113"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257117"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>非根大数据群集容器
 
@@ -47,7 +47,7 @@ SQL Server 2019 CU5 引入了对非根容器的支持。 默认情况下，通�
 
 Azure Data Studio 将以透明方式处理用于通过网关建立连接的凭据的更改，以在对象资源管理器中启用 HDFS 浏览体验，或通过笔记本提交 Spark 作业。 安装[最新的 Azure Data Studio 预览体验内部版本](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio)。 此内部版本包括此用例的必要更改。
 
-对于必须提供凭据以通过网关访问服务的其他情况（例如使用 `azdata` 登录、访问 Spark 的 Web 仪表板），请确保使用正确的凭据。 如果你的目标是在 CU5 之前部署的现有群集，你将继续使用 `root` 用户名连接到网关，即使是在将群集升级到 CU5 之后也是如此。 如果使用 CU5 版本部署新群集，请通过提供与 `AZDATA_USERNAME` 环境变量对应的用户名进行登录。
+对于必须提供凭据以通过网关访问服务的其他情况（例如使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 登录、访问 Spark 的 Web 仪表板），请确保使用正确的凭据。 如果你的目标是在 CU5 之前部署的现有群集，你将继续使用 `root` 用户名连接到网关，即使是在将群集升级到 CU5 之后也是如此。 如果使用 CU5 版本部署新群集，请通过提供与 `AZDATA_USERNAME` 环境变量对应的用户名进行登录。
 
 ## <a name="configuration-file-switches"></a>配置文件开关
 

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173684"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192637"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>用于 SQL Server Python 和 R 教程的纽约市出租车演示数据
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 本文介绍了如何设置一个示例数据库，该数据库包含来自[纽约市出租车和轿车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)的公共数据。 此数据用于多个 R 和 Python 教程，用于 SQL Server 上的数据库内分析。 为了使示例代码运行速度更快，我们创建了一个具有代表性的 1% 采样数据。 在你的系统上，数据库备份文件略大于 90 MB，在主数据表中提供 170 万行。
 
-若要完成此练习，你应该拥有 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 或其他可以还原数据库备份文件并运行 T-SQL 查询的工具。
+若要完成此练习，你应该拥有 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) 或其他可以还原数据库备份文件并运行 T-SQL 查询的工具。
 
 使用此数据集的教程和快速入门包括以下内容：
 

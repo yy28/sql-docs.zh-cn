@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b18fbdd0a4c59b8458b2bc1f757ef189db5de3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178774"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195139"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定义并使用计算上下文（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 4 个教程。
+这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 4 个教程。
 
-在上一教程中，已使用 RevoScaleR  函数检查数据对象。 本教程介绍了 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函数，它可用于为远程 SQL Server 定义计算上下文。 借助远程计算上下文，可以将 R 执行任务从本地会话转移到服务器上的远程会话。 
+在上一教程中，已使用 RevoScaleR  函数检查数据对象。 本教程介绍了 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函数，它可用于为远程 SQL Server 定义计算上下文。 借助远程计算上下文，可以将 R 执行任务从本地会话转移到服务器上的远程会话。 
 
 > [!div class="checklist"]
 > * 了解远程 SQL Server 计算上下文的各个元素
@@ -63,7 +63,7 @@ ms.locfileid: "88178774"
   
     到 RxInSqlServer  的 wait  参数支持以下选项：
   
-    -   **TRUE**。 作业被配置为具有阻塞性且不会返回，直到它完成或失败。  有关详细信息，请参阅 [Machine Learning Server 中的分布式计算和并行计算](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
+    -   **TRUE**。 作业被配置为具有阻塞性且不会返回，直到它完成或失败。  有关详细信息，请参阅 [Machine Learning Server 中的分布式计算和并行计算](/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
   
     -   **FALSE**。 作业被配置为具有非阻塞性且会立即返回，你可以继续运行其他 R 代码。 但是，即使在非阻塞模式下，作业运行时，也必须维持客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接。
 
@@ -90,9 +90,9 @@ ms.locfileid: "88178774"
     
     **RxInSqlServer** 的语法与之前用来定义数据源的 **RxSqlServerData** 函数的语法看上去差不多。 但是，它们之间存在以下重要差异。
       
-    - 使用函数 [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 定义的数据源对象指定数据的存储位置。
+    - 使用函数 [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 定义的数据源对象指定数据的存储位置。
     
-    - 与之相反，使用函数 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 定义的计算上下文指示聚合和其他计算发生的位置。
+    - 与之相反，使用函数 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 定义的计算上下文指示聚合和其他计算发生的位置。
     
     定义计算上下文不会影响任何其他可能在工作站上执行的泛型 R 计算，也不会更改数据源。 例如，你可以将本地文本文件定义为数据源，但会将计算上下文更改为 SQL Server 并对 SQL Server 计算机上的数据执行所有的读取和汇总操作。
 
@@ -135,7 +135,7 @@ ms.locfileid: "88178774"
   
    在此示例中，将 *traceLevel* 属性设置为 7，这意味着“显示所有跟踪信息”。
 
-2. 使用 [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 函数按名称指定启用了跟踪的计算上下文。
+2. 使用 [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 函数按名称指定启用了跟踪的计算上下文。
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

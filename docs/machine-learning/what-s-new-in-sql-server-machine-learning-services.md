@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f5cd84574a5e1a009c96863808e3cdaaf8818c5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179696"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195059"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的新增功能
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
@@ -25,17 +25,17 @@ ms.locfileid: "88179696"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能
 
-此版本在 SQL Server 中添加了用于 Python 和 R 机器学习操作的需求最大的功能。 有关此版本中所有功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的发行说明](../sql-server/sql-server-ver15-release-notes.md)。
+此版本在 SQL Server 中添加了用于 Python 和 R 机器学习操作的需求最大的功能。 有关此版本中所有功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的发行说明](../sql-server/sql-server-version-15-release-notes.md)。
 
 > [!NOTE]
-> 有关 SQL Server 2019 中 Java 的新增功能文档，请参阅 [What's new in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)（SQL Server 语言扩展中的新增功能？）
+> 有关 SQL Server 2019 中 Java 的新增功能文档，请参阅 [What's new in SQL Server Language Extensions?](../language-extensions/language-extensions-whats-new.md)（SQL Server 语言扩展中的新增功能？）
 
 以下是 SQL Server 机器学习服务的新增功能，在 Windows 和 Linux 上均可使用 ：
 
 - 在 Python 和 R 的机器学习服务中添加了 Linux 平台支持。开始[在 Linux 上安装 SQL Server 机器学习服务](../linux/sql-server-linux-setup-machine-learning.md)。
 - [从 Python 或 R 脚本到 SQL Server 的环回连接](connect/loopback-connection.md)。 
 - 适用于 Python 和 R 的[CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md)。
-- [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 引入了两个新参数，使你能够轻松地从分区数据生成多个模型。 有关详细信息，请参阅教程[在 R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。
+- [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 引入了两个新参数，使你能够轻松地从分区数据生成多个模型。 有关详细信息，请参阅教程[在 R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。
 - 可在 Launchpad 服务上使用故障转移群集支持的前提是在所有节点上启动 SQL Server Launchpad 服务。 有关详细信息，请参阅 [SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。
 - 机器学习服务的隔离机制更改。 有关详细信息，请参阅 [Windows 上的 SQL Server 2019：机器学习服务的隔离更改](install/sql-server-machine-learning-services-2019.md)。
 
@@ -55,7 +55,7 @@ SQL Server 机器学习服务 R 组件是下一代 SQL Server 2016 R Services，
 R 的新功能包括[包管理](package-management/install-r-packages-with-tsql.md)，以下是一些亮点  ： 
 
 + 数据库角色可帮助 DBA 管理包，并为包安装分配权限。
-+ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 帮助 DBA 以熟悉的 T-SQL 语言管理包。
++ [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) 帮助 DBA 以熟悉的 T-SQL 语言管理包。
 + [RevoScaleR](package-management/install-r-packages-with-revoscaler.md) 函数可帮助安装、删除或列出用户拥有的包。 有关详细信息，请参阅[如何使用 RevoScaleR 函数在 SQL Server 上查找或安装 R 包](package-management/install-r-packages-with-revoscaler.md)。
 
 ### <a name="r-libraries"></a>R 库
@@ -70,7 +70,7 @@ Python 是一种语言，可为各种机器学习任务提供极大灵活性和�
 
 由于 Python 与数据库引擎集成，因此可以保持与数据接近的分析结果，同时清除与数据移动相关的成本和安全风险。 可使用 Visual Studio 之类的工具基于 Python 部署机器学习解决方案。 使用 SQL Server 数据访问方法，生产应用程序可以从 Python 3.5 运行时获取预测、模型或视觉对象。
 
-通过 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 系统存储过程支持 T-SQL 和 Python 集成。 可使用此存储过程调用任何 Python 代码。 代码在安全的双体系结构中运行，该体系结构可使用企业级的 Python 模型和脚本部署，可使用简单的存储过程从应用程序中调用。 通过将数据从 SQL 流式传输到 Python 进程以及 MPI 环并行化，实现更多性能提升。
+通过 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 系统存储过程支持 T-SQL 和 Python 集成。 可使用此存储过程调用任何 Python 代码。 代码在安全的双体系结构中运行，该体系结构可使用企业级的 Python 模型和脚本部署，可使用简单的存储过程从应用程序中调用。 通过将数据从 SQL 流式传输到 Python 进程以及 MPI 环并行化，实现更多性能提升。
 
 可使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函数在以前以所需的二进制格式保存的预定型模型上执行[本机评分](predictions/native-scoring-predict-transact-sql.md)。
 
@@ -95,14 +95,14 @@ Python 是一种语言，可为各种机器学习任务提供极大灵活性和�
 
 此版本通过 SQL Server 2016 R Services 将机器学习功能引入到 SQL Server，这是一个数据库内分析引擎，用于处理数据库引擎实例中常驻数据上的 R 脚本  。
 
-此外，SQL Server 2016 R Server（独立版）是作为在 Windows 服务器上安装 R Server 的方式发布的  。 最初，SQL Server 安装程序提供了安装 R Server for Windows 的唯一方法。 在更高版本中，希望在 Windows 上使用 R Server 的开发人员和数据科学家可以使用另一个独立的安装程序实现相同的目标。 SQL Server 中的独立服务器在功能上等同于独立服务器软件 [Microsoft R Server for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
+此外，SQL Server 2016 R Server（独立版）是作为在 Windows 服务器上安装 R Server 的方式发布的  。 最初，SQL Server 安装程序提供了安装 R Server for Windows 的唯一方法。 在更高版本中，希望在 Windows 上使用 R Server 的开发人员和数据科学家可以使用另一个独立的安装程序实现相同的目标。 SQL Server 中的独立服务器在功能上等同于独立服务器软件 [Microsoft R Server for Windows](/machine-learning-server/install/r-server-install-windows)。
 
 有关所有的功能公告，请参阅 [SQL Server 2016 的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。
 
 | 发布 |功能更新 |
 |---------|----------------|
 | CU 添加件 | [实时评分](predictions/real-time-scoring.md)依赖于本机 C++ 库来读取以优化的二进制格式存储的模型，然后生成预测，而无需调用 R 运行时  。 这使得评分操作的速度更快。 使用实时评分，可以运行存储过程或从 R 代码执行实时评分。 如果实例升级到 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] 的最新版本，则实时评分也可用于 SQL Server 2016。 |
-| 初始版本 | [**用于数据库内分析的 R 集成**](r/sql-server-r-services.md)。 <br/><br/> 用于在 T-SQL 中调用 R 函数的 R 包，反之亦然。 RevoScaleR 函数通过将数据分块到组件部分、协调和管理分布式处理以及聚合结果，从而大规模提供 R 服务。 在 SQL Server 2016 R Services（数据库内）中，RevoScaleR 引擎与数据库引擎实例集成在一起，并在同一处理上下文中将数据和分析结合在一起。 <br/><br/>通过 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 实现 T-SQL 和 R 的集成。 可使用此存储过程调用任何 R 代码。 此安全体系结构支持企业级 Rn 模型和脚本的部署，这些模型和脚本可以使用简单的存储过程从应用程序中调用。 通过将数据从 SQL 流式传输到 R 进程以及 MPI 环并行化，实现更多性能提升。 <br/><br/>可使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函数在以前以所需的二进制格式保存的预定型模型上执行[本机评分](predictions/native-scoring-predict-transact-sql.md)。|
+| 初始版本 | [**用于数据库内分析的 R 集成**](r/sql-server-r-services.md)。 <br/><br/> 用于在 T-SQL 中调用 R 函数的 R 包，反之亦然。 RevoScaleR 函数通过将数据分块到组件部分、协调和管理分布式处理以及聚合结果，从而大规模提供 R 服务。 在 SQL Server 2016 R Services（数据库内）中，RevoScaleR 引擎与数据库引擎实例集成在一起，并在同一处理上下文中将数据和分析结合在一起。 <br/><br/>通过 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 实现 T-SQL 和 R 的集成。 可使用此存储过程调用任何 R 代码。 此安全体系结构支持企业级 Rn 模型和脚本的部署，这些模型和脚本可以使用简单的存储过程从应用程序中调用。 通过将数据从 SQL 流式传输到 R 进程以及 MPI 环并行化，实现更多性能提升。 <br/><br/>可使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函数在以前以所需的二进制格式保存的预定型模型上执行[本机评分](predictions/native-scoring-predict-transact-sql.md)。|
 
 ::: moniker-end
 

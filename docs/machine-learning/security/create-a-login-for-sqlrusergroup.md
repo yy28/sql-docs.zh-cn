@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180424"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92195751"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-当脚本中的[环回连接](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)指定了信任连接，且用于执行包含代码的对象的标识是 Windows 用户帐户时，在 [SQL Server](../concepts/security.md#sqlrusergroup) 中为 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) 创建登录名  。
+当脚本中的[环回连接](../../relational-databases/security/authentication-access/create-a-login.md)指定了信任连接，且用于执行包含代码的对象的标识是 Windows 用户帐户时，在 [SQL Server](../concepts/security.md#sqlrusergroup) 中为 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) 创建登录名  。
 
 信任连接是那些在连接字符串中具有 `Trusted_Connection=True` 的连接。 当 SQL Server 收到指定信任连接的请求时，它将检查当前 Windows 用户的标识是否具有登录名。 对于作为工作线程帐户执行的外部进程（例如 SQLRUserGroup 中的 MSSQLSERVER01），请求失败是因为默认情况下这些帐户没有登录名  。
 

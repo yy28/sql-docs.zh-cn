@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180461"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195771"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>进行 SQL Server 配置以供 R 使用
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180461"
 本文是基于两个案例研究介绍 R Services 的性能优化的系列文章中的第二篇。  本文提供有关用于运行 SQL Server R Services 的计算机的硬件和网络配置的指导。 它还包含有关配置解决方案中使用的 SQL Server 实例、数据库或表的方式的信息。 由于在 SQL Server 中使用 NUMA 模糊了硬件和数据库优化之间的界限，因此第三部分将详细讨论 CPU 关联和资源调控。
 
 > [!TIP]
-> 如果未使用过 SQL Server，则强烈建议你同时查看 SQL Server 性能优化指南：[监视和优化性能](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)。
+> 如果未使用过 SQL Server，则强烈建议你同时查看 SQL Server 性能优化指南：[监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)。
 
 ## <a name="hardware-optimization"></a>硬件优化
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 如果查询返回单个内存节点（节点 0），则表示没有硬件 NUMA，或者该硬件已配置为交错硬件（非 NUMA）。 如果仅有 4 个或更少的 CPU，或者至少有一个节点只有一个 CPU，则 SQL Server 也会忽略硬件 NUMA。
 
-如果计算机有多个处理器，但没有硬件 NUMA，则还可以使用 [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) 将 CPU 细分为更小的组。  在 SQL Server 2016 和 SQL Server 2017 中，启动 SQL Server 服务时会自动启用 Soft-NUMA 功能。
+如果计算机有多个处理器，但没有硬件 NUMA，则还可以使用 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) 将 CPU 细分为更小的组。  在 SQL Server 2016 和 SQL Server 2017 中，启动 SQL Server 服务时会自动启用 Soft-NUMA 功能。
 
 启用 Soft-NUMA 后，SQL Server 会自动管理节点；但是，若要针对特定工作负载进行优化，可以禁用软关联并手动配置 soft NUMA 节点的 CPU 相关性  。 这样，就可以更好地控制将哪些工作负载分配给哪些节点，尤其是在使用支持资源调控的 SQL Server 版本时。 通过指定 CPU 相关性并使资源池与 CPU 组对齐，可以减少延迟，并确保相关进程在同一 NUMA 节点内执行。
 
@@ -164,7 +164,7 @@ FROM sys.dm_os_memory_clerks
 
 其他资源： 
 
-+ [SQL Server 中的 Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server 中的 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     如何将 Soft-NUMA 节点映射到 CPU
 
@@ -178,7 +178,7 @@ R 的一个难点是它通常在单个 CPU 上进行处理。 这是许多任务
 
 有多种方法可以提高特征工程的性能。 可以优化 R 代码并在建模过程中进行特征提取，也可以将特征工程进程移到 SQL 中。
 
-- 使用 R。定义一个函数，然后在定型期间将其作为参数传递给 [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform)。 如果模型支持并行处理，则可以使用多个 CPU 处理特征工程任务。 使用此方法，数据科学团队发现在评分时间方面性能提高了 16%。 但是，此方法需要支持并行化的模型以及可使用并行计划执行的查询。
+- 使用 R。定义一个函数，然后在定型期间将其作为参数传递给 [rxTransform](/r-server/r-reference/revoscaler/rxtransform)。 如果模型支持并行处理，则可以使用多个 CPU 处理特征工程任务。 使用此方法，数据科学团队发现在评分时间方面性能提高了 16%。 但是，此方法需要支持并行化的模型以及可使用并行计划执行的查询。
 
 - 将 R 与 SQL 计算上下文结合使用。 在具有可用于执行分隔批的隔离资源的多处理器环境中，可通过隔离用于每个批处理的 SQL 查询，从表中提取数据并将数据约束在同一工作负载组上，从而提高效率。 用于隔离批的方法包括分区，以及使用 PowerShell 并行执行单独的查询。
 

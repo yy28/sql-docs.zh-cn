@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e53accf27dbc3c573596c5ebaf1d83667480a34e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178804"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196275"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>使用 RxSqlServerData 创建 SQL Server 数据对象（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 2 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 2 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
 本课程将继续介绍如何创建数据库：添加表和加载数据。 如果 DBA 在[教程 2](deepdive-work-with-sql-server-data-using-r.md) 中创建了数据库和登录名，则可以使用 R IDE（如 RStudio）或内置工具（如 Rgui****）来添加表。
 
@@ -103,7 +103,7 @@ ms.locfileid: "88178804"
 
 现在已创建了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，你可以使用相应的 **Rx** 函数将数据加载到这些表中。
 
-**RevoScaleR** 包包含特定于数据源类型的函数。 对于文本数据，请使用 [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) 生成数据源对象。 有一些其他函数可用于通过 Hadoop 数据、ODBC 数据等创建数据源对象。
+**RevoScaleR** 包包含特定于数据源类型的函数。 对于文本数据，请使用 [RxTextData](/machine-learning-server/r-reference/revoscaler/rxtextdata) 生成数据源对象。 有一些其他函数可用于通过 Hadoop 数据、ODBC 数据等创建数据源对象。
 
 > [!NOTE]
 > 对于此部分，必须对数据库具有**执行 DDL** 权限。
@@ -116,7 +116,7 @@ ms.locfileid: "88178804"
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    请注意对 **rxGetOption** 的调用，该方法是与 **RevoScaleR** 中的 [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) 关联的 GET 方法。 使用此实用工具设置和列出与本地及远程计算上下文相关的选项，例如默认共享目录或要在计算中使用的处理器（核心）数。
+    请注意对 **rxGetOption** 的调用，该方法是与 **RevoScaleR** 中的 [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions) 关联的 GET 方法。 使用此实用工具设置和列出与本地及远程计算上下文相关的选项，例如默认共享目录或要在计算中使用的处理器（核心）数。
     
     无论从何处运行代码，此特别调用都可以从正确的库中获取示例。 例如，尝试在 SQL Server 和开发计算机上运行该函数，查看路径有何不同。
   
@@ -137,7 +137,7 @@ ms.locfileid: "88178804"
   
     你将看到，尽管 R 数据对象已在本地工作区中创建，但表尚未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中创建。 此外，未从文本文件加载任何数据到 R 变量中。
   
-4. 通过调用 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 函数来插入数据。
+4. 通过调用 [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 函数来插入数据。
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -188,7 +188,7 @@ ms.locfileid: "88178804"
 
 ## <a name="more-about-rxdatastep"></a>有关 rxDataStep 的详细信息
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 是一个功能强大的函数，可以对 R 数据帧执行多个转换。 还可以使用 rxDataStep 将数据转换为目标所需的表示形式：在本例中为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 是一个功能强大的函数，可以对 R 数据帧执行多个转换。 还可以使用 rxDataStep 将数据转换为目标所需的表示形式：在本例中为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 （可选）可通过使用 **rxDataStep** 参数中的 R 函数来指定对数据的转换。 本教程稍后会提供这些操作的示例。
 

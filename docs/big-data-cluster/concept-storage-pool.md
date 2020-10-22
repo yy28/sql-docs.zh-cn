@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16a0309eda16ceab13720c83e1c36045dee2c1ff
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725050"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257237"
 ---
 # <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>什么是存储池 ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])？
 
@@ -57,7 +57,7 @@ ms.locfileid: "91725050"
 你也可以使用以下各项与 HDFS 交互：
 
 - Azure Data Studio。
-- azdata 客户端工具。
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 - kubectl，用于向 Hadoop 容器发出命令。
 - HDFS http 网关。
 

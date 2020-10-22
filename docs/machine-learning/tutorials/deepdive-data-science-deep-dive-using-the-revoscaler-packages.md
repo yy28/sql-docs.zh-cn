@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad18fc08a06a647c626972cf3b3141d9d9861c87
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a6fe6713479c0a9c62c1f56e358c27084dc9bbdc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178794"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195159"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程：对 SQL Server 数据使用 RevoScaleR R 函数
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 此多部分教程系列介绍了一系列 RevoScaleR 函数，可用于与数据科学相关的任务  。 在此过程中，你将了解如何创建远程计算上下文、在本地和远程计算上下文之间移动数据以及在远程 SQL Server 上执行 R 代码。 还将了解如何在本地和远程服务器上分析和绘制数据，以及如何创建和部署模型。
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 是 Microsoft R 包，为数据科学和机器学习工作负荷提供分布式的并行处理。 对于 SQL Server 中的 R 开发，RevoScaleR 是核心内置包之一，具有用于创建数据源对象、设置计算上下文、管理包的函数，最重要的是端对端地处理数据（从导入到可视化和分析）  。 SQL Server 中的机器学习算法依赖于 RevoScaleR 数据源  。 考虑到 RevoScaleR 的重要性，了解调用其函数的时机和方法是一项基本技能  。 
+[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 是 Microsoft R 包，为数据科学和机器学习工作负荷提供分布式的并行处理。 对于 SQL Server 中的 R 开发，RevoScaleR 是核心内置包之一，具有用于创建数据源对象、设置计算上下文、管理包的函数，最重要的是端对端地处理数据（从导入到可视化和分析）  。 SQL Server 中的机器学习算法依赖于 RevoScaleR 数据源  。 考虑到 RevoScaleR 的重要性，了解调用其函数的时机和方法是一项基本技能  。 
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -29,7 +29,7 @@ ms.locfileid: "88178794"
   
 + [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录名
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + IDE（如 RStudio）或 R 附带的内置 RGUI 工具
 

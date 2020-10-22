@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178424"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196231"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 创建图形和绘图（演练）
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88178424"
 
 ## <a name="create-a-histogram"></a>创建直方图
 
-1. 使用 [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 函数生成第一个绘图。  rxHistogram 函数提供的功能类似于开放源代码 R 包的功能，但可在远程执行上下文中运行。
+1. 使用 [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) 函数生成第一个绘图。  rxHistogram 函数提供的功能类似于开放源代码 R 包的功能，但可在远程执行上下文中运行。
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -73,7 +73,7 @@ ms.locfileid: "88178424"
 
     + mapPlot 函数采用两个参数：之前使用 RxSqlServerData 定义的现有数据对象，以及从客户端传递的地图表示形式。
     + 在以 ds 变量开头的行中，rxImport 用于将来自先前创建的数据源 inDataSource 的数据加载到内存中****。 （该数据源仅包含 1000 行；如果要创建包含更多数据点的地图，则可以替换其他数据源。）
-    + 只要使用开放源代码 R 函数，就必须将数据加载到本地内存中的数据帧。 但是，通过调用 [rxImport ](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)函数，你可以在远程计算上下文的内存中运行。
+    + 只要使用开放源代码 R 函数，就必须将数据加载到本地内存中的数据帧。 但是，通过调用 [rxImport ](/r-server/r-reference/revoscaler/rximport)函数，你可以在远程计算上下文的内存中运行。
 
 2. 将计算上下文更改为本地，并加载创建地图所需的库。
 
@@ -89,7 +89,7 @@ ms.locfileid: "88178424"
 
     + 以 `googmap` 开头的行生成中心具有指定坐标的地图。
 
-3. 通过将绘图函数包装在 [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) 中，切换到 SQL Server 计算上下文并呈现结果，如下所示。 rxExec 函数属于 **RevoScaleR** 包，并支持在远程计算上下文中执行任意 R 函数。
+3. 通过将绘图函数包装在 [rxExec](/r-server/r-reference/revoscaler/rxexec) 中，切换到 SQL Server 计算上下文并呈现结果，如下所示。 rxExec 函数属于 **RevoScaleR** 包，并支持在远程计算上下文中执行任意 R 函数。
 
     ```R
     rxSetComputeContext(sqlcc)

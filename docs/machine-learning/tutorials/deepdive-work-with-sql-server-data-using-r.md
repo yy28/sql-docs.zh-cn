@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fa8f5eab0c6d86f843d0f0c90ad49276e659171
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178625"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194499"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>创建数据库和权限（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 1 个教程。
+这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 1 个教程。
 
-本教程介绍了如何创建 SQL Server 数据库，并设置完成此系列中其他教程所需的权限。 使用 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或其他查询编辑器来完成以下任务：
+本教程介绍了如何创建 SQL Server 数据库，并设置完成此系列中其他教程所需的权限。 使用 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 或其他查询编辑器来完成以下任务：
 
 > [!div class="checklist"]
 > * 创建一个新的数据库，用于存储两个 R 模型的定型和评分数据
@@ -94,11 +94,11 @@ GO
 
 - **如何验证数据库连接并检查 SQL 查询？**
   
-    在使用服务器运行 R 代码之前，建议检查是否可以从 R 开发环境访问数据库。 [Visual Studio 中的服务器资源管理器](https://docs.microsoft.com/previous-versions/x603htbk(v=vs.140)) 和 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 是具有强大的数据库连接和管理功能的免费工具。
+    在使用服务器运行 R 代码之前，建议检查是否可以从 R 开发环境访问数据库。 [Visual Studio 中的服务器资源管理器](/previous-versions/x603htbk(v=vs.140)) 和 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 是具有强大的数据库连接和管理功能的免费工具。
   
-    如果不想安装附加的数据库管理工具，可以在控制面板中使用 [ODBC 数据源管理器](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) 创建到 SQL Server 实例的测试连接。 如果该数据库配置正确，并输入了正确的用户名和密码，则应能看到刚刚创建的数据库，并能将其选为默认数据库。
+    如果不想安装附加的数据库管理工具，可以在控制面板中使用 [ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) 创建到 SQL Server 实例的测试连接。 如果该数据库配置正确，并输入了正确的用户名和密码，则应能看到刚刚创建的数据库，并能将其选为默认数据库。
   
-    连接失败的常见原因包括未为服务器启用远程连接，并且未启用 Named Pipes 协议。 可以在本文中找到更多故障排除提示：[排查连接到 SQL Server 数据库引擎时的问题](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)。
+    连接失败的常见原因包括未为服务器启用远程连接，并且未启用 Named Pipes 协议。 可以在本文中找到更多故障排除提示：[排查连接到 SQL Server 数据库引擎时的问题](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
   
 - **表名称具有 datareader 前缀，为什么？**
   

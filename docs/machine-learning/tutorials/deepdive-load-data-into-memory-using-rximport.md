@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c31650525934b14bf31135264d9b86c52d85119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5be5c314cf50add1c215bbe52b5cf0d94a77a237
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179916"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195129"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>使用 rxImport 将数据加载到内存中（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 10 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 10 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
 在本教程中，将学习如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 获取数据，然后使用 rxImport  函数将感兴趣的数据放入本地文件中。 这样一来，就可以在本地计算上下文中重复对数据进行分析，而无需重新查询数据库。
 
-[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 函数可用于将数据从数据源移到会话内存中的数据帧或磁盘中的 XDF 文件。 如果未指定某个文件作为目标，数据会作为数据框放入内存中。
+[rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 函数可用于将数据从数据源移到会话内存中的数据帧或磁盘中的 XDF 文件。 如果未指定某个文件作为目标，数据会作为数据框放入内存中。
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>从 SQL Server 将数据子集提取到本地内存
 
@@ -44,7 +44,7 @@ ms.locfileid: "88179916"
         connectionString = sqlConnString)
     ```
 
-3. 调用函数 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 可将数据读取到本地 R 会话中的数据帧。
+3. 调用函数 [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 可将数据读取到本地 R 会话中的数据帧。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 870ff07f771f06acfb24e9883477b177af36d425
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725864"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257205"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725864"
 SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下面概述了设置和配置步骤：
 
 - 在 Azure Kubernetes 服务 (AKS)、Red Hat OpenShift 或 Azure Red Hat OpenShift (ARO) 中的单个 VM、VM 群集上设置 Kubernetes 群集。
-- 在自己的客户端计算机上安装群集配置工具 `azdata`。
+- 在自己的客户端计算机上安装群集配置工具 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。
 - 在 Kubernetes 群集中部署 SQL Server 大数据群集。
 
 ## <a name="supported-platforms"></a>支持的平台
@@ -77,7 +77,7 @@ kubectl config view
 
 请先[安装大数据工具](deploy-big-data-tools.md)，然后再部署 SQL Server 2019 大数据群集：
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - Azure Data Studio
 - Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/extensions/data-virtualization-extension.md)
@@ -91,10 +91,10 @@ kubectl config view
 
 ## <a name="default-configurations"></a><a id="configfile"></a> 默认配置
 
-JSON 配置文件中定义了大数据群集部署选项。 可以从 `azdata` 中提供的内置部署配置文件开始自定义群集部署。 
+JSON 配置文件中定义了大数据群集部署选项。 可以从 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 中提供的内置部署配置文件开始自定义群集部署。 
 
 > [!NOTE]
-> 大数据群集部署所需的容器映像在 `mssql/bdc` 存储库中的 Microsoft 容器注册表 (`mcr.microsoft.com`) 上托管。 默认情况下，这些设置已包含在 `azdata` 附带的每个部署配置文件的 `control.json` 配置文件中。 此外，每个版本的容器映像标记也在相同的配置文件中进行预填充。 如果需要将容器映像提取到自己的专用容器注册表中，或修改容器注册表/存储库设置，请按照[脱机安装](deploy-offline.md)一文中的说明进行操作
+> 大数据群集部署所需的容器映像在 `mssql/bdc` 存储库中的 Microsoft 容器注册表 (`mcr.microsoft.com`) 上托管。 默认情况下，这些设置已包含在 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 附带的每个部署配置文件的 `control.json` 配置文件中。 此外，每个版本的容器映像标记也在相同的配置文件中进行预填充。 如果需要将容器映像提取到自己的专用容器注册表中，或修改容器注册表/存储库设置，请按照[脱机安装](deploy-offline.md)一文中的说明进行操作
 
 运行此命令以查找可用模板：
 
@@ -117,7 +117,7 @@ azdata bdc config list -o table
 
 可以通过运行 `azdata bdc create` 部署大数据群集。 此操作会提示你选择其中某个默认配置，然后指导你完成部署。
 
-第一次运行 `azdata` 时，必须包含 `--accept-eula=yes` 才能接受最终用户许可协议 (EULA)。
+第一次运行 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 时，必须包含 `--accept-eula=yes` 才能接受最终用户许可协议 (EULA)。
 
 ```bash
 azdata bdc create --accept-eula=yes
@@ -176,7 +176,7 @@ azdata bdc create --accept-eula=yes
 |---|---|---|
 | `AZDATA_USERNAME` | 必须 |SQL Server 大数据群集管理员的用户名。 具有相同名称的 sysadmin 登录名在 SQL Server 主实例中创建。 最佳安全做法是禁用 `sa` 帐户。 <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | 必选 |上面创建的用户帐户的密码。 在 SQL Server 2019 CU5 之前部署的群集上，`root` 用户使用相同的密码来保护 Knox 网关和 HDFS。 |
-| `ACCEPT_EULA`| 首次使用 `azdata` 时为必需项| 设置为“是”。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula=yes` 包含在内。|
+| `ACCEPT_EULA`| 首次使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 时为必需项| 设置为“是”。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 如果未设置为环境变量，则可以在第一次使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令时将 `--accept-eula=yes` 包含在内。|
 | `DOCKER_USERNAME` | 可选 | 当容器映像存储在专用存储库中时，用于访问容器映像的用户名。 有关如何使用专用 Docker 存储库部署大数据群集的更多详细信息，请参阅[脱机部署](deploy-offline.md)主题。|
 | `DOCKER_PASSWORD` | 可选 |用于访问上述专用存储库的密码。 |
 
@@ -424,7 +424,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > 使用 `--all` 参数时，这些命令的输出包含 Kibana 和 Grafana 仪表板的 URL，可用于更详细的分析。
 
-除了使用 `azdata` 之外，还可以使用 Azure Data Studio 查找终结点和状态信息。 有关通过 `azdata` 和 Azure Data Studio 查看群集状态的详细信息，请参阅[如何查看大数据群集的状态](view-cluster-status.md)。
+除了使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 之外，还可以使用 Azure Data Studio 查找终结点和状态信息。 有关通过 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 和 Azure Data Studio 查看群集状态的详细信息，请参阅[如何查看大数据群集的状态](view-cluster-status.md)。
 
 ## <a name="connect-to-the-cluster"></a><a id="connect"></a> 连接到群集
 
