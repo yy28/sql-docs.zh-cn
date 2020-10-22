@@ -1,1 +1,0 @@
-**本主题适用于：**![yes](media/yes.png)SQL Server 2016![no](media/no.png)Power BI 报表服务器
