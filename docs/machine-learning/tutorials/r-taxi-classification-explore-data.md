@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12f964b71bd7dee79eeb3287efc7b67273abb65e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180329"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193682"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 教程：浏览并可视化数据
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 在此系列教程的第二部分中（共五部分），你将浏览示例数据，并生成一些图表。 之后，你可了解如何在 Python 中序列化图形对象，然后对这些对象进行反序列化并制作图表。
 
-在此系列教程的第二部分中（共五部分），你将查看示例数据，然后使用 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中的 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 和基本 R 中的通用 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 函数生成一些图表。
+在此系列教程的第二部分中（共五部分），你将查看示例数据，然后使用 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中的 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) 和基本 R 中的通用 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 函数生成一些图表。
 
 本文的主要目的是说明如何在存储过程中从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用 R 函数并将结果保存为应用程序文件格式：
 
@@ -83,7 +83,7 @@ ms.locfileid: "88180329"
 > 从 SQL Server 2019 开始，隔离机制要求你向存储绘图文件的目录授予适当的权限。 有关如何设置这些权限的详细信息，请参阅 [Windows 上 SQL Server 2019 中的“文件权限”部分：机器学习服务的隔离更改](../install/sql-server-machine-learning-services-2019.md#file-permissions)。
 ::: moniker-end
 
-若要创建绘图，请使用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，这是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的增强型 R 函数之一。 这一步基于从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的数据绘制直方图。 可以将此函数包装在存储过程 RxPlotHistogram  中。
+若要创建绘图，请使用 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram)，这是 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的增强型 R 函数之一。 这一步基于从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的数据绘制直方图。 可以将此函数包装在存储过程 RxPlotHistogram  中。
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器”中，右键单击 NYCTaxi_Sample 数据库，然后选择“新建查询”   。
 
@@ -114,7 +114,7 @@ ms.locfileid: "88180329"
 
 在此脚本中要理解的关键点包括：
   
-+ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。 对于作为外部进程运行的 R 脚本，应在脚本输入与输入 [sp_execute_external_script ](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储过程（在 SQL Server 上启动 R 会话）的输入之间具有一对一的映射。
++ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。 对于作为外部进程运行的 R 脚本，应在脚本输入与输入 [sp_execute_external_script ](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)系统存储过程（在 SQL Server 上启动 R 会话）的输入之间具有一对一的映射。
   
 + 在 R 脚本中，定义了一个变量 (`image_file`) 来存储图像。
 

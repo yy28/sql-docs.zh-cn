@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: abe3a4d1315ab8192a35e9e8a5a2c64f2a99158a
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956982"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155055"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -110,7 +110,7 @@ ms.locfileid: "91956982"
      选中此选项可添加 Microsoft Python 包、Python 3.5 可执行文件以及从 Anaconda 分发中选择库。
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   有关安装和使用 Java 的信息，请参阅[在 Windows 上安装 SQL Server 语言扩展](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
+   有关安装和使用 Java 的信息，请参阅[在 Windows 上安装 SQL Server 语言扩展](../../language-extensions/install/windows-java.md)。
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
