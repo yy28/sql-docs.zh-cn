@@ -21,16 +21,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 09/28/2020
-ms.openlocfilehash: 3919719b19cadb63e54a54dc5786f955a11ab5f5
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.date: 10/20/2020
+ms.openlocfilehash: 02526928d102dd9dba8a0f19b7a05f36a7de3bcc
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115726"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257988"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -40,23 +39,21 @@ SQL Server Management Studio (SSMS) 是一种集成环境，用于管理从 SQL 
 
 使用 SSMS 在本地计算机或云端查询、设计和管理数据库及数据仓库，无论它们位于何处。
 
-SSMS 是免费的！
-
 ## <a name="download-ssms"></a>下载 SSMS
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[下载 SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.6 是 SSMS 的最新正式发布 (GA) 版本。 如果安装的是旧 GA 版本 SSMS 18，请安装 SSMS 18.6 将它升级到 18.6。
+SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果安装的是旧 GA 版本 SSMS 18，请安装 SSMS 18.7 将它升级到 18.7。
 
-### <a name="version-information"></a>版本信息
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- 版本号：18.6
-- 生成号：15.0.18338.0
-- 发行日期：2020 年 7 月 22 日
+- 版本号：18.7
+- 生成号：15.0.18357.0
+- 发行日期：2020 年 10 月 20 日
 
 如果你有任何意见或建议，或想报告问题，最好是通过 [SQL Server 用户反馈](https://aka.ms/sqlfeedback)与 SSMS 团队联系。
 
-SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。 不过，如果安装的是 SSMS 18.x 预览版，则必须在安装 SSMS 18.6 前卸载它。 转到“帮助”>“关于”  窗口，找到“预览版”，即可查看。
+SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。 不过，如果安装的是 SSMS 18.x 预览版，则必须在安装 SSMS 18.7 前卸载它。 转到“帮助”>“关于”  窗口，找到“预览版”，即可查看。
 
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18
 
@@ -67,8 +64,8 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 
 此版本的 SSMS 可以安装在以下语言中：
 
-SQL Server Management Studio 18.6：  
-[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
+SQL Server Management Studio 18.7：  
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
@@ -77,7 +74,7 @@ SQL Server Management Studio 18.6：
 
 有关此版本中新增功能的详细信息，请参阅 [SSMS 发行说明](release-notes-ssms.md)。
 
-此版本存在一些[已知问题](release-notes-ssms.md#known-issues-186)。
+此版本存在一些[已知问题](release-notes-ssms.md#known-issues-187)。
 
 ## <a name="previous-versions"></a>以前的版本
 
@@ -115,6 +112,7 @@ SQL Server Management Studio 18.6：
 
 保留安装的共享组件包括：
 
+- Azure Data Studio
 - Microsoft .NET Framework 4.7.2
 - 适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 - Microsoft ODBC Driver 17 for SQL Server
@@ -158,11 +156,11 @@ SQL Server Management Studio 18.6：
 
 ## <a name="next-steps"></a>后续步骤
 
-- [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [SQL 工具](../tools/overview-sql-tools.md)
 - [SQL Server Management Studio 文档](sql-server-management-studio-ssms.md)
-- [最新更新](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [最新更新](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure 数据体系结构指南](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -58,7 +58,7 @@
           items:
             - name: 安装大数据工具
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: 安装 azdata
+            - name: 安装 Azure Data CLI
               items:
                 - name: 安装
                   href: azdata/install/deploy-install-azdata.md
@@ -196,7 +196,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: 部署和使用应用
           items:
-            - name: 使用 azdata 部署
+            - name: 使用 Azure Data CLI 进行部署
               href: big-data-cluster/app-create.md
             - name: 使用 VS Code 进行部署
               href: big-data-cluster/app-deployment-extension.md
@@ -402,9 +402,9 @@
               href: big-data-cluster/reference-config-master-instance.md
             - name: Apache Spark 和 Apache Hadoop
               href: big-data-cluster/reference-config-spark-hadoop.md
-        - name: azdata 参考
+        - name: Azure Data CLI 参考
           items:
-            - name: azdata
+            - name: Azure Data CLI
               items:
                 - name: azdata
                   href: azdata/reference/reference-azdata.md

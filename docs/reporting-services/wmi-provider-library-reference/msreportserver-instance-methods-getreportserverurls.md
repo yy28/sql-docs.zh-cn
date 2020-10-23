@@ -1,4 +1,5 @@
 ---
+description: GetReportServerUrls 方法 (WMI MSReportServer_Instance)
 title: GetReportServerUrls 方法 (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 06/09/2016
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3b3e0f7e521cd2a105a3cf093c0a179bd7306d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257520"
 ---
 # <a name="msreportserver_instance-methods---getreportserverurls"></a>MSReportServer_Instance 方法 - GetReportServerUrls
   返回用户可用于访问报表服务器和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL 列表。  
@@ -32,14 +33,14 @@ public void GetReportServerUrls(out string[] applicationName,
     out string[] URLs, out int length, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *ApplicationName[]*  
  一个包含安装的应用程序的数组。 值为 **ReportServerWebService** 或 **ReportServerWebApp**。  
   
  *URLs[]*  
  一个包含已成功注册的 URL 的数组。  
   
- *长度*  
+ *时长*  
  一个包含返回数组的长度的整数值。  
   
  *HRESULT*  
@@ -47,7 +48,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>返回值  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可通过 InvokeMethod 函数调用由 WMI 管理对象公开的方法。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI 文档中的“Executing Methods on Management Objects”（对管理对象执行方法）。  
   
 ## <a name="requirements"></a>要求  
