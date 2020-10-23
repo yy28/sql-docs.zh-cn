@@ -12,17 +12,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670656"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005796"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>将 Azure VM 配置为可用性组中的次要副本
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。  
-  
+
+>  [!IMPORTANT]  
+>  Azure 具有用于创建和处理资源的两个不同的部署模型：Resource Manager 和经典。 本文介绍如何使用经典部署模型。 Microsoft 建议大多数新部署使用资源管理器模型。 如果使用 Resource Manager 模型部署 Azure 虚拟机，则本文中的步骤不适用。   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果你从未向可用性组添加过任何可用性副本，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的“服务器实例”与“可用性组和副本”部分。  
@@ -47,6 +49,12 @@ ms.locfileid: "91670656"
  如果要允许“将副本添加到可用性组向导”管理数据库镜像端点，还需要 CONTROL ON ENDPOINT 权限。  
   
 ##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用“添加 Azure 副本向导”(SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  “添加 Azure 副本向导”仅支持使用经典部署模型创建的虚拟机。 新的虚拟机部署应使用较新的 Resource Manager 模型。 如果将虚拟机用于 Resource Manager，则必须使用 Transact-SQL 命令（此处未显示）手动添加辅助 Azure 副本。 此向导不适用于 Resource Manager 方案。 
+>
+>  “添加 Azure 副本向导”在 SQL Server Management Studio 的最新版本（版本 18.x 和 17.x）中不可用。
+        
  可以从 [“指定副本”页](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)启动“添加 Azure 副本向导”。 有两种方法可以打开此页：  
   
 -   [使用可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  

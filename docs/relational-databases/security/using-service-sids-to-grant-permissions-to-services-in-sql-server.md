@@ -8,16 +8,16 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868149"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175929"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服务 SID 授予对 SQL Server 中的服务的访问权限
 
-SQL Server 使用[每个服务的安全标识符 (SID)](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) 来允许直接授予对特定服务的访问权限。 SQL Server 使用此方法来授予对引擎和代理服务的访问权限（分别为 NT SERVICE\MSSQL$<InstanceName> 和 NT SERVICE\SQLAGENT$<InstanceName>）。 若使用此方法，这些服务只能在服务运行时访问数据库引擎。
+SQL Server 使用[每个服务的安全标识符 (SID)](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation)（也称为服务安全主体 (SID)）来允许直接授予对特定服务的访问权限。 SQL Server 使用此方法来授予对引擎和代理服务的访问权限（分别为 NT SERVICE\MSSQL$<InstanceName> 和 NT SERVICE\SQLAGENT$<InstanceName>）。 若使用此方法，这些服务只能在服务运行时访问数据库引擎。
 
 授予对其他服务的访问权限时，可以使用相同的方法。 使用服务 SID 可以消除管理和维护服务帐户的开销，并对授予系统资源的权限提供更严格、更精细的控制。
 
@@ -101,6 +101,35 @@ GO
 GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
+
+  > [!NOTE]
+  > 删除服务 SID 登录名或将其从 sysadmin 服务器角色中删除可能会导致连接到 SQL Server 数据库引擎的各种 SQL Server 组件出现问题。 一些问题如下：
+  > - SQL Server 代理无法启动或连接到 SQL Server 服务
+  > - SQL Server 安装程序遇到以下 Microsoft 知识库文章中所述的问题： https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  >
+  > 对于 SQL Server 的默认实例，可以通过使用以下 Transact-SQL 命令添加服务 SID 来纠正这种情况：
+  >
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLSERVERAGENT]
+  > ```
+  > 对于 SQL Server 的命名实例，可以使用以下 Transact-SQL 命令：
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQL$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQL$SQL2019]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLAgent$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
+  > 
+  > ```
+  > 在此示例中，`SQL2019` 是 SQL Server 的实例名称。
 
 ## <a name="next-steps"></a>后续步骤
 

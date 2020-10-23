@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725968"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006210"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725968"
 
 
 
-Azure SQL DW 上传任务  启用 SSIS 包，将表格数据从文件系统或 Azure Blob 存储复制到 Azure SQL 数据仓库 (DW)。
-该任务利用 PolyBase 来改进性能，如 [Azure SQL 数据仓库加载模式和策略](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)一文中所述。
+Azure SQL DW 上传任务启用 SSIS 包，将表格数据从文件系统或 Azure Blob 存储复制到 Azure Synapse Analytics (DW)。
+该任务利用 PolyBase 来改进性能，如 [Azure Synapse Analytics 加载模式和策略](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)一文中所述。
 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。
 当从文件系统复制时，数据首先将上传到 Azure Blob 存储进行暂存，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户。
 

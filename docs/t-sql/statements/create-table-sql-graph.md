@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688662"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005584"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE（SQL 图形）
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -117,7 +117,10 @@ CREATE TABLE
  创建边界表。  
  
  *table_constraint*   
- 指定添加到表中的 PRIMARY KEY、UNIQUE、FOREIGN KEY、CONNECTION constraint、CHECK 约束或 DEFAULT 定义的属性
+ 指定添加到表中的 PRIMARY KEY、UNIQUE、FOREIGN KEY、CONNECTION constraint、CHECK 约束或 DEFAULT 定义的属性。
+ 
+ > [!NOTE]   
+ > CONNECTION 约束仅适用于边缘表类型。
  
  ON { partition_scheme | filegroup | "default" }    
  指定存储表的分区架构或文件组。 如果指定了 partition_scheme，则该表将成为已分区表，其分区存储在 partition_scheme 所指定的一个或多个文件组的集合中。 如果指定了 filegroup，则该表将存储在已命名文件组中。 数据库中必须存在该文件组。 如果指定了 default，或者根本未指定 ON，则该表将存储在默认文件组中。 CREATE TABLE 中指定的表的存储机制以后不能进行更改。
@@ -125,7 +128,8 @@ CREATE TABLE
  ON {partition_scheme | filegroup | "default"}    
  也可在 PRIMARY KEY 约束或 UNIQUE 约束中指定。 这些约束会创建索引。 如果 filegroup 未指定，则索引会存储在已命名文件组中。 如果指定了 default，或者根本未指定 ON，则索引将与表存储在同一文件组中。 如果 PRIMARY KEY 约束或 UNIQUE 约束创建聚集索引，则表的数据页将与索引存储在同一文件组中。 如果指定了 CLUSTERED 或约束另外创建了聚集索引，并且指定的 partition_scheme 不同于表定义的 partition_scheme 或 filegroup，或反之，则只接受约束定义，而忽略其他定义。
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注
+
 不支持以节点或边界表的形式创建临时表。  
 
 不支持以临时表的形式创建节点或边界表。
@@ -163,6 +167,16 @@ CREATE TABLE
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+下一个示例建模了一条规则，即只有用户可以和其他用户进行联结，这意味着此边界不允许引用除人员之外的任何节点。
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

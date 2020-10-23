@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: f61e8a9cfab2de97ba21860833843609b50d934d
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 10/20/2020
+ms.openlocfilehash: b3363e9b5b8872d3a78d7c5c0fa7f70a80c8d6f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059243"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257359"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -35,39 +35,41 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行。
 
 ## <a name="get-azure-data-studio-for-windows"></a>获取适用于 Windows 的 Azure Data Studio
 
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
 此版本的 Azure Data Studio 包含标准 Windows Installer 体验和 .zip 文件。
 
 建议使用用户安装程序，因为它不需要管理员权限，可简化安装和升级。 用户安装程序不需要管理员权限，因为它位于用户本地的 AppData (LOCALAPPDATA) 文件夹下。 用户安装程序还提供更流畅的后台更新体验。 有关详细信息，请参阅 [Windows 用户设置](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)。
 
 **用户安装程序**（推荐）
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2145989)。
-2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
+1. 下载并运行[适用于 Windows 的 Azure Data Studio 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2145989)。
+2. 启动 Azure Data Studio 应用。
 
 **系统安装程序**
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2145990)。
-2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
+1. 下载并运行[适用于 Windows 的 Azure Data Studio 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2145990)。
+2. 启动 Azure Data Studio 应用。
 
 **zip 文件**
 
-1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2145864)。
+1. 下载[适用于 Windows 的 Azure Data Studio .zip](https://go.microsoft.com/fwlink/?linkid=2145864)。
 2. 浏览到下载文件并将其解压缩。
 3. `\azuredatastudio-windows\azuredatastudio.exe`运行
 
 ## <a name="get-azure-data-studio-for-macos"></a>获取适用于 macOS 的 Azure Data Studio
 
-1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2145865)。
+1. 下载[适用于 macOS 的 Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2145865)。
 2. 若要展开 zip 的内容，请双击。
 3. 若要使 Azure Data Studio 在启动板中可用，请将 Azure Data Studio.app 拖到“Applications”文件夹中  。
 
 ## <a name="get-azure-data-studio-for-linux"></a>获取适用于 Linux 的 Azure Data Studio
 
-1. 通过使用安装程序之一或 tar.gz 存档来下载适用于 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
+1. 通过使用安装程序之一或 tar.gz 存档来下载适用于 Linux 的 Azure Data Studio：
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866)
-1. 若要提取文件并启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，请打开一个新的终端窗口并键入以下命令：
+1. 若要提取文件并启动 Azure Data Studio，请打开一个新的终端窗口并键入以下命令：
 
    **Debian 安装：**
 
@@ -125,13 +127,7 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行。
 
 ## <a name="download-insiders-build-of-azure-data-studio"></a>下载 Azure Data Studio 的预览体验内部版本
 
-通常，用户应下载上述 Azure Data Studio 的稳定版本。 但是，如果用户希望试用 Beta 版功能并向我们提供反馈，可以下载 [Azure Data Studio 的预览体验内部版本。](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
-
-## <a name="uninstall-azure-data-studio"></a>卸载 Azure Data Studio
-
-如果使用 Windows 安装程序安装了 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，则卸载方式与删除任何 Windows 应用程序相同。
-
-如果使用 .zip 或其他存档安装了 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，则只需删除文件。
+通常，用户应下载上述 Azure Data Studio 的稳定版本。 但是，如果希望试用 Beta 版功能并发送反馈，可以下载 [Azure Data Studio 的预览体验内部版本。](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
 
 ## <a name="supported-operating-systems"></a>受支持的操作系统
 
@@ -172,19 +168,13 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行，并在以下平台�
 
 ## <a name="check-for-updates"></a>检查更新
 
-若要检查是否有最新更新，请单击窗口左下角的齿轮图标，然后单击“检查是否有更新”。
+若要检查是否有最新更新，请选择窗口左下角的齿轮图标，然后选择“检查是否有更新”。
 
-在脱机环境中，可以通过[直接在以前安装的版本上安装最新版本](#download-and-install-azure-data-studio)来应用更新。  不需要卸载旧版 Azure Data Studio，因为安装程序会更新当前安装的应用程序（若有）。
+脱机环境可以通过直接在以前安装的版本上[安装最新版本](#download-and-install-azure-data-studio)来应用更新。 不需要卸载 Azure Data Studio 的先前版本。 安装程序将更新当前安装的应用程序（如果有）。
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
 - 此版本的 Azure Data Studio 适用于所有[受支持的 SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本](https://support.microsoft.com/lifecycle?C2=1044)，并且支持与 Azure SQL 数据库和 Azure Synapse Analytics 中的最新云功能配合使用。 Azure Data Studio 还提供对 Azure SQL 托管实例的预览支持。
-
-## <a name="upgrade-from-sql-operations-studio"></a>从 SQL Operations Studio 升级
-
-如果用户仍在使用 SQL Operations Studio，则需要升级到 Azure Data Studio。 SQL Operations Studio 是 Azure Data Studio 的预览名称和预览版本。 2018 年 9 月，我们已[将该名称更改为 Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) 并发布了正式 (GA) 版本。 由于不再更新或支持 SQL Operations Studio，因此我们要求所有 SQL Operations Studio 用户下载最新版本的 Azure Data Studio 以获取最新功能、安全更新以及修补程序。
-
-从旧的预览版升级到最新 Azure Data Studio 时会丢失当前的设置和扩展。 若要迁移设置，请按照以下“移动用户设置”部分中的说明进行操作：
 
 ## <a name="move-user-settings"></a>移动用户设置
 
@@ -192,11 +182,11 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行，并在以下平台�
 
 如果已经拥有 Azure Data Studio，或从未安装或自定义过 SQL Operations Studio，可忽略此部分。
 
-1. 单击左下方的齿轮，然后单击“设置”，以打开设置。
+1. 选择左下方的齿轮，然后选择“设置”，以打开设置。
 
    ![编辑 Azure Data Studio 中的设置](./media/download/open-settings.png)
 
-2. 右键单击顶部的“用户设置”选项卡，然后单击“在资源管理器中显示”
+2. 右键单击顶部的“用户设置”选项卡，然后选择“在资源管理器中显示” 
 
    ![启动资将转到本地文件系统的源管理器](./media/download/reveal-in-explorer.png)
 
@@ -207,6 +197,43 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行，并在以下平台�
 4. 在新版 Azure Data Studio 中，执行步骤 1-2，然后在步骤 3 中将保存的内容粘贴到文件夹。 也可以在其各自位置上手动复制设置、键绑定或代码片段。
 
 5. 若要覆盖现有安装，请在安装之前删除旧安装目录，以避免连接到资源浏览器的 Azure 帐户时出错。
+
+## <a name="unattended-install-for-windows"></a>适用于 Windows 的无人参与安装
+
+还可以使用命令提示符脚本安装 Azure Data Studio。
+
+如果你使用 Windows 平台，并且想要在没有 GUI 提示的情况下在后台安装 Azure Data Studio，请执行以下步骤。
+
+1. 使用提升的权限启动命令提示符。
+
+2. 在命令提示符下键入以下命令。
+
+    ```console
+    <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    ```
+
+    示例：
+
+    ```console
+    %systemdrive%\azuredatastudio-windows-user-setup-1.23.0.exe /VERYSILENT /MERGETASKS=!runcode
+    ```
+
+    > [!Note]
+    > 该示例还适用于系统安装程序文件。
+    > 
+    > ```console
+    > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    > ```
+
+    你也可以传递 /SILENT 而不是 /VERYSILENT 来查看设置 UI 。
+
+3. 如果一切顺利，便可以看到 Azure Data Studio 安装成功。
+
+## <a name="uninstall-azure-data-studio"></a>卸载 Azure Data Studio
+
+如果使用 Windows 安装程序安装了 Azure Data Studio，则卸载方式与删除任何 Windows 应用程序相同。
+
+如果使用 .zip 或其他存档安装了 Azure Data Studio，则删除文件。
 
 ## <a name="next-steps"></a>后续步骤
 

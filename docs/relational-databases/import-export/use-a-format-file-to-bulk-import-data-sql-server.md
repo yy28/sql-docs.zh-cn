@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868052"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005578"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件批量导入数据 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "91868052"
   * SQLCHAR 或 SQLVARYCHAR（在客户端代码页或排序规则隐含的代码页中发送数据）
   * SQLNCHAR 或 SQLNVARCHAR（以 Unicode 格式发送数据）
   * SQLBINARY 或 SQLVARYBIN（不经任何转换即发送数据）。
-* Azure SQL 数据库和 Azure SQL 数据仓库仅支持 [bcp](../../tools/bcp-utility.md)。  有关其他信息，请参阅：
-  * [将数据载入 Azure SQL 数据仓库](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
-  * [将数据从 SQL Server 载入 Azure SQL 数据仓库（平面文件）](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+* Azure SQL 数据库和 Azure Synapse Analytics 仅支持 [bcp](../../tools/bcp-utility.md)。  有关其他信息，请参阅：
+  * [将数据加载到 Azure Synapse Analytics 中](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [将数据从 SQL Server 载入 Azure Synapse Analytics（平面文件）](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [迁移数据](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>示例测试条件

@@ -14,15 +14,15 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403265"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006294"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **MultiLineString** 是零个或多个 **geometry** 或 **geographyLineString** 实例的集合。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 实例  
@@ -45,7 +45,7 @@ ms.locfileid: "88403265"
 -   图 6 显示的是一个简单、闭合的 **MultiLineString** 实例。 它为闭合的是因为它的所有元素都是闭合的。 而其简单的原因在于，其所有元素都没有出现内部相交现象。  
   
 ### <a name="accepted-instances"></a>接受的实例  
- 为使 **MultiLineString** 实例可接受，它必须或者为空，或者仅由接受的 **LineString** 实例组成。 有关接受的 **LineString** 实例的详细信息，请参阅 [LineString](../../relational-databases/spatial/linestring.md)。 下面的示例显示接受的 **MultiLineString** 实例。  
+ 为使 MultiLineString 实例可接受，它必须或者为空，或者仅由接受的 LineString 实例组成。 有关接受的 **LineString** 实例的详细信息，请参阅 [LineString](../../relational-databases/spatial/linestring.md)。 下面的示例显示接受的 **MultiLineString** 实例。  
   
 ```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  

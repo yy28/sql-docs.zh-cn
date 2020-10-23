@@ -23,18 +23,18 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+author: XiaoyuMSFT
+ms.author: XiaoyuL
+ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227294"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098846"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 根据与源表联接的结果，对目标表运行插入、更新或删除操作。 例如，根据与另一个表的区别，在一个表中插入、更新或删除行，从而同步两个表。  
   
@@ -52,6 +52,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -96,9 +98,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## <a name="arguments"></a>参数
 
 WITH \<common_table_expression>  
@@ -212,6 +230,16 @@ DEFAULT VALUES
 指定图匹配模式。 有关此子句的参数的详细信息，请参阅 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## <a name="remarks"></a>备注
+>[!NOTE]
+> 在 Azure Synapse Analytics 中，MERGE 命令（预览）与 SQL Server 和 Azure SQL 数据库相比具有以下差异。  
+> - MERGE 更新操作实现为删除和插入对。 MERGE 更新的受影响的行计数包括删除的行和插入的行。 
+> - 此表描述了对具有不同分发类型的表的支持：
+
+>|Azure Synapse Analytics 中的 MERGE CLAUSE|支持的 TARGE 分发表| 支持的 SOURCE 分发表|评论|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH、ROUND_ROBIN、REPLICATE |所有分发类型||  
+>|**NOT MATCHED BY TARGET**|HASH |所有分发类型|使用 UPDATE/DELETE FROM…JOIN 来同步两个表。 |
+>|**NOT MATCHED BY SOURCE**|所有分发类型|所有分发类型|使用 UPDATE/DELETE FROM…JOIN 来同步两个表。||  
 
 必须指定三个 MATCHED 子句中的至少一个子句，但可以按任何顺序指定。 无法在同一个 MATCHED 子句中多次更新一个变量。  
   
@@ -224,7 +252,8 @@ MERGE 语句需要一个分号 (;) 作为语句终止符。 如果运行没有�
 在数据库兼容级别设置为 100 或更高时，MERGE 为完全保留的关键字。 MERGE 语句可用于设置为 90 和 100 的数据库兼容性级别；不过，当数据库兼容性级别设置为 90 时，关键字不是完全保留。  
   
 使用已排入队列的更新复制时，请勿使用 MERGE 语句。 MERGE 和已排入队列的更新触发器不兼容。 使用 insert 或 update 语句替换 **MERGE** 语句。  
-  
+
+
 ## <a name="trigger-implementation"></a>触发器的实现
 
 对于在 MERGE 语句中指定的每个插入、更新或删除操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会触发对目标表定义的任何对应 AFTER 触发器，但不保证哪个操作最先或最后触发触发器。 为相同操作定义的触发器会遵循您指定的顺序进行触发。 有关设置触发器激发顺序的详细信息，请参阅[指定第一个和最后一个触发器](../../relational-databases/triggers/specify-first-and-last-triggers.md)。  
@@ -483,9 +512,6 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. 使用 MERGE 对图形数据库中的目标边缘表执行 INSERT 或 UPDATE 操作
 
 在此示例中，创建节点表 `Person` 和 `City` 以及边缘表 `livesIn`。 如果 `Person` 和 `City` 之间尚不存在 `livesIn` 边缘，则对边缘使用 MERGE 语句，并插入新行。 如果已有边缘，只需更新 `livesIn` 边缘上的 StreetAddress 属性。
-
-> [!NOTE]
-> 以下示例适用范围：SQL Server（从 2019 版开始）。
 
 ```sql
 -- CREATE node and edge tables

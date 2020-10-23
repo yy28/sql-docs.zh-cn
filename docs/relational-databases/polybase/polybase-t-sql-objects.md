@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 2f52e71caddf2c2c7800e094ba3e40905a8d8833
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891337"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005711"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 参考
 
@@ -121,7 +121,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>为 Azure blob 存储创建外部表  
-适用对象：SQL Server（从 2016 版开始）、Azure SQL 数据仓库、并行数据仓库
+适用对象：SQL Server（从 2016 版开始）、Azure Synapse Analytics、并行数据仓库
 
 **1.创建数据库范围的凭据**  
 
@@ -196,7 +196,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>为 Azure Data Lake Store 创建外部表
-适用对象：Azure SQL 数据仓库
+适用对象：Azure Synapse Analytics
 
 有关详细信息，请参阅[使用 Azure Data Lake Store 加载](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 

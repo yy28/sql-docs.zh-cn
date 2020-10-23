@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818196"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005774"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
 
@@ -60,11 +60,11 @@ PolyBase 对以下 Microsoft SQL 产品提供这些相同功能：
 
 - SQL Server 2016 及更高版本（仅限 Windows）
 - 分析平台系统（旧称为“并行数据仓库”）
-- Azure SQL 数据仓库
+- Azure Synapse Analytics
 
 ### <a name="azure-integration"></a>Azure 集成
 
-借助 PolyBase 的基础帮助，T-SQL 查询还可以将数据导入和导出 Azure Blob 存储。 此外，借助 PolyBase，Azure SQL 数据仓库还可以将数据导入和导出 Azure Data Lake Store 和 Azure Blob 存储。
+借助 PolyBase 的基础帮助，T-SQL 查询还可以将数据导入和导出 Azure Blob 存储。 此外，借助 PolyBase，Azure Synapse Analytics 还可以将数据导入和导出 Azure Data Lake Store 和 Azure Blob 存储。
 
 ## <a name="why-use-polybase"></a>为什么要用 PolyBase？
 

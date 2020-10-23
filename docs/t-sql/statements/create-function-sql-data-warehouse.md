@@ -2,7 +2,7 @@
 description: CREATE FUNCTION (Azure Synapse Analytics)
 title: CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4dbe21949a1912eef8aad4de122a8b0a263eec7c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671160"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037050"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中创建用户定义函数。 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程。 返回值必须为标量（单个）值。 使用此语句可以创建可通过以下方式使用的重复使用的例程：  
+  在 [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中创建用户定义函数。 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，返回值必须是标量（单个）值。 在 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 中，CREATE FUNCTION 可以通过使用内联表值函数（预览）的语法来返回表，也可以通过使用标量函数的语法来返回单个值。 使用此语句可以创建可通过以下方式使用的重复使用的例程：  
   
 -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 SELECT）中  
   
@@ -36,12 +36,14 @@ ms.locfileid: "91671160"
   
 -   用于替换存储过程  
   
+-   使用内联函数作为安全策略的筛选器谓词  
+  
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -62,10 +64,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## <a name="arguments"></a>参数  
  *schema_name*  
@@ -105,6 +121,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  指定标量函数返回的标量值。  
+
+ select_stmt 适用范围：Azure Synapse Analytics  
+ 定义内联表值函数（预览）返回值的单个 SELECT 语句。
+
+ TABLE 适用范围：Azure Synapse Analytics  
+ 指定表值函数 (TVF) 的返回值为表。 只有常量和 @local_variables 可以传递到 TVF。
+
+ 在内联 TVF（预览）中，TABLE 返回值通过单个 SELECT 语句定义。 内联函数没有关联的返回变量。
   
  **\<function_option>::=** 
   
@@ -140,13 +164,15 @@ RETURNS return_data_type
 -   在您创建函数时指定 WITH SCHEMABINDING 子句。 这确保除非也修改了函数，否则无法修改在函数定义中引用的对象。  
   
 ## <a name="interoperability"></a>互操作性  
- 下列语句在函数内有效：  
+ 下列语句在标量值函数中有效：  
   
 -   赋值语句。  
   
 -   TRY...CATCH 语句以外的流控制语句。  
   
 -   定义本地数据变量的 DECLARE 语句。  
+
+在内联表值函数（预览）中，只允许使用单个 SELECT 语句。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  用户定义函数不能用于执行修改数据库状态的操作。  
@@ -193,6 +219,45 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## <a name="examples-sssdwfull"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### <a name="a-creating-an-inline-table-valued-function-preview"></a>A. 创建内联表值函数（预览）
+ 下面的示例创建一个内联表值函数，以返回按 `objectType` 参数筛选的模块的某些关键信息。 它包含一个默认值，以在使用 DEFAULT 参数调用函数时返回所有模块。 此示例使用[元数据](#metadata)中提到的一些系统目录视图。
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+然后，可以调用该函数以返回所有视图 (V) 对象：
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. 合并内联表值函数（预览）的结果
+ 这个简单的示例使用以前创建的内联 TVF 来演示如何使用 CROSS APPLY 将其结果与其他表合并。 在这里，我们选择了 sys.objects 中的所有列，以及“类型”列上匹配的所有行的 `ModulesByType` 结果。 有关使用 APPLY 的详细信息，请参阅 [FROM 子句以及 JOIN、APPLY、PIVOT](../../t-sql/queries/from-transact-sql.md)。
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   

@@ -14,15 +14,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455389"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006305"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **LineString** 是一个一维对象，表示一系列点和连接这些点的线段。  
   
 ## <a name="linestring-instances"></a>LineString 实例  
@@ -58,10 +58,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
-必须满足以下条件， **LineString** 实例才是有效的。  
+必须满足以下条件，LineString 实例才是有效的。  
   
 1.  **LineString** 实例必须是已接受的实例。  
-2.  如果 **LineString** 实例不为空，则它必须包含至少两个非重复点。  
+2.  如果 LineString 实例不为空，则它必须包含至少两个非重复点。  
 3.  在两个或更多连续点的间隔范围内， **LineString** 实例不能自身重叠。  
   
 以下是有效的 **LineString** 实例。  

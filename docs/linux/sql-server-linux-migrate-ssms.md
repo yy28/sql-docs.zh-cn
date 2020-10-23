@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f83f95fa17e99c20754bbde9d1d4a7fb388df74b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887839"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115680"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>使用 Windows 上的 SSMS 或 SqlPackage.exe 在 Linux 上导出和导入数据库
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-本文章说明如何使用 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 和 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 在 Linux 的 SQL Server 上导出和导入数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用此方法。
+本文章说明如何使用 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 和 [SqlPackage.exe](../tools/sqlpackage.md) 在 Linux 的 SQL Server 上导出和导入数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用此方法。
 
 应始终安装和使用最新版本的 SQL Server Management Studio (SSMS)，如[使用 Windows 上的 SSMS 连接到 Linux 上的 SQL Server](sql-server-linux-manage-ssms.md) 中所述
 
@@ -32,7 +32,7 @@ ms.locfileid: "85887839"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. 在对象资源管理器中连接到源数据库。 源数据库可以位于在本地或云中、在 Linux、Windows 或 Docker 上以及在 Azure SQL 数据库或 Azure SQL 数据仓库中运行的 Microsoft SQL Server 中。
+2. 在对象资源管理器中连接到源数据库。 源数据库可以位于在本地或云中、在 Linux、Windows 或 Docker 上以及在 Azure SQL 数据库或 Azure Synapse Analytics 中运行的 Microsoft SQL Server 中。
 
 3. 在对象资源管理器中右键单击源数据库，指向“任务”，然后单击“导出数据层应用程序...”  
 
@@ -50,7 +50,7 @@ ms.locfileid: "85887839"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. 在对象资源管理器中连接到目标服务器。 目标服务器可以是在本地或云中、在 Linux、Windows 或 Docker 上以及在 Azure SQL 数据库或 Azure SQL 数据仓库中运行的 Microsoft SQL Server。
+2. 在对象资源管理器中连接到目标服务器。 目标服务器可以是在本地或云中、在 Linux、Windows 或 Docker 上以及在 Azure SQL 数据库或 Azure Synapse Analytics 中运行的 Microsoft SQL Server。
 
 3. 在对象资源管理器中右键单击“数据库”文件夹，然后单击“导入数据层应用程序...”  
 
@@ -64,7 +64,7 @@ ms.locfileid: "85887839"
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage 命令行选项
 
-还可以使用 SQL Server Data Tools (SSDT) 命令行工具 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 来导出和导入 BACPAC 文件。
+还可以使用 SQL Server Data Tools (SSDT) 命令行工具 [SqlPackage.exe](../tools/sqlpackage.md) 来导出和导入 BACPAC 文件。
 
 下面的示例命令导出 BACPAC 文件：
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>另请参阅
-有关如何使用 SSMS 的详细信息，请参阅[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)。 有关 SqlPackage.exe 的详细信息，请参阅 [SqlPackage 参考文档](https://msdn.microsoft.com/library/hh550080.aspx)。
+有关如何使用 SSMS 的详细信息，请参阅[使用 SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)。 有关 SqlPackage.exe 的详细信息，请参阅 [SqlPackage 参考文档](../tools/sqlpackage.md)。

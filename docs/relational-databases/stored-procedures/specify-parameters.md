@@ -16,12 +16,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb9b80387573d0145c6510d9377ac959939dd536
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 1e101fe01c421dbd75b7d0426f13539fb0688e3d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332322"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005859"
 ---
 # <a name="specify-parameters"></a>指定参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GO
 >  如果默认值是包含嵌入空格或标点符号的字符串，或者以数字开头（例如，6xxx），那么该默认值必须用直的单引号引起来。  
 
 > [!NOTE] 
-> Azure SQL 数据仓库或并行数据仓库中不支持默认参数。 
+> Azure Synapse Analytics 或并行数据仓库中不支持默认参数。 
   
  如果没有合适的值可以指定为参数的默认值，则指定 NULL 为默认值。 如果在未提供参数值的情况下执行过程，最好让过程返回自定义的消息。  
   

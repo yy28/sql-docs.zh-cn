@@ -21,12 +21,12 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbb4c1c7df2e06d1e3740e401a3c9304aa0beb3a
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 4fcb156d48e619a0d5ac399bf4c04a91720d3f0d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226914"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196611"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91226914"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DECLARE   
@@ -74,8 +74,8 @@ See CREATE TABLE for index option syntax.
   
 ```  
   
-```  
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+
+-- Azure Synapse Analytics 和并行数据仓库的语法  
   
 DECLARE   
 {{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]  
@@ -84,133 +84,133 @@ DECLARE
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## <a name="arguments"></a>参数
-@local_variable  
- 变量的名称。 变量名必须以 at 符 (@) 开头。 局部变量名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
+## Arguments
+@*local_variable*  
+ Is the name of a variable. Variable names must begin with an at (@) sign. Local variable names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-data_type  
- 任何系统提供的公共语言运行时 (CLR) 用户定义表类型或别名数据类型。 变量的数据类型不能为 text、ntext 或 image  。  
+*data_type*  
+ Is any system-supplied, common language runtime (CLR) user-defined table type, or alias data type. A variable cannot be of **text**, **ntext**, or **image** data type.  
   
- 有关系统数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 有关 CLR 用户定义类型或别名数据类型的详细信息，请参阅 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)。  
+ For more information about system data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). For more information about CLR user-defined types or alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
- =value  
- 以内联方式为变量赋值。 值可以是常量或表达式，但它必须与变量声明类型匹配，或者可隐式转换为该类型。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ =*value*  
+ Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-@cursor_variable_name  
- cursor 变量的名称。 游标变量名称必须以 at 符 (@) 开头，并符合有关标识符的规则。  
+@*cursor_variable_name*  
+ Is the name of a cursor variable. Cursor variable names must begin with an at (@) sign and conform to the rules for identifiers.  
   
 CURSOR  
- 指定变量是局部游标变量。  
+ Specifies that the variable is a local cursor variable.  
   
-@table_variable_name  
- 表类型的变量的名称。 变量名称必须以 at 符 (@) 开头，并符合有关标识符的规则。  
+@*table_variable_name*  
+ Is the name of a variable of type **table**. Variable names must begin with an at  (@) sign and conform to the rules for identifiers.  
   
 <table_type_definition>  
-定义表数据类型。 表声明包括列定义、名称、数据类型和约束。 允许的约束类型只包括 PRIMARY KEY、UNIQUE、NULL 和 CHECK。 如果类型绑定了规则或默认定义，则不能将别名数据类型用作列标量数据类型。
+Defines the **table** data type. The table declaration includes column definitions, names, data types, and constraints. The only constraint types allowed are PRIMARY KEY, UNIQUE, NULL, and CHECK. An alias data type cannot be used as a column scalar data type if a rule or default definition is bound to the type.
   
-\<table_type_definiton> 是在 CREATE TABLE 中用于定义表的信息子集。 其中包含了元素和主要定义。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。  
+\<table_type_definiton>
+Is a subset of information used to define a table in CREATE TABLE. Elements and essential definitions are included here. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- 指示可以指定多个变量并对变量赋值的占位符。 声明表变量时，表变量必须是 DECLARE 语句中声明的唯一变量 。  
+ Is a placeholder indicating that multiple variables can be specified and assigned values. When declaring **table** variables, the **table** variable must be the only variable being declared in the DECLARE statement.  
   
- column_name  
- 表中的列的名称。  
+ *column_name*  
+ Is the name of the column in the table.  
   
- scalar_data_type  
- 指定列是标量数据类型。  
+ *scalar_data_type*  
+ Specifies that the column is a scalar data type.  
   
- computed_column_expression  
- 定义计算列值的表达式。 计算列由同一表中的其他列通过表达式计算而得。 例如，计算列可以定义为 cost、AS、price \* qty 。表达式可以是非计算列名称、常量、内置函数、变量，也可以是用一个或多个运算符连接的上述元素的任意组合。 表达式不能为子查询或用户定义函数。 表达式不能引用 CLR 用户定义类型。  
+ *computed_column_expression*  
+ Is an expression defining the value of a computed column. It is computed from an expression using other columns in the same table. For example, a computed column can have the definition **cost** AS **price \* qty**. The expression can be a noncomputed column name, constant, built-in function, variable, or any combination of these connected by one or more operators. The expression cannot be a subquery or a user-defined function. The expression cannot reference a CLR user-defined type.  
   
- [ COLLATE collation_name]  
- 指定列的排序规则。 collation_name 可以是 Windows 排序规则名称或 SQL 排序规则名称。只适用于 char、varchar、text、nchar、nvarchar 和 ntext 等数据类型列     。 如果未指定，则该列的排序规则是用户定义数据类型的排序规则（如果列为用户定义数据类型）或当前数据库的排序规则。  
+ [ COLLATE *collation_name*]  
+ Specifies the collation for the column. *collation_name* can be either a Windows collation name or an SQL collation name, and is applicable only for columns of the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types. If not specified, the column is assigned either the collation of the user-defined data type (if the column is of a user-defined data type) or the collation of the current database.  
   
- 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)。  
+ For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
- 如果在插入过程中未显式提供值，则指定为列提供的值。 DEFAULT 定义可适用于除定义为 timestamp 或带 IDENTITY 属性的列以外的任何列。 删除表时，将删除 DEFAULT 定义。 只有常量值（如字符串）、系统函数（如 SYSTEM_USER()）或 NULL 可用作默认参数。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。  
+ Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp** or those with the IDENTITY property. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a system function, such as a SYSTEM_USER(); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
   
- constant_expression  
- 用作列的默认值的常量、NULL 或系统函数。  
+ *constant_expression*  
+ Is a constant, NULL, or a system function used as the default value for the column.  
   
  IDENTITY  
- 指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、decimal(p,0) 或 numeric(p,0) 列    。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
+ Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a unique incremental value for the column. Identity columns are commonly used in conjunction with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the seed and increment, or neither. If neither is specified, the default is (1,1).  
   
- seed  
- 是装入表的第一行所使用的值。  
+ *seed*  
+ Is the value used for the very first row loaded into the table.  
   
- increment  
- 添加到以前装载的列标识值的增量值。  
+ *increment*  
+ Is the incremental value added to the identity value of the previous row that was loaded.  
   
  ROWGUIDCOL  
- 指示新列是行的全局唯一标识符列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列。  
+ Indicates that the new column is a row global unique identifier column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column.  
   
  NULL | NOT NULL  
- 指示变量中是否允许使用 Null。 默认值为 NULL。  
+ Indicates if null is allowed in the variable. The default is NULL.  
   
  PRIMARY KEY  
- 通过唯一索引对给定的一列或多列强制实现实体完整性的约束。 每个表只能创建一个 PRIMARY KEY 约束。  
+ Is a constraint that enforces entity integrity for a given column or columns through a unique index. Only one PRIMARY KEY constraint can be created per table.  
   
  UNIQUE  
- 通过唯一索引为给定的一列或多列提供实体完整性的约束。 一个表可以有多个 UNIQUE 约束。  
+ Is a constraint that provides entity integrity for a given column or columns through a unique index. A table can have multiple UNIQUE constraints.  
   
  CHECK  
- 一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。  
+ Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns.  
   
- logical_expression  
- 返回 TRUE 或 FALSE 的逻辑表达式。  
+ *logical_expression*  
+ Is a logical expression that returns TRUE or FALSE.  
   
-## <a name="remarks"></a>备注  
- 变量常用在批处理或过程中，作为 WHILE、LOOP 或 IF...ELSE 块的计数器。  
+## Remarks  
+ Variables are often used in a batch or procedure as counters for WHILE, LOOP, or for an IF...ELSE block.  
   
- 变量只能用在表达式中，不能代替对象名或关键字。 若要构造动态 SQL 语句，请使用 EXECUTE。  
+ Variables can be used only in expressions, not in place of object names or keywords. To construct dynamic SQL statements, use EXECUTE.  
   
- 局部变量的作用域是其被声明时所在批处理。  
+ The scope of a local variable is the batch in which it is declared.  
  
- 表变量不一定是内存驻留。 在内存压力下，可以将属于表变量的页推送到 tempdb。
+ A table variable is not necessarily memory resident. Under memory pressure, the pages belonging to a table variable can be pushed out to tempdb.
   
- 当前分配有游标的游标变量可在下列语句中作为源引用：  
+ A cursor variable that currently has a cursor assigned to it can be referenced as a source in a:  
   
--   CLOSE 语句。  
+-   CLOSE statement.  
   
--   DEALLOCATE 语句。  
+-   DEALLOCATE statement.  
   
--   FETCH 语句。  
+-   FETCH statement.  
   
--   OPEN 语句。  
+-   OPEN statement.  
   
--   定位的 DELETE 或 UPDATE 语句。  
+-   Positioned DELETE or UPDATE statement.  
   
--   SET CURSOR 变量语句（在右侧）。  
+-   SET CURSOR variable statement (on the right side).  
   
- 在所有上述语句中，如果存在被引用的游标变量，但是不具有当前分配给它的游标，那么 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将引发错误。 如果不存在被引用的游标变量，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将引发与其他类型的未声明变量引发的错误相同的错误。  
+ In all of these statements, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error if a referenced cursor variable exists but does not have a cursor currently allocated to it. If a referenced cursor variable does not exist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises the same error raised for an undeclared variable of another type.  
   
- 游标变量：  
+ A cursor variable:  
   
--   可以是游标类型或其他游标变量的目标。 有关详细信息，请参阅 [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)。  
+-   Can be the target of either a cursor type or another cursor variable. For more information, see [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
--   如果当前没有给游标变量分配游标，则可在 EXECUTE 语句中作为输出游标参数的目标引用。  
+-   Can be referenced as the target of an output cursor parameter in an EXECUTE statement if the cursor variable does not have a cursor currently assigned to it.  
   
--   应被看作是指向游标的指针。  
+-   Should be regarded as a pointer to the cursor.  
   
-## <a name="examples"></a>示例  
+## Examples  
   
-### <a name="a-using-declare"></a>A. 使用 DECLARE  
- 下例将使用名为 `@find` 的局部变量检索所有姓氏以 `Man` 开头的联系人信息。  
+### A. Using DECLARE  
+ The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @find varchar(30);   
+DECLARE @find VARCHAR(30);   
 /* Also allowed:   
-DECLARE @find varchar(30) = 'Man%';   
+DECLARE @find VARCHAR(30) = 'Man%';   
 */  
 SET @find = 'Man%';   
 SELECT p.LastName, p.FirstName, ph.PhoneNumber  
 FROM Person.Person AS p   
 JOIN Person.PersonPhone AS ph ON p.BusinessEntityID = ph.BusinessEntityID  
 WHERE LastName LIKE @find;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -228,12 +228,12 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 ### <a name="b-using-declare-with-two-variables"></a>B. 在 DECLARE 中使用两个变量  
  下例将检索北美销售区中年销售额至少为 $2,000,000 的 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 销售代表的名字。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT ON;  
 GO  
-DECLARE @Group nvarchar(50), @Sales money;  
+DECLARE @Group nvarchar(50), @Sales MONEY;  
 SET @Group = N'North America';  
 SET @Sales = 2000000;  
 SET NOCOUNT OFF;  
@@ -245,14 +245,14 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ### <a name="c-declaring-a-variable-of-type-table"></a>C. 声明一个表类型的变量  
  下例将创建一个 `table` 变量，用于储存 UPDATE 语句的 OUTPUT 子句中指定的值。 在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。 请注意，`INSERTED.ModifiedDate` 列中的结果与 `Employee` 表的 `ModifiedDate` 列中的值不同。 这是因为对 `AFTER UPDATE` 表定义了 `ModifiedDate` 触发器，该触发器可以将 `Employee` 的值更新为当前日期。 不过，从 `OUTPUT` 返回的列可反映触发器激发之前的数据。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE(  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
+    ModifiedDate DATETIME);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25   
 OUTPUT INSERTED.BusinessEntityID,  
@@ -275,7 +275,7 @@ GO
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. 声明一个用户定义表类型的变量  
  下面的示例将创建一个名为 `@LocationTVP` 的表值参数或表变量。 这需要使用一个相应的名为 `LocationTableType` 的用户定义表类型。 有关如何创建用户定义表类型的详细信息，请参阅 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)。 有关表值参数的详细信息，请参阅[使用表值参数（数据引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
-```  
+```sql  
 DECLARE @LocationTVP   
 AS LocationTableType;  
 ```  
@@ -285,12 +285,12 @@ AS LocationTableType;
 ### <a name="e-using-declare"></a>E. 使用 DECLARE  
  下例将使用名为 `@find` 的局部变量检索所有姓氏以 `Walt` 开头的联系人信息。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @find varchar(30);  
+DECLARE @find VARCHAR(30);  
 /* Also allowed:   
-DECLARE @find varchar(30) = 'Man%';  
+DECLARE @find VARCHAR(30) = 'Man%';  
 */  
 SET @find = 'Walt%';  
   
@@ -302,10 +302,10 @@ WHERE LastName LIKE @find;
 ### <a name="f-using-declare-with-two-variables"></a>F. 在 DECLARE 中使用两个变量  
  以下示例检索使用变量来指定 `DimEmployee` 表中的第一个和最后一个雇员名称。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @lastName varchar(30), @firstName varchar(30);  
+DECLARE @lastName VARCHAR(30), @firstName VARCHAR(30);  
   
 SET @lastName = 'Walt%';  
 SET @firstName = 'Bryan';  

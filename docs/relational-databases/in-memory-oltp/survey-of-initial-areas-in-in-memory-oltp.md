@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866680"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005677"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 
@@ -72,8 +72,8 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
 有两种主要方案：  
   
 - “批操作分析” 是指在工作时间后运行或在具有事务数据副本的辅助硬件上运行的聚合进程。  
-  - [Azure SQL 数据仓库](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 也与批操作分析相关。  
-- “实时操作分析” 是指工作时间内在用于事务工作负荷的主硬件上运行的聚合进程。  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 也与批操作分析相关。  
+- “实时操作分析”是指工作时间内在用于事务工作负载的主硬件上运行的聚合进程。  
   
   
 本文重点介绍 OLTP，而不是介绍相关分析。 有关列存储索引如何将分析引入 SQL 的信息，请参阅：  
@@ -103,8 +103,8 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
 
 #### <a name="defragment-a-columnstore-index"></a>对列存储索引进行碎片整理
 
-1. [Columnstore Index Defragmentation using REORGANIZE Command](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
-2. [Columnstore Index Merge Policy for REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
+1. [使用 REORGANIZE 命令的列存储索引碎片整理](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [REORGANIZE 的列存储索引合并策略](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>批量导入数据
 

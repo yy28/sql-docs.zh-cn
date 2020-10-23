@@ -1,6 +1,6 @@
 ---
-title: 使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据仓库中 | Microsoft Docs
-description: 介绍如何创建 SQL Server Integration Services (SSIS) 包，以将数据从各种数据源移到 Azure SQL 数据仓库。
+title: 使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure Synapse Analytics | Microsoft Docs
+description: 介绍如何创建 SQL Server Integration Services (SSIS) 包，将数据从各种数据源移到 Azure Synapse Analytics。
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,20 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 317a17d667c9c09009c3fcbd9bab6565108110ad
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943199"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192497"
 ---
-# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据仓库中
+# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure Synapse Analytics
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-创建 SQL Server Integration Services (SSIS) 包，以将数据加载到 [Azure SQL 数据仓库](/azure/sql-data-warehouse/index)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
+创建 SQL Server Integration Services (SSIS) 包，将数据加载到 [Azure Synapse Analytics](/azure/sql-data-warehouse/index)。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
 
 本文演示如何完成以下操作：
 
@@ -46,7 +46,7 @@ SQL Server Integration Services (SSIS) 是一组灵活的工具，提供多种�
 
 1. 可实现最佳性能的首选方法是创建一个使用 [Azure SQL DW 上传任务](control-flow/azure-sql-dw-upload-task.md)的包来加载数据。 此任务会封装源和目标信息。 它假定源数据本地存储在带分隔符的文本文件中。
 
-2. 或者，也可以创建一个使用数据流任务（包含源和目标）的包。 此方法支持各种数据源，包括 SQL Server 和 Azure SQL 数据仓库。
+2. 或者，也可以创建一个使用数据流任务（包含源和目标）的包。 此方法支持各种数据源，包括 SQL Server 和 Azure Synapse Analytics。
 
 ## <a name="prerequisites"></a>必备条件
 若要逐步完成本教程，需要以下各项：
@@ -54,7 +54,7 @@ SQL Server Integration Services (SSIS) 是一组灵活的工具，提供多种�
 1. **SQL Server Integration Services (SSIS)** 。 SSIS 是 SQL Server 的一个组件，需要 SQL Server 的许可版、开发人员版或评估版。 要获取 SQL Server 评估版，请参阅[评估 SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)。
 2. Visual Studio（可选）。 要获取免费的 Visual Studio Community Edition，请参阅 [Visual Studio Community][Visual Studio Community]。 如果不想安装 Visual Studio，可以只安装 SQL Server Data Tools (SSDT)。 SSDT 安装的 Visual Studio 版本功能有限。
 3. **适用于 Visual Studio 的 SQL Server Data Tools (SSDT)** 。 要获取适用于 Visual Studio 的 SQL Server Data Tools，请参阅[下载 SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)]。
-4. **Azure SQL 数据仓库数据库和权限**。 本教程将连接到 SQL 数据仓库实例并向其中加载数据。 必须具有连接、创建表和加载数据的权限。
+4. Azure Synapse Analytics 数据库和权限。 本教程将连接到 SQL 数据仓库实例并向其中加载数据。 必须具有连接、创建表和加载数据的权限。
 
 ## <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目
 1. 启动 Visual Studio。
@@ -80,7 +80,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 - [用于 Azure 的 Microsoft SQL Server Integration Services 功能包][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。 SQL DW 上传任务是功能包的组件。
 
-- [Azure Blob 存储](https://docs.microsoft.com/azure/storage/)帐户。 SQL DW 上传任务将数据从 Azure Blob 存储加载到 Azure SQL 数据仓库中。 可以加载 Blob 存储中的现有文件，也可以加载计算机中的文件。 如果选择计算机中的文件，则 SQL DW 上传任务会首先将它们上传到 Blob 存储进行暂存，然后再将它们加载到 SQL 数据仓库中。
+- [Azure Blob 存储](/azure/storage/)帐户。 SQL DW 上传任务将数据从 Azure Blob 存储加载到 Azure Synapse Analytics 中。 可以加载 Blob 存储中的现有文件，也可以加载计算机中的文件。 如果选择计算机中的文件，则 SQL DW 上传任务会首先将它们上传到 Blob 存储进行暂存，然后再将它们加载到 SQL 数据仓库中。
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>添加和配置 SQL DW 上传任务
 
@@ -98,11 +98,11 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 1. 使用 Azure Blob 上载任务可在 Azure Blob 存储中暂存数据。 若要获取 Azure Blob 上传任务，请下载[用于 Azure 的 Microsoft SQL Server Integration Services 功能包][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。
 
-2. 然后使用 SSIS 执行 SQL 任务，以启动 PolyBase 脚本，将数据加载到 SQL 数据仓库中。 有关将数据从 Azure Blob 存储加载到 SQL 数据仓库（不使用 SSIS）的示例，请参阅[教程：将数据加载到 Azure SQL 数据仓库](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)。
+2. 然后使用 SSIS 执行 SQL 任务，以启动 PolyBase 脚本，将数据加载到 SQL 数据仓库中。 有关将数据从 Azure Blob 存储加载到 SQL 数据仓库（不使用 SSIS）的示例，请参阅[教程：将数据加载到 Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw)。
 
 ## <a name="option-2---use-a-source-and-destination"></a>选项 2 - 使用源和目标
 
-第二种方法为典型包，它使用源和目标的数据流任务。 此方法支持各种数据源，包括 SQL Server 和 Azure SQL 数据仓库。
+第二种方法为典型包，它使用源和目标的数据流任务。 此方法支持各种数据源，包括 SQL Server 和 Azure Synapse Analytics。
 
 本教程使用 SQL Server 作为数据源。 SQL Server 可在本地或 Azure 虚拟机上运行。
 
@@ -171,7 +171,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 1. 双击目标适配器，打开“ADO.NET 目标编辑器”。
    
     ![ADO.NET 目标编辑器的屏幕截图。 “连接管理器”选项卡可见，其中包含用于配置数据流属性的控件。][11]
-2. 在“ADO.NET 目标编辑器”的“连接管理器”选项卡上，单击“连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于 Azure SQL 数据仓库数据库的连接设置，本教程将向该数据库加载数据    。
+2. 在“ADO.NET 目标编辑器”的“连接管理器”选项卡上，单击“连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于 Azure Synapse Analytics 数据库的连接设置，本教程将向该数据库加载数据。
 3. 在“配置 ADO.NET 连接管理器”对话框中，单击“新建”按钮，打开“连接管理器”对话框并创建新的数据连接  。
 4. 在“连接管理器”对话框中，执行以下操作。
    1. 对于“提供程序”，请选择 SqlClient 数据提供程序。
@@ -189,7 +189,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
    
    1. 将目标表的名称更改为 SalesOrderDetail。
    2. 删除 rowguid 列。 SQL 数据仓库不支持 uniqueidentifier 数据类型。
-   3. 将 LineTotal 列的数据类型更改为 money 。 SQL 数据仓库不支持 decimal 数据类型。 有关受支持数据类型的信息，请参阅 [CREATE TABLE（Azure SQL 数据仓库、并行数据仓库）][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]。
+   3. 将 LineTotal 列的数据类型更改为 money 。 SQL 数据仓库不支持 decimal 数据类型。 有关受支持数据类型的信息，请参阅 [CREATE TABLE（Azure Synapse Analytics、并行数据仓库）][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]。
       
        ![“创建表”对话框的屏幕截图，其中包含用于创建名为 SalesOrderDetail 的表的代码，并将 LineTotal 指定为 money 列而不是 rowguid 列。][12b]
    4. 单击“确定”创建表格并返回“ADO.NET 目标编辑器” 。
@@ -211,7 +211,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 ![显示源和目标适配器的屏幕截图。 每个适配器上都有绿色的复选标记，并且它们之间的文本为“121317 行”。][15]
 
-祝贺你！ 已成功使用 SQL Server Integration Services 将数据加载到 Azure SQL 数据仓库。
+祝贺你！ 已成功使用 SQL Server Integration Services 将数据加载到 Azure Synapse Analytics。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -242,7 +242,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 <!-- MSDN references -->
 [PolyBase Guide]: ../relational-databases/polybase/polybase-guide.md
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
-[CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
+[CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
 [Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md

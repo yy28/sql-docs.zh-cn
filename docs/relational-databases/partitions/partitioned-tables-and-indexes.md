@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891007"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005998"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为可以选择分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在默认情况下支持多达 15,000 个分区。 在早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，默认情况下，分区数限制为 1000 个。 在基于 x86 的系统上，可以创建具有超过 1000 个分区的表或索引，但不支持这样做。  
@@ -40,9 +40,12 @@ ms.locfileid: "91891007"
   
 -   您可以根据经常执行的查询类型和硬件配置，提高查询性能。 例如，在分区依据列与表联接的列相同时，查询优化器可以更快地处理两个或多个已分区表之间的相等联接查询。 有关详细信息，请参阅下面的[查询](#queries)。
   
-当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 针对 I/O 操作执行数据排序时，它会首先按分区对数据进行排序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次访问一个驱动器，这样可能会降低性能。 为了提高数据排序性能，可以通过设置 RAID 将多个磁盘中的分区数据文件条带化。 这样一来，尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍按分区对数据进行排序，但它可以同时访问每个分区的所有驱动器。  
+当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 针对 I/O 操作执行数据排序时，它会首先按分区对数据进行排序。 为了提高数据排序性能，可以通过设置 RAID 将多个磁盘中的分区数据文件条带化。 这样一来，尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍按分区对数据进行排序，但它可以同时访问每个分区的所有驱动器。  
   
 此外，您可以通过对在分区级别而不是整个表启用锁升级来提高性能。 这可以减少表上的锁争用。 若要通过允许对分区进行锁升级来减少锁争用，请将 `ALTER TABLE` 语句的 `LOCK_ESCALATION` 选项设置为“自动”。 
+
+> [!TIP]
+> 可以将表或索引的分区置于一个文件组（例如 `PRIMARY` 文件组）或多个文件组上。 使用分层存储时，可以使用多个文件组将特定分区分配给特定存储层。 所有其他分区权益均适用，无需考虑使用的文件组数量或特定文件组上的分区位置。
   
 ## <a name="components-and-concepts"></a>组件和概念  
 以下术语适用于表和索引分区。  
@@ -114,6 +117,8 @@ ms.locfileid: "91891007"
 -  定义了相同数量的分区。
 -  定义了相同的分区边界值。
 这样一来，查询优化器就可以更快地处理联接，因为分区可以自行联接。 如果查询联接的是联接字段未并置或未分区的两个表，则分区的出现实际上会降低而不是提高查询处理速度。
+
+有关查询处理中的分区处理的详细信息，请参阅[关于已分区表和索引的查询处理增强功能](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes)。
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>已分区索引操作期间统计信息计算中的行为更改  
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 在升级具有已分区索引的数据库后，您可以在直方图数据中注意到针对这些索引的差异。 此行为更改可能不会影响查询性能。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS` 以及 `FULLSCAN` 子句。  

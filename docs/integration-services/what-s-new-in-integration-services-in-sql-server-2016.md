@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480818"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193725"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 
@@ -112,7 +112,7 @@ ms.locfileid: "89480818"
         
         -   [发布了对 Azure Data Lake Store 的支持](#datalakestore)
         
-        -   [发布了对 Azure SQL 数据仓库的支持](#sqldwupload)
+        -   [发布了对 Azure Synapse Analytics 的支持](#sqldwupload)
   
 -   **易用性和工作效率**  
   
@@ -309,7 +309,7 @@ ms.locfileid: "89480818"
 
 最新版本的 Azure 功能包包括连接管理器、源和目标，以便在 Azure Data Lake Store 中移出或移入数据。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
-#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a> 发布了对 Azure SQL 数据仓库的支持
+#### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> 发布了对 Azure Synapse Analytics 的支持
 
 最新版本的 Azure 功能包包括 Azure SQL DW 上传任务，用于为 SQL 数据仓库填充数据。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
@@ -376,4 +376,4 @@ ms.locfileid: "89480818"
 
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)   
- [SQL Server 2016 的各版本和支持的功能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [SQL Server 2016 的各版本和支持的功能](../sql-server/editions-and-components-of-sql-server-2016.md)

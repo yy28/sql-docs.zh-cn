@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088867"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115838"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>使用 SSIS 在 Linux 上提取、转换和加载数据
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088867"
 
 本文介绍如何在 Linux 上运行 SQL Server Integration Services (SSIS) 包。 SSIS 从多个源和格式中提取数据，转换和清理数据，并将数据加载到多个目标，从而解决复杂的数据集成问题。 
 
-Linux 中运行的 SSIS 包可以连接到在本地或云的 Windows 中、在 Linux 上或在 Docker 中运行的 Microsoft SQL Server。 这些包还可以连接到 Azure SQL 数据库、Azure SQL 数据仓库、ODBC 数据源、平面文件以及其他数据源（包括 ADO.NET 源、XML 文件和 OData 服务）。
+Linux 中运行的 SSIS 包可以连接到在本地或云的 Windows 中、在 Linux 上或在 Docker 中运行的 Microsoft SQL Server。 这些包还可以连接到 Azure SQL 数据库、Azure Synapse Analytics、ODBC 数据源、平面文件以及其他数据源（包括 ADO.NET 源、XML 文件和 OData 服务）。
 
 有关 SSIS 功能的详细信息，请参阅 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
@@ -94,7 +94,7 @@ Linux 中运行的 SSIS 包可以连接到在本地或云的 Windows 中、在 L
 
 ## <a name="more-info-about-ssis"></a>有关 SSIS 的详细信息
 
-Microsoft SQL Server Integration Services (SSIS) 是一个可用于生成高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载 (ETL) 包。 有关 SSIS 的详细信息，请参阅 [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services)。
+Microsoft SQL Server Integration Services (SSIS) 是一个可用于生成高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载 (ETL) 包。 有关 SSIS 的详细信息，请参阅 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
 SSIS 包括以下功能：
 - 在 Windows 上生成和调试包的图形工具和向导

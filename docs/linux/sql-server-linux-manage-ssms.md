@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883919"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115612"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio 管理 Linux 上的 SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "85883919"
 > [!TIP]
 > 如果没有运行 SSMS 的 Windows 计算机，请考虑新的 [Azure Data Studio](../azure-data-studio/index.yml)。 它提供了管理 SQL Server 的图形工具，并在 Linux 和 Windows 上运行。
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) 是 SQL 工具套件的一部分，Microsoft 免费提供此工具套件，用于满足开发和管理需求。 SSMS 是用于访问、配置、管理和开发所有 SQL Server 的组件的集成环境。 它可以连接到在本地、在 Docker 容器中和云中的任何平台上运行的 SQL Server。 它还连接到 Azure SQL 数据库和 Azure SQL 数据仓库。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，各种技术水平的开发人员和管理员都能访问 SQL Server。
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) 是 SQL 工具套件的一部分，Microsoft 免费提供此工具套件，用于满足开发和管理需求。 SSMS 是用于访问、配置、管理和开发所有 SQL Server 的组件的集成环境。 它可以连接到在本地、在 Docker 容器中和云中的任何平台上运行的 SQL Server。 它还连接到 Azure SQL 数据库和 Azure Synapse Analytics。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，各种技术水平的开发人员和管理员都能访问 SQL Server。
 
 SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以下任务的工具：
 
@@ -107,7 +107,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 3. 在“新建数据库”对话框中，输入新数据库的名称，然后单击“确定” 
 
-已成功在服务器中创建新数据库。 如果想使用 T-SQL 创建新数据库，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md)。
+已成功在服务器中创建新数据库。 如果想使用 T-SQL 创建新数据库，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md)。
 
 ### <a name="drop-a-database"></a>删除数据库
 
@@ -143,6 +143,6 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 ## <a name="see-also"></a>另请参阅
 - [什么是 SSMS？](../ssms/sql-server-management-studio-ssms.md)
 - [使用 SSMS 导出和导入数据库](sql-server-linux-migrate-ssms.md)
-- [教程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [教程：SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [服务器性能和活动监视](../relational-databases/performance/server-performance-and-activity-monitoring.md)

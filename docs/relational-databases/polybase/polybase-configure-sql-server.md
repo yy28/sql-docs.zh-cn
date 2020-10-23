@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834022"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005852"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>配置 PolyBase 以访问 SQL Server 中的外部数据
 
@@ -81,7 +81,7 @@ SQL Server 外部数据源使用 SQL 身份验证。
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 连接器兼容类型
 
-可以连接到可识别 SQL Server 连接的其他数据源。 使用 SQL Server PolyBase 连接器创建 Azure SQL 数据仓库和 Azure SQL 数据库的外部表。 若要完成此任务，请执行前面列出的相同步骤。 确保数据库作用域凭据、服务器地址、端口和位置字符串与要连接的兼容数据源的相应内容相关联。
+可以连接到可识别 SQL Server 连接的其他数据源。 使用 SQL Server PolyBase 连接器创建 Azure Synapse Analytics 和 Azure SQL 数据库的外部表。 若要完成此任务，请执行前面列出的相同步骤。 确保数据库作用域凭据、服务器地址、端口和位置字符串与要连接的兼容数据源的相应内容相关联。
 
 ## <a name="next-steps"></a>后续步骤
 
