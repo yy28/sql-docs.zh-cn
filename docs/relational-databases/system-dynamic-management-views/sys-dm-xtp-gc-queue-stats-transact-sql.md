@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
-title: sys. dm_xtp_gc_queue_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1c2a816af4936d51473cd9770e6c52f46f277fa
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539221"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439484"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "89539221"
 ## <a name="user-scenario"></a>使用方案  
  此输出显示，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 4 个内核运行，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已关联到 4 个内核：  
   
- 此输出显示，要处理的队列中没有工作项。 对于队列 0，自 SQL 启动后取消排队的总工作项数为 15625，最大队列深度是 215625。  
+ 此输出显示，要处理的队列中没有工作项。 对于队列0，自从 SQL 启动后已取消排队的工作项总数为15625，最大队列深度为15625。  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  

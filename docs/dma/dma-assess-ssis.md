@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726310"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439401"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手执行 SQL Server Integration Service 迁移评估
 
@@ -55,12 +55,12 @@ DMA 需要使用 **管理员** 访问权限来评估包存储区中的 SSIS 包�
 1.  (可选) 输入包含 SSIS 包的文件夹路径。
 1.  (可选) 输入包加密密码（如果适用）。
 1. 单击 " **连接** 到源 SQL server"。
-  ![添加源](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![显示 "连接到服务器" 窗格的屏幕截图，其中包含 "输入包含 SSIS 包的文件夹路径" 选项，如果有适用选项，则输入包加密密码。](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>添加要评估的源
 
 1. 选择要评估的 SSIS 包存储类型，然后选择 " **添加**"。
-![添加源](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![显示 "添加源" 窗格的屏幕截图。](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. 如果需要评估多个文件夹，请选择 " **添加源** " 以打开 "连接" 弹出菜单。
 1. 单击“启动评估”****。
   ![开始评估](media/dma-assess-ssis/dma-assess-ssis-assess.png)
