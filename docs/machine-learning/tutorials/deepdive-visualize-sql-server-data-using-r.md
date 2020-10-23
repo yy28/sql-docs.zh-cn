@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180384"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196258"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 实现 SQL Server 数据的可视化效果（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-这是 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 6 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 6 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
 在本教程中，你将使用 R 函数来查看 creditLine  列中值的分布（按性别）。
 
@@ -84,13 +84,13 @@ ms.locfileid: "88180384"
 
 ## <a name="visualize-data-using-rxhistogram"></a>使用 rxHistogram 实现数据的可视化效果
 
-1. 使用以下 R 代码来调用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 函数并传递公式和数据源。 可首先在本地运行，查看预期的结果以及需要的时间。
+1. 使用以下 R 代码来调用 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) 函数并传递公式和数据源。 可首先在本地运行，查看预期的结果以及需要的时间。
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    在内部，**rxHistogram** 调用 [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) 函数，它包含在 **RevoScaleR** 包中。 rxCube 输出一个列表（或数据框架），其中包括针对公式中指定的每个变量的一个列，以及一个计数列  。
+    在内部，**rxHistogram** 调用 [rxCube](/machine-learning-server/r-reference/revoscaler/rxcube) 函数，它包含在 **RevoScaleR** 包中。 rxCube 输出一个列表（或数据框架），其中包括针对公式中指定的每个变量的一个列，以及一个计数列  。
     
 2. 现在，将计算上下文设置为远程 SQL Server 计算机并再次运行 rxHistogram  。
   
@@ -108,7 +108,7 @@ ms.locfileid: "88180384"
 
 散点图通常在数据浏览过程中用于比较两个变量之间的关系。 为此，你可以采用 RevoScaleR 函数提供的输入来使用内置的 R 包  。
 
-1. 对于 numTrans 和 numIntlTrans 的每个组合，调用 [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) 函数来计算 fraudRisk 的平均值    ：
+1. 对于 numTrans 和 numIntlTrans 的每个组合，调用 [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) 函数来计算 fraudRisk 的平均值    ：
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -118,7 +118,7 @@ ms.locfileid: "88180384"
   
     rxCube 的默认返回值为表示交叉表的 rxCube object   。 
   
-2. 调用 [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 函数将结果转换为一个数据框架，可轻松将此数据框架用于 R 的一个标准绘图函数。
+2. 调用 [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) 函数将结果转换为一个数据框架，可轻松将此数据框架用于 R 的一个标准绘图函数。
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -142,7 +142,7 @@ ms.locfileid: "88180384"
   
 从此快速分析中可以看出欺诈风险随交易数量和国际交易数量的增加而增高。
 
-有关 rxCube 函数和常规交叉表的详细信息，请参阅[使用 RevoScaleR 的数据摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)  。
+有关 rxCube 函数和常规交叉表的详细信息，请参阅[使用 RevoScaleR 的数据摘要](/machine-learning-server/r/how-to-revoscaler-data-summaries)  。
 
 ## <a name="next-steps"></a>后续步骤
 

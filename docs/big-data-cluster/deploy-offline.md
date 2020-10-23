@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875556"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257177"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>执行 SQL Server 大数据群集的脱机部署
 
@@ -77,7 +77,6 @@ ms.locfileid: "89875556"
 - **mssql-monitor-influxdb**
 - **mssql-monitor-grafana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ ms.locfileid: "89875556"
 
 ## <a name="install-tools-offline"></a>脱机安装工具
 
-大数据群集部署需要多种工具，包括 Python、`azdata` 和 Kubectl 。 通过下列步骤在脱机服务器上安装这些工具。
+大数据群集部署需要多种工具，包括 Python、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 和 Kubectl 。 通过下列步骤在脱机服务器上安装这些工具。
 
 ### <a name="install-python-offline"></a><a id="python"></a> 脱机安装 python
 
@@ -143,7 +142,7 @@ ms.locfileid: "89875556"
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> 脱机安装 azdata
 
-1. 在具有 Internet 连接和 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的计算机上运行以下命令，将所有 `azdata` 包下载到当前文件夹。
+1. 在具有 Internet 连接和 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的计算机上运行以下命令，将所有 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 包下载到当前文件夹。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ ms.locfileid: "89875556"
 
 ## <a name="deploy-from-private-repository"></a>从专用存储库进行部署
 
-若要从专用存储库进行部署，请使用[部署指南](deployment-guidance.md)中所述的步骤，但使用指定专用 Docker 存储库信息的自定义部署配置文件。 以下 `azdata` 命令演示如何更改名为 `control.json` 的自定义部署配置文件中的 Docker 设置：
+若要从专用存储库进行部署，请使用[部署指南](deployment-guidance.md)中所述的步骤，但使用指定专用 Docker 存储库信息的自定义部署配置文件。 以下 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令演示如何更改名为 `control.json` 的自定义部署配置文件中的 Docker 设置：
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

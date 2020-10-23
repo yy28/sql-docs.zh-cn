@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da13babdf51bc1b4f7e1afa297e7712994932c64
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 886057d9ced9b00b6b1c11f01464f0eb268fcabd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914560"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358406"
 ---
 # <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
 
-适用于 `azdata`
+适用于 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 

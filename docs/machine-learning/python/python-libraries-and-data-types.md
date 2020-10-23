@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: da92713dbf514e2500d0d5f8eb3e776523830041
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 1d83caf3f80369da449175fca78a47677e10e861
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891347"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098776"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python 与 SQL Server 之间的数据类型映射
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 本文列出了在 SQL Server 机器学习服务中使用 Python 集成功能时所支持的数据类型以及所执行的数据类型转换。
 

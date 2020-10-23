@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173468"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194509"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>收集数据以排查 SQL 机器学习问题
 
@@ -36,7 +36,7 @@ SQL Server 2017 及更高版本具有 Python 语言集成。 无法在早期版�
 
 通常，选择 R Services 功能或机器学习服务功能时安装的 Microsoft R 版本由 SQL Server 内部版本号决定。 如果升级或修补 SQL Server，则还必须升级或修补其 R 组件。
 
-有关版本和 R 组件下载链接的列表，请参阅[在无 Internet 访问的情况下安装机器学习组件](/sql/machine-learning/install/sql-ml-component-install-without-internet-access)。 在具有 Internet 访问的计算机上，会自动标识和安装所需的 R 版本。
+有关版本和 R 组件下载链接的列表，请参阅[在无 Internet 访问的情况下安装机器学习组件](../install/sql-ml-component-install-without-internet-access.md)。 在具有 Internet 访问的计算机上，会自动标识和安装所需的 R 版本。
 
 在一个称为绑定的过程中，可以独立于 SQL Server 数据库引擎来升级 R Server 组件。 因此，在 SQL Server 中运行 R 代码时使用的 R 版本可能会有所不同，这取决于安装的 SQL Server 版本以及是否已将服务器迁移到最新的 R 版本。
 

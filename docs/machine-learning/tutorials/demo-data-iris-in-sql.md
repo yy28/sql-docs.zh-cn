@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495000"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192368"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>用于 SQL 机器学习 Python 和 R 教程的 Iris 演示数据
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "88495000"
     EXEC dbo.get_iris_dataset;
     ```
 
-    如果不熟悉 T-SQL，请注意，INSERT 语句只添加新的数据；它不会检查现有的数据，也不会删除和重新生成表。 若要避免在表中获取相同数据的多个副本，可以先运行以下语句：`TRUNCATE TABLE iris_data`。 T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) 语句可删除现有数据，但保持表结构完整。
+    如果不熟悉 T-SQL，请注意，INSERT 语句只添加新的数据；它不会检查现有的数据，也不会删除和重新生成表。 若要避免在表中获取相同数据的多个副本，可以先运行以下语句：`TRUNCATE TABLE iris_data`。 T-SQL [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) 语句可删除现有数据，但保持表结构完整。
 
 ## <a name="query-the-data"></a>查询数据
 

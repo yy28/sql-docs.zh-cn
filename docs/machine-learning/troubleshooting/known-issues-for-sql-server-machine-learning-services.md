@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: c0089390202f6bebfc0ecce8b41b70adee7348c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059555"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196341"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的已知问题
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -136,7 +136,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 如果以下两个语句之一为 true，则会显示此消息，
 
 + 使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 的安装向导在客户端计算机上安装 R Server（独立版）。
-+ 使用[单独的 Windows 安装程序](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)安装了 Microsoft R Server。
++ 使用[单独的 Windows 安装程序](/machine-learning-server/install/r-server-install-windows)安装了 Microsoft R Server。
 
 若要确保服务器和客户端使用的版本相同，你可能需要使用 Microsoft R Server 9.0 和更高版本支持的绑定来升级 SQL Server 2016 实例中的 R 组件  。 若要确定 R Services 版本是否支持升级，请参阅[升级使用 SqlBindR.exe 的 R Services 实例](../install/upgrade-r-and-python.md)。
 
@@ -254,7 +254,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 ### <a name="15-installation-or-upgrade-error-on-fips-enabled-servers"></a>15.启用 FIPS 的服务器上发生的安装或升级错误
 
-如果使用“机器学习服务和语言扩展”功能安装 SQL Server 2019，或在启用了[美国联邦信息处理标准 (FIPS)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 的服务器上升级 SQL Server 实例，将收到以下错误：
+如果使用“机器学习服务和语言扩展”功能安装 SQL Server 2019，或在启用了[美国联邦信息处理标准 (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 的服务器上升级 SQL Server 实例，将收到以下错误：
 
 > *安装扩展性功能时出错，收到错误消息：AppContainer 创建失败，收到错误消息 NONE，声明此实现不是经过 Windows 平台 FIPS 验证的加密算法的一部分。*
 
@@ -268,7 +268,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 本部分包含特定于在 SQL Server 上运行 R 的已知问题，以及由 Microsoft 发布的 R 库和工具（包括 RevoScaleR）相关的一些问题。
 
-有关可能会影响 R 解决方案的其他已知问题，请参阅[机器学习服务器](https://docs.microsoft.com/machine-learning-server/resources-known-issues)站点。
+有关可能会影响 R 解决方案的其他已知问题，请参阅[机器学习服务器](/machine-learning-server/resources-known-issues)站点。
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1.在非默认位置的 SQL Server 上执行 R 脚本时出现的拒绝访问警告
 
@@ -288,7 +288,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 > memDecompress(data, type = decompress) 出现错误，memDecompress(2) 出现内部错误 -3。 
 
-如果使用最新版序列化函数 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 保存了模型，但反序列化模型的 SQL Server 实例具有旧版 RevoScaleR API（来自 SQL Server 2017 CU2 或更早版本），则会引发此错误。
+如果使用最新版序列化函数 [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) 保存了模型，但反序列化模型的 SQL Server 实例具有旧版 RevoScaleR API（来自 SQL Server 2017 CU2 或更早版本），则会引发此错误。
 
 解决方法之一是将 SQL Server 2017 实例升级到 CU3 或更高版本。
 
@@ -300,7 +300,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 如果使用决策树方法或决策林方法创建模型，并指定学习速率，则与使用 `rxPredict` 相比，使用 `sp_rxpredict` 或 SQL `PREDICT` 函数时可能会出现不一致的结果。
 
-原因是 API 中处理序列化模型的错误，并且仅限于 `learningRate` 参数：例如，在 [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) 中，或
+原因是 API 中处理序列化模型的错误，并且仅限于 `learningRate` 参数：例如，在 [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees) 中，或
 
 在即将发布的 Service Release 中解决了这一问题。
 
@@ -396,7 +396,7 @@ SQL 中支持的数据类型并非全都可在 R 中使用。解决方法之一�
 
 从 R 返回二进制数据类型（R raw 数据类型）时，必须在输出数据框架中发送该值  。
 
-对于 raw 以外的数据类型，可以通过添加 OUTPUT 关键字来返回参数值和存储过程的结果  。 有关详细信息，请参阅[参数](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)。
+对于 raw 以外的数据类型，可以通过添加 OUTPUT 关键字来返回参数值和存储过程的结果  。 有关详细信息，请参阅[参数](../../relational-databases/stored-procedures/parameters.md)。
 
 如果要使用包含 raw 类型值的多个输出集，一种可能的解决方法是多次调用存储过程，或者使用 ODBC 将结果集发送回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  。
 
@@ -544,7 +544,7 @@ SQL Server 2019 包含影响使用并行执行的 R 脚本的回归。 例如，
 
 ## <a name="python-script-execution-issues"></a>Python 脚本执行问题
 
-本部分包含特定于在 SQL Server 上运行 Python 的已知问题，以及由 Microsoft 发布的 Python 包相关的一些问题，包括 [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 和 [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)。
+本部分包含特定于在 SQL Server 上运行 Python 的已知问题，以及由 Microsoft 发布的 Python 包相关的一些问题，包括 [revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package) 和 [microsoftml](/r-server/python-reference/microsoftml/microsoftml-package)。
 
 ### <a name="1-call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>1.如果模型的路径太长，则调用预先训练的模型会失败
 
@@ -554,12 +554,12 @@ SQL Server 2019 包含影响使用并行执行的 R 脚本的回归。 例如，
 
 + 安装预先训练的模型时，请选择自定义位置。
 + 如果可能，请在具有较短路径（如 C:\SQL\MSSQL14.MSSQLSERVER）的自定义安装路径下安装 SQL Server 实例。
-+ 使用 Windows 实用工具 [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) 创建将模型文件映射到较短路径的硬链接。
++ 使用 Windows 实用工具 [Fsutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc788097(v=ws.11)) 创建将模型文件映射到较短路径的硬链接。
 + 更新到最新版 Service Release。
 
 ### <a name="2-error-when-saving-serialized-model-to-sql-server"></a>2.将序列化模型保存到 SQL Server 时出现的错误
 
-如果将模型传递到远程 SQL Server 实例，并尝试使用 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 中的 `rx_unserialize` 函数读取二进制模型，则可能会显示以下错误： 
+如果将模型传递到远程 SQL Server 实例，并尝试使用 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 中的 `rx_unserialize` 函数读取二进制模型，则可能会显示以下错误： 
 
 > 名称错误：未定义名称“rx_unserialize_model” 
 

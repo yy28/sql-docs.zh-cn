@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569907"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196328"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server 中的常见 R 脚本错误
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89569907"
 
 2. 检查消息，查看输入数据或输出数据是否包含具有不兼容或不支持的数据类型的列。 例如，对 SQL 数据库的查询通常返回 GUID 或 RowGUID，这两个都是不受支持的。 有关详细信息，请参阅 [R 库和数据类型](../r/r-libraries-and-data-types.md)。
 
-3. 检查单个 R 函数的帮助页，确定是否支持 SQL Server 计算上下文的所有参数。 有关 ScaleR 帮助，请使用内联的 R 帮助命令，或参阅[包参考](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)。
+3. 检查单个 R 函数的帮助页，确定是否支持 SQL Server 计算上下文的所有参数。 有关 ScaleR 帮助，请使用内联的 R 帮助命令，或参阅[包参考](/r-server/r-reference/revoscaler/revoscaler)。
 
 如果 R 运行时正常运行，但脚本返回错误，建议尝试在专用 R 开发环境（如针对 Visual Studio 的 R 工具）中调试脚本。
 

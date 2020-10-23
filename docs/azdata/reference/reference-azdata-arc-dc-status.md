@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 82408e8a7f1edb37c33a6f1748119f5ff24f563f
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 817571e809ab9ea4133a2f1933c3b23d99d9b1bc
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942397"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358785"
 ---
 # <a name="azdata-arc-dc-status"></a>azdata arc dc status
 
-适用于 `azdata`
+适用于 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
 

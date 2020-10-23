@@ -1,4 +1,5 @@
 ---
+description: Version 属性 (WMI MSReportServer_Instance)
 title: Version 属性 (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 059f517b3309b059f3944f04131e02e8722e7fc6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92fd1cef833de9d841d116dfe4121c706a14c5a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255784"
 ---
 # <a name="msreportserver_instance-properties---version"></a>MSReportServer_Instance 属性 - Version
   以格式 Major.Minor.Build.Revision 返回报表服务器的版本。 只读。  

@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178784"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195149"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>使用 rxExec 在 SQL Server 上运行自定义 R 函数（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 14 个教程。
+这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 14 个教程。
 
 在本教程中，你将使用模拟数据演示如何执行在远程服务器上运行的自定义 R 函数。
 
-可以通过 [rxec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 传递函数，在 SQL Server 的上下文中运行自定义 R 函数，前提是脚本所需的任何库也安装在服务器上，并且这些库与 R 的基本分发兼容。 
+可以通过 [rxec](/machine-learning-server/r-reference/revoscaler/rxexec) 传递函数，在 SQL Server 的上下文中运行自定义 R 函数，前提是脚本所需的任何库也安装在服务器上，并且这些库与 R 的基本分发兼容。 
 
 RevoScaleR 中的 rxExec 函数提供了运行所需的任何 R 脚本的机制   。 此外，rxExec 能够在单个服务器中的多个内核上显式地分配工作，从而增加了脚本的扩展性，否则这些脚本将受到本机 R 引擎资源约束的限制  。
 

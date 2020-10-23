@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c37608146b0ebf75cd0042f12ffc004f1273960
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c17b74aff83412dd7f74d3c9a9cb1fb7ec711b19
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178814"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196301"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>创建 R 模型（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 7 个教程。
+这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 7 个教程。
 
 你已经丰富了定型数据。 在本教程中，将使用回归建模来分析数据。 线性模型是预测分析领域中的一种重要工具。 RevoScaleR 包包含可以对工作负荷进行细分以及并行运行的回归算法  。
 
@@ -31,7 +31,7 @@ ms.locfileid: "88178814"
 
 在此步骤中，需要创建一个简单的线性模型，此模型通过将 gender 和 creditLine 列中的值用作独立变量来估计客户的信用卡余额   。
   
-为此，请使用 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 函数，它支持远程计算上下文。
+为此，请使用 [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) 函数，它支持远程计算上下文。
   
 1. 创建一个 R 变量来存储已完成的模型，然后调用 rxLinMod，从而传递相应的公式  。
   
@@ -75,7 +75,7 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>创建逻辑回归模型
 
-接着，创建一个逻辑回归模型，它指示特定客户是否存在欺诈风险。 你将使用 RevoScaleR  [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 函数，它支持在远程计算上下文中调整逻辑回归模型。
+接着，创建一个逻辑回归模型，它指示特定客户是否存在欺诈风险。 你将使用 RevoScaleR  [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) 函数，它支持在远程计算上下文中调整逻辑回归模型。
 
 将计算上下文保持为原样。 你还将继续使用相同的数据源。
 

@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765326"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257257"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什么是大数据群集上的应用程序部署？
 
@@ -78,7 +78,7 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>如何使用应用程序部署
 
 应用程序部署的两个主要接口如下： 
-- [命令行接口 `azdata`](app-create.md)
+- [命令行接口 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](app-create.md)
 - [Visual Studio Code 和 Azure Data Studio 扩展](app-deployment-extension.md)
 
 还可以使用 RESTful Web 服务执行应用程序。 有关详细信息，请参阅[在大数据群集上使用应用程序](app-consume.md)。

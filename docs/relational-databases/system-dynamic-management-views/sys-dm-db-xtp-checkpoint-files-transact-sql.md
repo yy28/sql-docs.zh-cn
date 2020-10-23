@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_xtp_checkpoint_files (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_files (Transact-sql) |Microsoft Docs
 description: 显示有关检查点文件的信息，包括文件大小、物理位置和事务 ID。 了解此视图与 SQL Server 版本的不同之处。
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 010b043bbaab3a5ce1712d32b1e94f800fa630d3
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542265"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412655"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "89542265"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 与更新的版本有很大差异，在 [SQL Server 2014](#bkmk_2014)的主题中对此进行了深入讨论。  
   
- 有关详细信息，请参阅 [创建和管理内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
+ 有关详细信息，请参阅 [创建和管理 Memory-Optimized 对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本  
  下表描述了 `sys.dm_db_xtp_checkpoint_files` 从开始的列 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 与 sys.databases 中的 file_id 的联接 [database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
-|container_guid|**uniqueidentifier**|根、数据或差异文件所属的容器的 GUID。 与 sys. database_files 表中 file_guid 的联接。|  
+|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 与 [sys.database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)中的 file_id 的联接。|  
+|container_guid|**uniqueidentifier**|根、数据或差异文件所属的容器的 GUID。 与 sys.database_files 表中 file_guid 的联接。|  
 |checkpoint_file_id|**uniqueidentifier**|检查点文件的 GUID。|  
 |relative_file_path|**nvarchar(256)**|相对于它映射到的容器的文件路径。|  
 |file_type|**smallint**|-1 表示免费<br /><br /> 对于数据文件，为0。<br /><br /> 1表示增量文件。<br /><br /> 2对于根文件<br /><br /> 3对于大数据文件|  
@@ -65,14 +65,14 @@ ms.locfileid: "89542265"
 |end_checkpoint_id|**bigint**|结束检查点的 ID。|  
 |last_updated_checkpoint_id|**bigint**|更新此文件的最后一个检查点的 ID。|  
 |encryption_status|**smallint**|0、1、2|  
-|encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => 用密钥1加密<br /><br /> 2 => 密钥2加密。 仅对活动文件有效。|  
+|encryption_status_desc|**nvarchar(60)**|0 = 不加密><br /><br /> 1 => 用密钥1加密<br /><br /> 2 => 密钥2加密。 仅对活动文件有效。|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表对的列进行了说明 `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 与 sys.databases 中的 file_id 的联接 [database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
+|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 与 [sys.database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)中的 file_id 的联接。|  
 |container_guid|**uniqueidentifier**|数据或差异文件所属的容器的 GUID。|  
 |checkpoint_file_id|**GUID**|数据或差异文件的 ID。|  
 |relative_file_path|**nvarchar(256)**|数据或差异文件的路径（相对于容器的位置）。|  
@@ -86,7 +86,7 @@ ms.locfileid: "89542265"
 |deleted_row_count|**bigint**|差异文件中删除的行数。|  
 |drop_table_deleted_row_count|**bigint**|删除表影响的数据文件中的行数。 当状态列等于 1 时，应用于数据文件。<br /><br /> 显示从已删除表中删除的行计数。 在对已删除表中的行完成内存垃圾回收并且实施了检查点之后，汇总 drop_table_deleted_row_count 统计信息。 如果您在此列中反映删除表统计信息之前重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则统计信息会在恢复过程中更新。 恢复过程不会从已删除表中加载行。 已删除表的统计信息会在加载阶段中进行汇总并在此列中进行报告（恢复完成时）。|  
 |state|**int**|0-预创建<br /><br /> 1-正在构造<br /><br /> 2 - ACTIVE<br /><br /> 3-合并目标<br /><br /> 4-合并源<br /><br /> 5-备份/HA 必需的<br /><br /> 6-正在转换为 TOMBSTONE<br /><br /> 7-逻辑删除|  
-|state_desc|**nvarchar(60)**|预创建-一组较小的数据和差异文件对（也称为检查点文件对 (Cfp) 将保留预分配，以最小化或消除任何在执行事务时分配新文件的等待。 针对数据文件的预分配 CFP 的完整大小是 128MB，而针对差异文件的预分配 CFP 的完整大小是 8 MB，但不包含任何数据。 CFP 的数目计算为逻辑处理器或计划程序的数目（每个核心一个，无最大值），最小值为 8。 这是具有内存优化表的数据库中的固定存储开销。<br /><br /> 在 "构造-Cfp" 下，存储自上一个检查点以来新插入和可能删除的数据行。<br /><br /> ACTIVE - 这些包含来自以前关闭的检查点的已插入和已删除行。 这些 CFP 包含数据库重新启动时在应用事务日志的活动部分前所需的所有已插入和已删除行。 这些 CFP 的大小大约是内存优化表在内存中的大小的 2 倍（假定合并操作是针对事务工作负荷的当前操作）。<br /><br /> 合并目标-CFP 存储合并策略标识的 CFP () 中的合并数据行。 合并已安装之后，MERGE TARGET 转换为 ACTIVE 状态。<br /><br /> 合并的源-一旦安装了 merge 操作，源 Cfp 将标记为 "合并源"。 请注意，合并策略计算器可能标识多个合并，但是一个 CFP 只能参与一个合并操作。<br /><br /> 备份/HA 必需-一旦安装了合并，并且合并目标 CFP 是持久检查点的一部分，则合并源 Cfp 会转换为此状态。 为保证具有内存优化表的数据库的运行正确性，需要处于此状态的 CFP。  例如，用于从持久检查点恢复以便及时返回。 在日志截断点移出其事务范围后，可以将 CFP 标为进行垃圾回收。<br /><br /> 转换为 TOMBSTONE 时，内存中 OLTP 引擎不需要这些 Cfp，可以对它们进行垃圾回收。 此状态指示这些 CFP 在等待后台线程将它们转换为下一个状态（即 TOMBSTONE）。<br /><br /> TOMBSTONE-这些 Cfp 正在等待 filestream 垃圾回收器对其进行垃圾回收。  ([sp_filestream_force_garbage_collection &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)) |  
+|state_desc|**nvarchar(60)**|预创建-一组较小的数据和差异文件对（也称为检查点文件对 (Cfp) 将保留预分配，以最小化或消除任何在执行事务时分配新文件的等待。 针对数据文件的预分配 CFP 的完整大小是 128MB，而针对差异文件的预分配 CFP 的完整大小是 8 MB，但不包含任何数据。 CFP 的数目计算为逻辑处理器或计划程序的数目（每个核心一个，无最大值），最小值为 8。 这是具有内存优化表的数据库中的固定存储开销。<br /><br /> 在 "构造-Cfp" 下，存储自上一个检查点以来新插入和可能删除的数据行。<br /><br /> ACTIVE - 这些包含来自以前关闭的检查点的已插入和已删除行。 这些 CFP 包含数据库重新启动时在应用事务日志的活动部分前所需的所有已插入和已删除行。 这些 CFP 的大小大约是内存优化表在内存中的大小的 2 倍（假定合并操作是针对事务工作负荷的当前操作）。<br /><br /> 合并目标-CFP 存储合并策略标识的 CFP () 中的合并数据行。 合并已安装之后，MERGE TARGET 转换为 ACTIVE 状态。<br /><br /> 合并的源-一旦安装了 merge 操作，源 Cfp 将标记为 "合并源"。 请注意，合并策略计算器可能标识多个合并，但是一个 CFP 只能参与一个合并操作。<br /><br /> 备份/HA 必需-一旦安装了合并，并且合并目标 CFP 是持久检查点的一部分，则合并源 Cfp 会转换为此状态。 为保证具有内存优化表的数据库的运行正确性，需要处于此状态的 CFP。  例如，用于从持久检查点恢复以便及时返回。 在日志截断点移出其事务范围后，可以将 CFP 标为进行垃圾回收。<br /><br /> 转换为 TOMBSTONE 时，In-Memory OLTP 引擎不需要这些 Cfp，可以对它们进行垃圾回收。 此状态指示这些 CFP 在等待后台线程将它们转换为下一个状态（即 TOMBSTONE）。<br /><br /> TOMBSTONE-这些 Cfp 正在等待 filestream 垃圾回收器对其进行垃圾回收。  ([sp_filestream_force_garbage_collection &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)) |  
 |lower_bound_tsn|**bigint**|文件中包含事务的下限。 如果状态列不是 2、3 或 4，则为 Null。|  
 |upper_bound_tsn|**bigint**|文件中包含事务的上限。 如果状态列不是 2、3 或 4，则为 Null。|  
 |last_backup_page_count|**int**|上次备份时确定的逻辑页计数。 状态列设置为 2、3、4 或 5 时应用。 如果页计数未知，则为 NULL。|  
@@ -99,7 +99,7 @@ ms.locfileid: "89542265"
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="use-cases"></a>用例  
- 可以按如下所示估计内存中 OLTP 使用的存储：  
+ 可以按如下所示估算 In-Memory OLTP 使用的存储：  
   
 ```  
 -- total storage used by In-Memory OLTP  

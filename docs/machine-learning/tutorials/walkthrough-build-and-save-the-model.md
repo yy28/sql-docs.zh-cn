@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178704"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196244"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>生成 R 模型并保存到 SQL（演练）
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-在此步骤中，你将了解如何生成机器学习模型并将该模型保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 通过保存模型，可以使用系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 或 [PREDICT (T-SQL) 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中直接调用模型。
+在此步骤中，你将了解如何生成机器学习模型并将该模型保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 通过保存模型，可以使用系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 或 [PREDICT (T-SQL) 函数](../../t-sql/queries/predict-transact-sql.md)从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中直接调用模型。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -67,7 +67,7 @@ GO
 
 模型是一个二元分类器，可以预测出租车司机是否有可能在某次载客后获得小费。 你将使用在上一课中创建的数据源，通过逻辑回归来定型小费分类器。
 
-1. 调用包括在 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 包中的 **rxLogit** 函数，创建逻辑回归模型。 
+1. 调用包括在 [RevoScaleR](/r-server/r-reference/revoscaler/rxlogit) 包中的 **rxLogit** 函数，创建逻辑回归模型。 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ GO
 
 既然已生成模型，可以用其来预测出租车司机是否有可能在某次搭乘中获得小费。
 
-1. 首先，使用 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 函数定义用于存储评分结果的数据源对象。
+1. 首先，使用 [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) 函数定义用于存储评分结果的数据源对象。
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ GO
   
     + 若要创建存储预测值的表，运行 rxSqlServer 数据函数的 SQL 登录名必须在数据库中具有 DDL 特权。 如果此登录名不能创建表，语句则将失败。
 
-2. 调用 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 函数以生成结果。
+2. 调用 [rxPredict](/r-server/r-reference/revoscaler/rxpredict) 函数以生成结果。
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ GO
 
 ## <a name="plot-model-accuracy"></a>绘制模型准确性
 
-若要了解模型的准确性，可以使用 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 函数来绘制接受者操作曲线。 因为 rxRoc 是由 RevoScaleR 包提供的新函数之一，它支持远程计算上下文，因此你有以下两种选择：
+若要了解模型的准确性，可以使用 [rxRoc](/r-server/r-reference/revoscaler/rxroc) 函数来绘制接受者操作曲线。 因为 rxRoc 是由 RevoScaleR 包提供的新函数之一，它支持远程计算上下文，因此你有以下两种选择：
 
 + 可以使用 rxRoc 函数在远程计算上下文中执行该绘图，然后将绘图返回到你的本地客户端。
 
@@ -173,7 +173,7 @@ GO
 
 可以通过在命令提示符下运行 `rxGetComputeContext()` 来验证计算上下文是否为本地。 返回值应为“RxLocalSeq Compute Context”。
 
-1. 对于本地计算上下文，此过程几乎是相同的。 使用 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 函数将指定数据引入本地 R 环境。
+1. 对于本地计算上下文，此过程几乎是相同的。 使用 [rxImport](/r-server/r-reference/revoscaler/rximport) 函数将指定数据引入本地 R 环境。
 
     ```R
     scoredOutput = rxImport(scoredOutput)

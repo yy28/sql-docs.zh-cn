@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725845"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257187"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -57,16 +57,16 @@ ms.locfileid: "91725845"
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. 更新 `azdata`。
+1. 更新 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。
 
-   按照说明安装 `azdata`。 
+   按照说明安装 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 
    - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
    - [带有 apt 的 Linux](../azdata/install/deploy-install-azdata-linux-package.md)
    - [带有 yum 的 Linux](../azdata/install/deploy-install-azdata-yum.md)
    - [带有 zypper 的 Linux](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >如果 `azdata` 随 `pip` 一起安装，则需要在安装 Windows 安装程序或 Linux 包管理器之前将其手动删除。
+   >如果 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 随 `pip` 一起安装，则需要在安装 Windows 安装程序或 Linux 包管理器之前将其手动删除。
 
 1. 更新大数据群集。
 
@@ -131,7 +131,7 @@ ms.locfileid: "91725845"
 
 ### <a name="backup-and-delete-the-old-cluster"></a>备份和删除旧群集
 
-在 SQL Server 2019 GDR1 版本之前，不会对部署的大数据群集进行就地升级。 升级到新版本的唯一方法是手动删除并重新创建群集。 每个版本都有唯一的 `azdata` 版本，该版本与以前的版本不兼容。 此外，如果在部署了不同旧版本的群集上下载了新的容器映像，则最新映像可能与群集上的旧映像不兼容。 当在容器设置的部署配置文件中使用 `latest` 映像标记时，将拉取较新的映像。 默认情况下，每个版本都具有与 SQL Server 发行版本相对应的特定映像标记。 若要升级到最新版本，请使用以下步骤：
+在 SQL Server 2019 GDR1 版本之前，不会对部署的大数据群集进行就地升级。 升级到新版本的唯一方法是手动删除并重新创建群集。 每个版本都有唯一的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本，该版本与以前的版本不兼容。 此外，如果在部署了不同旧版本的群集上下载了新的容器映像，则最新映像可能与群集上的旧映像不兼容。 当在容器设置的部署配置文件中使用 `latest` 映像标记时，将拉取较新的映像。 默认情况下，每个版本都具有与 SQL Server 发行版本相对应的特定映像标记。 若要升级到最新版本，请使用以下步骤：
 
 1. 在删除旧群集之前，备份 SQL Server 主实例和 HDFS 上的数据。 对于 SQL Server 主实例，可以使用 [SQL Server 备份和还原](data-ingestion-restore-database.md)。 对于 HDFS，[可以使用 `curl` 复制数据](data-ingestion-curl.md)。
 
@@ -142,18 +142,18 @@ ms.locfileid: "91725845"
    ```
 
    > [!Important]
-   > 使用与群集匹配的 `azdata` 版本。 请勿删除具有较新 `azdata` 版本的旧群集。
+   > 使用与群集匹配的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本。 请勿删除具有较新 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本的旧群集。
 
    > [!Note]
    > 发出 `azdata bdc delete` 命令将导致删除以大数据群集名称标识的命名空间中所创建的所有对象，而不会删除命名空间本身。 只要命名空间为空且未在其中创建其他应用程序，就可以在后续部署中重复使用该命名空间。
 
-1. 卸载旧版本的 `azdata`。
+1. 卸载旧版本的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. 安装最新版本的 `azdata`。 通过以下命令安装最新版本的 `azdata`：
+1. 安装最新版本的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 通过以下命令安装最新版本的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]：
 
    **Windows：**
 
@@ -168,11 +168,11 @@ ms.locfileid: "91725845"
    ```
 
    > [!IMPORTANT]
-   > 对于每个版本，`azdata` 的 `n-1` 的路径都有变化。 即使以前安装了 `azdata`，也必须在创建新群集前从最新路径重新安装。
+   > 对于每个版本，[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 的 `n-1` 的路径都有变化。 即使以前安装了 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]，也必须在创建新群集前从最新路径重新安装。
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> 验证 azdata 版本
 
-在部署新的大数据群集之前，请使用 `--version` 参数验证你是否使用最新版本的 `azdata`：
+在部署新的大数据群集之前，请使用 `--version` 参数验证你是否使用最新版本的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]：
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>安装新版本
 
-删除以前的大数据群集并安装最新的 `azdata` 后，使用当前的部署说明部署新的大数据群集。 有关详细信息，请参阅[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)。 然后，还原所有必需的数据库或文件。
+删除以前的大数据群集并安装最新的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 后，使用当前的部署说明部署新的大数据群集。 有关详细信息，请参阅[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)。 然后，还原所有必需的数据库或文件。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035360"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412512"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql) 
 
@@ -46,9 +46,10 @@ ms.locfileid: "92035360"
 |classifier_name|**sysname**|对于利用资源的请求，是用于分配资源和重要性的分类器的名称。||
 |resource_allocation_percentage|**decimal (5，2) **|分配给请求的资源的百分比。</br>适用对象：Azure Synapse Analytics|
 |result_cache_hit|**int**|详细说明已完成的查询是否使用了结果集缓存。  </br>适用对象：Azure Synapse Analytics| 1 = 结果集缓存命中 </br> 0 = 结果集缓存未命中 </br> 负整数值 = 不使用结果集缓存的原因。  有关详细信息，请参阅备注部分。|
+|command2|**nvarchar9max) **|保存用户提交的请求的完整文本。 保存长度超过4000个字符的查询。|任何有效的查询或请求文本。 NULL = 超过4000个字符的查询，对于这些查询，可以在 "命令" 列下找到完整文本。|
 ||||
   
-## <a name="remarks"></a>备注 
+## <a name="remarks"></a>注解 
  有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。
 
 "Result_cache_hit" 列中的负整数值是所有应用原因的位图值，无法缓存查询的结果集。  此列可以是以下一个或多个值的 [| (按位或) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 积：  
