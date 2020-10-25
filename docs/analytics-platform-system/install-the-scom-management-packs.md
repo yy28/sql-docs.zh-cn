@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d44e90493c905764eaceea86b5cc3c3311091726
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379409"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523822"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安装 SQL Server Operations Manager (SCOM) 用于分析平台系统的管理包
 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>开始之前  
-**先决条件**  
+**必备条件**  
   
 必须安装并运行 System Center Operations Manager。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、System Center Operations Manager 2012 或 System Center Operations Manager 2012 Service Pack 1。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "91379409"
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  单击“安装”。  
+4.  单击“安装”  。  
   
-    ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    !["确认安装" 步骤中的 "SQL Server 设备基础监视 MP 安装程序" 向导的屏幕截图，安装选项带有红色圆圈。](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”。  
   
     ![单击 "关闭"](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -67,11 +67,11 @@ ms.locfileid: "91379409"
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  单击“安装”。  
+4.  单击“安装”  。  
   
-    ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![PDWMP 安装程序向导的屏幕截图，其中安装选项以红色圆圈的 "确认安装" 步骤。](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

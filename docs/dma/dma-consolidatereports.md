@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727798"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523914"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
@@ -96,7 +96,7 @@ ms.locfileid: "91727798"
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server 表内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![如果正在使用 SQL Server 表，则为 SQL Server 表内容的屏幕截图。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 如果此数据库不在工具计算机上，请确保工具计算机具有与此 SQL Server 实例的网络连接。
 
@@ -113,7 +113,7 @@ ms.locfileid: "91727798"
 - 端口
 - AssessmentFlag
 
-![SQL Server 表内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![如果使用实例清单，则为 SQL Server 表内容的屏幕截图。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>运行缩放评估
 
@@ -123,7 +123,7 @@ ms.locfileid: "91727798"
 
 下表描述了与 dmaDataCollector 函数关联的参数。
 
-|参数  |说明 |
+|参数  |描述 |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为 **SqlServer** 和 **CSV**。<br/>有关详细信息，请参阅 [创建 SQL server 清点](#create-inventory)。 |
 |**csvPath** | CSV 清单文件的路径。  仅当 **getServerListFrom** 设置为  **CSV**时使用。 |
@@ -147,7 +147,7 @@ ms.locfileid: "91727798"
 
 下表描述了与 dmaProcessor 函数关联的参数。
 
-|参数  |说明 |
+|参数  |描述 |
 |---------|---------|
 |**processTo** | 将处理 JSON 文件的位置。 可能的值为 **SQLServer** 和 **AzureSQLDatabase**。 |
 |**serverName** | 数据将处理到的 SQL Server 实例。  如果为**processTo**参数指定**AzureSQLDatabase** ，则仅包含 SQL Server 名称 (不包含 database.windows.net) 。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
@@ -274,7 +274,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
 - InstanceDatabase
 - ChangeCategory
-- 标题
+- Title
 - ObjectType
 - ImpactedObjectName
 

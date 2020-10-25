@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867691"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496808"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD：评估迁移到 Azure SQL 的 SQL Server 数据空间的准备情况 
 
@@ -28,7 +28,12 @@ ms.locfileid: "91867691"
 
 [数据迁移助手 (DMA) ](dma-overview.md) 可帮助评估特定 Azure sql 目标的 SQL Server 实例，并将 SQL Server 数据库迁移到 Azure sql 的准备工作。 将 DMA 评估结果上载到 Azure Migrate 中心，以获得整个数据空间的集中式就绪性视图。 
 
-本文介绍如何使用 DMA 命令行界面 (DMACMD) ，大规模执行评估，并将结果上传到 Azure Migrate 中心。 或者，您可以使用 [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) 来执行评估。 
+本文介绍如何使用 DMA 命令行界面 (DMACMD) ，大规模执行评估，并将结果上传到 Azure Migrate 中心。 或者，您可以使用 [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) 来执行评估。
+
+若要了解详细信息，请参阅以下 Channel9 视频：
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>先决条件 
 
@@ -87,7 +92,7 @@ C:\Program Files\Microsoft Data Migration Assistant\DmaCmd.exe /Action=Assess /A
 |**XML 元素** |**定义**  |
 |---------|---------|
 |`AssessmentName`|评估的名称|
-|`AssessmentSourcePlatform`|源 SQL Server 平台。 默认值为 `SqlOnPrem`。|
+|`AssessmentSourcePlatform`|源 SQL Server 平台。 默认值是 `SqlOnPrem`。|
 |`AssessmentTargetPlatform`|目标 SQL Server 平台。  </br> `AzureSqlDatabase` 适用于 Azure SQL 数据库目标。 </br> `ManagedSqlServer` 适用于 Azure SQL 托管实例目标。 </br></br>示例 **AzureSQLMI** 评估 SQL 托管实例目标。|
 |`AssessmentDatabases`|如果需要评估实例中的所有数据库，请仅指定实例名称，或者在每行中列出特定的数据库。 </br></br>示例 **AzureSQLMI** 评估实例中的所有数据库 `Servername\SQL2017` 和实例中的两个特定数据库 `Servername\SQL2016` 。  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | 指定结果文件的格式。 `.DMA`分别是、 `.JSON` 和 `.CSV` 。 双击 `.DMA` 以在 DMA UI 中打开。 <br> `AssessmentResultDma` 需要将评估结果上载到 Azure Migrate 中心。  |
@@ -134,8 +139,9 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 - 运行评估的时间取决于数据库对象的数量。 如果可能，请避免在生产系统上运行评估并将其卸载到虚拟机或过渡服务器，尤其是对于具有大量对象的数据库。 
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [数据迁移助手 (DMA)](../dma/dma-overview.md)
 * [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)
 * [数据迁移助手：最佳实践](../dma/dma-bestpractices.md)
+

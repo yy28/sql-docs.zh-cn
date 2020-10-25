@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 07/20/2020
 ms.author: mikeray
 ms.openlocfilehash: e34f82f19350ae6ae1819d358ac8f5565593cd0c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
+ms.lasthandoff: 10/23/2020
 ms.locfileid: "86548733"
 ---
 Azure SQL 托管实例

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1482104a0c8ffea7f7f2502b83b9b268b7bb08d2
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955888"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523942"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks sample databases（AdventureWorks 示例数据库）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "91955888"
 |[AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
 |[AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)|[AdventureWorksDW2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)|[AdventureWorksLT2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)|
-|[AdventureWorks2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| 不适用 |
+|[AdventureWorks2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| 空值 |
 |[AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)|[AdventureWorksDW2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)|[AdventureWorksLT2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)|
 |[AdventureWorks2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)|[AdventureWorksDW2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)|[AdventureWorksLT2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)|
-|[AdventureWorks2008R2](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | 不适用 |
+|[AdventureWorks2008R2](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | 空值 |
 
 其他文件可直接在 GitHub 上找到： 
 
@@ -75,7 +75,7 @@ ms.locfileid: "91955888"
 3. 打开 SQL Server Management Studio (SSMS) 并连接到中的 SQL Server。 
 4. 右键单击**Databases** **对象资源管理器**  >  **还原数据库 ...** "中的" 数据库 "以启动**还原数据库**向导。 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -84,7 +84,7 @@ ms.locfileid: "91955888"
 1. 检查 &quot; **文件** &quot; 选项卡以确认 **还原为** &quot;位置&quot;，文件名与 &quot; **还原数据库** 向导" 中的预期位置和文件名匹配。 
 1. 选择“确定”以还原数据库。 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -94,7 +94,7 @@ ms.locfileid: "91955888"
 
 有关还原 SQL Server 数据库的详细信息，请参阅 [使用 SSMS 还原数据库备份](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。
 
-# <a name="transact-sql-t-sql"></a>[Transact-SQL (T-SQL)](#tab/tsql)
+# <a name="transact-sql-t-sql"></a>[Transact-sql (T-sql) ](#tab/tsql)
 
 您可以使用 Transact-sql (T-sql) 还原示例数据库。 下面提供了还原 AdventureWorks2019 的示例，但数据库名称和安装文件路径可能因环境而异。 
 
@@ -123,7 +123,7 @@ GO
 1. 打开 Azure Data Studio Studio 并连接到 SQL Server 实例。
 1. 右键单击服务器，然后选择 " **管理**"。
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -133,7 +133,7 @@ GO
 
 1. 选择 **还原**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -141,7 +141,7 @@ GO
 1. 选择 **&quot;确定&quot;** 以确认您的数据库备份选择，并关闭 &quot; **选择备份设备** &quot; 窗口。 
 1. 检查 &quot; **文件** &quot; 选项卡以确认 **还原为** &quot;位置&quot;，文件名与 &quot; **还原数据库** 向导" 下，选择存储 .bak 文件的位置。 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -151,7 +151,7 @@ GO
     
     这会自动填充其他字段，例如 **数据库**、 **目标数据库** 和 **还原到**。 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -159,7 +159,7 @@ GO
 1. 选择 **&quot;确定&quot;** 以确认您的数据库备份选择，并关闭 &quot; **选择备份设备** &quot; 窗口。 
 1. 检查 &quot; **文件** &quot; 选项卡以确认 **还原为** &quot;位置&quot;，文件名与 &quot; **还原数据库** 向导" 以还原数据库。 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -187,7 +187,7 @@ GO
 1. 填写所需信息以创建数据库。 
 1. 在 " **其他设置** " 选项卡上，选择 " **示例** " 作为 " **数据源**" 下的现有数据： 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 
@@ -206,7 +206,7 @@ SQL Server Management Studio 提供直接将数据库部署到 Azure SQL 数据�
 1. 如果尚未这样做，请将 [示例数据库还原到 SQL Server](#restore-to-sql-server)。 
 1. 右键单击还原的数据库**对象资源管理器**  >  **任务**"  >  **将数据库部署到 Microsoft Azure SQL 数据库 ...**"。 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="选择此项可还原数据库，方法是右键单击 &quot;对象资源管理器中的&quot; 数据库 &quot;，然后选择&quot; 还原数据库 &quot;&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="此屏幕截图显示了如何选择通过右键单击对象资源管理器中的 &quot;数据库&quot;，然后选择 &quot;还原数据库&quot; 来还原数据库。&quot;:::
 
 
 1. 选择 &quot; **设备** &quot;，然后选择省略号 ** ( ... ) ** 选择一个设备。 

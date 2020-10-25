@@ -1,7 +1,7 @@
 ---
 title: 在 SQL 示例中生成数据 WideWorldImporters
 description: 使用这些 SQL 语句生成和导入 WideWorldImporters 示例数据库的当前日期的样本数据。
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942197"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523932"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 数据生成
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ WideWorldImporters 和 WideWorldImportersDW 数据库的已发布版本具有从
 
 若要生成最新日期的示例数据，请执行以下操作：
 
-1. 如果尚未安装，请安装干净版本的 WideWorldImporters 数据库。 有关安装说明，请参阅[安装和配置](wide-world-importers-oltp-install-configure.md)。
+1. 如果尚未安装，请安装干净版本的 WideWorldImporters 数据库。 有关安装说明，请参阅 [安装和配置](wide-world-importers-oltp-install-configure.md)。
 2. 在数据库中执行以下语句：
 
     ```
@@ -39,23 +39,26 @@ WideWorldImporters 和 WideWorldImportersDW 数据库的已发布版本具有从
             @AreDatesPrinted = 1;
     ```
 
-    此语句将示例销售和采购数据添加到数据库中，直到达到当前日期。 它按天显示数据生成的进度。 每年需要数据的数据生成可能需要大约10分钟。 由于数据生成的随机因素，在运行之间生成的数据存在一些差异。
+    此语句将示例销售和采购数据添加到数据库中，直到达到当前日期。 它按天显示数据生成的进度。 由于数据生成的随机因素，在运行之间生成的数据存在一些差异。
 
     若要增加或减少每天生成的订单数，请更改参数的值 `@AverageNumberOfCustomerOrdersPerDay` 。 使用参数 `@SaturdayPercentageOfNormalWorkDay` 和 `@SundayPercentageOfNormalWorkDay` 来确定周末的订单量。
+
+> [!TIP]
+> 强制数据库的 [延迟持续](../relational-databases/logs/control-transaction-durability.md) 性可能会提高数据生成速度，特别是当数据库事务日志位于高延迟存储子系统上时。 请注意，使用延迟持续性时可能会 [造成数据丢失](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) 的影响，并且在数据生成期间只考虑启用延迟持续性。
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>导入在 WideWorldImportersDW 中生成的数据
 
 若要将示例数据导入到 WideWorldImportersDW OLAP 数据库中的当前日期：
 
 1. 使用上一节中的步骤执行 WideWorldImporters OLTP 数据库中的数据生成逻辑。
-2. 如果尚未这样做，请安装 WideWorldImportersDW 数据库的干净版本。 有关安装说明，请参阅[安装和配置](wide-world-importers-oltp-install-configure.md)。
+2. 如果尚未这样做，请安装 WideWorldImportersDW 数据库的干净版本。 有关安装说明，请参阅 [安装和配置](wide-world-importers-oltp-install-configure.md)。
 3. 通过在数据库中执行以下语句来重新设定 OLAP 数据库的种子：
 
     ```sql
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. 运行*每日 .ispac* SQL Server Integration Services 包，将数据导入到 OLAP 数据库。 若要了解如何运行 ETL 作业，请参阅[WIDEWORLDIMPORTERS ETL 工作流](wide-world-importers-perform-etl.md)。
+4. 运行 *每日 .ispac* SQL Server Integration Services 包，将数据导入到 OLAP 数据库。 若要了解如何运行 ETL 作业，请参阅 [WIDEWORLDIMPORTERS ETL 工作流](wide-world-importers-perform-etl.md)。
 
 ## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>在 WideWorldImportersDW 中生成数据以执行性能测试
 
@@ -73,7 +76,7 @@ WideWorldImportersDW 可以任意增加用于性能测试的数据大小。 例�
 
 #### <a name="parameters"></a>parameters
 
-`@EstimatedRowsFor2012`**bigint** （默认值为12000000）
+`@EstimatedRowsFor2012`**bigint** (默认为 12000000) 
 
 #### <a name="result"></a>结果
 
