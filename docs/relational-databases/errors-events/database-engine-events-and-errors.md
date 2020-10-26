@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
-ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
+ms.openlocfilehash: 25afd0615066472ce8e7a63b757576b50629e15f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84158616"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194246"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 
@@ -1625,7 +1625,8 @@ ORDER BY message_id
 |    3280    |    16    |    否    |    不支持在裸设备上进行备份， 而 '%ls' 是裸设备。    |
 |    3281    |    10    |    否    |    在 '%ls' 上释放并启动了重绕。    |
 |    3283    |    16    |    否    |    文件 "%ls" 无法正确初始化。 有关详细信息，请检查错误日志。    |
-|    3284    |    16    |    否    |    设备 '%ls' 上的文件标记未对齐。 使用用于创建备份集的相同块大小重新发布 Restore 语句: '%d' 看起来像一个可能值。    |
+|    3284    |    16    |    否    |    设备 '%ls' 上的文件标记未对齐。 使用用于创建备份集的相同块大小重新发布 Restore 语句：'%d' 看起来像一个可能值。    |
+|    3285    |    10    |    是    |    设备 '%ls' 上的文件标记未对齐。 还原操作将在效率较低的 I/O 下继续进行。  为了避免此问题，请使用用于创建备份集的相同块大小重新发布 Restore 语句：'%d' 看起来像一个可能值。    |
 |    3301    |    21    |    是    |    事务日志包含无效的记录(logop %d)。 该日志已损坏。 请利用完整备份还原数据库，或者修复该数据库。    |
 |    3302    |    21    |    是    |    在数据库 '%.*ls' 中重做日志记录操作时，无法到达日志记录 ID 为 %S_LSN 的日志结尾。 这表示 ID 为 %S_LSN 的日志记录有数据损坏。 请利用完整备份还原数据库，或者修复该数据库。    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    是    |    在重做数据库 '%.*ls' 的日志中记录的操作时，日志记录 ID %S_LSN 出错。 通常，特定故障以前会在 Windows 事件日志服务中记录为错误。 请利用完整备份还原数据库，或者修复该数据库。    |
@@ -6780,7 +6781,7 @@ ORDER BY message_id
 |    18338    |    10    |    否    |    原因:无法根据指定的文件名来确定数据库名称。    |
 |    18339    |    10    |    否    |    原因:无法打开在登录名属性中指定的数据库。    |
 |    18340    |    10    |    否    |    原因:无法存储数据库名称和排序规则。 请检查以前的错误。    |
-|    18341    |    10    |    否    |    。 原因:在连接重置过程中当前的排序规则与数据库排序规则不匹配。    |
+|    18341    |    10    |    否    |    . 原因:在连接重置过程中当前的排序规则与数据库排序规则不匹配。    |
 |    18342    |    10    |    否    |    原因:无法将环境更改通知发送到日志传送伙伴节点。    |
 |    18343    |    10    |    否    |    原因:在重新验证连接所使用的登录名时，无法检索数据库名称或者无法将数据库映射到某项。    |
 |    18344    |    10    |    否    |    原因:在重新验证连接所使用的登录名时，不允许使用未指定共享的登录名进行连接。    |
@@ -9110,4 +9111,4 @@ ORDER BY message_id
 ## <a name="see-also"></a>另请参阅
 
 [了解数据库引擎错误](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[数据库引擎错误的原因和解决方法](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
+[数据库引擎错误的原因和解决方法](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))
