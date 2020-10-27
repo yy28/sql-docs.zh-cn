@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115875"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257329"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入门：使用 Azure Data Studio，在 Azure Synapse Analytics 中借助专用 SQL 池连接和查询数据
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入门：使用 Azure Data Studio，在 Azure Synapse Analytics 中借助专用 SQL 池连接和查询数据
 
 本快速入门演示如何使用 Azure Data Studio 连接到 Azure Synapse Analytics 中的专用 SQL 池。
 
@@ -139,5 +139,6 @@ ms.locfileid: "92115875"
 如果不打算继续使用本文中创建的示例数据库，则[删除资源组](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>后续步骤
+有关详细信息，请访问[使用 Azure Data Studio连接到 Synapse SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)。
 
 成功连接到 Azure Synapse Analytics 并运行查询后，请试用[代码编辑器教程](tutorial-sql-editor.md)。
