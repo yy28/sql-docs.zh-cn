@@ -1,7 +1,7 @@
 ---
 title: 什么是 SQL Server 语言扩展？
 titleSuffix: ''
-description: 语言扩展是 SQL Server 的一项功能，用于执行外部代码。 在 SQL Server 2019 中，支持 Java、Python 和 R。 可以使用扩展性框架在外部代码中使用关系数据。
+description: 语言扩展是用于执行外部代码的 SQL Server 功能。 在 SQL Server 2019 中，支持 Java、Python 和 R。 可以使用扩展性框架在外部代码中使用关系数据。
 author: dphansen
 ms.author: davidph
 ms.date: 10/07/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09d5643b3a39493843adc0ad2da716b7fda1b332
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c4482adb86f9a2f205bd64044a18f342cf3e13c5
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934902"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92154943"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>什么是 SQL Server 语言扩展？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "91934902"
 
 + 安装[用于 SQL Server 的 Python 自定义运行时](../machine-learning/install/custom-runtime-python.md)
 + 安装[用于 SQL Server 的 R 自定义运行时](../machine-learning/install/custom-runtime-r.md)
-+ 在 [Windows](install/install-sql-server-language-extensions-on-windows.md) 或 [Linux](../linux/sql-server-linux-setup-language-extensions.md) 上安装 SQL Server 语言扩展
++ 在 [Windows](install/windows-java.md) 或 [Linux](../linux/sql-server-linux-setup-language-extensions-java.md) 上安装 SQL Server 语言扩展
 + 安装[用于 Java 的 Microsoft 扩展性 SDK](how-to/extensibility-sdk-java-sql-server.md)

@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 6513c3333bb852b0d899b785073f4ecbc31daab3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 3e088597a52a9f220c0aecb62c66df085b287955
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956944"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115500"
 ---
 # <a name="get-python-package-information"></a>获取 Python 包信息
 
@@ -61,6 +61,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> 在 Azure SQL 托管实例上，运行 sp_configure 和 RECONFIGURE 命令会触发 SQL Server 重启，以使 RG 设置生效。 这可能会导致几秒钟不可用。
+::: moniker-end
+
 如果想验证当前实例的默认库，请运行以下 SQL 语句。 此示例返回 Python `sys.path` 变量中包含的文件夹列表。 此列表包括当前目录和标准库路径。
 
 ```sql
@@ -105,17 +110,13 @@ EXECUTE sp_execute_external_script
 以下示例脚本显示了 SQL Server 实例中安装的所有 Python 包的列表。
 
 ```sql
-EXECUTE sp_execute_external_script 
-  @language = N'Python', 
+EXECUTE sp_execute_external_script
+  @language = N'Python',
   @script = N'
 import pkg_resources
-import pandas as pd
-installed_packages = pkg_resources.working_set
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
-df = pd.DataFrame(installed_packages_list)
-OutputDataSet = df
-'
-WITH RESULT SETS (( PackageVersion nvarchar (150) ))
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version) for i in pkg_resources.working_set]))'
+WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128)));
 ```
 
 ## <a name="find-a-single-python-package"></a>查找单个 Python 包

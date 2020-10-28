@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898669"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257097"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>AD 模式部署挂起 - `sparkhead` Pod 运行不正常
 
@@ -101,12 +101,12 @@ zookeeper-2       2/2     Running   0          3d13h 
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> 可通过多种方式来收集日志。 可以使用 Azure Data Studio 中的笔记本，而不是使用 `azdata` 复制日志。
+> 可通过多种方式来收集日志。 可以使用 Azure Data Studio 中的笔记本，而不是使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 复制日志。
 > 在 Azure Data Studio 中，连接到 Kubernetes 群集，并运行相应的故障排除笔记本。 以下是笔记本的示例。
 >
 > - TSG027 - 观察群集部署
 > - TSG061 - 获取 BDC 命名空间中 Pod 所有容器日志的尾部
-> - TSG001 - 运行 `azdata` copy-logs
+> - TSG001 - 运行 `azdata copy-logs`
 >
   
 ## <a name="inspect-the-logs"></a>检查日志

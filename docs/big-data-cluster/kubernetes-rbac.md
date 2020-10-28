@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79ea97a0824d7213f0758d75f8b552372bba51c2
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 315752ffc775aa1db1970e3fef5c807e0f8e1708
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879046"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257128"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Kubernetes RBAC 模型及对用户和服务帐户管理 BDC 的影响
 
@@ -25,7 +25,7 @@ ms.locfileid: "87879046"
 
 ## <a name="role-required-for-deployment"></a>部署所需的角色
 
-BDC 使用服务帐户（例如 `sa-mssql-controller` 或 `master`）来协调群集 Pod、服务、高可用性、监视等的预配。当 BDC 部署启动（例如 `azdata bdc create`）时，`azdata` 执行以下操作：
+BDC 使用服务帐户（例如 `sa-mssql-controller` 或 `master`）来协调群集 Pod、服务、高可用性、监视等的预配。当 BDC 部署启动（例如 `azdata bdc create`）时，[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 执行以下操作：
 
 1. 检查提供的命名空间是否存在。
 2. 如果不存在，将创建一个，并应用 `MSSQL_CLUSTER` 标签。
@@ -105,7 +105,7 @@ BDC 使用服务帐户（例如 `sa-mssql-controller` 或 `master`）来协调�
 ## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>BDC Pod 中的默认服务帐户使用情况
 
 为了获得更严格的安全模型，SQL Server 2019 CU5 禁用了 BDC Pod 中默认 Kubernetes 服务帐户的默认凭据装入。 这适用于 CU5 或更高版本中的新部署和升级的部署。
-Pod 中的凭据令牌可用于访问 Kubernetes API 服务器，权限级别取决于 Kubernetes 授权策略设置。 如果有需要恢复到以前的 CU5 行为的特定用例，我们将在 CU6 中引入新的功能切换，以便仅在部署时启用自动装入。 为此，可以使用 control.json 配置部署文件，并将 automountServiceAccountToken 设置为 true。 运行此命令，以使用 `azdata` CLI 在 control.json 自定义配置文件中更新此设置： 
+Pod 中的凭据令牌可用于访问 Kubernetes API 服务器，权限级别取决于 Kubernetes 授权策略设置。 如果有需要恢复到以前的 CU5 行为的特定用例，我们将在 CU6 中引入新的功能切换，以便仅在部署时启用自动装入。 为此，可以使用 control.json 配置部署文件，并将 automountServiceAccountToken 设置为 true。 运行此命令，以使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 在 control.json 自定义配置文件中更新此设置： 
 
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"
