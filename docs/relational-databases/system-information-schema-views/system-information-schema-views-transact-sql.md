@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542097"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907377"
 ---
 # <a name="system-information-schema-views-transact-sql"></a> (Transact-sql) 的系统信息架构视图
 
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>权限  
+信息架构视图中的元数据的可见性仅限用户所拥有的安全对象，或用户对其拥有某些权限的用户。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
+
+> [!NOTE]  
+> 信息架构视图是在服务器范围内定义的，因此不能在用户数据库的上下文中被拒绝。 若要撤消或拒绝访问权限 (选择 ") ，则必须使用 master 数据库。 默认情况下，公共角色具有对所有信息架构视图的 SELECT 权限，但内容限制为元数据可见性规则。
 
 ## <a name="see-also"></a>另请参阅
 
