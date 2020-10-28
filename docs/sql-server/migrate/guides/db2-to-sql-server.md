@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c7d4e0507667429e4f97674ef302a7d5aed8102
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 016d0e1a48e9f14356cae9dd4915fedd2b45374b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91510173"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258007"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>迁移指南：从 DB2 迁移到 SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91510173"
 要将 DB2 数据库迁移到 SQL Server，需要：
 
 - 验证源环境是否受支持。
-- 下载 [DB2 SQL Server 迁移助手 (SSMA)](https://www.microsoft.com/download/details.aspx?id=54254)。
+- [DB2 SQL Server 迁移助手 (SSMA)](https://www.microsoft.com/download/details.aspx?id=54254)。
 
 
 
@@ -41,7 +41,7 @@ ms.locfileid: "91510173"
 
 满足先决条件后，就可以发现环境的拓扑并评估迁移的可行性。 
 
-### <a name="assess-and-convert"></a>评估和转换
+### <a name="assess"></a>评估 
 
 使用 SQL Server 迁移助手 (SSMA) 创建评估。 
 
@@ -82,7 +82,7 @@ ms.locfileid: "91510173"
 
 1. 可以通过在“DB2 元数据资源管理器”中选择表来更改每个表的类型映射。 
 
-### <a name="schema-conversion"></a>架构转换 
+### <a name="convert-schema"></a>转换架构 
 
 要转换架构，请执行以下步骤：
 

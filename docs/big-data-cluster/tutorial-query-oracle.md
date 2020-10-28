@@ -3,24 +3,24 @@ title: 查询 Oracle 中的外部数据
 titleSuffix: SQL Server big data clusters
 description: 本教程演示如何从 SQL Server 2019 大数据群集中查询 Oracle 数据。 为 Oracle 中的数据创建外部表，然后运行查询。
 author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ''
-ms.date: 08/21/2019
+ms.author: dacoelho
+ms.reviewer: mikeray
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772841"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196081"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集中查询 Oracle
+# <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集查询 Oracle
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本教程演示如何从 SQL Server 2019 大数据群集中查询 Oracle 数据。 若要运行本教程，需要有 Oracle 服务器的访问权限。 如果没有访问权限，可通过本教程了解数据虚拟化如何适用于 SQL Server 大数据群集中的外部数据源。
+本教程演示如何从 SQL Server 2019 大数据群集中查询 Oracle 数据。 若要运行本教程，需要有 Oracle 服务器的访问权限。 需要拥有对外部对象的读取权限的 Oracle 用户帐户。 支持 Oracle 代理用户身份验证。 如果没有访问权限，可通过本教程了解数据虚拟化如何适用于 SQL Server 大数据群集中的外部数据源。
 
 在本教程中，你将了解如何执行以下操作：
 
@@ -67,7 +67,7 @@ ms.locfileid: "85772841"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”。
 
    ![SQL Server 主实例查询](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -90,6 +90,30 @@ ms.locfileid: "85772841"
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
+   ```
+
+### <a name="optional-oracle-proxy-authentication"></a>可选：Oracle 代理身份验证
+
+Oracle 支持代理身份验证，以提供精细的访问控制。 代理用户使用其凭据连接到 Oracle 数据库，并在数据库中模拟另一个用户。 
+
+可以将代理用户配置为，与被模拟的用户相比，具有有限的访问权限。 例如，可以允许代理用户使用被模拟用户的特定数据库角色进行连接。 即使多个用户使用代理身份验证进行连接，通过代理用户连接到 Oracle 数据库的用户的标识也会保留在连接中。 这样，Oracle 可以强制执行访问控制，并审核代表实际用户执行的操作。
+
+如果你的方案需要使用 Oracle 代理用户，请将前面的第 4 步和第 5 步替换为以下内容。
+
+4. 创建数据库范围凭据以连接到 Oracle 服务器。 在下面的语句中，向 Oracle 服务器提供适当的 Oracle 代理用户凭据。
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. 创建指向 Oracle 服务器的外部数据源。
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
    ```
 
 ## <a name="create-an-external-table"></a>创建外部表

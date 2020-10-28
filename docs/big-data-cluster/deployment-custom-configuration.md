@@ -9,18 +9,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725858"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257197"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-通过内置于 `azdata` 管理工具的一组预定义配置文件，你可以轻松地修改默认设置，以便更好地满足 BDC 工作负载要求。 借助配置文件的结构，可以精细地为资源的每项服务更新设置。
+通过内置于 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 管理工具的一组预定义配置文件，你可以轻松地修改默认设置，以便更好地满足 BDC 工作负载要求。 借助配置文件的结构，可以精细地为资源的每项服务更新设置。
 
 观看这段 13 分钟的视频，概览大数据群集配置：
 
@@ -648,7 +648,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.j
 }
 ```
 
-可以手动编辑 `control.json` 并将上述部分添加到 `spec`，也可以创建如下所示的修补程序文件 `elasticsearch-patch.json`，并使用 `azdata` CLI 来修补 `control.json` 文件：
+可以手动编辑 `control.json`，并将上述部分添加到 `spec`，也可以创建如下所示的补丁文件 `elasticsearch-patch.json`，并使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 来修补 `control.json` 文件：
 
 ```json
 {

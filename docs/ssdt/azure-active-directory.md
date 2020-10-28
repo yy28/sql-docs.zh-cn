@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005915"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300369"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持
 
@@ -45,11 +45,11 @@ Active Directory 密码验证是一种连接到之前列出的 Azure SQL 产品�
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 集成身份验证
 
-Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制**。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/sql-database/sql-database-aad-authentication)。
+Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制  。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 交互式身份验证
 
-使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 或更高版本**。
+使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于  。
 
 - [下载并安装任何版本的 .NET Framework](https://www.microsoft.com/net/download/all)。
 - [Visual Studio 2017 版本 15.6](/visualstudio/releasenotes/vs2017-relnotes) 或更高版本。
@@ -80,7 +80,7 @@ Azure AD 通过此附加 MFA 弹出窗口强制执行 MFA。
 - 仅当连接到本文开头列出的 Azure SQL 产品时，才支持Active Directory 交互式身份验证。 SQL Server（本地或 VM 上）不支持它。
 - 服务器资源管理器中的连接对话框不支持 Active Directory 交互式身份验证 。 必须结合使用 SSDT 和 SQL Server 对象资源管理器进行连接。
 - SSDT 不支持将单一登录与当前登录 Visual Studio 的帐户集成。
-- 在 Visual Studio 安装期间安装到扩展目录的 SQLPackage.exe 并不是指从此位置进行使用。 若要配合使用 SQLPackage.exe 和 Azure AD，请转到 [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
+- 在 Visual Studio 安装期间安装到扩展目录的 SQLPackage.exe 并不是指从此位置进行使用。 若要结合使用 SQLPackage.exe 和 Azure AD，请转到[数据层应用程序框架](https://www.microsoft.com/download/details.aspx?id=55088) 
 - Azure AD 身份验证不支持 SSDT 数据比较。  
 
 
@@ -90,5 +90,4 @@ Azure AD 通过此附加 MFA 弹出窗口强制执行 MFA。
 [向 SQL 数据库进行Azure Active Directory 身份验证](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 团队博客](/archive/blogs/ssdt/)  
-[DACFx API 参考](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
 [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

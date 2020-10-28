@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725078"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257297"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>如何在 SQL Server 大数据群集上部署应用
 
@@ -32,7 +32,7 @@ ms.locfileid: "91725078"
 - 支持托管其他应用程序类型 - SQL Server Integration Services (SSIS) 和 MLeap。
 - 用于管理应用程序部署的 [Visual Studio Code 扩展](app-deployment-extension.md)。
 
-使用 `azdata` 命令行实用程序部署和管理应用程序。 本文提供了有关如何从命令行部署应用的示例。 要了解如何在 Visual Studio Code 中使用它，请参阅 [Visual Studio Code 扩展](app-deployment-extension.md)。
+应用程序是使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 进行部署和管理的。 本文提供了有关如何从命令行部署应用的示例。 要了解如何在 Visual Studio Code 中使用它，请参阅 [Visual Studio Code 扩展](app-deployment-extension.md)。
 
 支持下列应用类型：
 
@@ -44,7 +44,7 @@ ms.locfileid: "91725078"
 ## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2019 大数据群集](deployment-guidance.md)
-- [azdata 命令行工具](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 
@@ -114,7 +114,7 @@ spec.yaml
 
 ## <a name="create-an-app"></a>创建应用
 
-若要创建应用程序，请结合使用 `azdata` 和 `app create` 命令。 这些文件位于创建应用的计算机本地。
+若要创建应用程序，请结合使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 和 `app create` 命令。 这些文件位于创建应用的计算机本地。
 
 使用以下语法在大数据群集中创建新应用：
 

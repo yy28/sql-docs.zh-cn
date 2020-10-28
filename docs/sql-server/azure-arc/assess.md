@@ -1,80 +1,90 @@
 ---
-title: 为启用了 Azure Arc 的 SQL Server 配置 SQL 评估
-titleSuffix: ''
-description: 为启用了 Azure Arc 的 SQL Server 实例配置按需评估
+title: 在启用了 Azure Arc 的 SQL Server 实例上配置按需 SQL 评估
+description: 在启用了 Azure Arc 的 SQL Server 实例上配置按需 SQL 评估
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988013"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258001"
 ---
-# <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>为启用了 Azure Arc 的 SQL Server 实例配置按需 SQL 评估
+# <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>在启用了 Azure Arc 的 SQL Server 实例上配置 SQL 评估
 
-可以按照以下步骤为 SQL Server 实例启用 SQL 评估。
+SQL 评估提供了一种机制来评估 SQL Server 的配置。 本文介绍了如何在启用了 Azure Arc 的 SQL Server 实例上使用 SQL 评估。
 
-## <a name="prerequisites"></a>必备知识
+## <a name="prerequisites"></a>先决条件
 
-* SQL Server 实例已连接到 Azure Arc。按照以下说明[将 SQL Server 实例载入已启用 Arc 的 SQL Server](connect.md)。
+* SQL Server 实例必须连接到 Azure Arc。有关说明，请参阅[将 SQL Server 连接到 Azure Arc](connect.md) 一文。
 
-* 在计算机上安装和配置 MMA 扩展。 按照以下说明[安装 Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma)。 有关详细信息，请参阅 [Log Analytics 代理](/azure/azure-monitor/platform/log-analytics-agent)。
+* 必须在计算机上安装并配置 Microsoft Monitoring Agent (MMA) 扩展。 有关说明，请查看[安装 MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma) 一文。 你还可以在 [Log Analytics 代理](/azure/azure-monitor/platform/log-analytics-agent)一文中了解详细信息。
 
-* 你的 SQL Server 启用了 [TCP/IP 协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
+* SQL Server 实例必须[启用 TCP/IP 协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
-* 如果你正在操作 SQL Server 的命名实例，则 [SQL Server 浏览器](../../tools/configuration-manager/sql-server-browser-service.md)正在运行。
+* 若要操作 SQL Server 的命名实例，[SQL Server 浏览器服务](../../tools/configuration-manager/sql-server-browser-service.md)必须处于正在运行状态。
 
-* 你已查看[服务中心按需评估先决条件](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)处的 SQL Server 文档。
+* 请确保你已查阅 SQL Server 文档[服务中心按需评估先决条件](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)。
 
-## <a name="enable-on-demand-sql-assessment"></a>启用按需 SQL 评估
+## <a name="run-on-demand-sql-assessment"></a>运行按需 SQL 评估
 
-1. 打开你的 SQL Server – Azure Arc 资源并在左侧菜单中选择“环境运行状况”。
+1. 打开“SQL Server - Azure Arc”资源，然后选择左侧窗格中的“环境运行状况”。
 
-   ![SQL 评估选择](media/assess/sql-assessment-heading-sql-server-arc.png)
+   > [!div class="mx-imgBorder"]
+   > [ ![显示“SQL Server - Azure Arc”资源的“环境运行状况”屏幕的屏幕截图。](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. 在数据收集计算机上指定工作目录。 默认情况下，将使用 `C:\sql_assessment\work_dir`。 在收集和分析期间，数据临时存储在该文件夹下。 如果该文件夹不存在，将自动创建它。
+1. 在数据收集计算机上指定工作目录。 默认使用 `C:\sql_assessment\work_dir`。 在收集和分析期间，数据临时存储在此文件夹中。 如果此文件夹不存在，则会自动创建它。
 
-1. 单击“下载配置脚本”并将下载的脚本复制到目标计算机。
+1. 选择“下载配置脚本”。 将下载的脚本复制到目标计算机。
 
-1. 启动 powershell.exe 的管理员实例，并执行以下操作之一： 
-   * 如果你使用域帐户，请运行以下命令。 系统会提示你输入用户帐户和密码。 
+1. 打开 powershell.exe 的管理员实例，并执行以下代码块之一：
+
+   * 域帐户：系统将提示你输入用户帐户和密码。
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
       & '.\AddSqlAssessment.ps1'
       ```
 
-    * 如果你使用 MSA 帐户，请运行以下命令。
+   * 托管服务帐户 (MSA)
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
       & '.\AddSqlAssessment.ps1' -ManagedServiceAccountName <MSA account name>
       ```
 
+> [!NOTE]
+> 此脚本计划一项名为 SQLAssessment 的任务，这项任务会触发数据收集。 此任务在运行脚本后的一小时内执行。 然后，每七天重复一次。
+
+> [!TIP]
+> 你可以将此任务修改为在其他日期和时间运行，甚至可以强制它立即运行。 在任务计划程序库中，依次找到“Microsoft” > “Operations Management Suite” > “AOI” **\*\*\***  > “评估” > “SQLAssessment”。
+
+## <a name="view-sql-assessment-results"></a>查看 SQL 评估结果
+
+* 在“环境运行状况”窗格中，选择“查看 SQL 评估结果”按钮。
+
    > [!NOTE]
-   > 该脚本会计划名为 SQLAssessment 的任务，使其在运行上一个脚本后一小时内运行，然后每 7 天运行一次。 可以从任务计划程序库 >“Microsoft”>“Operations Management Suite”>“AOI”*** >“评估”>“SQLAssessment”修改任务，使其在其他日期和时间运行，甚至强制其立即运行。 此任务会触发数据收集。
+   > 除非 Log Analytics 中的结果已就绪，否则“查看 SQL 评估结果”按钮就会一直处于禁用状态。 在目标计算机上处理数据文件后，此进程最长可能需要两个小时才能完成。
 
-## <a name="view-the-assessment-results"></a>查看评估结果
+   > [!div class="mx-imgBorder"]
+   > [ ![显示 SQL 评估结果的屏幕截图。](media/assess/sql-assessment-results.png) ](media/assess/sql-assessment-results.png#lightbox)
 
-Log Analytics 中结果准备就绪之前，“环境运行状况”边栏选项卡上的“查看 SQL 评估结果”按钮处于禁用状态。 激活该按钮后，可以单击它来查看结果。 在目标计算机上处理数据文件后，最多可能需要 2 小时才能在 Log Analytics 中看到结果。
+* 通过检查工作文件夹中的文件，可以在收集计算机上查看数据处理状态。 计划的任务完成后，应会看在工作目录中看到几个具有 new. 前缀的文件。
 
-![SQ：评估结果](media/assess/sql-assessment-results.png)
+   > [!div class="mx-imgBorder"]
+   > [ ![显示“文件管理器”窗口的屏幕截图，其中显示工作文件夹中的新数据文件。](media/assess/sql-assessment-data-files-ready.png) ](media/assess/sql-assessment-data-files-ready.png#lightbox)
 
-通过检查工作文件夹中的文件，可以在收集计算机上查看数据处理状态。 计划的任务完成后，应会看在工作目录中看到几个具有 new. 前缀的文件：
+* Microsoft Monitoring Agent 每 15 分钟扫描一次工作文件夹。 它查找 new.* 文件，并将数据发送到 Log Analytics 工作区。 在 MMA 上传文件后，它会将前缀从 new. 更改 为 processed.
 
-![数据文件已就绪](media/assess/sql-assessment-data-files-ready.png)
-
-Microsoft Monitoring Agent 每 15 分钟扫描一次工作文件夹，查找 new.* 文件，然后将数据发送到 Log Analytics 工作区。 上传文件后，前缀将从 new. 变为 processed.：
-
-![已处理数据文件](media/assess/sql-assessment-data-files-processed.png)
+   > [!div class="mx-imgBorder"]
+   > ![显示“文件管理器”窗口的屏幕截图，其中显示已处理的数据文件。](media/assess/sql-assessment-data-files-processed.png)
 
 ## <a name="next-steps"></a>后续步骤
 
-查看[服务中心按需评估先决条件](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)处的 SQL Server 文档，以了解详细信息。
+* 通过查看先决条件文档[服务中心按需评估](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)来了解详细信息。
 
-若要获得对按需 SQL 评估的全面支持，需要一个顶级或统一支持订阅。 有关详细信息，请参阅 [Azure 顶级支持](https://azure.microsoft.com/support/plans/premier)。
+* 若要获得对按需 SQL 评估功能的全面支持，需要订阅顶级支持或统一支持。 有关详细信息，请参阅 [Azure 顶级支持](https://azure.microsoft.com/support/plans/premier)。

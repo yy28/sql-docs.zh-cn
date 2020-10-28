@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 63086a762e8c55109a43a32e39868b65808108f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891027"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257087"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>AD 模式部署已停止 - 缺少 DC 的反向查找区域条目
 
@@ -90,12 +90,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 提取日志并找到 `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`。
 
 > [!TIP]
-> 可通过多种方式来收集日志。 可以使用 Azure Data Studio 中的笔记本，而不是使用 `azdata` 复制日志。
+> 可通过多种方式来收集日志。 可以使用 Azure Data Studio 中的笔记本，而不是使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 复制日志。
 > 在 Azure Data Studio 中，连接到 Kubernetes 群集，并运行相应的故障排除笔记本。 以下是笔记本的示例。
 >
 > - TSG027 - 观察群集部署
 > - TSG061 - 获取 BDC 命名空间中 Pod 所有容器日志的尾部
-> - TSG001 - 运行 `azdata` copy-logs
+> - TSG001 - 运行 `azdata copy-logs`
 >
 
 ## <a name="inspect-the-logs"></a>检查日志

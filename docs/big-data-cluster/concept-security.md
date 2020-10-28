@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730678"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257244"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
 
@@ -37,7 +37,7 @@ ms.locfileid: "85730678"
 
 大数据群集有 5 个入口点
 
-* 主实例 - 使用数据库工具和应用程序（如 SSMS 或 Azure Data Studio）访问群集中的 SQL Server 主实例所采用的 TDS 终结点。 从 azdata 中使用 HDFS 命令或 SQL Server 命令时，该工具将连接到其他终结点，具体取决于操作。
+* 主实例 - 使用数据库工具和应用程序（如 SSMS 或 Azure Data Studio）访问群集中的 SQL Server 主实例所采用的 TDS 终结点。 当使用来自 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 的 HDFS 或 SQL Server 命令时，此工具连接到其他终结点，具体视操作而定。
 
 * 访问 HDFS 文件的网关 Spark (Knox) - 用于访问 webHDFS 和 Spark 等服务的 HTTPS 终结点。
 
@@ -59,16 +59,23 @@ ms.locfileid: "85730678"
 
 安全的大数据群集意味着跨 SQL Server 和 HDFS/Spark 对身份验证和授权方案提供一致的支持。 身份验证是指验证用户或服务身份并确保其与所声称的身份相符的过程。 授权是指基于发出请求的用户的身份，授予或拒绝对特定资源的访问权限。 此步骤在通过身份验证标识用户后执行。
 
-大数据上下文中的授权通常通过访问控制列表 (ACL) 执行，后者将用户身份与特定权限相关联。 HDFS 通过限制对服务 API、HDFS 文件和作业执行的访问来支持授权。
+大数据上下文中的授权通过访问控制列表 (ACL) 执行，此列表将用户标识与特定权限关联起来。 HDFS 通过限制对服务 API、HDFS 文件和作业执行的访问来支持授权。
 
-## <a name="encryption-and-other-security-mechanisms"></a>加密和其他安全机制
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>动态加密和其他安全机制
 
 客户端与外部终结点之间的通信加密以及群集内部组件之间的通信加密使用证书通过 TLS/SSL 获得保护。
 
 所有 SQL Server 到 SQL Server 的通信（例如与数据池通信的 SQL 主实例）则通过 SQL 登录获得保护。
 
 > [!IMPORTANT]
->  大数据群集使用 etcd 来存储凭据。 最佳做法是确保将 Kubernetes 群集配置为在静态时使用 etcd 加密。 默认情况下，etcd 中存储的机密是未加密的。 Kubernetes 文档提供有关此管理任务的详细信息： https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 和 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 。
+>  大数据群集使用 `etcd` 来存储凭据。 按照最佳做法，必须确保将 Kubernetes 群集配置为使用 `etcd` 静态加密。 默认情况下，存储在 `etcd` 中的机密是不加密的。 Kubernetes 文档提供有关此管理任务的详细信息： https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 和 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 。
+
+## <a name="data-encryption-at-rest"></a>静态数据加密
+
+SQL Server 大数据群集静态加密功能支持 SQL Server 和 HDFS 组件的应用程序级别加密的核心方案。 有关全面的功能使用指南，请参阅[静态加密概念和配置指南](encryption-at-rest-concepts-and-configuration.md)一文。
+
+> [!IMPORTANT]
+> 建议对所有 SQL Server 大数据群集部署进行卷加密。 在 Kubernetes 群集中配置的客户提供的存储卷也应该进行加密，作为静态数据加密的一种综合方法。 SQL Server 大数据群集静态加密功能是附加的安全层，提供 SQL Server 数据和日志文件的应用程序级别加密和 HDFS 加密区域支持。
 
 
 ## <a name="basic-administrator-login"></a>基本管理员登录名

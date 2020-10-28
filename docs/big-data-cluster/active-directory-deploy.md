@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb42be7b0affc351a013e29af9370d1a109e3d93
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898679"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257287"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>在 Active Directory 模式下部署 SQL Server 大数据群集
 
@@ -119,7 +119,7 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 
 下表显示了应用程序管理的授权模型：
 
-|   授权的角色   |   azdata 命令   |
+|   授权的角色   |   [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令   |
 |----------------------|--------------------|
 |   appOwner           | azdata app create  |
 |   appOwner           | azdata app update  |
@@ -128,17 +128,17 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 |   appOwner           | azdata app delete  |
 |   appOwner、appReader| azdata app run     |
 
-- `security.activeDirectory.subdomain`：**可选参数** 此参数在 SQL Server 2019 CU5 版本中引入，以支持针对同一个域部署多个大数据群集。 使用此设置，可以为部署的每个大数据群集指定不同的 DNS 名称。 如果未在 `control.json` 文件的 active directory 部分指定此参数的值，默认情况下，将使用大数据群集名称（与 Kubernetes 命名空间名称相同）来计算子域设置的值。 
+- `security.activeDirectory.subdomain`： **可选参数** 此参数在 SQL Server 2019 CU5 版本中引入，以支持针对同一个域部署多个大数据群集。 使用此设置，可以为部署的每个大数据群集指定不同的 DNS 名称。 如果未在 `control.json` 文件的 active directory 部分指定此参数的值，默认情况下，将使用大数据群集名称（与 Kubernetes 命名空间名称相同）来计算子域设置的值。 
 
   >[!NOTE]
   >通过子域设置传递的值不是新的 AD 域，而只是 BDC 群集内部使用的 DNS 域。
 
   >[!IMPORTANT]
-  >从 SQL Server 2019 CU5 版本开始，需要安装或升级最新版本的 azdata CLI 才能利用这些新功能，并在同一域中部署多个大数据群集。
+  >自 SQL Server 2019 CU5 版本起，需要安装或升级最新版 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]，才能利用这些新功能，并在同一域中部署多个大数据群集。
 
   请参阅[概念：在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deployment-background.md)，了解有关在同一 Active Directory 域中部署多个大数据群集的详细信息。
 
-- `security.activeDirectory.accountPrefix`：**可选参数** 此参数在 SQL Server 2019 CU5 版本中引入，以支持针对同一个域部署多个大数据群集。 此设置保证各种大数据群集服务的帐户名称的唯一性，这些名称必须在任意两个群集之间有所不同。 默认情况下，可以选择对帐户前缀名称进行自定义，子域名称用作帐户前缀。 如果子域名称长度超过 12 个字符，则将子域名的前 12 个字符用作帐户前缀。  
+- `security.activeDirectory.accountPrefix`： **可选参数** 此参数在 SQL Server 2019 CU5 版本中引入，以支持针对同一个域部署多个大数据群集。 此设置保证各种大数据群集服务的帐户名称的唯一性，这些名称必须在任意两个群集之间有所不同。 默认情况下，可以选择对帐户前缀名称进行自定义，子域名称用作帐户前缀。 如果子域名称长度超过 12 个字符，则将子域名的前 12 个字符用作帐户前缀。  
 
   >[!NOTE]
   >Active Directory 要求帐户名称限制在 20 个字符以内。 BDC 群集需要使用 8 个字符来区分 Pod 和 StatefulSets。 这使得帐户前缀有 12 个字符的限制
@@ -151,7 +151,7 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-要在 `control.json` 文件中设置上述参数，请使用以下 `azdata` 命令。 这些命令将替换配置并在部署之前提供你自己的值。
+要在 `control.json` 文件中设置上述参数，请使用以下 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令。 这些命令将替换配置并在部署之前提供你自己的值。
 
 > [!IMPORTANT]
 > 在 SQL Server 2019 CU2 版本中，部署配置文件中的安全配置部分的结构发生了明显的变化，并且所有 Active Directory 相关设置位于 `control.json` 文件的 `security` 下 json 树的新 `activeDirectory` 中。
@@ -213,7 +213,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 可以在此处找到示例脚本，用于[在具有 AD 集成的单节点 Kubernetes 群集 (kubeadm) 上部署 SQL Server 大数据群集](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad)。
 
 > [!Note]
-> 在某些情况下，无法适应新引入的 `subdomain` 参数。 例如，必须部署 CU5 之前的版本，并且已升级 azdata CLI。 这不太可能发生，但如果需要还原到 CU5 之前的行为，可以在 `control.json` 的 active directory 部分中将 `useSubdomain` 参数设置为 `false`。  命令如下：
+> 在某些情况下，无法适应新引入的 `subdomain` 参数。 例如，必须部署低于 CU5 的版本，并且已升级 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 这不太可能发生，但如果需要还原到 CU5 之前的行为，可以在 `control.json` 的 active directory 部分中将 `useSubdomain` 参数设置为 `false`。  命令如下：
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -221,7 +221,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 现在，你应该已设置所有所需的参数，用于部署具有 Active Directory 集成的 BDC。
 
-现在可以使用 `azdata` 命令和 kubeadm-prod 部署配置文件部署与 Active Directory 集成的 BDC 群集。 有关如何部署 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 的完整文档，请访问[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)。
+现在可以使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令和 kubeadm-prod 部署配置文件部署与 Active Directory 集成的 BDC 群集。 有关如何部署 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 的完整文档，请访问[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)。
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>验证域控制器的反向 DNS 条目
 
