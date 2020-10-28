@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a17a153aedecac36acb02946e726d07a50e4c60
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: b66c95d7818144abd41b7a5b9fbedb93ba81aded
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529449"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300461"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 TYPE = [HADOOP | BLOB_STORAGE]   
 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 仅对于大容量操作，`LOCATION` 必须是有效的 Azure Blob 存储 URL。 请勿将 /、文件名或共享访问签名参数放在 `LOCATION` URL 的末尾。
-必须使用 `SHARED ACCESS SIGNATURE` 作为标识创建所使用的凭据。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
+必须使用 `SHARED ACCESS SIGNATURE` 作为标识创建所使用的凭据。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
   
 

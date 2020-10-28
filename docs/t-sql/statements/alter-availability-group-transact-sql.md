@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8b3953f0f0000ce67f3d58ffbc4be07b5d921734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c80e55d2a2dc54e90d33785bc64153fa1dbf8a6
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479203"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300849"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -210,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  缺少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例对客户端请求的响应与可用性组无关。  
   
- FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值为给定组定义“灵活的故障转移策略”。 此灵活的故障转移策略向您提供对必须导致自动故障转移的条件的精确控制。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
+ FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值为给定组定义“灵活的故障转移策略”。 此灵活的故障转移策略向您提供对必须导致自动故障转移的条件的精确控制。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)。  
   
  HEALTH_CHECK_TIMEOUT = milliseconds  
  指定在 WSFC 群集假定服务器实例速度较慢或无响应前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移。  
@@ -259,7 +259,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  \<server_instance>  
  指定承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的地址。 地址格式依赖于该实例是默认实例还是命名实例以及它是独立实例还是故障转移群集实例 (FCI)。 语法如下所示：  
   
- { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
+ { ' *system_name* [\\*instance_name* ]' | ' *FCI_network_name* [\\*instance_name* ]' }  
   
  此地址由以下部分组成：  
   
@@ -373,7 +373,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  对于命名实例，可以通过查询 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 动态管理视图的 port 和 type_desc 列来获取端口号 。 服务器实例使用 Transact-SQL 侦听器 (type_desc='TSQL')。  
   
- 有关计算可用性副本的只读路由 URL 的详细信息，请参阅[计算 Always On 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
+ 有关计算可用性副本的只读路由 URL 的详细信息，请参阅[计算 Always On 的 read_only_routing_url](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
 > [!NOTE]  
 >  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例，应将 Transact-SQL 侦听器配置为使用特定端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
@@ -471,7 +471,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  有关强制故障转移的限制、先决条件和建议的信息，以及强制故障转移对可用性组中以前的主数据库的影响，请参阅[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER '_dns\_name_'( \<add_listener_option> )  
+ ADD LISTENER ' _dns\_name_ '( \<add_listener_option> )  
  为此可用性组定义新的可用性组侦听器。 仅在主要副本上受支持。  
   
 > [!IMPORTANT]
@@ -565,7 +565,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘** _four\_part\_ipv4\_address_ **’,‘** _four\_part\_ipv4\_mask_ **’)**  |  **(‘** _ipv6\_address_ **’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **(‘** _four\_part\_ipv4\_address_ **’,‘** _four\_part\_ipv4\_mask_ **’)**  |  **(‘** _ipv6\_address_ **’)** } [ **,** ... _n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  指定可用性组侦听器将使用一个或多个静态 IP 地址，而不使用 DHCP。 若要跨多个子网创建一个可用性组，每个子网均需要一个侦听器配置中的静态 IP 地址。 对于某一给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。 请与您的网络管理员联系以获取将承载新可用性组的可用性副本的每个子网的静态 IP 地址。  
   
  例如：  
@@ -588,13 +588,13 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER '_dns\_name_'( \<modify\_listener\_option\> )  
+ MODIFY LISTENER ' _dns\_name_ '( \<modify\_listener\_option\> )  
  修改此可用性组的现有可用性组侦听器。 仅在主要副本上受支持。  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER 采用以下选项之一：  
   
- ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name*ipv6\_address* __')__ }  
+ ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name *ipv6\_address* __')__ }  
  将指定的 IP 地址添加到由 dns\_name 指定的可用性组侦听器。  
   
  PORT = listener_port  
@@ -650,5 +650,4 @@ GO
  [Always On 可用性组配置故障排除 (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
   

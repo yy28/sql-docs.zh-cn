@@ -1,6 +1,6 @@
 ---
+title: Table Properties - SSMS
 description: Table Properties - SSMS
-title: 表属性 - SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,23 +9,25 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.storage.f1
 - sql13.swb.tableproperties.changetracking.f1
 - sql13.swb.tableproperties.general.f1
-- sql12.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810455"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344053"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   本主题介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“表属性”对话框中显示的表属性。 有关如何显示这些属性的详细信息，请参阅 [查看表定义](../../relational-databases/tables/view-the-table-definition.md)。  
@@ -69,7 +71,7 @@ ms.locfileid: "91810455"
  指示在创建对象时带引号的标识符选项是否设为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **锁升级**  
- 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15)。 可能的值包括：  
+ 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](../sql-server-transaction-locking-and-row-versioning-guide.md)。 可能的值包括：  
   
  AUTO  
  此选项可让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 选择适合于表架构的锁升级粒度。  
@@ -84,11 +86,11 @@ ms.locfileid: "91810455"
  在大多数情况下禁止锁升级。 表级别的锁未完全禁止。 例如，当扫描在可序列化隔离级别下没有聚集索引的表时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须使用表锁来保证数据的完整性。  
   
  **对表进行复制**  
- 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值包括 **True** 和 **False**。  
+ 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值包括 **True** 和 **False** 。  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> “更改跟踪”页  
  **更改跟踪**  
- 指示是否对相应的表启用了更改跟踪。 默认值为 **False**。  
+ 指示是否对相应的表启用了更改跟踪。 默认值为 **False** 。  
   
  只有对数据库启用了更改跟踪，此选项才可用。  
   
@@ -109,7 +111,7 @@ ms.locfileid: "91810455"
  FileTable 的根文件夹。  
   
  **启用 FileTable 命名空间**  
- 当为 **True**时，该值指示该表为 FileTable。 如果您将该值更改为 **False**，则是在将 FileTable 更改为普通用户表。 如果您以后想要将该表更改回 FileTable，则该表将必须首先通过 FileTable 一致性检查，之后转换才会成功。  
+ 当为 **True** 时，该值指示该表为 FileTable。 如果您将该值更改为 **False** ，则是在将 FileTable 更改为普通用户表。 如果您以后想要将该表更改回 FileTable，则该表将必须首先通过 FileTable 一致性检查，之后转换才会成功。  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> “存储”页  
  显示所选表中与存储相关的属性。  
@@ -135,7 +137,7 @@ ms.locfileid: "91810455"
  包含该表的文件组的名称。  
   
  **已对表进行分区**  
- 可能的值包括 **True** 和 **False**。  
+ 可能的值包括 **True** 和 **False** 。  
   
  **Filestream 文件组**  
  如果该表包含具有 FILESTREAM 属性的 **varbinary(max)** 列，则指定 FILESTREAM 数据文件组的名称。 默认值为默认的 FILESTREAM 数据文件组。  
@@ -144,7 +146,7 @@ ms.locfileid: "91810455"
   
 ### <a name="general"></a>常规  
  **Vardecimal 存储格式已启用**  
- 当为 **True**时，此只读值表示使用 vardecimal 存储格式存储 **decimal** 和 **numeric** 数据类型。 若要更改此选项，请使用 **sp_tableoption** 的 [vardecimal storage format](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)选项。 不推荐使用 Vardecimal 存储格式。 请改用 ROW 压缩。  
+ 当为 **True** 时，此只读值表示使用 vardecimal 存储格式存储 **decimal** 和 **numeric** 数据类型。 若要更改此选项，请使用 **sp_tableoption** 的 [vardecimal storage format](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)选项。 不推荐使用 Vardecimal 存储格式。 请改用 ROW 压缩。  
   
  **索引空间**  
  索引在表中所占的空间大小 (MB)。 此值不包括表的 XML 索引空间使用量。 如果 XML 索引属于表，则使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 。  

@@ -19,12 +19,12 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1aff8d7d8496604983c54099f818e98fffbf18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493045"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734608"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,26 +44,26 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>参数  
  [ @key =] N'key '  
- 要设置的键，类型为 **sysname**。 最大密钥大小为128个字节。  
+ 要设置的键，类型为 **sysname** 。 最大密钥大小为128个字节。  
   
  [ @value =] "value"  
- **Sql_variant**类型的指定键的值。 如果将值设置为 NULL，则释放内存。 最大大小为 8,000 个字节。  
+ **Sql_variant** 类型的指定键的值。 如果将值设置为 NULL，则释放内存。 最大大小为 8,000 个字节。  
   
  [ @read_only =] {0 | 1}  
- 类型 **位**的标志。 如果为1，则无法在此逻辑连接上再次更改指定键的值。 如果 0 (默认值) ，则可更改该值。  
+ 类型 **位** 的标志。 如果为1，则无法在此逻辑连接上再次更改指定键的值。 如果 0 (默认值) ，则可更改该值。  
   
 ## <a name="permissions"></a>权限  
  任何用户都可以为其会话设置会话上下文。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  与其他存储过程一样， (不) 表达式或函数调用的文本和变量也可以作为参数传递。  
   
- 会话上下文的总大小限制为 1 MB。 如果设置的值导致超过此限制，则语句将失败。 可以监视 [sys.databases&#41;dm_os_memory_objects &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)的总体内存使用情况。  
+ 会话上下文的总大小限制为 1 MB。 如果设置的值导致超过此限制，则语句将失败。 可以监视 [sys.dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)中的总体内存使用情况。  
   
- 可以通过按如下所示 dm_os_memory_cache_counters 查询 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 来监视总体内存使用情况： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 可以通过查询 [sys.dm_os_memory_cache_counters &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 来监视总体内存使用情况，如下所示： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何设置并返回值为英语的名为 language 的会话上下文键。  
+A. 下面的示例演示如何设置并返回值为英语的名为 language 的会话上下文键。  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
@@ -75,12 +75,22 @@ SELECT SESSION_CONTEXT(N'language');
 ```  
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
-  
+
+B. 下面的示例演示如何设置和检索值为12323ad 的名为 client_correlation_id 的会话上下文键。
+```
+-- set value
+EXEC sp_set_session_context 'client_correlation_id', '12323ad'; 
+
+--check value
+SELECT SESSION_CONTEXT(N'client_correlation_id');
+
+```
+
 ## <a name="see-also"></a>另请参阅  
- [CURRENT_TRANSACTION_ID &#40;Transact-sql&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID (Transact-SQL)](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;Transact-sql&#41;](../../t-sql/functions/session-context-transact-sql.md)   
  [行级安全性](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40;Transact-sql&#41;](../../t-sql/functions/context-info-transact-sql.md)   
+ [CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

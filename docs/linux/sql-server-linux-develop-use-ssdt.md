@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: dc8975a1454996ffbbab38e3e443f3f3847dc8a1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: dd4de5567d2bafd21b321dc388068b6ee6c24ed5
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115453"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523912"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 
@@ -47,13 +47,13 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 3. 在“连接”页的“本地 Git 存储库”部分，单击“新建”    。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="Screenshot of the Local Git Repository section with the New option called out." style="width: 300px;"/>
 
 4. 单击“创建”。  创建本地 Git 存储库后，双击“SSDTRepo”  。
 
 5. 单击“解决方案”部分的“新建”   。 选择“新建项目”对话框中“其他语言”节点下的“SQL Server”    。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="Screenshot of the Solutions section with the New option and SQL Server option called out." style="width: 480px;"/>
 
 6. 键入 TutorialDB 作为名称，单击“确定”创建新数据库项目   。
 
@@ -69,7 +69,7 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 4. 使用表设计器添加两列，即名称 `nvarchar(50)` 和位置 `nvarchar(50)`，如下图所示。 在设计器中添加列时，SSDT 将生成 `CREATE TABLE` 脚本。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="Screenshot of the table designer with the Name and Location values called out." style="width: 480px;"/>
 
 5. 保存 Table1.sql 文件  。
 
@@ -77,7 +77,7 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 1. 在“TutorialDB”中打开数据库项目菜单，并选择“生成”   。 SSDT 将在项目中编译 .sql 源代码文件，并生成数据层应用程序包 (dacpac) 文件。 这适用于将数据库发布到 Linux 上的 SQL Server 实例。 
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="Screenshot showing the TutorialDB with the Build option called out." style="width: 400px;"/>
 
 2. 在 Visual Studio 的“输出”窗口中检查生成成功的消息  。 
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db4140d13fa0e521264a70bfcfb2363260327bdb
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: af27cbc5aaa05412052940b020ce9268a1c74ea3
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480433"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300403"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -155,7 +155,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
 |级别|失败条件|  
 |-----------|-----------------------|  
-|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> -由于没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租用时间到期。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout)。|  
+|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> -由于没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租用时间到期。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的 HEALTH_CHECK_TIMEOUT 阈值。<br /><br /> -可用性副本处于失败状态。|  
 |3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 此选项为默认行为。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  
@@ -164,7 +164,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
 > [!NOTE]  
 >  缺少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例对客户端请求的响应与可用性组无关。  
   
- FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值为给定组定义“灵活的故障转移策略”。 此灵活的故障转移策略向您提供对必须导致自动故障转移的条件的精确控制。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
+ FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值为给定组定义“灵活的故障转移策略”。 此灵活的故障转移策略向您提供对必须导致自动故障转移的条件的精确控制。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)。  
   
  HEALTH_CHECK_TIMEOUT = milliseconds  
  指定在 WSFC 群集假定服务器实例速度较慢或无响应前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移。  
@@ -186,7 +186,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
  用于创建基本可用性组。 基本可用性组限于一个数据库和两个副本：主要副本和次要副本。 此选项替换 SQL Server Standard Edition 上弃用的数据库镜像功能。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始支持基本可用性组。  
 
  DISTRIBUTED  
- 用于创建分布式可用性组。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，支持分布式可用性组。 
+ 用于创建分布式可用性组。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，支持分布式可用性组。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  在 SQL Server 2017 中引入。 用于设置需要在主要副本提交事务之前提交的最小数量的同步次要副本。 保证 SQL Server 事务等待至事务日志在最小数量的次要副本上更新为止。 默认值为 0，可提供与 SQL Server 2016 相同的行为。 最小值为 0。 最大值为副本数量减 1。 此选项与同步提交模式中的副本相关。 当副本处于同步提交模式时，对主要副本的写入操作会等待至将次要同步副本上的写入提交到副本数据库事务日志为止。 如果托管次要同步副本的 SQL Server 停止响应，则托管主要副本的 SQL Server 将此次要副本标记为 NOT SYNCHRONIZED（未同步）并继续执行操作。 当无响应的数据库恢复联机状态时，它处于“未同步”状态，副本标记为不正常，直到主要副本可再次对其执行同步。 此设置可确保主要副本等待至最少数量的副本已提交每个事务。 如果最少数量的副本不可用，则主要副本上的提交会失败。 对于群集类型 `EXTERNAL`，可用性组添加到群集资源时，设置会更改。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
@@ -214,7 +214,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
  \<server_instance> 指定承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的地址。 地址格式依赖于该实例是默认实例还是命名实例以及它是独立实例还是故障转移群集实例 (FCI)，如下所示：  
   
- { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
+ { ' *system_name* [\\*instance_name* ]' | ' *FCI_network_name* [\\*instance_name* ]' }  
   
  此地址由以下部分组成：  
   
@@ -325,7 +325,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
  对于命名实例，可以通过查询 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 动态管理视图的 port 和 type_desc 列来获取端口号 。 服务器实例使用 Transact-SQL 侦听器 (type_desc='TSQL')。  
   
- 有关计算副本的只读路由 URL 的详细信息，请参阅[计算 Always On 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
+ 有关计算副本的只读路由 URL 的详细信息，请参阅[计算 Always On 的 read_only_routing_url](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
 > [!NOTE]  
 >  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例，应将 Transact-SQL 侦听器配置为使用特定端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
@@ -427,7 +427,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
  MANUAL  
  指定手动种子设定（默认）。 此方法要求在主要副本上创建数据库的备份，并在次要可用性组的副本上手动还原该备份。  
   
- LISTENER '_dns\_name_'( \<listener_option\> ) 为此可用性组定义新的可用性组侦听器  。 LISTENER 是一个可选参数。  
+ LISTENER ' _dns\_name_ '( \<listener_option\> ) 为此可用性组定义新的可用性组侦听器  。 LISTENER 是一个可选参数。  
   
 > [!IMPORTANT]
 >  创建第一个侦听器之前，强烈建议阅读[创建或配置可用性组侦听程序 (SQL Server)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
@@ -459,7 +459,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘** _four\_part\_ipv4\_address_ **’,‘** _four\_part\_ipv4\_mask_ **’)**  |  **(‘** _ipv6\_address_ **’)** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **(‘** _four\_part\_ipv4\_address_ **’,‘** _four\_part\_ipv4\_mask_ **’)**  |  **(‘** _ipv6\_address_ **’)** } [ **,** ... *n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  指定可用性组侦听器使用一个或多个静态 IP 地址，而不使用 DHCP。 若要跨多个子网创建一个可用性组，每个子网均需要一个侦听器配置中的静态 IP 地址。 对于某一给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。 请联系网络管理员，以获取每个托管新可用性组副本的子网的静态 IP 地址。  
   
  例如：  
@@ -507,7 +507,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
 |副本选项|`COMPUTER01` 上的设置|`COMPUTER02` 上的设置|`COMPUTER03` 上的设置|说明|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|在这个示例中，系统处于相同的域中，因此，端点 URL 可以使用计算机的名称作为系统地址。|  
+|ENDPOINT_URL|TCP:// *COMPUTER01:5022*|TCP:// *COMPUTER02:5022*|TCP:// *COMPUTER03:5022*|在这个示例中，系统处于相同的域中，因此，端点 URL 可以使用计算机的名称作为系统地址。|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|两个副本使用同步提交模式。 同步时，它们支持故障转移而不会丢失数据。 第三个副本，将使用异步提交可用性模式。|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|同步提交副本支持自动故障转移和计划的手动故障转移。 同步提交可用性模式副本支持仅限强制的手动故障转移。|  
 |BACKUP_PRIORITY|30|30|90|与同步提交副本相比，将更高的优先级 90 分配给异步提交副本。 备份往往发生在将托管异步提交副本的服务器实例上。|  
@@ -588,4 +588,4 @@ GO
  [DROP AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Always On 可用性组配置故障排除 (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

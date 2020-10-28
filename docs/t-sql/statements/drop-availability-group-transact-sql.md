@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e6a2cb161ae00d9f77d50c7a702183927cc169d8
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: d2335b8015f0eb88821e94231ac8cf48d9bc0471
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380190"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300388"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,12 +64,12 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  如果 Windows Server 故障转移群集 (WSFC) 群集没有仲裁，则避免删除可用性组。 如果在群集缺少仲裁时必须删除可用性组，则不删除群集中存储的元数据可用性组。 在群集重新获得仲裁后，将需要再次删除此可用性组以便将其从 WSFC 群集中删除。  
   
--   在辅助副本上，**DROP AVAILABILITY GROUP** 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果从辅助副本中删除该可用性组，则主副本无法确定出现 **OFFLINE** 状态是因为仲裁丢失、强制故障转移还是 **DROP AVAILABILITY GROUP** 命令。 主副本将转换为 **RESTORING** 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) （CSS SQL Server 工程师博客）。  
+-   在辅助副本上， **DROP AVAILABILITY GROUP** 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果从辅助副本中删除该可用性组，则主副本无法确定出现 **OFFLINE** 状态是因为仲裁丢失、强制故障转移还是 **DROP AVAILABILITY GROUP** 命令。 主副本将转换为 **RESTORING** 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) （CSS SQL Server 工程师博客）。  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 对可用性组要求 **ALTER AVAILABILITY GROUP** 权限、**CONTROL AVAILABILITY GROUP** 权限、**ALTER ANY AVAILABILITY GROUP** 权限或 **CONTROL SERVER** 权限。 若要删除并非由本地服务器实例承载的某一可用性组，需要针对该可用性组的 **CONTROL SERVER** 权限或 **CONTROL** 权限。  
+ 对可用性组要求 **ALTER AVAILABILITY GROUP** 权限、 **CONTROL AVAILABILITY GROUP** 权限、 **ALTER ANY AVAILABILITY GROUP** 权限或 **CONTROL SERVER** 权限。 若要删除并非由本地服务器实例承载的某一可用性组，需要针对该可用性组的 **CONTROL SERVER** 权限或 **CONTROL** 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例删除了 `AccountsAG` 可用性组。  
@@ -80,11 +80,10 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   [工作方式：DROP AVAILABILITY GROUP 行为](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) （CSS SQL Server 工程师博客）  
+-   [工作方式：DROP AVAILABILITY GROUP 行为](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) （CSS SQL Server 工程师博客）  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [删除可用性组 (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
-  
   

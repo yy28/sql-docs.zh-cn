@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624814"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300282"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -43,9 +43,9 @@ ms.locfileid: "91624814"
 
 请访问以下文档，了解使用 COPY 语句的综合示例和快速入门：
 
-- [快速入门：使用 COPY 语句批量加载数据](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [快速入门：关于使用 COPY 语句及其支持的身份验证方法的示例](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [快速入门：使用丰富的 Synapse Studio UI（工作区预览版）创建 COPY 语句](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [快速入门：使用 COPY 语句批量加载数据](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [快速入门：关于使用 COPY 语句及其支持的身份验证方法的示例](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [快速入门：使用丰富的 Synapse Studio UI（工作区预览版）创建 COPY 语句](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>语法  
 
@@ -75,7 +75,7 @@ WITH
 ## <a name="arguments"></a>参数  
 
 *schema_name*  
-如果执行操作的用户的默认架构是指定表的架构，则该参数是可选的。 如果未指定 *schema*，并且执行复制操作的用户的默认架构不同于指定表的架构，则将取消复制，并返回一条错误消息。  
+如果执行操作的用户的默认架构是指定表的架构，则该参数是可选的。 如果未指定 *schema* ，并且执行复制操作的用户的默认架构不同于指定表的架构，则将取消复制，并返回一条错误消息。  
 
 *table_name*  
 要将数据复制到其中的表的名称。 目标表可以是临时或永久表，并且必须已存在于数据库中。 
@@ -85,9 +85,9 @@ WITH
 
 [(Column_name [Default_value] [Field_number] [,...n])]
 
-- *Column_name*：目标表中列的名称。
-- *Default_value*：将替换输入文件中的任何 NULL 值的默认值。 默认值适用于所有文件格式。 如果省略列列表中的某一列或者某个输入文件字段为空，则 COPY 将尝试从输入文件中加载 NULL。
-- *Field_number*：将映射到目标列名称的输入文件字段编号。
+- *Column_name* ：目标表中列的名称。
+- *Default_value* ：将替换输入文件中的任何 NULL 值的默认值。 默认值适用于所有文件格式。 如果省略列列表中的某一列或者某个输入文件字段为空，则 COPY 将尝试从输入文件中加载 NULL。
+- *Field_number* ：将映射到目标列名称的输入文件字段编号。
 - 字段索引从 1 开始。
 
 如果未指定列列表，则 COPY 将根据源顺序和目标顺序映射列：输入字段 1 将映射到目标列 1，字段 2 将映射到列 2，依此类推。
@@ -95,17 +95,17 @@ WITH
 *External locations(s)*</br>
 包含数据的文件的暂存位置。 目前支持 Azure Data Lake Storage (ADLS) Gen2 和 Azure Blob 存储：
 
-- Blob 存储的*外部位置*： https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2 的*外部位置*： https://<account>。 dfs.core.windows.net/<container>/<path>
+- Blob 存储的 *外部位置* ： https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2 的 *外部位置* ： https://<account>。 dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > .blob 终结点也可用于 ADLS Gen2，并且当前可获得最佳性能。 当身份验证方法不需要 .dfs 时，请使用 .blob 终结点。
 
-- *Account*：存储帐户名称
+- *Account* ：存储帐户名称
 
-- *Container*：blob 容器名称
+- *Container* ：blob 容器名称
 
-- *Path*：数据的文件夹或文件路径。 位置从容器开始。 如果指定了文件夹，则 COPY 将从该文件夹及其所有子文件夹中检索所有文件。 除非在路径中显式指定，否则 COPY 会忽略隐藏文件夹，并且不返回以下划线 (_) 或句点 (.) 开头的文件。 即使使用通配符指定路径也是如此。
+- *Path* ：数据的文件夹或文件路径。 位置从容器开始。 如果指定了文件夹，则 COPY 将从该文件夹及其所有子文件夹中检索所有文件。 除非在路径中显式指定，否则 COPY 会忽略隐藏文件夹，并且不返回以下划线 (_) 或句点 (.) 开头的文件。 即使使用通配符指定路径也是如此。
 
 可以在路径中使用通配符：
 
@@ -154,10 +154,10 @@ WITH
 - 使用共享访问签名 (SAS) 进行身份验证
   
   - *IDENTITY：一个值为“共享访问签名”的常量*
-  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
+  - *SECRET： [共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
   -  所需的最低权限：READ 和 LIST
   
-- 使用[*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
+- 使用 [*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
 
   - *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET：AAD 应用程序服务主体密钥*
@@ -179,7 +179,7 @@ WITH
   - 所需的最小 RBAC 角色：AAD 用户的存储 blob 数据参与者或存储 blob 数据所有者
 
 *ERRORFILE = Directory Location*</br>
-*ERRORFILE* 仅适用于 CSV。 指定 COPY 语句中的目录，应在该目录中写入被拒绝的行和相应的错误文件。 可以指定存储帐户的完整路径，也可以指定容器的相对路径。 如果指定的路径不存在，系统将代你创建一个。 创建名称为“_rejectedrows”的子目录。除非在位置参数中明确命名，否则，“_ ”字符将确保对该目录转义以进行其他数据处理。 
+*ERRORFILE* 仅适用于 CSV。 指定 COPY 语句中的目录，应在该目录中写入被拒绝的行和相应的错误文件。 可以指定存储帐户的完整路径，也可以指定容器的相对路径。 如果指定的路径不存在，系统将代你创建一个。 创建名称为“ _rejectedrows”的子目录。除非在位置参数中明确命名，否则，“_ ”字符将确保对该目录转义以进行其他数据处理。 
 
 在此目录中，存在根据负荷提交时间创建的文件夹，采用 YearMonthDay-HourMinuteSecond 格式（例如， 20180330-173205）。 在此文件夹中，将写入两种类型的文件，即原因（错误）文件和数据（行）文件，每个文件都预先追加 queryID、distributionID 和文件 GUID。 数据和原因位于不同的文件中，因此相应的文件具有匹配的前缀。
 
@@ -193,10 +193,10 @@ WITH
   
 - 使用共享访问签名 (SAS) 进行身份验证
   - *IDENTITY：一个值为“共享访问签名”的常量*
-  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
+  - *SECRET： [共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
   - 所需的最低权限：READ、LIST、WRITE、CREATE、DELETE
   
-- 使用[*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
+- 使用 [*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
   - *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET：AAD 应用程序服务主体密钥*
   - 所需的最小 RBAC 角色：存储 blob 数据参与者或存储 blob 数据所有者
@@ -234,7 +234,7 @@ COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}</br>
 
 - .gz - **GZIP**
 - .snappy - **Snappy**
-- .deflate - **DefaultCodec**（仅限 Parquet 和 ORC）
+- .deflate - **DefaultCodec** （仅限 Parquet 和 ORC）
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* 适用于 CSV，它指定一个字符，该字符将用作 CSV 文件中的引号字符（字符串分隔符）。 如果未指定，根据 RFC 4180 标准中的定义，引号字符 (") 将用作引号字符。 FIELDQUOTE 的 UTF-8 不支持扩展的 ASCII 和多字节字符。

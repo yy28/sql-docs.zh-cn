@@ -12,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0ab6f4ff4d5681d0dfeb30ded57447ddbb8b24a0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990150"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300548"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT (CTAS) 是提供最重要的 T-SQL 功能之一。 它是
 -   查询或导入外部数据。  
 
 > [!NOTE]  
-> 由于 CTAS 增加了创建表的功能，因此本主题尽量不重复 CREATE TABLE 主题。 而是描述 CTAS 和 CREATE TABLE 语句之间的差异。 有关 CREATE TABLE 的详细信息，请参阅 [CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) 语句。 
+> 由于 CTAS 增加了创建表的功能，因此本主题尽量不重复 CREATE TABLE 主题。 而是描述 CTAS 和 CREATE TABLE 语句之间的差异。 有关 CREATE TABLE 的详细信息，请参阅 [CREATE TABLE (Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md) 语句。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,13 +81,13 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>参数  
-有关详细信息，请参阅 CREATE TABLE 中的[参数部分](https://msdn.microsoft.com/library/mt203953/#Arguments)。  
+有关详细信息，请参阅 CREATE TABLE 中的[参数部分](./create-table-azure-sql-data-warehouse.md#Arguments)。  
 
 <a name="column-options-bk"></a>
 
 ### <a name="column-options"></a>列选项
 `column_name` [ ,...`n` ]   
- 列名不允许 CREATE TABLE 中提及的[列选项](https://msdn.microsoft.com/library/mt203953/#ColumnOptions)。  相反，可以为新表提供包含一个或多个列名的可选列表。 新表中的列将使用指定的名称。 指定列名时，列表中的列数必须与所选结果中的列数相匹配。 如果未指定任何列名，新的目标表将使用 select 语句结果中的列名。 
+ 列名不允许 CREATE TABLE 中提及的[列选项](./create-table-azure-sql-data-warehouse.md#ColumnOptions)。  相反，可以为新表提供包含一个或多个列名的可选列表。 新表中的列将使用指定的名称。 指定列名时，列表中的列数必须与所选结果中的列数相匹配。 如果未指定任何列名，新的目标表将使用 select 语句结果中的列名。 
   
  不能指定任何其他列选项，例如数据类型、排序规则或为 Null 性。 每个属性都派生自 `SELECT` 语句的结果。 但可以使用 SELECT 语句来更改属性。 有关示例，请参阅[使用 CTAS 更改列属性](#ctas-change-column-attributes-bk)。   
 
@@ -98,14 +98,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 `DISTRIBUTION` = `HASH` ( distribution_column_name ) | ROUND_ROBIN | REPLICATE      
 CTAS 语句需要分布选项，并且没有默认值。 这就不同于具有默认值的 CREATE TABLE。 
 
-有关详细信息以及如何选择最佳分布列的信息，请参阅 CREATE TABLE 中的[表分发选项](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)部分。 
+有关详细信息以及如何选择最佳分布列的信息，请参阅 CREATE TABLE 中的[表分发选项](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions)部分。 
 
 <a name="table-partition-options-bk"></a>
 
 ### <a name="table-partition-options"></a>表分区选项
 即使已对源表进行分区，CTAS 语句也会默认创建一个非分区表。 若要使用 CTAS 语句创建已分区表，必须指定分区选项。 
 
-有关详细信息，请参阅 CREATE TABLE 中的[表分区选项](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions)部分。
+有关详细信息，请参阅 CREATE TABLE 中的[表分区选项](./create-table-azure-sql-data-warehouse.md#TablePartitionOptions)部分。
 
 <a name="select-options-bk"></a>
 
@@ -127,12 +127,12 @@ select 语句是 CTAS 和 CREATE TABLE 之间的根本区别。
 ## <a name="permissions"></a>权限  
 CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限。
 
-有关创建表的权限，请参阅 CREATE TABLE 中的[权限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 
+有关创建表的权限，请参阅 CREATE TABLE 中的[权限](./create-table-azure-sql-data-warehouse.md#Permissions)。 
   
 <a name="general-remarks-bk"></a>
   
 ## <a name="general-remarks"></a>一般备注
-有关详细信息，请参阅 CREATE TABLE 中的[一般备注](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks)。
+有关详细信息，请参阅 CREATE TABLE 中的[一般备注](./create-table-azure-sql-data-warehouse.md#GeneralRemarks)。
 
 <a name="limitations-bk"></a>
 
@@ -147,7 +147,7 @@ CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限。
 <a name="locking-behavior-bk"></a>
   
 ## <a name="locking-behavior"></a>锁定行为  
- 有关详细信息，请参阅 CREATE TABLE 中的[锁定行为](https://msdn.microsoft.com/library/mt203953/#LockingBehavior)。
+ 有关详细信息，请参阅 CREATE TABLE 中的[锁定行为](./create-table-azure-sql-data-warehouse.md#LockingBehavior)。
  
 <a name="performance-bk"></a>
  
@@ -847,8 +847,5 @@ OPTION (MAXDOP 1);
  [CREATE TABLE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE (Transact-SQL)](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE (Transact-SQL)](./create-external-table-transact-sql.md)  
   
-  
-
-

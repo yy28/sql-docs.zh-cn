@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834213"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300935"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 credential_name 指定正在创建的数据库范围凭据的名称。 credential_name 不能以数字符号 (#) 开头。 系统凭据以 ## 开头。
 
-IDENTITY ='identityname' 指定从服务器外部进行连接时要使用的帐户名称 _\__ 。 要使用共享密钥从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。 若要将数据加载到 SQL DW，任何有效的值均可用于标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos（Windows Active Directory 或 MIT KDC）时，请勿在 IDENTITY 参数中使用域名。 它应只是帐户名称。
+IDENTITY ='identityname' 指定从服务器外部进行连接时要使用的帐户名称 _\__ 。 要使用共享密钥从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。 若要将数据加载到 SQL DW，任何有效的值均可用于标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos（Windows Active Directory 或 MIT KDC）时，请勿在 IDENTITY 参数中使用域名。 它应只是帐户名称。
 
 > [!IMPORTANT]
 > 用于 PolyBase 的 SQL、Oracle、Teradata 和 MongoDB ODBC 连接器仅支持基本身份验证，不支持 Kerberos 身份验证。
@@ -85,7 +85,7 @@ SECRET ='secret' 指定发送身份验证所需的机密内容。 需要 `SECRET
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用数据库范围凭据将扩展事件文件写入 Azure blob 存储。
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 将数据库范围凭据用于弹性池。 有关详细信息，请参阅[使用弹性数据库控制爆炸式增长](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 将数据库范围凭据用于弹性池。 有关详细信息，请参阅[使用弹性数据库控制爆炸式增长](/azure/azure-sql/database/elastic-pool-overview)
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用数据库范围凭据访问 Azure blob 存储的数据。 有关详细信息，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。 
 
@@ -127,7 +127,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 以下示例创建的数据库范围凭据可用于创建可以由 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的 PolyBase 使用的[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 Azure Data Lake Store 使用 Azure Active Directory 应用程序进行服务到服务身份验证。
-请先[创建 AAD 应用程序](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)，并记录 client_id、OAuth_2.0_Token_EndPoint 和密钥，然后再尝试创建数据库范围凭据。
+请先[创建 AAD 应用程序](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)，并记录 client_id、OAuth_2.0_Token_EndPoint 和密钥，然后再尝试创建数据库范围凭据。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -148,4 +148,4 @@ WITH
 - [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

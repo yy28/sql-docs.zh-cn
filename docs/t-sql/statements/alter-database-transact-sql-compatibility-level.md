@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a63edc1d0c040496fd041bf50bdc86861cd431e4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b17adc51f6915067d617a93776783e9e8aee2b12
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541471"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300744"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -101,7 +101,7 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } 是�
 
 若要对整个数据库利用数据库兼容性级别 120 或更高级别，但选择启用映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是它的关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 
-要详细了解如何评估你最重要的查询在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的两个不同兼容性级别的性能差异，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)（在 Azure SQL 数据库中使用兼容性级别 130 改进了查询性能）。 请注意，本文介绍兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中也可以使用相同的方法升级到 140 或更高级别。
+要详细了解如何评估你最重要的查询在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的两个不同兼容性级别的性能差异，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](/archive/blogs/sqlserverstorageengine/improved-query-performance-with-compatibility-level-130-in-azure-sql-database)（在 Azure SQL 数据库中使用兼容性级别 130 改进了查询性能）。 请注意，本文介绍兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中也可以使用相同的方法升级到 140 或更高级别。
 
 若要确定连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本，请执行以下查询。
 
@@ -142,19 +142,19 @@ SELECT name, compatibility_level FROM sys.databases;
 > 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的已停用功能不受兼容性级别保护 。 这指的是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中删除的功能。
 > 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容性级别设置为 110 不会恢复废止的提示。  
 >  
-> 要详细了解已停用的功能，请参阅 [SQL Server 2016 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)和 [SQL Server 2014 中停用的数据库引擎功能](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server)。
+> 要详细了解已停用的功能，请参阅 [SQL Server 2016 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)和 [SQL Server 2014 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)。
 
 > [!IMPORTANT]
-> 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的中断性变更可能不受兼容性级别保护 。 这指的是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之间的行为变更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象**不**受兼容级别保护。
+> 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的中断性变更可能不受兼容性级别保护 。 这指的是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之间的行为变更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象 **不** 受兼容级别保护。
 >
-> 受兼容级别**保护**的一个重大更改示例是从 datetime 到 datetime2 数据类型的隐式转换。 在数据库兼容性级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，这些转换显得更加准确。 若要还原以前的转换行为，请将数据库兼容性级别设置为 120 或更低。
+> 受兼容级别 **保护** 的一个重大更改示例是从 datetime 到 datetime2 数据类型的隐式转换。 在数据库兼容性级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，这些转换显得更加准确。 若要还原以前的转换行为，请将数据库兼容性级别设置为 120 或更低。
 >
-> 兼容级别**不保护**的重大更改示例有：
+> 兼容级别 **不保护** 的重大更改示例有：
 >
 > - 系统对象中更改了列名。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，sys.dm_os_sys_info 中的列 single_pages_kb 已重命名为 pages_kb。 无论兼容级别如何，查询 `SELECT single_pages_kb FROM sys.dm_os_sys_info` 都会生成错误 207（列名无效）。
 > - 删除了系统对象。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，`sp_dboption` 已删除。 无论兼容级别如何，语句 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 都会生成错误 2812（找不到存储过程“sp_dboption”）。
 >
-> 要详细了解中断性变更，请参阅 [SQL Server 2017 中的数据库引擎功能中断性变更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能中断性变更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)和 [SQL Server 2014 中的数据库引擎功能中断性变更](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server)。
+> 要详细了解中断性变更，请参阅 [SQL Server 2017 中的数据库引擎功能中断性变更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能中断性变更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)和 [SQL Server 2014 中的数据库引擎功能中断性变更](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)。
 
 ## <a name="differences-between-compatibility-levels"></a>兼容性级别之间的差异
 对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本相关联，如[此表](#supported-dbcompats)中所示。 对于新的开发工作，请始终计划在最新的数据库兼容性级别上验证应用程序。
@@ -230,9 +230,9 @@ SELECT name, compatibility_level FROM sys.databases;
 |兼容性级别设置为 130 或更低|兼容性级别设置为 140|
 |--------------------------------------------------|-----------------------------------------|
 |引用多语句表值函数的语句的基数估计使用固定行猜测。|引用多语句表值函数的符合条件语句的基数估计会使用函数输出的实际基数。 这通过多语句表值函数的交错执行来实现。|
-|请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会继续对连续执行产生问题。|请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会提高连续执行的性能。 这通过在对批处理模式运算符发生溢出时，会更新缓存计划内存授予大小的**批处理模式内存授予反馈**来实现。 |
-|请求会导致并发问题的过多内存授予大小的批处理模式查询可能会继续对连续执行产生问题。|请求会导致并发问题的过多内存授予大小的批处理模式查询可能会改进连续执行的并发性。 这通过在最初请求了过多量时，会更新缓存计划内存授予大小的**批处理模式内存授予反馈**来实现。|
-|包含联接运算符的批处理模式查询有资格使用三种物理联接算法，包括嵌套循环、哈希联接和合并联接。 如果基数估计对于联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，性能会降低，并继续使用不适当的联接算法，直到缓存计划进行重新编译。|有一个名为**自适应联接**的其他联接运算符。 如果基数估计对于外部生成联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，并且语句有资格进行自适应联接，则会将嵌套循环用于较小联接输入，将哈希联接动态用于较大联接输入，而无需重新编译。 |
+|请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会继续对连续执行产生问题。|请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会提高连续执行的性能。 这通过在对批处理模式运算符发生溢出时，会更新缓存计划内存授予大小的 **批处理模式内存授予反馈** 来实现。 |
+|请求会导致并发问题的过多内存授予大小的批处理模式查询可能会继续对连续执行产生问题。|请求会导致并发问题的过多内存授予大小的批处理模式查询可能会改进连续执行的并发性。 这通过在最初请求了过多量时，会更新缓存计划内存授予大小的 **批处理模式内存授予反馈** 来实现。|
+|包含联接运算符的批处理模式查询有资格使用三种物理联接算法，包括嵌套循环、哈希联接和合并联接。 如果基数估计对于联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，性能会降低，并继续使用不适当的联接算法，直到缓存计划进行重新编译。|有一个名为 **自适应联接** 的其他联接运算符。 如果基数估计对于外部生成联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，并且语句有资格进行自适应联接，则会将嵌套循环用于较小联接输入，将哈希联接动态用于较大联接输入，而无需重新编译。 |
 |引用列存储索引的普通计划没有资格进行批处理模式执行。 |引用列存储索引的普通计划会被放弃，以便支持有条件进行批处理模式执行的计划。|
 |`sp_execute_external_script` UDX 运算符只能在行模式下运行。|`sp_execute_external_script` UDX 运算符有资格进行批处理模式执行。|
 |多语句表值函数 (TVF) 没有交错执行 |用于改进计划质量的多语句 TVF 交错执行。|
@@ -250,7 +250,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |引入了 SQL 2014 基数估算器 **CardinalityEstimationModelVersion="120"**|基数估计模型 130 带来了进一步基数估计 (CE) 改进（在查询计划中可见）。 **CardinalityEstimationModelVersion="130"**|
 |列存储索引的批处理模式与行模式更改：<br /><ul><li>具有列存储索引的表上的排序处于行模式 <li>开窗函数聚合在行模式（如 `LAG` 或 `LEAD`）下运行 <li>具有多个不同子句的列存储表的查询在行模式下运行 <li>在 MAXDOP 1 下运行或具有串行计划的查询在行模式下执行</li></ul>| 列存储索引的批处理模式与行模式更改：<br /><ul><li>具有列存储索引的表上的排序现在处于批处理模式 <li>开窗聚合现在在批处理模式（如 `LAG` 或 `LEAD`）下运行 <li>具有多个不同子句的列存储表的查询在批处理模式下运行 <li>在 MAXDOP 1 下运行或具有串行计划的查询在批处理模式下执行</li></ul>|
 |可以自动更新统计信息。 | 自动更新统计信息的逻辑对大型表更主动。 在实践中，这应减少以下情况：对于经常查询新插入的行，但是未更新统计信息以包括这些值的查询，客户遇到性能问题。 |
-|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，跟踪 2371 默认情况下会关闭。 | 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，[Trace 2371（跟踪 2371）](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)默认情况下会打开。 跟踪标志 2371 告知自动统计信息更新程序在具有许多行的表中采样更小但更智能的行子集。 <br/> <br/> 一个重要改进是在采样中包括更多最近插入的行。 <br/> <br/> 另一个改进是让查询在更新统计信息进程运行期间运行，而不阻塞查询。 |
+|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，跟踪 2371 默认情况下会关闭。 | 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，[Trace 2371（跟踪 2371）](/archive/blogs/psssql/default-auto-statistics-update-threshold-change-for-sql-server-2016)默认情况下会打开。 跟踪标志 2371 告知自动统计信息更新程序在具有许多行的表中采样更小但更智能的行子集。 <br/> <br/> 一个重要改进是在采样中包括更多最近插入的行。 <br/> <br/> 另一个改进是让查询在更新统计信息进程运行期间运行，而不阻塞查询。 |
 |对于级别 120，统计信息通过单线程进程进行采样。|对于级别 130，统计信息通过多线程进程进行采样（并行进程）。 |
 |253 传入外键是限制。| 给定表可以通过最多 10,000 个传入外键或类似引用进行引用。 有关限制，请参阅 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |
 |允许使用弃用的 MD2、MD4、MD5、SHA 和 SHA1 哈希算法。|只允许使用 SHA2_256 和 SHA2_512 哈希算法。|
@@ -265,7 +265,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 
 |兼容性级别设置为 110 或更低|兼容性级别设置为 120|
 |--------------------------------------------------|-----------------------------------------|
-|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容性级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议。|
+|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容性级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][数据库引擎中的新增功能](../../sql-server/what-s-new-in-sql-server-2016.md)主题的“查询计划”一节中的建议。|
 |如果兼容级别低于 120，则在将 **date** 值转换为字符串值时语言设置将被忽略。 请注意，此行为仅特定于 **date** 类型。 请参阅下面“示例”部分中的“示例 B”。|将 **date** 值转换为字符串值时，不忽略语言设置。|
 |`EXCEPT` 子句右侧的递归引用产生无限循环。 下面“示例”部分中的示例 C 演示此行为。|`EXCEPT` 子句中的递归引用产生遵从 ANSI SQL 标准的错误。|
 |递归公用表表达式 (CTE) 允许重复的列名。|递归 CTE 禁止列名重复。|
@@ -285,7 +285,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |在递归公用表表达式 (CTE) 查询中允许 `PIVOT`。 然而，当每个分组有多个行时，该查询返回不正确的结果。|在递归公用表表达式 (CTE) 查询中不允许 `PIVOT`。 将返回错误。|
 |RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|不能使用 RC4 或 RC4_128 加密新材料。 而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|
 |对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式为 121，当在计算列表达式中使用这些类型时除外。 对于计算列，默认样式为 0。 当创建用于涉及自动参数化的查询中或约束定义中的计算列时，此行为会影响计算列。<br /><br /> 下面“示例”部分中的示例 D 显示样式 0 与 121 之间的差异。 它并不演示上面所述的行为。 有关日期和时间样式的详细信息，请参阅 [CAST 和 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。|兼容级别为 110 时，对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式始终为 121。 如果您的查询依赖旧行为，请使用低于 110 的兼容性级别或在受影响的查询中显式指定 0 样式。<br /><br /> 将数据库升级到兼容性级别 110 将不更改已存储到磁盘的用户数据。 您必须相应手动更正此数据。 例如，如果使用了 `SELECT INTO` 来从包含上述计算列表达式的源创建表，将存储数据（使用样式 0）而非存储计算列定义本身。 您需要手动更新此数据，以匹配样式 121。|
-|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **datetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **datetime** 类型。|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **smalldatetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **smalldatetime** 类型。<br /><br /> 在升级到 110 后，分布式分区视图将由于数据类型不匹配而失败。 可以通过将针对远程表的数据类型更改为 **datetime** 或者将本地数据库的兼容级别设置为 100 或更低，解决上述问题。|
+|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **datetime** 。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **datetime** 类型。|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **smalldatetime** 。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **smalldatetime** 类型。<br /><br /> 在升级到 110 后，分布式分区视图将由于数据类型不匹配而失败。 可以通过将针对远程表的数据类型更改为 **datetime** 或者将本地数据库的兼容级别设置为 100 或更低，解决上述问题。|
 |`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 当分隔两个具有相同 `SOUNDEX` 代码的辅音时，将忽略大写 H 或大写 W。<br /><br /> 2) 如果 *character_expression* 的前 2 个字符具有相同的 `SOUNDEX` 代码，则将包含这两个字符。 否则，如果一组并行辅音在 `SOUNDEX` 代码中有相同的数字，所有这些辅音都会被排除在外，第一个辅音除外。|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 如果大写 H 或大写 W 分隔具有相同 `SOUNDEX` 代码的两个辅音，则将忽略右侧的辅音<br /><br /> 2) 如果一组并行辅音在 `SOUNDEX` 代码中有相同的数字，所有这些辅音都会被排除在外，第一个辅音除外。<br /><br /> <br /><br /> 其他规则可能导致由 `SOUNDEX` 函数计算的值不同于在更低数据库兼容级别时计算的值。 在升级到兼容级别 110 后，可能需要重新生成使用 `SOUNDEX` 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX](../../t-sql/functions/soundex-transact-sql.md)。|
 
 ## <a name="differences-between-compatibility-level-90-and-level-100"></a>兼容性级别 90 和兼容性级别 100 之间的差异
@@ -305,7 +305,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |如果将 OUTPUT 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则会终止并回滚整个事务。|如果将 `OUTPUT` 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则行为取决于 `SET XACT_ABORT` 设置。 如果 `SET XACT_ABORT` 设置为 OFF，则由使用 `OUTPUT` 子句的 DML 语句所生成的语句中止错误将终止该语句，但批处理的执行仍会继续，并且不会回滚事务。 如果 `SET XACT_ABORT` 设置为 ON，则由使用 OUTPUT 子句的 DML 语句所生成的全部运行时错误都将终止批处理，并回滚事务。|低|
 |CUBE 和 ROLLUP 不作为保留关键字强制应用。|`CUBE` 和 `ROLLUP` 是 GROUP BY 子句中的保留关键字。|低|
 |对 XML **anyType** 类型的元素应用严格验证。|对 **anyType** 类型的元素应用宽松验证。 有关详细信息，请参阅[通配符组成部分和内容验证](../../relational-databases/xml/wildcard-components-and-content-validation.md)。|低|
-|数据操作语言语句不能查询或修改特殊属性 **xsi:nil** 和 **xsi:type**。<br /><br /> 这意味着 `/e/@xsi:nil` 失败，同时 `/e/@*` 忽略 **xsi:nil** 和 **xsi:type** 属性。 但是，`/e` 返回 **xsi:nil** 和 **xsi:type** 属性，以保持与 `SELECT xmlCol` 的一致性，即使 `xsi:nil = "false"` 也是如此。|特殊属性 **xsi:nil** 和 **xsi:type** 作为常规属性存储，不能查询和修改。<br /><br /> 例如，执行查询 `SELECT x.query('a/b/@*')` 会返回包括 **xsi: nil** 和 **xsi: type** 在内的所有属性。 若要在查询中排除这些类型，请用 `@*[namespace-uri(.) != "`insert xsi namespace uri`"` 替换 `@*`，而不是用 `(local-name(.) = "type"` 或 `local-name(.) ="nil".` 来替换|低|
+|数据操作语言语句不能查询或修改特殊属性 **xsi:nil** 和 **xsi:type** 。<br /><br /> 这意味着 `/e/@xsi:nil` 失败，同时 `/e/@*` 忽略 **xsi:nil** 和 **xsi:type** 属性。 但是，`/e` 返回 **xsi:nil** 和 **xsi:type** 属性，以保持与 `SELECT xmlCol` 的一致性，即使 `xsi:nil = "false"` 也是如此。|特殊属性 **xsi:nil** 和 **xsi:type** 作为常规属性存储，不能查询和修改。<br /><br /> 例如，执行查询 `SELECT x.query('a/b/@*')` 会返回包括 **xsi: nil** 和 **xsi: type** 在内的所有属性。 若要在查询中排除这些类型，请用 `@*[namespace-uri(.) != "`insert xsi namespace uri`"` 替换 `@*`，而不是用 `(local-name(.) = "type"` 或 `local-name(.) ="nil".` 来替换|低|
 |用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为确定的。|用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为不确定的。|低|
 |不完全支持 XML 联合和列表类型。|完全支持联合和列表类型，包括以下功能：<br /><br /> 列表的联合<br /><br /> 联合的联合<br /><br /> 原子类型的列表<br /><br /> 联合的列表|低|
 |当视图或内联表值函数中包含 xQuery 方法时，不对该方法所需的 SET 选项进行验证。|当视图或内联表值函数中包含 xQuery 方法时，对该方法所需的 SET 选项进行验证。 如果该方法的 SET 选项设置不正确，将引发一个错误。|低|

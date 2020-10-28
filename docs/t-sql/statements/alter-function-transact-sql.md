@@ -21,12 +21,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 165af0a279cf9b7e19cc7c5dbf7a20ca51272661
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8b8fc08aaf5f083d22938adf37c356c445d4b6f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549452"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300600"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -265,7 +265,7 @@ RETURNS return_data_type
  定义内联表值函数返回值的单个 SELECT 语句。  
   
  EXTERNAL NAME \<method_specifier>assembly_name.class_name.method_name   
- **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定要与函数绑定的程序集的方法。 assembly_name 必须与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中当前数据库内具有可见性的现有程序集匹配。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中。 如果类包含一个使用句点 (.) 分隔命名空间各部分的限定命名空间的名称，则必须使用方括号 ([]) 或引号 ("") 将类名称分隔开  。 method_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为静态方法存在于指定类中。  
   
@@ -278,7 +278,7 @@ RETURNS return_data_type
  \<_table\_type\_definition_\>( { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ ,...n ])   
  定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。  
   
-\< clr_table_type_definition \> ( { column_name**data_type } [ ,...n ] ) 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)） 。  
+\< clr_table_type_definition \> ( { column_name**data_type } [ ,...n ] ) 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)） 。  
   
  定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。  
   
@@ -301,7 +301,7 @@ RETURNS return_data_type
  指定函数将具有以下一个或多个选项：  
   
  ENCRYPTION  
- **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]对目录视图中包含 ALTER FUNCTION 语句文本的列进行加密。 使用 ENCRYPTION 可以防止将函数作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的一部分发布。 不能为 CLR 函数指定 ENCRYPTION。  
   
@@ -443,5 +443,4 @@ RETURNS return_data_type
  [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md)   
  [对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989810"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300208"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -158,7 +158,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 表分区选项
 有关使用表分区的指南，请参阅[对 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
 创建一个或多个表分区。 这些分区是水平表切片，可便于向行的子集应用操作，无论表是作为堆、聚集索引还是聚集列存储索引进行存储。 与分发列不同，表分区不确定存储每行的分发。 表分区决定行如何分组并存储在每个分发中。  
 
 | 参数 | 说明 |
@@ -178,16 +178,16 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 由于表中的列按顺序排列，用户可以在 sys.index_columns 中查询 column_store_order_ordinal 列   。  
 
-有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)。   
+有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](/azure/sql-data-warehouse/performance-tuning-ordered-cci)。   
 
 ### <a name="data-type"></a><a name="DataTypes"></a> 数据类型
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支持最常用的数据类型。 以下是支持的数据类型及其详细信息和存储字节的列表。 要更好地理解数据类型以及如何使用它们，请参阅 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中表的数据类型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
-有关数据类型转换的表，请参阅 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的“隐式转换”部分。
+有关数据类型转换的表，请参阅 [CAST 和 CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md) 的“隐式转换”部分。
 
 >[!NOTE]
->如需了解更多详情，请参阅[日期和时间数据类型和函数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。
+>如需了解更多详情，请参阅[日期和时间数据类型和函数 &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md)。
 
 `datetimeoffset` [ ( n ) ]  
  n 的默认值为 7  。  
@@ -326,7 +326,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 若要将行存储表更改为列存储表，请删除表上所有现有索引并创建一个聚集列存储索引。 有关示例，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
 
 有关详细信息，请参阅以下文章：
-- [列存储索引版本的功能摘要](https://msdn.microsoft.com/library/dn934994/)
+- [列存储索引版本的功能摘要](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
 - [为 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
@@ -596,5 +596,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
-  
+[sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 

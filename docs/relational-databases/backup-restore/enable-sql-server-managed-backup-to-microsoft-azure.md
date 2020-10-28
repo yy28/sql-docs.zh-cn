@@ -1,7 +1,7 @@
 ---
 title: 使用目标为 Azure 的托管备份
 description: 了解如何在数据库和实例级别启用目标为 Microsoft Azure 的 SQL Server 托管备份，以及如何启用通知和监视备份活动。
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, devx-track-azurecli
 ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 30c53bedf4f5946088e35c94e8902554c6da0049
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810173"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439470"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>启用目标为 Azure 的 SQL Server 托管备份
 

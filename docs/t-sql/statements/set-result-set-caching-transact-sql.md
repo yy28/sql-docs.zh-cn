@@ -15,12 +15,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f8247062993b33a669477be7d71363efa45ead32
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 93dfd425619744107fcf1123862cd0df76cad5ce
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670540"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300802"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT_SET_CACHING (Transact-SQL) 
 
@@ -52,7 +52,7 @@ SET RESULT_SET_CACHING { ON | OFF };
 
 ## <a name="examples"></a>示例
 
-使用查询的 request_id 查询 [sys.dm_pdw_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql) 中的 result_cache_hit 列以查看是否使用结果缓存命中或未命中执行此查询。
+使用查询的 request_id 查询 [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) 中的 result_cache_hit 列以查看是否使用结果缓存命中或未命中执行此查询。
 
 ```sql
 SELECT result_cache_hit
@@ -67,7 +67,7 @@ WHERE request_id = 'QID58286'
 ## <a name="see-also"></a>另请参阅
 
 - [通过结果集缓存进行性能优化](/azure/sql-data-warehouse/performance-tuning-result-set-caching)
-- [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest&preserve-view=true)
-- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&preserve-view=true)
-- [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)
-- [DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)
+- [ALTER DATABASE SET 选项 (Transact-SQL)](./alter-database-transact-sql-set-options.md?preserve-view=true&view=azure-sqldw-latest)
+- [ALTER DATABASE (Transact-SQL)](./alter-database-transact-sql.md?preserve-view=true&view=azure-sqldw-latest)
+- [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](../database-console-commands/dbcc-showresultcachespaceused-transact-sql.md)
+- [DBCC DROPRESULTSETCACHE (Transact-SQL)](../database-console-commands/dbcc-dropresultsetcache-transact-sql.md)

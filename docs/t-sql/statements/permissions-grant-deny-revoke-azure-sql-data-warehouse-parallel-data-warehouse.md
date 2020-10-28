@@ -15,12 +15,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 113b8dfd288eccff391f9c72df3647955770b916
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: e384304e5e3e67b0768c0cd145a0427877c4ce89
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498061"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300351"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure Synapse Analytics 和并行数据仓库）
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -238,7 +238,7 @@ REVOKE
   
 -   REFERENCES  
   
- 有关每种类型的权限定义，请参阅[权限（数据库引擎）](https://msdn.microsoft.com/library/ms191291.aspx)。  
+ 有关每种类型的权限定义，请参阅[权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)。  
   
 ### <a name="chart-of-permissions"></a>权限的图表  
  所有权限均以图形方式呈现在此发布程序上。 这是查看权限的嵌套层次结构最简单的方法。 例如，ALTER ON LOGIN 权限可由其本身授予，但如果授予某一登录名对该登录名的 CONTROL 权限，或者授予某一登录名 ALTER ANY LOGIN 权限，它也包含在内  。  
@@ -321,5 +321,3 @@ GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   
-  
-

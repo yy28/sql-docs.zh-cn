@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 606548b95d1d825341c44e03eb406c271763c12b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541381"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300639"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -66,7 +66,7 @@ ms.locfileid: "89541381"
 
 使用带有外部数据源的外部表进行 PolyBase 查询。 外部数据源用于建立连接以及支持以下这些用例：
 
-- 使用 [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) 执行数据虚拟化和数据加载
+- 使用 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 执行数据虚拟化和数据加载
 - 使用 `BULK INSERT` 或 `OPENROWSET` 通过 SQL Server 或 SQL 数据库进行批量加载操作
 
 另请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md)。
@@ -108,7 +108,7 @@ column_name <data_type>
 
 LOCATION = 'folder_or_filepath' 为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。
 
-在 SQL Server 中，如果路径和文件夹不存在，则 CREATE EXTERNAL TABLE 语句会进行创建。 然后，可使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 有关详细信息，请参阅 [PolyBase 查询](/sql/relational-databases/polybase/polybase-queries)。
+在 SQL Server 中，如果路径和文件夹不存在，则 CREATE EXTERNAL TABLE 语句会进行创建。 然后，可使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 有关详细信息，请参阅 [PolyBase 查询](../../relational-databases/polybase/polybase-queries.md)。
 
 如果将 LOCATION 指定为一个文件夹，则从外部表中进行选择的 PolyBase 查询会从该文件夹及其所有子文件夹中检索文件。 正如 Hadoop 一样，PolyBase 不返回隐藏文件夹。 它也不返回文件名以下划线 (_) 或句点 (.) 开头的文件。
 
@@ -638,11 +638,11 @@ column_name <data_type>
 
 分片外部表选项
 
-为[弹性查询](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)指定外部数据源（非 SQL Server 数据源）和分发方法。
+为[弹性查询](/azure/azure-sql/database/elastic-query-overview)指定外部数据源（非 SQL Server 数据源）和分发方法。
 
-DATA_SOURCE，DATA_SOURCE 子句定义了用于外部表的外部数据源（分片映射）。 有关示例，请参阅[创建外部表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
+DATA_SOURCE，DATA_SOURCE 子句定义了用于外部表的外部数据源（分片映射）。 有关示例，请参阅[创建外部表](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
-SCHEMA_NAME 和 OBJECT_NAME，SCHEMA_NAME 和 OBJECT_NAME 子句将外部表定义映射到不同架构的表。 如果省略，则假定远程对象的架构是“dbo”，并假定其名称与所定义的外部表名称相同。 如果远程表的名称已在要在其中创建外部表的数据库中使用，那么该做法很有用。 例如，你希望定义一个外部表，用于获取扩展数据层上目录视图或 DMV 的聚合视图。 由于目录视图和 DMV 已在本地存在，因此不能在外部表定义中使用其名称。 而是改用不同名称，并在 SCHEMA_NAME 和/或 OBJECT_NAME 子句中使用目录视图或 DMV 的名称。 有关示例，请参阅[创建外部表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
+SCHEMA_NAME 和 OBJECT_NAME，SCHEMA_NAME 和 OBJECT_NAME 子句将外部表定义映射到不同架构的表。 如果省略，则假定远程对象的架构是“dbo”，并假定其名称与所定义的外部表名称相同。 如果远程表的名称已在要在其中创建外部表的数据库中使用，那么该做法很有用。 例如，你希望定义一个外部表，用于获取扩展数据层上目录视图或 DMV 的聚合视图。 由于目录视图和 DMV 已在本地存在，因此不能在外部表定义中使用其名称。 而是改用不同名称，并在 SCHEMA_NAME 和/或 OBJECT_NAME 子句中使用目录视图或 DMV 的名称。 有关示例，请参阅[创建外部表](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
 DISTRIBUTION，DISTRIBUTION 子句指定用于此表的数据分发。 查询处理器利用 DISTRIBUTION 子句中提供的信息来构建最有效的查询计划。
 
@@ -719,9 +719,9 @@ WITH
 
 ## <a name="see-also"></a>另请参阅
 
-- [Azure SQL 数据库弹性查询概述](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
-- [跨扩展云数据库进行报告](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
-- [跨数据库查询（纵向分区）入门](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
+- [Azure SQL 数据库弹性查询概述](/azure/sql-database/sql-database-elastic-query-overview)
+- [跨扩展云数据库进行报告](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [跨数据库查询（纵向分区）入门](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34fd954475d308d8989be17063e9122bf821c3da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d3381300671d2303f8766351e19018d8122c861f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547792"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300927"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -227,7 +227,7 @@ LOCAL
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）。    
   
 ON  
-启用缓冲池扩展选项。 此选项通过使用永久性存储扩展缓冲池的大小。 诸如固态硬盘 (SSD) 之类的永久性存储可使池中的数据页面保持干净。 有关此功能的详细信息，请参阅[缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。不是所有 SQL Server 版本都提供缓冲池扩展。 有关详细信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+启用缓冲池扩展选项。 此选项通过使用永久性存储扩展缓冲池的大小。 诸如固态硬盘 (SSD) 之类的永久性存储可使池中的数据页面保持干净。 有关此功能的详细信息，请参阅[缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。不是所有 SQL Server 版本都提供缓冲池扩展。 有关详细信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 FILENAME = 'os_file_path_and_name'  
 定义缓冲池扩展缓存文件的目录路径和名称。 文件扩展名必须指定为 .BPE。 禁用 BUFFER POOL EXTENSION 后才能修改 FILENAME。  
@@ -484,5 +484,4 @@ GO
 [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9edfba19ad84a0334f85e6990f0e3cd1c2ccee81
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 781d61c5cde33ae51b7ecb94d56a8c3cadff1595
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688686"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300217"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -201,7 +201,7 @@ ALTER ASSEMBLY assembly_name
  以下示例将程序集 `ComplexNumber` 更新到保存其实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本。  
   
 > [!NOTE]  
->  可以通过运行 UserDefinedDataType 示例脚本创建程序集 `ComplexNumber`。 有关详细信息，请参阅[用户定义类型](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191)。  
+>  可以通过运行 UserDefinedDataType 示例脚本创建程序集 `ComplexNumber`。 有关详细信息，请参阅[用户定义类型](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))。  
   
  ```sql
  ALTER ASSEMBLY ComplexNumber 
@@ -233,5 +233,4 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   
