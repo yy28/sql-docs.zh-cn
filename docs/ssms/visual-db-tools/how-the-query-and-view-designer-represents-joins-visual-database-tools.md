@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462792"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439351"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查询和视图设计器如何表示联接 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ ms.locfileid: "88462792"
   
 |**联接线图标**|**说明**|  
 |----------------------|-------------------|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 图标")|内部联接（用等号创建）。|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 图标")|基于“大于”运算符的内部联接。|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools 图标")|外部联接，其中包括左侧表示的表中的所有行，即使它们在相关表中没有匹配行。|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools 图标")|外部联接，其中包括右侧表示的表中的所有行，即使它们在相关表中没有匹配行。|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools 图标")|完全外部联接，其中包括两个表中的所有行，即使它们在相关表中没有匹配行。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|内部联接（用等号创建）。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|基于“大于”运算符的内部联接。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|外部联接，其中包括左侧表示的表中的所有行，即使它们在相关表中没有匹配行。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|外部联接，其中包括右侧表示的表中的所有行，即使它们在相关表中没有匹配行。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|完全外部联接，其中包括两个表中的所有行，即使它们在相关表中没有匹配行。|  
   
 联接线末端的符号指示联接类型。 下表列出联接类型和在联接线末端显示的图标。  
   
 |**联接线末端的图标**|**联接类型**|  
 |---------------------------------|--------------------|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools 图标")|一对一联接。|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools 图标")|一对多联接。|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools 图标")|查询和视图设计器无法确定联接类型。 这种情况最常发生在手动创建联接时。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|一对一联接。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|一对多联接。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|查询和视图设计器无法确定联接类型。 这种情况最常发生在手动创建联接时。|  
   
 ## <a name="sql-pane"></a>SQL 窗格  
 在 SQL 语句中，可以采用许多方式表达联接。 确切的语法取决于所使用的数据库以及定义联接的方式。  
   
 联接表的语法选项包括：  
   
--   **FROM 子句的 JOIN 限定符**。   关键字 INNER 和 OUTER 指定联接类型。 此语法是 ANSI 92 SQL 的标准语法。  
+-   **FROM 子句的 JOIN 限定符** 。   关键字 INNER 和 OUTER 指定联接类型。 此语法是 ANSI 92 SQL 的标准语法。  
   
     例如，如果基于每个表中的 `publishers` 列联接 `pub_info` 和 `pub_id` 表，所得到的 SQL 语句可能类似于以下形式：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88462792"
   
     如果创建外部联接，将显示关键字 LEFT OUTER 或 RIGHT OUTER 来代替关键字 INNER。  
   
--   **WHERE 子句比较两个表中的列**。   如果数据库不支持 JOIN 语法（或用户自己输入该语法），将显示 WHERE 子句。 如果联接是在 WHERE 子句中创建的，则两个表名都出现在 FROM 子句中。  
+-   **WHERE 子句比较两个表中的列** 。   如果数据库不支持 JOIN 语法（或用户自己输入该语法），将显示 WHERE 子句。 如果联接是在 WHERE 子句中创建的，则两个表名都出现在 FROM 子句中。  
   
     例如，下面的语句联接 `publishers` 和 `pub_info` 表。  
   

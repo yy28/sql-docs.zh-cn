@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 在此系列教程的第三部分中（共五部分），你将使用 T-SQL 函数通过 SQL 机器学习根据示例数据创建和存储特征。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193699"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412566"
 ---
 # <a name="r-tutorial-create-data-features"></a>R 教程：创建数据特征
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "92193699"
 
 ## <a name="about-feature-engineering"></a>关于功能设计
 
-几轮数据探索后，已从数据收集了一些见解，现可以继续“特征工程”**。 从原始数据创建有意义功能的过程是创建分析建模中的关键步骤。
+几轮数据探索后，已从数据收集了一些见解，现可以继续“特征工程”  。 从原始数据创建有意义功能的过程是创建分析建模中的关键步骤。
 
 在此数据集中，距离值是基于所报告的计量距离得出的，并不一定表示地理距离或实际行程距离。 因此，需要使用源 NYC Taxi 数据集中提供的坐标计算接客点和落客点之间的直接距离。 可通过使用自定义 [函数中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine formula [!INCLUDE[tsql](../../includes/tsql-md.md)] （半正矢公式）实现。
 
-使用一个自定义 T-SQL 函数 _fnCalculateDistance_通过半正矢公式计算距离，并使用另一个自定义 T-SQL 函数 _fnEngineerFeatures_创建包含所有功能的表。
+使用一个自定义 T-SQL 函数 _fnCalculateDistance_ 通过半正矢公式计算距离，并使用另一个自定义 T-SQL 函数 _fnEngineerFeatures_ 创建包含所有功能的表。
 
 总体过程如下所示：
 
@@ -56,11 +56,11 @@ ms.locfileid: "92193699"
 
 ## <a name="calculate-trip-distance-using-fncalculatedistance"></a>使用 fnCalculateDistance 计算行程距离
 
-应已下载 fnCalculateDistance__ 函数，并作为本教程准备工作的一部分向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册。 花点时间查看代码。
+应已下载 fnCalculateDistance  函数，并作为本教程准备工作的一部分向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册。 花点时间查看代码。
   
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依次展开“可编程性”****、“函数”**** 及“标量值函数”****。   
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依次展开“可编程性”  、“函数”  及“标量值函数”  。   
 
-2. 右键单击“fnCalculateDistance”__，然后选择“修改”****，以在新查询窗口中打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。
+2. 右键单击“fnCalculateDistance”  ，然后选择“修改”  ，以在新查询窗口中打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -90,11 +90,11 @@ ms.locfileid: "92193699"
   
    + 它将从行程接客位置和落客位置获取的纬度和经度值作为输入。 半正矢公式会将位置转换为弧度值，并使用这些值以英里计算这两个位置之间的直接距离。
 
-## <a name="generate-the-features-using-_fnengineerfeatures_"></a>使用 fnEngineerFeatures__ 生成功能
+## <a name="generate-the-features-using-_fnengineerfeatures_"></a>使用 fnEngineerFeatures  生成功能
 
-要将计算所得值添加到可用于定型模型的表，需使用另一个函数 fnEngineerFeatures__。 新函数调用之前创建的 T-SQL 函数 fnCalculateDistance__，以获得接客位置和落客位置之间的直接距离。 
+要将计算所得值添加到可用于定型模型的表，需使用另一个函数 fnEngineerFeatures  。 新函数调用之前创建的 T-SQL 函数 fnCalculateDistance  ，以获得接客位置和落客位置之间的直接距离。 
 
-1. 花时间检查自定义 T-SQL 函数 _fnEngineerFeatures_的代码，该函数应已作为本演练准备工作的一部分进行了创建。
+1. 花时间检查自定义 T-SQL 函数 _fnEngineerFeatures_ 的代码，该函数应已作为本演练准备工作的一部分进行了创建。
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  

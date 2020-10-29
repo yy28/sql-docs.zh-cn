@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956905"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793794"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什么是 SQL Server 中独立的 Machine Learning Server 或 R Server？
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -80,7 +80,7 @@ R 和 Python 开发者通常会选择独立服务器，以打破开放源代码 
 
 ### <a name="step-4-operationalize-your-solution"></a>步骤 4：操作你的解决方案
 
-独立服务器可以使用非 SQL 品牌 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) 的[操作化](//machine-learning-server/what-is-operationalization)功能。 可以为操作化配置独立服务器，这样配置具有以下好处：将代码作为 Web 服务部署和托管、运行诊断、测试 Web 服务容量。
+独立服务器可以使用非 SQL 品牌 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) 的[操作化](/machine-learning-server/what-is-operationalization)功能。 可以为操作化配置独立服务器，这样配置具有以下好处：将代码作为 Web 服务部署和托管、运行诊断、测试 Web 服务容量。
 
 ### <a name="step-5-maintain-your-server"></a>步骤 5：维护服务器
 
