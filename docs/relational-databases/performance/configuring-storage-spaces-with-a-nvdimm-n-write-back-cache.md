@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891887"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679233"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>配置具有 NVDIMM-N 回写式缓存的存储空间
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91891887"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Windows Powershell 窗口的屏幕截图，其中显示了 Get-PhysicalDisk cmdlet 的输出。](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  使用 NVDIMM-N 设备，你不再需要具体选择可作为回写式缓存目标的设备。  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![选择 FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "选择 FriendlyName")  
+ ![Windows Powershell 窗口的屏幕截图，其中显示了 $pd cmdlet 的输出。](../../relational-databases/performance/media/select-friendlyname.png "选择 FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>创建存储池  
  使用包含 PhysicalDisks 的 $pd 变量，可通过 New-StoragePool PowerShell cmdlet 轻松创建存储池。  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![Windows Powershell 窗口的屏幕截图，其中显示了 New-StoragePool cmdlet 的输出。](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>创建虚拟磁盘和卷  
  现已创建一个池，下一步是分出一个虚拟磁盘并对其进行格式化。 这种情况下只会创建 1 个虚拟磁盘，且 New-Volume PowerShell cmdlet 可用于简化该过程：  
@@ -65,15 +65,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![Windows Powershell 窗口的屏幕截图，其中显示了 New-Volume cmdlet 的输出。](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  该虚拟磁盘已通过 NTFS 创建、初始化并格式化。 下面的屏幕截图显示其大小为 300GB，回写式缓存大小为 1GB（将托管于 NVDIMM-N 上）。  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Windows Powershell 窗口的屏幕截图，其中显示了 Get-VirtualDisk cmdlet 的输出。](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  现在你可查看服务器中可见的这一新卷。 现在你可对 SQL Server 事务日志使用此驱动器。  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![文件资源管理器窗口中“本电脑”页面的屏幕截图，其中显示了 Log_Space 驱动器。](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>另请参阅  
  [Windows 10 中的 Windows 存储空间](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

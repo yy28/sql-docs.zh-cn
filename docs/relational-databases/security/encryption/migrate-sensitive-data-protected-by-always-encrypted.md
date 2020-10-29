@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22ad17c49a2f084453c87f26b9c782404f93483d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784029"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679259"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>使用 Always Encrypted 将加密数据批量加载到列中
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85784029"
 ## <a name="data-migration-scenarios"></a>数据迁移方案  
 下表显示了适用于多个迁移方案的建议设置。  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![一张表的屏幕截图，其中显示了适用于多个迁移方案的建议设置。](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>加密数据的大容量加载  
 使用以下过程加载加密数据。  
@@ -58,7 +58,7 @@ ms.locfileid: "85784029"
 
 1.  用户的该选项设置为“开”。  
  
-2.  用户运行连接到数据库的应用程序。 应用程序使用大容量 API 将纯文本值插入到加密列中。 应用程序需要启用了始终加密的客户端驱动程序对插入的数据进行加密。 但是，应用程序配置不正确，因此其结果是使用不支持始终加密的驱动程序，或连接字符串不包含 **column encryption setting=enabled**。  
+2.  用户运行连接到数据库的应用程序。 应用程序使用大容量 API 将纯文本值插入到加密列中。 应用程序需要启用了始终加密的客户端驱动程序对插入的数据进行加密。 但是，应用程序配置不正确，因此其结果是使用不支持始终加密的驱动程序，或连接字符串不包含 **column encryption setting=enabled** 。  
 
 3.  应用程序向服务器发送纯文本值。 由于针对用户在服务器中禁用了加密元数据检查，因此该服务器可让不正确的数据（纯文本而不是正确加密的已加密文本）插入到加密列中。  
  

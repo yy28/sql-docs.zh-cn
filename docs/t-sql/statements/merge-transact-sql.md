@@ -4,7 +4,7 @@ title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -25,18 +25,21 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098846"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679086"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-根据与源表联接的结果，对目标表运行插入、更新或删除操作。 例如，根据与另一个表的区别，在一个表中插入、更新或删除行，从而同步两个表。  
+根据与源表联接的结果，对目标表运行插入、更新或删除操作。 例如，根据与另一个表的区别，在一个表中插入、更新或删除行，从而同步两个表。 
+
+> [!NOTE]
+> 对于 Azure Synapse Analytics，MERGE 目前为预览版。
   
 **性能提示：** 当两个表具有匹配特性的复杂混合时，针对 MERGE 语句介绍的条件行为的效果最佳。 例如，插入不存在的行，或更新匹配的行。 仅根据另一个表的行更新一个表时，通过基本的 INSERT、UPDATE 和 DELETE 语句提升性能和可伸缩性。 例如：  
   
@@ -212,10 +215,10 @@ DELETE
 \<merge_not_matched>  
 指定要插入到目标表中的值。  
   
-(*column_list*)  
+( *column_list* )  
 要在其中插入数据的目标表中一个或多个列的列表。 必须使用单一部分名称格式来指定这些列，否则 MERGE 语句将失败。 必须用括号将 column_list 括起来，并且用逗号进行分隔。  
   
-VALUES ( *values_list*)  
+VALUES ( *values_list* )  
 返回要插入到目标表中的值的常量、变量或表达式的逗号分隔列表。 表达式不得包含 EXECUTE 语句。  
   
 DEFAULT VALUES  
@@ -233,6 +236,7 @@ DEFAULT VALUES
 >[!NOTE]
 > 在 Azure Synapse Analytics 中，MERGE 命令（预览）与 SQL Server 和 Azure SQL 数据库相比具有以下差异。  
 > - MERGE 更新操作实现为删除和插入对。 MERGE 更新的受影响的行计数包括删除的行和插入的行。 
+> - 在预览期间，MERGE 命令不适用于具有 UNIQUE 约束的表。  这不久将在之后的版本中得到修复。
 > - 此表描述了对具有不同分发类型的表的支持：
 
 >|Azure Synapse Analytics 中的 MERGE CLAUSE|支持的 TARGE 分发表| 支持的 SOURCE 分发表|评论|  

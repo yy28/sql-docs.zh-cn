@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 9ab42b6628f34c020d02dcffac130601dddb1938
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 8c48facb150d527cc1c03c0d5cd9ca0849a889f0
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784798"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679274"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -62,8 +62,8 @@ SQL Server 2017 引入了 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 群集�
 |可用性行为 |读取扩展|高可用性和 </br> 数据保护 | 数据保护|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|主要副本中断 |自动故障转移。 新的主要副本为 R/W 副本。 |自动故障转移。 新的主要副本为 R/W 副本。 |自动故障转移。 在先前的主要副本恢复并加入可用性组作为次要副本之前，新的主要副本不可用于用户事务。 |
-|一个次要副本中断  | 主要副本为 R/W 副本。 如果主要副本发生故障，则不进行自动故障转移。 |主要副本为 R/W 副本。 如果主要副本也发生故障，则不进行自动故障转移。 | 主要副本不可用于用户事务。 |
+|主要副本中断 |自动故障转移。 新的主要副本为 R/W 副本。 |自动故障转移。 新的主要副本为 R/W 副本。 |自动故障转移。 在先前的主要副本恢复并加入可用性组作为次要副本之前，新的主要副本不可用于用户事务。 |
+|一个次要副本中断  | 主要副本为 R/W 副本。 如果主要副本发生故障，则不进行自动故障转移。 |主要副本为 R/W 副本。 如果主要副本也发生故障，则不进行自动故障转移。 | 主要副本不可用于用户事务。 |
 
 <sup>\*</sup> 默认值
 
@@ -81,7 +81,7 @@ SQL Server 2017 引入了 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 群集�
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主要副本为 R/W 副本。| 自动故障转移。 在先前的主要副本恢复并加入可用性组作为次要副本之前，新的主要副本不可用于用户事务。|
-|一个次要副本中断  |主要副本为 R/W 副本，运行可能导致数据丢失。 |在次要副本恢复之前，主要副本不可用于用户事务。|
+|一个次要副本中断  |主要副本为 R/W 副本，运行可能导致数据丢失。 |在次要副本恢复之前，主要副本不可用于用户事务。|
 
 <sup>\*</sup> 默认值
 
@@ -107,9 +107,9 @@ SQL Server 2017 引入了 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 群集�
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |主要副本中断 | 自动故障转移。 新的主要副本为 R/W 副本。 | 自动故障转移。 新的主要副本不可用于用户事务。 |
-|次要副本中断 | 主要副本为 R/W 副本，运行可能导致数据丢失（如果主要副本发生故障且无法恢复）。 如果主要副本也发生故障，则不进行自动故障转移。 | 主要副本不可用于用户事务。 如果主要副本也发生故障，则没有可以将故障转移到的副本。 |
-|仅配置副本中断 | 主要副本为 R/W 副本。 如果主要副本也发生故障，则不进行自动故障转移。 | 主要副本为 R/W 副本。 如果主要副本也发生故障，则不进行自动故障转移。 |
-|同步次要副本 + 仅配置副本中断| 主要副本不可用于用户事务。 不进行自动故障转移。 | 主要副本不可用于用户事务。 如果主要副本也发生故障，则没有可以将故障转移到的副本。 |
+|次要副本中断 | 主要副本为 R/W 副本，运行可能导致数据丢失（如果主要副本发生故障且无法恢复）。 如果主要副本也发生故障，则不进行自动故障转移。 | 主要副本不可用于用户事务。 如果主要副本也发生故障，则没有可以将故障转移到的副本。 |
+|仅配置副本中断 | 主要副本为 R/W 副本。 如果主要副本也发生故障，则不进行自动故障转移。 | 主要副本为 R/W 副本。 如果主要副本也发生故障，则不进行自动故障转移。 |
+|同步次要副本 + 仅配置副本中断| 主要副本不可用于用户事务。 不进行自动故障转移。 | 主要副本不可用于用户事务。 如果主要副本也发生故障，则没有可以将故障转移到的副本。 |
 
 <sup>\*</sup> 默认值
 
@@ -138,7 +138,7 @@ SQL Server 2017 引入了 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 群集�
 
 SQL Server 2017 CTP 1.4 向 `sys.availability_groups` 添加了 `sequence_number`，以允许 Pacemaker 通过主要副本识别次要副本的最新状态。 `sequence_number` 是一个单调递增的 BIGINT，表示本地可用性组副本的最新状态。 Pacemaker 会在每个可用性组配置更改时更新 `sequence_number`。 配置更改示例包括故障转移、副本添加或删除。 该数字将在主要副本上更新，然后复制到次要副本。 因此，具有最新配置的次要副本的序列号与主要副本相同。 
 
-当 Pacemaker 决定将某个副本提升为主要副本时，会先向所有副本发送*预提升*通知。 各副本将返回序列号。 接下来，当 Pacemaker 实际尝试将某个副本提升为主要副本时，只有当该副本的序列号在所有序列号中最高时，该副本才会提升自身。 如果其自己的序列号与最高序列号不匹配，则该副本会拒绝提升操作。 这样，就只有序列号最高的副本才会升级为主副本，确保不会丢失数据。 
+当 Pacemaker 决定将某个副本提升为主要副本时，会先向所有副本发送 *预提升* 通知。 各副本将返回序列号。 接下来，当 Pacemaker 实际尝试将某个副本提升为主要副本时，只有当该副本的序列号在所有序列号中最高时，该副本才会提升自身。 如果其自己的序列号与最高序列号不匹配，则该副本会拒绝提升操作。 这样，就只有序列号最高的副本才会升级为主副本，确保不会丢失数据。 
 
 此过程需要至少一个可用于提升的副本，其序列号与上一个主要副本相同。 Pacemaker 资源代理设置 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`，使得至少一个同步次要副本处于最新状态，并且默认情况下可用作自动故障转移的目标。 对于每个监视操作，计算 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 的值（并在必要时更新）。 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 值为“同步副本数”除以 2。 在故障转移时，资源代理需要（`total number of replicas` - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 个副本）来响应预提升通知。 `sequence_number` 最高的副本提升为主要副本。 
 

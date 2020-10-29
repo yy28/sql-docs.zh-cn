@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867940"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679252"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
@@ -28,7 +28,7 @@ ms.locfileid: "91867940"
 本文介绍了如何发现和解决 Azure Key Vault 密钥访问问题，这些问题导致配置为[结合使用透明数据加密 (TDE) 和 Azure Key Vault 中的客户托管密钥](/azure/sql-database/transparent-data-encryption-byok-azure-sql)的数据库变得无法访问。
 
 ## <a name="introduction"></a>介绍
-如果 TDE 配置为使用 Azure Key Vault 中的客户托管密钥，必须持续访问此 TDE 保护程序，才能让数据库保持联机状态。  如果逻辑 SQL Server 在 Azure Key Vault 中失去对客户托管 TDE 保护程序的访问权限，数据库就会开始拒绝所有带有相应错误消息的连接，并将其在 Azure 门户中的状态更改为“无法访问”  。
+如果 TDE 配置为使用 Azure Key Vault 中的客户托管密钥，必须持续访问此 TDE 保护程序，才能让数据库保持联机状态。  如果逻辑 SQL Server 在 Azure Key Vault 中失去对客户托管 TDE 保护程序的访问权限，数据库就会开始拒绝所有带有相应错误消息的连接，并将其在 Azure 门户中的状态更改为“无法访问”。
 
 在最初的 8 小时内，如果基础 Azure Key Vault 密钥访问问题得到解决，数据库就会自动恢复并自动联机。 也就是说，对于所有间歇性和临时网络故障情况，无需执行任何用户操作，数据库就会自动联机。 在大多数情况下，需要执行用户操作来解决基础密钥保管库密钥访问问题。 
 
