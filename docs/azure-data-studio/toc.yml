@@ -7,7 +7,7 @@
 - name: 概述
   items:
     - name: Azure Data Studio
-      href: what-is.md
+      href: what-is-azure-data-studio.md
 - name: 快速入门
   items:
     - name: 连接并查询 SQL Server
