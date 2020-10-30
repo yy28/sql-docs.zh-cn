@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_column_store_object_pool (Transact-sql) '
-title: sys. dm_column_store_object_pool (Transact-sql) |Microsoft Docs
+description: 'sys.dm_column_store_object_pool (Transact-sql) '
+title: sys.dm_column_store_object_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c53ddf41cd1d1ac1b71b28779e19383d4266834
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9ead8a41e3ac6aea721603df7bcf288dbcef80d0
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537640"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036080"
 ---
-# <a name="sysdm_column_store_object_pool-transact-sql"></a>sys. dm_column_store_object_pool (Transact-sql) 
+# <a name="sysdm_column_store_object_pool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-sql) 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -29,17 +29,17 @@ ms.locfileid: "89537640"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|`database_id`|`int`|数据库 ID。 这在 SQL Server 数据库或 Azure SQL 数据库服务器的实例中是唯一的。 |  
-|`object_id`|`int`|对象的 ID。 对象是 object_types 之一。 | 
-|`index_id`|`int`|columnstore 索引的 ID。|  
-|`partition_number`|`bigint`|索引或堆中从 1 开始的分区号。 每个表或视图至少具有一个分区。| 
-|`column_id`|`int`|列存储列的 ID。 对于 DELETE_BITMAP，此值为 NULL。| 
-|`row_group_id`|`int`|行组的 ID。|
-|`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-列段。 `object_id` 是段 ID。 段将一个行组中的所有值存储在一个行组中。 例如，如果表有10列，则每个行组有10个列段。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-一个全局字典，其中包含表中所有列段的查找信息。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-与一个列关联的本地字典。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-全局字典的其他表示形式。 这提供了值的反向查找 dictionary_id。 用于在元组移动器或大容量加载过程中创建压缩段。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-跟踪段删除的位图。 每个分区都有一个删除位图。|  
-|`access_count`|`int`|对此对象的读或写访问次数。|  
-|`memory_used_in_bytes`|`bigint`|对象池中此对象使用的内存。|  
-|`object_load_time`|`datetime`|Object_id 进入对象池时的时钟时间。|  
+|database_id|int|数据库 ID。 这在 SQL Server 数据库或 Azure SQL 数据库服务器的实例中是唯一的。 |  
+|object_id|int|对象的 ID。 对象是 object_types 之一。 | 
+|index_id|int|columnstore 索引的 ID。|  
+|**partition_number**|bigint|索引或堆中从 1 开始的分区号。 每个表或视图至少具有一个分区。| 
+|column_id|int|列存储列的 ID。 对于 DELETE_BITMAP，此值为 NULL。| 
+|**row_group_id**|int|行组的 ID。|
+|**object_type**|smallint|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
+|**object_type_desc**|nvarchar(60)|COLUMN_SEGMENT-列段。 `object_id` 是段 ID。 段将一个行组中的所有值存储在一个行组中。 例如，如果表有10列，则每个行组有10个列段。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-一个全局字典，其中包含表中所有列段的查找信息。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-与一个列关联的本地字典。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-全局字典的其他表示形式。 这提供了值的反向查找 dictionary_id。 用于在元组移动器或大容量加载过程中创建压缩段。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-跟踪段删除的位图。 每个分区都有一个删除位图。|  
+|**access_count**|int|对此对象的读或写访问次数。|  
+|**memory_used_in_bytes**|bigint|对象池中此对象使用的内存。|  
+|**object_load_time**|datetime|Object_id 进入对象池时的时钟时间。|  
   
 ## <a name="permissions"></a>权限  
 
@@ -54,5 +54,5 @@ ms.locfileid: "89537640"
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  
+ [列存储索引：概述](../../relational-databases/indexes/columnstore-indexes-overview.md) 
   

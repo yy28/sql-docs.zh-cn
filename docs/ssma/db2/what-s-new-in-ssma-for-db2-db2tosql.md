@@ -4,22 +4,34 @@ description: 了解有关每个版本的 DB2 (DB2ToSQL) SQL Server 迁移助手 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: b35e5a01f28feb8b5dd42f592cf2c310d6c410f3
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498227"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036023"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>DB2 (DB2ToSQL 的 SSMA 中的新增功能) 
 
 本文列出了每个版本中的 DB2 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+除了多项辅助功能改进以外，用于 DB2 的 SSMA 的8.15 版本包含以下更改：
+
+* 纠正 `MIN` / `MAX` 聚合函数与日期/时间参数的转换
+* `VARCHAR_FORMAT`使用占位符时修复模拟函数中的 bug `DD`
+* 改善数据类型的类型映射 `TIME`
+* `ROUND` `TRUNC` 通过数值自变量改进和函数的转换
+* 在新式浏览器中使用的说服评估报表
+* 使用数据库提供的授权进行 Azure AD 身份验证
+* 改善从文件中加载的语句的命名
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -94,7 +106,7 @@ SSMA for DB2 的 v4.0 版本包括全新的 DB2 语法分析器，以及图形�
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，还增强了 SSMA for DB2 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA for DB2 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
+若要利用此设置，请在 SSMA for DB2 中导航到 " **工具** " "  >  **项目设置** " "  >  **常规**  >  **转换** "，然后在 " **杂项** " 下，将 " **省略扩展属性** " 设置的值更新为 **"是"** 。
 
 ![省略扩展属性设置](../db2/media/ssma-omit-extended-properties.png)
 
@@ -168,7 +180,7 @@ SSMA for DB2 的 v2.0 版本得到了增强，可提供旨在提高质量和转�
 
   ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
-* 转换后 **修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
+* 转换后 **修补顾问** 。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
 * 初步的数据库/架构选择。
 
@@ -196,7 +208,7 @@ SSMA for DB2 的 v2.0 版本得到了增强，可提供旨在提高质量和转�
 
 适用于 DB2 的 SSMA 的版本7.8 版本包含以下更改：
 
-* 更改 *项目设置*中突出显示的类型映射。
+* 更改 *项目设置* 中突出显示的类型映射。
 * 允许用户禁用遥测数据。
 
 ## <a name="ssma-v77"></a>SSMA v4。0

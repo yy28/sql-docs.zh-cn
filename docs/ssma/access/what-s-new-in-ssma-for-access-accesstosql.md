@@ -4,22 +4,31 @@ description: 了解针对每个版本的 Access (AccessToSQL) SQL Server 迁移�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497913"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036053"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 的新增功能
 
 本文列出了每个版本中的访问更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+除了多项辅助功能改进之外，8.15 的 SSMA for Access 还包含以下更改：
+
+* 忽略自动为外键创建的索引
+* 在新式浏览器中使用的说服评估报表
+* 使用数据库提供的授权进行 Azure AD 身份验证
+* 改善从文件中加载的语句的命名
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -78,7 +87,7 @@ ms.locfileid: "91497913"
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，还增强了 SSMA for Access 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
+若要利用此设置，请在 SSMA 中导航到 " **工具** " "  >  **项目设置** " "  >  **常规**  >  **转换** "，然后在 " **杂项** " 下，将 " **省略扩展属性** " 设置的值更新为 **"是"** 。
 
 ![省略扩展属性设置](../access/media/ssma-omit-extended-properties.png)
 
@@ -130,7 +139,7 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
 
   ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
-* 转换后 **修补顾问**。 [在此处](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)了解详细信息。
+* 转换后 **修补顾问** 。 [在此处](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)了解详细信息。
 
 * 初步的数据库/架构选择。
 
